@@ -38,7 +38,7 @@ namespace ININ.PureCloudApi.Model
             this.Actions = Actions;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets Id
@@ -90,11 +90,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Category: ").Append(Category).Append("\n");
             sb.Append("  Conditions: ").Append(Conditions).Append("\n");
             sb.Append("  Actions: ").Append(Actions).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -170,25 +169,18 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.Order != null)
                     hash = hash * 59 + this.Order.GetHashCode();
-                
                 if (this.Category != null)
                     hash = hash * 59 + this.Category.GetHashCode();
-                
                 if (this.Conditions != null)
                     hash = hash * 59 + this.Conditions.GetHashCode();
-                
                 if (this.Actions != null)
                     hash = hash * 59 + this.Actions.GetHashCode();
-                
                 return hash;
             }
         }

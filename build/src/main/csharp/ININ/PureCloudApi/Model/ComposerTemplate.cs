@@ -17,9 +17,12 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class ComposerTemplate :  IEquatable<ComposerTemplate>
     { 
-    
+
+        /// <summary>
+        /// Gets or Sets Level
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum LevelEnum {
+                public enum LevelEnum {
             
             [EnumMember(Value = "GLOBAL")]
             Global,
@@ -30,6 +33,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "USER")]
             User
         }
+
         
         /// <summary>
         /// Gets or Sets Level
@@ -61,7 +65,7 @@ namespace ININ.PureCloudApi.Model
             this.Data = Data;
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -139,11 +143,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Tags: ").Append(Tags).Append("\n");
             sb.Append("  Data: ").Append(Data).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -239,37 +242,26 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
-                
                 if (this.CreatedDate != null)
                     hash = hash * 59 + this.CreatedDate.GetHashCode();
-                
                 if (this.ModifiedDate != null)
                     hash = hash * 59 + this.ModifiedDate.GetHashCode();
-                
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
-                
                 if (this.Level != null)
                     hash = hash * 59 + this.Level.GetHashCode();
-                
                 if (this.Tags != null)
                     hash = hash * 59 + this.Tags.GetHashCode();
-                
                 if (this.Data != null)
                     hash = hash * 59 + this.Data.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 return hash;
             }
         }

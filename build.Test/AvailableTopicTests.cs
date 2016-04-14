@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new AvailableTopic();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of AvailableTopic
@@ -50,34 +50,30 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<AvailableTopic> (instance, "instance is a AvailableTopic");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'Description' 
+        /// Test the property 'Description'
         /// </summary>
         [Test]
         public void DescriptionTest()
         {
-            // TODO: unit test for the property 'Description' 
+            // TODO: unit test for the property 'Description'
         }
-        
         /// <summary>
-        /// Test the property 'Schema' 
+        /// Test the property 'Schema'
         /// </summary>
         [Test]
         public void SchemaTest()
         {
-            // TODO: unit test for the property 'Schema' 
+            // TODO: unit test for the property 'Schema'
         }
-        
 
     }
 

@@ -17,9 +17,12 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class Contact :  IEquatable<Contact>
     { 
-    
+
+        /// <summary>
+        /// Gets or Sets MediaType
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum MediaTypeEnum {
+                public enum MediaTypeEnum {
             
             [EnumMember(Value = "PHONE")]
             Phone,
@@ -30,9 +33,13 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "SMS")]
             Sms
         }
-    
+
+
+        /// <summary>
+        /// Gets or Sets Type
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum TypeEnum {
+                public enum TypeEnum {
             
             [EnumMember(Value = "PRIMARY")]
             Primary,
@@ -49,6 +56,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "MAIN")]
             Main
         }
+
         
         /// <summary>
         /// Gets or Sets MediaType
@@ -76,7 +84,7 @@ namespace ININ.PureCloudApi.Model
             this.Type = Type;
             
         }
-        
+
     
         /// <summary>
         /// Email address or phone number for this contact type
@@ -104,11 +112,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Display: ").Append(Display).Append("\n");
             sb.Append("  MediaType: ").Append(MediaType).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -174,19 +181,14 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Address != null)
                     hash = hash * 59 + this.Address.GetHashCode();
-                
                 if (this.Display != null)
                     hash = hash * 59 + this.Display.GetHashCode();
-                
                 if (this.MediaType != null)
                     hash = hash * 59 + this.MediaType.GetHashCode();
-                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
                 return hash;
             }
         }

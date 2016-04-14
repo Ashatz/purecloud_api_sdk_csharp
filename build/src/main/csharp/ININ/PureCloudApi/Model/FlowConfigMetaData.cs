@@ -17,9 +17,13 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class FlowConfigMetaData :  IEquatable<FlowConfigMetaData>
     { 
-    
+
+        /// <summary>
+        /// Usability of this flow definition. (output only)
+        /// </summary>
+        /// <value>Usability of this flow definition. (output only)</value>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum ConfigStateEnum {
+                public enum ConfigStateEnum {
             
             [EnumMember(Value = "UNKNOWN")]
             Unknown,
@@ -33,9 +37,14 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "DELETED")]
             Deleted
         }
-    
+
+
+        /// <summary>
+        /// Type of flow this definition describes
+        /// </summary>
+        /// <value>Type of flow this definition describes</value>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum FlowTypeEnum {
+                public enum FlowTypeEnum {
             
             [EnumMember(Value = "UNKNOWN")]
             Unknown,
@@ -43,6 +52,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "WORKFLOW")]
             Workflow
         }
+
         
         /// <summary>
         /// Usability of this flow definition. (output only)
@@ -100,7 +110,7 @@ namespace ININ.PureCloudApi.Model
             }
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -183,11 +193,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  HasDraft: ").Append(HasDraft).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -288,40 +297,28 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.ConfigState != null)
                     hash = hash * 59 + this.ConfigState.GetHashCode();
-                
                 if (this.FlowType != null)
                     hash = hash * 59 + this.FlowType.GetHashCode();
-                
                 if (this.LockedByUser != null)
                     hash = hash * 59 + this.LockedByUser.GetHashCode();
-                
                 if (this.NewestPublishedVersion != null)
                     hash = hash * 59 + this.NewestPublishedVersion.GetHashCode();
-                
                 if (this.NewestVersion != null)
                     hash = hash * 59 + this.NewestVersion.GetHashCode();
-                
                 if (this.AssociatedWorkspaces != null)
                     hash = hash * 59 + this.AssociatedWorkspaces.GetHashCode();
-                
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
-                
                 if (this.HasDraft != null)
                     hash = hash * 59 + this.HasDraft.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 return hash;
             }
         }

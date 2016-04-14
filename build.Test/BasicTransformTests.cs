@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new BasicTransform();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of BasicTransform
@@ -50,25 +50,22 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<BasicTransform> (instance, "instance is a BasicTransform");
         }
 
-        
         /// <summary>
-        /// Test the property 'Replaces' 
+        /// Test the property 'Replaces'
         /// </summary>
         [Test]
         public void ReplacesTest()
         {
-            // TODO: unit test for the property 'Replaces' 
+            // TODO: unit test for the property 'Replaces'
         }
-        
         /// <summary>
-        /// Test the property 'EntityPath' 
+        /// Test the property 'EntityPath'
         /// </summary>
         [Test]
         public void EntityPathTest()
         {
-            // TODO: unit test for the property 'EntityPath' 
+            // TODO: unit test for the property 'EntityPath'
         }
-        
 
     }
 

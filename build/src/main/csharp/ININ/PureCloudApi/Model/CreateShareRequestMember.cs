@@ -17,9 +17,12 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class CreateShareRequestMember :  IEquatable<CreateShareRequestMember>
     { 
-    
+
+        /// <summary>
+        /// Gets or Sets MemberType
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum MemberTypeEnum {
+                public enum MemberTypeEnum {
             
             [EnumMember(Value = "USER")]
             User,
@@ -27,6 +30,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "PUBLIC")]
             Public
         }
+
         
         /// <summary>
         /// Gets or Sets MemberType
@@ -46,7 +50,7 @@ namespace ININ.PureCloudApi.Model
             this.Member = Member;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets Member
@@ -64,11 +68,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class CreateShareRequestMember {\n");
             sb.Append("  MemberType: ").Append(MemberType).Append("\n");
             sb.Append("  Member: ").Append(Member).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -124,13 +127,10 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.MemberType != null)
                     hash = hash * 59 + this.MemberType.GetHashCode();
-                
                 if (this.Member != null)
                     hash = hash * 59 + this.Member.GetHashCode();
-                
                 return hash;
             }
         }

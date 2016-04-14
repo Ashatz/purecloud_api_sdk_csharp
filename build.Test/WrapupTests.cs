@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new Wrapup();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of Wrapup
@@ -50,70 +50,62 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<Wrapup> (instance, "instance is a Wrapup");
         }
 
-        
         /// <summary>
-        /// Test the property 'Code' 
+        /// Test the property 'Code'
         /// </summary>
         [Test]
         public void CodeTest()
         {
-            // TODO: unit test for the property 'Code' 
+            // TODO: unit test for the property 'Code'
         }
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'Notes' 
+        /// Test the property 'Notes'
         /// </summary>
         [Test]
         public void NotesTest()
         {
-            // TODO: unit test for the property 'Notes' 
+            // TODO: unit test for the property 'Notes'
         }
-        
         /// <summary>
-        /// Test the property 'Tags' 
+        /// Test the property 'Tags'
         /// </summary>
         [Test]
         public void TagsTest()
         {
-            // TODO: unit test for the property 'Tags' 
+            // TODO: unit test for the property 'Tags'
         }
-        
         /// <summary>
-        /// Test the property 'DurationSeconds' 
+        /// Test the property 'DurationSeconds'
         /// </summary>
         [Test]
         public void DurationSecondsTest()
         {
-            // TODO: unit test for the property 'DurationSeconds' 
+            // TODO: unit test for the property 'DurationSeconds'
         }
-        
         /// <summary>
-        /// Test the property 'EndTime' 
+        /// Test the property 'EndTime'
         /// </summary>
         [Test]
         public void EndTimeTest()
         {
-            // TODO: unit test for the property 'EndTime' 
+            // TODO: unit test for the property 'EndTime'
         }
-        
         /// <summary>
-        /// Test the property 'Provisional' 
+        /// Test the property 'Provisional'
         /// </summary>
         [Test]
         public void ProvisionalTest()
         {
-            // TODO: unit test for the property 'Provisional' 
+            // TODO: unit test for the property 'Provisional'
         }
-        
 
     }
 

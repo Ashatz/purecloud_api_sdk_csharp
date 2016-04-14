@@ -40,7 +40,7 @@ namespace ININ.PureCloudApi.Model
             this.DateMax = DateMax;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets Count
@@ -101,11 +101,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  StdDeviation: ").Append(StdDeviation).Append("\n");
             sb.Append("  DateMin: ").Append(DateMin).Append("\n");
             sb.Append("  DateMax: ").Append(DateMax).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -186,28 +185,20 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Count != null)
                     hash = hash * 59 + this.Count.GetHashCode();
-                
                 if (this.Min != null)
                     hash = hash * 59 + this.Min.GetHashCode();
-                
                 if (this.Max != null)
                     hash = hash * 59 + this.Max.GetHashCode();
-                
                 if (this.Mean != null)
                     hash = hash * 59 + this.Mean.GetHashCode();
-                
                 if (this.StdDeviation != null)
                     hash = hash * 59 + this.StdDeviation.GetHashCode();
-                
                 if (this.DateMin != null)
                     hash = hash * 59 + this.DateMin.GetHashCode();
-                
                 if (this.DateMax != null)
                     hash = hash * 59 + this.DateMax.GetHashCode();
-                
                 return hash;
             }
         }

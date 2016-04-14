@@ -130,7 +130,7 @@ namespace ININ.PureCloudApi.Model
             }
             
         }
-        
+
     
         /// <summary>
         /// Behaves like one clause in a SQL WHERE. Specifies the date and time range of data being queried. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss
@@ -168,9 +168,9 @@ namespace ININ.PureCloudApi.Model
         public List<string> Metrics { get; set; }
     
         /// <summary>
-        /// Flattens any multivalued dimensions used in response groups (e.g. ['a','b','c']->'a,b,c')
+        /// Flattens any multivalued dimensions used in response groups (e.g. [&#39;a&#39;,&#39;b&#39;,&#39;c&#39;]-&gt;&#39;a,b,c&#39;)
         /// </summary>
-        /// <value>Flattens any multivalued dimensions used in response groups (e.g. ['a','b','c']->'a,b,c')</value>
+        /// <value>Flattens any multivalued dimensions used in response groups (e.g. [&#39;a&#39;,&#39;b&#39;,&#39;c&#39;]-&gt;&#39;a,b,c&#39;)</value>
         [DataMember(Name="flattenMultivaluedDimensions", EmitDefaultValue=false)]
         public bool? FlattenMultivaluedDimensions { get; set; }
     
@@ -188,11 +188,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Filter: ").Append(Filter).Append("\n");
             sb.Append("  Metrics: ").Append(Metrics).Append("\n");
             sb.Append("  FlattenMultivaluedDimensions: ").Append(FlattenMultivaluedDimensions).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -268,25 +267,18 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Interval != null)
                     hash = hash * 59 + this.Interval.GetHashCode();
-                
                 if (this.Granularity != null)
                     hash = hash * 59 + this.Granularity.GetHashCode();
-                
                 if (this.GroupBy != null)
                     hash = hash * 59 + this.GroupBy.GetHashCode();
-                
                 if (this.Filter != null)
                     hash = hash * 59 + this.Filter.GetHashCode();
-                
                 if (this.Metrics != null)
                     hash = hash * 59 + this.Metrics.GetHashCode();
-                
                 if (this.FlattenMultivaluedDimensions != null)
                     hash = hash * 59 + this.FlattenMultivaluedDimensions.GetHashCode();
-                
                 return hash;
             }
         }

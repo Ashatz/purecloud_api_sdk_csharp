@@ -17,9 +17,12 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class EdgeLine :  IEquatable<EdgeLine>
     { 
-    
+
+        /// <summary>
+        /// Gets or Sets LineType
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum LineTypeEnum {
+                public enum LineTypeEnum {
             
             [EnumMember(Value = "TIE")]
             Tie,
@@ -33,6 +36,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "STATION")]
             Station
         }
+
         
         /// <summary>
         /// Gets or Sets LineType
@@ -66,7 +70,7 @@ namespace ININ.PureCloudApi.Model
             this.LogicalInterfaceId = LogicalInterfaceId;
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -149,11 +153,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  IpAddress: ").Append(IpAddress).Append("\n");
             sb.Append("  LogicalInterfaceId: ").Append(LogicalInterfaceId).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -254,40 +257,28 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.Schema != null)
                     hash = hash * 59 + this.Schema.GetHashCode();
-                
                 if (this.Properties != null)
                     hash = hash * 59 + this.Properties.GetHashCode();
-                
                 if (this.Edge != null)
                     hash = hash * 59 + this.Edge.GetHashCode();
-                
                 if (this.EdgeGroup != null)
                     hash = hash * 59 + this.EdgeGroup.GetHashCode();
-                
                 if (this.LineType != null)
                     hash = hash * 59 + this.LineType.GetHashCode();
-                
                 if (this.Endpoint != null)
                     hash = hash * 59 + this.Endpoint.GetHashCode();
-                
                 if (this.IpAddress != null)
                     hash = hash * 59 + this.IpAddress.GetHashCode();
-                
                 if (this.LogicalInterfaceId != null)
                     hash = hash * 59 + this.LogicalInterfaceId.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 return hash;
             }
         }

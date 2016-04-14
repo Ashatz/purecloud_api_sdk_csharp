@@ -61,9 +61,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'DeleteIdAssociateduser'
             string id = null; // TODO: replace null with proper value
-            
             var response = instance.DeleteIdAssociateduser(id);
-            Assert.IsInstanceOf<string> (response, "response is string"); 
+            Assert.IsInstanceOf<string> (response, "response is string");
         }
         
         /// <summary>
@@ -74,9 +73,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'GetId'
             string id = null; // TODO: replace null with proper value
-            
             var response = instance.GetId(id);
-            Assert.IsInstanceOf<Station> (response, "response is Station"); 
+            Assert.IsInstanceOf<Station> (response, "response is Station");
         }
         
         /// <summary>
@@ -90,9 +88,8 @@ namespace ININ.PureCloudApi.Test
             int? pageNumber = null; // TODO: replace null with proper value
             string sortBy = null; // TODO: replace null with proper value
             string name = null; // TODO: replace null with proper value
-            
             var response = instance.GetStations(pageSize, pageNumber, sortBy, name);
-            Assert.IsInstanceOf<StationEntityListing> (response, "response is StationEntityListing"); 
+            Assert.IsInstanceOf<StationEntityListing> (response, "response is StationEntityListing");
         }
         
     }

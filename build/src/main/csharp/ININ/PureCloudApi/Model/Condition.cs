@@ -17,9 +17,12 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class Condition :  IEquatable<Condition>
     { 
-    
+
+        /// <summary>
+        /// Gets or Sets ValueType
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum ValueTypeEnum {
+                public enum ValueTypeEnum {
             
             [EnumMember(Value = "STRING")]
             String,
@@ -33,9 +36,13 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "PERIOD")]
             Period
         }
-    
+
+
+        /// <summary>
+        /// Gets or Sets _Operator
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum _OperatorEnum {
+                public enum _OperatorEnum {
             
             [EnumMember(Value = "EQUALS")]
             Equals,
@@ -67,6 +74,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "AFTER")]
             After
         }
+
         
         /// <summary>
         /// Gets or Sets ValueType
@@ -110,7 +118,7 @@ namespace ININ.PureCloudApi.Model
             this.Codes = Codes;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets Type
@@ -157,11 +165,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  ValueType: ").Append(ValueType).Append("\n");
             sb.Append("  _Operator: ").Append(_Operator).Append("\n");
             sb.Append("  Codes: ").Append(Codes).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -242,28 +249,20 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
                 if (this.Inverted != null)
                     hash = hash * 59 + this.Inverted.GetHashCode();
-                
                 if (this.AttributeName != null)
                     hash = hash * 59 + this.AttributeName.GetHashCode();
-                
                 if (this.Value != null)
                     hash = hash * 59 + this.Value.GetHashCode();
-                
                 if (this.ValueType != null)
                     hash = hash * 59 + this.ValueType.GetHashCode();
-                
                 if (this._Operator != null)
                     hash = hash * 59 + this._Operator.GetHashCode();
-                
                 if (this.Codes != null)
                     hash = hash * 59 + this.Codes.GetHashCode();
-                
                 return hash;
             }
         }

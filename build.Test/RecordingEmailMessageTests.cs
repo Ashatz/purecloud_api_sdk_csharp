@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new RecordingEmailMessage();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of RecordingEmailMessage
@@ -50,97 +50,86 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<RecordingEmailMessage> (instance, "instance is a RecordingEmailMessage");
         }
 
-        
         /// <summary>
-        /// Test the property 'HtmlBody' 
+        /// Test the property 'HtmlBody'
         /// </summary>
         [Test]
         public void HtmlBodyTest()
         {
-            // TODO: unit test for the property 'HtmlBody' 
+            // TODO: unit test for the property 'HtmlBody'
         }
-        
         /// <summary>
-        /// Test the property 'TextBody' 
+        /// Test the property 'TextBody'
         /// </summary>
         [Test]
         public void TextBodyTest()
         {
-            // TODO: unit test for the property 'TextBody' 
+            // TODO: unit test for the property 'TextBody'
         }
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'To' 
+        /// Test the property 'To'
         /// </summary>
         [Test]
         public void ToTest()
         {
-            // TODO: unit test for the property 'To' 
+            // TODO: unit test for the property 'To'
         }
-        
         /// <summary>
-        /// Test the property 'Cc' 
+        /// Test the property 'Cc'
         /// </summary>
         [Test]
         public void CcTest()
         {
-            // TODO: unit test for the property 'Cc' 
+            // TODO: unit test for the property 'Cc'
         }
-        
         /// <summary>
-        /// Test the property 'Bcc' 
+        /// Test the property 'Bcc'
         /// </summary>
         [Test]
         public void BccTest()
         {
-            // TODO: unit test for the property 'Bcc' 
+            // TODO: unit test for the property 'Bcc'
         }
-        
         /// <summary>
-        /// Test the property 'From' 
+        /// Test the property 'From'
         /// </summary>
         [Test]
         public void FromTest()
         {
-            // TODO: unit test for the property 'From' 
+            // TODO: unit test for the property 'From'
         }
-        
         /// <summary>
-        /// Test the property 'Subject' 
+        /// Test the property 'Subject'
         /// </summary>
         [Test]
         public void SubjectTest()
         {
-            // TODO: unit test for the property 'Subject' 
+            // TODO: unit test for the property 'Subject'
         }
-        
         /// <summary>
-        /// Test the property 'Attachments' 
+        /// Test the property 'Attachments'
         /// </summary>
         [Test]
         public void AttachmentsTest()
         {
-            // TODO: unit test for the property 'Attachments' 
+            // TODO: unit test for the property 'Attachments'
         }
-        
         /// <summary>
-        /// Test the property 'Time' 
+        /// Test the property 'Time'
         /// </summary>
         [Test]
         public void TimeTest()
         {
-            // TODO: unit test for the property 'Time' 
+            // TODO: unit test for the property 'Time'
         }
-        
 
     }
 

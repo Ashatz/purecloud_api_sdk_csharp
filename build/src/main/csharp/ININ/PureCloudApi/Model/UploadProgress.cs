@@ -26,7 +26,7 @@ namespace ININ.PureCloudApi.Model
         {
             
         }
-        
+
     
         /// <summary>
         /// Carrier id associated with the ratesheet that was uploaded.
@@ -92,11 +92,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Filetype: ").Append(Filetype).Append("\n");
             sb.Append("  Created: ").Append(Created).Append("\n");
             sb.Append("  Updated: ").Append(Updated).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -177,28 +176,20 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.CarrierId != null)
                     hash = hash * 59 + this.CarrierId.GetHashCode();
-                
                 if (this.SchemaName != null)
                     hash = hash * 59 + this.SchemaName.GetHashCode();
-                
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
-                
                 if (this.Filename != null)
                     hash = hash * 59 + this.Filename.GetHashCode();
-                
                 if (this.Filetype != null)
                     hash = hash * 59 + this.Filetype.GetHashCode();
-                
                 if (this.Created != null)
                     hash = hash * 59 + this.Created.GetHashCode();
-                
                 if (this.Updated != null)
                     hash = hash * 59 + this.Updated.GetHashCode();
-                
                 return hash;
             }
         }

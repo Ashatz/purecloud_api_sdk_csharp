@@ -30,7 +30,7 @@ namespace ININ.PureCloudApi.Model
             this.DisplayName = DisplayName;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets Id
@@ -54,11 +54,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class WorkItemCommand {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  DisplayName: ").Append(DisplayName).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -114,13 +113,10 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.DisplayName != null)
                     hash = hash * 59 + this.DisplayName.GetHashCode();
-                
                 return hash;
             }
         }

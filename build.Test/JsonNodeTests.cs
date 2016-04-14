@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new JsonNode();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of JsonNode
@@ -50,196 +50,174 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<JsonNode> (instance, "instance is a JsonNode");
         }
 
-        
         /// <summary>
-        /// Test the property 'NodeType' 
+        /// Test the property 'NodeType'
         /// </summary>
         [Test]
         public void NodeTypeTest()
         {
-            // TODO: unit test for the property 'NodeType' 
+            // TODO: unit test for the property 'NodeType'
         }
-        
         /// <summary>
-        /// Test the property '_Float' 
+        /// Test the property '_Float'
         /// </summary>
         [Test]
         public void _FloatTest()
         {
-            // TODO: unit test for the property '_Float' 
+            // TODO: unit test for the property '_Float'
         }
-        
         /// <summary>
-        /// Test the property '_Object' 
+        /// Test the property '_Object'
         /// </summary>
         [Test]
         public void _ObjectTest()
         {
-            // TODO: unit test for the property '_Object' 
+            // TODO: unit test for the property '_Object'
         }
-        
         /// <summary>
-        /// Test the property 'Boolean' 
+        /// Test the property 'Boolean'
         /// </summary>
         [Test]
         public void BooleanTest()
         {
-            // TODO: unit test for the property 'Boolean' 
+            // TODO: unit test for the property 'Boolean'
         }
-        
         /// <summary>
-        /// Test the property 'Number' 
+        /// Test the property 'Number'
         /// </summary>
         [Test]
         public void NumberTest()
         {
-            // TODO: unit test for the property 'Number' 
+            // TODO: unit test for the property 'Number'
         }
-        
         /// <summary>
-        /// Test the property 'ContainerNode' 
+        /// Test the property 'ContainerNode'
         /// </summary>
         [Test]
         public void ContainerNodeTest()
         {
-            // TODO: unit test for the property 'ContainerNode' 
+            // TODO: unit test for the property 'ContainerNode'
         }
-        
         /// <summary>
-        /// Test the property 'MissingNode' 
+        /// Test the property 'MissingNode'
         /// </summary>
         [Test]
         public void MissingNodeTest()
         {
-            // TODO: unit test for the property 'MissingNode' 
+            // TODO: unit test for the property 'MissingNode'
         }
-        
         /// <summary>
-        /// Test the property 'Pojo' 
+        /// Test the property 'Pojo'
         /// </summary>
         [Test]
         public void PojoTest()
         {
-            // TODO: unit test for the property 'Pojo' 
+            // TODO: unit test for the property 'Pojo'
         }
-        
         /// <summary>
-        /// Test the property 'IntegralNumber' 
+        /// Test the property 'IntegralNumber'
         /// </summary>
         [Test]
         public void IntegralNumberTest()
         {
-            // TODO: unit test for the property 'IntegralNumber' 
+            // TODO: unit test for the property 'IntegralNumber'
         }
-        
         /// <summary>
-        /// Test the property 'FloatingPointNumber' 
+        /// Test the property 'FloatingPointNumber'
         /// </summary>
         [Test]
         public void FloatingPointNumberTest()
         {
-            // TODO: unit test for the property 'FloatingPointNumber' 
+            // TODO: unit test for the property 'FloatingPointNumber'
         }
-        
         /// <summary>
-        /// Test the property '_Short' 
+        /// Test the property '_Short'
         /// </summary>
         [Test]
         public void _ShortTest()
         {
-            // TODO: unit test for the property '_Short' 
+            // TODO: unit test for the property '_Short'
         }
-        
         /// <summary>
-        /// Test the property '_Int' 
+        /// Test the property '_Int'
         /// </summary>
         [Test]
         public void _IntTest()
         {
-            // TODO: unit test for the property '_Int' 
+            // TODO: unit test for the property '_Int'
         }
-        
         /// <summary>
-        /// Test the property '_Long' 
+        /// Test the property '_Long'
         /// </summary>
         [Test]
         public void _LongTest()
         {
-            // TODO: unit test for the property '_Long' 
+            // TODO: unit test for the property '_Long'
         }
-        
         /// <summary>
-        /// Test the property '_Double' 
+        /// Test the property '_Double'
         /// </summary>
         [Test]
         public void _DoubleTest()
         {
-            // TODO: unit test for the property '_Double' 
+            // TODO: unit test for the property '_Double'
         }
-        
         /// <summary>
-        /// Test the property 'BigDecimal' 
+        /// Test the property 'BigDecimal'
         /// </summary>
         [Test]
         public void BigDecimalTest()
         {
-            // TODO: unit test for the property 'BigDecimal' 
+            // TODO: unit test for the property 'BigDecimal'
         }
-        
         /// <summary>
-        /// Test the property 'BigInteger' 
+        /// Test the property 'BigInteger'
         /// </summary>
         [Test]
         public void BigIntegerTest()
         {
-            // TODO: unit test for the property 'BigInteger' 
+            // TODO: unit test for the property 'BigInteger'
         }
-        
         /// <summary>
-        /// Test the property 'Textual' 
+        /// Test the property 'Textual'
         /// </summary>
         [Test]
         public void TextualTest()
         {
-            // TODO: unit test for the property 'Textual' 
+            // TODO: unit test for the property 'Textual'
         }
-        
         /// <summary>
-        /// Test the property 'Binary' 
+        /// Test the property 'Binary'
         /// </summary>
         [Test]
         public void BinaryTest()
         {
-            // TODO: unit test for the property 'Binary' 
+            // TODO: unit test for the property 'Binary'
         }
-        
         /// <summary>
-        /// Test the property 'ValueNode' 
+        /// Test the property 'ValueNode'
         /// </summary>
         [Test]
         public void ValueNodeTest()
         {
-            // TODO: unit test for the property 'ValueNode' 
+            // TODO: unit test for the property 'ValueNode'
         }
-        
         /// <summary>
-        /// Test the property 'Array' 
+        /// Test the property 'Array'
         /// </summary>
         [Test]
         public void ArrayTest()
         {
-            // TODO: unit test for the property 'Array' 
+            // TODO: unit test for the property 'Array'
         }
-        
         /// <summary>
-        /// Test the property '_Null' 
+        /// Test the property '_Null'
         /// </summary>
         [Test]
         public void _NullTest()
         {
-            // TODO: unit test for the property '_Null' 
+            // TODO: unit test for the property '_Null'
         }
-        
 
     }
 

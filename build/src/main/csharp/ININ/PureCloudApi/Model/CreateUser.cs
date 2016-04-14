@@ -64,7 +64,7 @@ namespace ININ.PureCloudApi.Model
             this.Title = Title;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets Name
@@ -79,9 +79,9 @@ namespace ININ.PureCloudApi.Model
         public string Department { get; set; }
     
         /// <summary>
-        /// User's email and username
+        /// User&#39;s email and username
         /// </summary>
-        /// <value>User's email and username</value>
+        /// <value>User&#39;s email and username</value>
         [DataMember(Name="email", EmitDefaultValue=false)]
         public string Email { get; set; }
     
@@ -99,9 +99,9 @@ namespace ININ.PureCloudApi.Model
         public string Title { get; set; }
     
         /// <summary>
-        /// User's password
+        /// User&#39;s password
         /// </summary>
-        /// <value>User's password</value>
+        /// <value>User&#39;s password</value>
         [DataMember(Name="password", EmitDefaultValue=false)]
         public string Password { get; set; }
     
@@ -127,11 +127,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Title: ").Append(Title).Append("\n");
             sb.Append("  Password: ").Append(Password).Append("\n");
             sb.Append("  Version: ").Append(Version).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -212,28 +211,20 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.Department != null)
                     hash = hash * 59 + this.Department.GetHashCode();
-                
                 if (this.Email != null)
                     hash = hash * 59 + this.Email.GetHashCode();
-                
                 if (this.Addresses != null)
                     hash = hash * 59 + this.Addresses.GetHashCode();
-                
                 if (this.Title != null)
                     hash = hash * 59 + this.Title.GetHashCode();
-                
                 if (this.Password != null)
                     hash = hash * 59 + this.Password.GetHashCode();
-                
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
-                
                 return hash;
             }
         }

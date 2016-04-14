@@ -17,9 +17,12 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class AnalyticsQueryClause :  IEquatable<AnalyticsQueryClause>
     { 
-    
+
+        /// <summary>
+        /// Gets or Sets Type
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum TypeEnum {
+                public enum TypeEnum {
             
             [EnumMember(Value = "and")]
             And,
@@ -27,6 +30,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "or")]
             Or
         }
+
         
         /// <summary>
         /// Gets or Sets Type
@@ -46,7 +50,7 @@ namespace ININ.PureCloudApi.Model
             this.Predicates = Predicates;
             
         }
-        
+
     
         /// <summary>
         /// Like a three-word sentence: (attribute-name) (operator) (target-value). These can be one of three types: dimension, property, metric.
@@ -65,11 +69,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class AnalyticsQueryClause {\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Predicates: ").Append(Predicates).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -125,13 +128,10 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
                 if (this.Predicates != null)
                     hash = hash * 59 + this.Predicates.GetHashCode();
-                
                 return hash;
             }
         }

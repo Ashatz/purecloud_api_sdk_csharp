@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new QuestionScore();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of QuestionScore
@@ -50,61 +50,54 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<QuestionScore> (instance, "instance is a QuestionScore");
         }
 
-        
         /// <summary>
-        /// Test the property 'QuestionId' 
+        /// Test the property 'QuestionId'
         /// </summary>
         [Test]
         public void QuestionIdTest()
         {
-            // TODO: unit test for the property 'QuestionId' 
+            // TODO: unit test for the property 'QuestionId'
         }
-        
         /// <summary>
-        /// Test the property 'AnswerId' 
+        /// Test the property 'AnswerId'
         /// </summary>
         [Test]
         public void AnswerIdTest()
         {
-            // TODO: unit test for the property 'AnswerId' 
+            // TODO: unit test for the property 'AnswerId'
         }
-        
         /// <summary>
-        /// Test the property 'Score' 
+        /// Test the property 'Score'
         /// </summary>
         [Test]
         public void ScoreTest()
         {
-            // TODO: unit test for the property 'Score' 
+            // TODO: unit test for the property 'Score'
         }
-        
         /// <summary>
-        /// Test the property 'MarkedNA' 
+        /// Test the property 'MarkedNA'
         /// </summary>
         [Test]
         public void MarkedNATest()
         {
-            // TODO: unit test for the property 'MarkedNA' 
+            // TODO: unit test for the property 'MarkedNA'
         }
-        
         /// <summary>
-        /// Test the property 'FailedKillQuestion' 
+        /// Test the property 'FailedKillQuestion'
         /// </summary>
         [Test]
         public void FailedKillQuestionTest()
         {
-            // TODO: unit test for the property 'FailedKillQuestion' 
+            // TODO: unit test for the property 'FailedKillQuestion'
         }
-        
         /// <summary>
-        /// Test the property 'Comments' 
+        /// Test the property 'Comments'
         /// </summary>
         [Test]
         public void CommentsTest()
         {
-            // TODO: unit test for the property 'Comments' 
+            // TODO: unit test for the property 'Comments'
         }
-        
 
     }
 

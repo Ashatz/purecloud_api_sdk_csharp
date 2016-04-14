@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new AutomateQueue();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of AutomateQueue
@@ -50,70 +50,62 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<AutomateQueue> (instance, "instance is a AutomateQueue");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'Description' 
+        /// Test the property 'Description'
         /// </summary>
         [Test]
         public void DescriptionTest()
         {
-            // TODO: unit test for the property 'Description' 
+            // TODO: unit test for the property 'Description'
         }
-        
         /// <summary>
-        /// Test the property 'Members' 
+        /// Test the property 'Members'
         /// </summary>
         [Test]
         public void MembersTest()
         {
-            // TODO: unit test for the property 'Members' 
+            // TODO: unit test for the property 'Members'
         }
-        
         /// <summary>
-        /// Test the property 'LastUpdateTime' 
+        /// Test the property 'LastUpdateTime'
         /// </summary>
         [Test]
         public void LastUpdateTimeTest()
         {
-            // TODO: unit test for the property 'LastUpdateTime' 
+            // TODO: unit test for the property 'LastUpdateTime'
         }
-        
         /// <summary>
-        /// Test the property 'LastUpdateUser' 
+        /// Test the property 'LastUpdateUser'
         /// </summary>
         [Test]
         public void LastUpdateUserTest()
         {
-            // TODO: unit test for the property 'LastUpdateUser' 
+            // TODO: unit test for the property 'LastUpdateUser'
         }
-        
         /// <summary>
-        /// Test the property 'SelfUri' 
+        /// Test the property 'SelfUri'
         /// </summary>
         [Test]
         public void SelfUriTest()
         {
-            // TODO: unit test for the property 'SelfUri' 
+            // TODO: unit test for the property 'SelfUri'
         }
-        
 
     }
 

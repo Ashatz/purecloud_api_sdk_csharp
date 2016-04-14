@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new IndexedTransform();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of IndexedTransform
@@ -50,43 +50,38 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<IndexedTransform> (instance, "instance is a IndexedTransform");
         }
 
-        
         /// <summary>
-        /// Test the property 'Replaces' 
+        /// Test the property 'Replaces'
         /// </summary>
         [Test]
         public void ReplacesTest()
         {
-            // TODO: unit test for the property 'Replaces' 
+            // TODO: unit test for the property 'Replaces'
         }
-        
         /// <summary>
-        /// Test the property 'EntityPath' 
+        /// Test the property 'EntityPath'
         /// </summary>
         [Test]
         public void EntityPathTest()
         {
-            // TODO: unit test for the property 'EntityPath' 
+            // TODO: unit test for the property 'EntityPath'
         }
-        
         /// <summary>
-        /// Test the property 'Index' 
+        /// Test the property 'Index'
         /// </summary>
         [Test]
         public void IndexTest()
         {
-            // TODO: unit test for the property 'Index' 
+            // TODO: unit test for the property 'Index'
         }
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
 
     }
 

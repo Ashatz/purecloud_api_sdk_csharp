@@ -30,7 +30,7 @@ namespace ININ.PureCloudApi.Model
             this.PageNumber = PageNumber;
             
         }
-        
+
     
         /// <summary>
         /// How many results per page
@@ -56,11 +56,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class PagingSpec {\n");
             sb.Append("  PageSize: ").Append(PageSize).Append("\n");
             sb.Append("  PageNumber: ").Append(PageNumber).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -116,13 +115,10 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.PageSize != null)
                     hash = hash * 59 + this.PageSize.GetHashCode();
-                
                 if (this.PageNumber != null)
                     hash = hash * 59 + this.PageNumber.GetHashCode();
-                
                 return hash;
             }
         }

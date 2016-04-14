@@ -40,7 +40,7 @@ namespace ININ.PureCloudApi.Model
             this.Workspace = Workspace;
             
         }
-        
+
     
         /// <summary>
         /// For TERM facets this will contain the value of the term that was found userid, docid, etc.
@@ -101,11 +101,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Queue: ").Append(Queue).Append("\n");
             sb.Append("  FlowConfigId: ").Append(FlowConfigId).Append("\n");
             sb.Append("  Workspace: ").Append(Workspace).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -186,28 +185,20 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.Count != null)
                     hash = hash * 59 + this.Count.GetHashCode();
-                
                 if (this.Document != null)
                     hash = hash * 59 + this.Document.GetHashCode();
-                
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();
-                
                 if (this.Queue != null)
                     hash = hash * 59 + this.Queue.GetHashCode();
-                
                 if (this.FlowConfigId != null)
                     hash = hash * 59 + this.FlowConfigId.GetHashCode();
-                
                 if (this.Workspace != null)
                     hash = hash * 59 + this.Workspace.GetHashCode();
-                
                 return hash;
             }
         }

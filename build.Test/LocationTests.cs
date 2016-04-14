@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new Location();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of Location
@@ -50,115 +50,102 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<Location> (instance, "instance is a Location");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'Address' 
+        /// Test the property 'Address'
         /// </summary>
         [Test]
         public void AddressTest()
         {
-            // TODO: unit test for the property 'Address' 
+            // TODO: unit test for the property 'Address'
         }
-        
         /// <summary>
-        /// Test the property 'AddressFields' 
+        /// Test the property 'AddressFields'
         /// </summary>
         [Test]
         public void AddressFieldsTest()
         {
-            // TODO: unit test for the property 'AddressFields' 
+            // TODO: unit test for the property 'AddressFields'
         }
-        
         /// <summary>
-        /// Test the property 'AddressVerified' 
+        /// Test the property 'AddressVerified'
         /// </summary>
         [Test]
         public void AddressVerifiedTest()
         {
-            // TODO: unit test for the property 'AddressVerified' 
+            // TODO: unit test for the property 'AddressVerified'
         }
-        
         /// <summary>
-        /// Test the property 'EmergencyNumber' 
+        /// Test the property 'EmergencyNumber'
         /// </summary>
         [Test]
         public void EmergencyNumberTest()
         {
-            // TODO: unit test for the property 'EmergencyNumber' 
+            // TODO: unit test for the property 'EmergencyNumber'
         }
-        
         /// <summary>
-        /// Test the property 'Notes' 
+        /// Test the property 'Notes'
         /// </summary>
         [Test]
         public void NotesTest()
         {
-            // TODO: unit test for the property 'Notes' 
+            // TODO: unit test for the property 'Notes'
         }
-        
         /// <summary>
-        /// Test the property 'Path' 
+        /// Test the property 'Path'
         /// </summary>
         [Test]
         public void PathTest()
         {
-            // TODO: unit test for the property 'Path' 
+            // TODO: unit test for the property 'Path'
         }
-        
         /// <summary>
-        /// Test the property 'State' 
+        /// Test the property 'State'
         /// </summary>
         [Test]
         public void StateTest()
         {
-            // TODO: unit test for the property 'State' 
+            // TODO: unit test for the property 'State'
         }
-        
         /// <summary>
-        /// Test the property 'SublocationOrder' 
+        /// Test the property 'SublocationOrder'
         /// </summary>
         [Test]
         public void SublocationOrderTest()
         {
-            // TODO: unit test for the property 'SublocationOrder' 
+            // TODO: unit test for the property 'SublocationOrder'
         }
-        
         /// <summary>
-        /// Test the property 'Version' 
+        /// Test the property 'Version'
         /// </summary>
         [Test]
         public void VersionTest()
         {
-            // TODO: unit test for the property 'Version' 
+            // TODO: unit test for the property 'Version'
         }
-        
         /// <summary>
-        /// Test the property 'SelfUri' 
+        /// Test the property 'SelfUri'
         /// </summary>
         [Test]
         public void SelfUriTest()
         {
-            // TODO: unit test for the property 'SelfUri' 
+            // TODO: unit test for the property 'SelfUri'
         }
-        
 
     }
 

@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new DataValueInfo();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of DataValueInfo
@@ -50,16 +50,14 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<DataValueInfo> (instance, "instance is a DataValueInfo");
         }
 
-        
         /// <summary>
-        /// Test the property 'DataItems' 
+        /// Test the property 'DataItems'
         /// </summary>
         [Test]
         public void DataItemsTest()
         {
-            // TODO: unit test for the property 'DataItems' 
+            // TODO: unit test for the property 'DataItems'
         }
-        
 
     }
 

@@ -46,7 +46,7 @@ namespace ININ.PureCloudApi.Model
             this.CountryCode = CountryCode;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets Display
@@ -98,11 +98,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  UserInput: ").Append(UserInput).Append("\n");
             sb.Append("  E164: ").Append(E164).Append("\n");
             sb.Append("  CountryCode: ").Append(CountryCode).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -178,25 +177,18 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Display != null)
                     hash = hash * 59 + this.Display.GetHashCode();
-                
                 if (this.Extension != null)
                     hash = hash * 59 + this.Extension.GetHashCode();
-                
                 if (this.AcceptsSMS != null)
                     hash = hash * 59 + this.AcceptsSMS.GetHashCode();
-                
                 if (this.UserInput != null)
                     hash = hash * 59 + this.UserInput.GetHashCode();
-                
                 if (this.E164 != null)
                     hash = hash * 59 + this.E164.GetHashCode();
-                
                 if (this.CountryCode != null)
                     hash = hash * 59 + this.CountryCode.GetHashCode();
-                
                 return hash;
             }
         }

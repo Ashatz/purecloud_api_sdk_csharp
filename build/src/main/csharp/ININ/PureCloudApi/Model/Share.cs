@@ -17,16 +17,23 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class Share :  IEquatable<Share>
     { 
-    
+
+        /// <summary>
+        /// Gets or Sets SharedEntityType
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum SharedEntityTypeEnum {
+                public enum SharedEntityTypeEnum {
             
             [EnumMember(Value = "DOCUMENT")]
             Document
         }
-    
+
+
+        /// <summary>
+        /// Gets or Sets MemberType
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum MemberTypeEnum {
+                public enum MemberTypeEnum {
             
             [EnumMember(Value = "USER")]
             User,
@@ -34,6 +41,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "PUBLIC")]
             Public
         }
+
         
         /// <summary>
         /// Gets or Sets SharedEntityType
@@ -71,7 +79,7 @@ namespace ININ.PureCloudApi.Model
             this.User = User;
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -141,11 +149,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Workspace: ").Append(Workspace).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -241,37 +248,26 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.SharedEntityType != null)
                     hash = hash * 59 + this.SharedEntityType.GetHashCode();
-                
                 if (this.SharedEntity != null)
                     hash = hash * 59 + this.SharedEntity.GetHashCode();
-                
                 if (this.MemberType != null)
                     hash = hash * 59 + this.MemberType.GetHashCode();
-                
                 if (this.Member != null)
                     hash = hash * 59 + this.Member.GetHashCode();
-                
                 if (this.SharedBy != null)
                     hash = hash * 59 + this.SharedBy.GetHashCode();
-                
                 if (this.Workspace != null)
                     hash = hash * 59 + this.Workspace.GetHashCode();
-                
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 return hash;
             }
         }

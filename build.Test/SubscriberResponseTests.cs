@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new SubscriberResponse();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of SubscriberResponse
@@ -50,25 +50,22 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<SubscriberResponse> (instance, "instance is a SubscriberResponse");
         }
 
-        
         /// <summary>
-        /// Test the property 'MessageReturned' 
+        /// Test the property 'MessageReturned'
         /// </summary>
         [Test]
         public void MessageReturnedTest()
         {
-            // TODO: unit test for the property 'MessageReturned' 
+            // TODO: unit test for the property 'MessageReturned'
         }
-        
         /// <summary>
-        /// Test the property 'Status' 
+        /// Test the property 'Status'
         /// </summary>
         [Test]
         public void StatusTest()
         {
-            // TODO: unit test for the property 'Status' 
+            // TODO: unit test for the property 'Status'
         }
-        
 
     }
 

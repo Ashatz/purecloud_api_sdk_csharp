@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new QueryResults();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of QueryResults
@@ -50,25 +50,22 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<QueryResults> (instance, "instance is a QueryResults");
         }
 
-        
         /// <summary>
-        /// Test the property 'Results' 
+        /// Test the property 'Results'
         /// </summary>
         [Test]
         public void ResultsTest()
         {
-            // TODO: unit test for the property 'Results' 
+            // TODO: unit test for the property 'Results'
         }
-        
         /// <summary>
-        /// Test the property 'FacetInfo' 
+        /// Test the property 'FacetInfo'
         /// </summary>
         [Test]
         public void FacetInfoTest()
         {
-            // TODO: unit test for the property 'FacetInfo' 
+            // TODO: unit test for the property 'FacetInfo'
         }
-        
 
     }
 

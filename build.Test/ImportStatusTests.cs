@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new ImportStatus();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of ImportStatus
@@ -50,52 +50,46 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<ImportStatus> (instance, "instance is a ImportStatus");
         }
 
-        
         /// <summary>
-        /// Test the property 'State' 
+        /// Test the property 'State'
         /// </summary>
         [Test]
         public void StateTest()
         {
-            // TODO: unit test for the property 'State' 
+            // TODO: unit test for the property 'State'
         }
-        
         /// <summary>
-        /// Test the property 'TotalRecords' 
+        /// Test the property 'TotalRecords'
         /// </summary>
         [Test]
         public void TotalRecordsTest()
         {
-            // TODO: unit test for the property 'TotalRecords' 
+            // TODO: unit test for the property 'TotalRecords'
         }
-        
         /// <summary>
-        /// Test the property 'CompletedRecords' 
+        /// Test the property 'CompletedRecords'
         /// </summary>
         [Test]
         public void CompletedRecordsTest()
         {
-            // TODO: unit test for the property 'CompletedRecords' 
+            // TODO: unit test for the property 'CompletedRecords'
         }
-        
         /// <summary>
-        /// Test the property 'PercentComplete' 
+        /// Test the property 'PercentComplete'
         /// </summary>
         [Test]
         public void PercentCompleteTest()
         {
-            // TODO: unit test for the property 'PercentComplete' 
+            // TODO: unit test for the property 'PercentComplete'
         }
-        
         /// <summary>
-        /// Test the property 'FailureReason' 
+        /// Test the property 'FailureReason'
         /// </summary>
         [Test]
         public void FailureReasonTest()
         {
-            // TODO: unit test for the property 'FailureReason' 
+            // TODO: unit test for the property 'FailureReason'
         }
-        
 
     }
 

@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new Callback();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of Callback
@@ -50,142 +50,126 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<Callback> (instance, "instance is a Callback");
         }
 
-        
         /// <summary>
-        /// Test the property 'State' 
+        /// Test the property 'State'
         /// </summary>
         [Test]
         public void StateTest()
         {
-            // TODO: unit test for the property 'State' 
+            // TODO: unit test for the property 'State'
         }
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'Segments' 
+        /// Test the property 'Segments'
         /// </summary>
         [Test]
         public void SegmentsTest()
         {
-            // TODO: unit test for the property 'Segments' 
+            // TODO: unit test for the property 'Segments'
         }
-        
         /// <summary>
-        /// Test the property 'Direction' 
+        /// Test the property 'Direction'
         /// </summary>
         [Test]
         public void DirectionTest()
         {
-            // TODO: unit test for the property 'Direction' 
+            // TODO: unit test for the property 'Direction'
         }
-        
         /// <summary>
-        /// Test the property 'Held' 
+        /// Test the property 'Held'
         /// </summary>
         [Test]
         public void HeldTest()
         {
-            // TODO: unit test for the property 'Held' 
+            // TODO: unit test for the property 'Held'
         }
-        
         /// <summary>
-        /// Test the property 'DisconnectType' 
+        /// Test the property 'DisconnectType'
         /// </summary>
         [Test]
         public void DisconnectTypeTest()
         {
-            // TODO: unit test for the property 'DisconnectType' 
+            // TODO: unit test for the property 'DisconnectType'
         }
-        
         /// <summary>
-        /// Test the property 'StartHoldTime' 
+        /// Test the property 'StartHoldTime'
         /// </summary>
         [Test]
         public void StartHoldTimeTest()
         {
-            // TODO: unit test for the property 'StartHoldTime' 
+            // TODO: unit test for the property 'StartHoldTime'
         }
-        
         /// <summary>
-        /// Test the property 'DialerPreview' 
+        /// Test the property 'DialerPreview'
         /// </summary>
         [Test]
         public void DialerPreviewTest()
         {
-            // TODO: unit test for the property 'DialerPreview' 
+            // TODO: unit test for the property 'DialerPreview'
         }
-        
         /// <summary>
-        /// Test the property 'CallbackNumbers' 
+        /// Test the property 'CallbackNumbers'
         /// </summary>
         [Test]
         public void CallbackNumbersTest()
         {
-            // TODO: unit test for the property 'CallbackNumbers' 
+            // TODO: unit test for the property 'CallbackNumbers'
         }
-        
         /// <summary>
-        /// Test the property 'CallbackUserName' 
+        /// Test the property 'CallbackUserName'
         /// </summary>
         [Test]
         public void CallbackUserNameTest()
         {
-            // TODO: unit test for the property 'CallbackUserName' 
+            // TODO: unit test for the property 'CallbackUserName'
         }
-        
         /// <summary>
-        /// Test the property 'ScriptId' 
+        /// Test the property 'ScriptId'
         /// </summary>
         [Test]
         public void ScriptIdTest()
         {
-            // TODO: unit test for the property 'ScriptId' 
+            // TODO: unit test for the property 'ScriptId'
         }
-        
         /// <summary>
-        /// Test the property 'SkipEnabled' 
+        /// Test the property 'SkipEnabled'
         /// </summary>
         [Test]
         public void SkipEnabledTest()
         {
-            // TODO: unit test for the property 'SkipEnabled' 
+            // TODO: unit test for the property 'SkipEnabled'
         }
-        
         /// <summary>
-        /// Test the property 'TimeoutSeconds' 
+        /// Test the property 'TimeoutSeconds'
         /// </summary>
         [Test]
         public void TimeoutSecondsTest()
         {
-            // TODO: unit test for the property 'TimeoutSeconds' 
+            // TODO: unit test for the property 'TimeoutSeconds'
         }
-        
         /// <summary>
-        /// Test the property 'ConnectedTime' 
+        /// Test the property 'ConnectedTime'
         /// </summary>
         [Test]
         public void ConnectedTimeTest()
         {
-            // TODO: unit test for the property 'ConnectedTime' 
+            // TODO: unit test for the property 'ConnectedTime'
         }
-        
         /// <summary>
-        /// Test the property 'DisconnectedTime' 
+        /// Test the property 'DisconnectedTime'
         /// </summary>
         [Test]
         public void DisconnectedTimeTest()
         {
-            // TODO: unit test for the property 'DisconnectedTime' 
+            // TODO: unit test for the property 'DisconnectedTime'
         }
-        
 
     }
 

@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new Channel();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of Channel
@@ -50,25 +50,22 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<Channel> (instance, "instance is a Channel");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'ConnectUri' 
+        /// Test the property 'ConnectUri'
         /// </summary>
         [Test]
         public void ConnectUriTest()
         {
-            // TODO: unit test for the property 'ConnectUri' 
+            // TODO: unit test for the property 'ConnectUri'
         }
-        
 
     }
 

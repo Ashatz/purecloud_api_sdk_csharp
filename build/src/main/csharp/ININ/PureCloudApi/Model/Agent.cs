@@ -28,7 +28,7 @@ namespace ININ.PureCloudApi.Model
             this.Stage = Stage;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets Stage
@@ -45,11 +45,10 @@ namespace ININ.PureCloudApi.Model
             var sb = new StringBuilder();
             sb.Append("class Agent {\n");
             sb.Append("  Stage: ").Append(Stage).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -100,10 +99,8 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Stage != null)
                     hash = hash * 59 + this.Stage.GetHashCode();
-                
                 return hash;
             }
         }

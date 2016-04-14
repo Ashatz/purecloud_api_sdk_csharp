@@ -42,7 +42,7 @@ namespace ININ.PureCloudApi.Model
             this.ErrorInfo = ErrorInfo;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets CorrelationId
@@ -80,11 +80,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  CommandName: ").Append(CommandName).Append("\n");
             sb.Append("  Acknowledged: ").Append(Acknowledged).Append("\n");
             sb.Append("  ErrorInfo: ").Append(ErrorInfo).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -150,19 +149,14 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.CorrelationId != null)
                     hash = hash * 59 + this.CorrelationId.GetHashCode();
-                
                 if (this.CommandName != null)
                     hash = hash * 59 + this.CommandName.GetHashCode();
-                
                 if (this.Acknowledged != null)
                     hash = hash * 59 + this.Acknowledged.GetHashCode();
-                
                 if (this.ErrorInfo != null)
                     hash = hash * 59 + this.ErrorInfo.GetHashCode();
-                
                 return hash;
             }
         }

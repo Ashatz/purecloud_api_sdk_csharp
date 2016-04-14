@@ -17,9 +17,13 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class LocationEmergencyNumber :  IEquatable<LocationEmergencyNumber>
     { 
-    
+
+        /// <summary>
+        /// The type of emergency number.
+        /// </summary>
+        /// <value>The type of emergency number.</value>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum TypeEnum {
+                public enum TypeEnum {
             
             [EnumMember(Value = "default")]
             Default,
@@ -27,6 +31,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "elin")]
             Elin
         }
+
         
         /// <summary>
         /// The type of emergency number.
@@ -49,7 +54,7 @@ namespace ININ.PureCloudApi.Model
             this.Type = Type;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets E164
@@ -74,11 +79,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  E164: ").Append(E164).Append("\n");
             sb.Append("  Number: ").Append(Number).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -139,16 +143,12 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.E164 != null)
                     hash = hash * 59 + this.E164.GetHashCode();
-                
                 if (this.Number != null)
                     hash = hash * 59 + this.Number.GetHashCode();
-                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
                 return hash;
             }
         }

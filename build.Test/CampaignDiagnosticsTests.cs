@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new CampaignDiagnostics();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of CampaignDiagnostics
@@ -50,34 +50,30 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<CampaignDiagnostics> (instance, "instance is a CampaignDiagnostics");
         }
 
-        
         /// <summary>
-        /// Test the property 'CallableContacts' 
+        /// Test the property 'CallableContacts'
         /// </summary>
         [Test]
         public void CallableContactsTest()
         {
-            // TODO: unit test for the property 'CallableContacts' 
+            // TODO: unit test for the property 'CallableContacts'
         }
-        
         /// <summary>
-        /// Test the property 'QueueUtilizationDiagnostic' 
+        /// Test the property 'QueueUtilizationDiagnostic'
         /// </summary>
         [Test]
         public void QueueUtilizationDiagnosticTest()
         {
-            // TODO: unit test for the property 'QueueUtilizationDiagnostic' 
+            // TODO: unit test for the property 'QueueUtilizationDiagnostic'
         }
-        
         /// <summary>
-        /// Test the property 'OutstandingInteractionsCount' 
+        /// Test the property 'OutstandingInteractionsCount'
         /// </summary>
         [Test]
         public void OutstandingInteractionsCountTest()
         {
-            // TODO: unit test for the property 'OutstandingInteractionsCount' 
+            // TODO: unit test for the property 'OutstandingInteractionsCount'
         }
-        
 
     }
 

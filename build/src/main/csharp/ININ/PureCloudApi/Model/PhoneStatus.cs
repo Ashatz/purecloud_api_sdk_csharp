@@ -17,9 +17,13 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class PhoneStatus :  IEquatable<PhoneStatus>
     { 
-    
+
+        /// <summary>
+        /// The Operational Status of this phone
+        /// </summary>
+        /// <value>The Operational Status of this phone</value>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum OperationalStatusEnum {
+                public enum OperationalStatusEnum {
             
             [EnumMember(Value = "OPERATIONAL")]
             Operational,
@@ -30,9 +34,14 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "OFFLINE")]
             Offline
         }
-    
+
+
+        /// <summary>
+        /// The status of the primary or secondary Edges assigned to the phone lines.
+        /// </summary>
+        /// <value>The status of the primary or secondary Edges assigned to the phone lines.</value>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum EdgesStatusEnum {
+                public enum EdgesStatusEnum {
             
             [EnumMember(Value = "IN_SERVICE")]
             InService,
@@ -46,9 +55,14 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "NO_EDGES")]
             NoEdges
         }
-    
+
+
+        /// <summary>
+        /// The phone status's edge assignment type.
+        /// </summary>
+        /// <value>The phone status's edge assignment type.</value>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum PhoneAssignmentToEdgeTypeEnum {
+                public enum PhoneAssignmentToEdgeTypeEnum {
             
             [EnumMember(Value = "PRIMARY")]
             Primary,
@@ -56,6 +70,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "SECONDARY")]
             Secondary
         }
+
         
         /// <summary>
         /// The Operational Status of this phone
@@ -100,7 +115,7 @@ namespace ININ.PureCloudApi.Model
             this.Edge = Edge;
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -160,11 +175,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  PhoneAssignmentToEdgeType: ").Append(PhoneAssignmentToEdgeType).Append("\n");
             sb.Append("  Edge: ").Append(Edge).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -255,34 +269,24 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.OperationalStatus != null)
                     hash = hash * 59 + this.OperationalStatus.GetHashCode();
-                
                 if (this.EdgesStatus != null)
                     hash = hash * 59 + this.EdgesStatus.GetHashCode();
-                
                 if (this.Provision != null)
                     hash = hash * 59 + this.Provision.GetHashCode();
-                
                 if (this.LineStatuses != null)
                     hash = hash * 59 + this.LineStatuses.GetHashCode();
-                
                 if (this.PhoneAssignmentToEdgeType != null)
                     hash = hash * 59 + this.PhoneAssignmentToEdgeType.GetHashCode();
-                
                 if (this.Edge != null)
                     hash = hash * 59 + this.Edge.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 return hash;
             }
         }

@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new SequenceSchedule();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of SequenceSchedule
@@ -50,88 +50,78 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<SequenceSchedule> (instance, "instance is a SequenceSchedule");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'DateCreated' 
+        /// Test the property 'DateCreated'
         /// </summary>
         [Test]
         public void DateCreatedTest()
         {
-            // TODO: unit test for the property 'DateCreated' 
+            // TODO: unit test for the property 'DateCreated'
         }
-        
         /// <summary>
-        /// Test the property 'DateModified' 
+        /// Test the property 'DateModified'
         /// </summary>
         [Test]
         public void DateModifiedTest()
         {
-            // TODO: unit test for the property 'DateModified' 
+            // TODO: unit test for the property 'DateModified'
         }
-        
         /// <summary>
-        /// Test the property 'Version' 
+        /// Test the property 'Version'
         /// </summary>
         [Test]
         public void VersionTest()
         {
-            // TODO: unit test for the property 'Version' 
+            // TODO: unit test for the property 'Version'
         }
-        
         /// <summary>
-        /// Test the property 'Intervals' 
+        /// Test the property 'Intervals'
         /// </summary>
         [Test]
         public void IntervalsTest()
         {
-            // TODO: unit test for the property 'Intervals' 
+            // TODO: unit test for the property 'Intervals'
         }
-        
         /// <summary>
-        /// Test the property 'TimeZone' 
+        /// Test the property 'TimeZone'
         /// </summary>
         [Test]
         public void TimeZoneTest()
         {
-            // TODO: unit test for the property 'TimeZone' 
+            // TODO: unit test for the property 'TimeZone'
         }
-        
         /// <summary>
-        /// Test the property 'Sequence' 
+        /// Test the property 'Sequence'
         /// </summary>
         [Test]
         public void SequenceTest()
         {
-            // TODO: unit test for the property 'Sequence' 
+            // TODO: unit test for the property 'Sequence'
         }
-        
         /// <summary>
-        /// Test the property 'SelfUri' 
+        /// Test the property 'SelfUri'
         /// </summary>
         [Test]
         public void SelfUriTest()
         {
-            // TODO: unit test for the property 'SelfUri' 
+            // TODO: unit test for the property 'SelfUri'
         }
-        
 
     }
 

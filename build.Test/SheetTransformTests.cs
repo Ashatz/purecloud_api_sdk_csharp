@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new SheetTransform();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of SheetTransform
@@ -50,34 +50,30 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<SheetTransform> (instance, "instance is a SheetTransform");
         }
 
-        
         /// <summary>
-        /// Test the property 'Sheet' 
+        /// Test the property 'Sheet'
         /// </summary>
         [Test]
         public void SheetTest()
         {
-            // TODO: unit test for the property 'Sheet' 
+            // TODO: unit test for the property 'Sheet'
         }
-        
         /// <summary>
-        /// Test the property 'SheetName' 
+        /// Test the property 'SheetName'
         /// </summary>
         [Test]
         public void SheetNameTest()
         {
-            // TODO: unit test for the property 'SheetName' 
+            // TODO: unit test for the property 'SheetName'
         }
-        
         /// <summary>
-        /// Test the property 'Table' 
+        /// Test the property 'Table'
         /// </summary>
         [Test]
         public void TableTest()
         {
-            // TODO: unit test for the property 'Table' 
+            // TODO: unit test for the property 'Table'
         }
-        
 
     }
 

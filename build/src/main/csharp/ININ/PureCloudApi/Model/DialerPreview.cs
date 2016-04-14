@@ -36,7 +36,7 @@ namespace ININ.PureCloudApi.Model
             this.PhoneNumberColumns = PhoneNumberColumns;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets Id
@@ -81,11 +81,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  ContactListId: ").Append(ContactListId).Append("\n");
             sb.Append("  CampaignId: ").Append(CampaignId).Append("\n");
             sb.Append("  PhoneNumberColumns: ").Append(PhoneNumberColumns).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -156,22 +155,16 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.ContactId != null)
                     hash = hash * 59 + this.ContactId.GetHashCode();
-                
                 if (this.ContactListId != null)
                     hash = hash * 59 + this.ContactListId.GetHashCode();
-                
                 if (this.CampaignId != null)
                     hash = hash * 59 + this.CampaignId.GetHashCode();
-                
                 if (this.PhoneNumberColumns != null)
                     hash = hash * 59 + this.PhoneNumberColumns.GetHashCode();
-                
                 return hash;
             }
         }

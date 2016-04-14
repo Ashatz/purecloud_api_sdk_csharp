@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new WorkItemCommandGroup();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of WorkItemCommandGroup
@@ -50,34 +50,30 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<WorkItemCommandGroup> (instance, "instance is a WorkItemCommandGroup");
         }
 
-        
         /// <summary>
-        /// Test the property 'Category' 
+        /// Test the property 'Category'
         /// </summary>
         [Test]
         public void CategoryTest()
         {
-            // TODO: unit test for the property 'Category' 
+            // TODO: unit test for the property 'Category'
         }
-        
         /// <summary>
-        /// Test the property 'DefaultCommandId' 
+        /// Test the property 'DefaultCommandId'
         /// </summary>
         [Test]
         public void DefaultCommandIdTest()
         {
-            // TODO: unit test for the property 'DefaultCommandId' 
+            // TODO: unit test for the property 'DefaultCommandId'
         }
-        
         /// <summary>
-        /// Test the property 'Commands' 
+        /// Test the property 'Commands'
         /// </summary>
         [Test]
         public void CommandsTest()
         {
-            // TODO: unit test for the property 'Commands' 
+            // TODO: unit test for the property 'Commands'
         }
-        
 
     }
 

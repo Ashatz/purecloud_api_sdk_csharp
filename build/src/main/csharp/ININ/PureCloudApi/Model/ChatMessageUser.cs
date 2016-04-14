@@ -36,7 +36,7 @@ namespace ININ.PureCloudApi.Model
             this.Images = Images;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets Id
@@ -81,11 +81,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  DisplayName: ").Append(DisplayName).Append("\n");
             sb.Append("  Username: ").Append(Username).Append("\n");
             sb.Append("  Images: ").Append(Images).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -156,22 +155,16 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.DisplayName != null)
                     hash = hash * 59 + this.DisplayName.GetHashCode();
-                
                 if (this.Username != null)
                     hash = hash * 59 + this.Username.GetHashCode();
-                
                 if (this.Images != null)
                     hash = hash * 59 + this.Images.GetHashCode();
-                
                 return hash;
             }
         }

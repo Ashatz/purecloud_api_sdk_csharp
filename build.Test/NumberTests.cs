@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new Number();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of Number
@@ -50,25 +50,22 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<Number> (instance, "instance is a Number");
         }
 
-        
         /// <summary>
-        /// Test the property 'Start' 
+        /// Test the property 'Start'
         /// </summary>
         [Test]
         public void StartTest()
         {
-            // TODO: unit test for the property 'Start' 
+            // TODO: unit test for the property 'Start'
         }
-        
         /// <summary>
-        /// Test the property 'End' 
+        /// Test the property 'End'
         /// </summary>
         [Test]
         public void EndTest()
         {
-            // TODO: unit test for the property 'End' 
+            // TODO: unit test for the property 'End'
         }
-        
 
     }
 

@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new InteractionStatsRule();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of InteractionStatsRule
@@ -50,133 +50,118 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<InteractionStatsRule> (instance, "instance is a InteractionStatsRule");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'Dimension' 
+        /// Test the property 'Dimension'
         /// </summary>
         [Test]
         public void DimensionTest()
         {
-            // TODO: unit test for the property 'Dimension' 
+            // TODO: unit test for the property 'Dimension'
         }
-        
         /// <summary>
-        /// Test the property 'DimensionValue' 
+        /// Test the property 'DimensionValue'
         /// </summary>
         [Test]
         public void DimensionValueTest()
         {
-            // TODO: unit test for the property 'DimensionValue' 
+            // TODO: unit test for the property 'DimensionValue'
         }
-        
         /// <summary>
-        /// Test the property 'Metric' 
+        /// Test the property 'Metric'
         /// </summary>
         [Test]
         public void MetricTest()
         {
-            // TODO: unit test for the property 'Metric' 
+            // TODO: unit test for the property 'Metric'
         }
-        
         /// <summary>
-        /// Test the property 'MediaType' 
+        /// Test the property 'MediaType'
         /// </summary>
         [Test]
         public void MediaTypeTest()
         {
-            // TODO: unit test for the property 'MediaType' 
+            // TODO: unit test for the property 'MediaType'
         }
-        
         /// <summary>
-        /// Test the property 'NumericRange' 
+        /// Test the property 'NumericRange'
         /// </summary>
         [Test]
         public void NumericRangeTest()
         {
-            // TODO: unit test for the property 'NumericRange' 
+            // TODO: unit test for the property 'NumericRange'
         }
-        
         /// <summary>
-        /// Test the property 'Statistic' 
+        /// Test the property 'Statistic'
         /// </summary>
         [Test]
         public void StatisticTest()
         {
-            // TODO: unit test for the property 'Statistic' 
+            // TODO: unit test for the property 'Statistic'
         }
-        
         /// <summary>
-        /// Test the property 'Value' 
+        /// Test the property 'Value'
         /// </summary>
         [Test]
         public void ValueTest()
         {
-            // TODO: unit test for the property 'Value' 
+            // TODO: unit test for the property 'Value'
         }
-        
         /// <summary>
-        /// Test the property 'Enabled' 
+        /// Test the property 'Enabled'
         /// </summary>
         [Test]
         public void EnabledTest()
         {
-            // TODO: unit test for the property 'Enabled' 
+            // TODO: unit test for the property 'Enabled'
         }
-        
         /// <summary>
-        /// Test the property 'InAlarm' 
+        /// Test the property 'InAlarm'
         /// </summary>
         [Test]
         public void InAlarmTest()
         {
-            // TODO: unit test for the property 'InAlarm' 
+            // TODO: unit test for the property 'InAlarm'
         }
-        
         /// <summary>
-        /// Test the property 'NotificationUsers' 
+        /// Test the property 'NotificationUsers'
         /// </summary>
         [Test]
         public void NotificationUsersTest()
         {
-            // TODO: unit test for the property 'NotificationUsers' 
+            // TODO: unit test for the property 'NotificationUsers'
         }
-        
         /// <summary>
-        /// Test the property 'AlertTypes' 
+        /// Test the property 'AlertTypes'
         /// </summary>
         [Test]
         public void AlertTypesTest()
         {
-            // TODO: unit test for the property 'AlertTypes' 
+            // TODO: unit test for the property 'AlertTypes'
         }
-        
         /// <summary>
-        /// Test the property 'SelfUri' 
+        /// Test the property 'SelfUri'
         /// </summary>
         [Test]
         public void SelfUriTest()
         {
-            // TODO: unit test for the property 'SelfUri' 
+            // TODO: unit test for the property 'SelfUri'
         }
-        
 
     }
 

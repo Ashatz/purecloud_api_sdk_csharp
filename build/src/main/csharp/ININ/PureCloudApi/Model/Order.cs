@@ -32,7 +32,7 @@ namespace ININ.PureCloudApi.Model
             this.EnvelopeId = EnvelopeId;
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -79,11 +79,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Quote: ").Append(Quote).Append("\n");
             sb.Append("  EnvelopeId: ").Append(EnvelopeId).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -154,22 +153,16 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.Quote != null)
                     hash = hash * 59 + this.Quote.GetHashCode();
-                
                 if (this.EnvelopeId != null)
                     hash = hash * 59 + this.EnvelopeId.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 return hash;
             }
         }

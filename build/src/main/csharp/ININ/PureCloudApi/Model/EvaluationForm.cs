@@ -48,7 +48,7 @@ namespace ININ.PureCloudApi.Model
             this.PublishedVersions = PublishedVersions;
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -124,11 +124,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  QuestionGroups: ").Append(QuestionGroups).Append("\n");
             sb.Append("  PublishedVersions: ").Append(PublishedVersions).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -219,34 +218,24 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
                 if (this.ModifiedDate != null)
                     hash = hash * 59 + this.ModifiedDate.GetHashCode();
-                
                 if (this.Published != null)
                     hash = hash * 59 + this.Published.GetHashCode();
-                
                 if (this.ContextId != null)
                     hash = hash * 59 + this.ContextId.GetHashCode();
-                
                 if (this.QuestionGroups != null)
                     hash = hash * 59 + this.QuestionGroups.GetHashCode();
-                
                 if (this.PublishedVersions != null)
                     hash = hash * 59 + this.PublishedVersions.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 return hash;
             }
         }

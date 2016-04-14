@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new ExpressionResponse();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of ExpressionResponse
@@ -50,106 +50,94 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<ExpressionResponse> (instance, "instance is a ExpressionResponse");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'DateCreated' 
+        /// Test the property 'DateCreated'
         /// </summary>
         [Test]
         public void DateCreatedTest()
         {
-            // TODO: unit test for the property 'DateCreated' 
+            // TODO: unit test for the property 'DateCreated'
         }
-        
         /// <summary>
-        /// Test the property 'DateModified' 
+        /// Test the property 'DateModified'
         /// </summary>
         [Test]
         public void DateModifiedTest()
         {
-            // TODO: unit test for the property 'DateModified' 
+            // TODO: unit test for the property 'DateModified'
         }
-        
         /// <summary>
-        /// Test the property 'SocialHub' 
+        /// Test the property 'SocialHub'
         /// </summary>
         [Test]
         public void SocialHubTest()
         {
-            // TODO: unit test for the property 'SocialHub' 
+            // TODO: unit test for the property 'SocialHub'
         }
-        
         /// <summary>
-        /// Test the property 'Conversation' 
+        /// Test the property 'Conversation'
         /// </summary>
         [Test]
         public void ConversationTest()
         {
-            // TODO: unit test for the property 'Conversation' 
+            // TODO: unit test for the property 'Conversation'
         }
-        
         /// <summary>
-        /// Test the property 'TwitterExpression' 
+        /// Test the property 'TwitterExpression'
         /// </summary>
         [Test]
         public void TwitterExpressionTest()
         {
-            // TODO: unit test for the property 'TwitterExpression' 
+            // TODO: unit test for the property 'TwitterExpression'
         }
-        
         /// <summary>
-        /// Test the property 'RawResponseText' 
+        /// Test the property 'RawResponseText'
         /// </summary>
         [Test]
         public void RawResponseTextTest()
         {
-            // TODO: unit test for the property 'RawResponseText' 
+            // TODO: unit test for the property 'RawResponseText'
         }
-        
         /// <summary>
-        /// Test the property 'SocialAccount' 
+        /// Test the property 'SocialAccount'
         /// </summary>
         [Test]
         public void SocialAccountTest()
         {
-            // TODO: unit test for the property 'SocialAccount' 
+            // TODO: unit test for the property 'SocialAccount'
         }
-        
         /// <summary>
-        /// Test the property 'SocialHubResponseId' 
+        /// Test the property 'SocialHubResponseId'
         /// </summary>
         [Test]
         public void SocialHubResponseIdTest()
         {
-            // TODO: unit test for the property 'SocialHubResponseId' 
+            // TODO: unit test for the property 'SocialHubResponseId'
         }
-        
         /// <summary>
-        /// Test the property 'SelfUri' 
+        /// Test the property 'SelfUri'
         /// </summary>
         [Test]
         public void SelfUriTest()
         {
-            // TODO: unit test for the property 'SelfUri' 
+            // TODO: unit test for the property 'SelfUri'
         }
-        
 
     }
 

@@ -1,5 +1,4 @@
 using System;
-using System.IO;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -9,14 +8,12 @@ using ININ.PureCloudApi.Model;
 
 namespace ININ.PureCloudApi.Api
 {
-    
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
     public interface IOrganizationApi
     {
         #region Synchronous Operations
-        
         /// <summary>
         /// Delete the organization.
         /// </summary>
@@ -26,7 +23,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>string</returns>
         string DeleteMe ();
-  
+
         /// <summary>
         /// Delete the organization.
         /// </summary>
@@ -36,7 +33,6 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> DeleteMeWithHttpInfo ();
-        
         /// <summary>
         /// Get organization.
         /// </summary>
@@ -46,7 +42,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Organization</returns>
         Organization GetMe ();
-  
+
         /// <summary>
         /// Get organization.
         /// </summary>
@@ -56,7 +52,6 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Organization</returns>
         ApiResponse<Organization> GetMeWithHttpInfo ();
-        
         /// <summary>
         /// Update organization.
         /// </summary>
@@ -64,10 +59,10 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Organization</param>
+        /// <param name="body">Organization (optional)</param>
         /// <returns>Organization</returns>
         Organization PutMe (Organization body = null);
-  
+
         /// <summary>
         /// Update organization.
         /// </summary>
@@ -75,14 +70,11 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Organization</param>
+        /// <param name="body">Organization (optional)</param>
         /// <returns>ApiResponse of Organization</returns>
         ApiResponse<Organization> PutMeWithHttpInfo (Organization body = null);
-        
         #endregion Synchronous Operations
-        
         #region Asynchronous Operations
-        
         /// <summary>
         /// Delete the organization.
         /// </summary>
@@ -102,7 +94,6 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> DeleteMeAsyncWithHttpInfo ();
-        
         /// <summary>
         /// Get organization.
         /// </summary>
@@ -122,7 +113,6 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (Organization)</returns>
         System.Threading.Tasks.Task<ApiResponse<Organization>> GetMeAsyncWithHttpInfo ();
-        
         /// <summary>
         /// Update organization.
         /// </summary>
@@ -130,7 +120,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Organization</param>
+        /// <param name="body">Organization (optional)</param>
         /// <returns>Task of Organization</returns>
         System.Threading.Tasks.Task<Organization> PutMeAsync (Organization body = null);
 
@@ -141,14 +131,12 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Organization</param>
+        /// <param name="body">Organization (optional)</param>
         /// <returns>Task of ApiResponse (Organization)</returns>
         System.Threading.Tasks.Task<ApiResponse<Organization>> PutMeAsyncWithHttpInfo (Organization body = null);
-        
         #endregion Asynchronous Operations
-        
     }
-  
+
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
@@ -161,8 +149,14 @@ namespace ININ.PureCloudApi.Api
         public OrganizationApi(String basePath)
         {
             this.Configuration = new Configuration(new ApiClient(basePath));
+
+            // ensure API client has configuration ready
+            if (Configuration.ApiClient.Configuration == null)
+            {
+                this.Configuration.ApiClient.Configuration = this.Configuration;
+            }
         }
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="OrganizationApi"/> class
         /// using Configuration object
@@ -172,9 +166,15 @@ namespace ININ.PureCloudApi.Api
         public OrganizationApi(Configuration configuration = null)
         {
             if (configuration == null) // use the default one in Configuration
-                this.Configuration = Configuration.Default; 
+                this.Configuration = Configuration.Default;
             else
                 this.Configuration = configuration;
+
+            // ensure API client has configuration ready
+            if (Configuration.ApiClient.Configuration == null)
+            {
+                this.Configuration.ApiClient.Configuration = this.Configuration;
+            }
         }
 
         /// <summary>
@@ -195,7 +195,7 @@ namespace ININ.PureCloudApi.Api
         {
             // do nothing
         }
-    
+
         /// <summary>
         /// Gets or sets the configuration object
         /// </summary>
@@ -223,8 +223,7 @@ namespace ININ.PureCloudApi.Api
         {
             this.Configuration.AddDefaultHeader(key, value);
         }
-   
-        
+
         /// <summary>
         /// Delete the organization. 
         /// </summary>
@@ -243,10 +242,8 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > DeleteMeWithHttpInfo ()
         {
-            
-    
+
             var localVarPath = "/api/v2/organizations/me";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -271,40 +268,32 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            
-            
-            
-            
-            
 
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-    
+
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
                 Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteMe: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteMe: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
+
             return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
         }
 
-        
         /// <summary>
         /// Delete the organization. 
         /// </summary>
@@ -324,10 +313,8 @@ namespace ININ.PureCloudApi.Api
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteMeAsyncWithHttpInfo ()
         {
-            
-    
+
             var localVarPath = "/api/v2/organizations/me";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -352,29 +339,21 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            
-            
-            
-            
-            
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteMe: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
@@ -385,7 +364,7 @@ namespace ININ.PureCloudApi.Api
                 (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
         }
-        
+
         /// <summary>
         /// Get organization. 
         /// </summary>
@@ -404,10 +383,8 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of Organization</returns>
         public ApiResponse< Organization > GetMeWithHttpInfo ()
         {
-            
-    
+
             var localVarPath = "/api/v2/organizations/me";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -432,40 +409,32 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            
-            
-            
-            
-            
 
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-    
+
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetMe: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetMe: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
+
             return new ApiResponse<Organization>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Organization) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Organization)));
             
         }
 
-        
         /// <summary>
         /// Get organization. 
         /// </summary>
@@ -485,10 +454,8 @@ namespace ININ.PureCloudApi.Api
         /// <returns>Task of ApiResponse (Organization)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Organization>> GetMeAsyncWithHttpInfo ()
         {
-            
-    
+
             var localVarPath = "/api/v2/organizations/me";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -513,29 +480,21 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            
-            
-            
-            
-            
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetMe: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
@@ -546,12 +505,12 @@ namespace ININ.PureCloudApi.Api
                 (Organization) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Organization)));
             
         }
-        
+
         /// <summary>
         /// Update organization. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Organization</param> 
+        /// <param name="body">Organization (optional)</param>
         /// <returns>Organization</returns>
         public Organization PutMe (Organization body = null)
         {
@@ -563,14 +522,12 @@ namespace ININ.PureCloudApi.Api
         /// Update organization. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Organization</param> 
+        /// <param name="body">Organization (optional)</param>
         /// <returns>ApiResponse of Organization</returns>
         public ApiResponse< Organization > PutMeWithHttpInfo (Organization body = null)
         {
-            
-    
+
             var localVarPath = "/api/v2/organizations/me";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -595,10 +552,6 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            
-            
-            
-            
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -609,38 +562,35 @@ namespace ININ.PureCloudApi.Api
             }
 
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-    
+
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
                 Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PutMe: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PutMe: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
+
             return new ApiResponse<Organization>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Organization) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Organization)));
             
         }
 
-        
         /// <summary>
         /// Update organization. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Organization</param>
+        /// <param name="body">Organization (optional)</param>
         /// <returns>Task of Organization</returns>
         public async System.Threading.Tasks.Task<Organization> PutMeAsync (Organization body = null)
         {
@@ -653,14 +603,12 @@ namespace ININ.PureCloudApi.Api
         /// Update organization. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Organization</param>
+        /// <param name="body">Organization (optional)</param>
         /// <returns>Task of ApiResponse (Organization)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Organization>> PutMeAsyncWithHttpInfo (Organization body = null)
         {
-            
-    
+
             var localVarPath = "/api/v2/organizations/me";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -685,10 +633,6 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            
-            
-            
-            
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -698,23 +642,20 @@ namespace ININ.PureCloudApi.Api
                 localVarPostBody = body; // byte array
             }
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PutMe: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
@@ -725,7 +666,6 @@ namespace ININ.PureCloudApi.Api
                 (Organization) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Organization)));
             
         }
-        
+
     }
-    
 }

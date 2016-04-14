@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new UnreadStatus();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of UnreadStatus
@@ -50,16 +50,14 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<UnreadStatus> (instance, "instance is a UnreadStatus");
         }
 
-        
         /// <summary>
-        /// Test the property 'Unread' 
+        /// Test the property 'Unread'
         /// </summary>
         [Test]
         public void UnreadTest()
         {
-            // TODO: unit test for the property 'Unread' 
+            // TODO: unit test for the property 'Unread'
         }
-        
 
     }
 

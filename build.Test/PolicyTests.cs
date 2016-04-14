@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new Policy();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of Policy
@@ -50,115 +50,102 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<Policy> (instance, "instance is a Policy");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'ModifiedDate' 
+        /// Test the property 'ModifiedDate'
         /// </summary>
         [Test]
         public void ModifiedDateTest()
         {
-            // TODO: unit test for the property 'ModifiedDate' 
+            // TODO: unit test for the property 'ModifiedDate'
         }
-        
         /// <summary>
-        /// Test the property 'CreatedDate' 
+        /// Test the property 'CreatedDate'
         /// </summary>
         [Test]
         public void CreatedDateTest()
         {
-            // TODO: unit test for the property 'CreatedDate' 
+            // TODO: unit test for the property 'CreatedDate'
         }
-        
         /// <summary>
-        /// Test the property 'Order' 
+        /// Test the property 'Order'
         /// </summary>
         [Test]
         public void OrderTest()
         {
-            // TODO: unit test for the property 'Order' 
+            // TODO: unit test for the property 'Order'
         }
-        
         /// <summary>
-        /// Test the property 'Description' 
+        /// Test the property 'Description'
         /// </summary>
         [Test]
         public void DescriptionTest()
         {
-            // TODO: unit test for the property 'Description' 
+            // TODO: unit test for the property 'Description'
         }
-        
         /// <summary>
-        /// Test the property 'Enabled' 
+        /// Test the property 'Enabled'
         /// </summary>
         [Test]
         public void EnabledTest()
         {
-            // TODO: unit test for the property 'Enabled' 
+            // TODO: unit test for the property 'Enabled'
         }
-        
         /// <summary>
-        /// Test the property 'MediaPolicies' 
+        /// Test the property 'MediaPolicies'
         /// </summary>
         [Test]
         public void MediaPoliciesTest()
         {
-            // TODO: unit test for the property 'MediaPolicies' 
+            // TODO: unit test for the property 'MediaPolicies'
         }
-        
         /// <summary>
-        /// Test the property 'Conditions' 
+        /// Test the property 'Conditions'
         /// </summary>
         [Test]
         public void ConditionsTest()
         {
-            // TODO: unit test for the property 'Conditions' 
+            // TODO: unit test for the property 'Conditions'
         }
-        
         /// <summary>
-        /// Test the property 'Actions' 
+        /// Test the property 'Actions'
         /// </summary>
         [Test]
         public void ActionsTest()
         {
-            // TODO: unit test for the property 'Actions' 
+            // TODO: unit test for the property 'Actions'
         }
-        
         /// <summary>
-        /// Test the property 'PolicyErrors' 
+        /// Test the property 'PolicyErrors'
         /// </summary>
         [Test]
         public void PolicyErrorsTest()
         {
-            // TODO: unit test for the property 'PolicyErrors' 
+            // TODO: unit test for the property 'PolicyErrors'
         }
-        
         /// <summary>
-        /// Test the property 'SelfUri' 
+        /// Test the property 'SelfUri'
         /// </summary>
         [Test]
         public void SelfUriTest()
         {
-            // TODO: unit test for the property 'SelfUri' 
+            // TODO: unit test for the property 'SelfUri'
         }
-        
 
     }
 

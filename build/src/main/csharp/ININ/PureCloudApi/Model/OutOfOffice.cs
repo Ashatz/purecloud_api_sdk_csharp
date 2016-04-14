@@ -44,7 +44,7 @@ namespace ININ.PureCloudApi.Model
             }
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -107,11 +107,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  EndDate: ").Append(EndDate).Append("\n");
             sb.Append("  Active: ").Append(Active).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -192,28 +191,20 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();
-                
                 if (this.StartDate != null)
                     hash = hash * 59 + this.StartDate.GetHashCode();
-                
                 if (this.EndDate != null)
                     hash = hash * 59 + this.EndDate.GetHashCode();
-                
                 if (this.Active != null)
                     hash = hash * 59 + this.Active.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 return hash;
             }
         }

@@ -17,9 +17,12 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class CallConversation :  IEquatable<CallConversation>
     { 
-    
+
+        /// <summary>
+        /// Gets or Sets RecordingState
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum RecordingStateEnum {
+                public enum RecordingStateEnum {
             
             [EnumMember(Value = "NONE")]
             None,
@@ -30,6 +33,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "PAUSED")]
             Paused
         }
+
         
         /// <summary>
         /// Gets or Sets RecordingState
@@ -53,7 +57,7 @@ namespace ININ.PureCloudApi.Model
             this.RecordingState = RecordingState;
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -103,11 +107,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  OtherMediaUris: ").Append(OtherMediaUris).Append("\n");
             sb.Append("  RecordingState: ").Append(RecordingState).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -183,25 +186,18 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.Participants != null)
                     hash = hash * 59 + this.Participants.GetHashCode();
-                
                 if (this.OtherMediaUris != null)
                     hash = hash * 59 + this.OtherMediaUris.GetHashCode();
-                
                 if (this.RecordingState != null)
                     hash = hash * 59 + this.RecordingState.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 return hash;
             }
         }

@@ -30,7 +30,7 @@ namespace ININ.PureCloudApi.Model
             this.Data = Data;
             
         }
-        
+
     
         /// <summary>
         /// A mapping from dimension to value
@@ -55,11 +55,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class AggregateDataContainer {\n");
             sb.Append("  Group: ").Append(Group).Append("\n");
             sb.Append("  Data: ").Append(Data).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -115,13 +114,10 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Group != null)
                     hash = hash * 59 + this.Group.GetHashCode();
-                
                 if (this.Data != null)
                     hash = hash * 59 + this.Data.GetHashCode();
-                
                 return hash;
             }
         }

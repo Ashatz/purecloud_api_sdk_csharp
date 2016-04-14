@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new DomainOrgRoleDifference();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of DomainOrgRoleDifference
@@ -50,52 +50,46 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<DomainOrgRoleDifference> (instance, "instance is a DomainOrgRoleDifference");
         }
 
-        
         /// <summary>
-        /// Test the property 'RemovedPermissionPolicies' 
+        /// Test the property 'RemovedPermissionPolicies'
         /// </summary>
         [Test]
         public void RemovedPermissionPoliciesTest()
         {
-            // TODO: unit test for the property 'RemovedPermissionPolicies' 
+            // TODO: unit test for the property 'RemovedPermissionPolicies'
         }
-        
         /// <summary>
-        /// Test the property 'AddedPermissionPolicies' 
+        /// Test the property 'AddedPermissionPolicies'
         /// </summary>
         [Test]
         public void AddedPermissionPoliciesTest()
         {
-            // TODO: unit test for the property 'AddedPermissionPolicies' 
+            // TODO: unit test for the property 'AddedPermissionPolicies'
         }
-        
         /// <summary>
-        /// Test the property 'SamePermissionPolicies' 
+        /// Test the property 'SamePermissionPolicies'
         /// </summary>
         [Test]
         public void SamePermissionPoliciesTest()
         {
-            // TODO: unit test for the property 'SamePermissionPolicies' 
+            // TODO: unit test for the property 'SamePermissionPolicies'
         }
-        
         /// <summary>
-        /// Test the property 'UserOrgRole' 
+        /// Test the property 'UserOrgRole'
         /// </summary>
         [Test]
         public void UserOrgRoleTest()
         {
-            // TODO: unit test for the property 'UserOrgRole' 
+            // TODO: unit test for the property 'UserOrgRole'
         }
-        
         /// <summary>
-        /// Test the property 'RoleFromDefault' 
+        /// Test the property 'RoleFromDefault'
         /// </summary>
         [Test]
         public void RoleFromDefaultTest()
         {
-            // TODO: unit test for the property 'RoleFromDefault' 
+            // TODO: unit test for the property 'RoleFromDefault'
         }
-        
 
     }
 

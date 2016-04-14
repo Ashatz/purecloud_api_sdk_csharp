@@ -17,9 +17,13 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class NumberOrderRequest :  IEquatable<NumberOrderRequest>
     { 
-    
+
+        /// <summary>
+        /// The type of phone number (eg us-domestic, toll-free, etc), to determine which third-party api(s) to use for the order request.
+        /// </summary>
+        /// <value>The type of phone number (eg us-domestic, toll-free, etc), to determine which third-party api(s) to use for the order request.</value>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum PhoneNumberTypeEnum {
+                public enum PhoneNumberTypeEnum {
             
             [EnumMember(Value = "TOLL_FREE")]
             TollFree,
@@ -30,6 +34,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "US_DOMESTIC")]
             UsDomestic
         }
+
         
         /// <summary>
         /// The type of phone number (eg us-domestic, toll-free, etc), to determine which third-party api(s) to use for the order request.
@@ -56,7 +61,7 @@ namespace ININ.PureCloudApi.Model
             this.PhoneNumberType = PhoneNumberType;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets OrderTns
@@ -96,11 +101,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  OrderId: ").Append(OrderId).Append("\n");
             sb.Append("  EffectiveDate: ").Append(EffectiveDate).Append("\n");
             sb.Append("  PhoneNumberType: ").Append(PhoneNumberType).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -171,22 +175,16 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.OrderTns != null)
                     hash = hash * 59 + this.OrderTns.GetHashCode();
-                
                 if (this.ReservationIds != null)
                     hash = hash * 59 + this.ReservationIds.GetHashCode();
-                
                 if (this.OrderId != null)
                     hash = hash * 59 + this.OrderId.GetHashCode();
-                
                 if (this.EffectiveDate != null)
                     hash = hash * 59 + this.EffectiveDate.GetHashCode();
-                
                 if (this.PhoneNumberType != null)
                     hash = hash * 59 + this.PhoneNumberType.GetHashCode();
-                
                 return hash;
             }
         }

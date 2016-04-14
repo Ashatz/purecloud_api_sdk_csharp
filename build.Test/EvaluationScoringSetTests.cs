@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new EvaluationScoringSet();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of EvaluationScoringSet
@@ -50,61 +50,54 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<EvaluationScoringSet> (instance, "instance is a EvaluationScoringSet");
         }
 
-        
         /// <summary>
-        /// Test the property 'TotalScore' 
+        /// Test the property 'TotalScore'
         /// </summary>
         [Test]
         public void TotalScoreTest()
         {
-            // TODO: unit test for the property 'TotalScore' 
+            // TODO: unit test for the property 'TotalScore'
         }
-        
         /// <summary>
-        /// Test the property 'TotalCriticalScore' 
+        /// Test the property 'TotalCriticalScore'
         /// </summary>
         [Test]
         public void TotalCriticalScoreTest()
         {
-            // TODO: unit test for the property 'TotalCriticalScore' 
+            // TODO: unit test for the property 'TotalCriticalScore'
         }
-        
         /// <summary>
-        /// Test the property 'QuestionGroupScores' 
+        /// Test the property 'QuestionGroupScores'
         /// </summary>
         [Test]
         public void QuestionGroupScoresTest()
         {
-            // TODO: unit test for the property 'QuestionGroupScores' 
+            // TODO: unit test for the property 'QuestionGroupScores'
         }
-        
         /// <summary>
-        /// Test the property 'AnyFailedKillQuestions' 
+        /// Test the property 'AnyFailedKillQuestions'
         /// </summary>
         [Test]
         public void AnyFailedKillQuestionsTest()
         {
-            // TODO: unit test for the property 'AnyFailedKillQuestions' 
+            // TODO: unit test for the property 'AnyFailedKillQuestions'
         }
-        
         /// <summary>
-        /// Test the property 'Comments' 
+        /// Test the property 'Comments'
         /// </summary>
         [Test]
         public void CommentsTest()
         {
-            // TODO: unit test for the property 'Comments' 
+            // TODO: unit test for the property 'Comments'
         }
-        
         /// <summary>
-        /// Test the property 'AgentComments' 
+        /// Test the property 'AgentComments'
         /// </summary>
         [Test]
         public void AgentCommentsTest()
         {
-            // TODO: unit test for the property 'AgentComments' 
+            // TODO: unit test for the property 'AgentComments'
         }
-        
 
     }
 

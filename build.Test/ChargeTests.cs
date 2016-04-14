@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new Charge();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of Charge
@@ -50,79 +50,70 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<Charge> (instance, "instance is a Charge");
         }
 
-        
         /// <summary>
-        /// Test the property 'LicenseCount' 
+        /// Test the property 'LicenseCount'
         /// </summary>
         [Test]
         public void LicenseCountTest()
         {
-            // TODO: unit test for the property 'LicenseCount' 
+            // TODO: unit test for the property 'LicenseCount'
         }
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'Description' 
+        /// Test the property 'Description'
         /// </summary>
         [Test]
         public void DescriptionTest()
         {
-            // TODO: unit test for the property 'Description' 
+            // TODO: unit test for the property 'Description'
         }
-        
         /// <summary>
-        /// Test the property 'Price' 
+        /// Test the property 'Price'
         /// </summary>
         [Test]
         public void PriceTest()
         {
-            // TODO: unit test for the property 'Price' 
+            // TODO: unit test for the property 'Price'
         }
-        
         /// <summary>
-        /// Test the property 'UnitOfMeasure' 
+        /// Test the property 'UnitOfMeasure'
         /// </summary>
         [Test]
         public void UnitOfMeasureTest()
         {
-            // TODO: unit test for the property 'UnitOfMeasure' 
+            // TODO: unit test for the property 'UnitOfMeasure'
         }
-        
         /// <summary>
-        /// Test the property 'BillingPeriod' 
+        /// Test the property 'BillingPeriod'
         /// </summary>
         [Test]
         public void BillingPeriodTest()
         {
-            // TODO: unit test for the property 'BillingPeriod' 
+            // TODO: unit test for the property 'BillingPeriod'
         }
-        
         /// <summary>
-        /// Test the property 'Quantity' 
+        /// Test the property 'Quantity'
         /// </summary>
         [Test]
         public void QuantityTest()
         {
-            // TODO: unit test for the property 'Quantity' 
+            // TODO: unit test for the property 'Quantity'
         }
-        
         /// <summary>
-        /// Test the property 'IncludedUnits' 
+        /// Test the property 'IncludedUnits'
         /// </summary>
         [Test]
         public void IncludedUnitsTest()
         {
-            // TODO: unit test for the property 'IncludedUnits' 
+            // TODO: unit test for the property 'IncludedUnits'
         }
-        
 
     }
 

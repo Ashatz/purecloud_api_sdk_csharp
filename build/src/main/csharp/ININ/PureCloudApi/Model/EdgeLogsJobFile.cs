@@ -17,9 +17,13 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class EdgeLogsJobFile :  IEquatable<EdgeLogsJobFile>
     { 
-    
+
+        /// <summary>
+        /// The status of the upload of this file from the Edge to the cloud.  Use /upload to start an upload.
+        /// </summary>
+        /// <value>The status of the upload of this file from the Edge to the cloud.  Use /upload to start an upload.</value>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum UploadStatusEnum {
+                public enum UploadStatusEnum {
             
             [EnumMember(Value = "UPLOADING")]
             Uploading,
@@ -33,6 +37,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "ERROR_ON_UPLOAD")]
             ErrorOnUpload
         }
+
         
         /// <summary>
         /// The status of the upload of this file from the Edge to the cloud.  Use /upload to start an upload.
@@ -63,7 +68,7 @@ namespace ININ.PureCloudApi.Model
             this.DownloadId = DownloadId;
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -137,11 +142,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  EdgePath: ").Append(EdgePath).Append("\n");
             sb.Append("  DownloadId: ").Append(DownloadId).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -232,34 +236,24 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.TimeCreated != null)
                     hash = hash * 59 + this.TimeCreated.GetHashCode();
-                
                 if (this.TimeModified != null)
                     hash = hash * 59 + this.TimeModified.GetHashCode();
-                
                 if (this.SizeBytes != null)
                     hash = hash * 59 + this.SizeBytes.GetHashCode();
-                
                 if (this.UploadStatus != null)
                     hash = hash * 59 + this.UploadStatus.GetHashCode();
-                
                 if (this.EdgePath != null)
                     hash = hash * 59 + this.EdgePath.GetHashCode();
-                
                 if (this.DownloadId != null)
                     hash = hash * 59 + this.DownloadId.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 return hash;
             }
         }

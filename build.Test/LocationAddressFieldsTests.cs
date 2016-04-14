@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new LocationAddressFields();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of LocationAddressFields
@@ -50,70 +50,62 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<LocationAddressFields> (instance, "instance is a LocationAddressFields");
         }
 
-        
         /// <summary>
-        /// Test the property 'City' 
+        /// Test the property 'City'
         /// </summary>
         [Test]
         public void CityTest()
         {
-            // TODO: unit test for the property 'City' 
+            // TODO: unit test for the property 'City'
         }
-        
         /// <summary>
-        /// Test the property 'Country' 
+        /// Test the property 'Country'
         /// </summary>
         [Test]
         public void CountryTest()
         {
-            // TODO: unit test for the property 'Country' 
+            // TODO: unit test for the property 'Country'
         }
-        
         /// <summary>
-        /// Test the property 'CountryName' 
+        /// Test the property 'CountryName'
         /// </summary>
         [Test]
         public void CountryNameTest()
         {
-            // TODO: unit test for the property 'CountryName' 
+            // TODO: unit test for the property 'CountryName'
         }
-        
         /// <summary>
-        /// Test the property 'State' 
+        /// Test the property 'State'
         /// </summary>
         [Test]
         public void StateTest()
         {
-            // TODO: unit test for the property 'State' 
+            // TODO: unit test for the property 'State'
         }
-        
         /// <summary>
-        /// Test the property 'Street1' 
+        /// Test the property 'Street1'
         /// </summary>
         [Test]
         public void Street1Test()
         {
-            // TODO: unit test for the property 'Street1' 
+            // TODO: unit test for the property 'Street1'
         }
-        
         /// <summary>
-        /// Test the property 'Street2' 
+        /// Test the property 'Street2'
         /// </summary>
         [Test]
         public void Street2Test()
         {
-            // TODO: unit test for the property 'Street2' 
+            // TODO: unit test for the property 'Street2'
         }
-        
         /// <summary>
-        /// Test the property 'Zipcode' 
+        /// Test the property 'Zipcode'
         /// </summary>
         [Test]
         public void ZipcodeTest()
         {
-            // TODO: unit test for the property 'Zipcode' 
+            // TODO: unit test for the property 'Zipcode'
         }
-        
 
     }
 

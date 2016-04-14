@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new PagingSpec();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of PagingSpec
@@ -50,25 +50,22 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<PagingSpec> (instance, "instance is a PagingSpec");
         }
 
-        
         /// <summary>
-        /// Test the property 'PageSize' 
+        /// Test the property 'PageSize'
         /// </summary>
         [Test]
         public void PageSizeTest()
         {
-            // TODO: unit test for the property 'PageSize' 
+            // TODO: unit test for the property 'PageSize'
         }
-        
         /// <summary>
-        /// Test the property 'PageNumber' 
+        /// Test the property 'PageNumber'
         /// </summary>
         [Test]
         public void PageNumberTest()
         {
-            // TODO: unit test for the property 'PageNumber' 
+            // TODO: unit test for the property 'PageNumber'
         }
-        
 
     }
 

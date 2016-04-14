@@ -32,7 +32,7 @@ namespace ININ.PureCloudApi.Model
             this.TotalCount = TotalCount;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets ReadCount
@@ -63,11 +63,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  ReadCount: ").Append(ReadCount).Append("\n");
             sb.Append("  UnreadCount: ").Append(UnreadCount).Append("\n");
             sb.Append("  TotalCount: ").Append(TotalCount).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -128,16 +127,12 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ReadCount != null)
                     hash = hash * 59 + this.ReadCount.GetHashCode();
-                
                 if (this.UnreadCount != null)
                     hash = hash * 59 + this.UnreadCount.GetHashCode();
-                
                 if (this.TotalCount != null)
                     hash = hash * 59 + this.TotalCount.GetHashCode();
-                
                 return hash;
             }
         }

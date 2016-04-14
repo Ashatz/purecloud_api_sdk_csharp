@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new DiagnosticEmail();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of DiagnosticEmail
@@ -50,70 +50,62 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<DiagnosticEmail> (instance, "instance is a DiagnosticEmail");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'Subject' 
+        /// Test the property 'Subject'
         /// </summary>
         [Test]
         public void SubjectTest()
         {
-            // TODO: unit test for the property 'Subject' 
+            // TODO: unit test for the property 'Subject'
         }
-        
         /// <summary>
-        /// Test the property 'Topic' 
+        /// Test the property 'Topic'
         /// </summary>
         [Test]
         public void TopicTest()
         {
-            // TODO: unit test for the property 'Topic' 
+            // TODO: unit test for the property 'Topic'
         }
-        
         /// <summary>
-        /// Test the property 'Description' 
+        /// Test the property 'Description'
         /// </summary>
         [Test]
         public void DescriptionTest()
         {
-            // TODO: unit test for the property 'Description' 
+            // TODO: unit test for the property 'Description'
         }
-        
         /// <summary>
-        /// Test the property 'Priority' 
+        /// Test the property 'Priority'
         /// </summary>
         [Test]
         public void PriorityTest()
         {
-            // TODO: unit test for the property 'Priority' 
+            // TODO: unit test for the property 'Priority'
         }
-        
         /// <summary>
-        /// Test the property 'Type' 
+        /// Test the property 'Type'
         /// </summary>
         [Test]
         public void TypeTest()
         {
-            // TODO: unit test for the property 'Type' 
+            // TODO: unit test for the property 'Type'
         }
-        
         /// <summary>
-        /// Test the property 'Data' 
+        /// Test the property 'Data'
         /// </summary>
         [Test]
         public void DataTest()
         {
-            // TODO: unit test for the property 'Data' 
+            // TODO: unit test for the property 'Data'
         }
-        
 
     }
 

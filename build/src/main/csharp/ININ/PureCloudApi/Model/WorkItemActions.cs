@@ -36,7 +36,7 @@ namespace ININ.PureCloudApi.Model
             }
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets CanSubmit
@@ -53,11 +53,10 @@ namespace ININ.PureCloudApi.Model
             var sb = new StringBuilder();
             sb.Append("class WorkItemActions {\n");
             sb.Append("  CanSubmit: ").Append(CanSubmit).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -108,10 +107,8 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.CanSubmit != null)
                     hash = hash * 59 + this.CanSubmit.GetHashCode();
-                
                 return hash;
             }
         }

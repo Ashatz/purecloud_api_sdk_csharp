@@ -38,7 +38,7 @@ namespace ININ.PureCloudApi.Model
             this.ContentType = ContentType;
             
         }
-        
+
     
         /// <summary>
         /// Response text content.
@@ -64,11 +64,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class ResponseText {\n");
             sb.Append("  Content: ").Append(Content).Append("\n");
             sb.Append("  ContentType: ").Append(ContentType).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -124,13 +123,10 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Content != null)
                     hash = hash * 59 + this.Content.GetHashCode();
-                
                 if (this.ContentType != null)
                     hash = hash * 59 + this.ContentType.GetHashCode();
-                
                 return hash;
             }
         }

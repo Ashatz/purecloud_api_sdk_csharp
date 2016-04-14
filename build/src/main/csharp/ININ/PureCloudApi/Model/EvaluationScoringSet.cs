@@ -46,7 +46,7 @@ namespace ININ.PureCloudApi.Model
             this.AgentComments = AgentComments;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets TotalScore
@@ -98,11 +98,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  AnyFailedKillQuestions: ").Append(AnyFailedKillQuestions).Append("\n");
             sb.Append("  Comments: ").Append(Comments).Append("\n");
             sb.Append("  AgentComments: ").Append(AgentComments).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -178,25 +177,18 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.TotalScore != null)
                     hash = hash * 59 + this.TotalScore.GetHashCode();
-                
                 if (this.TotalCriticalScore != null)
                     hash = hash * 59 + this.TotalCriticalScore.GetHashCode();
-                
                 if (this.QuestionGroupScores != null)
                     hash = hash * 59 + this.QuestionGroupScores.GetHashCode();
-                
                 if (this.AnyFailedKillQuestions != null)
                     hash = hash * 59 + this.AnyFailedKillQuestions.GetHashCode();
-                
                 if (this.Comments != null)
                     hash = hash * 59 + this.Comments.GetHashCode();
-                
                 if (this.AgentComments != null)
                     hash = hash * 59 + this.AgentComments.GetHashCode();
-                
                 return hash;
             }
         }

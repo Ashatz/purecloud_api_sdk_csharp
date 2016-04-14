@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new FlowBody();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of FlowBody
@@ -50,25 +50,22 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<FlowBody> (instance, "instance is a FlowBody");
         }
 
-        
         /// <summary>
-        /// Test the property 'Format' 
+        /// Test the property 'Format'
         /// </summary>
         [Test]
         public void FormatTest()
         {
-            // TODO: unit test for the property 'Format' 
+            // TODO: unit test for the property 'Format'
         }
-        
         /// <summary>
-        /// Test the property 'Body' 
+        /// Test the property 'Body'
         /// </summary>
         [Test]
         public void BodyTest()
         {
-            // TODO: unit test for the property 'Body' 
+            // TODO: unit test for the property 'Body'
         }
-        
 
     }
 

@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new Annotation();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of Annotation
@@ -50,79 +50,70 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<Annotation> (instance, "instance is a Annotation");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'Type' 
+        /// Test the property 'Type'
         /// </summary>
         [Test]
         public void TypeTest()
         {
-            // TODO: unit test for the property 'Type' 
+            // TODO: unit test for the property 'Type'
         }
-        
         /// <summary>
-        /// Test the property 'Location' 
+        /// Test the property 'Location'
         /// </summary>
         [Test]
         public void LocationTest()
         {
-            // TODO: unit test for the property 'Location' 
+            // TODO: unit test for the property 'Location'
         }
-        
         /// <summary>
-        /// Test the property 'DurationMs' 
+        /// Test the property 'DurationMs'
         /// </summary>
         [Test]
         public void DurationMsTest()
         {
-            // TODO: unit test for the property 'DurationMs' 
+            // TODO: unit test for the property 'DurationMs'
         }
-        
         /// <summary>
-        /// Test the property 'User' 
+        /// Test the property 'User'
         /// </summary>
         [Test]
         public void UserTest()
         {
-            // TODO: unit test for the property 'User' 
+            // TODO: unit test for the property 'User'
         }
-        
         /// <summary>
-        /// Test the property 'Description' 
+        /// Test the property 'Description'
         /// </summary>
         [Test]
         public void DescriptionTest()
         {
-            // TODO: unit test for the property 'Description' 
+            // TODO: unit test for the property 'Description'
         }
-        
         /// <summary>
-        /// Test the property 'SelfUri' 
+        /// Test the property 'SelfUri'
         /// </summary>
         [Test]
         public void SelfUriTest()
         {
-            // TODO: unit test for the property 'SelfUri' 
+            // TODO: unit test for the property 'SelfUri'
         }
-        
 
     }
 

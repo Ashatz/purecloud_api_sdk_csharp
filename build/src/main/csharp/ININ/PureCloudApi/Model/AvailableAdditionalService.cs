@@ -98,7 +98,7 @@ namespace ININ.PureCloudApi.Model
             this.Name = Name;
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -187,11 +187,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  ExclusiveFromProducts: ").Append(ExclusiveFromProducts).Append("\n");
             sb.Append("  Rate: ").Append(Rate).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -287,37 +286,26 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
-                
                 if (this.PartNumber != null)
                     hash = hash * 59 + this.PartNumber.GetHashCode();
-                
                 if (this.RequiredForProducts != null)
                     hash = hash * 59 + this.RequiredForProducts.GetHashCode();
-                
                 if (this.AvailableForProducts != null)
                     hash = hash * 59 + this.AvailableForProducts.GetHashCode();
-                
                 if (this.DefaultForProducts != null)
                     hash = hash * 59 + this.DefaultForProducts.GetHashCode();
-                
                 if (this.ExclusiveFromProducts != null)
                     hash = hash * 59 + this.ExclusiveFromProducts.GetHashCode();
-                
                 if (this.Rate != null)
                     hash = hash * 59 + this.Rate.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 return hash;
             }
         }

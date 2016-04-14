@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new LineBase();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of LineBase
@@ -50,52 +50,46 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<LineBase> (instance, "instance is a LineBase");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'LineMetaBase' 
+        /// Test the property 'LineMetaBase'
         /// </summary>
         [Test]
         public void LineMetaBaseTest()
         {
-            // TODO: unit test for the property 'LineMetaBase' 
+            // TODO: unit test for the property 'LineMetaBase'
         }
-        
         /// <summary>
-        /// Test the property 'Properties' 
+        /// Test the property 'Properties'
         /// </summary>
         [Test]
         public void PropertiesTest()
         {
-            // TODO: unit test for the property 'Properties' 
+            // TODO: unit test for the property 'Properties'
         }
-        
         /// <summary>
-        /// Test the property 'SelfUri' 
+        /// Test the property 'SelfUri'
         /// </summary>
         [Test]
         public void SelfUriTest()
         {
-            // TODO: unit test for the property 'SelfUri' 
+            // TODO: unit test for the property 'SelfUri'
         }
-        
 
     }
 

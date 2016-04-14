@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new Reaction();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of Reaction
@@ -50,34 +50,30 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<Reaction> (instance, "instance is a Reaction");
         }
 
-        
         /// <summary>
-        /// Test the property 'Data' 
+        /// Test the property 'Data'
         /// </summary>
         [Test]
         public void DataTest()
         {
-            // TODO: unit test for the property 'Data' 
+            // TODO: unit test for the property 'Data'
         }
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'ReactionType' 
+        /// Test the property 'ReactionType'
         /// </summary>
         [Test]
         public void ReactionTypeTest()
         {
-            // TODO: unit test for the property 'ReactionType' 
+            // TODO: unit test for the property 'ReactionType'
         }
-        
 
     }
 

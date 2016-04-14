@@ -44,7 +44,7 @@ namespace ININ.PureCloudApi.Model
             this.Participants = Participants;
             
         }
-        
+
     
         /// <summary>
         /// The phone number to dial.
@@ -89,9 +89,9 @@ namespace ININ.PureCloudApi.Model
         public string LanguageId { get; set; }
     
         /// <summary>
-        /// The skill ID's to use for routing this call (if calling a queue).
+        /// The skill ID&#39;s to use for routing this call (if calling a queue).
         /// </summary>
-        /// <value>The skill ID's to use for routing this call (if calling a queue).</value>
+        /// <value>The skill ID&#39;s to use for routing this call (if calling a queue).</value>
         [DataMember(Name="routingSkillsIds", EmitDefaultValue=false)]
         public List<string> RoutingSkillsIds { get; set; }
     
@@ -126,11 +126,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  RoutingSkillsIds: ").Append(RoutingSkillsIds).Append("\n");
             sb.Append("  ConversationIds: ").Append(ConversationIds).Append("\n");
             sb.Append("  Participants: ").Append(Participants).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -221,34 +220,24 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.PhoneNumber != null)
                     hash = hash * 59 + this.PhoneNumber.GetHashCode();
-                
                 if (this.CallFromQueueId != null)
                     hash = hash * 59 + this.CallFromQueueId.GetHashCode();
-                
                 if (this.CallQueueId != null)
                     hash = hash * 59 + this.CallQueueId.GetHashCode();
-                
                 if (this.CallUserId != null)
                     hash = hash * 59 + this.CallUserId.GetHashCode();
-                
                 if (this.Priority != null)
                     hash = hash * 59 + this.Priority.GetHashCode();
-                
                 if (this.LanguageId != null)
                     hash = hash * 59 + this.LanguageId.GetHashCode();
-                
                 if (this.RoutingSkillsIds != null)
                     hash = hash * 59 + this.RoutingSkillsIds.GetHashCode();
-                
                 if (this.ConversationIds != null)
                     hash = hash * 59 + this.ConversationIds.GetHashCode();
-                
                 if (this.Participants != null)
                     hash = hash * 59 + this.Participants.GetHashCode();
-                
                 return hash;
             }
         }

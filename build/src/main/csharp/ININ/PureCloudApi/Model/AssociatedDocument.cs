@@ -17,9 +17,13 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class AssociatedDocument :  IEquatable<AssociatedDocument>
     { 
-    
+
+        /// <summary>
+        /// the document association type
+        /// </summary>
+        /// <value>the document association type</value>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum DocumentAssociationTypeEnum {
+                public enum DocumentAssociationTypeEnum {
             
             [EnumMember(Value = "UNKNOWN")]
             Unknown,
@@ -30,6 +34,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "SECONDARY")]
             Secondary
         }
+
         
         /// <summary>
         /// the document association type
@@ -58,7 +63,7 @@ namespace ININ.PureCloudApi.Model
             this.DocumentAssociationType = DocumentAssociationType;
             
         }
-        
+
     
         /// <summary>
         /// the document associated with the workitem
@@ -77,11 +82,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class AssociatedDocument {\n");
             sb.Append("  Document: ").Append(Document).Append("\n");
             sb.Append("  DocumentAssociationType: ").Append(DocumentAssociationType).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -137,13 +141,10 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Document != null)
                     hash = hash * 59 + this.Document.GetHashCode();
-                
                 if (this.DocumentAssociationType != null)
                     hash = hash * 59 + this.DocumentAssociationType.GetHashCode();
-                
                 return hash;
             }
         }

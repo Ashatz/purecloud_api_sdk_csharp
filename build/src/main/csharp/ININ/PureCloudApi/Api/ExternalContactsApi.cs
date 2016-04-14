@@ -1,5 +1,4 @@
 using System;
-using System.IO;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -9,14 +8,12 @@ using ININ.PureCloudApi.Model;
 
 namespace ININ.PureCloudApi.Api
 {
-    
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
     public interface IExternalContactsApi
     {
         #region Synchronous Operations
-        
         /// <summary>
         /// Delete a contact
         /// </summary>
@@ -27,7 +24,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactId">ExternalContact ID</param>
         /// <returns></returns>
         void DeleteContactsContactId (string contactId);
-  
+
         /// <summary>
         /// Delete a contact
         /// </summary>
@@ -38,7 +35,6 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactId">ExternalContact ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteContactsContactIdWithHttpInfo (string contactId);
-        
         /// <summary>
         /// Delete a note for a contact
         /// </summary>
@@ -50,7 +46,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="noteId">Note Id</param>
         /// <returns></returns>
         void DeleteContactsContactIdNotesNoteId (string contactId, string noteId);
-  
+
         /// <summary>
         /// Delete a note for a contact
         /// </summary>
@@ -62,7 +58,6 @@ namespace ININ.PureCloudApi.Api
         /// <param name="noteId">Note Id</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteContactsContactIdNotesNoteIdWithHttpInfo (string contactId, string noteId);
-        
         /// <summary>
         /// Delete an External Organization
         /// </summary>
@@ -73,7 +68,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="externalOrganizationId">External Organization ID</param>
         /// <returns></returns>
         void DeleteOrganizationsExternalorganizationId (string externalOrganizationId);
-  
+
         /// <summary>
         /// Delete an External Organization
         /// </summary>
@@ -84,7 +79,6 @@ namespace ININ.PureCloudApi.Api
         /// <param name="externalOrganizationId">External Organization ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteOrganizationsExternalorganizationIdWithHttpInfo (string externalOrganizationId);
-        
         /// <summary>
         /// Delete a note
         /// </summary>
@@ -96,7 +90,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="noteId">Note Id</param>
         /// <returns></returns>
         void DeleteOrganizationsExternalorganizationIdNotesNoteId (string externalOrganizationId, string noteId);
-  
+
         /// <summary>
         /// Delete a note
         /// </summary>
@@ -108,7 +102,6 @@ namespace ININ.PureCloudApi.Api
         /// <param name="noteId">Note Id</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteOrganizationsExternalorganizationIdNotesNoteIdWithHttpInfo (string externalOrganizationId, string noteId);
-        
         /// <summary>
         /// Delete a relationship
         /// </summary>
@@ -119,7 +112,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="relationshipId">Relationship Id</param>
         /// <returns></returns>
         void DeleteRelationshipsRelationshipId (string relationshipId);
-  
+
         /// <summary>
         /// Delete a relationship
         /// </summary>
@@ -130,7 +123,6 @@ namespace ININ.PureCloudApi.Api
         /// <param name="relationshipId">Relationship Id</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteRelationshipsRelationshipIdWithHttpInfo (string relationshipId);
-        
         /// <summary>
         /// Search for External Contacts
         /// </summary>
@@ -138,14 +130,14 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="q">User supplied search keywords (no special syntax is currently supported)</param>
-        /// <param name="sortOrder">Sort order</param>
-        /// <param name="expand">which fields, if any, to expand</param>
+        /// <param name="pageSize">Page size (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="q">User supplied search keywords (no special syntax is currently supported) (optional)</param>
+        /// <param name="sortOrder">Sort order (optional)</param>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>ContactListing</returns>
         ContactListing GetContacts (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null);
-  
+
         /// <summary>
         /// Search for External Contacts
         /// </summary>
@@ -153,14 +145,13 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="q">User supplied search keywords (no special syntax is currently supported)</param>
-        /// <param name="sortOrder">Sort order</param>
-        /// <param name="expand">which fields, if any, to expand</param>
+        /// <param name="pageSize">Page size (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="q">User supplied search keywords (no special syntax is currently supported) (optional)</param>
+        /// <param name="sortOrder">Sort order (optional)</param>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of ContactListing</returns>
         ApiResponse<ContactListing> GetContactsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null);
-        
         /// <summary>
         /// Fetch a ExternalContact
         /// </summary>
@@ -169,10 +160,10 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param>
-        /// <param name="expand">which fields, if any, to expand</param>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>ExternalContact</returns>
         ExternalContact GetContactsContactId (string contactId, List<string> expand = null);
-  
+
         /// <summary>
         /// Fetch a ExternalContact
         /// </summary>
@@ -181,10 +172,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param>
-        /// <param name="expand">which fields, if any, to expand</param>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of ExternalContact</returns>
         ApiResponse<ExternalContact> GetContactsContactIdWithHttpInfo (string contactId, List<string> expand = null);
-        
         /// <summary>
         /// List Notes for an ExternalContact
         /// </summary>
@@ -193,12 +183,12 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact Id</param>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="sortOrder">Sort order</param>
+        /// <param name="pageSize">Page size (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortOrder">Sort order (optional)</param>
         /// <returns>NoteListing</returns>
         NoteListing GetContactsContactIdNotes (string contactId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
-  
+
         /// <summary>
         /// List Notes for an ExternalContact
         /// </summary>
@@ -207,12 +197,11 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact Id</param>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="sortOrder">Sort order</param>
+        /// <param name="pageSize">Page size (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortOrder">Sort order (optional)</param>
         /// <returns>ApiResponse of NoteListing</returns>
         ApiResponse<NoteListing> GetContactsContactIdNotesWithHttpInfo (string contactId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
-        
         /// <summary>
         /// Fetch a note for a contact
         /// </summary>
@@ -224,7 +213,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="noteId">Note Id</param>
         /// <returns>Note</returns>
         Note GetContactsContactIdNotesNoteId (string contactId, string noteId);
-  
+
         /// <summary>
         /// Fetch a note for a contact
         /// </summary>
@@ -236,7 +225,6 @@ namespace ININ.PureCloudApi.Api
         /// <param name="noteId">Note Id</param>
         /// <returns>ApiResponse of Note</returns>
         ApiResponse<Note> GetContactsContactIdNotesNoteIdWithHttpInfo (string contactId, string noteId);
-        
         /// <summary>
         /// Search for External Organizations
         /// </summary>
@@ -244,13 +232,13 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="q">Search query</param>
-        /// <param name="sortOrder">Sort order</param>
+        /// <param name="pageSize">Page size (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="q">Search query (optional)</param>
+        /// <param name="sortOrder">Sort order (optional)</param>
         /// <returns>ExternalOrganizationListing</returns>
         ExternalOrganizationListing GetOrganizations (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null);
-  
+
         /// <summary>
         /// Search for External Organizations
         /// </summary>
@@ -258,13 +246,12 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="q">Search query</param>
-        /// <param name="sortOrder">Sort order</param>
+        /// <param name="pageSize">Page size (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="q">Search query (optional)</param>
+        /// <param name="sortOrder">Sort order (optional)</param>
         /// <returns>ApiResponse of ExternalOrganizationListing</returns>
         ApiResponse<ExternalOrganizationListing> GetOrganizationsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null);
-        
         /// <summary>
         /// Fetch an External Organization
         /// </summary>
@@ -275,7 +262,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="externalOrganizationId">External Organization ID</param>
         /// <returns>ExternalOrganization</returns>
         ExternalOrganization GetOrganizationsExternalorganizationId (string externalOrganizationId);
-  
+
         /// <summary>
         /// Fetch an External Organization
         /// </summary>
@@ -286,7 +273,6 @@ namespace ININ.PureCloudApi.Api
         /// <param name="externalOrganizationId">External Organization ID</param>
         /// <returns>ApiResponse of ExternalOrganization</returns>
         ApiResponse<ExternalOrganization> GetOrganizationsExternalorganizationIdWithHttpInfo (string externalOrganizationId);
-        
         /// <summary>
         /// Search for External Contacts
         /// </summary>
@@ -295,14 +281,14 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="q">User supplied search keywords (no special syntax is currently supported)</param>
-        /// <param name="sortOrder">Sort order</param>
-        /// <param name="expand">which fields, if any, to expand</param>
+        /// <param name="pageSize">Page size (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="q">User supplied search keywords (no special syntax is currently supported) (optional)</param>
+        /// <param name="sortOrder">Sort order (optional)</param>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>ContactListing</returns>
         ContactListing GetOrganizationsExternalorganizationIdContacts (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null);
-  
+
         /// <summary>
         /// Search for External Contacts
         /// </summary>
@@ -311,14 +297,13 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="q">User supplied search keywords (no special syntax is currently supported)</param>
-        /// <param name="sortOrder">Sort order</param>
-        /// <param name="expand">which fields, if any, to expand</param>
+        /// <param name="pageSize">Page size (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="q">User supplied search keywords (no special syntax is currently supported) (optional)</param>
+        /// <param name="sortOrder">Sort order (optional)</param>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of ContactListing</returns>
         ApiResponse<ContactListing> GetOrganizationsExternalorganizationIdContactsWithHttpInfo (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null);
-        
         /// <summary>
         /// List Notes for an External Organization
         /// </summary>
@@ -327,12 +312,12 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization Id</param>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="sortOrder">Sort order</param>
+        /// <param name="pageSize">Page size (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortOrder">Sort order (optional)</param>
         /// <returns>NoteListing</returns>
         NoteListing GetOrganizationsExternalorganizationIdNotes (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
-  
+
         /// <summary>
         /// List Notes for an External Organization
         /// </summary>
@@ -341,12 +326,11 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization Id</param>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="sortOrder">Sort order</param>
+        /// <param name="pageSize">Page size (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortOrder">Sort order (optional)</param>
         /// <returns>ApiResponse of NoteListing</returns>
         ApiResponse<NoteListing> GetOrganizationsExternalorganizationIdNotesWithHttpInfo (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
-        
         /// <summary>
         /// Fetch a note
         /// </summary>
@@ -358,7 +342,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="noteId">Note Id</param>
         /// <returns>Note</returns>
         Note GetOrganizationsExternalorganizationIdNotesNoteId (string externalOrganizationId, string noteId);
-  
+
         /// <summary>
         /// Fetch a note
         /// </summary>
@@ -370,7 +354,6 @@ namespace ININ.PureCloudApi.Api
         /// <param name="noteId">Note Id</param>
         /// <returns>ApiResponse of Note</returns>
         ApiResponse<Note> GetOrganizationsExternalorganizationIdNotesNoteIdWithHttpInfo (string externalOrganizationId, string noteId);
-        
         /// <summary>
         /// Fetch an External Organization
         /// </summary>
@@ -379,12 +362,12 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="sortOrder">Sort order</param>
+        /// <param name="pageSize">Page size (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortOrder">Sort order (optional)</param>
         /// <returns>RelationshipListing</returns>
         RelationshipListing GetOrganizationsExternalorganizationIdRelationships (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
-  
+
         /// <summary>
         /// Fetch an External Organization
         /// </summary>
@@ -393,12 +376,11 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="sortOrder">Sort order</param>
+        /// <param name="pageSize">Page size (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortOrder">Sort order (optional)</param>
         /// <returns>ApiResponse of RelationshipListing</returns>
         ApiResponse<RelationshipListing> GetOrganizationsExternalorganizationIdRelationshipsWithHttpInfo (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
-        
         /// <summary>
         /// Fetch a relationship
         /// </summary>
@@ -409,7 +391,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="relationshipId">Relationship Id</param>
         /// <returns>Relationship</returns>
         Relationship GetRelationshipsRelationshipId (string relationshipId);
-  
+
         /// <summary>
         /// Fetch a relationship
         /// </summary>
@@ -420,7 +402,6 @@ namespace ININ.PureCloudApi.Api
         /// <param name="relationshipId">Relationship Id</param>
         /// <returns>ApiResponse of Relationship</returns>
         ApiResponse<Relationship> GetRelationshipsRelationshipIdWithHttpInfo (string relationshipId);
-        
         /// <summary>
         /// Create an ExternalContact
         /// </summary>
@@ -428,10 +409,10 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">ExternalContact</param>
+        /// <param name="body">ExternalContact (optional)</param>
         /// <returns>ExternalContact</returns>
         ExternalContact PostContacts (ExternalContact body = null);
-  
+
         /// <summary>
         /// Create an ExternalContact
         /// </summary>
@@ -439,10 +420,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">ExternalContact</param>
+        /// <param name="body">ExternalContact (optional)</param>
         /// <returns>ApiResponse of ExternalContact</returns>
         ApiResponse<ExternalContact> PostContactsWithHttpInfo (ExternalContact body = null);
-        
         /// <summary>
         /// Create a Note for an ExternalContact
         /// </summary>
@@ -451,10 +431,10 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact Id</param>
-        /// <param name="body">ExternalContact</param>
+        /// <param name="body">ExternalContact (optional)</param>
         /// <returns>Note</returns>
         Note PostContactsContactIdNotes (string contactId, Note body = null);
-  
+
         /// <summary>
         /// Create a Note for an ExternalContact
         /// </summary>
@@ -463,10 +443,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact Id</param>
-        /// <param name="body">ExternalContact</param>
+        /// <param name="body">ExternalContact (optional)</param>
         /// <returns>ApiResponse of Note</returns>
         ApiResponse<Note> PostContactsContactIdNotesWithHttpInfo (string contactId, Note body = null);
-        
         /// <summary>
         /// Create an External Organization
         /// </summary>
@@ -474,10 +453,10 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">ExternalOrganization</param>
+        /// <param name="body">ExternalOrganization (optional)</param>
         /// <returns>ExternalOrganization</returns>
         ExternalOrganization PostOrganizations (ExternalOrganization body = null);
-  
+
         /// <summary>
         /// Create an External Organization
         /// </summary>
@@ -485,10 +464,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">ExternalOrganization</param>
+        /// <param name="body">ExternalOrganization (optional)</param>
         /// <returns>ApiResponse of ExternalOrganization</returns>
         ApiResponse<ExternalOrganization> PostOrganizationsWithHttpInfo (ExternalOrganization body = null);
-        
         /// <summary>
         /// Create a Note for an External Organization
         /// </summary>
@@ -497,10 +475,10 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization Id</param>
-        /// <param name="body">ExternalContact</param>
+        /// <param name="body">ExternalContact (optional)</param>
         /// <returns>Note</returns>
         Note PostOrganizationsExternalorganizationIdNotes (string externalOrganizationId, Note body = null);
-  
+
         /// <summary>
         /// Create a Note for an External Organization
         /// </summary>
@@ -509,10 +487,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization Id</param>
-        /// <param name="body">ExternalContact</param>
+        /// <param name="body">ExternalContact (optional)</param>
         /// <returns>ApiResponse of Note</returns>
         ApiResponse<Note> PostOrganizationsExternalorganizationIdNotesWithHttpInfo (string externalOrganizationId, Note body = null);
-        
         /// <summary>
         /// Create a relationship
         /// </summary>
@@ -520,10 +497,10 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Relationship</param>
+        /// <param name="body">Relationship (optional)</param>
         /// <returns>Relationship</returns>
         Relationship PostRelationships (Relationship body = null);
-  
+
         /// <summary>
         /// Create a relationship
         /// </summary>
@@ -531,10 +508,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Relationship</param>
+        /// <param name="body">Relationship (optional)</param>
         /// <returns>ApiResponse of Relationship</returns>
         ApiResponse<Relationship> PostRelationshipsWithHttpInfo (Relationship body = null);
-        
         /// <summary>
         /// Update a externalContact
         /// </summary>
@@ -543,10 +519,10 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param>
-        /// <param name="body">ExternalContact</param>
+        /// <param name="body">ExternalContact (optional)</param>
         /// <returns>ExternalContact</returns>
         ExternalContact PutContactsContactId (string contactId, ExternalContact body = null);
-  
+
         /// <summary>
         /// Update a externalContact
         /// </summary>
@@ -555,10 +531,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param>
-        /// <param name="body">ExternalContact</param>
+        /// <param name="body">ExternalContact (optional)</param>
         /// <returns>ApiResponse of ExternalContact</returns>
         ApiResponse<ExternalContact> PutContactsContactIdWithHttpInfo (string contactId, ExternalContact body = null);
-        
         /// <summary>
         /// Update a note for a contact
         /// </summary>
@@ -568,10 +543,10 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact Id</param>
         /// <param name="noteId">Note Id</param>
-        /// <param name="body">Note</param>
+        /// <param name="body">Note (optional)</param>
         /// <returns>Note</returns>
         Note PutContactsContactIdNotesNoteId (string contactId, string noteId, Note body = null);
-  
+
         /// <summary>
         /// Update a note for a contact
         /// </summary>
@@ -581,10 +556,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact Id</param>
         /// <param name="noteId">Note Id</param>
-        /// <param name="body">Note</param>
+        /// <param name="body">Note (optional)</param>
         /// <returns>ApiResponse of Note</returns>
         ApiResponse<Note> PutContactsContactIdNotesNoteIdWithHttpInfo (string contactId, string noteId, Note body = null);
-        
         /// <summary>
         /// Update an External Organization
         /// </summary>
@@ -593,10 +567,10 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
-        /// <param name="body">ExternalOrganization</param>
+        /// <param name="body">ExternalOrganization (optional)</param>
         /// <returns>ExternalOrganization</returns>
         ExternalOrganization PutOrganizationsExternalorganizationId (string externalOrganizationId, ExternalOrganization body = null);
-  
+
         /// <summary>
         /// Update an External Organization
         /// </summary>
@@ -605,10 +579,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
-        /// <param name="body">ExternalOrganization</param>
+        /// <param name="body">ExternalOrganization (optional)</param>
         /// <returns>ApiResponse of ExternalOrganization</returns>
         ApiResponse<ExternalOrganization> PutOrganizationsExternalorganizationIdWithHttpInfo (string externalOrganizationId, ExternalOrganization body = null);
-        
         /// <summary>
         /// Update a note
         /// </summary>
@@ -618,10 +591,10 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization Id</param>
         /// <param name="noteId">Note Id</param>
-        /// <param name="body">Note</param>
+        /// <param name="body">Note (optional)</param>
         /// <returns>Note</returns>
         Note PutOrganizationsExternalorganizationIdNotesNoteId (string externalOrganizationId, string noteId, Note body = null);
-  
+
         /// <summary>
         /// Update a note
         /// </summary>
@@ -631,10 +604,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization Id</param>
         /// <param name="noteId">Note Id</param>
-        /// <param name="body">Note</param>
+        /// <param name="body">Note (optional)</param>
         /// <returns>ApiResponse of Note</returns>
         ApiResponse<Note> PutOrganizationsExternalorganizationIdNotesNoteIdWithHttpInfo (string externalOrganizationId, string noteId, Note body = null);
-        
         /// <summary>
         /// Update a relationship
         /// </summary>
@@ -643,10 +615,10 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="relationshipId">Relationship Id</param>
-        /// <param name="body">Relationship</param>
+        /// <param name="body">Relationship (optional)</param>
         /// <returns>Relationship</returns>
         Relationship PutRelationshipsRelationshipId (string relationshipId, Relationship body = null);
-  
+
         /// <summary>
         /// Update a relationship
         /// </summary>
@@ -655,14 +627,11 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="relationshipId">Relationship Id</param>
-        /// <param name="body">Relationship</param>
+        /// <param name="body">Relationship (optional)</param>
         /// <returns>ApiResponse of Relationship</returns>
         ApiResponse<Relationship> PutRelationshipsRelationshipIdWithHttpInfo (string relationshipId, Relationship body = null);
-        
         #endregion Synchronous Operations
-        
         #region Asynchronous Operations
-        
         /// <summary>
         /// Delete a contact
         /// </summary>
@@ -684,7 +653,6 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactId">ExternalContact ID</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteContactsContactIdAsyncWithHttpInfo (string contactId);
-        
         /// <summary>
         /// Delete a note for a contact
         /// </summary>
@@ -708,7 +676,6 @@ namespace ININ.PureCloudApi.Api
         /// <param name="noteId">Note Id</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteContactsContactIdNotesNoteIdAsyncWithHttpInfo (string contactId, string noteId);
-        
         /// <summary>
         /// Delete an External Organization
         /// </summary>
@@ -730,7 +697,6 @@ namespace ININ.PureCloudApi.Api
         /// <param name="externalOrganizationId">External Organization ID</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOrganizationsExternalorganizationIdAsyncWithHttpInfo (string externalOrganizationId);
-        
         /// <summary>
         /// Delete a note
         /// </summary>
@@ -754,7 +720,6 @@ namespace ININ.PureCloudApi.Api
         /// <param name="noteId">Note Id</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOrganizationsExternalorganizationIdNotesNoteIdAsyncWithHttpInfo (string externalOrganizationId, string noteId);
-        
         /// <summary>
         /// Delete a relationship
         /// </summary>
@@ -776,7 +741,6 @@ namespace ININ.PureCloudApi.Api
         /// <param name="relationshipId">Relationship Id</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRelationshipsRelationshipIdAsyncWithHttpInfo (string relationshipId);
-        
         /// <summary>
         /// Search for External Contacts
         /// </summary>
@@ -784,11 +748,11 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="q">User supplied search keywords (no special syntax is currently supported)</param>
-        /// <param name="sortOrder">Sort order</param>
-        /// <param name="expand">which fields, if any, to expand</param>
+        /// <param name="pageSize">Page size (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="q">User supplied search keywords (no special syntax is currently supported) (optional)</param>
+        /// <param name="sortOrder">Sort order (optional)</param>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of ContactListing</returns>
         System.Threading.Tasks.Task<ContactListing> GetContactsAsync (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null);
 
@@ -799,14 +763,13 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="q">User supplied search keywords (no special syntax is currently supported)</param>
-        /// <param name="sortOrder">Sort order</param>
-        /// <param name="expand">which fields, if any, to expand</param>
+        /// <param name="pageSize">Page size (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="q">User supplied search keywords (no special syntax is currently supported) (optional)</param>
+        /// <param name="sortOrder">Sort order (optional)</param>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (ContactListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<ContactListing>> GetContactsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null);
-        
         /// <summary>
         /// Fetch a ExternalContact
         /// </summary>
@@ -815,7 +778,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param>
-        /// <param name="expand">which fields, if any, to expand</param>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of ExternalContact</returns>
         System.Threading.Tasks.Task<ExternalContact> GetContactsContactIdAsync (string contactId, List<string> expand = null);
 
@@ -827,10 +790,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param>
-        /// <param name="expand">which fields, if any, to expand</param>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (ExternalContact)</returns>
         System.Threading.Tasks.Task<ApiResponse<ExternalContact>> GetContactsContactIdAsyncWithHttpInfo (string contactId, List<string> expand = null);
-        
         /// <summary>
         /// List Notes for an ExternalContact
         /// </summary>
@@ -839,9 +801,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact Id</param>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="sortOrder">Sort order</param>
+        /// <param name="pageSize">Page size (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortOrder">Sort order (optional)</param>
         /// <returns>Task of NoteListing</returns>
         System.Threading.Tasks.Task<NoteListing> GetContactsContactIdNotesAsync (string contactId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
 
@@ -853,12 +815,11 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact Id</param>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="sortOrder">Sort order</param>
+        /// <param name="pageSize">Page size (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortOrder">Sort order (optional)</param>
         /// <returns>Task of ApiResponse (NoteListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<NoteListing>> GetContactsContactIdNotesAsyncWithHttpInfo (string contactId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
-        
         /// <summary>
         /// Fetch a note for a contact
         /// </summary>
@@ -882,7 +843,6 @@ namespace ININ.PureCloudApi.Api
         /// <param name="noteId">Note Id</param>
         /// <returns>Task of ApiResponse (Note)</returns>
         System.Threading.Tasks.Task<ApiResponse<Note>> GetContactsContactIdNotesNoteIdAsyncWithHttpInfo (string contactId, string noteId);
-        
         /// <summary>
         /// Search for External Organizations
         /// </summary>
@@ -890,10 +850,10 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="q">Search query</param>
-        /// <param name="sortOrder">Sort order</param>
+        /// <param name="pageSize">Page size (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="q">Search query (optional)</param>
+        /// <param name="sortOrder">Sort order (optional)</param>
         /// <returns>Task of ExternalOrganizationListing</returns>
         System.Threading.Tasks.Task<ExternalOrganizationListing> GetOrganizationsAsync (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null);
 
@@ -904,13 +864,12 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="q">Search query</param>
-        /// <param name="sortOrder">Sort order</param>
+        /// <param name="pageSize">Page size (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="q">Search query (optional)</param>
+        /// <param name="sortOrder">Sort order (optional)</param>
         /// <returns>Task of ApiResponse (ExternalOrganizationListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<ExternalOrganizationListing>> GetOrganizationsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null);
-        
         /// <summary>
         /// Fetch an External Organization
         /// </summary>
@@ -932,7 +891,6 @@ namespace ININ.PureCloudApi.Api
         /// <param name="externalOrganizationId">External Organization ID</param>
         /// <returns>Task of ApiResponse (ExternalOrganization)</returns>
         System.Threading.Tasks.Task<ApiResponse<ExternalOrganization>> GetOrganizationsExternalorganizationIdAsyncWithHttpInfo (string externalOrganizationId);
-        
         /// <summary>
         /// Search for External Contacts
         /// </summary>
@@ -941,11 +899,11 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="q">User supplied search keywords (no special syntax is currently supported)</param>
-        /// <param name="sortOrder">Sort order</param>
-        /// <param name="expand">which fields, if any, to expand</param>
+        /// <param name="pageSize">Page size (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="q">User supplied search keywords (no special syntax is currently supported) (optional)</param>
+        /// <param name="sortOrder">Sort order (optional)</param>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of ContactListing</returns>
         System.Threading.Tasks.Task<ContactListing> GetOrganizationsExternalorganizationIdContactsAsync (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null);
 
@@ -957,14 +915,13 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="q">User supplied search keywords (no special syntax is currently supported)</param>
-        /// <param name="sortOrder">Sort order</param>
-        /// <param name="expand">which fields, if any, to expand</param>
+        /// <param name="pageSize">Page size (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="q">User supplied search keywords (no special syntax is currently supported) (optional)</param>
+        /// <param name="sortOrder">Sort order (optional)</param>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (ContactListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<ContactListing>> GetOrganizationsExternalorganizationIdContactsAsyncWithHttpInfo (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null);
-        
         /// <summary>
         /// List Notes for an External Organization
         /// </summary>
@@ -973,9 +930,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization Id</param>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="sortOrder">Sort order</param>
+        /// <param name="pageSize">Page size (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortOrder">Sort order (optional)</param>
         /// <returns>Task of NoteListing</returns>
         System.Threading.Tasks.Task<NoteListing> GetOrganizationsExternalorganizationIdNotesAsync (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
 
@@ -987,12 +944,11 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization Id</param>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="sortOrder">Sort order</param>
+        /// <param name="pageSize">Page size (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortOrder">Sort order (optional)</param>
         /// <returns>Task of ApiResponse (NoteListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<NoteListing>> GetOrganizationsExternalorganizationIdNotesAsyncWithHttpInfo (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
-        
         /// <summary>
         /// Fetch a note
         /// </summary>
@@ -1016,7 +972,6 @@ namespace ININ.PureCloudApi.Api
         /// <param name="noteId">Note Id</param>
         /// <returns>Task of ApiResponse (Note)</returns>
         System.Threading.Tasks.Task<ApiResponse<Note>> GetOrganizationsExternalorganizationIdNotesNoteIdAsyncWithHttpInfo (string externalOrganizationId, string noteId);
-        
         /// <summary>
         /// Fetch an External Organization
         /// </summary>
@@ -1025,9 +980,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="sortOrder">Sort order</param>
+        /// <param name="pageSize">Page size (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortOrder">Sort order (optional)</param>
         /// <returns>Task of RelationshipListing</returns>
         System.Threading.Tasks.Task<RelationshipListing> GetOrganizationsExternalorganizationIdRelationshipsAsync (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
 
@@ -1039,12 +994,11 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="sortOrder">Sort order</param>
+        /// <param name="pageSize">Page size (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortOrder">Sort order (optional)</param>
         /// <returns>Task of ApiResponse (RelationshipListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<RelationshipListing>> GetOrganizationsExternalorganizationIdRelationshipsAsyncWithHttpInfo (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
-        
         /// <summary>
         /// Fetch a relationship
         /// </summary>
@@ -1066,7 +1020,6 @@ namespace ININ.PureCloudApi.Api
         /// <param name="relationshipId">Relationship Id</param>
         /// <returns>Task of ApiResponse (Relationship)</returns>
         System.Threading.Tasks.Task<ApiResponse<Relationship>> GetRelationshipsRelationshipIdAsyncWithHttpInfo (string relationshipId);
-        
         /// <summary>
         /// Create an ExternalContact
         /// </summary>
@@ -1074,7 +1027,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">ExternalContact</param>
+        /// <param name="body">ExternalContact (optional)</param>
         /// <returns>Task of ExternalContact</returns>
         System.Threading.Tasks.Task<ExternalContact> PostContactsAsync (ExternalContact body = null);
 
@@ -1085,10 +1038,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">ExternalContact</param>
+        /// <param name="body">ExternalContact (optional)</param>
         /// <returns>Task of ApiResponse (ExternalContact)</returns>
         System.Threading.Tasks.Task<ApiResponse<ExternalContact>> PostContactsAsyncWithHttpInfo (ExternalContact body = null);
-        
         /// <summary>
         /// Create a Note for an ExternalContact
         /// </summary>
@@ -1097,7 +1049,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact Id</param>
-        /// <param name="body">ExternalContact</param>
+        /// <param name="body">ExternalContact (optional)</param>
         /// <returns>Task of Note</returns>
         System.Threading.Tasks.Task<Note> PostContactsContactIdNotesAsync (string contactId, Note body = null);
 
@@ -1109,10 +1061,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact Id</param>
-        /// <param name="body">ExternalContact</param>
+        /// <param name="body">ExternalContact (optional)</param>
         /// <returns>Task of ApiResponse (Note)</returns>
         System.Threading.Tasks.Task<ApiResponse<Note>> PostContactsContactIdNotesAsyncWithHttpInfo (string contactId, Note body = null);
-        
         /// <summary>
         /// Create an External Organization
         /// </summary>
@@ -1120,7 +1071,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">ExternalOrganization</param>
+        /// <param name="body">ExternalOrganization (optional)</param>
         /// <returns>Task of ExternalOrganization</returns>
         System.Threading.Tasks.Task<ExternalOrganization> PostOrganizationsAsync (ExternalOrganization body = null);
 
@@ -1131,10 +1082,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">ExternalOrganization</param>
+        /// <param name="body">ExternalOrganization (optional)</param>
         /// <returns>Task of ApiResponse (ExternalOrganization)</returns>
         System.Threading.Tasks.Task<ApiResponse<ExternalOrganization>> PostOrganizationsAsyncWithHttpInfo (ExternalOrganization body = null);
-        
         /// <summary>
         /// Create a Note for an External Organization
         /// </summary>
@@ -1143,7 +1093,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization Id</param>
-        /// <param name="body">ExternalContact</param>
+        /// <param name="body">ExternalContact (optional)</param>
         /// <returns>Task of Note</returns>
         System.Threading.Tasks.Task<Note> PostOrganizationsExternalorganizationIdNotesAsync (string externalOrganizationId, Note body = null);
 
@@ -1155,10 +1105,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization Id</param>
-        /// <param name="body">ExternalContact</param>
+        /// <param name="body">ExternalContact (optional)</param>
         /// <returns>Task of ApiResponse (Note)</returns>
         System.Threading.Tasks.Task<ApiResponse<Note>> PostOrganizationsExternalorganizationIdNotesAsyncWithHttpInfo (string externalOrganizationId, Note body = null);
-        
         /// <summary>
         /// Create a relationship
         /// </summary>
@@ -1166,7 +1115,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Relationship</param>
+        /// <param name="body">Relationship (optional)</param>
         /// <returns>Task of Relationship</returns>
         System.Threading.Tasks.Task<Relationship> PostRelationshipsAsync (Relationship body = null);
 
@@ -1177,10 +1126,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Relationship</param>
+        /// <param name="body">Relationship (optional)</param>
         /// <returns>Task of ApiResponse (Relationship)</returns>
         System.Threading.Tasks.Task<ApiResponse<Relationship>> PostRelationshipsAsyncWithHttpInfo (Relationship body = null);
-        
         /// <summary>
         /// Update a externalContact
         /// </summary>
@@ -1189,7 +1137,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param>
-        /// <param name="body">ExternalContact</param>
+        /// <param name="body">ExternalContact (optional)</param>
         /// <returns>Task of ExternalContact</returns>
         System.Threading.Tasks.Task<ExternalContact> PutContactsContactIdAsync (string contactId, ExternalContact body = null);
 
@@ -1201,10 +1149,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param>
-        /// <param name="body">ExternalContact</param>
+        /// <param name="body">ExternalContact (optional)</param>
         /// <returns>Task of ApiResponse (ExternalContact)</returns>
         System.Threading.Tasks.Task<ApiResponse<ExternalContact>> PutContactsContactIdAsyncWithHttpInfo (string contactId, ExternalContact body = null);
-        
         /// <summary>
         /// Update a note for a contact
         /// </summary>
@@ -1214,7 +1161,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact Id</param>
         /// <param name="noteId">Note Id</param>
-        /// <param name="body">Note</param>
+        /// <param name="body">Note (optional)</param>
         /// <returns>Task of Note</returns>
         System.Threading.Tasks.Task<Note> PutContactsContactIdNotesNoteIdAsync (string contactId, string noteId, Note body = null);
 
@@ -1227,10 +1174,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact Id</param>
         /// <param name="noteId">Note Id</param>
-        /// <param name="body">Note</param>
+        /// <param name="body">Note (optional)</param>
         /// <returns>Task of ApiResponse (Note)</returns>
         System.Threading.Tasks.Task<ApiResponse<Note>> PutContactsContactIdNotesNoteIdAsyncWithHttpInfo (string contactId, string noteId, Note body = null);
-        
         /// <summary>
         /// Update an External Organization
         /// </summary>
@@ -1239,7 +1185,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
-        /// <param name="body">ExternalOrganization</param>
+        /// <param name="body">ExternalOrganization (optional)</param>
         /// <returns>Task of ExternalOrganization</returns>
         System.Threading.Tasks.Task<ExternalOrganization> PutOrganizationsExternalorganizationIdAsync (string externalOrganizationId, ExternalOrganization body = null);
 
@@ -1251,10 +1197,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
-        /// <param name="body">ExternalOrganization</param>
+        /// <param name="body">ExternalOrganization (optional)</param>
         /// <returns>Task of ApiResponse (ExternalOrganization)</returns>
         System.Threading.Tasks.Task<ApiResponse<ExternalOrganization>> PutOrganizationsExternalorganizationIdAsyncWithHttpInfo (string externalOrganizationId, ExternalOrganization body = null);
-        
         /// <summary>
         /// Update a note
         /// </summary>
@@ -1264,7 +1209,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization Id</param>
         /// <param name="noteId">Note Id</param>
-        /// <param name="body">Note</param>
+        /// <param name="body">Note (optional)</param>
         /// <returns>Task of Note</returns>
         System.Threading.Tasks.Task<Note> PutOrganizationsExternalorganizationIdNotesNoteIdAsync (string externalOrganizationId, string noteId, Note body = null);
 
@@ -1277,10 +1222,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization Id</param>
         /// <param name="noteId">Note Id</param>
-        /// <param name="body">Note</param>
+        /// <param name="body">Note (optional)</param>
         /// <returns>Task of ApiResponse (Note)</returns>
         System.Threading.Tasks.Task<ApiResponse<Note>> PutOrganizationsExternalorganizationIdNotesNoteIdAsyncWithHttpInfo (string externalOrganizationId, string noteId, Note body = null);
-        
         /// <summary>
         /// Update a relationship
         /// </summary>
@@ -1289,7 +1233,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="relationshipId">Relationship Id</param>
-        /// <param name="body">Relationship</param>
+        /// <param name="body">Relationship (optional)</param>
         /// <returns>Task of Relationship</returns>
         System.Threading.Tasks.Task<Relationship> PutRelationshipsRelationshipIdAsync (string relationshipId, Relationship body = null);
 
@@ -1301,14 +1245,12 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="relationshipId">Relationship Id</param>
-        /// <param name="body">Relationship</param>
+        /// <param name="body">Relationship (optional)</param>
         /// <returns>Task of ApiResponse (Relationship)</returns>
         System.Threading.Tasks.Task<ApiResponse<Relationship>> PutRelationshipsRelationshipIdAsyncWithHttpInfo (string relationshipId, Relationship body = null);
-        
         #endregion Asynchronous Operations
-        
     }
-  
+
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
@@ -1321,8 +1263,14 @@ namespace ININ.PureCloudApi.Api
         public ExternalContactsApi(String basePath)
         {
             this.Configuration = new Configuration(new ApiClient(basePath));
+
+            // ensure API client has configuration ready
+            if (Configuration.ApiClient.Configuration == null)
+            {
+                this.Configuration.ApiClient.Configuration = this.Configuration;
+            }
         }
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ExternalContactsApi"/> class
         /// using Configuration object
@@ -1332,9 +1280,15 @@ namespace ININ.PureCloudApi.Api
         public ExternalContactsApi(Configuration configuration = null)
         {
             if (configuration == null) // use the default one in Configuration
-                this.Configuration = Configuration.Default; 
+                this.Configuration = Configuration.Default;
             else
                 this.Configuration = configuration;
+
+            // ensure API client has configuration ready
+            if (Configuration.ApiClient.Configuration == null)
+            {
+                this.Configuration.ApiClient.Configuration = this.Configuration;
+            }
         }
 
         /// <summary>
@@ -1355,7 +1309,7 @@ namespace ININ.PureCloudApi.Api
         {
             // do nothing
         }
-    
+
         /// <summary>
         /// Gets or sets the configuration object
         /// </summary>
@@ -1383,13 +1337,12 @@ namespace ININ.PureCloudApi.Api
         {
             this.Configuration.AddDefaultHeader(key, value);
         }
-   
-        
+
         /// <summary>
         /// Delete a contact 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="contactId">ExternalContact ID</param> 
+        /// <param name="contactId">ExternalContact ID</param>
         /// <returns></returns>
         public void DeleteContactsContactId (string contactId)
         {
@@ -1400,18 +1353,15 @@ namespace ININ.PureCloudApi.Api
         /// Delete a contact 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="contactId">ExternalContact ID</param> 
+        /// <param name="contactId">ExternalContact ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteContactsContactIdWithHttpInfo (string contactId)
         {
-            
             // verify the required parameter 'contactId' is set
             if (contactId == null)
                 throw new ApiException(400, "Missing required parameter 'contactId' when calling ExternalContactsApi->DeleteContactsContactId");
-            
-    
+
             var localVarPath = "/api/v2/externalcontacts/contacts/{contactId}";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1437,40 +1387,32 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (contactId != null) localVarPathParams.Add("contactId", Configuration.ApiClient.ParameterToString(contactId)); // path parameter
-            
-            
-            
-            
-            
 
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-    
+
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
                 Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteContactsContactId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteContactsContactId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
+
             
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
         }
 
-        
         /// <summary>
         /// Delete a contact 
         /// </summary>
@@ -1492,11 +1434,10 @@ namespace ININ.PureCloudApi.Api
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteContactsContactIdAsyncWithHttpInfo (string contactId)
         {
             // verify the required parameter 'contactId' is set
-            if (contactId == null) throw new ApiException(400, "Missing required parameter 'contactId' when calling DeleteContactsContactId");
-            
-    
+            if (contactId == null)
+                throw new ApiException(400, "Missing required parameter 'contactId' when calling ExternalContactsApi->DeleteContactsContactId");
+
             var localVarPath = "/api/v2/externalcontacts/contacts/{contactId}";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1522,29 +1463,21 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (contactId != null) localVarPathParams.Add("contactId", Configuration.ApiClient.ParameterToString(contactId)); // path parameter
-            
-            
-            
-            
-            
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteContactsContactId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
@@ -1555,13 +1488,13 @@ namespace ININ.PureCloudApi.Api
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
         }
-        
+
         /// <summary>
         /// Delete a note for a contact 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="contactId">ExternalContact Id</param> 
-        /// <param name="noteId">Note Id</param> 
+        /// <param name="contactId">ExternalContact Id</param>
+        /// <param name="noteId">Note Id</param>
         /// <returns></returns>
         public void DeleteContactsContactIdNotesNoteId (string contactId, string noteId)
         {
@@ -1572,23 +1505,19 @@ namespace ININ.PureCloudApi.Api
         /// Delete a note for a contact 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="contactId">ExternalContact Id</param> 
-        /// <param name="noteId">Note Id</param> 
+        /// <param name="contactId">ExternalContact Id</param>
+        /// <param name="noteId">Note Id</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteContactsContactIdNotesNoteIdWithHttpInfo (string contactId, string noteId)
         {
-            
             // verify the required parameter 'contactId' is set
             if (contactId == null)
                 throw new ApiException(400, "Missing required parameter 'contactId' when calling ExternalContactsApi->DeleteContactsContactIdNotesNoteId");
-            
             // verify the required parameter 'noteId' is set
             if (noteId == null)
                 throw new ApiException(400, "Missing required parameter 'noteId' when calling ExternalContactsApi->DeleteContactsContactIdNotesNoteId");
-            
-    
+
             var localVarPath = "/api/v2/externalcontacts/contacts/{contactId}/notes/{noteId}";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1615,40 +1544,32 @@ namespace ININ.PureCloudApi.Api
             localVarPathParams.Add("format", "json");
             if (contactId != null) localVarPathParams.Add("contactId", Configuration.ApiClient.ParameterToString(contactId)); // path parameter
             if (noteId != null) localVarPathParams.Add("noteId", Configuration.ApiClient.ParameterToString(noteId)); // path parameter
-            
-            
-            
-            
-            
 
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-    
+
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
                 Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteContactsContactIdNotesNoteId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteContactsContactIdNotesNoteId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
+
             
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
         }
 
-        
         /// <summary>
         /// Delete a note for a contact 
         /// </summary>
@@ -1672,13 +1593,13 @@ namespace ININ.PureCloudApi.Api
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteContactsContactIdNotesNoteIdAsyncWithHttpInfo (string contactId, string noteId)
         {
             // verify the required parameter 'contactId' is set
-            if (contactId == null) throw new ApiException(400, "Missing required parameter 'contactId' when calling DeleteContactsContactIdNotesNoteId");
+            if (contactId == null)
+                throw new ApiException(400, "Missing required parameter 'contactId' when calling ExternalContactsApi->DeleteContactsContactIdNotesNoteId");
             // verify the required parameter 'noteId' is set
-            if (noteId == null) throw new ApiException(400, "Missing required parameter 'noteId' when calling DeleteContactsContactIdNotesNoteId");
-            
-    
+            if (noteId == null)
+                throw new ApiException(400, "Missing required parameter 'noteId' when calling ExternalContactsApi->DeleteContactsContactIdNotesNoteId");
+
             var localVarPath = "/api/v2/externalcontacts/contacts/{contactId}/notes/{noteId}";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1705,29 +1626,21 @@ namespace ININ.PureCloudApi.Api
             localVarPathParams.Add("format", "json");
             if (contactId != null) localVarPathParams.Add("contactId", Configuration.ApiClient.ParameterToString(contactId)); // path parameter
             if (noteId != null) localVarPathParams.Add("noteId", Configuration.ApiClient.ParameterToString(noteId)); // path parameter
-            
-            
-            
-            
-            
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteContactsContactIdNotesNoteId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
@@ -1738,12 +1651,12 @@ namespace ININ.PureCloudApi.Api
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
         }
-        
+
         /// <summary>
         /// Delete an External Organization 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="externalOrganizationId">External Organization ID</param> 
+        /// <param name="externalOrganizationId">External Organization ID</param>
         /// <returns></returns>
         public void DeleteOrganizationsExternalorganizationId (string externalOrganizationId)
         {
@@ -1754,18 +1667,15 @@ namespace ININ.PureCloudApi.Api
         /// Delete an External Organization 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="externalOrganizationId">External Organization ID</param> 
+        /// <param name="externalOrganizationId">External Organization ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteOrganizationsExternalorganizationIdWithHttpInfo (string externalOrganizationId)
         {
-            
             // verify the required parameter 'externalOrganizationId' is set
             if (externalOrganizationId == null)
                 throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling ExternalContactsApi->DeleteOrganizationsExternalorganizationId");
-            
-    
+
             var localVarPath = "/api/v2/externalcontacts/organizations/{externalOrganizationId}";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1791,40 +1701,32 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (externalOrganizationId != null) localVarPathParams.Add("externalOrganizationId", Configuration.ApiClient.ParameterToString(externalOrganizationId)); // path parameter
-            
-            
-            
-            
-            
 
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-    
+
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
                 Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteOrganizationsExternalorganizationId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteOrganizationsExternalorganizationId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
+
             
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
         }
 
-        
         /// <summary>
         /// Delete an External Organization 
         /// </summary>
@@ -1846,11 +1748,10 @@ namespace ININ.PureCloudApi.Api
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOrganizationsExternalorganizationIdAsyncWithHttpInfo (string externalOrganizationId)
         {
             // verify the required parameter 'externalOrganizationId' is set
-            if (externalOrganizationId == null) throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling DeleteOrganizationsExternalorganizationId");
-            
-    
+            if (externalOrganizationId == null)
+                throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling ExternalContactsApi->DeleteOrganizationsExternalorganizationId");
+
             var localVarPath = "/api/v2/externalcontacts/organizations/{externalOrganizationId}";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1876,29 +1777,21 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (externalOrganizationId != null) localVarPathParams.Add("externalOrganizationId", Configuration.ApiClient.ParameterToString(externalOrganizationId)); // path parameter
-            
-            
-            
-            
-            
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteOrganizationsExternalorganizationId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
@@ -1909,13 +1802,13 @@ namespace ININ.PureCloudApi.Api
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
         }
-        
+
         /// <summary>
         /// Delete a note 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="externalOrganizationId">External Organization Id</param> 
-        /// <param name="noteId">Note Id</param> 
+        /// <param name="externalOrganizationId">External Organization Id</param>
+        /// <param name="noteId">Note Id</param>
         /// <returns></returns>
         public void DeleteOrganizationsExternalorganizationIdNotesNoteId (string externalOrganizationId, string noteId)
         {
@@ -1926,23 +1819,19 @@ namespace ININ.PureCloudApi.Api
         /// Delete a note 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="externalOrganizationId">External Organization Id</param> 
-        /// <param name="noteId">Note Id</param> 
+        /// <param name="externalOrganizationId">External Organization Id</param>
+        /// <param name="noteId">Note Id</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteOrganizationsExternalorganizationIdNotesNoteIdWithHttpInfo (string externalOrganizationId, string noteId)
         {
-            
             // verify the required parameter 'externalOrganizationId' is set
             if (externalOrganizationId == null)
                 throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling ExternalContactsApi->DeleteOrganizationsExternalorganizationIdNotesNoteId");
-            
             // verify the required parameter 'noteId' is set
             if (noteId == null)
                 throw new ApiException(400, "Missing required parameter 'noteId' when calling ExternalContactsApi->DeleteOrganizationsExternalorganizationIdNotesNoteId");
-            
-    
+
             var localVarPath = "/api/v2/externalcontacts/organizations/{externalOrganizationId}/notes/{noteId}";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1969,40 +1858,32 @@ namespace ININ.PureCloudApi.Api
             localVarPathParams.Add("format", "json");
             if (externalOrganizationId != null) localVarPathParams.Add("externalOrganizationId", Configuration.ApiClient.ParameterToString(externalOrganizationId)); // path parameter
             if (noteId != null) localVarPathParams.Add("noteId", Configuration.ApiClient.ParameterToString(noteId)); // path parameter
-            
-            
-            
-            
-            
 
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-    
+
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
                 Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteOrganizationsExternalorganizationIdNotesNoteId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteOrganizationsExternalorganizationIdNotesNoteId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
+
             
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
         }
 
-        
         /// <summary>
         /// Delete a note 
         /// </summary>
@@ -2026,13 +1907,13 @@ namespace ININ.PureCloudApi.Api
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOrganizationsExternalorganizationIdNotesNoteIdAsyncWithHttpInfo (string externalOrganizationId, string noteId)
         {
             // verify the required parameter 'externalOrganizationId' is set
-            if (externalOrganizationId == null) throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling DeleteOrganizationsExternalorganizationIdNotesNoteId");
+            if (externalOrganizationId == null)
+                throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling ExternalContactsApi->DeleteOrganizationsExternalorganizationIdNotesNoteId");
             // verify the required parameter 'noteId' is set
-            if (noteId == null) throw new ApiException(400, "Missing required parameter 'noteId' when calling DeleteOrganizationsExternalorganizationIdNotesNoteId");
-            
-    
+            if (noteId == null)
+                throw new ApiException(400, "Missing required parameter 'noteId' when calling ExternalContactsApi->DeleteOrganizationsExternalorganizationIdNotesNoteId");
+
             var localVarPath = "/api/v2/externalcontacts/organizations/{externalOrganizationId}/notes/{noteId}";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2059,29 +1940,21 @@ namespace ININ.PureCloudApi.Api
             localVarPathParams.Add("format", "json");
             if (externalOrganizationId != null) localVarPathParams.Add("externalOrganizationId", Configuration.ApiClient.ParameterToString(externalOrganizationId)); // path parameter
             if (noteId != null) localVarPathParams.Add("noteId", Configuration.ApiClient.ParameterToString(noteId)); // path parameter
-            
-            
-            
-            
-            
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteOrganizationsExternalorganizationIdNotesNoteId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
@@ -2092,12 +1965,12 @@ namespace ININ.PureCloudApi.Api
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
         }
-        
+
         /// <summary>
         /// Delete a relationship 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="relationshipId">Relationship Id</param> 
+        /// <param name="relationshipId">Relationship Id</param>
         /// <returns></returns>
         public void DeleteRelationshipsRelationshipId (string relationshipId)
         {
@@ -2108,18 +1981,15 @@ namespace ININ.PureCloudApi.Api
         /// Delete a relationship 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="relationshipId">Relationship Id</param> 
+        /// <param name="relationshipId">Relationship Id</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteRelationshipsRelationshipIdWithHttpInfo (string relationshipId)
         {
-            
             // verify the required parameter 'relationshipId' is set
             if (relationshipId == null)
                 throw new ApiException(400, "Missing required parameter 'relationshipId' when calling ExternalContactsApi->DeleteRelationshipsRelationshipId");
-            
-    
+
             var localVarPath = "/api/v2/externalcontacts/relationships/{relationshipId}";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2145,40 +2015,32 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (relationshipId != null) localVarPathParams.Add("relationshipId", Configuration.ApiClient.ParameterToString(relationshipId)); // path parameter
-            
-            
-            
-            
-            
 
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-    
+
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
                 Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteRelationshipsRelationshipId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteRelationshipsRelationshipId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
+
             
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
         }
 
-        
         /// <summary>
         /// Delete a relationship 
         /// </summary>
@@ -2200,11 +2062,10 @@ namespace ININ.PureCloudApi.Api
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRelationshipsRelationshipIdAsyncWithHttpInfo (string relationshipId)
         {
             // verify the required parameter 'relationshipId' is set
-            if (relationshipId == null) throw new ApiException(400, "Missing required parameter 'relationshipId' when calling DeleteRelationshipsRelationshipId");
-            
-    
+            if (relationshipId == null)
+                throw new ApiException(400, "Missing required parameter 'relationshipId' when calling ExternalContactsApi->DeleteRelationshipsRelationshipId");
+
             var localVarPath = "/api/v2/externalcontacts/relationships/{relationshipId}";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2230,29 +2091,21 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (relationshipId != null) localVarPathParams.Add("relationshipId", Configuration.ApiClient.ParameterToString(relationshipId)); // path parameter
-            
-            
-            
-            
-            
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteRelationshipsRelationshipId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
@@ -2263,16 +2116,16 @@ namespace ININ.PureCloudApi.Api
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
         }
-        
+
         /// <summary>
         /// Search for External Contacts 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size</param> 
-        /// <param name="pageNumber">Page number</param> 
-        /// <param name="q">User supplied search keywords (no special syntax is currently supported)</param> 
-        /// <param name="sortOrder">Sort order</param> 
-        /// <param name="expand">which fields, if any, to expand</param> 
+        /// <param name="pageSize">Page size (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="q">User supplied search keywords (no special syntax is currently supported) (optional)</param>
+        /// <param name="sortOrder">Sort order (optional)</param>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>ContactListing</returns>
         public ContactListing GetContacts (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null)
         {
@@ -2284,18 +2137,16 @@ namespace ININ.PureCloudApi.Api
         /// Search for External Contacts 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size</param> 
-        /// <param name="pageNumber">Page number</param> 
-        /// <param name="q">User supplied search keywords (no special syntax is currently supported)</param> 
-        /// <param name="sortOrder">Sort order</param> 
-        /// <param name="expand">which fields, if any, to expand</param> 
+        /// <param name="pageSize">Page size (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="q">User supplied search keywords (no special syntax is currently supported) (optional)</param>
+        /// <param name="sortOrder">Sort order (optional)</param>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of ContactListing</returns>
         public ApiResponse< ContactListing > GetContactsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null)
         {
-            
-    
+
             var localVarPath = "/api/v2/externalcontacts/contacts";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2320,54 +2171,46 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
             if (q != null) localVarQueryParams.Add("q", Configuration.ApiClient.ParameterToString(q)); // query parameter
             if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
             if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
-            
-            
-            
-            
 
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-    
+
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetContacts: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetContacts: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
+
             return new ApiResponse<ContactListing>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ContactListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContactListing)));
             
         }
 
-        
         /// <summary>
         /// Search for External Contacts 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="q">User supplied search keywords (no special syntax is currently supported)</param>
-        /// <param name="sortOrder">Sort order</param>
-        /// <param name="expand">which fields, if any, to expand</param>
+        /// <param name="pageSize">Page size (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="q">User supplied search keywords (no special syntax is currently supported) (optional)</param>
+        /// <param name="sortOrder">Sort order (optional)</param>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of ContactListing</returns>
         public async System.Threading.Tasks.Task<ContactListing> GetContactsAsync (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null)
         {
@@ -2380,18 +2223,16 @@ namespace ININ.PureCloudApi.Api
         /// Search for External Contacts 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="q">User supplied search keywords (no special syntax is currently supported)</param>
-        /// <param name="sortOrder">Sort order</param>
-        /// <param name="expand">which fields, if any, to expand</param>
+        /// <param name="pageSize">Page size (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="q">User supplied search keywords (no special syntax is currently supported) (optional)</param>
+        /// <param name="sortOrder">Sort order (optional)</param>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (ContactListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ContactListing>> GetContactsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null)
         {
-            
-    
+
             var localVarPath = "/api/v2/externalcontacts/contacts";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2416,34 +2257,26 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
             if (q != null) localVarQueryParams.Add("q", Configuration.ApiClient.ParameterToString(q)); // query parameter
             if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
             if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
-            
-            
-            
-            
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetContacts: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
@@ -2454,13 +2287,13 @@ namespace ININ.PureCloudApi.Api
                 (ContactListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContactListing)));
             
         }
-        
+
         /// <summary>
         /// Fetch a ExternalContact 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="contactId">ExternalContact ID</param> 
-        /// <param name="expand">which fields, if any, to expand</param> 
+        /// <param name="contactId">ExternalContact ID</param>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>ExternalContact</returns>
         public ExternalContact GetContactsContactId (string contactId, List<string> expand = null)
         {
@@ -2472,19 +2305,16 @@ namespace ININ.PureCloudApi.Api
         /// Fetch a ExternalContact 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="contactId">ExternalContact ID</param> 
-        /// <param name="expand">which fields, if any, to expand</param> 
+        /// <param name="contactId">ExternalContact ID</param>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of ExternalContact</returns>
         public ApiResponse< ExternalContact > GetContactsContactIdWithHttpInfo (string contactId, List<string> expand = null)
         {
-            
             // verify the required parameter 'contactId' is set
             if (contactId == null)
                 throw new ApiException(400, "Missing required parameter 'contactId' when calling ExternalContactsApi->GetContactsContactId");
-            
-    
+
             var localVarPath = "/api/v2/externalcontacts/contacts/{contactId}";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2510,47 +2340,39 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (contactId != null) localVarPathParams.Add("contactId", Configuration.ApiClient.ParameterToString(contactId)); // path parameter
-            
             if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
-            
-            
-            
-            
 
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-    
+
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetContactsContactId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetContactsContactId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
+
             return new ApiResponse<ExternalContact>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ExternalContact) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ExternalContact)));
             
         }
 
-        
         /// <summary>
         /// Fetch a ExternalContact 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param>
-        /// <param name="expand">which fields, if any, to expand</param>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of ExternalContact</returns>
         public async System.Threading.Tasks.Task<ExternalContact> GetContactsContactIdAsync (string contactId, List<string> expand = null)
         {
@@ -2564,16 +2386,15 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param>
-        /// <param name="expand">which fields, if any, to expand</param>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (ExternalContact)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ExternalContact>> GetContactsContactIdAsyncWithHttpInfo (string contactId, List<string> expand = null)
         {
             // verify the required parameter 'contactId' is set
-            if (contactId == null) throw new ApiException(400, "Missing required parameter 'contactId' when calling GetContactsContactId");
-            
-    
+            if (contactId == null)
+                throw new ApiException(400, "Missing required parameter 'contactId' when calling ExternalContactsApi->GetContactsContactId");
+
             var localVarPath = "/api/v2/externalcontacts/contacts/{contactId}";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2599,30 +2420,22 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (contactId != null) localVarPathParams.Add("contactId", Configuration.ApiClient.ParameterToString(contactId)); // path parameter
-            
             if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
-            
-            
-            
-            
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetContactsContactId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
@@ -2633,15 +2446,15 @@ namespace ININ.PureCloudApi.Api
                 (ExternalContact) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ExternalContact)));
             
         }
-        
+
         /// <summary>
         /// List Notes for an ExternalContact 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="contactId">ExternalContact Id</param> 
-        /// <param name="pageSize">Page size</param> 
-        /// <param name="pageNumber">Page number</param> 
-        /// <param name="sortOrder">Sort order</param> 
+        /// <param name="contactId">ExternalContact Id</param>
+        /// <param name="pageSize">Page size (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortOrder">Sort order (optional)</param>
         /// <returns>NoteListing</returns>
         public NoteListing GetContactsContactIdNotes (string contactId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
         {
@@ -2653,21 +2466,18 @@ namespace ININ.PureCloudApi.Api
         /// List Notes for an ExternalContact 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="contactId">ExternalContact Id</param> 
-        /// <param name="pageSize">Page size</param> 
-        /// <param name="pageNumber">Page number</param> 
-        /// <param name="sortOrder">Sort order</param> 
+        /// <param name="contactId">ExternalContact Id</param>
+        /// <param name="pageSize">Page size (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortOrder">Sort order (optional)</param>
         /// <returns>ApiResponse of NoteListing</returns>
         public ApiResponse< NoteListing > GetContactsContactIdNotesWithHttpInfo (string contactId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
         {
-            
             // verify the required parameter 'contactId' is set
             if (contactId == null)
                 throw new ApiException(400, "Missing required parameter 'contactId' when calling ExternalContactsApi->GetContactsContactIdNotes");
-            
-    
+
             var localVarPath = "/api/v2/externalcontacts/contacts/{contactId}/notes";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2693,51 +2503,43 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (contactId != null) localVarPathParams.Add("contactId", Configuration.ApiClient.ParameterToString(contactId)); // path parameter
-            
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
             if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
-            
-            
-            
-            
 
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-    
+
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetContactsContactIdNotes: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetContactsContactIdNotes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
+
             return new ApiResponse<NoteListing>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (NoteListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(NoteListing)));
             
         }
 
-        
         /// <summary>
         /// List Notes for an ExternalContact 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact Id</param>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="sortOrder">Sort order</param>
+        /// <param name="pageSize">Page size (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortOrder">Sort order (optional)</param>
         /// <returns>Task of NoteListing</returns>
         public async System.Threading.Tasks.Task<NoteListing> GetContactsContactIdNotesAsync (string contactId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
         {
@@ -2751,18 +2553,17 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact Id</param>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="sortOrder">Sort order</param>
+        /// <param name="pageSize">Page size (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortOrder">Sort order (optional)</param>
         /// <returns>Task of ApiResponse (NoteListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<NoteListing>> GetContactsContactIdNotesAsyncWithHttpInfo (string contactId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
         {
             // verify the required parameter 'contactId' is set
-            if (contactId == null) throw new ApiException(400, "Missing required parameter 'contactId' when calling GetContactsContactIdNotes");
-            
-    
+            if (contactId == null)
+                throw new ApiException(400, "Missing required parameter 'contactId' when calling ExternalContactsApi->GetContactsContactIdNotes");
+
             var localVarPath = "/api/v2/externalcontacts/contacts/{contactId}/notes";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2788,32 +2589,24 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (contactId != null) localVarPathParams.Add("contactId", Configuration.ApiClient.ParameterToString(contactId)); // path parameter
-            
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
             if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
-            
-            
-            
-            
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetContactsContactIdNotes: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
@@ -2824,13 +2617,13 @@ namespace ININ.PureCloudApi.Api
                 (NoteListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(NoteListing)));
             
         }
-        
+
         /// <summary>
         /// Fetch a note for a contact 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="contactId">ExternalContact Id</param> 
-        /// <param name="noteId">Note Id</param> 
+        /// <param name="contactId">ExternalContact Id</param>
+        /// <param name="noteId">Note Id</param>
         /// <returns>Note</returns>
         public Note GetContactsContactIdNotesNoteId (string contactId, string noteId)
         {
@@ -2842,23 +2635,19 @@ namespace ININ.PureCloudApi.Api
         /// Fetch a note for a contact 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="contactId">ExternalContact Id</param> 
-        /// <param name="noteId">Note Id</param> 
+        /// <param name="contactId">ExternalContact Id</param>
+        /// <param name="noteId">Note Id</param>
         /// <returns>ApiResponse of Note</returns>
         public ApiResponse< Note > GetContactsContactIdNotesNoteIdWithHttpInfo (string contactId, string noteId)
         {
-            
             // verify the required parameter 'contactId' is set
             if (contactId == null)
                 throw new ApiException(400, "Missing required parameter 'contactId' when calling ExternalContactsApi->GetContactsContactIdNotesNoteId");
-            
             // verify the required parameter 'noteId' is set
             if (noteId == null)
                 throw new ApiException(400, "Missing required parameter 'noteId' when calling ExternalContactsApi->GetContactsContactIdNotesNoteId");
-            
-    
+
             var localVarPath = "/api/v2/externalcontacts/contacts/{contactId}/notes/{noteId}";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2885,40 +2674,32 @@ namespace ININ.PureCloudApi.Api
             localVarPathParams.Add("format", "json");
             if (contactId != null) localVarPathParams.Add("contactId", Configuration.ApiClient.ParameterToString(contactId)); // path parameter
             if (noteId != null) localVarPathParams.Add("noteId", Configuration.ApiClient.ParameterToString(noteId)); // path parameter
-            
-            
-            
-            
-            
 
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-    
+
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetContactsContactIdNotesNoteId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetContactsContactIdNotesNoteId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
+
             return new ApiResponse<Note>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Note) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Note)));
             
         }
 
-        
         /// <summary>
         /// Fetch a note for a contact 
         /// </summary>
@@ -2943,13 +2724,13 @@ namespace ININ.PureCloudApi.Api
         public async System.Threading.Tasks.Task<ApiResponse<Note>> GetContactsContactIdNotesNoteIdAsyncWithHttpInfo (string contactId, string noteId)
         {
             // verify the required parameter 'contactId' is set
-            if (contactId == null) throw new ApiException(400, "Missing required parameter 'contactId' when calling GetContactsContactIdNotesNoteId");
+            if (contactId == null)
+                throw new ApiException(400, "Missing required parameter 'contactId' when calling ExternalContactsApi->GetContactsContactIdNotesNoteId");
             // verify the required parameter 'noteId' is set
-            if (noteId == null) throw new ApiException(400, "Missing required parameter 'noteId' when calling GetContactsContactIdNotesNoteId");
-            
-    
+            if (noteId == null)
+                throw new ApiException(400, "Missing required parameter 'noteId' when calling ExternalContactsApi->GetContactsContactIdNotesNoteId");
+
             var localVarPath = "/api/v2/externalcontacts/contacts/{contactId}/notes/{noteId}";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2976,29 +2757,21 @@ namespace ININ.PureCloudApi.Api
             localVarPathParams.Add("format", "json");
             if (contactId != null) localVarPathParams.Add("contactId", Configuration.ApiClient.ParameterToString(contactId)); // path parameter
             if (noteId != null) localVarPathParams.Add("noteId", Configuration.ApiClient.ParameterToString(noteId)); // path parameter
-            
-            
-            
-            
-            
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetContactsContactIdNotesNoteId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
@@ -3009,15 +2782,15 @@ namespace ININ.PureCloudApi.Api
                 (Note) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Note)));
             
         }
-        
+
         /// <summary>
         /// Search for External Organizations 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size</param> 
-        /// <param name="pageNumber">Page number</param> 
-        /// <param name="q">Search query</param> 
-        /// <param name="sortOrder">Sort order</param> 
+        /// <param name="pageSize">Page size (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="q">Search query (optional)</param>
+        /// <param name="sortOrder">Sort order (optional)</param>
         /// <returns>ExternalOrganizationListing</returns>
         public ExternalOrganizationListing GetOrganizations (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null)
         {
@@ -3029,17 +2802,15 @@ namespace ININ.PureCloudApi.Api
         /// Search for External Organizations 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size</param> 
-        /// <param name="pageNumber">Page number</param> 
-        /// <param name="q">Search query</param> 
-        /// <param name="sortOrder">Sort order</param> 
+        /// <param name="pageSize">Page size (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="q">Search query (optional)</param>
+        /// <param name="sortOrder">Sort order (optional)</param>
         /// <returns>ApiResponse of ExternalOrganizationListing</returns>
         public ApiResponse< ExternalOrganizationListing > GetOrganizationsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null)
         {
-            
-    
+
             var localVarPath = "/api/v2/externalcontacts/organizations";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -3064,52 +2835,44 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
             if (q != null) localVarQueryParams.Add("q", Configuration.ApiClient.ParameterToString(q)); // query parameter
             if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
-            
-            
-            
-            
 
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-    
+
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetOrganizations: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetOrganizations: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
+
             return new ApiResponse<ExternalOrganizationListing>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ExternalOrganizationListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ExternalOrganizationListing)));
             
         }
 
-        
         /// <summary>
         /// Search for External Organizations 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="q">Search query</param>
-        /// <param name="sortOrder">Sort order</param>
+        /// <param name="pageSize">Page size (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="q">Search query (optional)</param>
+        /// <param name="sortOrder">Sort order (optional)</param>
         /// <returns>Task of ExternalOrganizationListing</returns>
         public async System.Threading.Tasks.Task<ExternalOrganizationListing> GetOrganizationsAsync (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null)
         {
@@ -3122,17 +2885,15 @@ namespace ININ.PureCloudApi.Api
         /// Search for External Organizations 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="q">Search query</param>
-        /// <param name="sortOrder">Sort order</param>
+        /// <param name="pageSize">Page size (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="q">Search query (optional)</param>
+        /// <param name="sortOrder">Sort order (optional)</param>
         /// <returns>Task of ApiResponse (ExternalOrganizationListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ExternalOrganizationListing>> GetOrganizationsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null)
         {
-            
-    
+
             var localVarPath = "/api/v2/externalcontacts/organizations";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -3157,33 +2918,25 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
             if (q != null) localVarQueryParams.Add("q", Configuration.ApiClient.ParameterToString(q)); // query parameter
             if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
-            
-            
-            
-            
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetOrganizations: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
@@ -3194,12 +2947,12 @@ namespace ININ.PureCloudApi.Api
                 (ExternalOrganizationListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ExternalOrganizationListing)));
             
         }
-        
+
         /// <summary>
         /// Fetch an External Organization 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="externalOrganizationId">External Organization ID</param> 
+        /// <param name="externalOrganizationId">External Organization ID</param>
         /// <returns>ExternalOrganization</returns>
         public ExternalOrganization GetOrganizationsExternalorganizationId (string externalOrganizationId)
         {
@@ -3211,18 +2964,15 @@ namespace ININ.PureCloudApi.Api
         /// Fetch an External Organization 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="externalOrganizationId">External Organization ID</param> 
+        /// <param name="externalOrganizationId">External Organization ID</param>
         /// <returns>ApiResponse of ExternalOrganization</returns>
         public ApiResponse< ExternalOrganization > GetOrganizationsExternalorganizationIdWithHttpInfo (string externalOrganizationId)
         {
-            
             // verify the required parameter 'externalOrganizationId' is set
             if (externalOrganizationId == null)
                 throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling ExternalContactsApi->GetOrganizationsExternalorganizationId");
-            
-    
+
             var localVarPath = "/api/v2/externalcontacts/organizations/{externalOrganizationId}";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -3248,40 +2998,32 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (externalOrganizationId != null) localVarPathParams.Add("externalOrganizationId", Configuration.ApiClient.ParameterToString(externalOrganizationId)); // path parameter
-            
-            
-            
-            
-            
 
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-    
+
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetOrganizationsExternalorganizationId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetOrganizationsExternalorganizationId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
+
             return new ApiResponse<ExternalOrganization>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ExternalOrganization) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ExternalOrganization)));
             
         }
 
-        
         /// <summary>
         /// Fetch an External Organization 
         /// </summary>
@@ -3304,11 +3046,10 @@ namespace ININ.PureCloudApi.Api
         public async System.Threading.Tasks.Task<ApiResponse<ExternalOrganization>> GetOrganizationsExternalorganizationIdAsyncWithHttpInfo (string externalOrganizationId)
         {
             // verify the required parameter 'externalOrganizationId' is set
-            if (externalOrganizationId == null) throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling GetOrganizationsExternalorganizationId");
-            
-    
+            if (externalOrganizationId == null)
+                throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling ExternalContactsApi->GetOrganizationsExternalorganizationId");
+
             var localVarPath = "/api/v2/externalcontacts/organizations/{externalOrganizationId}";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -3334,29 +3075,21 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (externalOrganizationId != null) localVarPathParams.Add("externalOrganizationId", Configuration.ApiClient.ParameterToString(externalOrganizationId)); // path parameter
-            
-            
-            
-            
-            
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetOrganizationsExternalorganizationId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
@@ -3367,17 +3100,17 @@ namespace ININ.PureCloudApi.Api
                 (ExternalOrganization) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ExternalOrganization)));
             
         }
-        
+
         /// <summary>
         /// Search for External Contacts 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="externalOrganizationId">External Organization ID</param> 
-        /// <param name="pageSize">Page size</param> 
-        /// <param name="pageNumber">Page number</param> 
-        /// <param name="q">User supplied search keywords (no special syntax is currently supported)</param> 
-        /// <param name="sortOrder">Sort order</param> 
-        /// <param name="expand">which fields, if any, to expand</param> 
+        /// <param name="externalOrganizationId">External Organization ID</param>
+        /// <param name="pageSize">Page size (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="q">User supplied search keywords (no special syntax is currently supported) (optional)</param>
+        /// <param name="sortOrder">Sort order (optional)</param>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>ContactListing</returns>
         public ContactListing GetOrganizationsExternalorganizationIdContacts (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null)
         {
@@ -3389,23 +3122,20 @@ namespace ININ.PureCloudApi.Api
         /// Search for External Contacts 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="externalOrganizationId">External Organization ID</param> 
-        /// <param name="pageSize">Page size</param> 
-        /// <param name="pageNumber">Page number</param> 
-        /// <param name="q">User supplied search keywords (no special syntax is currently supported)</param> 
-        /// <param name="sortOrder">Sort order</param> 
-        /// <param name="expand">which fields, if any, to expand</param> 
+        /// <param name="externalOrganizationId">External Organization ID</param>
+        /// <param name="pageSize">Page size (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="q">User supplied search keywords (no special syntax is currently supported) (optional)</param>
+        /// <param name="sortOrder">Sort order (optional)</param>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of ContactListing</returns>
         public ApiResponse< ContactListing > GetOrganizationsExternalorganizationIdContactsWithHttpInfo (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null)
         {
-            
             // verify the required parameter 'externalOrganizationId' is set
             if (externalOrganizationId == null)
                 throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling ExternalContactsApi->GetOrganizationsExternalorganizationIdContacts");
-            
-    
+
             var localVarPath = "/api/v2/externalcontacts/organizations/{externalOrganizationId}/contacts";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -3431,55 +3161,47 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (externalOrganizationId != null) localVarPathParams.Add("externalOrganizationId", Configuration.ApiClient.ParameterToString(externalOrganizationId)); // path parameter
-            
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
             if (q != null) localVarQueryParams.Add("q", Configuration.ApiClient.ParameterToString(q)); // query parameter
             if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
             if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
-            
-            
-            
-            
 
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-    
+
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetOrganizationsExternalorganizationIdContacts: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetOrganizationsExternalorganizationIdContacts: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
+
             return new ApiResponse<ContactListing>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ContactListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContactListing)));
             
         }
 
-        
         /// <summary>
         /// Search for External Contacts 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="q">User supplied search keywords (no special syntax is currently supported)</param>
-        /// <param name="sortOrder">Sort order</param>
-        /// <param name="expand">which fields, if any, to expand</param>
+        /// <param name="pageSize">Page size (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="q">User supplied search keywords (no special syntax is currently supported) (optional)</param>
+        /// <param name="sortOrder">Sort order (optional)</param>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of ContactListing</returns>
         public async System.Threading.Tasks.Task<ContactListing> GetOrganizationsExternalorganizationIdContactsAsync (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null)
         {
@@ -3493,20 +3215,19 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="q">User supplied search keywords (no special syntax is currently supported)</param>
-        /// <param name="sortOrder">Sort order</param>
-        /// <param name="expand">which fields, if any, to expand</param>
+        /// <param name="pageSize">Page size (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="q">User supplied search keywords (no special syntax is currently supported) (optional)</param>
+        /// <param name="sortOrder">Sort order (optional)</param>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (ContactListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ContactListing>> GetOrganizationsExternalorganizationIdContactsAsyncWithHttpInfo (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null)
         {
             // verify the required parameter 'externalOrganizationId' is set
-            if (externalOrganizationId == null) throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling GetOrganizationsExternalorganizationIdContacts");
-            
-    
+            if (externalOrganizationId == null)
+                throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling ExternalContactsApi->GetOrganizationsExternalorganizationIdContacts");
+
             var localVarPath = "/api/v2/externalcontacts/organizations/{externalOrganizationId}/contacts";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -3532,34 +3253,26 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (externalOrganizationId != null) localVarPathParams.Add("externalOrganizationId", Configuration.ApiClient.ParameterToString(externalOrganizationId)); // path parameter
-            
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
             if (q != null) localVarQueryParams.Add("q", Configuration.ApiClient.ParameterToString(q)); // query parameter
             if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
             if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
-            
-            
-            
-            
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetOrganizationsExternalorganizationIdContacts: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
@@ -3570,15 +3283,15 @@ namespace ININ.PureCloudApi.Api
                 (ContactListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContactListing)));
             
         }
-        
+
         /// <summary>
         /// List Notes for an External Organization 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="externalOrganizationId">External Organization Id</param> 
-        /// <param name="pageSize">Page size</param> 
-        /// <param name="pageNumber">Page number</param> 
-        /// <param name="sortOrder">Sort order</param> 
+        /// <param name="externalOrganizationId">External Organization Id</param>
+        /// <param name="pageSize">Page size (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortOrder">Sort order (optional)</param>
         /// <returns>NoteListing</returns>
         public NoteListing GetOrganizationsExternalorganizationIdNotes (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
         {
@@ -3590,21 +3303,18 @@ namespace ININ.PureCloudApi.Api
         /// List Notes for an External Organization 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="externalOrganizationId">External Organization Id</param> 
-        /// <param name="pageSize">Page size</param> 
-        /// <param name="pageNumber">Page number</param> 
-        /// <param name="sortOrder">Sort order</param> 
+        /// <param name="externalOrganizationId">External Organization Id</param>
+        /// <param name="pageSize">Page size (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortOrder">Sort order (optional)</param>
         /// <returns>ApiResponse of NoteListing</returns>
         public ApiResponse< NoteListing > GetOrganizationsExternalorganizationIdNotesWithHttpInfo (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
         {
-            
             // verify the required parameter 'externalOrganizationId' is set
             if (externalOrganizationId == null)
                 throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling ExternalContactsApi->GetOrganizationsExternalorganizationIdNotes");
-            
-    
+
             var localVarPath = "/api/v2/externalcontacts/organizations/{externalOrganizationId}/notes";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -3630,51 +3340,43 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (externalOrganizationId != null) localVarPathParams.Add("externalOrganizationId", Configuration.ApiClient.ParameterToString(externalOrganizationId)); // path parameter
-            
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
             if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
-            
-            
-            
-            
 
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-    
+
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetOrganizationsExternalorganizationIdNotes: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetOrganizationsExternalorganizationIdNotes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
+
             return new ApiResponse<NoteListing>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (NoteListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(NoteListing)));
             
         }
 
-        
         /// <summary>
         /// List Notes for an External Organization 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization Id</param>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="sortOrder">Sort order</param>
+        /// <param name="pageSize">Page size (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortOrder">Sort order (optional)</param>
         /// <returns>Task of NoteListing</returns>
         public async System.Threading.Tasks.Task<NoteListing> GetOrganizationsExternalorganizationIdNotesAsync (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
         {
@@ -3688,18 +3390,17 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization Id</param>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="sortOrder">Sort order</param>
+        /// <param name="pageSize">Page size (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortOrder">Sort order (optional)</param>
         /// <returns>Task of ApiResponse (NoteListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<NoteListing>> GetOrganizationsExternalorganizationIdNotesAsyncWithHttpInfo (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
         {
             // verify the required parameter 'externalOrganizationId' is set
-            if (externalOrganizationId == null) throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling GetOrganizationsExternalorganizationIdNotes");
-            
-    
+            if (externalOrganizationId == null)
+                throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling ExternalContactsApi->GetOrganizationsExternalorganizationIdNotes");
+
             var localVarPath = "/api/v2/externalcontacts/organizations/{externalOrganizationId}/notes";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -3725,32 +3426,24 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (externalOrganizationId != null) localVarPathParams.Add("externalOrganizationId", Configuration.ApiClient.ParameterToString(externalOrganizationId)); // path parameter
-            
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
             if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
-            
-            
-            
-            
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetOrganizationsExternalorganizationIdNotes: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
@@ -3761,13 +3454,13 @@ namespace ININ.PureCloudApi.Api
                 (NoteListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(NoteListing)));
             
         }
-        
+
         /// <summary>
         /// Fetch a note 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="externalOrganizationId">External Organization Id</param> 
-        /// <param name="noteId">Note Id</param> 
+        /// <param name="externalOrganizationId">External Organization Id</param>
+        /// <param name="noteId">Note Id</param>
         /// <returns>Note</returns>
         public Note GetOrganizationsExternalorganizationIdNotesNoteId (string externalOrganizationId, string noteId)
         {
@@ -3779,23 +3472,19 @@ namespace ININ.PureCloudApi.Api
         /// Fetch a note 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="externalOrganizationId">External Organization Id</param> 
-        /// <param name="noteId">Note Id</param> 
+        /// <param name="externalOrganizationId">External Organization Id</param>
+        /// <param name="noteId">Note Id</param>
         /// <returns>ApiResponse of Note</returns>
         public ApiResponse< Note > GetOrganizationsExternalorganizationIdNotesNoteIdWithHttpInfo (string externalOrganizationId, string noteId)
         {
-            
             // verify the required parameter 'externalOrganizationId' is set
             if (externalOrganizationId == null)
                 throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling ExternalContactsApi->GetOrganizationsExternalorganizationIdNotesNoteId");
-            
             // verify the required parameter 'noteId' is set
             if (noteId == null)
                 throw new ApiException(400, "Missing required parameter 'noteId' when calling ExternalContactsApi->GetOrganizationsExternalorganizationIdNotesNoteId");
-            
-    
+
             var localVarPath = "/api/v2/externalcontacts/organizations/{externalOrganizationId}/notes/{noteId}";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -3822,40 +3511,32 @@ namespace ININ.PureCloudApi.Api
             localVarPathParams.Add("format", "json");
             if (externalOrganizationId != null) localVarPathParams.Add("externalOrganizationId", Configuration.ApiClient.ParameterToString(externalOrganizationId)); // path parameter
             if (noteId != null) localVarPathParams.Add("noteId", Configuration.ApiClient.ParameterToString(noteId)); // path parameter
-            
-            
-            
-            
-            
 
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-    
+
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetOrganizationsExternalorganizationIdNotesNoteId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetOrganizationsExternalorganizationIdNotesNoteId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
+
             return new ApiResponse<Note>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Note) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Note)));
             
         }
 
-        
         /// <summary>
         /// Fetch a note 
         /// </summary>
@@ -3880,13 +3561,13 @@ namespace ININ.PureCloudApi.Api
         public async System.Threading.Tasks.Task<ApiResponse<Note>> GetOrganizationsExternalorganizationIdNotesNoteIdAsyncWithHttpInfo (string externalOrganizationId, string noteId)
         {
             // verify the required parameter 'externalOrganizationId' is set
-            if (externalOrganizationId == null) throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling GetOrganizationsExternalorganizationIdNotesNoteId");
+            if (externalOrganizationId == null)
+                throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling ExternalContactsApi->GetOrganizationsExternalorganizationIdNotesNoteId");
             // verify the required parameter 'noteId' is set
-            if (noteId == null) throw new ApiException(400, "Missing required parameter 'noteId' when calling GetOrganizationsExternalorganizationIdNotesNoteId");
-            
-    
+            if (noteId == null)
+                throw new ApiException(400, "Missing required parameter 'noteId' when calling ExternalContactsApi->GetOrganizationsExternalorganizationIdNotesNoteId");
+
             var localVarPath = "/api/v2/externalcontacts/organizations/{externalOrganizationId}/notes/{noteId}";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -3913,29 +3594,21 @@ namespace ININ.PureCloudApi.Api
             localVarPathParams.Add("format", "json");
             if (externalOrganizationId != null) localVarPathParams.Add("externalOrganizationId", Configuration.ApiClient.ParameterToString(externalOrganizationId)); // path parameter
             if (noteId != null) localVarPathParams.Add("noteId", Configuration.ApiClient.ParameterToString(noteId)); // path parameter
-            
-            
-            
-            
-            
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetOrganizationsExternalorganizationIdNotesNoteId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
@@ -3946,15 +3619,15 @@ namespace ININ.PureCloudApi.Api
                 (Note) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Note)));
             
         }
-        
+
         /// <summary>
         /// Fetch an External Organization 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="externalOrganizationId">External Organization ID</param> 
-        /// <param name="pageSize">Page size</param> 
-        /// <param name="pageNumber">Page number</param> 
-        /// <param name="sortOrder">Sort order</param> 
+        /// <param name="externalOrganizationId">External Organization ID</param>
+        /// <param name="pageSize">Page size (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortOrder">Sort order (optional)</param>
         /// <returns>RelationshipListing</returns>
         public RelationshipListing GetOrganizationsExternalorganizationIdRelationships (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
         {
@@ -3966,21 +3639,18 @@ namespace ININ.PureCloudApi.Api
         /// Fetch an External Organization 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="externalOrganizationId">External Organization ID</param> 
-        /// <param name="pageSize">Page size</param> 
-        /// <param name="pageNumber">Page number</param> 
-        /// <param name="sortOrder">Sort order</param> 
+        /// <param name="externalOrganizationId">External Organization ID</param>
+        /// <param name="pageSize">Page size (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortOrder">Sort order (optional)</param>
         /// <returns>ApiResponse of RelationshipListing</returns>
         public ApiResponse< RelationshipListing > GetOrganizationsExternalorganizationIdRelationshipsWithHttpInfo (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
         {
-            
             // verify the required parameter 'externalOrganizationId' is set
             if (externalOrganizationId == null)
                 throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling ExternalContactsApi->GetOrganizationsExternalorganizationIdRelationships");
-            
-    
+
             var localVarPath = "/api/v2/externalcontacts/organizations/{externalOrganizationId}/relationships";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -4006,51 +3676,43 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (externalOrganizationId != null) localVarPathParams.Add("externalOrganizationId", Configuration.ApiClient.ParameterToString(externalOrganizationId)); // path parameter
-            
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
             if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
-            
-            
-            
-            
 
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-    
+
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetOrganizationsExternalorganizationIdRelationships: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetOrganizationsExternalorganizationIdRelationships: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
+
             return new ApiResponse<RelationshipListing>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (RelationshipListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RelationshipListing)));
             
         }
 
-        
         /// <summary>
         /// Fetch an External Organization 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="sortOrder">Sort order</param>
+        /// <param name="pageSize">Page size (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortOrder">Sort order (optional)</param>
         /// <returns>Task of RelationshipListing</returns>
         public async System.Threading.Tasks.Task<RelationshipListing> GetOrganizationsExternalorganizationIdRelationshipsAsync (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
         {
@@ -4064,18 +3726,17 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="sortOrder">Sort order</param>
+        /// <param name="pageSize">Page size (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortOrder">Sort order (optional)</param>
         /// <returns>Task of ApiResponse (RelationshipListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RelationshipListing>> GetOrganizationsExternalorganizationIdRelationshipsAsyncWithHttpInfo (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
         {
             // verify the required parameter 'externalOrganizationId' is set
-            if (externalOrganizationId == null) throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling GetOrganizationsExternalorganizationIdRelationships");
-            
-    
+            if (externalOrganizationId == null)
+                throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling ExternalContactsApi->GetOrganizationsExternalorganizationIdRelationships");
+
             var localVarPath = "/api/v2/externalcontacts/organizations/{externalOrganizationId}/relationships";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -4101,32 +3762,24 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (externalOrganizationId != null) localVarPathParams.Add("externalOrganizationId", Configuration.ApiClient.ParameterToString(externalOrganizationId)); // path parameter
-            
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
             if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
-            
-            
-            
-            
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetOrganizationsExternalorganizationIdRelationships: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
@@ -4137,12 +3790,12 @@ namespace ININ.PureCloudApi.Api
                 (RelationshipListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RelationshipListing)));
             
         }
-        
+
         /// <summary>
         /// Fetch a relationship 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="relationshipId">Relationship Id</param> 
+        /// <param name="relationshipId">Relationship Id</param>
         /// <returns>Relationship</returns>
         public Relationship GetRelationshipsRelationshipId (string relationshipId)
         {
@@ -4154,18 +3807,15 @@ namespace ININ.PureCloudApi.Api
         /// Fetch a relationship 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="relationshipId">Relationship Id</param> 
+        /// <param name="relationshipId">Relationship Id</param>
         /// <returns>ApiResponse of Relationship</returns>
         public ApiResponse< Relationship > GetRelationshipsRelationshipIdWithHttpInfo (string relationshipId)
         {
-            
             // verify the required parameter 'relationshipId' is set
             if (relationshipId == null)
                 throw new ApiException(400, "Missing required parameter 'relationshipId' when calling ExternalContactsApi->GetRelationshipsRelationshipId");
-            
-    
+
             var localVarPath = "/api/v2/externalcontacts/relationships/{relationshipId}";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -4191,40 +3841,32 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (relationshipId != null) localVarPathParams.Add("relationshipId", Configuration.ApiClient.ParameterToString(relationshipId)); // path parameter
-            
-            
-            
-            
-            
 
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-    
+
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetRelationshipsRelationshipId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetRelationshipsRelationshipId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
+
             return new ApiResponse<Relationship>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Relationship) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Relationship)));
             
         }
 
-        
         /// <summary>
         /// Fetch a relationship 
         /// </summary>
@@ -4247,11 +3889,10 @@ namespace ININ.PureCloudApi.Api
         public async System.Threading.Tasks.Task<ApiResponse<Relationship>> GetRelationshipsRelationshipIdAsyncWithHttpInfo (string relationshipId)
         {
             // verify the required parameter 'relationshipId' is set
-            if (relationshipId == null) throw new ApiException(400, "Missing required parameter 'relationshipId' when calling GetRelationshipsRelationshipId");
-            
-    
+            if (relationshipId == null)
+                throw new ApiException(400, "Missing required parameter 'relationshipId' when calling ExternalContactsApi->GetRelationshipsRelationshipId");
+
             var localVarPath = "/api/v2/externalcontacts/relationships/{relationshipId}";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -4277,29 +3918,21 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (relationshipId != null) localVarPathParams.Add("relationshipId", Configuration.ApiClient.ParameterToString(relationshipId)); // path parameter
-            
-            
-            
-            
-            
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetRelationshipsRelationshipId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
@@ -4310,12 +3943,12 @@ namespace ININ.PureCloudApi.Api
                 (Relationship) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Relationship)));
             
         }
-        
+
         /// <summary>
         /// Create an ExternalContact 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">ExternalContact</param> 
+        /// <param name="body">ExternalContact (optional)</param>
         /// <returns>ExternalContact</returns>
         public ExternalContact PostContacts (ExternalContact body = null)
         {
@@ -4327,14 +3960,12 @@ namespace ININ.PureCloudApi.Api
         /// Create an ExternalContact 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">ExternalContact</param> 
+        /// <param name="body">ExternalContact (optional)</param>
         /// <returns>ApiResponse of ExternalContact</returns>
         public ApiResponse< ExternalContact > PostContactsWithHttpInfo (ExternalContact body = null)
         {
-            
-    
+
             var localVarPath = "/api/v2/externalcontacts/contacts";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -4359,10 +3990,6 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            
-            
-            
-            
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -4373,38 +4000,35 @@ namespace ININ.PureCloudApi.Api
             }
 
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-    
+
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostContacts: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostContacts: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
+
             return new ApiResponse<ExternalContact>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ExternalContact) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ExternalContact)));
             
         }
 
-        
         /// <summary>
         /// Create an ExternalContact 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">ExternalContact</param>
+        /// <param name="body">ExternalContact (optional)</param>
         /// <returns>Task of ExternalContact</returns>
         public async System.Threading.Tasks.Task<ExternalContact> PostContactsAsync (ExternalContact body = null)
         {
@@ -4417,14 +4041,12 @@ namespace ININ.PureCloudApi.Api
         /// Create an ExternalContact 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">ExternalContact</param>
+        /// <param name="body">ExternalContact (optional)</param>
         /// <returns>Task of ApiResponse (ExternalContact)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ExternalContact>> PostContactsAsyncWithHttpInfo (ExternalContact body = null)
         {
-            
-    
+
             var localVarPath = "/api/v2/externalcontacts/contacts";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -4449,10 +4071,6 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            
-            
-            
-            
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -4462,23 +4080,20 @@ namespace ININ.PureCloudApi.Api
                 localVarPostBody = body; // byte array
             }
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostContacts: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
@@ -4489,13 +4104,13 @@ namespace ININ.PureCloudApi.Api
                 (ExternalContact) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ExternalContact)));
             
         }
-        
+
         /// <summary>
         /// Create a Note for an ExternalContact 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="contactId">ExternalContact Id</param> 
-        /// <param name="body">ExternalContact</param> 
+        /// <param name="contactId">ExternalContact Id</param>
+        /// <param name="body">ExternalContact (optional)</param>
         /// <returns>Note</returns>
         public Note PostContactsContactIdNotes (string contactId, Note body = null)
         {
@@ -4507,19 +4122,16 @@ namespace ININ.PureCloudApi.Api
         /// Create a Note for an ExternalContact 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="contactId">ExternalContact Id</param> 
-        /// <param name="body">ExternalContact</param> 
+        /// <param name="contactId">ExternalContact Id</param>
+        /// <param name="body">ExternalContact (optional)</param>
         /// <returns>ApiResponse of Note</returns>
         public ApiResponse< Note > PostContactsContactIdNotesWithHttpInfo (string contactId, Note body = null)
         {
-            
             // verify the required parameter 'contactId' is set
             if (contactId == null)
                 throw new ApiException(400, "Missing required parameter 'contactId' when calling ExternalContactsApi->PostContactsContactIdNotes");
-            
-    
+
             var localVarPath = "/api/v2/externalcontacts/contacts/{contactId}/notes";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -4545,10 +4157,6 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (contactId != null) localVarPathParams.Add("contactId", Configuration.ApiClient.ParameterToString(contactId)); // path parameter
-            
-            
-            
-            
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -4559,39 +4167,36 @@ namespace ININ.PureCloudApi.Api
             }
 
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-    
+
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostContactsContactIdNotes: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostContactsContactIdNotes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
+
             return new ApiResponse<Note>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Note) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Note)));
             
         }
 
-        
         /// <summary>
         /// Create a Note for an ExternalContact 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact Id</param>
-        /// <param name="body">ExternalContact</param>
+        /// <param name="body">ExternalContact (optional)</param>
         /// <returns>Task of Note</returns>
         public async System.Threading.Tasks.Task<Note> PostContactsContactIdNotesAsync (string contactId, Note body = null)
         {
@@ -4605,16 +4210,15 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact Id</param>
-        /// <param name="body">ExternalContact</param>
+        /// <param name="body">ExternalContact (optional)</param>
         /// <returns>Task of ApiResponse (Note)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Note>> PostContactsContactIdNotesAsyncWithHttpInfo (string contactId, Note body = null)
         {
             // verify the required parameter 'contactId' is set
-            if (contactId == null) throw new ApiException(400, "Missing required parameter 'contactId' when calling PostContactsContactIdNotes");
-            
-    
+            if (contactId == null)
+                throw new ApiException(400, "Missing required parameter 'contactId' when calling ExternalContactsApi->PostContactsContactIdNotes");
+
             var localVarPath = "/api/v2/externalcontacts/contacts/{contactId}/notes";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -4640,10 +4244,6 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (contactId != null) localVarPathParams.Add("contactId", Configuration.ApiClient.ParameterToString(contactId)); // path parameter
-            
-            
-            
-            
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -4653,23 +4253,20 @@ namespace ININ.PureCloudApi.Api
                 localVarPostBody = body; // byte array
             }
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostContactsContactIdNotes: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
@@ -4680,12 +4277,12 @@ namespace ININ.PureCloudApi.Api
                 (Note) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Note)));
             
         }
-        
+
         /// <summary>
         /// Create an External Organization 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">ExternalOrganization</param> 
+        /// <param name="body">ExternalOrganization (optional)</param>
         /// <returns>ExternalOrganization</returns>
         public ExternalOrganization PostOrganizations (ExternalOrganization body = null)
         {
@@ -4697,14 +4294,12 @@ namespace ININ.PureCloudApi.Api
         /// Create an External Organization 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">ExternalOrganization</param> 
+        /// <param name="body">ExternalOrganization (optional)</param>
         /// <returns>ApiResponse of ExternalOrganization</returns>
         public ApiResponse< ExternalOrganization > PostOrganizationsWithHttpInfo (ExternalOrganization body = null)
         {
-            
-    
+
             var localVarPath = "/api/v2/externalcontacts/organizations";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -4729,10 +4324,6 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            
-            
-            
-            
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -4743,38 +4334,35 @@ namespace ININ.PureCloudApi.Api
             }
 
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-    
+
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostOrganizations: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostOrganizations: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
+
             return new ApiResponse<ExternalOrganization>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ExternalOrganization) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ExternalOrganization)));
             
         }
 
-        
         /// <summary>
         /// Create an External Organization 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">ExternalOrganization</param>
+        /// <param name="body">ExternalOrganization (optional)</param>
         /// <returns>Task of ExternalOrganization</returns>
         public async System.Threading.Tasks.Task<ExternalOrganization> PostOrganizationsAsync (ExternalOrganization body = null)
         {
@@ -4787,14 +4375,12 @@ namespace ININ.PureCloudApi.Api
         /// Create an External Organization 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">ExternalOrganization</param>
+        /// <param name="body">ExternalOrganization (optional)</param>
         /// <returns>Task of ApiResponse (ExternalOrganization)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ExternalOrganization>> PostOrganizationsAsyncWithHttpInfo (ExternalOrganization body = null)
         {
-            
-    
+
             var localVarPath = "/api/v2/externalcontacts/organizations";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -4819,10 +4405,6 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            
-            
-            
-            
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -4832,23 +4414,20 @@ namespace ININ.PureCloudApi.Api
                 localVarPostBody = body; // byte array
             }
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostOrganizations: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
@@ -4859,13 +4438,13 @@ namespace ININ.PureCloudApi.Api
                 (ExternalOrganization) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ExternalOrganization)));
             
         }
-        
+
         /// <summary>
         /// Create a Note for an External Organization 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="externalOrganizationId">External Organization Id</param> 
-        /// <param name="body">ExternalContact</param> 
+        /// <param name="externalOrganizationId">External Organization Id</param>
+        /// <param name="body">ExternalContact (optional)</param>
         /// <returns>Note</returns>
         public Note PostOrganizationsExternalorganizationIdNotes (string externalOrganizationId, Note body = null)
         {
@@ -4877,19 +4456,16 @@ namespace ININ.PureCloudApi.Api
         /// Create a Note for an External Organization 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="externalOrganizationId">External Organization Id</param> 
-        /// <param name="body">ExternalContact</param> 
+        /// <param name="externalOrganizationId">External Organization Id</param>
+        /// <param name="body">ExternalContact (optional)</param>
         /// <returns>ApiResponse of Note</returns>
         public ApiResponse< Note > PostOrganizationsExternalorganizationIdNotesWithHttpInfo (string externalOrganizationId, Note body = null)
         {
-            
             // verify the required parameter 'externalOrganizationId' is set
             if (externalOrganizationId == null)
                 throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling ExternalContactsApi->PostOrganizationsExternalorganizationIdNotes");
-            
-    
+
             var localVarPath = "/api/v2/externalcontacts/organizations/{externalOrganizationId}/notes";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -4915,10 +4491,6 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (externalOrganizationId != null) localVarPathParams.Add("externalOrganizationId", Configuration.ApiClient.ParameterToString(externalOrganizationId)); // path parameter
-            
-            
-            
-            
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -4929,39 +4501,36 @@ namespace ININ.PureCloudApi.Api
             }
 
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-    
+
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostOrganizationsExternalorganizationIdNotes: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostOrganizationsExternalorganizationIdNotes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
+
             return new ApiResponse<Note>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Note) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Note)));
             
         }
 
-        
         /// <summary>
         /// Create a Note for an External Organization 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization Id</param>
-        /// <param name="body">ExternalContact</param>
+        /// <param name="body">ExternalContact (optional)</param>
         /// <returns>Task of Note</returns>
         public async System.Threading.Tasks.Task<Note> PostOrganizationsExternalorganizationIdNotesAsync (string externalOrganizationId, Note body = null)
         {
@@ -4975,16 +4544,15 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization Id</param>
-        /// <param name="body">ExternalContact</param>
+        /// <param name="body">ExternalContact (optional)</param>
         /// <returns>Task of ApiResponse (Note)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Note>> PostOrganizationsExternalorganizationIdNotesAsyncWithHttpInfo (string externalOrganizationId, Note body = null)
         {
             // verify the required parameter 'externalOrganizationId' is set
-            if (externalOrganizationId == null) throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling PostOrganizationsExternalorganizationIdNotes");
-            
-    
+            if (externalOrganizationId == null)
+                throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling ExternalContactsApi->PostOrganizationsExternalorganizationIdNotes");
+
             var localVarPath = "/api/v2/externalcontacts/organizations/{externalOrganizationId}/notes";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -5010,10 +4578,6 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (externalOrganizationId != null) localVarPathParams.Add("externalOrganizationId", Configuration.ApiClient.ParameterToString(externalOrganizationId)); // path parameter
-            
-            
-            
-            
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -5023,23 +4587,20 @@ namespace ININ.PureCloudApi.Api
                 localVarPostBody = body; // byte array
             }
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostOrganizationsExternalorganizationIdNotes: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
@@ -5050,12 +4611,12 @@ namespace ININ.PureCloudApi.Api
                 (Note) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Note)));
             
         }
-        
+
         /// <summary>
         /// Create a relationship 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Relationship</param> 
+        /// <param name="body">Relationship (optional)</param>
         /// <returns>Relationship</returns>
         public Relationship PostRelationships (Relationship body = null)
         {
@@ -5067,14 +4628,12 @@ namespace ININ.PureCloudApi.Api
         /// Create a relationship 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Relationship</param> 
+        /// <param name="body">Relationship (optional)</param>
         /// <returns>ApiResponse of Relationship</returns>
         public ApiResponse< Relationship > PostRelationshipsWithHttpInfo (Relationship body = null)
         {
-            
-    
+
             var localVarPath = "/api/v2/externalcontacts/relationships";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -5099,10 +4658,6 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            
-            
-            
-            
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -5113,38 +4668,35 @@ namespace ININ.PureCloudApi.Api
             }
 
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-    
+
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostRelationships: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostRelationships: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
+
             return new ApiResponse<Relationship>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Relationship) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Relationship)));
             
         }
 
-        
         /// <summary>
         /// Create a relationship 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Relationship</param>
+        /// <param name="body">Relationship (optional)</param>
         /// <returns>Task of Relationship</returns>
         public async System.Threading.Tasks.Task<Relationship> PostRelationshipsAsync (Relationship body = null)
         {
@@ -5157,14 +4709,12 @@ namespace ININ.PureCloudApi.Api
         /// Create a relationship 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Relationship</param>
+        /// <param name="body">Relationship (optional)</param>
         /// <returns>Task of ApiResponse (Relationship)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Relationship>> PostRelationshipsAsyncWithHttpInfo (Relationship body = null)
         {
-            
-    
+
             var localVarPath = "/api/v2/externalcontacts/relationships";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -5189,10 +4739,6 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            
-            
-            
-            
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -5202,23 +4748,20 @@ namespace ININ.PureCloudApi.Api
                 localVarPostBody = body; // byte array
             }
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostRelationships: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
@@ -5229,13 +4772,13 @@ namespace ININ.PureCloudApi.Api
                 (Relationship) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Relationship)));
             
         }
-        
+
         /// <summary>
         /// Update a externalContact 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="contactId">ExternalContact ID</param> 
-        /// <param name="body">ExternalContact</param> 
+        /// <param name="contactId">ExternalContact ID</param>
+        /// <param name="body">ExternalContact (optional)</param>
         /// <returns>ExternalContact</returns>
         public ExternalContact PutContactsContactId (string contactId, ExternalContact body = null)
         {
@@ -5247,19 +4790,16 @@ namespace ININ.PureCloudApi.Api
         /// Update a externalContact 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="contactId">ExternalContact ID</param> 
-        /// <param name="body">ExternalContact</param> 
+        /// <param name="contactId">ExternalContact ID</param>
+        /// <param name="body">ExternalContact (optional)</param>
         /// <returns>ApiResponse of ExternalContact</returns>
         public ApiResponse< ExternalContact > PutContactsContactIdWithHttpInfo (string contactId, ExternalContact body = null)
         {
-            
             // verify the required parameter 'contactId' is set
             if (contactId == null)
                 throw new ApiException(400, "Missing required parameter 'contactId' when calling ExternalContactsApi->PutContactsContactId");
-            
-    
+
             var localVarPath = "/api/v2/externalcontacts/contacts/{contactId}";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -5285,10 +4825,6 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (contactId != null) localVarPathParams.Add("contactId", Configuration.ApiClient.ParameterToString(contactId)); // path parameter
-            
-            
-            
-            
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -5299,39 +4835,36 @@ namespace ININ.PureCloudApi.Api
             }
 
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-    
+
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
                 Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PutContactsContactId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PutContactsContactId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
+
             return new ApiResponse<ExternalContact>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ExternalContact) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ExternalContact)));
             
         }
 
-        
         /// <summary>
         /// Update a externalContact 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param>
-        /// <param name="body">ExternalContact</param>
+        /// <param name="body">ExternalContact (optional)</param>
         /// <returns>Task of ExternalContact</returns>
         public async System.Threading.Tasks.Task<ExternalContact> PutContactsContactIdAsync (string contactId, ExternalContact body = null)
         {
@@ -5345,16 +4878,15 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param>
-        /// <param name="body">ExternalContact</param>
+        /// <param name="body">ExternalContact (optional)</param>
         /// <returns>Task of ApiResponse (ExternalContact)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ExternalContact>> PutContactsContactIdAsyncWithHttpInfo (string contactId, ExternalContact body = null)
         {
             // verify the required parameter 'contactId' is set
-            if (contactId == null) throw new ApiException(400, "Missing required parameter 'contactId' when calling PutContactsContactId");
-            
-    
+            if (contactId == null)
+                throw new ApiException(400, "Missing required parameter 'contactId' when calling ExternalContactsApi->PutContactsContactId");
+
             var localVarPath = "/api/v2/externalcontacts/contacts/{contactId}";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -5380,10 +4912,6 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (contactId != null) localVarPathParams.Add("contactId", Configuration.ApiClient.ParameterToString(contactId)); // path parameter
-            
-            
-            
-            
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -5393,23 +4921,20 @@ namespace ININ.PureCloudApi.Api
                 localVarPostBody = body; // byte array
             }
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PutContactsContactId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
@@ -5420,14 +4945,14 @@ namespace ININ.PureCloudApi.Api
                 (ExternalContact) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ExternalContact)));
             
         }
-        
+
         /// <summary>
         /// Update a note for a contact 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="contactId">ExternalContact Id</param> 
-        /// <param name="noteId">Note Id</param> 
-        /// <param name="body">Note</param> 
+        /// <param name="contactId">ExternalContact Id</param>
+        /// <param name="noteId">Note Id</param>
+        /// <param name="body">Note (optional)</param>
         /// <returns>Note</returns>
         public Note PutContactsContactIdNotesNoteId (string contactId, string noteId, Note body = null)
         {
@@ -5439,24 +4964,20 @@ namespace ININ.PureCloudApi.Api
         /// Update a note for a contact 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="contactId">ExternalContact Id</param> 
-        /// <param name="noteId">Note Id</param> 
-        /// <param name="body">Note</param> 
+        /// <param name="contactId">ExternalContact Id</param>
+        /// <param name="noteId">Note Id</param>
+        /// <param name="body">Note (optional)</param>
         /// <returns>ApiResponse of Note</returns>
         public ApiResponse< Note > PutContactsContactIdNotesNoteIdWithHttpInfo (string contactId, string noteId, Note body = null)
         {
-            
             // verify the required parameter 'contactId' is set
             if (contactId == null)
                 throw new ApiException(400, "Missing required parameter 'contactId' when calling ExternalContactsApi->PutContactsContactIdNotesNoteId");
-            
             // verify the required parameter 'noteId' is set
             if (noteId == null)
                 throw new ApiException(400, "Missing required parameter 'noteId' when calling ExternalContactsApi->PutContactsContactIdNotesNoteId");
-            
-    
+
             var localVarPath = "/api/v2/externalcontacts/contacts/{contactId}/notes/{noteId}";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -5483,10 +5004,6 @@ namespace ININ.PureCloudApi.Api
             localVarPathParams.Add("format", "json");
             if (contactId != null) localVarPathParams.Add("contactId", Configuration.ApiClient.ParameterToString(contactId)); // path parameter
             if (noteId != null) localVarPathParams.Add("noteId", Configuration.ApiClient.ParameterToString(noteId)); // path parameter
-            
-            
-            
-            
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -5497,40 +5014,37 @@ namespace ININ.PureCloudApi.Api
             }
 
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-    
+
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
                 Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PutContactsContactIdNotesNoteId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PutContactsContactIdNotesNoteId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
+
             return new ApiResponse<Note>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Note) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Note)));
             
         }
 
-        
         /// <summary>
         /// Update a note for a contact 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact Id</param>
         /// <param name="noteId">Note Id</param>
-        /// <param name="body">Note</param>
+        /// <param name="body">Note (optional)</param>
         /// <returns>Task of Note</returns>
         public async System.Threading.Tasks.Task<Note> PutContactsContactIdNotesNoteIdAsync (string contactId, string noteId, Note body = null)
         {
@@ -5545,18 +5059,18 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact Id</param>
         /// <param name="noteId">Note Id</param>
-        /// <param name="body">Note</param>
+        /// <param name="body">Note (optional)</param>
         /// <returns>Task of ApiResponse (Note)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Note>> PutContactsContactIdNotesNoteIdAsyncWithHttpInfo (string contactId, string noteId, Note body = null)
         {
             // verify the required parameter 'contactId' is set
-            if (contactId == null) throw new ApiException(400, "Missing required parameter 'contactId' when calling PutContactsContactIdNotesNoteId");
+            if (contactId == null)
+                throw new ApiException(400, "Missing required parameter 'contactId' when calling ExternalContactsApi->PutContactsContactIdNotesNoteId");
             // verify the required parameter 'noteId' is set
-            if (noteId == null) throw new ApiException(400, "Missing required parameter 'noteId' when calling PutContactsContactIdNotesNoteId");
-            
-    
+            if (noteId == null)
+                throw new ApiException(400, "Missing required parameter 'noteId' when calling ExternalContactsApi->PutContactsContactIdNotesNoteId");
+
             var localVarPath = "/api/v2/externalcontacts/contacts/{contactId}/notes/{noteId}";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -5583,10 +5097,6 @@ namespace ININ.PureCloudApi.Api
             localVarPathParams.Add("format", "json");
             if (contactId != null) localVarPathParams.Add("contactId", Configuration.ApiClient.ParameterToString(contactId)); // path parameter
             if (noteId != null) localVarPathParams.Add("noteId", Configuration.ApiClient.ParameterToString(noteId)); // path parameter
-            
-            
-            
-            
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -5596,23 +5106,20 @@ namespace ININ.PureCloudApi.Api
                 localVarPostBody = body; // byte array
             }
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PutContactsContactIdNotesNoteId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
@@ -5623,13 +5130,13 @@ namespace ININ.PureCloudApi.Api
                 (Note) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Note)));
             
         }
-        
+
         /// <summary>
         /// Update an External Organization 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="externalOrganizationId">External Organization ID</param> 
-        /// <param name="body">ExternalOrganization</param> 
+        /// <param name="externalOrganizationId">External Organization ID</param>
+        /// <param name="body">ExternalOrganization (optional)</param>
         /// <returns>ExternalOrganization</returns>
         public ExternalOrganization PutOrganizationsExternalorganizationId (string externalOrganizationId, ExternalOrganization body = null)
         {
@@ -5641,19 +5148,16 @@ namespace ININ.PureCloudApi.Api
         /// Update an External Organization 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="externalOrganizationId">External Organization ID</param> 
-        /// <param name="body">ExternalOrganization</param> 
+        /// <param name="externalOrganizationId">External Organization ID</param>
+        /// <param name="body">ExternalOrganization (optional)</param>
         /// <returns>ApiResponse of ExternalOrganization</returns>
         public ApiResponse< ExternalOrganization > PutOrganizationsExternalorganizationIdWithHttpInfo (string externalOrganizationId, ExternalOrganization body = null)
         {
-            
             // verify the required parameter 'externalOrganizationId' is set
             if (externalOrganizationId == null)
                 throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling ExternalContactsApi->PutOrganizationsExternalorganizationId");
-            
-    
+
             var localVarPath = "/api/v2/externalcontacts/organizations/{externalOrganizationId}";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -5679,10 +5183,6 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (externalOrganizationId != null) localVarPathParams.Add("externalOrganizationId", Configuration.ApiClient.ParameterToString(externalOrganizationId)); // path parameter
-            
-            
-            
-            
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -5693,39 +5193,36 @@ namespace ININ.PureCloudApi.Api
             }
 
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-    
+
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
                 Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PutOrganizationsExternalorganizationId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PutOrganizationsExternalorganizationId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
+
             return new ApiResponse<ExternalOrganization>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ExternalOrganization) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ExternalOrganization)));
             
         }
 
-        
         /// <summary>
         /// Update an External Organization 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
-        /// <param name="body">ExternalOrganization</param>
+        /// <param name="body">ExternalOrganization (optional)</param>
         /// <returns>Task of ExternalOrganization</returns>
         public async System.Threading.Tasks.Task<ExternalOrganization> PutOrganizationsExternalorganizationIdAsync (string externalOrganizationId, ExternalOrganization body = null)
         {
@@ -5739,16 +5236,15 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
-        /// <param name="body">ExternalOrganization</param>
+        /// <param name="body">ExternalOrganization (optional)</param>
         /// <returns>Task of ApiResponse (ExternalOrganization)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ExternalOrganization>> PutOrganizationsExternalorganizationIdAsyncWithHttpInfo (string externalOrganizationId, ExternalOrganization body = null)
         {
             // verify the required parameter 'externalOrganizationId' is set
-            if (externalOrganizationId == null) throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling PutOrganizationsExternalorganizationId");
-            
-    
+            if (externalOrganizationId == null)
+                throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling ExternalContactsApi->PutOrganizationsExternalorganizationId");
+
             var localVarPath = "/api/v2/externalcontacts/organizations/{externalOrganizationId}";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -5774,10 +5270,6 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (externalOrganizationId != null) localVarPathParams.Add("externalOrganizationId", Configuration.ApiClient.ParameterToString(externalOrganizationId)); // path parameter
-            
-            
-            
-            
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -5787,23 +5279,20 @@ namespace ININ.PureCloudApi.Api
                 localVarPostBody = body; // byte array
             }
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PutOrganizationsExternalorganizationId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
@@ -5814,14 +5303,14 @@ namespace ININ.PureCloudApi.Api
                 (ExternalOrganization) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ExternalOrganization)));
             
         }
-        
+
         /// <summary>
         /// Update a note 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="externalOrganizationId">External Organization Id</param> 
-        /// <param name="noteId">Note Id</param> 
-        /// <param name="body">Note</param> 
+        /// <param name="externalOrganizationId">External Organization Id</param>
+        /// <param name="noteId">Note Id</param>
+        /// <param name="body">Note (optional)</param>
         /// <returns>Note</returns>
         public Note PutOrganizationsExternalorganizationIdNotesNoteId (string externalOrganizationId, string noteId, Note body = null)
         {
@@ -5833,24 +5322,20 @@ namespace ININ.PureCloudApi.Api
         /// Update a note 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="externalOrganizationId">External Organization Id</param> 
-        /// <param name="noteId">Note Id</param> 
-        /// <param name="body">Note</param> 
+        /// <param name="externalOrganizationId">External Organization Id</param>
+        /// <param name="noteId">Note Id</param>
+        /// <param name="body">Note (optional)</param>
         /// <returns>ApiResponse of Note</returns>
         public ApiResponse< Note > PutOrganizationsExternalorganizationIdNotesNoteIdWithHttpInfo (string externalOrganizationId, string noteId, Note body = null)
         {
-            
             // verify the required parameter 'externalOrganizationId' is set
             if (externalOrganizationId == null)
                 throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling ExternalContactsApi->PutOrganizationsExternalorganizationIdNotesNoteId");
-            
             // verify the required parameter 'noteId' is set
             if (noteId == null)
                 throw new ApiException(400, "Missing required parameter 'noteId' when calling ExternalContactsApi->PutOrganizationsExternalorganizationIdNotesNoteId");
-            
-    
+
             var localVarPath = "/api/v2/externalcontacts/organizations/{externalOrganizationId}/notes/{noteId}";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -5877,10 +5362,6 @@ namespace ININ.PureCloudApi.Api
             localVarPathParams.Add("format", "json");
             if (externalOrganizationId != null) localVarPathParams.Add("externalOrganizationId", Configuration.ApiClient.ParameterToString(externalOrganizationId)); // path parameter
             if (noteId != null) localVarPathParams.Add("noteId", Configuration.ApiClient.ParameterToString(noteId)); // path parameter
-            
-            
-            
-            
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -5891,40 +5372,37 @@ namespace ININ.PureCloudApi.Api
             }
 
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-    
+
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
                 Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PutOrganizationsExternalorganizationIdNotesNoteId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PutOrganizationsExternalorganizationIdNotesNoteId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
+
             return new ApiResponse<Note>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Note) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Note)));
             
         }
 
-        
         /// <summary>
         /// Update a note 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization Id</param>
         /// <param name="noteId">Note Id</param>
-        /// <param name="body">Note</param>
+        /// <param name="body">Note (optional)</param>
         /// <returns>Task of Note</returns>
         public async System.Threading.Tasks.Task<Note> PutOrganizationsExternalorganizationIdNotesNoteIdAsync (string externalOrganizationId, string noteId, Note body = null)
         {
@@ -5939,18 +5417,18 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization Id</param>
         /// <param name="noteId">Note Id</param>
-        /// <param name="body">Note</param>
+        /// <param name="body">Note (optional)</param>
         /// <returns>Task of ApiResponse (Note)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Note>> PutOrganizationsExternalorganizationIdNotesNoteIdAsyncWithHttpInfo (string externalOrganizationId, string noteId, Note body = null)
         {
             // verify the required parameter 'externalOrganizationId' is set
-            if (externalOrganizationId == null) throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling PutOrganizationsExternalorganizationIdNotesNoteId");
+            if (externalOrganizationId == null)
+                throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling ExternalContactsApi->PutOrganizationsExternalorganizationIdNotesNoteId");
             // verify the required parameter 'noteId' is set
-            if (noteId == null) throw new ApiException(400, "Missing required parameter 'noteId' when calling PutOrganizationsExternalorganizationIdNotesNoteId");
-            
-    
+            if (noteId == null)
+                throw new ApiException(400, "Missing required parameter 'noteId' when calling ExternalContactsApi->PutOrganizationsExternalorganizationIdNotesNoteId");
+
             var localVarPath = "/api/v2/externalcontacts/organizations/{externalOrganizationId}/notes/{noteId}";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -5977,10 +5455,6 @@ namespace ININ.PureCloudApi.Api
             localVarPathParams.Add("format", "json");
             if (externalOrganizationId != null) localVarPathParams.Add("externalOrganizationId", Configuration.ApiClient.ParameterToString(externalOrganizationId)); // path parameter
             if (noteId != null) localVarPathParams.Add("noteId", Configuration.ApiClient.ParameterToString(noteId)); // path parameter
-            
-            
-            
-            
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -5990,23 +5464,20 @@ namespace ININ.PureCloudApi.Api
                 localVarPostBody = body; // byte array
             }
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PutOrganizationsExternalorganizationIdNotesNoteId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
@@ -6017,13 +5488,13 @@ namespace ININ.PureCloudApi.Api
                 (Note) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Note)));
             
         }
-        
+
         /// <summary>
         /// Update a relationship 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="relationshipId">Relationship Id</param> 
-        /// <param name="body">Relationship</param> 
+        /// <param name="relationshipId">Relationship Id</param>
+        /// <param name="body">Relationship (optional)</param>
         /// <returns>Relationship</returns>
         public Relationship PutRelationshipsRelationshipId (string relationshipId, Relationship body = null)
         {
@@ -6035,19 +5506,16 @@ namespace ININ.PureCloudApi.Api
         /// Update a relationship 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="relationshipId">Relationship Id</param> 
-        /// <param name="body">Relationship</param> 
+        /// <param name="relationshipId">Relationship Id</param>
+        /// <param name="body">Relationship (optional)</param>
         /// <returns>ApiResponse of Relationship</returns>
         public ApiResponse< Relationship > PutRelationshipsRelationshipIdWithHttpInfo (string relationshipId, Relationship body = null)
         {
-            
             // verify the required parameter 'relationshipId' is set
             if (relationshipId == null)
                 throw new ApiException(400, "Missing required parameter 'relationshipId' when calling ExternalContactsApi->PutRelationshipsRelationshipId");
-            
-    
+
             var localVarPath = "/api/v2/externalcontacts/relationships/{relationshipId}";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -6073,10 +5541,6 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (relationshipId != null) localVarPathParams.Add("relationshipId", Configuration.ApiClient.ParameterToString(relationshipId)); // path parameter
-            
-            
-            
-            
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -6087,39 +5551,36 @@ namespace ININ.PureCloudApi.Api
             }
 
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-    
+
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
                 Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PutRelationshipsRelationshipId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PutRelationshipsRelationshipId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
+
             return new ApiResponse<Relationship>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Relationship) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Relationship)));
             
         }
 
-        
         /// <summary>
         /// Update a relationship 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="relationshipId">Relationship Id</param>
-        /// <param name="body">Relationship</param>
+        /// <param name="body">Relationship (optional)</param>
         /// <returns>Task of Relationship</returns>
         public async System.Threading.Tasks.Task<Relationship> PutRelationshipsRelationshipIdAsync (string relationshipId, Relationship body = null)
         {
@@ -6133,16 +5594,15 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="relationshipId">Relationship Id</param>
-        /// <param name="body">Relationship</param>
+        /// <param name="body">Relationship (optional)</param>
         /// <returns>Task of ApiResponse (Relationship)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Relationship>> PutRelationshipsRelationshipIdAsyncWithHttpInfo (string relationshipId, Relationship body = null)
         {
             // verify the required parameter 'relationshipId' is set
-            if (relationshipId == null) throw new ApiException(400, "Missing required parameter 'relationshipId' when calling PutRelationshipsRelationshipId");
-            
-    
+            if (relationshipId == null)
+                throw new ApiException(400, "Missing required parameter 'relationshipId' when calling ExternalContactsApi->PutRelationshipsRelationshipId");
+
             var localVarPath = "/api/v2/externalcontacts/relationships/{relationshipId}";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -6168,10 +5628,6 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (relationshipId != null) localVarPathParams.Add("relationshipId", Configuration.ApiClient.ParameterToString(relationshipId)); // path parameter
-            
-            
-            
-            
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -6181,23 +5637,20 @@ namespace ININ.PureCloudApi.Api
                 localVarPostBody = body; // byte array
             }
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PutRelationshipsRelationshipId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
@@ -6208,7 +5661,6 @@ namespace ININ.PureCloudApi.Api
                 (Relationship) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Relationship)));
             
         }
-        
+
     }
-    
 }

@@ -21,8 +21,8 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CertificateDetails" />class.
         /// </summary>
-        /// <param name="Issuer">Information about the issuer of the certificate.  The value of this property is a comma separated key=value format.  Each key is one of the attribute names supported by X.500..</param>
-        /// <param name="Subject">Information about the subject of the certificate.  The value of this property is a comma separated key=value format.  Each key is one of the attribute names supported by X.500..</param>
+        /// <param name="Issuer">Information about the issuer of the certificate.  The value of this property is a comma separated key&#x3D;value format.  Each key is one of the attribute names supported by X.500..</param>
+        /// <param name="Subject">Information about the subject of the certificate.  The value of this property is a comma separated key&#x3D;value format.  Each key is one of the attribute names supported by X.500..</param>
         /// <param name="ExpirationDate">The expiration date of the certificate. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="IssueDate">The issue date of the certificate. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="Expired">True if the certificate is expired, false otherwise. (default to false).</param>
@@ -64,19 +64,19 @@ namespace ININ.PureCloudApi.Model
             }
             
         }
-        
+
     
         /// <summary>
-        /// Information about the issuer of the certificate.  The value of this property is a comma separated key=value format.  Each key is one of the attribute names supported by X.500.
+        /// Information about the issuer of the certificate.  The value of this property is a comma separated key&#x3D;value format.  Each key is one of the attribute names supported by X.500.
         /// </summary>
-        /// <value>Information about the issuer of the certificate.  The value of this property is a comma separated key=value format.  Each key is one of the attribute names supported by X.500.</value>
+        /// <value>Information about the issuer of the certificate.  The value of this property is a comma separated key&#x3D;value format.  Each key is one of the attribute names supported by X.500.</value>
         [DataMember(Name="issuer", EmitDefaultValue=false)]
         public string Issuer { get; set; }
     
         /// <summary>
-        /// Information about the subject of the certificate.  The value of this property is a comma separated key=value format.  Each key is one of the attribute names supported by X.500.
+        /// Information about the subject of the certificate.  The value of this property is a comma separated key&#x3D;value format.  Each key is one of the attribute names supported by X.500.
         /// </summary>
-        /// <value>Information about the subject of the certificate.  The value of this property is a comma separated key=value format.  Each key is one of the attribute names supported by X.500.</value>
+        /// <value>Information about the subject of the certificate.  The value of this property is a comma separated key&#x3D;value format.  Each key is one of the attribute names supported by X.500.</value>
         [DataMember(Name="subject", EmitDefaultValue=false)]
         public string Subject { get; set; }
     
@@ -128,11 +128,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Expired: ").Append(Expired).Append("\n");
             sb.Append("  SignatureValid: ").Append(SignatureValid).Append("\n");
             sb.Append("  Valid: ").Append(Valid).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -213,28 +212,20 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Issuer != null)
                     hash = hash * 59 + this.Issuer.GetHashCode();
-                
                 if (this.Subject != null)
                     hash = hash * 59 + this.Subject.GetHashCode();
-                
                 if (this.ExpirationDate != null)
                     hash = hash * 59 + this.ExpirationDate.GetHashCode();
-                
                 if (this.IssueDate != null)
                     hash = hash * 59 + this.IssueDate.GetHashCode();
-                
                 if (this.Expired != null)
                     hash = hash * 59 + this.Expired.GetHashCode();
-                
                 if (this.SignatureValid != null)
                     hash = hash * 59 + this.SignatureValid.GetHashCode();
-                
                 if (this.Valid != null)
                     hash = hash * 59 + this.Valid.GetHashCode();
-                
                 return hash;
             }
         }

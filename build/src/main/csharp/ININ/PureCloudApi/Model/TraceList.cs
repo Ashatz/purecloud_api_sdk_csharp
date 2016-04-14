@@ -30,7 +30,7 @@ namespace ININ.PureCloudApi.Model
             this.Traces = Traces;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets App
@@ -54,11 +54,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class TraceList {\n");
             sb.Append("  App: ").Append(App).Append("\n");
             sb.Append("  Traces: ").Append(Traces).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -114,13 +113,10 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.App != null)
                     hash = hash * 59 + this.App.GetHashCode();
-                
                 if (this.Traces != null)
                     hash = hash * 59 + this.Traces.GetHashCode();
-                
                 return hash;
             }
         }

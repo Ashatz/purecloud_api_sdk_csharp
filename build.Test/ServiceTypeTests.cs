@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new ServiceType();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of ServiceType
@@ -50,70 +50,62 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<ServiceType> (instance, "instance is a ServiceType");
         }
 
-        
         /// <summary>
-        /// Test the property 'Type' 
+        /// Test the property 'Type'
         /// </summary>
         [Test]
         public void TypeTest()
         {
-            // TODO: unit test for the property 'Type' 
+            // TODO: unit test for the property 'Type'
         }
-        
         /// <summary>
-        /// Test the property 'Parameters' 
+        /// Test the property 'Parameters'
         /// </summary>
         [Test]
         public void ParametersTest()
         {
-            // TODO: unit test for the property 'Parameters' 
+            // TODO: unit test for the property 'Parameters'
         }
-        
         /// <summary>
-        /// Test the property 'Codecs' 
+        /// Test the property 'Codecs'
         /// </summary>
         [Test]
         public void CodecsTest()
         {
-            // TODO: unit test for the property 'Codecs' 
+            // TODO: unit test for the property 'Codecs'
         }
-        
         /// <summary>
-        /// Test the property 'Strip' 
+        /// Test the property 'Strip'
         /// </summary>
         [Test]
         public void StripTest()
         {
-            // TODO: unit test for the property 'Strip' 
+            // TODO: unit test for the property 'Strip'
         }
-        
         /// <summary>
-        /// Test the property 'CallingPartyId' 
+        /// Test the property 'CallingPartyId'
         /// </summary>
         [Test]
         public void CallingPartyIdTest()
         {
-            // TODO: unit test for the property 'CallingPartyId' 
+            // TODO: unit test for the property 'CallingPartyId'
         }
-        
         /// <summary>
-        /// Test the property 'CallHistory' 
+        /// Test the property 'CallHistory'
         /// </summary>
         [Test]
         public void CallHistoryTest()
         {
-            // TODO: unit test for the property 'CallHistory' 
+            // TODO: unit test for the property 'CallHistory'
         }
-        
         /// <summary>
-        /// Test the property 'Prefix' 
+        /// Test the property 'Prefix'
         /// </summary>
         [Test]
         public void PrefixTest()
         {
-            // TODO: unit test for the property 'Prefix' 
+            // TODO: unit test for the property 'Prefix'
         }
-        
 
     }
 

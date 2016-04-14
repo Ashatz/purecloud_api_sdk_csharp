@@ -17,9 +17,13 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class CsvSchema :  IEquatable<CsvSchema>
     { 
-    
+
+        /// <summary>
+        /// Rate type for the sheet.
+        /// </summary>
+        /// <value>Rate type for the sheet.</value>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum RateTypeEnum {
+                public enum RateTypeEnum {
             
             [EnumMember(Value = "INTRASTATE")]
             Intrastate,
@@ -30,6 +34,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "INTERNATIONAL")]
             International
         }
+
         
         /// <summary>
         /// Rate type for the sheet.
@@ -98,7 +103,7 @@ namespace ININ.PureCloudApi.Model
             this.DateFormat = DateFormat;
             
         }
-        
+
     
         /// <summary>
         /// Carrier ID associated with this CSV schema.
@@ -108,9 +113,9 @@ namespace ININ.PureCloudApi.Model
         public string CarrierId { get; private set; }
     
         /// <summary>
-        /// Row number for the CSV's headers.  This is zero indexed (i.e. 0 is row 1).
+        /// Row number for the CSV&#39;s headers.  This is zero indexed (i.e. 0 is row 1).
         /// </summary>
-        /// <value>Row number for the CSV's headers.  This is zero indexed (i.e. 0 is row 1).</value>
+        /// <value>Row number for the CSV&#39;s headers.  This is zero indexed (i.e. 0 is row 1).</value>
         [DataMember(Name="HeaderRow", EmitDefaultValue=false)]
         public int? HeaderRow { get; set; }
     
@@ -122,9 +127,9 @@ namespace ININ.PureCloudApi.Model
         public int? DataRow { get; set; }
     
         /// <summary>
-        /// CSV header name to object name mappings. For example, \"ROUTE_TEL_PREFIX\" to \"Prefix\" might be one such mapping.
+        /// CSV header name to object name mappings. For example, \&quot;ROUTE_TEL_PREFIX\&quot; to \&quot;Prefix\&quot; might be one such mapping.
         /// </summary>
-        /// <value>CSV header name to object name mappings. For example, \"ROUTE_TEL_PREFIX\" to \"Prefix\" might be one such mapping.</value>
+        /// <value>CSV header name to object name mappings. For example, \&quot;ROUTE_TEL_PREFIX\&quot; to \&quot;Prefix\&quot; might be one such mapping.</value>
         [DataMember(Name="HeaderMappings", EmitDefaultValue=false)]
         public Dictionary<string, string> HeaderMappings { get; set; }
     
@@ -157,11 +162,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  RateType: ").Append(RateType).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  DateFormat: ").Append(DateFormat).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -242,28 +246,20 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.CarrierId != null)
                     hash = hash * 59 + this.CarrierId.GetHashCode();
-                
                 if (this.HeaderRow != null)
                     hash = hash * 59 + this.HeaderRow.GetHashCode();
-                
                 if (this.DataRow != null)
                     hash = hash * 59 + this.DataRow.GetHashCode();
-                
                 if (this.HeaderMappings != null)
                     hash = hash * 59 + this.HeaderMappings.GetHashCode();
-                
                 if (this.RateType != null)
                     hash = hash * 59 + this.RateType.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.DateFormat != null)
                     hash = hash * 59 + this.DateFormat.GetHashCode();
-                
                 return hash;
             }
         }

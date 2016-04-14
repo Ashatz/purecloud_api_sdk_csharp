@@ -17,9 +17,12 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class Call :  IEquatable<Call>
     { 
-    
+
+        /// <summary>
+        /// Gets or Sets State
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum StateEnum {
+                public enum StateEnum {
             
             [EnumMember(Value = "ALERTING")]
             Alerting,
@@ -54,9 +57,13 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "NONE")]
             None
         }
-    
+
+
+        /// <summary>
+        /// Gets or Sets Direction
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum DirectionEnum {
+                public enum DirectionEnum {
             
             [EnumMember(Value = "INBOUND")]
             Inbound,
@@ -64,9 +71,13 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "OUTBOUND")]
             Outbound
         }
-    
+
+
+        /// <summary>
+        /// Gets or Sets RecordingState
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum RecordingStateEnum {
+                public enum RecordingStateEnum {
             
             [EnumMember(Value = "NONE")]
             None,
@@ -77,9 +88,13 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "PAUSED")]
             Paused
         }
-    
+
+
+        /// <summary>
+        /// Gets or Sets DisconnectType
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum DisconnectTypeEnum {
+                public enum DisconnectTypeEnum {
             
             [EnumMember(Value = "ENDPOINT")]
             Endpoint,
@@ -114,6 +129,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "OTHER")]
             Other
         }
+
         
         /// <summary>
         /// Gets or Sets State
@@ -213,7 +229,7 @@ namespace ININ.PureCloudApi.Model
             this.DisconnectReasons = DisconnectReasons;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets Id
@@ -321,11 +337,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  ConnectedTime: ").Append(ConnectedTime).Append("\n");
             sb.Append("  DisconnectedTime: ").Append(DisconnectedTime).Append("\n");
             sb.Append("  DisconnectReasons: ").Append(DisconnectReasons).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -456,58 +471,40 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Direction != null)
                     hash = hash * 59 + this.Direction.GetHashCode();
-                
                 if (this.Recording != null)
                     hash = hash * 59 + this.Recording.GetHashCode();
-                
                 if (this.RecordingState != null)
                     hash = hash * 59 + this.RecordingState.GetHashCode();
-                
                 if (this.Muted != null)
                     hash = hash * 59 + this.Muted.GetHashCode();
-                
                 if (this.Confined != null)
                     hash = hash * 59 + this.Confined.GetHashCode();
-                
                 if (this.Held != null)
                     hash = hash * 59 + this.Held.GetHashCode();
-                
                 if (this.RecordingId != null)
                     hash = hash * 59 + this.RecordingId.GetHashCode();
-                
                 if (this.Segments != null)
                     hash = hash * 59 + this.Segments.GetHashCode();
-                
                 if (this.ErrorInfo != null)
                     hash = hash * 59 + this.ErrorInfo.GetHashCode();
-                
                 if (this.DisconnectType != null)
                     hash = hash * 59 + this.DisconnectType.GetHashCode();
-                
                 if (this.StartHoldTime != null)
                     hash = hash * 59 + this.StartHoldTime.GetHashCode();
-                
                 if (this.DocumentId != null)
                     hash = hash * 59 + this.DocumentId.GetHashCode();
-                
                 if (this.ConnectedTime != null)
                     hash = hash * 59 + this.ConnectedTime.GetHashCode();
-                
                 if (this.DisconnectedTime != null)
                     hash = hash * 59 + this.DisconnectedTime.GetHashCode();
-                
                 if (this.DisconnectReasons != null)
                     hash = hash * 59 + this.DisconnectReasons.GetHashCode();
-                
                 return hash;
             }
         }

@@ -44,7 +44,7 @@ namespace ININ.PureCloudApi.Model
             this.User = User;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets Body
@@ -117,11 +117,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Message: ").Append(Message).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -212,34 +211,24 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Body != null)
                     hash = hash * 59 + this.Body.GetHashCode();
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.To != null)
                     hash = hash * 59 + this.To.GetHashCode();
-                
                 if (this.From != null)
                     hash = hash * 59 + this.From.GetHashCode();
-                
                 if (this.Utc != null)
                     hash = hash * 59 + this.Utc.GetHashCode();
-                
                 if (this.Chat != null)
                     hash = hash * 59 + this.Chat.GetHashCode();
-                
                 if (this.Message != null)
                     hash = hash * 59 + this.Message.GetHashCode();
-                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();
-                
                 return hash;
             }
         }

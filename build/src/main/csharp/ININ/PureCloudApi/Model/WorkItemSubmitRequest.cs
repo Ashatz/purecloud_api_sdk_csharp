@@ -38,7 +38,7 @@ namespace ININ.PureCloudApi.Model
             this.DataItems = DataItems;
             
         }
-        
+
     
         /// <summary>
         /// The command associated with the submit request. Often it is the button pressed on the user interface.
@@ -64,11 +64,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class WorkItemSubmitRequest {\n");
             sb.Append("  CommandId: ").Append(CommandId).Append("\n");
             sb.Append("  DataItems: ").Append(DataItems).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -124,13 +123,10 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.CommandId != null)
                     hash = hash * 59 + this.CommandId.GetHashCode();
-                
                 if (this.DataItems != null)
                     hash = hash * 59 + this.DataItems.GetHashCode();
-                
                 return hash;
             }
         }

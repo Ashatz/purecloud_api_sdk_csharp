@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new ParticipantAttributes();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of ParticipantAttributes
@@ -50,16 +50,14 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<ParticipantAttributes> (instance, "instance is a ParticipantAttributes");
         }
 
-        
         /// <summary>
-        /// Test the property 'Attributes' 
+        /// Test the property 'Attributes'
         /// </summary>
         [Test]
         public void AttributesTest()
         {
-            // TODO: unit test for the property 'Attributes' 
+            // TODO: unit test for the property 'Attributes'
         }
-        
 
     }
 

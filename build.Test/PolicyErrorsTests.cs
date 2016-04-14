@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new PolicyErrors();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of PolicyErrors
@@ -50,16 +50,14 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<PolicyErrors> (instance, "instance is a PolicyErrors");
         }
 
-        
         /// <summary>
-        /// Test the property 'PolicyErrorMessages' 
+        /// Test the property 'PolicyErrorMessages'
         /// </summary>
         [Test]
         public void PolicyErrorMessagesTest()
         {
-            // TODO: unit test for the property 'PolicyErrorMessages' 
+            // TODO: unit test for the property 'PolicyErrorMessages'
         }
-        
 
     }
 

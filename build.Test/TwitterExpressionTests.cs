@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new TwitterExpression();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of TwitterExpression
@@ -50,223 +50,198 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<TwitterExpression> (instance, "instance is a TwitterExpression");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'DateCreated' 
+        /// Test the property 'DateCreated'
         /// </summary>
         [Test]
         public void DateCreatedTest()
         {
-            // TODO: unit test for the property 'DateCreated' 
+            // TODO: unit test for the property 'DateCreated'
         }
-        
         /// <summary>
-        /// Test the property 'DateModified' 
+        /// Test the property 'DateModified'
         /// </summary>
         [Test]
         public void DateModifiedTest()
         {
-            // TODO: unit test for the property 'DateModified' 
+            // TODO: unit test for the property 'DateModified'
         }
-        
         /// <summary>
-        /// Test the property 'IsDispositioned' 
+        /// Test the property 'IsDispositioned'
         /// </summary>
         [Test]
         public void IsDispositionedTest()
         {
-            // TODO: unit test for the property 'IsDispositioned' 
+            // TODO: unit test for the property 'IsDispositioned'
         }
-        
         /// <summary>
-        /// Test the property 'IsNoise' 
+        /// Test the property 'IsNoise'
         /// </summary>
         [Test]
         public void IsNoiseTest()
         {
-            // TODO: unit test for the property 'IsNoise' 
+            // TODO: unit test for the property 'IsNoise'
         }
-        
         /// <summary>
-        /// Test the property 'Gistener' 
+        /// Test the property 'Gistener'
         /// </summary>
         [Test]
         public void GistenerTest()
         {
-            // TODO: unit test for the property 'Gistener' 
+            // TODO: unit test for the property 'Gistener'
         }
-        
         /// <summary>
-        /// Test the property 'TweetId' 
+        /// Test the property 'TweetId'
         /// </summary>
         [Test]
         public void TweetIdTest()
         {
-            // TODO: unit test for the property 'TweetId' 
+            // TODO: unit test for the property 'TweetId'
         }
-        
         /// <summary>
-        /// Test the property 'Text' 
+        /// Test the property 'Text'
         /// </summary>
         [Test]
         public void TextTest()
         {
-            // TODO: unit test for the property 'Text' 
+            // TODO: unit test for the property 'Text'
         }
-        
         /// <summary>
-        /// Test the property 'TweetCreated' 
+        /// Test the property 'TweetCreated'
         /// </summary>
         [Test]
         public void TweetCreatedTest()
         {
-            // TODO: unit test for the property 'TweetCreated' 
+            // TODO: unit test for the property 'TweetCreated'
         }
-        
         /// <summary>
-        /// Test the property 'IsReply' 
+        /// Test the property 'IsReply'
         /// </summary>
         [Test]
         public void IsReplyTest()
         {
-            // TODO: unit test for the property 'IsReply' 
+            // TODO: unit test for the property 'IsReply'
         }
-        
         /// <summary>
-        /// Test the property 'IsRetweet' 
+        /// Test the property 'IsRetweet'
         /// </summary>
         [Test]
         public void IsRetweetTest()
         {
-            // TODO: unit test for the property 'IsRetweet' 
+            // TODO: unit test for the property 'IsRetweet'
         }
-        
         /// <summary>
-        /// Test the property 'RetweetParentId' 
+        /// Test the property 'RetweetParentId'
         /// </summary>
         [Test]
         public void RetweetParentIdTest()
         {
-            // TODO: unit test for the property 'RetweetParentId' 
+            // TODO: unit test for the property 'RetweetParentId'
         }
-        
         /// <summary>
-        /// Test the property 'RetweetCount' 
+        /// Test the property 'RetweetCount'
         /// </summary>
         [Test]
         public void RetweetCountTest()
         {
-            // TODO: unit test for the property 'RetweetCount' 
+            // TODO: unit test for the property 'RetweetCount'
         }
-        
         /// <summary>
-        /// Test the property 'IsQuotedTweet' 
+        /// Test the property 'IsQuotedTweet'
         /// </summary>
         [Test]
         public void IsQuotedTweetTest()
         {
-            // TODO: unit test for the property 'IsQuotedTweet' 
+            // TODO: unit test for the property 'IsQuotedTweet'
         }
-        
         /// <summary>
-        /// Test the property 'QuotedParentId' 
+        /// Test the property 'QuotedParentId'
         /// </summary>
         [Test]
         public void QuotedParentIdTest()
         {
-            // TODO: unit test for the property 'QuotedParentId' 
+            // TODO: unit test for the property 'QuotedParentId'
         }
-        
         /// <summary>
-        /// Test the property 'UserId' 
+        /// Test the property 'UserId'
         /// </summary>
         [Test]
         public void UserIdTest()
         {
-            // TODO: unit test for the property 'UserId' 
+            // TODO: unit test for the property 'UserId'
         }
-        
         /// <summary>
-        /// Test the property 'UserName' 
+        /// Test the property 'UserName'
         /// </summary>
         [Test]
         public void UserNameTest()
         {
-            // TODO: unit test for the property 'UserName' 
+            // TODO: unit test for the property 'UserName'
         }
-        
         /// <summary>
-        /// Test the property 'UserScreenName' 
+        /// Test the property 'UserScreenName'
         /// </summary>
         [Test]
         public void UserScreenNameTest()
         {
-            // TODO: unit test for the property 'UserScreenName' 
+            // TODO: unit test for the property 'UserScreenName'
         }
-        
         /// <summary>
-        /// Test the property 'UserTweetCount' 
+        /// Test the property 'UserTweetCount'
         /// </summary>
         [Test]
         public void UserTweetCountTest()
         {
-            // TODO: unit test for the property 'UserTweetCount' 
+            // TODO: unit test for the property 'UserTweetCount'
         }
-        
         /// <summary>
-        /// Test the property 'UserFollowersCount' 
+        /// Test the property 'UserFollowersCount'
         /// </summary>
         [Test]
         public void UserFollowersCountTest()
         {
-            // TODO: unit test for the property 'UserFollowersCount' 
+            // TODO: unit test for the property 'UserFollowersCount'
         }
-        
         /// <summary>
-        /// Test the property 'GroupTags' 
+        /// Test the property 'GroupTags'
         /// </summary>
         [Test]
         public void GroupTagsTest()
         {
-            // TODO: unit test for the property 'GroupTags' 
+            // TODO: unit test for the property 'GroupTags'
         }
-        
         /// <summary>
-        /// Test the property 'Routed' 
+        /// Test the property 'Routed'
         /// </summary>
         [Test]
         public void RoutedTest()
         {
-            // TODO: unit test for the property 'Routed' 
+            // TODO: unit test for the property 'Routed'
         }
-        
         /// <summary>
-        /// Test the property 'SelfUri' 
+        /// Test the property 'SelfUri'
         /// </summary>
         [Test]
         public void SelfUriTest()
         {
-            // TODO: unit test for the property 'SelfUri' 
+            // TODO: unit test for the property 'SelfUri'
         }
-        
 
     }
 

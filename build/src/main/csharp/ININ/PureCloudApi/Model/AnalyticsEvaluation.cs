@@ -46,7 +46,7 @@ namespace ININ.PureCloudApi.Model
             this.GetoTotalCriticalScore = GetoTotalCriticalScore;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets EvaluationId
@@ -126,11 +126,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  FormName: ").Append(FormName).Append("\n");
             sb.Append("  GetoTotalScore: ").Append(GetoTotalScore).Append("\n");
             sb.Append("  GetoTotalCriticalScore: ").Append(GetoTotalCriticalScore).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -226,37 +225,26 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.EvaluationId != null)
                     hash = hash * 59 + this.EvaluationId.GetHashCode();
-                
                 if (this.EvaluatorId != null)
                     hash = hash * 59 + this.EvaluatorId.GetHashCode();
-                
                 if (this.UserId != null)
                     hash = hash * 59 + this.UserId.GetHashCode();
-                
                 if (this.EventTime != null)
                     hash = hash * 59 + this.EventTime.GetHashCode();
-                
                 if (this.QueueId != null)
                     hash = hash * 59 + this.QueueId.GetHashCode();
-                
                 if (this.FormId != null)
                     hash = hash * 59 + this.FormId.GetHashCode();
-                
                 if (this.ContextId != null)
                     hash = hash * 59 + this.ContextId.GetHashCode();
-                
                 if (this.FormName != null)
                     hash = hash * 59 + this.FormName.GetHashCode();
-                
                 if (this.GetoTotalScore != null)
                     hash = hash * 59 + this.GetoTotalScore.GetHashCode();
-                
                 if (this.GetoTotalCriticalScore != null)
                     hash = hash * 59 + this.GetoTotalCriticalScore.GetHashCode();
-                
                 return hash;
             }
         }

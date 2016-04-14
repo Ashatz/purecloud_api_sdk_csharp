@@ -30,7 +30,7 @@ namespace ININ.PureCloudApi.Model
             this.ImageUri = ImageUri;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets Resolution
@@ -54,11 +54,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class UserImage {\n");
             sb.Append("  Resolution: ").Append(Resolution).Append("\n");
             sb.Append("  ImageUri: ").Append(ImageUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -114,13 +113,10 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Resolution != null)
                     hash = hash * 59 + this.Resolution.GetHashCode();
-                
                 if (this.ImageUri != null)
                     hash = hash * 59 + this.ImageUri.GetHashCode();
-                
                 return hash;
             }
         }

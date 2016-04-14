@@ -38,7 +38,7 @@ namespace ININ.PureCloudApi.Model
             this.AuditMessages = AuditMessages;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets PageNumber
@@ -90,11 +90,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  PageCount: ").Append(PageCount).Append("\n");
             sb.Append("  FacetInfo: ").Append(FacetInfo).Append("\n");
             sb.Append("  AuditMessages: ").Append(AuditMessages).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -170,25 +169,18 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.PageNumber != null)
                     hash = hash * 59 + this.PageNumber.GetHashCode();
-                
                 if (this.PageSize != null)
                     hash = hash * 59 + this.PageSize.GetHashCode();
-                
                 if (this.Total != null)
                     hash = hash * 59 + this.Total.GetHashCode();
-                
                 if (this.PageCount != null)
                     hash = hash * 59 + this.PageCount.GetHashCode();
-                
                 if (this.FacetInfo != null)
                     hash = hash * 59 + this.FacetInfo.GetHashCode();
-                
                 if (this.AuditMessages != null)
                     hash = hash * 59 + this.AuditMessages.GetHashCode();
-                
                 return hash;
             }
         }

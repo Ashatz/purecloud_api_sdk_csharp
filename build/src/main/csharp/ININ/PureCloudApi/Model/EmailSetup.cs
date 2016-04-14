@@ -28,7 +28,7 @@ namespace ININ.PureCloudApi.Model
             this.RootDomain = RootDomain;
             
         }
-        
+
     
         /// <summary>
         /// The root PureCloud domain that all sub-domains are created from.
@@ -46,11 +46,10 @@ namespace ININ.PureCloudApi.Model
             var sb = new StringBuilder();
             sb.Append("class EmailSetup {\n");
             sb.Append("  RootDomain: ").Append(RootDomain).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -101,10 +100,8 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.RootDomain != null)
                     hash = hash * 59 + this.RootDomain.GetHashCode();
-                
                 return hash;
             }
         }

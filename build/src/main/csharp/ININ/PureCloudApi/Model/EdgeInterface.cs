@@ -48,7 +48,7 @@ namespace ININ.PureCloudApi.Model
             this.AddressFamilyId = AddressFamilyId;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets Type
@@ -114,11 +114,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Endpoints: ").Append(Endpoints).Append("\n");
             sb.Append("  LineTypes: ").Append(LineTypes).Append("\n");
             sb.Append("  AddressFamilyId: ").Append(AddressFamilyId).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -204,31 +203,22 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
                 if (this.IpAddress != null)
                     hash = hash * 59 + this.IpAddress.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.MacAddress != null)
                     hash = hash * 59 + this.MacAddress.GetHashCode();
-                
                 if (this.IfName != null)
                     hash = hash * 59 + this.IfName.GetHashCode();
-                
                 if (this.Endpoints != null)
                     hash = hash * 59 + this.Endpoints.GetHashCode();
-                
                 if (this.LineTypes != null)
                     hash = hash * 59 + this.LineTypes.GetHashCode();
-                
                 if (this.AddressFamilyId != null)
                     hash = hash * 59 + this.AddressFamilyId.GetHashCode();
-                
                 return hash;
             }
         }

@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new SortField();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of SortField
@@ -50,25 +50,22 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<SortField> (instance, "instance is a SortField");
         }
 
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'SortType' 
+        /// Test the property 'SortType'
         /// </summary>
         [Test]
         public void SortTypeTest()
         {
-            // TODO: unit test for the property 'SortType' 
+            // TODO: unit test for the property 'SortType'
         }
-        
 
     }
 

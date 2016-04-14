@@ -30,7 +30,7 @@ namespace ININ.PureCloudApi.Model
             this.Aggregations = Aggregations;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets Conversations
@@ -54,11 +54,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class AnalyticsConversationQueryResponse {\n");
             sb.Append("  Conversations: ").Append(Conversations).Append("\n");
             sb.Append("  Aggregations: ").Append(Aggregations).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -114,13 +113,10 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Conversations != null)
                     hash = hash * 59 + this.Conversations.GetHashCode();
-                
                 if (this.Aggregations != null)
                     hash = hash * 59 + this.Aggregations.GetHashCode();
-                
                 return hash;
             }
         }

@@ -40,7 +40,7 @@ namespace ININ.PureCloudApi.Model
             }
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets Path
@@ -71,11 +71,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Path: ").Append(Path).Append("\n");
             sb.Append("  Query: ").Append(Query).Append("\n");
             sb.Append("  Recurse: ").Append(Recurse).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -136,16 +135,12 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Path != null)
                     hash = hash * 59 + this.Path.GetHashCode();
-                
                 if (this.Query != null)
                     hash = hash * 59 + this.Query.GetHashCode();
-                
                 if (this.Recurse != null)
                     hash = hash * 59 + this.Recurse.GetHashCode();
-                
                 return hash;
             }
         }

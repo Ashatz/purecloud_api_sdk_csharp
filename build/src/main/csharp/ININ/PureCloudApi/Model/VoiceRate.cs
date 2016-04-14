@@ -17,9 +17,13 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class VoiceRate :  IEquatable<VoiceRate>
     { 
-    
+
+        /// <summary>
+        /// The voice rate type.
+        /// </summary>
+        /// <value>The voice rate type.</value>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum TypeEnum {
+                public enum TypeEnum {
             
             [EnumMember(Value = "RATE_TOLL_FREE")]
             RateTollFree,
@@ -39,6 +43,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "EXTENDED")]
             Extended
         }
+
         
         /// <summary>
         /// The voice rate type.
@@ -127,7 +132,7 @@ namespace ININ.PureCloudApi.Model
             this.Name = Name;
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -209,11 +214,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  DurationMinimumSeconds: ").Append(DurationMinimumSeconds).Append("\n");
             sb.Append("  DurationIncrementSeconds: ").Append(DurationIncrementSeconds).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -309,37 +313,26 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.Currency != null)
                     hash = hash * 59 + this.Currency.GetHashCode();
-                
                 if (this.AmendmentId != null)
                     hash = hash * 59 + this.AmendmentId.GetHashCode();
-                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
                 if (this.EffectiveDate != null)
                     hash = hash * 59 + this.EffectiveDate.GetHashCode();
-                
                 if (this.Rate != null)
                     hash = hash * 59 + this.Rate.GetHashCode();
-                
                 if (this.DurationMinimumSeconds != null)
                     hash = hash * 59 + this.DurationMinimumSeconds.GetHashCode();
-                
                 if (this.DurationIncrementSeconds != null)
                     hash = hash * 59 + this.DurationIncrementSeconds.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 return hash;
             }
         }

@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new FacetInfo();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of FacetInfo
@@ -50,25 +50,22 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<FacetInfo> (instance, "instance is a FacetInfo");
         }
 
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'Entries' 
+        /// Test the property 'Entries'
         /// </summary>
         [Test]
         public void EntriesTest()
         {
-            // TODO: unit test for the property 'Entries' 
+            // TODO: unit test for the property 'Entries'
         }
-        
 
     }
 

@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new SubDataItem();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of SubDataItem
@@ -50,52 +50,46 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<SubDataItem> (instance, "instance is a SubDataItem");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'Type' 
+        /// Test the property 'Type'
         /// </summary>
         [Test]
         public void TypeTest()
         {
-            // TODO: unit test for the property 'Type' 
+            // TODO: unit test for the property 'Type'
         }
-        
         /// <summary>
-        /// Test the property 'Value' 
+        /// Test the property 'Value'
         /// </summary>
         [Test]
         public void ValueTest()
         {
-            // TODO: unit test for the property 'Value' 
+            // TODO: unit test for the property 'Value'
         }
-        
         /// <summary>
-        /// Test the property 'Prompt' 
+        /// Test the property 'Prompt'
         /// </summary>
         [Test]
         public void PromptTest()
         {
-            // TODO: unit test for the property 'Prompt' 
+            // TODO: unit test for the property 'Prompt'
         }
-        
         /// <summary>
-        /// Test the property 'DisplayValue' 
+        /// Test the property 'DisplayValue'
         /// </summary>
         [Test]
         public void DisplayValueTest()
         {
-            // TODO: unit test for the property 'DisplayValue' 
+            // TODO: unit test for the property 'DisplayValue'
         }
-        
 
     }
 

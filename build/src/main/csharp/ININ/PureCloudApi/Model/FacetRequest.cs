@@ -17,9 +17,13 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class FacetRequest :  IEquatable<FacetRequest>
     { 
-    
+
+        /// <summary>
+        /// Which facet request type
+        /// </summary>
+        /// <value>Which facet request type</value>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum FacetRequestQueryTypeEnum {
+                public enum FacetRequestQueryTypeEnum {
             
             [EnumMember(Value = "TERM")]
             Term,
@@ -27,9 +31,14 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "RANGE")]
             Range
         }
-    
+
+
+        /// <summary>
+        /// the fieldtype of the field to perform the facet request on.
+        /// </summary>
+        /// <value>the fieldtype of the field to perform the facet request on.</value>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum TypeEnum {
+                public enum TypeEnum {
             
             [EnumMember(Value = "NUMBER")]
             Number,
@@ -49,6 +58,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "GROUP")]
             Group
         }
+
         
         /// <summary>
         /// Which facet request type
@@ -110,7 +120,7 @@ namespace ININ.PureCloudApi.Model
             this.MaxFacetCount = MaxFacetCount;
             
         }
-        
+
     
         /// <summary>
         /// name of the facet request that will be returned with the result set
@@ -162,11 +172,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  RangeFrom: ").Append(RangeFrom).Append("\n");
             sb.Append("  RangeTo: ").Append(RangeTo).Append("\n");
             sb.Append("  MaxFacetCount: ").Append(MaxFacetCount).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -247,28 +256,20 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.FacetRequestQueryType != null)
                     hash = hash * 59 + this.FacetRequestQueryType.GetHashCode();
-                
                 if (this.FieldName != null)
                     hash = hash * 59 + this.FieldName.GetHashCode();
-                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
                 if (this.RangeFrom != null)
                     hash = hash * 59 + this.RangeFrom.GetHashCode();
-                
                 if (this.RangeTo != null)
                     hash = hash * 59 + this.RangeTo.GetHashCode();
-                
                 if (this.MaxFacetCount != null)
                     hash = hash * 59 + this.MaxFacetCount.GetHashCode();
-                
                 return hash;
             }
         }

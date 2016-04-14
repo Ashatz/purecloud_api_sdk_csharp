@@ -17,9 +17,12 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class FacetEntry :  IEquatable<FacetEntry>
     { 
-    
+
+        /// <summary>
+        /// Gets or Sets TermType
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum TermTypeEnum {
+                public enum TermTypeEnum {
             
             [EnumMember(Value = "TERM")]
             Term,
@@ -39,6 +42,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "ID")]
             Id
         }
+
         
         /// <summary>
         /// Gets or Sets TermType
@@ -70,7 +74,7 @@ namespace ININ.PureCloudApi.Model
             this.Terms = Terms;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets Attribute
@@ -130,11 +134,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  TermCount: ").Append(TermCount).Append("\n");
             sb.Append("  TermType: ").Append(TermType).Append("\n");
             sb.Append("  Terms: ").Append(Terms).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -220,31 +223,22 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Attribute != null)
                     hash = hash * 59 + this.Attribute.GetHashCode();
-                
                 if (this.Statistics != null)
                     hash = hash * 59 + this.Statistics.GetHashCode();
-                
                 if (this.Other != null)
                     hash = hash * 59 + this.Other.GetHashCode();
-                
                 if (this.Total != null)
                     hash = hash * 59 + this.Total.GetHashCode();
-                
                 if (this.Missing != null)
                     hash = hash * 59 + this.Missing.GetHashCode();
-                
                 if (this.TermCount != null)
                     hash = hash * 59 + this.TermCount.GetHashCode();
-                
                 if (this.TermType != null)
                     hash = hash * 59 + this.TermType.GetHashCode();
-                
                 if (this.Terms != null)
                     hash = hash * 59 + this.Terms.GetHashCode();
-                
                 return hash;
             }
         }

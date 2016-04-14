@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new Trace();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of Trace
@@ -50,70 +50,62 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<Trace> (instance, "instance is a Trace");
         }
 
-        
         /// <summary>
-        /// Test the property 'Topic' 
+        /// Test the property 'Topic'
         /// </summary>
         [Test]
         public void TopicTest()
         {
-            // TODO: unit test for the property 'Topic' 
+            // TODO: unit test for the property 'Topic'
         }
-        
         /// <summary>
-        /// Test the property 'Timestamp' 
+        /// Test the property 'Timestamp'
         /// </summary>
         [Test]
         public void TimestampTest()
         {
-            // TODO: unit test for the property 'Timestamp' 
+            // TODO: unit test for the property 'Timestamp'
         }
-        
         /// <summary>
-        /// Test the property 'Level' 
+        /// Test the property 'Level'
         /// </summary>
         [Test]
         public void LevelTest()
         {
-            // TODO: unit test for the property 'Level' 
+            // TODO: unit test for the property 'Level'
         }
-        
         /// <summary>
-        /// Test the property 'Message' 
+        /// Test the property 'Message'
         /// </summary>
         [Test]
         public void MessageTest()
         {
-            // TODO: unit test for the property 'Message' 
+            // TODO: unit test for the property 'Message'
         }
-        
         /// <summary>
-        /// Test the property 'Details' 
+        /// Test the property 'Details'
         /// </summary>
         [Test]
         public void DetailsTest()
         {
-            // TODO: unit test for the property 'Details' 
+            // TODO: unit test for the property 'Details'
         }
-        
         /// <summary>
-        /// Test the property 'TimestampString' 
+        /// Test the property 'TimestampString'
         /// </summary>
         [Test]
         public void TimestampStringTest()
         {
-            // TODO: unit test for the property 'TimestampString' 
+            // TODO: unit test for the property 'TimestampString'
         }
-        
         /// <summary>
-        /// Test the property 'DetailsString' 
+        /// Test the property 'DetailsString'
         /// </summary>
         [Test]
         public void DetailsStringTest()
         {
-            // TODO: unit test for the property 'DetailsString' 
+            // TODO: unit test for the property 'DetailsString'
         }
-        
 
     }
 

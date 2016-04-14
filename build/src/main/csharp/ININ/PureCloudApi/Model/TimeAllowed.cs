@@ -40,7 +40,7 @@ namespace ININ.PureCloudApi.Model
             }
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets TimeSlots
@@ -71,11 +71,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  TimeSlots: ").Append(TimeSlots).Append("\n");
             sb.Append("  TimeZoneId: ").Append(TimeZoneId).Append("\n");
             sb.Append("  Empty: ").Append(Empty).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -136,16 +135,12 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.TimeSlots != null)
                     hash = hash * 59 + this.TimeSlots.GetHashCode();
-                
                 if (this.TimeZoneId != null)
                     hash = hash * 59 + this.TimeZoneId.GetHashCode();
-                
                 if (this.Empty != null)
                     hash = hash * 59 + this.Empty.GetHashCode();
-                
                 return hash;
             }
         }

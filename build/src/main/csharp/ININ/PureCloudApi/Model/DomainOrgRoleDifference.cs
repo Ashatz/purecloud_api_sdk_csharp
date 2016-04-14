@@ -36,7 +36,7 @@ namespace ININ.PureCloudApi.Model
             this.RoleFromDefault = RoleFromDefault;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets RemovedPermissionPolicies
@@ -81,11 +81,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  SamePermissionPolicies: ").Append(SamePermissionPolicies).Append("\n");
             sb.Append("  UserOrgRole: ").Append(UserOrgRole).Append("\n");
             sb.Append("  RoleFromDefault: ").Append(RoleFromDefault).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -156,22 +155,16 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.RemovedPermissionPolicies != null)
                     hash = hash * 59 + this.RemovedPermissionPolicies.GetHashCode();
-                
                 if (this.AddedPermissionPolicies != null)
                     hash = hash * 59 + this.AddedPermissionPolicies.GetHashCode();
-                
                 if (this.SamePermissionPolicies != null)
                     hash = hash * 59 + this.SamePermissionPolicies.GetHashCode();
-                
                 if (this.UserOrgRole != null)
                     hash = hash * 59 + this.UserOrgRole.GetHashCode();
-                
                 if (this.RoleFromDefault != null)
                     hash = hash * 59 + this.RoleFromDefault.GetHashCode();
-                
                 return hash;
             }
         }

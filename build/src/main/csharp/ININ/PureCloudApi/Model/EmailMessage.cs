@@ -46,7 +46,7 @@ namespace ININ.PureCloudApi.Model
             this.Time = Time;
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -151,11 +151,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  HtmlBody: ").Append(HtmlBody).Append("\n");
             sb.Append("  Time: ").Append(Time).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -261,43 +260,30 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.To != null)
                     hash = hash * 59 + this.To.GetHashCode();
-                
                 if (this.Cc != null)
                     hash = hash * 59 + this.Cc.GetHashCode();
-                
                 if (this.Bcc != null)
                     hash = hash * 59 + this.Bcc.GetHashCode();
-                
                 if (this.From != null)
                     hash = hash * 59 + this.From.GetHashCode();
-                
                 if (this.Subject != null)
                     hash = hash * 59 + this.Subject.GetHashCode();
-                
                 if (this.Attachments != null)
                     hash = hash * 59 + this.Attachments.GetHashCode();
-                
                 if (this.TextBody != null)
                     hash = hash * 59 + this.TextBody.GetHashCode();
-                
                 if (this.HtmlBody != null)
                     hash = hash * 59 + this.HtmlBody.GetHashCode();
-                
                 if (this.Time != null)
                     hash = hash * 59 + this.Time.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 return hash;
             }
         }

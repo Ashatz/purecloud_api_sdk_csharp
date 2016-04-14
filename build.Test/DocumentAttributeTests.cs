@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new DocumentAttribute();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of DocumentAttribute
@@ -50,25 +50,22 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<DocumentAttribute> (instance, "instance is a DocumentAttribute");
         }
 
-        
         /// <summary>
-        /// Test the property 'Attribute' 
+        /// Test the property 'Attribute'
         /// </summary>
         [Test]
         public void AttributeTest()
         {
-            // TODO: unit test for the property 'Attribute' 
+            // TODO: unit test for the property 'Attribute'
         }
-        
         /// <summary>
-        /// Test the property 'Values' 
+        /// Test the property 'Values'
         /// </summary>
         [Test]
         public void ValuesTest()
         {
-            // TODO: unit test for the property 'Values' 
+            // TODO: unit test for the property 'Values'
         }
-        
 
     }
 

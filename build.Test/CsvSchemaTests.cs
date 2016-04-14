@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new CsvSchema();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of CsvSchema
@@ -50,70 +50,62 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<CsvSchema> (instance, "instance is a CsvSchema");
         }
 
-        
         /// <summary>
-        /// Test the property 'CarrierId' 
+        /// Test the property 'CarrierId'
         /// </summary>
         [Test]
         public void CarrierIdTest()
         {
-            // TODO: unit test for the property 'CarrierId' 
+            // TODO: unit test for the property 'CarrierId'
         }
-        
         /// <summary>
-        /// Test the property 'HeaderRow' 
+        /// Test the property 'HeaderRow'
         /// </summary>
         [Test]
         public void HeaderRowTest()
         {
-            // TODO: unit test for the property 'HeaderRow' 
+            // TODO: unit test for the property 'HeaderRow'
         }
-        
         /// <summary>
-        /// Test the property 'DataRow' 
+        /// Test the property 'DataRow'
         /// </summary>
         [Test]
         public void DataRowTest()
         {
-            // TODO: unit test for the property 'DataRow' 
+            // TODO: unit test for the property 'DataRow'
         }
-        
         /// <summary>
-        /// Test the property 'HeaderMappings' 
+        /// Test the property 'HeaderMappings'
         /// </summary>
         [Test]
         public void HeaderMappingsTest()
         {
-            // TODO: unit test for the property 'HeaderMappings' 
+            // TODO: unit test for the property 'HeaderMappings'
         }
-        
         /// <summary>
-        /// Test the property 'RateType' 
+        /// Test the property 'RateType'
         /// </summary>
         [Test]
         public void RateTypeTest()
         {
-            // TODO: unit test for the property 'RateType' 
+            // TODO: unit test for the property 'RateType'
         }
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'DateFormat' 
+        /// Test the property 'DateFormat'
         /// </summary>
         [Test]
         public void DateFormatTest()
         {
-            // TODO: unit test for the property 'DateFormat' 
+            // TODO: unit test for the property 'DateFormat'
         }
-        
 
     }
 

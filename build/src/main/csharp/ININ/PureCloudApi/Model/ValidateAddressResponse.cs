@@ -38,7 +38,7 @@ namespace ININ.PureCloudApi.Model
             this.Response = Response;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets Valid
@@ -62,11 +62,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class ValidateAddressResponse {\n");
             sb.Append("  Valid: ").Append(Valid).Append("\n");
             sb.Append("  Response: ").Append(Response).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -122,13 +121,10 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Valid != null)
                     hash = hash * 59 + this.Valid.GetHashCode();
-                
                 if (this.Response != null)
                     hash = hash * 59 + this.Response.GetHashCode();
-                
                 return hash;
             }
         }

@@ -54,7 +54,7 @@ namespace ININ.PureCloudApi.Model
             this.PolicyErrors = PolicyErrors;
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -155,11 +155,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Actions: ").Append(Actions).Append("\n");
             sb.Append("  PolicyErrors: ").Append(PolicyErrors).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -265,43 +264,30 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.ModifiedDate != null)
                     hash = hash * 59 + this.ModifiedDate.GetHashCode();
-                
                 if (this.CreatedDate != null)
                     hash = hash * 59 + this.CreatedDate.GetHashCode();
-                
                 if (this.Order != null)
                     hash = hash * 59 + this.Order.GetHashCode();
-                
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
-                
                 if (this.Enabled != null)
                     hash = hash * 59 + this.Enabled.GetHashCode();
-                
                 if (this.MediaPolicies != null)
                     hash = hash * 59 + this.MediaPolicies.GetHashCode();
-                
                 if (this.Conditions != null)
                     hash = hash * 59 + this.Conditions.GetHashCode();
-                
                 if (this.Actions != null)
                     hash = hash * 59 + this.Actions.GetHashCode();
-                
                 if (this.PolicyErrors != null)
                     hash = hash * 59 + this.PolicyErrors.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 return hash;
             }
         }

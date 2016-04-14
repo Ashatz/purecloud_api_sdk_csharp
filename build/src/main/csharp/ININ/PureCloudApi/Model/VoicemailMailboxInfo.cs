@@ -38,7 +38,7 @@ namespace ININ.PureCloudApi.Model
             this.ModifiedDate = ModifiedDate;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets UsageSizeBytes
@@ -92,11 +92,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  VoicemailPolicy: ").Append(VoicemailPolicy).Append("\n");
             sb.Append("  CreatedDate: ").Append(CreatedDate).Append("\n");
             sb.Append("  ModifiedDate: ").Append(ModifiedDate).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -172,25 +171,18 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.UsageSizeBytes != null)
                     hash = hash * 59 + this.UsageSizeBytes.GetHashCode();
-                
                 if (this.TotalCount != null)
                     hash = hash * 59 + this.TotalCount.GetHashCode();
-                
                 if (this.UnreadCount != null)
                     hash = hash * 59 + this.UnreadCount.GetHashCode();
-                
                 if (this.VoicemailPolicy != null)
                     hash = hash * 59 + this.VoicemailPolicy.GetHashCode();
-                
                 if (this.CreatedDate != null)
                     hash = hash * 59 + this.CreatedDate.GetHashCode();
-                
                 if (this.ModifiedDate != null)
                     hash = hash * 59 + this.ModifiedDate.GetHashCode();
-                
                 return hash;
             }
         }

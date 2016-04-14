@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new VoiceRateUpdate();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of VoiceRateUpdate
@@ -50,124 +50,110 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<VoiceRateUpdate> (instance, "instance is a VoiceRateUpdate");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'Currency' 
+        /// Test the property 'Currency'
         /// </summary>
         [Test]
         public void CurrencyTest()
         {
-            // TODO: unit test for the property 'Currency' 
+            // TODO: unit test for the property 'Currency'
         }
-        
         /// <summary>
-        /// Test the property 'InboundTollFree' 
+        /// Test the property 'InboundTollFree'
         /// </summary>
         [Test]
         public void InboundTollFreeTest()
         {
-            // TODO: unit test for the property 'InboundTollFree' 
+            // TODO: unit test for the property 'InboundTollFree'
         }
-        
         /// <summary>
-        /// Test the property 'Extended' 
+        /// Test the property 'Extended'
         /// </summary>
         [Test]
         public void ExtendedTest()
         {
-            // TODO: unit test for the property 'Extended' 
+            // TODO: unit test for the property 'Extended'
         }
-        
         /// <summary>
-        /// Test the property 'InboundTolled' 
+        /// Test the property 'InboundTolled'
         /// </summary>
         [Test]
         public void InboundTolledTest()
         {
-            // TODO: unit test for the property 'InboundTolled' 
+            // TODO: unit test for the property 'InboundTolled'
         }
-        
         /// <summary>
-        /// Test the property 'OutboundLocal' 
+        /// Test the property 'OutboundLocal'
         /// </summary>
         [Test]
         public void OutboundLocalTest()
         {
-            // TODO: unit test for the property 'OutboundLocal' 
+            // TODO: unit test for the property 'OutboundLocal'
         }
-        
         /// <summary>
-        /// Test the property 'OutboundIntraState' 
+        /// Test the property 'OutboundIntraState'
         /// </summary>
         [Test]
         public void OutboundIntraStateTest()
         {
-            // TODO: unit test for the property 'OutboundIntraState' 
+            // TODO: unit test for the property 'OutboundIntraState'
         }
-        
         /// <summary>
-        /// Test the property 'OutboundInterState' 
+        /// Test the property 'OutboundInterState'
         /// </summary>
         [Test]
         public void OutboundInterStateTest()
         {
-            // TODO: unit test for the property 'OutboundInterState' 
+            // TODO: unit test for the property 'OutboundInterState'
         }
-        
         /// <summary>
-        /// Test the property 'OutboundInternational' 
+        /// Test the property 'OutboundInternational'
         /// </summary>
         [Test]
         public void OutboundInternationalTest()
         {
-            // TODO: unit test for the property 'OutboundInternational' 
+            // TODO: unit test for the property 'OutboundInternational'
         }
-        
         /// <summary>
-        /// Test the property 'AmendmentDate' 
+        /// Test the property 'AmendmentDate'
         /// </summary>
         [Test]
         public void AmendmentDateTest()
         {
-            // TODO: unit test for the property 'AmendmentDate' 
+            // TODO: unit test for the property 'AmendmentDate'
         }
-        
         /// <summary>
-        /// Test the property 'EffectiveDate' 
+        /// Test the property 'EffectiveDate'
         /// </summary>
         [Test]
         public void EffectiveDateTest()
         {
-            // TODO: unit test for the property 'EffectiveDate' 
+            // TODO: unit test for the property 'EffectiveDate'
         }
-        
         /// <summary>
-        /// Test the property 'SelfUri' 
+        /// Test the property 'SelfUri'
         /// </summary>
         [Test]
         public void SelfUriTest()
         {
-            // TODO: unit test for the property 'SelfUri' 
+            // TODO: unit test for the property 'SelfUri'
         }
-        
 
     }
 

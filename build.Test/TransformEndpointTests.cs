@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new TransformEndpoint();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of TransformEndpoint
@@ -50,115 +50,102 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<TransformEndpoint> (instance, "instance is a TransformEndpoint");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'SwaggerUrl' 
+        /// Test the property 'SwaggerUrl'
         /// </summary>
         [Test]
         public void SwaggerUrlTest()
         {
-            // TODO: unit test for the property 'SwaggerUrl' 
+            // TODO: unit test for the property 'SwaggerUrl'
         }
-        
         /// <summary>
-        /// Test the property 'Route' 
+        /// Test the property 'Route'
         /// </summary>
         [Test]
         public void RouteTest()
         {
-            // TODO: unit test for the property 'Route' 
+            // TODO: unit test for the property 'Route'
         }
-        
         /// <summary>
-        /// Test the property 'Entity' 
+        /// Test the property 'Entity'
         /// </summary>
         [Test]
         public void EntityTest()
         {
-            // TODO: unit test for the property 'Entity' 
+            // TODO: unit test for the property 'Entity'
         }
-        
         /// <summary>
-        /// Test the property 'ApiFunction' 
+        /// Test the property 'ApiFunction'
         /// </summary>
         [Test]
         public void ApiFunctionTest()
         {
-            // TODO: unit test for the property 'ApiFunction' 
+            // TODO: unit test for the property 'ApiFunction'
         }
-        
         /// <summary>
-        /// Test the property 'Ready' 
+        /// Test the property 'Ready'
         /// </summary>
         [Test]
         public void ReadyTest()
         {
-            // TODO: unit test for the property 'Ready' 
+            // TODO: unit test for the property 'Ready'
         }
-        
         /// <summary>
-        /// Test the property 'Active' 
+        /// Test the property 'Active'
         /// </summary>
         [Test]
         public void ActiveTest()
         {
-            // TODO: unit test for the property 'Active' 
+            // TODO: unit test for the property 'Active'
         }
-        
         /// <summary>
-        /// Test the property 'BatchSize' 
+        /// Test the property 'BatchSize'
         /// </summary>
         [Test]
         public void BatchSizeTest()
         {
-            // TODO: unit test for the property 'BatchSize' 
+            // TODO: unit test for the property 'BatchSize'
         }
-        
         /// <summary>
-        /// Test the property 'Parallelism' 
+        /// Test the property 'Parallelism'
         /// </summary>
         [Test]
         public void ParallelismTest()
         {
-            // TODO: unit test for the property 'Parallelism' 
+            // TODO: unit test for the property 'Parallelism'
         }
-        
         /// <summary>
-        /// Test the property 'UpdateProgressEvery' 
+        /// Test the property 'UpdateProgressEvery'
         /// </summary>
         [Test]
         public void UpdateProgressEveryTest()
         {
-            // TODO: unit test for the property 'UpdateProgressEvery' 
+            // TODO: unit test for the property 'UpdateProgressEvery'
         }
-        
         /// <summary>
-        /// Test the property 'SelfUri' 
+        /// Test the property 'SelfUri'
         /// </summary>
         [Test]
         public void SelfUriTest()
         {
-            // TODO: unit test for the property 'SelfUri' 
+            // TODO: unit test for the property 'SelfUri'
         }
-        
 
     }
 

@@ -30,7 +30,7 @@ namespace ININ.PureCloudApi.Model
             this.WaveformData = WaveformData;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets MediaUri
@@ -54,11 +54,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class MediaResult {\n");
             sb.Append("  MediaUri: ").Append(MediaUri).Append("\n");
             sb.Append("  WaveformData: ").Append(WaveformData).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -114,13 +113,10 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.MediaUri != null)
                     hash = hash * 59 + this.MediaUri.GetHashCode();
-                
                 if (this.WaveformData != null)
                     hash = hash * 59 + this.WaveformData.GetHashCode();
-                
                 return hash;
             }
         }

@@ -40,7 +40,7 @@ namespace ININ.PureCloudApi.Model
             this.Filters = Filters;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets PageNumber
@@ -99,11 +99,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  QueryFields: ").Append(QueryFields).Append("\n");
             sb.Append("  Facets: ").Append(Facets).Append("\n");
             sb.Append("  Filters: ").Append(Filters).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -184,28 +183,20 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.PageNumber != null)
                     hash = hash * 59 + this.PageNumber.GetHashCode();
-                
                 if (this.PageSize != null)
                     hash = hash * 59 + this.PageSize.GetHashCode();
-                
                 if (this.SortBy != null)
                     hash = hash * 59 + this.SortBy.GetHashCode();
-                
                 if (this.QueryPhrase != null)
                     hash = hash * 59 + this.QueryPhrase.GetHashCode();
-                
                 if (this.QueryFields != null)
                     hash = hash * 59 + this.QueryFields.GetHashCode();
-                
                 if (this.Facets != null)
                     hash = hash * 59 + this.Facets.GetHashCode();
-                
                 if (this.Filters != null)
                     hash = hash * 59 + this.Filters.GetHashCode();
-                
                 return hash;
             }
         }

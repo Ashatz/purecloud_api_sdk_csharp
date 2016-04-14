@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new Detail();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of Detail
@@ -50,43 +50,38 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<Detail> (instance, "instance is a Detail");
         }
 
-        
         /// <summary>
-        /// Test the property 'ErrorCode' 
+        /// Test the property 'ErrorCode'
         /// </summary>
         [Test]
         public void ErrorCodeTest()
         {
-            // TODO: unit test for the property 'ErrorCode' 
+            // TODO: unit test for the property 'ErrorCode'
         }
-        
         /// <summary>
-        /// Test the property 'FieldName' 
+        /// Test the property 'FieldName'
         /// </summary>
         [Test]
         public void FieldNameTest()
         {
-            // TODO: unit test for the property 'FieldName' 
+            // TODO: unit test for the property 'FieldName'
         }
-        
         /// <summary>
-        /// Test the property 'EntityId' 
+        /// Test the property 'EntityId'
         /// </summary>
         [Test]
         public void EntityIdTest()
         {
-            // TODO: unit test for the property 'EntityId' 
+            // TODO: unit test for the property 'EntityId'
         }
-        
         /// <summary>
-        /// Test the property 'EntityName' 
+        /// Test the property 'EntityName'
         /// </summary>
         [Test]
         public void EntityNameTest()
         {
-            // TODO: unit test for the property 'EntityName' 
+            // TODO: unit test for the property 'EntityName'
         }
-        
 
     }
 

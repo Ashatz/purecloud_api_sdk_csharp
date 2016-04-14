@@ -32,7 +32,7 @@ namespace ININ.PureCloudApi.Model
             this.ReturnUrl = ReturnUrl;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets Org
@@ -63,11 +63,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Org: ").Append(Org).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  ReturnUrl: ").Append(ReturnUrl).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -128,16 +127,12 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Org != null)
                     hash = hash * 59 + this.Org.GetHashCode();
-                
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();
-                
                 if (this.ReturnUrl != null)
                     hash = hash * 59 + this.ReturnUrl.GetHashCode();
-                
                 return hash;
             }
         }

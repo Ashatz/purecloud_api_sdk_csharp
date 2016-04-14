@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new DomainPhysicalCapabilities();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of DomainPhysicalCapabilities
@@ -50,25 +50,22 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<DomainPhysicalCapabilities> (instance, "instance is a DomainPhysicalCapabilities");
         }
 
-        
         /// <summary>
-        /// Test the property 'Vlan' 
+        /// Test the property 'Vlan'
         /// </summary>
         [Test]
         public void VlanTest()
         {
-            // TODO: unit test for the property 'Vlan' 
+            // TODO: unit test for the property 'Vlan'
         }
-        
         /// <summary>
-        /// Test the property 'Team' 
+        /// Test the property 'Team'
         /// </summary>
         [Test]
         public void TeamTest()
         {
-            // TODO: unit test for the property 'Team' 
+            // TODO: unit test for the property 'Team'
         }
-        
 
     }
 

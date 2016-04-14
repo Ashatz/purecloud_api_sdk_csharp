@@ -58,7 +58,7 @@ namespace ININ.PureCloudApi.Model
             this.ExternalOrganization = ExternalOrganization;
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -198,11 +198,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  CreateDate: ").Append(CreateDate).Append("\n");
             sb.Append("  ExternalOrganization: ").Append(ExternalOrganization).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -338,61 +337,42 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.FirstName != null)
                     hash = hash * 59 + this.FirstName.GetHashCode();
-                
                 if (this.MiddleName != null)
                     hash = hash * 59 + this.MiddleName.GetHashCode();
-                
                 if (this.LastName != null)
                     hash = hash * 59 + this.LastName.GetHashCode();
-                
                 if (this.Salutation != null)
                     hash = hash * 59 + this.Salutation.GetHashCode();
-                
                 if (this.Title != null)
                     hash = hash * 59 + this.Title.GetHashCode();
-                
                 if (this.WorkPhone != null)
                     hash = hash * 59 + this.WorkPhone.GetHashCode();
-                
                 if (this.CellPhone != null)
                     hash = hash * 59 + this.CellPhone.GetHashCode();
-                
                 if (this.HomePhone != null)
                     hash = hash * 59 + this.HomePhone.GetHashCode();
-                
                 if (this.OtherPhone != null)
                     hash = hash * 59 + this.OtherPhone.GetHashCode();
-                
                 if (this.WorkEmail != null)
                     hash = hash * 59 + this.WorkEmail.GetHashCode();
-                
                 if (this.PersonalEmail != null)
                     hash = hash * 59 + this.PersonalEmail.GetHashCode();
-                
                 if (this.OtherEmail != null)
                     hash = hash * 59 + this.OtherEmail.GetHashCode();
-                
                 if (this.Address != null)
                     hash = hash * 59 + this.Address.GetHashCode();
-                
                 if (this.ModifyDate != null)
                     hash = hash * 59 + this.ModifyDate.GetHashCode();
-                
                 if (this.CreateDate != null)
                     hash = hash * 59 + this.CreateDate.GetHashCode();
-                
                 if (this.ExternalOrganization != null)
                     hash = hash * 59 + this.ExternalOrganization.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 return hash;
             }
         }

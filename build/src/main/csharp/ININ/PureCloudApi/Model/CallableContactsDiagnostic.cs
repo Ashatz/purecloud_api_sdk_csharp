@@ -32,7 +32,7 @@ namespace ININ.PureCloudApi.Model
             this.RuleSets = RuleSets;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets DncLists
@@ -63,11 +63,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  DncLists: ").Append(DncLists).Append("\n");
             sb.Append("  CallableTimeSet: ").Append(CallableTimeSet).Append("\n");
             sb.Append("  RuleSets: ").Append(RuleSets).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -128,16 +127,12 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.DncLists != null)
                     hash = hash * 59 + this.DncLists.GetHashCode();
-                
                 if (this.CallableTimeSet != null)
                     hash = hash * 59 + this.CallableTimeSet.GetHashCode();
-                
                 if (this.RuleSets != null)
                     hash = hash * 59 + this.RuleSets.GetHashCode();
-                
                 return hash;
             }
         }

@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new Tier();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of Tier
@@ -50,25 +50,22 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<Tier> (instance, "instance is a Tier");
         }
 
-        
         /// <summary>
-        /// Test the property 'Currency' 
+        /// Test the property 'Currency'
         /// </summary>
         [Test]
         public void CurrencyTest()
         {
-            // TODO: unit test for the property 'Currency' 
+            // TODO: unit test for the property 'Currency'
         }
-        
         /// <summary>
-        /// Test the property 'Price' 
+        /// Test the property 'Price'
         /// </summary>
         [Test]
         public void PriceTest()
         {
-            // TODO: unit test for the property 'Price' 
+            // TODO: unit test for the property 'Price'
         }
-        
 
     }
 

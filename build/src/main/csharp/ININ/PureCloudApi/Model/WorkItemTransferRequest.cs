@@ -17,9 +17,13 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class WorkItemTransferRequest :  IEquatable<WorkItemTransferRequest>
     { 
-    
+
+        /// <summary>
+        /// The type of the transferTarget, indicating whether you want to transfer to a User, or a Queue, etc.
+        /// </summary>
+        /// <value>The type of the transferTarget, indicating whether you want to transfer to a User, or a Queue, etc.</value>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum TransferTargetTypeEnum {
+                public enum TransferTargetTypeEnum {
             
             [EnumMember(Value = "USER")]
             User,
@@ -27,6 +31,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "QUEUE")]
             Queue
         }
+
         
         /// <summary>
         /// The type of the transferTarget, indicating whether you want to transfer to a User, or a Queue, etc.
@@ -63,7 +68,7 @@ namespace ININ.PureCloudApi.Model
             }
             
         }
-        
+
     
         /// <summary>
         /// The destination to where the work item should be transferred.
@@ -82,11 +87,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class WorkItemTransferRequest {\n");
             sb.Append("  TransferTargetType: ").Append(TransferTargetType).Append("\n");
             sb.Append("  TransferTarget: ").Append(TransferTarget).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -142,13 +146,10 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.TransferTargetType != null)
                     hash = hash * 59 + this.TransferTargetType.GetHashCode();
-                
                 if (this.TransferTarget != null)
                     hash = hash * 59 + this.TransferTarget.GetHashCode();
-                
                 return hash;
             }
         }

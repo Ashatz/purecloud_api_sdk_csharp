@@ -56,7 +56,7 @@ namespace ININ.PureCloudApi.Model
             this.ModifiedDate = ModifiedDate;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets Enabled
@@ -145,11 +145,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  QuotaSizeBytes: ").Append(QuotaSizeBytes).Append("\n");
             sb.Append("  CreatedDate: ").Append(CreatedDate).Append("\n");
             sb.Append("  ModifiedDate: ").Append(ModifiedDate).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -250,40 +249,28 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Enabled != null)
                     hash = hash * 59 + this.Enabled.GetHashCode();
-                
                 if (this.AlertTimeoutSeconds != null)
                     hash = hash * 59 + this.AlertTimeoutSeconds.GetHashCode();
-                
                 if (this.MinimumRecordingTimeSeconds != null)
                     hash = hash * 59 + this.MinimumRecordingTimeSeconds.GetHashCode();
-                
                 if (this.MaximumRecordingTimeSeconds != null)
                     hash = hash * 59 + this.MaximumRecordingTimeSeconds.GetHashCode();
-                
                 if (this.UnavailableMessageUri != null)
                     hash = hash * 59 + this.UnavailableMessageUri.GetHashCode();
-                
                 if (this.NamePromptMessageUri != null)
                     hash = hash * 59 + this.NamePromptMessageUri.GetHashCode();
-                
                 if (this.FullMessageUri != null)
                     hash = hash * 59 + this.FullMessageUri.GetHashCode();
-                
                 if (this.Pin != null)
                     hash = hash * 59 + this.Pin.GetHashCode();
-                
                 if (this.QuotaSizeBytes != null)
                     hash = hash * 59 + this.QuotaSizeBytes.GetHashCode();
-                
                 if (this.CreatedDate != null)
                     hash = hash * 59 + this.CreatedDate.GetHashCode();
-                
                 if (this.ModifiedDate != null)
                     hash = hash * 59 + this.ModifiedDate.GetHashCode();
-                
                 return hash;
             }
         }

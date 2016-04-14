@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new DomainResourceConditionValue();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of DomainResourceConditionValue
@@ -50,43 +50,38 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<DomainResourceConditionValue> (instance, "instance is a DomainResourceConditionValue");
         }
 
-        
         /// <summary>
-        /// Test the property 'User' 
+        /// Test the property 'User'
         /// </summary>
         [Test]
         public void UserTest()
         {
-            // TODO: unit test for the property 'User' 
+            // TODO: unit test for the property 'User'
         }
-        
         /// <summary>
-        /// Test the property 'Queue' 
+        /// Test the property 'Queue'
         /// </summary>
         [Test]
         public void QueueTest()
         {
-            // TODO: unit test for the property 'Queue' 
+            // TODO: unit test for the property 'Queue'
         }
-        
         /// <summary>
-        /// Test the property 'Value' 
+        /// Test the property 'Value'
         /// </summary>
         [Test]
         public void ValueTest()
         {
-            // TODO: unit test for the property 'Value' 
+            // TODO: unit test for the property 'Value'
         }
-        
         /// <summary>
-        /// Test the property 'Type' 
+        /// Test the property 'Type'
         /// </summary>
         [Test]
         public void TypeTest()
         {
-            // TODO: unit test for the property 'Type' 
+            // TODO: unit test for the property 'Type'
         }
-        
 
     }
 

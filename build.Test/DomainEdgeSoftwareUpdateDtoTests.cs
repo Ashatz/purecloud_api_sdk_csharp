@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new DomainEdgeSoftwareUpdateDto();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of DomainEdgeSoftwareUpdateDto
@@ -50,88 +50,78 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<DomainEdgeSoftwareUpdateDto> (instance, "instance is a DomainEdgeSoftwareUpdateDto");
         }
 
-        
         /// <summary>
-        /// Test the property 'Version' 
+        /// Test the property 'Version'
         /// </summary>
         [Test]
         public void VersionTest()
         {
-            // TODO: unit test for the property 'Version' 
+            // TODO: unit test for the property 'Version'
         }
-        
         /// <summary>
-        /// Test the property 'MaxDownloadRate' 
+        /// Test the property 'MaxDownloadRate'
         /// </summary>
         [Test]
         public void MaxDownloadRateTest()
         {
-            // TODO: unit test for the property 'MaxDownloadRate' 
+            // TODO: unit test for the property 'MaxDownloadRate'
         }
-        
         /// <summary>
-        /// Test the property 'DownloadStartTime' 
+        /// Test the property 'DownloadStartTime'
         /// </summary>
         [Test]
         public void DownloadStartTimeTest()
         {
-            // TODO: unit test for the property 'DownloadStartTime' 
+            // TODO: unit test for the property 'DownloadStartTime'
         }
-        
         /// <summary>
-        /// Test the property 'ExecuteStartTime' 
+        /// Test the property 'ExecuteStartTime'
         /// </summary>
         [Test]
         public void ExecuteStartTimeTest()
         {
-            // TODO: unit test for the property 'ExecuteStartTime' 
+            // TODO: unit test for the property 'ExecuteStartTime'
         }
-        
         /// <summary>
-        /// Test the property 'ExecuteStopTime' 
+        /// Test the property 'ExecuteStopTime'
         /// </summary>
         [Test]
         public void ExecuteStopTimeTest()
         {
-            // TODO: unit test for the property 'ExecuteStopTime' 
+            // TODO: unit test for the property 'ExecuteStopTime'
         }
-        
         /// <summary>
-        /// Test the property 'ExecuteOnIdle' 
+        /// Test the property 'ExecuteOnIdle'
         /// </summary>
         [Test]
         public void ExecuteOnIdleTest()
         {
-            // TODO: unit test for the property 'ExecuteOnIdle' 
+            // TODO: unit test for the property 'ExecuteOnIdle'
         }
-        
         /// <summary>
-        /// Test the property 'Status' 
+        /// Test the property 'Status'
         /// </summary>
         [Test]
         public void StatusTest()
         {
-            // TODO: unit test for the property 'Status' 
+            // TODO: unit test for the property 'Status'
         }
-        
         /// <summary>
-        /// Test the property 'EdgeUri' 
+        /// Test the property 'EdgeUri'
         /// </summary>
         [Test]
         public void EdgeUriTest()
         {
-            // TODO: unit test for the property 'EdgeUri' 
+            // TODO: unit test for the property 'EdgeUri'
         }
-        
         /// <summary>
-        /// Test the property 'Current' 
+        /// Test the property 'Current'
         /// </summary>
         [Test]
         public void CurrentTest()
         {
-            // TODO: unit test for the property 'Current' 
+            // TODO: unit test for the property 'Current'
         }
-        
 
     }
 

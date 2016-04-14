@@ -34,7 +34,7 @@ namespace ININ.PureCloudApi.Model
             this.LastAssociatedStation = LastAssociatedStation;
             
         }
-        
+
     
         /// <summary>
         /// Current associated station for this user.
@@ -76,11 +76,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  EffectiveStation: ").Append(EffectiveStation).Append("\n");
             sb.Append("  DefaultStation: ").Append(DefaultStation).Append("\n");
             sb.Append("  LastAssociatedStation: ").Append(LastAssociatedStation).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -146,19 +145,14 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.AssociatedStation != null)
                     hash = hash * 59 + this.AssociatedStation.GetHashCode();
-                
                 if (this.EffectiveStation != null)
                     hash = hash * 59 + this.EffectiveStation.GetHashCode();
-                
                 if (this.DefaultStation != null)
                     hash = hash * 59 + this.DefaultStation.GetHashCode();
-                
                 if (this.LastAssociatedStation != null)
                     hash = hash * 59 + this.LastAssociatedStation.GetHashCode();
-                
                 return hash;
             }
         }

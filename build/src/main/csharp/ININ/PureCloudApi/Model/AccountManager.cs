@@ -34,7 +34,7 @@ namespace ININ.PureCloudApi.Model
             this.Email = Email;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets FirstName
@@ -72,11 +72,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  LastName: ").Append(LastName).Append("\n");
             sb.Append("  Phone: ").Append(Phone).Append("\n");
             sb.Append("  Email: ").Append(Email).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -142,19 +141,14 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.FirstName != null)
                     hash = hash * 59 + this.FirstName.GetHashCode();
-                
                 if (this.LastName != null)
                     hash = hash * 59 + this.LastName.GetHashCode();
-                
                 if (this.Phone != null)
                     hash = hash * 59 + this.Phone.GetHashCode();
-                
                 if (this.Email != null)
                     hash = hash * 59 + this.Email.GetHashCode();
-                
                 return hash;
             }
         }

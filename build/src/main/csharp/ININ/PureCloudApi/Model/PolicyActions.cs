@@ -54,7 +54,7 @@ namespace ININ.PureCloudApi.Model
             this.RetentionDuration = RetentionDuration;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets RetainRecording
@@ -106,11 +106,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  AssignMeteredEvaluations: ").Append(AssignMeteredEvaluations).Append("\n");
             sb.Append("  AssignCalibrations: ").Append(AssignCalibrations).Append("\n");
             sb.Append("  RetentionDuration: ").Append(RetentionDuration).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -186,25 +185,18 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.RetainRecording != null)
                     hash = hash * 59 + this.RetainRecording.GetHashCode();
-                
                 if (this.DeleteRecording != null)
                     hash = hash * 59 + this.DeleteRecording.GetHashCode();
-                
                 if (this.AssignEvaluations != null)
                     hash = hash * 59 + this.AssignEvaluations.GetHashCode();
-                
                 if (this.AssignMeteredEvaluations != null)
                     hash = hash * 59 + this.AssignMeteredEvaluations.GetHashCode();
-                
                 if (this.AssignCalibrations != null)
                     hash = hash * 59 + this.AssignCalibrations.GetHashCode();
-                
                 if (this.RetentionDuration != null)
                     hash = hash * 59 + this.RetentionDuration.GetHashCode();
-                
                 return hash;
             }
         }

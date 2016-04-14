@@ -48,7 +48,7 @@ namespace ININ.PureCloudApi.Model
             this.ThirdPartySubscriptionNonAcbId = ThirdPartySubscriptionNonAcbId;
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -123,11 +123,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  ThirdPartySubscriptionId: ").Append(ThirdPartySubscriptionId).Append("\n");
             sb.Append("  ThirdPartySubscriptionNonAcbId: ").Append(ThirdPartySubscriptionNonAcbId).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -218,34 +217,24 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.OrgName != null)
                     hash = hash * 59 + this.OrgName.GetHashCode();
-                
                 if (this.Configured != null)
                     hash = hash * 59 + this.Configured.GetHashCode();
-                
                 if (this.AdminUIURL != null)
                     hash = hash * 59 + this.AdminUIURL.GetHashCode();
-                
                 if (this.ThirdPartyAccountId != null)
                     hash = hash * 59 + this.ThirdPartyAccountId.GetHashCode();
-                
                 if (this.ThirdPartySubscriptionId != null)
                     hash = hash * 59 + this.ThirdPartySubscriptionId.GetHashCode();
-                
                 if (this.ThirdPartySubscriptionNonAcbId != null)
                     hash = hash * 59 + this.ThirdPartySubscriptionNonAcbId.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 return hash;
             }
         }

@@ -17,9 +17,12 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class DefaultGreetingList :  IEquatable<DefaultGreetingList>
     { 
-    
+
+        /// <summary>
+        /// Gets or Sets OwnerType
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum OwnerTypeEnum {
+                public enum OwnerTypeEnum {
             
             [EnumMember(Value = "USER")]
             User,
@@ -27,6 +30,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "ORGANIZATION")]
             Organization
         }
+
         
         /// <summary>
         /// Gets or Sets OwnerType
@@ -58,7 +62,7 @@ namespace ININ.PureCloudApi.Model
             this.ModifiedBy = ModifiedBy;
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -136,11 +140,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  ModifiedDate: ").Append(ModifiedDate).Append("\n");
             sb.Append("  ModifiedBy: ").Append(ModifiedBy).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -236,37 +239,26 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.Owner != null)
                     hash = hash * 59 + this.Owner.GetHashCode();
-                
                 if (this.OwnerType != null)
                     hash = hash * 59 + this.OwnerType.GetHashCode();
-                
                 if (this.Greetings != null)
                     hash = hash * 59 + this.Greetings.GetHashCode();
-                
                 if (this.CreatedDate != null)
                     hash = hash * 59 + this.CreatedDate.GetHashCode();
-                
                 if (this.CreatedBy != null)
                     hash = hash * 59 + this.CreatedBy.GetHashCode();
-                
                 if (this.ModifiedDate != null)
                     hash = hash * 59 + this.ModifiedDate.GetHashCode();
-                
                 if (this.ModifiedBy != null)
                     hash = hash * 59 + this.ModifiedBy.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 return hash;
             }
         }

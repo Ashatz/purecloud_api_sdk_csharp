@@ -46,7 +46,7 @@ namespace ININ.PureCloudApi.Model
             this.ActionSet = ActionSet;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets Id
@@ -126,11 +126,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  NamedResources: ").Append(NamedResources).Append("\n");
             sb.Append("  ResourceCondition: ").Append(ResourceCondition).Append("\n");
             sb.Append("  ActionSet: ").Append(ActionSet).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -226,37 +225,26 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Domain != null)
                     hash = hash * 59 + this.Domain.GetHashCode();
-                
                 if (this.EntityName != null)
                     hash = hash * 59 + this.EntityName.GetHashCode();
-                
                 if (this.PolicyName != null)
                     hash = hash * 59 + this.PolicyName.GetHashCode();
-                
                 if (this.PolicyDescription != null)
                     hash = hash * 59 + this.PolicyDescription.GetHashCode();
-                
                 if (this.ActionSetKey != null)
                     hash = hash * 59 + this.ActionSetKey.GetHashCode();
-                
                 if (this.ResourceConditionNode != null)
                     hash = hash * 59 + this.ResourceConditionNode.GetHashCode();
-                
                 if (this.NamedResources != null)
                     hash = hash * 59 + this.NamedResources.GetHashCode();
-                
                 if (this.ResourceCondition != null)
                     hash = hash * 59 + this.ResourceCondition.GetHashCode();
-                
                 if (this.ActionSet != null)
                     hash = hash * 59 + this.ActionSet.GetHashCode();
-                
                 return hash;
             }
         }

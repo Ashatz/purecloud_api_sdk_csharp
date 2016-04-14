@@ -17,9 +17,13 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class Recording :  IEquatable<Recording>
     { 
-    
+
+        /// <summary>
+        /// Represents the current file state for a recording. Examples: Uploading, Archived, etc
+        /// </summary>
+        /// <value>Represents the current file state for a recording. Examples: Uploading, Archived, etc</value>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum FileStateEnum {
+                public enum FileStateEnum {
             
             [EnumMember(Value = "ARCHIVED")]
             Archived,
@@ -39,13 +43,19 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "UPLOADING")]
             Uploading
         }
-    
+
+
+        /// <summary>
+        /// The type of archive medium used. Example: CloudArchive
+        /// </summary>
+        /// <value>The type of archive medium used. Example: CloudArchive</value>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum ArchiveMediumEnum {
+                public enum ArchiveMediumEnum {
             
             [EnumMember(Value = "CLOUDARCHIVE")]
             Cloudarchive
         }
+
         
         /// <summary>
         /// Represents the current file state for a recording. Examples: Uploading, Archived, etc
@@ -109,7 +119,7 @@ namespace ININ.PureCloudApi.Model
             this.SessionId = SessionId;
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -274,11 +284,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  RemainingRestorationsAllowedForOrg: ").Append(RemainingRestorationsAllowedForOrg).Append("\n");
             sb.Append("  SessionId: ").Append(SessionId).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -434,73 +443,50 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.ConversationId != null)
                     hash = hash * 59 + this.ConversationId.GetHashCode();
-                
                 if (this.Path != null)
                     hash = hash * 59 + this.Path.GetHashCode();
-                
                 if (this.StartTime != null)
                     hash = hash * 59 + this.StartTime.GetHashCode();
-                
                 if (this.EndTime != null)
                     hash = hash * 59 + this.EndTime.GetHashCode();
-                
                 if (this.Media != null)
                     hash = hash * 59 + this.Media.GetHashCode();
-                
                 if (this.Annotations != null)
                     hash = hash * 59 + this.Annotations.GetHashCode();
-                
                 if (this.Transcript != null)
                     hash = hash * 59 + this.Transcript.GetHashCode();
-                
                 if (this.EmailTranscript != null)
                     hash = hash * 59 + this.EmailTranscript.GetHashCode();
-                
                 if (this.FileState != null)
                     hash = hash * 59 + this.FileState.GetHashCode();
-                
                 if (this.RestoreExpirationTime != null)
                     hash = hash * 59 + this.RestoreExpirationTime.GetHashCode();
-                
                 if (this.MediaUris != null)
                     hash = hash * 59 + this.MediaUris.GetHashCode();
-                
                 if (this.EstimatedTranscodeTimeMs != null)
                     hash = hash * 59 + this.EstimatedTranscodeTimeMs.GetHashCode();
-                
                 if (this.ActualTranscodeTimeMs != null)
                     hash = hash * 59 + this.ActualTranscodeTimeMs.GetHashCode();
-                
                 if (this.ArchiveDate != null)
                     hash = hash * 59 + this.ArchiveDate.GetHashCode();
-                
                 if (this.ArchiveMedium != null)
                     hash = hash * 59 + this.ArchiveMedium.GetHashCode();
-                
                 if (this.DeleteDate != null)
                     hash = hash * 59 + this.DeleteDate.GetHashCode();
-                
                 if (this.MaxAllowedRestorationsForOrg != null)
                     hash = hash * 59 + this.MaxAllowedRestorationsForOrg.GetHashCode();
-                
                 if (this.RemainingRestorationsAllowedForOrg != null)
                     hash = hash * 59 + this.RemainingRestorationsAllowedForOrg.GetHashCode();
-                
                 if (this.SessionId != null)
                     hash = hash * 59 + this.SessionId.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 return hash;
             }
         }

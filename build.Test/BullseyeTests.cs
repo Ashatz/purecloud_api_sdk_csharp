@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new Bullseye();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of Bullseye
@@ -50,16 +50,14 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<Bullseye> (instance, "instance is a Bullseye");
         }
 
-        
         /// <summary>
-        /// Test the property 'Rings' 
+        /// Test the property 'Rings'
         /// </summary>
         [Test]
         public void RingsTest()
         {
-            // TODO: unit test for the property 'Rings' 
+            // TODO: unit test for the property 'Rings'
         }
-        
 
     }
 

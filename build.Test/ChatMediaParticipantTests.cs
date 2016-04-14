@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new ChatMediaParticipant();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of ChatMediaParticipant
@@ -50,205 +50,182 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<ChatMediaParticipant> (instance, "instance is a ChatMediaParticipant");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'Address' 
+        /// Test the property 'Address'
         /// </summary>
         [Test]
         public void AddressTest()
         {
-            // TODO: unit test for the property 'Address' 
+            // TODO: unit test for the property 'Address'
         }
-        
         /// <summary>
-        /// Test the property 'StartTime' 
+        /// Test the property 'StartTime'
         /// </summary>
         [Test]
         public void StartTimeTest()
         {
-            // TODO: unit test for the property 'StartTime' 
+            // TODO: unit test for the property 'StartTime'
         }
-        
         /// <summary>
-        /// Test the property 'ConnectedTime' 
+        /// Test the property 'ConnectedTime'
         /// </summary>
         [Test]
         public void ConnectedTimeTest()
         {
-            // TODO: unit test for the property 'ConnectedTime' 
+            // TODO: unit test for the property 'ConnectedTime'
         }
-        
         /// <summary>
-        /// Test the property 'EndTime' 
+        /// Test the property 'EndTime'
         /// </summary>
         [Test]
         public void EndTimeTest()
         {
-            // TODO: unit test for the property 'EndTime' 
+            // TODO: unit test for the property 'EndTime'
         }
-        
         /// <summary>
-        /// Test the property 'StartHoldTime' 
+        /// Test the property 'StartHoldTime'
         /// </summary>
         [Test]
         public void StartHoldTimeTest()
         {
-            // TODO: unit test for the property 'StartHoldTime' 
+            // TODO: unit test for the property 'StartHoldTime'
         }
-        
         /// <summary>
-        /// Test the property 'Purpose' 
+        /// Test the property 'Purpose'
         /// </summary>
         [Test]
         public void PurposeTest()
         {
-            // TODO: unit test for the property 'Purpose' 
+            // TODO: unit test for the property 'Purpose'
         }
-        
         /// <summary>
-        /// Test the property 'State' 
+        /// Test the property 'State'
         /// </summary>
         [Test]
         public void StateTest()
         {
-            // TODO: unit test for the property 'State' 
+            // TODO: unit test for the property 'State'
         }
-        
         /// <summary>
-        /// Test the property 'Direction' 
+        /// Test the property 'Direction'
         /// </summary>
         [Test]
         public void DirectionTest()
         {
-            // TODO: unit test for the property 'Direction' 
+            // TODO: unit test for the property 'Direction'
         }
-        
         /// <summary>
-        /// Test the property 'DisconnectType' 
+        /// Test the property 'DisconnectType'
         /// </summary>
         [Test]
         public void DisconnectTypeTest()
         {
-            // TODO: unit test for the property 'DisconnectType' 
+            // TODO: unit test for the property 'DisconnectType'
         }
-        
         /// <summary>
-        /// Test the property 'Held' 
+        /// Test the property 'Held'
         /// </summary>
         [Test]
         public void HeldTest()
         {
-            // TODO: unit test for the property 'Held' 
+            // TODO: unit test for the property 'Held'
         }
-        
         /// <summary>
-        /// Test the property 'WrapupRequired' 
+        /// Test the property 'WrapupRequired'
         /// </summary>
         [Test]
         public void WrapupRequiredTest()
         {
-            // TODO: unit test for the property 'WrapupRequired' 
+            // TODO: unit test for the property 'WrapupRequired'
         }
-        
         /// <summary>
-        /// Test the property 'WrapupPrompt' 
+        /// Test the property 'WrapupPrompt'
         /// </summary>
         [Test]
         public void WrapupPromptTest()
         {
-            // TODO: unit test for the property 'WrapupPrompt' 
+            // TODO: unit test for the property 'WrapupPrompt'
         }
-        
         /// <summary>
-        /// Test the property 'User' 
+        /// Test the property 'User'
         /// </summary>
         [Test]
         public void UserTest()
         {
-            // TODO: unit test for the property 'User' 
+            // TODO: unit test for the property 'User'
         }
-        
         /// <summary>
-        /// Test the property 'Queue' 
+        /// Test the property 'Queue'
         /// </summary>
         [Test]
         public void QueueTest()
         {
-            // TODO: unit test for the property 'Queue' 
+            // TODO: unit test for the property 'Queue'
         }
-        
         /// <summary>
-        /// Test the property 'Attributes' 
+        /// Test the property 'Attributes'
         /// </summary>
         [Test]
         public void AttributesTest()
         {
-            // TODO: unit test for the property 'Attributes' 
+            // TODO: unit test for the property 'Attributes'
         }
-        
         /// <summary>
-        /// Test the property 'ErrorInfo' 
+        /// Test the property 'ErrorInfo'
         /// </summary>
         [Test]
         public void ErrorInfoTest()
         {
-            // TODO: unit test for the property 'ErrorInfo' 
+            // TODO: unit test for the property 'ErrorInfo'
         }
-        
         /// <summary>
-        /// Test the property 'Script' 
+        /// Test the property 'Script'
         /// </summary>
         [Test]
         public void ScriptTest()
         {
-            // TODO: unit test for the property 'Script' 
+            // TODO: unit test for the property 'Script'
         }
-        
         /// <summary>
-        /// Test the property 'WrapupTimeoutMs' 
+        /// Test the property 'WrapupTimeoutMs'
         /// </summary>
         [Test]
         public void WrapupTimeoutMsTest()
         {
-            // TODO: unit test for the property 'WrapupTimeoutMs' 
+            // TODO: unit test for the property 'WrapupTimeoutMs'
         }
-        
         /// <summary>
-        /// Test the property 'WrapupSkipped' 
+        /// Test the property 'WrapupSkipped'
         /// </summary>
         [Test]
         public void WrapupSkippedTest()
         {
-            // TODO: unit test for the property 'WrapupSkipped' 
+            // TODO: unit test for the property 'WrapupSkipped'
         }
-        
         /// <summary>
-        /// Test the property 'RoomId' 
+        /// Test the property 'RoomId'
         /// </summary>
         [Test]
         public void RoomIdTest()
         {
-            // TODO: unit test for the property 'RoomId' 
+            // TODO: unit test for the property 'RoomId'
         }
-        
 
     }
 

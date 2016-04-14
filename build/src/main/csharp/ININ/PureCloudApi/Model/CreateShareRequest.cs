@@ -17,16 +17,23 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class CreateShareRequest :  IEquatable<CreateShareRequest>
     { 
-    
+
+        /// <summary>
+        /// Gets or Sets SharedEntityType
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum SharedEntityTypeEnum {
+                public enum SharedEntityTypeEnum {
             
             [EnumMember(Value = "DOCUMENT")]
             Document
         }
-    
+
+
+        /// <summary>
+        /// Gets or Sets MemberType
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum MemberTypeEnum {
+                public enum MemberTypeEnum {
             
             [EnumMember(Value = "USER")]
             User,
@@ -34,6 +41,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "PUBLIC")]
             Public
         }
+
         
         /// <summary>
         /// Gets or Sets SharedEntityType
@@ -65,7 +73,7 @@ namespace ININ.PureCloudApi.Model
             this.Members = Members;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets SharedEntity
@@ -98,11 +106,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  MemberType: ").Append(MemberType).Append("\n");
             sb.Append("  Member: ").Append(Member).Append("\n");
             sb.Append("  Members: ").Append(Members).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -173,22 +180,16 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.SharedEntityType != null)
                     hash = hash * 59 + this.SharedEntityType.GetHashCode();
-                
                 if (this.SharedEntity != null)
                     hash = hash * 59 + this.SharedEntity.GetHashCode();
-                
                 if (this.MemberType != null)
                     hash = hash * 59 + this.MemberType.GetHashCode();
-                
                 if (this.Member != null)
                     hash = hash * 59 + this.Member.GetHashCode();
-                
                 if (this.Members != null)
                     hash = hash * 59 + this.Members.GetHashCode();
-                
                 return hash;
             }
         }

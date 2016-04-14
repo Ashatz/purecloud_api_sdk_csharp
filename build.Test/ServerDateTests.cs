@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new ServerDate();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of ServerDate
@@ -50,16 +50,14 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<ServerDate> (instance, "instance is a ServerDate");
         }
 
-        
         /// <summary>
-        /// Test the property 'CurrentDate' 
+        /// Test the property 'CurrentDate'
         /// </summary>
         [Test]
         public void CurrentDateTest()
         {
-            // TODO: unit test for the property 'CurrentDate' 
+            // TODO: unit test for the property 'CurrentDate'
         }
-        
 
     }
 

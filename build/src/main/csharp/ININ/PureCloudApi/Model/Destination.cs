@@ -42,7 +42,7 @@ namespace ININ.PureCloudApi.Model
             this.QueueId = QueueId;
             
         }
-        
+
     
         /// <summary>
         /// Address or phone number.
@@ -81,11 +81,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  UserId: ").Append(UserId).Append("\n");
             sb.Append("  QueueId: ").Append(QueueId).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -151,19 +150,14 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Address != null)
                     hash = hash * 59 + this.Address.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.UserId != null)
                     hash = hash * 59 + this.UserId.GetHashCode();
-                
                 if (this.QueueId != null)
                     hash = hash * 59 + this.QueueId.GetHashCode();
-                
                 return hash;
             }
         }

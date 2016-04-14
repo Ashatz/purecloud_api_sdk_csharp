@@ -60,9 +60,8 @@ namespace ININ.PureCloudApi.Test
         public void GetDateTest()
         {
             // TODO: add unit test for the method 'GetDate'
-            
             var response = instance.GetDate();
-            Assert.IsInstanceOf<ServerDate> (response, "response is ServerDate"); 
+            Assert.IsInstanceOf<ServerDate> (response, "response is ServerDate");
         }
         
         /// <summary>
@@ -74,9 +73,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'GetTimezones'
             int? pageSize = null; // TODO: replace null with proper value
             int? pageNumber = null; // TODO: replace null with proper value
-            
             var response = instance.GetTimezones(pageSize, pageNumber);
-            Assert.IsInstanceOf<TimeZoneEntityListing> (response, "response is TimeZoneEntityListing"); 
+            Assert.IsInstanceOf<TimeZoneEntityListing> (response, "response is TimeZoneEntityListing");
         }
         
         /// <summary>
@@ -87,9 +85,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'PostDetails'
             Certificate body = null; // TODO: replace null with proper value
-            
             var response = instance.PostDetails(body);
-            Assert.IsInstanceOf<ParsedCertificate> (response, "response is ParsedCertificate"); 
+            Assert.IsInstanceOf<ParsedCertificate> (response, "response is ParsedCertificate");
         }
         
     }

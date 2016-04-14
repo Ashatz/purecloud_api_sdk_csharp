@@ -30,7 +30,7 @@ namespace ININ.PureCloudApi.Model
             this.Name = Name;
             
         }
-        
+
     
         /// <summary>
         /// The ID of the role
@@ -56,11 +56,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class DomainRole {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -116,13 +115,10 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 return hash;
             }
         }

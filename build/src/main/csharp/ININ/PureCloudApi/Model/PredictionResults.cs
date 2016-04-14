@@ -17,9 +17,13 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class PredictionResults :  IEquatable<PredictionResults>
     { 
-    
+
+        /// <summary>
+        /// Indicates the estimated wait time Formula
+        /// </summary>
+        /// <value>Indicates the estimated wait time Formula</value>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum FormulaEnum {
+                public enum FormulaEnum {
             
             [EnumMember(Value = "BEST")]
             Best,
@@ -33,6 +37,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "PATIENCEABANDON")]
             Patienceabandon
         }
+
         
         /// <summary>
         /// Indicates the estimated wait time Formula
@@ -69,7 +74,7 @@ namespace ININ.PureCloudApi.Model
             }
             
         }
-        
+
     
         /// <summary>
         /// Estimated wait time in seconds
@@ -88,11 +93,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class PredictionResults {\n");
             sb.Append("  Formula: ").Append(Formula).Append("\n");
             sb.Append("  EstimatedWaitTimeSeconds: ").Append(EstimatedWaitTimeSeconds).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -148,13 +152,10 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Formula != null)
                     hash = hash * 59 + this.Formula.GetHashCode();
-                
                 if (this.EstimatedWaitTimeSeconds != null)
                     hash = hash * 59 + this.EstimatedWaitTimeSeconds.GetHashCode();
-                
                 return hash;
             }
         }

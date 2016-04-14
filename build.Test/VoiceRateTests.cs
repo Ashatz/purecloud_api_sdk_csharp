@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new VoiceRate();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of VoiceRate
@@ -50,97 +50,86 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<VoiceRate> (instance, "instance is a VoiceRate");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'Currency' 
+        /// Test the property 'Currency'
         /// </summary>
         [Test]
         public void CurrencyTest()
         {
-            // TODO: unit test for the property 'Currency' 
+            // TODO: unit test for the property 'Currency'
         }
-        
         /// <summary>
-        /// Test the property 'AmendmentId' 
+        /// Test the property 'AmendmentId'
         /// </summary>
         [Test]
         public void AmendmentIdTest()
         {
-            // TODO: unit test for the property 'AmendmentId' 
+            // TODO: unit test for the property 'AmendmentId'
         }
-        
         /// <summary>
-        /// Test the property 'Type' 
+        /// Test the property 'Type'
         /// </summary>
         [Test]
         public void TypeTest()
         {
-            // TODO: unit test for the property 'Type' 
+            // TODO: unit test for the property 'Type'
         }
-        
         /// <summary>
-        /// Test the property 'EffectiveDate' 
+        /// Test the property 'EffectiveDate'
         /// </summary>
         [Test]
         public void EffectiveDateTest()
         {
-            // TODO: unit test for the property 'EffectiveDate' 
+            // TODO: unit test for the property 'EffectiveDate'
         }
-        
         /// <summary>
-        /// Test the property 'Rate' 
+        /// Test the property 'Rate'
         /// </summary>
         [Test]
         public void RateTest()
         {
-            // TODO: unit test for the property 'Rate' 
+            // TODO: unit test for the property 'Rate'
         }
-        
         /// <summary>
-        /// Test the property 'DurationMinimumSeconds' 
+        /// Test the property 'DurationMinimumSeconds'
         /// </summary>
         [Test]
         public void DurationMinimumSecondsTest()
         {
-            // TODO: unit test for the property 'DurationMinimumSeconds' 
+            // TODO: unit test for the property 'DurationMinimumSeconds'
         }
-        
         /// <summary>
-        /// Test the property 'DurationIncrementSeconds' 
+        /// Test the property 'DurationIncrementSeconds'
         /// </summary>
         [Test]
         public void DurationIncrementSecondsTest()
         {
-            // TODO: unit test for the property 'DurationIncrementSeconds' 
+            // TODO: unit test for the property 'DurationIncrementSeconds'
         }
-        
         /// <summary>
-        /// Test the property 'SelfUri' 
+        /// Test the property 'SelfUri'
         /// </summary>
         [Test]
         public void SelfUriTest()
         {
-            // TODO: unit test for the property 'SelfUri' 
+            // TODO: unit test for the property 'SelfUri'
         }
-        
 
     }
 

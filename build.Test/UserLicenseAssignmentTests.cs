@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new UserLicenseAssignment();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of UserLicenseAssignment
@@ -50,52 +50,46 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<UserLicenseAssignment> (instance, "instance is a UserLicenseAssignment");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'User' 
+        /// Test the property 'User'
         /// </summary>
         [Test]
         public void UserTest()
         {
-            // TODO: unit test for the property 'User' 
+            // TODO: unit test for the property 'User'
         }
-        
         /// <summary>
-        /// Test the property 'LicenseId' 
+        /// Test the property 'LicenseId'
         /// </summary>
         [Test]
         public void LicenseIdTest()
         {
-            // TODO: unit test for the property 'LicenseId' 
+            // TODO: unit test for the property 'LicenseId'
         }
-        
         /// <summary>
-        /// Test the property 'SelfUri' 
+        /// Test the property 'SelfUri'
         /// </summary>
         [Test]
         public void SelfUriTest()
         {
-            // TODO: unit test for the property 'SelfUri' 
+            // TODO: unit test for the property 'SelfUri'
         }
-        
 
     }
 

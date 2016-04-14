@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new OrganizationCreate();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of OrganizationCreate
@@ -50,61 +50,54 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<OrganizationCreate> (instance, "instance is a OrganizationCreate");
         }
 
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'AdminUsername' 
+        /// Test the property 'AdminUsername'
         /// </summary>
         [Test]
         public void AdminUsernameTest()
         {
-            // TODO: unit test for the property 'AdminUsername' 
+            // TODO: unit test for the property 'AdminUsername'
         }
-        
         /// <summary>
-        /// Test the property 'AdminPassword' 
+        /// Test the property 'AdminPassword'
         /// </summary>
         [Test]
         public void AdminPasswordTest()
         {
-            // TODO: unit test for the property 'AdminPassword' 
+            // TODO: unit test for the property 'AdminPassword'
         }
-        
         /// <summary>
-        /// Test the property 'Domain' 
+        /// Test the property 'Domain'
         /// </summary>
         [Test]
         public void DomainTest()
         {
-            // TODO: unit test for the property 'Domain' 
+            // TODO: unit test for the property 'Domain'
         }
-        
         /// <summary>
-        /// Test the property 'ThirdPartyOrgName' 
+        /// Test the property 'ThirdPartyOrgName'
         /// </summary>
         [Test]
         public void ThirdPartyOrgNameTest()
         {
-            // TODO: unit test for the property 'ThirdPartyOrgName' 
+            // TODO: unit test for the property 'ThirdPartyOrgName'
         }
-        
         /// <summary>
-        /// Test the property 'Deletable' 
+        /// Test the property 'Deletable'
         /// </summary>
         [Test]
         public void DeletableTest()
         {
-            // TODO: unit test for the property 'Deletable' 
+            // TODO: unit test for the property 'Deletable'
         }
-        
 
     }
 

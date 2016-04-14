@@ -36,7 +36,7 @@ namespace ININ.PureCloudApi.Model
             }
             
         }
-        
+
     
         /// <summary>
         /// Participant ID to whom the call is being transferred.
@@ -54,11 +54,10 @@ namespace ININ.PureCloudApi.Model
             var sb = new StringBuilder();
             sb.Append("class ConsultTransferResponse {\n");
             sb.Append("  DestinationParticipantId: ").Append(DestinationParticipantId).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -109,10 +108,8 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.DestinationParticipantId != null)
                     hash = hash * 59 + this.DestinationParticipantId.GetHashCode();
-                
                 return hash;
             }
         }

@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new PhoneStatus();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of PhoneStatus
@@ -50,88 +50,78 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<PhoneStatus> (instance, "instance is a PhoneStatus");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'OperationalStatus' 
+        /// Test the property 'OperationalStatus'
         /// </summary>
         [Test]
         public void OperationalStatusTest()
         {
-            // TODO: unit test for the property 'OperationalStatus' 
+            // TODO: unit test for the property 'OperationalStatus'
         }
-        
         /// <summary>
-        /// Test the property 'EdgesStatus' 
+        /// Test the property 'EdgesStatus'
         /// </summary>
         [Test]
         public void EdgesStatusTest()
         {
-            // TODO: unit test for the property 'EdgesStatus' 
+            // TODO: unit test for the property 'EdgesStatus'
         }
-        
         /// <summary>
-        /// Test the property 'Provision' 
+        /// Test the property 'Provision'
         /// </summary>
         [Test]
         public void ProvisionTest()
         {
-            // TODO: unit test for the property 'Provision' 
+            // TODO: unit test for the property 'Provision'
         }
-        
         /// <summary>
-        /// Test the property 'LineStatuses' 
+        /// Test the property 'LineStatuses'
         /// </summary>
         [Test]
         public void LineStatusesTest()
         {
-            // TODO: unit test for the property 'LineStatuses' 
+            // TODO: unit test for the property 'LineStatuses'
         }
-        
         /// <summary>
-        /// Test the property 'PhoneAssignmentToEdgeType' 
+        /// Test the property 'PhoneAssignmentToEdgeType'
         /// </summary>
         [Test]
         public void PhoneAssignmentToEdgeTypeTest()
         {
-            // TODO: unit test for the property 'PhoneAssignmentToEdgeType' 
+            // TODO: unit test for the property 'PhoneAssignmentToEdgeType'
         }
-        
         /// <summary>
-        /// Test the property 'Edge' 
+        /// Test the property 'Edge'
         /// </summary>
         [Test]
         public void EdgeTest()
         {
-            // TODO: unit test for the property 'Edge' 
+            // TODO: unit test for the property 'Edge'
         }
-        
         /// <summary>
-        /// Test the property 'SelfUri' 
+        /// Test the property 'SelfUri'
         /// </summary>
         [Test]
         public void SelfUriTest()
         {
-            // TODO: unit test for the property 'SelfUri' 
+            // TODO: unit test for the property 'SelfUri'
         }
-        
 
     }
 

@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new FaxSendResponse();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of FaxSendResponse
@@ -50,52 +50,46 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<FaxSendResponse> (instance, "instance is a FaxSendResponse");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'UploadDestinationUri' 
+        /// Test the property 'UploadDestinationUri'
         /// </summary>
         [Test]
         public void UploadDestinationUriTest()
         {
-            // TODO: unit test for the property 'UploadDestinationUri' 
+            // TODO: unit test for the property 'UploadDestinationUri'
         }
-        
         /// <summary>
-        /// Test the property 'UploadMethodType' 
+        /// Test the property 'UploadMethodType'
         /// </summary>
         [Test]
         public void UploadMethodTypeTest()
         {
-            // TODO: unit test for the property 'UploadMethodType' 
+            // TODO: unit test for the property 'UploadMethodType'
         }
-        
         /// <summary>
-        /// Test the property 'SelfUri' 
+        /// Test the property 'SelfUri'
         /// </summary>
         [Test]
         public void SelfUriTest()
         {
-            // TODO: unit test for the property 'SelfUri' 
+            // TODO: unit test for the property 'SelfUri'
         }
-        
 
     }
 

@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new AggregationResult();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of AggregationResult
@@ -50,52 +50,46 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<AggregationResult> (instance, "instance is a AggregationResult");
         }
 
-        
         /// <summary>
-        /// Test the property 'Type' 
+        /// Test the property 'Type'
         /// </summary>
         [Test]
         public void TypeTest()
         {
-            // TODO: unit test for the property 'Type' 
+            // TODO: unit test for the property 'Type'
         }
-        
         /// <summary>
-        /// Test the property 'Dimension' 
+        /// Test the property 'Dimension'
         /// </summary>
         [Test]
         public void DimensionTest()
         {
-            // TODO: unit test for the property 'Dimension' 
+            // TODO: unit test for the property 'Dimension'
         }
-        
         /// <summary>
-        /// Test the property 'Metric' 
+        /// Test the property 'Metric'
         /// </summary>
         [Test]
         public void MetricTest()
         {
-            // TODO: unit test for the property 'Metric' 
+            // TODO: unit test for the property 'Metric'
         }
-        
         /// <summary>
-        /// Test the property 'Count' 
+        /// Test the property 'Count'
         /// </summary>
         [Test]
         public void CountTest()
         {
-            // TODO: unit test for the property 'Count' 
+            // TODO: unit test for the property 'Count'
         }
-        
         /// <summary>
-        /// Test the property 'Results' 
+        /// Test the property 'Results'
         /// </summary>
         [Test]
         public void ResultsTest()
         {
-            // TODO: unit test for the property 'Results' 
+            // TODO: unit test for the property 'Results'
         }
-        
 
     }
 

@@ -30,7 +30,7 @@ namespace ININ.PureCloudApi.Model
             this.Columns = Columns;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets Label
@@ -54,11 +54,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class ColumnCollapse {\n");
             sb.Append("  Label: ").Append(Label).Append("\n");
             sb.Append("  Columns: ").Append(Columns).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -114,13 +113,10 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Label != null)
                     hash = hash * 59 + this.Label.GetHashCode();
-                
                 if (this.Columns != null)
                     hash = hash * 59 + this.Columns.GetHashCode();
-                
                 return hash;
             }
         }

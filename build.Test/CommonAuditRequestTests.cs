@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new CommonAuditRequest();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of CommonAuditRequest
@@ -50,70 +50,62 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<CommonAuditRequest> (instance, "instance is a CommonAuditRequest");
         }
 
-        
         /// <summary>
-        /// Test the property 'PageNumber' 
+        /// Test the property 'PageNumber'
         /// </summary>
         [Test]
         public void PageNumberTest()
         {
-            // TODO: unit test for the property 'PageNumber' 
+            // TODO: unit test for the property 'PageNumber'
         }
-        
         /// <summary>
-        /// Test the property 'PageSize' 
+        /// Test the property 'PageSize'
         /// </summary>
         [Test]
         public void PageSizeTest()
         {
-            // TODO: unit test for the property 'PageSize' 
+            // TODO: unit test for the property 'PageSize'
         }
-        
         /// <summary>
-        /// Test the property 'SortBy' 
+        /// Test the property 'SortBy'
         /// </summary>
         [Test]
         public void SortByTest()
         {
-            // TODO: unit test for the property 'SortBy' 
+            // TODO: unit test for the property 'SortBy'
         }
-        
         /// <summary>
-        /// Test the property 'QueryPhrase' 
+        /// Test the property 'QueryPhrase'
         /// </summary>
         [Test]
         public void QueryPhraseTest()
         {
-            // TODO: unit test for the property 'QueryPhrase' 
+            // TODO: unit test for the property 'QueryPhrase'
         }
-        
         /// <summary>
-        /// Test the property 'QueryFields' 
+        /// Test the property 'QueryFields'
         /// </summary>
         [Test]
         public void QueryFieldsTest()
         {
-            // TODO: unit test for the property 'QueryFields' 
+            // TODO: unit test for the property 'QueryFields'
         }
-        
         /// <summary>
-        /// Test the property 'Facets' 
+        /// Test the property 'Facets'
         /// </summary>
         [Test]
         public void FacetsTest()
         {
-            // TODO: unit test for the property 'Facets' 
+            // TODO: unit test for the property 'Facets'
         }
-        
         /// <summary>
-        /// Test the property 'Filters' 
+        /// Test the property 'Filters'
         /// </summary>
         [Test]
         public void FiltersTest()
         {
-            // TODO: unit test for the property 'Filters' 
+            // TODO: unit test for the property 'Filters'
         }
-        
 
     }
 

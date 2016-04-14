@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new CreateCallRequest();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of CreateCallRequest
@@ -50,88 +50,78 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<CreateCallRequest> (instance, "instance is a CreateCallRequest");
         }
 
-        
         /// <summary>
-        /// Test the property 'PhoneNumber' 
+        /// Test the property 'PhoneNumber'
         /// </summary>
         [Test]
         public void PhoneNumberTest()
         {
-            // TODO: unit test for the property 'PhoneNumber' 
+            // TODO: unit test for the property 'PhoneNumber'
         }
-        
         /// <summary>
-        /// Test the property 'CallFromQueueId' 
+        /// Test the property 'CallFromQueueId'
         /// </summary>
         [Test]
         public void CallFromQueueIdTest()
         {
-            // TODO: unit test for the property 'CallFromQueueId' 
+            // TODO: unit test for the property 'CallFromQueueId'
         }
-        
         /// <summary>
-        /// Test the property 'CallQueueId' 
+        /// Test the property 'CallQueueId'
         /// </summary>
         [Test]
         public void CallQueueIdTest()
         {
-            // TODO: unit test for the property 'CallQueueId' 
+            // TODO: unit test for the property 'CallQueueId'
         }
-        
         /// <summary>
-        /// Test the property 'CallUserId' 
+        /// Test the property 'CallUserId'
         /// </summary>
         [Test]
         public void CallUserIdTest()
         {
-            // TODO: unit test for the property 'CallUserId' 
+            // TODO: unit test for the property 'CallUserId'
         }
-        
         /// <summary>
-        /// Test the property 'Priority' 
+        /// Test the property 'Priority'
         /// </summary>
         [Test]
         public void PriorityTest()
         {
-            // TODO: unit test for the property 'Priority' 
+            // TODO: unit test for the property 'Priority'
         }
-        
         /// <summary>
-        /// Test the property 'LanguageId' 
+        /// Test the property 'LanguageId'
         /// </summary>
         [Test]
         public void LanguageIdTest()
         {
-            // TODO: unit test for the property 'LanguageId' 
+            // TODO: unit test for the property 'LanguageId'
         }
-        
         /// <summary>
-        /// Test the property 'RoutingSkillsIds' 
+        /// Test the property 'RoutingSkillsIds'
         /// </summary>
         [Test]
         public void RoutingSkillsIdsTest()
         {
-            // TODO: unit test for the property 'RoutingSkillsIds' 
+            // TODO: unit test for the property 'RoutingSkillsIds'
         }
-        
         /// <summary>
-        /// Test the property 'ConversationIds' 
+        /// Test the property 'ConversationIds'
         /// </summary>
         [Test]
         public void ConversationIdsTest()
         {
-            // TODO: unit test for the property 'ConversationIds' 
+            // TODO: unit test for the property 'ConversationIds'
         }
-        
         /// <summary>
-        /// Test the property 'Participants' 
+        /// Test the property 'Participants'
         /// </summary>
         [Test]
         public void ParticipantsTest()
         {
-            // TODO: unit test for the property 'Participants' 
+            // TODO: unit test for the property 'Participants'
         }
-        
 
     }
 

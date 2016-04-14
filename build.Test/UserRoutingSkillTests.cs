@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new UserRoutingSkill();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of UserRoutingSkill
@@ -50,61 +50,54 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<UserRoutingSkill> (instance, "instance is a UserRoutingSkill");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'Proficiency' 
+        /// Test the property 'Proficiency'
         /// </summary>
         [Test]
         public void ProficiencyTest()
         {
-            // TODO: unit test for the property 'Proficiency' 
+            // TODO: unit test for the property 'Proficiency'
         }
-        
         /// <summary>
-        /// Test the property 'Active' 
+        /// Test the property 'Active'
         /// </summary>
         [Test]
         public void ActiveTest()
         {
-            // TODO: unit test for the property 'Active' 
+            // TODO: unit test for the property 'Active'
         }
-        
         /// <summary>
-        /// Test the property 'SkillUri' 
+        /// Test the property 'SkillUri'
         /// </summary>
         [Test]
         public void SkillUriTest()
         {
-            // TODO: unit test for the property 'SkillUri' 
+            // TODO: unit test for the property 'SkillUri'
         }
-        
         /// <summary>
-        /// Test the property 'SelfUri' 
+        /// Test the property 'SelfUri'
         /// </summary>
         [Test]
         public void SelfUriTest()
         {
-            // TODO: unit test for the property 'SelfUri' 
+            // TODO: unit test for the property 'SelfUri'
         }
-        
 
     }
 

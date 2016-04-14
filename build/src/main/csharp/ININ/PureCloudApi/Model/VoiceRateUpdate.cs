@@ -72,7 +72,7 @@ namespace ININ.PureCloudApi.Model
             this.OutboundInternational = OutboundInternational;
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -185,11 +185,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  AmendmentDate: ").Append(AmendmentDate).Append("\n");
             sb.Append("  EffectiveDate: ").Append(EffectiveDate).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -300,46 +299,32 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.Currency != null)
                     hash = hash * 59 + this.Currency.GetHashCode();
-                
                 if (this.InboundTollFree != null)
                     hash = hash * 59 + this.InboundTollFree.GetHashCode();
-                
                 if (this.Extended != null)
                     hash = hash * 59 + this.Extended.GetHashCode();
-                
                 if (this.InboundTolled != null)
                     hash = hash * 59 + this.InboundTolled.GetHashCode();
-                
                 if (this.OutboundLocal != null)
                     hash = hash * 59 + this.OutboundLocal.GetHashCode();
-                
                 if (this.OutboundIntraState != null)
                     hash = hash * 59 + this.OutboundIntraState.GetHashCode();
-                
                 if (this.OutboundInterState != null)
                     hash = hash * 59 + this.OutboundInterState.GetHashCode();
-                
                 if (this.OutboundInternational != null)
                     hash = hash * 59 + this.OutboundInternational.GetHashCode();
-                
                 if (this.AmendmentDate != null)
                     hash = hash * 59 + this.AmendmentDate.GetHashCode();
-                
                 if (this.EffectiveDate != null)
                     hash = hash * 59 + this.EffectiveDate.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 return hash;
             }
         }

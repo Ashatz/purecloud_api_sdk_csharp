@@ -1,5 +1,4 @@
 using System;
-using System.IO;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -9,14 +8,12 @@ using ININ.PureCloudApi.Model;
 
 namespace ININ.PureCloudApi.Api
 {
-    
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
     public interface IFaxApi
     {
         #region Synchronous Operations
-        
         /// <summary>
         /// Delete a fax document.
         /// </summary>
@@ -27,7 +24,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="documentId">Document ID</param>
         /// <returns></returns>
         void DeleteDocumentsDocumentId (string documentId);
-  
+
         /// <summary>
         /// Delete a fax document.
         /// </summary>
@@ -38,7 +35,6 @@ namespace ININ.PureCloudApi.Api
         /// <param name="documentId">Document ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteDocumentsDocumentIdWithHttpInfo (string documentId);
-        
         /// <summary>
         /// Get a list of fax documents.
         /// </summary>
@@ -46,11 +42,11 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>FaxDocumentEntityListing</returns>
         FaxDocumentEntityListing GetDocuments (int? pageSize = null, int? pageNumber = null);
-  
+
         /// <summary>
         /// Get a list of fax documents.
         /// </summary>
@@ -58,11 +54,10 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of FaxDocumentEntityListing</returns>
         ApiResponse<FaxDocumentEntityListing> GetDocumentsWithHttpInfo (int? pageSize = null, int? pageNumber = null);
-        
         /// <summary>
         /// Get a document.
         /// </summary>
@@ -73,7 +68,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="documentId">Document ID</param>
         /// <returns>FaxDocument</returns>
         FaxDocument GetDocumentsDocumentId (string documentId);
-  
+
         /// <summary>
         /// Get a document.
         /// </summary>
@@ -84,7 +79,6 @@ namespace ININ.PureCloudApi.Api
         /// <param name="documentId">Document ID</param>
         /// <returns>ApiResponse of FaxDocument</returns>
         ApiResponse<FaxDocument> GetDocumentsDocumentIdWithHttpInfo (string documentId);
-        
         /// <summary>
         /// Download a fax document.
         /// </summary>
@@ -95,7 +89,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="documentId">Document ID</param>
         /// <returns>DownloadResponse</returns>
         DownloadResponse GetDocumentsDocumentIdContent (string documentId);
-  
+
         /// <summary>
         /// Download a fax document.
         /// </summary>
@@ -106,7 +100,6 @@ namespace ININ.PureCloudApi.Api
         /// <param name="documentId">Document ID</param>
         /// <returns>ApiResponse of DownloadResponse</returns>
         ApiResponse<DownloadResponse> GetDocumentsDocumentIdContentWithHttpInfo (string documentId);
-        
         /// <summary>
         /// Get fax summary
         /// </summary>
@@ -116,7 +109,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>FaxSummary</returns>
         FaxSummary GetSummary ();
-  
+
         /// <summary>
         /// Get fax summary
         /// </summary>
@@ -126,7 +119,6 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of FaxSummary</returns>
         ApiResponse<FaxSummary> GetSummaryWithHttpInfo ();
-        
         /// <summary>
         /// Update a fax document.
         /// </summary>
@@ -135,10 +127,10 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId">Document ID</param>
-        /// <param name="body">Document</param>
+        /// <param name="body">Document (optional)</param>
         /// <returns>FaxDocument</returns>
         FaxDocument PutDocumentsDocumentId (string documentId, FaxDocument body = null);
-  
+
         /// <summary>
         /// Update a fax document.
         /// </summary>
@@ -147,14 +139,11 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId">Document ID</param>
-        /// <param name="body">Document</param>
+        /// <param name="body">Document (optional)</param>
         /// <returns>ApiResponse of FaxDocument</returns>
         ApiResponse<FaxDocument> PutDocumentsDocumentIdWithHttpInfo (string documentId, FaxDocument body = null);
-        
         #endregion Synchronous Operations
-        
         #region Asynchronous Operations
-        
         /// <summary>
         /// Delete a fax document.
         /// </summary>
@@ -176,7 +165,6 @@ namespace ININ.PureCloudApi.Api
         /// <param name="documentId">Document ID</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteDocumentsDocumentIdAsyncWithHttpInfo (string documentId);
-        
         /// <summary>
         /// Get a list of fax documents.
         /// </summary>
@@ -184,8 +172,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of FaxDocumentEntityListing</returns>
         System.Threading.Tasks.Task<FaxDocumentEntityListing> GetDocumentsAsync (int? pageSize = null, int? pageNumber = null);
 
@@ -196,11 +184,10 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (FaxDocumentEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<FaxDocumentEntityListing>> GetDocumentsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null);
-        
         /// <summary>
         /// Get a document.
         /// </summary>
@@ -222,7 +209,6 @@ namespace ININ.PureCloudApi.Api
         /// <param name="documentId">Document ID</param>
         /// <returns>Task of ApiResponse (FaxDocument)</returns>
         System.Threading.Tasks.Task<ApiResponse<FaxDocument>> GetDocumentsDocumentIdAsyncWithHttpInfo (string documentId);
-        
         /// <summary>
         /// Download a fax document.
         /// </summary>
@@ -244,7 +230,6 @@ namespace ININ.PureCloudApi.Api
         /// <param name="documentId">Document ID</param>
         /// <returns>Task of ApiResponse (DownloadResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<DownloadResponse>> GetDocumentsDocumentIdContentAsyncWithHttpInfo (string documentId);
-        
         /// <summary>
         /// Get fax summary
         /// </summary>
@@ -264,7 +249,6 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (FaxSummary)</returns>
         System.Threading.Tasks.Task<ApiResponse<FaxSummary>> GetSummaryAsyncWithHttpInfo ();
-        
         /// <summary>
         /// Update a fax document.
         /// </summary>
@@ -273,7 +257,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId">Document ID</param>
-        /// <param name="body">Document</param>
+        /// <param name="body">Document (optional)</param>
         /// <returns>Task of FaxDocument</returns>
         System.Threading.Tasks.Task<FaxDocument> PutDocumentsDocumentIdAsync (string documentId, FaxDocument body = null);
 
@@ -285,14 +269,12 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId">Document ID</param>
-        /// <param name="body">Document</param>
+        /// <param name="body">Document (optional)</param>
         /// <returns>Task of ApiResponse (FaxDocument)</returns>
         System.Threading.Tasks.Task<ApiResponse<FaxDocument>> PutDocumentsDocumentIdAsyncWithHttpInfo (string documentId, FaxDocument body = null);
-        
         #endregion Asynchronous Operations
-        
     }
-  
+
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
@@ -305,8 +287,14 @@ namespace ININ.PureCloudApi.Api
         public FaxApi(String basePath)
         {
             this.Configuration = new Configuration(new ApiClient(basePath));
+
+            // ensure API client has configuration ready
+            if (Configuration.ApiClient.Configuration == null)
+            {
+                this.Configuration.ApiClient.Configuration = this.Configuration;
+            }
         }
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="FaxApi"/> class
         /// using Configuration object
@@ -316,9 +304,15 @@ namespace ININ.PureCloudApi.Api
         public FaxApi(Configuration configuration = null)
         {
             if (configuration == null) // use the default one in Configuration
-                this.Configuration = Configuration.Default; 
+                this.Configuration = Configuration.Default;
             else
                 this.Configuration = configuration;
+
+            // ensure API client has configuration ready
+            if (Configuration.ApiClient.Configuration == null)
+            {
+                this.Configuration.ApiClient.Configuration = this.Configuration;
+            }
         }
 
         /// <summary>
@@ -339,7 +333,7 @@ namespace ININ.PureCloudApi.Api
         {
             // do nothing
         }
-    
+
         /// <summary>
         /// Gets or sets the configuration object
         /// </summary>
@@ -367,13 +361,12 @@ namespace ININ.PureCloudApi.Api
         {
             this.Configuration.AddDefaultHeader(key, value);
         }
-   
-        
+
         /// <summary>
         /// Delete a fax document. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentId">Document ID</param> 
+        /// <param name="documentId">Document ID</param>
         /// <returns></returns>
         public void DeleteDocumentsDocumentId (string documentId)
         {
@@ -384,18 +377,15 @@ namespace ININ.PureCloudApi.Api
         /// Delete a fax document. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentId">Document ID</param> 
+        /// <param name="documentId">Document ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteDocumentsDocumentIdWithHttpInfo (string documentId)
         {
-            
             // verify the required parameter 'documentId' is set
             if (documentId == null)
                 throw new ApiException(400, "Missing required parameter 'documentId' when calling FaxApi->DeleteDocumentsDocumentId");
-            
-    
+
             var localVarPath = "/api/v2/fax/documents/{documentId}";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -421,40 +411,32 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (documentId != null) localVarPathParams.Add("documentId", Configuration.ApiClient.ParameterToString(documentId)); // path parameter
-            
-            
-            
-            
-            
 
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-    
+
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
                 Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteDocumentsDocumentId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteDocumentsDocumentId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
+
             
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
         }
 
-        
         /// <summary>
         /// Delete a fax document. 
         /// </summary>
@@ -476,11 +458,10 @@ namespace ININ.PureCloudApi.Api
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteDocumentsDocumentIdAsyncWithHttpInfo (string documentId)
         {
             // verify the required parameter 'documentId' is set
-            if (documentId == null) throw new ApiException(400, "Missing required parameter 'documentId' when calling DeleteDocumentsDocumentId");
-            
-    
+            if (documentId == null)
+                throw new ApiException(400, "Missing required parameter 'documentId' when calling FaxApi->DeleteDocumentsDocumentId");
+
             var localVarPath = "/api/v2/fax/documents/{documentId}";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -506,29 +487,21 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (documentId != null) localVarPathParams.Add("documentId", Configuration.ApiClient.ParameterToString(documentId)); // path parameter
-            
-            
-            
-            
-            
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteDocumentsDocumentId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
@@ -539,13 +512,13 @@ namespace ININ.PureCloudApi.Api
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
         }
-        
+
         /// <summary>
         /// Get a list of fax documents. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size</param> 
-        /// <param name="pageNumber">Page number</param> 
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>FaxDocumentEntityListing</returns>
         public FaxDocumentEntityListing GetDocuments (int? pageSize = null, int? pageNumber = null)
         {
@@ -557,15 +530,13 @@ namespace ININ.PureCloudApi.Api
         /// Get a list of fax documents. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size</param> 
-        /// <param name="pageNumber">Page number</param> 
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of FaxDocumentEntityListing</returns>
         public ApiResponse< FaxDocumentEntityListing > GetDocumentsWithHttpInfo (int? pageSize = null, int? pageNumber = null)
         {
-            
-    
+
             var localVarPath = "/api/v2/fax/documents";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -590,48 +561,40 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
-            
-            
-            
-            
 
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-    
+
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetDocuments: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetDocuments: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
+
             return new ApiResponse<FaxDocumentEntityListing>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (FaxDocumentEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FaxDocumentEntityListing)));
             
         }
 
-        
         /// <summary>
         /// Get a list of fax documents. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of FaxDocumentEntityListing</returns>
         public async System.Threading.Tasks.Task<FaxDocumentEntityListing> GetDocumentsAsync (int? pageSize = null, int? pageNumber = null)
         {
@@ -644,15 +607,13 @@ namespace ININ.PureCloudApi.Api
         /// Get a list of fax documents. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (FaxDocumentEntityListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<FaxDocumentEntityListing>> GetDocumentsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null)
         {
-            
-    
+
             var localVarPath = "/api/v2/fax/documents";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -677,31 +638,23 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
-            
-            
-            
-            
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetDocuments: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
@@ -712,12 +665,12 @@ namespace ININ.PureCloudApi.Api
                 (FaxDocumentEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FaxDocumentEntityListing)));
             
         }
-        
+
         /// <summary>
         /// Get a document. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentId">Document ID</param> 
+        /// <param name="documentId">Document ID</param>
         /// <returns>FaxDocument</returns>
         public FaxDocument GetDocumentsDocumentId (string documentId)
         {
@@ -729,18 +682,15 @@ namespace ININ.PureCloudApi.Api
         /// Get a document. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentId">Document ID</param> 
+        /// <param name="documentId">Document ID</param>
         /// <returns>ApiResponse of FaxDocument</returns>
         public ApiResponse< FaxDocument > GetDocumentsDocumentIdWithHttpInfo (string documentId)
         {
-            
             // verify the required parameter 'documentId' is set
             if (documentId == null)
                 throw new ApiException(400, "Missing required parameter 'documentId' when calling FaxApi->GetDocumentsDocumentId");
-            
-    
+
             var localVarPath = "/api/v2/fax/documents/{documentId}";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -766,40 +716,32 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (documentId != null) localVarPathParams.Add("documentId", Configuration.ApiClient.ParameterToString(documentId)); // path parameter
-            
-            
-            
-            
-            
 
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-    
+
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetDocumentsDocumentId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetDocumentsDocumentId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
+
             return new ApiResponse<FaxDocument>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (FaxDocument) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FaxDocument)));
             
         }
 
-        
         /// <summary>
         /// Get a document. 
         /// </summary>
@@ -822,11 +764,10 @@ namespace ININ.PureCloudApi.Api
         public async System.Threading.Tasks.Task<ApiResponse<FaxDocument>> GetDocumentsDocumentIdAsyncWithHttpInfo (string documentId)
         {
             // verify the required parameter 'documentId' is set
-            if (documentId == null) throw new ApiException(400, "Missing required parameter 'documentId' when calling GetDocumentsDocumentId");
-            
-    
+            if (documentId == null)
+                throw new ApiException(400, "Missing required parameter 'documentId' when calling FaxApi->GetDocumentsDocumentId");
+
             var localVarPath = "/api/v2/fax/documents/{documentId}";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -852,29 +793,21 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (documentId != null) localVarPathParams.Add("documentId", Configuration.ApiClient.ParameterToString(documentId)); // path parameter
-            
-            
-            
-            
-            
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetDocumentsDocumentId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
@@ -885,12 +818,12 @@ namespace ININ.PureCloudApi.Api
                 (FaxDocument) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FaxDocument)));
             
         }
-        
+
         /// <summary>
         /// Download a fax document. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentId">Document ID</param> 
+        /// <param name="documentId">Document ID</param>
         /// <returns>DownloadResponse</returns>
         public DownloadResponse GetDocumentsDocumentIdContent (string documentId)
         {
@@ -902,18 +835,15 @@ namespace ININ.PureCloudApi.Api
         /// Download a fax document. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentId">Document ID</param> 
+        /// <param name="documentId">Document ID</param>
         /// <returns>ApiResponse of DownloadResponse</returns>
         public ApiResponse< DownloadResponse > GetDocumentsDocumentIdContentWithHttpInfo (string documentId)
         {
-            
             // verify the required parameter 'documentId' is set
             if (documentId == null)
                 throw new ApiException(400, "Missing required parameter 'documentId' when calling FaxApi->GetDocumentsDocumentIdContent");
-            
-    
+
             var localVarPath = "/api/v2/fax/documents/{documentId}/content";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -939,40 +869,32 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (documentId != null) localVarPathParams.Add("documentId", Configuration.ApiClient.ParameterToString(documentId)); // path parameter
-            
-            
-            
-            
-            
 
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-    
+
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetDocumentsDocumentIdContent: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetDocumentsDocumentIdContent: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
+
             return new ApiResponse<DownloadResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (DownloadResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DownloadResponse)));
             
         }
 
-        
         /// <summary>
         /// Download a fax document. 
         /// </summary>
@@ -995,11 +917,10 @@ namespace ININ.PureCloudApi.Api
         public async System.Threading.Tasks.Task<ApiResponse<DownloadResponse>> GetDocumentsDocumentIdContentAsyncWithHttpInfo (string documentId)
         {
             // verify the required parameter 'documentId' is set
-            if (documentId == null) throw new ApiException(400, "Missing required parameter 'documentId' when calling GetDocumentsDocumentIdContent");
-            
-    
+            if (documentId == null)
+                throw new ApiException(400, "Missing required parameter 'documentId' when calling FaxApi->GetDocumentsDocumentIdContent");
+
             var localVarPath = "/api/v2/fax/documents/{documentId}/content";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1025,29 +946,21 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (documentId != null) localVarPathParams.Add("documentId", Configuration.ApiClient.ParameterToString(documentId)); // path parameter
-            
-            
-            
-            
-            
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetDocumentsDocumentIdContent: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
@@ -1058,7 +971,7 @@ namespace ININ.PureCloudApi.Api
                 (DownloadResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DownloadResponse)));
             
         }
-        
+
         /// <summary>
         /// Get fax summary 
         /// </summary>
@@ -1077,10 +990,8 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of FaxSummary</returns>
         public ApiResponse< FaxSummary > GetSummaryWithHttpInfo ()
         {
-            
-    
+
             var localVarPath = "/api/v2/fax/summary";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1105,40 +1016,32 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            
-            
-            
-            
-            
 
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-    
+
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetSummary: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetSummary: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
+
             return new ApiResponse<FaxSummary>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (FaxSummary) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FaxSummary)));
             
         }
 
-        
         /// <summary>
         /// Get fax summary 
         /// </summary>
@@ -1158,10 +1061,8 @@ namespace ININ.PureCloudApi.Api
         /// <returns>Task of ApiResponse (FaxSummary)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<FaxSummary>> GetSummaryAsyncWithHttpInfo ()
         {
-            
-    
+
             var localVarPath = "/api/v2/fax/summary";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1186,29 +1087,21 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            
-            
-            
-            
-            
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetSummary: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
@@ -1219,13 +1112,13 @@ namespace ININ.PureCloudApi.Api
                 (FaxSummary) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FaxSummary)));
             
         }
-        
+
         /// <summary>
         /// Update a fax document. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentId">Document ID</param> 
-        /// <param name="body">Document</param> 
+        /// <param name="documentId">Document ID</param>
+        /// <param name="body">Document (optional)</param>
         /// <returns>FaxDocument</returns>
         public FaxDocument PutDocumentsDocumentId (string documentId, FaxDocument body = null)
         {
@@ -1237,19 +1130,16 @@ namespace ININ.PureCloudApi.Api
         /// Update a fax document. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentId">Document ID</param> 
-        /// <param name="body">Document</param> 
+        /// <param name="documentId">Document ID</param>
+        /// <param name="body">Document (optional)</param>
         /// <returns>ApiResponse of FaxDocument</returns>
         public ApiResponse< FaxDocument > PutDocumentsDocumentIdWithHttpInfo (string documentId, FaxDocument body = null)
         {
-            
             // verify the required parameter 'documentId' is set
             if (documentId == null)
                 throw new ApiException(400, "Missing required parameter 'documentId' when calling FaxApi->PutDocumentsDocumentId");
-            
-    
+
             var localVarPath = "/api/v2/fax/documents/{documentId}";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1275,10 +1165,6 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (documentId != null) localVarPathParams.Add("documentId", Configuration.ApiClient.ParameterToString(documentId)); // path parameter
-            
-            
-            
-            
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -1289,39 +1175,36 @@ namespace ININ.PureCloudApi.Api
             }
 
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-    
+
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
                 Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PutDocumentsDocumentId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PutDocumentsDocumentId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
+
             return new ApiResponse<FaxDocument>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (FaxDocument) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FaxDocument)));
             
         }
 
-        
         /// <summary>
         /// Update a fax document. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId">Document ID</param>
-        /// <param name="body">Document</param>
+        /// <param name="body">Document (optional)</param>
         /// <returns>Task of FaxDocument</returns>
         public async System.Threading.Tasks.Task<FaxDocument> PutDocumentsDocumentIdAsync (string documentId, FaxDocument body = null)
         {
@@ -1335,16 +1218,15 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId">Document ID</param>
-        /// <param name="body">Document</param>
+        /// <param name="body">Document (optional)</param>
         /// <returns>Task of ApiResponse (FaxDocument)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<FaxDocument>> PutDocumentsDocumentIdAsyncWithHttpInfo (string documentId, FaxDocument body = null)
         {
             // verify the required parameter 'documentId' is set
-            if (documentId == null) throw new ApiException(400, "Missing required parameter 'documentId' when calling PutDocumentsDocumentId");
-            
-    
+            if (documentId == null)
+                throw new ApiException(400, "Missing required parameter 'documentId' when calling FaxApi->PutDocumentsDocumentId");
+
             var localVarPath = "/api/v2/fax/documents/{documentId}";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1370,10 +1252,6 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (documentId != null) localVarPathParams.Add("documentId", Configuration.ApiClient.ParameterToString(documentId)); // path parameter
-            
-            
-            
-            
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -1383,23 +1261,20 @@ namespace ININ.PureCloudApi.Api
                 localVarPostBody = body; // byte array
             }
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PutDocumentsDocumentId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
@@ -1410,7 +1285,6 @@ namespace ININ.PureCloudApi.Api
                 (FaxDocument) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FaxDocument)));
             
         }
-        
+
     }
-    
 }

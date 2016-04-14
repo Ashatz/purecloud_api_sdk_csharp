@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new CallConversation();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of CallConversation
@@ -50,61 +50,54 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<CallConversation> (instance, "instance is a CallConversation");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'Participants' 
+        /// Test the property 'Participants'
         /// </summary>
         [Test]
         public void ParticipantsTest()
         {
-            // TODO: unit test for the property 'Participants' 
+            // TODO: unit test for the property 'Participants'
         }
-        
         /// <summary>
-        /// Test the property 'OtherMediaUris' 
+        /// Test the property 'OtherMediaUris'
         /// </summary>
         [Test]
         public void OtherMediaUrisTest()
         {
-            // TODO: unit test for the property 'OtherMediaUris' 
+            // TODO: unit test for the property 'OtherMediaUris'
         }
-        
         /// <summary>
-        /// Test the property 'RecordingState' 
+        /// Test the property 'RecordingState'
         /// </summary>
         [Test]
         public void RecordingStateTest()
         {
-            // TODO: unit test for the property 'RecordingState' 
+            // TODO: unit test for the property 'RecordingState'
         }
-        
         /// <summary>
-        /// Test the property 'SelfUri' 
+        /// Test the property 'SelfUri'
         /// </summary>
         [Test]
         public void SelfUriTest()
         {
-            // TODO: unit test for the property 'SelfUri' 
+            // TODO: unit test for the property 'SelfUri'
         }
-        
 
     }
 

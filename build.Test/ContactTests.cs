@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new Contact();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of Contact
@@ -50,43 +50,38 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<Contact> (instance, "instance is a Contact");
         }
 
-        
         /// <summary>
-        /// Test the property 'Address' 
+        /// Test the property 'Address'
         /// </summary>
         [Test]
         public void AddressTest()
         {
-            // TODO: unit test for the property 'Address' 
+            // TODO: unit test for the property 'Address'
         }
-        
         /// <summary>
-        /// Test the property 'Display' 
+        /// Test the property 'Display'
         /// </summary>
         [Test]
         public void DisplayTest()
         {
-            // TODO: unit test for the property 'Display' 
+            // TODO: unit test for the property 'Display'
         }
-        
         /// <summary>
-        /// Test the property 'MediaType' 
+        /// Test the property 'MediaType'
         /// </summary>
         [Test]
         public void MediaTypeTest()
         {
-            // TODO: unit test for the property 'MediaType' 
+            // TODO: unit test for the property 'MediaType'
         }
-        
         /// <summary>
-        /// Test the property 'Type' 
+        /// Test the property 'Type'
         /// </summary>
         [Test]
         public void TypeTest()
         {
-            // TODO: unit test for the property 'Type' 
+            // TODO: unit test for the property 'Type'
         }
-        
 
     }
 

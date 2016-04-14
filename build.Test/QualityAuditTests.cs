@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new QualityAudit();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of QualityAudit
@@ -50,106 +50,94 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<QualityAudit> (instance, "instance is a QualityAudit");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'User' 
+        /// Test the property 'User'
         /// </summary>
         [Test]
         public void UserTest()
         {
-            // TODO: unit test for the property 'User' 
+            // TODO: unit test for the property 'User'
         }
-        
         /// <summary>
-        /// Test the property 'Timestamp' 
+        /// Test the property 'Timestamp'
         /// </summary>
         [Test]
         public void TimestampTest()
         {
-            // TODO: unit test for the property 'Timestamp' 
+            // TODO: unit test for the property 'Timestamp'
         }
-        
         /// <summary>
-        /// Test the property 'Entity' 
+        /// Test the property 'Entity'
         /// </summary>
         [Test]
         public void EntityTest()
         {
-            // TODO: unit test for the property 'Entity' 
+            // TODO: unit test for the property 'Entity'
         }
-        
         /// <summary>
-        /// Test the property 'Level' 
+        /// Test the property 'Level'
         /// </summary>
         [Test]
         public void LevelTest()
         {
-            // TODO: unit test for the property 'Level' 
+            // TODO: unit test for the property 'Level'
         }
-        
         /// <summary>
-        /// Test the property 'Action' 
+        /// Test the property 'Action'
         /// </summary>
         [Test]
         public void ActionTest()
         {
-            // TODO: unit test for the property 'Action' 
+            // TODO: unit test for the property 'Action'
         }
-        
         /// <summary>
-        /// Test the property 'Status' 
+        /// Test the property 'Status'
         /// </summary>
         [Test]
         public void StatusTest()
         {
-            // TODO: unit test for the property 'Status' 
+            // TODO: unit test for the property 'Status'
         }
-        
         /// <summary>
-        /// Test the property 'Changes' 
+        /// Test the property 'Changes'
         /// </summary>
         [Test]
         public void ChangesTest()
         {
-            // TODO: unit test for the property 'Changes' 
+            // TODO: unit test for the property 'Changes'
         }
-        
         /// <summary>
-        /// Test the property 'EntityType' 
+        /// Test the property 'EntityType'
         /// </summary>
         [Test]
         public void EntityTypeTest()
         {
-            // TODO: unit test for the property 'EntityType' 
+            // TODO: unit test for the property 'EntityType'
         }
-        
         /// <summary>
-        /// Test the property 'SelfUri' 
+        /// Test the property 'SelfUri'
         /// </summary>
         [Test]
         public void SelfUriTest()
         {
-            // TODO: unit test for the property 'SelfUri' 
+            // TODO: unit test for the property 'SelfUri'
         }
-        
 
     }
 

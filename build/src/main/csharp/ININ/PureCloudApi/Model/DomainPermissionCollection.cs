@@ -32,7 +32,7 @@ namespace ININ.PureCloudApi.Model
             this.PermissionMap = PermissionMap;
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -79,11 +79,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Domain: ").Append(Domain).Append("\n");
             sb.Append("  PermissionMap: ").Append(PermissionMap).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -154,22 +153,16 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.Domain != null)
                     hash = hash * 59 + this.Domain.GetHashCode();
-                
                 if (this.PermissionMap != null)
                     hash = hash * 59 + this.PermissionMap.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 return hash;
             }
         }

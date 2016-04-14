@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new DialerPreview();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of DialerPreview
@@ -50,52 +50,46 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<DialerPreview> (instance, "instance is a DialerPreview");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'ContactId' 
+        /// Test the property 'ContactId'
         /// </summary>
         [Test]
         public void ContactIdTest()
         {
-            // TODO: unit test for the property 'ContactId' 
+            // TODO: unit test for the property 'ContactId'
         }
-        
         /// <summary>
-        /// Test the property 'ContactListId' 
+        /// Test the property 'ContactListId'
         /// </summary>
         [Test]
         public void ContactListIdTest()
         {
-            // TODO: unit test for the property 'ContactListId' 
+            // TODO: unit test for the property 'ContactListId'
         }
-        
         /// <summary>
-        /// Test the property 'CampaignId' 
+        /// Test the property 'CampaignId'
         /// </summary>
         [Test]
         public void CampaignIdTest()
         {
-            // TODO: unit test for the property 'CampaignId' 
+            // TODO: unit test for the property 'CampaignId'
         }
-        
         /// <summary>
-        /// Test the property 'PhoneNumberColumns' 
+        /// Test the property 'PhoneNumberColumns'
         /// </summary>
         [Test]
         public void PhoneNumberColumnsTest()
         {
-            // TODO: unit test for the property 'PhoneNumberColumns' 
+            // TODO: unit test for the property 'PhoneNumberColumns'
         }
-        
 
     }
 

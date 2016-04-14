@@ -40,7 +40,7 @@ namespace ININ.PureCloudApi.Model
             this.ClientTransformModel = ClientTransformModel;
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -115,11 +115,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Sheets: ").Append(Sheets).Append("\n");
             sb.Append("  ClientTransformModel: ").Append(ClientTransformModel).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -210,34 +209,24 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.RestEndpoint != null)
                     hash = hash * 59 + this.RestEndpoint.GetHashCode();
-                
                 if (this.FilenameTransforms != null)
                     hash = hash * 59 + this.FilenameTransforms.GetHashCode();
-                
                 if (this.Tags != null)
                     hash = hash * 59 + this.Tags.GetHashCode();
-                
                 if (this.SheetNameTransforms != null)
                     hash = hash * 59 + this.SheetNameTransforms.GetHashCode();
-                
                 if (this.Sheets != null)
                     hash = hash * 59 + this.Sheets.GetHashCode();
-                
                 if (this.ClientTransformModel != null)
                     hash = hash * 59 + this.ClientTransformModel.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 return hash;
             }
         }

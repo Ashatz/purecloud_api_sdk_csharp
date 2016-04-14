@@ -17,9 +17,13 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class FlowDetails :  IEquatable<FlowDetails>
     { 
-    
+
+        /// <summary>
+        /// The launch mode for this flow instance.
+        /// </summary>
+        /// <value>The launch mode for this flow instance.</value>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum LaunchTypeEnum {
+                public enum LaunchTypeEnum {
             
             [EnumMember(Value = "UNKNOWN")]
             Unknown,
@@ -33,9 +37,14 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "AUTOMATIC")]
             Automatic
         }
-    
+
+
+        /// <summary>
+        /// The flow's running status, which indicates whether the flow is running normally or completed, etc.
+        /// </summary>
+        /// <value>The flow's running status, which indicates whether the flow is running normally or completed, etc.</value>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum StatusEnum {
+                public enum StatusEnum {
             
             [EnumMember(Value = "UNKNOWN")]
             Unknown,
@@ -52,6 +61,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "COMPLETED")]
             Completed
         }
+
         
         /// <summary>
         /// The launch mode for this flow instance.
@@ -119,7 +129,7 @@ namespace ININ.PureCloudApi.Model
             this.FlowErrorInfo = FlowErrorInfo;
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -149,9 +159,9 @@ namespace ININ.PureCloudApi.Model
         public DateTime? LaunchTime { get; set; }
     
         /// <summary>
-        /// The user who launched the flow, if the flow was launched as the result of that user's action.
+        /// The user who launched the flow, if the flow was launched as the result of that user&#39;s action.
         /// </summary>
-        /// <value>The user who launched the flow, if the flow was launched as the result of that user's action.</value>
+        /// <value>The user who launched the flow, if the flow was launched as the result of that user&#39;s action.</value>
         [DataMember(Name="launchedBy", EmitDefaultValue=false)]
         public User LaunchedBy { get; set; }
     
@@ -210,11 +220,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  FlowCompletionReason: ").Append(FlowCompletionReason).Append("\n");
             sb.Append("  FlowErrorInfo: ").Append(FlowErrorInfo).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -320,43 +329,30 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.FlowConfigId != null)
                     hash = hash * 59 + this.FlowConfigId.GetHashCode();
-                
                 if (this.LaunchTime != null)
                     hash = hash * 59 + this.LaunchTime.GetHashCode();
-                
                 if (this.LaunchType != null)
                     hash = hash * 59 + this.LaunchType.GetHashCode();
-                
                 if (this.LaunchedBy != null)
                     hash = hash * 59 + this.LaunchedBy.GetHashCode();
-                
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
-                
                 if (this.AssociatedDocuments != null)
                     hash = hash * 59 + this.AssociatedDocuments.GetHashCode();
-                
                 if (this.FlowCompletionTime != null)
                     hash = hash * 59 + this.FlowCompletionTime.GetHashCode();
-                
                 if (this.FlowCompletionReason != null)
                     hash = hash * 59 + this.FlowCompletionReason.GetHashCode();
-                
                 if (this.FlowErrorInfo != null)
                     hash = hash * 59 + this.FlowErrorInfo.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 return hash;
             }
         }

@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new CoverSheet();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of CoverSheet
@@ -50,25 +50,22 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<CoverSheet> (instance, "instance is a CoverSheet");
         }
 
-        
         /// <summary>
-        /// Test the property 'Notes' 
+        /// Test the property 'Notes'
         /// </summary>
         [Test]
         public void NotesTest()
         {
-            // TODO: unit test for the property 'Notes' 
+            // TODO: unit test for the property 'Notes'
         }
-        
         /// <summary>
-        /// Test the property 'Locale' 
+        /// Test the property 'Locale'
         /// </summary>
         [Test]
         public void LocaleTest()
         {
-            // TODO: unit test for the property 'Locale' 
+            // TODO: unit test for the property 'Locale'
         }
-        
 
     }
 

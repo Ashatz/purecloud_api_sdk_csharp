@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new Conversation();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of Conversation
@@ -50,97 +50,86 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<Conversation> (instance, "instance is a Conversation");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'StartTime' 
+        /// Test the property 'StartTime'
         /// </summary>
         [Test]
         public void StartTimeTest()
         {
-            // TODO: unit test for the property 'StartTime' 
+            // TODO: unit test for the property 'StartTime'
         }
-        
         /// <summary>
-        /// Test the property 'EndTime' 
+        /// Test the property 'EndTime'
         /// </summary>
         [Test]
         public void EndTimeTest()
         {
-            // TODO: unit test for the property 'EndTime' 
+            // TODO: unit test for the property 'EndTime'
         }
-        
         /// <summary>
-        /// Test the property 'Address' 
+        /// Test the property 'Address'
         /// </summary>
         [Test]
         public void AddressTest()
         {
-            // TODO: unit test for the property 'Address' 
+            // TODO: unit test for the property 'Address'
         }
-        
         /// <summary>
-        /// Test the property 'Participants' 
+        /// Test the property 'Participants'
         /// </summary>
         [Test]
         public void ParticipantsTest()
         {
-            // TODO: unit test for the property 'Participants' 
+            // TODO: unit test for the property 'Participants'
         }
-        
         /// <summary>
-        /// Test the property 'ConversationIds' 
+        /// Test the property 'ConversationIds'
         /// </summary>
         [Test]
         public void ConversationIdsTest()
         {
-            // TODO: unit test for the property 'ConversationIds' 
+            // TODO: unit test for the property 'ConversationIds'
         }
-        
         /// <summary>
-        /// Test the property 'MaxParticipants' 
+        /// Test the property 'MaxParticipants'
         /// </summary>
         [Test]
         public void MaxParticipantsTest()
         {
-            // TODO: unit test for the property 'MaxParticipants' 
+            // TODO: unit test for the property 'MaxParticipants'
         }
-        
         /// <summary>
-        /// Test the property 'RecordingState' 
+        /// Test the property 'RecordingState'
         /// </summary>
         [Test]
         public void RecordingStateTest()
         {
-            // TODO: unit test for the property 'RecordingState' 
+            // TODO: unit test for the property 'RecordingState'
         }
-        
         /// <summary>
-        /// Test the property 'SelfUri' 
+        /// Test the property 'SelfUri'
         /// </summary>
         [Test]
         public void SelfUriTest()
         {
-            // TODO: unit test for the property 'SelfUri' 
+            // TODO: unit test for the property 'SelfUri'
         }
-        
 
     }
 

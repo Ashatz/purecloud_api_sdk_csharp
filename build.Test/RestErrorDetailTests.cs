@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new RestErrorDetail();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of RestErrorDetail
@@ -50,25 +50,22 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<RestErrorDetail> (instance, "instance is a RestErrorDetail");
         }
 
-        
         /// <summary>
-        /// Test the property 'Error' 
+        /// Test the property 'Error'
         /// </summary>
         [Test]
         public void ErrorTest()
         {
-            // TODO: unit test for the property 'Error' 
+            // TODO: unit test for the property 'Error'
         }
-        
         /// <summary>
-        /// Test the property 'Details' 
+        /// Test the property 'Details'
         /// </summary>
         [Test]
         public void DetailsTest()
         {
-            // TODO: unit test for the property 'Details' 
+            // TODO: unit test for the property 'Details'
         }
-        
 
     }
 

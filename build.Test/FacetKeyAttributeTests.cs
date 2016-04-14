@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new FacetKeyAttribute();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of FacetKeyAttribute
@@ -50,34 +50,30 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<FacetKeyAttribute> (instance, "instance is a FacetKeyAttribute");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'Count' 
+        /// Test the property 'Count'
         /// </summary>
         [Test]
         public void CountTest()
         {
-            // TODO: unit test for the property 'Count' 
+            // TODO: unit test for the property 'Count'
         }
-        
 
     }
 

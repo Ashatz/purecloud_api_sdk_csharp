@@ -17,9 +17,12 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class HealthCheckInfo :  IEquatable<HealthCheckInfo>
     { 
-    
+
+        /// <summary>
+        /// Gets or Sets Status
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum StatusEnum {
+                public enum StatusEnum {
             
             [EnumMember(Value = "OK")]
             Ok,
@@ -129,6 +132,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "HTTP_VERSION_NOT_SUPPORTED")]
             HttpVersionNotSupported
         }
+
         
         /// <summary>
         /// Gets or Sets Status
@@ -158,7 +162,7 @@ namespace ININ.PureCloudApi.Model
             this.Date = Date;
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -228,11 +232,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  PingMs: ").Append(PingMs).Append("\n");
             sb.Append("  Date: ").Append(Date).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -323,34 +326,24 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 if (this.BuildTime != null)
                     hash = hash * 59 + this.BuildTime.GetHashCode();
-                
                 if (this.BuildVersion != null)
                     hash = hash * 59 + this.BuildVersion.GetHashCode();
-                
                 if (this.ImplementationVersion != null)
                     hash = hash * 59 + this.ImplementationVersion.GetHashCode();
-                
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
-                
                 if (this.PingMs != null)
                     hash = hash * 59 + this.PingMs.GetHashCode();
-                
                 if (this.Date != null)
                     hash = hash * 59 + this.Date.GetHashCode();
-                
                 return hash;
             }
         }

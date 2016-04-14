@@ -36,7 +36,7 @@ namespace ININ.PureCloudApi.Model
             this.Schedule = Schedule;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets CampaignId
@@ -81,11 +81,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  ContactId: ").Append(ContactId).Append("\n");
             sb.Append("  PhoneColumn: ").Append(PhoneColumn).Append("\n");
             sb.Append("  Schedule: ").Append(Schedule).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -156,22 +155,16 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.CampaignId != null)
                     hash = hash * 59 + this.CampaignId.GetHashCode();
-                
                 if (this.ContactListId != null)
                     hash = hash * 59 + this.ContactListId.GetHashCode();
-                
                 if (this.ContactId != null)
                     hash = hash * 59 + this.ContactId.GetHashCode();
-                
                 if (this.PhoneColumn != null)
                     hash = hash * 59 + this.PhoneColumn.GetHashCode();
-                
                 if (this.Schedule != null)
                     hash = hash * 59 + this.Schedule.GetHashCode();
-                
                 return hash;
             }
         }

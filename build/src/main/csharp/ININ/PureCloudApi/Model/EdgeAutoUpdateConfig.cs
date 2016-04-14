@@ -34,7 +34,7 @@ namespace ININ.PureCloudApi.Model
             this.End = End;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets TimeZone
@@ -74,11 +74,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Rrule: ").Append(Rrule).Append("\n");
             sb.Append("  Start: ").Append(Start).Append("\n");
             sb.Append("  End: ").Append(End).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -144,19 +143,14 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.TimeZone != null)
                     hash = hash * 59 + this.TimeZone.GetHashCode();
-                
                 if (this.Rrule != null)
                     hash = hash * 59 + this.Rrule.GetHashCode();
-                
                 if (this.Start != null)
                     hash = hash * 59 + this.Start.GetHashCode();
-                
                 if (this.End != null)
                     hash = hash * 59 + this.End.GetHashCode();
-                
                 return hash;
             }
         }

@@ -17,13 +17,17 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class ArchiveRetention :  IEquatable<ArchiveRetention>
     { 
-    
+
+        /// <summary>
+        /// Gets or Sets StorageMedium
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum StorageMediumEnum {
+                public enum StorageMediumEnum {
             
             [EnumMember(Value = "CLOUDARCHIVE")]
             Cloudarchive
         }
+
         
         /// <summary>
         /// Gets or Sets StorageMedium
@@ -43,7 +47,7 @@ namespace ININ.PureCloudApi.Model
             this.StorageMedium = StorageMedium;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets Days
@@ -61,11 +65,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class ArchiveRetention {\n");
             sb.Append("  Days: ").Append(Days).Append("\n");
             sb.Append("  StorageMedium: ").Append(StorageMedium).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -121,13 +124,10 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Days != null)
                     hash = hash * 59 + this.Days.GetHashCode();
-                
                 if (this.StorageMedium != null)
                     hash = hash * 59 + this.StorageMedium.GetHashCode();
-                
                 return hash;
             }
         }

@@ -30,7 +30,7 @@ namespace ININ.PureCloudApi.Model
             this.End = End;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets Start
@@ -54,11 +54,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class Number {\n");
             sb.Append("  Start: ").Append(Start).Append("\n");
             sb.Append("  End: ").Append(End).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -114,13 +113,10 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Start != null)
                     hash = hash * 59 + this.Start.GetHashCode();
-                
                 if (this.End != null)
                     hash = hash * 59 + this.End.GetHashCode();
-                
                 return hash;
             }
         }

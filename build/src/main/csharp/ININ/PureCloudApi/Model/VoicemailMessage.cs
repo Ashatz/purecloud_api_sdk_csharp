@@ -52,7 +52,7 @@ namespace ININ.PureCloudApi.Model
             this.CallerUser = CallerUser;
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -143,11 +143,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  CallerName: ").Append(CallerName).Append("\n");
             sb.Append("  CallerUser: ").Append(CallerUser).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -248,40 +247,28 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Conversation != null)
                     hash = hash * 59 + this.Conversation.GetHashCode();
-                
                 if (this.Read != null)
                     hash = hash * 59 + this.Read.GetHashCode();
-                
                 if (this.AudioRecordingDurationSeconds != null)
                     hash = hash * 59 + this.AudioRecordingDurationSeconds.GetHashCode();
-                
                 if (this.AudioRecordingSizeBytes != null)
                     hash = hash * 59 + this.AudioRecordingSizeBytes.GetHashCode();
-                
                 if (this.CreatedDate != null)
                     hash = hash * 59 + this.CreatedDate.GetHashCode();
-                
                 if (this.ModifiedDate != null)
                     hash = hash * 59 + this.ModifiedDate.GetHashCode();
-                
                 if (this.CallerAddress != null)
                     hash = hash * 59 + this.CallerAddress.GetHashCode();
-                
                 if (this.CallerName != null)
                     hash = hash * 59 + this.CallerName.GetHashCode();
-                
                 if (this.CallerUser != null)
                     hash = hash * 59 + this.CallerUser.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 return hash;
             }
         }

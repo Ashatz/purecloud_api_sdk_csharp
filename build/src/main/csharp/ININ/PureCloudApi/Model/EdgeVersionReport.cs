@@ -30,7 +30,7 @@ namespace ININ.PureCloudApi.Model
             this.NewestVersion = NewestVersion;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets OldestVersion
@@ -54,11 +54,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class EdgeVersionReport {\n");
             sb.Append("  OldestVersion: ").Append(OldestVersion).Append("\n");
             sb.Append("  NewestVersion: ").Append(NewestVersion).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -114,13 +113,10 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.OldestVersion != null)
                     hash = hash * 59 + this.OldestVersion.GetHashCode();
-                
                 if (this.NewestVersion != null)
                     hash = hash * 59 + this.NewestVersion.GetHashCode();
-                
                 return hash;
             }
         }

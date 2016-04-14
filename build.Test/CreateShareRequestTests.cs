@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new CreateShareRequest();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of CreateShareRequest
@@ -50,52 +50,46 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<CreateShareRequest> (instance, "instance is a CreateShareRequest");
         }
 
-        
         /// <summary>
-        /// Test the property 'SharedEntityType' 
+        /// Test the property 'SharedEntityType'
         /// </summary>
         [Test]
         public void SharedEntityTypeTest()
         {
-            // TODO: unit test for the property 'SharedEntityType' 
+            // TODO: unit test for the property 'SharedEntityType'
         }
-        
         /// <summary>
-        /// Test the property 'SharedEntity' 
+        /// Test the property 'SharedEntity'
         /// </summary>
         [Test]
         public void SharedEntityTest()
         {
-            // TODO: unit test for the property 'SharedEntity' 
+            // TODO: unit test for the property 'SharedEntity'
         }
-        
         /// <summary>
-        /// Test the property 'MemberType' 
+        /// Test the property 'MemberType'
         /// </summary>
         [Test]
         public void MemberTypeTest()
         {
-            // TODO: unit test for the property 'MemberType' 
+            // TODO: unit test for the property 'MemberType'
         }
-        
         /// <summary>
-        /// Test the property 'Member' 
+        /// Test the property 'Member'
         /// </summary>
         [Test]
         public void MemberTest()
         {
-            // TODO: unit test for the property 'Member' 
+            // TODO: unit test for the property 'Member'
         }
-        
         /// <summary>
-        /// Test the property 'Members' 
+        /// Test the property 'Members'
         /// </summary>
         [Test]
         public void MembersTest()
         {
-            // TODO: unit test for the property 'Members' 
+            // TODO: unit test for the property 'Members'
         }
-        
 
     }
 

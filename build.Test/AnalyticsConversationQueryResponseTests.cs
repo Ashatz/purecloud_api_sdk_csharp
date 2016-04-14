@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new AnalyticsConversationQueryResponse();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of AnalyticsConversationQueryResponse
@@ -50,25 +50,22 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<AnalyticsConversationQueryResponse> (instance, "instance is a AnalyticsConversationQueryResponse");
         }
 
-        
         /// <summary>
-        /// Test the property 'Conversations' 
+        /// Test the property 'Conversations'
         /// </summary>
         [Test]
         public void ConversationsTest()
         {
-            // TODO: unit test for the property 'Conversations' 
+            // TODO: unit test for the property 'Conversations'
         }
-        
         /// <summary>
-        /// Test the property 'Aggregations' 
+        /// Test the property 'Aggregations'
         /// </summary>
         [Test]
         public void AggregationsTest()
         {
-            // TODO: unit test for the property 'Aggregations' 
+            // TODO: unit test for the property 'Aggregations'
         }
-        
 
     }
 

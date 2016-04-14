@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new Contract();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of Contract
@@ -50,61 +50,54 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<Contract> (instance, "instance is a Contract");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'Quote' 
+        /// Test the property 'Quote'
         /// </summary>
         [Test]
         public void QuoteTest()
         {
-            // TODO: unit test for the property 'Quote' 
+            // TODO: unit test for the property 'Quote'
         }
-        
         /// <summary>
-        /// Test the property 'SignerUrl' 
+        /// Test the property 'SignerUrl'
         /// </summary>
         [Test]
         public void SignerUrlTest()
         {
-            // TODO: unit test for the property 'SignerUrl' 
+            // TODO: unit test for the property 'SignerUrl'
         }
-        
         /// <summary>
-        /// Test the property 'Job' 
+        /// Test the property 'Job'
         /// </summary>
         [Test]
         public void JobTest()
         {
-            // TODO: unit test for the property 'Job' 
+            // TODO: unit test for the property 'Job'
         }
-        
         /// <summary>
-        /// Test the property 'SelfUri' 
+        /// Test the property 'SelfUri'
         /// </summary>
         [Test]
         public void SelfUriTest()
         {
-            // TODO: unit test for the property 'SelfUri' 
+            // TODO: unit test for the property 'SelfUri'
         }
-        
 
     }
 

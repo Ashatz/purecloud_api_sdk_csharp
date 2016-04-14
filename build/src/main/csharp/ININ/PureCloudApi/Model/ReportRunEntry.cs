@@ -17,9 +17,12 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class ReportRunEntry :  IEquatable<ReportRunEntry>
     { 
-    
+
+        /// <summary>
+        /// Gets or Sets RunStatus
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum RunStatusEnum {
+                public enum RunStatusEnum {
             
             [EnumMember(Value = "RUNNING")]
             Running,
@@ -30,6 +33,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "COMPLETED_WITH_ERRORS")]
             CompletedWithErrors
         }
+
         
         /// <summary>
         /// Gets or Sets RunStatus
@@ -63,7 +67,7 @@ namespace ININ.PureCloudApi.Model
             this.ScheduleUri = ScheduleUri;
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -147,11 +151,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  ReportFormat: ").Append(ReportFormat).Append("\n");
             sb.Append("  ScheduleUri: ").Append(ScheduleUri).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -252,40 +255,28 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.ReportId != null)
                     hash = hash * 59 + this.ReportId.GetHashCode();
-                
                 if (this.RunTime != null)
                     hash = hash * 59 + this.RunTime.GetHashCode();
-                
                 if (this.RunStatus != null)
                     hash = hash * 59 + this.RunStatus.GetHashCode();
-                
                 if (this.ErrorMessage != null)
                     hash = hash * 59 + this.ErrorMessage.GetHashCode();
-                
                 if (this.RunDurationMsec != null)
                     hash = hash * 59 + this.RunDurationMsec.GetHashCode();
-                
                 if (this.ReportUrl != null)
                     hash = hash * 59 + this.ReportUrl.GetHashCode();
-                
                 if (this.ReportFormat != null)
                     hash = hash * 59 + this.ReportFormat.GetHashCode();
-                
                 if (this.ScheduleUri != null)
                     hash = hash * 59 + this.ScheduleUri.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 return hash;
             }
         }

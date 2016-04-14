@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new TableTransform();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of TableTransform
@@ -50,61 +50,54 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<TableTransform> (instance, "instance is a TableTransform");
         }
 
-        
         /// <summary>
-        /// Test the property 'HeaderRow' 
+        /// Test the property 'HeaderRow'
         /// </summary>
         [Test]
         public void HeaderRowTest()
         {
-            // TODO: unit test for the property 'HeaderRow' 
+            // TODO: unit test for the property 'HeaderRow'
         }
-        
         /// <summary>
-        /// Test the property 'FirstData' 
+        /// Test the property 'FirstData'
         /// </summary>
         [Test]
         public void FirstDataTest()
         {
-            // TODO: unit test for the property 'FirstData' 
+            // TODO: unit test for the property 'FirstData'
         }
-        
         /// <summary>
-        /// Test the property 'HeaderReplaces' 
+        /// Test the property 'HeaderReplaces'
         /// </summary>
         [Test]
         public void HeaderReplacesTest()
         {
-            // TODO: unit test for the property 'HeaderReplaces' 
+            // TODO: unit test for the property 'HeaderReplaces'
         }
-        
         /// <summary>
-        /// Test the property 'Columns' 
+        /// Test the property 'Columns'
         /// </summary>
         [Test]
         public void ColumnsTest()
         {
-            // TODO: unit test for the property 'Columns' 
+            // TODO: unit test for the property 'Columns'
         }
-        
         /// <summary>
-        /// Test the property 'Unpivots' 
+        /// Test the property 'Unpivots'
         /// </summary>
         [Test]
         public void UnpivotsTest()
         {
-            // TODO: unit test for the property 'Unpivots' 
+            // TODO: unit test for the property 'Unpivots'
         }
-        
         /// <summary>
-        /// Test the property 'Collapses' 
+        /// Test the property 'Collapses'
         /// </summary>
         [Test]
         public void CollapsesTest()
         {
-            // TODO: unit test for the property 'Collapses' 
+            // TODO: unit test for the property 'Collapses'
         }
-        
 
     }
 

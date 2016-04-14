@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new AggregateQueryResponse();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of AggregateQueryResponse
@@ -50,16 +50,14 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<AggregateQueryResponse> (instance, "instance is a AggregateQueryResponse");
         }
 
-        
         /// <summary>
-        /// Test the property 'Results' 
+        /// Test the property 'Results'
         /// </summary>
         [Test]
         public void ResultsTest()
         {
-            // TODO: unit test for the property 'Results' 
+            // TODO: unit test for the property 'Results'
         }
-        
 
     }
 

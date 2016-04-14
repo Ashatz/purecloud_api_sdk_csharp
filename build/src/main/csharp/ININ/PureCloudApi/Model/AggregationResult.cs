@@ -17,9 +17,12 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class AggregationResult :  IEquatable<AggregationResult>
     { 
-    
+
+        /// <summary>
+        /// Gets or Sets Type
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum TypeEnum {
+                public enum TypeEnum {
             
             [EnumMember(Value = "termFrequency")]
             Termfrequency,
@@ -27,6 +30,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "numericRange")]
             Numericrange
         }
+
         
         /// <summary>
         /// Gets or Sets Type
@@ -52,7 +56,7 @@ namespace ININ.PureCloudApi.Model
             this.Results = Results;
             
         }
-        
+
     
         /// <summary>
         /// For termFrequency aggregations
@@ -93,11 +97,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Metric: ").Append(Metric).Append("\n");
             sb.Append("  Count: ").Append(Count).Append("\n");
             sb.Append("  Results: ").Append(Results).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -168,22 +171,16 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
                 if (this.Dimension != null)
                     hash = hash * 59 + this.Dimension.GetHashCode();
-                
                 if (this.Metric != null)
                     hash = hash * 59 + this.Metric.GetHashCode();
-                
                 if (this.Count != null)
                     hash = hash * 59 + this.Count.GetHashCode();
-                
                 if (this.Results != null)
                     hash = hash * 59 + this.Results.GetHashCode();
-                
                 return hash;
             }
         }

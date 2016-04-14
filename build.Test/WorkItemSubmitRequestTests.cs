@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new WorkItemSubmitRequest();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of WorkItemSubmitRequest
@@ -50,25 +50,22 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<WorkItemSubmitRequest> (instance, "instance is a WorkItemSubmitRequest");
         }
 
-        
         /// <summary>
-        /// Test the property 'CommandId' 
+        /// Test the property 'CommandId'
         /// </summary>
         [Test]
         public void CommandIdTest()
         {
-            // TODO: unit test for the property 'CommandId' 
+            // TODO: unit test for the property 'CommandId'
         }
-        
         /// <summary>
-        /// Test the property 'DataItems' 
+        /// Test the property 'DataItems'
         /// </summary>
         [Test]
         public void DataItemsTest()
         {
-            // TODO: unit test for the property 'DataItems' 
+            // TODO: unit test for the property 'DataItems'
         }
-        
 
     }
 

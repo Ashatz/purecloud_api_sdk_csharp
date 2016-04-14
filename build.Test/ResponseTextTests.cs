@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new ResponseText();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of ResponseText
@@ -50,25 +50,22 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<ResponseText> (instance, "instance is a ResponseText");
         }
 
-        
         /// <summary>
-        /// Test the property 'Content' 
+        /// Test the property 'Content'
         /// </summary>
         [Test]
         public void ContentTest()
         {
-            // TODO: unit test for the property 'Content' 
+            // TODO: unit test for the property 'Content'
         }
-        
         /// <summary>
-        /// Test the property 'ContentType' 
+        /// Test the property 'ContentType'
         /// </summary>
         [Test]
         public void ContentTypeTest()
         {
-            // TODO: unit test for the property 'ContentType' 
+            // TODO: unit test for the property 'ContentType'
         }
-        
 
     }
 

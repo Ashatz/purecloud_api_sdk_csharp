@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new DialerAction();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of DialerAction
@@ -50,43 +50,38 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<DialerAction> (instance, "instance is a DialerAction");
         }
 
-        
         /// <summary>
-        /// Test the property 'Type' 
+        /// Test the property 'Type'
         /// </summary>
         [Test]
         public void TypeTest()
         {
-            // TODO: unit test for the property 'Type' 
+            // TODO: unit test for the property 'Type'
         }
-        
         /// <summary>
-        /// Test the property 'ActionTypeName' 
+        /// Test the property 'ActionTypeName'
         /// </summary>
         [Test]
         public void ActionTypeNameTest()
         {
-            // TODO: unit test for the property 'ActionTypeName' 
+            // TODO: unit test for the property 'ActionTypeName'
         }
-        
         /// <summary>
-        /// Test the property 'UpdateOption' 
+        /// Test the property 'UpdateOption'
         /// </summary>
         [Test]
         public void UpdateOptionTest()
         {
-            // TODO: unit test for the property 'UpdateOption' 
+            // TODO: unit test for the property 'UpdateOption'
         }
-        
         /// <summary>
-        /// Test the property 'Properties' 
+        /// Test the property 'Properties'
         /// </summary>
         [Test]
         public void PropertiesTest()
         {
-            // TODO: unit test for the property 'Properties' 
+            // TODO: unit test for the property 'Properties'
         }
-        
 
     }
 

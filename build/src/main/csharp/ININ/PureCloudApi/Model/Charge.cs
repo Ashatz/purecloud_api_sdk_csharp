@@ -42,7 +42,7 @@ namespace ININ.PureCloudApi.Model
             this.IncludedUnits = IncludedUnits;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets LicenseCount
@@ -108,11 +108,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  BillingPeriod: ").Append(BillingPeriod).Append("\n");
             sb.Append("  Quantity: ").Append(Quantity).Append("\n");
             sb.Append("  IncludedUnits: ").Append(IncludedUnits).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -198,31 +197,22 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.LicenseCount != null)
                     hash = hash * 59 + this.LicenseCount.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
-                
                 if (this.Price != null)
                     hash = hash * 59 + this.Price.GetHashCode();
-                
                 if (this.UnitOfMeasure != null)
                     hash = hash * 59 + this.UnitOfMeasure.GetHashCode();
-                
                 if (this.BillingPeriod != null)
                     hash = hash * 59 + this.BillingPeriod.GetHashCode();
-                
                 if (this.Quantity != null)
                     hash = hash * 59 + this.Quantity.GetHashCode();
-                
                 if (this.IncludedUnits != null)
                     hash = hash * 59 + this.IncludedUnits.GetHashCode();
-                
                 return hash;
             }
         }

@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new TimeAllowed();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of TimeAllowed
@@ -50,34 +50,30 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<TimeAllowed> (instance, "instance is a TimeAllowed");
         }
 
-        
         /// <summary>
-        /// Test the property 'TimeSlots' 
+        /// Test the property 'TimeSlots'
         /// </summary>
         [Test]
         public void TimeSlotsTest()
         {
-            // TODO: unit test for the property 'TimeSlots' 
+            // TODO: unit test for the property 'TimeSlots'
         }
-        
         /// <summary>
-        /// Test the property 'TimeZoneId' 
+        /// Test the property 'TimeZoneId'
         /// </summary>
         [Test]
         public void TimeZoneIdTest()
         {
-            // TODO: unit test for the property 'TimeZoneId' 
+            // TODO: unit test for the property 'TimeZoneId'
         }
-        
         /// <summary>
-        /// Test the property 'Empty' 
+        /// Test the property 'Empty'
         /// </summary>
         [Test]
         public void EmptyTest()
         {
-            // TODO: unit test for the property 'Empty' 
+            // TODO: unit test for the property 'Empty'
         }
-        
 
     }
 

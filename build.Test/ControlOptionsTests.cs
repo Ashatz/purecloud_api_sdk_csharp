@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new ControlOptions();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of ControlOptions
@@ -50,25 +50,22 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<ControlOptions> (instance, "instance is a ControlOptions");
         }
 
-        
         /// <summary>
-        /// Test the property 'Value' 
+        /// Test the property 'Value'
         /// </summary>
         [Test]
         public void ValueTest()
         {
-            // TODO: unit test for the property 'Value' 
+            // TODO: unit test for the property 'Value'
         }
-        
         /// <summary>
-        /// Test the property 'Label' 
+        /// Test the property 'Label'
         /// </summary>
         [Test]
         public void LabelTest()
         {
-            // TODO: unit test for the property 'Label' 
+            // TODO: unit test for the property 'Label'
         }
-        
 
     }
 

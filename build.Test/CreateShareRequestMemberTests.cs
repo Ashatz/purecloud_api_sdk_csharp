@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new CreateShareRequestMember();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of CreateShareRequestMember
@@ -50,25 +50,22 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<CreateShareRequestMember> (instance, "instance is a CreateShareRequestMember");
         }
 
-        
         /// <summary>
-        /// Test the property 'MemberType' 
+        /// Test the property 'MemberType'
         /// </summary>
         [Test]
         public void MemberTypeTest()
         {
-            // TODO: unit test for the property 'MemberType' 
+            // TODO: unit test for the property 'MemberType'
         }
-        
         /// <summary>
-        /// Test the property 'Member' 
+        /// Test the property 'Member'
         /// </summary>
         [Test]
         public void MemberTest()
         {
-            // TODO: unit test for the property 'Member' 
+            // TODO: unit test for the property 'Member'
         }
-        
 
     }
 

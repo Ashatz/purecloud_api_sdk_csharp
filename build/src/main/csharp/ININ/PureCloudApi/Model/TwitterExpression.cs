@@ -118,7 +118,7 @@ namespace ININ.PureCloudApi.Model
             }
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -169,9 +169,9 @@ namespace ININ.PureCloudApi.Model
         public Gistener Gistener { get; set; }
     
         /// <summary>
-        /// Twitter: the tweet's unique id
+        /// Twitter: the tweet&#39;s unique id
         /// </summary>
-        /// <value>Twitter: the tweet's unique id</value>
+        /// <value>Twitter: the tweet&#39;s unique id</value>
         [DataMember(Name="tweetId", EmitDefaultValue=false)]
         public string TweetId { get; set; }
     
@@ -197,16 +197,16 @@ namespace ININ.PureCloudApi.Model
         public bool? IsReply { get; set; }
     
         /// <summary>
-        /// Twitter: indicates this tweet as a 'retweet' of another tweet
+        /// Twitter: indicates this tweet as a &#39;retweet&#39; of another tweet
         /// </summary>
-        /// <value>Twitter: indicates this tweet as a 'retweet' of another tweet</value>
+        /// <value>Twitter: indicates this tweet as a &#39;retweet&#39; of another tweet</value>
         [DataMember(Name="isRetweet", EmitDefaultValue=false)]
         public bool? IsRetweet { get; set; }
     
         /// <summary>
-        /// Twitter: when the expression is a retweet, this is Twitter's id of the original tweet
+        /// Twitter: when the expression is a retweet, this is Twitter&#39;s id of the original tweet
         /// </summary>
-        /// <value>Twitter: when the expression is a retweet, this is Twitter's id of the original tweet</value>
+        /// <value>Twitter: when the expression is a retweet, this is Twitter&#39;s id of the original tweet</value>
         [DataMember(Name="retweetParentId", EmitDefaultValue=false)]
         public string RetweetParentId { get; set; }
     
@@ -225,30 +225,30 @@ namespace ININ.PureCloudApi.Model
         public bool? IsQuotedTweet { get; set; }
     
         /// <summary>
-        /// Twitter: when the expression is a quoted tweet, this is Twitter's id of the original tweet (may not be immediately functional)
+        /// Twitter: when the expression is a quoted tweet, this is Twitter&#39;s id of the original tweet (may not be immediately functional)
         /// </summary>
-        /// <value>Twitter: when the expression is a quoted tweet, this is Twitter's id of the original tweet (may not be immediately functional)</value>
+        /// <value>Twitter: when the expression is a quoted tweet, this is Twitter&#39;s id of the original tweet (may not be immediately functional)</value>
         [DataMember(Name="quotedParentId", EmitDefaultValue=false)]
         public string QuotedParentId { get; set; }
     
         /// <summary>
-        /// Twitter: the expressing user's Twitter id
+        /// Twitter: the expressing user&#39;s Twitter id
         /// </summary>
-        /// <value>Twitter: the expressing user's Twitter id</value>
+        /// <value>Twitter: the expressing user&#39;s Twitter id</value>
         [DataMember(Name="userId", EmitDefaultValue=false)]
         public string UserId { get; set; }
     
         /// <summary>
-        /// Twitter: the user's account name for the core service
+        /// Twitter: the user&#39;s account name for the core service
         /// </summary>
-        /// <value>Twitter: the user's account name for the core service</value>
+        /// <value>Twitter: the user&#39;s account name for the core service</value>
         [DataMember(Name="userName", EmitDefaultValue=false)]
         public string UserName { get; set; }
     
         /// <summary>
-        /// Twitter: the user's custom 'branding' name (allowed to change over time)
+        /// Twitter: the user&#39;s custom &#39;branding&#39; name (allowed to change over time)
         /// </summary>
-        /// <value>Twitter: the user's custom 'branding' name (allowed to change over time)</value>
+        /// <value>Twitter: the user&#39;s custom &#39;branding&#39; name (allowed to change over time)</value>
         [DataMember(Name="userScreenName", EmitDefaultValue=false)]
         public string UserScreenName { get; set; }
     
@@ -318,11 +318,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  GroupTags: ").Append(GroupTags).Append("\n");
             sb.Append("  Routed: ").Append(Routed).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -488,79 +487,54 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
-                
                 if (this.DateModified != null)
                     hash = hash * 59 + this.DateModified.GetHashCode();
-                
                 if (this.IsDispositioned != null)
                     hash = hash * 59 + this.IsDispositioned.GetHashCode();
-                
                 if (this.IsNoise != null)
                     hash = hash * 59 + this.IsNoise.GetHashCode();
-                
                 if (this.Gistener != null)
                     hash = hash * 59 + this.Gistener.GetHashCode();
-                
                 if (this.TweetId != null)
                     hash = hash * 59 + this.TweetId.GetHashCode();
-                
                 if (this.Text != null)
                     hash = hash * 59 + this.Text.GetHashCode();
-                
                 if (this.TweetCreated != null)
                     hash = hash * 59 + this.TweetCreated.GetHashCode();
-                
                 if (this.IsReply != null)
                     hash = hash * 59 + this.IsReply.GetHashCode();
-                
                 if (this.IsRetweet != null)
                     hash = hash * 59 + this.IsRetweet.GetHashCode();
-                
                 if (this.RetweetParentId != null)
                     hash = hash * 59 + this.RetweetParentId.GetHashCode();
-                
                 if (this.RetweetCount != null)
                     hash = hash * 59 + this.RetweetCount.GetHashCode();
-                
                 if (this.IsQuotedTweet != null)
                     hash = hash * 59 + this.IsQuotedTweet.GetHashCode();
-                
                 if (this.QuotedParentId != null)
                     hash = hash * 59 + this.QuotedParentId.GetHashCode();
-                
                 if (this.UserId != null)
                     hash = hash * 59 + this.UserId.GetHashCode();
-                
                 if (this.UserName != null)
                     hash = hash * 59 + this.UserName.GetHashCode();
-                
                 if (this.UserScreenName != null)
                     hash = hash * 59 + this.UserScreenName.GetHashCode();
-                
                 if (this.UserTweetCount != null)
                     hash = hash * 59 + this.UserTweetCount.GetHashCode();
-                
                 if (this.UserFollowersCount != null)
                     hash = hash * 59 + this.UserFollowersCount.GetHashCode();
-                
                 if (this.GroupTags != null)
                     hash = hash * 59 + this.GroupTags.GetHashCode();
-                
                 if (this.Routed != null)
                     hash = hash * 59 + this.Routed.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 return hash;
             }
         }

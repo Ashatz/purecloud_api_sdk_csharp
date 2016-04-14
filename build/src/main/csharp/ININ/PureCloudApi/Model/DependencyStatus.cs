@@ -17,9 +17,12 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class DependencyStatus :  IEquatable<DependencyStatus>
     { 
-    
+
+        /// <summary>
+        /// Gets or Sets Status
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum StatusEnum {
+                public enum StatusEnum {
             
             [EnumMember(Value = "BUILDINITIALIZING")]
             Buildinitializing,
@@ -36,6 +39,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "OPERATIONALNEEDSREBUILD")]
             Operationalneedsrebuild
         }
+
         
         /// <summary>
         /// Gets or Sets Status
@@ -65,7 +69,7 @@ namespace ININ.PureCloudApi.Model
             this.FailedObjects = FailedObjects;
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -136,11 +140,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  FailedObjects: ").Append(FailedObjects).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -231,34 +234,24 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();
-                
                 if (this.BuildId != null)
                     hash = hash * 59 + this.BuildId.GetHashCode();
-                
                 if (this.DateStarted != null)
                     hash = hash * 59 + this.DateStarted.GetHashCode();
-                
                 if (this.DateCompleted != null)
                     hash = hash * 59 + this.DateCompleted.GetHashCode();
-                
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
-                
                 if (this.FailedObjects != null)
                     hash = hash * 59 + this.FailedObjects.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 return hash;
             }
         }

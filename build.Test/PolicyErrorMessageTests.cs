@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new PolicyErrorMessage();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of PolicyErrorMessage
@@ -50,70 +50,62 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<PolicyErrorMessage> (instance, "instance is a PolicyErrorMessage");
         }
 
-        
         /// <summary>
-        /// Test the property 'StatusCode' 
+        /// Test the property 'StatusCode'
         /// </summary>
         [Test]
         public void StatusCodeTest()
         {
-            // TODO: unit test for the property 'StatusCode' 
+            // TODO: unit test for the property 'StatusCode'
         }
-        
         /// <summary>
-        /// Test the property 'UserMessage' 
+        /// Test the property 'UserMessage'
         /// </summary>
         [Test]
         public void UserMessageTest()
         {
-            // TODO: unit test for the property 'UserMessage' 
+            // TODO: unit test for the property 'UserMessage'
         }
-        
         /// <summary>
-        /// Test the property 'UserParamsMessage' 
+        /// Test the property 'UserParamsMessage'
         /// </summary>
         [Test]
         public void UserParamsMessageTest()
         {
-            // TODO: unit test for the property 'UserParamsMessage' 
+            // TODO: unit test for the property 'UserParamsMessage'
         }
-        
         /// <summary>
-        /// Test the property 'ErrorCode' 
+        /// Test the property 'ErrorCode'
         /// </summary>
         [Test]
         public void ErrorCodeTest()
         {
-            // TODO: unit test for the property 'ErrorCode' 
+            // TODO: unit test for the property 'ErrorCode'
         }
-        
         /// <summary>
-        /// Test the property 'CorrelationId' 
+        /// Test the property 'CorrelationId'
         /// </summary>
         [Test]
         public void CorrelationIdTest()
         {
-            // TODO: unit test for the property 'CorrelationId' 
+            // TODO: unit test for the property 'CorrelationId'
         }
-        
         /// <summary>
-        /// Test the property 'UserParams' 
+        /// Test the property 'UserParams'
         /// </summary>
         [Test]
         public void UserParamsTest()
         {
-            // TODO: unit test for the property 'UserParams' 
+            // TODO: unit test for the property 'UserParams'
         }
-        
         /// <summary>
-        /// Test the property 'InsertDate' 
+        /// Test the property 'InsertDate'
         /// </summary>
         [Test]
         public void InsertDateTest()
         {
-            // TODO: unit test for the property 'InsertDate' 
+            // TODO: unit test for the property 'InsertDate'
         }
-        
 
     }
 

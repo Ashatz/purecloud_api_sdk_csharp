@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new PhoneNumber();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of PhoneNumber
@@ -50,61 +50,54 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<PhoneNumber> (instance, "instance is a PhoneNumber");
         }
 
-        
         /// <summary>
-        /// Test the property 'Display' 
+        /// Test the property 'Display'
         /// </summary>
         [Test]
         public void DisplayTest()
         {
-            // TODO: unit test for the property 'Display' 
+            // TODO: unit test for the property 'Display'
         }
-        
         /// <summary>
-        /// Test the property 'Extension' 
+        /// Test the property 'Extension'
         /// </summary>
         [Test]
         public void ExtensionTest()
         {
-            // TODO: unit test for the property 'Extension' 
+            // TODO: unit test for the property 'Extension'
         }
-        
         /// <summary>
-        /// Test the property 'AcceptsSMS' 
+        /// Test the property 'AcceptsSMS'
         /// </summary>
         [Test]
         public void AcceptsSMSTest()
         {
-            // TODO: unit test for the property 'AcceptsSMS' 
+            // TODO: unit test for the property 'AcceptsSMS'
         }
-        
         /// <summary>
-        /// Test the property 'UserInput' 
+        /// Test the property 'UserInput'
         /// </summary>
         [Test]
         public void UserInputTest()
         {
-            // TODO: unit test for the property 'UserInput' 
+            // TODO: unit test for the property 'UserInput'
         }
-        
         /// <summary>
-        /// Test the property 'E164' 
+        /// Test the property 'E164'
         /// </summary>
         [Test]
         public void E164Test()
         {
-            // TODO: unit test for the property 'E164' 
+            // TODO: unit test for the property 'E164'
         }
-        
         /// <summary>
-        /// Test the property 'CountryCode' 
+        /// Test the property 'CountryCode'
         /// </summary>
         [Test]
         public void CountryCodeTest()
         {
-            // TODO: unit test for the property 'CountryCode' 
+            // TODO: unit test for the property 'CountryCode'
         }
-        
 
     }
 

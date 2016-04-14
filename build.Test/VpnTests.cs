@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new Vpn();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of Vpn
@@ -50,34 +50,30 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<Vpn> (instance, "instance is a Vpn");
         }
 
-        
         /// <summary>
-        /// Test the property 'Type' 
+        /// Test the property 'Type'
         /// </summary>
         [Test]
         public void TypeTest()
         {
-            // TODO: unit test for the property 'Type' 
+            // TODO: unit test for the property 'Type'
         }
-        
         /// <summary>
-        /// Test the property 'Ip' 
+        /// Test the property 'Ip'
         /// </summary>
         [Test]
         public void IpTest()
         {
-            // TODO: unit test for the property 'Ip' 
+            // TODO: unit test for the property 'Ip'
         }
-        
         /// <summary>
-        /// Test the property 'Psk' 
+        /// Test the property 'Psk'
         /// </summary>
         [Test]
         public void PskTest()
         {
-            // TODO: unit test for the property 'Psk' 
+            // TODO: unit test for the property 'Psk'
         }
-        
 
     }
 

@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new WorkItemTransferRequest();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of WorkItemTransferRequest
@@ -50,25 +50,22 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<WorkItemTransferRequest> (instance, "instance is a WorkItemTransferRequest");
         }
 
-        
         /// <summary>
-        /// Test the property 'TransferTargetType' 
+        /// Test the property 'TransferTargetType'
         /// </summary>
         [Test]
         public void TransferTargetTypeTest()
         {
-            // TODO: unit test for the property 'TransferTargetType' 
+            // TODO: unit test for the property 'TransferTargetType'
         }
-        
         /// <summary>
-        /// Test the property 'TransferTarget' 
+        /// Test the property 'TransferTarget'
         /// </summary>
         [Test]
         public void TransferTargetTest()
         {
-            // TODO: unit test for the property 'TransferTarget' 
+            // TODO: unit test for the property 'TransferTarget'
         }
-        
 
     }
 

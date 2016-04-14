@@ -43,7 +43,7 @@ namespace ININ.PureCloudApi.Model
             this.GroupBy = GroupBy;
             
         }
-        
+
     
         /// <summary>
         /// The pageNumber to get results from (EG If there are 100 results with a pageSize of 10 and pageNumber is 3 then 10 results will be returned starting with index #31
@@ -100,11 +100,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Sort: ").Append(Sort).Append("\n");
             sb.Append("  Filters: ").Append(Filters).Append("\n");
             sb.Append("  GroupBy: ").Append(GroupBy).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -180,25 +179,18 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.PageNumber != null)
                     hash = hash * 59 + this.PageNumber.GetHashCode();
-                
                 if (this.PageSize != null)
                     hash = hash * 59 + this.PageSize.GetHashCode();
-                
                 if (this.FacetRequests != null)
                     hash = hash * 59 + this.FacetRequests.GetHashCode();
-                
                 if (this.Sort != null)
                     hash = hash * 59 + this.Sort.GetHashCode();
-                
                 if (this.Filters != null)
                     hash = hash * 59 + this.Filters.GetHashCode();
-                
                 if (this.GroupBy != null)
                     hash = hash * 59 + this.GroupBy.GetHashCode();
-                
                 return hash;
             }
         }

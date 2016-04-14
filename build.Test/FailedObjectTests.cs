@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new FailedObject();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of FailedObject
@@ -50,43 +50,38 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<FailedObject> (instance, "instance is a FailedObject");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'Version' 
+        /// Test the property 'Version'
         /// </summary>
         [Test]
         public void VersionTest()
         {
-            // TODO: unit test for the property 'Version' 
+            // TODO: unit test for the property 'Version'
         }
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'ErrorCode' 
+        /// Test the property 'ErrorCode'
         /// </summary>
         [Test]
         public void ErrorCodeTest()
         {
-            // TODO: unit test for the property 'ErrorCode' 
+            // TODO: unit test for the property 'ErrorCode'
         }
-        
 
     }
 

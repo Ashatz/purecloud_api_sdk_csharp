@@ -17,9 +17,12 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class DisconnectReason :  IEquatable<DisconnectReason>
     { 
-    
+
+        /// <summary>
+        /// Gets or Sets Type
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum TypeEnum {
+                public enum TypeEnum {
             
             [EnumMember(Value = "Q_850")]
             Q850,
@@ -27,6 +30,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "SIP")]
             Sip
         }
+
         
         /// <summary>
         /// Gets or Sets Type
@@ -48,7 +52,7 @@ namespace ININ.PureCloudApi.Model
             this.Phrase = Phrase;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets Code
@@ -73,11 +77,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Code: ").Append(Code).Append("\n");
             sb.Append("  Phrase: ").Append(Phrase).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -138,16 +141,12 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
                 if (this.Code != null)
                     hash = hash * 59 + this.Code.GetHashCode();
-                
                 if (this.Phrase != null)
                     hash = hash * 59 + this.Phrase.GetHashCode();
-                
                 return hash;
             }
         }

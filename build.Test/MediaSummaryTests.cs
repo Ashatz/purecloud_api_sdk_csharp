@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new MediaSummary();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of MediaSummary
@@ -50,25 +50,22 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<MediaSummary> (instance, "instance is a MediaSummary");
         }
 
-        
         /// <summary>
-        /// Test the property 'ContactCenter' 
+        /// Test the property 'ContactCenter'
         /// </summary>
         [Test]
         public void ContactCenterTest()
         {
-            // TODO: unit test for the property 'ContactCenter' 
+            // TODO: unit test for the property 'ContactCenter'
         }
-        
         /// <summary>
-        /// Test the property 'Enterprise' 
+        /// Test the property 'Enterprise'
         /// </summary>
         [Test]
         public void EnterpriseTest()
         {
-            // TODO: unit test for the property 'Enterprise' 
+            // TODO: unit test for the property 'Enterprise'
         }
-        
 
     }
 

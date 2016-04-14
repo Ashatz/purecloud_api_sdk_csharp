@@ -17,9 +17,12 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class Edge :  IEquatable<Edge>
     { 
-    
+
+        /// <summary>
+        /// Gets or Sets State
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum StateEnum {
+                public enum StateEnum {
             
             [EnumMember(Value = "ACTIVE")]
             Active,
@@ -30,9 +33,13 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "DELETED")]
             Deleted
         }
-    
+
+
+        /// <summary>
+        /// Gets or Sets StatusCode
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum StatusCodeEnum {
+                public enum StatusCodeEnum {
             
             [EnumMember(Value = "NEW")]
             New,
@@ -67,9 +74,13 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "UNPAIRED")]
             Unpaired
         }
-    
+
+
+        /// <summary>
+        /// Gets or Sets OnlineStatus
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum OnlineStatusEnum {
+                public enum OnlineStatusEnum {
             
             [EnumMember(Value = "ONLINE")]
             Online,
@@ -77,6 +88,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "OFFLINE")]
             Offline
         }
+
         
         /// <summary>
         /// Gets or Sets State
@@ -186,7 +198,7 @@ namespace ININ.PureCloudApi.Model
             }
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -427,11 +439,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  PhysicalEdge: ").Append(PhysicalEdge).Append("\n");
             sb.Append("  Managed: ").Append(Managed).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -652,112 +663,76 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
-                
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
-                
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
-                
                 if (this.DateModified != null)
                     hash = hash * 59 + this.DateModified.GetHashCode();
-                
                 if (this.ModifiedBy != null)
                     hash = hash * 59 + this.ModifiedBy.GetHashCode();
-                
                 if (this.CreatedBy != null)
                     hash = hash * 59 + this.CreatedBy.GetHashCode();
-                
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
-                
                 if (this.ModifiedByApp != null)
                     hash = hash * 59 + this.ModifiedByApp.GetHashCode();
-                
                 if (this.CreatedByApp != null)
                     hash = hash * 59 + this.CreatedByApp.GetHashCode();
-                
                 if (this.Interfaces != null)
                     hash = hash * 59 + this.Interfaces.GetHashCode();
-                
                 if (this.Make != null)
                     hash = hash * 59 + this.Make.GetHashCode();
-                
                 if (this.Model != null)
                     hash = hash * 59 + this.Model.GetHashCode();
-                
                 if (this.ApiVersion != null)
                     hash = hash * 59 + this.ApiVersion.GetHashCode();
-                
                 if (this.SoftwareVersion != null)
                     hash = hash * 59 + this.SoftwareVersion.GetHashCode();
-                
                 if (this.SoftwareVersionTimestamp != null)
                     hash = hash * 59 + this.SoftwareVersionTimestamp.GetHashCode();
-                
                 if (this.SoftwareVersionPlatform != null)
                     hash = hash * 59 + this.SoftwareVersionPlatform.GetHashCode();
-                
                 if (this.SoftwareVersionConfiguration != null)
                     hash = hash * 59 + this.SoftwareVersionConfiguration.GetHashCode();
-                
                 if (this.FullSoftwareVersion != null)
                     hash = hash * 59 + this.FullSoftwareVersion.GetHashCode();
-                
                 if (this.PairingId != null)
                     hash = hash * 59 + this.PairingId.GetHashCode();
-                
                 if (this.Fingerprint != null)
                     hash = hash * 59 + this.Fingerprint.GetHashCode();
-                
                 if (this.FingerprintHint != null)
                     hash = hash * 59 + this.FingerprintHint.GetHashCode();
-                
                 if (this.CurrentVersion != null)
                     hash = hash * 59 + this.CurrentVersion.GetHashCode();
-                
                 if (this.StagedVersion != null)
                     hash = hash * 59 + this.StagedVersion.GetHashCode();
-                
                 if (this.Patch != null)
                     hash = hash * 59 + this.Patch.GetHashCode();
-                
                 if (this.StatusCode != null)
                     hash = hash * 59 + this.StatusCode.GetHashCode();
-                
                 if (this.EdgeGroup != null)
                     hash = hash * 59 + this.EdgeGroup.GetHashCode();
-                
                 if (this.Site != null)
                     hash = hash * 59 + this.Site.GetHashCode();
-                
                 if (this.SoftwareStatus != null)
                     hash = hash * 59 + this.SoftwareStatus.GetHashCode();
-                
                 if (this.OnlineStatus != null)
                     hash = hash * 59 + this.OnlineStatus.GetHashCode();
-                
                 if (this.SerialNumber != null)
                     hash = hash * 59 + this.SerialNumber.GetHashCode();
-                
                 if (this.PhysicalEdge != null)
                     hash = hash * 59 + this.PhysicalEdge.GetHashCode();
-                
                 if (this.Managed != null)
                     hash = hash * 59 + this.Managed.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 return hash;
             }
         }

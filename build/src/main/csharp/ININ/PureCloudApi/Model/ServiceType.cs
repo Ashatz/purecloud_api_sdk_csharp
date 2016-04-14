@@ -40,7 +40,7 @@ namespace ININ.PureCloudApi.Model
             this.Prefix = Prefix;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets Type
@@ -100,11 +100,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  CallingPartyId: ").Append(CallingPartyId).Append("\n");
             sb.Append("  CallHistory: ").Append(CallHistory).Append("\n");
             sb.Append("  Prefix: ").Append(Prefix).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -185,28 +184,20 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
                 if (this.Parameters != null)
                     hash = hash * 59 + this.Parameters.GetHashCode();
-                
                 if (this.Codecs != null)
                     hash = hash * 59 + this.Codecs.GetHashCode();
-                
                 if (this.Strip != null)
                     hash = hash * 59 + this.Strip.GetHashCode();
-                
                 if (this.CallingPartyId != null)
                     hash = hash * 59 + this.CallingPartyId.GetHashCode();
-                
                 if (this.CallHistory != null)
                     hash = hash * 59 + this.CallHistory.GetHashCode();
-                
                 if (this.Prefix != null)
                     hash = hash * 59 + this.Prefix.GetHashCode();
-                
                 return hash;
             }
         }

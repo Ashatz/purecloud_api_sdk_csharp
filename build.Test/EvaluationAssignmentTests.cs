@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new EvaluationAssignment();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of EvaluationAssignment
@@ -50,25 +50,22 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<EvaluationAssignment> (instance, "instance is a EvaluationAssignment");
         }
 
-        
         /// <summary>
-        /// Test the property 'EvaluationForm' 
+        /// Test the property 'EvaluationForm'
         /// </summary>
         [Test]
         public void EvaluationFormTest()
         {
-            // TODO: unit test for the property 'EvaluationForm' 
+            // TODO: unit test for the property 'EvaluationForm'
         }
-        
         /// <summary>
-        /// Test the property 'User' 
+        /// Test the property 'User'
         /// </summary>
         [Test]
         public void UserTest()
         {
-            // TODO: unit test for the property 'User' 
+            // TODO: unit test for the property 'User'
         }
-        
 
     }
 

@@ -17,9 +17,12 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class Trace :  IEquatable<Trace>
     { 
-    
+
+        /// <summary>
+        /// Gets or Sets Level
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum LevelEnum {
+                public enum LevelEnum {
             
             [EnumMember(Value = "ERROR")]
             Error,
@@ -33,6 +36,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "DEBUG")]
             Debug
         }
+
         
         /// <summary>
         /// Gets or Sets Level
@@ -62,7 +66,7 @@ namespace ININ.PureCloudApi.Model
             this.DetailsString = DetailsString;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets Topic
@@ -116,11 +120,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Details: ").Append(Details).Append("\n");
             sb.Append("  TimestampString: ").Append(TimestampString).Append("\n");
             sb.Append("  DetailsString: ").Append(DetailsString).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -201,28 +204,20 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Topic != null)
                     hash = hash * 59 + this.Topic.GetHashCode();
-                
                 if (this.Timestamp != null)
                     hash = hash * 59 + this.Timestamp.GetHashCode();
-                
                 if (this.Level != null)
                     hash = hash * 59 + this.Level.GetHashCode();
-                
                 if (this.Message != null)
                     hash = hash * 59 + this.Message.GetHashCode();
-                
                 if (this.Details != null)
                     hash = hash * 59 + this.Details.GetHashCode();
-                
                 if (this.TimestampString != null)
                     hash = hash * 59 + this.TimestampString.GetHashCode();
-                
                 if (this.DetailsString != null)
                     hash = hash * 59 + this.DetailsString.GetHashCode();
-                
                 return hash;
             }
         }

@@ -17,13 +17,17 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class ExpansionCriterium :  IEquatable<ExpansionCriterium>
     { 
-    
+
+        /// <summary>
+        /// Gets or Sets Type
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum TypeEnum {
+                public enum TypeEnum {
             
             [EnumMember(Value = "TIMEOUT_SECONDS")]
             Seconds
         }
+
         
         /// <summary>
         /// Gets or Sets Type
@@ -43,7 +47,7 @@ namespace ININ.PureCloudApi.Model
             this.Threshold = Threshold;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets Threshold
@@ -61,11 +65,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class ExpansionCriterium {\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Threshold: ").Append(Threshold).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -121,13 +124,10 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
                 if (this.Threshold != null)
                     hash = hash * 59 + this.Threshold.GetHashCode();
-                
                 return hash;
             }
         }

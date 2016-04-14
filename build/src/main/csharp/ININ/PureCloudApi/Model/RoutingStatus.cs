@@ -17,9 +17,12 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class RoutingStatus :  IEquatable<RoutingStatus>
     { 
-    
+
+        /// <summary>
+        /// Gets or Sets Status
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum StatusEnum {
+                public enum StatusEnum {
             
             [EnumMember(Value = "OFF_QUEUE")]
             OffQueue,
@@ -33,6 +36,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "NOT_RESPONDING")]
             NotResponding
         }
+
         
         /// <summary>
         /// Gets or Sets Status
@@ -54,7 +58,7 @@ namespace ININ.PureCloudApi.Model
             this.StartTime = StartTime;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets UserId
@@ -80,11 +84,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  UserId: ").Append(UserId).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  StartTime: ").Append(StartTime).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -145,16 +148,12 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.UserId != null)
                     hash = hash * 59 + this.UserId.GetHashCode();
-                
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
-                
                 if (this.StartTime != null)
                     hash = hash * 59 + this.StartTime.GetHashCode();
-                
                 return hash;
             }
         }

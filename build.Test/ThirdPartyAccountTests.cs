@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new ThirdPartyAccount();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of ThirdPartyAccount
@@ -50,70 +50,62 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<ThirdPartyAccount> (instance, "instance is a ThirdPartyAccount");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'AccountNumber' 
+        /// Test the property 'AccountNumber'
         /// </summary>
         [Test]
         public void AccountNumberTest()
         {
-            // TODO: unit test for the property 'AccountNumber' 
+            // TODO: unit test for the property 'AccountNumber'
         }
-        
         /// <summary>
-        /// Test the property 'Currency' 
+        /// Test the property 'Currency'
         /// </summary>
         [Test]
         public void CurrencyTest()
         {
-            // TODO: unit test for the property 'Currency' 
+            // TODO: unit test for the property 'Currency'
         }
-        
         /// <summary>
-        /// Test the property 'Invoices' 
+        /// Test the property 'Invoices'
         /// </summary>
         [Test]
         public void InvoicesTest()
         {
-            // TODO: unit test for the property 'Invoices' 
+            // TODO: unit test for the property 'Invoices'
         }
-        
         /// <summary>
-        /// Test the property 'Subscriptions' 
+        /// Test the property 'Subscriptions'
         /// </summary>
         [Test]
         public void SubscriptionsTest()
         {
-            // TODO: unit test for the property 'Subscriptions' 
+            // TODO: unit test for the property 'Subscriptions'
         }
-        
         /// <summary>
-        /// Test the property 'SelfUri' 
+        /// Test the property 'SelfUri'
         /// </summary>
         [Test]
         public void SelfUriTest()
         {
-            // TODO: unit test for the property 'SelfUri' 
+            // TODO: unit test for the property 'SelfUri'
         }
-        
 
     }
 

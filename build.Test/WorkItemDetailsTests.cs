@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new WorkItemDetails();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of WorkItemDetails
@@ -50,187 +50,166 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<WorkItemDetails> (instance, "instance is a WorkItemDetails");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'WorkItemDefinition' 
+        /// Test the property 'WorkItemDefinition'
         /// </summary>
         [Test]
         public void WorkItemDefinitionTest()
         {
-            // TODO: unit test for the property 'WorkItemDefinition' 
+            // TODO: unit test for the property 'WorkItemDefinition'
         }
-        
         /// <summary>
-        /// Test the property 'FlowExecId' 
+        /// Test the property 'FlowExecId'
         /// </summary>
         [Test]
         public void FlowExecIdTest()
         {
-            // TODO: unit test for the property 'FlowExecId' 
+            // TODO: unit test for the property 'FlowExecId'
         }
-        
         /// <summary>
-        /// Test the property 'FlowConfigId' 
+        /// Test the property 'FlowConfigId'
         /// </summary>
         [Test]
         public void FlowConfigIdTest()
         {
-            // TODO: unit test for the property 'FlowConfigId' 
+            // TODO: unit test for the property 'FlowConfigId'
         }
-        
         /// <summary>
-        /// Test the property 'FlowCreateTime' 
+        /// Test the property 'FlowCreateTime'
         /// </summary>
         [Test]
         public void FlowCreateTimeTest()
         {
-            // TODO: unit test for the property 'FlowCreateTime' 
+            // TODO: unit test for the property 'FlowCreateTime'
         }
-        
         /// <summary>
-        /// Test the property 'CreateTime' 
+        /// Test the property 'CreateTime'
         /// </summary>
         [Test]
         public void CreateTimeTest()
         {
-            // TODO: unit test for the property 'CreateTime' 
+            // TODO: unit test for the property 'CreateTime'
         }
-        
         /// <summary>
-        /// Test the property 'Owner' 
+        /// Test the property 'Owner'
         /// </summary>
         [Test]
         public void OwnerTest()
         {
-            // TODO: unit test for the property 'Owner' 
+            // TODO: unit test for the property 'Owner'
         }
-        
         /// <summary>
-        /// Test the property 'OfferedToUsers' 
+        /// Test the property 'OfferedToUsers'
         /// </summary>
         [Test]
         public void OfferedToUsersTest()
         {
-            // TODO: unit test for the property 'OfferedToUsers' 
+            // TODO: unit test for the property 'OfferedToUsers'
         }
-        
         /// <summary>
-        /// Test the property 'OfferedToQueues' 
+        /// Test the property 'OfferedToQueues'
         /// </summary>
         [Test]
         public void OfferedToQueuesTest()
         {
-            // TODO: unit test for the property 'OfferedToQueues' 
+            // TODO: unit test for the property 'OfferedToQueues'
         }
-        
         /// <summary>
-        /// Test the property 'Title' 
+        /// Test the property 'Title'
         /// </summary>
         [Test]
         public void TitleTest()
         {
-            // TODO: unit test for the property 'Title' 
+            // TODO: unit test for the property 'Title'
         }
-        
         /// <summary>
-        /// Test the property 'Subtitle' 
+        /// Test the property 'Subtitle'
         /// </summary>
         [Test]
         public void SubtitleTest()
         {
-            // TODO: unit test for the property 'Subtitle' 
+            // TODO: unit test for the property 'Subtitle'
         }
-        
         /// <summary>
-        /// Test the property 'AssociatedDocuments' 
+        /// Test the property 'AssociatedDocuments'
         /// </summary>
         [Test]
         public void AssociatedDocumentsTest()
         {
-            // TODO: unit test for the property 'AssociatedDocuments' 
+            // TODO: unit test for the property 'AssociatedDocuments'
         }
-        
         /// <summary>
-        /// Test the property 'AvailableActions' 
+        /// Test the property 'AvailableActions'
         /// </summary>
         [Test]
         public void AvailableActionsTest()
         {
-            // TODO: unit test for the property 'AvailableActions' 
+            // TODO: unit test for the property 'AvailableActions'
         }
-        
         /// <summary>
-        /// Test the property 'DataValueInfo' 
+        /// Test the property 'DataValueInfo'
         /// </summary>
         [Test]
         public void DataValueInfoTest()
         {
-            // TODO: unit test for the property 'DataValueInfo' 
+            // TODO: unit test for the property 'DataValueInfo'
         }
-        
         /// <summary>
-        /// Test the property 'WorkItemCache' 
+        /// Test the property 'WorkItemCache'
         /// </summary>
         [Test]
         public void WorkItemCacheTest()
         {
-            // TODO: unit test for the property 'WorkItemCache' 
+            // TODO: unit test for the property 'WorkItemCache'
         }
-        
         /// <summary>
-        /// Test the property 'LastOfferedTime' 
+        /// Test the property 'LastOfferedTime'
         /// </summary>
         [Test]
         public void LastOfferedTimeTest()
         {
-            // TODO: unit test for the property 'LastOfferedTime' 
+            // TODO: unit test for the property 'LastOfferedTime'
         }
-        
         /// <summary>
-        /// Test the property 'LastOwnershipUpdateTime' 
+        /// Test the property 'LastOwnershipUpdateTime'
         /// </summary>
         [Test]
         public void LastOwnershipUpdateTimeTest()
         {
-            // TODO: unit test for the property 'LastOwnershipUpdateTime' 
+            // TODO: unit test for the property 'LastOwnershipUpdateTime'
         }
-        
         /// <summary>
-        /// Test the property 'CurrentTaskStartTime' 
+        /// Test the property 'CurrentTaskStartTime'
         /// </summary>
         [Test]
         public void CurrentTaskStartTimeTest()
         {
-            // TODO: unit test for the property 'CurrentTaskStartTime' 
+            // TODO: unit test for the property 'CurrentTaskStartTime'
         }
-        
         /// <summary>
-        /// Test the property 'SelfUri' 
+        /// Test the property 'SelfUri'
         /// </summary>
         [Test]
         public void SelfUriTest()
         {
-            // TODO: unit test for the property 'SelfUri' 
+            // TODO: unit test for the property 'SelfUri'
         }
-        
 
     }
 

@@ -30,7 +30,7 @@ namespace ININ.PureCloudApi.Model
             this.Bucket = Bucket;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets Name
@@ -54,11 +54,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class WorkspaceCreate {\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Bucket: ").Append(Bucket).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -114,13 +113,10 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.Bucket != null)
                     hash = hash * 59 + this.Bucket.GetHashCode();
-                
                 return hash;
             }
         }

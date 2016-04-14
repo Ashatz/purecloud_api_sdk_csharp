@@ -32,7 +32,7 @@ namespace ININ.PureCloudApi.Model
             this.Commands = Commands;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets Category
@@ -63,11 +63,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Category: ").Append(Category).Append("\n");
             sb.Append("  DefaultCommandId: ").Append(DefaultCommandId).Append("\n");
             sb.Append("  Commands: ").Append(Commands).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -128,16 +127,12 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Category != null)
                     hash = hash * 59 + this.Category.GetHashCode();
-                
                 if (this.DefaultCommandId != null)
                     hash = hash * 59 + this.DefaultCommandId.GetHashCode();
-                
                 if (this.Commands != null)
                     hash = hash * 59 + this.Commands.GetHashCode();
-                
                 return hash;
             }
         }

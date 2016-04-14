@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new AccountOverview();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of AccountOverview
@@ -50,79 +50,70 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<AccountOverview> (instance, "instance is a AccountOverview");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'IsSuperUser' 
+        /// Test the property 'IsSuperUser'
         /// </summary>
         [Test]
         public void IsSuperUserTest()
         {
-            // TODO: unit test for the property 'IsSuperUser' 
+            // TODO: unit test for the property 'IsSuperUser'
         }
-        
         /// <summary>
-        /// Test the property 'HasAccountNumber' 
+        /// Test the property 'HasAccountNumber'
         /// </summary>
         [Test]
         public void HasAccountNumberTest()
         {
-            // TODO: unit test for the property 'HasAccountNumber' 
+            // TODO: unit test for the property 'HasAccountNumber'
         }
-        
         /// <summary>
-        /// Test the property 'UsageCharges' 
+        /// Test the property 'UsageCharges'
         /// </summary>
         [Test]
         public void UsageChargesTest()
         {
-            // TODO: unit test for the property 'UsageCharges' 
+            // TODO: unit test for the property 'UsageCharges'
         }
-        
         /// <summary>
-        /// Test the property 'DomesticChargesTotal' 
+        /// Test the property 'DomesticChargesTotal'
         /// </summary>
         [Test]
         public void DomesticChargesTotalTest()
         {
-            // TODO: unit test for the property 'DomesticChargesTotal' 
+            // TODO: unit test for the property 'DomesticChargesTotal'
         }
-        
         /// <summary>
-        /// Test the property 'InternationalChargesTotal' 
+        /// Test the property 'InternationalChargesTotal'
         /// </summary>
         [Test]
         public void InternationalChargesTotalTest()
         {
-            // TODO: unit test for the property 'InternationalChargesTotal' 
+            // TODO: unit test for the property 'InternationalChargesTotal'
         }
-        
         /// <summary>
-        /// Test the property 'SelfUri' 
+        /// Test the property 'SelfUri'
         /// </summary>
         [Test]
         public void SelfUriTest()
         {
-            // TODO: unit test for the property 'SelfUri' 
+            // TODO: unit test for the property 'SelfUri'
         }
-        
 
     }
 

@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new TransferRequest();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of TransferRequest
@@ -50,52 +50,46 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<TransferRequest> (instance, "instance is a TransferRequest");
         }
 
-        
         /// <summary>
-        /// Test the property 'UserId' 
+        /// Test the property 'UserId'
         /// </summary>
         [Test]
         public void UserIdTest()
         {
-            // TODO: unit test for the property 'UserId' 
+            // TODO: unit test for the property 'UserId'
         }
-        
         /// <summary>
-        /// Test the property 'Address' 
+        /// Test the property 'Address'
         /// </summary>
         [Test]
         public void AddressTest()
         {
-            // TODO: unit test for the property 'Address' 
+            // TODO: unit test for the property 'Address'
         }
-        
         /// <summary>
-        /// Test the property 'UserName' 
+        /// Test the property 'UserName'
         /// </summary>
         [Test]
         public void UserNameTest()
         {
-            // TODO: unit test for the property 'UserName' 
+            // TODO: unit test for the property 'UserName'
         }
-        
         /// <summary>
-        /// Test the property 'QueueId' 
+        /// Test the property 'QueueId'
         /// </summary>
         [Test]
         public void QueueIdTest()
         {
-            // TODO: unit test for the property 'QueueId' 
+            // TODO: unit test for the property 'QueueId'
         }
-        
         /// <summary>
-        /// Test the property 'Voicemail' 
+        /// Test the property 'Voicemail'
         /// </summary>
         [Test]
         public void VoicemailTest()
         {
-            // TODO: unit test for the property 'Voicemail' 
+            // TODO: unit test for the property 'Voicemail'
         }
-        
 
     }
 

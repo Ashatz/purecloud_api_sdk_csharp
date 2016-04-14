@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new CalibrationAssignment();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of CalibrationAssignment
@@ -50,43 +50,38 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<CalibrationAssignment> (instance, "instance is a CalibrationAssignment");
         }
 
-        
         /// <summary>
-        /// Test the property 'Calibrator' 
+        /// Test the property 'Calibrator'
         /// </summary>
         [Test]
         public void CalibratorTest()
         {
-            // TODO: unit test for the property 'Calibrator' 
+            // TODO: unit test for the property 'Calibrator'
         }
-        
         /// <summary>
-        /// Test the property 'Evaluators' 
+        /// Test the property 'Evaluators'
         /// </summary>
         [Test]
         public void EvaluatorsTest()
         {
-            // TODO: unit test for the property 'Evaluators' 
+            // TODO: unit test for the property 'Evaluators'
         }
-        
         /// <summary>
-        /// Test the property 'EvaluationForm' 
+        /// Test the property 'EvaluationForm'
         /// </summary>
         [Test]
         public void EvaluationFormTest()
         {
-            // TODO: unit test for the property 'EvaluationForm' 
+            // TODO: unit test for the property 'EvaluationForm'
         }
-        
         /// <summary>
-        /// Test the property 'ExpertEvaluator' 
+        /// Test the property 'ExpertEvaluator'
         /// </summary>
         [Test]
         public void ExpertEvaluatorTest()
         {
-            // TODO: unit test for the property 'ExpertEvaluator' 
+            // TODO: unit test for the property 'ExpertEvaluator'
         }
-        
 
     }
 

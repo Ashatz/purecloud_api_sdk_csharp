@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new MediaParticipantRequest();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of MediaParticipantRequest
@@ -50,70 +50,62 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<MediaParticipantRequest> (instance, "instance is a MediaParticipantRequest");
         }
 
-        
         /// <summary>
-        /// Test the property 'Wrapup' 
+        /// Test the property 'Wrapup'
         /// </summary>
         [Test]
         public void WrapupTest()
         {
-            // TODO: unit test for the property 'Wrapup' 
+            // TODO: unit test for the property 'Wrapup'
         }
-        
         /// <summary>
-        /// Test the property 'State' 
+        /// Test the property 'State'
         /// </summary>
         [Test]
         public void StateTest()
         {
-            // TODO: unit test for the property 'State' 
+            // TODO: unit test for the property 'State'
         }
-        
         /// <summary>
-        /// Test the property 'Recording' 
+        /// Test the property 'Recording'
         /// </summary>
         [Test]
         public void RecordingTest()
         {
-            // TODO: unit test for the property 'Recording' 
+            // TODO: unit test for the property 'Recording'
         }
-        
         /// <summary>
-        /// Test the property 'Muted' 
+        /// Test the property 'Muted'
         /// </summary>
         [Test]
         public void MutedTest()
         {
-            // TODO: unit test for the property 'Muted' 
+            // TODO: unit test for the property 'Muted'
         }
-        
         /// <summary>
-        /// Test the property 'Confined' 
+        /// Test the property 'Confined'
         /// </summary>
         [Test]
         public void ConfinedTest()
         {
-            // TODO: unit test for the property 'Confined' 
+            // TODO: unit test for the property 'Confined'
         }
-        
         /// <summary>
-        /// Test the property 'Held' 
+        /// Test the property 'Held'
         /// </summary>
         [Test]
         public void HeldTest()
         {
-            // TODO: unit test for the property 'Held' 
+            // TODO: unit test for the property 'Held'
         }
-        
         /// <summary>
-        /// Test the property 'WrapupSkipped' 
+        /// Test the property 'WrapupSkipped'
         /// </summary>
         [Test]
         public void WrapupSkippedTest()
         {
-            // TODO: unit test for the property 'WrapupSkipped' 
+            // TODO: unit test for the property 'WrapupSkipped'
         }
-        
 
     }
 

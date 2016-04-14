@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new Carrier();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of Carrier
@@ -50,79 +50,70 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<Carrier> (instance, "instance is a Carrier");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'AccountManager' 
+        /// Test the property 'AccountManager'
         /// </summary>
         [Test]
         public void AccountManagerTest()
         {
-            // TODO: unit test for the property 'AccountManager' 
+            // TODO: unit test for the property 'AccountManager'
         }
-        
         /// <summary>
-        /// Test the property 'Support' 
+        /// Test the property 'Support'
         /// </summary>
         [Test]
         public void SupportTest()
         {
-            // TODO: unit test for the property 'Support' 
+            // TODO: unit test for the property 'Support'
         }
-        
         /// <summary>
-        /// Test the property 'NocSupport' 
+        /// Test the property 'NocSupport'
         /// </summary>
         [Test]
         public void NocSupportTest()
         {
-            // TODO: unit test for the property 'NocSupport' 
+            // TODO: unit test for the property 'NocSupport'
         }
-        
         /// <summary>
-        /// Test the property 'Services' 
+        /// Test the property 'Services'
         /// </summary>
         [Test]
         public void ServicesTest()
         {
-            // TODO: unit test for the property 'Services' 
+            // TODO: unit test for the property 'Services'
         }
-        
         /// <summary>
-        /// Test the property 'SelfUri' 
+        /// Test the property 'SelfUri'
         /// </summary>
         [Test]
         public void SelfUriTest()
         {
-            // TODO: unit test for the property 'SelfUri' 
+            // TODO: unit test for the property 'SelfUri'
         }
-        
         /// <summary>
-        /// Test the property 'Address' 
+        /// Test the property 'Address'
         /// </summary>
         [Test]
         public void AddressTest()
         {
-            // TODO: unit test for the property 'Address' 
+            // TODO: unit test for the property 'Address'
         }
-        
 
     }
 

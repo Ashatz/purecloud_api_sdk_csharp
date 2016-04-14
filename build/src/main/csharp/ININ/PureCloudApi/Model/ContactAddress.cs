@@ -38,7 +38,7 @@ namespace ININ.PureCloudApi.Model
             this.CountryCode = CountryCode;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets Address1
@@ -90,11 +90,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  State: ").Append(State).Append("\n");
             sb.Append("  PostalCode: ").Append(PostalCode).Append("\n");
             sb.Append("  CountryCode: ").Append(CountryCode).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -170,25 +169,18 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Address1 != null)
                     hash = hash * 59 + this.Address1.GetHashCode();
-                
                 if (this.Address2 != null)
                     hash = hash * 59 + this.Address2.GetHashCode();
-                
                 if (this.City != null)
                     hash = hash * 59 + this.City.GetHashCode();
-                
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
-                
                 if (this.PostalCode != null)
                     hash = hash * 59 + this.PostalCode.GetHashCode();
-                
                 if (this.CountryCode != null)
                     hash = hash * 59 + this.CountryCode.GetHashCode();
-                
                 return hash;
             }
         }

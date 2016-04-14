@@ -17,9 +17,12 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class AnalyticsQueryFilter :  IEquatable<AnalyticsQueryFilter>
     { 
-    
+
+        /// <summary>
+        /// Gets or Sets Type
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum TypeEnum {
+                public enum TypeEnum {
             
             [EnumMember(Value = "and")]
             And,
@@ -27,6 +30,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "or")]
             Or
         }
+
         
         /// <summary>
         /// Gets or Sets Type
@@ -48,12 +52,12 @@ namespace ININ.PureCloudApi.Model
             this.Predicates = Predicates;
             
         }
-        
+
     
         /// <summary>
-        /// Boolean 'and/or' logic with up to two-levels of nesting
+        /// Boolean &#39;and/or&#39; logic with up to two-levels of nesting
         /// </summary>
-        /// <value>Boolean 'and/or' logic with up to two-levels of nesting</value>
+        /// <value>Boolean &#39;and/or&#39; logic with up to two-levels of nesting</value>
         [DataMember(Name="clauses", EmitDefaultValue=false)]
         public List<AnalyticsQueryClause> Clauses { get; set; }
     
@@ -75,11 +79,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Clauses: ").Append(Clauses).Append("\n");
             sb.Append("  Predicates: ").Append(Predicates).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -140,16 +143,12 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
                 if (this.Clauses != null)
                     hash = hash * 59 + this.Clauses.GetHashCode();
-                
                 if (this.Predicates != null)
                     hash = hash * 59 + this.Predicates.GetHashCode();
-                
                 return hash;
             }
         }

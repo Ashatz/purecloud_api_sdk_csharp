@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new AuditMessage();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of AuditMessage
@@ -50,151 +50,134 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<AuditMessage> (instance, "instance is a AuditMessage");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'User' 
+        /// Test the property 'User'
         /// </summary>
         [Test]
         public void UserTest()
         {
-            // TODO: unit test for the property 'User' 
+            // TODO: unit test for the property 'User'
         }
-        
         /// <summary>
-        /// Test the property 'CorrelationId' 
+        /// Test the property 'CorrelationId'
         /// </summary>
         [Test]
         public void CorrelationIdTest()
         {
-            // TODO: unit test for the property 'CorrelationId' 
+            // TODO: unit test for the property 'CorrelationId'
         }
-        
         /// <summary>
-        /// Test the property 'TransactionId' 
+        /// Test the property 'TransactionId'
         /// </summary>
         [Test]
         public void TransactionIdTest()
         {
-            // TODO: unit test for the property 'TransactionId' 
+            // TODO: unit test for the property 'TransactionId'
         }
-        
         /// <summary>
-        /// Test the property 'TransactionInitiator' 
+        /// Test the property 'TransactionInitiator'
         /// </summary>
         [Test]
         public void TransactionInitiatorTest()
         {
-            // TODO: unit test for the property 'TransactionInitiator' 
+            // TODO: unit test for the property 'TransactionInitiator'
         }
-        
         /// <summary>
-        /// Test the property 'Application' 
+        /// Test the property 'Application'
         /// </summary>
         [Test]
         public void ApplicationTest()
         {
-            // TODO: unit test for the property 'Application' 
+            // TODO: unit test for the property 'Application'
         }
-        
         /// <summary>
-        /// Test the property 'ServiceName' 
+        /// Test the property 'ServiceName'
         /// </summary>
         [Test]
         public void ServiceNameTest()
         {
-            // TODO: unit test for the property 'ServiceName' 
+            // TODO: unit test for the property 'ServiceName'
         }
-        
         /// <summary>
-        /// Test the property 'Level' 
+        /// Test the property 'Level'
         /// </summary>
         [Test]
         public void LevelTest()
         {
-            // TODO: unit test for the property 'Level' 
+            // TODO: unit test for the property 'Level'
         }
-        
         /// <summary>
-        /// Test the property 'Timestamp' 
+        /// Test the property 'Timestamp'
         /// </summary>
         [Test]
         public void TimestampTest()
         {
-            // TODO: unit test for the property 'Timestamp' 
+            // TODO: unit test for the property 'Timestamp'
         }
-        
         /// <summary>
-        /// Test the property 'ReceivedTimestamp' 
+        /// Test the property 'ReceivedTimestamp'
         /// </summary>
         [Test]
         public void ReceivedTimestampTest()
         {
-            // TODO: unit test for the property 'ReceivedTimestamp' 
+            // TODO: unit test for the property 'ReceivedTimestamp'
         }
-        
         /// <summary>
-        /// Test the property 'Status' 
+        /// Test the property 'Status'
         /// </summary>
         [Test]
         public void StatusTest()
         {
-            // TODO: unit test for the property 'Status' 
+            // TODO: unit test for the property 'Status'
         }
-        
         /// <summary>
-        /// Test the property 'ActionContext' 
+        /// Test the property 'ActionContext'
         /// </summary>
         [Test]
         public void ActionContextTest()
         {
-            // TODO: unit test for the property 'ActionContext' 
+            // TODO: unit test for the property 'ActionContext'
         }
-        
         /// <summary>
-        /// Test the property 'Action' 
+        /// Test the property 'Action'
         /// </summary>
         [Test]
         public void ActionTest()
         {
-            // TODO: unit test for the property 'Action' 
+            // TODO: unit test for the property 'Action'
         }
-        
         /// <summary>
-        /// Test the property 'Changes' 
+        /// Test the property 'Changes'
         /// </summary>
         [Test]
         public void ChangesTest()
         {
-            // TODO: unit test for the property 'Changes' 
+            // TODO: unit test for the property 'Changes'
         }
-        
         /// <summary>
-        /// Test the property 'Entity' 
+        /// Test the property 'Entity'
         /// </summary>
         [Test]
         public void EntityTest()
         {
-            // TODO: unit test for the property 'Entity' 
+            // TODO: unit test for the property 'Entity'
         }
-        
         /// <summary>
-        /// Test the property 'ServiceContext' 
+        /// Test the property 'ServiceContext'
         /// </summary>
         [Test]
         public void ServiceContextTest()
         {
-            // TODO: unit test for the property 'ServiceContext' 
+            // TODO: unit test for the property 'ServiceContext'
         }
-        
 
     }
 

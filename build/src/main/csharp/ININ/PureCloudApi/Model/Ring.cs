@@ -30,7 +30,7 @@ namespace ININ.PureCloudApi.Model
             this.Actions = Actions;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets ExpansionCriteria
@@ -54,11 +54,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class Ring {\n");
             sb.Append("  ExpansionCriteria: ").Append(ExpansionCriteria).Append("\n");
             sb.Append("  Actions: ").Append(Actions).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -114,13 +113,10 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ExpansionCriteria != null)
                     hash = hash * 59 + this.ExpansionCriteria.GetHashCode();
-                
                 if (this.Actions != null)
                     hash = hash * 59 + this.Actions.GetHashCode();
-                
                 return hash;
             }
         }

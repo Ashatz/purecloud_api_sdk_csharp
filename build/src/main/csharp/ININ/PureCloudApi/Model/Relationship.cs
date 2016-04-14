@@ -24,9 +24,9 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Name">Name.</param>
         /// <param name="User">The user associated with the external organization (required).</param>
         /// <param name="ExternalOrganization">The external organization this relationship is attached to (required).</param>
-        /// <param name="RelationshipProperty">The relationship or role of the user to this external organization.Examples: Account Manager, Sales Engineer, Implementation Consultant (required).</param>
+        /// <param name="_Relationship">The relationship or role of the user to this external organization.Examples: Account Manager, Sales Engineer, Implementation Consultant (required).</param>
 
-        public Relationship(string Name = null, User User = null, ExternalOrganization ExternalOrganization = null, string RelationshipProperty = null)
+        public Relationship(string Name = null, User User = null, ExternalOrganization ExternalOrganization = null, string _Relationship = null)
         {
             // to ensure "User" is required (not null)
             if (User == null)
@@ -46,19 +46,19 @@ namespace ININ.PureCloudApi.Model
             {
                 this.ExternalOrganization = ExternalOrganization;
             }
-            // to ensure "RelationshipProperty" is required (not null)
-            if (RelationshipProperty == null)
+            // to ensure "_Relationship" is required (not null)
+            if (_Relationship == null)
             {
-                throw new InvalidDataException("RelationshipProperty is a required property for Relationship and cannot be null");
+                throw new InvalidDataException("_Relationship is a required property for Relationship and cannot be null");
             }
             else
             {
-                this.RelationshipProperty = RelationshipProperty;
+                this._Relationship = _Relationship;
             }
             this.Name = Name;
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -92,7 +92,7 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <value>The relationship or role of the user to this external organization.Examples: Account Manager, Sales Engineer, Implementation Consultant</value>
         [DataMember(Name="relationship", EmitDefaultValue=false)]
-        public string RelationshipProperty { get; set; }
+        public string _Relationship { get; set; }
     
         /// <summary>
         /// The URI for this object
@@ -113,13 +113,12 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  ExternalOrganization: ").Append(ExternalOrganization).Append("\n");
-            sb.Append("  RelationshipProperty: ").Append(RelationshipProperty).Append("\n");
+            sb.Append("  _Relationship: ").Append(_Relationship).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -173,9 +172,9 @@ namespace ININ.PureCloudApi.Model
                     this.ExternalOrganization.Equals(other.ExternalOrganization)
                 ) &&
                 (
-                    this.RelationshipProperty == other.RelationshipProperty ||
-                    this.RelationshipProperty != null &&
-                    this.RelationshipProperty.Equals(other.RelationshipProperty)
+                    this._Relationship == other._Relationship ||
+                    this._Relationship != null &&
+                    this._Relationship.Equals(other._Relationship)
                 ) &&
                 (
                     this.SelfUri == other.SelfUri ||
@@ -195,25 +194,18 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();
-                
                 if (this.ExternalOrganization != null)
                     hash = hash * 59 + this.ExternalOrganization.GetHashCode();
-                
-                if (this.RelationshipProperty != null)
-                    hash = hash * 59 + this.RelationshipProperty.GetHashCode();
-                
+                if (this._Relationship != null)
+                    hash = hash * 59 + this._Relationship.GetHashCode();
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 return hash;
             }
         }

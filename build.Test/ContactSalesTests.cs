@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new ContactSales();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of ContactSales
@@ -50,124 +50,110 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<ContactSales> (instance, "instance is a ContactSales");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'Email' 
+        /// Test the property 'Email'
         /// </summary>
         [Test]
         public void EmailTest()
         {
-            // TODO: unit test for the property 'Email' 
+            // TODO: unit test for the property 'Email'
         }
-        
         /// <summary>
-        /// Test the property 'FirstName' 
+        /// Test the property 'FirstName'
         /// </summary>
         [Test]
         public void FirstNameTest()
         {
-            // TODO: unit test for the property 'FirstName' 
+            // TODO: unit test for the property 'FirstName'
         }
-        
         /// <summary>
-        /// Test the property 'LastName' 
+        /// Test the property 'LastName'
         /// </summary>
         [Test]
         public void LastNameTest()
         {
-            // TODO: unit test for the property 'LastName' 
+            // TODO: unit test for the property 'LastName'
         }
-        
         /// <summary>
-        /// Test the property 'ContactPhone' 
+        /// Test the property 'ContactPhone'
         /// </summary>
         [Test]
         public void ContactPhoneTest()
         {
-            // TODO: unit test for the property 'ContactPhone' 
+            // TODO: unit test for the property 'ContactPhone'
         }
-        
         /// <summary>
-        /// Test the property 'Country' 
+        /// Test the property 'Country'
         /// </summary>
         [Test]
         public void CountryTest()
         {
-            // TODO: unit test for the property 'Country' 
+            // TODO: unit test for the property 'Country'
         }
-        
         /// <summary>
-        /// Test the property 'Title' 
+        /// Test the property 'Title'
         /// </summary>
         [Test]
         public void TitleTest()
         {
-            // TODO: unit test for the property 'Title' 
+            // TODO: unit test for the property 'Title'
         }
-        
         /// <summary>
-        /// Test the property 'Message' 
+        /// Test the property 'Message'
         /// </summary>
         [Test]
         public void MessageTest()
         {
-            // TODO: unit test for the property 'Message' 
+            // TODO: unit test for the property 'Message'
         }
-        
         /// <summary>
-        /// Test the property 'Language' 
+        /// Test the property 'Language'
         /// </summary>
         [Test]
         public void LanguageTest()
         {
-            // TODO: unit test for the property 'Language' 
+            // TODO: unit test for the property 'Language'
         }
-        
         /// <summary>
-        /// Test the property 'ProductName' 
+        /// Test the property 'ProductName'
         /// </summary>
         [Test]
         public void ProductNameTest()
         {
-            // TODO: unit test for the property 'ProductName' 
+            // TODO: unit test for the property 'ProductName'
         }
-        
         /// <summary>
-        /// Test the property 'QuoteId' 
+        /// Test the property 'QuoteId'
         /// </summary>
         [Test]
         public void QuoteIdTest()
         {
-            // TODO: unit test for the property 'QuoteId' 
+            // TODO: unit test for the property 'QuoteId'
         }
-        
         /// <summary>
-        /// Test the property 'SelfUri' 
+        /// Test the property 'SelfUri'
         /// </summary>
         [Test]
         public void SelfUriTest()
         {
-            // TODO: unit test for the property 'SelfUri' 
+            // TODO: unit test for the property 'SelfUri'
         }
-        
 
     }
 

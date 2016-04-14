@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new Gistener();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of Gistener
@@ -50,124 +50,110 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<Gistener> (instance, "instance is a Gistener");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'DateCreated' 
+        /// Test the property 'DateCreated'
         /// </summary>
         [Test]
         public void DateCreatedTest()
         {
-            // TODO: unit test for the property 'DateCreated' 
+            // TODO: unit test for the property 'DateCreated'
         }
-        
         /// <summary>
-        /// Test the property 'DateModified' 
+        /// Test the property 'DateModified'
         /// </summary>
         [Test]
         public void DateModifiedTest()
         {
-            // TODO: unit test for the property 'DateModified' 
+            // TODO: unit test for the property 'DateModified'
         }
-        
         /// <summary>
-        /// Test the property 'Enabled' 
+        /// Test the property 'Enabled'
         /// </summary>
         [Test]
         public void EnabledTest()
         {
-            // TODO: unit test for the property 'Enabled' 
+            // TODO: unit test for the property 'Enabled'
         }
-        
         /// <summary>
-        /// Test the property 'AnyWords' 
+        /// Test the property 'AnyWords'
         /// </summary>
         [Test]
         public void AnyWordsTest()
         {
-            // TODO: unit test for the property 'AnyWords' 
+            // TODO: unit test for the property 'AnyWords'
         }
-        
         /// <summary>
-        /// Test the property 'AllWords' 
+        /// Test the property 'AllWords'
         /// </summary>
         [Test]
         public void AllWordsTest()
         {
-            // TODO: unit test for the property 'AllWords' 
+            // TODO: unit test for the property 'AllWords'
         }
-        
         /// <summary>
-        /// Test the property 'ExcludeWords' 
+        /// Test the property 'ExcludeWords'
         /// </summary>
         [Test]
         public void ExcludeWordsTest()
         {
-            // TODO: unit test for the property 'ExcludeWords' 
+            // TODO: unit test for the property 'ExcludeWords'
         }
-        
         /// <summary>
-        /// Test the property 'ExactPhrase' 
+        /// Test the property 'ExactPhrase'
         /// </summary>
         [Test]
         public void ExactPhraseTest()
         {
-            // TODO: unit test for the property 'ExactPhrase' 
+            // TODO: unit test for the property 'ExactPhrase'
         }
-        
         /// <summary>
-        /// Test the property 'GroupTags' 
+        /// Test the property 'GroupTags'
         /// </summary>
         [Test]
         public void GroupTagsTest()
         {
-            // TODO: unit test for the property 'GroupTags' 
+            // TODO: unit test for the property 'GroupTags'
         }
-        
         /// <summary>
-        /// Test the property 'SocialAccount' 
+        /// Test the property 'SocialAccount'
         /// </summary>
         [Test]
         public void SocialAccountTest()
         {
-            // TODO: unit test for the property 'SocialAccount' 
+            // TODO: unit test for the property 'SocialAccount'
         }
-        
         /// <summary>
-        /// Test the property 'Queue' 
+        /// Test the property 'Queue'
         /// </summary>
         [Test]
         public void QueueTest()
         {
-            // TODO: unit test for the property 'Queue' 
+            // TODO: unit test for the property 'Queue'
         }
-        
         /// <summary>
-        /// Test the property 'SelfUri' 
+        /// Test the property 'SelfUri'
         /// </summary>
         [Test]
         public void SelfUriTest()
         {
-            // TODO: unit test for the property 'SelfUri' 
+            // TODO: unit test for the property 'SelfUri'
         }
-        
 
     }
 

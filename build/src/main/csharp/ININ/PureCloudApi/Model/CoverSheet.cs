@@ -22,7 +22,7 @@ namespace ININ.PureCloudApi.Model
         /// Initializes a new instance of the <see cref="CoverSheet" />class.
         /// </summary>
         /// <param name="Notes">Text to be added to the coversheet.</param>
-        /// <param name="Locale">Locale, e.g. = en-US.</param>
+        /// <param name="Locale">Locale, e.g. &#x3D; en-US.</param>
 
         public CoverSheet(string Notes = null, string Locale = null)
         {
@@ -30,7 +30,7 @@ namespace ININ.PureCloudApi.Model
             this.Locale = Locale;
             
         }
-        
+
     
         /// <summary>
         /// Text to be added to the coversheet
@@ -40,9 +40,9 @@ namespace ININ.PureCloudApi.Model
         public string Notes { get; set; }
     
         /// <summary>
-        /// Locale, e.g. = en-US
+        /// Locale, e.g. &#x3D; en-US
         /// </summary>
-        /// <value>Locale, e.g. = en-US</value>
+        /// <value>Locale, e.g. &#x3D; en-US</value>
         [DataMember(Name="locale", EmitDefaultValue=false)]
         public string Locale { get; set; }
     
@@ -56,11 +56,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class CoverSheet {\n");
             sb.Append("  Notes: ").Append(Notes).Append("\n");
             sb.Append("  Locale: ").Append(Locale).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -116,13 +115,10 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Notes != null)
                     hash = hash * 59 + this.Notes.GetHashCode();
-                
                 if (this.Locale != null)
                     hash = hash * 59 + this.Locale.GetHashCode();
-                
                 return hash;
             }
         }

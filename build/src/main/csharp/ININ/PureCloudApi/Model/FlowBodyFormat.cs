@@ -30,7 +30,7 @@ namespace ININ.PureCloudApi.Model
             this.Description = Description;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets SchemaUri
@@ -54,11 +54,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class FlowBodyFormat {\n");
             sb.Append("  SchemaUri: ").Append(SchemaUri).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -114,13 +113,10 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.SchemaUri != null)
                     hash = hash * 59 + this.SchemaUri.GetHashCode();
-                
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
-                
                 return hash;
             }
         }

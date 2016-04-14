@@ -30,7 +30,7 @@ namespace ININ.PureCloudApi.Model
             this.AppVersion = AppVersion;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets AppId
@@ -54,11 +54,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class App {\n");
             sb.Append("  AppId: ").Append(AppId).Append("\n");
             sb.Append("  AppVersion: ").Append(AppVersion).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -114,13 +113,10 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.AppId != null)
                     hash = hash * 59 + this.AppId.GetHashCode();
-                
                 if (this.AppVersion != null)
                     hash = hash * 59 + this.AppVersion.GetHashCode();
-                
                 return hash;
             }
         }

@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new RetentionDuration();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of RetentionDuration
@@ -50,25 +50,22 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<RetentionDuration> (instance, "instance is a RetentionDuration");
         }
 
-        
         /// <summary>
-        /// Test the property 'ArchiveRetention' 
+        /// Test the property 'ArchiveRetention'
         /// </summary>
         [Test]
         public void ArchiveRetentionTest()
         {
-            // TODO: unit test for the property 'ArchiveRetention' 
+            // TODO: unit test for the property 'ArchiveRetention'
         }
-        
         /// <summary>
-        /// Test the property 'DeleteRetention' 
+        /// Test the property 'DeleteRetention'
         /// </summary>
         [Test]
         public void DeleteRetentionTest()
         {
-            // TODO: unit test for the property 'DeleteRetention' 
+            // TODO: unit test for the property 'DeleteRetention'
         }
-        
 
     }
 

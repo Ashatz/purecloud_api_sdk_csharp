@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new CampaignStats();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of CampaignStats
@@ -50,43 +50,38 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<CampaignStats> (instance, "instance is a CampaignStats");
         }
 
-        
         /// <summary>
-        /// Test the property 'ContactRate' 
+        /// Test the property 'ContactRate'
         /// </summary>
         [Test]
         public void ContactRateTest()
         {
-            // TODO: unit test for the property 'ContactRate' 
+            // TODO: unit test for the property 'ContactRate'
         }
-        
         /// <summary>
-        /// Test the property 'IdleAgents' 
+        /// Test the property 'IdleAgents'
         /// </summary>
         [Test]
         public void IdleAgentsTest()
         {
-            // TODO: unit test for the property 'IdleAgents' 
+            // TODO: unit test for the property 'IdleAgents'
         }
-        
         /// <summary>
-        /// Test the property 'AdjustedCallsPerAgent' 
+        /// Test the property 'AdjustedCallsPerAgent'
         /// </summary>
         [Test]
         public void AdjustedCallsPerAgentTest()
         {
-            // TODO: unit test for the property 'AdjustedCallsPerAgent' 
+            // TODO: unit test for the property 'AdjustedCallsPerAgent'
         }
-        
         /// <summary>
-        /// Test the property 'OutstandingCalls' 
+        /// Test the property 'OutstandingCalls'
         /// </summary>
         [Test]
         public void OutstandingCallsTest()
         {
-            // TODO: unit test for the property 'OutstandingCalls' 
+            // TODO: unit test for the property 'OutstandingCalls'
         }
-        
 
     }
 

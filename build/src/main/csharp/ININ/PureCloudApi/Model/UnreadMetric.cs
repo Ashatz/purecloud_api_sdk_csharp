@@ -28,7 +28,7 @@ namespace ININ.PureCloudApi.Model
             this.Count = Count;
             
         }
-        
+
     
         /// <summary>
         /// The count of unread alerts for a specific rule type.
@@ -46,11 +46,10 @@ namespace ININ.PureCloudApi.Model
             var sb = new StringBuilder();
             sb.Append("class UnreadMetric {\n");
             sb.Append("  Count: ").Append(Count).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -101,10 +100,8 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Count != null)
                     hash = hash * 59 + this.Count.GetHashCode();
-                
                 return hash;
             }
         }

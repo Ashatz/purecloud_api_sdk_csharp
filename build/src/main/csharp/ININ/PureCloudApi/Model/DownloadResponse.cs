@@ -30,7 +30,7 @@ namespace ININ.PureCloudApi.Model
             this.ImageUri = ImageUri;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets ContentLocationUri
@@ -54,11 +54,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class DownloadResponse {\n");
             sb.Append("  ContentLocationUri: ").Append(ContentLocationUri).Append("\n");
             sb.Append("  ImageUri: ").Append(ImageUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -114,13 +113,10 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ContentLocationUri != null)
                     hash = hash * 59 + this.ContentLocationUri.GetHashCode();
-                
                 if (this.ImageUri != null)
                     hash = hash * 59 + this.ImageUri.GetHashCode();
-                
                 return hash;
             }
         }

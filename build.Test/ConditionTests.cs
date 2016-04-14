@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new Condition();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of Condition
@@ -50,70 +50,62 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<Condition> (instance, "instance is a Condition");
         }
 
-        
         /// <summary>
-        /// Test the property 'Type' 
+        /// Test the property 'Type'
         /// </summary>
         [Test]
         public void TypeTest()
         {
-            // TODO: unit test for the property 'Type' 
+            // TODO: unit test for the property 'Type'
         }
-        
         /// <summary>
-        /// Test the property 'Inverted' 
+        /// Test the property 'Inverted'
         /// </summary>
         [Test]
         public void InvertedTest()
         {
-            // TODO: unit test for the property 'Inverted' 
+            // TODO: unit test for the property 'Inverted'
         }
-        
         /// <summary>
-        /// Test the property 'AttributeName' 
+        /// Test the property 'AttributeName'
         /// </summary>
         [Test]
         public void AttributeNameTest()
         {
-            // TODO: unit test for the property 'AttributeName' 
+            // TODO: unit test for the property 'AttributeName'
         }
-        
         /// <summary>
-        /// Test the property 'Value' 
+        /// Test the property 'Value'
         /// </summary>
         [Test]
         public void ValueTest()
         {
-            // TODO: unit test for the property 'Value' 
+            // TODO: unit test for the property 'Value'
         }
-        
         /// <summary>
-        /// Test the property 'ValueType' 
+        /// Test the property 'ValueType'
         /// </summary>
         [Test]
         public void ValueTypeTest()
         {
-            // TODO: unit test for the property 'ValueType' 
+            // TODO: unit test for the property 'ValueType'
         }
-        
         /// <summary>
-        /// Test the property '_Operator' 
+        /// Test the property '_Operator'
         /// </summary>
         [Test]
         public void _OperatorTest()
         {
-            // TODO: unit test for the property '_Operator' 
+            // TODO: unit test for the property '_Operator'
         }
-        
         /// <summary>
-        /// Test the property 'Codes' 
+        /// Test the property 'Codes'
         /// </summary>
         [Test]
         public void CodesTest()
         {
-            // TODO: unit test for the property 'Codes' 
+            // TODO: unit test for the property 'Codes'
         }
-        
 
     }
 

@@ -30,7 +30,7 @@ namespace ININ.PureCloudApi.Model
             this.Answers = Answers;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets EvaluationForm
@@ -54,11 +54,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class EvaluationFormAndScoringSet {\n");
             sb.Append("  EvaluationForm: ").Append(EvaluationForm).Append("\n");
             sb.Append("  Answers: ").Append(Answers).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -114,13 +113,10 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.EvaluationForm != null)
                     hash = hash * 59 + this.EvaluationForm.GetHashCode();
-                
                 if (this.Answers != null)
                     hash = hash * 59 + this.Answers.GetHashCode();
-                
                 return hash;
             }
         }

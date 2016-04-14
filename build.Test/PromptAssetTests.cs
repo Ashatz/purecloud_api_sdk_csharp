@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new PromptAsset();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of PromptAsset
@@ -50,115 +50,102 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<PromptAsset> (instance, "instance is a PromptAsset");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'PromptId' 
+        /// Test the property 'PromptId'
         /// </summary>
         [Test]
         public void PromptIdTest()
         {
-            // TODO: unit test for the property 'PromptId' 
+            // TODO: unit test for the property 'PromptId'
         }
-        
         /// <summary>
-        /// Test the property 'Language' 
+        /// Test the property 'Language'
         /// </summary>
         [Test]
         public void LanguageTest()
         {
-            // TODO: unit test for the property 'Language' 
+            // TODO: unit test for the property 'Language'
         }
-        
         /// <summary>
-        /// Test the property 'MediaUri' 
+        /// Test the property 'MediaUri'
         /// </summary>
         [Test]
         public void MediaUriTest()
         {
-            // TODO: unit test for the property 'MediaUri' 
+            // TODO: unit test for the property 'MediaUri'
         }
-        
         /// <summary>
-        /// Test the property 'TtsString' 
+        /// Test the property 'TtsString'
         /// </summary>
         [Test]
         public void TtsStringTest()
         {
-            // TODO: unit test for the property 'TtsString' 
+            // TODO: unit test for the property 'TtsString'
         }
-        
         /// <summary>
-        /// Test the property 'UploadStatus' 
+        /// Test the property 'UploadStatus'
         /// </summary>
         [Test]
         public void UploadStatusTest()
         {
-            // TODO: unit test for the property 'UploadStatus' 
+            // TODO: unit test for the property 'UploadStatus'
         }
-        
         /// <summary>
-        /// Test the property 'UploadUri' 
+        /// Test the property 'UploadUri'
         /// </summary>
         [Test]
         public void UploadUriTest()
         {
-            // TODO: unit test for the property 'UploadUri' 
+            // TODO: unit test for the property 'UploadUri'
         }
-        
         /// <summary>
-        /// Test the property 'LanguageDefault' 
+        /// Test the property 'LanguageDefault'
         /// </summary>
         [Test]
         public void LanguageDefaultTest()
         {
-            // TODO: unit test for the property 'LanguageDefault' 
+            // TODO: unit test for the property 'LanguageDefault'
         }
-        
         /// <summary>
-        /// Test the property 'Tags' 
+        /// Test the property 'Tags'
         /// </summary>
         [Test]
         public void TagsTest()
         {
-            // TODO: unit test for the property 'Tags' 
+            // TODO: unit test for the property 'Tags'
         }
-        
         /// <summary>
-        /// Test the property 'DurationSeconds' 
+        /// Test the property 'DurationSeconds'
         /// </summary>
         [Test]
         public void DurationSecondsTest()
         {
-            // TODO: unit test for the property 'DurationSeconds' 
+            // TODO: unit test for the property 'DurationSeconds'
         }
-        
         /// <summary>
-        /// Test the property 'SelfUri' 
+        /// Test the property 'SelfUri'
         /// </summary>
         [Test]
         public void SelfUriTest()
         {
-            // TODO: unit test for the property 'SelfUri' 
+            // TODO: unit test for the property 'SelfUri'
         }
-        
 
     }
 

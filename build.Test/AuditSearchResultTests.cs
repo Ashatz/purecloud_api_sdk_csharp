@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new AuditSearchResult();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of AuditSearchResult
@@ -50,61 +50,54 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<AuditSearchResult> (instance, "instance is a AuditSearchResult");
         }
 
-        
         /// <summary>
-        /// Test the property 'PageNumber' 
+        /// Test the property 'PageNumber'
         /// </summary>
         [Test]
         public void PageNumberTest()
         {
-            // TODO: unit test for the property 'PageNumber' 
+            // TODO: unit test for the property 'PageNumber'
         }
-        
         /// <summary>
-        /// Test the property 'PageSize' 
+        /// Test the property 'PageSize'
         /// </summary>
         [Test]
         public void PageSizeTest()
         {
-            // TODO: unit test for the property 'PageSize' 
+            // TODO: unit test for the property 'PageSize'
         }
-        
         /// <summary>
-        /// Test the property 'Total' 
+        /// Test the property 'Total'
         /// </summary>
         [Test]
         public void TotalTest()
         {
-            // TODO: unit test for the property 'Total' 
+            // TODO: unit test for the property 'Total'
         }
-        
         /// <summary>
-        /// Test the property 'PageCount' 
+        /// Test the property 'PageCount'
         /// </summary>
         [Test]
         public void PageCountTest()
         {
-            // TODO: unit test for the property 'PageCount' 
+            // TODO: unit test for the property 'PageCount'
         }
-        
         /// <summary>
-        /// Test the property 'FacetInfo' 
+        /// Test the property 'FacetInfo'
         /// </summary>
         [Test]
         public void FacetInfoTest()
         {
-            // TODO: unit test for the property 'FacetInfo' 
+            // TODO: unit test for the property 'FacetInfo'
         }
-        
         /// <summary>
-        /// Test the property 'AuditMessages' 
+        /// Test the property 'AuditMessages'
         /// </summary>
         [Test]
         public void AuditMessagesTest()
         {
-            // TODO: unit test for the property 'AuditMessages' 
+            // TODO: unit test for the property 'AuditMessages'
         }
-        
 
     }
 

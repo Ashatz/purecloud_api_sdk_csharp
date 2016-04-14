@@ -17,9 +17,12 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class SearchRequest :  IEquatable<SearchRequest>
     { 
-    
+
+        /// <summary>
+        /// Gets or Sets SortOrder
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum SortOrderEnum {
+                public enum SortOrderEnum {
             
             [EnumMember(Value = "ASC")]
             Asc,
@@ -30,6 +33,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "SCORE")]
             Score
         }
+
         
         /// <summary>
         /// Gets or Sets SortOrder
@@ -63,7 +67,7 @@ namespace ININ.PureCloudApi.Model
             this.Expand = Expand;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets Types
@@ -130,11 +134,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  ReturnFields: ").Append(ReturnFields).Append("\n");
             sb.Append("  Aggregations: ").Append(Aggregations).Append("\n");
             sb.Append("  Expand: ").Append(Expand).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -225,34 +228,24 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Types != null)
                     hash = hash * 59 + this.Types.GetHashCode();
-                
                 if (this.SortOrder != null)
                     hash = hash * 59 + this.SortOrder.GetHashCode();
-                
                 if (this.Query != null)
                     hash = hash * 59 + this.Query.GetHashCode();
-                
                 if (this.SortBy != null)
                     hash = hash * 59 + this.SortBy.GetHashCode();
-                
                 if (this.PageSize != null)
                     hash = hash * 59 + this.PageSize.GetHashCode();
-                
                 if (this.PageNumber != null)
                     hash = hash * 59 + this.PageNumber.GetHashCode();
-                
                 if (this.ReturnFields != null)
                     hash = hash * 59 + this.ReturnFields.GetHashCode();
-                
                 if (this.Aggregations != null)
                     hash = hash * 59 + this.Aggregations.GetHashCode();
-                
                 if (this.Expand != null)
                     hash = hash * 59 + this.Expand.GetHashCode();
-                
                 return hash;
             }
         }

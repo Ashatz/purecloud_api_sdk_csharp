@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new Order();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of Order
@@ -50,52 +50,46 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<Order> (instance, "instance is a Order");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'Quote' 
+        /// Test the property 'Quote'
         /// </summary>
         [Test]
         public void QuoteTest()
         {
-            // TODO: unit test for the property 'Quote' 
+            // TODO: unit test for the property 'Quote'
         }
-        
         /// <summary>
-        /// Test the property 'EnvelopeId' 
+        /// Test the property 'EnvelopeId'
         /// </summary>
         [Test]
         public void EnvelopeIdTest()
         {
-            // TODO: unit test for the property 'EnvelopeId' 
+            // TODO: unit test for the property 'EnvelopeId'
         }
-        
         /// <summary>
-        /// Test the property 'SelfUri' 
+        /// Test the property 'SelfUri'
         /// </summary>
         [Test]
         public void SelfUriTest()
         {
-            // TODO: unit test for the property 'SelfUri' 
+            // TODO: unit test for the property 'SelfUri'
         }
-        
 
     }
 

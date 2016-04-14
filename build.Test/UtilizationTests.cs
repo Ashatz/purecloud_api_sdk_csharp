@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new Utilization();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of Utilization
@@ -50,16 +50,14 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<Utilization> (instance, "instance is a Utilization");
         }
 
-        
         /// <summary>
-        /// Test the property 'UtilizationProperty' 
+        /// Test the property '_Utilization'
         /// </summary>
         [Test]
-        public void UtilizationPropertyTest()
+        public void _UtilizationTest()
         {
-            // TODO: unit test for the property 'UtilizationProperty' 
+            // TODO: unit test for the property '_Utilization'
         }
-        
 
     }
 

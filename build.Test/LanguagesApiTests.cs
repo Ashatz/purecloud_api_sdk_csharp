@@ -61,9 +61,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'DeleteLanguageId'
             string languageId = null; // TODO: replace null with proper value
-            
             instance.DeleteLanguageId(languageId);
-             
+            
         }
         
         /// <summary>
@@ -74,9 +73,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'GetLanguageId'
             string languageId = null; // TODO: replace null with proper value
-            
             var response = instance.GetLanguageId(languageId);
-            Assert.IsInstanceOf<Language> (response, "response is Language"); 
+            Assert.IsInstanceOf<Language> (response, "response is Language");
         }
         
         /// <summary>
@@ -89,9 +87,8 @@ namespace ININ.PureCloudApi.Test
             int? pageSize = null; // TODO: replace null with proper value
             int? pageNumber = null; // TODO: replace null with proper value
             string sortOrder = null; // TODO: replace null with proper value
-            
             var response = instance.GetLanguages(pageSize, pageNumber, sortOrder);
-            Assert.IsInstanceOf<LanguageEntityListing> (response, "response is LanguageEntityListing"); 
+            Assert.IsInstanceOf<LanguageEntityListing> (response, "response is LanguageEntityListing");
         }
         
         /// <summary>
@@ -102,9 +99,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'PostLanguages'
             Language body = null; // TODO: replace null with proper value
-            
             var response = instance.PostLanguages(body);
-            Assert.IsInstanceOf<Language> (response, "response is Language"); 
+            Assert.IsInstanceOf<Language> (response, "response is Language");
         }
         
         /// <summary>
@@ -116,9 +112,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'PutLanguageId'
             string languageId = null; // TODO: replace null with proper value
             Language body = null; // TODO: replace null with proper value
-            
             var response = instance.PutLanguageId(languageId, body);
-            Assert.IsInstanceOf<Language> (response, "response is Language"); 
+            Assert.IsInstanceOf<Language> (response, "response is Language");
         }
         
     }

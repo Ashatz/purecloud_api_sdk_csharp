@@ -30,7 +30,7 @@ namespace ININ.PureCloudApi.Model
             this.Lt = Lt;
             
         }
-        
+
     
         /// <summary>
         /// Greater than or equal to
@@ -56,11 +56,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class AggregationRange {\n");
             sb.Append("  Gte: ").Append(Gte).Append("\n");
             sb.Append("  Lt: ").Append(Lt).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -116,13 +115,10 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Gte != null)
                     hash = hash * 59 + this.Gte.GetHashCode();
-                
                 if (this.Lt != null)
                     hash = hash * 59 + this.Lt.GetHashCode();
-                
                 return hash;
             }
         }

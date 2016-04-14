@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new Geolocation();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of Geolocation
@@ -50,97 +50,86 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<Geolocation> (instance, "instance is a Geolocation");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'Type' 
+        /// Test the property 'Type'
         /// </summary>
         [Test]
         public void TypeTest()
         {
-            // TODO: unit test for the property 'Type' 
+            // TODO: unit test for the property 'Type'
         }
-        
         /// <summary>
-        /// Test the property 'Primary' 
+        /// Test the property 'Primary'
         /// </summary>
         [Test]
         public void PrimaryTest()
         {
-            // TODO: unit test for the property 'Primary' 
+            // TODO: unit test for the property 'Primary'
         }
-        
         /// <summary>
-        /// Test the property 'Latitude' 
+        /// Test the property 'Latitude'
         /// </summary>
         [Test]
         public void LatitudeTest()
         {
-            // TODO: unit test for the property 'Latitude' 
+            // TODO: unit test for the property 'Latitude'
         }
-        
         /// <summary>
-        /// Test the property 'Longitude' 
+        /// Test the property 'Longitude'
         /// </summary>
         [Test]
         public void LongitudeTest()
         {
-            // TODO: unit test for the property 'Longitude' 
+            // TODO: unit test for the property 'Longitude'
         }
-        
         /// <summary>
-        /// Test the property 'Country' 
+        /// Test the property 'Country'
         /// </summary>
         [Test]
         public void CountryTest()
         {
-            // TODO: unit test for the property 'Country' 
+            // TODO: unit test for the property 'Country'
         }
-        
         /// <summary>
-        /// Test the property 'Region' 
+        /// Test the property 'Region'
         /// </summary>
         [Test]
         public void RegionTest()
         {
-            // TODO: unit test for the property 'Region' 
+            // TODO: unit test for the property 'Region'
         }
-        
         /// <summary>
-        /// Test the property 'City' 
+        /// Test the property 'City'
         /// </summary>
         [Test]
         public void CityTest()
         {
-            // TODO: unit test for the property 'City' 
+            // TODO: unit test for the property 'City'
         }
-        
         /// <summary>
-        /// Test the property 'SelfUri' 
+        /// Test the property 'SelfUri'
         /// </summary>
         [Test]
         public void SelfUriTest()
         {
-            // TODO: unit test for the property 'SelfUri' 
+            // TODO: unit test for the property 'SelfUri'
         }
-        
 
     }
 

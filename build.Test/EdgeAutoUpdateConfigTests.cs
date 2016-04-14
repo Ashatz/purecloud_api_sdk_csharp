@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new EdgeAutoUpdateConfig();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of EdgeAutoUpdateConfig
@@ -50,43 +50,38 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<EdgeAutoUpdateConfig> (instance, "instance is a EdgeAutoUpdateConfig");
         }
 
-        
         /// <summary>
-        /// Test the property 'TimeZone' 
+        /// Test the property 'TimeZone'
         /// </summary>
         [Test]
         public void TimeZoneTest()
         {
-            // TODO: unit test for the property 'TimeZone' 
+            // TODO: unit test for the property 'TimeZone'
         }
-        
         /// <summary>
-        /// Test the property 'Rrule' 
+        /// Test the property 'Rrule'
         /// </summary>
         [Test]
         public void RruleTest()
         {
-            // TODO: unit test for the property 'Rrule' 
+            // TODO: unit test for the property 'Rrule'
         }
-        
         /// <summary>
-        /// Test the property 'Start' 
+        /// Test the property 'Start'
         /// </summary>
         [Test]
         public void StartTest()
         {
-            // TODO: unit test for the property 'Start' 
+            // TODO: unit test for the property 'Start'
         }
-        
         /// <summary>
-        /// Test the property 'End' 
+        /// Test the property 'End'
         /// </summary>
         [Test]
         public void EndTest()
         {
-            // TODO: unit test for the property 'End' 
+            // TODO: unit test for the property 'End'
         }
-        
 
     }
 

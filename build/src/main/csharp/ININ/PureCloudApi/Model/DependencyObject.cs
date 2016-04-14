@@ -17,9 +17,12 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class DependencyObject :  IEquatable<DependencyObject>
     { 
-    
+
+        /// <summary>
+        /// Gets or Sets Type
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum TypeEnum {
+                public enum TypeEnum {
             
             [EnumMember(Value = "ACDLANGUAGE")]
             Acdlanguage,
@@ -69,6 +72,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "VOICEXML")]
             Voicexml
         }
+
         
         /// <summary>
         /// Gets or Sets Type
@@ -104,7 +108,7 @@ namespace ININ.PureCloudApi.Model
             this.ConsumingResources = ConsumingResources;
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -166,11 +170,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  ConsumedResources: ").Append(ConsumedResources).Append("\n");
             sb.Append("  ConsumingResources: ").Append(ConsumingResources).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -256,31 +259,22 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
-                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
                 if (this.Deleted != null)
                     hash = hash * 59 + this.Deleted.GetHashCode();
-                
                 if (this.ConsumedResources != null)
                     hash = hash * 59 + this.ConsumedResources.GetHashCode();
-                
                 if (this.ConsumingResources != null)
                     hash = hash * 59 + this.ConsumingResources.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 return hash;
             }
         }

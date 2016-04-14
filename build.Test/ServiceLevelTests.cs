@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new ServiceLevel();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of ServiceLevel
@@ -50,25 +50,22 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<ServiceLevel> (instance, "instance is a ServiceLevel");
         }
 
-        
         /// <summary>
-        /// Test the property 'Percentage' 
+        /// Test the property 'Percentage'
         /// </summary>
         [Test]
         public void PercentageTest()
         {
-            // TODO: unit test for the property 'Percentage' 
+            // TODO: unit test for the property 'Percentage'
         }
-        
         /// <summary>
-        /// Test the property 'DurationMs' 
+        /// Test the property 'DurationMs'
         /// </summary>
         [Test]
         public void DurationMsTest()
         {
-            // TODO: unit test for the property 'DurationMs' 
+            // TODO: unit test for the property 'DurationMs'
         }
-        
 
     }
 

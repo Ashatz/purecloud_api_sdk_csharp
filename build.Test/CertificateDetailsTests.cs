@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new CertificateDetails();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of CertificateDetails
@@ -50,70 +50,62 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<CertificateDetails> (instance, "instance is a CertificateDetails");
         }
 
-        
         /// <summary>
-        /// Test the property 'Issuer' 
+        /// Test the property 'Issuer'
         /// </summary>
         [Test]
         public void IssuerTest()
         {
-            // TODO: unit test for the property 'Issuer' 
+            // TODO: unit test for the property 'Issuer'
         }
-        
         /// <summary>
-        /// Test the property 'Subject' 
+        /// Test the property 'Subject'
         /// </summary>
         [Test]
         public void SubjectTest()
         {
-            // TODO: unit test for the property 'Subject' 
+            // TODO: unit test for the property 'Subject'
         }
-        
         /// <summary>
-        /// Test the property 'ExpirationDate' 
+        /// Test the property 'ExpirationDate'
         /// </summary>
         [Test]
         public void ExpirationDateTest()
         {
-            // TODO: unit test for the property 'ExpirationDate' 
+            // TODO: unit test for the property 'ExpirationDate'
         }
-        
         /// <summary>
-        /// Test the property 'IssueDate' 
+        /// Test the property 'IssueDate'
         /// </summary>
         [Test]
         public void IssueDateTest()
         {
-            // TODO: unit test for the property 'IssueDate' 
+            // TODO: unit test for the property 'IssueDate'
         }
-        
         /// <summary>
-        /// Test the property 'Expired' 
+        /// Test the property 'Expired'
         /// </summary>
         [Test]
         public void ExpiredTest()
         {
-            // TODO: unit test for the property 'Expired' 
+            // TODO: unit test for the property 'Expired'
         }
-        
         /// <summary>
-        /// Test the property 'SignatureValid' 
+        /// Test the property 'SignatureValid'
         /// </summary>
         [Test]
         public void SignatureValidTest()
         {
-            // TODO: unit test for the property 'SignatureValid' 
+            // TODO: unit test for the property 'SignatureValid'
         }
-        
         /// <summary>
-        /// Test the property 'Valid' 
+        /// Test the property 'Valid'
         /// </summary>
         [Test]
         public void ValidTest()
         {
-            // TODO: unit test for the property 'Valid' 
+            // TODO: unit test for the property 'Valid'
         }
-        
 
     }
 

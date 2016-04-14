@@ -30,7 +30,7 @@ namespace ININ.PureCloudApi.Model
             this.DeleteRetention = DeleteRetention;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets ArchiveRetention
@@ -54,11 +54,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class RetentionDuration {\n");
             sb.Append("  ArchiveRetention: ").Append(ArchiveRetention).Append("\n");
             sb.Append("  DeleteRetention: ").Append(DeleteRetention).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -114,13 +113,10 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ArchiveRetention != null)
                     hash = hash * 59 + this.ArchiveRetention.GetHashCode();
-                
                 if (this.DeleteRetention != null)
                     hash = hash * 59 + this.DeleteRetention.GetHashCode();
-                
                 return hash;
             }
         }

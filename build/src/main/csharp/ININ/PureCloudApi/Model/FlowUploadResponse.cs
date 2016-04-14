@@ -30,7 +30,7 @@ namespace ININ.PureCloudApi.Model
             this.UploadToken = UploadToken;
             
         }
-        
+
     
         /// <summary>
         /// uri destination to upload file to
@@ -56,11 +56,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class FlowUploadResponse {\n");
             sb.Append("  Uri: ").Append(Uri).Append("\n");
             sb.Append("  UploadToken: ").Append(UploadToken).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -116,13 +115,10 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Uri != null)
                     hash = hash * 59 + this.Uri.GetHashCode();
-                
                 if (this.UploadToken != null)
                     hash = hash * 59 + this.UploadToken.GetHashCode();
-                
                 return hash;
             }
         }

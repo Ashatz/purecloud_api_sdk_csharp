@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new ColumnCollapse();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of ColumnCollapse
@@ -50,25 +50,22 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<ColumnCollapse> (instance, "instance is a ColumnCollapse");
         }
 
-        
         /// <summary>
-        /// Test the property 'Label' 
+        /// Test the property 'Label'
         /// </summary>
         [Test]
         public void LabelTest()
         {
-            // TODO: unit test for the property 'Label' 
+            // TODO: unit test for the property 'Label'
         }
-        
         /// <summary>
-        /// Test the property 'Columns' 
+        /// Test the property 'Columns'
         /// </summary>
         [Test]
         public void ColumnsTest()
         {
-            // TODO: unit test for the property 'Columns' 
+            // TODO: unit test for the property 'Columns'
         }
-        
 
     }
 

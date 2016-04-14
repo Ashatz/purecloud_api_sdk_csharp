@@ -17,9 +17,13 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class InteractionStatsRule :  IEquatable<InteractionStatsRule>
     { 
-    
+
+        /// <summary>
+        /// The dimension of concern.
+        /// </summary>
+        /// <value>The dimension of concern.</value>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum DimensionEnum {
+                public enum DimensionEnum {
             
             [EnumMember(Value = "queueId")]
             Queueid,
@@ -27,9 +31,14 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "userId")]
             Userid
         }
-    
+
+
+        /// <summary>
+        /// The metric to be assessed.
+        /// </summary>
+        /// <value>The metric to be assessed.</value>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum MetricEnum {
+                public enum MetricEnum {
             
             [EnumMember(Value = "tAbandon")]
             Tabandon,
@@ -61,9 +70,14 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "tAcw")]
             Tacw
         }
-    
+
+
+        /// <summary>
+        /// The media type.
+        /// </summary>
+        /// <value>The media type.</value>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum MediaTypeEnum {
+                public enum MediaTypeEnum {
             
             [EnumMember(Value = "voice")]
             Voice,
@@ -74,9 +88,14 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "email")]
             Email
         }
-    
+
+
+        /// <summary>
+        /// The comparison descriptor used against the metric's value.
+        /// </summary>
+        /// <value>The comparison descriptor used against the metric's value.</value>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum NumericRangeEnum {
+                public enum NumericRangeEnum {
             
             [EnumMember(Value = "gt")]
             Gt,
@@ -96,9 +115,14 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "ne")]
             Ne
         }
-    
+
+
+        /// <summary>
+        /// The statistic of concern for the metric.
+        /// </summary>
+        /// <value>The statistic of concern for the metric.</value>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum StatisticEnum {
+                public enum StatisticEnum {
             
             [EnumMember(Value = "count")]
             Count,
@@ -112,6 +136,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "max")]
             Max
         }
+
         
         public static string AlertTypes_Sms = "SMS";
         public static string AlertTypes_Device = "DEVICE";
@@ -166,7 +191,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Value">The threshold value. (required).</param>
         /// <param name="Enabled">Indicates if the rule is enabled. (required) (default to false).</param>
         /// <param name="NotificationUsers">The ids of users who will be notified of alarm state change. (required).</param>
-        /// <param name="AlertTypes">A collection of notification methods. = [&#39;SMS&#39;, &#39;DEVICE&#39;, &#39;EMAIL&#39;] (required).</param>
+        /// <param name="AlertTypes">A collection of notification methods. &#x3D; [&#39;SMS&#39;, &#39;DEVICE&#39;, &#39;EMAIL&#39;] (required).</param>
 
         public InteractionStatsRule(string Name = null, DimensionEnum? Dimension = null, string DimensionValue = null, MetricEnum? Metric = null, MediaTypeEnum? MediaType = null, NumericRangeEnum? NumericRange = null, StatisticEnum? Statistic = null, double? Value = null, bool? Enabled = null, List<User> NotificationUsers = null, List<string> AlertTypes = null)
         {
@@ -271,7 +296,7 @@ namespace ININ.PureCloudApi.Model
             }
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -323,9 +348,9 @@ namespace ININ.PureCloudApi.Model
         public List<User> NotificationUsers { get; set; }
     
         /// <summary>
-        /// A collection of notification methods. = ['SMS', 'DEVICE', 'EMAIL']
+        /// A collection of notification methods. &#x3D; [&#39;SMS&#39;, &#39;DEVICE&#39;, &#39;EMAIL&#39;]
         /// </summary>
-        /// <value>A collection of notification methods. = ['SMS', 'DEVICE', 'EMAIL']</value>
+        /// <value>A collection of notification methods. &#x3D; [&#39;SMS&#39;, &#39;DEVICE&#39;, &#39;EMAIL&#39;]</value>
         [DataMember(Name="alertTypes", EmitDefaultValue=false)]
         public List<string> AlertTypes { get; set; }
     
@@ -358,11 +383,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  NotificationUsers: ").Append(NotificationUsers).Append("\n");
             sb.Append("  AlertTypes: ").Append(AlertTypes).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -478,49 +502,34 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.Dimension != null)
                     hash = hash * 59 + this.Dimension.GetHashCode();
-                
                 if (this.DimensionValue != null)
                     hash = hash * 59 + this.DimensionValue.GetHashCode();
-                
                 if (this.Metric != null)
                     hash = hash * 59 + this.Metric.GetHashCode();
-                
                 if (this.MediaType != null)
                     hash = hash * 59 + this.MediaType.GetHashCode();
-                
                 if (this.NumericRange != null)
                     hash = hash * 59 + this.NumericRange.GetHashCode();
-                
                 if (this.Statistic != null)
                     hash = hash * 59 + this.Statistic.GetHashCode();
-                
                 if (this.Value != null)
                     hash = hash * 59 + this.Value.GetHashCode();
-                
                 if (this.Enabled != null)
                     hash = hash * 59 + this.Enabled.GetHashCode();
-                
                 if (this.InAlarm != null)
                     hash = hash * 59 + this.InAlarm.GetHashCode();
-                
                 if (this.NotificationUsers != null)
                     hash = hash * 59 + this.NotificationUsers.GetHashCode();
-                
                 if (this.AlertTypes != null)
                     hash = hash * 59 + this.AlertTypes.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 return hash;
             }
         }

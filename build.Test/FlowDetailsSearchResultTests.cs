@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new FlowDetailsSearchResult();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of FlowDetailsSearchResult
@@ -50,25 +50,22 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<FlowDetailsSearchResult> (instance, "instance is a FlowDetailsSearchResult");
         }
 
-        
         /// <summary>
-        /// Test the property 'SearchResults' 
+        /// Test the property 'SearchResults'
         /// </summary>
         [Test]
         public void SearchResultsTest()
         {
-            // TODO: unit test for the property 'SearchResults' 
+            // TODO: unit test for the property 'SearchResults'
         }
-        
         /// <summary>
-        /// Test the property 'FacetResults' 
+        /// Test the property 'FacetResults'
         /// </summary>
         [Test]
         public void FacetResultsTest()
         {
-            // TODO: unit test for the property 'FacetResults' 
+            // TODO: unit test for the property 'FacetResults'
         }
-        
 
     }
 

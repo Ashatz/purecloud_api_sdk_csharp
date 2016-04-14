@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new FavoriteTemplateRequestData();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of FavoriteTemplateRequestData
@@ -50,16 +50,14 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<FavoriteTemplateRequestData> (instance, "instance is a FavoriteTemplateRequestData");
         }
 
-        
         /// <summary>
-        /// Test the property 'TemplateId' 
+        /// Test the property 'TemplateId'
         /// </summary>
         [Test]
         public void TemplateIdTest()
         {
-            // TODO: unit test for the property 'TemplateId' 
+            // TODO: unit test for the property 'TemplateId'
         }
-        
 
     }
 

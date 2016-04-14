@@ -17,9 +17,12 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class Control :  IEquatable<Control>
     { 
-    
+
+        /// <summary>
+        /// Gets or Sets Type
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum TypeEnum {
+                public enum TypeEnum {
             
             [EnumMember(Value = "CHECKBOX")]
             Checkbox,
@@ -30,6 +33,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "SELECT")]
             Select
         }
+
         
         /// <summary>
         /// Gets or Sets Type
@@ -75,7 +79,7 @@ namespace ININ.PureCloudApi.Model
             this.Type = Type;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets Id
@@ -128,11 +132,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  _ReadOnly: ").Append(_ReadOnly).Append("\n");
             sb.Append("  VariableBindingId: ").Append(VariableBindingId).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -213,28 +216,20 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Label != null)
                     hash = hash * 59 + this.Label.GetHashCode();
-                
                 if (this.Options != null)
                     hash = hash * 59 + this.Options.GetHashCode();
-                
                 if (this.Required != null)
                     hash = hash * 59 + this.Required.GetHashCode();
-                
                 if (this._ReadOnly != null)
                     hash = hash * 59 + this._ReadOnly.GetHashCode();
-                
                 if (this.VariableBindingId != null)
                     hash = hash * 59 + this.VariableBindingId.GetHashCode();
-                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
                 return hash;
             }
         }

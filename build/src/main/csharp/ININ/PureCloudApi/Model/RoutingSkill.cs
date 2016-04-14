@@ -17,9 +17,13 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class RoutingSkill :  IEquatable<RoutingSkill>
     { 
-    
+
+        /// <summary>
+        /// The current state for this skill.
+        /// </summary>
+        /// <value>The current state for this skill.</value>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum StateEnum {
+                public enum StateEnum {
             
             [EnumMember(Value = "ACTIVE")]
             Active,
@@ -30,6 +34,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "DELETED")]
             Deleted
         }
+
         
         /// <summary>
         /// The current state for this skill.
@@ -52,7 +57,7 @@ namespace ININ.PureCloudApi.Model
             this.Proficiency = Proficiency;
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -109,11 +114,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Version: ").Append(Version).Append("\n");
             sb.Append("  Proficiency: ").Append(Proficiency).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -194,28 +198,20 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.DateModified != null)
                     hash = hash * 59 + this.DateModified.GetHashCode();
-                
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
-                
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
-                
                 if (this.Proficiency != null)
                     hash = hash * 59 + this.Proficiency.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 return hash;
             }
         }

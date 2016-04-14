@@ -30,7 +30,7 @@ namespace ININ.PureCloudApi.Model
             this.VersionId = VersionId;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets ScriptId
@@ -54,11 +54,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class PublishScriptRequestData {\n");
             sb.Append("  ScriptId: ").Append(ScriptId).Append("\n");
             sb.Append("  VersionId: ").Append(VersionId).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -114,13 +113,10 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ScriptId != null)
                     hash = hash * 59 + this.ScriptId.GetHashCode();
-                
                 if (this.VersionId != null)
                     hash = hash * 59 + this.VersionId.GetHashCode();
-                
                 return hash;
             }
         }

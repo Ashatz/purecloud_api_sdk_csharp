@@ -30,7 +30,7 @@ namespace ININ.PureCloudApi.Model
             this.FacetResults = FacetResults;
             
         }
-        
+
     
         /// <summary>
         /// The actual results from the search
@@ -56,11 +56,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class FlowDetailsSearchResult {\n");
             sb.Append("  SearchResults: ").Append(SearchResults).Append("\n");
             sb.Append("  FacetResults: ").Append(FacetResults).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -116,13 +115,10 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.SearchResults != null)
                     hash = hash * 59 + this.SearchResults.GetHashCode();
-                
                 if (this.FacetResults != null)
                     hash = hash * 59 + this.FacetResults.GetHashCode();
-                
                 return hash;
             }
         }

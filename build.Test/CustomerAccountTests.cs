@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new CustomerAccount();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of CustomerAccount
@@ -50,88 +50,78 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<CustomerAccount> (instance, "instance is a CustomerAccount");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'IsFrozen' 
+        /// Test the property 'IsFrozen'
         /// </summary>
         [Test]
         public void IsFrozenTest()
         {
-            // TODO: unit test for the property 'IsFrozen' 
+            // TODO: unit test for the property 'IsFrozen'
         }
-        
         /// <summary>
-        /// Test the property 'OrgLegalName' 
+        /// Test the property 'OrgLegalName'
         /// </summary>
         [Test]
         public void OrgLegalNameTest()
         {
-            // TODO: unit test for the property 'OrgLegalName' 
+            // TODO: unit test for the property 'OrgLegalName'
         }
-        
         /// <summary>
-        /// Test the property 'OrgPhone' 
+        /// Test the property 'OrgPhone'
         /// </summary>
         [Test]
         public void OrgPhoneTest()
         {
-            // TODO: unit test for the property 'OrgPhone' 
+            // TODO: unit test for the property 'OrgPhone'
         }
-        
         /// <summary>
-        /// Test the property 'IsTaxExempt' 
+        /// Test the property 'IsTaxExempt'
         /// </summary>
         [Test]
         public void IsTaxExemptTest()
         {
-            // TODO: unit test for the property 'IsTaxExempt' 
+            // TODO: unit test for the property 'IsTaxExempt'
         }
-        
         /// <summary>
-        /// Test the property 'BillingAddress' 
+        /// Test the property 'BillingAddress'
         /// </summary>
         [Test]
         public void BillingAddressTest()
         {
-            // TODO: unit test for the property 'BillingAddress' 
+            // TODO: unit test for the property 'BillingAddress'
         }
-        
         /// <summary>
-        /// Test the property 'Currency' 
+        /// Test the property 'Currency'
         /// </summary>
         [Test]
         public void CurrencyTest()
         {
-            // TODO: unit test for the property 'Currency' 
+            // TODO: unit test for the property 'Currency'
         }
-        
         /// <summary>
-        /// Test the property 'SelfUri' 
+        /// Test the property 'SelfUri'
         /// </summary>
         [Test]
         public void SelfUriTest()
         {
-            // TODO: unit test for the property 'SelfUri' 
+            // TODO: unit test for the property 'SelfUri'
         }
-        
 
     }
 

@@ -44,7 +44,7 @@ namespace ININ.PureCloudApi.Model
             this.EntityType = EntityType;
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -133,11 +133,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Changes: ").Append(Changes).Append("\n");
             sb.Append("  EntityType: ").Append(EntityType).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -238,40 +237,28 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();
-                
                 if (this.Timestamp != null)
                     hash = hash * 59 + this.Timestamp.GetHashCode();
-                
                 if (this.Entity != null)
                     hash = hash * 59 + this.Entity.GetHashCode();
-                
                 if (this.Level != null)
                     hash = hash * 59 + this.Level.GetHashCode();
-                
                 if (this.Action != null)
                     hash = hash * 59 + this.Action.GetHashCode();
-                
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
-                
                 if (this.Changes != null)
                     hash = hash * 59 + this.Changes.GetHashCode();
-                
                 if (this.EntityType != null)
                     hash = hash * 59 + this.EntityType.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 return hash;
             }
         }

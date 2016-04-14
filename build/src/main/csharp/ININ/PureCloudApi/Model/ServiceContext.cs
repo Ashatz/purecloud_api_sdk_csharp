@@ -28,7 +28,7 @@ namespace ININ.PureCloudApi.Model
             this.Name = Name;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets Name
@@ -45,11 +45,10 @@ namespace ININ.PureCloudApi.Model
             var sb = new StringBuilder();
             sb.Append("class ServiceContext {\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -100,10 +99,8 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 return hash;
             }
         }

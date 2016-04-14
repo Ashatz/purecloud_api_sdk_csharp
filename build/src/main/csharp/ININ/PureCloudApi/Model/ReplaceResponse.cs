@@ -17,9 +17,12 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class ReplaceResponse :  IEquatable<ReplaceResponse>
     { 
-    
+
+        /// <summary>
+        /// Gets or Sets UploadMethod
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum UploadMethodEnum {
+                public enum UploadMethodEnum {
             
             [EnumMember(Value = "SINGLE_PUT")]
             SinglePut,
@@ -27,6 +30,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "MULTIPART_POST")]
             MultipartPost
         }
+
         
         /// <summary>
         /// Gets or Sets UploadMethod
@@ -54,7 +58,7 @@ namespace ININ.PureCloudApi.Model
             this.UploadMethod = UploadMethod;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets Id
@@ -100,11 +104,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  UploadStatus: ").Append(UploadStatus).Append("\n");
             sb.Append("  UploadDestinationUri: ").Append(UploadDestinationUri).Append("\n");
             sb.Append("  UploadMethod: ").Append(UploadMethod).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -180,25 +183,18 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.ChangeNumber != null)
                     hash = hash * 59 + this.ChangeNumber.GetHashCode();
-                
                 if (this.UploadStatus != null)
                     hash = hash * 59 + this.UploadStatus.GetHashCode();
-                
                 if (this.UploadDestinationUri != null)
                     hash = hash * 59 + this.UploadDestinationUri.GetHashCode();
-                
                 if (this.UploadMethod != null)
                     hash = hash * 59 + this.UploadMethod.GetHashCode();
-                
                 return hash;
             }
         }

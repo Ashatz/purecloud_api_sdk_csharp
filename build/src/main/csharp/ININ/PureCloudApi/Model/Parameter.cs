@@ -17,9 +17,12 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class Parameter :  IEquatable<Parameter>
     { 
-    
+
+        /// <summary>
+        /// Gets or Sets ParameterType
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum ParameterTypeEnum {
+                public enum ParameterTypeEnum {
             
             [EnumMember(Value = "UUID")]
             Uuid,
@@ -33,9 +36,13 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "STRINGLIST")]
             Stringlist
         }
-    
+
+
+        /// <summary>
+        /// Gets or Sets Domain
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum DomainEnum {
+                public enum DomainEnum {
             
             [EnumMember(Value = "USERID")]
             Userid,
@@ -55,6 +62,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "UNKNOWN")]
             Unknown
         }
+
         
         /// <summary>
         /// Gets or Sets ParameterType
@@ -92,7 +100,7 @@ namespace ININ.PureCloudApi.Model
             }
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets Name
@@ -118,11 +126,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  ParameterType: ").Append(ParameterType).Append("\n");
             sb.Append("  Domain: ").Append(Domain).Append("\n");
             sb.Append("  Required: ").Append(Required).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -188,19 +195,14 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.ParameterType != null)
                     hash = hash * 59 + this.ParameterType.GetHashCode();
-                
                 if (this.Domain != null)
                     hash = hash * 59 + this.Domain.GetHashCode();
-                
                 if (this.Required != null)
                     hash = hash * 59 + this.Required.GetHashCode();
-                
                 return hash;
             }
         }

@@ -28,7 +28,7 @@ namespace ININ.PureCloudApi.Model
             this.LinkedDocumentIds = LinkedDocumentIds;
             
         }
-        
+
     
         /// <summary>
         /// A list of document IDs to link with the new flow instance.
@@ -46,11 +46,10 @@ namespace ININ.PureCloudApi.Model
             var sb = new StringBuilder();
             sb.Append("class FlowInputData {\n");
             sb.Append("  LinkedDocumentIds: ").Append(LinkedDocumentIds).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -101,10 +100,8 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.LinkedDocumentIds != null)
                     hash = hash * 59 + this.LinkedDocumentIds.GetHashCode();
-                
                 return hash;
             }
         }

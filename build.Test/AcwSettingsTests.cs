@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new AcwSettings();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of AcwSettings
@@ -50,25 +50,22 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<AcwSettings> (instance, "instance is a AcwSettings");
         }
 
-        
         /// <summary>
-        /// Test the property 'WrapupPrompt' 
+        /// Test the property 'WrapupPrompt'
         /// </summary>
         [Test]
         public void WrapupPromptTest()
         {
-            // TODO: unit test for the property 'WrapupPrompt' 
+            // TODO: unit test for the property 'WrapupPrompt'
         }
-        
         /// <summary>
-        /// Test the property 'TimeoutMs' 
+        /// Test the property 'TimeoutMs'
         /// </summary>
         [Test]
         public void TimeoutMsTest()
         {
-            // TODO: unit test for the property 'TimeoutMs' 
+            // TODO: unit test for the property 'TimeoutMs'
         }
-        
 
     }
 

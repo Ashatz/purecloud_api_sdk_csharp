@@ -32,7 +32,7 @@ namespace ININ.PureCloudApi.Model
             this.AuthToken = AuthToken;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets ChangeNumber
@@ -63,11 +63,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  ChangeNumber: ").Append(ChangeNumber).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  AuthToken: ").Append(AuthToken).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -128,16 +127,12 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ChangeNumber != null)
                     hash = hash * 59 + this.ChangeNumber.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.AuthToken != null)
                     hash = hash * 59 + this.AuthToken.GetHashCode();
-                
                 return hash;
             }
         }

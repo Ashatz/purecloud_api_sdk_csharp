@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new DownloadResponse();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of DownloadResponse
@@ -50,25 +50,22 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<DownloadResponse> (instance, "instance is a DownloadResponse");
         }
 
-        
         /// <summary>
-        /// Test the property 'ContentLocationUri' 
+        /// Test the property 'ContentLocationUri'
         /// </summary>
         [Test]
         public void ContentLocationUriTest()
         {
-            // TODO: unit test for the property 'ContentLocationUri' 
+            // TODO: unit test for the property 'ContentLocationUri'
         }
-        
         /// <summary>
-        /// Test the property 'ImageUri' 
+        /// Test the property 'ImageUri'
         /// </summary>
         [Test]
         public void ImageUriTest()
         {
-            // TODO: unit test for the property 'ImageUri' 
+            // TODO: unit test for the property 'ImageUri'
         }
-        
 
     }
 

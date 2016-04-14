@@ -17,9 +17,12 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class Reaction :  IEquatable<Reaction>
     { 
-    
+
+        /// <summary>
+        /// Gets or Sets ReactionType
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum ReactionTypeEnum {
+                public enum ReactionTypeEnum {
             
             [EnumMember(Value = "HANGUP")]
             Hangup,
@@ -33,6 +36,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "PLAY_FILE")]
             PlayFile
         }
+
         
         /// <summary>
         /// Gets or Sets ReactionType
@@ -54,7 +58,7 @@ namespace ININ.PureCloudApi.Model
             this.ReactionType = ReactionType;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets Data
@@ -79,11 +83,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Data: ").Append(Data).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  ReactionType: ").Append(ReactionType).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -144,16 +147,12 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Data != null)
                     hash = hash * 59 + this.Data.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.ReactionType != null)
                     hash = hash * 59 + this.ReactionType.GetHashCode();
-                
                 return hash;
             }
         }

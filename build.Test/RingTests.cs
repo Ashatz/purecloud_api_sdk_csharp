@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new Ring();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of Ring
@@ -50,25 +50,22 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<Ring> (instance, "instance is a Ring");
         }
 
-        
         /// <summary>
-        /// Test the property 'ExpansionCriteria' 
+        /// Test the property 'ExpansionCriteria'
         /// </summary>
         [Test]
         public void ExpansionCriteriaTest()
         {
-            // TODO: unit test for the property 'ExpansionCriteria' 
+            // TODO: unit test for the property 'ExpansionCriteria'
         }
-        
         /// <summary>
-        /// Test the property 'Actions' 
+        /// Test the property 'Actions'
         /// </summary>
         [Test]
         public void ActionsTest()
         {
-            // TODO: unit test for the property 'Actions' 
+            // TODO: unit test for the property 'Actions'
         }
-        
 
     }
 

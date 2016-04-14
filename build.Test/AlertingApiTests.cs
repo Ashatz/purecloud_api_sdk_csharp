@@ -61,9 +61,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'DeleteInteractionstatsAlertsAlertId'
             string alertId = null; // TODO: replace null with proper value
-            
             instance.DeleteInteractionstatsAlertsAlertId(alertId);
-             
+            
         }
         
         /// <summary>
@@ -74,9 +73,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'DeleteInteractionstatsRulesRuleId'
             string ruleId = null; // TODO: replace null with proper value
-            
             instance.DeleteInteractionstatsRulesRuleId(ruleId);
-             
+            
         }
         
         /// <summary>
@@ -86,9 +84,8 @@ namespace ININ.PureCloudApi.Test
         public void GetInteractionstatsAlertsTest()
         {
             // TODO: add unit test for the method 'GetInteractionstatsAlerts'
-            
             var response = instance.GetInteractionstatsAlerts();
-            Assert.IsInstanceOf<InteractionStatsAlertContainer> (response, "response is InteractionStatsAlertContainer"); 
+            Assert.IsInstanceOf<InteractionStatsAlertContainer> (response, "response is InteractionStatsAlertContainer");
         }
         
         /// <summary>
@@ -99,9 +96,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'GetInteractionstatsAlertsAlertId'
             string alertId = null; // TODO: replace null with proper value
-            
             var response = instance.GetInteractionstatsAlertsAlertId(alertId);
-            Assert.IsInstanceOf<InteractionStatsAlert> (response, "response is InteractionStatsAlert"); 
+            Assert.IsInstanceOf<InteractionStatsAlert> (response, "response is InteractionStatsAlert");
         }
         
         /// <summary>
@@ -111,9 +107,8 @@ namespace ININ.PureCloudApi.Test
         public void GetInteractionstatsAlertsUnreadTest()
         {
             // TODO: add unit test for the method 'GetInteractionstatsAlertsUnread'
-            
             var response = instance.GetInteractionstatsAlertsUnread();
-            Assert.IsInstanceOf<UnreadMetric> (response, "response is UnreadMetric"); 
+            Assert.IsInstanceOf<UnreadMetric> (response, "response is UnreadMetric");
         }
         
         /// <summary>
@@ -123,9 +118,8 @@ namespace ININ.PureCloudApi.Test
         public void GetInteractionstatsRulesTest()
         {
             // TODO: add unit test for the method 'GetInteractionstatsRules'
-            
             var response = instance.GetInteractionstatsRules();
-            Assert.IsInstanceOf<InteractionStatsRuleContainer> (response, "response is InteractionStatsRuleContainer"); 
+            Assert.IsInstanceOf<InteractionStatsRuleContainer> (response, "response is InteractionStatsRuleContainer");
         }
         
         /// <summary>
@@ -136,9 +130,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'GetInteractionstatsRulesRuleId'
             string ruleId = null; // TODO: replace null with proper value
-            
             var response = instance.GetInteractionstatsRulesRuleId(ruleId);
-            Assert.IsInstanceOf<InteractionStatsRule> (response, "response is InteractionStatsRule"); 
+            Assert.IsInstanceOf<InteractionStatsRule> (response, "response is InteractionStatsRule");
         }
         
         /// <summary>
@@ -149,9 +142,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'PostInteractionstatsRules'
             InteractionStatsRule body = null; // TODO: replace null with proper value
-            
             var response = instance.PostInteractionstatsRules(body);
-            Assert.IsInstanceOf<InteractionStatsRule> (response, "response is InteractionStatsRule"); 
+            Assert.IsInstanceOf<InteractionStatsRule> (response, "response is InteractionStatsRule");
         }
         
         /// <summary>
@@ -163,9 +155,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'PutInteractionstatsAlertsAlertId'
             string alertId = null; // TODO: replace null with proper value
             UnreadStatus body = null; // TODO: replace null with proper value
-            
             var response = instance.PutInteractionstatsAlertsAlertId(alertId, body);
-            Assert.IsInstanceOf<UnreadStatus> (response, "response is UnreadStatus"); 
+            Assert.IsInstanceOf<UnreadStatus> (response, "response is UnreadStatus");
         }
         
         /// <summary>
@@ -177,9 +168,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'PutInteractionstatsRulesRuleId'
             string ruleId = null; // TODO: replace null with proper value
             InteractionStatsRule body = null; // TODO: replace null with proper value
-            
             var response = instance.PutInteractionstatsRulesRuleId(ruleId, body);
-            Assert.IsInstanceOf<InteractionStatsRule> (response, "response is InteractionStatsRule"); 
+            Assert.IsInstanceOf<InteractionStatsRule> (response, "response is InteractionStatsRule");
         }
         
     }

@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new Page();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of Page
@@ -50,79 +50,70 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<Page> (instance, "instance is a Page");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'VersionId' 
+        /// Test the property 'VersionId'
         /// </summary>
         [Test]
         public void VersionIdTest()
         {
-            // TODO: unit test for the property 'VersionId' 
+            // TODO: unit test for the property 'VersionId'
         }
-        
         /// <summary>
-        /// Test the property 'CreatedDate' 
+        /// Test the property 'CreatedDate'
         /// </summary>
         [Test]
         public void CreatedDateTest()
         {
-            // TODO: unit test for the property 'CreatedDate' 
+            // TODO: unit test for the property 'CreatedDate'
         }
-        
         /// <summary>
-        /// Test the property 'ModifiedDate' 
+        /// Test the property 'ModifiedDate'
         /// </summary>
         [Test]
         public void ModifiedDateTest()
         {
-            // TODO: unit test for the property 'ModifiedDate' 
+            // TODO: unit test for the property 'ModifiedDate'
         }
-        
         /// <summary>
-        /// Test the property 'RootContainer' 
+        /// Test the property 'RootContainer'
         /// </summary>
         [Test]
         public void RootContainerTest()
         {
-            // TODO: unit test for the property 'RootContainer' 
+            // TODO: unit test for the property 'RootContainer'
         }
-        
         /// <summary>
-        /// Test the property 'Properties' 
+        /// Test the property 'Properties'
         /// </summary>
         [Test]
         public void PropertiesTest()
         {
-            // TODO: unit test for the property 'Properties' 
+            // TODO: unit test for the property 'Properties'
         }
-        
         /// <summary>
-        /// Test the property 'SelfUri' 
+        /// Test the property 'SelfUri'
         /// </summary>
         [Test]
         public void SelfUriTest()
         {
-            // TODO: unit test for the property 'SelfUri' 
+            // TODO: unit test for the property 'SelfUri'
         }
-        
 
     }
 

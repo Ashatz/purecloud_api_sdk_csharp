@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new EmailSetup();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of EmailSetup
@@ -50,16 +50,14 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<EmailSetup> (instance, "instance is a EmailSetup");
         }
 
-        
         /// <summary>
-        /// Test the property 'RootDomain' 
+        /// Test the property 'RootDomain'
         /// </summary>
         [Test]
         public void RootDomainTest()
         {
-            // TODO: unit test for the property 'RootDomain' 
+            // TODO: unit test for the property 'RootDomain'
         }
-        
 
     }
 

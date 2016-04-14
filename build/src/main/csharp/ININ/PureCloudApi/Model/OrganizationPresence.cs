@@ -17,9 +17,12 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class OrganizationPresence :  IEquatable<OrganizationPresence>
     { 
-    
+
+        /// <summary>
+        /// Gets or Sets SystemPresence
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum SystemPresenceEnum {
+                public enum SystemPresenceEnum {
             
             [EnumMember(Value = "AVAILABLE")]
             Available,
@@ -42,6 +45,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "IDLE")]
             Idle
         }
+
         
         /// <summary>
         /// Gets or Sets SystemPresence
@@ -81,7 +85,7 @@ namespace ININ.PureCloudApi.Model
             this.ModifiedDate = ModifiedDate;
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -159,11 +163,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  ModifiedBy: ").Append(ModifiedBy).Append("\n");
             sb.Append("  ModifiedDate: ").Append(ModifiedDate).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -259,37 +262,26 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.LanguageLabels != null)
                     hash = hash * 59 + this.LanguageLabels.GetHashCode();
-                
                 if (this.SystemPresence != null)
                     hash = hash * 59 + this.SystemPresence.GetHashCode();
-                
                 if (this.Deactivated != null)
                     hash = hash * 59 + this.Deactivated.GetHashCode();
-                
                 if (this.CreatedBy != null)
                     hash = hash * 59 + this.CreatedBy.GetHashCode();
-                
                 if (this.CreatedDate != null)
                     hash = hash * 59 + this.CreatedDate.GetHashCode();
-                
                 if (this.ModifiedBy != null)
                     hash = hash * 59 + this.ModifiedBy.GetHashCode();
-                
                 if (this.ModifiedDate != null)
                     hash = hash * 59 + this.ModifiedDate.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 return hash;
             }
         }

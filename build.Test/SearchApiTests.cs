@@ -62,9 +62,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'GetSearch'
             string q64 = null; // TODO: replace null with proper value
             List<string> expand = null; // TODO: replace null with proper value
-            
             var response = instance.GetSearch(q64, expand);
-            Assert.IsInstanceOf<GroupsSearchResponse> (response, "response is GroupsSearchResponse"); 
+            Assert.IsInstanceOf<GroupsSearchResponse> (response, "response is GroupsSearchResponse");
         }
         
         /// <summary>
@@ -76,9 +75,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'GetSearch_0'
             string q64 = null; // TODO: replace null with proper value
             List<string> expand = null; // TODO: replace null with proper value
-            
             var response = instance.GetSearch_0(q64, expand);
-            Assert.IsInstanceOf<JsonNodeSearchResponse> (response, "response is JsonNodeSearchResponse"); 
+            Assert.IsInstanceOf<JsonNodeSearchResponse> (response, "response is JsonNodeSearchResponse");
         }
         
         /// <summary>
@@ -90,9 +88,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'GetSearch_1'
             string q64 = null; // TODO: replace null with proper value
             List<string> expand = null; // TODO: replace null with proper value
-            
             var response = instance.GetSearch_1(q64, expand);
-            Assert.IsInstanceOf<UsersSearchResponse> (response, "response is UsersSearchResponse"); 
+            Assert.IsInstanceOf<UsersSearchResponse> (response, "response is UsersSearchResponse");
         }
         
         /// <summary>
@@ -103,9 +100,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'PostSearch'
             SearchRequest body = null; // TODO: replace null with proper value
-            
             var response = instance.PostSearch(body);
-            Assert.IsInstanceOf<GroupsSearchResponse> (response, "response is GroupsSearchResponse"); 
+            Assert.IsInstanceOf<GroupsSearchResponse> (response, "response is GroupsSearchResponse");
         }
         
         /// <summary>
@@ -116,9 +112,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'PostSearch_0'
             SearchRequest body = null; // TODO: replace null with proper value
-            
             var response = instance.PostSearch_0(body);
-            Assert.IsInstanceOf<JsonNodeSearchResponse> (response, "response is JsonNodeSearchResponse"); 
+            Assert.IsInstanceOf<JsonNodeSearchResponse> (response, "response is JsonNodeSearchResponse");
         }
         
         /// <summary>
@@ -129,9 +124,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'PostSearch_1'
             SearchRequest body = null; // TODO: replace null with proper value
-            
             var response = instance.PostSearch_1(body);
-            Assert.IsInstanceOf<UsersSearchResponse> (response, "response is UsersSearchResponse"); 
+            Assert.IsInstanceOf<UsersSearchResponse> (response, "response is UsersSearchResponse");
         }
         
     }

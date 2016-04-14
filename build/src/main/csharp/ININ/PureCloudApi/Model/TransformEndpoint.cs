@@ -62,7 +62,7 @@ namespace ININ.PureCloudApi.Model
             this.UpdateProgressEvery = UpdateProgressEvery;
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -167,11 +167,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Parallelism: ").Append(Parallelism).Append("\n");
             sb.Append("  UpdateProgressEvery: ").Append(UpdateProgressEvery).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -277,43 +276,30 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.SwaggerUrl != null)
                     hash = hash * 59 + this.SwaggerUrl.GetHashCode();
-                
                 if (this.Route != null)
                     hash = hash * 59 + this.Route.GetHashCode();
-                
                 if (this.Entity != null)
                     hash = hash * 59 + this.Entity.GetHashCode();
-                
                 if (this.ApiFunction != null)
                     hash = hash * 59 + this.ApiFunction.GetHashCode();
-                
                 if (this.Ready != null)
                     hash = hash * 59 + this.Ready.GetHashCode();
-                
                 if (this.Active != null)
                     hash = hash * 59 + this.Active.GetHashCode();
-                
                 if (this.BatchSize != null)
                     hash = hash * 59 + this.BatchSize.GetHashCode();
-                
                 if (this.Parallelism != null)
                     hash = hash * 59 + this.Parallelism.GetHashCode();
-                
                 if (this.UpdateProgressEvery != null)
                     hash = hash * 59 + this.UpdateProgressEvery.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 return hash;
             }
         }

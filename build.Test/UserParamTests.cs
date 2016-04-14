@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new UserParam();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of UserParam
@@ -50,25 +50,22 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<UserParam> (instance, "instance is a UserParam");
         }
 
-        
         /// <summary>
-        /// Test the property 'Key' 
+        /// Test the property 'Key'
         /// </summary>
         [Test]
         public void KeyTest()
         {
-            // TODO: unit test for the property 'Key' 
+            // TODO: unit test for the property 'Key'
         }
-        
         /// <summary>
-        /// Test the property 'Value' 
+        /// Test the property 'Value'
         /// </summary>
         [Test]
         public void ValueTest()
         {
-            // TODO: unit test for the property 'Value' 
+            // TODO: unit test for the property 'Value'
         }
-        
 
     }
 

@@ -36,7 +36,7 @@ namespace ININ.PureCloudApi.Model
             this.DisconnectType = DisconnectType;
             
         }
-        
+
     
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
@@ -83,11 +83,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  HowEnded: ").Append(HowEnded).Append("\n");
             sb.Append("  DisconnectType: ").Append(DisconnectType).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -158,22 +157,16 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.StartTime != null)
                     hash = hash * 59 + this.StartTime.GetHashCode();
-                
                 if (this.EndTime != null)
                     hash = hash * 59 + this.EndTime.GetHashCode();
-                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
                 if (this.HowEnded != null)
                     hash = hash * 59 + this.HowEnded.GetHashCode();
-                
                 if (this.DisconnectType != null)
                     hash = hash * 59 + this.DisconnectType.GetHashCode();
-                
                 return hash;
             }
         }

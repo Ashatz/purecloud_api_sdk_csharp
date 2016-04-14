@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new Organization();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of Organization
@@ -50,106 +50,94 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<Organization> (instance, "instance is a Organization");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'ThirdPartyOrgId' 
+        /// Test the property 'ThirdPartyOrgId'
         /// </summary>
         [Test]
         public void ThirdPartyOrgIdTest()
         {
-            // TODO: unit test for the property 'ThirdPartyOrgId' 
+            // TODO: unit test for the property 'ThirdPartyOrgId'
         }
-        
         /// <summary>
-        /// Test the property 'ThirdPartyOrgName' 
+        /// Test the property 'ThirdPartyOrgName'
         /// </summary>
         [Test]
         public void ThirdPartyOrgNameTest()
         {
-            // TODO: unit test for the property 'ThirdPartyOrgName' 
+            // TODO: unit test for the property 'ThirdPartyOrgName'
         }
-        
         /// <summary>
-        /// Test the property 'ThirdPartyURI' 
+        /// Test the property 'ThirdPartyURI'
         /// </summary>
         [Test]
         public void ThirdPartyURITest()
         {
-            // TODO: unit test for the property 'ThirdPartyURI' 
+            // TODO: unit test for the property 'ThirdPartyURI'
         }
-        
         /// <summary>
-        /// Test the property 'Domain' 
+        /// Test the property 'Domain'
         /// </summary>
         [Test]
         public void DomainTest()
         {
-            // TODO: unit test for the property 'Domain' 
+            // TODO: unit test for the property 'Domain'
         }
-        
         /// <summary>
-        /// Test the property 'Version' 
+        /// Test the property 'Version'
         /// </summary>
         [Test]
         public void VersionTest()
         {
-            // TODO: unit test for the property 'Version' 
+            // TODO: unit test for the property 'Version'
         }
-        
         /// <summary>
-        /// Test the property 'State' 
+        /// Test the property 'State'
         /// </summary>
         [Test]
         public void StateTest()
         {
-            // TODO: unit test for the property 'State' 
+            // TODO: unit test for the property 'State'
         }
-        
         /// <summary>
-        /// Test the property 'DefaultSiteId' 
+        /// Test the property 'DefaultSiteId'
         /// </summary>
         [Test]
         public void DefaultSiteIdTest()
         {
-            // TODO: unit test for the property 'DefaultSiteId' 
+            // TODO: unit test for the property 'DefaultSiteId'
         }
-        
         /// <summary>
-        /// Test the property 'Deletable' 
+        /// Test the property 'Deletable'
         /// </summary>
         [Test]
         public void DeletableTest()
         {
-            // TODO: unit test for the property 'Deletable' 
+            // TODO: unit test for the property 'Deletable'
         }
-        
         /// <summary>
-        /// Test the property 'SelfUri' 
+        /// Test the property 'SelfUri'
         /// </summary>
         [Test]
         public void SelfUriTest()
         {
-            // TODO: unit test for the property 'SelfUri' 
+            // TODO: unit test for the property 'SelfUri'
         }
-        
 
     }
 

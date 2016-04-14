@@ -32,7 +32,7 @@ namespace ININ.PureCloudApi.Model
             this.Table = Table;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets Sheet
@@ -63,11 +63,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Sheet: ").Append(Sheet).Append("\n");
             sb.Append("  SheetName: ").Append(SheetName).Append("\n");
             sb.Append("  Table: ").Append(Table).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -128,16 +127,12 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Sheet != null)
                     hash = hash * 59 + this.Sheet.GetHashCode();
-                
                 if (this.SheetName != null)
                     hash = hash * 59 + this.SheetName.GetHashCode();
-                
                 if (this.Table != null)
                     hash = hash * 59 + this.Table.GetHashCode();
-                
                 return hash;
             }
         }

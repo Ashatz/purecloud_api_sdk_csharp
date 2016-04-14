@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new UploadProgress();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of UploadProgress
@@ -50,70 +50,62 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<UploadProgress> (instance, "instance is a UploadProgress");
         }
 
-        
         /// <summary>
-        /// Test the property 'CarrierId' 
+        /// Test the property 'CarrierId'
         /// </summary>
         [Test]
         public void CarrierIdTest()
         {
-            // TODO: unit test for the property 'CarrierId' 
+            // TODO: unit test for the property 'CarrierId'
         }
-        
         /// <summary>
-        /// Test the property 'SchemaName' 
+        /// Test the property 'SchemaName'
         /// </summary>
         [Test]
         public void SchemaNameTest()
         {
-            // TODO: unit test for the property 'SchemaName' 
+            // TODO: unit test for the property 'SchemaName'
         }
-        
         /// <summary>
-        /// Test the property 'Status' 
+        /// Test the property 'Status'
         /// </summary>
         [Test]
         public void StatusTest()
         {
-            // TODO: unit test for the property 'Status' 
+            // TODO: unit test for the property 'Status'
         }
-        
         /// <summary>
-        /// Test the property 'Filename' 
+        /// Test the property 'Filename'
         /// </summary>
         [Test]
         public void FilenameTest()
         {
-            // TODO: unit test for the property 'Filename' 
+            // TODO: unit test for the property 'Filename'
         }
-        
         /// <summary>
-        /// Test the property 'Filetype' 
+        /// Test the property 'Filetype'
         /// </summary>
         [Test]
         public void FiletypeTest()
         {
-            // TODO: unit test for the property 'Filetype' 
+            // TODO: unit test for the property 'Filetype'
         }
-        
         /// <summary>
-        /// Test the property 'Created' 
+        /// Test the property 'Created'
         /// </summary>
         [Test]
         public void CreatedTest()
         {
-            // TODO: unit test for the property 'Created' 
+            // TODO: unit test for the property 'Created'
         }
-        
         /// <summary>
-        /// Test the property 'Updated' 
+        /// Test the property 'Updated'
         /// </summary>
         [Test]
         public void UpdatedTest()
         {
-            // TODO: unit test for the property 'Updated' 
+            // TODO: unit test for the property 'Updated'
         }
-        
 
     }
 

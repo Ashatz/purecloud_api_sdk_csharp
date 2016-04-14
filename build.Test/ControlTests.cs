@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new Control();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of Control
@@ -50,70 +50,62 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<Control> (instance, "instance is a Control");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'Label' 
+        /// Test the property 'Label'
         /// </summary>
         [Test]
         public void LabelTest()
         {
-            // TODO: unit test for the property 'Label' 
+            // TODO: unit test for the property 'Label'
         }
-        
         /// <summary>
-        /// Test the property 'Options' 
+        /// Test the property 'Options'
         /// </summary>
         [Test]
         public void OptionsTest()
         {
-            // TODO: unit test for the property 'Options' 
+            // TODO: unit test for the property 'Options'
         }
-        
         /// <summary>
-        /// Test the property 'Required' 
+        /// Test the property 'Required'
         /// </summary>
         [Test]
         public void RequiredTest()
         {
-            // TODO: unit test for the property 'Required' 
+            // TODO: unit test for the property 'Required'
         }
-        
         /// <summary>
-        /// Test the property '_ReadOnly' 
+        /// Test the property '_ReadOnly'
         /// </summary>
         [Test]
         public void _ReadOnlyTest()
         {
-            // TODO: unit test for the property '_ReadOnly' 
+            // TODO: unit test for the property '_ReadOnly'
         }
-        
         /// <summary>
-        /// Test the property 'VariableBindingId' 
+        /// Test the property 'VariableBindingId'
         /// </summary>
         [Test]
         public void VariableBindingIdTest()
         {
-            // TODO: unit test for the property 'VariableBindingId' 
+            // TODO: unit test for the property 'VariableBindingId'
         }
-        
         /// <summary>
-        /// Test the property 'Type' 
+        /// Test the property 'Type'
         /// </summary>
         [Test]
         public void TypeTest()
         {
-            // TODO: unit test for the property 'Type' 
+            // TODO: unit test for the property 'Type'
         }
-        
 
     }
 

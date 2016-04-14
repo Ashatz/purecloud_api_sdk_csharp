@@ -54,7 +54,7 @@ namespace ININ.PureCloudApi.Model
             }
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -123,11 +123,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Current: ").Append(Current).Append("\n");
             sb.Append("  LatestRelease: ").Append(LatestRelease).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -213,31 +212,22 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.EdgeVersion != null)
                     hash = hash * 59 + this.EdgeVersion.GetHashCode();
-                
                 if (this.PublishDate != null)
                     hash = hash * 59 + this.PublishDate.GetHashCode();
-                
                 if (this.EdgeUri != null)
                     hash = hash * 59 + this.EdgeUri.GetHashCode();
-                
                 if (this.Current != null)
                     hash = hash * 59 + this.Current.GetHashCode();
-                
                 if (this.LatestRelease != null)
                     hash = hash * 59 + this.LatestRelease.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 return hash;
             }
         }

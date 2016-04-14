@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new GreetingAudioFile();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of GreetingAudioFile
@@ -50,34 +50,30 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<GreetingAudioFile> (instance, "instance is a GreetingAudioFile");
         }
 
-        
         /// <summary>
-        /// Test the property 'DurationMilliseconds' 
+        /// Test the property 'DurationMilliseconds'
         /// </summary>
         [Test]
         public void DurationMillisecondsTest()
         {
-            // TODO: unit test for the property 'DurationMilliseconds' 
+            // TODO: unit test for the property 'DurationMilliseconds'
         }
-        
         /// <summary>
-        /// Test the property 'SizeBytes' 
+        /// Test the property 'SizeBytes'
         /// </summary>
         [Test]
         public void SizeBytesTest()
         {
-            // TODO: unit test for the property 'SizeBytes' 
+            // TODO: unit test for the property 'SizeBytes'
         }
-        
         /// <summary>
-        /// Test the property 'SelfUri' 
+        /// Test the property 'SelfUri'
         /// </summary>
         [Test]
         public void SelfUriTest()
         {
-            // TODO: unit test for the property 'SelfUri' 
+            // TODO: unit test for the property 'SelfUri'
         }
-        
 
     }
 

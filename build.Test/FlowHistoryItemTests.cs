@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new FlowHistoryItem();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of FlowHistoryItem
@@ -50,79 +50,70 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<FlowHistoryItem> (instance, "instance is a FlowHistoryItem");
         }
 
-        
         /// <summary>
-        /// Test the property 'HistoryEventTime' 
+        /// Test the property 'HistoryEventTime'
         /// </summary>
         [Test]
         public void HistoryEventTimeTest()
         {
-            // TODO: unit test for the property 'HistoryEventTime' 
+            // TODO: unit test for the property 'HistoryEventTime'
         }
-        
         /// <summary>
-        /// Test the property 'State' 
+        /// Test the property 'State'
         /// </summary>
         [Test]
         public void StateTest()
         {
-            // TODO: unit test for the property 'State' 
+            // TODO: unit test for the property 'State'
         }
-        
         /// <summary>
-        /// Test the property 'WorkItem' 
+        /// Test the property 'WorkItem'
         /// </summary>
         [Test]
         public void WorkItemTest()
         {
-            // TODO: unit test for the property 'WorkItem' 
+            // TODO: unit test for the property 'WorkItem'
         }
-        
         /// <summary>
-        /// Test the property 'User' 
+        /// Test the property 'User'
         /// </summary>
         [Test]
         public void UserTest()
         {
-            // TODO: unit test for the property 'User' 
+            // TODO: unit test for the property 'User'
         }
-        
         /// <summary>
-        /// Test the property 'Queue' 
+        /// Test the property 'Queue'
         /// </summary>
         [Test]
         public void QueueTest()
         {
-            // TODO: unit test for the property 'Queue' 
+            // TODO: unit test for the property 'Queue'
         }
-        
         /// <summary>
-        /// Test the property 'HistoryEventData' 
+        /// Test the property 'HistoryEventData'
         /// </summary>
         [Test]
         public void HistoryEventDataTest()
         {
-            // TODO: unit test for the property 'HistoryEventData' 
+            // TODO: unit test for the property 'HistoryEventData'
         }
-        
         /// <summary>
-        /// Test the property 'HistoryEventType' 
+        /// Test the property 'HistoryEventType'
         /// </summary>
         [Test]
         public void HistoryEventTypeTest()
         {
-            // TODO: unit test for the property 'HistoryEventType' 
+            // TODO: unit test for the property 'HistoryEventType'
         }
-        
         /// <summary>
-        /// Test the property 'Success' 
+        /// Test the property 'Success'
         /// </summary>
         [Test]
         public void SuccessTest()
         {
-            // TODO: unit test for the property 'Success' 
+            // TODO: unit test for the property 'Success'
         }
-        
 
     }
 

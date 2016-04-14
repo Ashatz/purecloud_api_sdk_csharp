@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new ContactSort();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of ContactSort
@@ -50,25 +50,22 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<ContactSort> (instance, "instance is a ContactSort");
         }
 
-        
         /// <summary>
-        /// Test the property 'FieldName' 
+        /// Test the property 'FieldName'
         /// </summary>
         [Test]
         public void FieldNameTest()
         {
-            // TODO: unit test for the property 'FieldName' 
+            // TODO: unit test for the property 'FieldName'
         }
-        
         /// <summary>
-        /// Test the property 'Direction' 
+        /// Test the property 'Direction'
         /// </summary>
         [Test]
         public void DirectionTest()
         {
-            // TODO: unit test for the property 'Direction' 
+            // TODO: unit test for the property 'Direction'
         }
-        
 
     }
 

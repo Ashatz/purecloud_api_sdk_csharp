@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new ReplaceRequest();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of ReplaceRequest
@@ -50,34 +50,30 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<ReplaceRequest> (instance, "instance is a ReplaceRequest");
         }
 
-        
         /// <summary>
-        /// Test the property 'ChangeNumber' 
+        /// Test the property 'ChangeNumber'
         /// </summary>
         [Test]
         public void ChangeNumberTest()
         {
-            // TODO: unit test for the property 'ChangeNumber' 
+            // TODO: unit test for the property 'ChangeNumber'
         }
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'AuthToken' 
+        /// Test the property 'AuthToken'
         /// </summary>
         [Test]
         public void AuthTokenTest()
         {
-            // TODO: unit test for the property 'AuthToken' 
+            // TODO: unit test for the property 'AuthToken'
         }
-        
 
     }
 

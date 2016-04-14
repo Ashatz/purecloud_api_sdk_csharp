@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new FlowState();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of FlowState
@@ -50,34 +50,30 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<FlowState> (instance, "instance is a FlowState");
         }
 
-        
         /// <summary>
-        /// Test the property 'StateExecId' 
+        /// Test the property 'StateExecId'
         /// </summary>
         [Test]
         public void StateExecIdTest()
         {
-            // TODO: unit test for the property 'StateExecId' 
+            // TODO: unit test for the property 'StateExecId'
         }
-        
         /// <summary>
-        /// Test the property 'StateConfigId' 
+        /// Test the property 'StateConfigId'
         /// </summary>
         [Test]
         public void StateConfigIdTest()
         {
-            // TODO: unit test for the property 'StateConfigId' 
+            // TODO: unit test for the property 'StateConfigId'
         }
-        
         /// <summary>
-        /// Test the property 'StateName' 
+        /// Test the property 'StateName'
         /// </summary>
         [Test]
         public void StateNameTest()
         {
-            // TODO: unit test for the property 'StateName' 
+            // TODO: unit test for the property 'StateName'
         }
-        
 
     }
 

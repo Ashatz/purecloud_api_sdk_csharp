@@ -32,7 +32,7 @@ namespace ININ.PureCloudApi.Model
             this.Filters = Filters;
             
         }
-        
+
     
         /// <summary>
         /// Query phrase to search response text and name. If not set will match all.
@@ -66,11 +66,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  QueryPhrase: ").Append(QueryPhrase).Append("\n");
             sb.Append("  PageSize: ").Append(PageSize).Append("\n");
             sb.Append("  Filters: ").Append(Filters).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -131,16 +130,12 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.QueryPhrase != null)
                     hash = hash * 59 + this.QueryPhrase.GetHashCode();
-                
                 if (this.PageSize != null)
                     hash = hash * 59 + this.PageSize.GetHashCode();
-                
                 if (this.Filters != null)
                     hash = hash * 59 + this.Filters.GetHashCode();
-                
                 return hash;
             }
         }

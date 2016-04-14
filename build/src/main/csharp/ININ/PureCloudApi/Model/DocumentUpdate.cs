@@ -52,7 +52,7 @@ namespace ININ.PureCloudApi.Model
             this.RemoveAttributes = RemoveAttributes;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets ChangeNumber
@@ -125,11 +125,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  RemoveTagIds: ").Append(RemoveTagIds).Append("\n");
             sb.Append("  UpdateAttributes: ").Append(UpdateAttributes).Append("\n");
             sb.Append("  RemoveAttributes: ").Append(RemoveAttributes).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -220,34 +219,24 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ChangeNumber != null)
                     hash = hash * 59 + this.ChangeNumber.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.Read != null)
                     hash = hash * 59 + this.Read.GetHashCode();
-                
                 if (this.AddTags != null)
                     hash = hash * 59 + this.AddTags.GetHashCode();
-                
                 if (this.RemoveTags != null)
                     hash = hash * 59 + this.RemoveTags.GetHashCode();
-                
                 if (this.AddTagIds != null)
                     hash = hash * 59 + this.AddTagIds.GetHashCode();
-                
                 if (this.RemoveTagIds != null)
                     hash = hash * 59 + this.RemoveTagIds.GetHashCode();
-                
                 if (this.UpdateAttributes != null)
                     hash = hash * 59 + this.UpdateAttributes.GetHashCode();
-                
                 if (this.RemoveAttributes != null)
                     hash = hash * 59 + this.RemoveAttributes.GetHashCode();
-                
                 return hash;
             }
         }

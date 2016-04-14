@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new Support();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of Support
@@ -50,34 +50,30 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<Support> (instance, "instance is a Support");
         }
 
-        
         /// <summary>
-        /// Test the property 'Phone' 
+        /// Test the property 'Phone'
         /// </summary>
         [Test]
         public void PhoneTest()
         {
-            // TODO: unit test for the property 'Phone' 
+            // TODO: unit test for the property 'Phone'
         }
-        
         /// <summary>
-        /// Test the property 'Email' 
+        /// Test the property 'Email'
         /// </summary>
         [Test]
         public void EmailTest()
         {
-            // TODO: unit test for the property 'Email' 
+            // TODO: unit test for the property 'Email'
         }
-        
         /// <summary>
-        /// Test the property 'Website' 
+        /// Test the property 'Website'
         /// </summary>
         [Test]
         public void WebsiteTest()
         {
-            // TODO: unit test for the property 'Website' 
+            // TODO: unit test for the property 'Website'
         }
-        
 
     }
 

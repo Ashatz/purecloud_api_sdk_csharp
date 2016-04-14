@@ -44,7 +44,7 @@ namespace ININ.PureCloudApi.Model
             this.Message = Message;
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -107,11 +107,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  PresenceDefinition: ").Append(PresenceDefinition).Append("\n");
             sb.Append("  Message: ").Append(Message).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -192,28 +191,20 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.Source != null)
                     hash = hash * 59 + this.Source.GetHashCode();
-                
                 if (this.Primary != null)
                     hash = hash * 59 + this.Primary.GetHashCode();
-                
                 if (this.PresenceDefinition != null)
                     hash = hash * 59 + this.PresenceDefinition.GetHashCode();
-                
                 if (this.Message != null)
                     hash = hash * 59 + this.Message.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 return hash;
             }
         }

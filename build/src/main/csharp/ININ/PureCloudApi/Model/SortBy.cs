@@ -38,7 +38,7 @@ namespace ININ.PureCloudApi.Model
             }
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets Name
@@ -62,11 +62,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class SortBy {\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Ascending: ").Append(Ascending).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -122,13 +121,10 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.Ascending != null)
                     hash = hash * 59 + this.Ascending.GetHashCode();
-                
                 return hash;
             }
         }

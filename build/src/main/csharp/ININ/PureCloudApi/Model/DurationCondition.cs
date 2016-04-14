@@ -17,9 +17,12 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class DurationCondition :  IEquatable<DurationCondition>
     { 
-    
+
+        /// <summary>
+        /// Gets or Sets DurationTarget
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum DurationTargetEnum {
+                public enum DurationTargetEnum {
             
             [EnumMember(Value = "DURATION")]
             Duration,
@@ -27,6 +30,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "DURATION_RANGE")]
             DurationRange
         }
+
         
         /// <summary>
         /// Gets or Sets DurationTarget
@@ -48,7 +52,7 @@ namespace ININ.PureCloudApi.Model
             this.DurationRange = DurationRange;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets DurationOperator
@@ -73,11 +77,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  DurationTarget: ").Append(DurationTarget).Append("\n");
             sb.Append("  DurationOperator: ").Append(DurationOperator).Append("\n");
             sb.Append("  DurationRange: ").Append(DurationRange).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -138,16 +141,12 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.DurationTarget != null)
                     hash = hash * 59 + this.DurationTarget.GetHashCode();
-                
                 if (this.DurationOperator != null)
                     hash = hash * 59 + this.DurationOperator.GetHashCode();
-                
                 if (this.DurationRange != null)
                     hash = hash * 59 + this.DurationRange.GetHashCode();
-                
                 return hash;
             }
         }

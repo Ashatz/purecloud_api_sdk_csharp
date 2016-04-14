@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new AnalyticsQueryClause();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of AnalyticsQueryClause
@@ -50,25 +50,22 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<AnalyticsQueryClause> (instance, "instance is a AnalyticsQueryClause");
         }
 
-        
         /// <summary>
-        /// Test the property 'Type' 
+        /// Test the property 'Type'
         /// </summary>
         [Test]
         public void TypeTest()
         {
-            // TODO: unit test for the property 'Type' 
+            // TODO: unit test for the property 'Type'
         }
-        
         /// <summary>
-        /// Test the property 'Predicates' 
+        /// Test the property 'Predicates'
         /// </summary>
         [Test]
         public void PredicatesTest()
         {
-            // TODO: unit test for the property 'Predicates' 
+            // TODO: unit test for the property 'Predicates'
         }
-        
 
     }
 

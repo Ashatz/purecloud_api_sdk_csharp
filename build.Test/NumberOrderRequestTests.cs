@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new NumberOrderRequest();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of NumberOrderRequest
@@ -50,52 +50,46 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<NumberOrderRequest> (instance, "instance is a NumberOrderRequest");
         }
 
-        
         /// <summary>
-        /// Test the property 'OrderTns' 
+        /// Test the property 'OrderTns'
         /// </summary>
         [Test]
         public void OrderTnsTest()
         {
-            // TODO: unit test for the property 'OrderTns' 
+            // TODO: unit test for the property 'OrderTns'
         }
-        
         /// <summary>
-        /// Test the property 'ReservationIds' 
+        /// Test the property 'ReservationIds'
         /// </summary>
         [Test]
         public void ReservationIdsTest()
         {
-            // TODO: unit test for the property 'ReservationIds' 
+            // TODO: unit test for the property 'ReservationIds'
         }
-        
         /// <summary>
-        /// Test the property 'OrderId' 
+        /// Test the property 'OrderId'
         /// </summary>
         [Test]
         public void OrderIdTest()
         {
-            // TODO: unit test for the property 'OrderId' 
+            // TODO: unit test for the property 'OrderId'
         }
-        
         /// <summary>
-        /// Test the property 'EffectiveDate' 
+        /// Test the property 'EffectiveDate'
         /// </summary>
         [Test]
         public void EffectiveDateTest()
         {
-            // TODO: unit test for the property 'EffectiveDate' 
+            // TODO: unit test for the property 'EffectiveDate'
         }
-        
         /// <summary>
-        /// Test the property 'PhoneNumberType' 
+        /// Test the property 'PhoneNumberType'
         /// </summary>
         [Test]
         public void PhoneNumberTypeTest()
         {
-            // TODO: unit test for the property 'PhoneNumberType' 
+            // TODO: unit test for the property 'PhoneNumberType'
         }
-        
 
     }
 

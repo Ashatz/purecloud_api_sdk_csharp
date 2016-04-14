@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new Chat();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of Chat
@@ -50,16 +50,14 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<Chat> (instance, "instance is a Chat");
         }
 
-        
         /// <summary>
-        /// Test the property 'JabberId' 
+        /// Test the property 'JabberId'
         /// </summary>
         [Test]
         public void JabberIdTest()
         {
-            // TODO: unit test for the property 'JabberId' 
+            // TODO: unit test for the property 'JabberId'
         }
-        
 
     }
 

@@ -17,9 +17,12 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class CommandStatus :  IEquatable<CommandStatus>
     { 
-    
+
+        /// <summary>
+        /// Gets or Sets StatusCode
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum StatusCodeEnum {
+                public enum StatusCodeEnum {
             
             [EnumMember(Value = "INPROGRESS")]
             Inprogress,
@@ -36,9 +39,13 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "CANCELED")]
             Canceled
         }
-    
+
+
+        /// <summary>
+        /// Gets or Sets CommandType
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum CommandTypeEnum {
+                public enum CommandTypeEnum {
             
             [EnumMember(Value = "UPLOAD")]
             Upload,
@@ -70,6 +77,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "REPLACEDOCUMENT")]
             Replacedocument
         }
+
         
         /// <summary>
         /// Gets or Sets StatusCode
@@ -103,7 +111,7 @@ namespace ININ.PureCloudApi.Model
             this.Document = Document;
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -160,11 +168,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  CommandType: ").Append(CommandType).Append("\n");
             sb.Append("  Document: ").Append(Document).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -250,31 +257,22 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.Expiration != null)
                     hash = hash * 59 + this.Expiration.GetHashCode();
-                
                 if (this.UserId != null)
                     hash = hash * 59 + this.UserId.GetHashCode();
-                
                 if (this.StatusCode != null)
                     hash = hash * 59 + this.StatusCode.GetHashCode();
-                
                 if (this.CommandType != null)
                     hash = hash * 59 + this.CommandType.GetHashCode();
-                
                 if (this.Document != null)
                     hash = hash * 59 + this.Document.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 return hash;
             }
         }

@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new DomainPermissionCollection();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of DomainPermissionCollection
@@ -50,52 +50,46 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<DomainPermissionCollection> (instance, "instance is a DomainPermissionCollection");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'Domain' 
+        /// Test the property 'Domain'
         /// </summary>
         [Test]
         public void DomainTest()
         {
-            // TODO: unit test for the property 'Domain' 
+            // TODO: unit test for the property 'Domain'
         }
-        
         /// <summary>
-        /// Test the property 'PermissionMap' 
+        /// Test the property 'PermissionMap'
         /// </summary>
         [Test]
         public void PermissionMapTest()
         {
-            // TODO: unit test for the property 'PermissionMap' 
+            // TODO: unit test for the property 'PermissionMap'
         }
-        
         /// <summary>
-        /// Test the property 'SelfUri' 
+        /// Test the property 'SelfUri'
         /// </summary>
         [Test]
         public void SelfUriTest()
         {
-            // TODO: unit test for the property 'SelfUri' 
+            // TODO: unit test for the property 'SelfUri'
         }
-        
 
     }
 

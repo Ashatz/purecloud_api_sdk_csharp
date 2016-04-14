@@ -40,7 +40,7 @@ namespace ININ.PureCloudApi.Model
             this.Timestamp = Timestamp;
             
         }
-        
+
     
         /// <summary>
         /// Attach properties to a segment in the indicated session. Also requires a timestamp.
@@ -74,11 +74,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  SessionId: ").Append(SessionId).Append("\n");
             sb.Append("  Timestamp: ").Append(Timestamp).Append("\n");
             sb.Append("  Properties: ").Append(Properties).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -139,16 +138,12 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.SessionId != null)
                     hash = hash * 59 + this.SessionId.GetHashCode();
-                
                 if (this.Timestamp != null)
                     hash = hash * 59 + this.Timestamp.GetHashCode();
-                
                 if (this.Properties != null)
                     hash = hash * 59 + this.Properties.GetHashCode();
-                
                 return hash;
             }
         }

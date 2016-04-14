@@ -17,9 +17,12 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class DomainCertificateAuthority :  IEquatable<DomainCertificateAuthority>
     { 
-    
+
+        /// <summary>
+        /// Gets or Sets State
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum StateEnum {
+                public enum StateEnum {
             
             [EnumMember(Value = "ACTIVE")]
             Active,
@@ -30,9 +33,14 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "DELETED")]
             Deleted
         }
-    
+
+
+        /// <summary>
+        /// The certificate authorities type.  Managed certificate authorities are generated and maintained by Interactive Intelligence.  These are read-only and not modifiable by clients.  Remote authorities are customer managed.
+        /// </summary>
+        /// <value>The certificate authorities type.  Managed certificate authorities are generated and maintained by Interactive Intelligence.  These are read-only and not modifiable by clients.  Remote authorities are customer managed.</value>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum TypeEnum {
+                public enum TypeEnum {
             
             [EnumMember(Value = "MANAGED")]
             Managed,
@@ -40,6 +48,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "REMOTE")]
             Remote
         }
+
         
         public static string Services_Sip = "SIP";
         public static string Services_Provision = "PROVISION";
@@ -119,7 +128,7 @@ namespace ININ.PureCloudApi.Model
             this.CertificateDetails = CertificateDetails;
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -236,11 +245,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Services: ").Append(Services).Append("\n");
             sb.Append("  CertificateDetails: ").Append(CertificateDetails).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -366,55 +374,38 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
-                
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
-                
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
-                
                 if (this.DateModified != null)
                     hash = hash * 59 + this.DateModified.GetHashCode();
-                
                 if (this.ModifiedBy != null)
                     hash = hash * 59 + this.ModifiedBy.GetHashCode();
-                
                 if (this.CreatedBy != null)
                     hash = hash * 59 + this.CreatedBy.GetHashCode();
-                
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
-                
                 if (this.ModifiedByApp != null)
                     hash = hash * 59 + this.ModifiedByApp.GetHashCode();
-                
                 if (this.CreatedByApp != null)
                     hash = hash * 59 + this.CreatedByApp.GetHashCode();
-                
                 if (this.Certificate != null)
                     hash = hash * 59 + this.Certificate.GetHashCode();
-                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
                 if (this.Services != null)
                     hash = hash * 59 + this.Services.GetHashCode();
-                
                 if (this.CertificateDetails != null)
                     hash = hash * 59 + this.CertificateDetails.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 return hash;
             }
         }

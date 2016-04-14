@@ -62,9 +62,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'DeleteCalibrationsCalibrationId'
             string calibrationId = null; // TODO: replace null with proper value
             string calibratorId = null; // TODO: replace null with proper value
-            
             var response = instance.DeleteCalibrationsCalibrationId(calibrationId, calibratorId);
-            Assert.IsInstanceOf<Calibration> (response, "response is Calibration"); 
+            Assert.IsInstanceOf<Calibration> (response, "response is Calibration");
         }
         
         /// <summary>
@@ -77,9 +76,8 @@ namespace ININ.PureCloudApi.Test
             string conversationId = null; // TODO: replace null with proper value
             string evaluationId = null; // TODO: replace null with proper value
             string expand = null; // TODO: replace null with proper value
-            
             var response = instance.DeleteConversationsConversationIdEvaluationsEvaluationId(conversationId, evaluationId, expand);
-            Assert.IsInstanceOf<Evaluation> (response, "response is Evaluation"); 
+            Assert.IsInstanceOf<Evaluation> (response, "response is Evaluation");
         }
         
         /// <summary>
@@ -90,9 +88,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'DeleteFormsFormId'
             string formId = null; // TODO: replace null with proper value
-            
             var response = instance.DeleteFormsFormId(formId);
-            Assert.IsInstanceOf<string> (response, "response is string"); 
+            Assert.IsInstanceOf<string> (response, "response is string");
         }
         
         /// <summary>
@@ -114,9 +111,8 @@ namespace ININ.PureCloudApi.Test
             string evaluatorUserId = null; // TODO: replace null with proper value
             string name = null; // TODO: replace null with proper value
             string group = null; // TODO: replace null with proper value
-            
             var response = instance.GetAgentsActivity(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, startTime, endTime, agentUserId, evaluatorUserId, name, group);
-            Assert.IsInstanceOf<AgentActivityEntityListing> (response, "response is AgentActivityEntityListing"); 
+            Assert.IsInstanceOf<AgentActivityEntityListing> (response, "response is AgentActivityEntityListing");
         }
         
         /// <summary>
@@ -136,9 +132,8 @@ namespace ININ.PureCloudApi.Test
             string conversationId = null; // TODO: replace null with proper value
             DateTime? startTime = null; // TODO: replace null with proper value
             DateTime? endTime = null; // TODO: replace null with proper value
-            
             var response = instance.GetCalibrations(calibratorId, pageSize, pageNumber, sortBy, expand, nextPage, previousPage, conversationId, startTime, endTime);
-            Assert.IsInstanceOf<CalibrationEntityListing> (response, "response is CalibrationEntityListing"); 
+            Assert.IsInstanceOf<CalibrationEntityListing> (response, "response is CalibrationEntityListing");
         }
         
         /// <summary>
@@ -150,9 +145,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'GetCalibrationsCalibrationId'
             string calibrationId = null; // TODO: replace null with proper value
             string calibratorId = null; // TODO: replace null with proper value
-            
             var response = instance.GetCalibrationsCalibrationId(calibrationId, calibratorId);
-            Assert.IsInstanceOf<Calibration> (response, "response is Calibration"); 
+            Assert.IsInstanceOf<Calibration> (response, "response is Calibration");
         }
         
         /// <summary>
@@ -171,9 +165,8 @@ namespace ININ.PureCloudApi.Test
             string previousPage = null; // TODO: replace null with proper value
             string recordingId = null; // TODO: replace null with proper value
             string entityType = null; // TODO: replace null with proper value
-            
             var response = instance.GetConversationsConversationIdAudits(conversationId, pageSize, pageNumber, sortBy, expand, nextPage, previousPage, recordingId, entityType);
-            Assert.IsInstanceOf<QualityAuditPage> (response, "response is QualityAuditPage"); 
+            Assert.IsInstanceOf<QualityAuditPage> (response, "response is QualityAuditPage");
         }
         
         /// <summary>
@@ -186,9 +179,8 @@ namespace ININ.PureCloudApi.Test
             string conversationId = null; // TODO: replace null with proper value
             string evaluationId = null; // TODO: replace null with proper value
             string expand = null; // TODO: replace null with proper value
-            
             var response = instance.GetConversationsConversationIdEvaluationsEvaluationId(conversationId, evaluationId, expand);
-            Assert.IsInstanceOf<Evaluation> (response, "response is Evaluation"); 
+            Assert.IsInstanceOf<Evaluation> (response, "response is Evaluation");
         }
         
         /// <summary>
@@ -215,9 +207,8 @@ namespace ININ.PureCloudApi.Test
             bool? agentHasRead = null; // TODO: replace null with proper value
             bool? expandAnswerTotalScores = null; // TODO: replace null with proper value
             int? maximum = null; // TODO: replace null with proper value
-            
             var response = instance.GetEvaluationsQuery(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, conversationId, agentUserId, evaluatorUserId, queueId, startTime, endTime, evaluationState, isReleased, agentHasRead, expandAnswerTotalScores, maximum);
-            Assert.IsInstanceOf<EvaluationEntityListing> (response, "response is EvaluationEntityListing"); 
+            Assert.IsInstanceOf<EvaluationEntityListing> (response, "response is EvaluationEntityListing");
         }
         
         /// <summary>
@@ -238,9 +229,8 @@ namespace ININ.PureCloudApi.Test
             string name = null; // TODO: replace null with proper value
             List<string> permission = null; // TODO: replace null with proper value
             string group = null; // TODO: replace null with proper value
-            
             var response = instance.GetEvaluatorsActivity(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, startTime, endTime, name, permission, group);
-            Assert.IsInstanceOf<EvaluatorActivityEntityListing> (response, "response is EvaluatorActivityEntityListing"); 
+            Assert.IsInstanceOf<EvaluatorActivityEntityListing> (response, "response is EvaluatorActivityEntityListing");
         }
         
         /// <summary>
@@ -257,9 +247,8 @@ namespace ININ.PureCloudApi.Test
             string previousPage = null; // TODO: replace null with proper value
             string expand = null; // TODO: replace null with proper value
             string name = null; // TODO: replace null with proper value
-            
             var response = instance.GetForms(pageSize, pageNumber, sortBy, nextPage, previousPage, expand, name);
-            Assert.IsInstanceOf<EvaluationFormEntityListing> (response, "response is EvaluationFormEntityListing"); 
+            Assert.IsInstanceOf<EvaluationFormEntityListing> (response, "response is EvaluationFormEntityListing");
         }
         
         /// <summary>
@@ -270,9 +259,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'GetFormsFormId'
             string formId = null; // TODO: replace null with proper value
-            
             var response = instance.GetFormsFormId(formId);
-            Assert.IsInstanceOf<EvaluationForm> (response, "response is EvaluationForm"); 
+            Assert.IsInstanceOf<EvaluationForm> (response, "response is EvaluationForm");
         }
         
         /// <summary>
@@ -285,9 +273,8 @@ namespace ININ.PureCloudApi.Test
             string formId = null; // TODO: replace null with proper value
             int? pageSize = null; // TODO: replace null with proper value
             int? pageNumber = null; // TODO: replace null with proper value
-            
             var response = instance.GetFormsFormIdVersions(formId, pageSize, pageNumber);
-            Assert.IsInstanceOf<EvaluationFormEntityListing> (response, "response is EvaluationFormEntityListing"); 
+            Assert.IsInstanceOf<EvaluationFormEntityListing> (response, "response is EvaluationFormEntityListing");
         }
         
         /// <summary>
@@ -300,9 +287,8 @@ namespace ININ.PureCloudApi.Test
             int? pageSize = null; // TODO: replace null with proper value
             int? pageNumber = null; // TODO: replace null with proper value
             string name = null; // TODO: replace null with proper value
-            
             var response = instance.GetPublishedforms(pageSize, pageNumber, name);
-            Assert.IsInstanceOf<EvaluationFormEntityListing> (response, "response is EvaluationFormEntityListing"); 
+            Assert.IsInstanceOf<EvaluationFormEntityListing> (response, "response is EvaluationFormEntityListing");
         }
         
         /// <summary>
@@ -313,9 +299,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'GetPublishedformsFormId'
             string formId = null; // TODO: replace null with proper value
-            
             var response = instance.GetPublishedformsFormId(formId);
-            Assert.IsInstanceOf<EvaluationForm> (response, "response is EvaluationForm"); 
+            Assert.IsInstanceOf<EvaluationForm> (response, "response is EvaluationForm");
         }
         
         /// <summary>
@@ -327,9 +312,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'PostCalibrations'
             Calibration body = null; // TODO: replace null with proper value
             string expand = null; // TODO: replace null with proper value
-            
             var response = instance.PostCalibrations(body, expand);
-            Assert.IsInstanceOf<Calibration> (response, "response is Calibration"); 
+            Assert.IsInstanceOf<Calibration> (response, "response is Calibration");
         }
         
         /// <summary>
@@ -342,9 +326,8 @@ namespace ININ.PureCloudApi.Test
             string conversationId = null; // TODO: replace null with proper value
             Evaluation body = null; // TODO: replace null with proper value
             string expand = null; // TODO: replace null with proper value
-            
             var response = instance.PostConversationsConversationIdEvaluations(conversationId, body, expand);
-            Assert.IsInstanceOf<Evaluation> (response, "response is Evaluation"); 
+            Assert.IsInstanceOf<Evaluation> (response, "response is Evaluation");
         }
         
         /// <summary>
@@ -355,9 +338,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'PostEvaluationsAggregatesQuery'
             AggregationQuery body = null; // TODO: replace null with proper value
-            
             var response = instance.PostEvaluationsAggregatesQuery(body);
-            Assert.IsInstanceOf<AggregateQueryResponse> (response, "response is AggregateQueryResponse"); 
+            Assert.IsInstanceOf<AggregateQueryResponse> (response, "response is AggregateQueryResponse");
         }
         
         /// <summary>
@@ -368,9 +350,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'PostEvaluationsScoring'
             EvaluationFormAndScoringSet body = null; // TODO: replace null with proper value
-            
             var response = instance.PostEvaluationsScoring(body);
-            Assert.IsInstanceOf<EvaluationScoringSet> (response, "response is EvaluationScoringSet"); 
+            Assert.IsInstanceOf<EvaluationScoringSet> (response, "response is EvaluationScoringSet");
         }
         
         /// <summary>
@@ -381,9 +362,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'PostForms'
             EvaluationForm body = null; // TODO: replace null with proper value
-            
             var response = instance.PostForms(body);
-            Assert.IsInstanceOf<EvaluationForm> (response, "response is EvaluationForm"); 
+            Assert.IsInstanceOf<EvaluationForm> (response, "response is EvaluationForm");
         }
         
         /// <summary>
@@ -394,9 +374,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'PostPublishedforms'
             EvaluationForm body = null; // TODO: replace null with proper value
-            
             var response = instance.PostPublishedforms(body);
-            Assert.IsInstanceOf<EvaluationForm> (response, "response is EvaluationForm"); 
+            Assert.IsInstanceOf<EvaluationForm> (response, "response is EvaluationForm");
         }
         
         /// <summary>
@@ -408,9 +387,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'PutCalibrationsCalibrationId'
             string calibrationId = null; // TODO: replace null with proper value
             Calibration body = null; // TODO: replace null with proper value
-            
             var response = instance.PutCalibrationsCalibrationId(calibrationId, body);
-            Assert.IsInstanceOf<Calibration> (response, "response is Calibration"); 
+            Assert.IsInstanceOf<Calibration> (response, "response is Calibration");
         }
         
         /// <summary>
@@ -424,9 +402,8 @@ namespace ININ.PureCloudApi.Test
             string evaluationId = null; // TODO: replace null with proper value
             Evaluation body = null; // TODO: replace null with proper value
             string expand = null; // TODO: replace null with proper value
-            
             var response = instance.PutConversationsConversationIdEvaluationsEvaluationId(conversationId, evaluationId, body, expand);
-            Assert.IsInstanceOf<Evaluation> (response, "response is Evaluation"); 
+            Assert.IsInstanceOf<Evaluation> (response, "response is Evaluation");
         }
         
         /// <summary>
@@ -438,9 +415,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'PutFormsFormId'
             string formId = null; // TODO: replace null with proper value
             EvaluationForm body = null; // TODO: replace null with proper value
-            
             var response = instance.PutFormsFormId(formId, body);
-            Assert.IsInstanceOf<EvaluationForm> (response, "response is EvaluationForm"); 
+            Assert.IsInstanceOf<EvaluationForm> (response, "response is EvaluationForm");
         }
         
     }

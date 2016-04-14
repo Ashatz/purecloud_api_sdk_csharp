@@ -17,9 +17,12 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class DomainLogicalInterface :  IEquatable<DomainLogicalInterface>
     { 
-    
+
+        /// <summary>
+        /// Gets or Sets State
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum StateEnum {
+                public enum StateEnum {
             
             [EnumMember(Value = "ACTIVE")]
             Active,
@@ -30,9 +33,13 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "DELETED")]
             Deleted
         }
-    
+
+
+        /// <summary>
+        /// Gets or Sets CurrentState
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum CurrentStateEnum {
+                public enum CurrentStateEnum {
             
             [EnumMember(Value = "INIT")]
             Init,
@@ -52,6 +59,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "DELETING")]
             Deleting
         }
+
         
         /// <summary>
         /// Gets or Sets State
@@ -175,7 +183,7 @@ namespace ININ.PureCloudApi.Model
             this.PhoneTrunkBaseAssignments = PhoneTrunkBaseAssignments;
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -384,9 +392,9 @@ namespace ININ.PureCloudApi.Model
         public List<TrunkBaseAssignment> ExternalTrunkBaseAssignments { get; set; }
     
         /// <summary>
-        /// Phone trunk base settings to use for phone communication from this interface.  These settings will be ignored when \"inheritPhoneTrunkBases\" is true.
+        /// Phone trunk base settings to use for phone communication from this interface.  These settings will be ignored when \&quot;inheritPhoneTrunkBases\&quot; is true.
         /// </summary>
-        /// <value>Phone trunk base settings to use for phone communication from this interface.  These settings will be ignored when \"inheritPhoneTrunkBases\" is true.</value>
+        /// <value>Phone trunk base settings to use for phone communication from this interface.  These settings will be ignored when \&quot;inheritPhoneTrunkBases\&quot; is true.</value>
         [DataMember(Name="phoneTrunkBaseAssignments", EmitDefaultValue=false)]
         public List<TrunkBaseAssignment> PhoneTrunkBaseAssignments { get; set; }
     
@@ -442,11 +450,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  ExternalTrunkBaseAssignments: ").Append(ExternalTrunkBaseAssignments).Append("\n");
             sb.Append("  PhoneTrunkBaseAssignments: ").Append(PhoneTrunkBaseAssignments).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -677,118 +684,80 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
-                
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
-                
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
-                
                 if (this.DateModified != null)
                     hash = hash * 59 + this.DateModified.GetHashCode();
-                
                 if (this.ModifiedBy != null)
                     hash = hash * 59 + this.ModifiedBy.GetHashCode();
-                
                 if (this.CreatedBy != null)
                     hash = hash * 59 + this.CreatedBy.GetHashCode();
-                
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
-                
                 if (this.ModifiedByApp != null)
                     hash = hash * 59 + this.ModifiedByApp.GetHashCode();
-                
                 if (this.CreatedByApp != null)
                     hash = hash * 59 + this.CreatedByApp.GetHashCode();
-                
                 if (this.EdgeUri != null)
                     hash = hash * 59 + this.EdgeUri.GetHashCode();
-                
                 if (this.EdgeAssignedId != null)
                     hash = hash * 59 + this.EdgeAssignedId.GetHashCode();
-                
                 if (this.FriendlyName != null)
                     hash = hash * 59 + this.FriendlyName.GetHashCode();
-                
                 if (this.VlanTagId != null)
                     hash = hash * 59 + this.VlanTagId.GetHashCode();
-                
                 if (this.HardwareAddress != null)
                     hash = hash * 59 + this.HardwareAddress.GetHashCode();
-                
                 if (this.PhysicalAdapterId != null)
                     hash = hash * 59 + this.PhysicalAdapterId.GetHashCode();
-                
                 if (this.IpAddress != null)
                     hash = hash * 59 + this.IpAddress.GetHashCode();
-                
                 if (this.Gateway != null)
                     hash = hash * 59 + this.Gateway.GetHashCode();
-                
                 if (this.PrimaryDns != null)
                     hash = hash * 59 + this.PrimaryDns.GetHashCode();
-                
                 if (this.SecondaryDns != null)
                     hash = hash * 59 + this.SecondaryDns.GetHashCode();
-                
                 if (this.IfStatus != null)
                     hash = hash * 59 + this.IfStatus.GetHashCode();
-                
                 if (this.Routes != null)
                     hash = hash * 59 + this.Routes.GetHashCode();
-                
                 if (this.Addresses != null)
                     hash = hash * 59 + this.Addresses.GetHashCode();
-                
                 if (this.Ipv4Capabilities != null)
                     hash = hash * 59 + this.Ipv4Capabilities.GetHashCode();
-                
                 if (this.Ipv6Capabilities != null)
                     hash = hash * 59 + this.Ipv6Capabilities.GetHashCode();
-                
                 if (this.CurrentState != null)
                     hash = hash * 59 + this.CurrentState.GetHashCode();
-                
                 if (this.LastModifiedUserId != null)
                     hash = hash * 59 + this.LastModifiedUserId.GetHashCode();
-                
                 if (this.LastModifiedCorrelationId != null)
                     hash = hash * 59 + this.LastModifiedCorrelationId.GetHashCode();
-                
                 if (this.CommandResponses != null)
                     hash = hash * 59 + this.CommandResponses.GetHashCode();
-                
                 if (this.InheritPhoneTrunkBases != null)
                     hash = hash * 59 + this.InheritPhoneTrunkBases.GetHashCode();
-                
                 if (this.InheritPhoneTrunkBasesIPv4 != null)
                     hash = hash * 59 + this.InheritPhoneTrunkBasesIPv4.GetHashCode();
-                
                 if (this.InheritPhoneTrunkBasesIPv6 != null)
                     hash = hash * 59 + this.InheritPhoneTrunkBasesIPv6.GetHashCode();
-                
                 if (this.UseForInternalEdgeCommunication != null)
                     hash = hash * 59 + this.UseForInternalEdgeCommunication.GetHashCode();
-                
                 if (this.ExternalTrunkBaseAssignments != null)
                     hash = hash * 59 + this.ExternalTrunkBaseAssignments.GetHashCode();
-                
                 if (this.PhoneTrunkBaseAssignments != null)
                     hash = hash * 59 + this.PhoneTrunkBaseAssignments.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 return hash;
             }
         }

@@ -17,9 +17,13 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class ConsultTransferUpdate :  IEquatable<ConsultTransferUpdate>
     { 
-    
+
+        /// <summary>
+        /// Determines to whom the initiating participant is speaking.
+        /// </summary>
+        /// <value>Determines to whom the initiating participant is speaking.</value>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum SpeakToEnum {
+                public enum SpeakToEnum {
             
             [EnumMember(Value = "DESTINATION")]
             Destination,
@@ -30,6 +34,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "BOTH")]
             Both
         }
+
         
         /// <summary>
         /// Determines to whom the initiating participant is speaking.
@@ -56,7 +61,7 @@ namespace ININ.PureCloudApi.Model
             }
             
         }
-        
+
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -67,11 +72,10 @@ namespace ININ.PureCloudApi.Model
             var sb = new StringBuilder();
             sb.Append("class ConsultTransferUpdate {\n");
             sb.Append("  SpeakTo: ").Append(SpeakTo).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -122,10 +126,8 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.SpeakTo != null)
                     hash = hash * 59 + this.SpeakTo.GetHashCode();
-                
                 return hash;
             }
         }

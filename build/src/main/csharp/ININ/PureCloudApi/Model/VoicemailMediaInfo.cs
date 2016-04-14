@@ -30,7 +30,7 @@ namespace ININ.PureCloudApi.Model
             this.MediaImageUri = MediaImageUri;
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -62,11 +62,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  MediaFileUri: ").Append(MediaFileUri).Append("\n");
             sb.Append("  MediaImageUri: ").Append(MediaImageUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -127,16 +126,12 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.MediaFileUri != null)
                     hash = hash * 59 + this.MediaFileUri.GetHashCode();
-                
                 if (this.MediaImageUri != null)
                     hash = hash * 59 + this.MediaImageUri.GetHashCode();
-                
                 return hash;
             }
         }

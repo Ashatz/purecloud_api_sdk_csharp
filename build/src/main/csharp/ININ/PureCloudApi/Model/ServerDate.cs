@@ -28,7 +28,7 @@ namespace ININ.PureCloudApi.Model
             this.CurrentDate = CurrentDate;
             
         }
-        
+
     
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
@@ -46,11 +46,10 @@ namespace ININ.PureCloudApi.Model
             var sb = new StringBuilder();
             sb.Append("class ServerDate {\n");
             sb.Append("  CurrentDate: ").Append(CurrentDate).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -101,10 +100,8 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.CurrentDate != null)
                     hash = hash * 59 + this.CurrentDate.GetHashCode();
-                
                 return hash;
             }
         }

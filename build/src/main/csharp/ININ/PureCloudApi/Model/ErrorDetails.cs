@@ -42,7 +42,7 @@ namespace ININ.PureCloudApi.Model
             this.Details = Details;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets Status
@@ -108,11 +108,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  ContextId: ").Append(ContextId).Append("\n");
             sb.Append("  Nested: ").Append(Nested).Append("\n");
             sb.Append("  Details: ").Append(Details).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -198,31 +197,22 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
-                
                 if (this.Message != null)
                     hash = hash * 59 + this.Message.GetHashCode();
-                
                 if (this.MessageWithParams != null)
                     hash = hash * 59 + this.MessageWithParams.GetHashCode();
-                
                 if (this.MessageParams != null)
                     hash = hash * 59 + this.MessageParams.GetHashCode();
-                
                 if (this.Code != null)
                     hash = hash * 59 + this.Code.GetHashCode();
-                
                 if (this.ContextId != null)
                     hash = hash * 59 + this.ContextId.GetHashCode();
-                
                 if (this.Nested != null)
                     hash = hash * 59 + this.Nested.GetHashCode();
-                
                 if (this.Details != null)
                     hash = hash * 59 + this.Details.GetHashCode();
-                
                 return hash;
             }
         }

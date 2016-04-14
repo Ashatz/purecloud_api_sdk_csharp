@@ -42,7 +42,7 @@ namespace ININ.PureCloudApi.Model
             this.PC = PC;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets Country
@@ -108,11 +108,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  LOC: ").Append(LOC).Append("\n");
             sb.Append("  NAM: ").Append(NAM).Append("\n");
             sb.Append("  PC: ").Append(PC).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -198,31 +197,22 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Country != null)
                     hash = hash * 59 + this.Country.GetHashCode();
-                
                 if (this.A1 != null)
                     hash = hash * 59 + this.A1.GetHashCode();
-                
                 if (this.A3 != null)
                     hash = hash * 59 + this.A3.GetHashCode();
-                
                 if (this.RD != null)
                     hash = hash * 59 + this.RD.GetHashCode();
-                
                 if (this.HNO != null)
                     hash = hash * 59 + this.HNO.GetHashCode();
-                
                 if (this.LOC != null)
                     hash = hash * 59 + this.LOC.GetHashCode();
-                
                 if (this.NAM != null)
                     hash = hash * 59 + this.NAM.GetHashCode();
-                
                 if (this.PC != null)
                     hash = hash * 59 + this.PC.GetHashCode();
-                
                 return hash;
             }
         }

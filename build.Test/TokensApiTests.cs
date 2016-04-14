@@ -60,9 +60,8 @@ namespace ININ.PureCloudApi.Test
         public void DeleteMeTest()
         {
             // TODO: add unit test for the method 'DeleteMe'
-            
             var response = instance.DeleteMe();
-            Assert.IsInstanceOf<string> (response, "response is string"); 
+            Assert.IsInstanceOf<string> (response, "response is string");
         }
         
     }

@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new UnpivotColumns();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of UnpivotColumns
@@ -50,16 +50,14 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<UnpivotColumns> (instance, "instance is a UnpivotColumns");
         }
 
-        
         /// <summary>
-        /// Test the property 'Columns' 
+        /// Test the property 'Columns'
         /// </summary>
         [Test]
         public void ColumnsTest()
         {
-            // TODO: unit test for the property 'Columns' 
+            // TODO: unit test for the property 'Columns'
         }
-        
 
     }
 

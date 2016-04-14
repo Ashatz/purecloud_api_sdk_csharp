@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new DomainNetworkRoute();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of DomainNetworkRoute
@@ -50,52 +50,46 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<DomainNetworkRoute> (instance, "instance is a DomainNetworkRoute");
         }
 
-        
         /// <summary>
-        /// Test the property 'Prefix' 
+        /// Test the property 'Prefix'
         /// </summary>
         [Test]
         public void PrefixTest()
         {
-            // TODO: unit test for the property 'Prefix' 
+            // TODO: unit test for the property 'Prefix'
         }
-        
         /// <summary>
-        /// Test the property 'Nexthop' 
+        /// Test the property 'Nexthop'
         /// </summary>
         [Test]
         public void NexthopTest()
         {
-            // TODO: unit test for the property 'Nexthop' 
+            // TODO: unit test for the property 'Nexthop'
         }
-        
         /// <summary>
-        /// Test the property 'Persistent' 
+        /// Test the property 'Persistent'
         /// </summary>
         [Test]
         public void PersistentTest()
         {
-            // TODO: unit test for the property 'Persistent' 
+            // TODO: unit test for the property 'Persistent'
         }
-        
         /// <summary>
-        /// Test the property 'Metric' 
+        /// Test the property 'Metric'
         /// </summary>
         [Test]
         public void MetricTest()
         {
-            // TODO: unit test for the property 'Metric' 
+            // TODO: unit test for the property 'Metric'
         }
-        
         /// <summary>
-        /// Test the property 'Family' 
+        /// Test the property 'Family'
         /// </summary>
         [Test]
         public void FamilyTest()
         {
-            // TODO: unit test for the property 'Family' 
+            // TODO: unit test for the property 'Family'
         }
-        
 
     }
 

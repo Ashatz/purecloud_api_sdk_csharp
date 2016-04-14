@@ -94,7 +94,7 @@ namespace ININ.PureCloudApi.Model
             this.CurrentTaskStartTime = CurrentTaskStartTime;
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -172,9 +172,9 @@ namespace ININ.PureCloudApi.Model
         public string Title { get; set; }
     
         /// <summary>
-        /// The work item's subtitle - 2nd line/description
+        /// The work item&#39;s subtitle - 2nd line/description
         /// </summary>
-        /// <value>The work item's subtitle - 2nd line/description</value>
+        /// <value>The work item&#39;s subtitle - 2nd line/description</value>
         [DataMember(Name="subtitle", EmitDefaultValue=false)]
         public string Subtitle { get; set; }
     
@@ -262,11 +262,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  LastOwnershipUpdateTime: ").Append(LastOwnershipUpdateTime).Append("\n");
             sb.Append("  CurrentTaskStartTime: ").Append(CurrentTaskStartTime).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -412,67 +411,46 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.WorkItemDefinition != null)
                     hash = hash * 59 + this.WorkItemDefinition.GetHashCode();
-                
                 if (this.FlowExecId != null)
                     hash = hash * 59 + this.FlowExecId.GetHashCode();
-                
                 if (this.FlowConfigId != null)
                     hash = hash * 59 + this.FlowConfigId.GetHashCode();
-                
                 if (this.FlowCreateTime != null)
                     hash = hash * 59 + this.FlowCreateTime.GetHashCode();
-                
                 if (this.CreateTime != null)
                     hash = hash * 59 + this.CreateTime.GetHashCode();
-                
                 if (this.Owner != null)
                     hash = hash * 59 + this.Owner.GetHashCode();
-                
                 if (this.OfferedToUsers != null)
                     hash = hash * 59 + this.OfferedToUsers.GetHashCode();
-                
                 if (this.OfferedToQueues != null)
                     hash = hash * 59 + this.OfferedToQueues.GetHashCode();
-                
                 if (this.Title != null)
                     hash = hash * 59 + this.Title.GetHashCode();
-                
                 if (this.Subtitle != null)
                     hash = hash * 59 + this.Subtitle.GetHashCode();
-                
                 if (this.AssociatedDocuments != null)
                     hash = hash * 59 + this.AssociatedDocuments.GetHashCode();
-                
                 if (this.AvailableActions != null)
                     hash = hash * 59 + this.AvailableActions.GetHashCode();
-                
                 if (this.DataValueInfo != null)
                     hash = hash * 59 + this.DataValueInfo.GetHashCode();
-                
                 if (this.WorkItemCache != null)
                     hash = hash * 59 + this.WorkItemCache.GetHashCode();
-                
                 if (this.LastOfferedTime != null)
                     hash = hash * 59 + this.LastOfferedTime.GetHashCode();
-                
                 if (this.LastOwnershipUpdateTime != null)
                     hash = hash * 59 + this.LastOwnershipUpdateTime.GetHashCode();
-                
                 if (this.CurrentTaskStartTime != null)
                     hash = hash * 59 + this.CurrentTaskStartTime.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 return hash;
             }
         }

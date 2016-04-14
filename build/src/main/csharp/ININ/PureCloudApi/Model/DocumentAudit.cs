@@ -17,9 +17,12 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class DocumentAudit :  IEquatable<DocumentAudit>
     { 
-    
+
+        /// <summary>
+        /// Gets or Sets Level
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum LevelEnum {
+                public enum LevelEnum {
             
             [EnumMember(Value = "USER")]
             User,
@@ -27,9 +30,13 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "SYSTEM")]
             System
         }
-    
+
+
+        /// <summary>
+        /// Gets or Sets Status
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum StatusEnum {
+                public enum StatusEnum {
             
             [EnumMember(Value = "SUCCESS")]
             Success,
@@ -37,9 +44,13 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "FAILURE")]
             Failure
         }
-    
+
+
+        /// <summary>
+        /// Gets or Sets ActionContext
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum ActionContextEnum {
+                public enum ActionContextEnum {
             
             [EnumMember(Value = "CREATE")]
             Create,
@@ -164,9 +175,13 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "VERSION_CREATE")]
             VersionCreate
         }
-    
+
+
+        /// <summary>
+        /// Gets or Sets Action
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum ActionEnum {
+                public enum ActionEnum {
             
             [EnumMember(Value = "CREATE")]
             Create,
@@ -291,6 +306,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "VERSION_CREATE")]
             VersionCreate
         }
+
         
         /// <summary>
         /// Gets or Sets Level
@@ -360,7 +376,7 @@ namespace ININ.PureCloudApi.Model
             this.Changes = Changes;
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -461,11 +477,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Entity: ").Append(Entity).Append("\n");
             sb.Append("  Changes: ").Append(Changes).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -591,55 +606,38 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();
-                
                 if (this.Workspace != null)
                     hash = hash * 59 + this.Workspace.GetHashCode();
-                
                 if (this.TransactionId != null)
                     hash = hash * 59 + this.TransactionId.GetHashCode();
-                
                 if (this.TransactionInitiator != null)
                     hash = hash * 59 + this.TransactionInitiator.GetHashCode();
-                
                 if (this.Application != null)
                     hash = hash * 59 + this.Application.GetHashCode();
-                
                 if (this.ServiceName != null)
                     hash = hash * 59 + this.ServiceName.GetHashCode();
-                
                 if (this.Level != null)
                     hash = hash * 59 + this.Level.GetHashCode();
-                
                 if (this.Timestamp != null)
                     hash = hash * 59 + this.Timestamp.GetHashCode();
-                
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
-                
                 if (this.ActionContext != null)
                     hash = hash * 59 + this.ActionContext.GetHashCode();
-                
                 if (this.Action != null)
                     hash = hash * 59 + this.Action.GetHashCode();
-                
                 if (this.Entity != null)
                     hash = hash * 59 + this.Entity.GetHashCode();
-                
                 if (this.Changes != null)
                     hash = hash * 59 + this.Changes.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 return hash;
             }
         }

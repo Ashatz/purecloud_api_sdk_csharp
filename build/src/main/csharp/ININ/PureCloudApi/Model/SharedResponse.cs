@@ -36,7 +36,7 @@ namespace ININ.PureCloudApi.Model
             this.Share = Share;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets Id
@@ -81,11 +81,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  ViewUri: ").Append(ViewUri).Append("\n");
             sb.Append("  Document: ").Append(Document).Append("\n");
             sb.Append("  Share: ").Append(Share).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -156,22 +155,16 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.DownloadUri != null)
                     hash = hash * 59 + this.DownloadUri.GetHashCode();
-                
                 if (this.ViewUri != null)
                     hash = hash * 59 + this.ViewUri.GetHashCode();
-                
                 if (this.Document != null)
                     hash = hash * 59 + this.Document.GetHashCode();
-                
                 if (this.Share != null)
                     hash = hash * 59 + this.Share.GetHashCode();
-                
                 return hash;
             }
         }

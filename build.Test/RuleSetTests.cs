@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new RuleSet();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of RuleSet
@@ -50,88 +50,78 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<RuleSet> (instance, "instance is a RuleSet");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'DateCreated' 
+        /// Test the property 'DateCreated'
         /// </summary>
         [Test]
         public void DateCreatedTest()
         {
-            // TODO: unit test for the property 'DateCreated' 
+            // TODO: unit test for the property 'DateCreated'
         }
-        
         /// <summary>
-        /// Test the property 'DateModified' 
+        /// Test the property 'DateModified'
         /// </summary>
         [Test]
         public void DateModifiedTest()
         {
-            // TODO: unit test for the property 'DateModified' 
+            // TODO: unit test for the property 'DateModified'
         }
-        
         /// <summary>
-        /// Test the property 'Version' 
+        /// Test the property 'Version'
         /// </summary>
         [Test]
         public void VersionTest()
         {
-            // TODO: unit test for the property 'Version' 
+            // TODO: unit test for the property 'Version'
         }
-        
         /// <summary>
-        /// Test the property 'ContactList' 
+        /// Test the property 'ContactList'
         /// </summary>
         [Test]
         public void ContactListTest()
         {
-            // TODO: unit test for the property 'ContactList' 
+            // TODO: unit test for the property 'ContactList'
         }
-        
         /// <summary>
-        /// Test the property 'Queue' 
+        /// Test the property 'Queue'
         /// </summary>
         [Test]
         public void QueueTest()
         {
-            // TODO: unit test for the property 'Queue' 
+            // TODO: unit test for the property 'Queue'
         }
-        
         /// <summary>
-        /// Test the property 'Rules' 
+        /// Test the property 'Rules'
         /// </summary>
         [Test]
         public void RulesTest()
         {
-            // TODO: unit test for the property 'Rules' 
+            // TODO: unit test for the property 'Rules'
         }
-        
         /// <summary>
-        /// Test the property 'SelfUri' 
+        /// Test the property 'SelfUri'
         /// </summary>
         [Test]
         public void SelfUriTest()
         {
-            // TODO: unit test for the property 'SelfUri' 
+            // TODO: unit test for the property 'SelfUri'
         }
-        
 
     }
 

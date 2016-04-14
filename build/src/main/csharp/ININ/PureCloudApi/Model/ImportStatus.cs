@@ -17,9 +17,12 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class ImportStatus :  IEquatable<ImportStatus>
     { 
-    
+
+        /// <summary>
+        /// Gets or Sets State
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum StateEnum {
+                public enum StateEnum {
             
             [EnumMember(Value = "IN_PROGRESS")]
             InProgress,
@@ -27,6 +30,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "FAILED")]
             Failed
         }
+
         
         /// <summary>
         /// Gets or Sets State
@@ -52,7 +56,7 @@ namespace ININ.PureCloudApi.Model
             this.FailureReason = FailureReason;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets TotalRecords
@@ -91,11 +95,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  CompletedRecords: ").Append(CompletedRecords).Append("\n");
             sb.Append("  PercentComplete: ").Append(PercentComplete).Append("\n");
             sb.Append("  FailureReason: ").Append(FailureReason).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -166,22 +169,16 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
-                
                 if (this.TotalRecords != null)
                     hash = hash * 59 + this.TotalRecords.GetHashCode();
-                
                 if (this.CompletedRecords != null)
                     hash = hash * 59 + this.CompletedRecords.GetHashCode();
-                
                 if (this.PercentComplete != null)
                     hash = hash * 59 + this.PercentComplete.GetHashCode();
-                
                 if (this.FailureReason != null)
                     hash = hash * 59 + this.FailureReason.GetHashCode();
-                
                 return hash;
             }
         }

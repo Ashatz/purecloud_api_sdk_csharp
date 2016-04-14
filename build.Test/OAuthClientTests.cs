@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new OAuthClient();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of OAuthClient
@@ -50,88 +50,78 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<OAuthClient> (instance, "instance is a OAuthClient");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'AccessTokenValiditySeconds' 
+        /// Test the property 'AccessTokenValiditySeconds'
         /// </summary>
         [Test]
         public void AccessTokenValiditySecondsTest()
         {
-            // TODO: unit test for the property 'AccessTokenValiditySeconds' 
+            // TODO: unit test for the property 'AccessTokenValiditySeconds'
         }
-        
         /// <summary>
-        /// Test the property 'Description' 
+        /// Test the property 'Description'
         /// </summary>
         [Test]
         public void DescriptionTest()
         {
-            // TODO: unit test for the property 'Description' 
+            // TODO: unit test for the property 'Description'
         }
-        
         /// <summary>
-        /// Test the property 'RegisteredRedirectUri' 
+        /// Test the property 'RegisteredRedirectUri'
         /// </summary>
         [Test]
         public void RegisteredRedirectUriTest()
         {
-            // TODO: unit test for the property 'RegisteredRedirectUri' 
+            // TODO: unit test for the property 'RegisteredRedirectUri'
         }
-        
         /// <summary>
-        /// Test the property 'Secret' 
+        /// Test the property 'Secret'
         /// </summary>
         [Test]
         public void SecretTest()
         {
-            // TODO: unit test for the property 'Secret' 
+            // TODO: unit test for the property 'Secret'
         }
-        
         /// <summary>
-        /// Test the property 'RoleIds' 
+        /// Test the property 'RoleIds'
         /// </summary>
         [Test]
         public void RoleIdsTest()
         {
-            // TODO: unit test for the property 'RoleIds' 
+            // TODO: unit test for the property 'RoleIds'
         }
-        
         /// <summary>
-        /// Test the property 'AuthorizedGrantType' 
+        /// Test the property 'AuthorizedGrantType'
         /// </summary>
         [Test]
         public void AuthorizedGrantTypeTest()
         {
-            // TODO: unit test for the property 'AuthorizedGrantType' 
+            // TODO: unit test for the property 'AuthorizedGrantType'
         }
-        
         /// <summary>
-        /// Test the property 'SelfUri' 
+        /// Test the property 'SelfUri'
         /// </summary>
         [Test]
         public void SelfUriTest()
         {
-            // TODO: unit test for the property 'SelfUri' 
+            // TODO: unit test for the property 'SelfUri'
         }
-        
 
     }
 

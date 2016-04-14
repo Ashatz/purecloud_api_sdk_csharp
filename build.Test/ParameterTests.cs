@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new Parameter();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of Parameter
@@ -50,43 +50,38 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<Parameter> (instance, "instance is a Parameter");
         }
 
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'ParameterType' 
+        /// Test the property 'ParameterType'
         /// </summary>
         [Test]
         public void ParameterTypeTest()
         {
-            // TODO: unit test for the property 'ParameterType' 
+            // TODO: unit test for the property 'ParameterType'
         }
-        
         /// <summary>
-        /// Test the property 'Domain' 
+        /// Test the property 'Domain'
         /// </summary>
         [Test]
         public void DomainTest()
         {
-            // TODO: unit test for the property 'Domain' 
+            // TODO: unit test for the property 'Domain'
         }
-        
         /// <summary>
-        /// Test the property 'Required' 
+        /// Test the property 'Required'
         /// </summary>
         [Test]
         public void RequiredTest()
         {
-            // TODO: unit test for the property 'Required' 
+            // TODO: unit test for the property 'Required'
         }
-        
 
     }
 

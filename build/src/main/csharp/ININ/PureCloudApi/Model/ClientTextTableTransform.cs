@@ -42,7 +42,7 @@ namespace ININ.PureCloudApi.Model
             this.Table = Table;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets Id
@@ -108,11 +108,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Comments: ").Append(Comments).Append("\n");
             sb.Append("  Delimiter: ").Append(Delimiter).Append("\n");
             sb.Append("  Table: ").Append(Table).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -198,31 +197,22 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.EndpointId != null)
                     hash = hash * 59 + this.EndpointId.GetHashCode();
-                
                 if (this.FilenameReplaces != null)
                     hash = hash * 59 + this.FilenameReplaces.GetHashCode();
-                
                 if (this.Tags != null)
                     hash = hash * 59 + this.Tags.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.Comments != null)
                     hash = hash * 59 + this.Comments.GetHashCode();
-                
                 if (this.Delimiter != null)
                     hash = hash * 59 + this.Delimiter.GetHashCode();
-                
                 if (this.Table != null)
                     hash = hash * 59 + this.Table.GetHashCode();
-                
                 return hash;
             }
         }

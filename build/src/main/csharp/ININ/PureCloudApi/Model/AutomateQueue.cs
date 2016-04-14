@@ -24,7 +24,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Name">Name.</param>
         /// <param name="Description">The description for the queue object..</param>
         /// <param name="Members">The members for the queue object..</param>
-        /// <param name="LastUpdateTime">The last time that the queue was updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="LastUpdateTime"> The last time that the queue was updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="LastUpdateUser">The user who last performed an update..</param>
 
         public AutomateQueue(string Name = null, string Description = null, List<User> Members = null, DateTime? LastUpdateTime = null, User LastUpdateUser = null)
@@ -36,7 +36,7 @@ namespace ININ.PureCloudApi.Model
             this.LastUpdateUser = LastUpdateUser;
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -66,9 +66,9 @@ namespace ININ.PureCloudApi.Model
         public List<User> Members { get; set; }
     
         /// <summary>
-        /// The last time that the queue was updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        ///  The last time that the queue was updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
-        /// <value>The last time that the queue was updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value> The last time that the queue was updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="lastUpdateTime", EmitDefaultValue=false)]
         public DateTime? LastUpdateTime { get; set; }
     
@@ -101,11 +101,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  LastUpdateTime: ").Append(LastUpdateTime).Append("\n");
             sb.Append("  LastUpdateUser: ").Append(LastUpdateUser).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -186,28 +185,20 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
-                
                 if (this.Members != null)
                     hash = hash * 59 + this.Members.GetHashCode();
-                
                 if (this.LastUpdateTime != null)
                     hash = hash * 59 + this.LastUpdateTime.GetHashCode();
-                
                 if (this.LastUpdateUser != null)
                     hash = hash * 59 + this.LastUpdateUser.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 return hash;
             }
         }

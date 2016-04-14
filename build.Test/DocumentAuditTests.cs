@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new DocumentAudit();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of DocumentAudit
@@ -50,151 +50,134 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<DocumentAudit> (instance, "instance is a DocumentAudit");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'User' 
+        /// Test the property 'User'
         /// </summary>
         [Test]
         public void UserTest()
         {
-            // TODO: unit test for the property 'User' 
+            // TODO: unit test for the property 'User'
         }
-        
         /// <summary>
-        /// Test the property 'Workspace' 
+        /// Test the property 'Workspace'
         /// </summary>
         [Test]
         public void WorkspaceTest()
         {
-            // TODO: unit test for the property 'Workspace' 
+            // TODO: unit test for the property 'Workspace'
         }
-        
         /// <summary>
-        /// Test the property 'TransactionId' 
+        /// Test the property 'TransactionId'
         /// </summary>
         [Test]
         public void TransactionIdTest()
         {
-            // TODO: unit test for the property 'TransactionId' 
+            // TODO: unit test for the property 'TransactionId'
         }
-        
         /// <summary>
-        /// Test the property 'TransactionInitiator' 
+        /// Test the property 'TransactionInitiator'
         /// </summary>
         [Test]
         public void TransactionInitiatorTest()
         {
-            // TODO: unit test for the property 'TransactionInitiator' 
+            // TODO: unit test for the property 'TransactionInitiator'
         }
-        
         /// <summary>
-        /// Test the property 'Application' 
+        /// Test the property 'Application'
         /// </summary>
         [Test]
         public void ApplicationTest()
         {
-            // TODO: unit test for the property 'Application' 
+            // TODO: unit test for the property 'Application'
         }
-        
         /// <summary>
-        /// Test the property 'ServiceName' 
+        /// Test the property 'ServiceName'
         /// </summary>
         [Test]
         public void ServiceNameTest()
         {
-            // TODO: unit test for the property 'ServiceName' 
+            // TODO: unit test for the property 'ServiceName'
         }
-        
         /// <summary>
-        /// Test the property 'Level' 
+        /// Test the property 'Level'
         /// </summary>
         [Test]
         public void LevelTest()
         {
-            // TODO: unit test for the property 'Level' 
+            // TODO: unit test for the property 'Level'
         }
-        
         /// <summary>
-        /// Test the property 'Timestamp' 
+        /// Test the property 'Timestamp'
         /// </summary>
         [Test]
         public void TimestampTest()
         {
-            // TODO: unit test for the property 'Timestamp' 
+            // TODO: unit test for the property 'Timestamp'
         }
-        
         /// <summary>
-        /// Test the property 'Status' 
+        /// Test the property 'Status'
         /// </summary>
         [Test]
         public void StatusTest()
         {
-            // TODO: unit test for the property 'Status' 
+            // TODO: unit test for the property 'Status'
         }
-        
         /// <summary>
-        /// Test the property 'ActionContext' 
+        /// Test the property 'ActionContext'
         /// </summary>
         [Test]
         public void ActionContextTest()
         {
-            // TODO: unit test for the property 'ActionContext' 
+            // TODO: unit test for the property 'ActionContext'
         }
-        
         /// <summary>
-        /// Test the property 'Action' 
+        /// Test the property 'Action'
         /// </summary>
         [Test]
         public void ActionTest()
         {
-            // TODO: unit test for the property 'Action' 
+            // TODO: unit test for the property 'Action'
         }
-        
         /// <summary>
-        /// Test the property 'Entity' 
+        /// Test the property 'Entity'
         /// </summary>
         [Test]
         public void EntityTest()
         {
-            // TODO: unit test for the property 'Entity' 
+            // TODO: unit test for the property 'Entity'
         }
-        
         /// <summary>
-        /// Test the property 'Changes' 
+        /// Test the property 'Changes'
         /// </summary>
         [Test]
         public void ChangesTest()
         {
-            // TODO: unit test for the property 'Changes' 
+            // TODO: unit test for the property 'Changes'
         }
-        
         /// <summary>
-        /// Test the property 'SelfUri' 
+        /// Test the property 'SelfUri'
         /// </summary>
         [Test]
         public void SelfUriTest()
         {
-            // TODO: unit test for the property 'SelfUri' 
+            // TODO: unit test for the property 'SelfUri'
         }
-        
 
     }
 

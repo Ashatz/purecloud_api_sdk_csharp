@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new CallCommand();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of CallCommand
@@ -50,16 +50,14 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<CallCommand> (instance, "instance is a CallCommand");
         }
 
-        
         /// <summary>
-        /// Test the property 'CallNumber' 
+        /// Test the property 'CallNumber'
         /// </summary>
         [Test]
         public void CallNumberTest()
         {
-            // TODO: unit test for the property 'CallNumber' 
+            // TODO: unit test for the property 'CallNumber'
         }
-        
 
     }
 

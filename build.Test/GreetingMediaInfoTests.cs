@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new GreetingMediaInfo();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of GreetingMediaInfo
@@ -50,34 +50,30 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<GreetingMediaInfo> (instance, "instance is a GreetingMediaInfo");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'MediaFileUri' 
+        /// Test the property 'MediaFileUri'
         /// </summary>
         [Test]
         public void MediaFileUriTest()
         {
-            // TODO: unit test for the property 'MediaFileUri' 
+            // TODO: unit test for the property 'MediaFileUri'
         }
-        
         /// <summary>
-        /// Test the property 'MediaImageUri' 
+        /// Test the property 'MediaImageUri'
         /// </summary>
         [Test]
         public void MediaImageUriTest()
         {
-            // TODO: unit test for the property 'MediaImageUri' 
+            // TODO: unit test for the property 'MediaImageUri'
         }
-        
 
     }
 

@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new SortBy();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of SortBy
@@ -50,25 +50,22 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<SortBy> (instance, "instance is a SortBy");
         }
 
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'Ascending' 
+        /// Test the property 'Ascending'
         /// </summary>
         [Test]
         public void AscendingTest()
         {
-            // TODO: unit test for the property 'Ascending' 
+            // TODO: unit test for the property 'Ascending'
         }
-        
 
     }
 

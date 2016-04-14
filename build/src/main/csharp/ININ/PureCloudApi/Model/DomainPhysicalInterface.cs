@@ -38,7 +38,7 @@ namespace ININ.PureCloudApi.Model
             this.PhysicalCapabilities = PhysicalCapabilities;
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -106,11 +106,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  PortLabel: ").Append(PortLabel).Append("\n");
             sb.Append("  PhysicalCapabilities: ").Append(PhysicalCapabilities).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -196,31 +195,22 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.EdgeUri != null)
                     hash = hash * 59 + this.EdgeUri.GetHashCode();
-                
                 if (this.FriendlyName != null)
                     hash = hash * 59 + this.FriendlyName.GetHashCode();
-                
                 if (this.HardwareAddress != null)
                     hash = hash * 59 + this.HardwareAddress.GetHashCode();
-                
                 if (this.PortLabel != null)
                     hash = hash * 59 + this.PortLabel.GetHashCode();
-                
                 if (this.PhysicalCapabilities != null)
                     hash = hash * 59 + this.PhysicalCapabilities.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 return hash;
             }
         }

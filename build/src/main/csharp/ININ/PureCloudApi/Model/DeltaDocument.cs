@@ -17,9 +17,12 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class DeltaDocument :  IEquatable<DeltaDocument>
     { 
-    
+
+        /// <summary>
+        /// Gets or Sets Operation
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum OperationEnum {
+                public enum OperationEnum {
             
             [EnumMember(Value = "CREATED")]
             Created,
@@ -33,6 +36,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "DELETED")]
             Deleted
         }
+
         
         /// <summary>
         /// Gets or Sets Operation
@@ -62,7 +66,7 @@ namespace ININ.PureCloudApi.Model
             this.DateModified = DateModified;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets Id
@@ -116,11 +120,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  ContentLengthBytes: ").Append(ContentLengthBytes).Append("\n");
             sb.Append("  Operation: ").Append(Operation).Append("\n");
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -201,28 +204,20 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.Filename != null)
                     hash = hash * 59 + this.Filename.GetHashCode();
-                
                 if (this.ContentType != null)
                     hash = hash * 59 + this.ContentType.GetHashCode();
-                
                 if (this.ContentLengthBytes != null)
                     hash = hash * 59 + this.ContentLengthBytes.GetHashCode();
-                
                 if (this.Operation != null)
                     hash = hash * 59 + this.Operation.GetHashCode();
-                
                 if (this.DateModified != null)
                     hash = hash * 59 + this.DateModified.GetHashCode();
-                
                 return hash;
             }
         }

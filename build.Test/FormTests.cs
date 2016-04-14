@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new Form();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of Form
@@ -50,16 +50,14 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<Form> (instance, "instance is a Form");
         }
 
-        
         /// <summary>
-        /// Test the property 'Controls' 
+        /// Test the property 'Controls'
         /// </summary>
         [Test]
         public void ControlsTest()
         {
-            // TODO: unit test for the property 'Controls' 
+            // TODO: unit test for the property 'Controls'
         }
-        
 
     }
 

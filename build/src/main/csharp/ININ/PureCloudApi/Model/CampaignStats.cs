@@ -34,7 +34,7 @@ namespace ININ.PureCloudApi.Model
             this.OutstandingCalls = OutstandingCalls;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets ContactRate
@@ -72,11 +72,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  IdleAgents: ").Append(IdleAgents).Append("\n");
             sb.Append("  AdjustedCallsPerAgent: ").Append(AdjustedCallsPerAgent).Append("\n");
             sb.Append("  OutstandingCalls: ").Append(OutstandingCalls).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -142,19 +141,14 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ContactRate != null)
                     hash = hash * 59 + this.ContactRate.GetHashCode();
-                
                 if (this.IdleAgents != null)
                     hash = hash * 59 + this.IdleAgents.GetHashCode();
-                
                 if (this.AdjustedCallsPerAgent != null)
                     hash = hash * 59 + this.AdjustedCallsPerAgent.GetHashCode();
-                
                 if (this.OutstandingCalls != null)
                     hash = hash * 59 + this.OutstandingCalls.GetHashCode();
-                
                 return hash;
             }
         }

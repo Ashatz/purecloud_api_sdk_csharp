@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new DeleteRetention();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of DeleteRetention
@@ -50,16 +50,14 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<DeleteRetention> (instance, "instance is a DeleteRetention");
         }
 
-        
         /// <summary>
-        /// Test the property 'Days' 
+        /// Test the property 'Days'
         /// </summary>
         [Test]
         public void DaysTest()
         {
-            // TODO: unit test for the property 'Days' 
+            // TODO: unit test for the property 'Days'
         }
-        
 
     }
 

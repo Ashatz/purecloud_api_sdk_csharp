@@ -46,7 +46,7 @@ namespace ININ.PureCloudApi.Model
             this.Time = Time;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets HtmlBody
@@ -127,11 +127,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Subject: ").Append(Subject).Append("\n");
             sb.Append("  Attachments: ").Append(Attachments).Append("\n");
             sb.Append("  Time: ").Append(Time).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -227,37 +226,26 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.HtmlBody != null)
                     hash = hash * 59 + this.HtmlBody.GetHashCode();
-                
                 if (this.TextBody != null)
                     hash = hash * 59 + this.TextBody.GetHashCode();
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.To != null)
                     hash = hash * 59 + this.To.GetHashCode();
-                
                 if (this.Cc != null)
                     hash = hash * 59 + this.Cc.GetHashCode();
-                
                 if (this.Bcc != null)
                     hash = hash * 59 + this.Bcc.GetHashCode();
-                
                 if (this.From != null)
                     hash = hash * 59 + this.From.GetHashCode();
-                
                 if (this.Subject != null)
                     hash = hash * 59 + this.Subject.GetHashCode();
-                
                 if (this.Attachments != null)
                     hash = hash * 59 + this.Attachments.GetHashCode();
-                
                 if (this.Time != null)
                     hash = hash * 59 + this.Time.GetHashCode();
-                
                 return hash;
             }
         }

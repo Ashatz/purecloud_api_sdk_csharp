@@ -40,7 +40,7 @@ namespace ININ.PureCloudApi.Model
             this.Zipcode = Zipcode;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets City
@@ -99,11 +99,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Street1: ").Append(Street1).Append("\n");
             sb.Append("  Street2: ").Append(Street2).Append("\n");
             sb.Append("  Zipcode: ").Append(Zipcode).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -184,28 +183,20 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.City != null)
                     hash = hash * 59 + this.City.GetHashCode();
-                
                 if (this.Country != null)
                     hash = hash * 59 + this.Country.GetHashCode();
-                
                 if (this.CountryName != null)
                     hash = hash * 59 + this.CountryName.GetHashCode();
-                
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
-                
                 if (this.Street1 != null)
                     hash = hash * 59 + this.Street1.GetHashCode();
-                
                 if (this.Street2 != null)
                     hash = hash * 59 + this.Street2.GetHashCode();
-                
                 if (this.Zipcode != null)
                     hash = hash * 59 + this.Zipcode.GetHashCode();
-                
                 return hash;
             }
         }

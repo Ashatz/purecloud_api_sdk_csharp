@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new CreateUser();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of CreateUser
@@ -50,70 +50,62 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<CreateUser> (instance, "instance is a CreateUser");
         }
 
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'Department' 
+        /// Test the property 'Department'
         /// </summary>
         [Test]
         public void DepartmentTest()
         {
-            // TODO: unit test for the property 'Department' 
+            // TODO: unit test for the property 'Department'
         }
-        
         /// <summary>
-        /// Test the property 'Email' 
+        /// Test the property 'Email'
         /// </summary>
         [Test]
         public void EmailTest()
         {
-            // TODO: unit test for the property 'Email' 
+            // TODO: unit test for the property 'Email'
         }
-        
         /// <summary>
-        /// Test the property 'Addresses' 
+        /// Test the property 'Addresses'
         /// </summary>
         [Test]
         public void AddressesTest()
         {
-            // TODO: unit test for the property 'Addresses' 
+            // TODO: unit test for the property 'Addresses'
         }
-        
         /// <summary>
-        /// Test the property 'Title' 
+        /// Test the property 'Title'
         /// </summary>
         [Test]
         public void TitleTest()
         {
-            // TODO: unit test for the property 'Title' 
+            // TODO: unit test for the property 'Title'
         }
-        
         /// <summary>
-        /// Test the property 'Password' 
+        /// Test the property 'Password'
         /// </summary>
         [Test]
         public void PasswordTest()
         {
-            // TODO: unit test for the property 'Password' 
+            // TODO: unit test for the property 'Password'
         }
-        
         /// <summary>
-        /// Test the property 'Version' 
+        /// Test the property 'Version'
         /// </summary>
         [Test]
         public void VersionTest()
         {
-            // TODO: unit test for the property 'Version' 
+            // TODO: unit test for the property 'Version'
         }
-        
 
     }
 

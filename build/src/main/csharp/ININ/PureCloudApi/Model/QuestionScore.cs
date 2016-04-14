@@ -54,7 +54,7 @@ namespace ININ.PureCloudApi.Model
             this.Comments = Comments;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets QuestionId
@@ -106,11 +106,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  MarkedNA: ").Append(MarkedNA).Append("\n");
             sb.Append("  FailedKillQuestion: ").Append(FailedKillQuestion).Append("\n");
             sb.Append("  Comments: ").Append(Comments).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -186,25 +185,18 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.QuestionId != null)
                     hash = hash * 59 + this.QuestionId.GetHashCode();
-                
                 if (this.AnswerId != null)
                     hash = hash * 59 + this.AnswerId.GetHashCode();
-                
                 if (this.Score != null)
                     hash = hash * 59 + this.Score.GetHashCode();
-                
                 if (this.MarkedNA != null)
                     hash = hash * 59 + this.MarkedNA.GetHashCode();
-                
                 if (this.FailedKillQuestion != null)
                     hash = hash * 59 + this.FailedKillQuestion.GetHashCode();
-                
                 if (this.Comments != null)
                     hash = hash * 59 + this.Comments.GetHashCode();
-                
                 return hash;
             }
         }

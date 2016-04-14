@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new AggregationResultEntry();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of AggregationResultEntry
@@ -50,43 +50,38 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<AggregationResultEntry> (instance, "instance is a AggregationResultEntry");
         }
 
-        
         /// <summary>
-        /// Test the property 'Count' 
+        /// Test the property 'Count'
         /// </summary>
         [Test]
         public void CountTest()
         {
-            // TODO: unit test for the property 'Count' 
+            // TODO: unit test for the property 'Count'
         }
-        
         /// <summary>
-        /// Test the property 'Value' 
+        /// Test the property 'Value'
         /// </summary>
         [Test]
         public void ValueTest()
         {
-            // TODO: unit test for the property 'Value' 
+            // TODO: unit test for the property 'Value'
         }
-        
         /// <summary>
-        /// Test the property 'Gte' 
+        /// Test the property 'Gte'
         /// </summary>
         [Test]
         public void GteTest()
         {
-            // TODO: unit test for the property 'Gte' 
+            // TODO: unit test for the property 'Gte'
         }
-        
         /// <summary>
-        /// Test the property 'Lt' 
+        /// Test the property 'Lt'
         /// </summary>
         [Test]
         public void LtTest()
         {
-            // TODO: unit test for the property 'Lt' 
+            // TODO: unit test for the property 'Lt'
         }
-        
 
     }
 

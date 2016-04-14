@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new Value();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of Value
@@ -50,70 +50,62 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<Value> (instance, "instance is a Value");
         }
 
-        
         /// <summary>
-        /// Test the property 'StringItems' 
+        /// Test the property 'StringItems'
         /// </summary>
         [Test]
         public void StringItemsTest()
         {
-            // TODO: unit test for the property 'StringItems' 
+            // TODO: unit test for the property 'StringItems'
         }
-        
         /// <summary>
-        /// Test the property 'IntegerItems' 
+        /// Test the property 'IntegerItems'
         /// </summary>
         [Test]
         public void IntegerItemsTest()
         {
-            // TODO: unit test for the property 'IntegerItems' 
+            // TODO: unit test for the property 'IntegerItems'
         }
-        
         /// <summary>
-        /// Test the property 'RealItems' 
+        /// Test the property 'RealItems'
         /// </summary>
         [Test]
         public void RealItemsTest()
         {
-            // TODO: unit test for the property 'RealItems' 
+            // TODO: unit test for the property 'RealItems'
         }
-        
         /// <summary>
-        /// Test the property 'DateItems' 
+        /// Test the property 'DateItems'
         /// </summary>
         [Test]
         public void DateItemsTest()
         {
-            // TODO: unit test for the property 'DateItems' 
+            // TODO: unit test for the property 'DateItems'
         }
-        
         /// <summary>
-        /// Test the property 'UserItems' 
+        /// Test the property 'UserItems'
         /// </summary>
         [Test]
         public void UserItemsTest()
         {
-            // TODO: unit test for the property 'UserItems' 
+            // TODO: unit test for the property 'UserItems'
         }
-        
         /// <summary>
-        /// Test the property 'QueueItems' 
+        /// Test the property 'QueueItems'
         /// </summary>
         [Test]
         public void QueueItemsTest()
         {
-            // TODO: unit test for the property 'QueueItems' 
+            // TODO: unit test for the property 'QueueItems'
         }
-        
         /// <summary>
-        /// Test the property 'DataItems' 
+        /// Test the property 'DataItems'
         /// </summary>
         [Test]
         public void DataItemsTest()
         {
-            // TODO: unit test for the property 'DataItems' 
+            // TODO: unit test for the property 'DataItems'
         }
-        
 
     }
 

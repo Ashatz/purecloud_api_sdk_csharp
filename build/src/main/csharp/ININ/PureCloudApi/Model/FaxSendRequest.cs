@@ -38,7 +38,7 @@ namespace ININ.PureCloudApi.Model
             this.CoverSheet = CoverSheet;
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -106,11 +106,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Workspace: ").Append(Workspace).Append("\n");
             sb.Append("  CoverSheet: ").Append(CoverSheet).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -196,31 +195,22 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.Addresses != null)
                     hash = hash * 59 + this.Addresses.GetHashCode();
-                
                 if (this.OriginalFilename != null)
                     hash = hash * 59 + this.OriginalFilename.GetHashCode();
-                
                 if (this.ContentType != null)
                     hash = hash * 59 + this.ContentType.GetHashCode();
-                
                 if (this.Workspace != null)
                     hash = hash * 59 + this.Workspace.GetHashCode();
-                
                 if (this.CoverSheet != null)
                     hash = hash * 59 + this.CoverSheet.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 return hash;
             }
         }

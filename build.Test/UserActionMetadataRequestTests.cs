@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new UserActionMetadataRequest();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of UserActionMetadataRequest
@@ -50,61 +50,54 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<UserActionMetadataRequest> (instance, "instance is a UserActionMetadataRequest");
         }
 
-        
         /// <summary>
-        /// Test the property 'Format' 
+        /// Test the property 'Format'
         /// </summary>
         [Test]
         public void FormatTest()
         {
-            // TODO: unit test for the property 'Format' 
+            // TODO: unit test for the property 'Format'
         }
-        
         /// <summary>
-        /// Test the property 'Method' 
+        /// Test the property 'Method'
         /// </summary>
         [Test]
         public void MethodTest()
         {
-            // TODO: unit test for the property 'Method' 
+            // TODO: unit test for the property 'Method'
         }
-        
         /// <summary>
-        /// Test the property 'InputSchemaUri' 
+        /// Test the property 'InputSchemaUri'
         /// </summary>
         [Test]
         public void InputSchemaUriTest()
         {
-            // TODO: unit test for the property 'InputSchemaUri' 
+            // TODO: unit test for the property 'InputSchemaUri'
         }
-        
         /// <summary>
-        /// Test the property 'SuccessSchemaUri' 
+        /// Test the property 'SuccessSchemaUri'
         /// </summary>
         [Test]
         public void SuccessSchemaUriTest()
         {
-            // TODO: unit test for the property 'SuccessSchemaUri' 
+            // TODO: unit test for the property 'SuccessSchemaUri'
         }
-        
         /// <summary>
-        /// Test the property 'InputSchema' 
+        /// Test the property 'InputSchema'
         /// </summary>
         [Test]
         public void InputSchemaTest()
         {
-            // TODO: unit test for the property 'InputSchema' 
+            // TODO: unit test for the property 'InputSchema'
         }
-        
         /// <summary>
-        /// Test the property 'SuccessSchema' 
+        /// Test the property 'SuccessSchema'
         /// </summary>
         [Test]
         public void SuccessSchemaTest()
         {
-            // TODO: unit test for the property 'SuccessSchema' 
+            // TODO: unit test for the property 'SuccessSchema'
         }
-        
 
     }
 

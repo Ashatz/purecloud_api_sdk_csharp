@@ -17,9 +17,13 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class FlowLaunchRequest :  IEquatable<FlowLaunchRequest>
     { 
-    
+
+        /// <summary>
+        /// launch type of the flow - NORMAL or TEST
+        /// </summary>
+        /// <value>launch type of the flow - NORMAL or TEST</value>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum LaunchTypeEnum {
+                public enum LaunchTypeEnum {
             
             [EnumMember(Value = "UNKNOWN")]
             Unknown,
@@ -33,6 +37,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "AUTOMATIC")]
             Automatic
         }
+
         
         /// <summary>
         /// launch type of the flow - NORMAL or TEST
@@ -73,7 +78,7 @@ namespace ININ.PureCloudApi.Model
             this.InputData = InputData;
             
         }
-        
+
     
         /// <summary>
         /// ID of the flow to launch, will launch the most recently published version if a specific version is not specified.
@@ -108,11 +113,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  FlowInstanceName: ").Append(FlowInstanceName).Append("\n");
             sb.Append("  InputData: ").Append(InputData).Append("\n");
             sb.Append("  LaunchType: ").Append(LaunchType).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -178,19 +182,14 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.FlowConfigId != null)
                     hash = hash * 59 + this.FlowConfigId.GetHashCode();
-                
                 if (this.FlowInstanceName != null)
                     hash = hash * 59 + this.FlowInstanceName.GetHashCode();
-                
                 if (this.InputData != null)
                     hash = hash * 59 + this.InputData.GetHashCode();
-                
                 if (this.LaunchType != null)
                     hash = hash * 59 + this.LaunchType.GetHashCode();
-                
                 return hash;
             }
         }

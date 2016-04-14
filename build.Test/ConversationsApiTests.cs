@@ -62,9 +62,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'DeleteCallsCallIdParticipantsParticipantIdConsult'
             string callId = null; // TODO: replace null with proper value
             string participantId = null; // TODO: replace null with proper value
-            
             var response = instance.DeleteCallsCallIdParticipantsParticipantIdConsult(callId, participantId);
-            Assert.IsInstanceOf<string> (response, "response is string"); 
+            Assert.IsInstanceOf<string> (response, "response is string");
         }
         
         /// <summary>
@@ -76,9 +75,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'DeleteEmailsEmailIdMessagesDraftAttachmentsAttachmentId'
             string emailId = null; // TODO: replace null with proper value
             string attachmentId = null; // TODO: replace null with proper value
-            
             var response = instance.DeleteEmailsEmailIdMessagesDraftAttachmentsAttachmentId(emailId, attachmentId);
-            Assert.IsInstanceOf<string> (response, "response is string"); 
+            Assert.IsInstanceOf<string> (response, "response is string");
         }
         
         /// <summary>
@@ -88,9 +86,8 @@ namespace ININ.PureCloudApi.Test
         public void GetCallbacksTest()
         {
             // TODO: add unit test for the method 'GetCallbacks'
-            
             var response = instance.GetCallbacks();
-            Assert.IsInstanceOf<CallbackConversationEntityListing> (response, "response is CallbackConversationEntityListing"); 
+            Assert.IsInstanceOf<CallbackConversationEntityListing> (response, "response is CallbackConversationEntityListing");
         }
         
         /// <summary>
@@ -101,9 +98,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'GetCallbacksCallbackId'
             string callbackId = null; // TODO: replace null with proper value
-            
             var response = instance.GetCallbacksCallbackId(callbackId);
-            Assert.IsInstanceOf<CallbackConversation> (response, "response is CallbackConversation"); 
+            Assert.IsInstanceOf<CallbackConversation> (response, "response is CallbackConversation");
         }
         
         /// <summary>
@@ -116,9 +112,8 @@ namespace ININ.PureCloudApi.Test
             string callbackId = null; // TODO: replace null with proper value
             string participantId = null; // TODO: replace null with proper value
             bool? provisional = null; // TODO: replace null with proper value
-            
             var response = instance.GetCallbacksCallbackIdParticipantsParticipantIdWrapup(callbackId, participantId, provisional);
-            Assert.IsInstanceOf<WrapupCode> (response, "response is WrapupCode"); 
+            Assert.IsInstanceOf<WrapupCode> (response, "response is WrapupCode");
         }
         
         /// <summary>
@@ -130,9 +125,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'GetCallbacksCallbackIdParticipantsParticipantIdWrapupcodes'
             string callbackId = null; // TODO: replace null with proper value
             string participantId = null; // TODO: replace null with proper value
-            
             var response = instance.GetCallbacksCallbackIdParticipantsParticipantIdWrapupcodes(callbackId, participantId);
-            Assert.IsInstanceOf<WrapupCode> (response, "response is WrapupCode"); 
+            Assert.IsInstanceOf<WrapupCode> (response, "response is WrapupCode");
         }
         
         /// <summary>
@@ -142,9 +136,8 @@ namespace ININ.PureCloudApi.Test
         public void GetCallsTest()
         {
             // TODO: add unit test for the method 'GetCalls'
-            
             var response = instance.GetCalls();
-            Assert.IsInstanceOf<CallConversationEntityListing> (response, "response is CallConversationEntityListing"); 
+            Assert.IsInstanceOf<CallConversationEntityListing> (response, "response is CallConversationEntityListing");
         }
         
         /// <summary>
@@ -155,9 +148,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'GetCallsCallId'
             string callId = null; // TODO: replace null with proper value
-            
             var response = instance.GetCallsCallId(callId);
-            Assert.IsInstanceOf<CallConversation> (response, "response is CallConversation"); 
+            Assert.IsInstanceOf<CallConversation> (response, "response is CallConversation");
         }
         
         /// <summary>
@@ -170,9 +162,8 @@ namespace ININ.PureCloudApi.Test
             string callId = null; // TODO: replace null with proper value
             string participantId = null; // TODO: replace null with proper value
             bool? provisional = null; // TODO: replace null with proper value
-            
             var response = instance.GetCallsCallIdParticipantsParticipantIdWrapup(callId, participantId, provisional);
-            Assert.IsInstanceOf<WrapupCode> (response, "response is WrapupCode"); 
+            Assert.IsInstanceOf<WrapupCode> (response, "response is WrapupCode");
         }
         
         /// <summary>
@@ -184,9 +175,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'GetCallsCallIdParticipantsParticipantIdWrapupcodes'
             string callId = null; // TODO: replace null with proper value
             string participantId = null; // TODO: replace null with proper value
-            
             var response = instance.GetCallsCallIdParticipantsParticipantIdWrapupcodes(callId, participantId);
-            Assert.IsInstanceOf<WrapupCode> (response, "response is WrapupCode"); 
+            Assert.IsInstanceOf<WrapupCode> (response, "response is WrapupCode");
         }
         
         /// <summary>
@@ -196,9 +186,8 @@ namespace ININ.PureCloudApi.Test
         public void GetCallsMaximumconferencepartiesTest()
         {
             // TODO: add unit test for the method 'GetCallsMaximumconferenceparties'
-            
             var response = instance.GetCallsMaximumconferenceparties();
-            Assert.IsInstanceOf<MaxParticipants> (response, "response is MaxParticipants"); 
+            Assert.IsInstanceOf<MaxParticipants> (response, "response is MaxParticipants");
         }
         
         /// <summary>
@@ -208,9 +197,8 @@ namespace ININ.PureCloudApi.Test
         public void GetChatsTest()
         {
             // TODO: add unit test for the method 'GetChats'
-            
             var response = instance.GetChats();
-            Assert.IsInstanceOf<ChatConversationEntityListing> (response, "response is ChatConversationEntityListing"); 
+            Assert.IsInstanceOf<ChatConversationEntityListing> (response, "response is ChatConversationEntityListing");
         }
         
         /// <summary>
@@ -221,9 +209,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'GetChatsChatId'
             string chatId = null; // TODO: replace null with proper value
-            
             var response = instance.GetChatsChatId(chatId);
-            Assert.IsInstanceOf<ChatConversation> (response, "response is ChatConversation"); 
+            Assert.IsInstanceOf<ChatConversation> (response, "response is ChatConversation");
         }
         
         /// <summary>
@@ -236,9 +223,8 @@ namespace ININ.PureCloudApi.Test
             string chatId = null; // TODO: replace null with proper value
             string participantId = null; // TODO: replace null with proper value
             bool? provisional = null; // TODO: replace null with proper value
-            
             var response = instance.GetChatsChatIdParticipantsParticipantIdWrapup(chatId, participantId, provisional);
-            Assert.IsInstanceOf<WrapupCode> (response, "response is WrapupCode"); 
+            Assert.IsInstanceOf<WrapupCode> (response, "response is WrapupCode");
         }
         
         /// <summary>
@@ -250,9 +236,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'GetChatsChatIdParticipantsParticipantIdWrapupcodes'
             string chatId = null; // TODO: replace null with proper value
             string participantId = null; // TODO: replace null with proper value
-            
             var response = instance.GetChatsChatIdParticipantsParticipantIdWrapupcodes(chatId, participantId);
-            Assert.IsInstanceOf<WrapupCode> (response, "response is WrapupCode"); 
+            Assert.IsInstanceOf<WrapupCode> (response, "response is WrapupCode");
         }
         
         /// <summary>
@@ -263,9 +248,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'GetConversationId'
             string conversationId = null; // TODO: replace null with proper value
-            
             var response = instance.GetConversationId(conversationId);
-            Assert.IsInstanceOf<Conversation> (response, "response is Conversation"); 
+            Assert.IsInstanceOf<Conversation> (response, "response is Conversation");
         }
         
         /// <summary>
@@ -278,9 +262,8 @@ namespace ININ.PureCloudApi.Test
             string conversationId = null; // TODO: replace null with proper value
             string participantId = null; // TODO: replace null with proper value
             bool? provisional = null; // TODO: replace null with proper value
-            
             var response = instance.GetConversationIdParticipantsParticipantIdWrapup(conversationId, participantId, provisional);
-            Assert.IsInstanceOf<WrapupCode> (response, "response is WrapupCode"); 
+            Assert.IsInstanceOf<WrapupCode> (response, "response is WrapupCode");
         }
         
         /// <summary>
@@ -292,9 +275,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'GetConversationIdParticipantsParticipantIdWrapupcodes'
             string conversationId = null; // TODO: replace null with proper value
             string participantId = null; // TODO: replace null with proper value
-            
             var response = instance.GetConversationIdParticipantsParticipantIdWrapupcodes(conversationId, participantId);
-            Assert.IsInstanceOf<WrapupCode> (response, "response is WrapupCode"); 
+            Assert.IsInstanceOf<WrapupCode> (response, "response is WrapupCode");
         }
         
         /// <summary>
@@ -305,9 +287,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'GetConversations'
             string communicationType = null; // TODO: replace null with proper value
-            
             var response = instance.GetConversations(communicationType);
-            Assert.IsInstanceOf<ConversationEntityListing> (response, "response is ConversationEntityListing"); 
+            Assert.IsInstanceOf<ConversationEntityListing> (response, "response is ConversationEntityListing");
         }
         
         /// <summary>
@@ -318,9 +299,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'GetConversationsConversationIdDetails'
             string conversationId = null; // TODO: replace null with proper value
-            
             var response = instance.GetConversationsConversationIdDetails(conversationId);
-            Assert.IsInstanceOf<AnalyticsConversation> (response, "response is AnalyticsConversation"); 
+            Assert.IsInstanceOf<AnalyticsConversation> (response, "response is AnalyticsConversation");
         }
         
         /// <summary>
@@ -330,9 +310,8 @@ namespace ININ.PureCloudApi.Test
         public void GetEmailsTest()
         {
             // TODO: add unit test for the method 'GetEmails'
-            
             var response = instance.GetEmails();
-            Assert.IsInstanceOf<EmailConversationEntityListing> (response, "response is EmailConversationEntityListing"); 
+            Assert.IsInstanceOf<EmailConversationEntityListing> (response, "response is EmailConversationEntityListing");
         }
         
         /// <summary>
@@ -343,9 +322,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'GetEmailsEmailId'
             string emailId = null; // TODO: replace null with proper value
-            
             var response = instance.GetEmailsEmailId(emailId);
-            Assert.IsInstanceOf<EmailConversation> (response, "response is EmailConversation"); 
+            Assert.IsInstanceOf<EmailConversation> (response, "response is EmailConversation");
         }
         
         /// <summary>
@@ -356,9 +334,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'GetEmailsEmailIdMessages'
             string emailId = null; // TODO: replace null with proper value
-            
             var response = instance.GetEmailsEmailIdMessages(emailId);
-            Assert.IsInstanceOf<EmailMessageListing> (response, "response is EmailMessageListing"); 
+            Assert.IsInstanceOf<EmailMessageListing> (response, "response is EmailMessageListing");
         }
         
         /// <summary>
@@ -369,9 +346,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'GetEmailsEmailIdMessagesDraft'
             string emailId = null; // TODO: replace null with proper value
-            
             var response = instance.GetEmailsEmailIdMessagesDraft(emailId);
-            Assert.IsInstanceOf<EmailMessage> (response, "response is EmailMessage"); 
+            Assert.IsInstanceOf<EmailMessage> (response, "response is EmailMessage");
         }
         
         /// <summary>
@@ -383,9 +359,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'GetEmailsEmailIdMessagesMessageId'
             string emailId = null; // TODO: replace null with proper value
             string messageId = null; // TODO: replace null with proper value
-            
             var response = instance.GetEmailsEmailIdMessagesMessageId(emailId, messageId);
-            Assert.IsInstanceOf<EmailMessage> (response, "response is EmailMessage"); 
+            Assert.IsInstanceOf<EmailMessage> (response, "response is EmailMessage");
         }
         
         /// <summary>
@@ -398,9 +373,8 @@ namespace ININ.PureCloudApi.Test
             string emailId = null; // TODO: replace null with proper value
             string participantId = null; // TODO: replace null with proper value
             bool? provisional = null; // TODO: replace null with proper value
-            
             var response = instance.GetEmailsEmailIdParticipantsParticipantIdWrapup(emailId, participantId, provisional);
-            Assert.IsInstanceOf<WrapupCode> (response, "response is WrapupCode"); 
+            Assert.IsInstanceOf<WrapupCode> (response, "response is WrapupCode");
         }
         
         /// <summary>
@@ -412,9 +386,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'GetEmailsEmailIdParticipantsParticipantIdWrapupcodes'
             string emailId = null; // TODO: replace null with proper value
             string participantId = null; // TODO: replace null with proper value
-            
             var response = instance.GetEmailsEmailIdParticipantsParticipantIdWrapupcodes(emailId, participantId);
-            Assert.IsInstanceOf<WrapupCode> (response, "response is WrapupCode"); 
+            Assert.IsInstanceOf<WrapupCode> (response, "response is WrapupCode");
         }
         
         /// <summary>
@@ -427,9 +400,8 @@ namespace ININ.PureCloudApi.Test
             string callbackId = null; // TODO: replace null with proper value
             string participantId = null; // TODO: replace null with proper value
             MediaParticipantRequest body = null; // TODO: replace null with proper value
-            
             instance.PatchCallbacksCallbackIdParticipantsParticipantId(callbackId, participantId, body);
-             
+            
         }
         
         /// <summary>
@@ -442,9 +414,8 @@ namespace ININ.PureCloudApi.Test
             string callbackId = null; // TODO: replace null with proper value
             string participantId = null; // TODO: replace null with proper value
             ParticipantAttributes body = null; // TODO: replace null with proper value
-            
             instance.PatchCallbacksCallbackIdParticipantsParticipantIdAttributes(callbackId, participantId, body);
-             
+            
         }
         
         /// <summary>
@@ -456,9 +427,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'PatchCallsCallId'
             string callId = null; // TODO: replace null with proper value
             Conversation body = null; // TODO: replace null with proper value
-            
             var response = instance.PatchCallsCallId(callId, body);
-            Assert.IsInstanceOf<Conversation> (response, "response is Conversation"); 
+            Assert.IsInstanceOf<Conversation> (response, "response is Conversation");
         }
         
         /// <summary>
@@ -471,9 +441,8 @@ namespace ININ.PureCloudApi.Test
             string callId = null; // TODO: replace null with proper value
             string participantId = null; // TODO: replace null with proper value
             MediaParticipantRequest body = null; // TODO: replace null with proper value
-            
             instance.PatchCallsCallIdParticipantsParticipantId(callId, participantId, body);
-             
+            
         }
         
         /// <summary>
@@ -486,9 +455,8 @@ namespace ININ.PureCloudApi.Test
             string callId = null; // TODO: replace null with proper value
             string participantId = null; // TODO: replace null with proper value
             ParticipantAttributes body = null; // TODO: replace null with proper value
-            
             instance.PatchCallsCallIdParticipantsParticipantIdAttributes(callId, participantId, body);
-             
+            
         }
         
         /// <summary>
@@ -501,9 +469,8 @@ namespace ININ.PureCloudApi.Test
             string callId = null; // TODO: replace null with proper value
             string participantId = null; // TODO: replace null with proper value
             ConsultTransferUpdate body = null; // TODO: replace null with proper value
-            
             var response = instance.PatchCallsCallIdParticipantsParticipantIdConsult(callId, participantId, body);
-            Assert.IsInstanceOf<ConsultTransferResponse> (response, "response is ConsultTransferResponse"); 
+            Assert.IsInstanceOf<ConsultTransferResponse> (response, "response is ConsultTransferResponse");
         }
         
         /// <summary>
@@ -516,9 +483,8 @@ namespace ININ.PureCloudApi.Test
             string chatId = null; // TODO: replace null with proper value
             string participantId = null; // TODO: replace null with proper value
             MediaParticipantRequest body = null; // TODO: replace null with proper value
-            
             instance.PatchChatsChatIdParticipantsParticipantId(chatId, participantId, body);
-             
+            
         }
         
         /// <summary>
@@ -531,9 +497,8 @@ namespace ININ.PureCloudApi.Test
             string chatId = null; // TODO: replace null with proper value
             string participantId = null; // TODO: replace null with proper value
             ParticipantAttributes body = null; // TODO: replace null with proper value
-            
             instance.PatchChatsChatIdParticipantsParticipantIdAttributes(chatId, participantId, body);
-             
+            
         }
         
         /// <summary>
@@ -546,9 +511,8 @@ namespace ININ.PureCloudApi.Test
             string conversationId = null; // TODO: replace null with proper value
             string participantId = null; // TODO: replace null with proper value
             MediaParticipantRequest body = null; // TODO: replace null with proper value
-            
             instance.PatchConversationIdParticipantsParticipantId(conversationId, participantId, body);
-             
+            
         }
         
         /// <summary>
@@ -561,9 +525,8 @@ namespace ININ.PureCloudApi.Test
             string conversationId = null; // TODO: replace null with proper value
             string participantId = null; // TODO: replace null with proper value
             ParticipantAttributes body = null; // TODO: replace null with proper value
-            
             instance.PatchConversationIdParticipantsParticipantIdAttributes(conversationId, participantId, body);
-             
+            
         }
         
         /// <summary>
@@ -576,9 +539,8 @@ namespace ININ.PureCloudApi.Test
             string emailId = null; // TODO: replace null with proper value
             string participantId = null; // TODO: replace null with proper value
             MediaParticipantRequest body = null; // TODO: replace null with proper value
-            
             instance.PatchEmailsEmailIdParticipantsParticipantId(emailId, participantId, body);
-             
+            
         }
         
         /// <summary>
@@ -591,9 +553,8 @@ namespace ININ.PureCloudApi.Test
             string emailId = null; // TODO: replace null with proper value
             string participantId = null; // TODO: replace null with proper value
             ParticipantAttributes body = null; // TODO: replace null with proper value
-            
             instance.PatchEmailsEmailIdParticipantsParticipantIdAttributes(emailId, participantId, body);
-             
+            
         }
         
         /// <summary>
@@ -606,9 +567,8 @@ namespace ININ.PureCloudApi.Test
             string callbackId = null; // TODO: replace null with proper value
             string participantId = null; // TODO: replace null with proper value
             TransferRequest body = null; // TODO: replace null with proper value
-            
             instance.PostCallbacksCallbackIdParticipantsParticipantIdReplace(callbackId, participantId, body);
-             
+            
         }
         
         /// <summary>
@@ -619,9 +579,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'PostCalls'
             CreateCallRequest body = null; // TODO: replace null with proper value
-            
             var response = instance.PostCalls(body);
-            Assert.IsInstanceOf<CreateCallResponse> (response, "response is CreateCallResponse"); 
+            Assert.IsInstanceOf<CreateCallResponse> (response, "response is CreateCallResponse");
         }
         
         /// <summary>
@@ -633,9 +592,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'PostCallsCallId'
             string callId = null; // TODO: replace null with proper value
             CallCommand body = null; // TODO: replace null with proper value
-            
             var response = instance.PostCallsCallId(callId, body);
-            Assert.IsInstanceOf<Conversation> (response, "response is Conversation"); 
+            Assert.IsInstanceOf<Conversation> (response, "response is Conversation");
         }
         
         /// <summary>
@@ -647,9 +605,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'PostCallsCallIdParticipants'
             string callId = null; // TODO: replace null with proper value
             Conversation body = null; // TODO: replace null with proper value
-            
             var response = instance.PostCallsCallIdParticipants(callId, body);
-            Assert.IsInstanceOf<Conversation> (response, "response is Conversation"); 
+            Assert.IsInstanceOf<Conversation> (response, "response is Conversation");
         }
         
         /// <summary>
@@ -662,9 +619,8 @@ namespace ININ.PureCloudApi.Test
             string callId = null; // TODO: replace null with proper value
             string participantId = null; // TODO: replace null with proper value
             ConsultTransfer body = null; // TODO: replace null with proper value
-            
             var response = instance.PostCallsCallIdParticipantsParticipantIdConsult(callId, participantId, body);
-            Assert.IsInstanceOf<ConsultTransferResponse> (response, "response is ConsultTransferResponse"); 
+            Assert.IsInstanceOf<ConsultTransferResponse> (response, "response is ConsultTransferResponse");
         }
         
         /// <summary>
@@ -676,9 +632,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'PostCallsCallIdParticipantsParticipantIdMonitor'
             string callId = null; // TODO: replace null with proper value
             string participantId = null; // TODO: replace null with proper value
-            
             instance.PostCallsCallIdParticipantsParticipantIdMonitor(callId, participantId);
-             
+            
         }
         
         /// <summary>
@@ -691,9 +646,8 @@ namespace ININ.PureCloudApi.Test
             string callId = null; // TODO: replace null with proper value
             string participantId = null; // TODO: replace null with proper value
             TransferRequest body = null; // TODO: replace null with proper value
-            
             instance.PostCallsCallIdParticipantsParticipantIdReplace(callId, participantId, body);
-             
+            
         }
         
         /// <summary>
@@ -706,9 +660,8 @@ namespace ININ.PureCloudApi.Test
             string chatId = null; // TODO: replace null with proper value
             string participantId = null; // TODO: replace null with proper value
             TransferRequest body = null; // TODO: replace null with proper value
-            
             instance.PostChatsChatIdParticipantsParticipantIdReplace(chatId, participantId, body);
-             
+            
         }
         
         /// <summary>
@@ -721,9 +674,8 @@ namespace ININ.PureCloudApi.Test
             string conversationId = null; // TODO: replace null with proper value
             string participantId = null; // TODO: replace null with proper value
             CreateCallbackCommand body = null; // TODO: replace null with proper value
-            
             instance.PostConversationIdParticipantsParticipantIdCallbacks(conversationId, participantId, body);
-             
+            
         }
         
         /// <summary>
@@ -736,9 +688,8 @@ namespace ININ.PureCloudApi.Test
             string conversationId = null; // TODO: replace null with proper value
             string participantId = null; // TODO: replace null with proper value
             TransferRequest body = null; // TODO: replace null with proper value
-            
             instance.PostConversationIdParticipantsParticipantIdReplace(conversationId, participantId, body);
-             
+            
         }
         
         /// <summary>
@@ -749,9 +700,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'PostConversationsAggregatesQuery'
             AggregationQuery body = null; // TODO: replace null with proper value
-            
             var response = instance.PostConversationsAggregatesQuery(body);
-            Assert.IsInstanceOf<AggregateQueryResponse> (response, "response is AggregateQueryResponse"); 
+            Assert.IsInstanceOf<AggregateQueryResponse> (response, "response is AggregateQueryResponse");
         }
         
         /// <summary>
@@ -763,9 +713,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'PostConversationsConversationIdDetailsProperties'
             string conversationId = null; // TODO: replace null with proper value
             PropertyIndexRequest body = null; // TODO: replace null with proper value
-            
             var response = instance.PostConversationsConversationIdDetailsProperties(conversationId, body);
-            Assert.IsInstanceOf<PropertyIndexRequest> (response, "response is PropertyIndexRequest"); 
+            Assert.IsInstanceOf<PropertyIndexRequest> (response, "response is PropertyIndexRequest");
         }
         
         /// <summary>
@@ -776,9 +725,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'PostConversationsDetailsQuery'
             ConversationQuery body = null; // TODO: replace null with proper value
-            
             var response = instance.PostConversationsDetailsQuery(body);
-            Assert.IsInstanceOf<AnalyticsConversationQueryResponse> (response, "response is AnalyticsConversationQueryResponse"); 
+            Assert.IsInstanceOf<AnalyticsConversationQueryResponse> (response, "response is AnalyticsConversationQueryResponse");
         }
         
         /// <summary>
@@ -790,9 +738,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'PostEmailsEmailIdMessages'
             string emailId = null; // TODO: replace null with proper value
             EmailMessage body = null; // TODO: replace null with proper value
-            
             var response = instance.PostEmailsEmailIdMessages(emailId, body);
-            Assert.IsInstanceOf<EmailMessage> (response, "response is EmailMessage"); 
+            Assert.IsInstanceOf<EmailMessage> (response, "response is EmailMessage");
         }
         
         /// <summary>
@@ -805,9 +752,8 @@ namespace ININ.PureCloudApi.Test
             string emailId = null; // TODO: replace null with proper value
             string participantId = null; // TODO: replace null with proper value
             TransferRequest body = null; // TODO: replace null with proper value
-            
             instance.PostEmailsEmailIdParticipantsParticipantIdReplace(emailId, participantId, body);
-             
+            
         }
         
         /// <summary>
@@ -818,9 +764,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'PostFaxes'
             FaxSendRequest body = null; // TODO: replace null with proper value
-            
             var response = instance.PostFaxes(body);
-            Assert.IsInstanceOf<FaxSendResponse> (response, "response is FaxSendResponse"); 
+            Assert.IsInstanceOf<FaxSendResponse> (response, "response is FaxSendResponse");
         }
         
         /// <summary>
@@ -832,9 +777,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'PutEmailsEmailIdMessagesDraft'
             string emailId = null; // TODO: replace null with proper value
             EmailMessage body = null; // TODO: replace null with proper value
-            
             var response = instance.PutEmailsEmailIdMessagesDraft(emailId, body);
-            Assert.IsInstanceOf<EmailMessage> (response, "response is EmailMessage"); 
+            Assert.IsInstanceOf<EmailMessage> (response, "response is EmailMessage");
         }
         
     }

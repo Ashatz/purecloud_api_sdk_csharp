@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new XlsxSchema();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of XlsxSchema
@@ -50,34 +50,30 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<XlsxSchema> (instance, "instance is a XlsxSchema");
         }
 
-        
         /// <summary>
-        /// Test the property 'SheetSchemas' 
+        /// Test the property 'SheetSchemas'
         /// </summary>
         [Test]
         public void SheetSchemasTest()
         {
-            // TODO: unit test for the property 'SheetSchemas' 
+            // TODO: unit test for the property 'SheetSchemas'
         }
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'CarrierId' 
+        /// Test the property 'CarrierId'
         /// </summary>
         [Test]
         public void CarrierIdTest()
         {
-            // TODO: unit test for the property 'CarrierId' 
+            // TODO: unit test for the property 'CarrierId'
         }
-        
 
     }
 

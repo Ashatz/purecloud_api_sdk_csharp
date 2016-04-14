@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new Invoice();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of Invoice
@@ -50,88 +50,78 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<Invoice> (instance, "instance is a Invoice");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'InvoiceNumber' 
+        /// Test the property 'InvoiceNumber'
         /// </summary>
         [Test]
         public void InvoiceNumberTest()
         {
-            // TODO: unit test for the property 'InvoiceNumber' 
+            // TODO: unit test for the property 'InvoiceNumber'
         }
-        
         /// <summary>
-        /// Test the property 'InvoiceDate' 
+        /// Test the property 'InvoiceDate'
         /// </summary>
         [Test]
         public void InvoiceDateTest()
         {
-            // TODO: unit test for the property 'InvoiceDate' 
+            // TODO: unit test for the property 'InvoiceDate'
         }
-        
         /// <summary>
-        /// Test the property 'DueDate' 
+        /// Test the property 'DueDate'
         /// </summary>
         [Test]
         public void DueDateTest()
         {
-            // TODO: unit test for the property 'DueDate' 
+            // TODO: unit test for the property 'DueDate'
         }
-        
         /// <summary>
-        /// Test the property 'Amount' 
+        /// Test the property 'Amount'
         /// </summary>
         [Test]
         public void AmountTest()
         {
-            // TODO: unit test for the property 'Amount' 
+            // TODO: unit test for the property 'Amount'
         }
-        
         /// <summary>
-        /// Test the property 'Balance' 
+        /// Test the property 'Balance'
         /// </summary>
         [Test]
         public void BalanceTest()
         {
-            // TODO: unit test for the property 'Balance' 
+            // TODO: unit test for the property 'Balance'
         }
-        
         /// <summary>
-        /// Test the property 'Status' 
+        /// Test the property 'Status'
         /// </summary>
         [Test]
         public void StatusTest()
         {
-            // TODO: unit test for the property 'Status' 
+            // TODO: unit test for the property 'Status'
         }
-        
         /// <summary>
-        /// Test the property 'SelfUri' 
+        /// Test the property 'SelfUri'
         /// </summary>
         [Test]
         public void SelfUriTest()
         {
-            // TODO: unit test for the property 'SelfUri' 
+            // TODO: unit test for the property 'SelfUri'
         }
-        
 
     }
 

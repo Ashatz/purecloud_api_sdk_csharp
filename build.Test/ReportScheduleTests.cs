@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new ReportSchedule();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of ReportSchedule
@@ -50,160 +50,142 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<ReportSchedule> (instance, "instance is a ReportSchedule");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'QuartzCronExpression' 
+        /// Test the property 'QuartzCronExpression'
         /// </summary>
         [Test]
         public void QuartzCronExpressionTest()
         {
-            // TODO: unit test for the property 'QuartzCronExpression' 
+            // TODO: unit test for the property 'QuartzCronExpression'
         }
-        
         /// <summary>
-        /// Test the property 'NextFireTime' 
+        /// Test the property 'NextFireTime'
         /// </summary>
         [Test]
         public void NextFireTimeTest()
         {
-            // TODO: unit test for the property 'NextFireTime' 
+            // TODO: unit test for the property 'NextFireTime'
         }
-        
         /// <summary>
-        /// Test the property 'DateCreated' 
+        /// Test the property 'DateCreated'
         /// </summary>
         [Test]
         public void DateCreatedTest()
         {
-            // TODO: unit test for the property 'DateCreated' 
+            // TODO: unit test for the property 'DateCreated'
         }
-        
         /// <summary>
-        /// Test the property 'DateModified' 
+        /// Test the property 'DateModified'
         /// </summary>
         [Test]
         public void DateModifiedTest()
         {
-            // TODO: unit test for the property 'DateModified' 
+            // TODO: unit test for the property 'DateModified'
         }
-        
         /// <summary>
-        /// Test the property 'Description' 
+        /// Test the property 'Description'
         /// </summary>
         [Test]
         public void DescriptionTest()
         {
-            // TODO: unit test for the property 'Description' 
+            // TODO: unit test for the property 'Description'
         }
-        
         /// <summary>
-        /// Test the property 'TimeZone' 
+        /// Test the property 'TimeZone'
         /// </summary>
         [Test]
         public void TimeZoneTest()
         {
-            // TODO: unit test for the property 'TimeZone' 
+            // TODO: unit test for the property 'TimeZone'
         }
-        
         /// <summary>
-        /// Test the property 'TimePeriod' 
+        /// Test the property 'TimePeriod'
         /// </summary>
         [Test]
         public void TimePeriodTest()
         {
-            // TODO: unit test for the property 'TimePeriod' 
+            // TODO: unit test for the property 'TimePeriod'
         }
-        
         /// <summary>
-        /// Test the property 'Interval' 
+        /// Test the property 'Interval'
         /// </summary>
         [Test]
         public void IntervalTest()
         {
-            // TODO: unit test for the property 'Interval' 
+            // TODO: unit test for the property 'Interval'
         }
-        
         /// <summary>
-        /// Test the property 'ReportFormat' 
+        /// Test the property 'ReportFormat'
         /// </summary>
         [Test]
         public void ReportFormatTest()
         {
-            // TODO: unit test for the property 'ReportFormat' 
+            // TODO: unit test for the property 'ReportFormat'
         }
-        
         /// <summary>
-        /// Test the property 'Locale' 
+        /// Test the property 'Locale'
         /// </summary>
         [Test]
         public void LocaleTest()
         {
-            // TODO: unit test for the property 'Locale' 
+            // TODO: unit test for the property 'Locale'
         }
-        
         /// <summary>
-        /// Test the property 'Enabled' 
+        /// Test the property 'Enabled'
         /// </summary>
         [Test]
         public void EnabledTest()
         {
-            // TODO: unit test for the property 'Enabled' 
+            // TODO: unit test for the property 'Enabled'
         }
-        
         /// <summary>
-        /// Test the property 'ReportId' 
+        /// Test the property 'ReportId'
         /// </summary>
         [Test]
         public void ReportIdTest()
         {
-            // TODO: unit test for the property 'ReportId' 
+            // TODO: unit test for the property 'ReportId'
         }
-        
         /// <summary>
-        /// Test the property 'Parameters' 
+        /// Test the property 'Parameters'
         /// </summary>
         [Test]
         public void ParametersTest()
         {
-            // TODO: unit test for the property 'Parameters' 
+            // TODO: unit test for the property 'Parameters'
         }
-        
         /// <summary>
-        /// Test the property 'LastRun' 
+        /// Test the property 'LastRun'
         /// </summary>
         [Test]
         public void LastRunTest()
         {
-            // TODO: unit test for the property 'LastRun' 
+            // TODO: unit test for the property 'LastRun'
         }
-        
         /// <summary>
-        /// Test the property 'SelfUri' 
+        /// Test the property 'SelfUri'
         /// </summary>
         [Test]
         public void SelfUriTest()
         {
-            // TODO: unit test for the property 'SelfUri' 
+            // TODO: unit test for the property 'SelfUri'
         }
-        
 
     }
 

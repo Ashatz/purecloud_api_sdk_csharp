@@ -54,7 +54,7 @@ namespace ININ.PureCloudApi.Model
             this.InternationalChargesTotal = InternationalChargesTotal;
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -122,11 +122,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  DomesticChargesTotal: ").Append(DomesticChargesTotal).Append("\n");
             sb.Append("  InternationalChargesTotal: ").Append(InternationalChargesTotal).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -212,31 +211,22 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.IsSuperUser != null)
                     hash = hash * 59 + this.IsSuperUser.GetHashCode();
-                
                 if (this.HasAccountNumber != null)
                     hash = hash * 59 + this.HasAccountNumber.GetHashCode();
-                
                 if (this.UsageCharges != null)
                     hash = hash * 59 + this.UsageCharges.GetHashCode();
-                
                 if (this.DomesticChargesTotal != null)
                     hash = hash * 59 + this.DomesticChargesTotal.GetHashCode();
-                
                 if (this.InternationalChargesTotal != null)
                     hash = hash * 59 + this.InternationalChargesTotal.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 return hash;
             }
         }

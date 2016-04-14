@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new SearchCriteria();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of SearchCriteria
@@ -50,79 +50,70 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<SearchCriteria> (instance, "instance is a SearchCriteria");
         }
 
-        
         /// <summary>
-        /// Test the property 'EndValue' 
+        /// Test the property 'EndValue'
         /// </summary>
         [Test]
         public void EndValueTest()
         {
-            // TODO: unit test for the property 'EndValue' 
+            // TODO: unit test for the property 'EndValue'
         }
-        
         /// <summary>
-        /// Test the property 'Values' 
+        /// Test the property 'Values'
         /// </summary>
         [Test]
         public void ValuesTest()
         {
-            // TODO: unit test for the property 'Values' 
+            // TODO: unit test for the property 'Values'
         }
-        
         /// <summary>
-        /// Test the property 'StartValue' 
+        /// Test the property 'StartValue'
         /// </summary>
         [Test]
         public void StartValueTest()
         {
-            // TODO: unit test for the property 'StartValue' 
+            // TODO: unit test for the property 'StartValue'
         }
-        
         /// <summary>
-        /// Test the property 'Type' 
+        /// Test the property 'Type'
         /// </summary>
         [Test]
         public void TypeTest()
         {
-            // TODO: unit test for the property 'Type' 
+            // TODO: unit test for the property 'Type'
         }
-        
         /// <summary>
-        /// Test the property 'Fields' 
+        /// Test the property 'Fields'
         /// </summary>
         [Test]
         public void FieldsTest()
         {
-            // TODO: unit test for the property 'Fields' 
+            // TODO: unit test for the property 'Fields'
         }
-        
         /// <summary>
-        /// Test the property 'Value' 
+        /// Test the property 'Value'
         /// </summary>
         [Test]
         public void ValueTest()
         {
-            // TODO: unit test for the property 'Value' 
+            // TODO: unit test for the property 'Value'
         }
-        
         /// <summary>
-        /// Test the property '_Operator' 
+        /// Test the property '_Operator'
         /// </summary>
         [Test]
         public void _OperatorTest()
         {
-            // TODO: unit test for the property '_Operator' 
+            // TODO: unit test for the property '_Operator'
         }
-        
         /// <summary>
-        /// Test the property 'Group' 
+        /// Test the property 'Group'
         /// </summary>
         [Test]
         public void GroupTest()
         {
-            // TODO: unit test for the property 'Group' 
+            // TODO: unit test for the property 'Group'
         }
-        
 
     }
 

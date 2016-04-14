@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new FlowConfigMetaData();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of FlowConfigMetaData
@@ -50,106 +50,94 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<FlowConfigMetaData> (instance, "instance is a FlowConfigMetaData");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'ConfigState' 
+        /// Test the property 'ConfigState'
         /// </summary>
         [Test]
         public void ConfigStateTest()
         {
-            // TODO: unit test for the property 'ConfigState' 
+            // TODO: unit test for the property 'ConfigState'
         }
-        
         /// <summary>
-        /// Test the property 'FlowType' 
+        /// Test the property 'FlowType'
         /// </summary>
         [Test]
         public void FlowTypeTest()
         {
-            // TODO: unit test for the property 'FlowType' 
+            // TODO: unit test for the property 'FlowType'
         }
-        
         /// <summary>
-        /// Test the property 'LockedByUser' 
+        /// Test the property 'LockedByUser'
         /// </summary>
         [Test]
         public void LockedByUserTest()
         {
-            // TODO: unit test for the property 'LockedByUser' 
+            // TODO: unit test for the property 'LockedByUser'
         }
-        
         /// <summary>
-        /// Test the property 'NewestPublishedVersion' 
+        /// Test the property 'NewestPublishedVersion'
         /// </summary>
         [Test]
         public void NewestPublishedVersionTest()
         {
-            // TODO: unit test for the property 'NewestPublishedVersion' 
+            // TODO: unit test for the property 'NewestPublishedVersion'
         }
-        
         /// <summary>
-        /// Test the property 'NewestVersion' 
+        /// Test the property 'NewestVersion'
         /// </summary>
         [Test]
         public void NewestVersionTest()
         {
-            // TODO: unit test for the property 'NewestVersion' 
+            // TODO: unit test for the property 'NewestVersion'
         }
-        
         /// <summary>
-        /// Test the property 'AssociatedWorkspaces' 
+        /// Test the property 'AssociatedWorkspaces'
         /// </summary>
         [Test]
         public void AssociatedWorkspacesTest()
         {
-            // TODO: unit test for the property 'AssociatedWorkspaces' 
+            // TODO: unit test for the property 'AssociatedWorkspaces'
         }
-        
         /// <summary>
-        /// Test the property 'Description' 
+        /// Test the property 'Description'
         /// </summary>
         [Test]
         public void DescriptionTest()
         {
-            // TODO: unit test for the property 'Description' 
+            // TODO: unit test for the property 'Description'
         }
-        
         /// <summary>
-        /// Test the property 'HasDraft' 
+        /// Test the property 'HasDraft'
         /// </summary>
         [Test]
         public void HasDraftTest()
         {
-            // TODO: unit test for the property 'HasDraft' 
+            // TODO: unit test for the property 'HasDraft'
         }
-        
         /// <summary>
-        /// Test the property 'SelfUri' 
+        /// Test the property 'SelfUri'
         /// </summary>
         [Test]
         public void SelfUriTest()
         {
-            // TODO: unit test for the property 'SelfUri' 
+            // TODO: unit test for the property 'SelfUri'
         }
-        
 
     }
 

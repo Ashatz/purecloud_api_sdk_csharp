@@ -17,9 +17,12 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class DomainResourceConditionValue :  IEquatable<DomainResourceConditionValue>
     { 
-    
+
+        /// <summary>
+        /// Gets or Sets Type
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum TypeEnum {
+                public enum TypeEnum {
             
             [EnumMember(Value = "SCALAR")]
             Scalar,
@@ -33,6 +36,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "QUEUE")]
             Queue
         }
+
         
         /// <summary>
         /// Gets or Sets Type
@@ -56,7 +60,7 @@ namespace ININ.PureCloudApi.Model
             this.Type = Type;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets User
@@ -88,11 +92,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Queue: ").Append(Queue).Append("\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -158,19 +161,14 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();
-                
                 if (this.Queue != null)
                     hash = hash * 59 + this.Queue.GetHashCode();
-                
                 if (this.Value != null)
                     hash = hash * 59 + this.Value.GetHashCode();
-                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
                 return hash;
             }
         }

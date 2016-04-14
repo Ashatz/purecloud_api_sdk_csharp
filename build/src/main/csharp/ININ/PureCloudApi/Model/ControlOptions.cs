@@ -30,7 +30,7 @@ namespace ININ.PureCloudApi.Model
             this.Label = Label;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets Value
@@ -54,11 +54,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class ControlOptions {\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
             sb.Append("  Label: ").Append(Label).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -114,13 +113,10 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Value != null)
                     hash = hash * 59 + this.Value.GetHashCode();
-                
                 if (this.Label != null)
                     hash = hash * 59 + this.Label.GetHashCode();
-                
                 return hash;
             }
         }

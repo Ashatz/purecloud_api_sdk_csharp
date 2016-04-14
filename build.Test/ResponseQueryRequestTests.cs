@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new ResponseQueryRequest();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of ResponseQueryRequest
@@ -50,34 +50,30 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<ResponseQueryRequest> (instance, "instance is a ResponseQueryRequest");
         }
 
-        
         /// <summary>
-        /// Test the property 'QueryPhrase' 
+        /// Test the property 'QueryPhrase'
         /// </summary>
         [Test]
         public void QueryPhraseTest()
         {
-            // TODO: unit test for the property 'QueryPhrase' 
+            // TODO: unit test for the property 'QueryPhrase'
         }
-        
         /// <summary>
-        /// Test the property 'PageSize' 
+        /// Test the property 'PageSize'
         /// </summary>
         [Test]
         public void PageSizeTest()
         {
-            // TODO: unit test for the property 'PageSize' 
+            // TODO: unit test for the property 'PageSize'
         }
-        
         /// <summary>
-        /// Test the property 'Filters' 
+        /// Test the property 'Filters'
         /// </summary>
         [Test]
         public void FiltersTest()
         {
-            // TODO: unit test for the property 'Filters' 
+            // TODO: unit test for the property 'Filters'
         }
-        
 
     }
 

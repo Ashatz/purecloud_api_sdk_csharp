@@ -61,9 +61,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'DeleteLibrariesLibraryId'
             string libraryId = null; // TODO: replace null with proper value
-            
             instance.DeleteLibrariesLibraryId(libraryId);
-             
+            
         }
         
         /// <summary>
@@ -74,9 +73,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'DeleteResponsesResponseId'
             string responseId = null; // TODO: replace null with proper value
-            
             instance.DeleteResponsesResponseId(responseId);
-             
+            
         }
         
         /// <summary>
@@ -88,9 +86,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'GetLibraries'
             int? pageNumber = null; // TODO: replace null with proper value
             int? pageSize = null; // TODO: replace null with proper value
-            
             var response = instance.GetLibraries(pageNumber, pageSize);
-            Assert.IsInstanceOf<LibraryEntityListing> (response, "response is LibraryEntityListing"); 
+            Assert.IsInstanceOf<LibraryEntityListing> (response, "response is LibraryEntityListing");
         }
         
         /// <summary>
@@ -101,9 +98,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'GetLibrariesLibraryId'
             string libraryId = null; // TODO: replace null with proper value
-            
             var response = instance.GetLibrariesLibraryId(libraryId);
-            Assert.IsInstanceOf<Library> (response, "response is Library"); 
+            Assert.IsInstanceOf<Library> (response, "response is Library");
         }
         
         /// <summary>
@@ -116,9 +112,8 @@ namespace ININ.PureCloudApi.Test
             string libraryId = null; // TODO: replace null with proper value
             int? pageNumber = null; // TODO: replace null with proper value
             int? pageSize = null; // TODO: replace null with proper value
-            
             var response = instance.GetResponses(libraryId, pageNumber, pageSize);
-            Assert.IsInstanceOf<ResponseEntityListing> (response, "response is ResponseEntityListing"); 
+            Assert.IsInstanceOf<ResponseEntityListing> (response, "response is ResponseEntityListing");
         }
         
         /// <summary>
@@ -129,9 +124,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'GetResponsesResponseId'
             string responseId = null; // TODO: replace null with proper value
-            
             var response = instance.GetResponsesResponseId(responseId);
-            Assert.IsInstanceOf<Response> (response, "response is Response"); 
+            Assert.IsInstanceOf<Response> (response, "response is Response");
         }
         
         /// <summary>
@@ -142,9 +136,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'PostLibraries'
             Library body = null; // TODO: replace null with proper value
-            
             var response = instance.PostLibraries(body);
-            Assert.IsInstanceOf<Library> (response, "response is Library"); 
+            Assert.IsInstanceOf<Library> (response, "response is Library");
         }
         
         /// <summary>
@@ -155,9 +148,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'PostResponses'
             Response body = null; // TODO: replace null with proper value
-            
             var response = instance.PostResponses(body);
-            Assert.IsInstanceOf<Response> (response, "response is Response"); 
+            Assert.IsInstanceOf<Response> (response, "response is Response");
         }
         
         /// <summary>
@@ -168,9 +160,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'PostResponsesQuery'
             ResponseQueryRequest body = null; // TODO: replace null with proper value
-            
             var response = instance.PostResponsesQuery(body);
-            Assert.IsInstanceOf<ResponseQueryResults> (response, "response is ResponseQueryResults"); 
+            Assert.IsInstanceOf<ResponseQueryResults> (response, "response is ResponseQueryResults");
         }
         
         /// <summary>
@@ -182,9 +173,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'PutLibrariesLibraryId'
             string libraryId = null; // TODO: replace null with proper value
             Library body = null; // TODO: replace null with proper value
-            
             var response = instance.PutLibrariesLibraryId(libraryId, body);
-            Assert.IsInstanceOf<Library> (response, "response is Library"); 
+            Assert.IsInstanceOf<Library> (response, "response is Library");
         }
         
         /// <summary>
@@ -196,9 +186,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'PutResponsesResponseId'
             string responseId = null; // TODO: replace null with proper value
             Response body = null; // TODO: replace null with proper value
-            
             var response = instance.PutResponsesResponseId(responseId, body);
-            Assert.IsInstanceOf<Response> (response, "response is Response"); 
+            Assert.IsInstanceOf<Response> (response, "response is Response");
         }
         
     }

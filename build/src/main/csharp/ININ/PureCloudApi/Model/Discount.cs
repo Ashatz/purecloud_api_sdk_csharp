@@ -23,12 +23,12 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="AnnualPrePay">AnnualPrePay (default to false).</param>
-        /// <param name="DiscountProperty">DiscountProperty.</param>
+        /// <param name="_Discount">_Discount.</param>
         /// <param name="Maximum">Maximum.</param>
         /// <param name="Minimum">Minimum.</param>
         /// <param name="ProductCategory">ProductCategory.</param>
 
-        public Discount(string Name = null, bool? AnnualPrePay = null, string DiscountProperty = null, string Maximum = null, string Minimum = null, string ProductCategory = null)
+        public Discount(string Name = null, bool? AnnualPrePay = null, string _Discount = null, string Maximum = null, string Minimum = null, string ProductCategory = null)
         {
             this.Name = Name;
             // use default value if no "AnnualPrePay" provided
@@ -40,13 +40,13 @@ namespace ININ.PureCloudApi.Model
             {
                 this.AnnualPrePay = AnnualPrePay;
             }
-            this.DiscountProperty = DiscountProperty;
+            this._Discount = _Discount;
             this.Maximum = Maximum;
             this.Minimum = Minimum;
             this.ProductCategory = ProductCategory;
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -68,10 +68,10 @@ namespace ININ.PureCloudApi.Model
         public bool? AnnualPrePay { get; set; }
     
         /// <summary>
-        /// Gets or Sets DiscountProperty
+        /// Gets or Sets _Discount
         /// </summary>
         [DataMember(Name="discount", EmitDefaultValue=false)]
-        public string DiscountProperty { get; set; }
+        public string _Discount { get; set; }
     
         /// <summary>
         /// Gets or Sets Maximum
@@ -109,16 +109,15 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  AnnualPrePay: ").Append(AnnualPrePay).Append("\n");
-            sb.Append("  DiscountProperty: ").Append(DiscountProperty).Append("\n");
+            sb.Append("  _Discount: ").Append(_Discount).Append("\n");
             sb.Append("  Maximum: ").Append(Maximum).Append("\n");
             sb.Append("  Minimum: ").Append(Minimum).Append("\n");
             sb.Append("  ProductCategory: ").Append(ProductCategory).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -167,9 +166,9 @@ namespace ININ.PureCloudApi.Model
                     this.AnnualPrePay.Equals(other.AnnualPrePay)
                 ) &&
                 (
-                    this.DiscountProperty == other.DiscountProperty ||
-                    this.DiscountProperty != null &&
-                    this.DiscountProperty.Equals(other.DiscountProperty)
+                    this._Discount == other._Discount ||
+                    this._Discount != null &&
+                    this._Discount.Equals(other._Discount)
                 ) &&
                 (
                     this.Maximum == other.Maximum ||
@@ -204,31 +203,22 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.AnnualPrePay != null)
                     hash = hash * 59 + this.AnnualPrePay.GetHashCode();
-                
-                if (this.DiscountProperty != null)
-                    hash = hash * 59 + this.DiscountProperty.GetHashCode();
-                
+                if (this._Discount != null)
+                    hash = hash * 59 + this._Discount.GetHashCode();
                 if (this.Maximum != null)
                     hash = hash * 59 + this.Maximum.GetHashCode();
-                
                 if (this.Minimum != null)
                     hash = hash * 59 + this.Minimum.GetHashCode();
-                
                 if (this.ProductCategory != null)
                     hash = hash * 59 + this.ProductCategory.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 return hash;
             }
         }

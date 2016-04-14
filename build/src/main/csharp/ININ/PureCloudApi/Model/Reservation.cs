@@ -17,9 +17,13 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class Reservation :  IEquatable<Reservation>
     { 
-    
+
+        /// <summary>
+        /// The type of phone number (eg us-domestic, toll-free, etc).
+        /// </summary>
+        /// <value>The type of phone number (eg us-domestic, toll-free, etc).</value>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum PhoneNumberTypeEnum {
+                public enum PhoneNumberTypeEnum {
             
             [EnumMember(Value = "TOLL_FREE")]
             TollFree,
@@ -30,6 +34,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "US_DOMESTIC")]
             UsDomestic
         }
+
         
         /// <summary>
         /// The type of phone number (eg us-domestic, toll-free, etc).
@@ -54,7 +59,7 @@ namespace ININ.PureCloudApi.Model
             this.PhoneNumberType = PhoneNumberType;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets Id
@@ -87,11 +92,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  ReservedTn: ").Append(ReservedTn).Append("\n");
             sb.Append("  ReservationExpires: ").Append(ReservationExpires).Append("\n");
             sb.Append("  PhoneNumberType: ").Append(PhoneNumberType).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -157,19 +161,14 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.ReservedTn != null)
                     hash = hash * 59 + this.ReservedTn.GetHashCode();
-                
                 if (this.ReservationExpires != null)
                     hash = hash * 59 + this.ReservationExpires.GetHashCode();
-                
                 if (this.PhoneNumberType != null)
                     hash = hash * 59 + this.PhoneNumberType.GetHashCode();
-                
                 return hash;
             }
         }

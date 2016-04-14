@@ -46,12 +46,12 @@ namespace ININ.PureCloudApi.Model
             }
             
         }
-        
+
     
         /// <summary>
-        /// A list of all the schemas for a XLSX file. Each schema represents a different sheet's schema.
+        /// A list of all the schemas for a XLSX file. Each schema represents a different sheet&#39;s schema.
         /// </summary>
-        /// <value>A list of all the schemas for a XLSX file. Each schema represents a different sheet's schema.</value>
+        /// <value>A list of all the schemas for a XLSX file. Each schema represents a different sheet&#39;s schema.</value>
         [DataMember(Name="SheetSchemas", EmitDefaultValue=false)]
         public List<SheetSchema> SheetSchemas { get; set; }
     
@@ -80,11 +80,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  SheetSchemas: ").Append(SheetSchemas).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  CarrierId: ").Append(CarrierId).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -145,16 +144,12 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.SheetSchemas != null)
                     hash = hash * 59 + this.SheetSchemas.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.CarrierId != null)
                     hash = hash * 59 + this.CarrierId.GetHashCode();
-                
                 return hash;
             }
         }

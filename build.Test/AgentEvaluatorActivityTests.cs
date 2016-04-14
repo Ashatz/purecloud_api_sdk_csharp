@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new AgentEvaluatorActivity();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of AgentEvaluatorActivity
@@ -50,70 +50,62 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<AgentEvaluatorActivity> (instance, "instance is a AgentEvaluatorActivity");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'Agent' 
+        /// Test the property 'Agent'
         /// </summary>
         [Test]
         public void AgentTest()
         {
-            // TODO: unit test for the property 'Agent' 
+            // TODO: unit test for the property 'Agent'
         }
-        
         /// <summary>
-        /// Test the property 'Evaluator' 
+        /// Test the property 'Evaluator'
         /// </summary>
         [Test]
         public void EvaluatorTest()
         {
-            // TODO: unit test for the property 'Evaluator' 
+            // TODO: unit test for the property 'Evaluator'
         }
-        
         /// <summary>
-        /// Test the property 'NumEvaluations' 
+        /// Test the property 'NumEvaluations'
         /// </summary>
         [Test]
         public void NumEvaluationsTest()
         {
-            // TODO: unit test for the property 'NumEvaluations' 
+            // TODO: unit test for the property 'NumEvaluations'
         }
-        
         /// <summary>
-        /// Test the property 'AverageEvaluationScore' 
+        /// Test the property 'AverageEvaluationScore'
         /// </summary>
         [Test]
         public void AverageEvaluationScoreTest()
         {
-            // TODO: unit test for the property 'AverageEvaluationScore' 
+            // TODO: unit test for the property 'AverageEvaluationScore'
         }
-        
         /// <summary>
-        /// Test the property 'SelfUri' 
+        /// Test the property 'SelfUri'
         /// </summary>
         [Test]
         public void SelfUriTest()
         {
-            // TODO: unit test for the property 'SelfUri' 
+            // TODO: unit test for the property 'SelfUri'
         }
-        
 
     }
 

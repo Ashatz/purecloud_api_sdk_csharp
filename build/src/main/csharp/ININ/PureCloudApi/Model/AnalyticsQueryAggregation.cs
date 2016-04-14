@@ -17,9 +17,13 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class AnalyticsQueryAggregation :  IEquatable<AnalyticsQueryAggregation>
     { 
-    
+
+        /// <summary>
+        /// Optional type, can usually be inferred
+        /// </summary>
+        /// <value>Optional type, can usually be inferred</value>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum TypeEnum {
+                public enum TypeEnum {
             
             [EnumMember(Value = "termFrequency")]
             Termfrequency,
@@ -27,6 +31,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "numericRange")]
             Numericrange
         }
+
         
         /// <summary>
         /// Optional type, can usually be inferred
@@ -53,7 +58,7 @@ namespace ININ.PureCloudApi.Model
             this.Ranges = Ranges;
             
         }
-        
+
     
         /// <summary>
         /// For use with termFrequency aggregations
@@ -96,11 +101,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Metric: ").Append(Metric).Append("\n");
             sb.Append("  Size: ").Append(Size).Append("\n");
             sb.Append("  Ranges: ").Append(Ranges).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -171,22 +175,16 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
                 if (this.Dimension != null)
                     hash = hash * 59 + this.Dimension.GetHashCode();
-                
                 if (this.Metric != null)
                     hash = hash * 59 + this.Metric.GetHashCode();
-                
                 if (this.Size != null)
                     hash = hash * 59 + this.Size.GetHashCode();
-                
                 if (this.Ranges != null)
                     hash = hash * 59 + this.Ranges.GetHashCode();
-                
                 return hash;
             }
         }

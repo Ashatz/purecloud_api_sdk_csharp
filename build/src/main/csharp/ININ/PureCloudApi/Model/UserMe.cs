@@ -17,9 +17,13 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class UserMe :  IEquatable<UserMe>
     { 
-    
+
+        /// <summary>
+        /// The current state for this user.
+        /// </summary>
+        /// <value>The current state for this user.</value>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum StateEnum {
+                public enum StateEnum {
             
             [EnumMember(Value = "ACTIVE")]
             Active,
@@ -30,6 +34,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "DELETED")]
             Deleted
         }
+
         
         /// <summary>
         /// The current state for this user.
@@ -57,7 +62,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Geolocation">Current geolocation position.</param>
         /// <param name="Station">Effective, default, and last station information.</param>
         /// <param name="Authorization">Roles and permissions assigned to the user.</param>
-        /// <param name="Organization">Details about the organization the user is a member of.</param>
+        /// <param name="Organization"> Details about the organization the user is a member of.</param>
 
         public UserMe(string Name = null, Chat Chat = null, string Department = null, string Email = null, List<Contact> PrimaryContactInfo = null, List<Contact> Addresses = null, string Title = null, string Username = null, List<UserImage> Images = null, RoutingStatus RoutingStatus = null, UserPresence Presence = null, UserConversationSummary ConversationSummary = null, OutOfOffice OutOfOffice = null, Geolocation Geolocation = null, UserStations Station = null, UserAuthorization Authorization = null, Organization Organization = null)
         {
@@ -80,7 +85,7 @@ namespace ININ.PureCloudApi.Model
             this.Organization = Organization;
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -202,9 +207,9 @@ namespace ININ.PureCloudApi.Model
         public UserAuthorization Authorization { get; set; }
     
         /// <summary>
-        /// Details about the organization the user is a member of
+        ///  Details about the organization the user is a member of
         /// </summary>
-        /// <value>Details about the organization the user is a member of</value>
+        /// <value> Details about the organization the user is a member of</value>
         [DataMember(Name="organization", EmitDefaultValue=false)]
         public Organization Organization { get; set; }
     
@@ -244,11 +249,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Authorization: ").Append(Authorization).Append("\n");
             sb.Append("  Organization: ").Append(Organization).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -399,70 +403,48 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.Chat != null)
                     hash = hash * 59 + this.Chat.GetHashCode();
-                
                 if (this.Department != null)
                     hash = hash * 59 + this.Department.GetHashCode();
-                
                 if (this.Email != null)
                     hash = hash * 59 + this.Email.GetHashCode();
-                
                 if (this.PrimaryContactInfo != null)
                     hash = hash * 59 + this.PrimaryContactInfo.GetHashCode();
-                
                 if (this.Addresses != null)
                     hash = hash * 59 + this.Addresses.GetHashCode();
-                
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
-                
                 if (this.Title != null)
                     hash = hash * 59 + this.Title.GetHashCode();
-                
                 if (this.Username != null)
                     hash = hash * 59 + this.Username.GetHashCode();
-                
                 if (this.Images != null)
                     hash = hash * 59 + this.Images.GetHashCode();
-                
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
-                
                 if (this.RoutingStatus != null)
                     hash = hash * 59 + this.RoutingStatus.GetHashCode();
-                
                 if (this.Presence != null)
                     hash = hash * 59 + this.Presence.GetHashCode();
-                
                 if (this.ConversationSummary != null)
                     hash = hash * 59 + this.ConversationSummary.GetHashCode();
-                
                 if (this.OutOfOffice != null)
                     hash = hash * 59 + this.OutOfOffice.GetHashCode();
-                
                 if (this.Geolocation != null)
                     hash = hash * 59 + this.Geolocation.GetHashCode();
-                
                 if (this.Station != null)
                     hash = hash * 59 + this.Station.GetHashCode();
-                
                 if (this.Authorization != null)
                     hash = hash * 59 + this.Authorization.GetHashCode();
-                
                 if (this.Organization != null)
                     hash = hash * 59 + this.Organization.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 return hash;
             }
         }

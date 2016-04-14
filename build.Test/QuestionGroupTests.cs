@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new QuestionGroup();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of QuestionGroup
@@ -50,88 +50,78 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<QuestionGroup> (instance, "instance is a QuestionGroup");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'Type' 
+        /// Test the property 'Type'
         /// </summary>
         [Test]
         public void TypeTest()
         {
-            // TODO: unit test for the property 'Type' 
+            // TODO: unit test for the property 'Type'
         }
-        
         /// <summary>
-        /// Test the property 'DefaultAnswersToHighest' 
+        /// Test the property 'DefaultAnswersToHighest'
         /// </summary>
         [Test]
         public void DefaultAnswersToHighestTest()
         {
-            // TODO: unit test for the property 'DefaultAnswersToHighest' 
+            // TODO: unit test for the property 'DefaultAnswersToHighest'
         }
-        
         /// <summary>
-        /// Test the property 'DefaultAnswersToNA' 
+        /// Test the property 'DefaultAnswersToNA'
         /// </summary>
         [Test]
         public void DefaultAnswersToNATest()
         {
-            // TODO: unit test for the property 'DefaultAnswersToNA' 
+            // TODO: unit test for the property 'DefaultAnswersToNA'
         }
-        
         /// <summary>
-        /// Test the property 'NaEnabled' 
+        /// Test the property 'NaEnabled'
         /// </summary>
         [Test]
         public void NaEnabledTest()
         {
-            // TODO: unit test for the property 'NaEnabled' 
+            // TODO: unit test for the property 'NaEnabled'
         }
-        
         /// <summary>
-        /// Test the property 'Weight' 
+        /// Test the property 'Weight'
         /// </summary>
         [Test]
         public void WeightTest()
         {
-            // TODO: unit test for the property 'Weight' 
+            // TODO: unit test for the property 'Weight'
         }
-        
         /// <summary>
-        /// Test the property 'ManualWeight' 
+        /// Test the property 'ManualWeight'
         /// </summary>
         [Test]
         public void ManualWeightTest()
         {
-            // TODO: unit test for the property 'ManualWeight' 
+            // TODO: unit test for the property 'ManualWeight'
         }
-        
         /// <summary>
-        /// Test the property 'Questions' 
+        /// Test the property 'Questions'
         /// </summary>
         [Test]
         public void QuestionsTest()
         {
-            // TODO: unit test for the property 'Questions' 
+            // TODO: unit test for the property 'Questions'
         }
-        
 
     }
 

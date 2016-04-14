@@ -61,9 +61,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'DeleteChannelsChannelIdSubscriptions'
             string channelId = null; // TODO: replace null with proper value
-            
             var response = instance.DeleteChannelsChannelIdSubscriptions(channelId);
-            Assert.IsInstanceOf<string> (response, "response is string"); 
+            Assert.IsInstanceOf<string> (response, "response is string");
         }
         
         /// <summary>
@@ -74,9 +73,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'GetAvailabletopics'
             List<string> expand = null; // TODO: replace null with proper value
-            
             var response = instance.GetAvailabletopics(expand);
-            Assert.IsInstanceOf<AvailableTopicEntityListing> (response, "response is AvailableTopicEntityListing"); 
+            Assert.IsInstanceOf<AvailableTopicEntityListing> (response, "response is AvailableTopicEntityListing");
         }
         
         /// <summary>
@@ -86,9 +84,8 @@ namespace ININ.PureCloudApi.Test
         public void GetChannelsTest()
         {
             // TODO: add unit test for the method 'GetChannels'
-            
             var response = instance.GetChannels();
-            Assert.IsInstanceOf<ChannelEntityListing> (response, "response is ChannelEntityListing"); 
+            Assert.IsInstanceOf<ChannelEntityListing> (response, "response is ChannelEntityListing");
         }
         
         /// <summary>
@@ -99,9 +96,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'GetChannelsChannelIdSubscriptions'
             string channelId = null; // TODO: replace null with proper value
-            
             var response = instance.GetChannelsChannelIdSubscriptions(channelId);
-            Assert.IsInstanceOf<ChannelTopicEntityListing> (response, "response is ChannelTopicEntityListing"); 
+            Assert.IsInstanceOf<ChannelTopicEntityListing> (response, "response is ChannelTopicEntityListing");
         }
         
         /// <summary>
@@ -111,9 +107,8 @@ namespace ININ.PureCloudApi.Test
         public void PostChannelsTest()
         {
             // TODO: add unit test for the method 'PostChannels'
-            
             var response = instance.PostChannels();
-            Assert.IsInstanceOf<Channel> (response, "response is Channel"); 
+            Assert.IsInstanceOf<Channel> (response, "response is Channel");
         }
         
         /// <summary>
@@ -125,9 +120,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'PostChannelsChannelIdSubscriptions'
             string channelId = null; // TODO: replace null with proper value
             List<ChannelTopic> body = null; // TODO: replace null with proper value
-            
             var response = instance.PostChannelsChannelIdSubscriptions(channelId, body);
-            Assert.IsInstanceOf<ChannelTopicEntityListing> (response, "response is ChannelTopicEntityListing"); 
+            Assert.IsInstanceOf<ChannelTopicEntityListing> (response, "response is ChannelTopicEntityListing");
         }
         
         /// <summary>
@@ -139,9 +133,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'PutChannelsChannelIdSubscriptions'
             string channelId = null; // TODO: replace null with proper value
             List<ChannelTopic> body = null; // TODO: replace null with proper value
-            
             var response = instance.PutChannelsChannelIdSubscriptions(channelId, body);
-            Assert.IsInstanceOf<ChannelTopicEntityListing> (response, "response is ChannelTopicEntityListing"); 
+            Assert.IsInstanceOf<ChannelTopicEntityListing> (response, "response is ChannelTopicEntityListing");
         }
         
     }

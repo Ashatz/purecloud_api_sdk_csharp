@@ -60,9 +60,8 @@ namespace ININ.PureCloudApi.Test
         public void DeleteMessagesTest()
         {
             // TODO: add unit test for the method 'DeleteMessages'
-            
             var response = instance.DeleteMessages();
-            Assert.IsInstanceOf<string> (response, "response is string"); 
+            Assert.IsInstanceOf<string> (response, "response is string");
         }
         
         /// <summary>
@@ -73,9 +72,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'DeleteMessagesMessageId'
             string messageId = null; // TODO: replace null with proper value
-            
             var response = instance.DeleteMessagesMessageId(messageId);
-            Assert.IsInstanceOf<string> (response, "response is string"); 
+            Assert.IsInstanceOf<string> (response, "response is string");
         }
         
         /// <summary>
@@ -85,9 +83,8 @@ namespace ININ.PureCloudApi.Test
         public void GetMailboxTest()
         {
             // TODO: add unit test for the method 'GetMailbox'
-            
             var response = instance.GetMailbox();
-            Assert.IsInstanceOf<VoicemailMailboxInfo> (response, "response is VoicemailMailboxInfo"); 
+            Assert.IsInstanceOf<VoicemailMailboxInfo> (response, "response is VoicemailMailboxInfo");
         }
         
         /// <summary>
@@ -97,9 +94,8 @@ namespace ININ.PureCloudApi.Test
         public void GetMessagesTest()
         {
             // TODO: add unit test for the method 'GetMessages'
-            
             var response = instance.GetMessages();
-            Assert.IsInstanceOf<VoicemailMessageEntityListing> (response, "response is VoicemailMessageEntityListing"); 
+            Assert.IsInstanceOf<VoicemailMessageEntityListing> (response, "response is VoicemailMessageEntityListing");
         }
         
         /// <summary>
@@ -110,9 +106,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'GetMessagesMessageId'
             string messageId = null; // TODO: replace null with proper value
-            
             var response = instance.GetMessagesMessageId(messageId);
-            Assert.IsInstanceOf<VoicemailMessage> (response, "response is VoicemailMessage"); 
+            Assert.IsInstanceOf<VoicemailMessage> (response, "response is VoicemailMessage");
         }
         
         /// <summary>
@@ -124,9 +119,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'GetMessagesMessageIdMedia'
             string messageId = null; // TODO: replace null with proper value
             string formatId = null; // TODO: replace null with proper value
-            
             var response = instance.GetMessagesMessageIdMedia(messageId, formatId);
-            Assert.IsInstanceOf<VoicemailMediaInfo> (response, "response is VoicemailMediaInfo"); 
+            Assert.IsInstanceOf<VoicemailMediaInfo> (response, "response is VoicemailMediaInfo");
         }
         
         /// <summary>
@@ -136,9 +130,8 @@ namespace ININ.PureCloudApi.Test
         public void GetPolicyTest()
         {
             // TODO: add unit test for the method 'GetPolicy'
-            
             var response = instance.GetPolicy();
-            Assert.IsInstanceOf<VoicemailOrganizationPolicy> (response, "response is VoicemailOrganizationPolicy"); 
+            Assert.IsInstanceOf<VoicemailOrganizationPolicy> (response, "response is VoicemailOrganizationPolicy");
         }
         
         /// <summary>
@@ -149,9 +142,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'GetUserpoliciesUserId'
             string userId = null; // TODO: replace null with proper value
-            
             var response = instance.GetUserpoliciesUserId(userId);
-            Assert.IsInstanceOf<VoicemailUserPolicy> (response, "response is VoicemailUserPolicy"); 
+            Assert.IsInstanceOf<VoicemailUserPolicy> (response, "response is VoicemailUserPolicy");
         }
         
         /// <summary>
@@ -163,9 +155,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'PatchUserpoliciesUserId'
             string userId = null; // TODO: replace null with proper value
             VoicemailUserPolicy body = null; // TODO: replace null with proper value
-            
             var response = instance.PatchUserpoliciesUserId(userId, body);
-            Assert.IsInstanceOf<VoicemailUserPolicy> (response, "response is VoicemailUserPolicy"); 
+            Assert.IsInstanceOf<VoicemailUserPolicy> (response, "response is VoicemailUserPolicy");
         }
         
         /// <summary>
@@ -177,9 +168,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'PutMessagesMessageId'
             string messageId = null; // TODO: replace null with proper value
             VoicemailMessage body = null; // TODO: replace null with proper value
-            
             var response = instance.PutMessagesMessageId(messageId, body);
-            Assert.IsInstanceOf<VoicemailMessage> (response, "response is VoicemailMessage"); 
+            Assert.IsInstanceOf<VoicemailMessage> (response, "response is VoicemailMessage");
         }
         
         /// <summary>
@@ -190,9 +180,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'PutPolicy'
             VoicemailOrganizationPolicy body = null; // TODO: replace null with proper value
-            
             var response = instance.PutPolicy(body);
-            Assert.IsInstanceOf<VoicemailOrganizationPolicy> (response, "response is VoicemailOrganizationPolicy"); 
+            Assert.IsInstanceOf<VoicemailOrganizationPolicy> (response, "response is VoicemailOrganizationPolicy");
         }
         
     }

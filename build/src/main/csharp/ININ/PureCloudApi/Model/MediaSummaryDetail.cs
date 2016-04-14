@@ -30,7 +30,7 @@ namespace ININ.PureCloudApi.Model
             this.Acw = Acw;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets Active
@@ -54,11 +54,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class MediaSummaryDetail {\n");
             sb.Append("  Active: ").Append(Active).Append("\n");
             sb.Append("  Acw: ").Append(Acw).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -114,13 +113,10 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Active != null)
                     hash = hash * 59 + this.Active.GetHashCode();
-                
                 if (this.Acw != null)
                     hash = hash * 59 + this.Acw.GetHashCode();
-                
                 return hash;
             }
         }

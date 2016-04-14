@@ -17,9 +17,12 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class Video :  IEquatable<Video>
     { 
-    
+
+        /// <summary>
+        /// Gets or Sets State
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum StateEnum {
+                public enum StateEnum {
             
             [EnumMember(Value = "ALERTING")]
             Alerting,
@@ -45,9 +48,13 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "NONE")]
             None
         }
-    
+
+
+        /// <summary>
+        /// Gets or Sets DisconnectType
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum DisconnectTypeEnum {
+                public enum DisconnectTypeEnum {
             
             [EnumMember(Value = "ENDPOINT")]
             Endpoint,
@@ -79,6 +86,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "OTHER")]
             Other
         }
+
         
         /// <summary>
         /// Gets or Sets State
@@ -144,7 +152,7 @@ namespace ININ.PureCloudApi.Model
             this.DisconnectedTime = DisconnectedTime;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets Id
@@ -214,11 +222,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  DisconnectType: ").Append(DisconnectType).Append("\n");
             sb.Append("  ConnectedTime: ").Append(ConnectedTime).Append("\n");
             sb.Append("  DisconnectedTime: ").Append(DisconnectedTime).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -314,37 +321,26 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Context != null)
                     hash = hash * 59 + this.Context.GetHashCode();
-                
                 if (this.AudioMuted != null)
                     hash = hash * 59 + this.AudioMuted.GetHashCode();
-                
                 if (this.VideoMuted != null)
                     hash = hash * 59 + this.VideoMuted.GetHashCode();
-                
                 if (this.SharingScreen != null)
                     hash = hash * 59 + this.SharingScreen.GetHashCode();
-                
                 if (this.PeerCount != null)
                     hash = hash * 59 + this.PeerCount.GetHashCode();
-                
                 if (this.DisconnectType != null)
                     hash = hash * 59 + this.DisconnectType.GetHashCode();
-                
                 if (this.ConnectedTime != null)
                     hash = hash * 59 + this.ConnectedTime.GetHashCode();
-                
                 if (this.DisconnectedTime != null)
                     hash = hash * 59 + this.DisconnectedTime.GetHashCode();
-                
                 return hash;
             }
         }

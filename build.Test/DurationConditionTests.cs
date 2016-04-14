@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new DurationCondition();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of DurationCondition
@@ -50,34 +50,30 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<DurationCondition> (instance, "instance is a DurationCondition");
         }
 
-        
         /// <summary>
-        /// Test the property 'DurationTarget' 
+        /// Test the property 'DurationTarget'
         /// </summary>
         [Test]
         public void DurationTargetTest()
         {
-            // TODO: unit test for the property 'DurationTarget' 
+            // TODO: unit test for the property 'DurationTarget'
         }
-        
         /// <summary>
-        /// Test the property 'DurationOperator' 
+        /// Test the property 'DurationOperator'
         /// </summary>
         [Test]
         public void DurationOperatorTest()
         {
-            // TODO: unit test for the property 'DurationOperator' 
+            // TODO: unit test for the property 'DurationOperator'
         }
-        
         /// <summary>
-        /// Test the property 'DurationRange' 
+        /// Test the property 'DurationRange'
         /// </summary>
         [Test]
         public void DurationRangeTest()
         {
-            // TODO: unit test for the property 'DurationRange' 
+            // TODO: unit test for the property 'DurationRange'
         }
-        
 
     }
 

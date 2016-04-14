@@ -30,7 +30,7 @@ namespace ININ.PureCloudApi.Model
             this.User = User;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets EvaluationForm
@@ -54,11 +54,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class EvaluationAssignment {\n");
             sb.Append("  EvaluationForm: ").Append(EvaluationForm).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -114,13 +113,10 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.EvaluationForm != null)
                     hash = hash * 59 + this.EvaluationForm.GetHashCode();
-                
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();
-                
                 return hash;
             }
         }

@@ -17,9 +17,12 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class JsonNode :  IEquatable<JsonNode>
     { 
-    
+
+        /// <summary>
+        /// Gets or Sets NodeType
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum NodeTypeEnum {
+                public enum NodeTypeEnum {
             
             [EnumMember(Value = "ARRAY")]
             Array,
@@ -48,6 +51,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "STRING")]
             String
         }
+
         
         /// <summary>
         /// Gets or Sets NodeType
@@ -265,7 +269,7 @@ namespace ININ.PureCloudApi.Model
             }
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets _Float
@@ -416,11 +420,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  ValueNode: ").Append(ValueNode).Append("\n");
             sb.Append("  Array: ").Append(Array).Append("\n");
             sb.Append("  _Null: ").Append(_Null).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -571,70 +574,48 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.NodeType != null)
                     hash = hash * 59 + this.NodeType.GetHashCode();
-                
                 if (this._Float != null)
                     hash = hash * 59 + this._Float.GetHashCode();
-                
                 if (this._Object != null)
                     hash = hash * 59 + this._Object.GetHashCode();
-                
                 if (this.Boolean != null)
                     hash = hash * 59 + this.Boolean.GetHashCode();
-                
                 if (this.Number != null)
                     hash = hash * 59 + this.Number.GetHashCode();
-                
                 if (this.ContainerNode != null)
                     hash = hash * 59 + this.ContainerNode.GetHashCode();
-                
                 if (this.MissingNode != null)
                     hash = hash * 59 + this.MissingNode.GetHashCode();
-                
                 if (this.Pojo != null)
                     hash = hash * 59 + this.Pojo.GetHashCode();
-                
                 if (this.IntegralNumber != null)
                     hash = hash * 59 + this.IntegralNumber.GetHashCode();
-                
                 if (this.FloatingPointNumber != null)
                     hash = hash * 59 + this.FloatingPointNumber.GetHashCode();
-                
                 if (this._Short != null)
                     hash = hash * 59 + this._Short.GetHashCode();
-                
                 if (this._Int != null)
                     hash = hash * 59 + this._Int.GetHashCode();
-                
                 if (this._Long != null)
                     hash = hash * 59 + this._Long.GetHashCode();
-                
                 if (this._Double != null)
                     hash = hash * 59 + this._Double.GetHashCode();
-                
                 if (this.BigDecimal != null)
                     hash = hash * 59 + this.BigDecimal.GetHashCode();
-                
                 if (this.BigInteger != null)
                     hash = hash * 59 + this.BigInteger.GetHashCode();
-                
                 if (this.Textual != null)
                     hash = hash * 59 + this.Textual.GetHashCode();
-                
                 if (this.Binary != null)
                     hash = hash * 59 + this.Binary.GetHashCode();
-                
                 if (this.ValueNode != null)
                     hash = hash * 59 + this.ValueNode.GetHashCode();
-                
                 if (this.Array != null)
                     hash = hash * 59 + this.Array.GetHashCode();
-                
                 if (this._Null != null)
                     hash = hash * 59 + this._Null.GetHashCode();
-                
                 return hash;
             }
         }

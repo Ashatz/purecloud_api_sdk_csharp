@@ -17,9 +17,13 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class OAuthClient :  IEquatable<OAuthClient>
     { 
-    
+
+        /// <summary>
+        /// The OAuth Grant/Client type supported by this client.
+        /// </summary>
+        /// <value>The OAuth Grant/Client type supported by this client.</value>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum AuthorizedGrantTypeEnum {
+                public enum AuthorizedGrantTypeEnum {
             
             [EnumMember(Value = "CODE")]
             Code,
@@ -30,6 +34,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "CLIENT-CREDENTIALS")]
             Clientcredentials
         }
+
         
         /// <summary>
         /// The OAuth Grant/Client type supported by this client.
@@ -84,7 +89,7 @@ namespace ININ.PureCloudApi.Model
             this.RoleIds = RoleIds;
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -158,11 +163,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  RoleIds: ").Append(RoleIds).Append("\n");
             sb.Append("  AuthorizedGrantType: ").Append(AuthorizedGrantType).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -253,34 +257,24 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.AccessTokenValiditySeconds != null)
                     hash = hash * 59 + this.AccessTokenValiditySeconds.GetHashCode();
-                
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
-                
                 if (this.RegisteredRedirectUri != null)
                     hash = hash * 59 + this.RegisteredRedirectUri.GetHashCode();
-                
                 if (this.Secret != null)
                     hash = hash * 59 + this.Secret.GetHashCode();
-                
                 if (this.RoleIds != null)
                     hash = hash * 59 + this.RoleIds.GetHashCode();
-                
                 if (this.AuthorizedGrantType != null)
                     hash = hash * 59 + this.AuthorizedGrantType.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 return hash;
             }
         }

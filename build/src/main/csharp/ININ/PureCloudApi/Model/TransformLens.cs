@@ -30,7 +30,7 @@ namespace ININ.PureCloudApi.Model
             this.Value = Value;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets Replace
@@ -54,11 +54,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class TransformLens {\n");
             sb.Append("  Replace: ").Append(Replace).Append("\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -114,13 +113,10 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Replace != null)
                     hash = hash * 59 + this.Replace.GetHashCode();
-                
                 if (this.Value != null)
                     hash = hash * 59 + this.Value.GetHashCode();
-                
                 return hash;
             }
         }

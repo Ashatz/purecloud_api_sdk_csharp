@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new ResponseFilter();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of ResponseFilter
@@ -50,34 +50,30 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<ResponseFilter> (instance, "instance is a ResponseFilter");
         }
 
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property '_Operator' 
+        /// Test the property '_Operator'
         /// </summary>
         [Test]
         public void _OperatorTest()
         {
-            // TODO: unit test for the property '_Operator' 
+            // TODO: unit test for the property '_Operator'
         }
-        
         /// <summary>
-        /// Test the property 'Values' 
+        /// Test the property 'Values'
         /// </summary>
         [Test]
         public void ValuesTest()
         {
-            // TODO: unit test for the property 'Values' 
+            // TODO: unit test for the property 'Values'
         }
-        
 
     }
 

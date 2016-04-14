@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new Video();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of Video
@@ -50,97 +50,86 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<Video> (instance, "instance is a Video");
         }
 
-        
         /// <summary>
-        /// Test the property 'State' 
+        /// Test the property 'State'
         /// </summary>
         [Test]
         public void StateTest()
         {
-            // TODO: unit test for the property 'State' 
+            // TODO: unit test for the property 'State'
         }
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'Context' 
+        /// Test the property 'Context'
         /// </summary>
         [Test]
         public void ContextTest()
         {
-            // TODO: unit test for the property 'Context' 
+            // TODO: unit test for the property 'Context'
         }
-        
         /// <summary>
-        /// Test the property 'AudioMuted' 
+        /// Test the property 'AudioMuted'
         /// </summary>
         [Test]
         public void AudioMutedTest()
         {
-            // TODO: unit test for the property 'AudioMuted' 
+            // TODO: unit test for the property 'AudioMuted'
         }
-        
         /// <summary>
-        /// Test the property 'VideoMuted' 
+        /// Test the property 'VideoMuted'
         /// </summary>
         [Test]
         public void VideoMutedTest()
         {
-            // TODO: unit test for the property 'VideoMuted' 
+            // TODO: unit test for the property 'VideoMuted'
         }
-        
         /// <summary>
-        /// Test the property 'SharingScreen' 
+        /// Test the property 'SharingScreen'
         /// </summary>
         [Test]
         public void SharingScreenTest()
         {
-            // TODO: unit test for the property 'SharingScreen' 
+            // TODO: unit test for the property 'SharingScreen'
         }
-        
         /// <summary>
-        /// Test the property 'PeerCount' 
+        /// Test the property 'PeerCount'
         /// </summary>
         [Test]
         public void PeerCountTest()
         {
-            // TODO: unit test for the property 'PeerCount' 
+            // TODO: unit test for the property 'PeerCount'
         }
-        
         /// <summary>
-        /// Test the property 'DisconnectType' 
+        /// Test the property 'DisconnectType'
         /// </summary>
         [Test]
         public void DisconnectTypeTest()
         {
-            // TODO: unit test for the property 'DisconnectType' 
+            // TODO: unit test for the property 'DisconnectType'
         }
-        
         /// <summary>
-        /// Test the property 'ConnectedTime' 
+        /// Test the property 'ConnectedTime'
         /// </summary>
         [Test]
         public void ConnectedTimeTest()
         {
-            // TODO: unit test for the property 'ConnectedTime' 
+            // TODO: unit test for the property 'ConnectedTime'
         }
-        
         /// <summary>
-        /// Test the property 'DisconnectedTime' 
+        /// Test the property 'DisconnectedTime'
         /// </summary>
         [Test]
         public void DisconnectedTimeTest()
         {
-            // TODO: unit test for the property 'DisconnectedTime' 
+            // TODO: unit test for the property 'DisconnectedTime'
         }
-        
 
     }
 

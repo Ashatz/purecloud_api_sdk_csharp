@@ -32,7 +32,7 @@ namespace ININ.PureCloudApi.Model
             this.CallableTimeColumn = CallableTimeColumn;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets ColumnName
@@ -63,11 +63,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  ColumnName: ").Append(ColumnName).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  CallableTimeColumn: ").Append(CallableTimeColumn).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -128,16 +127,12 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ColumnName != null)
                     hash = hash * 59 + this.ColumnName.GetHashCode();
-                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
                 if (this.CallableTimeColumn != null)
                     hash = hash * 59 + this.CallableTimeColumn.GetHashCode();
-                
                 return hash;
             }
         }

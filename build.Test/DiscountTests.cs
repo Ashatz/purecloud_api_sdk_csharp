@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new Discount();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of Discount
@@ -50,79 +50,70 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<Discount> (instance, "instance is a Discount");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'AnnualPrePay' 
+        /// Test the property 'AnnualPrePay'
         /// </summary>
         [Test]
         public void AnnualPrePayTest()
         {
-            // TODO: unit test for the property 'AnnualPrePay' 
+            // TODO: unit test for the property 'AnnualPrePay'
         }
-        
         /// <summary>
-        /// Test the property 'DiscountProperty' 
+        /// Test the property '_Discount'
         /// </summary>
         [Test]
-        public void DiscountPropertyTest()
+        public void _DiscountTest()
         {
-            // TODO: unit test for the property 'DiscountProperty' 
+            // TODO: unit test for the property '_Discount'
         }
-        
         /// <summary>
-        /// Test the property 'Maximum' 
+        /// Test the property 'Maximum'
         /// </summary>
         [Test]
         public void MaximumTest()
         {
-            // TODO: unit test for the property 'Maximum' 
+            // TODO: unit test for the property 'Maximum'
         }
-        
         /// <summary>
-        /// Test the property 'Minimum' 
+        /// Test the property 'Minimum'
         /// </summary>
         [Test]
         public void MinimumTest()
         {
-            // TODO: unit test for the property 'Minimum' 
+            // TODO: unit test for the property 'Minimum'
         }
-        
         /// <summary>
-        /// Test the property 'ProductCategory' 
+        /// Test the property 'ProductCategory'
         /// </summary>
         [Test]
         public void ProductCategoryTest()
         {
-            // TODO: unit test for the property 'ProductCategory' 
+            // TODO: unit test for the property 'ProductCategory'
         }
-        
         /// <summary>
-        /// Test the property 'SelfUri' 
+        /// Test the property 'SelfUri'
         /// </summary>
         [Test]
         public void SelfUriTest()
         {
-            // TODO: unit test for the property 'SelfUri' 
+            // TODO: unit test for the property 'SelfUri'
         }
-        
 
     }
 

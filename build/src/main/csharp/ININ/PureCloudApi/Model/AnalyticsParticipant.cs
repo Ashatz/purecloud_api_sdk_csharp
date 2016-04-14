@@ -17,9 +17,12 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class AnalyticsParticipant :  IEquatable<AnalyticsParticipant>
     { 
-    
+
+        /// <summary>
+        /// Gets or Sets Purpose
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum PurposeEnum {
+                public enum PurposeEnum {
             
             [EnumMember(Value = "manual")]
             Manual,
@@ -60,6 +63,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "external")]
             External
         }
+
         
         /// <summary>
         /// Gets or Sets Purpose
@@ -85,7 +89,7 @@ namespace ININ.PureCloudApi.Model
             this.Sessions = Sessions;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets ParticipantId
@@ -124,11 +128,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  UserId: ").Append(UserId).Append("\n");
             sb.Append("  Purpose: ").Append(Purpose).Append("\n");
             sb.Append("  Sessions: ").Append(Sessions).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -199,22 +202,16 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ParticipantId != null)
                     hash = hash * 59 + this.ParticipantId.GetHashCode();
-                
                 if (this.ParticipantName != null)
                     hash = hash * 59 + this.ParticipantName.GetHashCode();
-                
                 if (this.UserId != null)
                     hash = hash * 59 + this.UserId.GetHashCode();
-                
                 if (this.Purpose != null)
                     hash = hash * 59 + this.Purpose.GetHashCode();
-                
                 if (this.Sessions != null)
                     hash = hash * 59 + this.Sessions.GetHashCode();
-                
                 return hash;
             }
         }

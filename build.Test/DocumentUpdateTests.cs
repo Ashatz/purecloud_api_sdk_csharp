@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new DocumentUpdate();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of DocumentUpdate
@@ -50,88 +50,78 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<DocumentUpdate> (instance, "instance is a DocumentUpdate");
         }
 
-        
         /// <summary>
-        /// Test the property 'ChangeNumber' 
+        /// Test the property 'ChangeNumber'
         /// </summary>
         [Test]
         public void ChangeNumberTest()
         {
-            // TODO: unit test for the property 'ChangeNumber' 
+            // TODO: unit test for the property 'ChangeNumber'
         }
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'Read' 
+        /// Test the property 'Read'
         /// </summary>
         [Test]
         public void ReadTest()
         {
-            // TODO: unit test for the property 'Read' 
+            // TODO: unit test for the property 'Read'
         }
-        
         /// <summary>
-        /// Test the property 'AddTags' 
+        /// Test the property 'AddTags'
         /// </summary>
         [Test]
         public void AddTagsTest()
         {
-            // TODO: unit test for the property 'AddTags' 
+            // TODO: unit test for the property 'AddTags'
         }
-        
         /// <summary>
-        /// Test the property 'RemoveTags' 
+        /// Test the property 'RemoveTags'
         /// </summary>
         [Test]
         public void RemoveTagsTest()
         {
-            // TODO: unit test for the property 'RemoveTags' 
+            // TODO: unit test for the property 'RemoveTags'
         }
-        
         /// <summary>
-        /// Test the property 'AddTagIds' 
+        /// Test the property 'AddTagIds'
         /// </summary>
         [Test]
         public void AddTagIdsTest()
         {
-            // TODO: unit test for the property 'AddTagIds' 
+            // TODO: unit test for the property 'AddTagIds'
         }
-        
         /// <summary>
-        /// Test the property 'RemoveTagIds' 
+        /// Test the property 'RemoveTagIds'
         /// </summary>
         [Test]
         public void RemoveTagIdsTest()
         {
-            // TODO: unit test for the property 'RemoveTagIds' 
+            // TODO: unit test for the property 'RemoveTagIds'
         }
-        
         /// <summary>
-        /// Test the property 'UpdateAttributes' 
+        /// Test the property 'UpdateAttributes'
         /// </summary>
         [Test]
         public void UpdateAttributesTest()
         {
-            // TODO: unit test for the property 'UpdateAttributes' 
+            // TODO: unit test for the property 'UpdateAttributes'
         }
-        
         /// <summary>
-        /// Test the property 'RemoveAttributes' 
+        /// Test the property 'RemoveAttributes'
         /// </summary>
         [Test]
         public void RemoveAttributesTest()
         {
-            // TODO: unit test for the property 'RemoveAttributes' 
+            // TODO: unit test for the property 'RemoveAttributes'
         }
-        
 
     }
 

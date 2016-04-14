@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new ErrorDetails();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of ErrorDetails
@@ -50,79 +50,70 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<ErrorDetails> (instance, "instance is a ErrorDetails");
         }
 
-        
         /// <summary>
-        /// Test the property 'Status' 
+        /// Test the property 'Status'
         /// </summary>
         [Test]
         public void StatusTest()
         {
-            // TODO: unit test for the property 'Status' 
+            // TODO: unit test for the property 'Status'
         }
-        
         /// <summary>
-        /// Test the property 'Message' 
+        /// Test the property 'Message'
         /// </summary>
         [Test]
         public void MessageTest()
         {
-            // TODO: unit test for the property 'Message' 
+            // TODO: unit test for the property 'Message'
         }
-        
         /// <summary>
-        /// Test the property 'MessageWithParams' 
+        /// Test the property 'MessageWithParams'
         /// </summary>
         [Test]
         public void MessageWithParamsTest()
         {
-            // TODO: unit test for the property 'MessageWithParams' 
+            // TODO: unit test for the property 'MessageWithParams'
         }
-        
         /// <summary>
-        /// Test the property 'MessageParams' 
+        /// Test the property 'MessageParams'
         /// </summary>
         [Test]
         public void MessageParamsTest()
         {
-            // TODO: unit test for the property 'MessageParams' 
+            // TODO: unit test for the property 'MessageParams'
         }
-        
         /// <summary>
-        /// Test the property 'Code' 
+        /// Test the property 'Code'
         /// </summary>
         [Test]
         public void CodeTest()
         {
-            // TODO: unit test for the property 'Code' 
+            // TODO: unit test for the property 'Code'
         }
-        
         /// <summary>
-        /// Test the property 'ContextId' 
+        /// Test the property 'ContextId'
         /// </summary>
         [Test]
         public void ContextIdTest()
         {
-            // TODO: unit test for the property 'ContextId' 
+            // TODO: unit test for the property 'ContextId'
         }
-        
         /// <summary>
-        /// Test the property 'Nested' 
+        /// Test the property 'Nested'
         /// </summary>
         [Test]
         public void NestedTest()
         {
-            // TODO: unit test for the property 'Nested' 
+            // TODO: unit test for the property 'Nested'
         }
-        
         /// <summary>
-        /// Test the property 'Details' 
+        /// Test the property 'Details'
         /// </summary>
         [Test]
         public void DetailsTest()
         {
-            // TODO: unit test for the property 'Details' 
+            // TODO: unit test for the property 'Details'
         }
-        
 
     }
 

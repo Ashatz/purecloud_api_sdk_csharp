@@ -17,9 +17,12 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class Flow :  IEquatable<Flow>
     { 
-    
+
+        /// <summary>
+        /// Gets or Sets Type
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum TypeEnum {
+                public enum TypeEnum {
             
             [EnumMember(Value = "INBOUNDCALL")]
             Inboundcall,
@@ -33,6 +36,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "SPEECH")]
             Speech
         }
+
         
         /// <summary>
         /// Gets or Sets Type
@@ -92,7 +96,7 @@ namespace ININ.PureCloudApi.Model
             }
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -182,11 +186,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  SavedVersion: ").Append(SavedVersion).Append("\n");
             sb.Append("  System: ").Append(System).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -292,43 +295,30 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
-                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
                 if (this.LockedUser != null)
                     hash = hash * 59 + this.LockedUser.GetHashCode();
-                
                 if (this.Active != null)
                     hash = hash * 59 + this.Active.GetHashCode();
-                
                 if (this.Deleted != null)
                     hash = hash * 59 + this.Deleted.GetHashCode();
-                
                 if (this.PublishedVersion != null)
                     hash = hash * 59 + this.PublishedVersion.GetHashCode();
-                
                 if (this.CheckedInVersion != null)
                     hash = hash * 59 + this.CheckedInVersion.GetHashCode();
-                
                 if (this.SavedVersion != null)
                     hash = hash * 59 + this.SavedVersion.GetHashCode();
-                
                 if (this.System != null)
                     hash = hash * 59 + this.System.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 return hash;
             }
         }

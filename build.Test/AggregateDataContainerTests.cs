@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new AggregateDataContainer();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of AggregateDataContainer
@@ -50,25 +50,22 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<AggregateDataContainer> (instance, "instance is a AggregateDataContainer");
         }
 
-        
         /// <summary>
-        /// Test the property 'Group' 
+        /// Test the property 'Group'
         /// </summary>
         [Test]
         public void GroupTest()
         {
-            // TODO: unit test for the property 'Group' 
+            // TODO: unit test for the property 'Group'
         }
-        
         /// <summary>
-        /// Test the property 'Data' 
+        /// Test the property 'Data'
         /// </summary>
         [Test]
         public void DataTest()
         {
-            // TODO: unit test for the property 'Data' 
+            // TODO: unit test for the property 'Data'
         }
-        
 
     }
 

@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new UrlResponse();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of UrlResponse
@@ -50,16 +50,14 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<UrlResponse> (instance, "instance is a UrlResponse");
         }
 
-        
         /// <summary>
-        /// Test the property 'Url' 
+        /// Test the property 'Url'
         /// </summary>
         [Test]
         public void UrlTest()
         {
-            // TODO: unit test for the property 'Url' 
+            // TODO: unit test for the property 'Url'
         }
-        
 
     }
 

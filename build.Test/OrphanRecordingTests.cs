@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new OrphanRecording();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of OrphanRecording
@@ -50,106 +50,94 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<OrphanRecording> (instance, "instance is a OrphanRecording");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'CreatedTime' 
+        /// Test the property 'CreatedTime'
         /// </summary>
         [Test]
         public void CreatedTimeTest()
         {
-            // TODO: unit test for the property 'CreatedTime' 
+            // TODO: unit test for the property 'CreatedTime'
         }
-        
         /// <summary>
-        /// Test the property 'RecoveredTime' 
+        /// Test the property 'RecoveredTime'
         /// </summary>
         [Test]
         public void RecoveredTimeTest()
         {
-            // TODO: unit test for the property 'RecoveredTime' 
+            // TODO: unit test for the property 'RecoveredTime'
         }
-        
         /// <summary>
-        /// Test the property 'ProviderType' 
+        /// Test the property 'ProviderType'
         /// </summary>
         [Test]
         public void ProviderTypeTest()
         {
-            // TODO: unit test for the property 'ProviderType' 
+            // TODO: unit test for the property 'ProviderType'
         }
-        
         /// <summary>
-        /// Test the property 'MediaSizeBytes' 
+        /// Test the property 'MediaSizeBytes'
         /// </summary>
         [Test]
         public void MediaSizeBytesTest()
         {
-            // TODO: unit test for the property 'MediaSizeBytes' 
+            // TODO: unit test for the property 'MediaSizeBytes'
         }
-        
         /// <summary>
-        /// Test the property 'MediaType' 
+        /// Test the property 'MediaType'
         /// </summary>
         [Test]
         public void MediaTypeTest()
         {
-            // TODO: unit test for the property 'MediaType' 
+            // TODO: unit test for the property 'MediaType'
         }
-        
         /// <summary>
-        /// Test the property 'FileState' 
+        /// Test the property 'FileState'
         /// </summary>
         [Test]
         public void FileStateTest()
         {
-            // TODO: unit test for the property 'FileState' 
+            // TODO: unit test for the property 'FileState'
         }
-        
         /// <summary>
-        /// Test the property 'ProviderEndpoint' 
+        /// Test the property 'ProviderEndpoint'
         /// </summary>
         [Test]
         public void ProviderEndpointTest()
         {
-            // TODO: unit test for the property 'ProviderEndpoint' 
+            // TODO: unit test for the property 'ProviderEndpoint'
         }
-        
         /// <summary>
-        /// Test the property 'Recording' 
+        /// Test the property 'Recording'
         /// </summary>
         [Test]
         public void RecordingTest()
         {
-            // TODO: unit test for the property 'Recording' 
+            // TODO: unit test for the property 'Recording'
         }
-        
         /// <summary>
-        /// Test the property 'SelfUri' 
+        /// Test the property 'SelfUri'
         /// </summary>
         [Test]
         public void SelfUriTest()
         {
-            // TODO: unit test for the property 'SelfUri' 
+            // TODO: unit test for the property 'SelfUri'
         }
-        
 
     }
 

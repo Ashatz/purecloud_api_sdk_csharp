@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new VoicemailMessage();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of VoicemailMessage
@@ -50,106 +50,94 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<VoicemailMessage> (instance, "instance is a VoicemailMessage");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'Conversation' 
+        /// Test the property 'Conversation'
         /// </summary>
         [Test]
         public void ConversationTest()
         {
-            // TODO: unit test for the property 'Conversation' 
+            // TODO: unit test for the property 'Conversation'
         }
-        
         /// <summary>
-        /// Test the property 'Read' 
+        /// Test the property 'Read'
         /// </summary>
         [Test]
         public void ReadTest()
         {
-            // TODO: unit test for the property 'Read' 
+            // TODO: unit test for the property 'Read'
         }
-        
         /// <summary>
-        /// Test the property 'AudioRecordingDurationSeconds' 
+        /// Test the property 'AudioRecordingDurationSeconds'
         /// </summary>
         [Test]
         public void AudioRecordingDurationSecondsTest()
         {
-            // TODO: unit test for the property 'AudioRecordingDurationSeconds' 
+            // TODO: unit test for the property 'AudioRecordingDurationSeconds'
         }
-        
         /// <summary>
-        /// Test the property 'AudioRecordingSizeBytes' 
+        /// Test the property 'AudioRecordingSizeBytes'
         /// </summary>
         [Test]
         public void AudioRecordingSizeBytesTest()
         {
-            // TODO: unit test for the property 'AudioRecordingSizeBytes' 
+            // TODO: unit test for the property 'AudioRecordingSizeBytes'
         }
-        
         /// <summary>
-        /// Test the property 'CreatedDate' 
+        /// Test the property 'CreatedDate'
         /// </summary>
         [Test]
         public void CreatedDateTest()
         {
-            // TODO: unit test for the property 'CreatedDate' 
+            // TODO: unit test for the property 'CreatedDate'
         }
-        
         /// <summary>
-        /// Test the property 'ModifiedDate' 
+        /// Test the property 'ModifiedDate'
         /// </summary>
         [Test]
         public void ModifiedDateTest()
         {
-            // TODO: unit test for the property 'ModifiedDate' 
+            // TODO: unit test for the property 'ModifiedDate'
         }
-        
         /// <summary>
-        /// Test the property 'CallerAddress' 
+        /// Test the property 'CallerAddress'
         /// </summary>
         [Test]
         public void CallerAddressTest()
         {
-            // TODO: unit test for the property 'CallerAddress' 
+            // TODO: unit test for the property 'CallerAddress'
         }
-        
         /// <summary>
-        /// Test the property 'CallerName' 
+        /// Test the property 'CallerName'
         /// </summary>
         [Test]
         public void CallerNameTest()
         {
-            // TODO: unit test for the property 'CallerName' 
+            // TODO: unit test for the property 'CallerName'
         }
-        
         /// <summary>
-        /// Test the property 'CallerUser' 
+        /// Test the property 'CallerUser'
         /// </summary>
         [Test]
         public void CallerUserTest()
         {
-            // TODO: unit test for the property 'CallerUser' 
+            // TODO: unit test for the property 'CallerUser'
         }
-        
         /// <summary>
-        /// Test the property 'SelfUri' 
+        /// Test the property 'SelfUri'
         /// </summary>
         [Test]
         public void SelfUriTest()
         {
-            // TODO: unit test for the property 'SelfUri' 
+            // TODO: unit test for the property 'SelfUri'
         }
-        
 
     }
 

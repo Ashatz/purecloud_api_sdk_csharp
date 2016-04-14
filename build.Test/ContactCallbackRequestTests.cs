@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new ContactCallbackRequest();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of ContactCallbackRequest
@@ -50,52 +50,46 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<ContactCallbackRequest> (instance, "instance is a ContactCallbackRequest");
         }
 
-        
         /// <summary>
-        /// Test the property 'CampaignId' 
+        /// Test the property 'CampaignId'
         /// </summary>
         [Test]
         public void CampaignIdTest()
         {
-            // TODO: unit test for the property 'CampaignId' 
+            // TODO: unit test for the property 'CampaignId'
         }
-        
         /// <summary>
-        /// Test the property 'ContactListId' 
+        /// Test the property 'ContactListId'
         /// </summary>
         [Test]
         public void ContactListIdTest()
         {
-            // TODO: unit test for the property 'ContactListId' 
+            // TODO: unit test for the property 'ContactListId'
         }
-        
         /// <summary>
-        /// Test the property 'ContactId' 
+        /// Test the property 'ContactId'
         /// </summary>
         [Test]
         public void ContactIdTest()
         {
-            // TODO: unit test for the property 'ContactId' 
+            // TODO: unit test for the property 'ContactId'
         }
-        
         /// <summary>
-        /// Test the property 'PhoneColumn' 
+        /// Test the property 'PhoneColumn'
         /// </summary>
         [Test]
         public void PhoneColumnTest()
         {
-            // TODO: unit test for the property 'PhoneColumn' 
+            // TODO: unit test for the property 'PhoneColumn'
         }
-        
         /// <summary>
-        /// Test the property 'Schedule' 
+        /// Test the property 'Schedule'
         /// </summary>
         [Test]
         public void ScheduleTest()
         {
-            // TODO: unit test for the property 'Schedule' 
+            // TODO: unit test for the property 'Schedule'
         }
-        
 
     }
 

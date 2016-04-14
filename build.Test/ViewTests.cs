@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new View();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of View
@@ -50,16 +50,14 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<View> (instance, "instance is a View");
         }
 
-        
         /// <summary>
-        /// Test the property 'Url' 
+        /// Test the property 'Url'
         /// </summary>
         [Test]
         public void UrlTest()
         {
-            // TODO: unit test for the property 'Url' 
+            // TODO: unit test for the property 'Url'
         }
-        
 
     }
 

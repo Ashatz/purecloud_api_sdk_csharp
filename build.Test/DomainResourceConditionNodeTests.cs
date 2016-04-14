@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new DomainResourceConditionNode();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of DomainResourceConditionNode
@@ -50,52 +50,46 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<DomainResourceConditionNode> (instance, "instance is a DomainResourceConditionNode");
         }
 
-        
         /// <summary>
-        /// Test the property 'VariableName' 
+        /// Test the property 'VariableName'
         /// </summary>
         [Test]
         public void VariableNameTest()
         {
-            // TODO: unit test for the property 'VariableName' 
+            // TODO: unit test for the property 'VariableName'
         }
-        
         /// <summary>
-        /// Test the property '_Operator' 
+        /// Test the property '_Operator'
         /// </summary>
         [Test]
         public void _OperatorTest()
         {
-            // TODO: unit test for the property '_Operator' 
+            // TODO: unit test for the property '_Operator'
         }
-        
         /// <summary>
-        /// Test the property 'Operands' 
+        /// Test the property 'Operands'
         /// </summary>
         [Test]
         public void OperandsTest()
         {
-            // TODO: unit test for the property 'Operands' 
+            // TODO: unit test for the property 'Operands'
         }
-        
         /// <summary>
-        /// Test the property 'Conjunction' 
+        /// Test the property 'Conjunction'
         /// </summary>
         [Test]
         public void ConjunctionTest()
         {
-            // TODO: unit test for the property 'Conjunction' 
+            // TODO: unit test for the property 'Conjunction'
         }
-        
         /// <summary>
-        /// Test the property 'Terms' 
+        /// Test the property 'Terms'
         /// </summary>
         [Test]
         public void TermsTest()
         {
-            // TODO: unit test for the property 'Terms' 
+            // TODO: unit test for the property 'Terms'
         }
-        
 
     }
 

@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new BackendFlowAvailableActions();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of BackendFlowAvailableActions
@@ -50,16 +50,14 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<BackendFlowAvailableActions> (instance, "instance is a BackendFlowAvailableActions");
         }
 
-        
         /// <summary>
-        /// Test the property 'CanTerminate' 
+        /// Test the property 'CanTerminate'
         /// </summary>
         [Test]
         public void CanTerminateTest()
         {
-            // TODO: unit test for the property 'CanTerminate' 
+            // TODO: unit test for the property 'CanTerminate'
         }
-        
 
     }
 

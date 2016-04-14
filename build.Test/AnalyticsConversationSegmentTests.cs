@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new AnalyticsConversationSegment();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of AnalyticsConversationSegment
@@ -50,205 +50,182 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<AnalyticsConversationSegment> (instance, "instance is a AnalyticsConversationSegment");
         }
 
-        
         /// <summary>
-        /// Test the property 'SegmentStart' 
+        /// Test the property 'SegmentStart'
         /// </summary>
         [Test]
         public void SegmentStartTest()
         {
-            // TODO: unit test for the property 'SegmentStart' 
+            // TODO: unit test for the property 'SegmentStart'
         }
-        
         /// <summary>
-        /// Test the property 'SegmentEnd' 
+        /// Test the property 'SegmentEnd'
         /// </summary>
         [Test]
         public void SegmentEndTest()
         {
-            // TODO: unit test for the property 'SegmentEnd' 
+            // TODO: unit test for the property 'SegmentEnd'
         }
-        
         /// <summary>
-        /// Test the property 'QueueId' 
+        /// Test the property 'QueueId'
         /// </summary>
         [Test]
         public void QueueIdTest()
         {
-            // TODO: unit test for the property 'QueueId' 
+            // TODO: unit test for the property 'QueueId'
         }
-        
         /// <summary>
-        /// Test the property 'WrapUpCode' 
+        /// Test the property 'WrapUpCode'
         /// </summary>
         [Test]
         public void WrapUpCodeTest()
         {
-            // TODO: unit test for the property 'WrapUpCode' 
+            // TODO: unit test for the property 'WrapUpCode'
         }
-        
         /// <summary>
-        /// Test the property 'WrapUpNote' 
+        /// Test the property 'WrapUpNote'
         /// </summary>
         [Test]
         public void WrapUpNoteTest()
         {
-            // TODO: unit test for the property 'WrapUpNote' 
+            // TODO: unit test for the property 'WrapUpNote'
         }
-        
         /// <summary>
-        /// Test the property 'WrapUpTags' 
+        /// Test the property 'WrapUpTags'
         /// </summary>
         [Test]
         public void WrapUpTagsTest()
         {
-            // TODO: unit test for the property 'WrapUpTags' 
+            // TODO: unit test for the property 'WrapUpTags'
         }
-        
         /// <summary>
-        /// Test the property 'ErrorCode' 
+        /// Test the property 'ErrorCode'
         /// </summary>
         [Test]
         public void ErrorCodeTest()
         {
-            // TODO: unit test for the property 'ErrorCode' 
+            // TODO: unit test for the property 'ErrorCode'
         }
-        
         /// <summary>
-        /// Test the property 'DisconnectType' 
+        /// Test the property 'DisconnectType'
         /// </summary>
         [Test]
         public void DisconnectTypeTest()
         {
-            // TODO: unit test for the property 'DisconnectType' 
+            // TODO: unit test for the property 'DisconnectType'
         }
-        
         /// <summary>
-        /// Test the property 'SegmentType' 
+        /// Test the property 'SegmentType'
         /// </summary>
         [Test]
         public void SegmentTypeTest()
         {
-            // TODO: unit test for the property 'SegmentType' 
+            // TODO: unit test for the property 'SegmentType'
         }
-        
         /// <summary>
-        /// Test the property 'RequestedRoutingUserIds' 
+        /// Test the property 'RequestedRoutingUserIds'
         /// </summary>
         [Test]
         public void RequestedRoutingUserIdsTest()
         {
-            // TODO: unit test for the property 'RequestedRoutingUserIds' 
+            // TODO: unit test for the property 'RequestedRoutingUserIds'
         }
-        
         /// <summary>
-        /// Test the property 'RequestedRoutingSkillIds' 
+        /// Test the property 'RequestedRoutingSkillIds'
         /// </summary>
         [Test]
         public void RequestedRoutingSkillIdsTest()
         {
-            // TODO: unit test for the property 'RequestedRoutingSkillIds' 
+            // TODO: unit test for the property 'RequestedRoutingSkillIds'
         }
-        
         /// <summary>
-        /// Test the property 'RequestedLanguageId' 
+        /// Test the property 'RequestedLanguageId'
         /// </summary>
         [Test]
         public void RequestedLanguageIdTest()
         {
-            // TODO: unit test for the property 'RequestedLanguageId' 
+            // TODO: unit test for the property 'RequestedLanguageId'
         }
-        
         /// <summary>
-        /// Test the property 'Properties' 
+        /// Test the property 'Properties'
         /// </summary>
         [Test]
         public void PropertiesTest()
         {
-            // TODO: unit test for the property 'Properties' 
+            // TODO: unit test for the property 'Properties'
         }
-        
         /// <summary>
-        /// Test the property 'SourceConversationId' 
+        /// Test the property 'SourceConversationId'
         /// </summary>
         [Test]
         public void SourceConversationIdTest()
         {
-            // TODO: unit test for the property 'SourceConversationId' 
+            // TODO: unit test for the property 'SourceConversationId'
         }
-        
         /// <summary>
-        /// Test the property 'DestinationConversationId' 
+        /// Test the property 'DestinationConversationId'
         /// </summary>
         [Test]
         public void DestinationConversationIdTest()
         {
-            // TODO: unit test for the property 'DestinationConversationId' 
+            // TODO: unit test for the property 'DestinationConversationId'
         }
-        
         /// <summary>
-        /// Test the property 'SourceSessionId' 
+        /// Test the property 'SourceSessionId'
         /// </summary>
         [Test]
         public void SourceSessionIdTest()
         {
-            // TODO: unit test for the property 'SourceSessionId' 
+            // TODO: unit test for the property 'SourceSessionId'
         }
-        
         /// <summary>
-        /// Test the property 'DestinationSessionId' 
+        /// Test the property 'DestinationSessionId'
         /// </summary>
         [Test]
         public void DestinationSessionIdTest()
         {
-            // TODO: unit test for the property 'DestinationSessionId' 
+            // TODO: unit test for the property 'DestinationSessionId'
         }
-        
         /// <summary>
-        /// Test the property 'SipResponseCodes' 
+        /// Test the property 'SipResponseCodes'
         /// </summary>
         [Test]
         public void SipResponseCodesTest()
         {
-            // TODO: unit test for the property 'SipResponseCodes' 
+            // TODO: unit test for the property 'SipResponseCodes'
         }
-        
         /// <summary>
-        /// Test the property 'Q850ResponseCodes' 
+        /// Test the property 'Q850ResponseCodes'
         /// </summary>
         [Test]
         public void Q850ResponseCodesTest()
         {
-            // TODO: unit test for the property 'Q850ResponseCodes' 
+            // TODO: unit test for the property 'Q850ResponseCodes'
         }
-        
         /// <summary>
-        /// Test the property 'Conference' 
+        /// Test the property 'Conference'
         /// </summary>
         [Test]
         public void ConferenceTest()
         {
-            // TODO: unit test for the property 'Conference' 
+            // TODO: unit test for the property 'Conference'
         }
-        
         /// <summary>
-        /// Test the property 'GroupId' 
+        /// Test the property 'GroupId'
         /// </summary>
         [Test]
         public void GroupIdTest()
         {
-            // TODO: unit test for the property 'GroupId' 
+            // TODO: unit test for the property 'GroupId'
         }
-        
         /// <summary>
-        /// Test the property 'Subject' 
+        /// Test the property 'Subject'
         /// </summary>
         [Test]
         public void SubjectTest()
         {
-            // TODO: unit test for the property 'Subject' 
+            // TODO: unit test for the property 'Subject'
         }
-        
 
     }
 

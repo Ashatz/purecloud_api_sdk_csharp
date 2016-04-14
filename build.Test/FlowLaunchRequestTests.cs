@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new FlowLaunchRequest();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of FlowLaunchRequest
@@ -50,43 +50,38 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<FlowLaunchRequest> (instance, "instance is a FlowLaunchRequest");
         }
 
-        
         /// <summary>
-        /// Test the property 'FlowConfigId' 
+        /// Test the property 'FlowConfigId'
         /// </summary>
         [Test]
         public void FlowConfigIdTest()
         {
-            // TODO: unit test for the property 'FlowConfigId' 
+            // TODO: unit test for the property 'FlowConfigId'
         }
-        
         /// <summary>
-        /// Test the property 'FlowInstanceName' 
+        /// Test the property 'FlowInstanceName'
         /// </summary>
         [Test]
         public void FlowInstanceNameTest()
         {
-            // TODO: unit test for the property 'FlowInstanceName' 
+            // TODO: unit test for the property 'FlowInstanceName'
         }
-        
         /// <summary>
-        /// Test the property 'InputData' 
+        /// Test the property 'InputData'
         /// </summary>
         [Test]
         public void InputDataTest()
         {
-            // TODO: unit test for the property 'InputData' 
+            // TODO: unit test for the property 'InputData'
         }
-        
         /// <summary>
-        /// Test the property 'LaunchType' 
+        /// Test the property 'LaunchType'
         /// </summary>
         [Test]
         public void LaunchTypeTest()
         {
-            // TODO: unit test for the property 'LaunchType' 
+            // TODO: unit test for the property 'LaunchType'
         }
-        
 
     }
 

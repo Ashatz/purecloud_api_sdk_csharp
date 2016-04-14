@@ -40,7 +40,7 @@ namespace ININ.PureCloudApi.Model
             }
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets ContextToken
@@ -71,11 +71,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  ContextToken: ").Append(ContextToken).Append("\n");
             sb.Append("  Documents: ").Append(Documents).Append("\n");
             sb.Append("  HasMore: ").Append(HasMore).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -136,16 +135,12 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ContextToken != null)
                     hash = hash * 59 + this.ContextToken.GetHashCode();
-                
                 if (this.Documents != null)
                     hash = hash * 59 + this.Documents.GetHashCode();
-                
                 if (this.HasMore != null)
                     hash = hash * 59 + this.HasMore.GetHashCode();
-                
                 return hash;
             }
         }

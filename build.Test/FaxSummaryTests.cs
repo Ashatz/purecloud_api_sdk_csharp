@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new FaxSummary();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of FaxSummary
@@ -50,34 +50,30 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<FaxSummary> (instance, "instance is a FaxSummary");
         }
 
-        
         /// <summary>
-        /// Test the property 'ReadCount' 
+        /// Test the property 'ReadCount'
         /// </summary>
         [Test]
         public void ReadCountTest()
         {
-            // TODO: unit test for the property 'ReadCount' 
+            // TODO: unit test for the property 'ReadCount'
         }
-        
         /// <summary>
-        /// Test the property 'UnreadCount' 
+        /// Test the property 'UnreadCount'
         /// </summary>
         [Test]
         public void UnreadCountTest()
         {
-            // TODO: unit test for the property 'UnreadCount' 
+            // TODO: unit test for the property 'UnreadCount'
         }
-        
         /// <summary>
-        /// Test the property 'TotalCount' 
+        /// Test the property 'TotalCount'
         /// </summary>
         [Test]
         public void TotalCountTest()
         {
-            // TODO: unit test for the property 'TotalCount' 
+            // TODO: unit test for the property 'TotalCount'
         }
-        
 
     }
 

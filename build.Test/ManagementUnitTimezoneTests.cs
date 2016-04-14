@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new ManagementUnitTimezone();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of ManagementUnitTimezone
@@ -50,16 +50,14 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<ManagementUnitTimezone> (instance, "instance is a ManagementUnitTimezone");
         }
 
-        
         /// <summary>
-        /// Test the property 'Timezone' 
+        /// Test the property 'Timezone'
         /// </summary>
         [Test]
         public void TimezoneTest()
         {
-            // TODO: unit test for the property 'Timezone' 
+            // TODO: unit test for the property 'Timezone'
         }
-        
 
     }
 

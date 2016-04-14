@@ -17,9 +17,12 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class Quote :  IEquatable<Quote>
     { 
-    
+
+        /// <summary>
+        /// Gets or Sets Type
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum TypeEnum {
+                public enum TypeEnum {
             
             [EnumMember(Value = "NEW_SUBSCRIPTION")]
             NewSubscription,
@@ -27,9 +30,13 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "AMENDMENT")]
             Amendment
         }
-    
+
+
+        /// <summary>
+        /// Gets or Sets Status
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum StatusEnum {
+                public enum StatusEnum {
             
             [EnumMember(Value = "IN_PROGRESS")]
             InProgress,
@@ -40,6 +47,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "FROZEN")]
             Frozen
         }
+
         
         /// <summary>
         /// Gets or Sets Type
@@ -113,7 +121,7 @@ namespace ININ.PureCloudApi.Model
             }
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -255,11 +263,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  SalesPartnerCode: ").Append(SalesPartnerCode).Append("\n");
             sb.Append("  IsAnnualPrepay: ").Append(IsAnnualPrepay).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -405,67 +412,46 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.PurchaseOrder != null)
                     hash = hash * 59 + this.PurchaseOrder.GetHashCode();
-                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
-                
                 if (this.Currency != null)
                     hash = hash * 59 + this.Currency.GetHashCode();
-                
                 if (this.CreatedDate != null)
                     hash = hash * 59 + this.CreatedDate.GetHashCode();
-                
                 if (this.LastUpdatedDate != null)
                     hash = hash * 59 + this.LastUpdatedDate.GetHashCode();
-                
                 if (this.BillingContactEmail != null)
                     hash = hash * 59 + this.BillingContactEmail.GetHashCode();
-                
                 if (this.BillingContactFirstName != null)
                     hash = hash * 59 + this.BillingContactFirstName.GetHashCode();
-                
                 if (this.BillingContactLastName != null)
                     hash = hash * 59 + this.BillingContactLastName.GetHashCode();
-                
                 if (this.BillingContactPhone != null)
                     hash = hash * 59 + this.BillingContactPhone.GetHashCode();
-                
                 if (this.IncludeVoiceCharges != null)
                     hash = hash * 59 + this.IncludeVoiceCharges.GetHashCode();
-                
                 if (this.Charges != null)
                     hash = hash * 59 + this.Charges.GetHashCode();
-                
                 if (this.EdgeControlModel != null)
                     hash = hash * 59 + this.EdgeControlModel.GetHashCode();
-                
                 if (this.ReferralCodes != null)
                     hash = hash * 59 + this.ReferralCodes.GetHashCode();
-                
                 if (this.DiscountCodes != null)
                     hash = hash * 59 + this.DiscountCodes.GetHashCode();
-                
                 if (this.SalesPartnerCode != null)
                     hash = hash * 59 + this.SalesPartnerCode.GetHashCode();
-                
                 if (this.IsAnnualPrepay != null)
                     hash = hash * 59 + this.IsAnnualPrepay.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 return hash;
             }
         }

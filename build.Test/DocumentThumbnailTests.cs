@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new DocumentThumbnail();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of DocumentThumbnail
@@ -50,25 +50,22 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<DocumentThumbnail> (instance, "instance is a DocumentThumbnail");
         }
 
-        
         /// <summary>
-        /// Test the property 'Resolution' 
+        /// Test the property 'Resolution'
         /// </summary>
         [Test]
         public void ResolutionTest()
         {
-            // TODO: unit test for the property 'Resolution' 
+            // TODO: unit test for the property 'Resolution'
         }
-        
         /// <summary>
-        /// Test the property 'ImageUri' 
+        /// Test the property 'ImageUri'
         /// </summary>
         [Test]
         public void ImageUriTest()
         {
-            // TODO: unit test for the property 'ImageUri' 
+            // TODO: unit test for the property 'ImageUri'
         }
-        
 
     }
 

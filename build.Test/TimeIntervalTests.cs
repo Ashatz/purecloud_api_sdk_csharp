@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new TimeInterval();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of TimeInterval
@@ -50,25 +50,22 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<TimeInterval> (instance, "instance is a TimeInterval");
         }
 
-        
         /// <summary>
-        /// Test the property 'Days' 
+        /// Test the property 'Days'
         /// </summary>
         [Test]
         public void DaysTest()
         {
-            // TODO: unit test for the property 'Days' 
+            // TODO: unit test for the property 'Days'
         }
-        
         /// <summary>
-        /// Test the property 'Hours' 
+        /// Test the property 'Hours'
         /// </summary>
         [Test]
         public void HoursTest()
         {
-            // TODO: unit test for the property 'Hours' 
+            // TODO: unit test for the property 'Hours'
         }
-        
 
     }
 

@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new EmbeddedSignatureView();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of EmbeddedSignatureView
@@ -50,16 +50,14 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<EmbeddedSignatureView> (instance, "instance is a EmbeddedSignatureView");
         }
 
-        
         /// <summary>
-        /// Test the property 'View' 
+        /// Test the property 'View'
         /// </summary>
         [Test]
         public void ViewTest()
         {
-            // TODO: unit test for the property 'View' 
+            // TODO: unit test for the property 'View'
         }
-        
 
     }
 

@@ -40,7 +40,7 @@ namespace ININ.PureCloudApi.Model
             this.Video = Video;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets UserId
@@ -99,11 +99,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Chat: ").Append(Chat).Append("\n");
             sb.Append("  SocialExpression: ").Append(SocialExpression).Append("\n");
             sb.Append("  Video: ").Append(Video).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -184,28 +183,20 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.UserId != null)
                     hash = hash * 59 + this.UserId.GetHashCode();
-                
                 if (this.Call != null)
                     hash = hash * 59 + this.Call.GetHashCode();
-                
                 if (this.Callback != null)
                     hash = hash * 59 + this.Callback.GetHashCode();
-                
                 if (this.Email != null)
                     hash = hash * 59 + this.Email.GetHashCode();
-                
                 if (this.Chat != null)
                     hash = hash * 59 + this.Chat.GetHashCode();
-                
                 if (this.SocialExpression != null)
                     hash = hash * 59 + this.SocialExpression.GetHashCode();
-                
                 if (this.Video != null)
                     hash = hash * 59 + this.Video.GetHashCode();
-                
                 return hash;
             }
         }

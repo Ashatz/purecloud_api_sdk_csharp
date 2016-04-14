@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new PredictionResults();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of PredictionResults
@@ -50,25 +50,22 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<PredictionResults> (instance, "instance is a PredictionResults");
         }
 
-        
         /// <summary>
-        /// Test the property 'Formula' 
+        /// Test the property 'Formula'
         /// </summary>
         [Test]
         public void FormulaTest()
         {
-            // TODO: unit test for the property 'Formula' 
+            // TODO: unit test for the property 'Formula'
         }
-        
         /// <summary>
-        /// Test the property 'EstimatedWaitTimeSeconds' 
+        /// Test the property 'EstimatedWaitTimeSeconds'
         /// </summary>
         [Test]
         public void EstimatedWaitTimeSecondsTest()
         {
-            // TODO: unit test for the property 'EstimatedWaitTimeSeconds' 
+            // TODO: unit test for the property 'EstimatedWaitTimeSeconds'
         }
-        
 
     }
 

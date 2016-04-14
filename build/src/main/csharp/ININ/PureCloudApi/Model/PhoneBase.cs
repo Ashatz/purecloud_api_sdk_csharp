@@ -36,7 +36,7 @@ namespace ININ.PureCloudApi.Model
             this.Capabilities = Capabilities;
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -97,11 +97,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Properties: ").Append(Properties).Append("\n");
             sb.Append("  Capabilities: ").Append(Capabilities).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -182,28 +181,20 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.PhoneMetaBase != null)
                     hash = hash * 59 + this.PhoneMetaBase.GetHashCode();
-                
                 if (this.Lines != null)
                     hash = hash * 59 + this.Lines.GetHashCode();
-                
                 if (this.Properties != null)
                     hash = hash * 59 + this.Properties.GetHashCode();
-                
                 if (this.Capabilities != null)
                     hash = hash * 59 + this.Capabilities.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 return hash;
             }
         }

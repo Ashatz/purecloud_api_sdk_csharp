@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new NocSupport();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of NocSupport
@@ -50,25 +50,22 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<NocSupport> (instance, "instance is a NocSupport");
         }
 
-        
         /// <summary>
-        /// Test the property 'Phone' 
+        /// Test the property 'Phone'
         /// </summary>
         [Test]
         public void PhoneTest()
         {
-            // TODO: unit test for the property 'Phone' 
+            // TODO: unit test for the property 'Phone'
         }
-        
         /// <summary>
-        /// Test the property 'Email' 
+        /// Test the property 'Email'
         /// </summary>
         [Test]
         public void EmailTest()
         {
-            // TODO: unit test for the property 'Email' 
+            // TODO: unit test for the property 'Email'
         }
-        
 
     }
 

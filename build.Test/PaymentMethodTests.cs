@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new PaymentMethod();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of PaymentMethod
@@ -50,61 +50,54 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<PaymentMethod> (instance, "instance is a PaymentMethod");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'Type' 
+        /// Test the property 'Type'
         /// </summary>
         [Test]
         public void TypeTest()
         {
-            // TODO: unit test for the property 'Type' 
+            // TODO: unit test for the property 'Type'
         }
-        
         /// <summary>
-        /// Test the property 'ProviderName' 
+        /// Test the property 'ProviderName'
         /// </summary>
         [Test]
         public void ProviderNameTest()
         {
-            // TODO: unit test for the property 'ProviderName' 
+            // TODO: unit test for the property 'ProviderName'
         }
-        
         /// <summary>
-        /// Test the property 'Token' 
+        /// Test the property 'Token'
         /// </summary>
         [Test]
         public void TokenTest()
         {
-            // TODO: unit test for the property 'Token' 
+            // TODO: unit test for the property 'Token'
         }
-        
         /// <summary>
-        /// Test the property 'SelfUri' 
+        /// Test the property 'SelfUri'
         /// </summary>
         [Test]
         public void SelfUriTest()
         {
-            // TODO: unit test for the property 'SelfUri' 
+            // TODO: unit test for the property 'SelfUri'
         }
-        
 
     }
 

@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new LineStatus();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of LineStatus
@@ -50,52 +50,46 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<LineStatus> (instance, "instance is a LineStatus");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'Reachable' 
+        /// Test the property 'Reachable'
         /// </summary>
         [Test]
         public void ReachableTest()
         {
-            // TODO: unit test for the property 'Reachable' 
+            // TODO: unit test for the property 'Reachable'
         }
-        
         /// <summary>
-        /// Test the property 'AddressOfRecord' 
+        /// Test the property 'AddressOfRecord'
         /// </summary>
         [Test]
         public void AddressOfRecordTest()
         {
-            // TODO: unit test for the property 'AddressOfRecord' 
+            // TODO: unit test for the property 'AddressOfRecord'
         }
-        
         /// <summary>
-        /// Test the property 'ContactAddresses' 
+        /// Test the property 'ContactAddresses'
         /// </summary>
         [Test]
         public void ContactAddressesTest()
         {
-            // TODO: unit test for the property 'ContactAddresses' 
+            // TODO: unit test for the property 'ContactAddresses'
         }
-        
         /// <summary>
-        /// Test the property 'ReachableStateTime' 
+        /// Test the property 'ReachableStateTime'
         /// </summary>
         [Test]
         public void ReachableStateTimeTest()
         {
-            // TODO: unit test for the property 'ReachableStateTime' 
+            // TODO: unit test for the property 'ReachableStateTime'
         }
-        
 
     }
 

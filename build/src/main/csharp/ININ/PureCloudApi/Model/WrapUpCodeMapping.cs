@@ -43,7 +43,7 @@ namespace ININ.PureCloudApi.Model
             this.Mapping = Mapping;
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -113,11 +113,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  DefaultSet: ").Append(DefaultSet).Append("\n");
             sb.Append("  Mapping: ").Append(Mapping).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -203,31 +202,22 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
-                
                 if (this.DateModified != null)
                     hash = hash * 59 + this.DateModified.GetHashCode();
-                
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
-                
                 if (this.DefaultSet != null)
                     hash = hash * 59 + this.DefaultSet.GetHashCode();
-                
                 if (this.Mapping != null)
                     hash = hash * 59 + this.Mapping.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 return hash;
             }
         }

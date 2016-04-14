@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new StatisticalSummary();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of StatisticalSummary
@@ -50,88 +50,78 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<StatisticalSummary> (instance, "instance is a StatisticalSummary");
         }
 
-        
         /// <summary>
-        /// Test the property 'Max' 
+        /// Test the property 'Max'
         /// </summary>
         [Test]
         public void MaxTest()
         {
-            // TODO: unit test for the property 'Max' 
+            // TODO: unit test for the property 'Max'
         }
-        
         /// <summary>
-        /// Test the property 'Min' 
+        /// Test the property 'Min'
         /// </summary>
         [Test]
         public void MinTest()
         {
-            // TODO: unit test for the property 'Min' 
+            // TODO: unit test for the property 'Min'
         }
-        
         /// <summary>
-        /// Test the property 'Count' 
+        /// Test the property 'Count'
         /// </summary>
         [Test]
         public void CountTest()
         {
-            // TODO: unit test for the property 'Count' 
+            // TODO: unit test for the property 'Count'
         }
-        
         /// <summary>
-        /// Test the property 'Sum' 
+        /// Test the property 'Sum'
         /// </summary>
         [Test]
         public void SumTest()
         {
-            // TODO: unit test for the property 'Sum' 
+            // TODO: unit test for the property 'Sum'
         }
-        
         /// <summary>
-        /// Test the property 'Current' 
+        /// Test the property 'Current'
         /// </summary>
         [Test]
         public void CurrentTest()
         {
-            // TODO: unit test for the property 'Current' 
+            // TODO: unit test for the property 'Current'
         }
-        
         /// <summary>
-        /// Test the property 'Ratio' 
+        /// Test the property 'Ratio'
         /// </summary>
         [Test]
         public void RatioTest()
         {
-            // TODO: unit test for the property 'Ratio' 
+            // TODO: unit test for the property 'Ratio'
         }
-        
         /// <summary>
-        /// Test the property 'Numerator' 
+        /// Test the property 'Numerator'
         /// </summary>
         [Test]
         public void NumeratorTest()
         {
-            // TODO: unit test for the property 'Numerator' 
+            // TODO: unit test for the property 'Numerator'
         }
-        
         /// <summary>
-        /// Test the property 'Denominator' 
+        /// Test the property 'Denominator'
         /// </summary>
         [Test]
         public void DenominatorTest()
         {
-            // TODO: unit test for the property 'Denominator' 
+            // TODO: unit test for the property 'Denominator'
         }
-        
         /// <summary>
-        /// Test the property 'Target' 
+        /// Test the property 'Target'
         /// </summary>
         [Test]
         public void TargetTest()
         {
-            // TODO: unit test for the property 'Target' 
+            // TODO: unit test for the property 'Target'
         }
-        
 
     }
 

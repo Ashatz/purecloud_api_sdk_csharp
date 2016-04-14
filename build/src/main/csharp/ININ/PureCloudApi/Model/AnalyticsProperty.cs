@@ -17,9 +17,13 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class AnalyticsProperty :  IEquatable<AnalyticsProperty>
     { 
-    
+
+        /// <summary>
+        /// Indicates what the data type is (e.g. integer vs string) and therefore how to evaluate what would constitute a match
+        /// </summary>
+        /// <value>Indicates what the data type is (e.g. integer vs string) and therefore how to evaluate what would constitute a match</value>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum PropertyTypeEnum {
+                public enum PropertyTypeEnum {
             
             [EnumMember(Value = "bool")]
             Bool,
@@ -39,6 +43,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "uuid")]
             Uuid
         }
+
         
         /// <summary>
         /// Indicates what the data type is (e.g. integer vs string) and therefore how to evaluate what would constitute a match
@@ -85,7 +90,7 @@ namespace ININ.PureCloudApi.Model
             }
             
         }
-        
+
     
         /// <summary>
         /// User-defined rather than intrinsic system-observed values. These are tagged onto segments by other components within PureCloud or by API users directly.  This is the name of the user-defined property.
@@ -112,11 +117,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  PropertyType: ").Append(PropertyType).Append("\n");
             sb.Append("  Property: ").Append(Property).Append("\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -177,16 +181,12 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.PropertyType != null)
                     hash = hash * 59 + this.PropertyType.GetHashCode();
-                
                 if (this.Property != null)
                     hash = hash * 59 + this.Property.GetHashCode();
-                
                 if (this.Value != null)
                     hash = hash * 59 + this.Value.GetHashCode();
-                
                 return hash;
             }
         }

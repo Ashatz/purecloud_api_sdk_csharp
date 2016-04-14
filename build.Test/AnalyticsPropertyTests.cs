@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new AnalyticsProperty();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of AnalyticsProperty
@@ -50,34 +50,30 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<AnalyticsProperty> (instance, "instance is a AnalyticsProperty");
         }
 
-        
         /// <summary>
-        /// Test the property 'PropertyType' 
+        /// Test the property 'PropertyType'
         /// </summary>
         [Test]
         public void PropertyTypeTest()
         {
-            // TODO: unit test for the property 'PropertyType' 
+            // TODO: unit test for the property 'PropertyType'
         }
-        
         /// <summary>
-        /// Test the property 'Property' 
+        /// Test the property 'Property'
         /// </summary>
         [Test]
         public void PropertyTest()
         {
-            // TODO: unit test for the property 'Property' 
+            // TODO: unit test for the property 'Property'
         }
-        
         /// <summary>
-        /// Test the property 'Value' 
+        /// Test the property 'Value'
         /// </summary>
         [Test]
         public void ValueTest()
         {
-            // TODO: unit test for the property 'Value' 
+            // TODO: unit test for the property 'Value'
         }
-        
 
     }
 

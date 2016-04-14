@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new App();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of App
@@ -50,25 +50,22 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<App> (instance, "instance is a App");
         }
 
-        
         /// <summary>
-        /// Test the property 'AppId' 
+        /// Test the property 'AppId'
         /// </summary>
         [Test]
         public void AppIdTest()
         {
-            // TODO: unit test for the property 'AppId' 
+            // TODO: unit test for the property 'AppId'
         }
-        
         /// <summary>
-        /// Test the property 'AppVersion' 
+        /// Test the property 'AppVersion'
         /// </summary>
         [Test]
         public void AppVersionTest()
         {
-            // TODO: unit test for the property 'AppVersion' 
+            // TODO: unit test for the property 'AppVersion'
         }
-        
 
     }
 

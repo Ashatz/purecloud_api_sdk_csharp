@@ -17,9 +17,12 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class Station :  IEquatable<Station>
     { 
-    
+
+        /// <summary>
+        /// Gets or Sets Status
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum StatusEnum {
+                public enum StatusEnum {
             
             [EnumMember(Value = "AVAILABLE")]
             Available,
@@ -27,6 +30,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "ASSOCIATED")]
             Associated
         }
+
         
         /// <summary>
         /// Gets or Sets Status
@@ -56,7 +60,7 @@ namespace ININ.PureCloudApi.Model
             this.Type = Type;
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -125,11 +129,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  SecondaryEdge: ").Append(SecondaryEdge).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -220,34 +223,24 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
-                
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
-                
                 if (this.UserId != null)
                     hash = hash * 59 + this.UserId.GetHashCode();
-                
                 if (this.PrimaryEdge != null)
                     hash = hash * 59 + this.PrimaryEdge.GetHashCode();
-                
                 if (this.SecondaryEdge != null)
                     hash = hash * 59 + this.SecondaryEdge.GetHashCode();
-                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 return hash;
             }
         }

@@ -17,9 +17,13 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class Conversation :  IEquatable<Conversation>
     { 
-    
+
+        /// <summary>
+        /// On update, 'paused' initiates a secure pause, 'active' resumes any paused recordings; otherwise indicates state of conversation recording.
+        /// </summary>
+        /// <value>On update, 'paused' initiates a secure pause, 'active' resumes any paused recordings; otherwise indicates state of conversation recording.</value>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum RecordingStateEnum {
+                public enum RecordingStateEnum {
             
             [EnumMember(Value = "ACTIVE")]
             Active,
@@ -30,6 +34,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "NONE")]
             None
         }
+
         
         /// <summary>
         /// On update, 'paused' initiates a secure pause, 'active' resumes any paused recordings; otherwise indicates state of conversation recording.
@@ -78,7 +83,7 @@ namespace ININ.PureCloudApi.Model
             this.RecordingState = RecordingState;
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -160,11 +165,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  MaxParticipants: ").Append(MaxParticipants).Append("\n");
             sb.Append("  RecordingState: ").Append(RecordingState).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -260,37 +264,26 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.StartTime != null)
                     hash = hash * 59 + this.StartTime.GetHashCode();
-                
                 if (this.EndTime != null)
                     hash = hash * 59 + this.EndTime.GetHashCode();
-                
                 if (this.Address != null)
                     hash = hash * 59 + this.Address.GetHashCode();
-                
                 if (this.Participants != null)
                     hash = hash * 59 + this.Participants.GetHashCode();
-                
                 if (this.ConversationIds != null)
                     hash = hash * 59 + this.ConversationIds.GetHashCode();
-                
                 if (this.MaxParticipants != null)
                     hash = hash * 59 + this.MaxParticipants.GetHashCode();
-                
                 if (this.RecordingState != null)
                     hash = hash * 59 + this.RecordingState.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 return hash;
             }
         }

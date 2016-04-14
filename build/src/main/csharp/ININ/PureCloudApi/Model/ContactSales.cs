@@ -48,7 +48,7 @@ namespace ININ.PureCloudApi.Model
             this.QuoteId = QuoteId;
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -151,11 +151,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  ProductName: ").Append(ProductName).Append("\n");
             sb.Append("  QuoteId: ").Append(QuoteId).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -266,46 +265,32 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.Email != null)
                     hash = hash * 59 + this.Email.GetHashCode();
-                
                 if (this.FirstName != null)
                     hash = hash * 59 + this.FirstName.GetHashCode();
-                
                 if (this.LastName != null)
                     hash = hash * 59 + this.LastName.GetHashCode();
-                
                 if (this.ContactPhone != null)
                     hash = hash * 59 + this.ContactPhone.GetHashCode();
-                
                 if (this.Country != null)
                     hash = hash * 59 + this.Country.GetHashCode();
-                
                 if (this.Title != null)
                     hash = hash * 59 + this.Title.GetHashCode();
-                
                 if (this.Message != null)
                     hash = hash * 59 + this.Message.GetHashCode();
-                
                 if (this.Language != null)
                     hash = hash * 59 + this.Language.GetHashCode();
-                
                 if (this.ProductName != null)
                     hash = hash * 59 + this.ProductName.GetHashCode();
-                
                 if (this.QuoteId != null)
                     hash = hash * 59 + this.QuoteId.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 return hash;
             }
         }

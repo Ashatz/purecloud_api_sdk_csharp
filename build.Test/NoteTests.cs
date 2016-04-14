@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new Note();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of Note
@@ -50,61 +50,54 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<Note> (instance, "instance is a Note");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'NoteText' 
+        /// Test the property 'NoteText'
         /// </summary>
         [Test]
         public void NoteTextTest()
         {
-            // TODO: unit test for the property 'NoteText' 
+            // TODO: unit test for the property 'NoteText'
         }
-        
         /// <summary>
-        /// Test the property 'ModifyDate' 
+        /// Test the property 'ModifyDate'
         /// </summary>
         [Test]
         public void ModifyDateTest()
         {
-            // TODO: unit test for the property 'ModifyDate' 
+            // TODO: unit test for the property 'ModifyDate'
         }
-        
         /// <summary>
-        /// Test the property 'CreateDate' 
+        /// Test the property 'CreateDate'
         /// </summary>
         [Test]
         public void CreateDateTest()
         {
-            // TODO: unit test for the property 'CreateDate' 
+            // TODO: unit test for the property 'CreateDate'
         }
-        
         /// <summary>
-        /// Test the property 'SelfUri' 
+        /// Test the property 'SelfUri'
         /// </summary>
         [Test]
         public void SelfUriTest()
         {
-            // TODO: unit test for the property 'SelfUri' 
+            // TODO: unit test for the property 'SelfUri'
         }
-        
 
     }
 

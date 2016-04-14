@@ -28,7 +28,7 @@ namespace ININ.PureCloudApi.Model
             this.Controls = Controls;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets Controls
@@ -45,11 +45,10 @@ namespace ININ.PureCloudApi.Model
             var sb = new StringBuilder();
             sb.Append("class Form {\n");
             sb.Append("  Controls: ").Append(Controls).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -100,10 +99,8 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Controls != null)
                     hash = hash * 59 + this.Controls.GetHashCode();
-                
                 return hash;
             }
         }

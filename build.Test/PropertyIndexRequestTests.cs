@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new PropertyIndexRequest();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of PropertyIndexRequest
@@ -50,34 +50,30 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<PropertyIndexRequest> (instance, "instance is a PropertyIndexRequest");
         }
 
-        
         /// <summary>
-        /// Test the property 'SessionId' 
+        /// Test the property 'SessionId'
         /// </summary>
         [Test]
         public void SessionIdTest()
         {
-            // TODO: unit test for the property 'SessionId' 
+            // TODO: unit test for the property 'SessionId'
         }
-        
         /// <summary>
-        /// Test the property 'Timestamp' 
+        /// Test the property 'Timestamp'
         /// </summary>
         [Test]
         public void TimestampTest()
         {
-            // TODO: unit test for the property 'Timestamp' 
+            // TODO: unit test for the property 'Timestamp'
         }
-        
         /// <summary>
-        /// Test the property 'Properties' 
+        /// Test the property 'Properties'
         /// </summary>
         [Test]
         public void PropertiesTest()
         {
-            // TODO: unit test for the property 'Properties' 
+            // TODO: unit test for the property 'Properties'
         }
-        
 
     }
 

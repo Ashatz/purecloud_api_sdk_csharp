@@ -62,9 +62,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'DeleteDocumentsDocumentId'
             string documentId = null; // TODO: replace null with proper value
             bool? _override = null; // TODO: replace null with proper value
-            
             instance.DeleteDocumentsDocumentId(documentId, _override);
-             
+            
         }
         
         /// <summary>
@@ -75,9 +74,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'DeleteSharesShareId'
             string shareId = null; // TODO: replace null with proper value
-            
             instance.DeleteSharesShareId(shareId);
-             
+            
         }
         
         /// <summary>
@@ -88,9 +86,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'DeleteStatusStatusId'
             string statusId = null; // TODO: replace null with proper value
-            
             instance.DeleteStatusStatusId(statusId);
-             
+            
         }
         
         /// <summary>
@@ -102,9 +99,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'DeleteWorkspacesWorkspaceId'
             string workspaceId = null; // TODO: replace null with proper value
             string moveChildrenToWorkspaceId = null; // TODO: replace null with proper value
-            
             instance.DeleteWorkspacesWorkspaceId(workspaceId, moveChildrenToWorkspaceId);
-             
+            
         }
         
         /// <summary>
@@ -116,9 +112,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'DeleteWorkspacesWorkspaceIdMembersMemberId'
             string workspaceId = null; // TODO: replace null with proper value
             string memberId = null; // TODO: replace null with proper value
-            
             instance.DeleteWorkspacesWorkspaceIdMembersMemberId(workspaceId, memberId);
-             
+            
         }
         
         /// <summary>
@@ -130,9 +125,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'DeleteWorkspacesWorkspaceIdTagvaluesTagId'
             string workspaceId = null; // TODO: replace null with proper value
             string tagId = null; // TODO: replace null with proper value
-            
             instance.DeleteWorkspacesWorkspaceIdTagvaluesTagId(workspaceId, tagId);
-             
+            
         }
         
         /// <summary>
@@ -149,9 +143,8 @@ namespace ININ.PureCloudApi.Test
             int? pageNumber = null; // TODO: replace null with proper value
             string sortBy = null; // TODO: replace null with proper value
             string sortOrder = null; // TODO: replace null with proper value
-            
             var response = instance.GetDocuments(workspaceId, name, expand, pageSize, pageNumber, sortBy, sortOrder);
-            Assert.IsInstanceOf<DocumentEntityListing> (response, "response is DocumentEntityListing"); 
+            Assert.IsInstanceOf<DocumentEntityListing> (response, "response is DocumentEntityListing");
         }
         
         /// <summary>
@@ -163,9 +156,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'GetDocumentsDocumentId'
             string documentId = null; // TODO: replace null with proper value
             string expand = null; // TODO: replace null with proper value
-            
             var response = instance.GetDocumentsDocumentId(documentId, expand);
-            Assert.IsInstanceOf<Document> (response, "response is Document"); 
+            Assert.IsInstanceOf<Document> (response, "response is Document");
         }
         
         /// <summary>
@@ -182,9 +174,8 @@ namespace ININ.PureCloudApi.Test
             string level = null; // TODO: replace null with proper value
             string sortBy = null; // TODO: replace null with proper value
             string sortOrder = null; // TODO: replace null with proper value
-            
             var response = instance.GetDocumentsDocumentIdAudits(documentId, pageSize, pageNumber, transactionFilter, level, sortBy, sortOrder);
-            Assert.IsInstanceOf<DocumentAuditEntityListing> (response, "response is DocumentAuditEntityListing"); 
+            Assert.IsInstanceOf<DocumentAuditEntityListing> (response, "response is DocumentAuditEntityListing");
         }
         
         /// <summary>
@@ -197,9 +188,8 @@ namespace ININ.PureCloudApi.Test
             string documentId = null; // TODO: replace null with proper value
             string disposition = null; // TODO: replace null with proper value
             string contentType = null; // TODO: replace null with proper value
-            
             instance.GetDocumentsDocumentIdContent(documentId, disposition, contentType);
-             
+            
         }
         
         /// <summary>
@@ -215,9 +205,8 @@ namespace ININ.PureCloudApi.Test
             string sortBy = null; // TODO: replace null with proper value
             string sortOrder = null; // TODO: replace null with proper value
             string expand = null; // TODO: replace null with proper value
-            
             var response = instance.GetQuery(queryPhrase, pageSize, pageNumber, sortBy, sortOrder, expand);
-            Assert.IsInstanceOf<QueryResults> (response, "response is QueryResults"); 
+            Assert.IsInstanceOf<QueryResults> (response, "response is QueryResults");
         }
         
         /// <summary>
@@ -227,9 +216,8 @@ namespace ININ.PureCloudApi.Test
         public void GetSecurityprofilesTest()
         {
             // TODO: add unit test for the method 'GetSecurityprofiles'
-            
             var response = instance.GetSecurityprofiles();
-            Assert.IsInstanceOf<SecurityProfileEntityListing> (response, "response is SecurityProfileEntityListing"); 
+            Assert.IsInstanceOf<SecurityProfileEntityListing> (response, "response is SecurityProfileEntityListing");
         }
         
         /// <summary>
@@ -240,9 +228,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'GetSecurityprofilesSecurityprofileId'
             string securityProfileId = null; // TODO: replace null with proper value
-            
             var response = instance.GetSecurityprofilesSecurityprofileId(securityProfileId);
-            Assert.IsInstanceOf<SecurityProfile> (response, "response is SecurityProfile"); 
+            Assert.IsInstanceOf<SecurityProfile> (response, "response is SecurityProfile");
         }
         
         /// <summary>
@@ -257,9 +244,8 @@ namespace ININ.PureCloudApi.Test
             string disposition = null; // TODO: replace null with proper value
             string contentType = null; // TODO: replace null with proper value
             string expand = null; // TODO: replace null with proper value
-            
             instance.GetSharedSharedId(sharedId, redirect, disposition, contentType, expand);
-             
+            
         }
         
         /// <summary>
@@ -273,9 +259,8 @@ namespace ININ.PureCloudApi.Test
             string expand = null; // TODO: replace null with proper value
             int? pageSize = null; // TODO: replace null with proper value
             int? pageNumber = null; // TODO: replace null with proper value
-            
             var response = instance.GetShares(entityId, expand, pageSize, pageNumber);
-            Assert.IsInstanceOf<ShareEntityListing> (response, "response is ShareEntityListing"); 
+            Assert.IsInstanceOf<ShareEntityListing> (response, "response is ShareEntityListing");
         }
         
         /// <summary>
@@ -287,9 +272,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'GetSharesShareId'
             string shareId = null; // TODO: replace null with proper value
             string expand = null; // TODO: replace null with proper value
-            
             var response = instance.GetSharesShareId(shareId, expand);
-            Assert.IsInstanceOf<Share> (response, "response is Share"); 
+            Assert.IsInstanceOf<Share> (response, "response is Share");
         }
         
         /// <summary>
@@ -301,9 +285,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'GetStatus'
             int? pageSize = null; // TODO: replace null with proper value
             int? pageNumber = null; // TODO: replace null with proper value
-            
             var response = instance.GetStatus(pageSize, pageNumber);
-            Assert.IsInstanceOf<CommandStatusEntityListing> (response, "response is CommandStatusEntityListing"); 
+            Assert.IsInstanceOf<CommandStatusEntityListing> (response, "response is CommandStatusEntityListing");
         }
         
         /// <summary>
@@ -314,9 +297,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'GetStatusStatusId'
             string statusId = null; // TODO: replace null with proper value
-            
             var response = instance.GetStatusStatusId(statusId);
-            Assert.IsInstanceOf<CommandStatus> (response, "response is CommandStatus"); 
+            Assert.IsInstanceOf<CommandStatus> (response, "response is CommandStatus");
         }
         
         /// <summary>
@@ -330,9 +312,8 @@ namespace ININ.PureCloudApi.Test
             int? pageNumber = null; // TODO: replace null with proper value
             string access = null; // TODO: replace null with proper value
             string expand = null; // TODO: replace null with proper value
-            
             var response = instance.GetWorkspaces(pageSize, pageNumber, access, expand);
-            Assert.IsInstanceOf<WorkspaceEntityListing> (response, "response is WorkspaceEntityListing"); 
+            Assert.IsInstanceOf<WorkspaceEntityListing> (response, "response is WorkspaceEntityListing");
         }
         
         /// <summary>
@@ -344,9 +325,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'GetWorkspacesWorkspaceId'
             string workspaceId = null; // TODO: replace null with proper value
             string expand = null; // TODO: replace null with proper value
-            
             var response = instance.GetWorkspacesWorkspaceId(workspaceId, expand);
-            Assert.IsInstanceOf<Workspace> (response, "response is Workspace"); 
+            Assert.IsInstanceOf<Workspace> (response, "response is Workspace");
         }
         
         /// <summary>
@@ -360,9 +340,8 @@ namespace ININ.PureCloudApi.Test
             int? pageSize = null; // TODO: replace null with proper value
             int? pageNumber = null; // TODO: replace null with proper value
             string expand = null; // TODO: replace null with proper value
-            
             var response = instance.GetWorkspacesWorkspaceIdMembers(workspaceId, pageSize, pageNumber, expand);
-            Assert.IsInstanceOf<WorkspaceMemberEntityListing> (response, "response is WorkspaceMemberEntityListing"); 
+            Assert.IsInstanceOf<WorkspaceMemberEntityListing> (response, "response is WorkspaceMemberEntityListing");
         }
         
         /// <summary>
@@ -375,9 +354,8 @@ namespace ININ.PureCloudApi.Test
             string workspaceId = null; // TODO: replace null with proper value
             string memberId = null; // TODO: replace null with proper value
             string expand = null; // TODO: replace null with proper value
-            
             var response = instance.GetWorkspacesWorkspaceIdMembersMemberId(workspaceId, memberId, expand);
-            Assert.IsInstanceOf<WorkspaceMember> (response, "response is WorkspaceMember"); 
+            Assert.IsInstanceOf<WorkspaceMember> (response, "response is WorkspaceMember");
         }
         
         /// <summary>
@@ -392,9 +370,8 @@ namespace ININ.PureCloudApi.Test
             int? pageSize = null; // TODO: replace null with proper value
             int? pageNumber = null; // TODO: replace null with proper value
             string expand = null; // TODO: replace null with proper value
-            
             var response = instance.GetWorkspacesWorkspaceIdTagvalues(workspaceId, value, pageSize, pageNumber, expand);
-            Assert.IsInstanceOf<TagValueEntityListing> (response, "response is TagValueEntityListing"); 
+            Assert.IsInstanceOf<TagValueEntityListing> (response, "response is TagValueEntityListing");
         }
         
         /// <summary>
@@ -407,9 +384,8 @@ namespace ININ.PureCloudApi.Test
             string workspaceId = null; // TODO: replace null with proper value
             string tagId = null; // TODO: replace null with proper value
             string expand = null; // TODO: replace null with proper value
-            
             var response = instance.GetWorkspacesWorkspaceIdTagvaluesTagId(workspaceId, tagId, expand);
-            Assert.IsInstanceOf<TagValue> (response, "response is TagValue"); 
+            Assert.IsInstanceOf<TagValue> (response, "response is TagValue");
         }
         
         /// <summary>
@@ -420,9 +396,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'PostAuditquery'
             ContentQueryRequest body = null; // TODO: replace null with proper value
-            
             var response = instance.PostAuditquery(body);
-            Assert.IsInstanceOf<QueryResults> (response, "response is QueryResults"); 
+            Assert.IsInstanceOf<QueryResults> (response, "response is QueryResults");
         }
         
         /// <summary>
@@ -436,9 +411,8 @@ namespace ININ.PureCloudApi.Test
             string copySource = null; // TODO: replace null with proper value
             string moveSource = null; // TODO: replace null with proper value
             bool? _override = null; // TODO: replace null with proper value
-            
             var response = instance.PostDocuments(body, copySource, moveSource, _override);
-            Assert.IsInstanceOf<Document> (response, "response is Document"); 
+            Assert.IsInstanceOf<Document> (response, "response is Document");
         }
         
         /// <summary>
@@ -452,9 +426,8 @@ namespace ININ.PureCloudApi.Test
             DocumentUpdate body = null; // TODO: replace null with proper value
             string expand = null; // TODO: replace null with proper value
             bool? _override = null; // TODO: replace null with proper value
-            
             var response = instance.PostDocumentsDocumentId(documentId, body, expand, _override);
-            Assert.IsInstanceOf<Document> (response, "response is Document"); 
+            Assert.IsInstanceOf<Document> (response, "response is Document");
         }
         
         /// <summary>
@@ -467,9 +440,8 @@ namespace ININ.PureCloudApi.Test
             string documentId = null; // TODO: replace null with proper value
             ReplaceRequest body = null; // TODO: replace null with proper value
             bool? _override = null; // TODO: replace null with proper value
-            
             var response = instance.PostDocumentsDocumentIdContent(documentId, body, _override);
-            Assert.IsInstanceOf<ReplaceResponse> (response, "response is ReplaceResponse"); 
+            Assert.IsInstanceOf<ReplaceResponse> (response, "response is ReplaceResponse");
         }
         
         /// <summary>
@@ -481,9 +453,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'PostQuery'
             QueryRequest body = null; // TODO: replace null with proper value
             string expand = null; // TODO: replace null with proper value
-            
             var response = instance.PostQuery(body, expand);
-            Assert.IsInstanceOf<QueryResults> (response, "response is QueryResults"); 
+            Assert.IsInstanceOf<QueryResults> (response, "response is QueryResults");
         }
         
         /// <summary>
@@ -494,9 +465,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'PostShares'
             CreateShareRequest body = null; // TODO: replace null with proper value
-            
             var response = instance.PostShares(body);
-            Assert.IsInstanceOf<CreateShareResponse> (response, "response is CreateShareResponse"); 
+            Assert.IsInstanceOf<CreateShareResponse> (response, "response is CreateShareResponse");
         }
         
         /// <summary>
@@ -507,9 +477,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'PostWorkspaces'
             WorkspaceCreate body = null; // TODO: replace null with proper value
-            
             var response = instance.PostWorkspaces(body);
-            Assert.IsInstanceOf<Workspace> (response, "response is Workspace"); 
+            Assert.IsInstanceOf<Workspace> (response, "response is Workspace");
         }
         
         /// <summary>
@@ -521,9 +490,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'PostWorkspacesWorkspaceIdTagvalues'
             string workspaceId = null; // TODO: replace null with proper value
             TagValue body = null; // TODO: replace null with proper value
-            
             var response = instance.PostWorkspacesWorkspaceIdTagvalues(workspaceId, body);
-            Assert.IsInstanceOf<TagValue> (response, "response is TagValue"); 
+            Assert.IsInstanceOf<TagValue> (response, "response is TagValue");
         }
         
         /// <summary>
@@ -536,9 +504,8 @@ namespace ININ.PureCloudApi.Test
             string workspaceId = null; // TODO: replace null with proper value
             TagQueryRequest body = null; // TODO: replace null with proper value
             string expand = null; // TODO: replace null with proper value
-            
             var response = instance.PostWorkspacesWorkspaceIdTagvaluesQuery(workspaceId, body, expand);
-            Assert.IsInstanceOf<TagValueEntityListing> (response, "response is TagValueEntityListing"); 
+            Assert.IsInstanceOf<TagValueEntityListing> (response, "response is TagValueEntityListing");
         }
         
         /// <summary>
@@ -550,9 +517,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'PutWorkspacesWorkspaceId'
             string workspaceId = null; // TODO: replace null with proper value
             Workspace body = null; // TODO: replace null with proper value
-            
             var response = instance.PutWorkspacesWorkspaceId(workspaceId, body);
-            Assert.IsInstanceOf<Workspace> (response, "response is Workspace"); 
+            Assert.IsInstanceOf<Workspace> (response, "response is Workspace");
         }
         
         /// <summary>
@@ -565,9 +531,8 @@ namespace ININ.PureCloudApi.Test
             string workspaceId = null; // TODO: replace null with proper value
             string memberId = null; // TODO: replace null with proper value
             WorkspaceMember body = null; // TODO: replace null with proper value
-            
             var response = instance.PutWorkspacesWorkspaceIdMembersMemberId(workspaceId, memberId, body);
-            Assert.IsInstanceOf<WorkspaceMember> (response, "response is WorkspaceMember"); 
+            Assert.IsInstanceOf<WorkspaceMember> (response, "response is WorkspaceMember");
         }
         
         /// <summary>
@@ -580,9 +545,8 @@ namespace ININ.PureCloudApi.Test
             string workspaceId = null; // TODO: replace null with proper value
             string tagId = null; // TODO: replace null with proper value
             TagValue body = null; // TODO: replace null with proper value
-            
             var response = instance.PutWorkspacesWorkspaceIdTagvaluesTagId(workspaceId, tagId, body);
-            Assert.IsInstanceOf<TagValue> (response, "response is TagValue"); 
+            Assert.IsInstanceOf<TagValue> (response, "response is TagValue");
         }
         
     }

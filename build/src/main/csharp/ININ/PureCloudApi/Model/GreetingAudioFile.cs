@@ -32,7 +32,7 @@ namespace ININ.PureCloudApi.Model
             this.SelfUri = SelfUri;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets DurationMilliseconds
@@ -63,11 +63,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  DurationMilliseconds: ").Append(DurationMilliseconds).Append("\n");
             sb.Append("  SizeBytes: ").Append(SizeBytes).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -128,16 +127,12 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.DurationMilliseconds != null)
                     hash = hash * 59 + this.DurationMilliseconds.GetHashCode();
-                
                 if (this.SizeBytes != null)
                     hash = hash * 59 + this.SizeBytes.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 return hash;
             }
         }

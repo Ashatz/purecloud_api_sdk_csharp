@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new PolicyActions();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of PolicyActions
@@ -50,61 +50,54 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<PolicyActions> (instance, "instance is a PolicyActions");
         }
 
-        
         /// <summary>
-        /// Test the property 'RetainRecording' 
+        /// Test the property 'RetainRecording'
         /// </summary>
         [Test]
         public void RetainRecordingTest()
         {
-            // TODO: unit test for the property 'RetainRecording' 
+            // TODO: unit test for the property 'RetainRecording'
         }
-        
         /// <summary>
-        /// Test the property 'DeleteRecording' 
+        /// Test the property 'DeleteRecording'
         /// </summary>
         [Test]
         public void DeleteRecordingTest()
         {
-            // TODO: unit test for the property 'DeleteRecording' 
+            // TODO: unit test for the property 'DeleteRecording'
         }
-        
         /// <summary>
-        /// Test the property 'AssignEvaluations' 
+        /// Test the property 'AssignEvaluations'
         /// </summary>
         [Test]
         public void AssignEvaluationsTest()
         {
-            // TODO: unit test for the property 'AssignEvaluations' 
+            // TODO: unit test for the property 'AssignEvaluations'
         }
-        
         /// <summary>
-        /// Test the property 'AssignMeteredEvaluations' 
+        /// Test the property 'AssignMeteredEvaluations'
         /// </summary>
         [Test]
         public void AssignMeteredEvaluationsTest()
         {
-            // TODO: unit test for the property 'AssignMeteredEvaluations' 
+            // TODO: unit test for the property 'AssignMeteredEvaluations'
         }
-        
         /// <summary>
-        /// Test the property 'AssignCalibrations' 
+        /// Test the property 'AssignCalibrations'
         /// </summary>
         [Test]
         public void AssignCalibrationsTest()
         {
-            // TODO: unit test for the property 'AssignCalibrations' 
+            // TODO: unit test for the property 'AssignCalibrations'
         }
-        
         /// <summary>
-        /// Test the property 'RetentionDuration' 
+        /// Test the property 'RetentionDuration'
         /// </summary>
         [Test]
         public void RetentionDurationTest()
         {
-            // TODO: unit test for the property 'RetentionDuration' 
+            // TODO: unit test for the property 'RetentionDuration'
         }
-        
 
     }
 

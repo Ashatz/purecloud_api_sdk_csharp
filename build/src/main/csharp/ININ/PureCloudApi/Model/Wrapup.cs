@@ -48,7 +48,7 @@ namespace ININ.PureCloudApi.Model
             }
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets Code
@@ -108,11 +108,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  DurationSeconds: ").Append(DurationSeconds).Append("\n");
             sb.Append("  EndTime: ").Append(EndTime).Append("\n");
             sb.Append("  Provisional: ").Append(Provisional).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -193,28 +192,20 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Code != null)
                     hash = hash * 59 + this.Code.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.Notes != null)
                     hash = hash * 59 + this.Notes.GetHashCode();
-                
                 if (this.Tags != null)
                     hash = hash * 59 + this.Tags.GetHashCode();
-                
                 if (this.DurationSeconds != null)
                     hash = hash * 59 + this.DurationSeconds.GetHashCode();
-                
                 if (this.EndTime != null)
                     hash = hash * 59 + this.EndTime.GetHashCode();
-                
                 if (this.Provisional != null)
                     hash = hash * 59 + this.Provisional.GetHashCode();
-                
                 return hash;
             }
         }

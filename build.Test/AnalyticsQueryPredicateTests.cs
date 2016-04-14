@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new AnalyticsQueryPredicate();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of AnalyticsQueryPredicate
@@ -50,79 +50,70 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<AnalyticsQueryPredicate> (instance, "instance is a AnalyticsQueryPredicate");
         }
 
-        
         /// <summary>
-        /// Test the property 'Type' 
+        /// Test the property 'Type'
         /// </summary>
         [Test]
         public void TypeTest()
         {
-            // TODO: unit test for the property 'Type' 
+            // TODO: unit test for the property 'Type'
         }
-        
         /// <summary>
-        /// Test the property 'Dimension' 
+        /// Test the property 'Dimension'
         /// </summary>
         [Test]
         public void DimensionTest()
         {
-            // TODO: unit test for the property 'Dimension' 
+            // TODO: unit test for the property 'Dimension'
         }
-        
         /// <summary>
-        /// Test the property 'PropertyType' 
+        /// Test the property 'PropertyType'
         /// </summary>
         [Test]
         public void PropertyTypeTest()
         {
-            // TODO: unit test for the property 'PropertyType' 
+            // TODO: unit test for the property 'PropertyType'
         }
-        
         /// <summary>
-        /// Test the property 'Property' 
+        /// Test the property 'Property'
         /// </summary>
         [Test]
         public void PropertyTest()
         {
-            // TODO: unit test for the property 'Property' 
+            // TODO: unit test for the property 'Property'
         }
-        
         /// <summary>
-        /// Test the property 'Metric' 
+        /// Test the property 'Metric'
         /// </summary>
         [Test]
         public void MetricTest()
         {
-            // TODO: unit test for the property 'Metric' 
+            // TODO: unit test for the property 'Metric'
         }
-        
         /// <summary>
-        /// Test the property '_Operator' 
+        /// Test the property '_Operator'
         /// </summary>
         [Test]
         public void _OperatorTest()
         {
-            // TODO: unit test for the property '_Operator' 
+            // TODO: unit test for the property '_Operator'
         }
-        
         /// <summary>
-        /// Test the property 'Value' 
+        /// Test the property 'Value'
         /// </summary>
         [Test]
         public void ValueTest()
         {
-            // TODO: unit test for the property 'Value' 
+            // TODO: unit test for the property 'Value'
         }
-        
         /// <summary>
-        /// Test the property 'Range' 
+        /// Test the property 'Range'
         /// </summary>
         [Test]
         public void RangeTest()
         {
-            // TODO: unit test for the property 'Range' 
+            // TODO: unit test for the property 'Range'
         }
-        
 
     }
 

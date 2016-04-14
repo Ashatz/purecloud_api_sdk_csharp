@@ -32,7 +32,7 @@ namespace ININ.PureCloudApi.Model
             this.PermissionPolicies = PermissionPolicies;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets Roles
@@ -65,11 +65,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Roles: ").Append(Roles).Append("\n");
             sb.Append("  Permissions: ").Append(Permissions).Append("\n");
             sb.Append("  PermissionPolicies: ").Append(PermissionPolicies).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -130,16 +129,12 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Roles != null)
                     hash = hash * 59 + this.Roles.GetHashCode();
-                
                 if (this.Permissions != null)
                     hash = hash * 59 + this.Permissions.GetHashCode();
-                
                 if (this.PermissionPolicies != null)
                     hash = hash * 59 + this.PermissionPolicies.GetHashCode();
-                
                 return hash;
             }
         }

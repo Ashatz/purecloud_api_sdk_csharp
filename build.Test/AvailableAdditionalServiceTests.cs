@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new AvailableAdditionalService();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of AvailableAdditionalService
@@ -50,97 +50,86 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<AvailableAdditionalService> (instance, "instance is a AvailableAdditionalService");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'Description' 
+        /// Test the property 'Description'
         /// </summary>
         [Test]
         public void DescriptionTest()
         {
-            // TODO: unit test for the property 'Description' 
+            // TODO: unit test for the property 'Description'
         }
-        
         /// <summary>
-        /// Test the property 'PartNumber' 
+        /// Test the property 'PartNumber'
         /// </summary>
         [Test]
         public void PartNumberTest()
         {
-            // TODO: unit test for the property 'PartNumber' 
+            // TODO: unit test for the property 'PartNumber'
         }
-        
         /// <summary>
-        /// Test the property 'RequiredForProducts' 
+        /// Test the property 'RequiredForProducts'
         /// </summary>
         [Test]
         public void RequiredForProductsTest()
         {
-            // TODO: unit test for the property 'RequiredForProducts' 
+            // TODO: unit test for the property 'RequiredForProducts'
         }
-        
         /// <summary>
-        /// Test the property 'AvailableForProducts' 
+        /// Test the property 'AvailableForProducts'
         /// </summary>
         [Test]
         public void AvailableForProductsTest()
         {
-            // TODO: unit test for the property 'AvailableForProducts' 
+            // TODO: unit test for the property 'AvailableForProducts'
         }
-        
         /// <summary>
-        /// Test the property 'DefaultForProducts' 
+        /// Test the property 'DefaultForProducts'
         /// </summary>
         [Test]
         public void DefaultForProductsTest()
         {
-            // TODO: unit test for the property 'DefaultForProducts' 
+            // TODO: unit test for the property 'DefaultForProducts'
         }
-        
         /// <summary>
-        /// Test the property 'ExclusiveFromProducts' 
+        /// Test the property 'ExclusiveFromProducts'
         /// </summary>
         [Test]
         public void ExclusiveFromProductsTest()
         {
-            // TODO: unit test for the property 'ExclusiveFromProducts' 
+            // TODO: unit test for the property 'ExclusiveFromProducts'
         }
-        
         /// <summary>
-        /// Test the property 'Rate' 
+        /// Test the property 'Rate'
         /// </summary>
         [Test]
         public void RateTest()
         {
-            // TODO: unit test for the property 'Rate' 
+            // TODO: unit test for the property 'Rate'
         }
-        
         /// <summary>
-        /// Test the property 'SelfUri' 
+        /// Test the property 'SelfUri'
         /// </summary>
         [Test]
         public void SelfUriTest()
         {
-            // TODO: unit test for the property 'SelfUri' 
+            // TODO: unit test for the property 'SelfUri'
         }
-        
 
     }
 

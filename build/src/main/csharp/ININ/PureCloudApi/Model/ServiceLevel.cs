@@ -30,7 +30,7 @@ namespace ININ.PureCloudApi.Model
             this.DurationMs = DurationMs;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets Percentage
@@ -54,11 +54,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class ServiceLevel {\n");
             sb.Append("  Percentage: ").Append(Percentage).Append("\n");
             sb.Append("  DurationMs: ").Append(DurationMs).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -114,13 +113,10 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Percentage != null)
                     hash = hash * 59 + this.Percentage.GetHashCode();
-                
                 if (this.DurationMs != null)
                     hash = hash * 59 + this.DurationMs.GetHashCode();
-                
                 return hash;
             }
         }

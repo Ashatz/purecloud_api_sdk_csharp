@@ -48,7 +48,7 @@ namespace ININ.PureCloudApi.Model
             this.StateName = StateName;
             
         }
-        
+
     
         /// <summary>
         /// The identifier of the execution instance of this State.
@@ -82,11 +82,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  StateExecId: ").Append(StateExecId).Append("\n");
             sb.Append("  StateConfigId: ").Append(StateConfigId).Append("\n");
             sb.Append("  StateName: ").Append(StateName).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -147,16 +146,12 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.StateExecId != null)
                     hash = hash * 59 + this.StateExecId.GetHashCode();
-                
                 if (this.StateConfigId != null)
                     hash = hash * 59 + this.StateConfigId.GetHashCode();
-                
                 if (this.StateName != null)
                     hash = hash * 59 + this.StateName.GetHashCode();
-                
                 return hash;
             }
         }

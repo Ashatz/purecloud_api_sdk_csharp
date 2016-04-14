@@ -48,7 +48,7 @@ namespace ININ.PureCloudApi.Model
             this.CustomActions = CustomActions;
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -155,11 +155,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Variables: ").Append(Variables).Append("\n");
             sb.Append("  CustomActions: ").Append(CustomActions).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -270,46 +269,32 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.VersionId != null)
                     hash = hash * 59 + this.VersionId.GetHashCode();
-                
                 if (this.CreatedDate != null)
                     hash = hash * 59 + this.CreatedDate.GetHashCode();
-                
                 if (this.ModifiedDate != null)
                     hash = hash * 59 + this.ModifiedDate.GetHashCode();
-                
                 if (this.PublishedDate != null)
                     hash = hash * 59 + this.PublishedDate.GetHashCode();
-                
                 if (this.VersionDate != null)
                     hash = hash * 59 + this.VersionDate.GetHashCode();
-                
                 if (this.StartPageId != null)
                     hash = hash * 59 + this.StartPageId.GetHashCode();
-                
                 if (this.StartPageName != null)
                     hash = hash * 59 + this.StartPageName.GetHashCode();
-                
                 if (this.Features != null)
                     hash = hash * 59 + this.Features.GetHashCode();
-                
                 if (this.Variables != null)
                     hash = hash * 59 + this.Variables.GetHashCode();
-                
                 if (this.CustomActions != null)
                     hash = hash * 59 + this.CustomActions.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 return hash;
             }
         }

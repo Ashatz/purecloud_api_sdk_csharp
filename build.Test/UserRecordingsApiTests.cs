@@ -61,9 +61,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'DeleteRecordingId'
             string recordingId = null; // TODO: replace null with proper value
-            
             instance.DeleteRecordingId(recordingId);
-             
+            
         }
         
         /// <summary>
@@ -75,9 +74,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'GetRecordingId'
             string recordingId = null; // TODO: replace null with proper value
             string expand = null; // TODO: replace null with proper value
-            
             var response = instance.GetRecordingId(recordingId, expand);
-            Assert.IsInstanceOf<UserRecording> (response, "response is UserRecording"); 
+            Assert.IsInstanceOf<UserRecording> (response, "response is UserRecording");
         }
         
         /// <summary>
@@ -89,9 +87,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'GetRecordingIdMedia'
             string recordingId = null; // TODO: replace null with proper value
             string formatId = null; // TODO: replace null with proper value
-            
             var response = instance.GetRecordingIdMedia(recordingId, formatId);
-            Assert.IsInstanceOf<DownloadResponse> (response, "response is DownloadResponse"); 
+            Assert.IsInstanceOf<DownloadResponse> (response, "response is DownloadResponse");
         }
         
         /// <summary>
@@ -101,9 +98,8 @@ namespace ININ.PureCloudApi.Test
         public void GetSummaryTest()
         {
             // TODO: add unit test for the method 'GetSummary'
-            
             var response = instance.GetSummary();
-            Assert.IsInstanceOf<FaxSummary> (response, "response is FaxSummary"); 
+            Assert.IsInstanceOf<FaxSummary> (response, "response is FaxSummary");
         }
         
         /// <summary>
@@ -116,9 +112,8 @@ namespace ININ.PureCloudApi.Test
             int? pageSize = null; // TODO: replace null with proper value
             int? pageNumber = null; // TODO: replace null with proper value
             string expand = null; // TODO: replace null with proper value
-            
             var response = instance.GetUserrecordings(pageSize, pageNumber, expand);
-            Assert.IsInstanceOf<UserRecordingEntityListing> (response, "response is UserRecordingEntityListing"); 
+            Assert.IsInstanceOf<UserRecordingEntityListing> (response, "response is UserRecordingEntityListing");
         }
         
         /// <summary>
@@ -131,9 +126,8 @@ namespace ININ.PureCloudApi.Test
             string recordingId = null; // TODO: replace null with proper value
             UserRecording body = null; // TODO: replace null with proper value
             string expand = null; // TODO: replace null with proper value
-            
             var response = instance.PutRecordingId(recordingId, body, expand);
-            Assert.IsInstanceOf<UserRecording> (response, "response is UserRecording"); 
+            Assert.IsInstanceOf<UserRecording> (response, "response is UserRecording");
         }
         
     }

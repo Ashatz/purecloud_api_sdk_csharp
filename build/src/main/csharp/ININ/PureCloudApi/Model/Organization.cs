@@ -17,9 +17,12 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class Organization :  IEquatable<Organization>
     { 
-    
+
+        /// <summary>
+        /// Gets or Sets State
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum StateEnum {
+                public enum StateEnum {
             
             [EnumMember(Value = "ACTIVE")]
             Active,
@@ -30,6 +33,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "DELETED")]
             Deleted
         }
+
         
         /// <summary>
         /// Gets or Sets State
@@ -79,7 +83,7 @@ namespace ININ.PureCloudApi.Model
             }
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -163,11 +167,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  DefaultSiteId: ").Append(DefaultSiteId).Append("\n");
             sb.Append("  Deletable: ").Append(Deletable).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -268,40 +271,28 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.ThirdPartyOrgId != null)
                     hash = hash * 59 + this.ThirdPartyOrgId.GetHashCode();
-                
                 if (this.ThirdPartyOrgName != null)
                     hash = hash * 59 + this.ThirdPartyOrgName.GetHashCode();
-                
                 if (this.ThirdPartyURI != null)
                     hash = hash * 59 + this.ThirdPartyURI.GetHashCode();
-                
                 if (this.Domain != null)
                     hash = hash * 59 + this.Domain.GetHashCode();
-                
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
-                
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
-                
                 if (this.DefaultSiteId != null)
                     hash = hash * 59 + this.DefaultSiteId.GetHashCode();
-                
                 if (this.Deletable != null)
                     hash = hash * 59 + this.Deletable.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 return hash;
             }
         }

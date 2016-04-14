@@ -32,7 +32,7 @@ namespace ININ.PureCloudApi.Model
             this.ConnectRatio = ConnectRatio;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets Attempts
@@ -63,11 +63,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Attempts: ").Append(Attempts).Append("\n");
             sb.Append("  Connects: ").Append(Connects).Append("\n");
             sb.Append("  ConnectRatio: ").Append(ConnectRatio).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -128,16 +127,12 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Attempts != null)
                     hash = hash * 59 + this.Attempts.GetHashCode();
-                
                 if (this.Connects != null)
                     hash = hash * 59 + this.Connects.GetHashCode();
-                
                 if (this.ConnectRatio != null)
                     hash = hash * 59 + this.ConnectRatio.GetHashCode();
-                
                 return hash;
             }
         }

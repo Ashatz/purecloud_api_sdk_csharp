@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new UsersSearchResponse();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of UsersSearchResponse
@@ -50,88 +50,78 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<UsersSearchResponse> (instance, "instance is a UsersSearchResponse");
         }
 
-        
         /// <summary>
-        /// Test the property 'Total' 
+        /// Test the property 'Total'
         /// </summary>
         [Test]
         public void TotalTest()
         {
-            // TODO: unit test for the property 'Total' 
+            // TODO: unit test for the property 'Total'
         }
-        
         /// <summary>
-        /// Test the property 'PageCount' 
+        /// Test the property 'PageCount'
         /// </summary>
         [Test]
         public void PageCountTest()
         {
-            // TODO: unit test for the property 'PageCount' 
+            // TODO: unit test for the property 'PageCount'
         }
-        
         /// <summary>
-        /// Test the property 'PageSize' 
+        /// Test the property 'PageSize'
         /// </summary>
         [Test]
         public void PageSizeTest()
         {
-            // TODO: unit test for the property 'PageSize' 
+            // TODO: unit test for the property 'PageSize'
         }
-        
         /// <summary>
-        /// Test the property 'PageNumber' 
+        /// Test the property 'PageNumber'
         /// </summary>
         [Test]
         public void PageNumberTest()
         {
-            // TODO: unit test for the property 'PageNumber' 
+            // TODO: unit test for the property 'PageNumber'
         }
-        
         /// <summary>
-        /// Test the property 'PreviousPage' 
+        /// Test the property 'PreviousPage'
         /// </summary>
         [Test]
         public void PreviousPageTest()
         {
-            // TODO: unit test for the property 'PreviousPage' 
+            // TODO: unit test for the property 'PreviousPage'
         }
-        
         /// <summary>
-        /// Test the property 'CurrentPage' 
+        /// Test the property 'CurrentPage'
         /// </summary>
         [Test]
         public void CurrentPageTest()
         {
-            // TODO: unit test for the property 'CurrentPage' 
+            // TODO: unit test for the property 'CurrentPage'
         }
-        
         /// <summary>
-        /// Test the property 'NextPage' 
+        /// Test the property 'NextPage'
         /// </summary>
         [Test]
         public void NextPageTest()
         {
-            // TODO: unit test for the property 'NextPage' 
+            // TODO: unit test for the property 'NextPage'
         }
-        
         /// <summary>
-        /// Test the property 'Types' 
+        /// Test the property 'Types'
         /// </summary>
         [Test]
         public void TypesTest()
         {
-            // TODO: unit test for the property 'Types' 
+            // TODO: unit test for the property 'Types'
         }
-        
         /// <summary>
-        /// Test the property 'Results' 
+        /// Test the property 'Results'
         /// </summary>
         [Test]
         public void ResultsTest()
         {
-            // TODO: unit test for the property 'Results' 
+            // TODO: unit test for the property 'Results'
         }
-        
 
     }
 

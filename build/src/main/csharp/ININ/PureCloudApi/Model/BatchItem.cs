@@ -32,7 +32,7 @@ namespace ININ.PureCloudApi.Model
             this.Body = Body;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets Method
@@ -63,11 +63,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Method: ").Append(Method).Append("\n");
             sb.Append("  Url: ").Append(Url).Append("\n");
             sb.Append("  Body: ").Append(Body).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -128,16 +127,12 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Method != null)
                     hash = hash * 59 + this.Method.GetHashCode();
-                
                 if (this.Url != null)
                     hash = hash * 59 + this.Url.GetHashCode();
-                
                 if (this.Body != null)
                     hash = hash * 59 + this.Body.GetHashCode();
-                
                 return hash;
             }
         }

@@ -32,7 +32,7 @@ namespace ININ.PureCloudApi.Model
             this.DefaultUser = DefaultUser;
             
         }
-        
+
     
         /// <summary>
         /// A globally unique identifier for this station
@@ -72,11 +72,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  AssociatedUser: ").Append(AssociatedUser).Append("\n");
             sb.Append("  AssociatedDate: ").Append(AssociatedDate).Append("\n");
             sb.Append("  DefaultUser: ").Append(DefaultUser).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -142,19 +141,14 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.AssociatedUser != null)
                     hash = hash * 59 + this.AssociatedUser.GetHashCode();
-                
                 if (this.AssociatedDate != null)
                     hash = hash * 59 + this.AssociatedDate.GetHashCode();
-                
                 if (this.DefaultUser != null)
                     hash = hash * 59 + this.DefaultUser.GetHashCode();
-                
                 return hash;
             }
         }

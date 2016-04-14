@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new EdgeLogsJobRequest();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of EdgeLogsJobRequest
@@ -50,34 +50,30 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<EdgeLogsJobRequest> (instance, "instance is a EdgeLogsJobRequest");
         }
 
-        
         /// <summary>
-        /// Test the property 'Path' 
+        /// Test the property 'Path'
         /// </summary>
         [Test]
         public void PathTest()
         {
-            // TODO: unit test for the property 'Path' 
+            // TODO: unit test for the property 'Path'
         }
-        
         /// <summary>
-        /// Test the property 'Query' 
+        /// Test the property 'Query'
         /// </summary>
         [Test]
         public void QueryTest()
         {
-            // TODO: unit test for the property 'Query' 
+            // TODO: unit test for the property 'Query'
         }
-        
         /// <summary>
-        /// Test the property 'Recurse' 
+        /// Test the property 'Recurse'
         /// </summary>
         [Test]
         public void RecurseTest()
         {
-            // TODO: unit test for the property 'Recurse' 
+            // TODO: unit test for the property 'Recurse'
         }
-        
 
     }
 

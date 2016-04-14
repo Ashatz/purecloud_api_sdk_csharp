@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new DomainEdgeSoftwareVersionDto();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of DomainEdgeSoftwareVersionDto
@@ -50,79 +50,70 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<DomainEdgeSoftwareVersionDto> (instance, "instance is a DomainEdgeSoftwareVersionDto");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'EdgeVersion' 
+        /// Test the property 'EdgeVersion'
         /// </summary>
         [Test]
         public void EdgeVersionTest()
         {
-            // TODO: unit test for the property 'EdgeVersion' 
+            // TODO: unit test for the property 'EdgeVersion'
         }
-        
         /// <summary>
-        /// Test the property 'PublishDate' 
+        /// Test the property 'PublishDate'
         /// </summary>
         [Test]
         public void PublishDateTest()
         {
-            // TODO: unit test for the property 'PublishDate' 
+            // TODO: unit test for the property 'PublishDate'
         }
-        
         /// <summary>
-        /// Test the property 'EdgeUri' 
+        /// Test the property 'EdgeUri'
         /// </summary>
         [Test]
         public void EdgeUriTest()
         {
-            // TODO: unit test for the property 'EdgeUri' 
+            // TODO: unit test for the property 'EdgeUri'
         }
-        
         /// <summary>
-        /// Test the property 'Current' 
+        /// Test the property 'Current'
         /// </summary>
         [Test]
         public void CurrentTest()
         {
-            // TODO: unit test for the property 'Current' 
+            // TODO: unit test for the property 'Current'
         }
-        
         /// <summary>
-        /// Test the property 'LatestRelease' 
+        /// Test the property 'LatestRelease'
         /// </summary>
         [Test]
         public void LatestReleaseTest()
         {
-            // TODO: unit test for the property 'LatestRelease' 
+            // TODO: unit test for the property 'LatestRelease'
         }
-        
         /// <summary>
-        /// Test the property 'SelfUri' 
+        /// Test the property 'SelfUri'
         /// </summary>
         [Test]
         public void SelfUriTest()
         {
-            // TODO: unit test for the property 'SelfUri' 
+            // TODO: unit test for the property 'SelfUri'
         }
-        
 
     }
 

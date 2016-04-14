@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new CallableTime();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of CallableTime
@@ -50,25 +50,22 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<CallableTime> (instance, "instance is a CallableTime");
         }
 
-        
         /// <summary>
-        /// Test the property 'TimeSlots' 
+        /// Test the property 'TimeSlots'
         /// </summary>
         [Test]
         public void TimeSlotsTest()
         {
-            // TODO: unit test for the property 'TimeSlots' 
+            // TODO: unit test for the property 'TimeSlots'
         }
-        
         /// <summary>
-        /// Test the property 'TimeZoneId' 
+        /// Test the property 'TimeZoneId'
         /// </summary>
         [Test]
         public void TimeZoneIdTest()
         {
-            // TODO: unit test for the property 'TimeZoneId' 
+            // TODO: unit test for the property 'TimeZoneId'
         }
-        
 
     }
 

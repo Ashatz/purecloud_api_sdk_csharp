@@ -30,7 +30,7 @@ namespace ININ.PureCloudApi.Model
             this.Results = Results;
             
         }
-        
+
     
         /// <summary>
         /// A mapping from system presence to a list of organization presence ids
@@ -55,11 +55,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class PresenceQueryResponse {\n");
             sb.Append("  SystemToOrganizationMappings: ").Append(SystemToOrganizationMappings).Append("\n");
             sb.Append("  Results: ").Append(Results).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -115,13 +114,10 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.SystemToOrganizationMappings != null)
                     hash = hash * 59 + this.SystemToOrganizationMappings.GetHashCode();
-                
                 if (this.Results != null)
                     hash = hash * 59 + this.Results.GetHashCode();
-                
                 return hash;
             }
         }

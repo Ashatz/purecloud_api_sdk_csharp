@@ -28,7 +28,7 @@ namespace ININ.PureCloudApi.Model
             this.Reason = Reason;
             
         }
-        
+
     
         /// <summary>
         /// Reason code for a termination.
@@ -46,11 +46,10 @@ namespace ININ.PureCloudApi.Model
             var sb = new StringBuilder();
             sb.Append("class FlowTerminateRequest {\n");
             sb.Append("  Reason: ").Append(Reason).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -101,10 +100,8 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Reason != null)
                     hash = hash * 59 + this.Reason.GetHashCode();
-                
                 return hash;
             }
         }

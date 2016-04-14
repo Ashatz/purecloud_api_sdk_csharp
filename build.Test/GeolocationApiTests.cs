@@ -60,9 +60,8 @@ namespace ININ.PureCloudApi.Test
         public void GetSettingsTest()
         {
             // TODO: add unit test for the method 'GetSettings'
-            
             var response = instance.GetSettings();
-            Assert.IsInstanceOf<GeolocationSettings> (response, "response is GeolocationSettings"); 
+            Assert.IsInstanceOf<GeolocationSettings> (response, "response is GeolocationSettings");
         }
         
         /// <summary>
@@ -74,9 +73,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'GetUserIdGeolocationsClientId'
             string userId = null; // TODO: replace null with proper value
             string clientId = null; // TODO: replace null with proper value
-            
             var response = instance.GetUserIdGeolocationsClientId(userId, clientId);
-            Assert.IsInstanceOf<Geolocation> (response, "response is Geolocation"); 
+            Assert.IsInstanceOf<Geolocation> (response, "response is Geolocation");
         }
         
         /// <summary>
@@ -87,9 +85,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'PatchSettings'
             GeolocationSettings body = null; // TODO: replace null with proper value
-            
             var response = instance.PatchSettings(body);
-            Assert.IsInstanceOf<GeolocationSettings> (response, "response is GeolocationSettings"); 
+            Assert.IsInstanceOf<GeolocationSettings> (response, "response is GeolocationSettings");
         }
         
         /// <summary>
@@ -102,9 +99,8 @@ namespace ININ.PureCloudApi.Test
             string userId = null; // TODO: replace null with proper value
             string clientId = null; // TODO: replace null with proper value
             Geolocation body = null; // TODO: replace null with proper value
-            
             var response = instance.PatchUserIdGeolocationsClientId(userId, clientId, body);
-            Assert.IsInstanceOf<Geolocation> (response, "response is Geolocation"); 
+            Assert.IsInstanceOf<Geolocation> (response, "response is Geolocation");
         }
         
     }

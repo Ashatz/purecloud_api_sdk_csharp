@@ -148,7 +148,7 @@ namespace ININ.PureCloudApi.Model
             this.ForRelatedPart = ForRelatedPart;
             
         }
-        
+
     
         /// <summary>
         /// The quote charge Id.
@@ -262,11 +262,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  ProductShippable: ").Append(ProductShippable).Append("\n");
             sb.Append("  ShippingAddress: ").Append(ShippingAddress).Append("\n");
             sb.Append("  ForRelatedPart: ").Append(ForRelatedPart).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -377,46 +376,32 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Sku != null)
                     hash = hash * 59 + this.Sku.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.ChargeType != null)
                     hash = hash * 59 + this.ChargeType.GetHashCode();
-                
                 if (this.Quantity != null)
                     hash = hash * 59 + this.Quantity.GetHashCode();
-                
                 if (this.ListTotal != null)
                     hash = hash * 59 + this.ListTotal.GetHashCode();
-                
                 if (this.Total != null)
                     hash = hash * 59 + this.Total.GetHashCode();
-                
                 if (this.ListPriceDisplay != null)
                     hash = hash * 59 + this.ListPriceDisplay.GetHashCode();
-                
                 if (this.Discount != null)
                     hash = hash * 59 + this.Discount.GetHashCode();
-                
                 if (this.EffectivePrice != null)
                     hash = hash * 59 + this.EffectivePrice.GetHashCode();
-                
                 if (this.ProductShippable != null)
                     hash = hash * 59 + this.ProductShippable.GetHashCode();
-                
                 if (this.ShippingAddress != null)
                     hash = hash * 59 + this.ShippingAddress.GetHashCode();
-                
                 if (this.ForRelatedPart != null)
                     hash = hash * 59 + this.ForRelatedPart.GetHashCode();
-                
                 return hash;
             }
         }

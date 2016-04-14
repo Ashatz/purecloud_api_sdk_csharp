@@ -46,7 +46,7 @@ namespace ININ.PureCloudApi.Model
             this.PageCount = PageCount;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets PageSize
@@ -126,11 +126,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  NextUri: ").Append(NextUri).Append("\n");
             sb.Append("  LastUri: ").Append(LastUri).Append("\n");
             sb.Append("  PageCount: ").Append(PageCount).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -226,37 +225,26 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.PageSize != null)
                     hash = hash * 59 + this.PageSize.GetHashCode();
-                
                 if (this.PageNumber != null)
                     hash = hash * 59 + this.PageNumber.GetHashCode();
-                
                 if (this.Total != null)
                     hash = hash * 59 + this.Total.GetHashCode();
-                
                 if (this.Entities != null)
                     hash = hash * 59 + this.Entities.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 if (this.FirstUri != null)
                     hash = hash * 59 + this.FirstUri.GetHashCode();
-                
                 if (this.PreviousUri != null)
                     hash = hash * 59 + this.PreviousUri.GetHashCode();
-                
                 if (this.NextUri != null)
                     hash = hash * 59 + this.NextUri.GetHashCode();
-                
                 if (this.LastUri != null)
                     hash = hash * 59 + this.LastUri.GetHashCode();
-                
                 if (this.PageCount != null)
                     hash = hash * 59 + this.PageCount.GetHashCode();
-                
                 return hash;
             }
         }

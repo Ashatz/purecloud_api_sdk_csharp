@@ -30,7 +30,7 @@ namespace ININ.PureCloudApi.Model
             this.MaximumLength = MaximumLength;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets MinimumLength
@@ -54,11 +54,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class PINConfiguration {\n");
             sb.Append("  MinimumLength: ").Append(MinimumLength).Append("\n");
             sb.Append("  MaximumLength: ").Append(MaximumLength).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -114,13 +113,10 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.MinimumLength != null)
                     hash = hash * 59 + this.MinimumLength.GetHashCode();
-                
                 if (this.MaximumLength != null)
                     hash = hash * 59 + this.MaximumLength.GetHashCode();
-                
                 return hash;
             }
         }

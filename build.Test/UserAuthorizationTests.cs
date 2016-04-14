@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new UserAuthorization();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of UserAuthorization
@@ -50,34 +50,30 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<UserAuthorization> (instance, "instance is a UserAuthorization");
         }
 
-        
         /// <summary>
-        /// Test the property 'Roles' 
+        /// Test the property 'Roles'
         /// </summary>
         [Test]
         public void RolesTest()
         {
-            // TODO: unit test for the property 'Roles' 
+            // TODO: unit test for the property 'Roles'
         }
-        
         /// <summary>
-        /// Test the property 'Permissions' 
+        /// Test the property 'Permissions'
         /// </summary>
         [Test]
         public void PermissionsTest()
         {
-            // TODO: unit test for the property 'Permissions' 
+            // TODO: unit test for the property 'Permissions'
         }
-        
         /// <summary>
-        /// Test the property 'PermissionPolicies' 
+        /// Test the property 'PermissionPolicies'
         /// </summary>
         [Test]
         public void PermissionPoliciesTest()
         {
-            // TODO: unit test for the property 'PermissionPolicies' 
+            // TODO: unit test for the property 'PermissionPolicies'
         }
-        
 
     }
 

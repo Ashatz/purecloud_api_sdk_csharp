@@ -17,9 +17,12 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class FlowVersion :  IEquatable<FlowVersion>
     { 
-    
+
+        /// <summary>
+        /// Gets or Sets Type
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum TypeEnum {
+                public enum TypeEnum {
             
             [EnumMember(Value = "PUBLISH")]
             Publish,
@@ -30,6 +33,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "SAVE")]
             Save
         }
+
         
         /// <summary>
         /// Gets or Sets Type
@@ -63,7 +67,7 @@ namespace ININ.PureCloudApi.Model
             this.PublishResultUri = PublishResultUri;
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -146,11 +150,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  GenerationId: ").Append(GenerationId).Append("\n");
             sb.Append("  PublishResultUri: ").Append(PublishResultUri).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -251,40 +254,28 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.CommitVersion != null)
                     hash = hash * 59 + this.CommitVersion.GetHashCode();
-                
                 if (this.ConfigurationVersion != null)
                     hash = hash * 59 + this.ConfigurationVersion.GetHashCode();
-                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
                 if (this.CreatedBy != null)
                     hash = hash * 59 + this.CreatedBy.GetHashCode();
-                
                 if (this.ConfigurationUri != null)
                     hash = hash * 59 + this.ConfigurationUri.GetHashCode();
-                
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
-                
                 if (this.GenerationId != null)
                     hash = hash * 59 + this.GenerationId.GetHashCode();
-                
                 if (this.PublishResultUri != null)
                     hash = hash * 59 + this.PublishResultUri.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 return hash;
             }
         }

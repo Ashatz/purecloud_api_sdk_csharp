@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new DomainNetworkCommandResponse();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of DomainNetworkCommandResponse
@@ -50,43 +50,38 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<DomainNetworkCommandResponse> (instance, "instance is a DomainNetworkCommandResponse");
         }
 
-        
         /// <summary>
-        /// Test the property 'CorrelationId' 
+        /// Test the property 'CorrelationId'
         /// </summary>
         [Test]
         public void CorrelationIdTest()
         {
-            // TODO: unit test for the property 'CorrelationId' 
+            // TODO: unit test for the property 'CorrelationId'
         }
-        
         /// <summary>
-        /// Test the property 'CommandName' 
+        /// Test the property 'CommandName'
         /// </summary>
         [Test]
         public void CommandNameTest()
         {
-            // TODO: unit test for the property 'CommandName' 
+            // TODO: unit test for the property 'CommandName'
         }
-        
         /// <summary>
-        /// Test the property 'Acknowledged' 
+        /// Test the property 'Acknowledged'
         /// </summary>
         [Test]
         public void AcknowledgedTest()
         {
-            // TODO: unit test for the property 'Acknowledged' 
+            // TODO: unit test for the property 'Acknowledged'
         }
-        
         /// <summary>
-        /// Test the property 'ErrorInfo' 
+        /// Test the property 'ErrorInfo'
         /// </summary>
         [Test]
         public void ErrorInfoTest()
         {
-            // TODO: unit test for the property 'ErrorInfo' 
+            // TODO: unit test for the property 'ErrorInfo'
         }
-        
 
     }
 

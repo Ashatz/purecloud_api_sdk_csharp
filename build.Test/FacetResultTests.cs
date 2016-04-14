@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new FacetResult();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of FacetResult
@@ -50,52 +50,46 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<FacetResult> (instance, "instance is a FacetResult");
         }
 
-        
         /// <summary>
-        /// Test the property 'RequestName' 
+        /// Test the property 'RequestName'
         /// </summary>
         [Test]
         public void RequestNameTest()
         {
-            // TODO: unit test for the property 'RequestName' 
+            // TODO: unit test for the property 'RequestName'
         }
-        
         /// <summary>
-        /// Test the property 'RequestFieldName' 
+        /// Test the property 'RequestFieldName'
         /// </summary>
         [Test]
         public void RequestFieldNameTest()
         {
-            // TODO: unit test for the property 'RequestFieldName' 
+            // TODO: unit test for the property 'RequestFieldName'
         }
-        
         /// <summary>
-        /// Test the property 'FieldType' 
+        /// Test the property 'FieldType'
         /// </summary>
         [Test]
         public void FieldTypeTest()
         {
-            // TODO: unit test for the property 'FieldType' 
+            // TODO: unit test for the property 'FieldType'
         }
-        
         /// <summary>
-        /// Test the property 'RequestType' 
+        /// Test the property 'RequestType'
         /// </summary>
         [Test]
         public void RequestTypeTest()
         {
-            // TODO: unit test for the property 'RequestType' 
+            // TODO: unit test for the property 'RequestType'
         }
-        
         /// <summary>
-        /// Test the property 'Results' 
+        /// Test the property 'Results'
         /// </summary>
         [Test]
         public void ResultsTest()
         {
-            // TODO: unit test for the property 'Results' 
+            // TODO: unit test for the property 'Results'
         }
-        
 
     }
 

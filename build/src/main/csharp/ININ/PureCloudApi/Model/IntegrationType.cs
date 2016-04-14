@@ -17,9 +17,12 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class IntegrationType :  IEquatable<IntegrationType>
     { 
-    
+
+        /// <summary>
+        /// Gets or Sets Provider
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum ProviderEnum {
+                public enum ProviderEnum {
             
             [EnumMember(Value = "BRIDGE")]
             Bridge,
@@ -30,6 +33,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "REALTIME")]
             Realtime
         }
+
         
         /// <summary>
         /// Gets or Sets Provider
@@ -53,7 +57,7 @@ namespace ININ.PureCloudApi.Model
             this.Images = Images;
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -101,11 +105,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Provider: ").Append(Provider).Append("\n");
             sb.Append("  Images: ").Append(Images).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -181,25 +184,18 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
-                
                 if (this.Provider != null)
                     hash = hash * 59 + this.Provider.GetHashCode();
-                
                 if (this.Images != null)
                     hash = hash * 59 + this.Images.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 return hash;
             }
         }

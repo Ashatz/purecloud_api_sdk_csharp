@@ -17,9 +17,12 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class DomainEdgeSoftwareUpdateDto :  IEquatable<DomainEdgeSoftwareUpdateDto>
     { 
-    
+
+        /// <summary>
+        /// Gets or Sets Status
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum StatusEnum {
+                public enum StatusEnum {
             
             [EnumMember(Value = "NONE")]
             None,
@@ -48,6 +51,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "DELETE")]
             Delete
         }
+
         
         /// <summary>
         /// Gets or Sets Status
@@ -97,7 +101,7 @@ namespace ININ.PureCloudApi.Model
             }
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets Version
@@ -167,11 +171,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  EdgeUri: ").Append(EdgeUri).Append("\n");
             sb.Append("  Current: ").Append(Current).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -262,34 +265,24 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
-                
                 if (this.MaxDownloadRate != null)
                     hash = hash * 59 + this.MaxDownloadRate.GetHashCode();
-                
                 if (this.DownloadStartTime != null)
                     hash = hash * 59 + this.DownloadStartTime.GetHashCode();
-                
                 if (this.ExecuteStartTime != null)
                     hash = hash * 59 + this.ExecuteStartTime.GetHashCode();
-                
                 if (this.ExecuteStopTime != null)
                     hash = hash * 59 + this.ExecuteStopTime.GetHashCode();
-                
                 if (this.ExecuteOnIdle != null)
                     hash = hash * 59 + this.ExecuteOnIdle.GetHashCode();
-                
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
-                
                 if (this.EdgeUri != null)
                     hash = hash * 59 + this.EdgeUri.GetHashCode();
-                
                 if (this.Current != null)
                     hash = hash * 59 + this.Current.GetHashCode();
-                
                 return hash;
             }
         }

@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new DomainPermissionPolicy();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of DomainPermissionPolicy
@@ -50,79 +50,70 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<DomainPermissionPolicy> (instance, "instance is a DomainPermissionPolicy");
         }
 
-        
         /// <summary>
-        /// Test the property 'Domain' 
+        /// Test the property 'Domain'
         /// </summary>
         [Test]
         public void DomainTest()
         {
-            // TODO: unit test for the property 'Domain' 
+            // TODO: unit test for the property 'Domain'
         }
-        
         /// <summary>
-        /// Test the property 'EntityName' 
+        /// Test the property 'EntityName'
         /// </summary>
         [Test]
         public void EntityNameTest()
         {
-            // TODO: unit test for the property 'EntityName' 
+            // TODO: unit test for the property 'EntityName'
         }
-        
         /// <summary>
-        /// Test the property 'PolicyName' 
+        /// Test the property 'PolicyName'
         /// </summary>
         [Test]
         public void PolicyNameTest()
         {
-            // TODO: unit test for the property 'PolicyName' 
+            // TODO: unit test for the property 'PolicyName'
         }
-        
         /// <summary>
-        /// Test the property 'PolicyDescription' 
+        /// Test the property 'PolicyDescription'
         /// </summary>
         [Test]
         public void PolicyDescriptionTest()
         {
-            // TODO: unit test for the property 'PolicyDescription' 
+            // TODO: unit test for the property 'PolicyDescription'
         }
-        
         /// <summary>
-        /// Test the property 'ActionSet' 
+        /// Test the property 'ActionSet'
         /// </summary>
         [Test]
         public void ActionSetTest()
         {
-            // TODO: unit test for the property 'ActionSet' 
+            // TODO: unit test for the property 'ActionSet'
         }
-        
         /// <summary>
-        /// Test the property 'NamedResources' 
+        /// Test the property 'NamedResources'
         /// </summary>
         [Test]
         public void NamedResourcesTest()
         {
-            // TODO: unit test for the property 'NamedResources' 
+            // TODO: unit test for the property 'NamedResources'
         }
-        
         /// <summary>
-        /// Test the property 'AllowConditions' 
+        /// Test the property 'AllowConditions'
         /// </summary>
         [Test]
         public void AllowConditionsTest()
         {
-            // TODO: unit test for the property 'AllowConditions' 
+            // TODO: unit test for the property 'AllowConditions'
         }
-        
         /// <summary>
-        /// Test the property 'ResourceConditionNode' 
+        /// Test the property 'ResourceConditionNode'
         /// </summary>
         [Test]
         public void ResourceConditionNodeTest()
         {
-            // TODO: unit test for the property 'ResourceConditionNode' 
+            // TODO: unit test for the property 'ResourceConditionNode'
         }
-        
 
     }
 

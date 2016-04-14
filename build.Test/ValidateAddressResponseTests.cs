@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new ValidateAddressResponse();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of ValidateAddressResponse
@@ -50,25 +50,22 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<ValidateAddressResponse> (instance, "instance is a ValidateAddressResponse");
         }
 
-        
         /// <summary>
-        /// Test the property 'Valid' 
+        /// Test the property 'Valid'
         /// </summary>
         [Test]
         public void ValidTest()
         {
-            // TODO: unit test for the property 'Valid' 
+            // TODO: unit test for the property 'Valid'
         }
-        
         /// <summary>
-        /// Test the property 'Response' 
+        /// Test the property 'Response'
         /// </summary>
         [Test]
         public void ResponseTest()
         {
-            // TODO: unit test for the property 'Response' 
+            // TODO: unit test for the property 'Response'
         }
-        
 
     }
 

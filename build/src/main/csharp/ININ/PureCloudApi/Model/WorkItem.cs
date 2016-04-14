@@ -48,7 +48,7 @@ namespace ININ.PureCloudApi.Model
             this.WorkItemName = WorkItemName;
             
         }
-        
+
     
         /// <summary>
         /// The work item execution id.
@@ -82,11 +82,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  WorkItemExecId: ").Append(WorkItemExecId).Append("\n");
             sb.Append("  WorkItemConfigId: ").Append(WorkItemConfigId).Append("\n");
             sb.Append("  WorkItemName: ").Append(WorkItemName).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -147,16 +146,12 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.WorkItemExecId != null)
                     hash = hash * 59 + this.WorkItemExecId.GetHashCode();
-                
                 if (this.WorkItemConfigId != null)
                     hash = hash * 59 + this.WorkItemConfigId.GetHashCode();
-                
                 if (this.WorkItemName != null)
                     hash = hash * 59 + this.WorkItemName.GetHashCode();
-                
                 return hash;
             }
         }

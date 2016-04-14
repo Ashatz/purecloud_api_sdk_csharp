@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new DialerAuditRequest();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of DialerAuditRequest
@@ -50,43 +50,38 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<DialerAuditRequest> (instance, "instance is a DialerAuditRequest");
         }
 
-        
         /// <summary>
-        /// Test the property 'QueryPhrase' 
+        /// Test the property 'QueryPhrase'
         /// </summary>
         [Test]
         public void QueryPhraseTest()
         {
-            // TODO: unit test for the property 'QueryPhrase' 
+            // TODO: unit test for the property 'QueryPhrase'
         }
-        
         /// <summary>
-        /// Test the property 'QueryFields' 
+        /// Test the property 'QueryFields'
         /// </summary>
         [Test]
         public void QueryFieldsTest()
         {
-            // TODO: unit test for the property 'QueryFields' 
+            // TODO: unit test for the property 'QueryFields'
         }
-        
         /// <summary>
-        /// Test the property 'Facets' 
+        /// Test the property 'Facets'
         /// </summary>
         [Test]
         public void FacetsTest()
         {
-            // TODO: unit test for the property 'Facets' 
+            // TODO: unit test for the property 'Facets'
         }
-        
         /// <summary>
-        /// Test the property 'Filters' 
+        /// Test the property 'Filters'
         /// </summary>
         [Test]
         public void FiltersTest()
         {
-            // TODO: unit test for the property 'Filters' 
+            // TODO: unit test for the property 'Filters'
         }
-        
 
     }
 

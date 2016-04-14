@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new ConnectRate();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of ConnectRate
@@ -50,34 +50,30 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<ConnectRate> (instance, "instance is a ConnectRate");
         }
 
-        
         /// <summary>
-        /// Test the property 'Attempts' 
+        /// Test the property 'Attempts'
         /// </summary>
         [Test]
         public void AttemptsTest()
         {
-            // TODO: unit test for the property 'Attempts' 
+            // TODO: unit test for the property 'Attempts'
         }
-        
         /// <summary>
-        /// Test the property 'Connects' 
+        /// Test the property 'Connects'
         /// </summary>
         [Test]
         public void ConnectsTest()
         {
-            // TODO: unit test for the property 'Connects' 
+            // TODO: unit test for the property 'Connects'
         }
-        
         /// <summary>
-        /// Test the property 'ConnectRatio' 
+        /// Test the property 'ConnectRatio'
         /// </summary>
         [Test]
         public void ConnectRatioTest()
         {
-            // TODO: unit test for the property 'ConnectRatio' 
+            // TODO: unit test for the property 'ConnectRatio'
         }
-        
 
     }
 

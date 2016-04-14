@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new Segment();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of Segment
@@ -50,52 +50,46 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<Segment> (instance, "instance is a Segment");
         }
 
-        
         /// <summary>
-        /// Test the property 'StartTime' 
+        /// Test the property 'StartTime'
         /// </summary>
         [Test]
         public void StartTimeTest()
         {
-            // TODO: unit test for the property 'StartTime' 
+            // TODO: unit test for the property 'StartTime'
         }
-        
         /// <summary>
-        /// Test the property 'EndTime' 
+        /// Test the property 'EndTime'
         /// </summary>
         [Test]
         public void EndTimeTest()
         {
-            // TODO: unit test for the property 'EndTime' 
+            // TODO: unit test for the property 'EndTime'
         }
-        
         /// <summary>
-        /// Test the property 'Type' 
+        /// Test the property 'Type'
         /// </summary>
         [Test]
         public void TypeTest()
         {
-            // TODO: unit test for the property 'Type' 
+            // TODO: unit test for the property 'Type'
         }
-        
         /// <summary>
-        /// Test the property 'HowEnded' 
+        /// Test the property 'HowEnded'
         /// </summary>
         [Test]
         public void HowEndedTest()
         {
-            // TODO: unit test for the property 'HowEnded' 
+            // TODO: unit test for the property 'HowEnded'
         }
-        
         /// <summary>
-        /// Test the property 'DisconnectType' 
+        /// Test the property 'DisconnectType'
         /// </summary>
         [Test]
         public void DisconnectTypeTest()
         {
-            // TODO: unit test for the property 'DisconnectType' 
+            // TODO: unit test for the property 'DisconnectType'
         }
-        
 
     }
 

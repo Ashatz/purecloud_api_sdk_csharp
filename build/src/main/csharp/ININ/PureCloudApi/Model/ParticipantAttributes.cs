@@ -28,7 +28,7 @@ namespace ININ.PureCloudApi.Model
             this.Attributes = Attributes;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets Attributes
@@ -45,11 +45,10 @@ namespace ININ.PureCloudApi.Model
             var sb = new StringBuilder();
             sb.Append("class ParticipantAttributes {\n");
             sb.Append("  Attributes: ").Append(Attributes).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -100,10 +99,8 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Attributes != null)
                     hash = hash * 59 + this.Attributes.GetHashCode();
-                
                 return hash;
             }
         }

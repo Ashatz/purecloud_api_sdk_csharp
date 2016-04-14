@@ -32,7 +32,7 @@ namespace ININ.PureCloudApi.Model
             this.OutstandingInteractionsCount = OutstandingInteractionsCount;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets CallableContacts
@@ -63,11 +63,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  CallableContacts: ").Append(CallableContacts).Append("\n");
             sb.Append("  QueueUtilizationDiagnostic: ").Append(QueueUtilizationDiagnostic).Append("\n");
             sb.Append("  OutstandingInteractionsCount: ").Append(OutstandingInteractionsCount).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -128,16 +127,12 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.CallableContacts != null)
                     hash = hash * 59 + this.CallableContacts.GetHashCode();
-                
                 if (this.QueueUtilizationDiagnostic != null)
                     hash = hash * 59 + this.QueueUtilizationDiagnostic.GetHashCode();
-                
                 if (this.OutstandingInteractionsCount != null)
                     hash = hash * 59 + this.OutstandingInteractionsCount.GetHashCode();
-                
                 return hash;
             }
         }

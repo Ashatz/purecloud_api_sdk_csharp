@@ -32,7 +32,7 @@ namespace ININ.PureCloudApi.Model
             this.ErrorInfo = ErrorInfo;
             
         }
-        
+
     
         /// <summary>
         /// The time at which this phone was provisioned. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
@@ -66,11 +66,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Time: ").Append(Time).Append("\n");
             sb.Append("  Source: ").Append(Source).Append("\n");
             sb.Append("  ErrorInfo: ").Append(ErrorInfo).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -131,16 +130,12 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Time != null)
                     hash = hash * 59 + this.Time.GetHashCode();
-                
                 if (this.Source != null)
                     hash = hash * 59 + this.Source.GetHashCode();
-                
                 if (this.ErrorInfo != null)
                     hash = hash * 59 + this.ErrorInfo.GetHashCode();
-                
                 return hash;
             }
         }

@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new PhoneColumn();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of PhoneColumn
@@ -50,25 +50,22 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<PhoneColumn> (instance, "instance is a PhoneColumn");
         }
 
-        
         /// <summary>
-        /// Test the property 'ColumnName' 
+        /// Test the property 'ColumnName'
         /// </summary>
         [Test]
         public void ColumnNameTest()
         {
-            // TODO: unit test for the property 'ColumnName' 
+            // TODO: unit test for the property 'ColumnName'
         }
-        
         /// <summary>
-        /// Test the property 'Type' 
+        /// Test the property 'Type'
         /// </summary>
         [Test]
         public void TypeTest()
         {
-            // TODO: unit test for the property 'Type' 
+            // TODO: unit test for the property 'Type'
         }
-        
 
     }
 

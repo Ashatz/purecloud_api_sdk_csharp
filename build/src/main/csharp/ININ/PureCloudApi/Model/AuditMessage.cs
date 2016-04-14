@@ -66,7 +66,7 @@ namespace ININ.PureCloudApi.Model
             this.ServiceContext = ServiceContext;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets Id
@@ -188,11 +188,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Changes: ").Append(Changes).Append("\n");
             sb.Append("  Entity: ").Append(Entity).Append("\n");
             sb.Append("  ServiceContext: ").Append(ServiceContext).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -318,55 +317,38 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();
-                
                 if (this.CorrelationId != null)
                     hash = hash * 59 + this.CorrelationId.GetHashCode();
-                
                 if (this.TransactionId != null)
                     hash = hash * 59 + this.TransactionId.GetHashCode();
-                
                 if (this.TransactionInitiator != null)
                     hash = hash * 59 + this.TransactionInitiator.GetHashCode();
-                
                 if (this.Application != null)
                     hash = hash * 59 + this.Application.GetHashCode();
-                
                 if (this.ServiceName != null)
                     hash = hash * 59 + this.ServiceName.GetHashCode();
-                
                 if (this.Level != null)
                     hash = hash * 59 + this.Level.GetHashCode();
-                
                 if (this.Timestamp != null)
                     hash = hash * 59 + this.Timestamp.GetHashCode();
-                
                 if (this.ReceivedTimestamp != null)
                     hash = hash * 59 + this.ReceivedTimestamp.GetHashCode();
-                
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
-                
                 if (this.ActionContext != null)
                     hash = hash * 59 + this.ActionContext.GetHashCode();
-                
                 if (this.Action != null)
                     hash = hash * 59 + this.Action.GetHashCode();
-                
                 if (this.Changes != null)
                     hash = hash * 59 + this.Changes.GetHashCode();
-                
                 if (this.Entity != null)
                     hash = hash * 59 + this.Entity.GetHashCode();
-                
                 if (this.ServiceContext != null)
                     hash = hash * 59 + this.ServiceContext.GetHashCode();
-                
                 return hash;
             }
         }

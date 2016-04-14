@@ -78,7 +78,7 @@ namespace ININ.PureCloudApi.Model
             }
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets Provisions
@@ -130,11 +130,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  HardwareIdType: ").Append(HardwareIdType).Append("\n");
             sb.Append("  AllowReboot: ").Append(AllowReboot).Append("\n");
             sb.Append("  NoRebalance: ").Append(NoRebalance).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -210,25 +209,18 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Provisions != null)
                     hash = hash * 59 + this.Provisions.GetHashCode();
-                
                 if (this.Registers != null)
                     hash = hash * 59 + this.Registers.GetHashCode();
-                
                 if (this.DualRegisters != null)
                     hash = hash * 59 + this.DualRegisters.GetHashCode();
-                
                 if (this.HardwareIdType != null)
                     hash = hash * 59 + this.HardwareIdType.GetHashCode();
-                
                 if (this.AllowReboot != null)
                     hash = hash * 59 + this.AllowReboot.GetHashCode();
-                
                 if (this.NoRebalance != null)
                     hash = hash * 59 + this.NoRebalance.GetHashCode();
-                
                 return hash;
             }
         }

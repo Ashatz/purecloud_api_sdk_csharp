@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new CallRecord();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of CallRecord
@@ -50,25 +50,22 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<CallRecord> (instance, "instance is a CallRecord");
         }
 
-        
         /// <summary>
-        /// Test the property 'LastAttempt' 
+        /// Test the property 'LastAttempt'
         /// </summary>
         [Test]
         public void LastAttemptTest()
         {
-            // TODO: unit test for the property 'LastAttempt' 
+            // TODO: unit test for the property 'LastAttempt'
         }
-        
         /// <summary>
-        /// Test the property 'LastResult' 
+        /// Test the property 'LastResult'
         /// </summary>
         [Test]
         public void LastResultTest()
         {
-            // TODO: unit test for the property 'LastResult' 
+            // TODO: unit test for the property 'LastResult'
         }
-        
 
     }
 

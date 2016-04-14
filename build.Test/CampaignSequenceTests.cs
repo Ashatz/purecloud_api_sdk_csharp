@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new CampaignSequence();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of CampaignSequence
@@ -50,106 +50,94 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<CampaignSequence> (instance, "instance is a CampaignSequence");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'DateCreated' 
+        /// Test the property 'DateCreated'
         /// </summary>
         [Test]
         public void DateCreatedTest()
         {
-            // TODO: unit test for the property 'DateCreated' 
+            // TODO: unit test for the property 'DateCreated'
         }
-        
         /// <summary>
-        /// Test the property 'DateModified' 
+        /// Test the property 'DateModified'
         /// </summary>
         [Test]
         public void DateModifiedTest()
         {
-            // TODO: unit test for the property 'DateModified' 
+            // TODO: unit test for the property 'DateModified'
         }
-        
         /// <summary>
-        /// Test the property 'Version' 
+        /// Test the property 'Version'
         /// </summary>
         [Test]
         public void VersionTest()
         {
-            // TODO: unit test for the property 'Version' 
+            // TODO: unit test for the property 'Version'
         }
-        
         /// <summary>
-        /// Test the property 'Campaigns' 
+        /// Test the property 'Campaigns'
         /// </summary>
         [Test]
         public void CampaignsTest()
         {
-            // TODO: unit test for the property 'Campaigns' 
+            // TODO: unit test for the property 'Campaigns'
         }
-        
         /// <summary>
-        /// Test the property 'CurrentCampaign' 
+        /// Test the property 'CurrentCampaign'
         /// </summary>
         [Test]
         public void CurrentCampaignTest()
         {
-            // TODO: unit test for the property 'CurrentCampaign' 
+            // TODO: unit test for the property 'CurrentCampaign'
         }
-        
         /// <summary>
-        /// Test the property 'Status' 
+        /// Test the property 'Status'
         /// </summary>
         [Test]
         public void StatusTest()
         {
-            // TODO: unit test for the property 'Status' 
+            // TODO: unit test for the property 'Status'
         }
-        
         /// <summary>
-        /// Test the property 'StopMessage' 
+        /// Test the property 'StopMessage'
         /// </summary>
         [Test]
         public void StopMessageTest()
         {
-            // TODO: unit test for the property 'StopMessage' 
+            // TODO: unit test for the property 'StopMessage'
         }
-        
         /// <summary>
-        /// Test the property 'Repeat' 
+        /// Test the property 'Repeat'
         /// </summary>
         [Test]
         public void RepeatTest()
         {
-            // TODO: unit test for the property 'Repeat' 
+            // TODO: unit test for the property 'Repeat'
         }
-        
         /// <summary>
-        /// Test the property 'SelfUri' 
+        /// Test the property 'SelfUri'
         /// </summary>
         [Test]
         public void SelfUriTest()
         {
-            // TODO: unit test for the property 'SelfUri' 
+            // TODO: unit test for the property 'SelfUri'
         }
-        
 
     }
 

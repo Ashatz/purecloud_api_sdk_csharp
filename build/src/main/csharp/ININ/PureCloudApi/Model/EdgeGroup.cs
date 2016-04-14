@@ -17,9 +17,12 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class EdgeGroup :  IEquatable<EdgeGroup>
     { 
-    
+
+        /// <summary>
+        /// Gets or Sets State
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum StateEnum {
+                public enum StateEnum {
             
             [EnumMember(Value = "ACTIVE")]
             Active,
@@ -30,6 +33,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "DELETED")]
             Deleted
         }
+
         
         /// <summary>
         /// Gets or Sets State
@@ -81,7 +85,7 @@ namespace ININ.PureCloudApi.Model
             this.PhoneTrunkBases = PhoneTrunkBases;
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -154,23 +158,23 @@ namespace ININ.PureCloudApi.Model
         public bool? Managed { get; set; }
     
         /// <summary>
-        /// A trunk base settings assignment of trunkType \"EDGE\" to use for edge-to-edge communication.
+        /// A trunk base settings assignment of trunkType \&quot;EDGE\&quot; to use for edge-to-edge communication.
         /// </summary>
-        /// <value>A trunk base settings assignment of trunkType \"EDGE\" to use for edge-to-edge communication.</value>
+        /// <value>A trunk base settings assignment of trunkType \&quot;EDGE\&quot; to use for edge-to-edge communication.</value>
         [DataMember(Name="edgeTrunkBaseAssignment", EmitDefaultValue=false)]
         public TrunkBaseAssignment EdgeTrunkBaseAssignment { get; set; }
     
         /// <summary>
-        /// Trunk base settings assignments of trunkType \"PHONE\" to inherit to edge logical interfaces for phone communication.
+        /// Trunk base settings assignments of trunkType \&quot;PHONE\&quot; to inherit to edge logical interfaces for phone communication.
         /// </summary>
-        /// <value>Trunk base settings assignments of trunkType \"PHONE\" to inherit to edge logical interfaces for phone communication.</value>
+        /// <value>Trunk base settings assignments of trunkType \&quot;PHONE\&quot; to inherit to edge logical interfaces for phone communication.</value>
         [DataMember(Name="phoneTrunkBaseAssignments", EmitDefaultValue=false)]
         public List<TrunkBaseAssignment> PhoneTrunkBaseAssignments { get; set; }
     
         /// <summary>
-        /// Trunk base settings of trunkType \"PHONE\" to inherit to edge logical interface for phone communication.
+        /// Trunk base settings of trunkType \&quot;PHONE\&quot; to inherit to edge logical interface for phone communication.
         /// </summary>
-        /// <value>Trunk base settings of trunkType \"PHONE\" to inherit to edge logical interface for phone communication.</value>
+        /// <value>Trunk base settings of trunkType \&quot;PHONE\&quot; to inherit to edge logical interface for phone communication.</value>
         [DataMember(Name="phoneTrunkBases", EmitDefaultValue=false)]
         public List<UriReference> PhoneTrunkBases { get; set; }
     
@@ -205,11 +209,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  PhoneTrunkBaseAssignments: ").Append(PhoneTrunkBaseAssignments).Append("\n");
             sb.Append("  PhoneTrunkBases: ").Append(PhoneTrunkBases).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -335,55 +338,38 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
-                
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
-                
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
-                
                 if (this.DateModified != null)
                     hash = hash * 59 + this.DateModified.GetHashCode();
-                
                 if (this.ModifiedBy != null)
                     hash = hash * 59 + this.ModifiedBy.GetHashCode();
-                
                 if (this.CreatedBy != null)
                     hash = hash * 59 + this.CreatedBy.GetHashCode();
-                
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
-                
                 if (this.ModifiedByApp != null)
                     hash = hash * 59 + this.ModifiedByApp.GetHashCode();
-                
                 if (this.CreatedByApp != null)
                     hash = hash * 59 + this.CreatedByApp.GetHashCode();
-                
                 if (this.Managed != null)
                     hash = hash * 59 + this.Managed.GetHashCode();
-                
                 if (this.EdgeTrunkBaseAssignment != null)
                     hash = hash * 59 + this.EdgeTrunkBaseAssignment.GetHashCode();
-                
                 if (this.PhoneTrunkBaseAssignments != null)
                     hash = hash * 59 + this.PhoneTrunkBaseAssignments.GetHashCode();
-                
                 if (this.PhoneTrunkBases != null)
                     hash = hash * 59 + this.PhoneTrunkBases.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 return hash;
             }
         }

@@ -61,9 +61,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'DeleteCallabletimesetsCallabletimesetId'
             string callableTimeSetId = null; // TODO: replace null with proper value
-            
             var response = instance.DeleteCallabletimesetsCallabletimesetId(callableTimeSetId);
-            Assert.IsInstanceOf<string> (response, "response is string"); 
+            Assert.IsInstanceOf<string> (response, "response is string");
         }
         
         /// <summary>
@@ -74,9 +73,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'DeleteCallanalysisresponsesetsCallanalysissetId'
             string callAnalysisSetId = null; // TODO: replace null with proper value
-            
             var response = instance.DeleteCallanalysisresponsesetsCallanalysissetId(callAnalysisSetId);
-            Assert.IsInstanceOf<string> (response, "response is string"); 
+            Assert.IsInstanceOf<string> (response, "response is string");
         }
         
         /// <summary>
@@ -87,9 +85,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'DeleteCampaignsCampaignId'
             string campaignId = null; // TODO: replace null with proper value
-            
             var response = instance.DeleteCampaignsCampaignId(campaignId);
-            Assert.IsInstanceOf<string> (response, "response is string"); 
+            Assert.IsInstanceOf<string> (response, "response is string");
         }
         
         /// <summary>
@@ -100,9 +97,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'DeleteCampaignsCampaignIdProgress'
             string campaignId = null; // TODO: replace null with proper value
-            
             var response = instance.DeleteCampaignsCampaignIdProgress(campaignId);
-            Assert.IsInstanceOf<string> (response, "response is string"); 
+            Assert.IsInstanceOf<string> (response, "response is string");
         }
         
         /// <summary>
@@ -113,9 +109,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'DeleteContactlistsContactlistId'
             string contactListId = null; // TODO: replace null with proper value
-            
             var response = instance.DeleteContactlistsContactlistId(contactListId);
-            Assert.IsInstanceOf<string> (response, "response is string"); 
+            Assert.IsInstanceOf<string> (response, "response is string");
         }
         
         /// <summary>
@@ -127,9 +122,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'DeleteContactlistsContactlistIdContactsContactId'
             string contactListId = null; // TODO: replace null with proper value
             string contactId = null; // TODO: replace null with proper value
-            
             var response = instance.DeleteContactlistsContactlistIdContactsContactId(contactListId, contactId);
-            Assert.IsInstanceOf<string> (response, "response is string"); 
+            Assert.IsInstanceOf<string> (response, "response is string");
         }
         
         /// <summary>
@@ -140,9 +134,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'DeleteDnclistsDnclistId'
             string dncListId = null; // TODO: replace null with proper value
-            
             var response = instance.DeleteDnclistsDnclistId(dncListId);
-            Assert.IsInstanceOf<string> (response, "response is string"); 
+            Assert.IsInstanceOf<string> (response, "response is string");
         }
         
         /// <summary>
@@ -153,9 +146,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'DeleteRulesetsRulesetId'
             string ruleSetId = null; // TODO: replace null with proper value
-            
             var response = instance.DeleteRulesetsRulesetId(ruleSetId);
-            Assert.IsInstanceOf<string> (response, "response is string"); 
+            Assert.IsInstanceOf<string> (response, "response is string");
         }
         
         /// <summary>
@@ -166,9 +158,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'DeleteSchedulesCampaignsCampaignId'
             string campaignId = null; // TODO: replace null with proper value
-            
             var response = instance.DeleteSchedulesCampaignsCampaignId(campaignId);
-            Assert.IsInstanceOf<string> (response, "response is string"); 
+            Assert.IsInstanceOf<string> (response, "response is string");
         }
         
         /// <summary>
@@ -179,9 +170,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'DeleteSchedulesSequencesSequenceId'
             string sequenceId = null; // TODO: replace null with proper value
-            
             var response = instance.DeleteSchedulesSequencesSequenceId(sequenceId);
-            Assert.IsInstanceOf<string> (response, "response is string"); 
+            Assert.IsInstanceOf<string> (response, "response is string");
         }
         
         /// <summary>
@@ -192,9 +182,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'DeleteSequencesSequenceId'
             string sequenceId = null; // TODO: replace null with proper value
-            
             var response = instance.DeleteSequencesSequenceId(sequenceId);
-            Assert.IsInstanceOf<string> (response, "response is string"); 
+            Assert.IsInstanceOf<string> (response, "response is string");
         }
         
         /// <summary>
@@ -210,9 +199,8 @@ namespace ININ.PureCloudApi.Test
             string name = null; // TODO: replace null with proper value
             string sortBy = null; // TODO: replace null with proper value
             string sortOrder = null; // TODO: replace null with proper value
-            
             var response = instance.GetCallabletimesets(pageSize, pageNumber, filterType, name, sortBy, sortOrder);
-            Assert.IsInstanceOf<CallableTimeSetEntityListing> (response, "response is CallableTimeSetEntityListing"); 
+            Assert.IsInstanceOf<CallableTimeSetEntityListing> (response, "response is CallableTimeSetEntityListing");
         }
         
         /// <summary>
@@ -223,9 +211,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'GetCallabletimesetsCallabletimesetId'
             string callableTimeSetId = null; // TODO: replace null with proper value
-            
             var response = instance.GetCallabletimesetsCallabletimesetId(callableTimeSetId);
-            Assert.IsInstanceOf<CallableTimeSet> (response, "response is CallableTimeSet"); 
+            Assert.IsInstanceOf<CallableTimeSet> (response, "response is CallableTimeSet");
         }
         
         /// <summary>
@@ -241,9 +228,8 @@ namespace ININ.PureCloudApi.Test
             string name = null; // TODO: replace null with proper value
             string sortBy = null; // TODO: replace null with proper value
             string sortOrder = null; // TODO: replace null with proper value
-            
             var response = instance.GetCallanalysisresponsesets(pageSize, pageNumber, filterType, name, sortBy, sortOrder);
-            Assert.IsInstanceOf<ResponseSetEntityListing> (response, "response is ResponseSetEntityListing"); 
+            Assert.IsInstanceOf<ResponseSetEntityListing> (response, "response is ResponseSetEntityListing");
         }
         
         /// <summary>
@@ -254,9 +240,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'GetCallanalysisresponsesetsCallanalysissetId'
             string callAnalysisSetId = null; // TODO: replace null with proper value
-            
             var response = instance.GetCallanalysisresponsesetsCallanalysissetId(callAnalysisSetId);
-            Assert.IsInstanceOf<ResponseSet> (response, "response is ResponseSet"); 
+            Assert.IsInstanceOf<ResponseSet> (response, "response is ResponseSet");
         }
         
         /// <summary>
@@ -277,9 +262,8 @@ namespace ININ.PureCloudApi.Test
             string callAnalysisResponseSetId = null; // TODO: replace null with proper value
             string sortBy = null; // TODO: replace null with proper value
             string sortOrder = null; // TODO: replace null with proper value
-            
             var response = instance.GetCampaigns(pageSize, pageNumber, filterType, name, contactListId, dncListId, distributionQueueId, edgeGroupId, callAnalysisResponseSetId, sortBy, sortOrder);
-            Assert.IsInstanceOf<CampaignEntityListing> (response, "response is CampaignEntityListing"); 
+            Assert.IsInstanceOf<CampaignEntityListing> (response, "response is CampaignEntityListing");
         }
         
         /// <summary>
@@ -290,9 +274,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'GetCampaignsCampaignId'
             string campaignId = null; // TODO: replace null with proper value
-            
             var response = instance.GetCampaignsCampaignId(campaignId);
-            Assert.IsInstanceOf<Campaign> (response, "response is Campaign"); 
+            Assert.IsInstanceOf<Campaign> (response, "response is Campaign");
         }
         
         /// <summary>
@@ -303,9 +286,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'GetCampaignsCampaignIdDiagnostics'
             string campaignId = null; // TODO: replace null with proper value
-            
             var response = instance.GetCampaignsCampaignIdDiagnostics(campaignId);
-            Assert.IsInstanceOf<CampaignDiagnostics> (response, "response is CampaignDiagnostics"); 
+            Assert.IsInstanceOf<CampaignDiagnostics> (response, "response is CampaignDiagnostics");
         }
         
         /// <summary>
@@ -316,9 +298,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'GetCampaignsCampaignIdProgress'
             string campaignId = null; // TODO: replace null with proper value
-            
             var response = instance.GetCampaignsCampaignIdProgress(campaignId);
-            Assert.IsInstanceOf<CampaignProgress> (response, "response is CampaignProgress"); 
+            Assert.IsInstanceOf<CampaignProgress> (response, "response is CampaignProgress");
         }
         
         /// <summary>
@@ -329,9 +310,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'GetCampaignsCampaignIdStats'
             string campaignId = null; // TODO: replace null with proper value
-            
             var response = instance.GetCampaignsCampaignIdStats(campaignId);
-            Assert.IsInstanceOf<CampaignStats> (response, "response is CampaignStats"); 
+            Assert.IsInstanceOf<CampaignStats> (response, "response is CampaignStats");
         }
         
         /// <summary>
@@ -349,9 +329,8 @@ namespace ININ.PureCloudApi.Test
             string name = null; // TODO: replace null with proper value
             string sortBy = null; // TODO: replace null with proper value
             string sortOrder = null; // TODO: replace null with proper value
-            
             var response = instance.GetContactlists(includeImportStatus, includeSize, pageSize, pageNumber, filterType, name, sortBy, sortOrder);
-            Assert.IsInstanceOf<ContactListEntityListing> (response, "response is ContactListEntityListing"); 
+            Assert.IsInstanceOf<ContactListEntityListing> (response, "response is ContactListEntityListing");
         }
         
         /// <summary>
@@ -364,9 +343,8 @@ namespace ININ.PureCloudApi.Test
             string contactListId = null; // TODO: replace null with proper value
             bool? includeImportStatus = null; // TODO: replace null with proper value
             bool? includeSize = null; // TODO: replace null with proper value
-            
             var response = instance.GetContactlistsContactlistId(contactListId, includeImportStatus, includeSize);
-            Assert.IsInstanceOf<ContactList> (response, "response is ContactList"); 
+            Assert.IsInstanceOf<ContactList> (response, "response is ContactList");
         }
         
         /// <summary>
@@ -378,9 +356,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'GetContactlistsContactlistIdContactsContactId'
             string contactListId = null; // TODO: replace null with proper value
             string contactId = null; // TODO: replace null with proper value
-            
             var response = instance.GetContactlistsContactlistIdContactsContactId(contactListId, contactId);
-            Assert.IsInstanceOf<DialerContact> (response, "response is DialerContact"); 
+            Assert.IsInstanceOf<DialerContact> (response, "response is DialerContact");
         }
         
         /// <summary>
@@ -391,9 +368,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'GetContactlistsContactlistIdImportstatus'
             string contactListId = null; // TODO: replace null with proper value
-            
             var response = instance.GetContactlistsContactlistIdImportstatus(contactListId);
-            Assert.IsInstanceOf<ImportStatus> (response, "response is ImportStatus"); 
+            Assert.IsInstanceOf<ImportStatus> (response, "response is ImportStatus");
         }
         
         /// <summary>
@@ -411,9 +387,8 @@ namespace ININ.PureCloudApi.Test
             string name = null; // TODO: replace null with proper value
             string sortBy = null; // TODO: replace null with proper value
             string sortOrder = null; // TODO: replace null with proper value
-            
             var response = instance.GetDnclists(includeImportStatus, includeSize, pageSize, pageNumber, filterType, name, sortBy, sortOrder);
-            Assert.IsInstanceOf<DncListEntityListing> (response, "response is DncListEntityListing"); 
+            Assert.IsInstanceOf<DncListEntityListing> (response, "response is DncListEntityListing");
         }
         
         /// <summary>
@@ -426,9 +401,8 @@ namespace ININ.PureCloudApi.Test
             string dncListId = null; // TODO: replace null with proper value
             bool? includeImportStatus = null; // TODO: replace null with proper value
             bool? includeSize = null; // TODO: replace null with proper value
-            
             var response = instance.GetDnclistsDnclistId(dncListId, includeImportStatus, includeSize);
-            Assert.IsInstanceOf<DncList> (response, "response is DncList"); 
+            Assert.IsInstanceOf<DncList> (response, "response is DncList");
         }
         
         /// <summary>
@@ -439,9 +413,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'GetDnclistsDnclistIdImportstatus'
             string dncListId = null; // TODO: replace null with proper value
-            
             var response = instance.GetDnclistsDnclistIdImportstatus(dncListId);
-            Assert.IsInstanceOf<ImportStatus> (response, "response is ImportStatus"); 
+            Assert.IsInstanceOf<ImportStatus> (response, "response is ImportStatus");
         }
         
         /// <summary>
@@ -457,9 +430,8 @@ namespace ININ.PureCloudApi.Test
             string name = null; // TODO: replace null with proper value
             string sortBy = null; // TODO: replace null with proper value
             string sortOrder = null; // TODO: replace null with proper value
-            
             var response = instance.GetRulesets(pageSize, pageNumber, filterType, name, sortBy, sortOrder);
-            Assert.IsInstanceOf<RuleSetEntityListing> (response, "response is RuleSetEntityListing"); 
+            Assert.IsInstanceOf<RuleSetEntityListing> (response, "response is RuleSetEntityListing");
         }
         
         /// <summary>
@@ -470,9 +442,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'GetRulesetsRulesetId'
             string ruleSetId = null; // TODO: replace null with proper value
-            
             var response = instance.GetRulesetsRulesetId(ruleSetId);
-            Assert.IsInstanceOf<RuleSet> (response, "response is RuleSet"); 
+            Assert.IsInstanceOf<RuleSet> (response, "response is RuleSet");
         }
         
         /// <summary>
@@ -482,9 +453,8 @@ namespace ININ.PureCloudApi.Test
         public void GetSchedulesCampaignsTest()
         {
             // TODO: add unit test for the method 'GetSchedulesCampaigns'
-            
             var response = instance.GetSchedulesCampaigns();
-            Assert.IsInstanceOf<List<CampaignSchedule>> (response, "response is List<CampaignSchedule>"); 
+            Assert.IsInstanceOf<List<CampaignSchedule>> (response, "response is List<CampaignSchedule>");
         }
         
         /// <summary>
@@ -495,9 +465,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'GetSchedulesCampaignsCampaignId'
             string campaignId = null; // TODO: replace null with proper value
-            
             var response = instance.GetSchedulesCampaignsCampaignId(campaignId);
-            Assert.IsInstanceOf<CampaignSchedule> (response, "response is CampaignSchedule"); 
+            Assert.IsInstanceOf<CampaignSchedule> (response, "response is CampaignSchedule");
         }
         
         /// <summary>
@@ -507,9 +476,8 @@ namespace ININ.PureCloudApi.Test
         public void GetSchedulesSequencesTest()
         {
             // TODO: add unit test for the method 'GetSchedulesSequences'
-            
             var response = instance.GetSchedulesSequences();
-            Assert.IsInstanceOf<List<SequenceSchedule>> (response, "response is List<SequenceSchedule>"); 
+            Assert.IsInstanceOf<List<SequenceSchedule>> (response, "response is List<SequenceSchedule>");
         }
         
         /// <summary>
@@ -520,9 +488,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'GetSchedulesSequencesSequenceId'
             string sequenceId = null; // TODO: replace null with proper value
-            
             var response = instance.GetSchedulesSequencesSequenceId(sequenceId);
-            Assert.IsInstanceOf<SequenceSchedule> (response, "response is SequenceSchedule"); 
+            Assert.IsInstanceOf<SequenceSchedule> (response, "response is SequenceSchedule");
         }
         
         /// <summary>
@@ -538,9 +505,8 @@ namespace ININ.PureCloudApi.Test
             string name = null; // TODO: replace null with proper value
             string sortBy = null; // TODO: replace null with proper value
             string sortOrder = null; // TODO: replace null with proper value
-            
             var response = instance.GetSequences(pageSize, pageNumber, filterType, name, sortBy, sortOrder);
-            Assert.IsInstanceOf<CampaignSequenceEntityListing> (response, "response is CampaignSequenceEntityListing"); 
+            Assert.IsInstanceOf<CampaignSequenceEntityListing> (response, "response is CampaignSequenceEntityListing");
         }
         
         /// <summary>
@@ -551,9 +517,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'GetSequencesSequenceId'
             string sequenceId = null; // TODO: replace null with proper value
-            
             var response = instance.GetSequencesSequenceId(sequenceId);
-            Assert.IsInstanceOf<CampaignSequence> (response, "response is CampaignSequence"); 
+            Assert.IsInstanceOf<CampaignSequence> (response, "response is CampaignSequence");
         }
         
         /// <summary>
@@ -563,9 +528,8 @@ namespace ININ.PureCloudApi.Test
         public void GetWrapupcodemappingsTest()
         {
             // TODO: add unit test for the method 'GetWrapupcodemappings'
-            
             var response = instance.GetWrapupcodemappings();
-            Assert.IsInstanceOf<WrapUpCodeMapping> (response, "response is WrapUpCodeMapping"); 
+            Assert.IsInstanceOf<WrapUpCodeMapping> (response, "response is WrapUpCodeMapping");
         }
         
         /// <summary>
@@ -581,9 +545,8 @@ namespace ININ.PureCloudApi.Test
             string sortBy = null; // TODO: replace null with proper value
             string sortOrder = null; // TODO: replace null with proper value
             bool? facetsOnly = null; // TODO: replace null with proper value
-            
             var response = instance.PostAudits(body, pageSize, pageNumber, sortBy, sortOrder, facetsOnly);
-            Assert.IsInstanceOf<AuditSearchResult> (response, "response is AuditSearchResult"); 
+            Assert.IsInstanceOf<AuditSearchResult> (response, "response is AuditSearchResult");
         }
         
         /// <summary>
@@ -594,9 +557,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'PostCallabletimesets'
             CallableTimeSet body = null; // TODO: replace null with proper value
-            
             var response = instance.PostCallabletimesets(body);
-            Assert.IsInstanceOf<CallableTimeSet> (response, "response is CallableTimeSet"); 
+            Assert.IsInstanceOf<CallableTimeSet> (response, "response is CallableTimeSet");
         }
         
         /// <summary>
@@ -607,9 +569,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'PostCallanalysisresponsesets'
             ResponseSet body = null; // TODO: replace null with proper value
-            
             var response = instance.PostCallanalysisresponsesets(body);
-            Assert.IsInstanceOf<ResponseSet> (response, "response is ResponseSet"); 
+            Assert.IsInstanceOf<ResponseSet> (response, "response is ResponseSet");
         }
         
         /// <summary>
@@ -620,9 +581,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'PostCampaigns'
             Campaign body = null; // TODO: replace null with proper value
-            
             var response = instance.PostCampaigns(body);
-            Assert.IsInstanceOf<Campaign> (response, "response is Campaign"); 
+            Assert.IsInstanceOf<Campaign> (response, "response is Campaign");
         }
         
         /// <summary>
@@ -634,9 +594,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'PostCampaignsCampaignIdCallbackSchedule'
             string campaignId = null; // TODO: replace null with proper value
             ContactCallbackRequest body = null; // TODO: replace null with proper value
-            
             var response = instance.PostCampaignsCampaignIdCallbackSchedule(campaignId, body);
-            Assert.IsInstanceOf<ContactCallbackRequest> (response, "response is ContactCallbackRequest"); 
+            Assert.IsInstanceOf<ContactCallbackRequest> (response, "response is ContactCallbackRequest");
         }
         
         /// <summary>
@@ -647,9 +606,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'PostCampaignsProgress'
             List<string> body = null; // TODO: replace null with proper value
-            
             var response = instance.PostCampaignsProgress(body);
-            Assert.IsInstanceOf<List<CampaignProgress>> (response, "response is List<CampaignProgress>"); 
+            Assert.IsInstanceOf<List<CampaignProgress>> (response, "response is List<CampaignProgress>");
         }
         
         /// <summary>
@@ -660,9 +618,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'PostContactlists'
             ContactList body = null; // TODO: replace null with proper value
-            
             var response = instance.PostContactlists(body);
-            Assert.IsInstanceOf<ContactList> (response, "response is ContactList"); 
+            Assert.IsInstanceOf<ContactList> (response, "response is ContactList");
         }
         
         /// <summary>
@@ -675,9 +632,8 @@ namespace ININ.PureCloudApi.Test
             string contactListId = null; // TODO: replace null with proper value
             List<DialerContact> body = null; // TODO: replace null with proper value
             bool? priority = null; // TODO: replace null with proper value
-            
             var response = instance.PostContactlistsContactlistIdContacts(contactListId, body, priority);
-            Assert.IsInstanceOf<DialerContact> (response, "response is DialerContact"); 
+            Assert.IsInstanceOf<DialerContact> (response, "response is DialerContact");
         }
         
         /// <summary>
@@ -688,9 +644,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'PostContactlistsContactlistIdExport'
             string contactListId = null; // TODO: replace null with proper value
-            
             var response = instance.PostContactlistsContactlistIdExport(contactListId);
-            Assert.IsInstanceOf<string> (response, "response is string"); 
+            Assert.IsInstanceOf<string> (response, "response is string");
         }
         
         /// <summary>
@@ -701,9 +656,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'PostConversationsConversationIdDnc'
             string conversationId = null; // TODO: replace null with proper value
-            
             instance.PostConversationsConversationIdDnc(conversationId);
-             
+            
         }
         
         /// <summary>
@@ -714,9 +668,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'PostDnclists'
             DncList body = null; // TODO: replace null with proper value
-            
             var response = instance.PostDnclists(body);
-            Assert.IsInstanceOf<DncList> (response, "response is DncList"); 
+            Assert.IsInstanceOf<DncList> (response, "response is DncList");
         }
         
         /// <summary>
@@ -727,9 +680,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'PostDnclistsDnclistIdExport'
             string dncListId = null; // TODO: replace null with proper value
-            
             var response = instance.PostDnclistsDnclistIdExport(dncListId);
-            Assert.IsInstanceOf<string> (response, "response is string"); 
+            Assert.IsInstanceOf<string> (response, "response is string");
         }
         
         /// <summary>
@@ -741,9 +693,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'PostDnclistsDnclistIdPhonenumbers'
             string dncListId = null; // TODO: replace null with proper value
             List<string> body = null; // TODO: replace null with proper value
-            
             instance.PostDnclistsDnclistIdPhonenumbers(dncListId, body);
-             
+            
         }
         
         /// <summary>
@@ -754,9 +705,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'PostRulesets'
             RuleSet body = null; // TODO: replace null with proper value
-            
             var response = instance.PostRulesets(body);
-            Assert.IsInstanceOf<RuleSet> (response, "response is RuleSet"); 
+            Assert.IsInstanceOf<RuleSet> (response, "response is RuleSet");
         }
         
         /// <summary>
@@ -767,9 +717,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'PostSequences'
             CampaignSequence body = null; // TODO: replace null with proper value
-            
             var response = instance.PostSequences(body);
-            Assert.IsInstanceOf<CampaignSequence> (response, "response is CampaignSequence"); 
+            Assert.IsInstanceOf<CampaignSequence> (response, "response is CampaignSequence");
         }
         
         /// <summary>
@@ -781,9 +730,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'PutCallabletimesetsCallabletimesetId'
             string callableTimeSetId = null; // TODO: replace null with proper value
             CallableTimeSet body = null; // TODO: replace null with proper value
-            
             var response = instance.PutCallabletimesetsCallabletimesetId(callableTimeSetId, body);
-            Assert.IsInstanceOf<CallableTimeSet> (response, "response is CallableTimeSet"); 
+            Assert.IsInstanceOf<CallableTimeSet> (response, "response is CallableTimeSet");
         }
         
         /// <summary>
@@ -795,9 +743,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'PutCallanalysisresponsesetsCallanalysissetId'
             string callAnalysisSetId = null; // TODO: replace null with proper value
             ResponseSet body = null; // TODO: replace null with proper value
-            
             var response = instance.PutCallanalysisresponsesetsCallanalysissetId(callAnalysisSetId, body);
-            Assert.IsInstanceOf<ResponseSet> (response, "response is ResponseSet"); 
+            Assert.IsInstanceOf<ResponseSet> (response, "response is ResponseSet");
         }
         
         /// <summary>
@@ -809,9 +756,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'PutCampaignsCampaignId'
             string campaignId = null; // TODO: replace null with proper value
             Campaign body = null; // TODO: replace null with proper value
-            
             var response = instance.PutCampaignsCampaignId(campaignId, body);
-            Assert.IsInstanceOf<Campaign> (response, "response is Campaign"); 
+            Assert.IsInstanceOf<Campaign> (response, "response is Campaign");
         }
         
         /// <summary>
@@ -824,9 +770,8 @@ namespace ININ.PureCloudApi.Test
             string campaignId = null; // TODO: replace null with proper value
             string userId = null; // TODO: replace null with proper value
             Agent body = null; // TODO: replace null with proper value
-            
             var response = instance.PutCampaignsCampaignIdAgentsUserId(campaignId, userId, body);
-            Assert.IsInstanceOf<string> (response, "response is string"); 
+            Assert.IsInstanceOf<string> (response, "response is string");
         }
         
         /// <summary>
@@ -838,9 +783,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'PutContactlistsContactlistId'
             string contactListId = null; // TODO: replace null with proper value
             ContactList body = null; // TODO: replace null with proper value
-            
             var response = instance.PutContactlistsContactlistId(contactListId, body);
-            Assert.IsInstanceOf<ContactList> (response, "response is ContactList"); 
+            Assert.IsInstanceOf<ContactList> (response, "response is ContactList");
         }
         
         /// <summary>
@@ -853,9 +797,8 @@ namespace ININ.PureCloudApi.Test
             string contactListId = null; // TODO: replace null with proper value
             string contactId = null; // TODO: replace null with proper value
             DialerContact body = null; // TODO: replace null with proper value
-            
             var response = instance.PutContactlistsContactlistIdContactsContactId(contactListId, contactId, body);
-            Assert.IsInstanceOf<DialerContact> (response, "response is DialerContact"); 
+            Assert.IsInstanceOf<DialerContact> (response, "response is DialerContact");
         }
         
         /// <summary>
@@ -867,9 +810,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'PutDnclistsDnclistId'
             string dncListId = null; // TODO: replace null with proper value
             DncList body = null; // TODO: replace null with proper value
-            
             var response = instance.PutDnclistsDnclistId(dncListId, body);
-            Assert.IsInstanceOf<DncList> (response, "response is DncList"); 
+            Assert.IsInstanceOf<DncList> (response, "response is DncList");
         }
         
         /// <summary>
@@ -881,9 +823,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'PutRulesetsRulesetId'
             string ruleSetId = null; // TODO: replace null with proper value
             RuleSet body = null; // TODO: replace null with proper value
-            
             var response = instance.PutRulesetsRulesetId(ruleSetId, body);
-            Assert.IsInstanceOf<RuleSet> (response, "response is RuleSet"); 
+            Assert.IsInstanceOf<RuleSet> (response, "response is RuleSet");
         }
         
         /// <summary>
@@ -895,9 +836,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'PutSchedulesCampaignsCampaignId'
             string campaignId = null; // TODO: replace null with proper value
             CampaignSchedule body = null; // TODO: replace null with proper value
-            
             var response = instance.PutSchedulesCampaignsCampaignId(campaignId, body);
-            Assert.IsInstanceOf<CampaignSchedule> (response, "response is CampaignSchedule"); 
+            Assert.IsInstanceOf<CampaignSchedule> (response, "response is CampaignSchedule");
         }
         
         /// <summary>
@@ -909,9 +849,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'PutSchedulesSequencesSequenceId'
             string sequenceId = null; // TODO: replace null with proper value
             SequenceSchedule body = null; // TODO: replace null with proper value
-            
             var response = instance.PutSchedulesSequencesSequenceId(sequenceId, body);
-            Assert.IsInstanceOf<SequenceSchedule> (response, "response is SequenceSchedule"); 
+            Assert.IsInstanceOf<SequenceSchedule> (response, "response is SequenceSchedule");
         }
         
         /// <summary>
@@ -923,9 +862,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'PutSequencesSequenceId'
             string sequenceId = null; // TODO: replace null with proper value
             CampaignSequence body = null; // TODO: replace null with proper value
-            
             var response = instance.PutSequencesSequenceId(sequenceId, body);
-            Assert.IsInstanceOf<CampaignSequence> (response, "response is CampaignSequence"); 
+            Assert.IsInstanceOf<CampaignSequence> (response, "response is CampaignSequence");
         }
         
         /// <summary>
@@ -936,9 +874,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'PutWrapupcodemappings'
             WrapUpCodeMapping body = null; // TODO: replace null with proper value
-            
             var response = instance.PutWrapupcodemappings(body);
-            Assert.IsInstanceOf<WrapUpCodeMapping> (response, "response is WrapUpCodeMapping"); 
+            Assert.IsInstanceOf<WrapUpCodeMapping> (response, "response is WrapUpCodeMapping");
         }
         
     }

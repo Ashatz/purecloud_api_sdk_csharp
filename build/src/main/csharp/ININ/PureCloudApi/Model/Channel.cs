@@ -28,7 +28,7 @@ namespace ININ.PureCloudApi.Model
             this.ConnectUri = ConnectUri;
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -53,11 +53,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class Channel {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  ConnectUri: ").Append(ConnectUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -113,13 +112,10 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.ConnectUri != null)
                     hash = hash * 59 + this.ConnectUri.GetHashCode();
-                
                 return hash;
             }
         }

@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new DisconnectReason();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of DisconnectReason
@@ -50,34 +50,30 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<DisconnectReason> (instance, "instance is a DisconnectReason");
         }
 
-        
         /// <summary>
-        /// Test the property 'Type' 
+        /// Test the property 'Type'
         /// </summary>
         [Test]
         public void TypeTest()
         {
-            // TODO: unit test for the property 'Type' 
+            // TODO: unit test for the property 'Type'
         }
-        
         /// <summary>
-        /// Test the property 'Code' 
+        /// Test the property 'Code'
         /// </summary>
         [Test]
         public void CodeTest()
         {
-            // TODO: unit test for the property 'Code' 
+            // TODO: unit test for the property 'Code'
         }
-        
         /// <summary>
-        /// Test the property 'Phrase' 
+        /// Test the property 'Phrase'
         /// </summary>
         [Test]
         public void PhraseTest()
         {
-            // TODO: unit test for the property 'Phrase' 
+            // TODO: unit test for the property 'Phrase'
         }
-        
 
     }
 

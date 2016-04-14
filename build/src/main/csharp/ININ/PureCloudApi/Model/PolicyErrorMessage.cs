@@ -40,7 +40,7 @@ namespace ININ.PureCloudApi.Model
             this.InsertDate = InsertDate;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets StatusCode
@@ -100,11 +100,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  CorrelationId: ").Append(CorrelationId).Append("\n");
             sb.Append("  UserParams: ").Append(UserParams).Append("\n");
             sb.Append("  InsertDate: ").Append(InsertDate).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -185,28 +184,20 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.StatusCode != null)
                     hash = hash * 59 + this.StatusCode.GetHashCode();
-                
                 if (this.UserMessage != null)
                     hash = hash * 59 + this.UserMessage.GetHashCode();
-                
                 if (this.UserParamsMessage != null)
                     hash = hash * 59 + this.UserParamsMessage.GetHashCode();
-                
                 if (this.ErrorCode != null)
                     hash = hash * 59 + this.ErrorCode.GetHashCode();
-                
                 if (this.CorrelationId != null)
                     hash = hash * 59 + this.CorrelationId.GetHashCode();
-                
                 if (this.UserParams != null)
                     hash = hash * 59 + this.UserParams.GetHashCode();
-                
                 if (this.InsertDate != null)
                     hash = hash * 59 + this.InsertDate.GetHashCode();
-                
                 return hash;
             }
         }

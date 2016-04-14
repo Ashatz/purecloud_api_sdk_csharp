@@ -17,9 +17,12 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class AcwSettings :  IEquatable<AcwSettings>
     { 
-    
+
+        /// <summary>
+        /// Gets or Sets WrapupPrompt
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum WrapupPromptEnum {
+                public enum WrapupPromptEnum {
             
             [EnumMember(Value = "MANDATORY")]
             Mandatory,
@@ -33,6 +36,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "MANDATORY_FORCED_TIMEOUT")]
             MandatoryForcedTimeout
         }
+
         
         /// <summary>
         /// Gets or Sets WrapupPrompt
@@ -52,7 +56,7 @@ namespace ININ.PureCloudApi.Model
             this.TimeoutMs = TimeoutMs;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets TimeoutMs
@@ -70,11 +74,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class AcwSettings {\n");
             sb.Append("  WrapupPrompt: ").Append(WrapupPrompt).Append("\n");
             sb.Append("  TimeoutMs: ").Append(TimeoutMs).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -130,13 +133,10 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.WrapupPrompt != null)
                     hash = hash * 59 + this.WrapupPrompt.GetHashCode();
-                
                 if (this.TimeoutMs != null)
                     hash = hash * 59 + this.TimeoutMs.GetHashCode();
-                
                 return hash;
             }
         }

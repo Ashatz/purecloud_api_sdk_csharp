@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new AggregationQuery();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of AggregationQuery
@@ -50,61 +50,54 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<AggregationQuery> (instance, "instance is a AggregationQuery");
         }
 
-        
         /// <summary>
-        /// Test the property 'Interval' 
+        /// Test the property 'Interval'
         /// </summary>
         [Test]
         public void IntervalTest()
         {
-            // TODO: unit test for the property 'Interval' 
+            // TODO: unit test for the property 'Interval'
         }
-        
         /// <summary>
-        /// Test the property 'Granularity' 
+        /// Test the property 'Granularity'
         /// </summary>
         [Test]
         public void GranularityTest()
         {
-            // TODO: unit test for the property 'Granularity' 
+            // TODO: unit test for the property 'Granularity'
         }
-        
         /// <summary>
-        /// Test the property 'GroupBy' 
+        /// Test the property 'GroupBy'
         /// </summary>
         [Test]
         public void GroupByTest()
         {
-            // TODO: unit test for the property 'GroupBy' 
+            // TODO: unit test for the property 'GroupBy'
         }
-        
         /// <summary>
-        /// Test the property 'Filter' 
+        /// Test the property 'Filter'
         /// </summary>
         [Test]
         public void FilterTest()
         {
-            // TODO: unit test for the property 'Filter' 
+            // TODO: unit test for the property 'Filter'
         }
-        
         /// <summary>
-        /// Test the property 'Metrics' 
+        /// Test the property 'Metrics'
         /// </summary>
         [Test]
         public void MetricsTest()
         {
-            // TODO: unit test for the property 'Metrics' 
+            // TODO: unit test for the property 'Metrics'
         }
-        
         /// <summary>
-        /// Test the property 'FlattenMultivaluedDimensions' 
+        /// Test the property 'FlattenMultivaluedDimensions'
         /// </summary>
         [Test]
         public void FlattenMultivaluedDimensionsTest()
         {
-            // TODO: unit test for the property 'FlattenMultivaluedDimensions' 
+            // TODO: unit test for the property 'FlattenMultivaluedDimensions'
         }
-        
 
     }
 

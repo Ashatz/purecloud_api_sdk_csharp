@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new DomainPermission();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of DomainPermission
@@ -50,52 +50,46 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<DomainPermission> (instance, "instance is a DomainPermission");
         }
 
-        
         /// <summary>
-        /// Test the property 'Domain' 
+        /// Test the property 'Domain'
         /// </summary>
         [Test]
         public void DomainTest()
         {
-            // TODO: unit test for the property 'Domain' 
+            // TODO: unit test for the property 'Domain'
         }
-        
         /// <summary>
-        /// Test the property 'EntityType' 
+        /// Test the property 'EntityType'
         /// </summary>
         [Test]
         public void EntityTypeTest()
         {
-            // TODO: unit test for the property 'EntityType' 
+            // TODO: unit test for the property 'EntityType'
         }
-        
         /// <summary>
-        /// Test the property 'Action' 
+        /// Test the property 'Action'
         /// </summary>
         [Test]
         public void ActionTest()
         {
-            // TODO: unit test for the property 'Action' 
+            // TODO: unit test for the property 'Action'
         }
-        
         /// <summary>
-        /// Test the property 'Label' 
+        /// Test the property 'Label'
         /// </summary>
         [Test]
         public void LabelTest()
         {
-            // TODO: unit test for the property 'Label' 
+            // TODO: unit test for the property 'Label'
         }
-        
         /// <summary>
-        /// Test the property 'AllowsConditions' 
+        /// Test the property 'AllowsConditions'
         /// </summary>
         [Test]
         public void AllowsConditionsTest()
         {
-            // TODO: unit test for the property 'AllowsConditions' 
+            // TODO: unit test for the property 'AllowsConditions'
         }
-        
 
     }
 

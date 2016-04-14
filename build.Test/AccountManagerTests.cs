@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new AccountManager();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of AccountManager
@@ -50,43 +50,38 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<AccountManager> (instance, "instance is a AccountManager");
         }
 
-        
         /// <summary>
-        /// Test the property 'FirstName' 
+        /// Test the property 'FirstName'
         /// </summary>
         [Test]
         public void FirstNameTest()
         {
-            // TODO: unit test for the property 'FirstName' 
+            // TODO: unit test for the property 'FirstName'
         }
-        
         /// <summary>
-        /// Test the property 'LastName' 
+        /// Test the property 'LastName'
         /// </summary>
         [Test]
         public void LastNameTest()
         {
-            // TODO: unit test for the property 'LastName' 
+            // TODO: unit test for the property 'LastName'
         }
-        
         /// <summary>
-        /// Test the property 'Phone' 
+        /// Test the property 'Phone'
         /// </summary>
         [Test]
         public void PhoneTest()
         {
-            // TODO: unit test for the property 'Phone' 
+            // TODO: unit test for the property 'Phone'
         }
-        
         /// <summary>
-        /// Test the property 'Email' 
+        /// Test the property 'Email'
         /// </summary>
         [Test]
         public void EmailTest()
         {
-            // TODO: unit test for the property 'Email' 
+            // TODO: unit test for the property 'Email'
         }
-        
 
     }
 

@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new AssociatedDocument();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of AssociatedDocument
@@ -50,25 +50,22 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<AssociatedDocument> (instance, "instance is a AssociatedDocument");
         }
 
-        
         /// <summary>
-        /// Test the property 'Document' 
+        /// Test the property 'Document'
         /// </summary>
         [Test]
         public void DocumentTest()
         {
-            // TODO: unit test for the property 'Document' 
+            // TODO: unit test for the property 'Document'
         }
-        
         /// <summary>
-        /// Test the property 'DocumentAssociationType' 
+        /// Test the property 'DocumentAssociationType'
         /// </summary>
         [Test]
         public void DocumentAssociationTypeTest()
         {
-            // TODO: unit test for the property 'DocumentAssociationType' 
+            // TODO: unit test for the property 'DocumentAssociationType'
         }
-        
 
     }
 

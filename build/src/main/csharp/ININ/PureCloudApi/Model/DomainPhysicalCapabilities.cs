@@ -46,7 +46,7 @@ namespace ININ.PureCloudApi.Model
             }
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets Vlan
@@ -70,11 +70,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class DomainPhysicalCapabilities {\n");
             sb.Append("  Vlan: ").Append(Vlan).Append("\n");
             sb.Append("  Team: ").Append(Team).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -130,13 +129,10 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Vlan != null)
                     hash = hash * 59 + this.Vlan.GetHashCode();
-                
                 if (this.Team != null)
                     hash = hash * 59 + this.Team.GetHashCode();
-                
                 return hash;
             }
         }

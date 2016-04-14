@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new PresenceQueryResponse();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of PresenceQueryResponse
@@ -50,25 +50,22 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<PresenceQueryResponse> (instance, "instance is a PresenceQueryResponse");
         }
 
-        
         /// <summary>
-        /// Test the property 'SystemToOrganizationMappings' 
+        /// Test the property 'SystemToOrganizationMappings'
         /// </summary>
         [Test]
         public void SystemToOrganizationMappingsTest()
         {
-            // TODO: unit test for the property 'SystemToOrganizationMappings' 
+            // TODO: unit test for the property 'SystemToOrganizationMappings'
         }
-        
         /// <summary>
-        /// Test the property 'Results' 
+        /// Test the property 'Results'
         /// </summary>
         [Test]
         public void ResultsTest()
         {
-            // TODO: unit test for the property 'Results' 
+            // TODO: unit test for the property 'Results'
         }
-        
 
     }
 

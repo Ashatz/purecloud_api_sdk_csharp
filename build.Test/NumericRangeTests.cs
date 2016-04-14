@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new NumericRange();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of NumericRange
@@ -50,43 +50,38 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<NumericRange> (instance, "instance is a NumericRange");
         }
 
-        
         /// <summary>
-        /// Test the property 'Gt' 
+        /// Test the property 'Gt'
         /// </summary>
         [Test]
         public void GtTest()
         {
-            // TODO: unit test for the property 'Gt' 
+            // TODO: unit test for the property 'Gt'
         }
-        
         /// <summary>
-        /// Test the property 'Gte' 
+        /// Test the property 'Gte'
         /// </summary>
         [Test]
         public void GteTest()
         {
-            // TODO: unit test for the property 'Gte' 
+            // TODO: unit test for the property 'Gte'
         }
-        
         /// <summary>
-        /// Test the property 'Lt' 
+        /// Test the property 'Lt'
         /// </summary>
         [Test]
         public void LtTest()
         {
-            // TODO: unit test for the property 'Lt' 
+            // TODO: unit test for the property 'Lt'
         }
-        
         /// <summary>
-        /// Test the property 'Lte' 
+        /// Test the property 'Lte'
         /// </summary>
         [Test]
         public void LteTest()
         {
-            // TODO: unit test for the property 'Lte' 
+            // TODO: unit test for the property 'Lte'
         }
-        
 
     }
 

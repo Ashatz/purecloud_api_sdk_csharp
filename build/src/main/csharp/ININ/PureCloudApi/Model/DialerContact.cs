@@ -46,7 +46,7 @@ namespace ININ.PureCloudApi.Model
             this.PhoneNumberStatus = PhoneNumberStatus;
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -114,11 +114,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Callable: ").Append(Callable).Append("\n");
             sb.Append("  PhoneNumberStatus: ").Append(PhoneNumberStatus).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -204,31 +203,22 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.ContactListId != null)
                     hash = hash * 59 + this.ContactListId.GetHashCode();
-                
                 if (this.Data != null)
                     hash = hash * 59 + this.Data.GetHashCode();
-                
                 if (this.CallRecords != null)
                     hash = hash * 59 + this.CallRecords.GetHashCode();
-                
                 if (this.Callable != null)
                     hash = hash * 59 + this.Callable.GetHashCode();
-                
                 if (this.PhoneNumberStatus != null)
                     hash = hash * 59 + this.PhoneNumberStatus.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 return hash;
             }
         }

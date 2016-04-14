@@ -70,7 +70,7 @@ namespace ININ.PureCloudApi.Model
             }
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -121,16 +121,16 @@ namespace ININ.PureCloudApi.Model
         public string SocialHub { get; set; }
     
         /// <summary>
-        /// Credential provided through the Social Hub's authorization process
+        /// Credential provided through the Social Hub&#39;s authorization process
         /// </summary>
-        /// <value>Credential provided through the Social Hub's authorization process</value>
+        /// <value>Credential provided through the Social Hub&#39;s authorization process</value>
         [DataMember(Name="access_token", EmitDefaultValue=false)]
         public string AccessToken { get; set; }
     
         /// <summary>
-        /// Credential provided through the Social Hub's authorization process
+        /// Credential provided through the Social Hub&#39;s authorization process
         /// </summary>
-        /// <value>Credential provided through the Social Hub's authorization process</value>
+        /// <value>Credential provided through the Social Hub&#39;s authorization process</value>
         [DataMember(Name="access_token_secret", EmitDefaultValue=false)]
         public string AccessTokenSecret { get; set; }
     
@@ -175,11 +175,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  TwitterId: ").Append(TwitterId).Append("\n");
             sb.Append("  StreamingEnabled: ").Append(StreamingEnabled).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -285,43 +284,30 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
-                
                 if (this.DateModified != null)
                     hash = hash * 59 + this.DateModified.GetHashCode();
-                
                 if (this.Enabled != null)
                     hash = hash * 59 + this.Enabled.GetHashCode();
-                
                 if (this.Authorized != null)
                     hash = hash * 59 + this.Authorized.GetHashCode();
-                
                 if (this.SocialHub != null)
                     hash = hash * 59 + this.SocialHub.GetHashCode();
-                
                 if (this.AccessToken != null)
                     hash = hash * 59 + this.AccessToken.GetHashCode();
-                
                 if (this.AccessTokenSecret != null)
                     hash = hash * 59 + this.AccessTokenSecret.GetHashCode();
-                
                 if (this.TwitterId != null)
                     hash = hash * 59 + this.TwitterId.GetHashCode();
-                
                 if (this.StreamingEnabled != null)
                     hash = hash * 59 + this.StreamingEnabled.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 return hash;
             }
         }

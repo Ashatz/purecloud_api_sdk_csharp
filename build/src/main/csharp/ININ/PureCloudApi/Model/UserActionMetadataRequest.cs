@@ -38,7 +38,7 @@ namespace ININ.PureCloudApi.Model
             this.SuccessSchema = SuccessSchema;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets Format
@@ -90,11 +90,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  SuccessSchemaUri: ").Append(SuccessSchemaUri).Append("\n");
             sb.Append("  InputSchema: ").Append(InputSchema).Append("\n");
             sb.Append("  SuccessSchema: ").Append(SuccessSchema).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -170,25 +169,18 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Format != null)
                     hash = hash * 59 + this.Format.GetHashCode();
-                
                 if (this.Method != null)
                     hash = hash * 59 + this.Method.GetHashCode();
-                
                 if (this.InputSchemaUri != null)
                     hash = hash * 59 + this.InputSchemaUri.GetHashCode();
-                
                 if (this.SuccessSchemaUri != null)
                     hash = hash * 59 + this.SuccessSchemaUri.GetHashCode();
-                
                 if (this.InputSchema != null)
                     hash = hash * 59 + this.InputSchema.GetHashCode();
-                
                 if (this.SuccessSchema != null)
                     hash = hash * 59 + this.SuccessSchema.GetHashCode();
-                
                 return hash;
             }
         }

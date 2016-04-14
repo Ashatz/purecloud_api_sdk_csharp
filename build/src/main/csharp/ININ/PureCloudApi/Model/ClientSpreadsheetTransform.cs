@@ -40,7 +40,7 @@ namespace ININ.PureCloudApi.Model
             this.Sheets = Sheets;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets Id
@@ -99,11 +99,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  SheetNameReplaces: ").Append(SheetNameReplaces).Append("\n");
             sb.Append("  Sheets: ").Append(Sheets).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -184,28 +183,20 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.EndpointId != null)
                     hash = hash * 59 + this.EndpointId.GetHashCode();
-                
                 if (this.FilenameReplaces != null)
                     hash = hash * 59 + this.FilenameReplaces.GetHashCode();
-                
                 if (this.Tags != null)
                     hash = hash * 59 + this.Tags.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.SheetNameReplaces != null)
                     hash = hash * 59 + this.SheetNameReplaces.GetHashCode();
-                
                 if (this.Sheets != null)
                     hash = hash * 59 + this.Sheets.GetHashCode();
-                
                 return hash;
             }
         }

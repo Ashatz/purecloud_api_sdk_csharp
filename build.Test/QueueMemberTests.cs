@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new QueueMember();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of QueueMember
@@ -50,79 +50,70 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<QueueMember> (instance, "instance is a QueueMember");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'User' 
+        /// Test the property 'User'
         /// </summary>
         [Test]
         public void UserTest()
         {
-            // TODO: unit test for the property 'User' 
+            // TODO: unit test for the property 'User'
         }
-        
         /// <summary>
-        /// Test the property 'RingNumber' 
+        /// Test the property 'RingNumber'
         /// </summary>
         [Test]
         public void RingNumberTest()
         {
-            // TODO: unit test for the property 'RingNumber' 
+            // TODO: unit test for the property 'RingNumber'
         }
-        
         /// <summary>
-        /// Test the property 'Joined' 
+        /// Test the property 'Joined'
         /// </summary>
         [Test]
         public void JoinedTest()
         {
-            // TODO: unit test for the property 'Joined' 
+            // TODO: unit test for the property 'Joined'
         }
-        
         /// <summary>
-        /// Test the property 'MemberBy' 
+        /// Test the property 'MemberBy'
         /// </summary>
         [Test]
         public void MemberByTest()
         {
-            // TODO: unit test for the property 'MemberBy' 
+            // TODO: unit test for the property 'MemberBy'
         }
-        
         /// <summary>
-        /// Test the property 'RoutingStatus' 
+        /// Test the property 'RoutingStatus'
         /// </summary>
         [Test]
         public void RoutingStatusTest()
         {
-            // TODO: unit test for the property 'RoutingStatus' 
+            // TODO: unit test for the property 'RoutingStatus'
         }
-        
         /// <summary>
-        /// Test the property 'SelfUri' 
+        /// Test the property 'SelfUri'
         /// </summary>
         [Test]
         public void SelfUriTest()
         {
-            // TODO: unit test for the property 'SelfUri' 
+            // TODO: unit test for the property 'SelfUri'
         }
-        
 
     }
 

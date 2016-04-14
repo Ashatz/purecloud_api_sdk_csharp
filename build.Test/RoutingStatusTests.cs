@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new RoutingStatus();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of RoutingStatus
@@ -50,34 +50,30 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<RoutingStatus> (instance, "instance is a RoutingStatus");
         }
 
-        
         /// <summary>
-        /// Test the property 'UserId' 
+        /// Test the property 'UserId'
         /// </summary>
         [Test]
         public void UserIdTest()
         {
-            // TODO: unit test for the property 'UserId' 
+            // TODO: unit test for the property 'UserId'
         }
-        
         /// <summary>
-        /// Test the property 'Status' 
+        /// Test the property 'Status'
         /// </summary>
         [Test]
         public void StatusTest()
         {
-            // TODO: unit test for the property 'Status' 
+            // TODO: unit test for the property 'Status'
         }
-        
         /// <summary>
-        /// Test the property 'StartTime' 
+        /// Test the property 'StartTime'
         /// </summary>
         [Test]
         public void StartTimeTest()
         {
-            // TODO: unit test for the property 'StartTime' 
+            // TODO: unit test for the property 'StartTime'
         }
-        
 
     }
 

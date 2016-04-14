@@ -17,9 +17,12 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class ContactSort :  IEquatable<ContactSort>
     { 
-    
+
+        /// <summary>
+        /// Gets or Sets Direction
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum DirectionEnum {
+                public enum DirectionEnum {
             
             [EnumMember(Value = "ASC")]
             Asc,
@@ -27,6 +30,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "DESC")]
             Desc
         }
+
         
         /// <summary>
         /// Gets or Sets Direction
@@ -46,7 +50,7 @@ namespace ININ.PureCloudApi.Model
             this.Direction = Direction;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets FieldName
@@ -64,11 +68,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class ContactSort {\n");
             sb.Append("  FieldName: ").Append(FieldName).Append("\n");
             sb.Append("  Direction: ").Append(Direction).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -124,13 +127,10 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.FieldName != null)
                     hash = hash * 59 + this.FieldName.GetHashCode();
-                
                 if (this.Direction != null)
                     hash = hash * 59 + this.Direction.GetHashCode();
-                
                 return hash;
             }
         }

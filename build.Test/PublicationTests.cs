@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new Publication();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of Publication
@@ -50,79 +50,70 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<Publication> (instance, "instance is a Publication");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'DateCreated' 
+        /// Test the property 'DateCreated'
         /// </summary>
         [Test]
         public void DateCreatedTest()
         {
-            // TODO: unit test for the property 'DateCreated' 
+            // TODO: unit test for the property 'DateCreated'
         }
-        
         /// <summary>
-        /// Test the property 'DateModified' 
+        /// Test the property 'DateModified'
         /// </summary>
         [Test]
         public void DateModifiedTest()
         {
-            // TODO: unit test for the property 'DateModified' 
+            // TODO: unit test for the property 'DateModified'
         }
-        
         /// <summary>
-        /// Test the property 'TweetText' 
+        /// Test the property 'TweetText'
         /// </summary>
         [Test]
         public void TweetTextTest()
         {
-            // TODO: unit test for the property 'TweetText' 
+            // TODO: unit test for the property 'TweetText'
         }
-        
         /// <summary>
-        /// Test the property 'RawTweetText' 
+        /// Test the property 'RawTweetText'
         /// </summary>
         [Test]
         public void RawTweetTextTest()
         {
-            // TODO: unit test for the property 'RawTweetText' 
+            // TODO: unit test for the property 'RawTweetText'
         }
-        
         /// <summary>
-        /// Test the property 'Approved' 
+        /// Test the property 'Approved'
         /// </summary>
         [Test]
         public void ApprovedTest()
         {
-            // TODO: unit test for the property 'Approved' 
+            // TODO: unit test for the property 'Approved'
         }
-        
         /// <summary>
-        /// Test the property 'SelfUri' 
+        /// Test the property 'SelfUri'
         /// </summary>
         [Test]
         public void SelfUriTest()
         {
-            // TODO: unit test for the property 'SelfUri' 
+            // TODO: unit test for the property 'SelfUri'
         }
-        
 
     }
 

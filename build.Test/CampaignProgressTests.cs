@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new CampaignProgress();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of CampaignProgress
@@ -50,52 +50,46 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<CampaignProgress> (instance, "instance is a CampaignProgress");
         }
 
-        
         /// <summary>
-        /// Test the property 'Campaign' 
+        /// Test the property 'Campaign'
         /// </summary>
         [Test]
         public void CampaignTest()
         {
-            // TODO: unit test for the property 'Campaign' 
+            // TODO: unit test for the property 'Campaign'
         }
-        
         /// <summary>
-        /// Test the property 'ContactList' 
+        /// Test the property 'ContactList'
         /// </summary>
         [Test]
         public void ContactListTest()
         {
-            // TODO: unit test for the property 'ContactList' 
+            // TODO: unit test for the property 'ContactList'
         }
-        
         /// <summary>
-        /// Test the property 'NumberOfContactsCalled' 
+        /// Test the property 'NumberOfContactsCalled'
         /// </summary>
         [Test]
         public void NumberOfContactsCalledTest()
         {
-            // TODO: unit test for the property 'NumberOfContactsCalled' 
+            // TODO: unit test for the property 'NumberOfContactsCalled'
         }
-        
         /// <summary>
-        /// Test the property 'TotalNumberOfContacts' 
+        /// Test the property 'TotalNumberOfContacts'
         /// </summary>
         [Test]
         public void TotalNumberOfContactsTest()
         {
-            // TODO: unit test for the property 'TotalNumberOfContacts' 
+            // TODO: unit test for the property 'TotalNumberOfContacts'
         }
-        
         /// <summary>
-        /// Test the property 'Percentage' 
+        /// Test the property 'Percentage'
         /// </summary>
         [Test]
         public void PercentageTest()
         {
-            // TODO: unit test for the property 'Percentage' 
+            // TODO: unit test for the property 'Percentage'
         }
-        
 
     }
 

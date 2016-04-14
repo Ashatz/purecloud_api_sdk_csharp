@@ -34,7 +34,7 @@ namespace ININ.PureCloudApi.Model
             this.ExpertEvaluator = ExpertEvaluator;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets Calibrator
@@ -72,11 +72,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Evaluators: ").Append(Evaluators).Append("\n");
             sb.Append("  EvaluationForm: ").Append(EvaluationForm).Append("\n");
             sb.Append("  ExpertEvaluator: ").Append(ExpertEvaluator).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -142,19 +141,14 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Calibrator != null)
                     hash = hash * 59 + this.Calibrator.GetHashCode();
-                
                 if (this.Evaluators != null)
                     hash = hash * 59 + this.Evaluators.GetHashCode();
-                
                 if (this.EvaluationForm != null)
                     hash = hash * 59 + this.EvaluationForm.GetHashCode();
-                
                 if (this.ExpertEvaluator != null)
                     hash = hash * 59 + this.ExpertEvaluator.GetHashCode();
-                
                 return hash;
             }
         }

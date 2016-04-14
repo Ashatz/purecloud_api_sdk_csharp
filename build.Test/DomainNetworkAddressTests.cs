@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new DomainNetworkAddress();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of DomainNetworkAddress
@@ -50,43 +50,38 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<DomainNetworkAddress> (instance, "instance is a DomainNetworkAddress");
         }
 
-        
         /// <summary>
-        /// Test the property 'Type' 
+        /// Test the property 'Type'
         /// </summary>
         [Test]
         public void TypeTest()
         {
-            // TODO: unit test for the property 'Type' 
+            // TODO: unit test for the property 'Type'
         }
-        
         /// <summary>
-        /// Test the property 'Address' 
+        /// Test the property 'Address'
         /// </summary>
         [Test]
         public void AddressTest()
         {
-            // TODO: unit test for the property 'Address' 
+            // TODO: unit test for the property 'Address'
         }
-        
         /// <summary>
-        /// Test the property 'Persistent' 
+        /// Test the property 'Persistent'
         /// </summary>
         [Test]
         public void PersistentTest()
         {
-            // TODO: unit test for the property 'Persistent' 
+            // TODO: unit test for the property 'Persistent'
         }
-        
         /// <summary>
-        /// Test the property 'Family' 
+        /// Test the property 'Family'
         /// </summary>
         [Test]
         public void FamilyTest()
         {
-            // TODO: unit test for the property 'Family' 
+            // TODO: unit test for the property 'Family'
         }
-        
 
     }
 

@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new PhoneCapabilities();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of PhoneCapabilities
@@ -50,61 +50,54 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<PhoneCapabilities> (instance, "instance is a PhoneCapabilities");
         }
 
-        
         /// <summary>
-        /// Test the property 'Provisions' 
+        /// Test the property 'Provisions'
         /// </summary>
         [Test]
         public void ProvisionsTest()
         {
-            // TODO: unit test for the property 'Provisions' 
+            // TODO: unit test for the property 'Provisions'
         }
-        
         /// <summary>
-        /// Test the property 'Registers' 
+        /// Test the property 'Registers'
         /// </summary>
         [Test]
         public void RegistersTest()
         {
-            // TODO: unit test for the property 'Registers' 
+            // TODO: unit test for the property 'Registers'
         }
-        
         /// <summary>
-        /// Test the property 'DualRegisters' 
+        /// Test the property 'DualRegisters'
         /// </summary>
         [Test]
         public void DualRegistersTest()
         {
-            // TODO: unit test for the property 'DualRegisters' 
+            // TODO: unit test for the property 'DualRegisters'
         }
-        
         /// <summary>
-        /// Test the property 'HardwareIdType' 
+        /// Test the property 'HardwareIdType'
         /// </summary>
         [Test]
         public void HardwareIdTypeTest()
         {
-            // TODO: unit test for the property 'HardwareIdType' 
+            // TODO: unit test for the property 'HardwareIdType'
         }
-        
         /// <summary>
-        /// Test the property 'AllowReboot' 
+        /// Test the property 'AllowReboot'
         /// </summary>
         [Test]
         public void AllowRebootTest()
         {
-            // TODO: unit test for the property 'AllowReboot' 
+            // TODO: unit test for the property 'AllowReboot'
         }
-        
         /// <summary>
-        /// Test the property 'NoRebalance' 
+        /// Test the property 'NoRebalance'
         /// </summary>
         [Test]
         public void NoRebalanceTest()
         {
-            // TODO: unit test for the property 'NoRebalance' 
+            // TODO: unit test for the property 'NoRebalance'
         }
-        
 
     }
 

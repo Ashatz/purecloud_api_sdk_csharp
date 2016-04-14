@@ -17,9 +17,12 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class SocializeFilterRequest :  IEquatable<SocializeFilterRequest>
     { 
-    
+
+        /// <summary>
+        /// Gets or Sets SortOrder
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum SortOrderEnum {
+                public enum SortOrderEnum {
             
             [EnumMember(Value = "ascending")]
             Ascending,
@@ -27,6 +30,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "descending")]
             Descending
         }
+
         
         /// <summary>
         /// Gets or Sets SortOrder
@@ -52,7 +56,7 @@ namespace ININ.PureCloudApi.Model
             this.SortOrder = SortOrder;
             
         }
-        
+
     
         /// <summary>
         /// The list of filters used to narrow the return.
@@ -92,11 +96,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  PageNumber: ").Append(PageNumber).Append("\n");
             sb.Append("  SortBy: ").Append(SortBy).Append("\n");
             sb.Append("  SortOrder: ").Append(SortOrder).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -167,22 +170,16 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Filters != null)
                     hash = hash * 59 + this.Filters.GetHashCode();
-                
                 if (this.PageSize != null)
                     hash = hash * 59 + this.PageSize.GetHashCode();
-                
                 if (this.PageNumber != null)
                     hash = hash * 59 + this.PageNumber.GetHashCode();
-                
                 if (this.SortBy != null)
                     hash = hash * 59 + this.SortBy.GetHashCode();
-                
                 if (this.SortOrder != null)
                     hash = hash * 59 + this.SortOrder.GetHashCode();
-                
                 return hash;
             }
         }

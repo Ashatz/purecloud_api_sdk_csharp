@@ -34,7 +34,7 @@ namespace ININ.PureCloudApi.Model
             this.Lte = Lte;
             
         }
-        
+
     
         /// <summary>
         /// Greater than
@@ -76,11 +76,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Gte: ").Append(Gte).Append("\n");
             sb.Append("  Lt: ").Append(Lt).Append("\n");
             sb.Append("  Lte: ").Append(Lte).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -146,19 +145,14 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Gt != null)
                     hash = hash * 59 + this.Gt.GetHashCode();
-                
                 if (this.Gte != null)
                     hash = hash * 59 + this.Gte.GetHashCode();
-                
                 if (this.Lt != null)
                     hash = hash * 59 + this.Lt.GetHashCode();
-                
                 if (this.Lte != null)
                     hash = hash * 59 + this.Lte.GetHashCode();
-                
                 return hash;
             }
         }

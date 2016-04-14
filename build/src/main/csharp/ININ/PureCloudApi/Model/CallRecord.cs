@@ -30,7 +30,7 @@ namespace ININ.PureCloudApi.Model
             this.LastResult = LastResult;
             
         }
-        
+
     
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
@@ -55,11 +55,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class CallRecord {\n");
             sb.Append("  LastAttempt: ").Append(LastAttempt).Append("\n");
             sb.Append("  LastResult: ").Append(LastResult).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -115,13 +114,10 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.LastAttempt != null)
                     hash = hash * 59 + this.LastAttempt.GetHashCode();
-                
                 if (this.LastResult != null)
                     hash = hash * 59 + this.LastResult.GetHashCode();
-                
                 return hash;
             }
         }

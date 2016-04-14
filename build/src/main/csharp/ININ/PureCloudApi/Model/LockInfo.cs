@@ -17,9 +17,12 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class LockInfo :  IEquatable<LockInfo>
     { 
-    
+
+        /// <summary>
+        /// Gets or Sets Action
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum ActionEnum {
+                public enum ActionEnum {
             
             [EnumMember(Value = "UPDATE")]
             Update,
@@ -42,6 +45,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "TEXT_EXTRACTION")]
             TextExtraction
         }
+
         
         /// <summary>
         /// Gets or Sets Action
@@ -65,7 +69,7 @@ namespace ININ.PureCloudApi.Model
             this.Action = Action;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets LockedBy
@@ -99,11 +103,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  DateExpires: ").Append(DateExpires).Append("\n");
             sb.Append("  Action: ").Append(Action).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -169,19 +172,14 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.LockedBy != null)
                     hash = hash * 59 + this.LockedBy.GetHashCode();
-                
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
-                
                 if (this.DateExpires != null)
                     hash = hash * 59 + this.DateExpires.GetHashCode();
-                
                 if (this.Action != null)
                     hash = hash * 59 + this.Action.GetHashCode();
-                
                 return hash;
             }
         }

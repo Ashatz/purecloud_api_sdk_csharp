@@ -50,7 +50,7 @@ namespace ININ.PureCloudApi.Model
             this.TimeAllowed = TimeAllowed;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets ForUsers
@@ -116,11 +116,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Duration: ").Append(Duration).Append("\n");
             sb.Append("  WrapupCodes: ").Append(WrapupCodes).Append("\n");
             sb.Append("  TimeAllowed: ").Append(TimeAllowed).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -206,31 +205,22 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ForUsers != null)
                     hash = hash * 59 + this.ForUsers.GetHashCode();
-                
                 if (this.Directions != null)
                     hash = hash * 59 + this.Directions.GetHashCode();
-                
                 if (this.DateRanges != null)
                     hash = hash * 59 + this.DateRanges.GetHashCode();
-                
                 if (this.MediaTypes != null)
                     hash = hash * 59 + this.MediaTypes.GetHashCode();
-                
                 if (this.ForQueues != null)
                     hash = hash * 59 + this.ForQueues.GetHashCode();
-                
                 if (this.Duration != null)
                     hash = hash * 59 + this.Duration.GetHashCode();
-                
                 if (this.WrapupCodes != null)
                     hash = hash * 59 + this.WrapupCodes.GetHashCode();
-                
                 if (this.TimeAllowed != null)
                     hash = hash * 59 + this.TimeAllowed.GetHashCode();
-                
                 return hash;
             }
         }

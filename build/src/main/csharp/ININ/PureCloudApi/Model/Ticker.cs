@@ -46,7 +46,7 @@ namespace ININ.PureCloudApi.Model
             }
             
         }
-        
+
     
         /// <summary>
         /// The ticker symbol for this organization. Example: ININ, AAPL, MSFT, etc.
@@ -72,11 +72,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class Ticker {\n");
             sb.Append("  Symbol: ").Append(Symbol).Append("\n");
             sb.Append("  Exchange: ").Append(Exchange).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -132,13 +131,10 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Symbol != null)
                     hash = hash * 59 + this.Symbol.GetHashCode();
-                
                 if (this.Exchange != null)
                     hash = hash * 59 + this.Exchange.GetHashCode();
-                
                 return hash;
             }
         }

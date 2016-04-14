@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new WorkspaceSummary();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of WorkspaceSummary
@@ -50,16 +50,14 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<WorkspaceSummary> (instance, "instance is a WorkspaceSummary");
         }
 
-        
         /// <summary>
-        /// Test the property 'TotalDocumentCount' 
+        /// Test the property 'TotalDocumentCount'
         /// </summary>
         [Test]
         public void TotalDocumentCountTest()
         {
-            // TODO: unit test for the property 'TotalDocumentCount' 
+            // TODO: unit test for the property 'TotalDocumentCount'
         }
-        
 
     }
 

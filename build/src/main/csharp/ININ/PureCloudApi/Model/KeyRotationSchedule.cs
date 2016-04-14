@@ -17,9 +17,13 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class KeyRotationSchedule :  IEquatable<KeyRotationSchedule>
     { 
-    
+
+        /// <summary>
+        /// Value to set schedule to
+        /// </summary>
+        /// <value>Value to set schedule to</value>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum PeriodEnum {
+                public enum PeriodEnum {
             
             [EnumMember(Value = "DISABLED")]
             Disabled,
@@ -36,6 +40,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "YEARLY")]
             Yearly
         }
+
         
         /// <summary>
         /// Value to set schedule to
@@ -64,7 +69,7 @@ namespace ININ.PureCloudApi.Model
             this.Name = Name;
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -98,11 +103,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Period: ").Append(Period).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -168,19 +172,14 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.Period != null)
                     hash = hash * 59 + this.Period.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 return hash;
             }
         }

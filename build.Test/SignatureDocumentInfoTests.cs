@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new SignatureDocumentInfo();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of SignatureDocumentInfo
@@ -50,34 +50,30 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<SignatureDocumentInfo> (instance, "instance is a SignatureDocumentInfo");
         }
 
-        
         /// <summary>
-        /// Test the property 'Org' 
+        /// Test the property 'Org'
         /// </summary>
         [Test]
         public void OrgTest()
         {
-            // TODO: unit test for the property 'Org' 
+            // TODO: unit test for the property 'Org'
         }
-        
         /// <summary>
-        /// Test the property 'User' 
+        /// Test the property 'User'
         /// </summary>
         [Test]
         public void UserTest()
         {
-            // TODO: unit test for the property 'User' 
+            // TODO: unit test for the property 'User'
         }
-        
         /// <summary>
-        /// Test the property 'ReturnUrl' 
+        /// Test the property 'ReturnUrl'
         /// </summary>
         [Test]
         public void ReturnUrlTest()
         {
-            // TODO: unit test for the property 'ReturnUrl' 
+            // TODO: unit test for the property 'ReturnUrl'
         }
-        
 
     }
 

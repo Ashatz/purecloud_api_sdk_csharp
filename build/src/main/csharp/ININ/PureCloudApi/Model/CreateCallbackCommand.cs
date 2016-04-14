@@ -46,7 +46,7 @@ namespace ININ.PureCloudApi.Model
             }
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets ScriptId
@@ -98,11 +98,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  CallbackNumbers: ").Append(CallbackNumbers).Append("\n");
             sb.Append("  CountryCode: ").Append(CountryCode).Append("\n");
             sb.Append("  SkipEnabled: ").Append(SkipEnabled).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -178,25 +177,18 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ScriptId != null)
                     hash = hash * 59 + this.ScriptId.GetHashCode();
-                
                 if (this.QueueId != null)
                     hash = hash * 59 + this.QueueId.GetHashCode();
-                
                 if (this.CallbackUserName != null)
                     hash = hash * 59 + this.CallbackUserName.GetHashCode();
-                
                 if (this.CallbackNumbers != null)
                     hash = hash * 59 + this.CallbackNumbers.GetHashCode();
-                
                 if (this.CountryCode != null)
                     hash = hash * 59 + this.CountryCode.GetHashCode();
-                
                 if (this.SkipEnabled != null)
                     hash = hash * 59 + this.SkipEnabled.GetHashCode();
-                
                 return hash;
             }
         }

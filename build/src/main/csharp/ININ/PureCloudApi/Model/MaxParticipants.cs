@@ -21,20 +21,20 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MaxParticipants" />class.
         /// </summary>
-        /// <param name="MaxParticipantsProperty">MaxParticipantsProperty.</param>
+        /// <param name="_MaxParticipants">_MaxParticipants.</param>
 
-        public MaxParticipants(int? MaxParticipantsProperty = null)
+        public MaxParticipants(int? _MaxParticipants = null)
         {
-            this.MaxParticipantsProperty = MaxParticipantsProperty;
+            this._MaxParticipants = _MaxParticipants;
             
         }
-        
+
     
         /// <summary>
-        /// Gets or Sets MaxParticipantsProperty
+        /// Gets or Sets _MaxParticipants
         /// </summary>
         [DataMember(Name="maxParticipants", EmitDefaultValue=false)]
-        public int? MaxParticipantsProperty { get; set; }
+        public int? _MaxParticipants { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -44,12 +44,11 @@ namespace ININ.PureCloudApi.Model
         {
             var sb = new StringBuilder();
             sb.Append("class MaxParticipants {\n");
-            sb.Append("  MaxParticipantsProperty: ").Append(MaxParticipantsProperty).Append("\n");
-            
+            sb.Append("  _MaxParticipants: ").Append(_MaxParticipants).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -83,9 +82,9 @@ namespace ININ.PureCloudApi.Model
 
             return true &&
                 (
-                    this.MaxParticipantsProperty == other.MaxParticipantsProperty ||
-                    this.MaxParticipantsProperty != null &&
-                    this.MaxParticipantsProperty.Equals(other.MaxParticipantsProperty)
+                    this._MaxParticipants == other._MaxParticipants ||
+                    this._MaxParticipants != null &&
+                    this._MaxParticipants.Equals(other._MaxParticipants)
                 );
         }
 
@@ -100,10 +99,8 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
-                if (this.MaxParticipantsProperty != null)
-                    hash = hash * 59 + this.MaxParticipantsProperty.GetHashCode();
-                
+                if (this._MaxParticipants != null)
+                    hash = hash * 59 + this._MaxParticipants.GetHashCode();
                 return hash;
             }
         }

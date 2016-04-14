@@ -30,7 +30,7 @@ namespace ININ.PureCloudApi.Model
             this.ServiceLevel = ServiceLevel;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets AlertingTimeoutSeconds
@@ -54,11 +54,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class MediaSetting {\n");
             sb.Append("  AlertingTimeoutSeconds: ").Append(AlertingTimeoutSeconds).Append("\n");
             sb.Append("  ServiceLevel: ").Append(ServiceLevel).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -114,13 +113,10 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.AlertingTimeoutSeconds != null)
                     hash = hash * 59 + this.AlertingTimeoutSeconds.GetHashCode();
-                
                 if (this.ServiceLevel != null)
                     hash = hash * 59 + this.ServiceLevel.GetHashCode();
-                
                 return hash;
             }
         }

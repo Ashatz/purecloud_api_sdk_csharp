@@ -32,7 +32,7 @@ namespace ININ.PureCloudApi.Model
             this.Day = Day;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets StartTime
@@ -63,11 +63,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  StartTime: ").Append(StartTime).Append("\n");
             sb.Append("  StopTime: ").Append(StopTime).Append("\n");
             sb.Append("  Day: ").Append(Day).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -128,16 +127,12 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.StartTime != null)
                     hash = hash * 59 + this.StartTime.GetHashCode();
-                
                 if (this.StopTime != null)
                     hash = hash * 59 + this.StopTime.GetHashCode();
-                
                 if (this.Day != null)
                     hash = hash * 59 + this.Day.GetHashCode();
-                
                 return hash;
             }
         }

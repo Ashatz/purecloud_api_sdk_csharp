@@ -36,7 +36,7 @@ namespace ININ.PureCloudApi.Model
             this.User = User;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets Id
@@ -90,11 +90,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  KeydataSummary: ").Append(KeydataSummary).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -170,25 +169,18 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.CreateDate != null)
                     hash = hash * 59 + this.CreateDate.GetHashCode();
-                
                 if (this.KeydataSummary != null)
                     hash = hash * 59 + this.KeydataSummary.GetHashCode();
-                
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 return hash;
             }
         }

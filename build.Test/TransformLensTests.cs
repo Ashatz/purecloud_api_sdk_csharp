@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new TransformLens();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of TransformLens
@@ -50,25 +50,22 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<TransformLens> (instance, "instance is a TransformLens");
         }
 
-        
         /// <summary>
-        /// Test the property 'Replace' 
+        /// Test the property 'Replace'
         /// </summary>
         [Test]
         public void ReplaceTest()
         {
-            // TODO: unit test for the property 'Replace' 
+            // TODO: unit test for the property 'Replace'
         }
-        
         /// <summary>
-        /// Test the property 'Value' 
+        /// Test the property 'Value'
         /// </summary>
         [Test]
         public void ValueTest()
         {
-            // TODO: unit test for the property 'Value' 
+            // TODO: unit test for the property 'Value'
         }
-        
 
     }
 

@@ -54,7 +54,7 @@ namespace ININ.PureCloudApi.Model
             this.CreateDate = CreateDate;
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -180,11 +180,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  ModifyDate: ").Append(ModifyDate).Append("\n");
             sb.Append("  CreateDate: ").Append(CreateDate).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -310,55 +309,38 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.CompanyType != null)
                     hash = hash * 59 + this.CompanyType.GetHashCode();
-                
                 if (this.Industry != null)
                     hash = hash * 59 + this.Industry.GetHashCode();
-                
                 if (this.PrimaryContactId != null)
                     hash = hash * 59 + this.PrimaryContactId.GetHashCode();
-                
                 if (this.Address != null)
                     hash = hash * 59 + this.Address.GetHashCode();
-                
                 if (this.PhoneNumber != null)
                     hash = hash * 59 + this.PhoneNumber.GetHashCode();
-                
                 if (this.FaxNumber != null)
                     hash = hash * 59 + this.FaxNumber.GetHashCode();
-                
                 if (this.EmployeeCount != null)
                     hash = hash * 59 + this.EmployeeCount.GetHashCode();
-                
                 if (this.Revenue != null)
                     hash = hash * 59 + this.Revenue.GetHashCode();
-                
                 if (this.Tags != null)
                     hash = hash * 59 + this.Tags.GetHashCode();
-                
                 if (this.Websites != null)
                     hash = hash * 59 + this.Websites.GetHashCode();
-                
                 if (this.Tickers != null)
                     hash = hash * 59 + this.Tickers.GetHashCode();
-                
                 if (this.ModifyDate != null)
                     hash = hash * 59 + this.ModifyDate.GetHashCode();
-                
                 if (this.CreateDate != null)
                     hash = hash * 59 + this.CreateDate.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 return hash;
             }
         }

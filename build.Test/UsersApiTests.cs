@@ -61,9 +61,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'DeleteUserId'
             string userId = null; // TODO: replace null with proper value
-            
             var response = instance.DeleteUserId(userId);
-            Assert.IsInstanceOf<string> (response, "response is string"); 
+            Assert.IsInstanceOf<string> (response, "response is string");
         }
         
         /// <summary>
@@ -74,9 +73,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'DeleteUserIdRoles'
             string userId = null; // TODO: replace null with proper value
-            
             instance.DeleteUserIdRoles(userId);
-             
+            
         }
         
         /// <summary>
@@ -88,9 +86,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'DeleteUserIdRoutingskillsSkillId'
             string userId = null; // TODO: replace null with proper value
             string skillId = null; // TODO: replace null with proper value
-            
             var response = instance.DeleteUserIdRoutingskillsSkillId(userId, skillId);
-            Assert.IsInstanceOf<string> (response, "response is string"); 
+            Assert.IsInstanceOf<string> (response, "response is string");
         }
         
         /// <summary>
@@ -101,9 +98,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'DeleteUserIdStationAssociatedstation'
             string userId = null; // TODO: replace null with proper value
-            
             instance.DeleteUserIdStationAssociatedstation(userId);
-             
+            
         }
         
         /// <summary>
@@ -114,9 +110,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'DeleteUserIdStationDefaultstation'
             string userId = null; // TODO: replace null with proper value
-            
             instance.DeleteUserIdStationDefaultstation(userId);
-             
+            
         }
         
         /// <summary>
@@ -127,9 +122,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'GetMe'
             List<string> expand = null; // TODO: replace null with proper value
-            
             var response = instance.GetMe(expand);
-            Assert.IsInstanceOf<UserMe> (response, "response is UserMe"); 
+            Assert.IsInstanceOf<UserMe> (response, "response is UserMe");
         }
         
         /// <summary>
@@ -141,9 +135,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'GetSearch'
             string q64 = null; // TODO: replace null with proper value
             List<string> expand = null; // TODO: replace null with proper value
-            
             var response = instance.GetSearch(q64, expand);
-            Assert.IsInstanceOf<UsersSearchResponse> (response, "response is UsersSearchResponse"); 
+            Assert.IsInstanceOf<UsersSearchResponse> (response, "response is UsersSearchResponse");
         }
         
         /// <summary>
@@ -155,9 +148,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'GetUserId'
             string userId = null; // TODO: replace null with proper value
             List<string> expand = null; // TODO: replace null with proper value
-            
             var response = instance.GetUserId(userId, expand);
-            Assert.IsInstanceOf<User> (response, "response is User"); 
+            Assert.IsInstanceOf<User> (response, "response is User");
         }
         
         /// <summary>
@@ -168,9 +160,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'GetUserIdCallforwarding'
             string userId = null; // TODO: replace null with proper value
-            
             var response = instance.GetUserIdCallforwarding(userId);
-            Assert.IsInstanceOf<CallForwarding> (response, "response is CallForwarding"); 
+            Assert.IsInstanceOf<CallForwarding> (response, "response is CallForwarding");
         }
         
         /// <summary>
@@ -182,9 +173,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'GetUserIdGeolocationsClientId'
             string userId = null; // TODO: replace null with proper value
             string clientId = null; // TODO: replace null with proper value
-            
             var response = instance.GetUserIdGeolocationsClientId(userId, clientId);
-            Assert.IsInstanceOf<Geolocation> (response, "response is Geolocation"); 
+            Assert.IsInstanceOf<Geolocation> (response, "response is Geolocation");
         }
         
         /// <summary>
@@ -195,9 +185,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'GetUserIdOutofoffice'
             string userId = null; // TODO: replace null with proper value
-            
             var response = instance.GetUserIdOutofoffice(userId);
-            Assert.IsInstanceOf<OutOfOffice> (response, "response is OutOfOffice"); 
+            Assert.IsInstanceOf<OutOfOffice> (response, "response is OutOfOffice");
         }
         
         /// <summary>
@@ -209,9 +198,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'GetUserIdPresencesSource'
             string userId = null; // TODO: replace null with proper value
             string source = null; // TODO: replace null with proper value
-            
             var response = instance.GetUserIdPresencesSource(userId, source);
-            Assert.IsInstanceOf<UserPresence> (response, "response is UserPresence"); 
+            Assert.IsInstanceOf<UserPresence> (response, "response is UserPresence");
         }
         
         /// <summary>
@@ -224,9 +212,8 @@ namespace ININ.PureCloudApi.Test
             string userId = null; // TODO: replace null with proper value
             int? pageSize = null; // TODO: replace null with proper value
             int? pageNumber = null; // TODO: replace null with proper value
-            
             var response = instance.GetUserIdQueues(userId, pageSize, pageNumber);
-            Assert.IsInstanceOf<UserQueueEntityListing> (response, "response is UserQueueEntityListing"); 
+            Assert.IsInstanceOf<UserQueueEntityListing> (response, "response is UserQueueEntityListing");
         }
         
         /// <summary>
@@ -237,9 +224,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'GetUserIdRoles'
             string userId = null; // TODO: replace null with proper value
-            
             var response = instance.GetUserIdRoles(userId);
-            Assert.IsInstanceOf<UserAuthorization> (response, "response is UserAuthorization"); 
+            Assert.IsInstanceOf<UserAuthorization> (response, "response is UserAuthorization");
         }
         
         /// <summary>
@@ -253,9 +239,8 @@ namespace ININ.PureCloudApi.Test
             int? pageSize = null; // TODO: replace null with proper value
             int? pageNumber = null; // TODO: replace null with proper value
             string sortOrder = null; // TODO: replace null with proper value
-            
             var response = instance.GetUserIdRoutingskills(userId, pageSize, pageNumber, sortOrder);
-            Assert.IsInstanceOf<UserSkillEntityListing> (response, "response is UserSkillEntityListing"); 
+            Assert.IsInstanceOf<UserSkillEntityListing> (response, "response is UserSkillEntityListing");
         }
         
         /// <summary>
@@ -266,9 +251,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'GetUserIdRoutingstatus'
             string userId = null; // TODO: replace null with proper value
-            
             var response = instance.GetUserIdRoutingstatus(userId);
-            Assert.IsInstanceOf<RoutingStatus> (response, "response is RoutingStatus"); 
+            Assert.IsInstanceOf<RoutingStatus> (response, "response is RoutingStatus");
         }
         
         /// <summary>
@@ -279,9 +263,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'GetUserIdStation'
             string userId = null; // TODO: replace null with proper value
-            
             var response = instance.GetUserIdStation(userId);
-            Assert.IsInstanceOf<UserStations> (response, "response is UserStations"); 
+            Assert.IsInstanceOf<UserStations> (response, "response is UserStations");
         }
         
         /// <summary>
@@ -296,9 +279,8 @@ namespace ININ.PureCloudApi.Test
             List<string> id = null; // TODO: replace null with proper value
             string sortOrder = null; // TODO: replace null with proper value
             List<string> expand = null; // TODO: replace null with proper value
-            
             var response = instance.GetUsers(pageSize, pageNumber, id, sortOrder, expand);
-            Assert.IsInstanceOf<UsersEntityListing> (response, "response is UsersEntityListing"); 
+            Assert.IsInstanceOf<UsersEntityListing> (response, "response is UsersEntityListing");
         }
         
         /// <summary>
@@ -310,9 +292,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'PatchUserId'
             string userId = null; // TODO: replace null with proper value
             User body = null; // TODO: replace null with proper value
-            
             var response = instance.PatchUserId(userId, body);
-            Assert.IsInstanceOf<User> (response, "response is User"); 
+            Assert.IsInstanceOf<User> (response, "response is User");
         }
         
         /// <summary>
@@ -324,9 +305,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'PatchUserIdCallforwarding'
             string userId = null; // TODO: replace null with proper value
             CallForwarding body = null; // TODO: replace null with proper value
-            
             var response = instance.PatchUserIdCallforwarding(userId, body);
-            Assert.IsInstanceOf<CallForwarding> (response, "response is CallForwarding"); 
+            Assert.IsInstanceOf<CallForwarding> (response, "response is CallForwarding");
         }
         
         /// <summary>
@@ -339,9 +319,8 @@ namespace ININ.PureCloudApi.Test
             string userId = null; // TODO: replace null with proper value
             string clientId = null; // TODO: replace null with proper value
             Geolocation body = null; // TODO: replace null with proper value
-            
             var response = instance.PatchUserIdGeolocationsClientId(userId, clientId, body);
-            Assert.IsInstanceOf<Geolocation> (response, "response is Geolocation"); 
+            Assert.IsInstanceOf<Geolocation> (response, "response is Geolocation");
         }
         
         /// <summary>
@@ -354,9 +333,8 @@ namespace ININ.PureCloudApi.Test
             string userId = null; // TODO: replace null with proper value
             string source = null; // TODO: replace null with proper value
             UserPresence body = null; // TODO: replace null with proper value
-            
             var response = instance.PatchUserIdPresencesSource(userId, source, body);
-            Assert.IsInstanceOf<UserPresence> (response, "response is UserPresence"); 
+            Assert.IsInstanceOf<UserPresence> (response, "response is UserPresence");
         }
         
         /// <summary>
@@ -368,9 +346,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'PatchUserIdQueues'
             string userId = null; // TODO: replace null with proper value
             List<UserQueue> body = null; // TODO: replace null with proper value
-            
             var response = instance.PatchUserIdQueues(userId, body);
-            Assert.IsInstanceOf<UserQueue> (response, "response is UserQueue"); 
+            Assert.IsInstanceOf<UserQueue> (response, "response is UserQueue");
         }
         
         /// <summary>
@@ -383,9 +360,8 @@ namespace ININ.PureCloudApi.Test
             string queueId = null; // TODO: replace null with proper value
             string userId = null; // TODO: replace null with proper value
             UserQueue body = null; // TODO: replace null with proper value
-            
             var response = instance.PatchUserIdQueuesQueueId(queueId, userId, body);
-            Assert.IsInstanceOf<UserQueue> (response, "response is UserQueue"); 
+            Assert.IsInstanceOf<UserQueue> (response, "response is UserQueue");
         }
         
         /// <summary>
@@ -396,9 +372,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'PostSearch'
             SearchRequest body = null; // TODO: replace null with proper value
-            
             var response = instance.PostSearch(body);
-            Assert.IsInstanceOf<UsersSearchResponse> (response, "response is UsersSearchResponse"); 
+            Assert.IsInstanceOf<UsersSearchResponse> (response, "response is UsersSearchResponse");
         }
         
         /// <summary>
@@ -410,9 +385,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'PostUserIdRoutingskills'
             string userId = null; // TODO: replace null with proper value
             UserRoutingSkill body = null; // TODO: replace null with proper value
-            
             var response = instance.PostUserIdRoutingskills(userId, body);
-            Assert.IsInstanceOf<UserRoutingSkill> (response, "response is UserRoutingSkill"); 
+            Assert.IsInstanceOf<UserRoutingSkill> (response, "response is UserRoutingSkill");
         }
         
         /// <summary>
@@ -423,9 +397,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'PostUsers'
             CreateUser body = null; // TODO: replace null with proper value
-            
             var response = instance.PostUsers(body);
-            Assert.IsInstanceOf<User> (response, "response is User"); 
+            Assert.IsInstanceOf<User> (response, "response is User");
         }
         
         /// <summary>
@@ -436,9 +409,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'PostUsersAggregatesQuery'
             AggregationQuery body = null; // TODO: replace null with proper value
-            
             var response = instance.PostUsersAggregatesQuery(body);
-            Assert.IsInstanceOf<PresenceQueryResponse> (response, "response is PresenceQueryResponse"); 
+            Assert.IsInstanceOf<PresenceQueryResponse> (response, "response is PresenceQueryResponse");
         }
         
         /// <summary>
@@ -449,9 +421,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'PostUsersObservationsQuery'
             ObservationQuery body = null; // TODO: replace null with proper value
-            
             var response = instance.PostUsersObservationsQuery(body);
-            Assert.IsInstanceOf<ObservationQueryResponse> (response, "response is ObservationQueryResponse"); 
+            Assert.IsInstanceOf<ObservationQueryResponse> (response, "response is ObservationQueryResponse");
         }
         
         /// <summary>
@@ -463,9 +434,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'PutUserIdCallforwarding'
             string userId = null; // TODO: replace null with proper value
             CallForwarding body = null; // TODO: replace null with proper value
-            
             var response = instance.PutUserIdCallforwarding(userId, body);
-            Assert.IsInstanceOf<CallForwarding> (response, "response is CallForwarding"); 
+            Assert.IsInstanceOf<CallForwarding> (response, "response is CallForwarding");
         }
         
         /// <summary>
@@ -477,9 +447,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'PutUserIdOutofoffice'
             string userId = null; // TODO: replace null with proper value
             OutOfOffice body = null; // TODO: replace null with proper value
-            
             var response = instance.PutUserIdOutofoffice(userId, body);
-            Assert.IsInstanceOf<OutOfOffice> (response, "response is OutOfOffice"); 
+            Assert.IsInstanceOf<OutOfOffice> (response, "response is OutOfOffice");
         }
         
         /// <summary>
@@ -491,9 +460,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'PutUserIdRoles'
             string userId = null; // TODO: replace null with proper value
             List<string> body = null; // TODO: replace null with proper value
-            
             var response = instance.PutUserIdRoles(userId, body);
-            Assert.IsInstanceOf<UserAuthorization> (response, "response is UserAuthorization"); 
+            Assert.IsInstanceOf<UserAuthorization> (response, "response is UserAuthorization");
         }
         
         /// <summary>
@@ -505,9 +473,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'PutUserIdRoutingstatus'
             string userId = null; // TODO: replace null with proper value
             RoutingStatus body = null; // TODO: replace null with proper value
-            
             var response = instance.PutUserIdRoutingstatus(userId, body);
-            Assert.IsInstanceOf<RoutingStatus> (response, "response is RoutingStatus"); 
+            Assert.IsInstanceOf<RoutingStatus> (response, "response is RoutingStatus");
         }
         
         /// <summary>
@@ -519,9 +486,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'PutUserIdStationAssociatedstationStationId'
             string userId = null; // TODO: replace null with proper value
             string stationId = null; // TODO: replace null with proper value
-            
             instance.PutUserIdStationAssociatedstationStationId(userId, stationId);
-             
+            
         }
         
         /// <summary>
@@ -533,9 +499,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'PutUserIdStationDefaultstationStationId'
             string userId = null; // TODO: replace null with proper value
             string stationId = null; // TODO: replace null with proper value
-            
             instance.PutUserIdStationDefaultstationStationId(userId, stationId);
-             
+            
         }
         
     }

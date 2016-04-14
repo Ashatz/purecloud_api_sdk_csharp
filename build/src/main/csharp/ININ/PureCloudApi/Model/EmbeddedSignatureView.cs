@@ -28,7 +28,7 @@ namespace ININ.PureCloudApi.Model
             this.View = View;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets View
@@ -45,11 +45,10 @@ namespace ININ.PureCloudApi.Model
             var sb = new StringBuilder();
             sb.Append("class EmbeddedSignatureView {\n");
             sb.Append("  View: ").Append(View).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -100,10 +99,8 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.View != null)
                     hash = hash * 59 + this.View.GetHashCode();
-                
                 return hash;
             }
         }

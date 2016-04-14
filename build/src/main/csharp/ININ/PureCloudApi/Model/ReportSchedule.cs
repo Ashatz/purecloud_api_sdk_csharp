@@ -64,7 +64,7 @@ namespace ININ.PureCloudApi.Model
             this.LastRun = LastRun;
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -199,11 +199,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Parameters: ").Append(Parameters).Append("\n");
             sb.Append("  LastRun: ").Append(LastRun).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -334,58 +333,40 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.QuartzCronExpression != null)
                     hash = hash * 59 + this.QuartzCronExpression.GetHashCode();
-                
                 if (this.NextFireTime != null)
                     hash = hash * 59 + this.NextFireTime.GetHashCode();
-                
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
-                
                 if (this.DateModified != null)
                     hash = hash * 59 + this.DateModified.GetHashCode();
-                
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
-                
                 if (this.TimeZone != null)
                     hash = hash * 59 + this.TimeZone.GetHashCode();
-                
                 if (this.TimePeriod != null)
                     hash = hash * 59 + this.TimePeriod.GetHashCode();
-                
                 if (this.Interval != null)
                     hash = hash * 59 + this.Interval.GetHashCode();
-                
                 if (this.ReportFormat != null)
                     hash = hash * 59 + this.ReportFormat.GetHashCode();
-                
                 if (this.Locale != null)
                     hash = hash * 59 + this.Locale.GetHashCode();
-                
                 if (this.Enabled != null)
                     hash = hash * 59 + this.Enabled.GetHashCode();
-                
                 if (this.ReportId != null)
                     hash = hash * 59 + this.ReportId.GetHashCode();
-                
                 if (this.Parameters != null)
                     hash = hash * 59 + this.Parameters.GetHashCode();
-                
                 if (this.LastRun != null)
                     hash = hash * 59 + this.LastRun.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 return hash;
             }
         }

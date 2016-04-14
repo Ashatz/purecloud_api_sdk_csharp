@@ -30,7 +30,7 @@ namespace ININ.PureCloudApi.Model
             this.Hours = Hours;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets Days
@@ -54,11 +54,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class TimeInterval {\n");
             sb.Append("  Days: ").Append(Days).Append("\n");
             sb.Append("  Hours: ").Append(Hours).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -114,13 +113,10 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Days != null)
                     hash = hash * 59 + this.Days.GetHashCode();
-                
                 if (this.Hours != null)
                     hash = hash * 59 + this.Hours.GetHashCode();
-                
                 return hash;
             }
         }

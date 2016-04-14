@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new UserActionMetadata();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of UserActionMetadata
@@ -50,97 +50,86 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<UserActionMetadata> (instance, "instance is a UserActionMetadata");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'Category' 
+        /// Test the property 'Category'
         /// </summary>
         [Test]
         public void CategoryTest()
         {
-            // TODO: unit test for the property 'Category' 
+            // TODO: unit test for the property 'Category'
         }
-        
         /// <summary>
-        /// Test the property 'Deprecated' 
+        /// Test the property 'Deprecated'
         /// </summary>
         [Test]
         public void DeprecatedTest()
         {
-            // TODO: unit test for the property 'Deprecated' 
+            // TODO: unit test for the property 'Deprecated'
         }
-        
         /// <summary>
-        /// Test the property 'Description' 
+        /// Test the property 'Description'
         /// </summary>
         [Test]
         public void DescriptionTest()
         {
-            // TODO: unit test for the property 'Description' 
+            // TODO: unit test for the property 'Description'
         }
-        
         /// <summary>
-        /// Test the property 'Published' 
+        /// Test the property 'Published'
         /// </summary>
         [Test]
         public void PublishedTest()
         {
-            // TODO: unit test for the property 'Published' 
+            // TODO: unit test for the property 'Published'
         }
-        
         /// <summary>
-        /// Test the property 'Tags' 
+        /// Test the property 'Tags'
         /// </summary>
         [Test]
         public void TagsTest()
         {
-            // TODO: unit test for the property 'Tags' 
+            // TODO: unit test for the property 'Tags'
         }
-        
         /// <summary>
-        /// Test the property 'HelpLink' 
+        /// Test the property 'HelpLink'
         /// </summary>
         [Test]
         public void HelpLinkTest()
         {
-            // TODO: unit test for the property 'HelpLink' 
+            // TODO: unit test for the property 'HelpLink'
         }
-        
         /// <summary>
-        /// Test the property 'Requests' 
+        /// Test the property 'Requests'
         /// </summary>
         [Test]
         public void RequestsTest()
         {
-            // TODO: unit test for the property 'Requests' 
+            // TODO: unit test for the property 'Requests'
         }
-        
         /// <summary>
-        /// Test the property 'SelfUri' 
+        /// Test the property 'SelfUri'
         /// </summary>
         [Test]
         public void SelfUriTest()
         {
-            // TODO: unit test for the property 'SelfUri' 
+            // TODO: unit test for the property 'SelfUri'
         }
-        
 
     }
 

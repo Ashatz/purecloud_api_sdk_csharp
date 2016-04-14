@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new Ticker();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of Ticker
@@ -50,25 +50,22 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<Ticker> (instance, "instance is a Ticker");
         }
 
-        
         /// <summary>
-        /// Test the property 'Symbol' 
+        /// Test the property 'Symbol'
         /// </summary>
         [Test]
         public void SymbolTest()
         {
-            // TODO: unit test for the property 'Symbol' 
+            // TODO: unit test for the property 'Symbol'
         }
-        
         /// <summary>
-        /// Test the property 'Exchange' 
+        /// Test the property 'Exchange'
         /// </summary>
         [Test]
         public void ExchangeTest()
         {
-            // TODO: unit test for the property 'Exchange' 
+            // TODO: unit test for the property 'Exchange'
         }
-        
 
     }
 

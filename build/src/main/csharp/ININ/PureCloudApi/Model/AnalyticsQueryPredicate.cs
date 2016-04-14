@@ -17,9 +17,13 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class AnalyticsQueryPredicate :  IEquatable<AnalyticsQueryPredicate>
     { 
-    
+
+        /// <summary>
+        /// Optional type, can usually be inferred
+        /// </summary>
+        /// <value>Optional type, can usually be inferred</value>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum TypeEnum {
+                public enum TypeEnum {
             
             [EnumMember(Value = "dimension")]
             Dimension,
@@ -30,9 +34,14 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "metric")]
             Metric
         }
-    
+
+
+        /// <summary>
+        /// Left hand side for dimension predicates
+        /// </summary>
+        /// <value>Left hand side for dimension predicates</value>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum DimensionEnum {
+                public enum DimensionEnum {
             
             [EnumMember(Value = "conversationId")]
             Conversationid,
@@ -163,9 +172,14 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "eventTime")]
             Eventtime
         }
-    
+
+
+        /// <summary>
+        /// Left hand side for property predicates
+        /// </summary>
+        /// <value>Left hand side for property predicates</value>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum PropertyTypeEnum {
+                public enum PropertyTypeEnum {
             
             [EnumMember(Value = "bool")]
             Bool,
@@ -185,9 +199,14 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "uuid")]
             Uuid
         }
-    
+
+
+        /// <summary>
+        /// Left hand side for metric predicates
+        /// </summary>
+        /// <value>Left hand side for metric predicates</value>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum MetricEnum {
+                public enum MetricEnum {
             
             [EnumMember(Value = "tSegmentDuration")]
             Tsegmentduration,
@@ -300,9 +319,14 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "oWaiting")]
             Owaiting
         }
-    
+
+
+        /// <summary>
+        /// Optional operator, default is matches
+        /// </summary>
+        /// <value>Optional operator, default is matches</value>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum _OperatorEnum {
+                public enum _OperatorEnum {
             
             [EnumMember(Value = "matches")]
             Matches,
@@ -313,6 +337,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "notExists")]
             Notexists
         }
+
         
         /// <summary>
         /// Optional type, can usually be inferred
@@ -373,7 +398,7 @@ namespace ININ.PureCloudApi.Model
             this.Range = Range;
             
         }
-        
+
     
         /// <summary>
         /// Left hand side for property predicates
@@ -412,11 +437,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  _Operator: ").Append(_Operator).Append("\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
             sb.Append("  Range: ").Append(Range).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -502,31 +526,22 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
                 if (this.Dimension != null)
                     hash = hash * 59 + this.Dimension.GetHashCode();
-                
                 if (this.PropertyType != null)
                     hash = hash * 59 + this.PropertyType.GetHashCode();
-                
                 if (this.Property != null)
                     hash = hash * 59 + this.Property.GetHashCode();
-                
                 if (this.Metric != null)
                     hash = hash * 59 + this.Metric.GetHashCode();
-                
                 if (this._Operator != null)
                     hash = hash * 59 + this._Operator.GetHashCode();
-                
                 if (this.Value != null)
                     hash = hash * 59 + this.Value.GetHashCode();
-                
                 if (this.Range != null)
                     hash = hash * 59 + this.Range.GetHashCode();
-                
                 return hash;
             }
         }

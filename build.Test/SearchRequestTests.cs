@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new SearchRequest();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of SearchRequest
@@ -50,88 +50,78 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<SearchRequest> (instance, "instance is a SearchRequest");
         }
 
-        
         /// <summary>
-        /// Test the property 'Types' 
+        /// Test the property 'Types'
         /// </summary>
         [Test]
         public void TypesTest()
         {
-            // TODO: unit test for the property 'Types' 
+            // TODO: unit test for the property 'Types'
         }
-        
         /// <summary>
-        /// Test the property 'SortOrder' 
+        /// Test the property 'SortOrder'
         /// </summary>
         [Test]
         public void SortOrderTest()
         {
-            // TODO: unit test for the property 'SortOrder' 
+            // TODO: unit test for the property 'SortOrder'
         }
-        
         /// <summary>
-        /// Test the property 'Query' 
+        /// Test the property 'Query'
         /// </summary>
         [Test]
         public void QueryTest()
         {
-            // TODO: unit test for the property 'Query' 
+            // TODO: unit test for the property 'Query'
         }
-        
         /// <summary>
-        /// Test the property 'SortBy' 
+        /// Test the property 'SortBy'
         /// </summary>
         [Test]
         public void SortByTest()
         {
-            // TODO: unit test for the property 'SortBy' 
+            // TODO: unit test for the property 'SortBy'
         }
-        
         /// <summary>
-        /// Test the property 'PageSize' 
+        /// Test the property 'PageSize'
         /// </summary>
         [Test]
         public void PageSizeTest()
         {
-            // TODO: unit test for the property 'PageSize' 
+            // TODO: unit test for the property 'PageSize'
         }
-        
         /// <summary>
-        /// Test the property 'PageNumber' 
+        /// Test the property 'PageNumber'
         /// </summary>
         [Test]
         public void PageNumberTest()
         {
-            // TODO: unit test for the property 'PageNumber' 
+            // TODO: unit test for the property 'PageNumber'
         }
-        
         /// <summary>
-        /// Test the property 'ReturnFields' 
+        /// Test the property 'ReturnFields'
         /// </summary>
         [Test]
         public void ReturnFieldsTest()
         {
-            // TODO: unit test for the property 'ReturnFields' 
+            // TODO: unit test for the property 'ReturnFields'
         }
-        
         /// <summary>
-        /// Test the property 'Aggregations' 
+        /// Test the property 'Aggregations'
         /// </summary>
         [Test]
         public void AggregationsTest()
         {
-            // TODO: unit test for the property 'Aggregations' 
+            // TODO: unit test for the property 'Aggregations'
         }
-        
         /// <summary>
-        /// Test the property 'Expand' 
+        /// Test the property 'Expand'
         /// </summary>
         [Test]
         public void ExpandTest()
         {
-            // TODO: unit test for the property 'Expand' 
+            // TODO: unit test for the property 'Expand'
         }
-        
 
     }
 

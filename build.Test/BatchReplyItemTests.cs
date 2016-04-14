@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new BatchReplyItem();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of BatchReplyItem
@@ -50,34 +50,30 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<BatchReplyItem> (instance, "instance is a BatchReplyItem");
         }
 
-        
         /// <summary>
-        /// Test the property 'Code' 
+        /// Test the property 'Code'
         /// </summary>
         [Test]
         public void CodeTest()
         {
-            // TODO: unit test for the property 'Code' 
+            // TODO: unit test for the property 'Code'
         }
-        
         /// <summary>
-        /// Test the property 'Error' 
+        /// Test the property 'Error'
         /// </summary>
         [Test]
         public void ErrorTest()
         {
-            // TODO: unit test for the property 'Error' 
+            // TODO: unit test for the property 'Error'
         }
-        
         /// <summary>
-        /// Test the property 'Body' 
+        /// Test the property 'Body'
         /// </summary>
         [Test]
         public void BodyTest()
         {
-            // TODO: unit test for the property 'Body' 
+            // TODO: unit test for the property 'Body'
         }
-        
 
     }
 

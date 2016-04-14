@@ -62,9 +62,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'GetRecordingkeys'
             int? pageSize = null; // TODO: replace null with proper value
             int? pageNumber = null; // TODO: replace null with proper value
-            
             var response = instance.GetRecordingkeys(pageSize, pageNumber);
-            Assert.IsInstanceOf<EncryptionKeyEntityListing> (response, "response is EncryptionKeyEntityListing"); 
+            Assert.IsInstanceOf<EncryptionKeyEntityListing> (response, "response is EncryptionKeyEntityListing");
         }
         
         /// <summary>
@@ -74,9 +73,8 @@ namespace ININ.PureCloudApi.Test
         public void GetRecordingkeysRotationscheduleTest()
         {
             // TODO: add unit test for the method 'GetRecordingkeysRotationschedule'
-            
             var response = instance.GetRecordingkeysRotationschedule();
-            Assert.IsInstanceOf<KeyRotationSchedule> (response, "response is KeyRotationSchedule"); 
+            Assert.IsInstanceOf<KeyRotationSchedule> (response, "response is KeyRotationSchedule");
         }
         
         /// <summary>
@@ -86,9 +84,8 @@ namespace ININ.PureCloudApi.Test
         public void PostRecordingkeysTest()
         {
             // TODO: add unit test for the method 'PostRecordingkeys'
-            
             var response = instance.PostRecordingkeys();
-            Assert.IsInstanceOf<EncryptionKey> (response, "response is EncryptionKey"); 
+            Assert.IsInstanceOf<EncryptionKey> (response, "response is EncryptionKey");
         }
         
         /// <summary>
@@ -99,9 +96,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'PutRecordingkeysRotationschedule'
             KeyRotationSchedule body = null; // TODO: replace null with proper value
-            
             var response = instance.PutRecordingkeysRotationschedule(body);
-            Assert.IsInstanceOf<KeyRotationSchedule> (response, "response is KeyRotationSchedule"); 
+            Assert.IsInstanceOf<KeyRotationSchedule> (response, "response is KeyRotationSchedule");
         }
         
     }

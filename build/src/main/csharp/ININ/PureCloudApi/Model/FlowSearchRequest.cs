@@ -40,7 +40,7 @@ namespace ININ.PureCloudApi.Model
             this.Filters = Filters;
             
         }
-        
+
     
         /// <summary>
         /// The search text to look for
@@ -106,11 +106,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  FacetRequests: ").Append(FacetRequests).Append("\n");
             sb.Append("  Sort: ").Append(Sort).Append("\n");
             sb.Append("  Filters: ").Append(Filters).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -191,28 +190,20 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.SearchPhrase != null)
                     hash = hash * 59 + this.SearchPhrase.GetHashCode();
-                
                 if (this.PageNumber != null)
                     hash = hash * 59 + this.PageNumber.GetHashCode();
-                
                 if (this.PageSize != null)
                     hash = hash * 59 + this.PageSize.GetHashCode();
-                
                 if (this.SearchFields != null)
                     hash = hash * 59 + this.SearchFields.GetHashCode();
-                
                 if (this.FacetRequests != null)
                     hash = hash * 59 + this.FacetRequests.GetHashCode();
-                
                 if (this.Sort != null)
                     hash = hash * 59 + this.Sort.GetHashCode();
-                
                 if (this.Filters != null)
                     hash = hash * 59 + this.Filters.GetHashCode();
-                
                 return hash;
             }
         }

@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new ExternalContact();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of ExternalContact
@@ -50,169 +50,150 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<ExternalContact> (instance, "instance is a ExternalContact");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'FirstName' 
+        /// Test the property 'FirstName'
         /// </summary>
         [Test]
         public void FirstNameTest()
         {
-            // TODO: unit test for the property 'FirstName' 
+            // TODO: unit test for the property 'FirstName'
         }
-        
         /// <summary>
-        /// Test the property 'MiddleName' 
+        /// Test the property 'MiddleName'
         /// </summary>
         [Test]
         public void MiddleNameTest()
         {
-            // TODO: unit test for the property 'MiddleName' 
+            // TODO: unit test for the property 'MiddleName'
         }
-        
         /// <summary>
-        /// Test the property 'LastName' 
+        /// Test the property 'LastName'
         /// </summary>
         [Test]
         public void LastNameTest()
         {
-            // TODO: unit test for the property 'LastName' 
+            // TODO: unit test for the property 'LastName'
         }
-        
         /// <summary>
-        /// Test the property 'Salutation' 
+        /// Test the property 'Salutation'
         /// </summary>
         [Test]
         public void SalutationTest()
         {
-            // TODO: unit test for the property 'Salutation' 
+            // TODO: unit test for the property 'Salutation'
         }
-        
         /// <summary>
-        /// Test the property 'Title' 
+        /// Test the property 'Title'
         /// </summary>
         [Test]
         public void TitleTest()
         {
-            // TODO: unit test for the property 'Title' 
+            // TODO: unit test for the property 'Title'
         }
-        
         /// <summary>
-        /// Test the property 'WorkPhone' 
+        /// Test the property 'WorkPhone'
         /// </summary>
         [Test]
         public void WorkPhoneTest()
         {
-            // TODO: unit test for the property 'WorkPhone' 
+            // TODO: unit test for the property 'WorkPhone'
         }
-        
         /// <summary>
-        /// Test the property 'CellPhone' 
+        /// Test the property 'CellPhone'
         /// </summary>
         [Test]
         public void CellPhoneTest()
         {
-            // TODO: unit test for the property 'CellPhone' 
+            // TODO: unit test for the property 'CellPhone'
         }
-        
         /// <summary>
-        /// Test the property 'HomePhone' 
+        /// Test the property 'HomePhone'
         /// </summary>
         [Test]
         public void HomePhoneTest()
         {
-            // TODO: unit test for the property 'HomePhone' 
+            // TODO: unit test for the property 'HomePhone'
         }
-        
         /// <summary>
-        /// Test the property 'OtherPhone' 
+        /// Test the property 'OtherPhone'
         /// </summary>
         [Test]
         public void OtherPhoneTest()
         {
-            // TODO: unit test for the property 'OtherPhone' 
+            // TODO: unit test for the property 'OtherPhone'
         }
-        
         /// <summary>
-        /// Test the property 'WorkEmail' 
+        /// Test the property 'WorkEmail'
         /// </summary>
         [Test]
         public void WorkEmailTest()
         {
-            // TODO: unit test for the property 'WorkEmail' 
+            // TODO: unit test for the property 'WorkEmail'
         }
-        
         /// <summary>
-        /// Test the property 'PersonalEmail' 
+        /// Test the property 'PersonalEmail'
         /// </summary>
         [Test]
         public void PersonalEmailTest()
         {
-            // TODO: unit test for the property 'PersonalEmail' 
+            // TODO: unit test for the property 'PersonalEmail'
         }
-        
         /// <summary>
-        /// Test the property 'OtherEmail' 
+        /// Test the property 'OtherEmail'
         /// </summary>
         [Test]
         public void OtherEmailTest()
         {
-            // TODO: unit test for the property 'OtherEmail' 
+            // TODO: unit test for the property 'OtherEmail'
         }
-        
         /// <summary>
-        /// Test the property 'Address' 
+        /// Test the property 'Address'
         /// </summary>
         [Test]
         public void AddressTest()
         {
-            // TODO: unit test for the property 'Address' 
+            // TODO: unit test for the property 'Address'
         }
-        
         /// <summary>
-        /// Test the property 'ModifyDate' 
+        /// Test the property 'ModifyDate'
         /// </summary>
         [Test]
         public void ModifyDateTest()
         {
-            // TODO: unit test for the property 'ModifyDate' 
+            // TODO: unit test for the property 'ModifyDate'
         }
-        
         /// <summary>
-        /// Test the property 'CreateDate' 
+        /// Test the property 'CreateDate'
         /// </summary>
         [Test]
         public void CreateDateTest()
         {
-            // TODO: unit test for the property 'CreateDate' 
+            // TODO: unit test for the property 'CreateDate'
         }
-        
         /// <summary>
-        /// Test the property 'ExternalOrganization' 
+        /// Test the property 'ExternalOrganization'
         /// </summary>
         [Test]
         public void ExternalOrganizationTest()
         {
-            // TODO: unit test for the property 'ExternalOrganization' 
+            // TODO: unit test for the property 'ExternalOrganization'
         }
-        
         /// <summary>
-        /// Test the property 'SelfUri' 
+        /// Test the property 'SelfUri'
         /// </summary>
         [Test]
         public void SelfUriTest()
         {
-            // TODO: unit test for the property 'SelfUri' 
+            // TODO: unit test for the property 'SelfUri'
         }
-        
 
     }
 

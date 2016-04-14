@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new TraceList();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of TraceList
@@ -50,25 +50,22 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<TraceList> (instance, "instance is a TraceList");
         }
 
-        
         /// <summary>
-        /// Test the property 'App' 
+        /// Test the property 'App'
         /// </summary>
         [Test]
         public void AppTest()
         {
-            // TODO: unit test for the property 'App' 
+            // TODO: unit test for the property 'App'
         }
-        
         /// <summary>
-        /// Test the property 'Traces' 
+        /// Test the property 'Traces'
         /// </summary>
         [Test]
         public void TracesTest()
         {
-            // TODO: unit test for the property 'Traces' 
+            // TODO: unit test for the property 'Traces'
         }
-        
 
     }
 

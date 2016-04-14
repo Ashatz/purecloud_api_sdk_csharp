@@ -17,9 +17,13 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class FacetResult :  IEquatable<FacetResult>
     { 
-    
+
+        /// <summary>
+        /// data type of the field being returned (if this is a mixed field this will be unknown)
+        /// </summary>
+        /// <value>data type of the field being returned (if this is a mixed field this will be unknown)</value>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum FieldTypeEnum {
+                public enum FieldTypeEnum {
             
             [EnumMember(Value = "NUMBER")]
             Number,
@@ -39,9 +43,14 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "GROUP")]
             Group
         }
-    
+
+
+        /// <summary>
+        /// the facet request type that was made.
+        /// </summary>
+        /// <value>the facet request type that was made.</value>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum RequestTypeEnum {
+                public enum RequestTypeEnum {
             
             [EnumMember(Value = "TERM")]
             Term,
@@ -49,6 +58,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "RANGE")]
             Range
         }
+
         
         /// <summary>
         /// data type of the field being returned (if this is a mixed field this will be unknown)
@@ -82,7 +92,7 @@ namespace ININ.PureCloudApi.Model
             this.Results = Results;
             
         }
-        
+
     
         /// <summary>
         /// This was the name passed in as part of the facetRequest
@@ -117,11 +127,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  FieldType: ").Append(FieldType).Append("\n");
             sb.Append("  RequestType: ").Append(RequestType).Append("\n");
             sb.Append("  Results: ").Append(Results).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -192,22 +201,16 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.RequestName != null)
                     hash = hash * 59 + this.RequestName.GetHashCode();
-                
                 if (this.RequestFieldName != null)
                     hash = hash * 59 + this.RequestFieldName.GetHashCode();
-                
                 if (this.FieldType != null)
                     hash = hash * 59 + this.FieldType.GetHashCode();
-                
                 if (this.RequestType != null)
                     hash = hash * 59 + this.RequestType.GetHashCode();
-                
                 if (this.Results != null)
                     hash = hash * 59 + this.Results.GetHashCode();
-                
                 return hash;
             }
         }

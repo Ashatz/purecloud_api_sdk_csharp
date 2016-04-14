@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new MediaPolicies();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of MediaPolicies
@@ -50,34 +50,30 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<MediaPolicies> (instance, "instance is a MediaPolicies");
         }
 
-        
         /// <summary>
-        /// Test the property 'CallPolicy' 
+        /// Test the property 'CallPolicy'
         /// </summary>
         [Test]
         public void CallPolicyTest()
         {
-            // TODO: unit test for the property 'CallPolicy' 
+            // TODO: unit test for the property 'CallPolicy'
         }
-        
         /// <summary>
-        /// Test the property 'ChatPolicy' 
+        /// Test the property 'ChatPolicy'
         /// </summary>
         [Test]
         public void ChatPolicyTest()
         {
-            // TODO: unit test for the property 'ChatPolicy' 
+            // TODO: unit test for the property 'ChatPolicy'
         }
-        
         /// <summary>
-        /// Test the property 'EmailPolicy' 
+        /// Test the property 'EmailPolicy'
         /// </summary>
         [Test]
         public void EmailPolicyTest()
         {
-            // TODO: unit test for the property 'EmailPolicy' 
+            // TODO: unit test for the property 'EmailPolicy'
         }
-        
 
     }
 

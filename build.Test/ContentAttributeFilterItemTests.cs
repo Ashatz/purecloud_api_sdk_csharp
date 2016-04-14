@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new ContentAttributeFilterItem();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of ContentAttributeFilterItem
@@ -50,34 +50,30 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<ContentAttributeFilterItem> (instance, "instance is a ContentAttributeFilterItem");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property '_Operator' 
+        /// Test the property '_Operator'
         /// </summary>
         [Test]
         public void _OperatorTest()
         {
-            // TODO: unit test for the property '_Operator' 
+            // TODO: unit test for the property '_Operator'
         }
-        
         /// <summary>
-        /// Test the property 'Values' 
+        /// Test the property 'Values'
         /// </summary>
         [Test]
         public void ValuesTest()
         {
-            // TODO: unit test for the property 'Values' 
+            // TODO: unit test for the property 'Values'
         }
-        
 
     }
 

@@ -58,7 +58,7 @@ namespace ININ.PureCloudApi.Model
             }
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -140,11 +140,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  RoleNeedsUpdate: ").Append(RoleNeedsUpdate).Append("\n");
             sb.Append("  _Default: ").Append(_Default).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -240,37 +239,26 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
-                
                 if (this.DefaultRoleId != null)
                     hash = hash * 59 + this.DefaultRoleId.GetHashCode();
-                
                 if (this.Permissions != null)
                     hash = hash * 59 + this.Permissions.GetHashCode();
-                
                 if (this.PermissionPolicies != null)
                     hash = hash * 59 + this.PermissionPolicies.GetHashCode();
-                
                 if (this.UserCount != null)
                     hash = hash * 59 + this.UserCount.GetHashCode();
-                
                 if (this.RoleNeedsUpdate != null)
                     hash = hash * 59 + this.RoleNeedsUpdate.GetHashCode();
-                
                 if (this._Default != null)
                     hash = hash * 59 + this._Default.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 return hash;
             }
         }

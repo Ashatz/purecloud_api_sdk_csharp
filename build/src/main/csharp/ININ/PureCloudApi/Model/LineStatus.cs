@@ -44,7 +44,7 @@ namespace ININ.PureCloudApi.Model
             this.ReachableStateTime = ReachableStateTime;
             
         }
-        
+
     
         /// <summary>
         /// The id of this line
@@ -61,9 +61,9 @@ namespace ININ.PureCloudApi.Model
         public bool? Reachable { get; set; }
     
         /// <summary>
-        /// The line's address of record.
+        /// The line&#39;s address of record.
         /// </summary>
-        /// <value>The line's address of record.</value>
+        /// <value>The line&#39;s address of record.</value>
         [DataMember(Name="addressOfRecord", EmitDefaultValue=false)]
         public string AddressOfRecord { get; set; }
     
@@ -94,11 +94,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  AddressOfRecord: ").Append(AddressOfRecord).Append("\n");
             sb.Append("  ContactAddresses: ").Append(ContactAddresses).Append("\n");
             sb.Append("  ReachableStateTime: ").Append(ReachableStateTime).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -169,22 +168,16 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Reachable != null)
                     hash = hash * 59 + this.Reachable.GetHashCode();
-                
                 if (this.AddressOfRecord != null)
                     hash = hash * 59 + this.AddressOfRecord.GetHashCode();
-                
                 if (this.ContactAddresses != null)
                     hash = hash * 59 + this.ContactAddresses.GetHashCode();
-                
                 if (this.ReachableStateTime != null)
                     hash = hash * 59 + this.ReachableStateTime.GetHashCode();
-                
                 return hash;
             }
         }

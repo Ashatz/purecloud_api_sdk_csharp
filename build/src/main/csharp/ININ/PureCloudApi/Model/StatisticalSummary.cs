@@ -44,7 +44,7 @@ namespace ININ.PureCloudApi.Model
             this.Target = Target;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets Max
@@ -117,11 +117,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Numerator: ").Append(Numerator).Append("\n");
             sb.Append("  Denominator: ").Append(Denominator).Append("\n");
             sb.Append("  Target: ").Append(Target).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -212,34 +211,24 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Max != null)
                     hash = hash * 59 + this.Max.GetHashCode();
-                
                 if (this.Min != null)
                     hash = hash * 59 + this.Min.GetHashCode();
-                
                 if (this.Count != null)
                     hash = hash * 59 + this.Count.GetHashCode();
-                
                 if (this.Sum != null)
                     hash = hash * 59 + this.Sum.GetHashCode();
-                
                 if (this.Current != null)
                     hash = hash * 59 + this.Current.GetHashCode();
-                
                 if (this.Ratio != null)
                     hash = hash * 59 + this.Ratio.GetHashCode();
-                
                 if (this.Numerator != null)
                     hash = hash * 59 + this.Numerator.GetHashCode();
-                
                 if (this.Denominator != null)
                     hash = hash * 59 + this.Denominator.GetHashCode();
-                
                 if (this.Target != null)
                     hash = hash * 59 + this.Target.GetHashCode();
-                
                 return hash;
             }
         }

@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new OrganizationProductEntityListing();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of OrganizationProductEntityListing
@@ -50,52 +50,46 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<OrganizationProductEntityListing> (instance, "instance is a OrganizationProductEntityListing");
         }
 
-        
         /// <summary>
-        /// Test the property 'PageSize' 
+        /// Test the property 'PageSize'
         /// </summary>
         [Test]
         public void PageSizeTest()
         {
-            // TODO: unit test for the property 'PageSize' 
+            // TODO: unit test for the property 'PageSize'
         }
-        
         /// <summary>
-        /// Test the property 'PageNumber' 
+        /// Test the property 'PageNumber'
         /// </summary>
         [Test]
         public void PageNumberTest()
         {
-            // TODO: unit test for the property 'PageNumber' 
+            // TODO: unit test for the property 'PageNumber'
         }
-        
         /// <summary>
-        /// Test the property 'Total' 
+        /// Test the property 'Total'
         /// </summary>
         [Test]
         public void TotalTest()
         {
-            // TODO: unit test for the property 'Total' 
+            // TODO: unit test for the property 'Total'
         }
-        
         /// <summary>
-        /// Test the property 'Entities' 
+        /// Test the property 'Entities'
         /// </summary>
         [Test]
         public void EntitiesTest()
         {
-            // TODO: unit test for the property 'Entities' 
+            // TODO: unit test for the property 'Entities'
         }
-        
         /// <summary>
-        /// Test the property 'PageCount' 
+        /// Test the property 'PageCount'
         /// </summary>
         [Test]
         public void PageCountTest()
         {
-            // TODO: unit test for the property 'PageCount' 
+            // TODO: unit test for the property 'PageCount'
         }
-        
 
     }
 

@@ -17,9 +17,12 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class Document :  IEquatable<Document>
     { 
-    
+
+        /// <summary>
+        /// Gets or Sets SystemType
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum SystemTypeEnum {
+                public enum SystemTypeEnum {
             
             [EnumMember(Value = "DOCUMENT")]
             Document,
@@ -30,9 +33,13 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "RECORDING")]
             Recording
         }
-    
+
+
+        /// <summary>
+        /// Gets or Sets UploadMethod
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum UploadMethodEnum {
+                public enum UploadMethodEnum {
             
             [EnumMember(Value = "SINGLE_PUT")]
             SinglePut,
@@ -40,9 +47,13 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "MULTIPART_POST")]
             MultipartPost
         }
-    
+
+
+        /// <summary>
+        /// Gets or Sets SharingStatus
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum SharingStatusEnum {
+                public enum SharingStatusEnum {
             
             [EnumMember(Value = "NONE")]
             None,
@@ -53,6 +64,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "PUBLIC")]
             Public
         }
+
         
         /// <summary>
         /// Gets or Sets SystemType
@@ -146,7 +158,7 @@ namespace ININ.PureCloudApi.Model
             this.DownloadSharingUri = DownloadSharingUri;
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -361,11 +373,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  SharingUri: ").Append(SharingUri).Append("\n");
             sb.Append("  DownloadSharingUri: ").Append(DownloadSharingUri).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -566,100 +577,68 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.ChangeNumber != null)
                     hash = hash * 59 + this.ChangeNumber.GetHashCode();
-                
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
-                
                 if (this.DateModified != null)
                     hash = hash * 59 + this.DateModified.GetHashCode();
-                
                 if (this.DateUploaded != null)
                     hash = hash * 59 + this.DateUploaded.GetHashCode();
-                
                 if (this.ContentUri != null)
                     hash = hash * 59 + this.ContentUri.GetHashCode();
-                
                 if (this.Workspace != null)
                     hash = hash * 59 + this.Workspace.GetHashCode();
-                
                 if (this.CreatedBy != null)
                     hash = hash * 59 + this.CreatedBy.GetHashCode();
-                
                 if (this.UploadedBy != null)
                     hash = hash * 59 + this.UploadedBy.GetHashCode();
-                
                 if (this.ContentType != null)
                     hash = hash * 59 + this.ContentType.GetHashCode();
-                
                 if (this.ContentLength != null)
                     hash = hash * 59 + this.ContentLength.GetHashCode();
-                
                 if (this.SystemType != null)
                     hash = hash * 59 + this.SystemType.GetHashCode();
-                
                 if (this.Filename != null)
                     hash = hash * 59 + this.Filename.GetHashCode();
-                
                 if (this.PageCount != null)
                     hash = hash * 59 + this.PageCount.GetHashCode();
-                
                 if (this.Read != null)
                     hash = hash * 59 + this.Read.GetHashCode();
-                
                 if (this.CallerAddress != null)
                     hash = hash * 59 + this.CallerAddress.GetHashCode();
-                
                 if (this.ReceiverAddress != null)
                     hash = hash * 59 + this.ReceiverAddress.GetHashCode();
-                
                 if (this.Tags != null)
                     hash = hash * 59 + this.Tags.GetHashCode();
-                
                 if (this.TagValues != null)
                     hash = hash * 59 + this.TagValues.GetHashCode();
-                
                 if (this.Attributes != null)
                     hash = hash * 59 + this.Attributes.GetHashCode();
-                
                 if (this.Thumbnails != null)
                     hash = hash * 59 + this.Thumbnails.GetHashCode();
-                
                 if (this.UploadStatus != null)
                     hash = hash * 59 + this.UploadStatus.GetHashCode();
-                
                 if (this.UploadDestinationUri != null)
                     hash = hash * 59 + this.UploadDestinationUri.GetHashCode();
-                
                 if (this.UploadMethod != null)
                     hash = hash * 59 + this.UploadMethod.GetHashCode();
-                
                 if (this.LockInfo != null)
                     hash = hash * 59 + this.LockInfo.GetHashCode();
-                
                 if (this.Acl != null)
                     hash = hash * 59 + this.Acl.GetHashCode();
-                
                 if (this.SharingStatus != null)
                     hash = hash * 59 + this.SharingStatus.GetHashCode();
-                
                 if (this.SharingUri != null)
                     hash = hash * 59 + this.SharingUri.GetHashCode();
-                
                 if (this.DownloadSharingUri != null)
                     hash = hash * 59 + this.DownloadSharingUri.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 return hash;
             }
         }

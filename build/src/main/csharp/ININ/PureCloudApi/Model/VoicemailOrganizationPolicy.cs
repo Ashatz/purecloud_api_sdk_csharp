@@ -80,7 +80,7 @@ namespace ININ.PureCloudApi.Model
             }
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets Enabled
@@ -170,9 +170,9 @@ namespace ININ.PureCloudApi.Model
         public string VoicemailExtension { get; set; }
     
         /// <summary>
-        /// If this is true, a PIN is required when accessing a user's voicemail from a phone.
+        /// If this is true, a PIN is required when accessing a user&#39;s voicemail from a phone.
         /// </summary>
-        /// <value>If this is true, a PIN is required when accessing a user's voicemail from a phone.</value>
+        /// <value>If this is true, a PIN is required when accessing a user&#39;s voicemail from a phone.</value>
         [DataMember(Name="pinRequired", EmitDefaultValue=false)]
         public bool? PinRequired { get; set; }
     
@@ -199,11 +199,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  ModifiedDate: ").Append(ModifiedDate).Append("\n");
             sb.Append("  VoicemailExtension: ").Append(VoicemailExtension).Append("\n");
             sb.Append("  PinRequired: ").Append(PinRequired).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -324,52 +323,36 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Enabled != null)
                     hash = hash * 59 + this.Enabled.GetHashCode();
-                
                 if (this.RetentionTimeDays != null)
                     hash = hash * 59 + this.RetentionTimeDays.GetHashCode();
-                
                 if (this.AlertTimeoutSeconds != null)
                     hash = hash * 59 + this.AlertTimeoutSeconds.GetHashCode();
-                
                 if (this.MinimumRecordingTimeSeconds != null)
                     hash = hash * 59 + this.MinimumRecordingTimeSeconds.GetHashCode();
-                
                 if (this.MaximumRecordingTimeSeconds != null)
                     hash = hash * 59 + this.MaximumRecordingTimeSeconds.GetHashCode();
-                
                 if (this.UnavailableMessageUri != null)
                     hash = hash * 59 + this.UnavailableMessageUri.GetHashCode();
-                
                 if (this.NamePromptMessageUri != null)
                     hash = hash * 59 + this.NamePromptMessageUri.GetHashCode();
-                
                 if (this.FullMessageUri != null)
                     hash = hash * 59 + this.FullMessageUri.GetHashCode();
-                
                 if (this.CompressSilence != null)
                     hash = hash * 59 + this.CompressSilence.GetHashCode();
-                
                 if (this.PinConfiguration != null)
                     hash = hash * 59 + this.PinConfiguration.GetHashCode();
-                
                 if (this.QuotaSizeBytes != null)
                     hash = hash * 59 + this.QuotaSizeBytes.GetHashCode();
-                
                 if (this.CreatedDate != null)
                     hash = hash * 59 + this.CreatedDate.GetHashCode();
-                
                 if (this.ModifiedDate != null)
                     hash = hash * 59 + this.ModifiedDate.GetHashCode();
-                
                 if (this.VoicemailExtension != null)
                     hash = hash * 59 + this.VoicemailExtension.GetHashCode();
-                
                 if (this.PinRequired != null)
                     hash = hash * 59 + this.PinRequired.GetHashCode();
-                
                 return hash;
             }
         }

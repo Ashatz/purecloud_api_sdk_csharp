@@ -86,7 +86,7 @@ namespace ININ.PureCloudApi.Model
             }
             
         }
-        
+
     
         /// <summary>
         /// Display Name for Organization
@@ -144,11 +144,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Domain: ").Append(Domain).Append("\n");
             sb.Append("  ThirdPartyOrgName: ").Append(ThirdPartyOrgName).Append("\n");
             sb.Append("  Deletable: ").Append(Deletable).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -224,25 +223,18 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.AdminUsername != null)
                     hash = hash * 59 + this.AdminUsername.GetHashCode();
-                
                 if (this.AdminPassword != null)
                     hash = hash * 59 + this.AdminPassword.GetHashCode();
-                
                 if (this.Domain != null)
                     hash = hash * 59 + this.Domain.GetHashCode();
-                
                 if (this.ThirdPartyOrgName != null)
                     hash = hash * 59 + this.ThirdPartyOrgName.GetHashCode();
-                
                 if (this.Deletable != null)
                     hash = hash * 59 + this.Deletable.GetHashCode();
-                
                 return hash;
             }
         }

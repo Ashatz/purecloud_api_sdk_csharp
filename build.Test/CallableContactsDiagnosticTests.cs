@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new CallableContactsDiagnostic();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of CallableContactsDiagnostic
@@ -50,34 +50,30 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<CallableContactsDiagnostic> (instance, "instance is a CallableContactsDiagnostic");
         }
 
-        
         /// <summary>
-        /// Test the property 'DncLists' 
+        /// Test the property 'DncLists'
         /// </summary>
         [Test]
         public void DncListsTest()
         {
-            // TODO: unit test for the property 'DncLists' 
+            // TODO: unit test for the property 'DncLists'
         }
-        
         /// <summary>
-        /// Test the property 'CallableTimeSet' 
+        /// Test the property 'CallableTimeSet'
         /// </summary>
         [Test]
         public void CallableTimeSetTest()
         {
-            // TODO: unit test for the property 'CallableTimeSet' 
+            // TODO: unit test for the property 'CallableTimeSet'
         }
-        
         /// <summary>
-        /// Test the property 'RuleSets' 
+        /// Test the property 'RuleSets'
         /// </summary>
         [Test]
         public void RuleSetsTest()
         {
-            // TODO: unit test for the property 'RuleSets' 
+            // TODO: unit test for the property 'RuleSets'
         }
-        
 
     }
 

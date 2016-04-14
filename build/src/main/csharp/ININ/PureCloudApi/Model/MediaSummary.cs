@@ -30,7 +30,7 @@ namespace ININ.PureCloudApi.Model
             this.Enterprise = Enterprise;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets ContactCenter
@@ -54,11 +54,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class MediaSummary {\n");
             sb.Append("  ContactCenter: ").Append(ContactCenter).Append("\n");
             sb.Append("  Enterprise: ").Append(Enterprise).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -114,13 +113,10 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ContactCenter != null)
                     hash = hash * 59 + this.ContactCenter.GetHashCode();
-                
                 if (this.Enterprise != null)
                     hash = hash * 59 + this.Enterprise.GetHashCode();
-                
                 return hash;
             }
         }

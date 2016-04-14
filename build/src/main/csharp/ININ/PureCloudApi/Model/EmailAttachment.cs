@@ -36,7 +36,7 @@ namespace ININ.PureCloudApi.Model
             this.ContentLength = ContentLength;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets Name
@@ -81,11 +81,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  ContentType: ").Append(ContentType).Append("\n");
             sb.Append("  AttachmentId: ").Append(AttachmentId).Append("\n");
             sb.Append("  ContentLength: ").Append(ContentLength).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -156,22 +155,16 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.ContentPath != null)
                     hash = hash * 59 + this.ContentPath.GetHashCode();
-                
                 if (this.ContentType != null)
                     hash = hash * 59 + this.ContentType.GetHashCode();
-                
                 if (this.AttachmentId != null)
                     hash = hash * 59 + this.AttachmentId.GetHashCode();
-                
                 if (this.ContentLength != null)
                     hash = hash * 59 + this.ContentLength.GetHashCode();
-                
                 return hash;
             }
         }

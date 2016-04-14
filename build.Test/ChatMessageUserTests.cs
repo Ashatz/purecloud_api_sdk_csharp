@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new ChatMessageUser();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of ChatMessageUser
@@ -50,52 +50,46 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<ChatMessageUser> (instance, "instance is a ChatMessageUser");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'DisplayName' 
+        /// Test the property 'DisplayName'
         /// </summary>
         [Test]
         public void DisplayNameTest()
         {
-            // TODO: unit test for the property 'DisplayName' 
+            // TODO: unit test for the property 'DisplayName'
         }
-        
         /// <summary>
-        /// Test the property 'Username' 
+        /// Test the property 'Username'
         /// </summary>
         [Test]
         public void UsernameTest()
         {
-            // TODO: unit test for the property 'Username' 
+            // TODO: unit test for the property 'Username'
         }
-        
         /// <summary>
-        /// Test the property 'Images' 
+        /// Test the property 'Images'
         /// </summary>
         [Test]
         public void ImagesTest()
         {
-            // TODO: unit test for the property 'Images' 
+            // TODO: unit test for the property 'Images'
         }
-        
 
     }
 

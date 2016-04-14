@@ -40,7 +40,7 @@ namespace ININ.PureCloudApi.Model
             this.Table = Table;
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -115,11 +115,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Delimiter: ").Append(Delimiter).Append("\n");
             sb.Append("  Table: ").Append(Table).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -210,34 +209,24 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.RestEndpoint != null)
                     hash = hash * 59 + this.RestEndpoint.GetHashCode();
-                
                 if (this.FilenameTransforms != null)
                     hash = hash * 59 + this.FilenameTransforms.GetHashCode();
-                
                 if (this.Tags != null)
                     hash = hash * 59 + this.Tags.GetHashCode();
-                
                 if (this.CommentSymbol != null)
                     hash = hash * 59 + this.CommentSymbol.GetHashCode();
-                
                 if (this.Delimiter != null)
                     hash = hash * 59 + this.Delimiter.GetHashCode();
-                
                 if (this.Table != null)
                     hash = hash * 59 + this.Table.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 return hash;
             }
         }

@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new FacetStatistics();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of FacetStatistics
@@ -50,70 +50,62 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<FacetStatistics> (instance, "instance is a FacetStatistics");
         }
 
-        
         /// <summary>
-        /// Test the property 'Count' 
+        /// Test the property 'Count'
         /// </summary>
         [Test]
         public void CountTest()
         {
-            // TODO: unit test for the property 'Count' 
+            // TODO: unit test for the property 'Count'
         }
-        
         /// <summary>
-        /// Test the property 'Min' 
+        /// Test the property 'Min'
         /// </summary>
         [Test]
         public void MinTest()
         {
-            // TODO: unit test for the property 'Min' 
+            // TODO: unit test for the property 'Min'
         }
-        
         /// <summary>
-        /// Test the property 'Max' 
+        /// Test the property 'Max'
         /// </summary>
         [Test]
         public void MaxTest()
         {
-            // TODO: unit test for the property 'Max' 
+            // TODO: unit test for the property 'Max'
         }
-        
         /// <summary>
-        /// Test the property 'Mean' 
+        /// Test the property 'Mean'
         /// </summary>
         [Test]
         public void MeanTest()
         {
-            // TODO: unit test for the property 'Mean' 
+            // TODO: unit test for the property 'Mean'
         }
-        
         /// <summary>
-        /// Test the property 'StdDeviation' 
+        /// Test the property 'StdDeviation'
         /// </summary>
         [Test]
         public void StdDeviationTest()
         {
-            // TODO: unit test for the property 'StdDeviation' 
+            // TODO: unit test for the property 'StdDeviation'
         }
-        
         /// <summary>
-        /// Test the property 'DateMin' 
+        /// Test the property 'DateMin'
         /// </summary>
         [Test]
         public void DateMinTest()
         {
-            // TODO: unit test for the property 'DateMin' 
+            // TODO: unit test for the property 'DateMin'
         }
-        
         /// <summary>
-        /// Test the property 'DateMax' 
+        /// Test the property 'DateMax'
         /// </summary>
         [Test]
         public void DateMaxTest()
         {
-            // TODO: unit test for the property 'DateMax' 
+            // TODO: unit test for the property 'DateMax'
         }
-        
 
     }
 

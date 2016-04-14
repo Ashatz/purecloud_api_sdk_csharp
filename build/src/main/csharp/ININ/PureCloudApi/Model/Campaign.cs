@@ -90,7 +90,7 @@ namespace ININ.PureCloudApi.Model
             this.ContactSort = ContactSort;
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -286,11 +286,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  SingleNumberPreview: ").Append(SingleNumberPreview).Append("\n");
             sb.Append("  ContactSort: ").Append(ContactSort).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -466,85 +465,58 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
-                
                 if (this.DateModified != null)
                     hash = hash * 59 + this.DateModified.GetHashCode();
-                
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
-                
                 if (this.ContactList != null)
                     hash = hash * 59 + this.ContactList.GetHashCode();
-                
                 if (this.Queue != null)
                     hash = hash * 59 + this.Queue.GetHashCode();
-                
                 if (this.DialingMode != null)
                     hash = hash * 59 + this.DialingMode.GetHashCode();
-                
                 if (this.Script != null)
                     hash = hash * 59 + this.Script.GetHashCode();
-                
                 if (this.EdgeGroup != null)
                     hash = hash * 59 + this.EdgeGroup.GetHashCode();
-                
                 if (this.CampaignStatus != null)
                     hash = hash * 59 + this.CampaignStatus.GetHashCode();
-                
                 if (this.PhoneColumns != null)
                     hash = hash * 59 + this.PhoneColumns.GetHashCode();
-                
                 if (this.AbandonRate != null)
                     hash = hash * 59 + this.AbandonRate.GetHashCode();
-                
                 if (this.DncLists != null)
                     hash = hash * 59 + this.DncLists.GetHashCode();
-                
                 if (this.CallableTimeSet != null)
                     hash = hash * 59 + this.CallableTimeSet.GetHashCode();
-                
                 if (this.CallAnalysisResponseSet != null)
                     hash = hash * 59 + this.CallAnalysisResponseSet.GetHashCode();
-                
                 if (this.Errors != null)
                     hash = hash * 59 + this.Errors.GetHashCode();
-                
                 if (this.CallerName != null)
                     hash = hash * 59 + this.CallerName.GetHashCode();
-                
                 if (this.CallerAddress != null)
                     hash = hash * 59 + this.CallerAddress.GetHashCode();
-                
                 if (this.OutboundLineCount != null)
                     hash = hash * 59 + this.OutboundLineCount.GetHashCode();
-                
                 if (this.RuleSets != null)
                     hash = hash * 59 + this.RuleSets.GetHashCode();
-                
                 if (this.SkipPreviewDisabled != null)
                     hash = hash * 59 + this.SkipPreviewDisabled.GetHashCode();
-                
                 if (this.PreviewTimeOutSeconds != null)
                     hash = hash * 59 + this.PreviewTimeOutSeconds.GetHashCode();
-                
                 if (this.SingleNumberPreview != null)
                     hash = hash * 59 + this.SingleNumberPreview.GetHashCode();
-                
                 if (this.ContactSort != null)
                     hash = hash * 59 + this.ContactSort.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 return hash;
             }
         }

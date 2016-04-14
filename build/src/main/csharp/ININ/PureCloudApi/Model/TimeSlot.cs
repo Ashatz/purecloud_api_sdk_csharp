@@ -23,7 +23,7 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <param name="StartTime">start time in xx:xx:xx.xxx format.</param>
         /// <param name="StopTime">stop time in xx:xx:xx.xxx format.</param>
-        /// <param name="Day">Day for this time slot, Monday = 1 ... Sunday = 7.</param>
+        /// <param name="Day">Day for this time slot, Monday &#x3D; 1 ... Sunday &#x3D; 7.</param>
 
         public TimeSlot(string StartTime = null, string StopTime = null, int? Day = null)
         {
@@ -32,7 +32,7 @@ namespace ININ.PureCloudApi.Model
             this.Day = Day;
             
         }
-        
+
     
         /// <summary>
         /// start time in xx:xx:xx.xxx format
@@ -49,9 +49,9 @@ namespace ININ.PureCloudApi.Model
         public string StopTime { get; set; }
     
         /// <summary>
-        /// Day for this time slot, Monday = 1 ... Sunday = 7
+        /// Day for this time slot, Monday &#x3D; 1 ... Sunday &#x3D; 7
         /// </summary>
-        /// <value>Day for this time slot, Monday = 1 ... Sunday = 7</value>
+        /// <value>Day for this time slot, Monday &#x3D; 1 ... Sunday &#x3D; 7</value>
         [DataMember(Name="day", EmitDefaultValue=false)]
         public int? Day { get; set; }
     
@@ -66,11 +66,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  StartTime: ").Append(StartTime).Append("\n");
             sb.Append("  StopTime: ").Append(StopTime).Append("\n");
             sb.Append("  Day: ").Append(Day).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -131,16 +130,12 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.StartTime != null)
                     hash = hash * 59 + this.StartTime.GetHashCode();
-                
                 if (this.StopTime != null)
                     hash = hash * 59 + this.StopTime.GetHashCode();
-                
                 if (this.Day != null)
                     hash = hash * 59 + this.Day.GetHashCode();
-                
                 return hash;
             }
         }

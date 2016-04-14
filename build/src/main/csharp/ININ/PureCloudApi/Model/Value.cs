@@ -40,7 +40,7 @@ namespace ININ.PureCloudApi.Model
             this.DataItems = DataItems;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets StringItems
@@ -99,11 +99,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  UserItems: ").Append(UserItems).Append("\n");
             sb.Append("  QueueItems: ").Append(QueueItems).Append("\n");
             sb.Append("  DataItems: ").Append(DataItems).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -184,28 +183,20 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.StringItems != null)
                     hash = hash * 59 + this.StringItems.GetHashCode();
-                
                 if (this.IntegerItems != null)
                     hash = hash * 59 + this.IntegerItems.GetHashCode();
-                
                 if (this.RealItems != null)
                     hash = hash * 59 + this.RealItems.GetHashCode();
-                
                 if (this.DateItems != null)
                     hash = hash * 59 + this.DateItems.GetHashCode();
-                
                 if (this.UserItems != null)
                     hash = hash * 59 + this.UserItems.GetHashCode();
-                
                 if (this.QueueItems != null)
                     hash = hash * 59 + this.QueueItems.GetHashCode();
-                
                 if (this.DataItems != null)
                     hash = hash * 59 + this.DataItems.GetHashCode();
-                
                 return hash;
             }
         }

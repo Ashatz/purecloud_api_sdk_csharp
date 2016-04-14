@@ -17,9 +17,13 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class SocializeEntityFilter :  IEquatable<SocializeEntityFilter>
     { 
-    
+
+        /// <summary>
+        /// The operator to apply when filtering.
+        /// </summary>
+        /// <value>The operator to apply when filtering.</value>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum _OperatorEnum {
+                public enum _OperatorEnum {
             
             [EnumMember(Value = "EQ")]
             Eq,
@@ -63,6 +67,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "IN")]
             In
         }
+
         
         /// <summary>
         /// The operator to apply when filtering.
@@ -85,7 +90,7 @@ namespace ININ.PureCloudApi.Model
             this.FieldValue = FieldValue;
             
         }
-        
+
     
         /// <summary>
         /// The fieldName the filter will be applied to.
@@ -112,11 +117,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  FieldName: ").Append(FieldName).Append("\n");
             sb.Append("  _Operator: ").Append(_Operator).Append("\n");
             sb.Append("  FieldValue: ").Append(FieldValue).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -177,16 +181,12 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.FieldName != null)
                     hash = hash * 59 + this.FieldName.GetHashCode();
-                
                 if (this._Operator != null)
                     hash = hash * 59 + this._Operator.GetHashCode();
-                
                 if (this.FieldValue != null)
                     hash = hash * 59 + this.FieldValue.GetHashCode();
-                
                 return hash;
             }
         }

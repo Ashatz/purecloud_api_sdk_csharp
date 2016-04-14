@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new AggregateMetricData();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of AggregateMetricData
@@ -50,34 +50,30 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<AggregateMetricData> (instance, "instance is a AggregateMetricData");
         }
 
-        
         /// <summary>
-        /// Test the property 'Metric' 
+        /// Test the property 'Metric'
         /// </summary>
         [Test]
         public void MetricTest()
         {
-            // TODO: unit test for the property 'Metric' 
+            // TODO: unit test for the property 'Metric'
         }
-        
         /// <summary>
-        /// Test the property 'Qualifier' 
+        /// Test the property 'Qualifier'
         /// </summary>
         [Test]
         public void QualifierTest()
         {
-            // TODO: unit test for the property 'Qualifier' 
+            // TODO: unit test for the property 'Qualifier'
         }
-        
         /// <summary>
-        /// Test the property 'Stats' 
+        /// Test the property 'Stats'
         /// </summary>
         [Test]
         public void StatsTest()
         {
-            // TODO: unit test for the property 'Stats' 
+            // TODO: unit test for the property 'Stats'
         }
-        
 
     }
 

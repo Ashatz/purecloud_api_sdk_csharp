@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new CommandStatus();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of CommandStatus
@@ -50,79 +50,70 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<CommandStatus> (instance, "instance is a CommandStatus");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'Expiration' 
+        /// Test the property 'Expiration'
         /// </summary>
         [Test]
         public void ExpirationTest()
         {
-            // TODO: unit test for the property 'Expiration' 
+            // TODO: unit test for the property 'Expiration'
         }
-        
         /// <summary>
-        /// Test the property 'UserId' 
+        /// Test the property 'UserId'
         /// </summary>
         [Test]
         public void UserIdTest()
         {
-            // TODO: unit test for the property 'UserId' 
+            // TODO: unit test for the property 'UserId'
         }
-        
         /// <summary>
-        /// Test the property 'StatusCode' 
+        /// Test the property 'StatusCode'
         /// </summary>
         [Test]
         public void StatusCodeTest()
         {
-            // TODO: unit test for the property 'StatusCode' 
+            // TODO: unit test for the property 'StatusCode'
         }
-        
         /// <summary>
-        /// Test the property 'CommandType' 
+        /// Test the property 'CommandType'
         /// </summary>
         [Test]
         public void CommandTypeTest()
         {
-            // TODO: unit test for the property 'CommandType' 
+            // TODO: unit test for the property 'CommandType'
         }
-        
         /// <summary>
-        /// Test the property 'Document' 
+        /// Test the property 'Document'
         /// </summary>
         [Test]
         public void DocumentTest()
         {
-            // TODO: unit test for the property 'Document' 
+            // TODO: unit test for the property 'Document'
         }
-        
         /// <summary>
-        /// Test the property 'SelfUri' 
+        /// Test the property 'SelfUri'
         /// </summary>
         [Test]
         public void SelfUriTest()
         {
-            // TODO: unit test for the property 'SelfUri' 
+            // TODO: unit test for the property 'SelfUri'
         }
-        
 
     }
 

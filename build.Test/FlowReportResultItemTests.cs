@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new FlowReportResultItem();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of FlowReportResultItem
@@ -50,115 +50,102 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<FlowReportResultItem> (instance, "instance is a FlowReportResultItem");
         }
 
-        
         /// <summary>
-        /// Test the property 'FlowExecId' 
+        /// Test the property 'FlowExecId'
         /// </summary>
         [Test]
         public void FlowExecIdTest()
         {
-            // TODO: unit test for the property 'FlowExecId' 
+            // TODO: unit test for the property 'FlowExecId'
         }
-        
         /// <summary>
-        /// Test the property 'FlowConfigId' 
+        /// Test the property 'FlowConfigId'
         /// </summary>
         [Test]
         public void FlowConfigIdTest()
         {
-            // TODO: unit test for the property 'FlowConfigId' 
+            // TODO: unit test for the property 'FlowConfigId'
         }
-        
         /// <summary>
-        /// Test the property 'FlowInstanceName' 
+        /// Test the property 'FlowInstanceName'
         /// </summary>
         [Test]
         public void FlowInstanceNameTest()
         {
-            // TODO: unit test for the property 'FlowInstanceName' 
+            // TODO: unit test for the property 'FlowInstanceName'
         }
-        
         /// <summary>
-        /// Test the property 'AssociatedDocument' 
+        /// Test the property 'AssociatedDocument'
         /// </summary>
         [Test]
         public void AssociatedDocumentTest()
         {
-            // TODO: unit test for the property 'AssociatedDocument' 
+            // TODO: unit test for the property 'AssociatedDocument'
         }
-        
         /// <summary>
-        /// Test the property 'FlowStatus' 
+        /// Test the property 'FlowStatus'
         /// </summary>
         [Test]
         public void FlowStatusTest()
         {
-            // TODO: unit test for the property 'FlowStatus' 
+            // TODO: unit test for the property 'FlowStatus'
         }
-        
         /// <summary>
-        /// Test the property 'CurrentState' 
+        /// Test the property 'CurrentState'
         /// </summary>
         [Test]
         public void CurrentStateTest()
         {
-            // TODO: unit test for the property 'CurrentState' 
+            // TODO: unit test for the property 'CurrentState'
         }
-        
         /// <summary>
-        /// Test the property 'StartDateTime' 
+        /// Test the property 'StartDateTime'
         /// </summary>
         [Test]
         public void StartDateTimeTest()
         {
-            // TODO: unit test for the property 'StartDateTime' 
+            // TODO: unit test for the property 'StartDateTime'
         }
-        
         /// <summary>
-        /// Test the property 'EndDateTime' 
+        /// Test the property 'EndDateTime'
         /// </summary>
         [Test]
         public void EndDateTimeTest()
         {
-            // TODO: unit test for the property 'EndDateTime' 
+            // TODO: unit test for the property 'EndDateTime'
         }
-        
         /// <summary>
-        /// Test the property 'WorkItemUserAssignees' 
+        /// Test the property 'WorkItemUserAssignees'
         /// </summary>
         [Test]
         public void WorkItemUserAssigneesTest()
         {
-            // TODO: unit test for the property 'WorkItemUserAssignees' 
+            // TODO: unit test for the property 'WorkItemUserAssignees'
         }
-        
         /// <summary>
-        /// Test the property 'CompletedUser' 
+        /// Test the property 'CompletedUser'
         /// </summary>
         [Test]
         public void CompletedUserTest()
         {
-            // TODO: unit test for the property 'CompletedUser' 
+            // TODO: unit test for the property 'CompletedUser'
         }
-        
         /// <summary>
-        /// Test the property 'CompletionReason' 
+        /// Test the property 'CompletionReason'
         /// </summary>
         [Test]
         public void CompletionReasonTest()
         {
-            // TODO: unit test for the property 'CompletionReason' 
+            // TODO: unit test for the property 'CompletionReason'
         }
-        
         /// <summary>
-        /// Test the property 'FlowErrorInfo' 
+        /// Test the property 'FlowErrorInfo'
         /// </summary>
         [Test]
         public void FlowErrorInfoTest()
         {
-            // TODO: unit test for the property 'FlowErrorInfo' 
+            // TODO: unit test for the property 'FlowErrorInfo'
         }
-        
 
     }
 

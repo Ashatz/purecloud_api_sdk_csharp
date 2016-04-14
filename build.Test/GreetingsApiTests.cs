@@ -61,9 +61,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'DeleteGreetingId'
             string greetingId = null; // TODO: replace null with proper value
-            
             var response = instance.DeleteGreetingId(greetingId);
-            Assert.IsInstanceOf<Greeting> (response, "response is Greeting"); 
+            Assert.IsInstanceOf<Greeting> (response, "response is Greeting");
         }
         
         /// <summary>
@@ -73,9 +72,8 @@ namespace ININ.PureCloudApi.Test
         public void GetDefaultsTest()
         {
             // TODO: add unit test for the method 'GetDefaults'
-            
             var response = instance.GetDefaults();
-            Assert.IsInstanceOf<DefaultGreetingList> (response, "response is DefaultGreetingList"); 
+            Assert.IsInstanceOf<DefaultGreetingList> (response, "response is DefaultGreetingList");
         }
         
         /// <summary>
@@ -86,9 +84,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'GetGreetingId'
             string greetingId = null; // TODO: replace null with proper value
-            
             var response = instance.GetGreetingId(greetingId);
-            Assert.IsInstanceOf<Greeting> (response, "response is Greeting"); 
+            Assert.IsInstanceOf<Greeting> (response, "response is Greeting");
         }
         
         /// <summary>
@@ -100,9 +97,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'GetGreetingIdMedia'
             string greetingId = null; // TODO: replace null with proper value
             string formatId = null; // TODO: replace null with proper value
-            
             var response = instance.GetGreetingIdMedia(greetingId, formatId);
-            Assert.IsInstanceOf<GreetingMediaInfo> (response, "response is GreetingMediaInfo"); 
+            Assert.IsInstanceOf<GreetingMediaInfo> (response, "response is GreetingMediaInfo");
         }
         
         /// <summary>
@@ -114,9 +110,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'GetGreetings'
             int? pageSize = null; // TODO: replace null with proper value
             int? pageNumber = null; // TODO: replace null with proper value
-            
             var response = instance.GetGreetings(pageSize, pageNumber);
-            Assert.IsInstanceOf<DomainEntityListing> (response, "response is DomainEntityListing"); 
+            Assert.IsInstanceOf<DomainEntityListing> (response, "response is DomainEntityListing");
         }
         
         /// <summary>
@@ -129,9 +124,8 @@ namespace ININ.PureCloudApi.Test
             string userId = null; // TODO: replace null with proper value
             int? pageSize = null; // TODO: replace null with proper value
             int? pageNumber = null; // TODO: replace null with proper value
-            
             var response = instance.GetUserIdGreetings(userId, pageSize, pageNumber);
-            Assert.IsInstanceOf<DomainEntityListing> (response, "response is DomainEntityListing"); 
+            Assert.IsInstanceOf<DomainEntityListing> (response, "response is DomainEntityListing");
         }
         
         /// <summary>
@@ -142,9 +136,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'GetUserIdGreetingsDefaults'
             string userId = null; // TODO: replace null with proper value
-            
             var response = instance.GetUserIdGreetingsDefaults(userId);
-            Assert.IsInstanceOf<DefaultGreetingList> (response, "response is DefaultGreetingList"); 
+            Assert.IsInstanceOf<DefaultGreetingList> (response, "response is DefaultGreetingList");
         }
         
         /// <summary>
@@ -155,9 +148,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'PostGreetings'
             Greeting body = null; // TODO: replace null with proper value
-            
             var response = instance.PostGreetings(body);
-            Assert.IsInstanceOf<DefaultGreetingList> (response, "response is DefaultGreetingList"); 
+            Assert.IsInstanceOf<DefaultGreetingList> (response, "response is DefaultGreetingList");
         }
         
         /// <summary>
@@ -169,9 +161,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'PostUserIdGreetings'
             string userId = null; // TODO: replace null with proper value
             Greeting body = null; // TODO: replace null with proper value
-            
             var response = instance.PostUserIdGreetings(userId, body);
-            Assert.IsInstanceOf<Greeting> (response, "response is Greeting"); 
+            Assert.IsInstanceOf<Greeting> (response, "response is Greeting");
         }
         
         /// <summary>
@@ -182,9 +173,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'PutDefaults'
             DefaultGreetingList body = null; // TODO: replace null with proper value
-            
             var response = instance.PutDefaults(body);
-            Assert.IsInstanceOf<DefaultGreetingList> (response, "response is DefaultGreetingList"); 
+            Assert.IsInstanceOf<DefaultGreetingList> (response, "response is DefaultGreetingList");
         }
         
         /// <summary>
@@ -196,9 +186,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'PutGreetingId'
             string greetingId = null; // TODO: replace null with proper value
             Greeting body = null; // TODO: replace null with proper value
-            
             var response = instance.PutGreetingId(greetingId, body);
-            Assert.IsInstanceOf<Greeting> (response, "response is Greeting"); 
+            Assert.IsInstanceOf<Greeting> (response, "response is Greeting");
         }
         
         /// <summary>
@@ -210,9 +199,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'PutUserIdGreetingsDefaults'
             string userId = null; // TODO: replace null with proper value
             DefaultGreetingList body = null; // TODO: replace null with proper value
-            
             var response = instance.PutUserIdGreetingsDefaults(userId, body);
-            Assert.IsInstanceOf<DefaultGreetingList> (response, "response is DefaultGreetingList"); 
+            Assert.IsInstanceOf<DefaultGreetingList> (response, "response is DefaultGreetingList");
         }
         
     }

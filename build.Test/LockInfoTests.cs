@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new LockInfo();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of LockInfo
@@ -50,43 +50,38 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<LockInfo> (instance, "instance is a LockInfo");
         }
 
-        
         /// <summary>
-        /// Test the property 'LockedBy' 
+        /// Test the property 'LockedBy'
         /// </summary>
         [Test]
         public void LockedByTest()
         {
-            // TODO: unit test for the property 'LockedBy' 
+            // TODO: unit test for the property 'LockedBy'
         }
-        
         /// <summary>
-        /// Test the property 'DateCreated' 
+        /// Test the property 'DateCreated'
         /// </summary>
         [Test]
         public void DateCreatedTest()
         {
-            // TODO: unit test for the property 'DateCreated' 
+            // TODO: unit test for the property 'DateCreated'
         }
-        
         /// <summary>
-        /// Test the property 'DateExpires' 
+        /// Test the property 'DateExpires'
         /// </summary>
         [Test]
         public void DateExpiresTest()
         {
-            // TODO: unit test for the property 'DateExpires' 
+            // TODO: unit test for the property 'DateExpires'
         }
-        
         /// <summary>
-        /// Test the property 'Action' 
+        /// Test the property 'Action'
         /// </summary>
         [Test]
         public void ActionTest()
         {
-            // TODO: unit test for the property 'Action' 
+            // TODO: unit test for the property 'Action'
         }
-        
 
     }
 

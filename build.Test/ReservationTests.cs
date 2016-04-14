@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new Reservation();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of Reservation
@@ -50,43 +50,38 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<Reservation> (instance, "instance is a Reservation");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'ReservedTn' 
+        /// Test the property 'ReservedTn'
         /// </summary>
         [Test]
         public void ReservedTnTest()
         {
-            // TODO: unit test for the property 'ReservedTn' 
+            // TODO: unit test for the property 'ReservedTn'
         }
-        
         /// <summary>
-        /// Test the property 'ReservationExpires' 
+        /// Test the property 'ReservationExpires'
         /// </summary>
         [Test]
         public void ReservationExpiresTest()
         {
-            // TODO: unit test for the property 'ReservationExpires' 
+            // TODO: unit test for the property 'ReservationExpires'
         }
-        
         /// <summary>
-        /// Test the property 'PhoneNumberType' 
+        /// Test the property 'PhoneNumberType'
         /// </summary>
         [Test]
         public void PhoneNumberTypeTest()
         {
-            // TODO: unit test for the property 'PhoneNumberType' 
+            // TODO: unit test for the property 'PhoneNumberType'
         }
-        
 
     }
 

@@ -30,7 +30,7 @@ namespace ININ.PureCloudApi.Model
             this.SiteId = SiteId;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets PhoneIds
@@ -54,11 +54,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class PhonesReboot {\n");
             sb.Append("  PhoneIds: ").Append(PhoneIds).Append("\n");
             sb.Append("  SiteId: ").Append(SiteId).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -114,13 +113,10 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.PhoneIds != null)
                     hash = hash * 59 + this.PhoneIds.GetHashCode();
-                
                 if (this.SiteId != null)
                     hash = hash * 59 + this.SiteId.GetHashCode();
-                
                 return hash;
             }
         }

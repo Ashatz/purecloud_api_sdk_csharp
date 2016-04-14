@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new ResourcePermissionPolicy();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of ResourcePermissionPolicy
@@ -50,97 +50,86 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<ResourcePermissionPolicy> (instance, "instance is a ResourcePermissionPolicy");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'Domain' 
+        /// Test the property 'Domain'
         /// </summary>
         [Test]
         public void DomainTest()
         {
-            // TODO: unit test for the property 'Domain' 
+            // TODO: unit test for the property 'Domain'
         }
-        
         /// <summary>
-        /// Test the property 'EntityName' 
+        /// Test the property 'EntityName'
         /// </summary>
         [Test]
         public void EntityNameTest()
         {
-            // TODO: unit test for the property 'EntityName' 
+            // TODO: unit test for the property 'EntityName'
         }
-        
         /// <summary>
-        /// Test the property 'PolicyName' 
+        /// Test the property 'PolicyName'
         /// </summary>
         [Test]
         public void PolicyNameTest()
         {
-            // TODO: unit test for the property 'PolicyName' 
+            // TODO: unit test for the property 'PolicyName'
         }
-        
         /// <summary>
-        /// Test the property 'PolicyDescription' 
+        /// Test the property 'PolicyDescription'
         /// </summary>
         [Test]
         public void PolicyDescriptionTest()
         {
-            // TODO: unit test for the property 'PolicyDescription' 
+            // TODO: unit test for the property 'PolicyDescription'
         }
-        
         /// <summary>
-        /// Test the property 'ActionSetKey' 
+        /// Test the property 'ActionSetKey'
         /// </summary>
         [Test]
         public void ActionSetKeyTest()
         {
-            // TODO: unit test for the property 'ActionSetKey' 
+            // TODO: unit test for the property 'ActionSetKey'
         }
-        
         /// <summary>
-        /// Test the property 'ResourceConditionNode' 
+        /// Test the property 'ResourceConditionNode'
         /// </summary>
         [Test]
         public void ResourceConditionNodeTest()
         {
-            // TODO: unit test for the property 'ResourceConditionNode' 
+            // TODO: unit test for the property 'ResourceConditionNode'
         }
-        
         /// <summary>
-        /// Test the property 'NamedResources' 
+        /// Test the property 'NamedResources'
         /// </summary>
         [Test]
         public void NamedResourcesTest()
         {
-            // TODO: unit test for the property 'NamedResources' 
+            // TODO: unit test for the property 'NamedResources'
         }
-        
         /// <summary>
-        /// Test the property 'ResourceCondition' 
+        /// Test the property 'ResourceCondition'
         /// </summary>
         [Test]
         public void ResourceConditionTest()
         {
-            // TODO: unit test for the property 'ResourceCondition' 
+            // TODO: unit test for the property 'ResourceCondition'
         }
-        
         /// <summary>
-        /// Test the property 'ActionSet' 
+        /// Test the property 'ActionSet'
         /// </summary>
         [Test]
         public void ActionSetTest()
         {
-            // TODO: unit test for the property 'ActionSet' 
+            // TODO: unit test for the property 'ActionSet'
         }
-        
 
     }
 

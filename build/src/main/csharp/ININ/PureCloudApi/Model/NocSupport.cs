@@ -30,7 +30,7 @@ namespace ININ.PureCloudApi.Model
             this.Email = Email;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets Phone
@@ -54,11 +54,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class NocSupport {\n");
             sb.Append("  Phone: ").Append(Phone).Append("\n");
             sb.Append("  Email: ").Append(Email).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -114,13 +113,10 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Phone != null)
                     hash = hash * 59 + this.Phone.GetHashCode();
-                
                 if (this.Email != null)
                     hash = hash * 59 + this.Email.GetHashCode();
-                
                 return hash;
             }
         }

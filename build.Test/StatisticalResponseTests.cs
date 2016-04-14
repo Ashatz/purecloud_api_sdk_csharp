@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new StatisticalResponse();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of StatisticalResponse
@@ -50,25 +50,22 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<StatisticalResponse> (instance, "instance is a StatisticalResponse");
         }
 
-        
         /// <summary>
-        /// Test the property 'Interval' 
+        /// Test the property 'Interval'
         /// </summary>
         [Test]
         public void IntervalTest()
         {
-            // TODO: unit test for the property 'Interval' 
+            // TODO: unit test for the property 'Interval'
         }
-        
         /// <summary>
-        /// Test the property 'Metrics' 
+        /// Test the property 'Metrics'
         /// </summary>
         [Test]
         public void MetricsTest()
         {
-            // TODO: unit test for the property 'Metrics' 
+            // TODO: unit test for the property 'Metrics'
         }
-        
 
     }
 

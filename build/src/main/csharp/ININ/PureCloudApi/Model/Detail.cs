@@ -34,7 +34,7 @@ namespace ININ.PureCloudApi.Model
             this.EntityName = EntityName;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets ErrorCode
@@ -72,11 +72,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  FieldName: ").Append(FieldName).Append("\n");
             sb.Append("  EntityId: ").Append(EntityId).Append("\n");
             sb.Append("  EntityName: ").Append(EntityName).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -142,19 +141,14 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ErrorCode != null)
                     hash = hash * 59 + this.ErrorCode.GetHashCode();
-                
                 if (this.FieldName != null)
                     hash = hash * 59 + this.FieldName.GetHashCode();
-                
                 if (this.EntityId != null)
                     hash = hash * 59 + this.EntityId.GetHashCode();
-                
                 if (this.EntityName != null)
                     hash = hash * 59 + this.EntityName.GetHashCode();
-                
                 return hash;
             }
         }

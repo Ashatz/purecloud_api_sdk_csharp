@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new MediaSetting();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of MediaSetting
@@ -50,25 +50,22 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<MediaSetting> (instance, "instance is a MediaSetting");
         }
 
-        
         /// <summary>
-        /// Test the property 'AlertingTimeoutSeconds' 
+        /// Test the property 'AlertingTimeoutSeconds'
         /// </summary>
         [Test]
         public void AlertingTimeoutSecondsTest()
         {
-            // TODO: unit test for the property 'AlertingTimeoutSeconds' 
+            // TODO: unit test for the property 'AlertingTimeoutSeconds'
         }
-        
         /// <summary>
-        /// Test the property 'ServiceLevel' 
+        /// Test the property 'ServiceLevel'
         /// </summary>
         [Test]
         public void ServiceLevelTest()
         {
-            // TODO: unit test for the property 'ServiceLevel' 
+            // TODO: unit test for the property 'ServiceLevel'
         }
-        
 
     }
 

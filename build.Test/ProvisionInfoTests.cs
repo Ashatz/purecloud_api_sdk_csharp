@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new ProvisionInfo();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of ProvisionInfo
@@ -50,34 +50,30 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<ProvisionInfo> (instance, "instance is a ProvisionInfo");
         }
 
-        
         /// <summary>
-        /// Test the property 'Time' 
+        /// Test the property 'Time'
         /// </summary>
         [Test]
         public void TimeTest()
         {
-            // TODO: unit test for the property 'Time' 
+            // TODO: unit test for the property 'Time'
         }
-        
         /// <summary>
-        /// Test the property 'Source' 
+        /// Test the property 'Source'
         /// </summary>
         [Test]
         public void SourceTest()
         {
-            // TODO: unit test for the property 'Source' 
+            // TODO: unit test for the property 'Source'
         }
-        
         /// <summary>
-        /// Test the property 'ErrorInfo' 
+        /// Test the property 'ErrorInfo'
         /// </summary>
         [Test]
         public void ErrorInfoTest()
         {
-            // TODO: unit test for the property 'ErrorInfo' 
+            // TODO: unit test for the property 'ErrorInfo'
         }
-        
 
     }
 

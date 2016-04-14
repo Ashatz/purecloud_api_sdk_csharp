@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new SocializeEntityFilter();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of SocializeEntityFilter
@@ -50,34 +50,30 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<SocializeEntityFilter> (instance, "instance is a SocializeEntityFilter");
         }
 
-        
         /// <summary>
-        /// Test the property 'FieldName' 
+        /// Test the property 'FieldName'
         /// </summary>
         [Test]
         public void FieldNameTest()
         {
-            // TODO: unit test for the property 'FieldName' 
+            // TODO: unit test for the property 'FieldName'
         }
-        
         /// <summary>
-        /// Test the property '_Operator' 
+        /// Test the property '_Operator'
         /// </summary>
         [Test]
         public void _OperatorTest()
         {
-            // TODO: unit test for the property '_Operator' 
+            // TODO: unit test for the property '_Operator'
         }
-        
         /// <summary>
-        /// Test the property 'FieldValue' 
+        /// Test the property 'FieldValue'
         /// </summary>
         [Test]
         public void FieldValueTest()
         {
-            // TODO: unit test for the property 'FieldValue' 
+            // TODO: unit test for the property 'FieldValue'
         }
-        
 
     }
 

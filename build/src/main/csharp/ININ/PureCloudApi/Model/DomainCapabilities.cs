@@ -48,7 +48,7 @@ namespace ININ.PureCloudApi.Model
             this.Metric = Metric;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets Enabled
@@ -79,11 +79,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
             sb.Append("  Dhcp: ").Append(Dhcp).Append("\n");
             sb.Append("  Metric: ").Append(Metric).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -144,16 +143,12 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Enabled != null)
                     hash = hash * 59 + this.Enabled.GetHashCode();
-                
                 if (this.Dhcp != null)
                     hash = hash * 59 + this.Dhcp.GetHashCode();
-                
                 if (this.Metric != null)
                     hash = hash * 59 + this.Metric.GetHashCode();
-                
                 return hash;
             }
         }

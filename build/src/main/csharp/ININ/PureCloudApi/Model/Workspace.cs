@@ -17,9 +17,12 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class Workspace :  IEquatable<Workspace>
     { 
-    
+
+        /// <summary>
+        /// Gets or Sets Type
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum TypeEnum {
+                public enum TypeEnum {
             
             [EnumMember(Value = "USER")]
             User,
@@ -27,6 +30,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "GROUP")]
             Group
         }
+
         
         /// <summary>
         /// Gets or Sets Type
@@ -68,7 +72,7 @@ namespace ININ.PureCloudApi.Model
             this.Acl = Acl;
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -153,11 +157,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Summary: ").Append(Summary).Append("\n");
             sb.Append("  Acl: ").Append(Acl).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -258,40 +261,28 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
                 if (this.IsCurrentUserWorkspace != null)
                     hash = hash * 59 + this.IsCurrentUserWorkspace.GetHashCode();
-                
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();
-                
                 if (this.Bucket != null)
                     hash = hash * 59 + this.Bucket.GetHashCode();
-                
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
-                
                 if (this.DateModified != null)
                     hash = hash * 59 + this.DateModified.GetHashCode();
-                
                 if (this.Summary != null)
                     hash = hash * 59 + this.Summary.GetHashCode();
-                
                 if (this.Acl != null)
                     hash = hash * 59 + this.Acl.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 return hash;
             }
         }

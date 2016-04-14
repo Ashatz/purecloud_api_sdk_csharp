@@ -17,9 +17,12 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class AnalyticsSession :  IEquatable<AnalyticsSession>
     { 
-    
+
+        /// <summary>
+        /// Gets or Sets MediaType
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum MediaTypeEnum {
+                public enum MediaTypeEnum {
             
             [EnumMember(Value = "voice")]
             Voice,
@@ -30,9 +33,13 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "email")]
             Email
         }
-    
+
+
+        /// <summary>
+        /// Gets or Sets Direction
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum DirectionEnum {
+                public enum DirectionEnum {
             
             [EnumMember(Value = "inbound")]
             Inbound,
@@ -40,6 +47,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "outbound")]
             Outbound
         }
+
         
         /// <summary>
         /// Gets or Sets MediaType
@@ -95,7 +103,7 @@ namespace ININ.PureCloudApi.Model
             this.Segments = Segments;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets SessionId
@@ -212,11 +220,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  MonitoredSessionId: ").Append(MonitoredSessionId).Append("\n");
             sb.Append("  MonitoredParticipantId: ").Append(MonitoredParticipantId).Append("\n");
             sb.Append("  Segments: ").Append(Segments).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -347,58 +354,40 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.MediaType != null)
                     hash = hash * 59 + this.MediaType.GetHashCode();
-                
                 if (this.SessionId != null)
                     hash = hash * 59 + this.SessionId.GetHashCode();
-                
                 if (this.AddressOther != null)
                     hash = hash * 59 + this.AddressOther.GetHashCode();
-                
                 if (this.AddressSelf != null)
                     hash = hash * 59 + this.AddressSelf.GetHashCode();
-                
                 if (this.Ani != null)
                     hash = hash * 59 + this.Ani.GetHashCode();
-                
                 if (this.Direction != null)
                     hash = hash * 59 + this.Direction.GetHashCode();
-                
                 if (this.Dnis != null)
                     hash = hash * 59 + this.Dnis.GetHashCode();
-                
                 if (this.OutboundCampaignId != null)
                     hash = hash * 59 + this.OutboundCampaignId.GetHashCode();
-                
                 if (this.OutboundContactListId != null)
                     hash = hash * 59 + this.OutboundContactListId.GetHashCode();
-                
                 if (this.DispositionAnalyzer != null)
                     hash = hash * 59 + this.DispositionAnalyzer.GetHashCode();
-                
                 if (this.DispositionName != null)
                     hash = hash * 59 + this.DispositionName.GetHashCode();
-                
                 if (this.EdgeId != null)
                     hash = hash * 59 + this.EdgeId.GetHashCode();
-                
                 if (this.RemoteNameDisplayable != null)
                     hash = hash * 59 + this.RemoteNameDisplayable.GetHashCode();
-                
                 if (this.RoomId != null)
                     hash = hash * 59 + this.RoomId.GetHashCode();
-                
                 if (this.MonitoredSessionId != null)
                     hash = hash * 59 + this.MonitoredSessionId.GetHashCode();
-                
                 if (this.MonitoredParticipantId != null)
                     hash = hash * 59 + this.MonitoredParticipantId.GetHashCode();
-                
                 if (this.Segments != null)
                     hash = hash * 59 + this.Segments.GetHashCode();
-                
                 return hash;
             }
         }

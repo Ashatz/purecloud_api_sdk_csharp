@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new SearchAggregation();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of SearchAggregation
@@ -50,34 +50,30 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<SearchAggregation> (instance, "instance is a SearchAggregation");
         }
 
-        
         /// <summary>
-        /// Test the property 'Field' 
+        /// Test the property 'Field'
         /// </summary>
         [Test]
         public void FieldTest()
         {
-            // TODO: unit test for the property 'Field' 
+            // TODO: unit test for the property 'Field'
         }
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'Type' 
+        /// Test the property 'Type'
         /// </summary>
         [Test]
         public void TypeTest()
         {
-            // TODO: unit test for the property 'Type' 
+            // TODO: unit test for the property 'Type'
         }
-        
 
     }
 

@@ -17,9 +17,12 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class DiagnosticEmail :  IEquatable<DiagnosticEmail>
     { 
-    
+
+        /// <summary>
+        /// Gets or Sets Priority
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum PriorityEnum {
+                public enum PriorityEnum {
             
             [EnumMember(Value = "LOW")]
             Low,
@@ -30,9 +33,13 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "HIGH")]
             High
         }
-    
+
+
+        /// <summary>
+        /// Gets or Sets Type
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum TypeEnum {
+                public enum TypeEnum {
             
             [EnumMember(Value = "PROBLEM")]
             Problem,
@@ -49,6 +56,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "NON_TECHNICAL_ISSUE")]
             NonTechnicalIssue
         }
+
         
         /// <summary>
         /// Gets or Sets Priority
@@ -82,7 +90,7 @@ namespace ININ.PureCloudApi.Model
             this.Data = Data;
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -130,11 +138,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Priority: ").Append(Priority).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Data: ").Append(Data).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -215,28 +222,20 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Subject != null)
                     hash = hash * 59 + this.Subject.GetHashCode();
-                
                 if (this.Topic != null)
                     hash = hash * 59 + this.Topic.GetHashCode();
-                
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
-                
                 if (this.Priority != null)
                     hash = hash * 59 + this.Priority.GetHashCode();
-                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
                 if (this.Data != null)
                     hash = hash * 59 + this.Data.GetHashCode();
-                
                 return hash;
             }
         }

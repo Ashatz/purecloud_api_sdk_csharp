@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new PolicyConditions();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of PolicyConditions
@@ -50,79 +50,70 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<PolicyConditions> (instance, "instance is a PolicyConditions");
         }
 
-        
         /// <summary>
-        /// Test the property 'ForUsers' 
+        /// Test the property 'ForUsers'
         /// </summary>
         [Test]
         public void ForUsersTest()
         {
-            // TODO: unit test for the property 'ForUsers' 
+            // TODO: unit test for the property 'ForUsers'
         }
-        
         /// <summary>
-        /// Test the property 'Directions' 
+        /// Test the property 'Directions'
         /// </summary>
         [Test]
         public void DirectionsTest()
         {
-            // TODO: unit test for the property 'Directions' 
+            // TODO: unit test for the property 'Directions'
         }
-        
         /// <summary>
-        /// Test the property 'DateRanges' 
+        /// Test the property 'DateRanges'
         /// </summary>
         [Test]
         public void DateRangesTest()
         {
-            // TODO: unit test for the property 'DateRanges' 
+            // TODO: unit test for the property 'DateRanges'
         }
-        
         /// <summary>
-        /// Test the property 'MediaTypes' 
+        /// Test the property 'MediaTypes'
         /// </summary>
         [Test]
         public void MediaTypesTest()
         {
-            // TODO: unit test for the property 'MediaTypes' 
+            // TODO: unit test for the property 'MediaTypes'
         }
-        
         /// <summary>
-        /// Test the property 'ForQueues' 
+        /// Test the property 'ForQueues'
         /// </summary>
         [Test]
         public void ForQueuesTest()
         {
-            // TODO: unit test for the property 'ForQueues' 
+            // TODO: unit test for the property 'ForQueues'
         }
-        
         /// <summary>
-        /// Test the property 'Duration' 
+        /// Test the property 'Duration'
         /// </summary>
         [Test]
         public void DurationTest()
         {
-            // TODO: unit test for the property 'Duration' 
+            // TODO: unit test for the property 'Duration'
         }
-        
         /// <summary>
-        /// Test the property 'WrapupCodes' 
+        /// Test the property 'WrapupCodes'
         /// </summary>
         [Test]
         public void WrapupCodesTest()
         {
-            // TODO: unit test for the property 'WrapupCodes' 
+            // TODO: unit test for the property 'WrapupCodes'
         }
-        
         /// <summary>
-        /// Test the property 'TimeAllowed' 
+        /// Test the property 'TimeAllowed'
         /// </summary>
         [Test]
         public void TimeAllowedTest()
         {
-            // TODO: unit test for the property 'TimeAllowed' 
+            // TODO: unit test for the property 'TimeAllowed'
         }
-        
 
     }
 

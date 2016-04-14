@@ -17,9 +17,13 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class Location :  IEquatable<Location>
     { 
-    
+
+        /// <summary>
+        /// Current activity status of the location.
+        /// </summary>
+        /// <value>Current activity status of the location.</value>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum StateEnum {
+                public enum StateEnum {
             
             [EnumMember(Value = "active")]
             Active,
@@ -27,6 +31,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "inactive")]
             Inactive
         }
+
         
         /// <summary>
         /// Current activity status of the location.
@@ -71,7 +76,7 @@ namespace ININ.PureCloudApi.Model
             this.Version = Version;
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -161,11 +166,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  SublocationOrder: ").Append(SublocationOrder).Append("\n");
             sb.Append("  Version: ").Append(Version).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -271,43 +275,30 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.Address != null)
                     hash = hash * 59 + this.Address.GetHashCode();
-                
                 if (this.AddressFields != null)
                     hash = hash * 59 + this.AddressFields.GetHashCode();
-                
                 if (this.AddressVerified != null)
                     hash = hash * 59 + this.AddressVerified.GetHashCode();
-                
                 if (this.EmergencyNumber != null)
                     hash = hash * 59 + this.EmergencyNumber.GetHashCode();
-                
                 if (this.Notes != null)
                     hash = hash * 59 + this.Notes.GetHashCode();
-                
                 if (this.Path != null)
                     hash = hash * 59 + this.Path.GetHashCode();
-                
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
-                
                 if (this.SublocationOrder != null)
                     hash = hash * 59 + this.SublocationOrder.GetHashCode();
-                
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 return hash;
             }
         }

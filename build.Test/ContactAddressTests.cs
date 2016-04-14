@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new ContactAddress();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of ContactAddress
@@ -50,61 +50,54 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<ContactAddress> (instance, "instance is a ContactAddress");
         }
 
-        
         /// <summary>
-        /// Test the property 'Address1' 
+        /// Test the property 'Address1'
         /// </summary>
         [Test]
         public void Address1Test()
         {
-            // TODO: unit test for the property 'Address1' 
+            // TODO: unit test for the property 'Address1'
         }
-        
         /// <summary>
-        /// Test the property 'Address2' 
+        /// Test the property 'Address2'
         /// </summary>
         [Test]
         public void Address2Test()
         {
-            // TODO: unit test for the property 'Address2' 
+            // TODO: unit test for the property 'Address2'
         }
-        
         /// <summary>
-        /// Test the property 'City' 
+        /// Test the property 'City'
         /// </summary>
         [Test]
         public void CityTest()
         {
-            // TODO: unit test for the property 'City' 
+            // TODO: unit test for the property 'City'
         }
-        
         /// <summary>
-        /// Test the property 'State' 
+        /// Test the property 'State'
         /// </summary>
         [Test]
         public void StateTest()
         {
-            // TODO: unit test for the property 'State' 
+            // TODO: unit test for the property 'State'
         }
-        
         /// <summary>
-        /// Test the property 'PostalCode' 
+        /// Test the property 'PostalCode'
         /// </summary>
         [Test]
         public void PostalCodeTest()
         {
-            // TODO: unit test for the property 'PostalCode' 
+            // TODO: unit test for the property 'PostalCode'
         }
-        
         /// <summary>
-        /// Test the property 'CountryCode' 
+        /// Test the property 'CountryCode'
         /// </summary>
         [Test]
         public void CountryCodeTest()
         {
-            // TODO: unit test for the property 'CountryCode' 
+            // TODO: unit test for the property 'CountryCode'
         }
-        
 
     }
 

@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new CarrierAddress();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of CarrierAddress
@@ -50,52 +50,46 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<CarrierAddress> (instance, "instance is a CarrierAddress");
         }
 
-        
         /// <summary>
-        /// Test the property 'StreetAddress1' 
+        /// Test the property 'StreetAddress1'
         /// </summary>
         [Test]
         public void StreetAddress1Test()
         {
-            // TODO: unit test for the property 'StreetAddress1' 
+            // TODO: unit test for the property 'StreetAddress1'
         }
-        
         /// <summary>
-        /// Test the property 'StreetAddress2' 
+        /// Test the property 'StreetAddress2'
         /// </summary>
         [Test]
         public void StreetAddress2Test()
         {
-            // TODO: unit test for the property 'StreetAddress2' 
+            // TODO: unit test for the property 'StreetAddress2'
         }
-        
         /// <summary>
-        /// Test the property 'City' 
+        /// Test the property 'City'
         /// </summary>
         [Test]
         public void CityTest()
         {
-            // TODO: unit test for the property 'City' 
+            // TODO: unit test for the property 'City'
         }
-        
         /// <summary>
-        /// Test the property 'State' 
+        /// Test the property 'State'
         /// </summary>
         [Test]
         public void StateTest()
         {
-            // TODO: unit test for the property 'State' 
+            // TODO: unit test for the property 'State'
         }
-        
         /// <summary>
-        /// Test the property 'Zipcode' 
+        /// Test the property 'Zipcode'
         /// </summary>
         [Test]
         public void ZipcodeTest()
         {
-            // TODO: unit test for the property 'Zipcode' 
+            // TODO: unit test for the property 'Zipcode'
         }
-        
 
     }
 

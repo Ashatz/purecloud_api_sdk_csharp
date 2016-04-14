@@ -17,9 +17,12 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class Queue :  IEquatable<Queue>
     { 
-    
+
+        /// <summary>
+        /// Gets or Sets State
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum StateEnum {
+                public enum StateEnum {
             
             [EnumMember(Value = "ACTIVE")]
             Active,
@@ -30,9 +33,13 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "DELETED")]
             Deleted
         }
-    
+
+
+        /// <summary>
+        /// Gets or Sets SkillEvaluationMethod
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum SkillEvaluationMethodEnum {
+                public enum SkillEvaluationMethodEnum {
             
             [EnumMember(Value = "NONE")]
             None,
@@ -43,6 +50,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "ALL")]
             All
         }
+
         
         /// <summary>
         /// Gets or Sets State
@@ -100,7 +108,7 @@ namespace ININ.PureCloudApi.Model
             this.MemberCount = MemberCount;
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -242,11 +250,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  CallingPartyNumber: ").Append(CallingPartyNumber).Append("\n");
             sb.Append("  MemberCount: ").Append(MemberCount).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -392,67 +399,46 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
-                
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
-                
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
-                
                 if (this.DateModified != null)
                     hash = hash * 59 + this.DateModified.GetHashCode();
-                
                 if (this.ModifiedBy != null)
                     hash = hash * 59 + this.ModifiedBy.GetHashCode();
-                
                 if (this.CreatedBy != null)
                     hash = hash * 59 + this.CreatedBy.GetHashCode();
-                
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
-                
                 if (this.ModifiedByApp != null)
                     hash = hash * 59 + this.ModifiedByApp.GetHashCode();
-                
                 if (this.CreatedByApp != null)
                     hash = hash * 59 + this.CreatedByApp.GetHashCode();
-                
                 if (this.MediaSettings != null)
                     hash = hash * 59 + this.MediaSettings.GetHashCode();
-                
                 if (this.Bullseye != null)
                     hash = hash * 59 + this.Bullseye.GetHashCode();
-                
                 if (this.AcwSettings != null)
                     hash = hash * 59 + this.AcwSettings.GetHashCode();
-                
                 if (this.SkillEvaluationMethod != null)
                     hash = hash * 59 + this.SkillEvaluationMethod.GetHashCode();
-                
                 if (this.QueueFlow != null)
                     hash = hash * 59 + this.QueueFlow.GetHashCode();
-                
                 if (this.CallingPartyName != null)
                     hash = hash * 59 + this.CallingPartyName.GetHashCode();
-                
                 if (this.CallingPartyNumber != null)
                     hash = hash * 59 + this.CallingPartyNumber.GetHashCode();
-                
                 if (this.MemberCount != null)
                     hash = hash * 59 + this.MemberCount.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 return hash;
             }
         }

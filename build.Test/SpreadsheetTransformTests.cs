@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new SpreadsheetTransform();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of SpreadsheetTransform
@@ -50,88 +50,78 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<SpreadsheetTransform> (instance, "instance is a SpreadsheetTransform");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'RestEndpoint' 
+        /// Test the property 'RestEndpoint'
         /// </summary>
         [Test]
         public void RestEndpointTest()
         {
-            // TODO: unit test for the property 'RestEndpoint' 
+            // TODO: unit test for the property 'RestEndpoint'
         }
-        
         /// <summary>
-        /// Test the property 'FilenameTransforms' 
+        /// Test the property 'FilenameTransforms'
         /// </summary>
         [Test]
         public void FilenameTransformsTest()
         {
-            // TODO: unit test for the property 'FilenameTransforms' 
+            // TODO: unit test for the property 'FilenameTransforms'
         }
-        
         /// <summary>
-        /// Test the property 'Tags' 
+        /// Test the property 'Tags'
         /// </summary>
         [Test]
         public void TagsTest()
         {
-            // TODO: unit test for the property 'Tags' 
+            // TODO: unit test for the property 'Tags'
         }
-        
         /// <summary>
-        /// Test the property 'SheetNameTransforms' 
+        /// Test the property 'SheetNameTransforms'
         /// </summary>
         [Test]
         public void SheetNameTransformsTest()
         {
-            // TODO: unit test for the property 'SheetNameTransforms' 
+            // TODO: unit test for the property 'SheetNameTransforms'
         }
-        
         /// <summary>
-        /// Test the property 'Sheets' 
+        /// Test the property 'Sheets'
         /// </summary>
         [Test]
         public void SheetsTest()
         {
-            // TODO: unit test for the property 'Sheets' 
+            // TODO: unit test for the property 'Sheets'
         }
-        
         /// <summary>
-        /// Test the property 'ClientTransformModel' 
+        /// Test the property 'ClientTransformModel'
         /// </summary>
         [Test]
         public void ClientTransformModelTest()
         {
-            // TODO: unit test for the property 'ClientTransformModel' 
+            // TODO: unit test for the property 'ClientTransformModel'
         }
-        
         /// <summary>
-        /// Test the property 'SelfUri' 
+        /// Test the property 'SelfUri'
         /// </summary>
         [Test]
         public void SelfUriTest()
         {
-            // TODO: unit test for the property 'SelfUri' 
+            // TODO: unit test for the property 'SelfUri'
         }
-        
 
     }
 

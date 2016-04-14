@@ -17,9 +17,12 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class InboundDomain :  IEquatable<InboundDomain>
     { 
-    
+
+        /// <summary>
+        /// Gets or Sets MxRecordStatus
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum MxRecordStatusEnum {
+                public enum MxRecordStatusEnum {
             
             [EnumMember(Value = "VALID")]
             Valid,
@@ -30,6 +33,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "NOT_AVAILABLE")]
             NotAvailable
         }
+
         
         /// <summary>
         /// Gets or Sets MxRecordStatus
@@ -59,7 +63,7 @@ namespace ININ.PureCloudApi.Model
             }
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -101,11 +105,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  MxRecordStatus: ").Append(MxRecordStatus).Append("\n");
             sb.Append("  SubDomain: ").Append(SubDomain).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -176,22 +179,16 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.MxRecordStatus != null)
                     hash = hash * 59 + this.MxRecordStatus.GetHashCode();
-                
                 if (this.SubDomain != null)
                     hash = hash * 59 + this.SubDomain.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 return hash;
             }
         }

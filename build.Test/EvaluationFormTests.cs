@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new EvaluationForm();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of EvaluationForm
@@ -50,88 +50,78 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<EvaluationForm> (instance, "instance is a EvaluationForm");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'Type' 
+        /// Test the property 'Type'
         /// </summary>
         [Test]
         public void TypeTest()
         {
-            // TODO: unit test for the property 'Type' 
+            // TODO: unit test for the property 'Type'
         }
-        
         /// <summary>
-        /// Test the property 'ModifiedDate' 
+        /// Test the property 'ModifiedDate'
         /// </summary>
         [Test]
         public void ModifiedDateTest()
         {
-            // TODO: unit test for the property 'ModifiedDate' 
+            // TODO: unit test for the property 'ModifiedDate'
         }
-        
         /// <summary>
-        /// Test the property 'Published' 
+        /// Test the property 'Published'
         /// </summary>
         [Test]
         public void PublishedTest()
         {
-            // TODO: unit test for the property 'Published' 
+            // TODO: unit test for the property 'Published'
         }
-        
         /// <summary>
-        /// Test the property 'ContextId' 
+        /// Test the property 'ContextId'
         /// </summary>
         [Test]
         public void ContextIdTest()
         {
-            // TODO: unit test for the property 'ContextId' 
+            // TODO: unit test for the property 'ContextId'
         }
-        
         /// <summary>
-        /// Test the property 'QuestionGroups' 
+        /// Test the property 'QuestionGroups'
         /// </summary>
         [Test]
         public void QuestionGroupsTest()
         {
-            // TODO: unit test for the property 'QuestionGroups' 
+            // TODO: unit test for the property 'QuestionGroups'
         }
-        
         /// <summary>
-        /// Test the property 'PublishedVersions' 
+        /// Test the property 'PublishedVersions'
         /// </summary>
         [Test]
         public void PublishedVersionsTest()
         {
-            // TODO: unit test for the property 'PublishedVersions' 
+            // TODO: unit test for the property 'PublishedVersions'
         }
-        
         /// <summary>
-        /// Test the property 'SelfUri' 
+        /// Test the property 'SelfUri'
         /// </summary>
         [Test]
         public void SelfUriTest()
         {
-            // TODO: unit test for the property 'SelfUri' 
+            // TODO: unit test for the property 'SelfUri'
         }
-        
 
     }
 

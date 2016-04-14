@@ -56,7 +56,7 @@ namespace ININ.PureCloudApi.Model
             }
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -161,11 +161,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Thumbnails: ").Append(Thumbnails).Append("\n");
             sb.Append("  Read: ").Append(Read).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -276,46 +275,32 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
-                
                 if (this.DateModified != null)
                     hash = hash * 59 + this.DateModified.GetHashCode();
-                
                 if (this.ContentUri != null)
                     hash = hash * 59 + this.ContentUri.GetHashCode();
-                
                 if (this.Workspace != null)
                     hash = hash * 59 + this.Workspace.GetHashCode();
-                
                 if (this.CreatedBy != null)
                     hash = hash * 59 + this.CreatedBy.GetHashCode();
-                
                 if (this.Conversation != null)
                     hash = hash * 59 + this.Conversation.GetHashCode();
-                
                 if (this.ContentLength != null)
                     hash = hash * 59 + this.ContentLength.GetHashCode();
-                
                 if (this.DurationMilliseconds != null)
                     hash = hash * 59 + this.DurationMilliseconds.GetHashCode();
-                
                 if (this.Thumbnails != null)
                     hash = hash * 59 + this.Thumbnails.GetHashCode();
-                
                 if (this.Read != null)
                     hash = hash * 59 + this.Read.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 return hash;
             }
         }

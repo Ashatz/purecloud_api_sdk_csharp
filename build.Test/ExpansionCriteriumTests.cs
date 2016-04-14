@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new ExpansionCriterium();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of ExpansionCriterium
@@ -50,25 +50,22 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<ExpansionCriterium> (instance, "instance is a ExpansionCriterium");
         }
 
-        
         /// <summary>
-        /// Test the property 'Type' 
+        /// Test the property 'Type'
         /// </summary>
         [Test]
         public void TypeTest()
         {
-            // TODO: unit test for the property 'Type' 
+            // TODO: unit test for the property 'Type'
         }
-        
         /// <summary>
-        /// Test the property 'Threshold' 
+        /// Test the property 'Threshold'
         /// </summary>
         [Test]
         public void ThresholdTest()
         {
-            // TODO: unit test for the property 'Threshold' 
+            // TODO: unit test for the property 'Threshold'
         }
-        
 
     }
 

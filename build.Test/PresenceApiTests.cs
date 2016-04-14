@@ -61,9 +61,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'DeletePresenceId'
             string presenceId = null; // TODO: replace null with proper value
-            
             var response = instance.DeletePresenceId(presenceId);
-            Assert.IsInstanceOf<OrganizationPresence> (response, "response is OrganizationPresence"); 
+            Assert.IsInstanceOf<OrganizationPresence> (response, "response is OrganizationPresence");
         }
         
         /// <summary>
@@ -74,9 +73,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'GetPresenceId'
             string presenceId = null; // TODO: replace null with proper value
-            
             var response = instance.GetPresenceId(presenceId);
-            Assert.IsInstanceOf<OrganizationPresence> (response, "response is OrganizationPresence"); 
+            Assert.IsInstanceOf<OrganizationPresence> (response, "response is OrganizationPresence");
         }
         
         /// <summary>
@@ -88,9 +86,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'GetPresencedefinitions'
             int? pageNumber = null; // TODO: replace null with proper value
             int? pageSize = null; // TODO: replace null with proper value
-            
             var response = instance.GetPresencedefinitions(pageNumber, pageSize);
-            Assert.IsInstanceOf<OrganizationPresenceEntityListing> (response, "response is OrganizationPresenceEntityListing"); 
+            Assert.IsInstanceOf<OrganizationPresenceEntityListing> (response, "response is OrganizationPresenceEntityListing");
         }
         
         /// <summary>
@@ -102,9 +99,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'GetUserIdPresencesSource'
             string userId = null; // TODO: replace null with proper value
             string source = null; // TODO: replace null with proper value
-            
             var response = instance.GetUserIdPresencesSource(userId, source);
-            Assert.IsInstanceOf<UserPresence> (response, "response is UserPresence"); 
+            Assert.IsInstanceOf<UserPresence> (response, "response is UserPresence");
         }
         
         /// <summary>
@@ -117,9 +113,8 @@ namespace ININ.PureCloudApi.Test
             string userId = null; // TODO: replace null with proper value
             string source = null; // TODO: replace null with proper value
             UserPresence body = null; // TODO: replace null with proper value
-            
             var response = instance.PatchUserIdPresencesSource(userId, source, body);
-            Assert.IsInstanceOf<UserPresence> (response, "response is UserPresence"); 
+            Assert.IsInstanceOf<UserPresence> (response, "response is UserPresence");
         }
         
         /// <summary>
@@ -130,9 +125,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'PostPresencedefinitions'
             OrganizationPresence body = null; // TODO: replace null with proper value
-            
             var response = instance.PostPresencedefinitions(body);
-            Assert.IsInstanceOf<OrganizationPresence> (response, "response is OrganizationPresence"); 
+            Assert.IsInstanceOf<OrganizationPresence> (response, "response is OrganizationPresence");
         }
         
         /// <summary>
@@ -144,9 +138,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'PutPresenceId'
             string presenceId = null; // TODO: replace null with proper value
             OrganizationPresence body = null; // TODO: replace null with proper value
-            
             var response = instance.PutPresenceId(presenceId, body);
-            Assert.IsInstanceOf<OrganizationPresence> (response, "response is OrganizationPresence"); 
+            Assert.IsInstanceOf<OrganizationPresence> (response, "response is OrganizationPresence");
         }
         
     }

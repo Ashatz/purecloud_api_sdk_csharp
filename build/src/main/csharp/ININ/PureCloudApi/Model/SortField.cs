@@ -17,9 +17,12 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class SortField :  IEquatable<SortField>
     { 
-    
+
+        /// <summary>
+        /// Gets or Sets SortType
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum SortTypeEnum {
+                public enum SortTypeEnum {
             
             [EnumMember(Value = "ASCENDING")]
             Ascending,
@@ -27,6 +30,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "DESCENDING")]
             Descending
         }
+
         
         /// <summary>
         /// Gets or Sets SortType
@@ -46,7 +50,7 @@ namespace ININ.PureCloudApi.Model
             this.SortType = SortType;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets Name
@@ -64,11 +68,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class SortField {\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  SortType: ").Append(SortType).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -124,13 +127,10 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.SortType != null)
                     hash = hash * 59 + this.SortType.GetHashCode();
-                
                 return hash;
             }
         }

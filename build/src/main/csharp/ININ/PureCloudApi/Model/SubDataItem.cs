@@ -76,7 +76,7 @@ namespace ININ.PureCloudApi.Model
             }
             
         }
-        
+
     
         /// <summary>
         /// The id of this element
@@ -86,9 +86,9 @@ namespace ININ.PureCloudApi.Model
         public string Id { get; set; }
     
         /// <summary>
-        /// The 'type' of the element, this may be a system value, EG 'STRING' or a user defined type
+        /// The &#39;type&#39; of the element, this may be a system value, EG &#39;STRING&#39; or a user defined type
         /// </summary>
-        /// <value>The 'type' of the element, this may be a system value, EG 'STRING' or a user defined type</value>
+        /// <value>The &#39;type&#39; of the element, this may be a system value, EG &#39;STRING&#39; or a user defined type</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public string Type { get; set; }
     
@@ -126,11 +126,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Value: ").Append(Value).Append("\n");
             sb.Append("  Prompt: ").Append(Prompt).Append("\n");
             sb.Append("  DisplayValue: ").Append(DisplayValue).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -201,22 +200,16 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
                 if (this.Value != null)
                     hash = hash * 59 + this.Value.GetHashCode();
-                
                 if (this.Prompt != null)
                     hash = hash * 59 + this.Prompt.GetHashCode();
-                
                 if (this.DisplayValue != null)
                     hash = hash * 59 + this.DisplayValue.GetHashCode();
-                
                 return hash;
             }
         }

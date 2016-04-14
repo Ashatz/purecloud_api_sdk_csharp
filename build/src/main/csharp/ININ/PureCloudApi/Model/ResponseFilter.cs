@@ -17,9 +17,13 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class ResponseFilter :  IEquatable<ResponseFilter>
     { 
-    
+
+        /// <summary>
+        /// Filter operation: IN, EQUALS, NOTEQUALS.
+        /// </summary>
+        /// <value>Filter operation: IN, EQUALS, NOTEQUALS.</value>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum _OperatorEnum {
+                public enum _OperatorEnum {
             
             [EnumMember(Value = "IN")]
             In,
@@ -30,6 +34,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "NOTEQUALS")]
             Notequals
         }
+
         
         /// <summary>
         /// Filter operation: IN, EQUALS, NOTEQUALS.
@@ -76,12 +81,12 @@ namespace ININ.PureCloudApi.Model
             }
             
         }
-        
+
     
         /// <summary>
-        /// Field to filter on. Allowed values are 'name' and 'libraryId.
+        /// Field to filter on. Allowed values are &#39;name&#39; and &#39;libraryId.
         /// </summary>
-        /// <value>Field to filter on. Allowed values are 'name' and 'libraryId.</value>
+        /// <value>Field to filter on. Allowed values are &#39;name&#39; and &#39;libraryId.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
     
@@ -103,11 +108,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  _Operator: ").Append(_Operator).Append("\n");
             sb.Append("  Values: ").Append(Values).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -168,16 +172,12 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this._Operator != null)
                     hash = hash * 59 + this._Operator.GetHashCode();
-                
                 if (this.Values != null)
                     hash = hash * 59 + this.Values.GetHashCode();
-                
                 return hash;
             }
         }

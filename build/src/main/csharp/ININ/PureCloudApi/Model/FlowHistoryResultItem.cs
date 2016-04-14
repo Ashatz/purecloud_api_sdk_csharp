@@ -40,7 +40,7 @@ namespace ININ.PureCloudApi.Model
             this.HistoryItems = HistoryItems;
             
         }
-        
+
     
         /// <summary>
         /// The flow instance information that applies to the history events.
@@ -74,11 +74,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  FlowInstance: ").Append(FlowInstance).Append("\n");
             sb.Append("  AvailableActions: ").Append(AvailableActions).Append("\n");
             sb.Append("  HistoryItems: ").Append(HistoryItems).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -139,16 +138,12 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.FlowInstance != null)
                     hash = hash * 59 + this.FlowInstance.GetHashCode();
-                
                 if (this.AvailableActions != null)
                     hash = hash * 59 + this.AvailableActions.GetHashCode();
-                
                 if (this.HistoryItems != null)
                     hash = hash * 59 + this.HistoryItems.GetHashCode();
-                
                 return hash;
             }
         }

@@ -17,9 +17,12 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class AggregateMetricData :  IEquatable<AggregateMetricData>
     { 
-    
+
+        /// <summary>
+        /// Gets or Sets Metric
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum MetricEnum {
+                public enum MetricEnum {
             
             [EnumMember(Value = "tSegmentDuration")]
             Tsegmentduration,
@@ -132,6 +135,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "oWaiting")]
             Owaiting
         }
+
         
         /// <summary>
         /// Gets or Sets Metric
@@ -153,7 +157,7 @@ namespace ININ.PureCloudApi.Model
             this.Stats = Stats;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets Qualifier
@@ -178,11 +182,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Metric: ").Append(Metric).Append("\n");
             sb.Append("  Qualifier: ").Append(Qualifier).Append("\n");
             sb.Append("  Stats: ").Append(Stats).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -243,16 +246,12 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Metric != null)
                     hash = hash * 59 + this.Metric.GetHashCode();
-                
                 if (this.Qualifier != null)
                     hash = hash * 59 + this.Qualifier.GetHashCode();
-                
                 if (this.Stats != null)
                     hash = hash * 59 + this.Stats.GetHashCode();
-                
                 return hash;
             }
         }

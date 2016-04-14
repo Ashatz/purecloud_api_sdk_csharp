@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new DialerContact();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of DialerContact
@@ -50,79 +50,70 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<DialerContact> (instance, "instance is a DialerContact");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'ContactListId' 
+        /// Test the property 'ContactListId'
         /// </summary>
         [Test]
         public void ContactListIdTest()
         {
-            // TODO: unit test for the property 'ContactListId' 
+            // TODO: unit test for the property 'ContactListId'
         }
-        
         /// <summary>
-        /// Test the property 'Data' 
+        /// Test the property 'Data'
         /// </summary>
         [Test]
         public void DataTest()
         {
-            // TODO: unit test for the property 'Data' 
+            // TODO: unit test for the property 'Data'
         }
-        
         /// <summary>
-        /// Test the property 'CallRecords' 
+        /// Test the property 'CallRecords'
         /// </summary>
         [Test]
         public void CallRecordsTest()
         {
-            // TODO: unit test for the property 'CallRecords' 
+            // TODO: unit test for the property 'CallRecords'
         }
-        
         /// <summary>
-        /// Test the property 'Callable' 
+        /// Test the property 'Callable'
         /// </summary>
         [Test]
         public void CallableTest()
         {
-            // TODO: unit test for the property 'Callable' 
+            // TODO: unit test for the property 'Callable'
         }
-        
         /// <summary>
-        /// Test the property 'PhoneNumberStatus' 
+        /// Test the property 'PhoneNumberStatus'
         /// </summary>
         [Test]
         public void PhoneNumberStatusTest()
         {
-            // TODO: unit test for the property 'PhoneNumberStatus' 
+            // TODO: unit test for the property 'PhoneNumberStatus'
         }
-        
         /// <summary>
-        /// Test the property 'SelfUri' 
+        /// Test the property 'SelfUri'
         /// </summary>
         [Test]
         public void SelfUriTest()
         {
-            // TODO: unit test for the property 'SelfUri' 
+            // TODO: unit test for the property 'SelfUri'
         }
-        
 
     }
 

@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new AggregationRange();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of AggregationRange
@@ -50,25 +50,22 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<AggregationRange> (instance, "instance is a AggregationRange");
         }
 
-        
         /// <summary>
-        /// Test the property 'Gte' 
+        /// Test the property 'Gte'
         /// </summary>
         [Test]
         public void GteTest()
         {
-            // TODO: unit test for the property 'Gte' 
+            // TODO: unit test for the property 'Gte'
         }
-        
         /// <summary>
-        /// Test the property 'Lt' 
+        /// Test the property 'Lt'
         /// </summary>
         [Test]
         public void LtTest()
         {
-            // TODO: unit test for the property 'Lt' 
+            // TODO: unit test for the property 'Lt'
         }
-        
 
     }
 

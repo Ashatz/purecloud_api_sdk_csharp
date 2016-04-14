@@ -17,9 +17,12 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class OrphanRecording :  IEquatable<OrphanRecording>
     { 
-    
+
+        /// <summary>
+        /// Gets or Sets ProviderType
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum ProviderTypeEnum {
+                public enum ProviderTypeEnum {
             
             [EnumMember(Value = "EDGE")]
             Edge,
@@ -30,9 +33,13 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "EMAIL")]
             Email
         }
-    
+
+
+        /// <summary>
+        /// Gets or Sets MediaType
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum MediaTypeEnum {
+                public enum MediaTypeEnum {
             
             [EnumMember(Value = "CALL")]
             Call,
@@ -43,9 +50,13 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "EMAIL")]
             Email
         }
-    
+
+
+        /// <summary>
+        /// Gets or Sets FileState
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum FileStateEnum {
+                public enum FileStateEnum {
             
             [EnumMember(Value = "ARCHIVED")]
             Archived,
@@ -65,6 +76,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "UPLOADING")]
             Uploading
         }
+
         
         /// <summary>
         /// Gets or Sets ProviderType
@@ -110,7 +122,7 @@ namespace ININ.PureCloudApi.Model
             this.Recording = Recording;
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -183,11 +195,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  ProviderEndpoint: ").Append(ProviderEndpoint).Append("\n");
             sb.Append("  Recording: ").Append(Recording).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -288,40 +299,28 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.CreatedTime != null)
                     hash = hash * 59 + this.CreatedTime.GetHashCode();
-                
                 if (this.RecoveredTime != null)
                     hash = hash * 59 + this.RecoveredTime.GetHashCode();
-                
                 if (this.ProviderType != null)
                     hash = hash * 59 + this.ProviderType.GetHashCode();
-                
                 if (this.MediaSizeBytes != null)
                     hash = hash * 59 + this.MediaSizeBytes.GetHashCode();
-                
                 if (this.MediaType != null)
                     hash = hash * 59 + this.MediaType.GetHashCode();
-                
                 if (this.FileState != null)
                     hash = hash * 59 + this.FileState.GetHashCode();
-                
                 if (this.ProviderEndpoint != null)
                     hash = hash * 59 + this.ProviderEndpoint.GetHashCode();
-                
                 if (this.Recording != null)
                     hash = hash * 59 + this.Recording.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 return hash;
             }
         }

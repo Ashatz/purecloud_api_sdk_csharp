@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new DomainLogicalInterface();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of DomainLogicalInterface
@@ -50,340 +50,302 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<DomainLogicalInterface> (instance, "instance is a DomainLogicalInterface");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'Description' 
+        /// Test the property 'Description'
         /// </summary>
         [Test]
         public void DescriptionTest()
         {
-            // TODO: unit test for the property 'Description' 
+            // TODO: unit test for the property 'Description'
         }
-        
         /// <summary>
-        /// Test the property 'Version' 
+        /// Test the property 'Version'
         /// </summary>
         [Test]
         public void VersionTest()
         {
-            // TODO: unit test for the property 'Version' 
+            // TODO: unit test for the property 'Version'
         }
-        
         /// <summary>
-        /// Test the property 'DateCreated' 
+        /// Test the property 'DateCreated'
         /// </summary>
         [Test]
         public void DateCreatedTest()
         {
-            // TODO: unit test for the property 'DateCreated' 
+            // TODO: unit test for the property 'DateCreated'
         }
-        
         /// <summary>
-        /// Test the property 'DateModified' 
+        /// Test the property 'DateModified'
         /// </summary>
         [Test]
         public void DateModifiedTest()
         {
-            // TODO: unit test for the property 'DateModified' 
+            // TODO: unit test for the property 'DateModified'
         }
-        
         /// <summary>
-        /// Test the property 'ModifiedBy' 
+        /// Test the property 'ModifiedBy'
         /// </summary>
         [Test]
         public void ModifiedByTest()
         {
-            // TODO: unit test for the property 'ModifiedBy' 
+            // TODO: unit test for the property 'ModifiedBy'
         }
-        
         /// <summary>
-        /// Test the property 'CreatedBy' 
+        /// Test the property 'CreatedBy'
         /// </summary>
         [Test]
         public void CreatedByTest()
         {
-            // TODO: unit test for the property 'CreatedBy' 
+            // TODO: unit test for the property 'CreatedBy'
         }
-        
         /// <summary>
-        /// Test the property 'State' 
+        /// Test the property 'State'
         /// </summary>
         [Test]
         public void StateTest()
         {
-            // TODO: unit test for the property 'State' 
+            // TODO: unit test for the property 'State'
         }
-        
         /// <summary>
-        /// Test the property 'ModifiedByApp' 
+        /// Test the property 'ModifiedByApp'
         /// </summary>
         [Test]
         public void ModifiedByAppTest()
         {
-            // TODO: unit test for the property 'ModifiedByApp' 
+            // TODO: unit test for the property 'ModifiedByApp'
         }
-        
         /// <summary>
-        /// Test the property 'CreatedByApp' 
+        /// Test the property 'CreatedByApp'
         /// </summary>
         [Test]
         public void CreatedByAppTest()
         {
-            // TODO: unit test for the property 'CreatedByApp' 
+            // TODO: unit test for the property 'CreatedByApp'
         }
-        
         /// <summary>
-        /// Test the property 'EdgeUri' 
+        /// Test the property 'EdgeUri'
         /// </summary>
         [Test]
         public void EdgeUriTest()
         {
-            // TODO: unit test for the property 'EdgeUri' 
+            // TODO: unit test for the property 'EdgeUri'
         }
-        
         /// <summary>
-        /// Test the property 'EdgeAssignedId' 
+        /// Test the property 'EdgeAssignedId'
         /// </summary>
         [Test]
         public void EdgeAssignedIdTest()
         {
-            // TODO: unit test for the property 'EdgeAssignedId' 
+            // TODO: unit test for the property 'EdgeAssignedId'
         }
-        
         /// <summary>
-        /// Test the property 'FriendlyName' 
+        /// Test the property 'FriendlyName'
         /// </summary>
         [Test]
         public void FriendlyNameTest()
         {
-            // TODO: unit test for the property 'FriendlyName' 
+            // TODO: unit test for the property 'FriendlyName'
         }
-        
         /// <summary>
-        /// Test the property 'VlanTagId' 
+        /// Test the property 'VlanTagId'
         /// </summary>
         [Test]
         public void VlanTagIdTest()
         {
-            // TODO: unit test for the property 'VlanTagId' 
+            // TODO: unit test for the property 'VlanTagId'
         }
-        
         /// <summary>
-        /// Test the property 'HardwareAddress' 
+        /// Test the property 'HardwareAddress'
         /// </summary>
         [Test]
         public void HardwareAddressTest()
         {
-            // TODO: unit test for the property 'HardwareAddress' 
+            // TODO: unit test for the property 'HardwareAddress'
         }
-        
         /// <summary>
-        /// Test the property 'PhysicalAdapterId' 
+        /// Test the property 'PhysicalAdapterId'
         /// </summary>
         [Test]
         public void PhysicalAdapterIdTest()
         {
-            // TODO: unit test for the property 'PhysicalAdapterId' 
+            // TODO: unit test for the property 'PhysicalAdapterId'
         }
-        
         /// <summary>
-        /// Test the property 'IpAddress' 
+        /// Test the property 'IpAddress'
         /// </summary>
         [Test]
         public void IpAddressTest()
         {
-            // TODO: unit test for the property 'IpAddress' 
+            // TODO: unit test for the property 'IpAddress'
         }
-        
         /// <summary>
-        /// Test the property 'Gateway' 
+        /// Test the property 'Gateway'
         /// </summary>
         [Test]
         public void GatewayTest()
         {
-            // TODO: unit test for the property 'Gateway' 
+            // TODO: unit test for the property 'Gateway'
         }
-        
         /// <summary>
-        /// Test the property 'PrimaryDns' 
+        /// Test the property 'PrimaryDns'
         /// </summary>
         [Test]
         public void PrimaryDnsTest()
         {
-            // TODO: unit test for the property 'PrimaryDns' 
+            // TODO: unit test for the property 'PrimaryDns'
         }
-        
         /// <summary>
-        /// Test the property 'SecondaryDns' 
+        /// Test the property 'SecondaryDns'
         /// </summary>
         [Test]
         public void SecondaryDnsTest()
         {
-            // TODO: unit test for the property 'SecondaryDns' 
+            // TODO: unit test for the property 'SecondaryDns'
         }
-        
         /// <summary>
-        /// Test the property 'IfStatus' 
+        /// Test the property 'IfStatus'
         /// </summary>
         [Test]
         public void IfStatusTest()
         {
-            // TODO: unit test for the property 'IfStatus' 
+            // TODO: unit test for the property 'IfStatus'
         }
-        
         /// <summary>
-        /// Test the property 'Routes' 
+        /// Test the property 'Routes'
         /// </summary>
         [Test]
         public void RoutesTest()
         {
-            // TODO: unit test for the property 'Routes' 
+            // TODO: unit test for the property 'Routes'
         }
-        
         /// <summary>
-        /// Test the property 'Addresses' 
+        /// Test the property 'Addresses'
         /// </summary>
         [Test]
         public void AddressesTest()
         {
-            // TODO: unit test for the property 'Addresses' 
+            // TODO: unit test for the property 'Addresses'
         }
-        
         /// <summary>
-        /// Test the property 'Ipv4Capabilities' 
+        /// Test the property 'Ipv4Capabilities'
         /// </summary>
         [Test]
         public void Ipv4CapabilitiesTest()
         {
-            // TODO: unit test for the property 'Ipv4Capabilities' 
+            // TODO: unit test for the property 'Ipv4Capabilities'
         }
-        
         /// <summary>
-        /// Test the property 'Ipv6Capabilities' 
+        /// Test the property 'Ipv6Capabilities'
         /// </summary>
         [Test]
         public void Ipv6CapabilitiesTest()
         {
-            // TODO: unit test for the property 'Ipv6Capabilities' 
+            // TODO: unit test for the property 'Ipv6Capabilities'
         }
-        
         /// <summary>
-        /// Test the property 'CurrentState' 
+        /// Test the property 'CurrentState'
         /// </summary>
         [Test]
         public void CurrentStateTest()
         {
-            // TODO: unit test for the property 'CurrentState' 
+            // TODO: unit test for the property 'CurrentState'
         }
-        
         /// <summary>
-        /// Test the property 'LastModifiedUserId' 
+        /// Test the property 'LastModifiedUserId'
         /// </summary>
         [Test]
         public void LastModifiedUserIdTest()
         {
-            // TODO: unit test for the property 'LastModifiedUserId' 
+            // TODO: unit test for the property 'LastModifiedUserId'
         }
-        
         /// <summary>
-        /// Test the property 'LastModifiedCorrelationId' 
+        /// Test the property 'LastModifiedCorrelationId'
         /// </summary>
         [Test]
         public void LastModifiedCorrelationIdTest()
         {
-            // TODO: unit test for the property 'LastModifiedCorrelationId' 
+            // TODO: unit test for the property 'LastModifiedCorrelationId'
         }
-        
         /// <summary>
-        /// Test the property 'CommandResponses' 
+        /// Test the property 'CommandResponses'
         /// </summary>
         [Test]
         public void CommandResponsesTest()
         {
-            // TODO: unit test for the property 'CommandResponses' 
+            // TODO: unit test for the property 'CommandResponses'
         }
-        
         /// <summary>
-        /// Test the property 'InheritPhoneTrunkBases' 
+        /// Test the property 'InheritPhoneTrunkBases'
         /// </summary>
         [Test]
         public void InheritPhoneTrunkBasesTest()
         {
-            // TODO: unit test for the property 'InheritPhoneTrunkBases' 
+            // TODO: unit test for the property 'InheritPhoneTrunkBases'
         }
-        
         /// <summary>
-        /// Test the property 'InheritPhoneTrunkBasesIPv4' 
+        /// Test the property 'InheritPhoneTrunkBasesIPv4'
         /// </summary>
         [Test]
         public void InheritPhoneTrunkBasesIPv4Test()
         {
-            // TODO: unit test for the property 'InheritPhoneTrunkBasesIPv4' 
+            // TODO: unit test for the property 'InheritPhoneTrunkBasesIPv4'
         }
-        
         /// <summary>
-        /// Test the property 'InheritPhoneTrunkBasesIPv6' 
+        /// Test the property 'InheritPhoneTrunkBasesIPv6'
         /// </summary>
         [Test]
         public void InheritPhoneTrunkBasesIPv6Test()
         {
-            // TODO: unit test for the property 'InheritPhoneTrunkBasesIPv6' 
+            // TODO: unit test for the property 'InheritPhoneTrunkBasesIPv6'
         }
-        
         /// <summary>
-        /// Test the property 'UseForInternalEdgeCommunication' 
+        /// Test the property 'UseForInternalEdgeCommunication'
         /// </summary>
         [Test]
         public void UseForInternalEdgeCommunicationTest()
         {
-            // TODO: unit test for the property 'UseForInternalEdgeCommunication' 
+            // TODO: unit test for the property 'UseForInternalEdgeCommunication'
         }
-        
         /// <summary>
-        /// Test the property 'ExternalTrunkBaseAssignments' 
+        /// Test the property 'ExternalTrunkBaseAssignments'
         /// </summary>
         [Test]
         public void ExternalTrunkBaseAssignmentsTest()
         {
-            // TODO: unit test for the property 'ExternalTrunkBaseAssignments' 
+            // TODO: unit test for the property 'ExternalTrunkBaseAssignments'
         }
-        
         /// <summary>
-        /// Test the property 'PhoneTrunkBaseAssignments' 
+        /// Test the property 'PhoneTrunkBaseAssignments'
         /// </summary>
         [Test]
         public void PhoneTrunkBaseAssignmentsTest()
         {
-            // TODO: unit test for the property 'PhoneTrunkBaseAssignments' 
+            // TODO: unit test for the property 'PhoneTrunkBaseAssignments'
         }
-        
         /// <summary>
-        /// Test the property 'SelfUri' 
+        /// Test the property 'SelfUri'
         /// </summary>
         [Test]
         public void SelfUriTest()
         {
-            // TODO: unit test for the property 'SelfUri' 
+            // TODO: unit test for the property 'SelfUri'
         }
-        
 
     }
 

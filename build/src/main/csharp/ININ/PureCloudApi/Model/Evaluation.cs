@@ -17,9 +17,12 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class Evaluation :  IEquatable<Evaluation>
     { 
-    
+
+        /// <summary>
+        /// Gets or Sets Status
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum StatusEnum {
+                public enum StatusEnum {
             
             [EnumMember(Value = "PENDING")]
             Pending,
@@ -30,13 +33,19 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "FINISHED")]
             Finished
         }
-    
+
+
+        /// <summary>
+        /// The type of resource. Only used for email evaluations. Will be null for evaluations on all other resources.
+        /// </summary>
+        /// <value>The type of resource. Only used for email evaluations. Will be null for evaluations on all other resources.</value>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum ResourceTypeEnum {
+                public enum ResourceTypeEnum {
             
             [EnumMember(Value = "Email")]
             Email
         }
+
         
         /// <summary>
         /// Gets or Sets Status
@@ -117,7 +126,7 @@ namespace ININ.PureCloudApi.Model
             }
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -256,11 +265,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Redacted: ").Append(Redacted).Append("\n");
             sb.Append("  IsScoringIndex: ").Append(IsScoringIndex).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -401,64 +409,44 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.Conversation != null)
                     hash = hash * 59 + this.Conversation.GetHashCode();
-                
                 if (this.EvaluationForm != null)
                     hash = hash * 59 + this.EvaluationForm.GetHashCode();
-                
                 if (this.Evaluator != null)
                     hash = hash * 59 + this.Evaluator.GetHashCode();
-                
                 if (this.Agent != null)
                     hash = hash * 59 + this.Agent.GetHashCode();
-                
                 if (this.Calibration != null)
                     hash = hash * 59 + this.Calibration.GetHashCode();
-                
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
-                
                 if (this.Answers != null)
                     hash = hash * 59 + this.Answers.GetHashCode();
-                
                 if (this.AgentHasRead != null)
                     hash = hash * 59 + this.AgentHasRead.GetHashCode();
-                
                 if (this.ReleaseDate != null)
                     hash = hash * 59 + this.ReleaseDate.GetHashCode();
-                
                 if (this.AssignedDate != null)
                     hash = hash * 59 + this.AssignedDate.GetHashCode();
-                
                 if (this.ChangedDate != null)
                     hash = hash * 59 + this.ChangedDate.GetHashCode();
-                
                 if (this.Queue != null)
                     hash = hash * 59 + this.Queue.GetHashCode();
-                
                 if (this.ResourceId != null)
                     hash = hash * 59 + this.ResourceId.GetHashCode();
-                
                 if (this.ResourceType != null)
                     hash = hash * 59 + this.ResourceType.GetHashCode();
-                
                 if (this.Redacted != null)
                     hash = hash * 59 + this.Redacted.GetHashCode();
-                
                 if (this.IsScoringIndex != null)
                     hash = hash * 59 + this.IsScoringIndex.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 return hash;
             }
         }

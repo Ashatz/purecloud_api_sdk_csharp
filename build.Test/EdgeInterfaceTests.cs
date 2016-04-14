@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new EdgeInterface();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of EdgeInterface
@@ -50,79 +50,70 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<EdgeInterface> (instance, "instance is a EdgeInterface");
         }
 
-        
         /// <summary>
-        /// Test the property 'Type' 
+        /// Test the property 'Type'
         /// </summary>
         [Test]
         public void TypeTest()
         {
-            // TODO: unit test for the property 'Type' 
+            // TODO: unit test for the property 'Type'
         }
-        
         /// <summary>
-        /// Test the property 'IpAddress' 
+        /// Test the property 'IpAddress'
         /// </summary>
         [Test]
         public void IpAddressTest()
         {
-            // TODO: unit test for the property 'IpAddress' 
+            // TODO: unit test for the property 'IpAddress'
         }
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'MacAddress' 
+        /// Test the property 'MacAddress'
         /// </summary>
         [Test]
         public void MacAddressTest()
         {
-            // TODO: unit test for the property 'MacAddress' 
+            // TODO: unit test for the property 'MacAddress'
         }
-        
         /// <summary>
-        /// Test the property 'IfName' 
+        /// Test the property 'IfName'
         /// </summary>
         [Test]
         public void IfNameTest()
         {
-            // TODO: unit test for the property 'IfName' 
+            // TODO: unit test for the property 'IfName'
         }
-        
         /// <summary>
-        /// Test the property 'Endpoints' 
+        /// Test the property 'Endpoints'
         /// </summary>
         [Test]
         public void EndpointsTest()
         {
-            // TODO: unit test for the property 'Endpoints' 
+            // TODO: unit test for the property 'Endpoints'
         }
-        
         /// <summary>
-        /// Test the property 'LineTypes' 
+        /// Test the property 'LineTypes'
         /// </summary>
         [Test]
         public void LineTypesTest()
         {
-            // TODO: unit test for the property 'LineTypes' 
+            // TODO: unit test for the property 'LineTypes'
         }
-        
         /// <summary>
-        /// Test the property 'AddressFamilyId' 
+        /// Test the property 'AddressFamilyId'
         /// </summary>
         [Test]
         public void AddressFamilyIdTest()
         {
-            // TODO: unit test for the property 'AddressFamilyId' 
+            // TODO: unit test for the property 'AddressFamilyId'
         }
-        
 
     }
 

@@ -61,9 +61,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'GetLocationId'
             string locationId = null; // TODO: replace null with proper value
-            
             var response = instance.GetLocationId(locationId);
-            Assert.IsInstanceOf<Location> (response, "response is Location"); 
+            Assert.IsInstanceOf<Location> (response, "response is Location");
         }
         
         /// <summary>
@@ -77,9 +76,8 @@ namespace ININ.PureCloudApi.Test
             string name = null; // TODO: replace null with proper value
             int? pageSize = null; // TODO: replace null with proper value
             int? pageNumber = null; // TODO: replace null with proper value
-            
             var response = instance.GetLocations(state, name, pageSize, pageNumber);
-            Assert.IsInstanceOf<LocationEntityListing> (response, "response is LocationEntityListing"); 
+            Assert.IsInstanceOf<LocationEntityListing> (response, "response is LocationEntityListing");
         }
         
     }

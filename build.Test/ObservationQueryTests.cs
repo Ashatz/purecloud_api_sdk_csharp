@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new ObservationQuery();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of ObservationQuery
@@ -50,25 +50,22 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<ObservationQuery> (instance, "instance is a ObservationQuery");
         }
 
-        
         /// <summary>
-        /// Test the property 'Filter' 
+        /// Test the property 'Filter'
         /// </summary>
         [Test]
         public void FilterTest()
         {
-            // TODO: unit test for the property 'Filter' 
+            // TODO: unit test for the property 'Filter'
         }
-        
         /// <summary>
-        /// Test the property 'Metrics' 
+        /// Test the property 'Metrics'
         /// </summary>
         [Test]
         public void MetricsTest()
         {
-            // TODO: unit test for the property 'Metrics' 
+            // TODO: unit test for the property 'Metrics'
         }
-        
 
     }
 

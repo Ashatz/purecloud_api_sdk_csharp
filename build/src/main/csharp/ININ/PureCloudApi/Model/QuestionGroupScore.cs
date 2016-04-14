@@ -56,7 +56,7 @@ namespace ININ.PureCloudApi.Model
             this.QuestionScores = QuestionScores;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets QuestionGroupId
@@ -143,11 +143,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  MaxTotalCriticalScoreUnweighted: ").Append(MaxTotalCriticalScoreUnweighted).Append("\n");
             sb.Append("  MarkedNA: ").Append(MarkedNA).Append("\n");
             sb.Append("  QuestionScores: ").Append(QuestionScores).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -248,40 +247,28 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.QuestionGroupId != null)
                     hash = hash * 59 + this.QuestionGroupId.GetHashCode();
-                
                 if (this.TotalScore != null)
                     hash = hash * 59 + this.TotalScore.GetHashCode();
-                
                 if (this.MaxTotalScore != null)
                     hash = hash * 59 + this.MaxTotalScore.GetHashCode();
-                
                 if (this.TotalCriticalScore != null)
                     hash = hash * 59 + this.TotalCriticalScore.GetHashCode();
-                
                 if (this.MaxTotalCriticalScore != null)
                     hash = hash * 59 + this.MaxTotalCriticalScore.GetHashCode();
-                
                 if (this.TotalScoreUnweighted != null)
                     hash = hash * 59 + this.TotalScoreUnweighted.GetHashCode();
-                
                 if (this.MaxTotalScoreUnweighted != null)
                     hash = hash * 59 + this.MaxTotalScoreUnweighted.GetHashCode();
-                
                 if (this.TotalCriticalScoreUnweighted != null)
                     hash = hash * 59 + this.TotalCriticalScoreUnweighted.GetHashCode();
-                
                 if (this.MaxTotalCriticalScoreUnweighted != null)
                     hash = hash * 59 + this.MaxTotalCriticalScoreUnweighted.GetHashCode();
-                
                 if (this.MarkedNA != null)
                     hash = hash * 59 + this.MarkedNA.GetHashCode();
-                
                 if (this.QuestionScores != null)
                     hash = hash * 59 + this.QuestionScores.GetHashCode();
-                
                 return hash;
             }
         }

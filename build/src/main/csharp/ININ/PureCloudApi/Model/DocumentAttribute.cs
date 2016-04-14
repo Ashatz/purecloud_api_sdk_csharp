@@ -30,7 +30,7 @@ namespace ININ.PureCloudApi.Model
             this.Values = Values;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets Attribute
@@ -54,11 +54,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class DocumentAttribute {\n");
             sb.Append("  Attribute: ").Append(Attribute).Append("\n");
             sb.Append("  Values: ").Append(Values).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -114,13 +113,10 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Attribute != null)
                     hash = hash * 59 + this.Attribute.GetHashCode();
-                
                 if (this.Values != null)
                     hash = hash * 59 + this.Values.GetHashCode();
-                
                 return hash;
             }
         }

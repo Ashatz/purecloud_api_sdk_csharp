@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new ConversationQuery();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of ConversationQuery
@@ -50,79 +50,70 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<ConversationQuery> (instance, "instance is a ConversationQuery");
         }
 
-        
         /// <summary>
-        /// Test the property 'Interval' 
+        /// Test the property 'Interval'
         /// </summary>
         [Test]
         public void IntervalTest()
         {
-            // TODO: unit test for the property 'Interval' 
+            // TODO: unit test for the property 'Interval'
         }
-        
         /// <summary>
-        /// Test the property 'ConversationFilters' 
+        /// Test the property 'ConversationFilters'
         /// </summary>
         [Test]
         public void ConversationFiltersTest()
         {
-            // TODO: unit test for the property 'ConversationFilters' 
+            // TODO: unit test for the property 'ConversationFilters'
         }
-        
         /// <summary>
-        /// Test the property 'EvaluationFilters' 
+        /// Test the property 'EvaluationFilters'
         /// </summary>
         [Test]
         public void EvaluationFiltersTest()
         {
-            // TODO: unit test for the property 'EvaluationFilters' 
+            // TODO: unit test for the property 'EvaluationFilters'
         }
-        
         /// <summary>
-        /// Test the property 'SegmentFilters' 
+        /// Test the property 'SegmentFilters'
         /// </summary>
         [Test]
         public void SegmentFiltersTest()
         {
-            // TODO: unit test for the property 'SegmentFilters' 
+            // TODO: unit test for the property 'SegmentFilters'
         }
-        
         /// <summary>
-        /// Test the property 'Aggregations' 
+        /// Test the property 'Aggregations'
         /// </summary>
         [Test]
         public void AggregationsTest()
         {
-            // TODO: unit test for the property 'Aggregations' 
+            // TODO: unit test for the property 'Aggregations'
         }
-        
         /// <summary>
-        /// Test the property 'Paging' 
+        /// Test the property 'Paging'
         /// </summary>
         [Test]
         public void PagingTest()
         {
-            // TODO: unit test for the property 'Paging' 
+            // TODO: unit test for the property 'Paging'
         }
-        
         /// <summary>
-        /// Test the property 'Order' 
+        /// Test the property 'Order'
         /// </summary>
         [Test]
         public void OrderTest()
         {
-            // TODO: unit test for the property 'Order' 
+            // TODO: unit test for the property 'Order'
         }
-        
         /// <summary>
-        /// Test the property 'OrderBy' 
+        /// Test the property 'OrderBy'
         /// </summary>
         [Test]
         public void OrderByTest()
         {
-            // TODO: unit test for the property 'OrderBy' 
+            // TODO: unit test for the property 'OrderBy'
         }
-        
 
     }
 

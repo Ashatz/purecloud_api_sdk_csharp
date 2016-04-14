@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new Dns();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of Dns
@@ -50,34 +50,30 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<Dns> (instance, "instance is a Dns");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'Ip' 
+        /// Test the property 'Ip'
         /// </summary>
         [Test]
         public void IpTest()
         {
-            // TODO: unit test for the property 'Ip' 
+            // TODO: unit test for the property 'Ip'
         }
-        
         /// <summary>
-        /// Test the property 'Port' 
+        /// Test the property 'Port'
         /// </summary>
         [Test]
         public void PortTest()
         {
-            // TODO: unit test for the property 'Port' 
+            // TODO: unit test for the property 'Port'
         }
-        
 
     }
 

@@ -42,7 +42,7 @@ namespace ININ.PureCloudApi.Model
             this.UsersOnANonCampaignCall = UsersOnANonCampaignCall;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets Queue
@@ -108,11 +108,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  UsersOnQueueWithStation: ").Append(UsersOnQueueWithStation).Append("\n");
             sb.Append("  UsersOnACampaignCall: ").Append(UsersOnACampaignCall).Append("\n");
             sb.Append("  UsersOnANonCampaignCall: ").Append(UsersOnANonCampaignCall).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -198,31 +197,22 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Queue != null)
                     hash = hash * 59 + this.Queue.GetHashCode();
-                
                 if (this.UsersInQueue != null)
                     hash = hash * 59 + this.UsersInQueue.GetHashCode();
-                
                 if (this.ActiveUsersInQueue != null)
                     hash = hash * 59 + this.ActiveUsersInQueue.GetHashCode();
-                
                 if (this.UsersOnQueue != null)
                     hash = hash * 59 + this.UsersOnQueue.GetHashCode();
-                
                 if (this.UsersNotUtilized != null)
                     hash = hash * 59 + this.UsersNotUtilized.GetHashCode();
-                
                 if (this.UsersOnQueueWithStation != null)
                     hash = hash * 59 + this.UsersOnQueueWithStation.GetHashCode();
-                
                 if (this.UsersOnACampaignCall != null)
                     hash = hash * 59 + this.UsersOnACampaignCall.GetHashCode();
-                
                 if (this.UsersOnANonCampaignCall != null)
                     hash = hash * 59 + this.UsersOnANonCampaignCall.GetHashCode();
-                
                 return hash;
             }
         }

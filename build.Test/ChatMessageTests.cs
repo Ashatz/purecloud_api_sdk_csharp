@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new ChatMessage();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of ChatMessage
@@ -50,88 +50,78 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<ChatMessage> (instance, "instance is a ChatMessage");
         }
 
-        
         /// <summary>
-        /// Test the property 'Body' 
+        /// Test the property 'Body'
         /// </summary>
         [Test]
         public void BodyTest()
         {
-            // TODO: unit test for the property 'Body' 
+            // TODO: unit test for the property 'Body'
         }
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'To' 
+        /// Test the property 'To'
         /// </summary>
         [Test]
         public void ToTest()
         {
-            // TODO: unit test for the property 'To' 
+            // TODO: unit test for the property 'To'
         }
-        
         /// <summary>
-        /// Test the property 'From' 
+        /// Test the property 'From'
         /// </summary>
         [Test]
         public void FromTest()
         {
-            // TODO: unit test for the property 'From' 
+            // TODO: unit test for the property 'From'
         }
-        
         /// <summary>
-        /// Test the property 'Utc' 
+        /// Test the property 'Utc'
         /// </summary>
         [Test]
         public void UtcTest()
         {
-            // TODO: unit test for the property 'Utc' 
+            // TODO: unit test for the property 'Utc'
         }
-        
         /// <summary>
-        /// Test the property 'Chat' 
+        /// Test the property 'Chat'
         /// </summary>
         [Test]
         public void ChatTest()
         {
-            // TODO: unit test for the property 'Chat' 
+            // TODO: unit test for the property 'Chat'
         }
-        
         /// <summary>
-        /// Test the property 'Message' 
+        /// Test the property 'Message'
         /// </summary>
         [Test]
         public void MessageTest()
         {
-            // TODO: unit test for the property 'Message' 
+            // TODO: unit test for the property 'Message'
         }
-        
         /// <summary>
-        /// Test the property 'Type' 
+        /// Test the property 'Type'
         /// </summary>
         [Test]
         public void TypeTest()
         {
-            // TODO: unit test for the property 'Type' 
+            // TODO: unit test for the property 'Type'
         }
-        
         /// <summary>
-        /// Test the property 'User' 
+        /// Test the property 'User'
         /// </summary>
         [Test]
         public void UserTest()
         {
-            // TODO: unit test for the property 'User' 
+            // TODO: unit test for the property 'User'
         }
-        
 
     }
 

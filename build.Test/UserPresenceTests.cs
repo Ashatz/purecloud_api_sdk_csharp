@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new UserPresence();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of UserPresence
@@ -50,70 +50,62 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<UserPresence> (instance, "instance is a UserPresence");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'Source' 
+        /// Test the property 'Source'
         /// </summary>
         [Test]
         public void SourceTest()
         {
-            // TODO: unit test for the property 'Source' 
+            // TODO: unit test for the property 'Source'
         }
-        
         /// <summary>
-        /// Test the property 'Primary' 
+        /// Test the property 'Primary'
         /// </summary>
         [Test]
         public void PrimaryTest()
         {
-            // TODO: unit test for the property 'Primary' 
+            // TODO: unit test for the property 'Primary'
         }
-        
         /// <summary>
-        /// Test the property 'PresenceDefinition' 
+        /// Test the property 'PresenceDefinition'
         /// </summary>
         [Test]
         public void PresenceDefinitionTest()
         {
-            // TODO: unit test for the property 'PresenceDefinition' 
+            // TODO: unit test for the property 'PresenceDefinition'
         }
-        
         /// <summary>
-        /// Test the property 'Message' 
+        /// Test the property 'Message'
         /// </summary>
         [Test]
         public void MessageTest()
         {
-            // TODO: unit test for the property 'Message' 
+            // TODO: unit test for the property 'Message'
         }
-        
         /// <summary>
-        /// Test the property 'SelfUri' 
+        /// Test the property 'SelfUri'
         /// </summary>
         [Test]
         public void SelfUriTest()
         {
-            // TODO: unit test for the property 'SelfUri' 
+            // TODO: unit test for the property 'SelfUri'
         }
-        
 
     }
 

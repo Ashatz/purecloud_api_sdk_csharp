@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new CampaignTimeSlot();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of CampaignTimeSlot
@@ -50,34 +50,30 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<CampaignTimeSlot> (instance, "instance is a CampaignTimeSlot");
         }
 
-        
         /// <summary>
-        /// Test the property 'StartTime' 
+        /// Test the property 'StartTime'
         /// </summary>
         [Test]
         public void StartTimeTest()
         {
-            // TODO: unit test for the property 'StartTime' 
+            // TODO: unit test for the property 'StartTime'
         }
-        
         /// <summary>
-        /// Test the property 'StopTime' 
+        /// Test the property 'StopTime'
         /// </summary>
         [Test]
         public void StopTimeTest()
         {
-            // TODO: unit test for the property 'StopTime' 
+            // TODO: unit test for the property 'StopTime'
         }
-        
         /// <summary>
-        /// Test the property 'Day' 
+        /// Test the property 'Day'
         /// </summary>
         [Test]
         public void DayTest()
         {
-            // TODO: unit test for the property 'Day' 
+            // TODO: unit test for the property 'Day'
         }
-        
 
     }
 

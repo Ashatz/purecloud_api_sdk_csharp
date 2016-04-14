@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new UserStations();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of UserStations
@@ -50,43 +50,38 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<UserStations> (instance, "instance is a UserStations");
         }
 
-        
         /// <summary>
-        /// Test the property 'AssociatedStation' 
+        /// Test the property 'AssociatedStation'
         /// </summary>
         [Test]
         public void AssociatedStationTest()
         {
-            // TODO: unit test for the property 'AssociatedStation' 
+            // TODO: unit test for the property 'AssociatedStation'
         }
-        
         /// <summary>
-        /// Test the property 'EffectiveStation' 
+        /// Test the property 'EffectiveStation'
         /// </summary>
         [Test]
         public void EffectiveStationTest()
         {
-            // TODO: unit test for the property 'EffectiveStation' 
+            // TODO: unit test for the property 'EffectiveStation'
         }
-        
         /// <summary>
-        /// Test the property 'DefaultStation' 
+        /// Test the property 'DefaultStation'
         /// </summary>
         [Test]
         public void DefaultStationTest()
         {
-            // TODO: unit test for the property 'DefaultStation' 
+            // TODO: unit test for the property 'DefaultStation'
         }
-        
         /// <summary>
-        /// Test the property 'LastAssociatedStation' 
+        /// Test the property 'LastAssociatedStation'
         /// </summary>
         [Test]
         public void LastAssociatedStationTest()
         {
-            // TODO: unit test for the property 'LastAssociatedStation' 
+            // TODO: unit test for the property 'LastAssociatedStation'
         }
-        
 
     }
 

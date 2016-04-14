@@ -17,9 +17,13 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class FlowReportResultItem :  IEquatable<FlowReportResultItem>
     { 
-    
+
+        /// <summary>
+        /// The flow's running status, which indicates whether the flow is running normally or in error, etc;
+        /// </summary>
+        /// <value>The flow's running status, which indicates whether the flow is running normally or in error, etc;</value>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum FlowStatusEnum {
+                public enum FlowStatusEnum {
             
             [EnumMember(Value = "UNKNOWN")]
             Unknown,
@@ -36,6 +40,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "COMPLETED")]
             Completed
         }
+
         
         /// <summary>
         /// The flow's running status, which indicates whether the flow is running normally or in error, etc;
@@ -108,7 +113,7 @@ namespace ININ.PureCloudApi.Model
             this.FlowErrorInfo = FlowErrorInfo;
             
         }
-        
+
     
         /// <summary>
         /// The flow instance ID for this process
@@ -207,11 +212,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  CompletedUser: ").Append(CompletedUser).Append("\n");
             sb.Append("  CompletionReason: ").Append(CompletionReason).Append("\n");
             sb.Append("  FlowErrorInfo: ").Append(FlowErrorInfo).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -317,43 +321,30 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.FlowExecId != null)
                     hash = hash * 59 + this.FlowExecId.GetHashCode();
-                
                 if (this.FlowConfigId != null)
                     hash = hash * 59 + this.FlowConfigId.GetHashCode();
-                
                 if (this.FlowInstanceName != null)
                     hash = hash * 59 + this.FlowInstanceName.GetHashCode();
-                
                 if (this.AssociatedDocument != null)
                     hash = hash * 59 + this.AssociatedDocument.GetHashCode();
-                
                 if (this.FlowStatus != null)
                     hash = hash * 59 + this.FlowStatus.GetHashCode();
-                
                 if (this.CurrentState != null)
                     hash = hash * 59 + this.CurrentState.GetHashCode();
-                
                 if (this.StartDateTime != null)
                     hash = hash * 59 + this.StartDateTime.GetHashCode();
-                
                 if (this.EndDateTime != null)
                     hash = hash * 59 + this.EndDateTime.GetHashCode();
-                
                 if (this.WorkItemUserAssignees != null)
                     hash = hash * 59 + this.WorkItemUserAssignees.GetHashCode();
-                
                 if (this.CompletedUser != null)
                     hash = hash * 59 + this.CompletedUser.GetHashCode();
-                
                 if (this.CompletionReason != null)
                     hash = hash * 59 + this.CompletionReason.GetHashCode();
-                
                 if (this.FlowErrorInfo != null)
                     hash = hash * 59 + this.FlowErrorInfo.GetHashCode();
-                
                 return hash;
             }
         }

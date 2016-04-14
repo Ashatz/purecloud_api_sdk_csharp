@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new MaxParticipants();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of MaxParticipants
@@ -50,16 +50,14 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<MaxParticipants> (instance, "instance is a MaxParticipants");
         }
 
-        
         /// <summary>
-        /// Test the property 'MaxParticipantsProperty' 
+        /// Test the property '_MaxParticipants'
         /// </summary>
         [Test]
-        public void MaxParticipantsPropertyTest()
+        public void _MaxParticipantsTest()
         {
-            // TODO: unit test for the property 'MaxParticipantsProperty' 
+            // TODO: unit test for the property '_MaxParticipants'
         }
-        
 
     }
 

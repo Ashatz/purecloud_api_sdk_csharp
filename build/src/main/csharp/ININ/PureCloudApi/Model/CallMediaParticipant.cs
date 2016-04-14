@@ -17,9 +17,13 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class CallMediaParticipant :  IEquatable<CallMediaParticipant>
     { 
-    
+
+        /// <summary>
+        /// The participant's state.  Values can be: 'alerting', 'connected', 'disconnected', 'dialing', 'contacting
+        /// </summary>
+        /// <value>The participant's state.  Values can be: 'alerting', 'connected', 'disconnected', 'dialing', 'contacting</value>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum StateEnum {
+                public enum StateEnum {
             
             [EnumMember(Value = "ALERTING")]
             Alerting,
@@ -54,9 +58,14 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "NONE")]
             None
         }
-    
+
+
+        /// <summary>
+        /// The participant's direction.  Values can be: 'inbound' or 'outbound'
+        /// </summary>
+        /// <value>The participant's direction.  Values can be: 'inbound' or 'outbound'</value>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum DirectionEnum {
+                public enum DirectionEnum {
             
             [EnumMember(Value = "INBOUND")]
             Inbound,
@@ -64,9 +73,14 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "OUTBOUND")]
             Outbound
         }
-    
+
+
+        /// <summary>
+        /// The reason the participant was disconnected from the conversation.
+        /// </summary>
+        /// <value>The reason the participant was disconnected from the conversation.</value>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum DisconnectTypeEnum {
+                public enum DisconnectTypeEnum {
             
             [EnumMember(Value = "ENDPOINT")]
             Endpoint,
@@ -95,9 +109,14 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "OTHER")]
             Other
         }
-    
+
+
+        /// <summary>
+        /// The state of the call recording.
+        /// </summary>
+        /// <value>The state of the call recording.</value>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum RecordingStateEnum {
+                public enum RecordingStateEnum {
             
             [EnumMember(Value = "NONE")]
             None,
@@ -108,6 +127,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "PAUSED")]
             Paused
         }
+
         
         /// <summary>
         /// The participant's state.  Values can be: 'alerting', 'connected', 'disconnected', 'dialing', 'contacting
@@ -255,7 +275,7 @@ namespace ININ.PureCloudApi.Model
             this.ConsultParticipantId = ConsultParticipantId;
             
         }
-        
+
     
         /// <summary>
         /// The unique participant ID.
@@ -300,16 +320,16 @@ namespace ININ.PureCloudApi.Model
         public DateTime? EndTime { get; set; }
     
         /// <summary>
-        /// The time when this participant's hold started. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// The time when this participant&#39;s hold started. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
-        /// <value>The time when this participant's hold started. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>The time when this participant&#39;s hold started. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="startHoldTime", EmitDefaultValue=false)]
         public DateTime? StartHoldTime { get; set; }
     
         /// <summary>
-        /// The participant's purpose.  Values can be: 'agent', 'user', 'customer', 'external', 'acd', 'ivr
+        /// The participant&#39;s purpose.  Values can be: &#39;agent&#39;, &#39;user&#39;, &#39;customer&#39;, &#39;external&#39;, &#39;acd&#39;, &#39;ivr
         /// </summary>
-        /// <value>The participant's purpose.  Values can be: 'agent', 'user', 'customer', 'external', 'acd', 'ivr</value>
+        /// <value>The participant&#39;s purpose.  Values can be: &#39;agent&#39;, &#39;user&#39;, &#39;customer&#39;, &#39;external&#39;, &#39;acd&#39;, &#39;ivr</value>
         [DataMember(Name="purpose", EmitDefaultValue=false)]
         public string Purpose { get; set; }
     
@@ -485,11 +505,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  DocumentId: ").Append(DocumentId).Append("\n");
             sb.Append("  MonitoredParticipantId: ").Append(MonitoredParticipantId).Append("\n");
             sb.Append("  ConsultParticipantId: ").Append(ConsultParticipantId).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -690,100 +709,68 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.Address != null)
                     hash = hash * 59 + this.Address.GetHashCode();
-                
                 if (this.StartTime != null)
                     hash = hash * 59 + this.StartTime.GetHashCode();
-                
                 if (this.ConnectedTime != null)
                     hash = hash * 59 + this.ConnectedTime.GetHashCode();
-                
                 if (this.EndTime != null)
                     hash = hash * 59 + this.EndTime.GetHashCode();
-                
                 if (this.StartHoldTime != null)
                     hash = hash * 59 + this.StartHoldTime.GetHashCode();
-                
                 if (this.Purpose != null)
                     hash = hash * 59 + this.Purpose.GetHashCode();
-                
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
-                
                 if (this.Direction != null)
                     hash = hash * 59 + this.Direction.GetHashCode();
-                
                 if (this.DisconnectType != null)
                     hash = hash * 59 + this.DisconnectType.GetHashCode();
-                
                 if (this.Held != null)
                     hash = hash * 59 + this.Held.GetHashCode();
-                
                 if (this.WrapupRequired != null)
                     hash = hash * 59 + this.WrapupRequired.GetHashCode();
-                
                 if (this.WrapupPrompt != null)
                     hash = hash * 59 + this.WrapupPrompt.GetHashCode();
-                
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();
-                
                 if (this.Queue != null)
                     hash = hash * 59 + this.Queue.GetHashCode();
-                
                 if (this.Attributes != null)
                     hash = hash * 59 + this.Attributes.GetHashCode();
-                
                 if (this.ErrorInfo != null)
                     hash = hash * 59 + this.ErrorInfo.GetHashCode();
-                
                 if (this.Script != null)
                     hash = hash * 59 + this.Script.GetHashCode();
-                
                 if (this.WrapupTimeoutMs != null)
                     hash = hash * 59 + this.WrapupTimeoutMs.GetHashCode();
-                
                 if (this.WrapupSkipped != null)
                     hash = hash * 59 + this.WrapupSkipped.GetHashCode();
-                
                 if (this.Muted != null)
                     hash = hash * 59 + this.Muted.GetHashCode();
-                
                 if (this.Confined != null)
                     hash = hash * 59 + this.Confined.GetHashCode();
-                
                 if (this.Recording != null)
                     hash = hash * 59 + this.Recording.GetHashCode();
-                
                 if (this.RecordingState != null)
                     hash = hash * 59 + this.RecordingState.GetHashCode();
-                
                 if (this.Group != null)
                     hash = hash * 59 + this.Group.GetHashCode();
-                
                 if (this.Ani != null)
                     hash = hash * 59 + this.Ani.GetHashCode();
-                
                 if (this.Dnis != null)
                     hash = hash * 59 + this.Dnis.GetHashCode();
-                
                 if (this.DocumentId != null)
                     hash = hash * 59 + this.DocumentId.GetHashCode();
-                
                 if (this.MonitoredParticipantId != null)
                     hash = hash * 59 + this.MonitoredParticipantId.GetHashCode();
-                
                 if (this.ConsultParticipantId != null)
                     hash = hash * 59 + this.ConsultParticipantId.GetHashCode();
-                
                 return hash;
             }
         }

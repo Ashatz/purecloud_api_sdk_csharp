@@ -36,7 +36,7 @@ namespace ININ.PureCloudApi.Model
             this.Percentage = Percentage;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets Campaign
@@ -81,11 +81,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  NumberOfContactsCalled: ").Append(NumberOfContactsCalled).Append("\n");
             sb.Append("  TotalNumberOfContacts: ").Append(TotalNumberOfContacts).Append("\n");
             sb.Append("  Percentage: ").Append(Percentage).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -156,22 +155,16 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Campaign != null)
                     hash = hash * 59 + this.Campaign.GetHashCode();
-                
                 if (this.ContactList != null)
                     hash = hash * 59 + this.ContactList.GetHashCode();
-                
                 if (this.NumberOfContactsCalled != null)
                     hash = hash * 59 + this.NumberOfContactsCalled.GetHashCode();
-                
                 if (this.TotalNumberOfContacts != null)
                     hash = hash * 59 + this.TotalNumberOfContacts.GetHashCode();
-                
                 if (this.Percentage != null)
                     hash = hash * 59 + this.Percentage.GetHashCode();
-                
                 return hash;
             }
         }

@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new FacetTerm();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of FacetTerm
@@ -50,61 +50,54 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<FacetTerm> (instance, "instance is a FacetTerm");
         }
 
-        
         /// <summary>
-        /// Test the property 'Term' 
+        /// Test the property 'Term'
         /// </summary>
         [Test]
         public void TermTest()
         {
-            // TODO: unit test for the property 'Term' 
+            // TODO: unit test for the property 'Term'
         }
-        
         /// <summary>
-        /// Test the property 'Key' 
+        /// Test the property 'Key'
         /// </summary>
         [Test]
         public void KeyTest()
         {
-            // TODO: unit test for the property 'Key' 
+            // TODO: unit test for the property 'Key'
         }
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'Count' 
+        /// Test the property 'Count'
         /// </summary>
         [Test]
         public void CountTest()
         {
-            // TODO: unit test for the property 'Count' 
+            // TODO: unit test for the property 'Count'
         }
-        
         /// <summary>
-        /// Test the property 'Time' 
+        /// Test the property 'Time'
         /// </summary>
         [Test]
         public void TimeTest()
         {
-            // TODO: unit test for the property 'Time' 
+            // TODO: unit test for the property 'Time'
         }
-        
 
     }
 

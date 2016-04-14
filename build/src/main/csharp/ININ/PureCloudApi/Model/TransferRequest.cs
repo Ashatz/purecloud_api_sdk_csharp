@@ -44,7 +44,7 @@ namespace ININ.PureCloudApi.Model
             }
             
         }
-        
+
     
         /// <summary>
         /// The user ID of the transfer target.
@@ -75,9 +75,9 @@ namespace ININ.PureCloudApi.Model
         public string QueueId { get; set; }
     
         /// <summary>
-        /// If true, then transfer to the user's voicemail.
+        /// If true, then transfer to the user&#39;s voicemail.
         /// </summary>
-        /// <value>If true, then transfer to the user's voicemail.</value>
+        /// <value>If true, then transfer to the user&#39;s voicemail.</value>
         [DataMember(Name="voicemail", EmitDefaultValue=false)]
         public bool? Voicemail { get; set; }
     
@@ -94,11 +94,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  UserName: ").Append(UserName).Append("\n");
             sb.Append("  QueueId: ").Append(QueueId).Append("\n");
             sb.Append("  Voicemail: ").Append(Voicemail).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -169,22 +168,16 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.UserId != null)
                     hash = hash * 59 + this.UserId.GetHashCode();
-                
                 if (this.Address != null)
                     hash = hash * 59 + this.Address.GetHashCode();
-                
                 if (this.UserName != null)
                     hash = hash * 59 + this.UserName.GetHashCode();
-                
                 if (this.QueueId != null)
                     hash = hash * 59 + this.QueueId.GetHashCode();
-                
                 if (this.Voicemail != null)
                     hash = hash * 59 + this.Voicemail.GetHashCode();
-                
                 return hash;
             }
         }

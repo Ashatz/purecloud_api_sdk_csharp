@@ -30,7 +30,7 @@ namespace ININ.PureCloudApi.Model
             this.Actions = Actions;
             
         }
-        
+
     
         /// <summary>
         /// Conditions for when actions should be applied
@@ -56,11 +56,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class MediaPolicy {\n");
             sb.Append("  Conditions: ").Append(Conditions).Append("\n");
             sb.Append("  Actions: ").Append(Actions).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -116,13 +115,10 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Conditions != null)
                     hash = hash * 59 + this.Conditions.GetHashCode();
-                
                 if (this.Actions != null)
                     hash = hash * 59 + this.Actions.GetHashCode();
-                
                 return hash;
             }
         }

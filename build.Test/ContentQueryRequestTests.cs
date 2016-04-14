@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new ContentQueryRequest();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of ContentQueryRequest
@@ -50,70 +50,62 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<ContentQueryRequest> (instance, "instance is a ContentQueryRequest");
         }
 
-        
         /// <summary>
-        /// Test the property 'QueryPhrase' 
+        /// Test the property 'QueryPhrase'
         /// </summary>
         [Test]
         public void QueryPhraseTest()
         {
-            // TODO: unit test for the property 'QueryPhrase' 
+            // TODO: unit test for the property 'QueryPhrase'
         }
-        
         /// <summary>
-        /// Test the property 'PageNumber' 
+        /// Test the property 'PageNumber'
         /// </summary>
         [Test]
         public void PageNumberTest()
         {
-            // TODO: unit test for the property 'PageNumber' 
+            // TODO: unit test for the property 'PageNumber'
         }
-        
         /// <summary>
-        /// Test the property 'PageSize' 
+        /// Test the property 'PageSize'
         /// </summary>
         [Test]
         public void PageSizeTest()
         {
-            // TODO: unit test for the property 'PageSize' 
+            // TODO: unit test for the property 'PageSize'
         }
-        
         /// <summary>
-        /// Test the property 'FacetNameRequests' 
+        /// Test the property 'FacetNameRequests'
         /// </summary>
         [Test]
         public void FacetNameRequestsTest()
         {
-            // TODO: unit test for the property 'FacetNameRequests' 
+            // TODO: unit test for the property 'FacetNameRequests'
         }
-        
         /// <summary>
-        /// Test the property 'Sort' 
+        /// Test the property 'Sort'
         /// </summary>
         [Test]
         public void SortTest()
         {
-            // TODO: unit test for the property 'Sort' 
+            // TODO: unit test for the property 'Sort'
         }
-        
         /// <summary>
-        /// Test the property 'Filters' 
+        /// Test the property 'Filters'
         /// </summary>
         [Test]
         public void FiltersTest()
         {
-            // TODO: unit test for the property 'Filters' 
+            // TODO: unit test for the property 'Filters'
         }
-        
         /// <summary>
-        /// Test the property 'AttributeFilters' 
+        /// Test the property 'AttributeFilters'
         /// </summary>
         [Test]
         public void AttributeFiltersTest()
         {
-            // TODO: unit test for the property 'AttributeFilters' 
+            // TODO: unit test for the property 'AttributeFilters'
         }
-        
 
     }
 

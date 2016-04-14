@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new FacetRequest();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of FacetRequest
@@ -50,70 +50,62 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<FacetRequest> (instance, "instance is a FacetRequest");
         }
 
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'FacetRequestQueryType' 
+        /// Test the property 'FacetRequestQueryType'
         /// </summary>
         [Test]
         public void FacetRequestQueryTypeTest()
         {
-            // TODO: unit test for the property 'FacetRequestQueryType' 
+            // TODO: unit test for the property 'FacetRequestQueryType'
         }
-        
         /// <summary>
-        /// Test the property 'FieldName' 
+        /// Test the property 'FieldName'
         /// </summary>
         [Test]
         public void FieldNameTest()
         {
-            // TODO: unit test for the property 'FieldName' 
+            // TODO: unit test for the property 'FieldName'
         }
-        
         /// <summary>
-        /// Test the property 'Type' 
+        /// Test the property 'Type'
         /// </summary>
         [Test]
         public void TypeTest()
         {
-            // TODO: unit test for the property 'Type' 
+            // TODO: unit test for the property 'Type'
         }
-        
         /// <summary>
-        /// Test the property 'RangeFrom' 
+        /// Test the property 'RangeFrom'
         /// </summary>
         [Test]
         public void RangeFromTest()
         {
-            // TODO: unit test for the property 'RangeFrom' 
+            // TODO: unit test for the property 'RangeFrom'
         }
-        
         /// <summary>
-        /// Test the property 'RangeTo' 
+        /// Test the property 'RangeTo'
         /// </summary>
         [Test]
         public void RangeToTest()
         {
-            // TODO: unit test for the property 'RangeTo' 
+            // TODO: unit test for the property 'RangeTo'
         }
-        
         /// <summary>
-        /// Test the property 'MaxFacetCount' 
+        /// Test the property 'MaxFacetCount'
         /// </summary>
         [Test]
         public void MaxFacetCountTest()
         {
-            // TODO: unit test for the property 'MaxFacetCount' 
+            // TODO: unit test for the property 'MaxFacetCount'
         }
-        
 
     }
 

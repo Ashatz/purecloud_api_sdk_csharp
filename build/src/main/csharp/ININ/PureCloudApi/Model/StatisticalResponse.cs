@@ -30,7 +30,7 @@ namespace ININ.PureCloudApi.Model
             this.Metrics = Metrics;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets Interval
@@ -54,11 +54,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class StatisticalResponse {\n");
             sb.Append("  Interval: ").Append(Interval).Append("\n");
             sb.Append("  Metrics: ").Append(Metrics).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -114,13 +113,10 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Interval != null)
                     hash = hash * 59 + this.Interval.GetHashCode();
-                
                 if (this.Metrics != null)
                     hash = hash * 59 + this.Metrics.GetHashCode();
-                
                 return hash;
             }
         }

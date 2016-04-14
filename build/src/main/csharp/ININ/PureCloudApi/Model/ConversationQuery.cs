@@ -17,9 +17,13 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class ConversationQuery :  IEquatable<ConversationQuery>
     { 
-    
+
+        /// <summary>
+        /// Sort the result set in ascending/descending order. Default is ascending
+        /// </summary>
+        /// <value>Sort the result set in ascending/descending order. Default is ascending</value>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum OrderEnum {
+                public enum OrderEnum {
             
             [EnumMember(Value = "asc")]
             Asc,
@@ -27,9 +31,14 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "desc")]
             Desc
         }
-    
+
+
+        /// <summary>
+        /// Specify which data element within the result set to use for sorting. The options  to use as a basis for sorting the results: conversationStart, segmentStart, and segmentEnd. If not specified, the default is conversationStart
+        /// </summary>
+        /// <value>Specify which data element within the result set to use for sorting. The options  to use as a basis for sorting the results: conversationStart, segmentStart, and segmentEnd. If not specified, the default is conversationStart</value>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum OrderByEnum {
+                public enum OrderByEnum {
             
             [EnumMember(Value = "conversationStart")]
             Conversationstart,
@@ -40,6 +49,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "segmentEnd")]
             Segmentend
         }
+
         
         /// <summary>
         /// Sort the result set in ascending/descending order. Default is ascending
@@ -79,7 +89,7 @@ namespace ININ.PureCloudApi.Model
             this.OrderBy = OrderBy;
             
         }
-        
+
     
         /// <summary>
         /// Specifies the date and time range of data being queried. Conversations MUST have started within this time range to potentially be included within the result set. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss
@@ -139,11 +149,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Paging: ").Append(Paging).Append("\n");
             sb.Append("  Order: ").Append(Order).Append("\n");
             sb.Append("  OrderBy: ").Append(OrderBy).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -229,31 +238,22 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Interval != null)
                     hash = hash * 59 + this.Interval.GetHashCode();
-                
                 if (this.ConversationFilters != null)
                     hash = hash * 59 + this.ConversationFilters.GetHashCode();
-                
                 if (this.EvaluationFilters != null)
                     hash = hash * 59 + this.EvaluationFilters.GetHashCode();
-                
                 if (this.SegmentFilters != null)
                     hash = hash * 59 + this.SegmentFilters.GetHashCode();
-                
                 if (this.Aggregations != null)
                     hash = hash * 59 + this.Aggregations.GetHashCode();
-                
                 if (this.Paging != null)
                     hash = hash * 59 + this.Paging.GetHashCode();
-                
                 if (this.Order != null)
                     hash = hash * 59 + this.Order.GetHashCode();
-                
                 if (this.OrderBy != null)
                     hash = hash * 59 + this.OrderBy.GetHashCode();
-                
                 return hash;
             }
         }

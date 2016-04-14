@@ -54,7 +54,7 @@ namespace ININ.PureCloudApi.Model
             this.DurationSeconds = DurationSeconds;
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -150,11 +150,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Tags: ").Append(Tags).Append("\n");
             sb.Append("  DurationSeconds: ").Append(DurationSeconds).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -260,43 +259,30 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.PromptId != null)
                     hash = hash * 59 + this.PromptId.GetHashCode();
-                
                 if (this.Language != null)
                     hash = hash * 59 + this.Language.GetHashCode();
-                
                 if (this.MediaUri != null)
                     hash = hash * 59 + this.MediaUri.GetHashCode();
-                
                 if (this.TtsString != null)
                     hash = hash * 59 + this.TtsString.GetHashCode();
-                
                 if (this.UploadStatus != null)
                     hash = hash * 59 + this.UploadStatus.GetHashCode();
-                
                 if (this.UploadUri != null)
                     hash = hash * 59 + this.UploadUri.GetHashCode();
-                
                 if (this.LanguageDefault != null)
                     hash = hash * 59 + this.LanguageDefault.GetHashCode();
-                
                 if (this.Tags != null)
                     hash = hash * 59 + this.Tags.GetHashCode();
-                
                 if (this.DurationSeconds != null)
                     hash = hash * 59 + this.DurationSeconds.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 return hash;
             }
         }

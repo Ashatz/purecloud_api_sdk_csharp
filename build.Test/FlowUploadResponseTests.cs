@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new FlowUploadResponse();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of FlowUploadResponse
@@ -50,25 +50,22 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<FlowUploadResponse> (instance, "instance is a FlowUploadResponse");
         }
 
-        
         /// <summary>
-        /// Test the property 'Uri' 
+        /// Test the property 'Uri'
         /// </summary>
         [Test]
         public void UriTest()
         {
-            // TODO: unit test for the property 'Uri' 
+            // TODO: unit test for the property 'Uri'
         }
-        
         /// <summary>
-        /// Test the property 'UploadToken' 
+        /// Test the property 'UploadToken'
         /// </summary>
         [Test]
         public void UploadTokenTest()
         {
-            // TODO: unit test for the property 'UploadToken' 
+            // TODO: unit test for the property 'UploadToken'
         }
-        
 
     }
 

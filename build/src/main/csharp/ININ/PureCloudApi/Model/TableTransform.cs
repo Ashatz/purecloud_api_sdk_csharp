@@ -38,7 +38,7 @@ namespace ININ.PureCloudApi.Model
             this.Collapses = Collapses;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets HeaderRow
@@ -90,11 +90,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Columns: ").Append(Columns).Append("\n");
             sb.Append("  Unpivots: ").Append(Unpivots).Append("\n");
             sb.Append("  Collapses: ").Append(Collapses).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -170,25 +169,18 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.HeaderRow != null)
                     hash = hash * 59 + this.HeaderRow.GetHashCode();
-                
                 if (this.FirstData != null)
                     hash = hash * 59 + this.FirstData.GetHashCode();
-                
                 if (this.HeaderReplaces != null)
                     hash = hash * 59 + this.HeaderReplaces.GetHashCode();
-                
                 if (this.Columns != null)
                     hash = hash * 59 + this.Columns.GetHashCode();
-                
                 if (this.Unpivots != null)
                     hash = hash * 59 + this.Unpivots.GetHashCode();
-                
                 if (this.Collapses != null)
                     hash = hash * 59 + this.Collapses.GetHashCode();
-                
                 return hash;
             }
         }

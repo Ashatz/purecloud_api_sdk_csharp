@@ -106,7 +106,7 @@ namespace ININ.PureCloudApi.Model
             this.OneTimeCharges = OneTimeCharges;
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -328,11 +328,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  EstimatedQuantities: ").Append(EstimatedQuantities).Append("\n");
             sb.Append("  OneTimeCharges: ").Append(OneTimeCharges).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -528,97 +527,66 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.OrgLegalName != null)
                     hash = hash * 59 + this.OrgLegalName.GetHashCode();
-                
                 if (this.BillingAddressLine1 != null)
                     hash = hash * 59 + this.BillingAddressLine1.GetHashCode();
-                
                 if (this.BillingAddressLine2 != null)
                     hash = hash * 59 + this.BillingAddressLine2.GetHashCode();
-                
                 if (this.BillingAddressCity != null)
                     hash = hash * 59 + this.BillingAddressCity.GetHashCode();
-                
                 if (this.BillingAddressState != null)
                     hash = hash * 59 + this.BillingAddressState.GetHashCode();
-                
                 if (this.BillingAddressZipCode != null)
                     hash = hash * 59 + this.BillingAddressZipCode.GetHashCode();
-                
                 if (this.BillingAddressCountry != null)
                     hash = hash * 59 + this.BillingAddressCountry.GetHashCode();
-                
                 if (this.LegalAddressLine1 != null)
                     hash = hash * 59 + this.LegalAddressLine1.GetHashCode();
-                
                 if (this.LegalAddressLine2 != null)
                     hash = hash * 59 + this.LegalAddressLine2.GetHashCode();
-                
                 if (this.LegalAddressCity != null)
                     hash = hash * 59 + this.LegalAddressCity.GetHashCode();
-                
                 if (this.LegalAddressState != null)
                     hash = hash * 59 + this.LegalAddressState.GetHashCode();
-                
                 if (this.LegalAddressZipCode != null)
                     hash = hash * 59 + this.LegalAddressZipCode.GetHashCode();
-                
                 if (this.LegalAddressCountry != null)
                     hash = hash * 59 + this.LegalAddressCountry.GetHashCode();
-                
                 if (this.BillingContactFirstName != null)
                     hash = hash * 59 + this.BillingContactFirstName.GetHashCode();
-                
                 if (this.BillingContactLastName != null)
                     hash = hash * 59 + this.BillingContactLastName.GetHashCode();
-                
                 if (this.BillingContactEmail != null)
                     hash = hash * 59 + this.BillingContactEmail.GetHashCode();
-                
                 if (this.BillingContactPhone != null)
                     hash = hash * 59 + this.BillingContactPhone.GetHashCode();
-                
                 if (this.PurchaseOrderNumber != null)
                     hash = hash * 59 + this.PurchaseOrderNumber.GetHashCode();
-                
                 if (this.IsTaxExempt != null)
                     hash = hash * 59 + this.IsTaxExempt.GetHashCode();
-                
                 if (this.Currency != null)
                     hash = hash * 59 + this.Currency.GetHashCode();
-                
                 if (this.PaymentTerm != null)
                     hash = hash * 59 + this.PaymentTerm.GetHashCode();
-                
                 if (this.ContractTerm != null)
                     hash = hash * 59 + this.ContractTerm.GetHashCode();
-                
                 if (this.AutoRenew != null)
                     hash = hash * 59 + this.AutoRenew.GetHashCode();
-                
                 if (this.Enabled != null)
                     hash = hash * 59 + this.Enabled.GetHashCode();
-                
                 if (this.MinCommitQuantities != null)
                     hash = hash * 59 + this.MinCommitQuantities.GetHashCode();
-                
                 if (this.EstimatedQuantities != null)
                     hash = hash * 59 + this.EstimatedQuantities.GetHashCode();
-                
                 if (this.OneTimeCharges != null)
                     hash = hash * 59 + this.OneTimeCharges.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 return hash;
             }
         }

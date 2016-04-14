@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new CreateCallbackCommand();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of CreateCallbackCommand
@@ -50,61 +50,54 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<CreateCallbackCommand> (instance, "instance is a CreateCallbackCommand");
         }
 
-        
         /// <summary>
-        /// Test the property 'ScriptId' 
+        /// Test the property 'ScriptId'
         /// </summary>
         [Test]
         public void ScriptIdTest()
         {
-            // TODO: unit test for the property 'ScriptId' 
+            // TODO: unit test for the property 'ScriptId'
         }
-        
         /// <summary>
-        /// Test the property 'QueueId' 
+        /// Test the property 'QueueId'
         /// </summary>
         [Test]
         public void QueueIdTest()
         {
-            // TODO: unit test for the property 'QueueId' 
+            // TODO: unit test for the property 'QueueId'
         }
-        
         /// <summary>
-        /// Test the property 'CallbackUserName' 
+        /// Test the property 'CallbackUserName'
         /// </summary>
         [Test]
         public void CallbackUserNameTest()
         {
-            // TODO: unit test for the property 'CallbackUserName' 
+            // TODO: unit test for the property 'CallbackUserName'
         }
-        
         /// <summary>
-        /// Test the property 'CallbackNumbers' 
+        /// Test the property 'CallbackNumbers'
         /// </summary>
         [Test]
         public void CallbackNumbersTest()
         {
-            // TODO: unit test for the property 'CallbackNumbers' 
+            // TODO: unit test for the property 'CallbackNumbers'
         }
-        
         /// <summary>
-        /// Test the property 'CountryCode' 
+        /// Test the property 'CountryCode'
         /// </summary>
         [Test]
         public void CountryCodeTest()
         {
-            // TODO: unit test for the property 'CountryCode' 
+            // TODO: unit test for the property 'CountryCode'
         }
-        
         /// <summary>
-        /// Test the property 'SkipEnabled' 
+        /// Test the property 'SkipEnabled'
         /// </summary>
         [Test]
         public void SkipEnabledTest()
         {
-            // TODO: unit test for the property 'SkipEnabled' 
+            // TODO: unit test for the property 'SkipEnabled'
         }
-        
 
     }
 

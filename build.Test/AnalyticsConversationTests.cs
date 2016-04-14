@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new AnalyticsConversation();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of AnalyticsConversation
@@ -50,43 +50,38 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<AnalyticsConversation> (instance, "instance is a AnalyticsConversation");
         }
 
-        
         /// <summary>
-        /// Test the property 'ConversationId' 
+        /// Test the property 'ConversationId'
         /// </summary>
         [Test]
         public void ConversationIdTest()
         {
-            // TODO: unit test for the property 'ConversationId' 
+            // TODO: unit test for the property 'ConversationId'
         }
-        
         /// <summary>
-        /// Test the property 'ConversationStart' 
+        /// Test the property 'ConversationStart'
         /// </summary>
         [Test]
         public void ConversationStartTest()
         {
-            // TODO: unit test for the property 'ConversationStart' 
+            // TODO: unit test for the property 'ConversationStart'
         }
-        
         /// <summary>
-        /// Test the property 'Participants' 
+        /// Test the property 'Participants'
         /// </summary>
         [Test]
         public void ParticipantsTest()
         {
-            // TODO: unit test for the property 'Participants' 
+            // TODO: unit test for the property 'Participants'
         }
-        
         /// <summary>
-        /// Test the property 'Evaluations' 
+        /// Test the property 'Evaluations'
         /// </summary>
         [Test]
         public void EvaluationsTest()
         {
-            // TODO: unit test for the property 'Evaluations' 
+            // TODO: unit test for the property 'Evaluations'
         }
-        
 
     }
 

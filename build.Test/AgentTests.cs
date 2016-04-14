@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new Agent();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of Agent
@@ -50,16 +50,14 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<Agent> (instance, "instance is a Agent");
         }
 
-        
         /// <summary>
-        /// Test the property 'Stage' 
+        /// Test the property 'Stage'
         /// </summary>
         [Test]
         public void StageTest()
         {
-            // TODO: unit test for the property 'Stage' 
+            // TODO: unit test for the property 'Stage'
         }
-        
 
     }
 

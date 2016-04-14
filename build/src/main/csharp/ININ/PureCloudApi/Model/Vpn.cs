@@ -32,7 +32,7 @@ namespace ININ.PureCloudApi.Model
             this.Psk = Psk;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets Type
@@ -63,11 +63,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Ip: ").Append(Ip).Append("\n");
             sb.Append("  Psk: ").Append(Psk).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -128,16 +127,12 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
                 if (this.Ip != null)
                     hash = hash * 59 + this.Ip.GetHashCode();
-                
                 if (this.Psk != null)
                     hash = hash * 59 + this.Psk.GetHashCode();
-                
                 return hash;
             }
         }

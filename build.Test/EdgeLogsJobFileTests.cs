@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new EdgeLogsJobFile();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of EdgeLogsJobFile
@@ -50,88 +50,78 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<EdgeLogsJobFile> (instance, "instance is a EdgeLogsJobFile");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'TimeCreated' 
+        /// Test the property 'TimeCreated'
         /// </summary>
         [Test]
         public void TimeCreatedTest()
         {
-            // TODO: unit test for the property 'TimeCreated' 
+            // TODO: unit test for the property 'TimeCreated'
         }
-        
         /// <summary>
-        /// Test the property 'TimeModified' 
+        /// Test the property 'TimeModified'
         /// </summary>
         [Test]
         public void TimeModifiedTest()
         {
-            // TODO: unit test for the property 'TimeModified' 
+            // TODO: unit test for the property 'TimeModified'
         }
-        
         /// <summary>
-        /// Test the property 'SizeBytes' 
+        /// Test the property 'SizeBytes'
         /// </summary>
         [Test]
         public void SizeBytesTest()
         {
-            // TODO: unit test for the property 'SizeBytes' 
+            // TODO: unit test for the property 'SizeBytes'
         }
-        
         /// <summary>
-        /// Test the property 'UploadStatus' 
+        /// Test the property 'UploadStatus'
         /// </summary>
         [Test]
         public void UploadStatusTest()
         {
-            // TODO: unit test for the property 'UploadStatus' 
+            // TODO: unit test for the property 'UploadStatus'
         }
-        
         /// <summary>
-        /// Test the property 'EdgePath' 
+        /// Test the property 'EdgePath'
         /// </summary>
         [Test]
         public void EdgePathTest()
         {
-            // TODO: unit test for the property 'EdgePath' 
+            // TODO: unit test for the property 'EdgePath'
         }
-        
         /// <summary>
-        /// Test the property 'DownloadId' 
+        /// Test the property 'DownloadId'
         /// </summary>
         [Test]
         public void DownloadIdTest()
         {
-            // TODO: unit test for the property 'DownloadId' 
+            // TODO: unit test for the property 'DownloadId'
         }
-        
         /// <summary>
-        /// Test the property 'SelfUri' 
+        /// Test the property 'SelfUri'
         /// </summary>
         [Test]
         public void SelfUriTest()
         {
-            // TODO: unit test for the property 'SelfUri' 
+            // TODO: unit test for the property 'SelfUri'
         }
-        
 
     }
 

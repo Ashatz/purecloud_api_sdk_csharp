@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new DomainOrganizationRole();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of DomainOrganizationRole
@@ -50,97 +50,86 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<DomainOrganizationRole> (instance, "instance is a DomainOrganizationRole");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'Description' 
+        /// Test the property 'Description'
         /// </summary>
         [Test]
         public void DescriptionTest()
         {
-            // TODO: unit test for the property 'Description' 
+            // TODO: unit test for the property 'Description'
         }
-        
         /// <summary>
-        /// Test the property 'DefaultRoleId' 
+        /// Test the property 'DefaultRoleId'
         /// </summary>
         [Test]
         public void DefaultRoleIdTest()
         {
-            // TODO: unit test for the property 'DefaultRoleId' 
+            // TODO: unit test for the property 'DefaultRoleId'
         }
-        
         /// <summary>
-        /// Test the property 'Permissions' 
+        /// Test the property 'Permissions'
         /// </summary>
         [Test]
         public void PermissionsTest()
         {
-            // TODO: unit test for the property 'Permissions' 
+            // TODO: unit test for the property 'Permissions'
         }
-        
         /// <summary>
-        /// Test the property 'PermissionPolicies' 
+        /// Test the property 'PermissionPolicies'
         /// </summary>
         [Test]
         public void PermissionPoliciesTest()
         {
-            // TODO: unit test for the property 'PermissionPolicies' 
+            // TODO: unit test for the property 'PermissionPolicies'
         }
-        
         /// <summary>
-        /// Test the property 'UserCount' 
+        /// Test the property 'UserCount'
         /// </summary>
         [Test]
         public void UserCountTest()
         {
-            // TODO: unit test for the property 'UserCount' 
+            // TODO: unit test for the property 'UserCount'
         }
-        
         /// <summary>
-        /// Test the property 'RoleNeedsUpdate' 
+        /// Test the property 'RoleNeedsUpdate'
         /// </summary>
         [Test]
         public void RoleNeedsUpdateTest()
         {
-            // TODO: unit test for the property 'RoleNeedsUpdate' 
+            // TODO: unit test for the property 'RoleNeedsUpdate'
         }
-        
         /// <summary>
-        /// Test the property '_Default' 
+        /// Test the property '_Default'
         /// </summary>
         [Test]
         public void _DefaultTest()
         {
-            // TODO: unit test for the property '_Default' 
+            // TODO: unit test for the property '_Default'
         }
-        
         /// <summary>
-        /// Test the property 'SelfUri' 
+        /// Test the property 'SelfUri'
         /// </summary>
         [Test]
         public void SelfUriTest()
         {
-            // TODO: unit test for the property 'SelfUri' 
+            // TODO: unit test for the property 'SelfUri'
         }
-        
 
     }
 

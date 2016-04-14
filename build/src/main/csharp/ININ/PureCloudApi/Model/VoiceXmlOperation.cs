@@ -17,9 +17,12 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class VoiceXmlOperation :  IEquatable<VoiceXmlOperation>
     { 
-    
+
+        /// <summary>
+        /// Gets or Sets Type
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum TypeEnum {
+                public enum TypeEnum {
             
             [EnumMember(Value = "GOTO")]
             Goto,
@@ -27,9 +30,13 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "CALL_AND_RETURN")]
             CallAndReturn
         }
-    
+
+
+        /// <summary>
+        /// Gets or Sets Method
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum MethodEnum {
+                public enum MethodEnum {
             
             [EnumMember(Value = "GET")]
             Get,
@@ -43,9 +50,13 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "DELETE")]
             Delete
         }
-    
+
+
+        /// <summary>
+        /// Gets or Sets Encoding
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum EncodingEnum {
+                public enum EncodingEnum {
             
             [EnumMember(Value = "MULTIPART_FORM_DATA")]
             MultipartFormData,
@@ -56,6 +67,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "JSON")]
             Json
         }
+
         
         /// <summary>
         /// Gets or Sets Type
@@ -103,7 +115,7 @@ namespace ININ.PureCloudApi.Model
             this.TimeoutMS = TimeoutMS;
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -181,11 +193,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  FetchAudio: ").Append(FetchAudio).Append("\n");
             sb.Append("  TimeoutMS: ").Append(TimeoutMS).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -291,43 +302,30 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
                 if (this.Method != null)
                     hash = hash * 59 + this.Method.GetHashCode();
-                
                 if (this.Encoding != null)
                     hash = hash * 59 + this.Encoding.GetHashCode();
-                
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
-                
                 if (this.Uri != null)
                     hash = hash * 59 + this.Uri.GetHashCode();
-                
                 if (this.Inputs != null)
                     hash = hash * 59 + this.Inputs.GetHashCode();
-                
                 if (this.Outputs != null)
                     hash = hash * 59 + this.Outputs.GetHashCode();
-                
                 if (this.FetchAudio != null)
                     hash = hash * 59 + this.FetchAudio.GetHashCode();
-                
                 if (this.TimeoutMS != null)
                     hash = hash * 59 + this.TimeoutMS.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 return hash;
             }
         }

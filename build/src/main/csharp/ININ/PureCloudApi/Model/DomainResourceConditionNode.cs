@@ -17,9 +17,12 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class DomainResourceConditionNode :  IEquatable<DomainResourceConditionNode>
     { 
-    
+
+        /// <summary>
+        /// Gets or Sets _Operator
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum _OperatorEnum {
+                public enum _OperatorEnum {
             
             [EnumMember(Value = "EQ")]
             Eq,
@@ -39,9 +42,13 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "LT")]
             Lt
         }
-    
+
+
+        /// <summary>
+        /// Gets or Sets Conjunction
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum ConjunctionEnum {
+                public enum ConjunctionEnum {
             
             [EnumMember(Value = "AND")]
             And,
@@ -49,6 +56,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "OR")]
             Or
         }
+
         
         /// <summary>
         /// Gets or Sets _Operator
@@ -80,7 +88,7 @@ namespace ININ.PureCloudApi.Model
             this.Terms = Terms;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets VariableName
@@ -113,11 +121,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Operands: ").Append(Operands).Append("\n");
             sb.Append("  Conjunction: ").Append(Conjunction).Append("\n");
             sb.Append("  Terms: ").Append(Terms).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -188,22 +195,16 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.VariableName != null)
                     hash = hash * 59 + this.VariableName.GetHashCode();
-                
                 if (this._Operator != null)
                     hash = hash * 59 + this._Operator.GetHashCode();
-                
                 if (this.Operands != null)
                     hash = hash * 59 + this.Operands.GetHashCode();
-                
                 if (this.Conjunction != null)
                     hash = hash * 59 + this.Conjunction.GetHashCode();
-                
                 if (this.Terms != null)
                     hash = hash * 59 + this.Terms.GetHashCode();
-                
                 return hash;
             }
         }

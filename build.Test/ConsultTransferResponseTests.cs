@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new ConsultTransferResponse();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of ConsultTransferResponse
@@ -50,16 +50,14 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<ConsultTransferResponse> (instance, "instance is a ConsultTransferResponse");
         }
 
-        
         /// <summary>
-        /// Test the property 'DestinationParticipantId' 
+        /// Test the property 'DestinationParticipantId'
         /// </summary>
         [Test]
         public void DestinationParticipantIdTest()
         {
-            // TODO: unit test for the property 'DestinationParticipantId' 
+            // TODO: unit test for the property 'DestinationParticipantId'
         }
-        
 
     }
 

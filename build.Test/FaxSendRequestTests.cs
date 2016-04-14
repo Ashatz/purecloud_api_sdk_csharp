@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new FaxSendRequest();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of FaxSendRequest
@@ -50,79 +50,70 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<FaxSendRequest> (instance, "instance is a FaxSendRequest");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'Addresses' 
+        /// Test the property 'Addresses'
         /// </summary>
         [Test]
         public void AddressesTest()
         {
-            // TODO: unit test for the property 'Addresses' 
+            // TODO: unit test for the property 'Addresses'
         }
-        
         /// <summary>
-        /// Test the property 'OriginalFilename' 
+        /// Test the property 'OriginalFilename'
         /// </summary>
         [Test]
         public void OriginalFilenameTest()
         {
-            // TODO: unit test for the property 'OriginalFilename' 
+            // TODO: unit test for the property 'OriginalFilename'
         }
-        
         /// <summary>
-        /// Test the property 'ContentType' 
+        /// Test the property 'ContentType'
         /// </summary>
         [Test]
         public void ContentTypeTest()
         {
-            // TODO: unit test for the property 'ContentType' 
+            // TODO: unit test for the property 'ContentType'
         }
-        
         /// <summary>
-        /// Test the property 'Workspace' 
+        /// Test the property 'Workspace'
         /// </summary>
         [Test]
         public void WorkspaceTest()
         {
-            // TODO: unit test for the property 'Workspace' 
+            // TODO: unit test for the property 'Workspace'
         }
-        
         /// <summary>
-        /// Test the property 'CoverSheet' 
+        /// Test the property 'CoverSheet'
         /// </summary>
         [Test]
         public void CoverSheetTest()
         {
-            // TODO: unit test for the property 'CoverSheet' 
+            // TODO: unit test for the property 'CoverSheet'
         }
-        
         /// <summary>
-        /// Test the property 'SelfUri' 
+        /// Test the property 'SelfUri'
         /// </summary>
         [Test]
         public void SelfUriTest()
         {
-            // TODO: unit test for the property 'SelfUri' 
+            // TODO: unit test for the property 'SelfUri'
         }
-        
 
     }
 

@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new EmailAttachment();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of EmailAttachment
@@ -50,52 +50,46 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<EmailAttachment> (instance, "instance is a EmailAttachment");
         }
 
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'ContentPath' 
+        /// Test the property 'ContentPath'
         /// </summary>
         [Test]
         public void ContentPathTest()
         {
-            // TODO: unit test for the property 'ContentPath' 
+            // TODO: unit test for the property 'ContentPath'
         }
-        
         /// <summary>
-        /// Test the property 'ContentType' 
+        /// Test the property 'ContentType'
         /// </summary>
         [Test]
         public void ContentTypeTest()
         {
-            // TODO: unit test for the property 'ContentType' 
+            // TODO: unit test for the property 'ContentType'
         }
-        
         /// <summary>
-        /// Test the property 'AttachmentId' 
+        /// Test the property 'AttachmentId'
         /// </summary>
         [Test]
         public void AttachmentIdTest()
         {
-            // TODO: unit test for the property 'AttachmentId' 
+            // TODO: unit test for the property 'AttachmentId'
         }
-        
         /// <summary>
-        /// Test the property 'ContentLength' 
+        /// Test the property 'ContentLength'
         /// </summary>
         [Test]
         public void ContentLengthTest()
         {
-            // TODO: unit test for the property 'ContentLength' 
+            // TODO: unit test for the property 'ContentLength'
         }
-        
 
     }
 

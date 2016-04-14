@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new FacetEntry();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of FacetEntry
@@ -50,79 +50,70 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<FacetEntry> (instance, "instance is a FacetEntry");
         }
 
-        
         /// <summary>
-        /// Test the property 'Attribute' 
+        /// Test the property 'Attribute'
         /// </summary>
         [Test]
         public void AttributeTest()
         {
-            // TODO: unit test for the property 'Attribute' 
+            // TODO: unit test for the property 'Attribute'
         }
-        
         /// <summary>
-        /// Test the property 'Statistics' 
+        /// Test the property 'Statistics'
         /// </summary>
         [Test]
         public void StatisticsTest()
         {
-            // TODO: unit test for the property 'Statistics' 
+            // TODO: unit test for the property 'Statistics'
         }
-        
         /// <summary>
-        /// Test the property 'Other' 
+        /// Test the property 'Other'
         /// </summary>
         [Test]
         public void OtherTest()
         {
-            // TODO: unit test for the property 'Other' 
+            // TODO: unit test for the property 'Other'
         }
-        
         /// <summary>
-        /// Test the property 'Total' 
+        /// Test the property 'Total'
         /// </summary>
         [Test]
         public void TotalTest()
         {
-            // TODO: unit test for the property 'Total' 
+            // TODO: unit test for the property 'Total'
         }
-        
         /// <summary>
-        /// Test the property 'Missing' 
+        /// Test the property 'Missing'
         /// </summary>
         [Test]
         public void MissingTest()
         {
-            // TODO: unit test for the property 'Missing' 
+            // TODO: unit test for the property 'Missing'
         }
-        
         /// <summary>
-        /// Test the property 'TermCount' 
+        /// Test the property 'TermCount'
         /// </summary>
         [Test]
         public void TermCountTest()
         {
-            // TODO: unit test for the property 'TermCount' 
+            // TODO: unit test for the property 'TermCount'
         }
-        
         /// <summary>
-        /// Test the property 'TermType' 
+        /// Test the property 'TermType'
         /// </summary>
         [Test]
         public void TermTypeTest()
         {
-            // TODO: unit test for the property 'TermType' 
+            // TODO: unit test for the property 'TermType'
         }
-        
         /// <summary>
-        /// Test the property 'Terms' 
+        /// Test the property 'Terms'
         /// </summary>
         [Test]
         public void TermsTest()
         {
-            // TODO: unit test for the property 'Terms' 
+            // TODO: unit test for the property 'Terms'
         }
-        
 
     }
 

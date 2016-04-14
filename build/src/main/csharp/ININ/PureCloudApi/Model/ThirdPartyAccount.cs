@@ -36,7 +36,7 @@ namespace ININ.PureCloudApi.Model
             this.Subscriptions = Subscriptions;
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -97,11 +97,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Invoices: ").Append(Invoices).Append("\n");
             sb.Append("  Subscriptions: ").Append(Subscriptions).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -182,28 +181,20 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.AccountNumber != null)
                     hash = hash * 59 + this.AccountNumber.GetHashCode();
-                
                 if (this.Currency != null)
                     hash = hash * 59 + this.Currency.GetHashCode();
-                
                 if (this.Invoices != null)
                     hash = hash * 59 + this.Invoices.GetHashCode();
-                
                 if (this.Subscriptions != null)
                     hash = hash * 59 + this.Subscriptions.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 return hash;
             }
         }

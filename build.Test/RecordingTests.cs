@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new Recording();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of Recording
@@ -50,205 +50,182 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<Recording> (instance, "instance is a Recording");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'ConversationId' 
+        /// Test the property 'ConversationId'
         /// </summary>
         [Test]
         public void ConversationIdTest()
         {
-            // TODO: unit test for the property 'ConversationId' 
+            // TODO: unit test for the property 'ConversationId'
         }
-        
         /// <summary>
-        /// Test the property 'Path' 
+        /// Test the property 'Path'
         /// </summary>
         [Test]
         public void PathTest()
         {
-            // TODO: unit test for the property 'Path' 
+            // TODO: unit test for the property 'Path'
         }
-        
         /// <summary>
-        /// Test the property 'StartTime' 
+        /// Test the property 'StartTime'
         /// </summary>
         [Test]
         public void StartTimeTest()
         {
-            // TODO: unit test for the property 'StartTime' 
+            // TODO: unit test for the property 'StartTime'
         }
-        
         /// <summary>
-        /// Test the property 'EndTime' 
+        /// Test the property 'EndTime'
         /// </summary>
         [Test]
         public void EndTimeTest()
         {
-            // TODO: unit test for the property 'EndTime' 
+            // TODO: unit test for the property 'EndTime'
         }
-        
         /// <summary>
-        /// Test the property 'Media' 
+        /// Test the property 'Media'
         /// </summary>
         [Test]
         public void MediaTest()
         {
-            // TODO: unit test for the property 'Media' 
+            // TODO: unit test for the property 'Media'
         }
-        
         /// <summary>
-        /// Test the property 'Annotations' 
+        /// Test the property 'Annotations'
         /// </summary>
         [Test]
         public void AnnotationsTest()
         {
-            // TODO: unit test for the property 'Annotations' 
+            // TODO: unit test for the property 'Annotations'
         }
-        
         /// <summary>
-        /// Test the property 'Transcript' 
+        /// Test the property 'Transcript'
         /// </summary>
         [Test]
         public void TranscriptTest()
         {
-            // TODO: unit test for the property 'Transcript' 
+            // TODO: unit test for the property 'Transcript'
         }
-        
         /// <summary>
-        /// Test the property 'EmailTranscript' 
+        /// Test the property 'EmailTranscript'
         /// </summary>
         [Test]
         public void EmailTranscriptTest()
         {
-            // TODO: unit test for the property 'EmailTranscript' 
+            // TODO: unit test for the property 'EmailTranscript'
         }
-        
         /// <summary>
-        /// Test the property 'FileState' 
+        /// Test the property 'FileState'
         /// </summary>
         [Test]
         public void FileStateTest()
         {
-            // TODO: unit test for the property 'FileState' 
+            // TODO: unit test for the property 'FileState'
         }
-        
         /// <summary>
-        /// Test the property 'RestoreExpirationTime' 
+        /// Test the property 'RestoreExpirationTime'
         /// </summary>
         [Test]
         public void RestoreExpirationTimeTest()
         {
-            // TODO: unit test for the property 'RestoreExpirationTime' 
+            // TODO: unit test for the property 'RestoreExpirationTime'
         }
-        
         /// <summary>
-        /// Test the property 'MediaUris' 
+        /// Test the property 'MediaUris'
         /// </summary>
         [Test]
         public void MediaUrisTest()
         {
-            // TODO: unit test for the property 'MediaUris' 
+            // TODO: unit test for the property 'MediaUris'
         }
-        
         /// <summary>
-        /// Test the property 'EstimatedTranscodeTimeMs' 
+        /// Test the property 'EstimatedTranscodeTimeMs'
         /// </summary>
         [Test]
         public void EstimatedTranscodeTimeMsTest()
         {
-            // TODO: unit test for the property 'EstimatedTranscodeTimeMs' 
+            // TODO: unit test for the property 'EstimatedTranscodeTimeMs'
         }
-        
         /// <summary>
-        /// Test the property 'ActualTranscodeTimeMs' 
+        /// Test the property 'ActualTranscodeTimeMs'
         /// </summary>
         [Test]
         public void ActualTranscodeTimeMsTest()
         {
-            // TODO: unit test for the property 'ActualTranscodeTimeMs' 
+            // TODO: unit test for the property 'ActualTranscodeTimeMs'
         }
-        
         /// <summary>
-        /// Test the property 'ArchiveDate' 
+        /// Test the property 'ArchiveDate'
         /// </summary>
         [Test]
         public void ArchiveDateTest()
         {
-            // TODO: unit test for the property 'ArchiveDate' 
+            // TODO: unit test for the property 'ArchiveDate'
         }
-        
         /// <summary>
-        /// Test the property 'ArchiveMedium' 
+        /// Test the property 'ArchiveMedium'
         /// </summary>
         [Test]
         public void ArchiveMediumTest()
         {
-            // TODO: unit test for the property 'ArchiveMedium' 
+            // TODO: unit test for the property 'ArchiveMedium'
         }
-        
         /// <summary>
-        /// Test the property 'DeleteDate' 
+        /// Test the property 'DeleteDate'
         /// </summary>
         [Test]
         public void DeleteDateTest()
         {
-            // TODO: unit test for the property 'DeleteDate' 
+            // TODO: unit test for the property 'DeleteDate'
         }
-        
         /// <summary>
-        /// Test the property 'MaxAllowedRestorationsForOrg' 
+        /// Test the property 'MaxAllowedRestorationsForOrg'
         /// </summary>
         [Test]
         public void MaxAllowedRestorationsForOrgTest()
         {
-            // TODO: unit test for the property 'MaxAllowedRestorationsForOrg' 
+            // TODO: unit test for the property 'MaxAllowedRestorationsForOrg'
         }
-        
         /// <summary>
-        /// Test the property 'RemainingRestorationsAllowedForOrg' 
+        /// Test the property 'RemainingRestorationsAllowedForOrg'
         /// </summary>
         [Test]
         public void RemainingRestorationsAllowedForOrgTest()
         {
-            // TODO: unit test for the property 'RemainingRestorationsAllowedForOrg' 
+            // TODO: unit test for the property 'RemainingRestorationsAllowedForOrg'
         }
-        
         /// <summary>
-        /// Test the property 'SessionId' 
+        /// Test the property 'SessionId'
         /// </summary>
         [Test]
         public void SessionIdTest()
         {
-            // TODO: unit test for the property 'SessionId' 
+            // TODO: unit test for the property 'SessionId'
         }
-        
         /// <summary>
-        /// Test the property 'SelfUri' 
+        /// Test the property 'SelfUri'
         /// </summary>
         [Test]
         public void SelfUriTest()
         {
-            // TODO: unit test for the property 'SelfUri' 
+            // TODO: unit test for the property 'SelfUri'
         }
-        
 
     }
 

@@ -17,9 +17,12 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class Participant :  IEquatable<Participant>
     { 
-    
+
+        /// <summary>
+        /// Gets or Sets WrapupPrompt
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum WrapupPromptEnum {
+                public enum WrapupPromptEnum {
             
             [EnumMember(Value = "MANDATORY")]
             Mandatory,
@@ -33,6 +36,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "FORCED_TIMEOUT")]
             ForcedTimeout
         }
+
         
         /// <summary>
         /// Gets or Sets WrapupPrompt
@@ -128,7 +132,7 @@ namespace ININ.PureCloudApi.Model
             this.Evaluations = Evaluations;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets Id
@@ -359,11 +363,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  SocialExpressions: ").Append(SocialExpressions).Append("\n");
             sb.Append("  Videos: ").Append(Videos).Append("\n");
             sb.Append("  Evaluations: ").Append(Evaluations).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -569,103 +572,70 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.StartTime != null)
                     hash = hash * 59 + this.StartTime.GetHashCode();
-                
                 if (this.EndTime != null)
                     hash = hash * 59 + this.EndTime.GetHashCode();
-                
                 if (this.ConnectedTime != null)
                     hash = hash * 59 + this.ConnectedTime.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.UserUri != null)
                     hash = hash * 59 + this.UserUri.GetHashCode();
-                
                 if (this.UserId != null)
                     hash = hash * 59 + this.UserId.GetHashCode();
-                
                 if (this.ExternalContactId != null)
                     hash = hash * 59 + this.ExternalContactId.GetHashCode();
-                
                 if (this.QueueId != null)
                     hash = hash * 59 + this.QueueId.GetHashCode();
-                
                 if (this.GroupId != null)
                     hash = hash * 59 + this.GroupId.GetHashCode();
-                
                 if (this.QueueName != null)
                     hash = hash * 59 + this.QueueName.GetHashCode();
-                
                 if (this.Purpose != null)
                     hash = hash * 59 + this.Purpose.GetHashCode();
-                
                 if (this.ParticipantType != null)
                     hash = hash * 59 + this.ParticipantType.GetHashCode();
-                
                 if (this.ConsultParticipantId != null)
                     hash = hash * 59 + this.ConsultParticipantId.GetHashCode();
-                
                 if (this.Address != null)
                     hash = hash * 59 + this.Address.GetHashCode();
-                
                 if (this.Ani != null)
                     hash = hash * 59 + this.Ani.GetHashCode();
-                
                 if (this.Dnis != null)
                     hash = hash * 59 + this.Dnis.GetHashCode();
-                
                 if (this.Locale != null)
                     hash = hash * 59 + this.Locale.GetHashCode();
-                
                 if (this.WrapupRequired != null)
                     hash = hash * 59 + this.WrapupRequired.GetHashCode();
-                
                 if (this.WrapupPrompt != null)
                     hash = hash * 59 + this.WrapupPrompt.GetHashCode();
-                
                 if (this.WrapupTimeoutMs != null)
                     hash = hash * 59 + this.WrapupTimeoutMs.GetHashCode();
-                
                 if (this.WrapupSkipped != null)
                     hash = hash * 59 + this.WrapupSkipped.GetHashCode();
-                
                 if (this.Wrapup != null)
                     hash = hash * 59 + this.Wrapup.GetHashCode();
-                
                 if (this.MonitoredParticipantId != null)
                     hash = hash * 59 + this.MonitoredParticipantId.GetHashCode();
-                
                 if (this.Attributes != null)
                     hash = hash * 59 + this.Attributes.GetHashCode();
-                
                 if (this.Calls != null)
                     hash = hash * 59 + this.Calls.GetHashCode();
-                
                 if (this.Callbacks != null)
                     hash = hash * 59 + this.Callbacks.GetHashCode();
-                
                 if (this.Chats != null)
                     hash = hash * 59 + this.Chats.GetHashCode();
-                
                 if (this.Emails != null)
                     hash = hash * 59 + this.Emails.GetHashCode();
-                
                 if (this.SocialExpressions != null)
                     hash = hash * 59 + this.SocialExpressions.GetHashCode();
-                
                 if (this.Videos != null)
                     hash = hash * 59 + this.Videos.GetHashCode();
-                
                 if (this.Evaluations != null)
                     hash = hash * 59 + this.Evaluations.GetHashCode();
-                
                 return hash;
             }
         }

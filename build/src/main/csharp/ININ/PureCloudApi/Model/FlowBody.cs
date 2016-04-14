@@ -30,19 +30,19 @@ namespace ININ.PureCloudApi.Model
             this.Body = Body;
             
         }
-        
+
     
         /// <summary>
-        /// The 'format' indicates the particular format of the 'body' contents.  Reference the Automate documentation for format information.
+        /// The &#39;format&#39; indicates the particular format of the &#39;body&#39; contents.  Reference the Automate documentation for format information.
         /// </summary>
-        /// <value>The 'format' indicates the particular format of the 'body' contents.  Reference the Automate documentation for format information.</value>
+        /// <value>The &#39;format&#39; indicates the particular format of the &#39;body&#39; contents.  Reference the Automate documentation for format information.</value>
         [DataMember(Name="format", EmitDefaultValue=false)]
         public string Format { get; set; }
     
         /// <summary>
-        /// The flow definition body according to the syntax supported by the 'format'.  Use the /processautomation/flows/schemas endpoint to get detailed syntax information for each format.
+        /// The flow definition body according to the syntax supported by the &#39;format&#39;.  Use the /processautomation/flows/schemas endpoint to get detailed syntax information for each format.
         /// </summary>
-        /// <value>The flow definition body according to the syntax supported by the 'format'.  Use the /processautomation/flows/schemas endpoint to get detailed syntax information for each format.</value>
+        /// <value>The flow definition body according to the syntax supported by the &#39;format&#39;.  Use the /processautomation/flows/schemas endpoint to get detailed syntax information for each format.</value>
         [DataMember(Name="body", EmitDefaultValue=false)]
         public Dictionary<string, Object> Body { get; set; }
     
@@ -56,11 +56,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class FlowBody {\n");
             sb.Append("  Format: ").Append(Format).Append("\n");
             sb.Append("  Body: ").Append(Body).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -116,13 +115,10 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Format != null)
                     hash = hash * 59 + this.Format.GetHashCode();
-                
                 if (this.Body != null)
                     hash = hash * 59 + this.Body.GetHashCode();
-                
                 return hash;
             }
         }

@@ -34,7 +34,7 @@ namespace ININ.PureCloudApi.Model
             this.TagIds = TagIds;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets Name
@@ -72,11 +72,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Workspace: ").Append(Workspace).Append("\n");
             sb.Append("  Tags: ").Append(Tags).Append("\n");
             sb.Append("  TagIds: ").Append(TagIds).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -142,19 +141,14 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.Workspace != null)
                     hash = hash * 59 + this.Workspace.GetHashCode();
-                
                 if (this.Tags != null)
                     hash = hash * 59 + this.Tags.GetHashCode();
-                
                 if (this.TagIds != null)
                     hash = hash * 59 + this.TagIds.GetHashCode();
-                
                 return hash;
             }
         }

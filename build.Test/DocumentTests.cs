@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new Document();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of Document
@@ -50,286 +50,254 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<Document> (instance, "instance is a Document");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'ChangeNumber' 
+        /// Test the property 'ChangeNumber'
         /// </summary>
         [Test]
         public void ChangeNumberTest()
         {
-            // TODO: unit test for the property 'ChangeNumber' 
+            // TODO: unit test for the property 'ChangeNumber'
         }
-        
         /// <summary>
-        /// Test the property 'DateCreated' 
+        /// Test the property 'DateCreated'
         /// </summary>
         [Test]
         public void DateCreatedTest()
         {
-            // TODO: unit test for the property 'DateCreated' 
+            // TODO: unit test for the property 'DateCreated'
         }
-        
         /// <summary>
-        /// Test the property 'DateModified' 
+        /// Test the property 'DateModified'
         /// </summary>
         [Test]
         public void DateModifiedTest()
         {
-            // TODO: unit test for the property 'DateModified' 
+            // TODO: unit test for the property 'DateModified'
         }
-        
         /// <summary>
-        /// Test the property 'DateUploaded' 
+        /// Test the property 'DateUploaded'
         /// </summary>
         [Test]
         public void DateUploadedTest()
         {
-            // TODO: unit test for the property 'DateUploaded' 
+            // TODO: unit test for the property 'DateUploaded'
         }
-        
         /// <summary>
-        /// Test the property 'ContentUri' 
+        /// Test the property 'ContentUri'
         /// </summary>
         [Test]
         public void ContentUriTest()
         {
-            // TODO: unit test for the property 'ContentUri' 
+            // TODO: unit test for the property 'ContentUri'
         }
-        
         /// <summary>
-        /// Test the property 'Workspace' 
+        /// Test the property 'Workspace'
         /// </summary>
         [Test]
         public void WorkspaceTest()
         {
-            // TODO: unit test for the property 'Workspace' 
+            // TODO: unit test for the property 'Workspace'
         }
-        
         /// <summary>
-        /// Test the property 'CreatedBy' 
+        /// Test the property 'CreatedBy'
         /// </summary>
         [Test]
         public void CreatedByTest()
         {
-            // TODO: unit test for the property 'CreatedBy' 
+            // TODO: unit test for the property 'CreatedBy'
         }
-        
         /// <summary>
-        /// Test the property 'UploadedBy' 
+        /// Test the property 'UploadedBy'
         /// </summary>
         [Test]
         public void UploadedByTest()
         {
-            // TODO: unit test for the property 'UploadedBy' 
+            // TODO: unit test for the property 'UploadedBy'
         }
-        
         /// <summary>
-        /// Test the property 'ContentType' 
+        /// Test the property 'ContentType'
         /// </summary>
         [Test]
         public void ContentTypeTest()
         {
-            // TODO: unit test for the property 'ContentType' 
+            // TODO: unit test for the property 'ContentType'
         }
-        
         /// <summary>
-        /// Test the property 'ContentLength' 
+        /// Test the property 'ContentLength'
         /// </summary>
         [Test]
         public void ContentLengthTest()
         {
-            // TODO: unit test for the property 'ContentLength' 
+            // TODO: unit test for the property 'ContentLength'
         }
-        
         /// <summary>
-        /// Test the property 'SystemType' 
+        /// Test the property 'SystemType'
         /// </summary>
         [Test]
         public void SystemTypeTest()
         {
-            // TODO: unit test for the property 'SystemType' 
+            // TODO: unit test for the property 'SystemType'
         }
-        
         /// <summary>
-        /// Test the property 'Filename' 
+        /// Test the property 'Filename'
         /// </summary>
         [Test]
         public void FilenameTest()
         {
-            // TODO: unit test for the property 'Filename' 
+            // TODO: unit test for the property 'Filename'
         }
-        
         /// <summary>
-        /// Test the property 'PageCount' 
+        /// Test the property 'PageCount'
         /// </summary>
         [Test]
         public void PageCountTest()
         {
-            // TODO: unit test for the property 'PageCount' 
+            // TODO: unit test for the property 'PageCount'
         }
-        
         /// <summary>
-        /// Test the property 'Read' 
+        /// Test the property 'Read'
         /// </summary>
         [Test]
         public void ReadTest()
         {
-            // TODO: unit test for the property 'Read' 
+            // TODO: unit test for the property 'Read'
         }
-        
         /// <summary>
-        /// Test the property 'CallerAddress' 
+        /// Test the property 'CallerAddress'
         /// </summary>
         [Test]
         public void CallerAddressTest()
         {
-            // TODO: unit test for the property 'CallerAddress' 
+            // TODO: unit test for the property 'CallerAddress'
         }
-        
         /// <summary>
-        /// Test the property 'ReceiverAddress' 
+        /// Test the property 'ReceiverAddress'
         /// </summary>
         [Test]
         public void ReceiverAddressTest()
         {
-            // TODO: unit test for the property 'ReceiverAddress' 
+            // TODO: unit test for the property 'ReceiverAddress'
         }
-        
         /// <summary>
-        /// Test the property 'Tags' 
+        /// Test the property 'Tags'
         /// </summary>
         [Test]
         public void TagsTest()
         {
-            // TODO: unit test for the property 'Tags' 
+            // TODO: unit test for the property 'Tags'
         }
-        
         /// <summary>
-        /// Test the property 'TagValues' 
+        /// Test the property 'TagValues'
         /// </summary>
         [Test]
         public void TagValuesTest()
         {
-            // TODO: unit test for the property 'TagValues' 
+            // TODO: unit test for the property 'TagValues'
         }
-        
         /// <summary>
-        /// Test the property 'Attributes' 
+        /// Test the property 'Attributes'
         /// </summary>
         [Test]
         public void AttributesTest()
         {
-            // TODO: unit test for the property 'Attributes' 
+            // TODO: unit test for the property 'Attributes'
         }
-        
         /// <summary>
-        /// Test the property 'Thumbnails' 
+        /// Test the property 'Thumbnails'
         /// </summary>
         [Test]
         public void ThumbnailsTest()
         {
-            // TODO: unit test for the property 'Thumbnails' 
+            // TODO: unit test for the property 'Thumbnails'
         }
-        
         /// <summary>
-        /// Test the property 'UploadStatus' 
+        /// Test the property 'UploadStatus'
         /// </summary>
         [Test]
         public void UploadStatusTest()
         {
-            // TODO: unit test for the property 'UploadStatus' 
+            // TODO: unit test for the property 'UploadStatus'
         }
-        
         /// <summary>
-        /// Test the property 'UploadDestinationUri' 
+        /// Test the property 'UploadDestinationUri'
         /// </summary>
         [Test]
         public void UploadDestinationUriTest()
         {
-            // TODO: unit test for the property 'UploadDestinationUri' 
+            // TODO: unit test for the property 'UploadDestinationUri'
         }
-        
         /// <summary>
-        /// Test the property 'UploadMethod' 
+        /// Test the property 'UploadMethod'
         /// </summary>
         [Test]
         public void UploadMethodTest()
         {
-            // TODO: unit test for the property 'UploadMethod' 
+            // TODO: unit test for the property 'UploadMethod'
         }
-        
         /// <summary>
-        /// Test the property 'LockInfo' 
+        /// Test the property 'LockInfo'
         /// </summary>
         [Test]
         public void LockInfoTest()
         {
-            // TODO: unit test for the property 'LockInfo' 
+            // TODO: unit test for the property 'LockInfo'
         }
-        
         /// <summary>
-        /// Test the property 'Acl' 
+        /// Test the property 'Acl'
         /// </summary>
         [Test]
         public void AclTest()
         {
-            // TODO: unit test for the property 'Acl' 
+            // TODO: unit test for the property 'Acl'
         }
-        
         /// <summary>
-        /// Test the property 'SharingStatus' 
+        /// Test the property 'SharingStatus'
         /// </summary>
         [Test]
         public void SharingStatusTest()
         {
-            // TODO: unit test for the property 'SharingStatus' 
+            // TODO: unit test for the property 'SharingStatus'
         }
-        
         /// <summary>
-        /// Test the property 'SharingUri' 
+        /// Test the property 'SharingUri'
         /// </summary>
         [Test]
         public void SharingUriTest()
         {
-            // TODO: unit test for the property 'SharingUri' 
+            // TODO: unit test for the property 'SharingUri'
         }
-        
         /// <summary>
-        /// Test the property 'DownloadSharingUri' 
+        /// Test the property 'DownloadSharingUri'
         /// </summary>
         [Test]
         public void DownloadSharingUriTest()
         {
-            // TODO: unit test for the property 'DownloadSharingUri' 
+            // TODO: unit test for the property 'DownloadSharingUri'
         }
-        
         /// <summary>
-        /// Test the property 'SelfUri' 
+        /// Test the property 'SelfUri'
         /// </summary>
         [Test]
         public void SelfUriTest()
         {
-            // TODO: unit test for the property 'SelfUri' 
+            // TODO: unit test for the property 'SelfUri'
         }
-        
 
     }
 

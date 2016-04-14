@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new QueueUtilizationDiagnostic();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of QueueUtilizationDiagnostic
@@ -50,79 +50,70 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<QueueUtilizationDiagnostic> (instance, "instance is a QueueUtilizationDiagnostic");
         }
 
-        
         /// <summary>
-        /// Test the property 'Queue' 
+        /// Test the property 'Queue'
         /// </summary>
         [Test]
         public void QueueTest()
         {
-            // TODO: unit test for the property 'Queue' 
+            // TODO: unit test for the property 'Queue'
         }
-        
         /// <summary>
-        /// Test the property 'UsersInQueue' 
+        /// Test the property 'UsersInQueue'
         /// </summary>
         [Test]
         public void UsersInQueueTest()
         {
-            // TODO: unit test for the property 'UsersInQueue' 
+            // TODO: unit test for the property 'UsersInQueue'
         }
-        
         /// <summary>
-        /// Test the property 'ActiveUsersInQueue' 
+        /// Test the property 'ActiveUsersInQueue'
         /// </summary>
         [Test]
         public void ActiveUsersInQueueTest()
         {
-            // TODO: unit test for the property 'ActiveUsersInQueue' 
+            // TODO: unit test for the property 'ActiveUsersInQueue'
         }
-        
         /// <summary>
-        /// Test the property 'UsersOnQueue' 
+        /// Test the property 'UsersOnQueue'
         /// </summary>
         [Test]
         public void UsersOnQueueTest()
         {
-            // TODO: unit test for the property 'UsersOnQueue' 
+            // TODO: unit test for the property 'UsersOnQueue'
         }
-        
         /// <summary>
-        /// Test the property 'UsersNotUtilized' 
+        /// Test the property 'UsersNotUtilized'
         /// </summary>
         [Test]
         public void UsersNotUtilizedTest()
         {
-            // TODO: unit test for the property 'UsersNotUtilized' 
+            // TODO: unit test for the property 'UsersNotUtilized'
         }
-        
         /// <summary>
-        /// Test the property 'UsersOnQueueWithStation' 
+        /// Test the property 'UsersOnQueueWithStation'
         /// </summary>
         [Test]
         public void UsersOnQueueWithStationTest()
         {
-            // TODO: unit test for the property 'UsersOnQueueWithStation' 
+            // TODO: unit test for the property 'UsersOnQueueWithStation'
         }
-        
         /// <summary>
-        /// Test the property 'UsersOnACampaignCall' 
+        /// Test the property 'UsersOnACampaignCall'
         /// </summary>
         [Test]
         public void UsersOnACampaignCallTest()
         {
-            // TODO: unit test for the property 'UsersOnACampaignCall' 
+            // TODO: unit test for the property 'UsersOnACampaignCall'
         }
-        
         /// <summary>
-        /// Test the property 'UsersOnANonCampaignCall' 
+        /// Test the property 'UsersOnANonCampaignCall'
         /// </summary>
         [Test]
         public void UsersOnANonCampaignCallTest()
         {
-            // TODO: unit test for the property 'UsersOnANonCampaignCall' 
+            // TODO: unit test for the property 'UsersOnANonCampaignCall'
         }
-        
 
     }
 

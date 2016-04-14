@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new EdgeVersionInformation();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of EdgeVersionInformation
@@ -50,16 +50,14 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<EdgeVersionInformation> (instance, "instance is a EdgeVersionInformation");
         }
 
-        
         /// <summary>
-        /// Test the property 'SoftwareVersion' 
+        /// Test the property 'SoftwareVersion'
         /// </summary>
         [Test]
         public void SoftwareVersionTest()
         {
-            // TODO: unit test for the property 'SoftwareVersion' 
+            // TODO: unit test for the property 'SoftwareVersion'
         }
-        
 
     }
 

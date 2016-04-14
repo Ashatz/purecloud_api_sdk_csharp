@@ -56,7 +56,7 @@ namespace ININ.PureCloudApi.Model
             this.Queue = Queue;
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -169,11 +169,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  SocialAccount: ").Append(SocialAccount).Append("\n");
             sb.Append("  Queue: ").Append(Queue).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -284,46 +283,32 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
-                
                 if (this.DateModified != null)
                     hash = hash * 59 + this.DateModified.GetHashCode();
-                
                 if (this.Enabled != null)
                     hash = hash * 59 + this.Enabled.GetHashCode();
-                
                 if (this.AnyWords != null)
                     hash = hash * 59 + this.AnyWords.GetHashCode();
-                
                 if (this.AllWords != null)
                     hash = hash * 59 + this.AllWords.GetHashCode();
-                
                 if (this.ExcludeWords != null)
                     hash = hash * 59 + this.ExcludeWords.GetHashCode();
-                
                 if (this.ExactPhrase != null)
                     hash = hash * 59 + this.ExactPhrase.GetHashCode();
-                
                 if (this.GroupTags != null)
                     hash = hash * 59 + this.GroupTags.GetHashCode();
-                
                 if (this.SocialAccount != null)
                     hash = hash * 59 + this.SocialAccount.GetHashCode();
-                
                 if (this.Queue != null)
                     hash = hash * 59 + this.Queue.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 return hash;
             }
         }

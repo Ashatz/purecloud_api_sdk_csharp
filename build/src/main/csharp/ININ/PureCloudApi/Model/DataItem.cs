@@ -48,7 +48,7 @@ namespace ININ.PureCloudApi.Model
             this.ParameterValues = ParameterValues;
             
         }
-        
+
     
         /// <summary>
         /// The name of the data element associated with a history event.
@@ -82,11 +82,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  ParameterName: ").Append(ParameterName).Append("\n");
             sb.Append("  ParameterType: ").Append(ParameterType).Append("\n");
             sb.Append("  ParameterValues: ").Append(ParameterValues).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -147,16 +146,12 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ParameterName != null)
                     hash = hash * 59 + this.ParameterName.GetHashCode();
-                
                 if (this.ParameterType != null)
                     hash = hash * 59 + this.ParameterType.GetHashCode();
-                
                 if (this.ParameterValues != null)
                     hash = hash * 59 + this.ParameterValues.GetHashCode();
-                
                 return hash;
             }
         }

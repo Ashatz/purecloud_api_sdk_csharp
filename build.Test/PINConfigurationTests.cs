@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new PINConfiguration();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of PINConfiguration
@@ -50,25 +50,22 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<PINConfiguration> (instance, "instance is a PINConfiguration");
         }
 
-        
         /// <summary>
-        /// Test the property 'MinimumLength' 
+        /// Test the property 'MinimumLength'
         /// </summary>
         [Test]
         public void MinimumLengthTest()
         {
-            // TODO: unit test for the property 'MinimumLength' 
+            // TODO: unit test for the property 'MinimumLength'
         }
-        
         /// <summary>
-        /// Test the property 'MaximumLength' 
+        /// Test the property 'MaximumLength'
         /// </summary>
         [Test]
         public void MaximumLengthTest()
         {
-            // TODO: unit test for the property 'MaximumLength' 
+            // TODO: unit test for the property 'MaximumLength'
         }
-        
 
     }
 

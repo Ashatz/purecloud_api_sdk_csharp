@@ -17,9 +17,13 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class FlowHistoryItem :  IEquatable<FlowHistoryItem>
     { 
-    
+
+        /// <summary>
+        /// The type of the history event being reported.
+        /// </summary>
+        /// <value>The type of the history event being reported.</value>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum HistoryEventTypeEnum {
+                public enum HistoryEventTypeEnum {
             
             [EnumMember(Value = "FLOW_INSTANCE_START")]
             FlowInstanceStart,
@@ -60,6 +64,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "FLOW_INSTANCE_RETRY")]
             FlowInstanceRetry
         }
+
         
         /// <summary>
         /// The type of the history event being reported.
@@ -116,7 +121,7 @@ namespace ININ.PureCloudApi.Model
             this.HistoryEventData = HistoryEventData;
             
         }
-        
+
     
         /// <summary>
         /// The time when the history item occurred. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
@@ -161,9 +166,9 @@ namespace ININ.PureCloudApi.Model
         public List<DataItem> HistoryEventData { get; set; }
     
         /// <summary>
-        /// Whether or not the flow item was successful (if a 'notification' event this will default to true)
+        /// Whether or not the flow item was successful (if a &#39;notification&#39; event this will default to true)
         /// </summary>
-        /// <value>Whether or not the flow item was successful (if a 'notification' event this will default to true)</value>
+        /// <value>Whether or not the flow item was successful (if a &#39;notification&#39; event this will default to true)</value>
         [DataMember(Name="success", EmitDefaultValue=false)]
         public bool? Success { get; set; }
     
@@ -183,11 +188,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  HistoryEventData: ").Append(HistoryEventData).Append("\n");
             sb.Append("  HistoryEventType: ").Append(HistoryEventType).Append("\n");
             sb.Append("  Success: ").Append(Success).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -273,31 +277,22 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.HistoryEventTime != null)
                     hash = hash * 59 + this.HistoryEventTime.GetHashCode();
-                
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
-                
                 if (this.WorkItem != null)
                     hash = hash * 59 + this.WorkItem.GetHashCode();
-                
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();
-                
                 if (this.Queue != null)
                     hash = hash * 59 + this.Queue.GetHashCode();
-                
                 if (this.HistoryEventData != null)
                     hash = hash * 59 + this.HistoryEventData.GetHashCode();
-                
                 if (this.HistoryEventType != null)
                     hash = hash * 59 + this.HistoryEventType.GetHashCode();
-                
                 if (this.Success != null)
                     hash = hash * 59 + this.Success.GetHashCode();
-                
                 return hash;
             }
         }

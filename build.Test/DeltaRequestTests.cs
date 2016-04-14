@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new DeltaRequest();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of DeltaRequest
@@ -50,16 +50,14 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<DeltaRequest> (instance, "instance is a DeltaRequest");
         }
 
-        
         /// <summary>
-        /// Test the property 'ContextToken' 
+        /// Test the property 'ContextToken'
         /// </summary>
         [Test]
         public void ContextTokenTest()
         {
-            // TODO: unit test for the property 'ContextToken' 
+            // TODO: unit test for the property 'ContextToken'
         }
-        
 
     }
 

@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new DialerRule();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of DialerRule
@@ -50,61 +50,54 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<DialerRule> (instance, "instance is a DialerRule");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'Order' 
+        /// Test the property 'Order'
         /// </summary>
         [Test]
         public void OrderTest()
         {
-            // TODO: unit test for the property 'Order' 
+            // TODO: unit test for the property 'Order'
         }
-        
         /// <summary>
-        /// Test the property 'Category' 
+        /// Test the property 'Category'
         /// </summary>
         [Test]
         public void CategoryTest()
         {
-            // TODO: unit test for the property 'Category' 
+            // TODO: unit test for the property 'Category'
         }
-        
         /// <summary>
-        /// Test the property 'Conditions' 
+        /// Test the property 'Conditions'
         /// </summary>
         [Test]
         public void ConditionsTest()
         {
-            // TODO: unit test for the property 'Conditions' 
+            // TODO: unit test for the property 'Conditions'
         }
-        
         /// <summary>
-        /// Test the property 'Actions' 
+        /// Test the property 'Actions'
         /// </summary>
         [Test]
         public void ActionsTest()
         {
-            // TODO: unit test for the property 'Actions' 
+            // TODO: unit test for the property 'Actions'
         }
-        
 
     }
 

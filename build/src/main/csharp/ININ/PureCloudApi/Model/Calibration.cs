@@ -54,7 +54,7 @@ namespace ININ.PureCloudApi.Model
             this.ExpertEvaluator = ExpertEvaluator;
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -179,11 +179,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  ScoringIndex: ").Append(ScoringIndex).Append("\n");
             sb.Append("  ExpertEvaluator: ").Append(ExpertEvaluator).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -309,55 +308,38 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.Calibrator != null)
                     hash = hash * 59 + this.Calibrator.GetHashCode();
-                
                 if (this.Agent != null)
                     hash = hash * 59 + this.Agent.GetHashCode();
-                
                 if (this.Conversation != null)
                     hash = hash * 59 + this.Conversation.GetHashCode();
-                
                 if (this.EvaluationForm != null)
                     hash = hash * 59 + this.EvaluationForm.GetHashCode();
-                
                 if (this.ContextId != null)
                     hash = hash * 59 + this.ContextId.GetHashCode();
-                
                 if (this.AverageScore != null)
                     hash = hash * 59 + this.AverageScore.GetHashCode();
-                
                 if (this.HighScore != null)
                     hash = hash * 59 + this.HighScore.GetHashCode();
-                
                 if (this.LowScore != null)
                     hash = hash * 59 + this.LowScore.GetHashCode();
-                
                 if (this.CreatedDate != null)
                     hash = hash * 59 + this.CreatedDate.GetHashCode();
-                
                 if (this.Evaluations != null)
                     hash = hash * 59 + this.Evaluations.GetHashCode();
-                
                 if (this.Evaluators != null)
                     hash = hash * 59 + this.Evaluators.GetHashCode();
-                
                 if (this.ScoringIndex != null)
                     hash = hash * 59 + this.ScoringIndex.GetHashCode();
-                
                 if (this.ExpertEvaluator != null)
                     hash = hash * 59 + this.ExpertEvaluator.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 return hash;
             }
         }

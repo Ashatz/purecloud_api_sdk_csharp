@@ -32,7 +32,7 @@ namespace ININ.PureCloudApi.Model
             this.EmailPolicy = EmailPolicy;
             
         }
-        
+
     
         /// <summary>
         /// Conditions and actions for calls
@@ -66,11 +66,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  CallPolicy: ").Append(CallPolicy).Append("\n");
             sb.Append("  ChatPolicy: ").Append(ChatPolicy).Append("\n");
             sb.Append("  EmailPolicy: ").Append(EmailPolicy).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -131,16 +130,12 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.CallPolicy != null)
                     hash = hash * 59 + this.CallPolicy.GetHashCode();
-                
                 if (this.ChatPolicy != null)
                     hash = hash * 59 + this.ChatPolicy.GetHashCode();
-                
                 if (this.EmailPolicy != null)
                     hash = hash * 59 + this.EmailPolicy.GetHashCode();
-                
                 return hash;
             }
         }

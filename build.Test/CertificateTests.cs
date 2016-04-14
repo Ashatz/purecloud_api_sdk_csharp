@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new Certificate();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of Certificate
@@ -50,16 +50,14 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<Certificate> (instance, "instance is a Certificate");
         }
 
-        
         /// <summary>
-        /// Test the property 'CertificateProperty' 
+        /// Test the property '_Certificate'
         /// </summary>
         [Test]
-        public void CertificatePropertyTest()
+        public void _CertificateTest()
         {
-            // TODO: unit test for the property 'CertificateProperty' 
+            // TODO: unit test for the property '_Certificate'
         }
-        
 
     }
 

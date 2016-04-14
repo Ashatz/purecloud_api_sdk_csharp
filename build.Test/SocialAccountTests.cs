@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new SocialAccount();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of SocialAccount
@@ -50,115 +50,102 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<SocialAccount> (instance, "instance is a SocialAccount");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'DateCreated' 
+        /// Test the property 'DateCreated'
         /// </summary>
         [Test]
         public void DateCreatedTest()
         {
-            // TODO: unit test for the property 'DateCreated' 
+            // TODO: unit test for the property 'DateCreated'
         }
-        
         /// <summary>
-        /// Test the property 'DateModified' 
+        /// Test the property 'DateModified'
         /// </summary>
         [Test]
         public void DateModifiedTest()
         {
-            // TODO: unit test for the property 'DateModified' 
+            // TODO: unit test for the property 'DateModified'
         }
-        
         /// <summary>
-        /// Test the property 'Enabled' 
+        /// Test the property 'Enabled'
         /// </summary>
         [Test]
         public void EnabledTest()
         {
-            // TODO: unit test for the property 'Enabled' 
+            // TODO: unit test for the property 'Enabled'
         }
-        
         /// <summary>
-        /// Test the property 'Authorized' 
+        /// Test the property 'Authorized'
         /// </summary>
         [Test]
         public void AuthorizedTest()
         {
-            // TODO: unit test for the property 'Authorized' 
+            // TODO: unit test for the property 'Authorized'
         }
-        
         /// <summary>
-        /// Test the property 'SocialHub' 
+        /// Test the property 'SocialHub'
         /// </summary>
         [Test]
         public void SocialHubTest()
         {
-            // TODO: unit test for the property 'SocialHub' 
+            // TODO: unit test for the property 'SocialHub'
         }
-        
         /// <summary>
-        /// Test the property 'AccessToken' 
+        /// Test the property 'AccessToken'
         /// </summary>
         [Test]
         public void AccessTokenTest()
         {
-            // TODO: unit test for the property 'AccessToken' 
+            // TODO: unit test for the property 'AccessToken'
         }
-        
         /// <summary>
-        /// Test the property 'AccessTokenSecret' 
+        /// Test the property 'AccessTokenSecret'
         /// </summary>
         [Test]
         public void AccessTokenSecretTest()
         {
-            // TODO: unit test for the property 'AccessTokenSecret' 
+            // TODO: unit test for the property 'AccessTokenSecret'
         }
-        
         /// <summary>
-        /// Test the property 'TwitterId' 
+        /// Test the property 'TwitterId'
         /// </summary>
         [Test]
         public void TwitterIdTest()
         {
-            // TODO: unit test for the property 'TwitterId' 
+            // TODO: unit test for the property 'TwitterId'
         }
-        
         /// <summary>
-        /// Test the property 'StreamingEnabled' 
+        /// Test the property 'StreamingEnabled'
         /// </summary>
         [Test]
         public void StreamingEnabledTest()
         {
-            // TODO: unit test for the property 'StreamingEnabled' 
+            // TODO: unit test for the property 'StreamingEnabled'
         }
-        
         /// <summary>
-        /// Test the property 'SelfUri' 
+        /// Test the property 'SelfUri'
         /// </summary>
         [Test]
         public void SelfUriTest()
         {
-            // TODO: unit test for the property 'SelfUri' 
+            // TODO: unit test for the property 'SelfUri'
         }
-        
 
     }
 

@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new Share();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of Share
@@ -50,97 +50,86 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<Share> (instance, "instance is a Share");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'SharedEntityType' 
+        /// Test the property 'SharedEntityType'
         /// </summary>
         [Test]
         public void SharedEntityTypeTest()
         {
-            // TODO: unit test for the property 'SharedEntityType' 
+            // TODO: unit test for the property 'SharedEntityType'
         }
-        
         /// <summary>
-        /// Test the property 'SharedEntity' 
+        /// Test the property 'SharedEntity'
         /// </summary>
         [Test]
         public void SharedEntityTest()
         {
-            // TODO: unit test for the property 'SharedEntity' 
+            // TODO: unit test for the property 'SharedEntity'
         }
-        
         /// <summary>
-        /// Test the property 'MemberType' 
+        /// Test the property 'MemberType'
         /// </summary>
         [Test]
         public void MemberTypeTest()
         {
-            // TODO: unit test for the property 'MemberType' 
+            // TODO: unit test for the property 'MemberType'
         }
-        
         /// <summary>
-        /// Test the property 'Member' 
+        /// Test the property 'Member'
         /// </summary>
         [Test]
         public void MemberTest()
         {
-            // TODO: unit test for the property 'Member' 
+            // TODO: unit test for the property 'Member'
         }
-        
         /// <summary>
-        /// Test the property 'SharedBy' 
+        /// Test the property 'SharedBy'
         /// </summary>
         [Test]
         public void SharedByTest()
         {
-            // TODO: unit test for the property 'SharedBy' 
+            // TODO: unit test for the property 'SharedBy'
         }
-        
         /// <summary>
-        /// Test the property 'Workspace' 
+        /// Test the property 'Workspace'
         /// </summary>
         [Test]
         public void WorkspaceTest()
         {
-            // TODO: unit test for the property 'Workspace' 
+            // TODO: unit test for the property 'Workspace'
         }
-        
         /// <summary>
-        /// Test the property 'User' 
+        /// Test the property 'User'
         /// </summary>
         [Test]
         public void UserTest()
         {
-            // TODO: unit test for the property 'User' 
+            // TODO: unit test for the property 'User'
         }
-        
         /// <summary>
-        /// Test the property 'SelfUri' 
+        /// Test the property 'SelfUri'
         /// </summary>
         [Test]
         public void SelfUriTest()
         {
-            // TODO: unit test for the property 'SelfUri' 
+            // TODO: unit test for the property 'SelfUri'
         }
-        
 
     }
 

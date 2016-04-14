@@ -46,7 +46,7 @@ namespace ININ.PureCloudApi.Model
             this.TimeInterval = TimeInterval;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets EvaluationContextId
@@ -98,11 +98,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  EvaluationForm: ").Append(EvaluationForm).Append("\n");
             sb.Append("  AssignToActiveUser: ").Append(AssignToActiveUser).Append("\n");
             sb.Append("  TimeInterval: ").Append(TimeInterval).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -178,25 +177,18 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.EvaluationContextId != null)
                     hash = hash * 59 + this.EvaluationContextId.GetHashCode();
-                
                 if (this.Evaluators != null)
                     hash = hash * 59 + this.Evaluators.GetHashCode();
-                
                 if (this.MaxNumberEvaluations != null)
                     hash = hash * 59 + this.MaxNumberEvaluations.GetHashCode();
-                
                 if (this.EvaluationForm != null)
                     hash = hash * 59 + this.EvaluationForm.GetHashCode();
-                
                 if (this.AssignToActiveUser != null)
                     hash = hash * 59 + this.AssignToActiveUser.GetHashCode();
-                
                 if (this.TimeInterval != null)
                     hash = hash * 59 + this.TimeInterval.GetHashCode();
-                
                 return hash;
             }
         }

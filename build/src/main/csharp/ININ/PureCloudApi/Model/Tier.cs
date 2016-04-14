@@ -30,7 +30,7 @@ namespace ININ.PureCloudApi.Model
             this.Price = Price;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets Currency
@@ -54,11 +54,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class Tier {\n");
             sb.Append("  Currency: ").Append(Currency).Append("\n");
             sb.Append("  Price: ").Append(Price).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -114,13 +113,10 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Currency != null)
                     hash = hash * 59 + this.Currency.GetHashCode();
-                
                 if (this.Price != null)
                     hash = hash * 59 + this.Price.GetHashCode();
-                
                 return hash;
             }
         }

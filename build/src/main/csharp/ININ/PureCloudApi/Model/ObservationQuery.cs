@@ -69,7 +69,7 @@ namespace ININ.PureCloudApi.Model
             this.Metrics = Metrics;
             
         }
-        
+
     
         /// <summary>
         /// Filter to return a subset of observations. Expresses boolean logical predicates as well as dimensional filters
@@ -95,11 +95,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class ObservationQuery {\n");
             sb.Append("  Filter: ").Append(Filter).Append("\n");
             sb.Append("  Metrics: ").Append(Metrics).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -155,13 +154,10 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Filter != null)
                     hash = hash * 59 + this.Filter.GetHashCode();
-                
                 if (this.Metrics != null)
                     hash = hash * 59 + this.Metrics.GetHashCode();
-                
                 return hash;
             }
         }

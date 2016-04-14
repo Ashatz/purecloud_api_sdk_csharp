@@ -46,7 +46,7 @@ namespace ININ.PureCloudApi.Model
             this.Version = Version;
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -119,11 +119,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  CreatedDate: ").Append(CreatedDate).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("  Version: ").Append(Version).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -209,31 +208,22 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.VersionSpecificComment != null)
                     hash = hash * 59 + this.VersionSpecificComment.GetHashCode();
-                
                 if (this.FlowDefinitionUri != null)
                     hash = hash * 59 + this.FlowDefinitionUri.GetHashCode();
-                
                 if (this.CreatedByUser != null)
                     hash = hash * 59 + this.CreatedByUser.GetHashCode();
-                
                 if (this.CreatedDate != null)
                     hash = hash * 59 + this.CreatedDate.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
-                
                 return hash;
             }
         }

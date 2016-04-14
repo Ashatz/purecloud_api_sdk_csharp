@@ -30,7 +30,7 @@ namespace ININ.PureCloudApi.Model
             this.Facets = Facets;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets Attributes
@@ -54,11 +54,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class QueryFacetInfo {\n");
             sb.Append("  Attributes: ").Append(Attributes).Append("\n");
             sb.Append("  Facets: ").Append(Facets).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -114,13 +113,10 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Attributes != null)
                     hash = hash * 59 + this.Attributes.GetHashCode();
-                
                 if (this.Facets != null)
                     hash = hash * 59 + this.Facets.GetHashCode();
-                
                 return hash;
             }
         }

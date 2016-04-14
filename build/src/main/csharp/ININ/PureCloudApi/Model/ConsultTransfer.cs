@@ -17,9 +17,13 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class ConsultTransfer :  IEquatable<ConsultTransfer>
     { 
-    
+
+        /// <summary>
+        /// Determines to whom the initiating participant is speaking. Defaults to DESTINATION
+        /// </summary>
+        /// <value>Determines to whom the initiating participant is speaking. Defaults to DESTINATION</value>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum SpeakToEnum {
+                public enum SpeakToEnum {
             
             [EnumMember(Value = "DESTINATION")]
             Destination,
@@ -30,6 +34,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "BOTH")]
             Both
         }
+
         
         /// <summary>
         /// Determines to whom the initiating participant is speaking. Defaults to DESTINATION
@@ -58,7 +63,7 @@ namespace ININ.PureCloudApi.Model
             this.SpeakTo = SpeakTo;
             
         }
-        
+
     
         /// <summary>
         /// Destination phone number and name.
@@ -77,11 +82,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class ConsultTransfer {\n");
             sb.Append("  SpeakTo: ").Append(SpeakTo).Append("\n");
             sb.Append("  Destination: ").Append(Destination).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -137,13 +141,10 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.SpeakTo != null)
                     hash = hash * 59 + this.SpeakTo.GetHashCode();
-                
                 if (this.Destination != null)
                     hash = hash * 59 + this.Destination.GetHashCode();
-                
                 return hash;
             }
         }

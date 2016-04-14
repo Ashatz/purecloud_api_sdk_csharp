@@ -28,7 +28,7 @@ namespace ININ.PureCloudApi.Model
             this.CertificateDetails = CertificateDetails;
             
         }
-        
+
     
         /// <summary>
         /// The details of the certificates that were parsed correctly.
@@ -46,11 +46,10 @@ namespace ININ.PureCloudApi.Model
             var sb = new StringBuilder();
             sb.Append("class ParsedCertificate {\n");
             sb.Append("  CertificateDetails: ").Append(CertificateDetails).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -101,10 +100,8 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.CertificateDetails != null)
                     hash = hash * 59 + this.CertificateDetails.GetHashCode();
-                
                 return hash;
             }
         }

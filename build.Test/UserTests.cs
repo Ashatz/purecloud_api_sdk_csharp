@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new User();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of User
@@ -50,187 +50,166 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<User> (instance, "instance is a User");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'Chat' 
+        /// Test the property 'Chat'
         /// </summary>
         [Test]
         public void ChatTest()
         {
-            // TODO: unit test for the property 'Chat' 
+            // TODO: unit test for the property 'Chat'
         }
-        
         /// <summary>
-        /// Test the property 'Department' 
+        /// Test the property 'Department'
         /// </summary>
         [Test]
         public void DepartmentTest()
         {
-            // TODO: unit test for the property 'Department' 
+            // TODO: unit test for the property 'Department'
         }
-        
         /// <summary>
-        /// Test the property 'Email' 
+        /// Test the property 'Email'
         /// </summary>
         [Test]
         public void EmailTest()
         {
-            // TODO: unit test for the property 'Email' 
+            // TODO: unit test for the property 'Email'
         }
-        
         /// <summary>
-        /// Test the property 'PrimaryContactInfo' 
+        /// Test the property 'PrimaryContactInfo'
         /// </summary>
         [Test]
         public void PrimaryContactInfoTest()
         {
-            // TODO: unit test for the property 'PrimaryContactInfo' 
+            // TODO: unit test for the property 'PrimaryContactInfo'
         }
-        
         /// <summary>
-        /// Test the property 'Addresses' 
+        /// Test the property 'Addresses'
         /// </summary>
         [Test]
         public void AddressesTest()
         {
-            // TODO: unit test for the property 'Addresses' 
+            // TODO: unit test for the property 'Addresses'
         }
-        
         /// <summary>
-        /// Test the property 'State' 
+        /// Test the property 'State'
         /// </summary>
         [Test]
         public void StateTest()
         {
-            // TODO: unit test for the property 'State' 
+            // TODO: unit test for the property 'State'
         }
-        
         /// <summary>
-        /// Test the property 'Title' 
+        /// Test the property 'Title'
         /// </summary>
         [Test]
         public void TitleTest()
         {
-            // TODO: unit test for the property 'Title' 
+            // TODO: unit test for the property 'Title'
         }
-        
         /// <summary>
-        /// Test the property 'Username' 
+        /// Test the property 'Username'
         /// </summary>
         [Test]
         public void UsernameTest()
         {
-            // TODO: unit test for the property 'Username' 
+            // TODO: unit test for the property 'Username'
         }
-        
         /// <summary>
-        /// Test the property 'Images' 
+        /// Test the property 'Images'
         /// </summary>
         [Test]
         public void ImagesTest()
         {
-            // TODO: unit test for the property 'Images' 
+            // TODO: unit test for the property 'Images'
         }
-        
         /// <summary>
-        /// Test the property 'Version' 
+        /// Test the property 'Version'
         /// </summary>
         [Test]
         public void VersionTest()
         {
-            // TODO: unit test for the property 'Version' 
+            // TODO: unit test for the property 'Version'
         }
-        
         /// <summary>
-        /// Test the property 'RoutingStatus' 
+        /// Test the property 'RoutingStatus'
         /// </summary>
         [Test]
         public void RoutingStatusTest()
         {
-            // TODO: unit test for the property 'RoutingStatus' 
+            // TODO: unit test for the property 'RoutingStatus'
         }
-        
         /// <summary>
-        /// Test the property 'Presence' 
+        /// Test the property 'Presence'
         /// </summary>
         [Test]
         public void PresenceTest()
         {
-            // TODO: unit test for the property 'Presence' 
+            // TODO: unit test for the property 'Presence'
         }
-        
         /// <summary>
-        /// Test the property 'ConversationSummary' 
+        /// Test the property 'ConversationSummary'
         /// </summary>
         [Test]
         public void ConversationSummaryTest()
         {
-            // TODO: unit test for the property 'ConversationSummary' 
+            // TODO: unit test for the property 'ConversationSummary'
         }
-        
         /// <summary>
-        /// Test the property 'OutOfOffice' 
+        /// Test the property 'OutOfOffice'
         /// </summary>
         [Test]
         public void OutOfOfficeTest()
         {
-            // TODO: unit test for the property 'OutOfOffice' 
+            // TODO: unit test for the property 'OutOfOffice'
         }
-        
         /// <summary>
-        /// Test the property 'Geolocation' 
+        /// Test the property 'Geolocation'
         /// </summary>
         [Test]
         public void GeolocationTest()
         {
-            // TODO: unit test for the property 'Geolocation' 
+            // TODO: unit test for the property 'Geolocation'
         }
-        
         /// <summary>
-        /// Test the property 'Station' 
+        /// Test the property 'Station'
         /// </summary>
         [Test]
         public void StationTest()
         {
-            // TODO: unit test for the property 'Station' 
+            // TODO: unit test for the property 'Station'
         }
-        
         /// <summary>
-        /// Test the property 'Authorization' 
+        /// Test the property 'Authorization'
         /// </summary>
         [Test]
         public void AuthorizationTest()
         {
-            // TODO: unit test for the property 'Authorization' 
+            // TODO: unit test for the property 'Authorization'
         }
-        
         /// <summary>
-        /// Test the property 'SelfUri' 
+        /// Test the property 'SelfUri'
         /// </summary>
         [Test]
         public void SelfUriTest()
         {
-            // TODO: unit test for the property 'SelfUri' 
+            // TODO: unit test for the property 'SelfUri'
         }
-        
 
     }
 

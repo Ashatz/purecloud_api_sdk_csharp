@@ -17,9 +17,13 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class MediaParticipantRequest :  IEquatable<MediaParticipantRequest>
     { 
-    
+
+        /// <summary>
+        /// The state to update to set for this participant's communications.  Possible values are: 'connected' and 'disconnected'.
+        /// </summary>
+        /// <value>The state to update to set for this participant's communications.  Possible values are: 'connected' and 'disconnected'.</value>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum StateEnum {
+                public enum StateEnum {
             
             [EnumMember(Value = "ALERTING")]
             Alerting,
@@ -54,6 +58,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "NONE")]
             None
         }
+
         
         /// <summary>
         /// The state to update to set for this participant's communications.  Possible values are: 'connected' and 'disconnected'.
@@ -124,7 +129,7 @@ namespace ININ.PureCloudApi.Model
             }
             
         }
-        
+
     
         /// <summary>
         /// Wrap-up to assign to this participant.
@@ -183,11 +188,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Confined: ").Append(Confined).Append("\n");
             sb.Append("  Held: ").Append(Held).Append("\n");
             sb.Append("  WrapupSkipped: ").Append(WrapupSkipped).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -268,28 +272,20 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Wrapup != null)
                     hash = hash * 59 + this.Wrapup.GetHashCode();
-                
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
-                
                 if (this.Recording != null)
                     hash = hash * 59 + this.Recording.GetHashCode();
-                
                 if (this.Muted != null)
                     hash = hash * 59 + this.Muted.GetHashCode();
-                
                 if (this.Confined != null)
                     hash = hash * 59 + this.Confined.GetHashCode();
-                
                 if (this.Held != null)
                     hash = hash * 59 + this.Held.GetHashCode();
-                
                 if (this.WrapupSkipped != null)
                     hash = hash * 59 + this.WrapupSkipped.GetHashCode();
-                
                 return hash;
             }
         }

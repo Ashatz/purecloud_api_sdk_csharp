@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new TwitterExpressionBuffer();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of TwitterExpressionBuffer
@@ -50,16 +50,14 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<TwitterExpressionBuffer> (instance, "instance is a TwitterExpressionBuffer");
         }
 
-        
         /// <summary>
-        /// Test the property 'BufferContent' 
+        /// Test the property 'BufferContent'
         /// </summary>
         [Test]
         public void BufferContentTest()
         {
-            // TODO: unit test for the property 'BufferContent' 
+            // TODO: unit test for the property 'BufferContent'
         }
-        
 
     }
 

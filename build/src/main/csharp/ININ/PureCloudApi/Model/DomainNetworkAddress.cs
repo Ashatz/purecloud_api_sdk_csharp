@@ -42,7 +42,7 @@ namespace ININ.PureCloudApi.Model
             this.Family = Family;
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets Type
@@ -80,11 +80,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Address: ").Append(Address).Append("\n");
             sb.Append("  Persistent: ").Append(Persistent).Append("\n");
             sb.Append("  Family: ").Append(Family).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -150,19 +149,14 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
                 if (this.Address != null)
                     hash = hash * 59 + this.Address.GetHashCode();
-                
                 if (this.Persistent != null)
                     hash = hash * 59 + this.Persistent.GetHashCode();
-                
                 if (this.Family != null)
                     hash = hash * 59 + this.Family.GetHashCode();
-                
                 return hash;
             }
         }

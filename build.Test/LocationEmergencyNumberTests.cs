@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new LocationEmergencyNumber();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of LocationEmergencyNumber
@@ -50,34 +50,30 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<LocationEmergencyNumber> (instance, "instance is a LocationEmergencyNumber");
         }
 
-        
         /// <summary>
-        /// Test the property 'E164' 
+        /// Test the property 'E164'
         /// </summary>
         [Test]
         public void E164Test()
         {
-            // TODO: unit test for the property 'E164' 
+            // TODO: unit test for the property 'E164'
         }
-        
         /// <summary>
-        /// Test the property 'Number' 
+        /// Test the property 'Number'
         /// </summary>
         [Test]
         public void NumberTest()
         {
-            // TODO: unit test for the property 'Number' 
+            // TODO: unit test for the property 'Number'
         }
-        
         /// <summary>
-        /// Test the property 'Type' 
+        /// Test the property 'Type'
         /// </summary>
         [Test]
         public void TypeTest()
         {
-            // TODO: unit test for the property 'Type' 
+            // TODO: unit test for the property 'Type'
         }
-        
 
     }
 

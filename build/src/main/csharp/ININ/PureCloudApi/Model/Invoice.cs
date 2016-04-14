@@ -40,7 +40,7 @@ namespace ININ.PureCloudApi.Model
             this.Status = Status;
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -117,11 +117,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Balance: ").Append(Balance).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -212,34 +211,24 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.InvoiceNumber != null)
                     hash = hash * 59 + this.InvoiceNumber.GetHashCode();
-                
                 if (this.InvoiceDate != null)
                     hash = hash * 59 + this.InvoiceDate.GetHashCode();
-                
                 if (this.DueDate != null)
                     hash = hash * 59 + this.DueDate.GetHashCode();
-                
                 if (this.Amount != null)
                     hash = hash * 59 + this.Amount.GetHashCode();
-                
                 if (this.Balance != null)
                     hash = hash * 59 + this.Balance.GetHashCode();
-                
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 return hash;
             }
         }

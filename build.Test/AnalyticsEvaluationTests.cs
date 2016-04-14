@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new AnalyticsEvaluation();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of AnalyticsEvaluation
@@ -50,97 +50,86 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<AnalyticsEvaluation> (instance, "instance is a AnalyticsEvaluation");
         }
 
-        
         /// <summary>
-        /// Test the property 'EvaluationId' 
+        /// Test the property 'EvaluationId'
         /// </summary>
         [Test]
         public void EvaluationIdTest()
         {
-            // TODO: unit test for the property 'EvaluationId' 
+            // TODO: unit test for the property 'EvaluationId'
         }
-        
         /// <summary>
-        /// Test the property 'EvaluatorId' 
+        /// Test the property 'EvaluatorId'
         /// </summary>
         [Test]
         public void EvaluatorIdTest()
         {
-            // TODO: unit test for the property 'EvaluatorId' 
+            // TODO: unit test for the property 'EvaluatorId'
         }
-        
         /// <summary>
-        /// Test the property 'UserId' 
+        /// Test the property 'UserId'
         /// </summary>
         [Test]
         public void UserIdTest()
         {
-            // TODO: unit test for the property 'UserId' 
+            // TODO: unit test for the property 'UserId'
         }
-        
         /// <summary>
-        /// Test the property 'EventTime' 
+        /// Test the property 'EventTime'
         /// </summary>
         [Test]
         public void EventTimeTest()
         {
-            // TODO: unit test for the property 'EventTime' 
+            // TODO: unit test for the property 'EventTime'
         }
-        
         /// <summary>
-        /// Test the property 'QueueId' 
+        /// Test the property 'QueueId'
         /// </summary>
         [Test]
         public void QueueIdTest()
         {
-            // TODO: unit test for the property 'QueueId' 
+            // TODO: unit test for the property 'QueueId'
         }
-        
         /// <summary>
-        /// Test the property 'FormId' 
+        /// Test the property 'FormId'
         /// </summary>
         [Test]
         public void FormIdTest()
         {
-            // TODO: unit test for the property 'FormId' 
+            // TODO: unit test for the property 'FormId'
         }
-        
         /// <summary>
-        /// Test the property 'ContextId' 
+        /// Test the property 'ContextId'
         /// </summary>
         [Test]
         public void ContextIdTest()
         {
-            // TODO: unit test for the property 'ContextId' 
+            // TODO: unit test for the property 'ContextId'
         }
-        
         /// <summary>
-        /// Test the property 'FormName' 
+        /// Test the property 'FormName'
         /// </summary>
         [Test]
         public void FormNameTest()
         {
-            // TODO: unit test for the property 'FormName' 
+            // TODO: unit test for the property 'FormName'
         }
-        
         /// <summary>
-        /// Test the property 'GetoTotalScore' 
+        /// Test the property 'GetoTotalScore'
         /// </summary>
         [Test]
         public void GetoTotalScoreTest()
         {
-            // TODO: unit test for the property 'GetoTotalScore' 
+            // TODO: unit test for the property 'GetoTotalScore'
         }
-        
         /// <summary>
-        /// Test the property 'GetoTotalCriticalScore' 
+        /// Test the property 'GetoTotalCriticalScore'
         /// </summary>
         [Test]
         public void GetoTotalCriticalScoreTest()
         {
-            // TODO: unit test for the property 'GetoTotalCriticalScore' 
+            // TODO: unit test for the property 'GetoTotalCriticalScore'
         }
-        
 
     }
 

@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new FlowHistoryResultItem();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of FlowHistoryResultItem
@@ -50,34 +50,30 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<FlowHistoryResultItem> (instance, "instance is a FlowHistoryResultItem");
         }
 
-        
         /// <summary>
-        /// Test the property 'FlowInstance' 
+        /// Test the property 'FlowInstance'
         /// </summary>
         [Test]
         public void FlowInstanceTest()
         {
-            // TODO: unit test for the property 'FlowInstance' 
+            // TODO: unit test for the property 'FlowInstance'
         }
-        
         /// <summary>
-        /// Test the property 'AvailableActions' 
+        /// Test the property 'AvailableActions'
         /// </summary>
         [Test]
         public void AvailableActionsTest()
         {
-            // TODO: unit test for the property 'AvailableActions' 
+            // TODO: unit test for the property 'AvailableActions'
         }
-        
         /// <summary>
-        /// Test the property 'HistoryItems' 
+        /// Test the property 'HistoryItems'
         /// </summary>
         [Test]
         public void HistoryItemsTest()
         {
-            // TODO: unit test for the property 'HistoryItems' 
+            // TODO: unit test for the property 'HistoryItems'
         }
-        
 
     }
 

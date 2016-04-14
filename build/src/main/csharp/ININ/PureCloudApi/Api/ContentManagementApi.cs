@@ -1,5 +1,4 @@
 using System;
-using System.IO;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -9,14 +8,12 @@ using ININ.PureCloudApi.Model;
 
 namespace ININ.PureCloudApi.Api
 {
-    
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
     public interface IContentManagementApi
     {
         #region Synchronous Operations
-        
         /// <summary>
         /// Delete a document.
         /// </summary>
@@ -25,10 +22,10 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId">Document ID</param>
-        /// <param name="_override">Override any lock on the document</param>
+        /// <param name="_override">Override any lock on the document (optional)</param>
         /// <returns></returns>
         void DeleteDocumentsDocumentId (string documentId, bool? _override = null);
-  
+
         /// <summary>
         /// Delete a document.
         /// </summary>
@@ -37,10 +34,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId">Document ID</param>
-        /// <param name="_override">Override any lock on the document</param>
+        /// <param name="_override">Override any lock on the document (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteDocumentsDocumentIdWithHttpInfo (string documentId, bool? _override = null);
-        
         /// <summary>
         /// Deletes an existing share.
         /// </summary>
@@ -51,7 +47,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="shareId">Share ID</param>
         /// <returns></returns>
         void DeleteSharesShareId (string shareId);
-  
+
         /// <summary>
         /// Deletes an existing share.
         /// </summary>
@@ -62,7 +58,6 @@ namespace ININ.PureCloudApi.Api
         /// <param name="shareId">Share ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteSharesShareIdWithHttpInfo (string shareId);
-        
         /// <summary>
         /// Cancel the command for this status
         /// </summary>
@@ -73,7 +68,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="statusId">Status ID</param>
         /// <returns></returns>
         void DeleteStatusStatusId (string statusId);
-  
+
         /// <summary>
         /// Cancel the command for this status
         /// </summary>
@@ -84,7 +79,6 @@ namespace ININ.PureCloudApi.Api
         /// <param name="statusId">Status ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteStatusStatusIdWithHttpInfo (string statusId);
-        
         /// <summary>
         /// Delete a workspace
         /// </summary>
@@ -93,10 +87,10 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
-        /// <param name="moveChildrenToWorkspaceId">New location for objects in deleted workspace.</param>
+        /// <param name="moveChildrenToWorkspaceId">New location for objects in deleted workspace. (optional)</param>
         /// <returns></returns>
         void DeleteWorkspacesWorkspaceId (string workspaceId, string moveChildrenToWorkspaceId = null);
-  
+
         /// <summary>
         /// Delete a workspace
         /// </summary>
@@ -105,10 +99,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
-        /// <param name="moveChildrenToWorkspaceId">New location for objects in deleted workspace.</param>
+        /// <param name="moveChildrenToWorkspaceId">New location for objects in deleted workspace. (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteWorkspacesWorkspaceIdWithHttpInfo (string workspaceId, string moveChildrenToWorkspaceId = null);
-        
         /// <summary>
         /// Delete a member from a workspace
         /// </summary>
@@ -120,7 +113,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="memberId">Member ID</param>
         /// <returns></returns>
         void DeleteWorkspacesWorkspaceIdMembersMemberId (string workspaceId, string memberId);
-  
+
         /// <summary>
         /// Delete a member from a workspace
         /// </summary>
@@ -132,7 +125,6 @@ namespace ININ.PureCloudApi.Api
         /// <param name="memberId">Member ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteWorkspacesWorkspaceIdMembersMemberIdWithHttpInfo (string workspaceId, string memberId);
-        
         /// <summary>
         /// Delete workspace tag
         /// </summary>
@@ -144,7 +136,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="tagId">Tag ID</param>
         /// <returns></returns>
         void DeleteWorkspacesWorkspaceIdTagvaluesTagId (string workspaceId, string tagId);
-  
+
         /// <summary>
         /// Delete workspace tag
         /// </summary>
@@ -156,7 +148,6 @@ namespace ININ.PureCloudApi.Api
         /// <param name="tagId">Tag ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteWorkspacesWorkspaceIdTagvaluesTagIdWithHttpInfo (string workspaceId, string tagId);
-        
         /// <summary>
         /// Get a list of documents.
         /// </summary>
@@ -165,15 +156,15 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
-        /// <param name="name">Name</param>
-        /// <param name="expand">Expand some document fields</param>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="sortBy">name or dateCreated</param>
-        /// <param name="sortOrder">ascending or descending</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="expand">Expand some document fields (optional)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">name or dateCreated (optional)</param>
+        /// <param name="sortOrder">ascending or descending (optional, default to ascending)</param>
         /// <returns>DocumentEntityListing</returns>
         DocumentEntityListing GetDocuments (string workspaceId, string name = null, string expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null);
-  
+
         /// <summary>
         /// Get a list of documents.
         /// </summary>
@@ -182,15 +173,14 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
-        /// <param name="name">Name</param>
-        /// <param name="expand">Expand some document fields</param>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="sortBy">name or dateCreated</param>
-        /// <param name="sortOrder">ascending or descending</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="expand">Expand some document fields (optional)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">name or dateCreated (optional)</param>
+        /// <param name="sortOrder">ascending or descending (optional, default to ascending)</param>
         /// <returns>ApiResponse of DocumentEntityListing</returns>
         ApiResponse<DocumentEntityListing> GetDocumentsWithHttpInfo (string workspaceId, string name = null, string expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null);
-        
         /// <summary>
         /// Get a document.
         /// </summary>
@@ -199,10 +189,10 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId">Document ID</param>
-        /// <param name="expand">Expand some document fields</param>
+        /// <param name="expand">Expand some document fields (optional)</param>
         /// <returns>Document</returns>
         Document GetDocumentsDocumentId (string documentId, string expand = null);
-  
+
         /// <summary>
         /// Get a document.
         /// </summary>
@@ -211,10 +201,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId">Document ID</param>
-        /// <param name="expand">Expand some document fields</param>
+        /// <param name="expand">Expand some document fields (optional)</param>
         /// <returns>ApiResponse of Document</returns>
         ApiResponse<Document> GetDocumentsDocumentIdWithHttpInfo (string documentId, string expand = null);
-        
         /// <summary>
         /// Get a list of audits for a document.
         /// </summary>
@@ -223,15 +212,15 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId">Document ID</param>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="transactionFilter">Transaction filter</param>
-        /// <param name="level">level</param>
-        /// <param name="sortBy">Sort by</param>
-        /// <param name="sortOrder">Sort order</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="transactionFilter">Transaction filter (optional)</param>
+        /// <param name="level">level (optional, default to USER)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
         /// <returns>DocumentAuditEntityListing</returns>
         DocumentAuditEntityListing GetDocumentsDocumentIdAudits (string documentId, int? pageSize = null, int? pageNumber = null, string transactionFilter = null, string level = null, string sortBy = null, string sortOrder = null);
-  
+
         /// <summary>
         /// Get a list of audits for a document.
         /// </summary>
@@ -240,15 +229,14 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId">Document ID</param>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="transactionFilter">Transaction filter</param>
-        /// <param name="level">level</param>
-        /// <param name="sortBy">Sort by</param>
-        /// <param name="sortOrder">Sort order</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="transactionFilter">Transaction filter (optional)</param>
+        /// <param name="level">level (optional, default to USER)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
         /// <returns>ApiResponse of DocumentAuditEntityListing</returns>
         ApiResponse<DocumentAuditEntityListing> GetDocumentsDocumentIdAuditsWithHttpInfo (string documentId, int? pageSize = null, int? pageNumber = null, string transactionFilter = null, string level = null, string sortBy = null, string sortOrder = null);
-        
         /// <summary>
         /// Download a document.
         /// </summary>
@@ -257,11 +245,11 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId">Document ID</param>
-        /// <param name="disposition">Request how the content will be downloaded: attached as a file or inline. Default is attachment.</param>
-        /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType=audio/wav</param>
+        /// <param name="disposition">Request how the content will be downloaded: attached as a file or inline. Default is attachment. (optional)</param>
+        /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType&#x3D;audio/wav (optional)</param>
         /// <returns></returns>
         void GetDocumentsDocumentIdContent (string documentId, string disposition = null, string contentType = null);
-  
+
         /// <summary>
         /// Download a document.
         /// </summary>
@@ -270,11 +258,10 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId">Document ID</param>
-        /// <param name="disposition">Request how the content will be downloaded: attached as a file or inline. Default is attachment.</param>
-        /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType=audio/wav</param>
+        /// <param name="disposition">Request how the content will be downloaded: attached as a file or inline. Default is attachment. (optional)</param>
+        /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType&#x3D;audio/wav (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetDocumentsDocumentIdContentWithHttpInfo (string documentId, string disposition = null, string contentType = null);
-        
         /// <summary>
         /// Query content
         /// </summary>
@@ -283,14 +270,14 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queryPhrase">Phrase tokens are ANDed together over all searchable fields</param>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="sortBy">name or dateCreated</param>
-        /// <param name="sortOrder">ascending or descending</param>
-        /// <param name="expand">Expand some document fields</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">name or dateCreated (optional, default to name)</param>
+        /// <param name="sortOrder">ascending or descending (optional, default to ascending)</param>
+        /// <param name="expand">Expand some document fields (optional)</param>
         /// <returns>QueryResults</returns>
         QueryResults GetQuery (string queryPhrase, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string expand = null);
-  
+
         /// <summary>
         /// Query content
         /// </summary>
@@ -299,14 +286,13 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queryPhrase">Phrase tokens are ANDed together over all searchable fields</param>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="sortBy">name or dateCreated</param>
-        /// <param name="sortOrder">ascending or descending</param>
-        /// <param name="expand">Expand some document fields</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">name or dateCreated (optional, default to name)</param>
+        /// <param name="sortOrder">ascending or descending (optional, default to ascending)</param>
+        /// <param name="expand">Expand some document fields (optional)</param>
         /// <returns>ApiResponse of QueryResults</returns>
         ApiResponse<QueryResults> GetQueryWithHttpInfo (string queryPhrase, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string expand = null);
-        
         /// <summary>
         /// Get a List of Security Profiles
         /// </summary>
@@ -316,7 +302,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>SecurityProfileEntityListing</returns>
         SecurityProfileEntityListing GetSecurityprofiles ();
-  
+
         /// <summary>
         /// Get a List of Security Profiles
         /// </summary>
@@ -326,7 +312,6 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of SecurityProfileEntityListing</returns>
         ApiResponse<SecurityProfileEntityListing> GetSecurityprofilesWithHttpInfo ();
-        
         /// <summary>
         /// Get a Security Profile
         /// </summary>
@@ -337,7 +322,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="securityProfileId">Security Profile Id</param>
         /// <returns>SecurityProfile</returns>
         SecurityProfile GetSecurityprofilesSecurityprofileId (string securityProfileId);
-  
+
         /// <summary>
         /// Get a Security Profile
         /// </summary>
@@ -348,7 +333,6 @@ namespace ININ.PureCloudApi.Api
         /// <param name="securityProfileId">Security Profile Id</param>
         /// <returns>ApiResponse of SecurityProfile</returns>
         ApiResponse<SecurityProfile> GetSecurityprofilesSecurityprofileIdWithHttpInfo (string securityProfileId);
-        
         /// <summary>
         /// Get shared documents. Securely download a shared document.
         /// </summary>
@@ -357,13 +341,13 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sharedId">Shared ID</param>
-        /// <param name="redirect">Turn on or off redirect</param>
-        /// <param name="disposition">Request how the share content will be downloaded: attached as a file or inline. Default is attachment.</param>
-        /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType=audio/wav</param>
-        /// <param name="expand">Expand some document fields</param>
+        /// <param name="redirect">Turn on or off redirect (optional, default to true)</param>
+        /// <param name="disposition">Request how the share content will be downloaded: attached as a file or inline. Default is attachment. (optional, default to attachment)</param>
+        /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType&#x3D;audio/wav (optional)</param>
+        /// <param name="expand">Expand some document fields (optional)</param>
         /// <returns></returns>
         void GetSharedSharedId (string sharedId, bool? redirect = null, string disposition = null, string contentType = null, string expand = null);
-  
+
         /// <summary>
         /// Get shared documents. Securely download a shared document.
         /// </summary>
@@ -372,13 +356,12 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sharedId">Shared ID</param>
-        /// <param name="redirect">Turn on or off redirect</param>
-        /// <param name="disposition">Request how the share content will be downloaded: attached as a file or inline. Default is attachment.</param>
-        /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType=audio/wav</param>
-        /// <param name="expand">Expand some document fields</param>
+        /// <param name="redirect">Turn on or off redirect (optional, default to true)</param>
+        /// <param name="disposition">Request how the share content will be downloaded: attached as a file or inline. Default is attachment. (optional, default to attachment)</param>
+        /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType&#x3D;audio/wav (optional)</param>
+        /// <param name="expand">Expand some document fields (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetSharedSharedIdWithHttpInfo (string sharedId, bool? redirect = null, string disposition = null, string contentType = null, string expand = null);
-        
         /// <summary>
         /// Gets a list of shares.  You must specify at least one filter (e.g. entityId).
         /// </summary>
@@ -386,13 +369,13 @@ namespace ININ.PureCloudApi.Api
         /// Failing to specify a filter will return 400.
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="entityId">Filters the shares returned to only the entity specified by the value of this parameter.</param>
-        /// <param name="expand">Expand share fields</param>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
+        /// <param name="entityId">Filters the shares returned to only the entity specified by the value of this parameter. (optional)</param>
+        /// <param name="expand">Expand share fields (optional)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ShareEntityListing</returns>
         ShareEntityListing GetShares (string entityId = null, string expand = null, int? pageSize = null, int? pageNumber = null);
-  
+
         /// <summary>
         /// Gets a list of shares.  You must specify at least one filter (e.g. entityId).
         /// </summary>
@@ -400,13 +383,12 @@ namespace ININ.PureCloudApi.Api
         /// Failing to specify a filter will return 400.
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="entityId">Filters the shares returned to only the entity specified by the value of this parameter.</param>
-        /// <param name="expand">Expand share fields</param>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
+        /// <param name="entityId">Filters the shares returned to only the entity specified by the value of this parameter. (optional)</param>
+        /// <param name="expand">Expand share fields (optional)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of ShareEntityListing</returns>
         ApiResponse<ShareEntityListing> GetSharesWithHttpInfo (string entityId = null, string expand = null, int? pageSize = null, int? pageNumber = null);
-        
         /// <summary>
         /// Retrieve details about an existing share.
         /// </summary>
@@ -415,10 +397,10 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="shareId">Share ID</param>
-        /// <param name="expand">Expand share fields</param>
+        /// <param name="expand">Expand share fields (optional)</param>
         /// <returns>Share</returns>
         Share GetSharesShareId (string shareId, string expand = null);
-  
+
         /// <summary>
         /// Retrieve details about an existing share.
         /// </summary>
@@ -427,10 +409,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="shareId">Share ID</param>
-        /// <param name="expand">Expand share fields</param>
+        /// <param name="expand">Expand share fields (optional)</param>
         /// <returns>ApiResponse of Share</returns>
         ApiResponse<Share> GetSharesShareIdWithHttpInfo (string shareId, string expand = null);
-        
         /// <summary>
         /// Get a list of statuses for pending operations
         /// </summary>
@@ -438,11 +419,11 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>CommandStatusEntityListing</returns>
         CommandStatusEntityListing GetStatus (int? pageSize = null, int? pageNumber = null);
-  
+
         /// <summary>
         /// Get a list of statuses for pending operations
         /// </summary>
@@ -450,11 +431,10 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of CommandStatusEntityListing</returns>
         ApiResponse<CommandStatusEntityListing> GetStatusWithHttpInfo (int? pageSize = null, int? pageNumber = null);
-        
         /// <summary>
         /// Get a status.
         /// </summary>
@@ -465,7 +445,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="statusId">Status ID</param>
         /// <returns>CommandStatus</returns>
         CommandStatus GetStatusStatusId (string statusId);
-  
+
         /// <summary>
         /// Get a status.
         /// </summary>
@@ -476,7 +456,6 @@ namespace ININ.PureCloudApi.Api
         /// <param name="statusId">Status ID</param>
         /// <returns>ApiResponse of CommandStatus</returns>
         ApiResponse<CommandStatus> GetStatusStatusIdWithHttpInfo (string statusId);
-        
         /// <summary>
         /// Get a list of workspaces.
         /// </summary>
@@ -484,13 +463,13 @@ namespace ININ.PureCloudApi.Api
         /// Specifying &#39;content&#39; access will return all workspaces the user has document access to, while &#39;admin&#39; access will return all group workspaces the user has administrative rights to.
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="access">Requested access level</param>
-        /// <param name="expand">Expand some workspace fields</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="access">Requested access level (optional, default to document:viewmetadata)</param>
+        /// <param name="expand">Expand some workspace fields (optional)</param>
         /// <returns>WorkspaceEntityListing</returns>
         WorkspaceEntityListing GetWorkspaces (int? pageSize = null, int? pageNumber = null, string access = null, string expand = null);
-  
+
         /// <summary>
         /// Get a list of workspaces.
         /// </summary>
@@ -498,13 +477,12 @@ namespace ININ.PureCloudApi.Api
         /// Specifying &#39;content&#39; access will return all workspaces the user has document access to, while &#39;admin&#39; access will return all group workspaces the user has administrative rights to.
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="access">Requested access level</param>
-        /// <param name="expand">Expand some workspace fields</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="access">Requested access level (optional, default to document:viewmetadata)</param>
+        /// <param name="expand">Expand some workspace fields (optional)</param>
         /// <returns>ApiResponse of WorkspaceEntityListing</returns>
         ApiResponse<WorkspaceEntityListing> GetWorkspacesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string access = null, string expand = null);
-        
         /// <summary>
         /// Get a workspace.
         /// </summary>
@@ -513,10 +491,10 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
-        /// <param name="expand">Expand some workspace fields</param>
+        /// <param name="expand">Expand some workspace fields (optional)</param>
         /// <returns>Workspace</returns>
         Workspace GetWorkspacesWorkspaceId (string workspaceId, string expand = null);
-  
+
         /// <summary>
         /// Get a workspace.
         /// </summary>
@@ -525,10 +503,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
-        /// <param name="expand">Expand some workspace fields</param>
+        /// <param name="expand">Expand some workspace fields (optional)</param>
         /// <returns>ApiResponse of Workspace</returns>
         ApiResponse<Workspace> GetWorkspacesWorkspaceIdWithHttpInfo (string workspaceId, string expand = null);
-        
         /// <summary>
         /// Get a list workspace members
         /// </summary>
@@ -537,12 +514,12 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="expand">Expand workspace member fields</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand workspace member fields (optional)</param>
         /// <returns>WorkspaceMemberEntityListing</returns>
         WorkspaceMemberEntityListing GetWorkspacesWorkspaceIdMembers (string workspaceId, int? pageSize = null, int? pageNumber = null, string expand = null);
-  
+
         /// <summary>
         /// Get a list workspace members
         /// </summary>
@@ -551,12 +528,11 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="expand">Expand workspace member fields</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand workspace member fields (optional)</param>
         /// <returns>ApiResponse of WorkspaceMemberEntityListing</returns>
         ApiResponse<WorkspaceMemberEntityListing> GetWorkspacesWorkspaceIdMembersWithHttpInfo (string workspaceId, int? pageSize = null, int? pageNumber = null, string expand = null);
-        
         /// <summary>
         /// Get a workspace member
         /// </summary>
@@ -566,10 +542,10 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="memberId">Member ID</param>
-        /// <param name="expand">Expand workspace member fields</param>
+        /// <param name="expand">Expand workspace member fields (optional)</param>
         /// <returns>WorkspaceMember</returns>
         WorkspaceMember GetWorkspacesWorkspaceIdMembersMemberId (string workspaceId, string memberId, string expand = null);
-  
+
         /// <summary>
         /// Get a workspace member
         /// </summary>
@@ -579,10 +555,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="memberId">Member ID</param>
-        /// <param name="expand">Expand workspace member fields</param>
+        /// <param name="expand">Expand workspace member fields (optional)</param>
         /// <returns>ApiResponse of WorkspaceMember</returns>
         ApiResponse<WorkspaceMember> GetWorkspacesWorkspaceIdMembersMemberIdWithHttpInfo (string workspaceId, string memberId, string expand = null);
-        
         /// <summary>
         /// Get a list of workspace tags
         /// </summary>
@@ -591,13 +566,13 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
-        /// <param name="value">filter the list of tags returned</param>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="expand">Expand some document fields</param>
+        /// <param name="value">filter the list of tags returned (optional)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand some document fields (optional)</param>
         /// <returns>TagValueEntityListing</returns>
         TagValueEntityListing GetWorkspacesWorkspaceIdTagvalues (string workspaceId, string value = null, int? pageSize = null, int? pageNumber = null, string expand = null);
-  
+
         /// <summary>
         /// Get a list of workspace tags
         /// </summary>
@@ -606,13 +581,12 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
-        /// <param name="value">filter the list of tags returned</param>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="expand">Expand some document fields</param>
+        /// <param name="value">filter the list of tags returned (optional)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand some document fields (optional)</param>
         /// <returns>ApiResponse of TagValueEntityListing</returns>
         ApiResponse<TagValueEntityListing> GetWorkspacesWorkspaceIdTagvaluesWithHttpInfo (string workspaceId, string value = null, int? pageSize = null, int? pageNumber = null, string expand = null);
-        
         /// <summary>
         /// Get a workspace tag
         /// </summary>
@@ -622,10 +596,10 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="tagId">Tag ID</param>
-        /// <param name="expand">Expand some document fields</param>
+        /// <param name="expand">Expand some document fields (optional)</param>
         /// <returns>TagValue</returns>
         TagValue GetWorkspacesWorkspaceIdTagvaluesTagId (string workspaceId, string tagId, string expand = null);
-  
+
         /// <summary>
         /// Get a workspace tag
         /// </summary>
@@ -635,10 +609,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="tagId">Tag ID</param>
-        /// <param name="expand">Expand some document fields</param>
+        /// <param name="expand">Expand some document fields (optional)</param>
         /// <returns>ApiResponse of TagValue</returns>
         ApiResponse<TagValue> GetWorkspacesWorkspaceIdTagvaluesTagIdWithHttpInfo (string workspaceId, string tagId, string expand = null);
-        
         /// <summary>
         /// Query audits
         /// </summary>
@@ -649,7 +622,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">Allows for a filtered query returning facet information</param>
         /// <returns>QueryResults</returns>
         QueryResults PostAuditquery (ContentQueryRequest body);
-  
+
         /// <summary>
         /// Query audits
         /// </summary>
@@ -660,7 +633,6 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">Allows for a filtered query returning facet information</param>
         /// <returns>ApiResponse of QueryResults</returns>
         ApiResponse<QueryResults> PostAuditqueryWithHttpInfo (ContentQueryRequest body);
-        
         /// <summary>
         /// Add a document.
         /// </summary>
@@ -668,13 +640,13 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Document</param>
-        /// <param name="copySource">Copy a document within a workspace or to a new workspace. Provide a document ID as the copy source.</param>
-        /// <param name="moveSource">Move a document to a new workspace. Provide a document ID as the move source.</param>
-        /// <param name="_override">Override any lock on the source document</param>
+        /// <param name="body">Document (optional)</param>
+        /// <param name="copySource">Copy a document within a workspace or to a new workspace. Provide a document ID as the copy source. (optional)</param>
+        /// <param name="moveSource">Move a document to a new workspace. Provide a document ID as the move source. (optional)</param>
+        /// <param name="_override">Override any lock on the source document (optional)</param>
         /// <returns>Document</returns>
         Document PostDocuments (DocumentUpload body = null, string copySource = null, string moveSource = null, bool? _override = null);
-  
+
         /// <summary>
         /// Add a document.
         /// </summary>
@@ -682,13 +654,12 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Document</param>
-        /// <param name="copySource">Copy a document within a workspace or to a new workspace. Provide a document ID as the copy source.</param>
-        /// <param name="moveSource">Move a document to a new workspace. Provide a document ID as the move source.</param>
-        /// <param name="_override">Override any lock on the source document</param>
+        /// <param name="body">Document (optional)</param>
+        /// <param name="copySource">Copy a document within a workspace or to a new workspace. Provide a document ID as the copy source. (optional)</param>
+        /// <param name="moveSource">Move a document to a new workspace. Provide a document ID as the move source. (optional)</param>
+        /// <param name="_override">Override any lock on the source document (optional)</param>
         /// <returns>ApiResponse of Document</returns>
         ApiResponse<Document> PostDocumentsWithHttpInfo (DocumentUpload body = null, string copySource = null, string moveSource = null, bool? _override = null);
-        
         /// <summary>
         /// Update a document.
         /// </summary>
@@ -697,12 +668,12 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId">Document ID</param>
-        /// <param name="body">Document</param>
-        /// <param name="expand">Expand some document fields</param>
-        /// <param name="_override">Override any lock on the document</param>
+        /// <param name="body">Document (optional)</param>
+        /// <param name="expand">Expand some document fields (optional)</param>
+        /// <param name="_override">Override any lock on the document (optional)</param>
         /// <returns>Document</returns>
         Document PostDocumentsDocumentId (string documentId, DocumentUpdate body = null, string expand = null, bool? _override = null);
-  
+
         /// <summary>
         /// Update a document.
         /// </summary>
@@ -711,12 +682,11 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId">Document ID</param>
-        /// <param name="body">Document</param>
-        /// <param name="expand">Expand some document fields</param>
-        /// <param name="_override">Override any lock on the document</param>
+        /// <param name="body">Document (optional)</param>
+        /// <param name="expand">Expand some document fields (optional)</param>
+        /// <param name="_override">Override any lock on the document (optional)</param>
         /// <returns>ApiResponse of Document</returns>
         ApiResponse<Document> PostDocumentsDocumentIdWithHttpInfo (string documentId, DocumentUpdate body = null, string expand = null, bool? _override = null);
-        
         /// <summary>
         /// Replace the contents of a document.
         /// </summary>
@@ -725,11 +695,11 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId">Document ID</param>
-        /// <param name="body">Replace Request</param>
-        /// <param name="_override">Override any lock on the document</param>
+        /// <param name="body">Replace Request (optional)</param>
+        /// <param name="_override">Override any lock on the document (optional)</param>
         /// <returns>ReplaceResponse</returns>
         ReplaceResponse PostDocumentsDocumentIdContent (string documentId, ReplaceRequest body = null, bool? _override = null);
-  
+
         /// <summary>
         /// Replace the contents of a document.
         /// </summary>
@@ -738,11 +708,10 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId">Document ID</param>
-        /// <param name="body">Replace Request</param>
-        /// <param name="_override">Override any lock on the document</param>
+        /// <param name="body">Replace Request (optional)</param>
+        /// <param name="_override">Override any lock on the document (optional)</param>
         /// <returns>ApiResponse of ReplaceResponse</returns>
         ApiResponse<ReplaceResponse> PostDocumentsDocumentIdContentWithHttpInfo (string documentId, ReplaceRequest body = null, bool? _override = null);
-        
         /// <summary>
         /// Query content
         /// </summary>
@@ -751,10 +720,10 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Allows for a filtered query returning facet information</param>
-        /// <param name="expand">Expand some document fields</param>
+        /// <param name="expand">Expand some document fields (optional)</param>
         /// <returns>QueryResults</returns>
         QueryResults PostQuery (QueryRequest body, string expand = null);
-  
+
         /// <summary>
         /// Query content
         /// </summary>
@@ -763,10 +732,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Allows for a filtered query returning facet information</param>
-        /// <param name="expand">Expand some document fields</param>
+        /// <param name="expand">Expand some document fields (optional)</param>
         /// <returns>ApiResponse of QueryResults</returns>
         ApiResponse<QueryResults> PostQueryWithHttpInfo (QueryRequest body, string expand = null);
-        
         /// <summary>
         /// Creates a new share or updates an existing share if the entity has already been shared
         /// </summary>
@@ -774,10 +742,10 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">CreateShareRequest - entity id and type and a single member or list of members are required</param>
+        /// <param name="body">CreateShareRequest - entity id and type and a single member or list of members are required (optional)</param>
         /// <returns>CreateShareResponse</returns>
         CreateShareResponse PostShares (CreateShareRequest body = null);
-  
+
         /// <summary>
         /// Creates a new share or updates an existing share if the entity has already been shared
         /// </summary>
@@ -785,10 +753,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">CreateShareRequest - entity id and type and a single member or list of members are required</param>
+        /// <param name="body">CreateShareRequest - entity id and type and a single member or list of members are required (optional)</param>
         /// <returns>ApiResponse of CreateShareResponse</returns>
         ApiResponse<CreateShareResponse> PostSharesWithHttpInfo (CreateShareRequest body = null);
-        
         /// <summary>
         /// Create a group workspace
         /// </summary>
@@ -796,10 +763,10 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Workspace</param>
+        /// <param name="body">Workspace (optional)</param>
         /// <returns>Workspace</returns>
         Workspace PostWorkspaces (WorkspaceCreate body = null);
-  
+
         /// <summary>
         /// Create a group workspace
         /// </summary>
@@ -807,10 +774,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Workspace</param>
+        /// <param name="body">Workspace (optional)</param>
         /// <returns>ApiResponse of Workspace</returns>
         ApiResponse<Workspace> PostWorkspacesWithHttpInfo (WorkspaceCreate body = null);
-        
         /// <summary>
         /// Create a workspace tag
         /// </summary>
@@ -819,10 +785,10 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
-        /// <param name="body">tag</param>
+        /// <param name="body">tag (optional)</param>
         /// <returns>TagValue</returns>
         TagValue PostWorkspacesWorkspaceIdTagvalues (string workspaceId, TagValue body = null);
-  
+
         /// <summary>
         /// Create a workspace tag
         /// </summary>
@@ -831,10 +797,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
-        /// <param name="body">tag</param>
+        /// <param name="body">tag (optional)</param>
         /// <returns>ApiResponse of TagValue</returns>
         ApiResponse<TagValue> PostWorkspacesWorkspaceIdTagvaluesWithHttpInfo (string workspaceId, TagValue body = null);
-        
         /// <summary>
         /// Perform a prefix query on tags in the workspace
         /// </summary>
@@ -843,11 +808,11 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
-        /// <param name="body">query</param>
-        /// <param name="expand">Expand some document fields</param>
+        /// <param name="body">query (optional)</param>
+        /// <param name="expand">Expand some document fields (optional)</param>
         /// <returns>TagValueEntityListing</returns>
         TagValueEntityListing PostWorkspacesWorkspaceIdTagvaluesQuery (string workspaceId, TagQueryRequest body = null, string expand = null);
-  
+
         /// <summary>
         /// Perform a prefix query on tags in the workspace
         /// </summary>
@@ -856,11 +821,10 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
-        /// <param name="body">query</param>
-        /// <param name="expand">Expand some document fields</param>
+        /// <param name="body">query (optional)</param>
+        /// <param name="expand">Expand some document fields (optional)</param>
         /// <returns>ApiResponse of TagValueEntityListing</returns>
         ApiResponse<TagValueEntityListing> PostWorkspacesWorkspaceIdTagvaluesQueryWithHttpInfo (string workspaceId, TagQueryRequest body = null, string expand = null);
-        
         /// <summary>
         /// Update a workspace
         /// </summary>
@@ -869,10 +833,10 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
-        /// <param name="body">Workspace</param>
+        /// <param name="body">Workspace (optional)</param>
         /// <returns>Workspace</returns>
         Workspace PutWorkspacesWorkspaceId (string workspaceId, Workspace body = null);
-  
+
         /// <summary>
         /// Update a workspace
         /// </summary>
@@ -881,10 +845,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
-        /// <param name="body">Workspace</param>
+        /// <param name="body">Workspace (optional)</param>
         /// <returns>ApiResponse of Workspace</returns>
         ApiResponse<Workspace> PutWorkspacesWorkspaceIdWithHttpInfo (string workspaceId, Workspace body = null);
-        
         /// <summary>
         /// Add a member to a workspace
         /// </summary>
@@ -894,10 +857,10 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="memberId">Member ID</param>
-        /// <param name="body">Workspace</param>
+        /// <param name="body">Workspace (optional)</param>
         /// <returns>WorkspaceMember</returns>
         WorkspaceMember PutWorkspacesWorkspaceIdMembersMemberId (string workspaceId, string memberId, WorkspaceMember body = null);
-  
+
         /// <summary>
         /// Add a member to a workspace
         /// </summary>
@@ -907,10 +870,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="memberId">Member ID</param>
-        /// <param name="body">Workspace</param>
+        /// <param name="body">Workspace (optional)</param>
         /// <returns>ApiResponse of WorkspaceMember</returns>
         ApiResponse<WorkspaceMember> PutWorkspacesWorkspaceIdMembersMemberIdWithHttpInfo (string workspaceId, string memberId, WorkspaceMember body = null);
-        
         /// <summary>
         /// Update a workspace tag. Will update all documents with the new tag value.
         /// </summary>
@@ -920,10 +882,10 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="tagId">Tag ID</param>
-        /// <param name="body">Workspace</param>
+        /// <param name="body">Workspace (optional)</param>
         /// <returns>TagValue</returns>
         TagValue PutWorkspacesWorkspaceIdTagvaluesTagId (string workspaceId, string tagId, TagValue body = null);
-  
+
         /// <summary>
         /// Update a workspace tag. Will update all documents with the new tag value.
         /// </summary>
@@ -933,14 +895,11 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="tagId">Tag ID</param>
-        /// <param name="body">Workspace</param>
+        /// <param name="body">Workspace (optional)</param>
         /// <returns>ApiResponse of TagValue</returns>
         ApiResponse<TagValue> PutWorkspacesWorkspaceIdTagvaluesTagIdWithHttpInfo (string workspaceId, string tagId, TagValue body = null);
-        
         #endregion Synchronous Operations
-        
         #region Asynchronous Operations
-        
         /// <summary>
         /// Delete a document.
         /// </summary>
@@ -949,7 +908,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId">Document ID</param>
-        /// <param name="_override">Override any lock on the document</param>
+        /// <param name="_override">Override any lock on the document (optional)</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task DeleteDocumentsDocumentIdAsync (string documentId, bool? _override = null);
 
@@ -961,10 +920,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId">Document ID</param>
-        /// <param name="_override">Override any lock on the document</param>
+        /// <param name="_override">Override any lock on the document (optional)</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteDocumentsDocumentIdAsyncWithHttpInfo (string documentId, bool? _override = null);
-        
         /// <summary>
         /// Deletes an existing share.
         /// </summary>
@@ -986,7 +944,6 @@ namespace ININ.PureCloudApi.Api
         /// <param name="shareId">Share ID</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteSharesShareIdAsyncWithHttpInfo (string shareId);
-        
         /// <summary>
         /// Cancel the command for this status
         /// </summary>
@@ -1008,7 +965,6 @@ namespace ININ.PureCloudApi.Api
         /// <param name="statusId">Status ID</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteStatusStatusIdAsyncWithHttpInfo (string statusId);
-        
         /// <summary>
         /// Delete a workspace
         /// </summary>
@@ -1017,7 +973,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
-        /// <param name="moveChildrenToWorkspaceId">New location for objects in deleted workspace.</param>
+        /// <param name="moveChildrenToWorkspaceId">New location for objects in deleted workspace. (optional)</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task DeleteWorkspacesWorkspaceIdAsync (string workspaceId, string moveChildrenToWorkspaceId = null);
 
@@ -1029,10 +985,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
-        /// <param name="moveChildrenToWorkspaceId">New location for objects in deleted workspace.</param>
+        /// <param name="moveChildrenToWorkspaceId">New location for objects in deleted workspace. (optional)</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkspacesWorkspaceIdAsyncWithHttpInfo (string workspaceId, string moveChildrenToWorkspaceId = null);
-        
         /// <summary>
         /// Delete a member from a workspace
         /// </summary>
@@ -1056,7 +1011,6 @@ namespace ININ.PureCloudApi.Api
         /// <param name="memberId">Member ID</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkspacesWorkspaceIdMembersMemberIdAsyncWithHttpInfo (string workspaceId, string memberId);
-        
         /// <summary>
         /// Delete workspace tag
         /// </summary>
@@ -1080,7 +1034,6 @@ namespace ININ.PureCloudApi.Api
         /// <param name="tagId">Tag ID</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkspacesWorkspaceIdTagvaluesTagIdAsyncWithHttpInfo (string workspaceId, string tagId);
-        
         /// <summary>
         /// Get a list of documents.
         /// </summary>
@@ -1089,12 +1042,12 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
-        /// <param name="name">Name</param>
-        /// <param name="expand">Expand some document fields</param>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="sortBy">name or dateCreated</param>
-        /// <param name="sortOrder">ascending or descending</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="expand">Expand some document fields (optional)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">name or dateCreated (optional)</param>
+        /// <param name="sortOrder">ascending or descending (optional, default to ascending)</param>
         /// <returns>Task of DocumentEntityListing</returns>
         System.Threading.Tasks.Task<DocumentEntityListing> GetDocumentsAsync (string workspaceId, string name = null, string expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null);
 
@@ -1106,15 +1059,14 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
-        /// <param name="name">Name</param>
-        /// <param name="expand">Expand some document fields</param>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="sortBy">name or dateCreated</param>
-        /// <param name="sortOrder">ascending or descending</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="expand">Expand some document fields (optional)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">name or dateCreated (optional)</param>
+        /// <param name="sortOrder">ascending or descending (optional, default to ascending)</param>
         /// <returns>Task of ApiResponse (DocumentEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<DocumentEntityListing>> GetDocumentsAsyncWithHttpInfo (string workspaceId, string name = null, string expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null);
-        
         /// <summary>
         /// Get a document.
         /// </summary>
@@ -1123,7 +1075,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId">Document ID</param>
-        /// <param name="expand">Expand some document fields</param>
+        /// <param name="expand">Expand some document fields (optional)</param>
         /// <returns>Task of Document</returns>
         System.Threading.Tasks.Task<Document> GetDocumentsDocumentIdAsync (string documentId, string expand = null);
 
@@ -1135,10 +1087,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId">Document ID</param>
-        /// <param name="expand">Expand some document fields</param>
+        /// <param name="expand">Expand some document fields (optional)</param>
         /// <returns>Task of ApiResponse (Document)</returns>
         System.Threading.Tasks.Task<ApiResponse<Document>> GetDocumentsDocumentIdAsyncWithHttpInfo (string documentId, string expand = null);
-        
         /// <summary>
         /// Get a list of audits for a document.
         /// </summary>
@@ -1147,12 +1098,12 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId">Document ID</param>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="transactionFilter">Transaction filter</param>
-        /// <param name="level">level</param>
-        /// <param name="sortBy">Sort by</param>
-        /// <param name="sortOrder">Sort order</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="transactionFilter">Transaction filter (optional)</param>
+        /// <param name="level">level (optional, default to USER)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
         /// <returns>Task of DocumentAuditEntityListing</returns>
         System.Threading.Tasks.Task<DocumentAuditEntityListing> GetDocumentsDocumentIdAuditsAsync (string documentId, int? pageSize = null, int? pageNumber = null, string transactionFilter = null, string level = null, string sortBy = null, string sortOrder = null);
 
@@ -1164,15 +1115,14 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId">Document ID</param>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="transactionFilter">Transaction filter</param>
-        /// <param name="level">level</param>
-        /// <param name="sortBy">Sort by</param>
-        /// <param name="sortOrder">Sort order</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="transactionFilter">Transaction filter (optional)</param>
+        /// <param name="level">level (optional, default to USER)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
         /// <returns>Task of ApiResponse (DocumentAuditEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<DocumentAuditEntityListing>> GetDocumentsDocumentIdAuditsAsyncWithHttpInfo (string documentId, int? pageSize = null, int? pageNumber = null, string transactionFilter = null, string level = null, string sortBy = null, string sortOrder = null);
-        
         /// <summary>
         /// Download a document.
         /// </summary>
@@ -1181,8 +1131,8 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId">Document ID</param>
-        /// <param name="disposition">Request how the content will be downloaded: attached as a file or inline. Default is attachment.</param>
-        /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType=audio/wav</param>
+        /// <param name="disposition">Request how the content will be downloaded: attached as a file or inline. Default is attachment. (optional)</param>
+        /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType&#x3D;audio/wav (optional)</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task GetDocumentsDocumentIdContentAsync (string documentId, string disposition = null, string contentType = null);
 
@@ -1194,11 +1144,10 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId">Document ID</param>
-        /// <param name="disposition">Request how the content will be downloaded: attached as a file or inline. Default is attachment.</param>
-        /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType=audio/wav</param>
+        /// <param name="disposition">Request how the content will be downloaded: attached as a file or inline. Default is attachment. (optional)</param>
+        /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType&#x3D;audio/wav (optional)</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> GetDocumentsDocumentIdContentAsyncWithHttpInfo (string documentId, string disposition = null, string contentType = null);
-        
         /// <summary>
         /// Query content
         /// </summary>
@@ -1207,11 +1156,11 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queryPhrase">Phrase tokens are ANDed together over all searchable fields</param>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="sortBy">name or dateCreated</param>
-        /// <param name="sortOrder">ascending or descending</param>
-        /// <param name="expand">Expand some document fields</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">name or dateCreated (optional, default to name)</param>
+        /// <param name="sortOrder">ascending or descending (optional, default to ascending)</param>
+        /// <param name="expand">Expand some document fields (optional)</param>
         /// <returns>Task of QueryResults</returns>
         System.Threading.Tasks.Task<QueryResults> GetQueryAsync (string queryPhrase, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string expand = null);
 
@@ -1223,14 +1172,13 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queryPhrase">Phrase tokens are ANDed together over all searchable fields</param>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="sortBy">name or dateCreated</param>
-        /// <param name="sortOrder">ascending or descending</param>
-        /// <param name="expand">Expand some document fields</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">name or dateCreated (optional, default to name)</param>
+        /// <param name="sortOrder">ascending or descending (optional, default to ascending)</param>
+        /// <param name="expand">Expand some document fields (optional)</param>
         /// <returns>Task of ApiResponse (QueryResults)</returns>
         System.Threading.Tasks.Task<ApiResponse<QueryResults>> GetQueryAsyncWithHttpInfo (string queryPhrase, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string expand = null);
-        
         /// <summary>
         /// Get a List of Security Profiles
         /// </summary>
@@ -1250,7 +1198,6 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (SecurityProfileEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<SecurityProfileEntityListing>> GetSecurityprofilesAsyncWithHttpInfo ();
-        
         /// <summary>
         /// Get a Security Profile
         /// </summary>
@@ -1272,7 +1219,6 @@ namespace ININ.PureCloudApi.Api
         /// <param name="securityProfileId">Security Profile Id</param>
         /// <returns>Task of ApiResponse (SecurityProfile)</returns>
         System.Threading.Tasks.Task<ApiResponse<SecurityProfile>> GetSecurityprofilesSecurityprofileIdAsyncWithHttpInfo (string securityProfileId);
-        
         /// <summary>
         /// Get shared documents. Securely download a shared document.
         /// </summary>
@@ -1281,10 +1227,10 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sharedId">Shared ID</param>
-        /// <param name="redirect">Turn on or off redirect</param>
-        /// <param name="disposition">Request how the share content will be downloaded: attached as a file or inline. Default is attachment.</param>
-        /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType=audio/wav</param>
-        /// <param name="expand">Expand some document fields</param>
+        /// <param name="redirect">Turn on or off redirect (optional, default to true)</param>
+        /// <param name="disposition">Request how the share content will be downloaded: attached as a file or inline. Default is attachment. (optional, default to attachment)</param>
+        /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType&#x3D;audio/wav (optional)</param>
+        /// <param name="expand">Expand some document fields (optional)</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task GetSharedSharedIdAsync (string sharedId, bool? redirect = null, string disposition = null, string contentType = null, string expand = null);
 
@@ -1296,13 +1242,12 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sharedId">Shared ID</param>
-        /// <param name="redirect">Turn on or off redirect</param>
-        /// <param name="disposition">Request how the share content will be downloaded: attached as a file or inline. Default is attachment.</param>
-        /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType=audio/wav</param>
-        /// <param name="expand">Expand some document fields</param>
+        /// <param name="redirect">Turn on or off redirect (optional, default to true)</param>
+        /// <param name="disposition">Request how the share content will be downloaded: attached as a file or inline. Default is attachment. (optional, default to attachment)</param>
+        /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType&#x3D;audio/wav (optional)</param>
+        /// <param name="expand">Expand some document fields (optional)</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> GetSharedSharedIdAsyncWithHttpInfo (string sharedId, bool? redirect = null, string disposition = null, string contentType = null, string expand = null);
-        
         /// <summary>
         /// Gets a list of shares.  You must specify at least one filter (e.g. entityId).
         /// </summary>
@@ -1310,10 +1255,10 @@ namespace ININ.PureCloudApi.Api
         /// Failing to specify a filter will return 400.
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="entityId">Filters the shares returned to only the entity specified by the value of this parameter.</param>
-        /// <param name="expand">Expand share fields</param>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
+        /// <param name="entityId">Filters the shares returned to only the entity specified by the value of this parameter. (optional)</param>
+        /// <param name="expand">Expand share fields (optional)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ShareEntityListing</returns>
         System.Threading.Tasks.Task<ShareEntityListing> GetSharesAsync (string entityId = null, string expand = null, int? pageSize = null, int? pageNumber = null);
 
@@ -1324,13 +1269,12 @@ namespace ININ.PureCloudApi.Api
         /// Failing to specify a filter will return 400.
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="entityId">Filters the shares returned to only the entity specified by the value of this parameter.</param>
-        /// <param name="expand">Expand share fields</param>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
+        /// <param name="entityId">Filters the shares returned to only the entity specified by the value of this parameter. (optional)</param>
+        /// <param name="expand">Expand share fields (optional)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (ShareEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<ShareEntityListing>> GetSharesAsyncWithHttpInfo (string entityId = null, string expand = null, int? pageSize = null, int? pageNumber = null);
-        
         /// <summary>
         /// Retrieve details about an existing share.
         /// </summary>
@@ -1339,7 +1283,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="shareId">Share ID</param>
-        /// <param name="expand">Expand share fields</param>
+        /// <param name="expand">Expand share fields (optional)</param>
         /// <returns>Task of Share</returns>
         System.Threading.Tasks.Task<Share> GetSharesShareIdAsync (string shareId, string expand = null);
 
@@ -1351,10 +1295,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="shareId">Share ID</param>
-        /// <param name="expand">Expand share fields</param>
+        /// <param name="expand">Expand share fields (optional)</param>
         /// <returns>Task of ApiResponse (Share)</returns>
         System.Threading.Tasks.Task<ApiResponse<Share>> GetSharesShareIdAsyncWithHttpInfo (string shareId, string expand = null);
-        
         /// <summary>
         /// Get a list of statuses for pending operations
         /// </summary>
@@ -1362,8 +1305,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of CommandStatusEntityListing</returns>
         System.Threading.Tasks.Task<CommandStatusEntityListing> GetStatusAsync (int? pageSize = null, int? pageNumber = null);
 
@@ -1374,11 +1317,10 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (CommandStatusEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<CommandStatusEntityListing>> GetStatusAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null);
-        
         /// <summary>
         /// Get a status.
         /// </summary>
@@ -1400,7 +1342,6 @@ namespace ININ.PureCloudApi.Api
         /// <param name="statusId">Status ID</param>
         /// <returns>Task of ApiResponse (CommandStatus)</returns>
         System.Threading.Tasks.Task<ApiResponse<CommandStatus>> GetStatusStatusIdAsyncWithHttpInfo (string statusId);
-        
         /// <summary>
         /// Get a list of workspaces.
         /// </summary>
@@ -1408,10 +1349,10 @@ namespace ININ.PureCloudApi.Api
         /// Specifying &#39;content&#39; access will return all workspaces the user has document access to, while &#39;admin&#39; access will return all group workspaces the user has administrative rights to.
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="access">Requested access level</param>
-        /// <param name="expand">Expand some workspace fields</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="access">Requested access level (optional, default to document:viewmetadata)</param>
+        /// <param name="expand">Expand some workspace fields (optional)</param>
         /// <returns>Task of WorkspaceEntityListing</returns>
         System.Threading.Tasks.Task<WorkspaceEntityListing> GetWorkspacesAsync (int? pageSize = null, int? pageNumber = null, string access = null, string expand = null);
 
@@ -1422,13 +1363,12 @@ namespace ININ.PureCloudApi.Api
         /// Specifying &#39;content&#39; access will return all workspaces the user has document access to, while &#39;admin&#39; access will return all group workspaces the user has administrative rights to.
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="access">Requested access level</param>
-        /// <param name="expand">Expand some workspace fields</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="access">Requested access level (optional, default to document:viewmetadata)</param>
+        /// <param name="expand">Expand some workspace fields (optional)</param>
         /// <returns>Task of ApiResponse (WorkspaceEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<WorkspaceEntityListing>> GetWorkspacesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string access = null, string expand = null);
-        
         /// <summary>
         /// Get a workspace.
         /// </summary>
@@ -1437,7 +1377,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
-        /// <param name="expand">Expand some workspace fields</param>
+        /// <param name="expand">Expand some workspace fields (optional)</param>
         /// <returns>Task of Workspace</returns>
         System.Threading.Tasks.Task<Workspace> GetWorkspacesWorkspaceIdAsync (string workspaceId, string expand = null);
 
@@ -1449,10 +1389,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
-        /// <param name="expand">Expand some workspace fields</param>
+        /// <param name="expand">Expand some workspace fields (optional)</param>
         /// <returns>Task of ApiResponse (Workspace)</returns>
         System.Threading.Tasks.Task<ApiResponse<Workspace>> GetWorkspacesWorkspaceIdAsyncWithHttpInfo (string workspaceId, string expand = null);
-        
         /// <summary>
         /// Get a list workspace members
         /// </summary>
@@ -1461,9 +1400,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="expand">Expand workspace member fields</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand workspace member fields (optional)</param>
         /// <returns>Task of WorkspaceMemberEntityListing</returns>
         System.Threading.Tasks.Task<WorkspaceMemberEntityListing> GetWorkspacesWorkspaceIdMembersAsync (string workspaceId, int? pageSize = null, int? pageNumber = null, string expand = null);
 
@@ -1475,12 +1414,11 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="expand">Expand workspace member fields</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand workspace member fields (optional)</param>
         /// <returns>Task of ApiResponse (WorkspaceMemberEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<WorkspaceMemberEntityListing>> GetWorkspacesWorkspaceIdMembersAsyncWithHttpInfo (string workspaceId, int? pageSize = null, int? pageNumber = null, string expand = null);
-        
         /// <summary>
         /// Get a workspace member
         /// </summary>
@@ -1490,7 +1428,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="memberId">Member ID</param>
-        /// <param name="expand">Expand workspace member fields</param>
+        /// <param name="expand">Expand workspace member fields (optional)</param>
         /// <returns>Task of WorkspaceMember</returns>
         System.Threading.Tasks.Task<WorkspaceMember> GetWorkspacesWorkspaceIdMembersMemberIdAsync (string workspaceId, string memberId, string expand = null);
 
@@ -1503,10 +1441,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="memberId">Member ID</param>
-        /// <param name="expand">Expand workspace member fields</param>
+        /// <param name="expand">Expand workspace member fields (optional)</param>
         /// <returns>Task of ApiResponse (WorkspaceMember)</returns>
         System.Threading.Tasks.Task<ApiResponse<WorkspaceMember>> GetWorkspacesWorkspaceIdMembersMemberIdAsyncWithHttpInfo (string workspaceId, string memberId, string expand = null);
-        
         /// <summary>
         /// Get a list of workspace tags
         /// </summary>
@@ -1515,10 +1452,10 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
-        /// <param name="value">filter the list of tags returned</param>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="expand">Expand some document fields</param>
+        /// <param name="value">filter the list of tags returned (optional)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand some document fields (optional)</param>
         /// <returns>Task of TagValueEntityListing</returns>
         System.Threading.Tasks.Task<TagValueEntityListing> GetWorkspacesWorkspaceIdTagvaluesAsync (string workspaceId, string value = null, int? pageSize = null, int? pageNumber = null, string expand = null);
 
@@ -1530,13 +1467,12 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
-        /// <param name="value">filter the list of tags returned</param>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="expand">Expand some document fields</param>
+        /// <param name="value">filter the list of tags returned (optional)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand some document fields (optional)</param>
         /// <returns>Task of ApiResponse (TagValueEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<TagValueEntityListing>> GetWorkspacesWorkspaceIdTagvaluesAsyncWithHttpInfo (string workspaceId, string value = null, int? pageSize = null, int? pageNumber = null, string expand = null);
-        
         /// <summary>
         /// Get a workspace tag
         /// </summary>
@@ -1546,7 +1482,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="tagId">Tag ID</param>
-        /// <param name="expand">Expand some document fields</param>
+        /// <param name="expand">Expand some document fields (optional)</param>
         /// <returns>Task of TagValue</returns>
         System.Threading.Tasks.Task<TagValue> GetWorkspacesWorkspaceIdTagvaluesTagIdAsync (string workspaceId, string tagId, string expand = null);
 
@@ -1559,10 +1495,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="tagId">Tag ID</param>
-        /// <param name="expand">Expand some document fields</param>
+        /// <param name="expand">Expand some document fields (optional)</param>
         /// <returns>Task of ApiResponse (TagValue)</returns>
         System.Threading.Tasks.Task<ApiResponse<TagValue>> GetWorkspacesWorkspaceIdTagvaluesTagIdAsyncWithHttpInfo (string workspaceId, string tagId, string expand = null);
-        
         /// <summary>
         /// Query audits
         /// </summary>
@@ -1584,7 +1519,6 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">Allows for a filtered query returning facet information</param>
         /// <returns>Task of ApiResponse (QueryResults)</returns>
         System.Threading.Tasks.Task<ApiResponse<QueryResults>> PostAuditqueryAsyncWithHttpInfo (ContentQueryRequest body);
-        
         /// <summary>
         /// Add a document.
         /// </summary>
@@ -1592,10 +1526,10 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Document</param>
-        /// <param name="copySource">Copy a document within a workspace or to a new workspace. Provide a document ID as the copy source.</param>
-        /// <param name="moveSource">Move a document to a new workspace. Provide a document ID as the move source.</param>
-        /// <param name="_override">Override any lock on the source document</param>
+        /// <param name="body">Document (optional)</param>
+        /// <param name="copySource">Copy a document within a workspace or to a new workspace. Provide a document ID as the copy source. (optional)</param>
+        /// <param name="moveSource">Move a document to a new workspace. Provide a document ID as the move source. (optional)</param>
+        /// <param name="_override">Override any lock on the source document (optional)</param>
         /// <returns>Task of Document</returns>
         System.Threading.Tasks.Task<Document> PostDocumentsAsync (DocumentUpload body = null, string copySource = null, string moveSource = null, bool? _override = null);
 
@@ -1606,13 +1540,12 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Document</param>
-        /// <param name="copySource">Copy a document within a workspace or to a new workspace. Provide a document ID as the copy source.</param>
-        /// <param name="moveSource">Move a document to a new workspace. Provide a document ID as the move source.</param>
-        /// <param name="_override">Override any lock on the source document</param>
+        /// <param name="body">Document (optional)</param>
+        /// <param name="copySource">Copy a document within a workspace or to a new workspace. Provide a document ID as the copy source. (optional)</param>
+        /// <param name="moveSource">Move a document to a new workspace. Provide a document ID as the move source. (optional)</param>
+        /// <param name="_override">Override any lock on the source document (optional)</param>
         /// <returns>Task of ApiResponse (Document)</returns>
         System.Threading.Tasks.Task<ApiResponse<Document>> PostDocumentsAsyncWithHttpInfo (DocumentUpload body = null, string copySource = null, string moveSource = null, bool? _override = null);
-        
         /// <summary>
         /// Update a document.
         /// </summary>
@@ -1621,9 +1554,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId">Document ID</param>
-        /// <param name="body">Document</param>
-        /// <param name="expand">Expand some document fields</param>
-        /// <param name="_override">Override any lock on the document</param>
+        /// <param name="body">Document (optional)</param>
+        /// <param name="expand">Expand some document fields (optional)</param>
+        /// <param name="_override">Override any lock on the document (optional)</param>
         /// <returns>Task of Document</returns>
         System.Threading.Tasks.Task<Document> PostDocumentsDocumentIdAsync (string documentId, DocumentUpdate body = null, string expand = null, bool? _override = null);
 
@@ -1635,12 +1568,11 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId">Document ID</param>
-        /// <param name="body">Document</param>
-        /// <param name="expand">Expand some document fields</param>
-        /// <param name="_override">Override any lock on the document</param>
+        /// <param name="body">Document (optional)</param>
+        /// <param name="expand">Expand some document fields (optional)</param>
+        /// <param name="_override">Override any lock on the document (optional)</param>
         /// <returns>Task of ApiResponse (Document)</returns>
         System.Threading.Tasks.Task<ApiResponse<Document>> PostDocumentsDocumentIdAsyncWithHttpInfo (string documentId, DocumentUpdate body = null, string expand = null, bool? _override = null);
-        
         /// <summary>
         /// Replace the contents of a document.
         /// </summary>
@@ -1649,8 +1581,8 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId">Document ID</param>
-        /// <param name="body">Replace Request</param>
-        /// <param name="_override">Override any lock on the document</param>
+        /// <param name="body">Replace Request (optional)</param>
+        /// <param name="_override">Override any lock on the document (optional)</param>
         /// <returns>Task of ReplaceResponse</returns>
         System.Threading.Tasks.Task<ReplaceResponse> PostDocumentsDocumentIdContentAsync (string documentId, ReplaceRequest body = null, bool? _override = null);
 
@@ -1662,11 +1594,10 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId">Document ID</param>
-        /// <param name="body">Replace Request</param>
-        /// <param name="_override">Override any lock on the document</param>
+        /// <param name="body">Replace Request (optional)</param>
+        /// <param name="_override">Override any lock on the document (optional)</param>
         /// <returns>Task of ApiResponse (ReplaceResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<ReplaceResponse>> PostDocumentsDocumentIdContentAsyncWithHttpInfo (string documentId, ReplaceRequest body = null, bool? _override = null);
-        
         /// <summary>
         /// Query content
         /// </summary>
@@ -1675,7 +1606,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Allows for a filtered query returning facet information</param>
-        /// <param name="expand">Expand some document fields</param>
+        /// <param name="expand">Expand some document fields (optional)</param>
         /// <returns>Task of QueryResults</returns>
         System.Threading.Tasks.Task<QueryResults> PostQueryAsync (QueryRequest body, string expand = null);
 
@@ -1687,10 +1618,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Allows for a filtered query returning facet information</param>
-        /// <param name="expand">Expand some document fields</param>
+        /// <param name="expand">Expand some document fields (optional)</param>
         /// <returns>Task of ApiResponse (QueryResults)</returns>
         System.Threading.Tasks.Task<ApiResponse<QueryResults>> PostQueryAsyncWithHttpInfo (QueryRequest body, string expand = null);
-        
         /// <summary>
         /// Creates a new share or updates an existing share if the entity has already been shared
         /// </summary>
@@ -1698,7 +1628,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">CreateShareRequest - entity id and type and a single member or list of members are required</param>
+        /// <param name="body">CreateShareRequest - entity id and type and a single member or list of members are required (optional)</param>
         /// <returns>Task of CreateShareResponse</returns>
         System.Threading.Tasks.Task<CreateShareResponse> PostSharesAsync (CreateShareRequest body = null);
 
@@ -1709,10 +1639,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">CreateShareRequest - entity id and type and a single member or list of members are required</param>
+        /// <param name="body">CreateShareRequest - entity id and type and a single member or list of members are required (optional)</param>
         /// <returns>Task of ApiResponse (CreateShareResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<CreateShareResponse>> PostSharesAsyncWithHttpInfo (CreateShareRequest body = null);
-        
         /// <summary>
         /// Create a group workspace
         /// </summary>
@@ -1720,7 +1649,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Workspace</param>
+        /// <param name="body">Workspace (optional)</param>
         /// <returns>Task of Workspace</returns>
         System.Threading.Tasks.Task<Workspace> PostWorkspacesAsync (WorkspaceCreate body = null);
 
@@ -1731,10 +1660,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Workspace</param>
+        /// <param name="body">Workspace (optional)</param>
         /// <returns>Task of ApiResponse (Workspace)</returns>
         System.Threading.Tasks.Task<ApiResponse<Workspace>> PostWorkspacesAsyncWithHttpInfo (WorkspaceCreate body = null);
-        
         /// <summary>
         /// Create a workspace tag
         /// </summary>
@@ -1743,7 +1671,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
-        /// <param name="body">tag</param>
+        /// <param name="body">tag (optional)</param>
         /// <returns>Task of TagValue</returns>
         System.Threading.Tasks.Task<TagValue> PostWorkspacesWorkspaceIdTagvaluesAsync (string workspaceId, TagValue body = null);
 
@@ -1755,10 +1683,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
-        /// <param name="body">tag</param>
+        /// <param name="body">tag (optional)</param>
         /// <returns>Task of ApiResponse (TagValue)</returns>
         System.Threading.Tasks.Task<ApiResponse<TagValue>> PostWorkspacesWorkspaceIdTagvaluesAsyncWithHttpInfo (string workspaceId, TagValue body = null);
-        
         /// <summary>
         /// Perform a prefix query on tags in the workspace
         /// </summary>
@@ -1767,8 +1694,8 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
-        /// <param name="body">query</param>
-        /// <param name="expand">Expand some document fields</param>
+        /// <param name="body">query (optional)</param>
+        /// <param name="expand">Expand some document fields (optional)</param>
         /// <returns>Task of TagValueEntityListing</returns>
         System.Threading.Tasks.Task<TagValueEntityListing> PostWorkspacesWorkspaceIdTagvaluesQueryAsync (string workspaceId, TagQueryRequest body = null, string expand = null);
 
@@ -1780,11 +1707,10 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
-        /// <param name="body">query</param>
-        /// <param name="expand">Expand some document fields</param>
+        /// <param name="body">query (optional)</param>
+        /// <param name="expand">Expand some document fields (optional)</param>
         /// <returns>Task of ApiResponse (TagValueEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<TagValueEntityListing>> PostWorkspacesWorkspaceIdTagvaluesQueryAsyncWithHttpInfo (string workspaceId, TagQueryRequest body = null, string expand = null);
-        
         /// <summary>
         /// Update a workspace
         /// </summary>
@@ -1793,7 +1719,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
-        /// <param name="body">Workspace</param>
+        /// <param name="body">Workspace (optional)</param>
         /// <returns>Task of Workspace</returns>
         System.Threading.Tasks.Task<Workspace> PutWorkspacesWorkspaceIdAsync (string workspaceId, Workspace body = null);
 
@@ -1805,10 +1731,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
-        /// <param name="body">Workspace</param>
+        /// <param name="body">Workspace (optional)</param>
         /// <returns>Task of ApiResponse (Workspace)</returns>
         System.Threading.Tasks.Task<ApiResponse<Workspace>> PutWorkspacesWorkspaceIdAsyncWithHttpInfo (string workspaceId, Workspace body = null);
-        
         /// <summary>
         /// Add a member to a workspace
         /// </summary>
@@ -1818,7 +1743,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="memberId">Member ID</param>
-        /// <param name="body">Workspace</param>
+        /// <param name="body">Workspace (optional)</param>
         /// <returns>Task of WorkspaceMember</returns>
         System.Threading.Tasks.Task<WorkspaceMember> PutWorkspacesWorkspaceIdMembersMemberIdAsync (string workspaceId, string memberId, WorkspaceMember body = null);
 
@@ -1831,10 +1756,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="memberId">Member ID</param>
-        /// <param name="body">Workspace</param>
+        /// <param name="body">Workspace (optional)</param>
         /// <returns>Task of ApiResponse (WorkspaceMember)</returns>
         System.Threading.Tasks.Task<ApiResponse<WorkspaceMember>> PutWorkspacesWorkspaceIdMembersMemberIdAsyncWithHttpInfo (string workspaceId, string memberId, WorkspaceMember body = null);
-        
         /// <summary>
         /// Update a workspace tag. Will update all documents with the new tag value.
         /// </summary>
@@ -1844,7 +1768,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="tagId">Tag ID</param>
-        /// <param name="body">Workspace</param>
+        /// <param name="body">Workspace (optional)</param>
         /// <returns>Task of TagValue</returns>
         System.Threading.Tasks.Task<TagValue> PutWorkspacesWorkspaceIdTagvaluesTagIdAsync (string workspaceId, string tagId, TagValue body = null);
 
@@ -1857,14 +1781,12 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="tagId">Tag ID</param>
-        /// <param name="body">Workspace</param>
+        /// <param name="body">Workspace (optional)</param>
         /// <returns>Task of ApiResponse (TagValue)</returns>
         System.Threading.Tasks.Task<ApiResponse<TagValue>> PutWorkspacesWorkspaceIdTagvaluesTagIdAsyncWithHttpInfo (string workspaceId, string tagId, TagValue body = null);
-        
         #endregion Asynchronous Operations
-        
     }
-  
+
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
@@ -1877,8 +1799,14 @@ namespace ININ.PureCloudApi.Api
         public ContentManagementApi(String basePath)
         {
             this.Configuration = new Configuration(new ApiClient(basePath));
+
+            // ensure API client has configuration ready
+            if (Configuration.ApiClient.Configuration == null)
+            {
+                this.Configuration.ApiClient.Configuration = this.Configuration;
+            }
         }
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ContentManagementApi"/> class
         /// using Configuration object
@@ -1888,9 +1816,15 @@ namespace ININ.PureCloudApi.Api
         public ContentManagementApi(Configuration configuration = null)
         {
             if (configuration == null) // use the default one in Configuration
-                this.Configuration = Configuration.Default; 
+                this.Configuration = Configuration.Default;
             else
                 this.Configuration = configuration;
+
+            // ensure API client has configuration ready
+            if (Configuration.ApiClient.Configuration == null)
+            {
+                this.Configuration.ApiClient.Configuration = this.Configuration;
+            }
         }
 
         /// <summary>
@@ -1911,7 +1845,7 @@ namespace ININ.PureCloudApi.Api
         {
             // do nothing
         }
-    
+
         /// <summary>
         /// Gets or sets the configuration object
         /// </summary>
@@ -1939,14 +1873,13 @@ namespace ININ.PureCloudApi.Api
         {
             this.Configuration.AddDefaultHeader(key, value);
         }
-   
-        
+
         /// <summary>
         /// Delete a document. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentId">Document ID</param> 
-        /// <param name="_override">Override any lock on the document</param> 
+        /// <param name="documentId">Document ID</param>
+        /// <param name="_override">Override any lock on the document (optional)</param>
         /// <returns></returns>
         public void DeleteDocumentsDocumentId (string documentId, bool? _override = null)
         {
@@ -1957,19 +1890,16 @@ namespace ININ.PureCloudApi.Api
         /// Delete a document. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentId">Document ID</param> 
-        /// <param name="_override">Override any lock on the document</param> 
+        /// <param name="documentId">Document ID</param>
+        /// <param name="_override">Override any lock on the document (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteDocumentsDocumentIdWithHttpInfo (string documentId, bool? _override = null)
         {
-            
             // verify the required parameter 'documentId' is set
             if (documentId == null)
                 throw new ApiException(400, "Missing required parameter 'documentId' when calling ContentManagementApi->DeleteDocumentsDocumentId");
-            
-    
+
             var localVarPath = "/api/v2/contentmanagement/documents/{documentId}";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1995,47 +1925,39 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (documentId != null) localVarPathParams.Add("documentId", Configuration.ApiClient.ParameterToString(documentId)); // path parameter
-            
             if (_override != null) localVarQueryParams.Add("override", Configuration.ApiClient.ParameterToString(_override)); // query parameter
-            
-            
-            
-            
 
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-    
+
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
                 Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteDocumentsDocumentId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteDocumentsDocumentId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
+
             
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
         }
 
-        
         /// <summary>
         /// Delete a document. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId">Document ID</param>
-        /// <param name="_override">Override any lock on the document</param>
+        /// <param name="_override">Override any lock on the document (optional)</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task DeleteDocumentsDocumentIdAsync (string documentId, bool? _override = null)
         {
@@ -2048,16 +1970,15 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId">Document ID</param>
-        /// <param name="_override">Override any lock on the document</param>
+        /// <param name="_override">Override any lock on the document (optional)</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteDocumentsDocumentIdAsyncWithHttpInfo (string documentId, bool? _override = null)
         {
             // verify the required parameter 'documentId' is set
-            if (documentId == null) throw new ApiException(400, "Missing required parameter 'documentId' when calling DeleteDocumentsDocumentId");
-            
-    
+            if (documentId == null)
+                throw new ApiException(400, "Missing required parameter 'documentId' when calling ContentManagementApi->DeleteDocumentsDocumentId");
+
             var localVarPath = "/api/v2/contentmanagement/documents/{documentId}";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2083,30 +2004,22 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (documentId != null) localVarPathParams.Add("documentId", Configuration.ApiClient.ParameterToString(documentId)); // path parameter
-            
             if (_override != null) localVarQueryParams.Add("override", Configuration.ApiClient.ParameterToString(_override)); // query parameter
-            
-            
-            
-            
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteDocumentsDocumentId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
@@ -2117,12 +2030,12 @@ namespace ININ.PureCloudApi.Api
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
         }
-        
+
         /// <summary>
         /// Deletes an existing share. This revokes sharing rights specified in the share record
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="shareId">Share ID</param> 
+        /// <param name="shareId">Share ID</param>
         /// <returns></returns>
         public void DeleteSharesShareId (string shareId)
         {
@@ -2133,18 +2046,15 @@ namespace ININ.PureCloudApi.Api
         /// Deletes an existing share. This revokes sharing rights specified in the share record
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="shareId">Share ID</param> 
+        /// <param name="shareId">Share ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteSharesShareIdWithHttpInfo (string shareId)
         {
-            
             // verify the required parameter 'shareId' is set
             if (shareId == null)
                 throw new ApiException(400, "Missing required parameter 'shareId' when calling ContentManagementApi->DeleteSharesShareId");
-            
-    
+
             var localVarPath = "/api/v2/contentmanagement/shares/{shareId}";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2170,40 +2080,32 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (shareId != null) localVarPathParams.Add("shareId", Configuration.ApiClient.ParameterToString(shareId)); // path parameter
-            
-            
-            
-            
-            
 
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-    
+
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
                 Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteSharesShareId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteSharesShareId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
+
             
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
         }
 
-        
         /// <summary>
         /// Deletes an existing share. This revokes sharing rights specified in the share record
         /// </summary>
@@ -2225,11 +2127,10 @@ namespace ININ.PureCloudApi.Api
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteSharesShareIdAsyncWithHttpInfo (string shareId)
         {
             // verify the required parameter 'shareId' is set
-            if (shareId == null) throw new ApiException(400, "Missing required parameter 'shareId' when calling DeleteSharesShareId");
-            
-    
+            if (shareId == null)
+                throw new ApiException(400, "Missing required parameter 'shareId' when calling ContentManagementApi->DeleteSharesShareId");
+
             var localVarPath = "/api/v2/contentmanagement/shares/{shareId}";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2255,29 +2156,21 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (shareId != null) localVarPathParams.Add("shareId", Configuration.ApiClient.ParameterToString(shareId)); // path parameter
-            
-            
-            
-            
-            
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteSharesShareId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
@@ -2288,12 +2181,12 @@ namespace ININ.PureCloudApi.Api
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
         }
-        
+
         /// <summary>
         /// Cancel the command for this status 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="statusId">Status ID</param> 
+        /// <param name="statusId">Status ID</param>
         /// <returns></returns>
         public void DeleteStatusStatusId (string statusId)
         {
@@ -2304,18 +2197,15 @@ namespace ININ.PureCloudApi.Api
         /// Cancel the command for this status 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="statusId">Status ID</param> 
+        /// <param name="statusId">Status ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteStatusStatusIdWithHttpInfo (string statusId)
         {
-            
             // verify the required parameter 'statusId' is set
             if (statusId == null)
                 throw new ApiException(400, "Missing required parameter 'statusId' when calling ContentManagementApi->DeleteStatusStatusId");
-            
-    
+
             var localVarPath = "/api/v2/contentmanagement/status/{statusId}";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2341,40 +2231,32 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (statusId != null) localVarPathParams.Add("statusId", Configuration.ApiClient.ParameterToString(statusId)); // path parameter
-            
-            
-            
-            
-            
 
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-    
+
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
                 Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteStatusStatusId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteStatusStatusId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
+
             
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
         }
 
-        
         /// <summary>
         /// Cancel the command for this status 
         /// </summary>
@@ -2396,11 +2278,10 @@ namespace ININ.PureCloudApi.Api
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteStatusStatusIdAsyncWithHttpInfo (string statusId)
         {
             // verify the required parameter 'statusId' is set
-            if (statusId == null) throw new ApiException(400, "Missing required parameter 'statusId' when calling DeleteStatusStatusId");
-            
-    
+            if (statusId == null)
+                throw new ApiException(400, "Missing required parameter 'statusId' when calling ContentManagementApi->DeleteStatusStatusId");
+
             var localVarPath = "/api/v2/contentmanagement/status/{statusId}";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2426,29 +2307,21 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (statusId != null) localVarPathParams.Add("statusId", Configuration.ApiClient.ParameterToString(statusId)); // path parameter
-            
-            
-            
-            
-            
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteStatusStatusId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
@@ -2459,13 +2332,13 @@ namespace ININ.PureCloudApi.Api
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
         }
-        
+
         /// <summary>
         /// Delete a workspace 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="workspaceId">Workspace ID</param> 
-        /// <param name="moveChildrenToWorkspaceId">New location for objects in deleted workspace.</param> 
+        /// <param name="workspaceId">Workspace ID</param>
+        /// <param name="moveChildrenToWorkspaceId">New location for objects in deleted workspace. (optional)</param>
         /// <returns></returns>
         public void DeleteWorkspacesWorkspaceId (string workspaceId, string moveChildrenToWorkspaceId = null)
         {
@@ -2476,19 +2349,16 @@ namespace ININ.PureCloudApi.Api
         /// Delete a workspace 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="workspaceId">Workspace ID</param> 
-        /// <param name="moveChildrenToWorkspaceId">New location for objects in deleted workspace.</param> 
+        /// <param name="workspaceId">Workspace ID</param>
+        /// <param name="moveChildrenToWorkspaceId">New location for objects in deleted workspace. (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteWorkspacesWorkspaceIdWithHttpInfo (string workspaceId, string moveChildrenToWorkspaceId = null)
         {
-            
             // verify the required parameter 'workspaceId' is set
             if (workspaceId == null)
                 throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->DeleteWorkspacesWorkspaceId");
-            
-    
+
             var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2514,47 +2384,39 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (workspaceId != null) localVarPathParams.Add("workspaceId", Configuration.ApiClient.ParameterToString(workspaceId)); // path parameter
-            
             if (moveChildrenToWorkspaceId != null) localVarQueryParams.Add("moveChildrenToWorkspaceId", Configuration.ApiClient.ParameterToString(moveChildrenToWorkspaceId)); // query parameter
-            
-            
-            
-            
 
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-    
+
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
                 Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteWorkspacesWorkspaceId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteWorkspacesWorkspaceId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
+
             
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
         }
 
-        
         /// <summary>
         /// Delete a workspace 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
-        /// <param name="moveChildrenToWorkspaceId">New location for objects in deleted workspace.</param>
+        /// <param name="moveChildrenToWorkspaceId">New location for objects in deleted workspace. (optional)</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task DeleteWorkspacesWorkspaceIdAsync (string workspaceId, string moveChildrenToWorkspaceId = null)
         {
@@ -2567,16 +2429,15 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
-        /// <param name="moveChildrenToWorkspaceId">New location for objects in deleted workspace.</param>
+        /// <param name="moveChildrenToWorkspaceId">New location for objects in deleted workspace. (optional)</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkspacesWorkspaceIdAsyncWithHttpInfo (string workspaceId, string moveChildrenToWorkspaceId = null)
         {
             // verify the required parameter 'workspaceId' is set
-            if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling DeleteWorkspacesWorkspaceId");
-            
-    
+            if (workspaceId == null)
+                throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->DeleteWorkspacesWorkspaceId");
+
             var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2602,30 +2463,22 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (workspaceId != null) localVarPathParams.Add("workspaceId", Configuration.ApiClient.ParameterToString(workspaceId)); // path parameter
-            
             if (moveChildrenToWorkspaceId != null) localVarQueryParams.Add("moveChildrenToWorkspaceId", Configuration.ApiClient.ParameterToString(moveChildrenToWorkspaceId)); // query parameter
-            
-            
-            
-            
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteWorkspacesWorkspaceId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
@@ -2636,13 +2489,13 @@ namespace ININ.PureCloudApi.Api
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
         }
-        
+
         /// <summary>
         /// Delete a member from a workspace 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="workspaceId">Workspace ID</param> 
-        /// <param name="memberId">Member ID</param> 
+        /// <param name="workspaceId">Workspace ID</param>
+        /// <param name="memberId">Member ID</param>
         /// <returns></returns>
         public void DeleteWorkspacesWorkspaceIdMembersMemberId (string workspaceId, string memberId)
         {
@@ -2653,23 +2506,19 @@ namespace ININ.PureCloudApi.Api
         /// Delete a member from a workspace 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="workspaceId">Workspace ID</param> 
-        /// <param name="memberId">Member ID</param> 
+        /// <param name="workspaceId">Workspace ID</param>
+        /// <param name="memberId">Member ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteWorkspacesWorkspaceIdMembersMemberIdWithHttpInfo (string workspaceId, string memberId)
         {
-            
             // verify the required parameter 'workspaceId' is set
             if (workspaceId == null)
                 throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->DeleteWorkspacesWorkspaceIdMembersMemberId");
-            
             // verify the required parameter 'memberId' is set
             if (memberId == null)
                 throw new ApiException(400, "Missing required parameter 'memberId' when calling ContentManagementApi->DeleteWorkspacesWorkspaceIdMembersMemberId");
-            
-    
+
             var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}/members/{memberId}";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2696,40 +2545,32 @@ namespace ININ.PureCloudApi.Api
             localVarPathParams.Add("format", "json");
             if (workspaceId != null) localVarPathParams.Add("workspaceId", Configuration.ApiClient.ParameterToString(workspaceId)); // path parameter
             if (memberId != null) localVarPathParams.Add("memberId", Configuration.ApiClient.ParameterToString(memberId)); // path parameter
-            
-            
-            
-            
-            
 
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-    
+
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
                 Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteWorkspacesWorkspaceIdMembersMemberId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteWorkspacesWorkspaceIdMembersMemberId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
+
             
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
         }
 
-        
         /// <summary>
         /// Delete a member from a workspace 
         /// </summary>
@@ -2753,13 +2594,13 @@ namespace ININ.PureCloudApi.Api
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkspacesWorkspaceIdMembersMemberIdAsyncWithHttpInfo (string workspaceId, string memberId)
         {
             // verify the required parameter 'workspaceId' is set
-            if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling DeleteWorkspacesWorkspaceIdMembersMemberId");
+            if (workspaceId == null)
+                throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->DeleteWorkspacesWorkspaceIdMembersMemberId");
             // verify the required parameter 'memberId' is set
-            if (memberId == null) throw new ApiException(400, "Missing required parameter 'memberId' when calling DeleteWorkspacesWorkspaceIdMembersMemberId");
-            
-    
+            if (memberId == null)
+                throw new ApiException(400, "Missing required parameter 'memberId' when calling ContentManagementApi->DeleteWorkspacesWorkspaceIdMembersMemberId");
+
             var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}/members/{memberId}";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2786,29 +2627,21 @@ namespace ININ.PureCloudApi.Api
             localVarPathParams.Add("format", "json");
             if (workspaceId != null) localVarPathParams.Add("workspaceId", Configuration.ApiClient.ParameterToString(workspaceId)); // path parameter
             if (memberId != null) localVarPathParams.Add("memberId", Configuration.ApiClient.ParameterToString(memberId)); // path parameter
-            
-            
-            
-            
-            
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteWorkspacesWorkspaceIdMembersMemberId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
@@ -2819,13 +2652,13 @@ namespace ININ.PureCloudApi.Api
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
         }
-        
+
         /// <summary>
         /// Delete workspace tag Delete a tag from a workspace. Will remove this tag from all documents.
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="workspaceId">Workspace ID</param> 
-        /// <param name="tagId">Tag ID</param> 
+        /// <param name="workspaceId">Workspace ID</param>
+        /// <param name="tagId">Tag ID</param>
         /// <returns></returns>
         public void DeleteWorkspacesWorkspaceIdTagvaluesTagId (string workspaceId, string tagId)
         {
@@ -2836,23 +2669,19 @@ namespace ININ.PureCloudApi.Api
         /// Delete workspace tag Delete a tag from a workspace. Will remove this tag from all documents.
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="workspaceId">Workspace ID</param> 
-        /// <param name="tagId">Tag ID</param> 
+        /// <param name="workspaceId">Workspace ID</param>
+        /// <param name="tagId">Tag ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteWorkspacesWorkspaceIdTagvaluesTagIdWithHttpInfo (string workspaceId, string tagId)
         {
-            
             // verify the required parameter 'workspaceId' is set
             if (workspaceId == null)
                 throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->DeleteWorkspacesWorkspaceIdTagvaluesTagId");
-            
             // verify the required parameter 'tagId' is set
             if (tagId == null)
                 throw new ApiException(400, "Missing required parameter 'tagId' when calling ContentManagementApi->DeleteWorkspacesWorkspaceIdTagvaluesTagId");
-            
-    
+
             var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues/{tagId}";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2879,40 +2708,32 @@ namespace ININ.PureCloudApi.Api
             localVarPathParams.Add("format", "json");
             if (workspaceId != null) localVarPathParams.Add("workspaceId", Configuration.ApiClient.ParameterToString(workspaceId)); // path parameter
             if (tagId != null) localVarPathParams.Add("tagId", Configuration.ApiClient.ParameterToString(tagId)); // path parameter
-            
-            
-            
-            
-            
 
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-    
+
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
                 Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteWorkspacesWorkspaceIdTagvaluesTagId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteWorkspacesWorkspaceIdTagvaluesTagId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
+
             
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
         }
 
-        
         /// <summary>
         /// Delete workspace tag Delete a tag from a workspace. Will remove this tag from all documents.
         /// </summary>
@@ -2936,13 +2757,13 @@ namespace ININ.PureCloudApi.Api
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkspacesWorkspaceIdTagvaluesTagIdAsyncWithHttpInfo (string workspaceId, string tagId)
         {
             // verify the required parameter 'workspaceId' is set
-            if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling DeleteWorkspacesWorkspaceIdTagvaluesTagId");
+            if (workspaceId == null)
+                throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->DeleteWorkspacesWorkspaceIdTagvaluesTagId");
             // verify the required parameter 'tagId' is set
-            if (tagId == null) throw new ApiException(400, "Missing required parameter 'tagId' when calling DeleteWorkspacesWorkspaceIdTagvaluesTagId");
-            
-    
+            if (tagId == null)
+                throw new ApiException(400, "Missing required parameter 'tagId' when calling ContentManagementApi->DeleteWorkspacesWorkspaceIdTagvaluesTagId");
+
             var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues/{tagId}";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2969,29 +2790,21 @@ namespace ININ.PureCloudApi.Api
             localVarPathParams.Add("format", "json");
             if (workspaceId != null) localVarPathParams.Add("workspaceId", Configuration.ApiClient.ParameterToString(workspaceId)); // path parameter
             if (tagId != null) localVarPathParams.Add("tagId", Configuration.ApiClient.ParameterToString(tagId)); // path parameter
-            
-            
-            
-            
-            
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteWorkspacesWorkspaceIdTagvaluesTagId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
@@ -3002,18 +2815,18 @@ namespace ININ.PureCloudApi.Api
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
         }
-        
+
         /// <summary>
         /// Get a list of documents. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="workspaceId">Workspace ID</param> 
-        /// <param name="name">Name</param> 
-        /// <param name="expand">Expand some document fields</param> 
-        /// <param name="pageSize">Page size</param> 
-        /// <param name="pageNumber">Page number</param> 
-        /// <param name="sortBy">name or dateCreated</param> 
-        /// <param name="sortOrder">ascending or descending</param> 
+        /// <param name="workspaceId">Workspace ID</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="expand">Expand some document fields (optional)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">name or dateCreated (optional)</param>
+        /// <param name="sortOrder">ascending or descending (optional, default to ascending)</param>
         /// <returns>DocumentEntityListing</returns>
         public DocumentEntityListing GetDocuments (string workspaceId, string name = null, string expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
         {
@@ -3025,24 +2838,21 @@ namespace ININ.PureCloudApi.Api
         /// Get a list of documents. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="workspaceId">Workspace ID</param> 
-        /// <param name="name">Name</param> 
-        /// <param name="expand">Expand some document fields</param> 
-        /// <param name="pageSize">Page size</param> 
-        /// <param name="pageNumber">Page number</param> 
-        /// <param name="sortBy">name or dateCreated</param> 
-        /// <param name="sortOrder">ascending or descending</param> 
+        /// <param name="workspaceId">Workspace ID</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="expand">Expand some document fields (optional)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">name or dateCreated (optional)</param>
+        /// <param name="sortOrder">ascending or descending (optional, default to ascending)</param>
         /// <returns>ApiResponse of DocumentEntityListing</returns>
         public ApiResponse< DocumentEntityListing > GetDocumentsWithHttpInfo (string workspaceId, string name = null, string expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
         {
-            
             // verify the required parameter 'workspaceId' is set
             if (workspaceId == null)
                 throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->GetDocuments");
-            
-    
+
             var localVarPath = "/api/v2/contentmanagement/documents";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -3067,7 +2877,6 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            
             if (workspaceId != null) localVarQueryParams.Add("workspaceId", Configuration.ApiClient.ParameterToString(workspaceId)); // query parameter
             if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
             if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
@@ -3075,50 +2884,43 @@ namespace ININ.PureCloudApi.Api
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
             if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
             if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
-            
-            
-            
-            
 
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-    
+
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetDocuments: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetDocuments: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
+
             return new ApiResponse<DocumentEntityListing>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (DocumentEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DocumentEntityListing)));
             
         }
 
-        
         /// <summary>
         /// Get a list of documents. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
-        /// <param name="name">Name</param>
-        /// <param name="expand">Expand some document fields</param>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="sortBy">name or dateCreated</param>
-        /// <param name="sortOrder">ascending or descending</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="expand">Expand some document fields (optional)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">name or dateCreated (optional)</param>
+        /// <param name="sortOrder">ascending or descending (optional, default to ascending)</param>
         /// <returns>Task of DocumentEntityListing</returns>
         public async System.Threading.Tasks.Task<DocumentEntityListing> GetDocumentsAsync (string workspaceId, string name = null, string expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
         {
@@ -3132,21 +2934,20 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
-        /// <param name="name">Name</param>
-        /// <param name="expand">Expand some document fields</param>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="sortBy">name or dateCreated</param>
-        /// <param name="sortOrder">ascending or descending</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="expand">Expand some document fields (optional)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">name or dateCreated (optional)</param>
+        /// <param name="sortOrder">ascending or descending (optional, default to ascending)</param>
         /// <returns>Task of ApiResponse (DocumentEntityListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<DocumentEntityListing>> GetDocumentsAsyncWithHttpInfo (string workspaceId, string name = null, string expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
         {
             // verify the required parameter 'workspaceId' is set
-            if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling GetDocuments");
-            
-    
+            if (workspaceId == null)
+                throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->GetDocuments");
+
             var localVarPath = "/api/v2/contentmanagement/documents";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -3171,7 +2972,6 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            
             if (workspaceId != null) localVarQueryParams.Add("workspaceId", Configuration.ApiClient.ParameterToString(workspaceId)); // query parameter
             if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
             if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
@@ -3179,28 +2979,21 @@ namespace ININ.PureCloudApi.Api
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
             if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
             if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
-            
-            
-            
-            
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetDocuments: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
@@ -3211,13 +3004,13 @@ namespace ININ.PureCloudApi.Api
                 (DocumentEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DocumentEntityListing)));
             
         }
-        
+
         /// <summary>
         /// Get a document. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentId">Document ID</param> 
-        /// <param name="expand">Expand some document fields</param> 
+        /// <param name="documentId">Document ID</param>
+        /// <param name="expand">Expand some document fields (optional)</param>
         /// <returns>Document</returns>
         public Document GetDocumentsDocumentId (string documentId, string expand = null)
         {
@@ -3229,19 +3022,16 @@ namespace ININ.PureCloudApi.Api
         /// Get a document. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentId">Document ID</param> 
-        /// <param name="expand">Expand some document fields</param> 
+        /// <param name="documentId">Document ID</param>
+        /// <param name="expand">Expand some document fields (optional)</param>
         /// <returns>ApiResponse of Document</returns>
         public ApiResponse< Document > GetDocumentsDocumentIdWithHttpInfo (string documentId, string expand = null)
         {
-            
             // verify the required parameter 'documentId' is set
             if (documentId == null)
                 throw new ApiException(400, "Missing required parameter 'documentId' when calling ContentManagementApi->GetDocumentsDocumentId");
-            
-    
+
             var localVarPath = "/api/v2/contentmanagement/documents/{documentId}";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -3267,47 +3057,39 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (documentId != null) localVarPathParams.Add("documentId", Configuration.ApiClient.ParameterToString(documentId)); // path parameter
-            
             if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
-            
-            
-            
-            
 
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-    
+
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetDocumentsDocumentId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetDocumentsDocumentId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
+
             return new ApiResponse<Document>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Document) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Document)));
             
         }
 
-        
         /// <summary>
         /// Get a document. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId">Document ID</param>
-        /// <param name="expand">Expand some document fields</param>
+        /// <param name="expand">Expand some document fields (optional)</param>
         /// <returns>Task of Document</returns>
         public async System.Threading.Tasks.Task<Document> GetDocumentsDocumentIdAsync (string documentId, string expand = null)
         {
@@ -3321,16 +3103,15 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId">Document ID</param>
-        /// <param name="expand">Expand some document fields</param>
+        /// <param name="expand">Expand some document fields (optional)</param>
         /// <returns>Task of ApiResponse (Document)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Document>> GetDocumentsDocumentIdAsyncWithHttpInfo (string documentId, string expand = null)
         {
             // verify the required parameter 'documentId' is set
-            if (documentId == null) throw new ApiException(400, "Missing required parameter 'documentId' when calling GetDocumentsDocumentId");
-            
-    
+            if (documentId == null)
+                throw new ApiException(400, "Missing required parameter 'documentId' when calling ContentManagementApi->GetDocumentsDocumentId");
+
             var localVarPath = "/api/v2/contentmanagement/documents/{documentId}";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -3356,30 +3137,22 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (documentId != null) localVarPathParams.Add("documentId", Configuration.ApiClient.ParameterToString(documentId)); // path parameter
-            
             if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
-            
-            
-            
-            
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetDocumentsDocumentId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
@@ -3390,18 +3163,18 @@ namespace ININ.PureCloudApi.Api
                 (Document) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Document)));
             
         }
-        
+
         /// <summary>
         /// Get a list of audits for a document. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentId">Document ID</param> 
-        /// <param name="pageSize">Page size</param> 
-        /// <param name="pageNumber">Page number</param> 
-        /// <param name="transactionFilter">Transaction filter</param> 
-        /// <param name="level">level</param> 
-        /// <param name="sortBy">Sort by</param> 
-        /// <param name="sortOrder">Sort order</param> 
+        /// <param name="documentId">Document ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="transactionFilter">Transaction filter (optional)</param>
+        /// <param name="level">level (optional, default to USER)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
         /// <returns>DocumentAuditEntityListing</returns>
         public DocumentAuditEntityListing GetDocumentsDocumentIdAudits (string documentId, int? pageSize = null, int? pageNumber = null, string transactionFilter = null, string level = null, string sortBy = null, string sortOrder = null)
         {
@@ -3413,24 +3186,21 @@ namespace ININ.PureCloudApi.Api
         /// Get a list of audits for a document. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentId">Document ID</param> 
-        /// <param name="pageSize">Page size</param> 
-        /// <param name="pageNumber">Page number</param> 
-        /// <param name="transactionFilter">Transaction filter</param> 
-        /// <param name="level">level</param> 
-        /// <param name="sortBy">Sort by</param> 
-        /// <param name="sortOrder">Sort order</param> 
+        /// <param name="documentId">Document ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="transactionFilter">Transaction filter (optional)</param>
+        /// <param name="level">level (optional, default to USER)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
         /// <returns>ApiResponse of DocumentAuditEntityListing</returns>
         public ApiResponse< DocumentAuditEntityListing > GetDocumentsDocumentIdAuditsWithHttpInfo (string documentId, int? pageSize = null, int? pageNumber = null, string transactionFilter = null, string level = null, string sortBy = null, string sortOrder = null)
         {
-            
             // verify the required parameter 'documentId' is set
             if (documentId == null)
                 throw new ApiException(400, "Missing required parameter 'documentId' when calling ContentManagementApi->GetDocumentsDocumentIdAudits");
-            
-    
+
             var localVarPath = "/api/v2/contentmanagement/documents/{documentId}/audits";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -3456,57 +3226,49 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (documentId != null) localVarPathParams.Add("documentId", Configuration.ApiClient.ParameterToString(documentId)); // path parameter
-            
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
             if (transactionFilter != null) localVarQueryParams.Add("transactionFilter", Configuration.ApiClient.ParameterToString(transactionFilter)); // query parameter
             if (level != null) localVarQueryParams.Add("level", Configuration.ApiClient.ParameterToString(level)); // query parameter
             if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
             if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
-            
-            
-            
-            
 
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-    
+
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetDocumentsDocumentIdAudits: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetDocumentsDocumentIdAudits: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
+
             return new ApiResponse<DocumentAuditEntityListing>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (DocumentAuditEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DocumentAuditEntityListing)));
             
         }
 
-        
         /// <summary>
         /// Get a list of audits for a document. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId">Document ID</param>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="transactionFilter">Transaction filter</param>
-        /// <param name="level">level</param>
-        /// <param name="sortBy">Sort by</param>
-        /// <param name="sortOrder">Sort order</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="transactionFilter">Transaction filter (optional)</param>
+        /// <param name="level">level (optional, default to USER)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
         /// <returns>Task of DocumentAuditEntityListing</returns>
         public async System.Threading.Tasks.Task<DocumentAuditEntityListing> GetDocumentsDocumentIdAuditsAsync (string documentId, int? pageSize = null, int? pageNumber = null, string transactionFilter = null, string level = null, string sortBy = null, string sortOrder = null)
         {
@@ -3520,21 +3282,20 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId">Document ID</param>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="transactionFilter">Transaction filter</param>
-        /// <param name="level">level</param>
-        /// <param name="sortBy">Sort by</param>
-        /// <param name="sortOrder">Sort order</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="transactionFilter">Transaction filter (optional)</param>
+        /// <param name="level">level (optional, default to USER)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
         /// <returns>Task of ApiResponse (DocumentAuditEntityListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<DocumentAuditEntityListing>> GetDocumentsDocumentIdAuditsAsyncWithHttpInfo (string documentId, int? pageSize = null, int? pageNumber = null, string transactionFilter = null, string level = null, string sortBy = null, string sortOrder = null)
         {
             // verify the required parameter 'documentId' is set
-            if (documentId == null) throw new ApiException(400, "Missing required parameter 'documentId' when calling GetDocumentsDocumentIdAudits");
-            
-    
+            if (documentId == null)
+                throw new ApiException(400, "Missing required parameter 'documentId' when calling ContentManagementApi->GetDocumentsDocumentIdAudits");
+
             var localVarPath = "/api/v2/contentmanagement/documents/{documentId}/audits";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -3560,35 +3321,27 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (documentId != null) localVarPathParams.Add("documentId", Configuration.ApiClient.ParameterToString(documentId)); // path parameter
-            
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
             if (transactionFilter != null) localVarQueryParams.Add("transactionFilter", Configuration.ApiClient.ParameterToString(transactionFilter)); // query parameter
             if (level != null) localVarQueryParams.Add("level", Configuration.ApiClient.ParameterToString(level)); // query parameter
             if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
             if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
-            
-            
-            
-            
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetDocumentsDocumentIdAudits: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
@@ -3599,14 +3352,14 @@ namespace ININ.PureCloudApi.Api
                 (DocumentAuditEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DocumentAuditEntityListing)));
             
         }
-        
+
         /// <summary>
         /// Download a document. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentId">Document ID</param> 
-        /// <param name="disposition">Request how the content will be downloaded: attached as a file or inline. Default is attachment.</param> 
-        /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType=audio/wav</param> 
+        /// <param name="documentId">Document ID</param>
+        /// <param name="disposition">Request how the content will be downloaded: attached as a file or inline. Default is attachment. (optional)</param>
+        /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType&#x3D;audio/wav (optional)</param>
         /// <returns></returns>
         public void GetDocumentsDocumentIdContent (string documentId, string disposition = null, string contentType = null)
         {
@@ -3617,20 +3370,17 @@ namespace ININ.PureCloudApi.Api
         /// Download a document. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentId">Document ID</param> 
-        /// <param name="disposition">Request how the content will be downloaded: attached as a file or inline. Default is attachment.</param> 
-        /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType=audio/wav</param> 
+        /// <param name="documentId">Document ID</param>
+        /// <param name="disposition">Request how the content will be downloaded: attached as a file or inline. Default is attachment. (optional)</param>
+        /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType&#x3D;audio/wav (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetDocumentsDocumentIdContentWithHttpInfo (string documentId, string disposition = null, string contentType = null)
         {
-            
             // verify the required parameter 'documentId' is set
             if (documentId == null)
                 throw new ApiException(400, "Missing required parameter 'documentId' when calling ContentManagementApi->GetDocumentsDocumentIdContent");
-            
-    
+
             var localVarPath = "/api/v2/contentmanagement/documents/{documentId}/content";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -3656,49 +3406,41 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (documentId != null) localVarPathParams.Add("documentId", Configuration.ApiClient.ParameterToString(documentId)); // path parameter
-            
             if (disposition != null) localVarQueryParams.Add("disposition", Configuration.ApiClient.ParameterToString(disposition)); // query parameter
             if (contentType != null) localVarQueryParams.Add("contentType", Configuration.ApiClient.ParameterToString(contentType)); // query parameter
-            
-            
-            
-            
 
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-    
+
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetDocumentsDocumentIdContent: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetDocumentsDocumentIdContent: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
+
             
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
         }
 
-        
         /// <summary>
         /// Download a document. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId">Document ID</param>
-        /// <param name="disposition">Request how the content will be downloaded: attached as a file or inline. Default is attachment.</param>
-        /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType=audio/wav</param>
+        /// <param name="disposition">Request how the content will be downloaded: attached as a file or inline. Default is attachment. (optional)</param>
+        /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType&#x3D;audio/wav (optional)</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task GetDocumentsDocumentIdContentAsync (string documentId, string disposition = null, string contentType = null)
         {
@@ -3711,17 +3453,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId">Document ID</param>
-        /// <param name="disposition">Request how the content will be downloaded: attached as a file or inline. Default is attachment.</param>
-        /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType=audio/wav</param>
+        /// <param name="disposition">Request how the content will be downloaded: attached as a file or inline. Default is attachment. (optional)</param>
+        /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType&#x3D;audio/wav (optional)</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> GetDocumentsDocumentIdContentAsyncWithHttpInfo (string documentId, string disposition = null, string contentType = null)
         {
             // verify the required parameter 'documentId' is set
-            if (documentId == null) throw new ApiException(400, "Missing required parameter 'documentId' when calling GetDocumentsDocumentIdContent");
-            
-    
+            if (documentId == null)
+                throw new ApiException(400, "Missing required parameter 'documentId' when calling ContentManagementApi->GetDocumentsDocumentIdContent");
+
             var localVarPath = "/api/v2/contentmanagement/documents/{documentId}/content";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -3747,31 +3488,23 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (documentId != null) localVarPathParams.Add("documentId", Configuration.ApiClient.ParameterToString(documentId)); // path parameter
-            
             if (disposition != null) localVarQueryParams.Add("disposition", Configuration.ApiClient.ParameterToString(disposition)); // query parameter
             if (contentType != null) localVarQueryParams.Add("contentType", Configuration.ApiClient.ParameterToString(contentType)); // query parameter
-            
-            
-            
-            
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetDocumentsDocumentIdContent: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
@@ -3782,17 +3515,17 @@ namespace ININ.PureCloudApi.Api
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
         }
-        
+
         /// <summary>
         /// Query content 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queryPhrase">Phrase tokens are ANDed together over all searchable fields</param> 
-        /// <param name="pageSize">Page size</param> 
-        /// <param name="pageNumber">Page number</param> 
-        /// <param name="sortBy">name or dateCreated</param> 
-        /// <param name="sortOrder">ascending or descending</param> 
-        /// <param name="expand">Expand some document fields</param> 
+        /// <param name="queryPhrase">Phrase tokens are ANDed together over all searchable fields</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">name or dateCreated (optional, default to name)</param>
+        /// <param name="sortOrder">ascending or descending (optional, default to ascending)</param>
+        /// <param name="expand">Expand some document fields (optional)</param>
         /// <returns>QueryResults</returns>
         public QueryResults GetQuery (string queryPhrase, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string expand = null)
         {
@@ -3804,23 +3537,20 @@ namespace ININ.PureCloudApi.Api
         /// Query content 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queryPhrase">Phrase tokens are ANDed together over all searchable fields</param> 
-        /// <param name="pageSize">Page size</param> 
-        /// <param name="pageNumber">Page number</param> 
-        /// <param name="sortBy">name or dateCreated</param> 
-        /// <param name="sortOrder">ascending or descending</param> 
-        /// <param name="expand">Expand some document fields</param> 
+        /// <param name="queryPhrase">Phrase tokens are ANDed together over all searchable fields</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">name or dateCreated (optional, default to name)</param>
+        /// <param name="sortOrder">ascending or descending (optional, default to ascending)</param>
+        /// <param name="expand">Expand some document fields (optional)</param>
         /// <returns>ApiResponse of QueryResults</returns>
         public ApiResponse< QueryResults > GetQueryWithHttpInfo (string queryPhrase, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string expand = null)
         {
-            
             // verify the required parameter 'queryPhrase' is set
             if (queryPhrase == null)
                 throw new ApiException(400, "Missing required parameter 'queryPhrase' when calling ContentManagementApi->GetQuery");
-            
-    
+
             var localVarPath = "/api/v2/contentmanagement/query";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -3845,56 +3575,48 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
             if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
             if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
             if (queryPhrase != null) localVarQueryParams.Add("queryPhrase", Configuration.ApiClient.ParameterToString(queryPhrase)); // query parameter
             if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
-            
-            
-            
-            
 
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-    
+
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetQuery: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
+
             return new ApiResponse<QueryResults>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (QueryResults) Configuration.ApiClient.Deserialize(localVarResponse, typeof(QueryResults)));
             
         }
 
-        
         /// <summary>
         /// Query content 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queryPhrase">Phrase tokens are ANDed together over all searchable fields</param>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="sortBy">name or dateCreated</param>
-        /// <param name="sortOrder">ascending or descending</param>
-        /// <param name="expand">Expand some document fields</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">name or dateCreated (optional, default to name)</param>
+        /// <param name="sortOrder">ascending or descending (optional, default to ascending)</param>
+        /// <param name="expand">Expand some document fields (optional)</param>
         /// <returns>Task of QueryResults</returns>
         public async System.Threading.Tasks.Task<QueryResults> GetQueryAsync (string queryPhrase, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string expand = null)
         {
@@ -3908,20 +3630,19 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queryPhrase">Phrase tokens are ANDed together over all searchable fields</param>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="sortBy">name or dateCreated</param>
-        /// <param name="sortOrder">ascending or descending</param>
-        /// <param name="expand">Expand some document fields</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">name or dateCreated (optional, default to name)</param>
+        /// <param name="sortOrder">ascending or descending (optional, default to ascending)</param>
+        /// <param name="expand">Expand some document fields (optional)</param>
         /// <returns>Task of ApiResponse (QueryResults)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<QueryResults>> GetQueryAsyncWithHttpInfo (string queryPhrase, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string expand = null)
         {
             // verify the required parameter 'queryPhrase' is set
-            if (queryPhrase == null) throw new ApiException(400, "Missing required parameter 'queryPhrase' when calling GetQuery");
-            
-    
+            if (queryPhrase == null)
+                throw new ApiException(400, "Missing required parameter 'queryPhrase' when calling ContentManagementApi->GetQuery");
+
             var localVarPath = "/api/v2/contentmanagement/query";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -3946,35 +3667,27 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
             if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
             if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
             if (queryPhrase != null) localVarQueryParams.Add("queryPhrase", Configuration.ApiClient.ParameterToString(queryPhrase)); // query parameter
             if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
-            
-            
-            
-            
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetQuery: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
@@ -3985,7 +3698,7 @@ namespace ININ.PureCloudApi.Api
                 (QueryResults) Configuration.ApiClient.Deserialize(localVarResponse, typeof(QueryResults)));
             
         }
-        
+
         /// <summary>
         /// Get a List of Security Profiles 
         /// </summary>
@@ -4004,10 +3717,8 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of SecurityProfileEntityListing</returns>
         public ApiResponse< SecurityProfileEntityListing > GetSecurityprofilesWithHttpInfo ()
         {
-            
-    
+
             var localVarPath = "/api/v2/contentmanagement/securityprofiles";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -4032,40 +3743,32 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            
-            
-            
-            
-            
 
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-    
+
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetSecurityprofiles: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetSecurityprofiles: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
+
             return new ApiResponse<SecurityProfileEntityListing>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (SecurityProfileEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SecurityProfileEntityListing)));
             
         }
 
-        
         /// <summary>
         /// Get a List of Security Profiles 
         /// </summary>
@@ -4085,10 +3788,8 @@ namespace ININ.PureCloudApi.Api
         /// <returns>Task of ApiResponse (SecurityProfileEntityListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<SecurityProfileEntityListing>> GetSecurityprofilesAsyncWithHttpInfo ()
         {
-            
-    
+
             var localVarPath = "/api/v2/contentmanagement/securityprofiles";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -4113,29 +3814,21 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            
-            
-            
-            
-            
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetSecurityprofiles: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
@@ -4146,12 +3839,12 @@ namespace ININ.PureCloudApi.Api
                 (SecurityProfileEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SecurityProfileEntityListing)));
             
         }
-        
+
         /// <summary>
         /// Get a Security Profile 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="securityProfileId">Security Profile Id</param> 
+        /// <param name="securityProfileId">Security Profile Id</param>
         /// <returns>SecurityProfile</returns>
         public SecurityProfile GetSecurityprofilesSecurityprofileId (string securityProfileId)
         {
@@ -4163,18 +3856,15 @@ namespace ININ.PureCloudApi.Api
         /// Get a Security Profile 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="securityProfileId">Security Profile Id</param> 
+        /// <param name="securityProfileId">Security Profile Id</param>
         /// <returns>ApiResponse of SecurityProfile</returns>
         public ApiResponse< SecurityProfile > GetSecurityprofilesSecurityprofileIdWithHttpInfo (string securityProfileId)
         {
-            
             // verify the required parameter 'securityProfileId' is set
             if (securityProfileId == null)
                 throw new ApiException(400, "Missing required parameter 'securityProfileId' when calling ContentManagementApi->GetSecurityprofilesSecurityprofileId");
-            
-    
+
             var localVarPath = "/api/v2/contentmanagement/securityprofiles/{securityProfileId}";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -4200,40 +3890,32 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (securityProfileId != null) localVarPathParams.Add("securityProfileId", Configuration.ApiClient.ParameterToString(securityProfileId)); // path parameter
-            
-            
-            
-            
-            
 
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-    
+
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetSecurityprofilesSecurityprofileId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetSecurityprofilesSecurityprofileId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
+
             return new ApiResponse<SecurityProfile>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (SecurityProfile) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SecurityProfile)));
             
         }
 
-        
         /// <summary>
         /// Get a Security Profile 
         /// </summary>
@@ -4256,11 +3938,10 @@ namespace ININ.PureCloudApi.Api
         public async System.Threading.Tasks.Task<ApiResponse<SecurityProfile>> GetSecurityprofilesSecurityprofileIdAsyncWithHttpInfo (string securityProfileId)
         {
             // verify the required parameter 'securityProfileId' is set
-            if (securityProfileId == null) throw new ApiException(400, "Missing required parameter 'securityProfileId' when calling GetSecurityprofilesSecurityprofileId");
-            
-    
+            if (securityProfileId == null)
+                throw new ApiException(400, "Missing required parameter 'securityProfileId' when calling ContentManagementApi->GetSecurityprofilesSecurityprofileId");
+
             var localVarPath = "/api/v2/contentmanagement/securityprofiles/{securityProfileId}";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -4286,29 +3967,21 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (securityProfileId != null) localVarPathParams.Add("securityProfileId", Configuration.ApiClient.ParameterToString(securityProfileId)); // path parameter
-            
-            
-            
-            
-            
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetSecurityprofilesSecurityprofileId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
@@ -4319,16 +3992,16 @@ namespace ININ.PureCloudApi.Api
                 (SecurityProfile) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SecurityProfile)));
             
         }
-        
+
         /// <summary>
         /// Get shared documents. Securely download a shared document. This method requires the download sharing URI obtained in the get document response (downloadSharingUri). Documents may be shared between users in the same workspace. Documents may also be shared between any user by creating a content management share.
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sharedId">Shared ID</param> 
-        /// <param name="redirect">Turn on or off redirect</param> 
-        /// <param name="disposition">Request how the share content will be downloaded: attached as a file or inline. Default is attachment.</param> 
-        /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType=audio/wav</param> 
-        /// <param name="expand">Expand some document fields</param> 
+        /// <param name="sharedId">Shared ID</param>
+        /// <param name="redirect">Turn on or off redirect (optional, default to true)</param>
+        /// <param name="disposition">Request how the share content will be downloaded: attached as a file or inline. Default is attachment. (optional, default to attachment)</param>
+        /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType&#x3D;audio/wav (optional)</param>
+        /// <param name="expand">Expand some document fields (optional)</param>
         /// <returns></returns>
         public void GetSharedSharedId (string sharedId, bool? redirect = null, string disposition = null, string contentType = null, string expand = null)
         {
@@ -4339,22 +4012,19 @@ namespace ININ.PureCloudApi.Api
         /// Get shared documents. Securely download a shared document. This method requires the download sharing URI obtained in the get document response (downloadSharingUri). Documents may be shared between users in the same workspace. Documents may also be shared between any user by creating a content management share.
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sharedId">Shared ID</param> 
-        /// <param name="redirect">Turn on or off redirect</param> 
-        /// <param name="disposition">Request how the share content will be downloaded: attached as a file or inline. Default is attachment.</param> 
-        /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType=audio/wav</param> 
-        /// <param name="expand">Expand some document fields</param> 
+        /// <param name="sharedId">Shared ID</param>
+        /// <param name="redirect">Turn on or off redirect (optional, default to true)</param>
+        /// <param name="disposition">Request how the share content will be downloaded: attached as a file or inline. Default is attachment. (optional, default to attachment)</param>
+        /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType&#x3D;audio/wav (optional)</param>
+        /// <param name="expand">Expand some document fields (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetSharedSharedIdWithHttpInfo (string sharedId, bool? redirect = null, string disposition = null, string contentType = null, string expand = null)
         {
-            
             // verify the required parameter 'sharedId' is set
             if (sharedId == null)
                 throw new ApiException(400, "Missing required parameter 'sharedId' when calling ContentManagementApi->GetSharedSharedId");
-            
-    
+
             var localVarPath = "/api/v2/contentmanagement/shared/{sharedId}";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -4380,53 +4050,45 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (sharedId != null) localVarPathParams.Add("sharedId", Configuration.ApiClient.ParameterToString(sharedId)); // path parameter
-            
             if (redirect != null) localVarQueryParams.Add("redirect", Configuration.ApiClient.ParameterToString(redirect)); // query parameter
             if (disposition != null) localVarQueryParams.Add("disposition", Configuration.ApiClient.ParameterToString(disposition)); // query parameter
             if (contentType != null) localVarQueryParams.Add("contentType", Configuration.ApiClient.ParameterToString(contentType)); // query parameter
             if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
-            
-            
-            
-            
 
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-    
+
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetSharedSharedId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetSharedSharedId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
+
             
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
         }
 
-        
         /// <summary>
         /// Get shared documents. Securely download a shared document. This method requires the download sharing URI obtained in the get document response (downloadSharingUri). Documents may be shared between users in the same workspace. Documents may also be shared between any user by creating a content management share.
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sharedId">Shared ID</param>
-        /// <param name="redirect">Turn on or off redirect</param>
-        /// <param name="disposition">Request how the share content will be downloaded: attached as a file or inline. Default is attachment.</param>
-        /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType=audio/wav</param>
-        /// <param name="expand">Expand some document fields</param>
+        /// <param name="redirect">Turn on or off redirect (optional, default to true)</param>
+        /// <param name="disposition">Request how the share content will be downloaded: attached as a file or inline. Default is attachment. (optional, default to attachment)</param>
+        /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType&#x3D;audio/wav (optional)</param>
+        /// <param name="expand">Expand some document fields (optional)</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task GetSharedSharedIdAsync (string sharedId, bool? redirect = null, string disposition = null, string contentType = null, string expand = null)
         {
@@ -4439,19 +4101,18 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sharedId">Shared ID</param>
-        /// <param name="redirect">Turn on or off redirect</param>
-        /// <param name="disposition">Request how the share content will be downloaded: attached as a file or inline. Default is attachment.</param>
-        /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType=audio/wav</param>
-        /// <param name="expand">Expand some document fields</param>
+        /// <param name="redirect">Turn on or off redirect (optional, default to true)</param>
+        /// <param name="disposition">Request how the share content will be downloaded: attached as a file or inline. Default is attachment. (optional, default to attachment)</param>
+        /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType&#x3D;audio/wav (optional)</param>
+        /// <param name="expand">Expand some document fields (optional)</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> GetSharedSharedIdAsyncWithHttpInfo (string sharedId, bool? redirect = null, string disposition = null, string contentType = null, string expand = null)
         {
             // verify the required parameter 'sharedId' is set
-            if (sharedId == null) throw new ApiException(400, "Missing required parameter 'sharedId' when calling GetSharedSharedId");
-            
-    
+            if (sharedId == null)
+                throw new ApiException(400, "Missing required parameter 'sharedId' when calling ContentManagementApi->GetSharedSharedId");
+
             var localVarPath = "/api/v2/contentmanagement/shared/{sharedId}";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -4477,33 +4138,25 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (sharedId != null) localVarPathParams.Add("sharedId", Configuration.ApiClient.ParameterToString(sharedId)); // path parameter
-            
             if (redirect != null) localVarQueryParams.Add("redirect", Configuration.ApiClient.ParameterToString(redirect)); // query parameter
             if (disposition != null) localVarQueryParams.Add("disposition", Configuration.ApiClient.ParameterToString(disposition)); // query parameter
             if (contentType != null) localVarQueryParams.Add("contentType", Configuration.ApiClient.ParameterToString(contentType)); // query parameter
             if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
-            
-            
-            
-            
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetSharedSharedId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
@@ -4514,15 +4167,15 @@ namespace ININ.PureCloudApi.Api
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
         }
-        
+
         /// <summary>
         /// Gets a list of shares.  You must specify at least one filter (e.g. entityId). Failing to specify a filter will return 400.
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="entityId">Filters the shares returned to only the entity specified by the value of this parameter.</param> 
-        /// <param name="expand">Expand share fields</param> 
-        /// <param name="pageSize">Page size</param> 
-        /// <param name="pageNumber">Page number</param> 
+        /// <param name="entityId">Filters the shares returned to only the entity specified by the value of this parameter. (optional)</param>
+        /// <param name="expand">Expand share fields (optional)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ShareEntityListing</returns>
         public ShareEntityListing GetShares (string entityId = null, string expand = null, int? pageSize = null, int? pageNumber = null)
         {
@@ -4534,17 +4187,15 @@ namespace ININ.PureCloudApi.Api
         /// Gets a list of shares.  You must specify at least one filter (e.g. entityId). Failing to specify a filter will return 400.
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="entityId">Filters the shares returned to only the entity specified by the value of this parameter.</param> 
-        /// <param name="expand">Expand share fields</param> 
-        /// <param name="pageSize">Page size</param> 
-        /// <param name="pageNumber">Page number</param> 
+        /// <param name="entityId">Filters the shares returned to only the entity specified by the value of this parameter. (optional)</param>
+        /// <param name="expand">Expand share fields (optional)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of ShareEntityListing</returns>
         public ApiResponse< ShareEntityListing > GetSharesWithHttpInfo (string entityId = null, string expand = null, int? pageSize = null, int? pageNumber = null)
         {
-            
-    
+
             var localVarPath = "/api/v2/contentmanagement/shares";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -4569,52 +4220,44 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            
             if (entityId != null) localVarQueryParams.Add("entityId", Configuration.ApiClient.ParameterToString(entityId)); // query parameter
             if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
-            
-            
-            
-            
 
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-    
+
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetShares: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetShares: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
+
             return new ApiResponse<ShareEntityListing>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ShareEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ShareEntityListing)));
             
         }
 
-        
         /// <summary>
         /// Gets a list of shares.  You must specify at least one filter (e.g. entityId). Failing to specify a filter will return 400.
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="entityId">Filters the shares returned to only the entity specified by the value of this parameter.</param>
-        /// <param name="expand">Expand share fields</param>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
+        /// <param name="entityId">Filters the shares returned to only the entity specified by the value of this parameter. (optional)</param>
+        /// <param name="expand">Expand share fields (optional)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ShareEntityListing</returns>
         public async System.Threading.Tasks.Task<ShareEntityListing> GetSharesAsync (string entityId = null, string expand = null, int? pageSize = null, int? pageNumber = null)
         {
@@ -4627,17 +4270,15 @@ namespace ININ.PureCloudApi.Api
         /// Gets a list of shares.  You must specify at least one filter (e.g. entityId). Failing to specify a filter will return 400.
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="entityId">Filters the shares returned to only the entity specified by the value of this parameter.</param>
-        /// <param name="expand">Expand share fields</param>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
+        /// <param name="entityId">Filters the shares returned to only the entity specified by the value of this parameter. (optional)</param>
+        /// <param name="expand">Expand share fields (optional)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (ShareEntityListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ShareEntityListing>> GetSharesAsyncWithHttpInfo (string entityId = null, string expand = null, int? pageSize = null, int? pageNumber = null)
         {
-            
-    
+
             var localVarPath = "/api/v2/contentmanagement/shares";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -4662,33 +4303,25 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            
             if (entityId != null) localVarQueryParams.Add("entityId", Configuration.ApiClient.ParameterToString(entityId)); // query parameter
             if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
-            
-            
-            
-            
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetShares: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
@@ -4699,13 +4332,13 @@ namespace ININ.PureCloudApi.Api
                 (ShareEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ShareEntityListing)));
             
         }
-        
+
         /// <summary>
         /// Retrieve details about an existing share. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="shareId">Share ID</param> 
-        /// <param name="expand">Expand share fields</param> 
+        /// <param name="shareId">Share ID</param>
+        /// <param name="expand">Expand share fields (optional)</param>
         /// <returns>Share</returns>
         public Share GetSharesShareId (string shareId, string expand = null)
         {
@@ -4717,19 +4350,16 @@ namespace ININ.PureCloudApi.Api
         /// Retrieve details about an existing share. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="shareId">Share ID</param> 
-        /// <param name="expand">Expand share fields</param> 
+        /// <param name="shareId">Share ID</param>
+        /// <param name="expand">Expand share fields (optional)</param>
         /// <returns>ApiResponse of Share</returns>
         public ApiResponse< Share > GetSharesShareIdWithHttpInfo (string shareId, string expand = null)
         {
-            
             // verify the required parameter 'shareId' is set
             if (shareId == null)
                 throw new ApiException(400, "Missing required parameter 'shareId' when calling ContentManagementApi->GetSharesShareId");
-            
-    
+
             var localVarPath = "/api/v2/contentmanagement/shares/{shareId}";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -4755,47 +4385,39 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (shareId != null) localVarPathParams.Add("shareId", Configuration.ApiClient.ParameterToString(shareId)); // path parameter
-            
             if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
-            
-            
-            
-            
 
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-    
+
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetSharesShareId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetSharesShareId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
+
             return new ApiResponse<Share>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Share) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Share)));
             
         }
 
-        
         /// <summary>
         /// Retrieve details about an existing share. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="shareId">Share ID</param>
-        /// <param name="expand">Expand share fields</param>
+        /// <param name="expand">Expand share fields (optional)</param>
         /// <returns>Task of Share</returns>
         public async System.Threading.Tasks.Task<Share> GetSharesShareIdAsync (string shareId, string expand = null)
         {
@@ -4809,16 +4431,15 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="shareId">Share ID</param>
-        /// <param name="expand">Expand share fields</param>
+        /// <param name="expand">Expand share fields (optional)</param>
         /// <returns>Task of ApiResponse (Share)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Share>> GetSharesShareIdAsyncWithHttpInfo (string shareId, string expand = null)
         {
             // verify the required parameter 'shareId' is set
-            if (shareId == null) throw new ApiException(400, "Missing required parameter 'shareId' when calling GetSharesShareId");
-            
-    
+            if (shareId == null)
+                throw new ApiException(400, "Missing required parameter 'shareId' when calling ContentManagementApi->GetSharesShareId");
+
             var localVarPath = "/api/v2/contentmanagement/shares/{shareId}";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -4844,30 +4465,22 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (shareId != null) localVarPathParams.Add("shareId", Configuration.ApiClient.ParameterToString(shareId)); // path parameter
-            
             if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
-            
-            
-            
-            
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetSharesShareId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
@@ -4878,13 +4491,13 @@ namespace ININ.PureCloudApi.Api
                 (Share) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Share)));
             
         }
-        
+
         /// <summary>
         /// Get a list of statuses for pending operations 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size</param> 
-        /// <param name="pageNumber">Page number</param> 
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>CommandStatusEntityListing</returns>
         public CommandStatusEntityListing GetStatus (int? pageSize = null, int? pageNumber = null)
         {
@@ -4896,15 +4509,13 @@ namespace ININ.PureCloudApi.Api
         /// Get a list of statuses for pending operations 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size</param> 
-        /// <param name="pageNumber">Page number</param> 
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of CommandStatusEntityListing</returns>
         public ApiResponse< CommandStatusEntityListing > GetStatusWithHttpInfo (int? pageSize = null, int? pageNumber = null)
         {
-            
-    
+
             var localVarPath = "/api/v2/contentmanagement/status";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -4929,48 +4540,40 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
-            
-            
-            
-            
 
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-    
+
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetStatus: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetStatus: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
+
             return new ApiResponse<CommandStatusEntityListing>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (CommandStatusEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CommandStatusEntityListing)));
             
         }
 
-        
         /// <summary>
         /// Get a list of statuses for pending operations 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of CommandStatusEntityListing</returns>
         public async System.Threading.Tasks.Task<CommandStatusEntityListing> GetStatusAsync (int? pageSize = null, int? pageNumber = null)
         {
@@ -4983,15 +4586,13 @@ namespace ININ.PureCloudApi.Api
         /// Get a list of statuses for pending operations 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (CommandStatusEntityListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<CommandStatusEntityListing>> GetStatusAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null)
         {
-            
-    
+
             var localVarPath = "/api/v2/contentmanagement/status";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -5016,31 +4617,23 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
-            
-            
-            
-            
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetStatus: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
@@ -5051,12 +4644,12 @@ namespace ININ.PureCloudApi.Api
                 (CommandStatusEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CommandStatusEntityListing)));
             
         }
-        
+
         /// <summary>
         /// Get a status. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="statusId">Status ID</param> 
+        /// <param name="statusId">Status ID</param>
         /// <returns>CommandStatus</returns>
         public CommandStatus GetStatusStatusId (string statusId)
         {
@@ -5068,18 +4661,15 @@ namespace ININ.PureCloudApi.Api
         /// Get a status. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="statusId">Status ID</param> 
+        /// <param name="statusId">Status ID</param>
         /// <returns>ApiResponse of CommandStatus</returns>
         public ApiResponse< CommandStatus > GetStatusStatusIdWithHttpInfo (string statusId)
         {
-            
             // verify the required parameter 'statusId' is set
             if (statusId == null)
                 throw new ApiException(400, "Missing required parameter 'statusId' when calling ContentManagementApi->GetStatusStatusId");
-            
-    
+
             var localVarPath = "/api/v2/contentmanagement/status/{statusId}";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -5105,40 +4695,32 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (statusId != null) localVarPathParams.Add("statusId", Configuration.ApiClient.ParameterToString(statusId)); // path parameter
-            
-            
-            
-            
-            
 
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-    
+
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetStatusStatusId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetStatusStatusId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
+
             return new ApiResponse<CommandStatus>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (CommandStatus) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CommandStatus)));
             
         }
 
-        
         /// <summary>
         /// Get a status. 
         /// </summary>
@@ -5161,11 +4743,10 @@ namespace ININ.PureCloudApi.Api
         public async System.Threading.Tasks.Task<ApiResponse<CommandStatus>> GetStatusStatusIdAsyncWithHttpInfo (string statusId)
         {
             // verify the required parameter 'statusId' is set
-            if (statusId == null) throw new ApiException(400, "Missing required parameter 'statusId' when calling GetStatusStatusId");
-            
-    
+            if (statusId == null)
+                throw new ApiException(400, "Missing required parameter 'statusId' when calling ContentManagementApi->GetStatusStatusId");
+
             var localVarPath = "/api/v2/contentmanagement/status/{statusId}";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -5191,29 +4772,21 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (statusId != null) localVarPathParams.Add("statusId", Configuration.ApiClient.ParameterToString(statusId)); // path parameter
-            
-            
-            
-            
-            
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetStatusStatusId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
@@ -5224,15 +4797,15 @@ namespace ININ.PureCloudApi.Api
                 (CommandStatus) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CommandStatus)));
             
         }
-        
+
         /// <summary>
         /// Get a list of workspaces. Specifying &#39;content&#39; access will return all workspaces the user has document access to, while &#39;admin&#39; access will return all group workspaces the user has administrative rights to.
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size</param> 
-        /// <param name="pageNumber">Page number</param> 
-        /// <param name="access">Requested access level</param> 
-        /// <param name="expand">Expand some workspace fields</param> 
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="access">Requested access level (optional, default to document:viewmetadata)</param>
+        /// <param name="expand">Expand some workspace fields (optional)</param>
         /// <returns>WorkspaceEntityListing</returns>
         public WorkspaceEntityListing GetWorkspaces (int? pageSize = null, int? pageNumber = null, string access = null, string expand = null)
         {
@@ -5244,17 +4817,15 @@ namespace ININ.PureCloudApi.Api
         /// Get a list of workspaces. Specifying &#39;content&#39; access will return all workspaces the user has document access to, while &#39;admin&#39; access will return all group workspaces the user has administrative rights to.
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size</param> 
-        /// <param name="pageNumber">Page number</param> 
-        /// <param name="access">Requested access level</param> 
-        /// <param name="expand">Expand some workspace fields</param> 
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="access">Requested access level (optional, default to document:viewmetadata)</param>
+        /// <param name="expand">Expand some workspace fields (optional)</param>
         /// <returns>ApiResponse of WorkspaceEntityListing</returns>
         public ApiResponse< WorkspaceEntityListing > GetWorkspacesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string access = null, string expand = null)
         {
-            
-    
+
             var localVarPath = "/api/v2/contentmanagement/workspaces";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -5279,52 +4850,44 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
             if (access != null) localVarQueryParams.Add("access", Configuration.ApiClient.ParameterToString(access)); // query parameter
             if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
-            
-            
-            
-            
 
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-    
+
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetWorkspaces: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetWorkspaces: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
+
             return new ApiResponse<WorkspaceEntityListing>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (WorkspaceEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(WorkspaceEntityListing)));
             
         }
 
-        
         /// <summary>
         /// Get a list of workspaces. Specifying &#39;content&#39; access will return all workspaces the user has document access to, while &#39;admin&#39; access will return all group workspaces the user has administrative rights to.
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="access">Requested access level</param>
-        /// <param name="expand">Expand some workspace fields</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="access">Requested access level (optional, default to document:viewmetadata)</param>
+        /// <param name="expand">Expand some workspace fields (optional)</param>
         /// <returns>Task of WorkspaceEntityListing</returns>
         public async System.Threading.Tasks.Task<WorkspaceEntityListing> GetWorkspacesAsync (int? pageSize = null, int? pageNumber = null, string access = null, string expand = null)
         {
@@ -5337,17 +4900,15 @@ namespace ININ.PureCloudApi.Api
         /// Get a list of workspaces. Specifying &#39;content&#39; access will return all workspaces the user has document access to, while &#39;admin&#39; access will return all group workspaces the user has administrative rights to.
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="access">Requested access level</param>
-        /// <param name="expand">Expand some workspace fields</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="access">Requested access level (optional, default to document:viewmetadata)</param>
+        /// <param name="expand">Expand some workspace fields (optional)</param>
         /// <returns>Task of ApiResponse (WorkspaceEntityListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<WorkspaceEntityListing>> GetWorkspacesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string access = null, string expand = null)
         {
-            
-    
+
             var localVarPath = "/api/v2/contentmanagement/workspaces";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -5372,33 +4933,25 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
             if (access != null) localVarQueryParams.Add("access", Configuration.ApiClient.ParameterToString(access)); // query parameter
             if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
-            
-            
-            
-            
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetWorkspaces: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
@@ -5409,13 +4962,13 @@ namespace ININ.PureCloudApi.Api
                 (WorkspaceEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(WorkspaceEntityListing)));
             
         }
-        
+
         /// <summary>
         /// Get a workspace. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="workspaceId">Workspace ID</param> 
-        /// <param name="expand">Expand some workspace fields</param> 
+        /// <param name="workspaceId">Workspace ID</param>
+        /// <param name="expand">Expand some workspace fields (optional)</param>
         /// <returns>Workspace</returns>
         public Workspace GetWorkspacesWorkspaceId (string workspaceId, string expand = null)
         {
@@ -5427,19 +4980,16 @@ namespace ININ.PureCloudApi.Api
         /// Get a workspace. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="workspaceId">Workspace ID</param> 
-        /// <param name="expand">Expand some workspace fields</param> 
+        /// <param name="workspaceId">Workspace ID</param>
+        /// <param name="expand">Expand some workspace fields (optional)</param>
         /// <returns>ApiResponse of Workspace</returns>
         public ApiResponse< Workspace > GetWorkspacesWorkspaceIdWithHttpInfo (string workspaceId, string expand = null)
         {
-            
             // verify the required parameter 'workspaceId' is set
             if (workspaceId == null)
                 throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->GetWorkspacesWorkspaceId");
-            
-    
+
             var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -5465,47 +5015,39 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (workspaceId != null) localVarPathParams.Add("workspaceId", Configuration.ApiClient.ParameterToString(workspaceId)); // path parameter
-            
             if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
-            
-            
-            
-            
 
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-    
+
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetWorkspacesWorkspaceId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetWorkspacesWorkspaceId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
+
             return new ApiResponse<Workspace>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Workspace) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Workspace)));
             
         }
 
-        
         /// <summary>
         /// Get a workspace. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
-        /// <param name="expand">Expand some workspace fields</param>
+        /// <param name="expand">Expand some workspace fields (optional)</param>
         /// <returns>Task of Workspace</returns>
         public async System.Threading.Tasks.Task<Workspace> GetWorkspacesWorkspaceIdAsync (string workspaceId, string expand = null)
         {
@@ -5519,16 +5061,15 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
-        /// <param name="expand">Expand some workspace fields</param>
+        /// <param name="expand">Expand some workspace fields (optional)</param>
         /// <returns>Task of ApiResponse (Workspace)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Workspace>> GetWorkspacesWorkspaceIdAsyncWithHttpInfo (string workspaceId, string expand = null)
         {
             // verify the required parameter 'workspaceId' is set
-            if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling GetWorkspacesWorkspaceId");
-            
-    
+            if (workspaceId == null)
+                throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->GetWorkspacesWorkspaceId");
+
             var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -5554,30 +5095,22 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (workspaceId != null) localVarPathParams.Add("workspaceId", Configuration.ApiClient.ParameterToString(workspaceId)); // path parameter
-            
             if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
-            
-            
-            
-            
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetWorkspacesWorkspaceId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
@@ -5588,15 +5121,15 @@ namespace ININ.PureCloudApi.Api
                 (Workspace) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Workspace)));
             
         }
-        
+
         /// <summary>
         /// Get a list workspace members 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="workspaceId">Workspace ID</param> 
-        /// <param name="pageSize">Page size</param> 
-        /// <param name="pageNumber">Page number</param> 
-        /// <param name="expand">Expand workspace member fields</param> 
+        /// <param name="workspaceId">Workspace ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand workspace member fields (optional)</param>
         /// <returns>WorkspaceMemberEntityListing</returns>
         public WorkspaceMemberEntityListing GetWorkspacesWorkspaceIdMembers (string workspaceId, int? pageSize = null, int? pageNumber = null, string expand = null)
         {
@@ -5608,21 +5141,18 @@ namespace ININ.PureCloudApi.Api
         /// Get a list workspace members 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="workspaceId">Workspace ID</param> 
-        /// <param name="pageSize">Page size</param> 
-        /// <param name="pageNumber">Page number</param> 
-        /// <param name="expand">Expand workspace member fields</param> 
+        /// <param name="workspaceId">Workspace ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand workspace member fields (optional)</param>
         /// <returns>ApiResponse of WorkspaceMemberEntityListing</returns>
         public ApiResponse< WorkspaceMemberEntityListing > GetWorkspacesWorkspaceIdMembersWithHttpInfo (string workspaceId, int? pageSize = null, int? pageNumber = null, string expand = null)
         {
-            
             // verify the required parameter 'workspaceId' is set
             if (workspaceId == null)
                 throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->GetWorkspacesWorkspaceIdMembers");
-            
-    
+
             var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}/members";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -5648,51 +5178,43 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (workspaceId != null) localVarPathParams.Add("workspaceId", Configuration.ApiClient.ParameterToString(workspaceId)); // path parameter
-            
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
             if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
-            
-            
-            
-            
 
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-    
+
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetWorkspacesWorkspaceIdMembers: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetWorkspacesWorkspaceIdMembers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
+
             return new ApiResponse<WorkspaceMemberEntityListing>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (WorkspaceMemberEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(WorkspaceMemberEntityListing)));
             
         }
 
-        
         /// <summary>
         /// Get a list workspace members 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="expand">Expand workspace member fields</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand workspace member fields (optional)</param>
         /// <returns>Task of WorkspaceMemberEntityListing</returns>
         public async System.Threading.Tasks.Task<WorkspaceMemberEntityListing> GetWorkspacesWorkspaceIdMembersAsync (string workspaceId, int? pageSize = null, int? pageNumber = null, string expand = null)
         {
@@ -5706,18 +5228,17 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="expand">Expand workspace member fields</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand workspace member fields (optional)</param>
         /// <returns>Task of ApiResponse (WorkspaceMemberEntityListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<WorkspaceMemberEntityListing>> GetWorkspacesWorkspaceIdMembersAsyncWithHttpInfo (string workspaceId, int? pageSize = null, int? pageNumber = null, string expand = null)
         {
             // verify the required parameter 'workspaceId' is set
-            if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling GetWorkspacesWorkspaceIdMembers");
-            
-    
+            if (workspaceId == null)
+                throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->GetWorkspacesWorkspaceIdMembers");
+
             var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}/members";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -5743,32 +5264,24 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (workspaceId != null) localVarPathParams.Add("workspaceId", Configuration.ApiClient.ParameterToString(workspaceId)); // path parameter
-            
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
             if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
-            
-            
-            
-            
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetWorkspacesWorkspaceIdMembers: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
@@ -5779,14 +5292,14 @@ namespace ININ.PureCloudApi.Api
                 (WorkspaceMemberEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(WorkspaceMemberEntityListing)));
             
         }
-        
+
         /// <summary>
         /// Get a workspace member 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="workspaceId">Workspace ID</param> 
-        /// <param name="memberId">Member ID</param> 
-        /// <param name="expand">Expand workspace member fields</param> 
+        /// <param name="workspaceId">Workspace ID</param>
+        /// <param name="memberId">Member ID</param>
+        /// <param name="expand">Expand workspace member fields (optional)</param>
         /// <returns>WorkspaceMember</returns>
         public WorkspaceMember GetWorkspacesWorkspaceIdMembersMemberId (string workspaceId, string memberId, string expand = null)
         {
@@ -5798,24 +5311,20 @@ namespace ININ.PureCloudApi.Api
         /// Get a workspace member 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="workspaceId">Workspace ID</param> 
-        /// <param name="memberId">Member ID</param> 
-        /// <param name="expand">Expand workspace member fields</param> 
+        /// <param name="workspaceId">Workspace ID</param>
+        /// <param name="memberId">Member ID</param>
+        /// <param name="expand">Expand workspace member fields (optional)</param>
         /// <returns>ApiResponse of WorkspaceMember</returns>
         public ApiResponse< WorkspaceMember > GetWorkspacesWorkspaceIdMembersMemberIdWithHttpInfo (string workspaceId, string memberId, string expand = null)
         {
-            
             // verify the required parameter 'workspaceId' is set
             if (workspaceId == null)
                 throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->GetWorkspacesWorkspaceIdMembersMemberId");
-            
             // verify the required parameter 'memberId' is set
             if (memberId == null)
                 throw new ApiException(400, "Missing required parameter 'memberId' when calling ContentManagementApi->GetWorkspacesWorkspaceIdMembersMemberId");
-            
-    
+
             var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}/members/{memberId}";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -5842,48 +5351,40 @@ namespace ININ.PureCloudApi.Api
             localVarPathParams.Add("format", "json");
             if (workspaceId != null) localVarPathParams.Add("workspaceId", Configuration.ApiClient.ParameterToString(workspaceId)); // path parameter
             if (memberId != null) localVarPathParams.Add("memberId", Configuration.ApiClient.ParameterToString(memberId)); // path parameter
-            
             if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
-            
-            
-            
-            
 
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-    
+
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetWorkspacesWorkspaceIdMembersMemberId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetWorkspacesWorkspaceIdMembersMemberId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
+
             return new ApiResponse<WorkspaceMember>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (WorkspaceMember) Configuration.ApiClient.Deserialize(localVarResponse, typeof(WorkspaceMember)));
             
         }
 
-        
         /// <summary>
         /// Get a workspace member 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="memberId">Member ID</param>
-        /// <param name="expand">Expand workspace member fields</param>
+        /// <param name="expand">Expand workspace member fields (optional)</param>
         /// <returns>Task of WorkspaceMember</returns>
         public async System.Threading.Tasks.Task<WorkspaceMember> GetWorkspacesWorkspaceIdMembersMemberIdAsync (string workspaceId, string memberId, string expand = null)
         {
@@ -5898,18 +5399,18 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="memberId">Member ID</param>
-        /// <param name="expand">Expand workspace member fields</param>
+        /// <param name="expand">Expand workspace member fields (optional)</param>
         /// <returns>Task of ApiResponse (WorkspaceMember)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<WorkspaceMember>> GetWorkspacesWorkspaceIdMembersMemberIdAsyncWithHttpInfo (string workspaceId, string memberId, string expand = null)
         {
             // verify the required parameter 'workspaceId' is set
-            if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling GetWorkspacesWorkspaceIdMembersMemberId");
+            if (workspaceId == null)
+                throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->GetWorkspacesWorkspaceIdMembersMemberId");
             // verify the required parameter 'memberId' is set
-            if (memberId == null) throw new ApiException(400, "Missing required parameter 'memberId' when calling GetWorkspacesWorkspaceIdMembersMemberId");
-            
-    
+            if (memberId == null)
+                throw new ApiException(400, "Missing required parameter 'memberId' when calling ContentManagementApi->GetWorkspacesWorkspaceIdMembersMemberId");
+
             var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}/members/{memberId}";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -5936,30 +5437,22 @@ namespace ININ.PureCloudApi.Api
             localVarPathParams.Add("format", "json");
             if (workspaceId != null) localVarPathParams.Add("workspaceId", Configuration.ApiClient.ParameterToString(workspaceId)); // path parameter
             if (memberId != null) localVarPathParams.Add("memberId", Configuration.ApiClient.ParameterToString(memberId)); // path parameter
-            
             if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
-            
-            
-            
-            
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetWorkspacesWorkspaceIdMembersMemberId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
@@ -5970,16 +5463,16 @@ namespace ININ.PureCloudApi.Api
                 (WorkspaceMember) Configuration.ApiClient.Deserialize(localVarResponse, typeof(WorkspaceMember)));
             
         }
-        
+
         /// <summary>
         /// Get a list of workspace tags 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="workspaceId">Workspace ID</param> 
-        /// <param name="value">filter the list of tags returned</param> 
-        /// <param name="pageSize">Page size</param> 
-        /// <param name="pageNumber">Page number</param> 
-        /// <param name="expand">Expand some document fields</param> 
+        /// <param name="workspaceId">Workspace ID</param>
+        /// <param name="value">filter the list of tags returned (optional)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand some document fields (optional)</param>
         /// <returns>TagValueEntityListing</returns>
         public TagValueEntityListing GetWorkspacesWorkspaceIdTagvalues (string workspaceId, string value = null, int? pageSize = null, int? pageNumber = null, string expand = null)
         {
@@ -5991,22 +5484,19 @@ namespace ININ.PureCloudApi.Api
         /// Get a list of workspace tags 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="workspaceId">Workspace ID</param> 
-        /// <param name="value">filter the list of tags returned</param> 
-        /// <param name="pageSize">Page size</param> 
-        /// <param name="pageNumber">Page number</param> 
-        /// <param name="expand">Expand some document fields</param> 
+        /// <param name="workspaceId">Workspace ID</param>
+        /// <param name="value">filter the list of tags returned (optional)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand some document fields (optional)</param>
         /// <returns>ApiResponse of TagValueEntityListing</returns>
         public ApiResponse< TagValueEntityListing > GetWorkspacesWorkspaceIdTagvaluesWithHttpInfo (string workspaceId, string value = null, int? pageSize = null, int? pageNumber = null, string expand = null)
         {
-            
             // verify the required parameter 'workspaceId' is set
             if (workspaceId == null)
                 throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->GetWorkspacesWorkspaceIdTagvalues");
-            
-    
+
             var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -6032,53 +5522,45 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (workspaceId != null) localVarPathParams.Add("workspaceId", Configuration.ApiClient.ParameterToString(workspaceId)); // path parameter
-            
             if (value != null) localVarQueryParams.Add("value", Configuration.ApiClient.ParameterToString(value)); // query parameter
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
             if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
-            
-            
-            
-            
 
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-    
+
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetWorkspacesWorkspaceIdTagvalues: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetWorkspacesWorkspaceIdTagvalues: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
+
             return new ApiResponse<TagValueEntityListing>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (TagValueEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TagValueEntityListing)));
             
         }
 
-        
         /// <summary>
         /// Get a list of workspace tags 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
-        /// <param name="value">filter the list of tags returned</param>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="expand">Expand some document fields</param>
+        /// <param name="value">filter the list of tags returned (optional)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand some document fields (optional)</param>
         /// <returns>Task of TagValueEntityListing</returns>
         public async System.Threading.Tasks.Task<TagValueEntityListing> GetWorkspacesWorkspaceIdTagvaluesAsync (string workspaceId, string value = null, int? pageSize = null, int? pageNumber = null, string expand = null)
         {
@@ -6092,19 +5574,18 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
-        /// <param name="value">filter the list of tags returned</param>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="expand">Expand some document fields</param>
+        /// <param name="value">filter the list of tags returned (optional)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand some document fields (optional)</param>
         /// <returns>Task of ApiResponse (TagValueEntityListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<TagValueEntityListing>> GetWorkspacesWorkspaceIdTagvaluesAsyncWithHttpInfo (string workspaceId, string value = null, int? pageSize = null, int? pageNumber = null, string expand = null)
         {
             // verify the required parameter 'workspaceId' is set
-            if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling GetWorkspacesWorkspaceIdTagvalues");
-            
-    
+            if (workspaceId == null)
+                throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->GetWorkspacesWorkspaceIdTagvalues");
+
             var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -6130,33 +5611,25 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (workspaceId != null) localVarPathParams.Add("workspaceId", Configuration.ApiClient.ParameterToString(workspaceId)); // path parameter
-            
             if (value != null) localVarQueryParams.Add("value", Configuration.ApiClient.ParameterToString(value)); // query parameter
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
             if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
-            
-            
-            
-            
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetWorkspacesWorkspaceIdTagvalues: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
@@ -6167,14 +5640,14 @@ namespace ININ.PureCloudApi.Api
                 (TagValueEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TagValueEntityListing)));
             
         }
-        
+
         /// <summary>
         /// Get a workspace tag 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="workspaceId">Workspace ID</param> 
-        /// <param name="tagId">Tag ID</param> 
-        /// <param name="expand">Expand some document fields</param> 
+        /// <param name="workspaceId">Workspace ID</param>
+        /// <param name="tagId">Tag ID</param>
+        /// <param name="expand">Expand some document fields (optional)</param>
         /// <returns>TagValue</returns>
         public TagValue GetWorkspacesWorkspaceIdTagvaluesTagId (string workspaceId, string tagId, string expand = null)
         {
@@ -6186,24 +5659,20 @@ namespace ININ.PureCloudApi.Api
         /// Get a workspace tag 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="workspaceId">Workspace ID</param> 
-        /// <param name="tagId">Tag ID</param> 
-        /// <param name="expand">Expand some document fields</param> 
+        /// <param name="workspaceId">Workspace ID</param>
+        /// <param name="tagId">Tag ID</param>
+        /// <param name="expand">Expand some document fields (optional)</param>
         /// <returns>ApiResponse of TagValue</returns>
         public ApiResponse< TagValue > GetWorkspacesWorkspaceIdTagvaluesTagIdWithHttpInfo (string workspaceId, string tagId, string expand = null)
         {
-            
             // verify the required parameter 'workspaceId' is set
             if (workspaceId == null)
                 throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->GetWorkspacesWorkspaceIdTagvaluesTagId");
-            
             // verify the required parameter 'tagId' is set
             if (tagId == null)
                 throw new ApiException(400, "Missing required parameter 'tagId' when calling ContentManagementApi->GetWorkspacesWorkspaceIdTagvaluesTagId");
-            
-    
+
             var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues/{tagId}";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -6230,48 +5699,40 @@ namespace ININ.PureCloudApi.Api
             localVarPathParams.Add("format", "json");
             if (workspaceId != null) localVarPathParams.Add("workspaceId", Configuration.ApiClient.ParameterToString(workspaceId)); // path parameter
             if (tagId != null) localVarPathParams.Add("tagId", Configuration.ApiClient.ParameterToString(tagId)); // path parameter
-            
             if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
-            
-            
-            
-            
 
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-    
+
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetWorkspacesWorkspaceIdTagvaluesTagId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetWorkspacesWorkspaceIdTagvaluesTagId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
+
             return new ApiResponse<TagValue>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (TagValue) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TagValue)));
             
         }
 
-        
         /// <summary>
         /// Get a workspace tag 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="tagId">Tag ID</param>
-        /// <param name="expand">Expand some document fields</param>
+        /// <param name="expand">Expand some document fields (optional)</param>
         /// <returns>Task of TagValue</returns>
         public async System.Threading.Tasks.Task<TagValue> GetWorkspacesWorkspaceIdTagvaluesTagIdAsync (string workspaceId, string tagId, string expand = null)
         {
@@ -6286,18 +5747,18 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="tagId">Tag ID</param>
-        /// <param name="expand">Expand some document fields</param>
+        /// <param name="expand">Expand some document fields (optional)</param>
         /// <returns>Task of ApiResponse (TagValue)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<TagValue>> GetWorkspacesWorkspaceIdTagvaluesTagIdAsyncWithHttpInfo (string workspaceId, string tagId, string expand = null)
         {
             // verify the required parameter 'workspaceId' is set
-            if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling GetWorkspacesWorkspaceIdTagvaluesTagId");
+            if (workspaceId == null)
+                throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->GetWorkspacesWorkspaceIdTagvaluesTagId");
             // verify the required parameter 'tagId' is set
-            if (tagId == null) throw new ApiException(400, "Missing required parameter 'tagId' when calling GetWorkspacesWorkspaceIdTagvaluesTagId");
-            
-    
+            if (tagId == null)
+                throw new ApiException(400, "Missing required parameter 'tagId' when calling ContentManagementApi->GetWorkspacesWorkspaceIdTagvaluesTagId");
+
             var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues/{tagId}";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -6324,30 +5785,22 @@ namespace ININ.PureCloudApi.Api
             localVarPathParams.Add("format", "json");
             if (workspaceId != null) localVarPathParams.Add("workspaceId", Configuration.ApiClient.ParameterToString(workspaceId)); // path parameter
             if (tagId != null) localVarPathParams.Add("tagId", Configuration.ApiClient.ParameterToString(tagId)); // path parameter
-            
             if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
-            
-            
-            
-            
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling GetWorkspacesWorkspaceIdTagvaluesTagId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
@@ -6358,12 +5811,12 @@ namespace ININ.PureCloudApi.Api
                 (TagValue) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TagValue)));
             
         }
-        
+
         /// <summary>
         /// Query audits 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Allows for a filtered query returning facet information</param> 
+        /// <param name="body">Allows for a filtered query returning facet information</param>
         /// <returns>QueryResults</returns>
         public QueryResults PostAuditquery (ContentQueryRequest body)
         {
@@ -6375,18 +5828,15 @@ namespace ININ.PureCloudApi.Api
         /// Query audits 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Allows for a filtered query returning facet information</param> 
+        /// <param name="body">Allows for a filtered query returning facet information</param>
         /// <returns>ApiResponse of QueryResults</returns>
         public ApiResponse< QueryResults > PostAuditqueryWithHttpInfo (ContentQueryRequest body)
         {
-            
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling ContentManagementApi->PostAuditquery");
-            
-    
+
             var localVarPath = "/api/v2/contentmanagement/auditquery";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -6411,10 +5861,6 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            
-            
-            
-            
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -6425,33 +5871,30 @@ namespace ININ.PureCloudApi.Api
             }
 
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-    
+
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostAuditquery: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostAuditquery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
+
             return new ApiResponse<QueryResults>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (QueryResults) Configuration.ApiClient.Deserialize(localVarResponse, typeof(QueryResults)));
             
         }
 
-        
         /// <summary>
         /// Query audits 
         /// </summary>
@@ -6474,11 +5917,10 @@ namespace ININ.PureCloudApi.Api
         public async System.Threading.Tasks.Task<ApiResponse<QueryResults>> PostAuditqueryAsyncWithHttpInfo (ContentQueryRequest body)
         {
             // verify the required parameter 'body' is set
-            if (body == null) throw new ApiException(400, "Missing required parameter 'body' when calling PostAuditquery");
-            
-    
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ContentManagementApi->PostAuditquery");
+
             var localVarPath = "/api/v2/contentmanagement/auditquery";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -6503,10 +5945,6 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            
-            
-            
-            
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -6516,23 +5954,20 @@ namespace ININ.PureCloudApi.Api
                 localVarPostBody = body; // byte array
             }
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostAuditquery: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
@@ -6543,15 +5978,15 @@ namespace ININ.PureCloudApi.Api
                 (QueryResults) Configuration.ApiClient.Deserialize(localVarResponse, typeof(QueryResults)));
             
         }
-        
+
         /// <summary>
         /// Add a document. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Document</param> 
-        /// <param name="copySource">Copy a document within a workspace or to a new workspace. Provide a document ID as the copy source.</param> 
-        /// <param name="moveSource">Move a document to a new workspace. Provide a document ID as the move source.</param> 
-        /// <param name="_override">Override any lock on the source document</param> 
+        /// <param name="body">Document (optional)</param>
+        /// <param name="copySource">Copy a document within a workspace or to a new workspace. Provide a document ID as the copy source. (optional)</param>
+        /// <param name="moveSource">Move a document to a new workspace. Provide a document ID as the move source. (optional)</param>
+        /// <param name="_override">Override any lock on the source document (optional)</param>
         /// <returns>Document</returns>
         public Document PostDocuments (DocumentUpload body = null, string copySource = null, string moveSource = null, bool? _override = null)
         {
@@ -6563,17 +5998,15 @@ namespace ININ.PureCloudApi.Api
         /// Add a document. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Document</param> 
-        /// <param name="copySource">Copy a document within a workspace or to a new workspace. Provide a document ID as the copy source.</param> 
-        /// <param name="moveSource">Move a document to a new workspace. Provide a document ID as the move source.</param> 
-        /// <param name="_override">Override any lock on the source document</param> 
+        /// <param name="body">Document (optional)</param>
+        /// <param name="copySource">Copy a document within a workspace or to a new workspace. Provide a document ID as the copy source. (optional)</param>
+        /// <param name="moveSource">Move a document to a new workspace. Provide a document ID as the move source. (optional)</param>
+        /// <param name="_override">Override any lock on the source document (optional)</param>
         /// <returns>ApiResponse of Document</returns>
         public ApiResponse< Document > PostDocumentsWithHttpInfo (DocumentUpload body = null, string copySource = null, string moveSource = null, bool? _override = null)
         {
-            
-    
+
             var localVarPath = "/api/v2/contentmanagement/documents";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -6598,13 +6031,9 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            
             if (copySource != null) localVarQueryParams.Add("copySource", Configuration.ApiClient.ParameterToString(copySource)); // query parameter
             if (moveSource != null) localVarQueryParams.Add("moveSource", Configuration.ApiClient.ParameterToString(moveSource)); // query parameter
             if (_override != null) localVarQueryParams.Add("override", Configuration.ApiClient.ParameterToString(_override)); // query parameter
-            
-            
-            
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -6615,41 +6044,38 @@ namespace ININ.PureCloudApi.Api
             }
 
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-    
+
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostDocuments: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostDocuments: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
+
             return new ApiResponse<Document>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Document) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Document)));
             
         }
 
-        
         /// <summary>
         /// Add a document. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Document</param>
-        /// <param name="copySource">Copy a document within a workspace or to a new workspace. Provide a document ID as the copy source.</param>
-        /// <param name="moveSource">Move a document to a new workspace. Provide a document ID as the move source.</param>
-        /// <param name="_override">Override any lock on the source document</param>
+        /// <param name="body">Document (optional)</param>
+        /// <param name="copySource">Copy a document within a workspace or to a new workspace. Provide a document ID as the copy source. (optional)</param>
+        /// <param name="moveSource">Move a document to a new workspace. Provide a document ID as the move source. (optional)</param>
+        /// <param name="_override">Override any lock on the source document (optional)</param>
         /// <returns>Task of Document</returns>
         public async System.Threading.Tasks.Task<Document> PostDocumentsAsync (DocumentUpload body = null, string copySource = null, string moveSource = null, bool? _override = null)
         {
@@ -6662,17 +6088,15 @@ namespace ININ.PureCloudApi.Api
         /// Add a document. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Document</param>
-        /// <param name="copySource">Copy a document within a workspace or to a new workspace. Provide a document ID as the copy source.</param>
-        /// <param name="moveSource">Move a document to a new workspace. Provide a document ID as the move source.</param>
-        /// <param name="_override">Override any lock on the source document</param>
+        /// <param name="body">Document (optional)</param>
+        /// <param name="copySource">Copy a document within a workspace or to a new workspace. Provide a document ID as the copy source. (optional)</param>
+        /// <param name="moveSource">Move a document to a new workspace. Provide a document ID as the move source. (optional)</param>
+        /// <param name="_override">Override any lock on the source document (optional)</param>
         /// <returns>Task of ApiResponse (Document)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Document>> PostDocumentsAsyncWithHttpInfo (DocumentUpload body = null, string copySource = null, string moveSource = null, bool? _override = null)
         {
-            
-    
+
             var localVarPath = "/api/v2/contentmanagement/documents";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -6697,13 +6121,9 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            
             if (copySource != null) localVarQueryParams.Add("copySource", Configuration.ApiClient.ParameterToString(copySource)); // query parameter
             if (moveSource != null) localVarQueryParams.Add("moveSource", Configuration.ApiClient.ParameterToString(moveSource)); // query parameter
             if (_override != null) localVarQueryParams.Add("override", Configuration.ApiClient.ParameterToString(_override)); // query parameter
-            
-            
-            
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -6713,23 +6133,20 @@ namespace ININ.PureCloudApi.Api
                 localVarPostBody = body; // byte array
             }
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostDocuments: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
@@ -6740,15 +6157,15 @@ namespace ININ.PureCloudApi.Api
                 (Document) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Document)));
             
         }
-        
+
         /// <summary>
         /// Update a document. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentId">Document ID</param> 
-        /// <param name="body">Document</param> 
-        /// <param name="expand">Expand some document fields</param> 
-        /// <param name="_override">Override any lock on the document</param> 
+        /// <param name="documentId">Document ID</param>
+        /// <param name="body">Document (optional)</param>
+        /// <param name="expand">Expand some document fields (optional)</param>
+        /// <param name="_override">Override any lock on the document (optional)</param>
         /// <returns>Document</returns>
         public Document PostDocumentsDocumentId (string documentId, DocumentUpdate body = null, string expand = null, bool? _override = null)
         {
@@ -6760,21 +6177,18 @@ namespace ININ.PureCloudApi.Api
         /// Update a document. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentId">Document ID</param> 
-        /// <param name="body">Document</param> 
-        /// <param name="expand">Expand some document fields</param> 
-        /// <param name="_override">Override any lock on the document</param> 
+        /// <param name="documentId">Document ID</param>
+        /// <param name="body">Document (optional)</param>
+        /// <param name="expand">Expand some document fields (optional)</param>
+        /// <param name="_override">Override any lock on the document (optional)</param>
         /// <returns>ApiResponse of Document</returns>
         public ApiResponse< Document > PostDocumentsDocumentIdWithHttpInfo (string documentId, DocumentUpdate body = null, string expand = null, bool? _override = null)
         {
-            
             // verify the required parameter 'documentId' is set
             if (documentId == null)
                 throw new ApiException(400, "Missing required parameter 'documentId' when calling ContentManagementApi->PostDocumentsDocumentId");
-            
-    
+
             var localVarPath = "/api/v2/contentmanagement/documents/{documentId}";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -6800,12 +6214,8 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (documentId != null) localVarPathParams.Add("documentId", Configuration.ApiClient.ParameterToString(documentId)); // path parameter
-            
             if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
             if (_override != null) localVarQueryParams.Add("override", Configuration.ApiClient.ParameterToString(_override)); // query parameter
-            
-            
-            
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -6816,41 +6226,38 @@ namespace ININ.PureCloudApi.Api
             }
 
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-    
+
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostDocumentsDocumentId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostDocumentsDocumentId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
+
             return new ApiResponse<Document>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Document) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Document)));
             
         }
 
-        
         /// <summary>
         /// Update a document. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId">Document ID</param>
-        /// <param name="body">Document</param>
-        /// <param name="expand">Expand some document fields</param>
-        /// <param name="_override">Override any lock on the document</param>
+        /// <param name="body">Document (optional)</param>
+        /// <param name="expand">Expand some document fields (optional)</param>
+        /// <param name="_override">Override any lock on the document (optional)</param>
         /// <returns>Task of Document</returns>
         public async System.Threading.Tasks.Task<Document> PostDocumentsDocumentIdAsync (string documentId, DocumentUpdate body = null, string expand = null, bool? _override = null)
         {
@@ -6864,18 +6271,17 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId">Document ID</param>
-        /// <param name="body">Document</param>
-        /// <param name="expand">Expand some document fields</param>
-        /// <param name="_override">Override any lock on the document</param>
+        /// <param name="body">Document (optional)</param>
+        /// <param name="expand">Expand some document fields (optional)</param>
+        /// <param name="_override">Override any lock on the document (optional)</param>
         /// <returns>Task of ApiResponse (Document)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Document>> PostDocumentsDocumentIdAsyncWithHttpInfo (string documentId, DocumentUpdate body = null, string expand = null, bool? _override = null)
         {
             // verify the required parameter 'documentId' is set
-            if (documentId == null) throw new ApiException(400, "Missing required parameter 'documentId' when calling PostDocumentsDocumentId");
-            
-    
+            if (documentId == null)
+                throw new ApiException(400, "Missing required parameter 'documentId' when calling ContentManagementApi->PostDocumentsDocumentId");
+
             var localVarPath = "/api/v2/contentmanagement/documents/{documentId}";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -6901,12 +6307,8 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (documentId != null) localVarPathParams.Add("documentId", Configuration.ApiClient.ParameterToString(documentId)); // path parameter
-            
             if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
             if (_override != null) localVarQueryParams.Add("override", Configuration.ApiClient.ParameterToString(_override)); // query parameter
-            
-            
-            
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -6916,23 +6318,20 @@ namespace ININ.PureCloudApi.Api
                 localVarPostBody = body; // byte array
             }
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostDocumentsDocumentId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
@@ -6943,14 +6342,14 @@ namespace ININ.PureCloudApi.Api
                 (Document) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Document)));
             
         }
-        
+
         /// <summary>
         /// Replace the contents of a document. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentId">Document ID</param> 
-        /// <param name="body">Replace Request</param> 
-        /// <param name="_override">Override any lock on the document</param> 
+        /// <param name="documentId">Document ID</param>
+        /// <param name="body">Replace Request (optional)</param>
+        /// <param name="_override">Override any lock on the document (optional)</param>
         /// <returns>ReplaceResponse</returns>
         public ReplaceResponse PostDocumentsDocumentIdContent (string documentId, ReplaceRequest body = null, bool? _override = null)
         {
@@ -6962,20 +6361,17 @@ namespace ININ.PureCloudApi.Api
         /// Replace the contents of a document. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentId">Document ID</param> 
-        /// <param name="body">Replace Request</param> 
-        /// <param name="_override">Override any lock on the document</param> 
+        /// <param name="documentId">Document ID</param>
+        /// <param name="body">Replace Request (optional)</param>
+        /// <param name="_override">Override any lock on the document (optional)</param>
         /// <returns>ApiResponse of ReplaceResponse</returns>
         public ApiResponse< ReplaceResponse > PostDocumentsDocumentIdContentWithHttpInfo (string documentId, ReplaceRequest body = null, bool? _override = null)
         {
-            
             // verify the required parameter 'documentId' is set
             if (documentId == null)
                 throw new ApiException(400, "Missing required parameter 'documentId' when calling ContentManagementApi->PostDocumentsDocumentIdContent");
-            
-    
+
             var localVarPath = "/api/v2/contentmanagement/documents/{documentId}/content";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -7001,11 +6397,7 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (documentId != null) localVarPathParams.Add("documentId", Configuration.ApiClient.ParameterToString(documentId)); // path parameter
-            
             if (_override != null) localVarQueryParams.Add("override", Configuration.ApiClient.ParameterToString(_override)); // query parameter
-            
-            
-            
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -7016,40 +6408,37 @@ namespace ININ.PureCloudApi.Api
             }
 
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-    
+
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostDocumentsDocumentIdContent: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostDocumentsDocumentIdContent: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
+
             return new ApiResponse<ReplaceResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ReplaceResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ReplaceResponse)));
             
         }
 
-        
         /// <summary>
         /// Replace the contents of a document. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId">Document ID</param>
-        /// <param name="body">Replace Request</param>
-        /// <param name="_override">Override any lock on the document</param>
+        /// <param name="body">Replace Request (optional)</param>
+        /// <param name="_override">Override any lock on the document (optional)</param>
         /// <returns>Task of ReplaceResponse</returns>
         public async System.Threading.Tasks.Task<ReplaceResponse> PostDocumentsDocumentIdContentAsync (string documentId, ReplaceRequest body = null, bool? _override = null)
         {
@@ -7063,17 +6452,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId">Document ID</param>
-        /// <param name="body">Replace Request</param>
-        /// <param name="_override">Override any lock on the document</param>
+        /// <param name="body">Replace Request (optional)</param>
+        /// <param name="_override">Override any lock on the document (optional)</param>
         /// <returns>Task of ApiResponse (ReplaceResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ReplaceResponse>> PostDocumentsDocumentIdContentAsyncWithHttpInfo (string documentId, ReplaceRequest body = null, bool? _override = null)
         {
             // verify the required parameter 'documentId' is set
-            if (documentId == null) throw new ApiException(400, "Missing required parameter 'documentId' when calling PostDocumentsDocumentIdContent");
-            
-    
+            if (documentId == null)
+                throw new ApiException(400, "Missing required parameter 'documentId' when calling ContentManagementApi->PostDocumentsDocumentIdContent");
+
             var localVarPath = "/api/v2/contentmanagement/documents/{documentId}/content";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -7099,11 +6487,7 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (documentId != null) localVarPathParams.Add("documentId", Configuration.ApiClient.ParameterToString(documentId)); // path parameter
-            
             if (_override != null) localVarQueryParams.Add("override", Configuration.ApiClient.ParameterToString(_override)); // query parameter
-            
-            
-            
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -7113,23 +6497,20 @@ namespace ININ.PureCloudApi.Api
                 localVarPostBody = body; // byte array
             }
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostDocumentsDocumentIdContent: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
@@ -7140,13 +6521,13 @@ namespace ININ.PureCloudApi.Api
                 (ReplaceResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ReplaceResponse)));
             
         }
-        
+
         /// <summary>
         /// Query content 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Allows for a filtered query returning facet information</param> 
-        /// <param name="expand">Expand some document fields</param> 
+        /// <param name="body">Allows for a filtered query returning facet information</param>
+        /// <param name="expand">Expand some document fields (optional)</param>
         /// <returns>QueryResults</returns>
         public QueryResults PostQuery (QueryRequest body, string expand = null)
         {
@@ -7158,19 +6539,16 @@ namespace ININ.PureCloudApi.Api
         /// Query content 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Allows for a filtered query returning facet information</param> 
-        /// <param name="expand">Expand some document fields</param> 
+        /// <param name="body">Allows for a filtered query returning facet information</param>
+        /// <param name="expand">Expand some document fields (optional)</param>
         /// <returns>ApiResponse of QueryResults</returns>
         public ApiResponse< QueryResults > PostQueryWithHttpInfo (QueryRequest body, string expand = null)
         {
-            
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling ContentManagementApi->PostQuery");
-            
-    
+
             var localVarPath = "/api/v2/contentmanagement/query";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -7195,11 +6573,7 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            
             if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
-            
-            
-            
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -7210,39 +6584,36 @@ namespace ININ.PureCloudApi.Api
             }
 
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-    
+
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostQuery: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
+
             return new ApiResponse<QueryResults>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (QueryResults) Configuration.ApiClient.Deserialize(localVarResponse, typeof(QueryResults)));
             
         }
 
-        
         /// <summary>
         /// Query content 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Allows for a filtered query returning facet information</param>
-        /// <param name="expand">Expand some document fields</param>
+        /// <param name="expand">Expand some document fields (optional)</param>
         /// <returns>Task of QueryResults</returns>
         public async System.Threading.Tasks.Task<QueryResults> PostQueryAsync (QueryRequest body, string expand = null)
         {
@@ -7256,16 +6627,15 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Allows for a filtered query returning facet information</param>
-        /// <param name="expand">Expand some document fields</param>
+        /// <param name="expand">Expand some document fields (optional)</param>
         /// <returns>Task of ApiResponse (QueryResults)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<QueryResults>> PostQueryAsyncWithHttpInfo (QueryRequest body, string expand = null)
         {
             // verify the required parameter 'body' is set
-            if (body == null) throw new ApiException(400, "Missing required parameter 'body' when calling PostQuery");
-            
-    
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ContentManagementApi->PostQuery");
+
             var localVarPath = "/api/v2/contentmanagement/query";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -7290,11 +6660,7 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            
             if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
-            
-            
-            
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -7304,23 +6670,20 @@ namespace ININ.PureCloudApi.Api
                 localVarPostBody = body; // byte array
             }
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostQuery: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
@@ -7331,12 +6694,12 @@ namespace ININ.PureCloudApi.Api
                 (QueryResults) Configuration.ApiClient.Deserialize(localVarResponse, typeof(QueryResults)));
             
         }
-        
+
         /// <summary>
         /// Creates a new share or updates an existing share if the entity has already been shared 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">CreateShareRequest - entity id and type and a single member or list of members are required</param> 
+        /// <param name="body">CreateShareRequest - entity id and type and a single member or list of members are required (optional)</param>
         /// <returns>CreateShareResponse</returns>
         public CreateShareResponse PostShares (CreateShareRequest body = null)
         {
@@ -7348,14 +6711,12 @@ namespace ININ.PureCloudApi.Api
         /// Creates a new share or updates an existing share if the entity has already been shared 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">CreateShareRequest - entity id and type and a single member or list of members are required</param> 
+        /// <param name="body">CreateShareRequest - entity id and type and a single member or list of members are required (optional)</param>
         /// <returns>ApiResponse of CreateShareResponse</returns>
         public ApiResponse< CreateShareResponse > PostSharesWithHttpInfo (CreateShareRequest body = null)
         {
-            
-    
+
             var localVarPath = "/api/v2/contentmanagement/shares";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -7380,10 +6741,6 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            
-            
-            
-            
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -7394,38 +6751,35 @@ namespace ININ.PureCloudApi.Api
             }
 
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-    
+
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostShares: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostShares: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
+
             return new ApiResponse<CreateShareResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (CreateShareResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CreateShareResponse)));
             
         }
 
-        
         /// <summary>
         /// Creates a new share or updates an existing share if the entity has already been shared 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">CreateShareRequest - entity id and type and a single member or list of members are required</param>
+        /// <param name="body">CreateShareRequest - entity id and type and a single member or list of members are required (optional)</param>
         /// <returns>Task of CreateShareResponse</returns>
         public async System.Threading.Tasks.Task<CreateShareResponse> PostSharesAsync (CreateShareRequest body = null)
         {
@@ -7438,14 +6792,12 @@ namespace ININ.PureCloudApi.Api
         /// Creates a new share or updates an existing share if the entity has already been shared 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">CreateShareRequest - entity id and type and a single member or list of members are required</param>
+        /// <param name="body">CreateShareRequest - entity id and type and a single member or list of members are required (optional)</param>
         /// <returns>Task of ApiResponse (CreateShareResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<CreateShareResponse>> PostSharesAsyncWithHttpInfo (CreateShareRequest body = null)
         {
-            
-    
+
             var localVarPath = "/api/v2/contentmanagement/shares";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -7470,10 +6822,6 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            
-            
-            
-            
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -7483,23 +6831,20 @@ namespace ININ.PureCloudApi.Api
                 localVarPostBody = body; // byte array
             }
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostShares: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
@@ -7510,12 +6855,12 @@ namespace ININ.PureCloudApi.Api
                 (CreateShareResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CreateShareResponse)));
             
         }
-        
+
         /// <summary>
         /// Create a group workspace 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Workspace</param> 
+        /// <param name="body">Workspace (optional)</param>
         /// <returns>Workspace</returns>
         public Workspace PostWorkspaces (WorkspaceCreate body = null)
         {
@@ -7527,14 +6872,12 @@ namespace ININ.PureCloudApi.Api
         /// Create a group workspace 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Workspace</param> 
+        /// <param name="body">Workspace (optional)</param>
         /// <returns>ApiResponse of Workspace</returns>
         public ApiResponse< Workspace > PostWorkspacesWithHttpInfo (WorkspaceCreate body = null)
         {
-            
-    
+
             var localVarPath = "/api/v2/contentmanagement/workspaces";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -7559,10 +6902,6 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            
-            
-            
-            
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -7573,38 +6912,35 @@ namespace ININ.PureCloudApi.Api
             }
 
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-    
+
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostWorkspaces: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostWorkspaces: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
+
             return new ApiResponse<Workspace>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Workspace) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Workspace)));
             
         }
 
-        
         /// <summary>
         /// Create a group workspace 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Workspace</param>
+        /// <param name="body">Workspace (optional)</param>
         /// <returns>Task of Workspace</returns>
         public async System.Threading.Tasks.Task<Workspace> PostWorkspacesAsync (WorkspaceCreate body = null)
         {
@@ -7617,14 +6953,12 @@ namespace ININ.PureCloudApi.Api
         /// Create a group workspace 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Workspace</param>
+        /// <param name="body">Workspace (optional)</param>
         /// <returns>Task of ApiResponse (Workspace)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Workspace>> PostWorkspacesAsyncWithHttpInfo (WorkspaceCreate body = null)
         {
-            
-    
+
             var localVarPath = "/api/v2/contentmanagement/workspaces";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -7649,10 +6983,6 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            
-            
-            
-            
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -7662,23 +6992,20 @@ namespace ININ.PureCloudApi.Api
                 localVarPostBody = body; // byte array
             }
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostWorkspaces: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
@@ -7689,13 +7016,13 @@ namespace ININ.PureCloudApi.Api
                 (Workspace) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Workspace)));
             
         }
-        
+
         /// <summary>
         /// Create a workspace tag 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="workspaceId">Workspace ID</param> 
-        /// <param name="body">tag</param> 
+        /// <param name="workspaceId">Workspace ID</param>
+        /// <param name="body">tag (optional)</param>
         /// <returns>TagValue</returns>
         public TagValue PostWorkspacesWorkspaceIdTagvalues (string workspaceId, TagValue body = null)
         {
@@ -7707,19 +7034,16 @@ namespace ININ.PureCloudApi.Api
         /// Create a workspace tag 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="workspaceId">Workspace ID</param> 
-        /// <param name="body">tag</param> 
+        /// <param name="workspaceId">Workspace ID</param>
+        /// <param name="body">tag (optional)</param>
         /// <returns>ApiResponse of TagValue</returns>
         public ApiResponse< TagValue > PostWorkspacesWorkspaceIdTagvaluesWithHttpInfo (string workspaceId, TagValue body = null)
         {
-            
             // verify the required parameter 'workspaceId' is set
             if (workspaceId == null)
                 throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->PostWorkspacesWorkspaceIdTagvalues");
-            
-    
+
             var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -7745,10 +7069,6 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (workspaceId != null) localVarPathParams.Add("workspaceId", Configuration.ApiClient.ParameterToString(workspaceId)); // path parameter
-            
-            
-            
-            
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -7759,39 +7079,36 @@ namespace ININ.PureCloudApi.Api
             }
 
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-    
+
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostWorkspacesWorkspaceIdTagvalues: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostWorkspacesWorkspaceIdTagvalues: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
+
             return new ApiResponse<TagValue>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (TagValue) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TagValue)));
             
         }
 
-        
         /// <summary>
         /// Create a workspace tag 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
-        /// <param name="body">tag</param>
+        /// <param name="body">tag (optional)</param>
         /// <returns>Task of TagValue</returns>
         public async System.Threading.Tasks.Task<TagValue> PostWorkspacesWorkspaceIdTagvaluesAsync (string workspaceId, TagValue body = null)
         {
@@ -7805,16 +7122,15 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
-        /// <param name="body">tag</param>
+        /// <param name="body">tag (optional)</param>
         /// <returns>Task of ApiResponse (TagValue)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<TagValue>> PostWorkspacesWorkspaceIdTagvaluesAsyncWithHttpInfo (string workspaceId, TagValue body = null)
         {
             // verify the required parameter 'workspaceId' is set
-            if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling PostWorkspacesWorkspaceIdTagvalues");
-            
-    
+            if (workspaceId == null)
+                throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->PostWorkspacesWorkspaceIdTagvalues");
+
             var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -7840,10 +7156,6 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (workspaceId != null) localVarPathParams.Add("workspaceId", Configuration.ApiClient.ParameterToString(workspaceId)); // path parameter
-            
-            
-            
-            
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -7853,23 +7165,20 @@ namespace ININ.PureCloudApi.Api
                 localVarPostBody = body; // byte array
             }
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostWorkspacesWorkspaceIdTagvalues: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
@@ -7880,14 +7189,14 @@ namespace ININ.PureCloudApi.Api
                 (TagValue) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TagValue)));
             
         }
-        
+
         /// <summary>
         /// Perform a prefix query on tags in the workspace 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="workspaceId">Workspace ID</param> 
-        /// <param name="body">query</param> 
-        /// <param name="expand">Expand some document fields</param> 
+        /// <param name="workspaceId">Workspace ID</param>
+        /// <param name="body">query (optional)</param>
+        /// <param name="expand">Expand some document fields (optional)</param>
         /// <returns>TagValueEntityListing</returns>
         public TagValueEntityListing PostWorkspacesWorkspaceIdTagvaluesQuery (string workspaceId, TagQueryRequest body = null, string expand = null)
         {
@@ -7899,20 +7208,17 @@ namespace ININ.PureCloudApi.Api
         /// Perform a prefix query on tags in the workspace 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="workspaceId">Workspace ID</param> 
-        /// <param name="body">query</param> 
-        /// <param name="expand">Expand some document fields</param> 
+        /// <param name="workspaceId">Workspace ID</param>
+        /// <param name="body">query (optional)</param>
+        /// <param name="expand">Expand some document fields (optional)</param>
         /// <returns>ApiResponse of TagValueEntityListing</returns>
         public ApiResponse< TagValueEntityListing > PostWorkspacesWorkspaceIdTagvaluesQueryWithHttpInfo (string workspaceId, TagQueryRequest body = null, string expand = null)
         {
-            
             // verify the required parameter 'workspaceId' is set
             if (workspaceId == null)
                 throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->PostWorkspacesWorkspaceIdTagvaluesQuery");
-            
-    
+
             var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues/query";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -7938,11 +7244,7 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (workspaceId != null) localVarPathParams.Add("workspaceId", Configuration.ApiClient.ParameterToString(workspaceId)); // path parameter
-            
             if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
-            
-            
-            
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -7953,40 +7255,37 @@ namespace ININ.PureCloudApi.Api
             }
 
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-    
+
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostWorkspacesWorkspaceIdTagvaluesQuery: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostWorkspacesWorkspaceIdTagvaluesQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
+
             return new ApiResponse<TagValueEntityListing>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (TagValueEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TagValueEntityListing)));
             
         }
 
-        
         /// <summary>
         /// Perform a prefix query on tags in the workspace 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
-        /// <param name="body">query</param>
-        /// <param name="expand">Expand some document fields</param>
+        /// <param name="body">query (optional)</param>
+        /// <param name="expand">Expand some document fields (optional)</param>
         /// <returns>Task of TagValueEntityListing</returns>
         public async System.Threading.Tasks.Task<TagValueEntityListing> PostWorkspacesWorkspaceIdTagvaluesQueryAsync (string workspaceId, TagQueryRequest body = null, string expand = null)
         {
@@ -8000,17 +7299,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
-        /// <param name="body">query</param>
-        /// <param name="expand">Expand some document fields</param>
+        /// <param name="body">query (optional)</param>
+        /// <param name="expand">Expand some document fields (optional)</param>
         /// <returns>Task of ApiResponse (TagValueEntityListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<TagValueEntityListing>> PostWorkspacesWorkspaceIdTagvaluesQueryAsyncWithHttpInfo (string workspaceId, TagQueryRequest body = null, string expand = null)
         {
             // verify the required parameter 'workspaceId' is set
-            if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling PostWorkspacesWorkspaceIdTagvaluesQuery");
-            
-    
+            if (workspaceId == null)
+                throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->PostWorkspacesWorkspaceIdTagvaluesQuery");
+
             var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues/query";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -8036,11 +7334,7 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (workspaceId != null) localVarPathParams.Add("workspaceId", Configuration.ApiClient.ParameterToString(workspaceId)); // path parameter
-            
             if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
-            
-            
-            
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -8050,23 +7344,20 @@ namespace ININ.PureCloudApi.Api
                 localVarPostBody = body; // byte array
             }
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PostWorkspacesWorkspaceIdTagvaluesQuery: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
@@ -8077,13 +7368,13 @@ namespace ININ.PureCloudApi.Api
                 (TagValueEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TagValueEntityListing)));
             
         }
-        
+
         /// <summary>
         /// Update a workspace 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="workspaceId">Workspace ID</param> 
-        /// <param name="body">Workspace</param> 
+        /// <param name="workspaceId">Workspace ID</param>
+        /// <param name="body">Workspace (optional)</param>
         /// <returns>Workspace</returns>
         public Workspace PutWorkspacesWorkspaceId (string workspaceId, Workspace body = null)
         {
@@ -8095,19 +7386,16 @@ namespace ININ.PureCloudApi.Api
         /// Update a workspace 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="workspaceId">Workspace ID</param> 
-        /// <param name="body">Workspace</param> 
+        /// <param name="workspaceId">Workspace ID</param>
+        /// <param name="body">Workspace (optional)</param>
         /// <returns>ApiResponse of Workspace</returns>
         public ApiResponse< Workspace > PutWorkspacesWorkspaceIdWithHttpInfo (string workspaceId, Workspace body = null)
         {
-            
             // verify the required parameter 'workspaceId' is set
             if (workspaceId == null)
                 throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->PutWorkspacesWorkspaceId");
-            
-    
+
             var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -8133,10 +7421,6 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (workspaceId != null) localVarPathParams.Add("workspaceId", Configuration.ApiClient.ParameterToString(workspaceId)); // path parameter
-            
-            
-            
-            
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -8147,39 +7431,36 @@ namespace ININ.PureCloudApi.Api
             }
 
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-    
+
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
                 Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PutWorkspacesWorkspaceId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PutWorkspacesWorkspaceId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
+
             return new ApiResponse<Workspace>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Workspace) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Workspace)));
             
         }
 
-        
         /// <summary>
         /// Update a workspace 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
-        /// <param name="body">Workspace</param>
+        /// <param name="body">Workspace (optional)</param>
         /// <returns>Task of Workspace</returns>
         public async System.Threading.Tasks.Task<Workspace> PutWorkspacesWorkspaceIdAsync (string workspaceId, Workspace body = null)
         {
@@ -8193,16 +7474,15 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
-        /// <param name="body">Workspace</param>
+        /// <param name="body">Workspace (optional)</param>
         /// <returns>Task of ApiResponse (Workspace)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Workspace>> PutWorkspacesWorkspaceIdAsyncWithHttpInfo (string workspaceId, Workspace body = null)
         {
             // verify the required parameter 'workspaceId' is set
-            if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling PutWorkspacesWorkspaceId");
-            
-    
+            if (workspaceId == null)
+                throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->PutWorkspacesWorkspaceId");
+
             var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -8228,10 +7508,6 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (workspaceId != null) localVarPathParams.Add("workspaceId", Configuration.ApiClient.ParameterToString(workspaceId)); // path parameter
-            
-            
-            
-            
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -8241,23 +7517,20 @@ namespace ININ.PureCloudApi.Api
                 localVarPostBody = body; // byte array
             }
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PutWorkspacesWorkspaceId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
@@ -8268,14 +7541,14 @@ namespace ININ.PureCloudApi.Api
                 (Workspace) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Workspace)));
             
         }
-        
+
         /// <summary>
         /// Add a member to a workspace 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="workspaceId">Workspace ID</param> 
-        /// <param name="memberId">Member ID</param> 
-        /// <param name="body">Workspace</param> 
+        /// <param name="workspaceId">Workspace ID</param>
+        /// <param name="memberId">Member ID</param>
+        /// <param name="body">Workspace (optional)</param>
         /// <returns>WorkspaceMember</returns>
         public WorkspaceMember PutWorkspacesWorkspaceIdMembersMemberId (string workspaceId, string memberId, WorkspaceMember body = null)
         {
@@ -8287,24 +7560,20 @@ namespace ININ.PureCloudApi.Api
         /// Add a member to a workspace 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="workspaceId">Workspace ID</param> 
-        /// <param name="memberId">Member ID</param> 
-        /// <param name="body">Workspace</param> 
+        /// <param name="workspaceId">Workspace ID</param>
+        /// <param name="memberId">Member ID</param>
+        /// <param name="body">Workspace (optional)</param>
         /// <returns>ApiResponse of WorkspaceMember</returns>
         public ApiResponse< WorkspaceMember > PutWorkspacesWorkspaceIdMembersMemberIdWithHttpInfo (string workspaceId, string memberId, WorkspaceMember body = null)
         {
-            
             // verify the required parameter 'workspaceId' is set
             if (workspaceId == null)
                 throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->PutWorkspacesWorkspaceIdMembersMemberId");
-            
             // verify the required parameter 'memberId' is set
             if (memberId == null)
                 throw new ApiException(400, "Missing required parameter 'memberId' when calling ContentManagementApi->PutWorkspacesWorkspaceIdMembersMemberId");
-            
-    
+
             var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}/members/{memberId}";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -8331,10 +7600,6 @@ namespace ININ.PureCloudApi.Api
             localVarPathParams.Add("format", "json");
             if (workspaceId != null) localVarPathParams.Add("workspaceId", Configuration.ApiClient.ParameterToString(workspaceId)); // path parameter
             if (memberId != null) localVarPathParams.Add("memberId", Configuration.ApiClient.ParameterToString(memberId)); // path parameter
-            
-            
-            
-            
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -8345,40 +7610,37 @@ namespace ININ.PureCloudApi.Api
             }
 
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-    
+
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
                 Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PutWorkspacesWorkspaceIdMembersMemberId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PutWorkspacesWorkspaceIdMembersMemberId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
+
             return new ApiResponse<WorkspaceMember>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (WorkspaceMember) Configuration.ApiClient.Deserialize(localVarResponse, typeof(WorkspaceMember)));
             
         }
 
-        
         /// <summary>
         /// Add a member to a workspace 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="memberId">Member ID</param>
-        /// <param name="body">Workspace</param>
+        /// <param name="body">Workspace (optional)</param>
         /// <returns>Task of WorkspaceMember</returns>
         public async System.Threading.Tasks.Task<WorkspaceMember> PutWorkspacesWorkspaceIdMembersMemberIdAsync (string workspaceId, string memberId, WorkspaceMember body = null)
         {
@@ -8393,18 +7655,18 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="memberId">Member ID</param>
-        /// <param name="body">Workspace</param>
+        /// <param name="body">Workspace (optional)</param>
         /// <returns>Task of ApiResponse (WorkspaceMember)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<WorkspaceMember>> PutWorkspacesWorkspaceIdMembersMemberIdAsyncWithHttpInfo (string workspaceId, string memberId, WorkspaceMember body = null)
         {
             // verify the required parameter 'workspaceId' is set
-            if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling PutWorkspacesWorkspaceIdMembersMemberId");
+            if (workspaceId == null)
+                throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->PutWorkspacesWorkspaceIdMembersMemberId");
             // verify the required parameter 'memberId' is set
-            if (memberId == null) throw new ApiException(400, "Missing required parameter 'memberId' when calling PutWorkspacesWorkspaceIdMembersMemberId");
-            
-    
+            if (memberId == null)
+                throw new ApiException(400, "Missing required parameter 'memberId' when calling ContentManagementApi->PutWorkspacesWorkspaceIdMembersMemberId");
+
             var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}/members/{memberId}";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -8431,10 +7693,6 @@ namespace ININ.PureCloudApi.Api
             localVarPathParams.Add("format", "json");
             if (workspaceId != null) localVarPathParams.Add("workspaceId", Configuration.ApiClient.ParameterToString(workspaceId)); // path parameter
             if (memberId != null) localVarPathParams.Add("memberId", Configuration.ApiClient.ParameterToString(memberId)); // path parameter
-            
-            
-            
-            
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -8444,23 +7702,20 @@ namespace ININ.PureCloudApi.Api
                 localVarPostBody = body; // byte array
             }
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PutWorkspacesWorkspaceIdMembersMemberId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
@@ -8471,14 +7726,14 @@ namespace ININ.PureCloudApi.Api
                 (WorkspaceMember) Configuration.ApiClient.Deserialize(localVarResponse, typeof(WorkspaceMember)));
             
         }
-        
+
         /// <summary>
         /// Update a workspace tag. Will update all documents with the new tag value. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="workspaceId">Workspace ID</param> 
-        /// <param name="tagId">Tag ID</param> 
-        /// <param name="body">Workspace</param> 
+        /// <param name="workspaceId">Workspace ID</param>
+        /// <param name="tagId">Tag ID</param>
+        /// <param name="body">Workspace (optional)</param>
         /// <returns>TagValue</returns>
         public TagValue PutWorkspacesWorkspaceIdTagvaluesTagId (string workspaceId, string tagId, TagValue body = null)
         {
@@ -8490,24 +7745,20 @@ namespace ININ.PureCloudApi.Api
         /// Update a workspace tag. Will update all documents with the new tag value. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="workspaceId">Workspace ID</param> 
-        /// <param name="tagId">Tag ID</param> 
-        /// <param name="body">Workspace</param> 
+        /// <param name="workspaceId">Workspace ID</param>
+        /// <param name="tagId">Tag ID</param>
+        /// <param name="body">Workspace (optional)</param>
         /// <returns>ApiResponse of TagValue</returns>
         public ApiResponse< TagValue > PutWorkspacesWorkspaceIdTagvaluesTagIdWithHttpInfo (string workspaceId, string tagId, TagValue body = null)
         {
-            
             // verify the required parameter 'workspaceId' is set
             if (workspaceId == null)
                 throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->PutWorkspacesWorkspaceIdTagvaluesTagId");
-            
             // verify the required parameter 'tagId' is set
             if (tagId == null)
                 throw new ApiException(400, "Missing required parameter 'tagId' when calling ContentManagementApi->PutWorkspacesWorkspaceIdTagvaluesTagId");
-            
-    
+
             var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues/{tagId}";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -8534,10 +7785,6 @@ namespace ININ.PureCloudApi.Api
             localVarPathParams.Add("format", "json");
             if (workspaceId != null) localVarPathParams.Add("workspaceId", Configuration.ApiClient.ParameterToString(workspaceId)); // path parameter
             if (tagId != null) localVarPathParams.Add("tagId", Configuration.ApiClient.ParameterToString(tagId)); // path parameter
-            
-            
-            
-            
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -8548,40 +7795,37 @@ namespace ININ.PureCloudApi.Api
             }
 
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-    
+
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
                 Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PutWorkspacesWorkspaceIdTagvaluesTagId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PutWorkspacesWorkspaceIdTagvaluesTagId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
+
             return new ApiResponse<TagValue>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (TagValue) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TagValue)));
             
         }
 
-        
         /// <summary>
         /// Update a workspace tag. Will update all documents with the new tag value. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="tagId">Tag ID</param>
-        /// <param name="body">Workspace</param>
+        /// <param name="body">Workspace (optional)</param>
         /// <returns>Task of TagValue</returns>
         public async System.Threading.Tasks.Task<TagValue> PutWorkspacesWorkspaceIdTagvaluesTagIdAsync (string workspaceId, string tagId, TagValue body = null)
         {
@@ -8596,18 +7840,18 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="tagId">Tag ID</param>
-        /// <param name="body">Workspace</param>
+        /// <param name="body">Workspace (optional)</param>
         /// <returns>Task of ApiResponse (TagValue)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<TagValue>> PutWorkspacesWorkspaceIdTagvaluesTagIdAsyncWithHttpInfo (string workspaceId, string tagId, TagValue body = null)
         {
             // verify the required parameter 'workspaceId' is set
-            if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling PutWorkspacesWorkspaceIdTagvaluesTagId");
+            if (workspaceId == null)
+                throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->PutWorkspacesWorkspaceIdTagvaluesTagId");
             // verify the required parameter 'tagId' is set
-            if (tagId == null) throw new ApiException(400, "Missing required parameter 'tagId' when calling PutWorkspacesWorkspaceIdTagvaluesTagId");
-            
-    
+            if (tagId == null)
+                throw new ApiException(400, "Missing required parameter 'tagId' when calling ContentManagementApi->PutWorkspacesWorkspaceIdTagvaluesTagId");
+
             var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues/{tagId}";
-    
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -8634,10 +7878,6 @@ namespace ININ.PureCloudApi.Api
             localVarPathParams.Add("format", "json");
             if (workspaceId != null) localVarPathParams.Add("workspaceId", Configuration.ApiClient.ParameterToString(workspaceId)); // path parameter
             if (tagId != null) localVarPathParams.Add("tagId", Configuration.ApiClient.ParameterToString(tagId)); // path parameter
-            
-            
-            
-            
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -8647,23 +7887,20 @@ namespace ININ.PureCloudApi.Api
                 localVarPostBody = body; // byte array
             }
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
+
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling PutWorkspacesWorkspaceIdTagvaluesTagId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
@@ -8674,7 +7911,6 @@ namespace ININ.PureCloudApi.Api
                 (TagValue) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TagValue)));
             
         }
-        
+
     }
-    
 }

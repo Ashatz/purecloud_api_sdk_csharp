@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new SharedResponse();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of SharedResponse
@@ -50,52 +50,46 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<SharedResponse> (instance, "instance is a SharedResponse");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'DownloadUri' 
+        /// Test the property 'DownloadUri'
         /// </summary>
         [Test]
         public void DownloadUriTest()
         {
-            // TODO: unit test for the property 'DownloadUri' 
+            // TODO: unit test for the property 'DownloadUri'
         }
-        
         /// <summary>
-        /// Test the property 'ViewUri' 
+        /// Test the property 'ViewUri'
         /// </summary>
         [Test]
         public void ViewUriTest()
         {
-            // TODO: unit test for the property 'ViewUri' 
+            // TODO: unit test for the property 'ViewUri'
         }
-        
         /// <summary>
-        /// Test the property 'Document' 
+        /// Test the property 'Document'
         /// </summary>
         [Test]
         public void DocumentTest()
         {
-            // TODO: unit test for the property 'Document' 
+            // TODO: unit test for the property 'Document'
         }
-        
         /// <summary>
-        /// Test the property 'Share' 
+        /// Test the property 'Share'
         /// </summary>
         [Test]
         public void ShareTest()
         {
-            // TODO: unit test for the property 'Share' 
+            // TODO: unit test for the property 'Share'
         }
-        
 
     }
 

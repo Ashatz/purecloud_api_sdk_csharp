@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new FlowInputData();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of FlowInputData
@@ -50,16 +50,14 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<FlowInputData> (instance, "instance is a FlowInputData");
         }
 
-        
         /// <summary>
-        /// Test the property 'LinkedDocumentIds' 
+        /// Test the property 'LinkedDocumentIds'
         /// </summary>
         [Test]
         public void LinkedDocumentIdsTest()
         {
-            // TODO: unit test for the property 'LinkedDocumentIds' 
+            // TODO: unit test for the property 'LinkedDocumentIds'
         }
-        
 
     }
 

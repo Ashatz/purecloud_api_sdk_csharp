@@ -17,9 +17,12 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class AnalyticsConversationSegment :  IEquatable<AnalyticsConversationSegment>
     { 
-    
+
+        /// <summary>
+        /// Gets or Sets DisconnectType
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum DisconnectTypeEnum {
+                public enum DisconnectTypeEnum {
             
             [EnumMember(Value = "endpoint")]
             Endpoint,
@@ -57,9 +60,13 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "forwardTransfer")]
             Forwardtransfer
         }
-    
+
+
+        /// <summary>
+        /// Gets or Sets SegmentType
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum SegmentTypeEnum {
+                public enum SegmentTypeEnum {
             
             [EnumMember(Value = "unknown")]
             Unknown,
@@ -91,6 +98,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "voicemail")]
             Voicemail
         }
+
         
         /// <summary>
         /// Gets or Sets DisconnectType
@@ -164,7 +172,7 @@ namespace ININ.PureCloudApi.Model
             this.Subject = Subject;
             
         }
-        
+
     
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
@@ -318,11 +326,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Conference: ").Append(Conference).Append("\n");
             sb.Append("  GroupId: ").Append(GroupId).Append("\n");
             sb.Append("  Subject: ").Append(Subject).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -478,73 +485,50 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.SegmentStart != null)
                     hash = hash * 59 + this.SegmentStart.GetHashCode();
-                
                 if (this.SegmentEnd != null)
                     hash = hash * 59 + this.SegmentEnd.GetHashCode();
-                
                 if (this.QueueId != null)
                     hash = hash * 59 + this.QueueId.GetHashCode();
-                
                 if (this.WrapUpCode != null)
                     hash = hash * 59 + this.WrapUpCode.GetHashCode();
-                
                 if (this.WrapUpNote != null)
                     hash = hash * 59 + this.WrapUpNote.GetHashCode();
-                
                 if (this.WrapUpTags != null)
                     hash = hash * 59 + this.WrapUpTags.GetHashCode();
-                
                 if (this.ErrorCode != null)
                     hash = hash * 59 + this.ErrorCode.GetHashCode();
-                
                 if (this.DisconnectType != null)
                     hash = hash * 59 + this.DisconnectType.GetHashCode();
-                
                 if (this.SegmentType != null)
                     hash = hash * 59 + this.SegmentType.GetHashCode();
-                
                 if (this.RequestedRoutingUserIds != null)
                     hash = hash * 59 + this.RequestedRoutingUserIds.GetHashCode();
-                
                 if (this.RequestedRoutingSkillIds != null)
                     hash = hash * 59 + this.RequestedRoutingSkillIds.GetHashCode();
-                
                 if (this.RequestedLanguageId != null)
                     hash = hash * 59 + this.RequestedLanguageId.GetHashCode();
-                
                 if (this.Properties != null)
                     hash = hash * 59 + this.Properties.GetHashCode();
-                
                 if (this.SourceConversationId != null)
                     hash = hash * 59 + this.SourceConversationId.GetHashCode();
-                
                 if (this.DestinationConversationId != null)
                     hash = hash * 59 + this.DestinationConversationId.GetHashCode();
-                
                 if (this.SourceSessionId != null)
                     hash = hash * 59 + this.SourceSessionId.GetHashCode();
-                
                 if (this.DestinationSessionId != null)
                     hash = hash * 59 + this.DestinationSessionId.GetHashCode();
-                
                 if (this.SipResponseCodes != null)
                     hash = hash * 59 + this.SipResponseCodes.GetHashCode();
-                
                 if (this.Q850ResponseCodes != null)
                     hash = hash * 59 + this.Q850ResponseCodes.GetHashCode();
-                
                 if (this.Conference != null)
                     hash = hash * 59 + this.Conference.GetHashCode();
-                
                 if (this.GroupId != null)
                     hash = hash * 59 + this.GroupId.GetHashCode();
-                
                 if (this.Subject != null)
                     hash = hash * 59 + this.Subject.GetHashCode();
-                
                 return hash;
             }
         }

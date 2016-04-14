@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new FlowTerminateRequest();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of FlowTerminateRequest
@@ -50,16 +50,14 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<FlowTerminateRequest> (instance, "instance is a FlowTerminateRequest");
         }
 
-        
         /// <summary>
-        /// Test the property 'Reason' 
+        /// Test the property 'Reason'
         /// </summary>
         [Test]
         public void ReasonTest()
         {
-            // TODO: unit test for the property 'Reason' 
+            // TODO: unit test for the property 'Reason'
         }
-        
 
     }
 

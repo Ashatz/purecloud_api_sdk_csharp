@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new TrunkBaseAssignment();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of TrunkBaseAssignment
@@ -50,25 +50,22 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<TrunkBaseAssignment> (instance, "instance is a TrunkBaseAssignment");
         }
 
-        
         /// <summary>
-        /// Test the property 'Family' 
+        /// Test the property 'Family'
         /// </summary>
         [Test]
         public void FamilyTest()
         {
-            // TODO: unit test for the property 'Family' 
+            // TODO: unit test for the property 'Family'
         }
-        
         /// <summary>
-        /// Test the property 'TrunkBase' 
+        /// Test the property 'TrunkBase'
         /// </summary>
         [Test]
         public void TrunkBaseTest()
         {
-            // TODO: unit test for the property 'TrunkBase' 
+            // TODO: unit test for the property 'TrunkBase'
         }
-        
 
     }
 

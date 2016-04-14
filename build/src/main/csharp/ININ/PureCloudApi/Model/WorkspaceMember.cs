@@ -17,9 +17,12 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class WorkspaceMember :  IEquatable<WorkspaceMember>
     { 
-    
+
+        /// <summary>
+        /// Gets or Sets MemberType
+        /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum MemberTypeEnum {
+                public enum MemberTypeEnum {
             
             [EnumMember(Value = "USER")]
             User,
@@ -27,6 +30,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "GROUP")]
             Group
         }
+
         
         /// <summary>
         /// Gets or Sets MemberType
@@ -56,7 +60,7 @@ namespace ININ.PureCloudApi.Model
             this.SecurityProfile = SecurityProfile;
             
         }
-        
+
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -125,11 +129,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Group: ").Append(Group).Append("\n");
             sb.Append("  SecurityProfile: ").Append(SecurityProfile).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -220,34 +223,24 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.Workspace != null)
                     hash = hash * 59 + this.Workspace.GetHashCode();
-                
                 if (this.MemberType != null)
                     hash = hash * 59 + this.MemberType.GetHashCode();
-                
                 if (this.Member != null)
                     hash = hash * 59 + this.Member.GetHashCode();
-                
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();
-                
                 if (this.Group != null)
                     hash = hash * 59 + this.Group.GetHashCode();
-                
                 if (this.SecurityProfile != null)
                     hash = hash * 59 + this.SecurityProfile.GetHashCode();
-                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
                 return hash;
             }
         }

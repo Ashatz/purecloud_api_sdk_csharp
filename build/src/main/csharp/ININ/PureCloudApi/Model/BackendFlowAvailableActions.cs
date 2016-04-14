@@ -36,7 +36,7 @@ namespace ININ.PureCloudApi.Model
             }
             
         }
-        
+
     
         /// <summary>
         /// Gets or Sets CanTerminate
@@ -53,11 +53,10 @@ namespace ININ.PureCloudApi.Model
             var sb = new StringBuilder();
             sb.Append("class BackendFlowAvailableActions {\n");
             sb.Append("  CanTerminate: ").Append(CanTerminate).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -108,10 +107,8 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.CanTerminate != null)
                     hash = hash * 59 + this.CanTerminate.GetHashCode();
-                
                 return hash;
             }
         }

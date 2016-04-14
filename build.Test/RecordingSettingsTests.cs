@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new RecordingSettings();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of RecordingSettings
@@ -50,16 +50,14 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<RecordingSettings> (instance, "instance is a RecordingSettings");
         }
 
-        
         /// <summary>
-        /// Test the property 'MaxSimultaneousStreams' 
+        /// Test the property 'MaxSimultaneousStreams'
         /// </summary>
         [Test]
         public void MaxSimultaneousStreamsTest()
         {
-            // TODO: unit test for the property 'MaxSimultaneousStreams' 
+            // TODO: unit test for the property 'MaxSimultaneousStreams'
         }
-        
 
     }
 

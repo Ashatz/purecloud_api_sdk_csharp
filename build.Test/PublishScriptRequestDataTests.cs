@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new PublishScriptRequestData();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of PublishScriptRequestData
@@ -50,25 +50,22 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<PublishScriptRequestData> (instance, "instance is a PublishScriptRequestData");
         }
 
-        
         /// <summary>
-        /// Test the property 'ScriptId' 
+        /// Test the property 'ScriptId'
         /// </summary>
         [Test]
         public void ScriptIdTest()
         {
-            // TODO: unit test for the property 'ScriptId' 
+            // TODO: unit test for the property 'ScriptId'
         }
-        
         /// <summary>
-        /// Test the property 'VersionId' 
+        /// Test the property 'VersionId'
         /// </summary>
         [Test]
         public void VersionIdTest()
         {
-            // TODO: unit test for the property 'VersionId' 
+            // TODO: unit test for the property 'VersionId'
         }
-        
 
     }
 

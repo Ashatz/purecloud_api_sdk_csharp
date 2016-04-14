@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new BillingAddress();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of BillingAddress
@@ -50,79 +50,70 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<BillingAddress> (instance, "instance is a BillingAddress");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'Street' 
+        /// Test the property 'Street'
         /// </summary>
         [Test]
         public void StreetTest()
         {
-            // TODO: unit test for the property 'Street' 
+            // TODO: unit test for the property 'Street'
         }
-        
         /// <summary>
-        /// Test the property 'City' 
+        /// Test the property 'City'
         /// </summary>
         [Test]
         public void CityTest()
         {
-            // TODO: unit test for the property 'City' 
+            // TODO: unit test for the property 'City'
         }
-        
         /// <summary>
-        /// Test the property 'CountryName' 
+        /// Test the property 'CountryName'
         /// </summary>
         [Test]
         public void CountryNameTest()
         {
-            // TODO: unit test for the property 'CountryName' 
+            // TODO: unit test for the property 'CountryName'
         }
-        
         /// <summary>
-        /// Test the property 'StateName' 
+        /// Test the property 'StateName'
         /// </summary>
         [Test]
         public void StateNameTest()
         {
-            // TODO: unit test for the property 'StateName' 
+            // TODO: unit test for the property 'StateName'
         }
-        
         /// <summary>
-        /// Test the property 'PostalCode' 
+        /// Test the property 'PostalCode'
         /// </summary>
         [Test]
         public void PostalCodeTest()
         {
-            // TODO: unit test for the property 'PostalCode' 
+            // TODO: unit test for the property 'PostalCode'
         }
-        
         /// <summary>
-        /// Test the property 'SelfUri' 
+        /// Test the property 'SelfUri'
         /// </summary>
         [Test]
         public void SelfUriTest()
         {
-            // TODO: unit test for the property 'SelfUri' 
+            // TODO: unit test for the property 'SelfUri'
         }
-        
 
     }
 

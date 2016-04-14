@@ -36,7 +36,7 @@ namespace ININ.PureCloudApi.Model
             this.DataItems = DataItems;
             
         }
-        
+
     
         /// <summary>
         /// The workItem instance ID that owns this cache.
@@ -86,11 +86,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  SaveUser: ").Append(SaveUser).Append("\n");
             sb.Append("  SaveComment: ").Append(SaveComment).Append("\n");
             sb.Append("  DataItems: ").Append(DataItems).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -161,22 +160,16 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.WorkItemExecId != null)
                     hash = hash * 59 + this.WorkItemExecId.GetHashCode();
-                
                 if (this.SaveTime != null)
                     hash = hash * 59 + this.SaveTime.GetHashCode();
-                
                 if (this.SaveUser != null)
                     hash = hash * 59 + this.SaveUser.GetHashCode();
-                
                 if (this.SaveComment != null)
                     hash = hash * 59 + this.SaveComment.GetHashCode();
-                
                 if (this.DataItems != null)
                     hash = hash * 59 + this.DataItems.GetHashCode();
-                
                 return hash;
             }
         }

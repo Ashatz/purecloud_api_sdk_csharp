@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new UserStation();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of UserStation
@@ -50,43 +50,38 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<UserStation> (instance, "instance is a UserStation");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'AssociatedUser' 
+        /// Test the property 'AssociatedUser'
         /// </summary>
         [Test]
         public void AssociatedUserTest()
         {
-            // TODO: unit test for the property 'AssociatedUser' 
+            // TODO: unit test for the property 'AssociatedUser'
         }
-        
         /// <summary>
-        /// Test the property 'AssociatedDate' 
+        /// Test the property 'AssociatedDate'
         /// </summary>
         [Test]
         public void AssociatedDateTest()
         {
-            // TODO: unit test for the property 'AssociatedDate' 
+            // TODO: unit test for the property 'AssociatedDate'
         }
-        
         /// <summary>
-        /// Test the property 'DefaultUser' 
+        /// Test the property 'DefaultUser'
         /// </summary>
         [Test]
         public void DefaultUserTest()
         {
-            // TODO: unit test for the property 'DefaultUser' 
+            // TODO: unit test for the property 'DefaultUser'
         }
-        
 
     }
 

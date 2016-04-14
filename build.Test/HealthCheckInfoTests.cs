@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new HealthCheckInfo();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of HealthCheckInfo
@@ -50,88 +50,78 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<HealthCheckInfo> (instance, "instance is a HealthCheckInfo");
         }
 
-        
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Id'
         /// </summary>
         [Test]
         public void IdTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Id'
         }
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
         /// <summary>
-        /// Test the property 'SelfUri' 
+        /// Test the property 'SelfUri'
         /// </summary>
         [Test]
         public void SelfUriTest()
         {
-            // TODO: unit test for the property 'SelfUri' 
+            // TODO: unit test for the property 'SelfUri'
         }
-        
         /// <summary>
-        /// Test the property 'BuildTime' 
+        /// Test the property 'BuildTime'
         /// </summary>
         [Test]
         public void BuildTimeTest()
         {
-            // TODO: unit test for the property 'BuildTime' 
+            // TODO: unit test for the property 'BuildTime'
         }
-        
         /// <summary>
-        /// Test the property 'BuildVersion' 
+        /// Test the property 'BuildVersion'
         /// </summary>
         [Test]
         public void BuildVersionTest()
         {
-            // TODO: unit test for the property 'BuildVersion' 
+            // TODO: unit test for the property 'BuildVersion'
         }
-        
         /// <summary>
-        /// Test the property 'ImplementationVersion' 
+        /// Test the property 'ImplementationVersion'
         /// </summary>
         [Test]
         public void ImplementationVersionTest()
         {
-            // TODO: unit test for the property 'ImplementationVersion' 
+            // TODO: unit test for the property 'ImplementationVersion'
         }
-        
         /// <summary>
-        /// Test the property 'Status' 
+        /// Test the property 'Status'
         /// </summary>
         [Test]
         public void StatusTest()
         {
-            // TODO: unit test for the property 'Status' 
+            // TODO: unit test for the property 'Status'
         }
-        
         /// <summary>
-        /// Test the property 'PingMs' 
+        /// Test the property 'PingMs'
         /// </summary>
         [Test]
         public void PingMsTest()
         {
-            // TODO: unit test for the property 'PingMs' 
+            // TODO: unit test for the property 'PingMs'
         }
-        
         /// <summary>
-        /// Test the property 'Date' 
+        /// Test the property 'Date'
         /// </summary>
         [Test]
         public void DateTest()
         {
-            // TODO: unit test for the property 'Date' 
+            // TODO: unit test for the property 'Date'
         }
-        
 
     }
 

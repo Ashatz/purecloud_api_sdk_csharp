@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new VendorConnectionRequest();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of VendorConnectionRequest
@@ -50,34 +50,30 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<VendorConnectionRequest> (instance, "instance is a VendorConnectionRequest");
         }
 
-        
         /// <summary>
-        /// Test the property 'Publisher' 
+        /// Test the property 'Publisher'
         /// </summary>
         [Test]
         public void PublisherTest()
         {
-            // TODO: unit test for the property 'Publisher' 
+            // TODO: unit test for the property 'Publisher'
         }
-        
         /// <summary>
-        /// Test the property 'Type' 
+        /// Test the property 'Type'
         /// </summary>
         [Test]
         public void TypeTest()
         {
-            // TODO: unit test for the property 'Type' 
+            // TODO: unit test for the property 'Type'
         }
-        
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Name'
         }
-        
 
     }
 

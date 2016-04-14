@@ -30,7 +30,7 @@ namespace ININ.PureCloudApi.Model
             this.InterruptableMediaTypes = InterruptableMediaTypes;
             
         }
-        
+
     
         /// <summary>
         /// Defines the maximum number of conversations of this type that an agent can handle at one time.
@@ -56,11 +56,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class OrgMediaUtilization {\n");
             sb.Append("  MaximumCapacity: ").Append(MaximumCapacity).Append("\n");
             sb.Append("  InterruptableMediaTypes: ").Append(InterruptableMediaTypes).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -116,13 +115,10 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.MaximumCapacity != null)
                     hash = hash * 59 + this.MaximumCapacity.GetHashCode();
-                
                 if (this.InterruptableMediaTypes != null)
                     hash = hash * 59 + this.InterruptableMediaTypes.GetHashCode();
-                
                 return hash;
             }
         }

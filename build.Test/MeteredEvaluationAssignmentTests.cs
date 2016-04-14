@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Test
         {
             instance = new MeteredEvaluationAssignment();
         }
-    
+
         /// <summary>
         /// Clean up after each test
         /// </summary>
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Test
         public void Cleanup()
         {
 
-        }   
+        }
 
         /// <summary>
         /// Test an instance of MeteredEvaluationAssignment
@@ -50,61 +50,54 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<MeteredEvaluationAssignment> (instance, "instance is a MeteredEvaluationAssignment");
         }
 
-        
         /// <summary>
-        /// Test the property 'EvaluationContextId' 
+        /// Test the property 'EvaluationContextId'
         /// </summary>
         [Test]
         public void EvaluationContextIdTest()
         {
-            // TODO: unit test for the property 'EvaluationContextId' 
+            // TODO: unit test for the property 'EvaluationContextId'
         }
-        
         /// <summary>
-        /// Test the property 'Evaluators' 
+        /// Test the property 'Evaluators'
         /// </summary>
         [Test]
         public void EvaluatorsTest()
         {
-            // TODO: unit test for the property 'Evaluators' 
+            // TODO: unit test for the property 'Evaluators'
         }
-        
         /// <summary>
-        /// Test the property 'MaxNumberEvaluations' 
+        /// Test the property 'MaxNumberEvaluations'
         /// </summary>
         [Test]
         public void MaxNumberEvaluationsTest()
         {
-            // TODO: unit test for the property 'MaxNumberEvaluations' 
+            // TODO: unit test for the property 'MaxNumberEvaluations'
         }
-        
         /// <summary>
-        /// Test the property 'EvaluationForm' 
+        /// Test the property 'EvaluationForm'
         /// </summary>
         [Test]
         public void EvaluationFormTest()
         {
-            // TODO: unit test for the property 'EvaluationForm' 
+            // TODO: unit test for the property 'EvaluationForm'
         }
-        
         /// <summary>
-        /// Test the property 'AssignToActiveUser' 
+        /// Test the property 'AssignToActiveUser'
         /// </summary>
         [Test]
         public void AssignToActiveUserTest()
         {
-            // TODO: unit test for the property 'AssignToActiveUser' 
+            // TODO: unit test for the property 'AssignToActiveUser'
         }
-        
         /// <summary>
-        /// Test the property 'TimeInterval' 
+        /// Test the property 'TimeInterval'
         /// </summary>
         [Test]
         public void TimeIntervalTest()
         {
-            // TODO: unit test for the property 'TimeInterval' 
+            // TODO: unit test for the property 'TimeInterval'
         }
-        
 
     }
 
