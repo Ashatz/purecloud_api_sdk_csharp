@@ -2,7 +2,7 @@ var archiver = require('archiver');
 var Q = require('q');
 var fs = require('fs');
 
-zipDocFiles('docs.zip')
+zipDocFiles('../docs.zip')
 	.then(function() {
 		console.log('archiveDocs script complete');
 		// Have to explicitly exit because promises keep the node process running
