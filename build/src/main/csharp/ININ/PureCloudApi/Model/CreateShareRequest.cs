@@ -4,65 +4,97 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class CreateShareRequest :  IEquatable<CreateShareRequest>
-    {
+    public partial class CreateShareRequest :  IEquatable<CreateShareRequest>
+    { 
+
         /// <summary>
-        /// Initializes a new instance of the <see cref="CreateShareRequest" /> class.
+        /// Gets or Sets SharedEntityType
         /// </summary>
-        public CreateShareRequest()
-        {
+        [JsonConverter(typeof(StringEnumConverter))]
+                public enum SharedEntityTypeEnum {
             
+            [EnumMember(Value = "DOCUMENT")]
+            Document
+        }
+
+
+        /// <summary>
+        /// Gets or Sets MemberType
+        /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
+                public enum MemberTypeEnum {
+            
+            [EnumMember(Value = "USER")]
+            User,
+            
+            [EnumMember(Value = "PUBLIC")]
+            Public
         }
 
         
+
         /// <summary>
         /// Gets or Sets SharedEntityType
         /// </summary>
         [DataMember(Name="sharedEntityType", EmitDefaultValue=false)]
-        public string SharedEntityType { get; set; }
-  
-        
+        public SharedEntityTypeEnum? SharedEntityType { get; set; }
+    
+
+        /// <summary>
+        /// Gets or Sets MemberType
+        /// </summary>
+        [DataMember(Name="memberType", EmitDefaultValue=false)]
+        public MemberTypeEnum? MemberType { get; set; }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CreateShareRequest" />class.
+        /// </summary>
+        /// <param name="SharedEntityType">SharedEntityType.</param>
+        /// <param name="SharedEntity">SharedEntity.</param>
+        /// <param name="MemberType">MemberType.</param>
+        /// <param name="Member">Member.</param>
+        /// <param name="Members">Members.</param>
+
+        public CreateShareRequest(SharedEntityTypeEnum? SharedEntityType = null, Entity SharedEntity = null, MemberTypeEnum? MemberType = null, Entity Member = null, List<CreateShareRequestMember> Members = null)
+        {
+            this.SharedEntityType = SharedEntityType;
+            this.SharedEntity = SharedEntity;
+            this.MemberType = MemberType;
+            this.Member = Member;
+            this.Members = Members;
+            
+        }
+
+    
         /// <summary>
         /// Gets or Sets SharedEntity
         /// </summary>
         [DataMember(Name="sharedEntity", EmitDefaultValue=false)]
         public Entity SharedEntity { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets MemberType
-        /// </summary>
-        [DataMember(Name="memberType", EmitDefaultValue=false)]
-        public string MemberType { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Member
         /// </summary>
         [DataMember(Name="member", EmitDefaultValue=false)]
         public Entity Member { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Members
         /// </summary>
         [DataMember(Name="members", EmitDefaultValue=false)]
         public List<CreateShareRequestMember> Members { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -76,11 +108,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  MemberType: ").Append(MemberType).Append("\n");
             sb.Append("  Member: ").Append(Member).Append("\n");
             sb.Append("  Members: ").Append(Members).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -104,7 +135,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if CreateShareRequest instances are equal
         /// </summary>
-        /// <param name="obj">Instance of CreateShareRequest to be compared</param>
+        /// <param name="other">Instance of CreateShareRequest to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(CreateShareRequest other)
         {
@@ -112,27 +143,27 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.SharedEntityType == other.SharedEntityType ||
                     this.SharedEntityType != null &&
                     this.SharedEntityType.Equals(other.SharedEntityType)
-                ) && 
+                ) &&
                 (
                     this.SharedEntity == other.SharedEntity ||
                     this.SharedEntity != null &&
                     this.SharedEntity.Equals(other.SharedEntity)
-                ) && 
+                ) &&
                 (
                     this.MemberType == other.MemberType ||
                     this.MemberType != null &&
                     this.MemberType.Equals(other.MemberType)
-                ) && 
+                ) &&
                 (
                     this.Member == other.Member ||
                     this.Member != null &&
                     this.Member.Equals(other.Member)
-                ) && 
+                ) &&
                 (
                     this.Members == other.Members ||
                     this.Members != null &&
@@ -151,27 +182,19 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.SharedEntityType != null)
-                    hash = hash * 57 + this.SharedEntityType.GetHashCode();
-                
+                    hash = hash * 59 + this.SharedEntityType.GetHashCode();
                 if (this.SharedEntity != null)
-                    hash = hash * 57 + this.SharedEntity.GetHashCode();
-                
+                    hash = hash * 59 + this.SharedEntity.GetHashCode();
                 if (this.MemberType != null)
-                    hash = hash * 57 + this.MemberType.GetHashCode();
-                
+                    hash = hash * 59 + this.MemberType.GetHashCode();
                 if (this.Member != null)
-                    hash = hash * 57 + this.Member.GetHashCode();
-                
+                    hash = hash * 59 + this.Member.GetHashCode();
                 if (this.Members != null)
-                    hash = hash * 57 + this.Members.GetHashCode();
-                
+                    hash = hash * 59 + this.Members.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

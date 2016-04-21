@@ -4,112 +4,126 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class Policy :  IEquatable<Policy>
-    {
+    public partial class Policy :  IEquatable<Policy>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="Policy" /> class.
+        /// Initializes a new instance of the <see cref="Policy" />class.
         /// </summary>
-        public Policy()
+        /// <param name="Name">Name.</param>
+        /// <param name="ModifiedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="CreatedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="Order">Order.</param>
+        /// <param name="Description">Description.</param>
+        /// <param name="Enabled">Enabled (default to false).</param>
+        /// <param name="Conditions">Conditions.</param>
+        /// <param name="Actions">Actions.</param>
+        /// <param name="PolicyErrors">PolicyErrors.</param>
+
+        public Policy(string Name = null, DateTime? ModifiedDate = null, DateTime? CreatedDate = null, int? Order = null, string Description = null, bool? Enabled = null, PolicyConditions Conditions = null, PolicyActions Actions = null, PolicyErrors PolicyErrors = null)
         {
-            this.Enabled = false;
+            this.Name = Name;
+            this.ModifiedDate = ModifiedDate;
+            this.CreatedDate = CreatedDate;
+            this.Order = Order;
+            this.Description = Description;
+            // use default value if no "Enabled" provided
+            if (Enabled == null)
+            {
+                this.Enabled = false;
+            }
+            else
+            {
+                this.Enabled = Enabled;
+            }
+            this.Conditions = Conditions;
+            this.Actions = Actions;
+            this.PolicyErrors = PolicyErrors;
             
         }
 
-        
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="modifiedDate", EmitDefaultValue=false)]
         public DateTime? ModifiedDate { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="createdDate", EmitDefaultValue=false)]
         public DateTime? CreatedDate { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Order
         /// </summary>
         [DataMember(Name="order", EmitDefaultValue=false)]
         public int? Order { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Description
         /// </summary>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Enabled
         /// </summary>
         [DataMember(Name="enabled", EmitDefaultValue=false)]
         public bool? Enabled { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Conditions
         /// </summary>
         [DataMember(Name="conditions", EmitDefaultValue=false)]
         public PolicyConditions Conditions { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Actions
         /// </summary>
         [DataMember(Name="actions", EmitDefaultValue=false)]
         public PolicyActions Actions { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets PolicyErrors
         /// </summary>
         [DataMember(Name="policyErrors", EmitDefaultValue=false)]
         public PolicyErrors PolicyErrors { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -129,11 +143,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Actions: ").Append(Actions).Append("\n");
             sb.Append("  PolicyErrors: ").Append(PolicyErrors).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -157,7 +170,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if Policy instances are equal
         /// </summary>
-        /// <param name="obj">Instance of Policy to be compared</param>
+        /// <param name="other">Instance of Policy to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(Policy other)
         {
@@ -165,57 +178,57 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.ModifiedDate == other.ModifiedDate ||
                     this.ModifiedDate != null &&
                     this.ModifiedDate.Equals(other.ModifiedDate)
-                ) && 
+                ) &&
                 (
                     this.CreatedDate == other.CreatedDate ||
                     this.CreatedDate != null &&
                     this.CreatedDate.Equals(other.CreatedDate)
-                ) && 
+                ) &&
                 (
                     this.Order == other.Order ||
                     this.Order != null &&
                     this.Order.Equals(other.Order)
-                ) && 
+                ) &&
                 (
                     this.Description == other.Description ||
                     this.Description != null &&
                     this.Description.Equals(other.Description)
-                ) && 
+                ) &&
                 (
                     this.Enabled == other.Enabled ||
                     this.Enabled != null &&
                     this.Enabled.Equals(other.Enabled)
-                ) && 
+                ) &&
                 (
                     this.Conditions == other.Conditions ||
                     this.Conditions != null &&
                     this.Conditions.Equals(other.Conditions)
-                ) && 
+                ) &&
                 (
                     this.Actions == other.Actions ||
                     this.Actions != null &&
                     this.Actions.Equals(other.Actions)
-                ) && 
+                ) &&
                 (
                     this.PolicyErrors == other.PolicyErrors ||
                     this.PolicyErrors != null &&
                     this.PolicyErrors.Equals(other.PolicyErrors)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
@@ -234,45 +247,31 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
-                
+                    hash = hash * 59 + this.Id.GetHashCode();
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
-                
+                    hash = hash * 59 + this.Name.GetHashCode();
                 if (this.ModifiedDate != null)
-                    hash = hash * 57 + this.ModifiedDate.GetHashCode();
-                
+                    hash = hash * 59 + this.ModifiedDate.GetHashCode();
                 if (this.CreatedDate != null)
-                    hash = hash * 57 + this.CreatedDate.GetHashCode();
-                
+                    hash = hash * 59 + this.CreatedDate.GetHashCode();
                 if (this.Order != null)
-                    hash = hash * 57 + this.Order.GetHashCode();
-                
+                    hash = hash * 59 + this.Order.GetHashCode();
                 if (this.Description != null)
-                    hash = hash * 57 + this.Description.GetHashCode();
-                
+                    hash = hash * 59 + this.Description.GetHashCode();
                 if (this.Enabled != null)
-                    hash = hash * 57 + this.Enabled.GetHashCode();
-                
+                    hash = hash * 59 + this.Enabled.GetHashCode();
                 if (this.Conditions != null)
-                    hash = hash * 57 + this.Conditions.GetHashCode();
-                
+                    hash = hash * 59 + this.Conditions.GetHashCode();
                 if (this.Actions != null)
-                    hash = hash * 57 + this.Actions.GetHashCode();
-                
+                    hash = hash * 59 + this.Actions.GetHashCode();
                 if (this.PolicyErrors != null)
-                    hash = hash * 57 + this.PolicyErrors.GetHashCode();
-                
+                    hash = hash * 59 + this.PolicyErrors.GetHashCode();
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
-                
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

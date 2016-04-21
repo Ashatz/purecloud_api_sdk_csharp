@@ -4,45 +4,54 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class Tag :  IEquatable<Tag>
-    {
+    public partial class Tag :  IEquatable<Tag>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="Tag" /> class.
+        /// Initializes a new instance of the <see cref="Tag" />class.
         /// </summary>
-        public Tag()
+        /// <param name="Label">Label.</param>
+        /// <param name="InteractionFlag">InteractionFlag (default to false).</param>
+
+        public Tag(string Label = null, bool? InteractionFlag = null)
         {
-            this.InteractionFlag = false;
+            this.Label = Label;
+            // use default value if no "InteractionFlag" provided
+            if (InteractionFlag == null)
+            {
+                this.InteractionFlag = false;
+            }
+            else
+            {
+                this.InteractionFlag = InteractionFlag;
+            }
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets Label
         /// </summary>
         [DataMember(Name="label", EmitDefaultValue=false)]
         public string Label { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets InteractionFlag
         /// </summary>
         [DataMember(Name="interactionFlag", EmitDefaultValue=false)]
         public bool? InteractionFlag { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -53,11 +62,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class Tag {\n");
             sb.Append("  Label: ").Append(Label).Append("\n");
             sb.Append("  InteractionFlag: ").Append(InteractionFlag).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -81,7 +89,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if Tag instances are equal
         /// </summary>
-        /// <param name="obj">Instance of Tag to be compared</param>
+        /// <param name="other">Instance of Tag to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(Tag other)
         {
@@ -89,12 +97,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Label == other.Label ||
                     this.Label != null &&
                     this.Label.Equals(other.Label)
-                ) && 
+                ) &&
                 (
                     this.InteractionFlag == other.InteractionFlag ||
                     this.InteractionFlag != null &&
@@ -113,18 +121,13 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Label != null)
-                    hash = hash * 57 + this.Label.GetHashCode();
-                
+                    hash = hash * 59 + this.Label.GetHashCode();
                 if (this.InteractionFlag != null)
-                    hash = hash * 57 + this.InteractionFlag.GetHashCode();
-                
+                    hash = hash * 59 + this.InteractionFlag.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

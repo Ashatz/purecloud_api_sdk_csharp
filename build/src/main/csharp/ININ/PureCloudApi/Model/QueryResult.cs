@@ -4,60 +4,60 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class QueryResult :  IEquatable<QueryResult>
-    {
+    public partial class QueryResult :  IEquatable<QueryResult>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="QueryResult" /> class.
+        /// Initializes a new instance of the <see cref="QueryResult" />class.
         /// </summary>
-        public QueryResult()
+        /// <param name="Name">Name.</param>
+        /// <param name="Body">Body.</param>
+
+        public QueryResult(string Name = null, DomainEntity Body = null)
         {
+            this.Name = Name;
+            this.Body = Body;
             
         }
 
-        
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Body
         /// </summary>
         [DataMember(Name="body", EmitDefaultValue=false)]
         public DomainEntity Body { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -70,11 +70,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Body: ").Append(Body).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -98,7 +97,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if QueryResult instances are equal
         /// </summary>
-        /// <param name="obj">Instance of QueryResult to be compared</param>
+        /// <param name="other">Instance of QueryResult to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(QueryResult other)
         {
@@ -106,22 +105,22 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Body == other.Body ||
                     this.Body != null &&
                     this.Body.Equals(other.Body)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
@@ -140,24 +139,17 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
-                
+                    hash = hash * 59 + this.Id.GetHashCode();
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
-                
+                    hash = hash * 59 + this.Name.GetHashCode();
                 if (this.Body != null)
-                    hash = hash * 57 + this.Body.GetHashCode();
-                
+                    hash = hash * 59 + this.Body.GetHashCode();
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
-                
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

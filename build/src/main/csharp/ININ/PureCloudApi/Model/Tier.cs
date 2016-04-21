@@ -4,44 +4,46 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class Tier :  IEquatable<Tier>
-    {
+    public partial class Tier :  IEquatable<Tier>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="Tier" /> class.
+        /// Initializes a new instance of the <see cref="Tier" />class.
         /// </summary>
-        public Tier()
+        /// <param name="Currency">Currency.</param>
+        /// <param name="Price">Price.</param>
+
+        public Tier(string Currency = null, double? Price = null)
         {
+            this.Currency = Currency;
+            this.Price = Price;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets Currency
         /// </summary>
         [DataMember(Name="currency", EmitDefaultValue=false)]
         public string Currency { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Price
         /// </summary>
         [DataMember(Name="price", EmitDefaultValue=false)]
         public double? Price { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -52,11 +54,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class Tier {\n");
             sb.Append("  Currency: ").Append(Currency).Append("\n");
             sb.Append("  Price: ").Append(Price).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -80,7 +81,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if Tier instances are equal
         /// </summary>
-        /// <param name="obj">Instance of Tier to be compared</param>
+        /// <param name="other">Instance of Tier to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(Tier other)
         {
@@ -88,12 +89,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Currency == other.Currency ||
                     this.Currency != null &&
                     this.Currency.Equals(other.Currency)
-                ) && 
+                ) &&
                 (
                     this.Price == other.Price ||
                     this.Price != null &&
@@ -112,18 +113,13 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Currency != null)
-                    hash = hash * 57 + this.Currency.GetHashCode();
-                
+                    hash = hash * 59 + this.Currency.GetHashCode();
                 if (this.Price != null)
-                    hash = hash * 57 + this.Price.GetHashCode();
-                
+                    hash = hash * 59 + this.Price.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

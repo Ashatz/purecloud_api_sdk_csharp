@@ -4,46 +4,75 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// Contains information about the Document associated with a workItem
     /// </summary>
     [DataContract]
-    public class AssociatedDocument :  IEquatable<AssociatedDocument>
-    {
+    public partial class AssociatedDocument :  IEquatable<AssociatedDocument>
+    { 
+
         /// <summary>
-        /// Initializes a new instance of the <see cref="AssociatedDocument" /> class.
+        /// the document association type
         /// </summary>
-        public AssociatedDocument()
-        {
+        /// <value>the document association type</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+                public enum DocumentAssociationTypeEnum {
             
+            [EnumMember(Value = "UNKNOWN")]
+            Unknown,
+            
+            [EnumMember(Value = "MAIN")]
+            Main,
+            
+            [EnumMember(Value = "SECONDARY")]
+            Secondary
         }
 
         
+
+        /// <summary>
+        /// the document association type
+        /// </summary>
+        /// <value>the document association type</value>
+        [DataMember(Name="documentAssociationType", EmitDefaultValue=false)]
+        public DocumentAssociationTypeEnum? DocumentAssociationType { get; set; }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="AssociatedDocument" />class.
+        /// </summary>
+        /// <param name="Document">the document associated with the workitem (required).</param>
+        /// <param name="DocumentAssociationType">the document association type.</param>
+
+        public AssociatedDocument(Document Document = null, DocumentAssociationTypeEnum? DocumentAssociationType = null)
+        {
+            // to ensure "Document" is required (not null)
+            if (Document == null)
+            {
+                throw new InvalidDataException("Document is a required property for AssociatedDocument and cannot be null");
+            }
+            else
+            {
+                this.Document = Document;
+            }
+            this.DocumentAssociationType = DocumentAssociationType;
+            
+        }
+
+    
         /// <summary>
         /// the document associated with the workitem
         /// </summary>
         /// <value>the document associated with the workitem</value>
         [DataMember(Name="document", EmitDefaultValue=false)]
         public Document Document { get; set; }
-  
-        
-        /// <summary>
-        /// the document association type
-        /// </summary>
-        /// <value>the document association type</value>
-        [DataMember(Name="documentAssociationType", EmitDefaultValue=false)]
-        public string DocumentAssociationType { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -54,11 +83,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class AssociatedDocument {\n");
             sb.Append("  Document: ").Append(Document).Append("\n");
             sb.Append("  DocumentAssociationType: ").Append(DocumentAssociationType).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -82,7 +110,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if AssociatedDocument instances are equal
         /// </summary>
-        /// <param name="obj">Instance of AssociatedDocument to be compared</param>
+        /// <param name="other">Instance of AssociatedDocument to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(AssociatedDocument other)
         {
@@ -90,12 +118,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Document == other.Document ||
                     this.Document != null &&
                     this.Document.Equals(other.Document)
-                ) && 
+                ) &&
                 (
                     this.DocumentAssociationType == other.DocumentAssociationType ||
                     this.DocumentAssociationType != null &&
@@ -114,18 +142,13 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Document != null)
-                    hash = hash * 57 + this.Document.GetHashCode();
-                
+                    hash = hash * 59 + this.Document.GetHashCode();
                 if (this.DocumentAssociationType != null)
-                    hash = hash * 57 + this.DocumentAssociationType.GetHashCode();
-                
+                    hash = hash * 59 + this.DocumentAssociationType.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

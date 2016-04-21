@@ -4,44 +4,46 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class FacetInfo :  IEquatable<FacetInfo>
-    {
+    public partial class FacetInfo :  IEquatable<FacetInfo>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="FacetInfo" /> class.
+        /// Initializes a new instance of the <see cref="FacetInfo" />class.
         /// </summary>
-        public FacetInfo()
+        /// <param name="Name">Name.</param>
+        /// <param name="Entries">Entries.</param>
+
+        public FacetInfo(string Name = null, List<Entry> Entries = null)
         {
+            this.Name = Name;
+            this.Entries = Entries;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Entries
         /// </summary>
         [DataMember(Name="entries", EmitDefaultValue=false)]
         public List<Entry> Entries { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -52,11 +54,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class FacetInfo {\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Entries: ").Append(Entries).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -80,7 +81,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if FacetInfo instances are equal
         /// </summary>
-        /// <param name="obj">Instance of FacetInfo to be compared</param>
+        /// <param name="other">Instance of FacetInfo to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(FacetInfo other)
         {
@@ -88,12 +89,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Entries == other.Entries ||
                     this.Entries != null &&
@@ -112,18 +113,13 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
-                
+                    hash = hash * 59 + this.Name.GetHashCode();
                 if (this.Entries != null)
-                    hash = hash * 57 + this.Entries.GetHashCode();
-                
+                    hash = hash * 59 + this.Entries.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

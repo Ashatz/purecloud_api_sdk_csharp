@@ -4,51 +4,54 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class Entity :  IEquatable<Entity>
-    {
+    public partial class Entity :  IEquatable<Entity>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="Entity" /> class.
+        /// Initializes a new instance of the <see cref="Entity" />class.
         /// </summary>
-        public Entity()
+        /// <param name="Kind">Kind.</param>
+        /// <param name="Id">Id.</param>
+        /// <param name="Name">Name.</param>
+
+        public Entity(string Kind = null, string Id = null, string Name = null)
         {
+            this.Kind = Kind;
+            this.Id = Id;
+            this.Name = Name;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets Kind
         /// </summary>
         [DataMember(Name="kind", EmitDefaultValue=false)]
         public string Kind { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -60,11 +63,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Kind: ").Append(Kind).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -88,7 +90,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if Entity instances are equal
         /// </summary>
-        /// <param name="obj">Instance of Entity to be compared</param>
+        /// <param name="other">Instance of Entity to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(Entity other)
         {
@@ -96,17 +98,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Kind == other.Kind ||
                     this.Kind != null &&
                     this.Kind.Equals(other.Kind)
-                ) && 
+                ) &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
@@ -125,21 +127,15 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Kind != null)
-                    hash = hash * 57 + this.Kind.GetHashCode();
-                
+                    hash = hash * 59 + this.Kind.GetHashCode();
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
-                
+                    hash = hash * 59 + this.Id.GetHashCode();
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
-                
+                    hash = hash * 59 + this.Name.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

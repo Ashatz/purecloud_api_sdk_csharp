@@ -4,52 +4,62 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class AttributeGroupInstanceCommand :  IEquatable<AttributeGroupInstanceCommand>
-    {
+    public partial class AttributeGroupInstanceCommand :  IEquatable<AttributeGroupInstanceCommand>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="AttributeGroupInstanceCommand" /> class.
+        /// Initializes a new instance of the <see cref="AttributeGroupInstanceCommand" />class.
         /// </summary>
-        public AttributeGroupInstanceCommand()
+        /// <param name="Instance">Instance.</param>
+        /// <param name="Status">Status.</param>
+        /// <param name="Created">Created (default to false).</param>
+
+        public AttributeGroupInstanceCommand(AttributeGroupInstance Instance = null, CommandStatus Status = null, bool? Created = null)
         {
-            this.Created = false;
+            this.Instance = Instance;
+            this.Status = Status;
+            // use default value if no "Created" provided
+            if (Created == null)
+            {
+                this.Created = false;
+            }
+            else
+            {
+                this.Created = Created;
+            }
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets Instance
         /// </summary>
         [DataMember(Name="instance", EmitDefaultValue=false)]
         public AttributeGroupInstance Instance { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public CommandStatus Status { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Created
         /// </summary>
         [DataMember(Name="created", EmitDefaultValue=false)]
         public bool? Created { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -61,11 +71,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Instance: ").Append(Instance).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  Created: ").Append(Created).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -89,7 +98,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if AttributeGroupInstanceCommand instances are equal
         /// </summary>
-        /// <param name="obj">Instance of AttributeGroupInstanceCommand to be compared</param>
+        /// <param name="other">Instance of AttributeGroupInstanceCommand to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(AttributeGroupInstanceCommand other)
         {
@@ -97,17 +106,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Instance == other.Instance ||
                     this.Instance != null &&
                     this.Instance.Equals(other.Instance)
-                ) && 
+                ) &&
                 (
                     this.Status == other.Status ||
                     this.Status != null &&
                     this.Status.Equals(other.Status)
-                ) && 
+                ) &&
                 (
                     this.Created == other.Created ||
                     this.Created != null &&
@@ -126,21 +135,15 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Instance != null)
-                    hash = hash * 57 + this.Instance.GetHashCode();
-                
+                    hash = hash * 59 + this.Instance.GetHashCode();
                 if (this.Status != null)
-                    hash = hash * 57 + this.Status.GetHashCode();
-                
+                    hash = hash * 59 + this.Status.GetHashCode();
                 if (this.Created != null)
-                    hash = hash * 57 + this.Created.GetHashCode();
-                
+                    hash = hash * 59 + this.Created.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

@@ -4,37 +4,38 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class FavoriteTemplateRequestData :  IEquatable<FavoriteTemplateRequestData>
-    {
+    public partial class FavoriteTemplateRequestData :  IEquatable<FavoriteTemplateRequestData>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="FavoriteTemplateRequestData" /> class.
+        /// Initializes a new instance of the <see cref="FavoriteTemplateRequestData" />class.
         /// </summary>
-        public FavoriteTemplateRequestData()
+        /// <param name="TemplateId">TemplateId.</param>
+
+        public FavoriteTemplateRequestData(string TemplateId = null)
         {
+            this.TemplateId = TemplateId;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets TemplateId
         /// </summary>
         [DataMember(Name="templateId", EmitDefaultValue=false)]
         public string TemplateId { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -44,11 +45,10 @@ namespace ININ.PureCloudApi.Model
             var sb = new StringBuilder();
             sb.Append("class FavoriteTemplateRequestData {\n");
             sb.Append("  TemplateId: ").Append(TemplateId).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -72,7 +72,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if FavoriteTemplateRequestData instances are equal
         /// </summary>
-        /// <param name="obj">Instance of FavoriteTemplateRequestData to be compared</param>
+        /// <param name="other">Instance of FavoriteTemplateRequestData to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(FavoriteTemplateRequestData other)
         {
@@ -80,7 +80,7 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.TemplateId == other.TemplateId ||
                     this.TemplateId != null &&
@@ -99,15 +99,11 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.TemplateId != null)
-                    hash = hash * 57 + this.TemplateId.GetHashCode();
-                
+                    hash = hash * 59 + this.TemplateId.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

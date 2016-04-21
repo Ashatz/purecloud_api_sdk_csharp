@@ -4,58 +4,83 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class StringDefinition :  IEquatable<StringDefinition>
-    {
+    public partial class StringDefinition :  IEquatable<StringDefinition>
+    { 
+
         /// <summary>
-        /// Initializes a new instance of the <see cref="StringDefinition" /> class.
+        /// Gets or Sets Type
         /// </summary>
-        public StringDefinition()
-        {
+        [JsonConverter(typeof(StringEnumConverter))]
+                public enum TypeEnum {
             
+            [EnumMember(Value = "ALPHABETIC")]
+            Alphabetic,
+            
+            [EnumMember(Value = "ALPHANUMERIC")]
+            Alphanumeric,
+            
+            [EnumMember(Value = "NUMERIC")]
+            Numeric,
+            
+            [EnumMember(Value = "CUSTOM")]
+            Custom
         }
 
         
+
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
         [DataMember(Name="type", EmitDefaultValue=false)]
-        public string Type { get; set; }
-  
-        
+        public TypeEnum? Type { get; set; }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="StringDefinition" />class.
+        /// </summary>
+        /// <param name="Type">Type.</param>
+        /// <param name="MinimumLength">MinimumLength.</param>
+        /// <param name="MaximumLength">MaximumLength.</param>
+        /// <param name="RegularExpression">RegularExpression.</param>
+
+        public StringDefinition(TypeEnum? Type = null, int? MinimumLength = null, int? MaximumLength = null, string RegularExpression = null)
+        {
+            this.Type = Type;
+            this.MinimumLength = MinimumLength;
+            this.MaximumLength = MaximumLength;
+            this.RegularExpression = RegularExpression;
+            
+        }
+
+    
         /// <summary>
         /// Gets or Sets MinimumLength
         /// </summary>
         [DataMember(Name="minimumLength", EmitDefaultValue=false)]
         public int? MinimumLength { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets MaximumLength
         /// </summary>
         [DataMember(Name="maximumLength", EmitDefaultValue=false)]
         public int? MaximumLength { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets RegularExpression
         /// </summary>
         [DataMember(Name="regularExpression", EmitDefaultValue=false)]
         public string RegularExpression { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -68,11 +93,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  MinimumLength: ").Append(MinimumLength).Append("\n");
             sb.Append("  MaximumLength: ").Append(MaximumLength).Append("\n");
             sb.Append("  RegularExpression: ").Append(RegularExpression).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -96,7 +120,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if StringDefinition instances are equal
         /// </summary>
-        /// <param name="obj">Instance of StringDefinition to be compared</param>
+        /// <param name="other">Instance of StringDefinition to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(StringDefinition other)
         {
@@ -104,22 +128,22 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Type == other.Type ||
                     this.Type != null &&
                     this.Type.Equals(other.Type)
-                ) && 
+                ) &&
                 (
                     this.MinimumLength == other.MinimumLength ||
                     this.MinimumLength != null &&
                     this.MinimumLength.Equals(other.MinimumLength)
-                ) && 
+                ) &&
                 (
                     this.MaximumLength == other.MaximumLength ||
                     this.MaximumLength != null &&
                     this.MaximumLength.Equals(other.MaximumLength)
-                ) && 
+                ) &&
                 (
                     this.RegularExpression == other.RegularExpression ||
                     this.RegularExpression != null &&
@@ -138,24 +162,17 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Type != null)
-                    hash = hash * 57 + this.Type.GetHashCode();
-                
+                    hash = hash * 59 + this.Type.GetHashCode();
                 if (this.MinimumLength != null)
-                    hash = hash * 57 + this.MinimumLength.GetHashCode();
-                
+                    hash = hash * 59 + this.MinimumLength.GetHashCode();
                 if (this.MaximumLength != null)
-                    hash = hash * 57 + this.MaximumLength.GetHashCode();
-                
+                    hash = hash * 59 + this.MaximumLength.GetHashCode();
                 if (this.RegularExpression != null)
-                    hash = hash * 57 + this.RegularExpression.GetHashCode();
-                
+                    hash = hash * 59 + this.RegularExpression.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

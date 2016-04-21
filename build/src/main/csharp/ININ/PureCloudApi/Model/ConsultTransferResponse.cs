@@ -4,38 +4,47 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class ConsultTransferResponse :  IEquatable<ConsultTransferResponse>
-    {
+    public partial class ConsultTransferResponse :  IEquatable<ConsultTransferResponse>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="ConsultTransferResponse" /> class.
+        /// Initializes a new instance of the <see cref="ConsultTransferResponse" />class.
         /// </summary>
-        public ConsultTransferResponse()
+        /// <param name="DestinationParticipantId">Participant ID to whom the call is being transferred. (required).</param>
+
+        public ConsultTransferResponse(string DestinationParticipantId = null)
         {
+            // to ensure "DestinationParticipantId" is required (not null)
+            if (DestinationParticipantId == null)
+            {
+                throw new InvalidDataException("DestinationParticipantId is a required property for ConsultTransferResponse and cannot be null");
+            }
+            else
+            {
+                this.DestinationParticipantId = DestinationParticipantId;
+            }
             
         }
 
-        
+    
         /// <summary>
         /// Participant ID to whom the call is being transferred.
         /// </summary>
         /// <value>Participant ID to whom the call is being transferred.</value>
         [DataMember(Name="destinationParticipantId", EmitDefaultValue=false)]
         public string DestinationParticipantId { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -45,11 +54,10 @@ namespace ININ.PureCloudApi.Model
             var sb = new StringBuilder();
             sb.Append("class ConsultTransferResponse {\n");
             sb.Append("  DestinationParticipantId: ").Append(DestinationParticipantId).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -73,7 +81,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if ConsultTransferResponse instances are equal
         /// </summary>
-        /// <param name="obj">Instance of ConsultTransferResponse to be compared</param>
+        /// <param name="other">Instance of ConsultTransferResponse to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(ConsultTransferResponse other)
         {
@@ -81,7 +89,7 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.DestinationParticipantId == other.DestinationParticipantId ||
                     this.DestinationParticipantId != null &&
@@ -100,15 +108,11 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.DestinationParticipantId != null)
-                    hash = hash * 57 + this.DestinationParticipantId.GetHashCode();
-                
+                    hash = hash * 59 + this.DestinationParticipantId.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

@@ -4,44 +4,46 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class DownloadResponse :  IEquatable<DownloadResponse>
-    {
+    public partial class DownloadResponse :  IEquatable<DownloadResponse>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="DownloadResponse" /> class.
+        /// Initializes a new instance of the <see cref="DownloadResponse" />class.
         /// </summary>
-        public DownloadResponse()
+        /// <param name="ContentLocationUri">ContentLocationUri.</param>
+        /// <param name="ImageUri">ImageUri.</param>
+
+        public DownloadResponse(string ContentLocationUri = null, string ImageUri = null)
         {
+            this.ContentLocationUri = ContentLocationUri;
+            this.ImageUri = ImageUri;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets ContentLocationUri
         /// </summary>
         [DataMember(Name="contentLocationUri", EmitDefaultValue=false)]
         public string ContentLocationUri { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ImageUri
         /// </summary>
         [DataMember(Name="imageUri", EmitDefaultValue=false)]
         public string ImageUri { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -52,11 +54,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class DownloadResponse {\n");
             sb.Append("  ContentLocationUri: ").Append(ContentLocationUri).Append("\n");
             sb.Append("  ImageUri: ").Append(ImageUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -80,7 +81,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if DownloadResponse instances are equal
         /// </summary>
-        /// <param name="obj">Instance of DownloadResponse to be compared</param>
+        /// <param name="other">Instance of DownloadResponse to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(DownloadResponse other)
         {
@@ -88,12 +89,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.ContentLocationUri == other.ContentLocationUri ||
                     this.ContentLocationUri != null &&
                     this.ContentLocationUri.Equals(other.ContentLocationUri)
-                ) && 
+                ) &&
                 (
                     this.ImageUri == other.ImageUri ||
                     this.ImageUri != null &&
@@ -112,18 +113,13 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ContentLocationUri != null)
-                    hash = hash * 57 + this.ContentLocationUri.GetHashCode();
-                
+                    hash = hash * 59 + this.ContentLocationUri.GetHashCode();
                 if (this.ImageUri != null)
-                    hash = hash * 57 + this.ImageUri.GetHashCode();
-                
+                    hash = hash * 59 + this.ImageUri.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

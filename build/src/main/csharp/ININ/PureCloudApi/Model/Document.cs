@@ -4,261 +4,347 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class Document :  IEquatable<Document>
-    {
+    public partial class Document :  IEquatable<Document>
+    { 
+
         /// <summary>
-        /// Initializes a new instance of the <see cref="Document" /> class.
+        /// Gets or Sets SystemType
         /// </summary>
-        public Document()
-        {
-            this.Read = false;
+        [JsonConverter(typeof(StringEnumConverter))]
+                public enum SystemTypeEnum {
             
+            [EnumMember(Value = "DOCUMENT")]
+            Document,
+            
+            [EnumMember(Value = "FAX")]
+            Fax,
+            
+            [EnumMember(Value = "RECORDING")]
+            Recording
+        }
+
+
+        /// <summary>
+        /// Gets or Sets UploadMethod
+        /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
+                public enum UploadMethodEnum {
+            
+            [EnumMember(Value = "SINGLE_PUT")]
+            SinglePut,
+            
+            [EnumMember(Value = "MULTIPART_POST")]
+            MultipartPost
+        }
+
+
+        /// <summary>
+        /// Gets or Sets SharingStatus
+        /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
+                public enum SharingStatusEnum {
+            
+            [EnumMember(Value = "NONE")]
+            None,
+            
+            [EnumMember(Value = "LIMITED")]
+            Limited,
+            
+            [EnumMember(Value = "PUBLIC")]
+            Public
         }
 
         
+
+        /// <summary>
+        /// Gets or Sets SystemType
+        /// </summary>
+        [DataMember(Name="systemType", EmitDefaultValue=false)]
+        public SystemTypeEnum? SystemType { get; set; }
+    
+
+        /// <summary>
+        /// Gets or Sets UploadMethod
+        /// </summary>
+        [DataMember(Name="uploadMethod", EmitDefaultValue=false)]
+        public UploadMethodEnum? UploadMethod { get; set; }
+    
+
+        /// <summary>
+        /// Gets or Sets SharingStatus
+        /// </summary>
+        [DataMember(Name="sharingStatus", EmitDefaultValue=false)]
+        public SharingStatusEnum? SharingStatus { get; set; }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Document" />class.
+        /// </summary>
+        /// <param name="Name">Name.</param>
+        /// <param name="ChangeNumber">ChangeNumber.</param>
+        /// <param name="DateCreated">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="DateModified">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="DateUploaded">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="ContentUri">ContentUri.</param>
+        /// <param name="Workspace">Workspace.</param>
+        /// <param name="CreatedBy">CreatedBy.</param>
+        /// <param name="UploadedBy">UploadedBy.</param>
+        /// <param name="ContentType">ContentType.</param>
+        /// <param name="ContentLength">ContentLength.</param>
+        /// <param name="SystemType">SystemType.</param>
+        /// <param name="Filename">Filename.</param>
+        /// <param name="PageCount">PageCount.</param>
+        /// <param name="Read">Read (default to false).</param>
+        /// <param name="CallerAddress">CallerAddress.</param>
+        /// <param name="ReceiverAddress">ReceiverAddress.</param>
+        /// <param name="Tags">Tags.</param>
+        /// <param name="TagValues">TagValues.</param>
+        /// <param name="Attributes">Attributes.</param>
+        /// <param name="AttributeGroupInstances">AttributeGroupInstances.</param>
+        /// <param name="Thumbnails">Thumbnails.</param>
+        /// <param name="UploadStatus">UploadStatus.</param>
+        /// <param name="UploadDestinationUri">UploadDestinationUri.</param>
+        /// <param name="UploadMethod">UploadMethod.</param>
+        /// <param name="LockInfo">LockInfo.</param>
+        /// <param name="Acl">A list of permitted action rights for the user making the request.</param>
+        /// <param name="SharingStatus">SharingStatus.</param>
+        /// <param name="SharingUri">SharingUri.</param>
+        /// <param name="DownloadSharingUri">DownloadSharingUri.</param>
+
+        public Document(string Name = null, int? ChangeNumber = null, DateTime? DateCreated = null, DateTime? DateModified = null, DateTime? DateUploaded = null, string ContentUri = null, UriReference Workspace = null, UriReference CreatedBy = null, UriReference UploadedBy = null, string ContentType = null, long? ContentLength = null, SystemTypeEnum? SystemType = null, string Filename = null, long? PageCount = null, bool? Read = null, string CallerAddress = null, string ReceiverAddress = null, List<string> Tags = null, List<TagValue> TagValues = null, List<AttributeValue> Attributes = null, List<AttributeGroupInstance> AttributeGroupInstances = null, List<DocumentThumbnail> Thumbnails = null, UriReference UploadStatus = null, string UploadDestinationUri = null, UploadMethodEnum? UploadMethod = null, LockInfo LockInfo = null, List<string> Acl = null, SharingStatusEnum? SharingStatus = null, string SharingUri = null, string DownloadSharingUri = null)
+        {
+            this.Name = Name;
+            this.ChangeNumber = ChangeNumber;
+            this.DateCreated = DateCreated;
+            this.DateModified = DateModified;
+            this.DateUploaded = DateUploaded;
+            this.ContentUri = ContentUri;
+            this.Workspace = Workspace;
+            this.CreatedBy = CreatedBy;
+            this.UploadedBy = UploadedBy;
+            this.ContentType = ContentType;
+            this.ContentLength = ContentLength;
+            this.SystemType = SystemType;
+            this.Filename = Filename;
+            this.PageCount = PageCount;
+            // use default value if no "Read" provided
+            if (Read == null)
+            {
+                this.Read = false;
+            }
+            else
+            {
+                this.Read = Read;
+            }
+            this.CallerAddress = CallerAddress;
+            this.ReceiverAddress = ReceiverAddress;
+            this.Tags = Tags;
+            this.TagValues = TagValues;
+            this.Attributes = Attributes;
+            this.AttributeGroupInstances = AttributeGroupInstances;
+            this.Thumbnails = Thumbnails;
+            this.UploadStatus = UploadStatus;
+            this.UploadDestinationUri = UploadDestinationUri;
+            this.UploadMethod = UploadMethod;
+            this.LockInfo = LockInfo;
+            this.Acl = Acl;
+            this.SharingStatus = SharingStatus;
+            this.SharingUri = SharingUri;
+            this.DownloadSharingUri = DownloadSharingUri;
+            
+        }
+
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ChangeNumber
         /// </summary>
         [DataMember(Name="changeNumber", EmitDefaultValue=false)]
         public int? ChangeNumber { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
         public DateTime? DateModified { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dateUploaded", EmitDefaultValue=false)]
         public DateTime? DateUploaded { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ContentUri
         /// </summary>
         [DataMember(Name="contentUri", EmitDefaultValue=false)]
         public string ContentUri { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Workspace
         /// </summary>
         [DataMember(Name="workspace", EmitDefaultValue=false)]
         public UriReference Workspace { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets CreatedBy
         /// </summary>
         [DataMember(Name="createdBy", EmitDefaultValue=false)]
         public UriReference CreatedBy { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets UploadedBy
         /// </summary>
         [DataMember(Name="uploadedBy", EmitDefaultValue=false)]
         public UriReference UploadedBy { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ContentType
         /// </summary>
         [DataMember(Name="contentType", EmitDefaultValue=false)]
         public string ContentType { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ContentLength
         /// </summary>
         [DataMember(Name="contentLength", EmitDefaultValue=false)]
         public long? ContentLength { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets SystemType
-        /// </summary>
-        [DataMember(Name="systemType", EmitDefaultValue=false)]
-        public string SystemType { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Filename
         /// </summary>
         [DataMember(Name="filename", EmitDefaultValue=false)]
         public string Filename { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets PageCount
         /// </summary>
         [DataMember(Name="pageCount", EmitDefaultValue=false)]
         public long? PageCount { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Read
         /// </summary>
         [DataMember(Name="read", EmitDefaultValue=false)]
         public bool? Read { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets CallerAddress
         /// </summary>
         [DataMember(Name="callerAddress", EmitDefaultValue=false)]
         public string CallerAddress { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ReceiverAddress
         /// </summary>
         [DataMember(Name="receiverAddress", EmitDefaultValue=false)]
         public string ReceiverAddress { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Tags
         /// </summary>
         [DataMember(Name="tags", EmitDefaultValue=false)]
         public List<string> Tags { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets TagValues
         /// </summary>
         [DataMember(Name="tagValues", EmitDefaultValue=false)]
         public List<TagValue> TagValues { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Attributes
         /// </summary>
         [DataMember(Name="attributes", EmitDefaultValue=false)]
         public List<AttributeValue> Attributes { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets AttributeGroupInstances
         /// </summary>
         [DataMember(Name="attributeGroupInstances", EmitDefaultValue=false)]
         public List<AttributeGroupInstance> AttributeGroupInstances { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Thumbnails
         /// </summary>
         [DataMember(Name="thumbnails", EmitDefaultValue=false)]
         public List<DocumentThumbnail> Thumbnails { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets UploadStatus
         /// </summary>
         [DataMember(Name="uploadStatus", EmitDefaultValue=false)]
         public UriReference UploadStatus { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets UploadDestinationUri
         /// </summary>
         [DataMember(Name="uploadDestinationUri", EmitDefaultValue=false)]
         public string UploadDestinationUri { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets UploadMethod
-        /// </summary>
-        [DataMember(Name="uploadMethod", EmitDefaultValue=false)]
-        public string UploadMethod { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets LockInfo
         /// </summary>
         [DataMember(Name="lockInfo", EmitDefaultValue=false)]
         public LockInfo LockInfo { get; set; }
-  
-        
+    
         /// <summary>
         /// A list of permitted action rights for the user making the request
         /// </summary>
         /// <value>A list of permitted action rights for the user making the request</value>
         [DataMember(Name="acl", EmitDefaultValue=false)]
         public List<string> Acl { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets SharingStatus
-        /// </summary>
-        [DataMember(Name="sharingStatus", EmitDefaultValue=false)]
-        public string SharingStatus { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets SharingUri
         /// </summary>
         [DataMember(Name="sharingUri", EmitDefaultValue=false)]
         public string SharingUri { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets DownloadSharingUri
         /// </summary>
         [DataMember(Name="downloadSharingUri", EmitDefaultValue=false)]
         public string DownloadSharingUri { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -299,11 +385,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  SharingUri: ").Append(SharingUri).Append("\n");
             sb.Append("  DownloadSharingUri: ").Append(DownloadSharingUri).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -327,7 +412,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if Document instances are equal
         /// </summary>
-        /// <param name="obj">Instance of Document to be compared</param>
+        /// <param name="other">Instance of Document to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(Document other)
         {
@@ -335,162 +420,162 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.ChangeNumber == other.ChangeNumber ||
                     this.ChangeNumber != null &&
                     this.ChangeNumber.Equals(other.ChangeNumber)
-                ) && 
+                ) &&
                 (
                     this.DateCreated == other.DateCreated ||
                     this.DateCreated != null &&
                     this.DateCreated.Equals(other.DateCreated)
-                ) && 
+                ) &&
                 (
                     this.DateModified == other.DateModified ||
                     this.DateModified != null &&
                     this.DateModified.Equals(other.DateModified)
-                ) && 
+                ) &&
                 (
                     this.DateUploaded == other.DateUploaded ||
                     this.DateUploaded != null &&
                     this.DateUploaded.Equals(other.DateUploaded)
-                ) && 
+                ) &&
                 (
                     this.ContentUri == other.ContentUri ||
                     this.ContentUri != null &&
                     this.ContentUri.Equals(other.ContentUri)
-                ) && 
+                ) &&
                 (
                     this.Workspace == other.Workspace ||
                     this.Workspace != null &&
                     this.Workspace.Equals(other.Workspace)
-                ) && 
+                ) &&
                 (
                     this.CreatedBy == other.CreatedBy ||
                     this.CreatedBy != null &&
                     this.CreatedBy.Equals(other.CreatedBy)
-                ) && 
+                ) &&
                 (
                     this.UploadedBy == other.UploadedBy ||
                     this.UploadedBy != null &&
                     this.UploadedBy.Equals(other.UploadedBy)
-                ) && 
+                ) &&
                 (
                     this.ContentType == other.ContentType ||
                     this.ContentType != null &&
                     this.ContentType.Equals(other.ContentType)
-                ) && 
+                ) &&
                 (
                     this.ContentLength == other.ContentLength ||
                     this.ContentLength != null &&
                     this.ContentLength.Equals(other.ContentLength)
-                ) && 
+                ) &&
                 (
                     this.SystemType == other.SystemType ||
                     this.SystemType != null &&
                     this.SystemType.Equals(other.SystemType)
-                ) && 
+                ) &&
                 (
                     this.Filename == other.Filename ||
                     this.Filename != null &&
                     this.Filename.Equals(other.Filename)
-                ) && 
+                ) &&
                 (
                     this.PageCount == other.PageCount ||
                     this.PageCount != null &&
                     this.PageCount.Equals(other.PageCount)
-                ) && 
+                ) &&
                 (
                     this.Read == other.Read ||
                     this.Read != null &&
                     this.Read.Equals(other.Read)
-                ) && 
+                ) &&
                 (
                     this.CallerAddress == other.CallerAddress ||
                     this.CallerAddress != null &&
                     this.CallerAddress.Equals(other.CallerAddress)
-                ) && 
+                ) &&
                 (
                     this.ReceiverAddress == other.ReceiverAddress ||
                     this.ReceiverAddress != null &&
                     this.ReceiverAddress.Equals(other.ReceiverAddress)
-                ) && 
+                ) &&
                 (
                     this.Tags == other.Tags ||
                     this.Tags != null &&
                     this.Tags.SequenceEqual(other.Tags)
-                ) && 
+                ) &&
                 (
                     this.TagValues == other.TagValues ||
                     this.TagValues != null &&
                     this.TagValues.SequenceEqual(other.TagValues)
-                ) && 
+                ) &&
                 (
                     this.Attributes == other.Attributes ||
                     this.Attributes != null &&
                     this.Attributes.SequenceEqual(other.Attributes)
-                ) && 
+                ) &&
                 (
                     this.AttributeGroupInstances == other.AttributeGroupInstances ||
                     this.AttributeGroupInstances != null &&
                     this.AttributeGroupInstances.SequenceEqual(other.AttributeGroupInstances)
-                ) && 
+                ) &&
                 (
                     this.Thumbnails == other.Thumbnails ||
                     this.Thumbnails != null &&
                     this.Thumbnails.SequenceEqual(other.Thumbnails)
-                ) && 
+                ) &&
                 (
                     this.UploadStatus == other.UploadStatus ||
                     this.UploadStatus != null &&
                     this.UploadStatus.Equals(other.UploadStatus)
-                ) && 
+                ) &&
                 (
                     this.UploadDestinationUri == other.UploadDestinationUri ||
                     this.UploadDestinationUri != null &&
                     this.UploadDestinationUri.Equals(other.UploadDestinationUri)
-                ) && 
+                ) &&
                 (
                     this.UploadMethod == other.UploadMethod ||
                     this.UploadMethod != null &&
                     this.UploadMethod.Equals(other.UploadMethod)
-                ) && 
+                ) &&
                 (
                     this.LockInfo == other.LockInfo ||
                     this.LockInfo != null &&
                     this.LockInfo.Equals(other.LockInfo)
-                ) && 
+                ) &&
                 (
                     this.Acl == other.Acl ||
                     this.Acl != null &&
                     this.Acl.SequenceEqual(other.Acl)
-                ) && 
+                ) &&
                 (
                     this.SharingStatus == other.SharingStatus ||
                     this.SharingStatus != null &&
                     this.SharingStatus.Equals(other.SharingStatus)
-                ) && 
+                ) &&
                 (
                     this.SharingUri == other.SharingUri ||
                     this.SharingUri != null &&
                     this.SharingUri.Equals(other.SharingUri)
-                ) && 
+                ) &&
                 (
                     this.DownloadSharingUri == other.DownloadSharingUri ||
                     this.DownloadSharingUri != null &&
                     this.DownloadSharingUri.Equals(other.DownloadSharingUri)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
@@ -509,108 +594,73 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
-                
+                    hash = hash * 59 + this.Id.GetHashCode();
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
-                
+                    hash = hash * 59 + this.Name.GetHashCode();
                 if (this.ChangeNumber != null)
-                    hash = hash * 57 + this.ChangeNumber.GetHashCode();
-                
+                    hash = hash * 59 + this.ChangeNumber.GetHashCode();
                 if (this.DateCreated != null)
-                    hash = hash * 57 + this.DateCreated.GetHashCode();
-                
+                    hash = hash * 59 + this.DateCreated.GetHashCode();
                 if (this.DateModified != null)
-                    hash = hash * 57 + this.DateModified.GetHashCode();
-                
+                    hash = hash * 59 + this.DateModified.GetHashCode();
                 if (this.DateUploaded != null)
-                    hash = hash * 57 + this.DateUploaded.GetHashCode();
-                
+                    hash = hash * 59 + this.DateUploaded.GetHashCode();
                 if (this.ContentUri != null)
-                    hash = hash * 57 + this.ContentUri.GetHashCode();
-                
+                    hash = hash * 59 + this.ContentUri.GetHashCode();
                 if (this.Workspace != null)
-                    hash = hash * 57 + this.Workspace.GetHashCode();
-                
+                    hash = hash * 59 + this.Workspace.GetHashCode();
                 if (this.CreatedBy != null)
-                    hash = hash * 57 + this.CreatedBy.GetHashCode();
-                
+                    hash = hash * 59 + this.CreatedBy.GetHashCode();
                 if (this.UploadedBy != null)
-                    hash = hash * 57 + this.UploadedBy.GetHashCode();
-                
+                    hash = hash * 59 + this.UploadedBy.GetHashCode();
                 if (this.ContentType != null)
-                    hash = hash * 57 + this.ContentType.GetHashCode();
-                
+                    hash = hash * 59 + this.ContentType.GetHashCode();
                 if (this.ContentLength != null)
-                    hash = hash * 57 + this.ContentLength.GetHashCode();
-                
+                    hash = hash * 59 + this.ContentLength.GetHashCode();
                 if (this.SystemType != null)
-                    hash = hash * 57 + this.SystemType.GetHashCode();
-                
+                    hash = hash * 59 + this.SystemType.GetHashCode();
                 if (this.Filename != null)
-                    hash = hash * 57 + this.Filename.GetHashCode();
-                
+                    hash = hash * 59 + this.Filename.GetHashCode();
                 if (this.PageCount != null)
-                    hash = hash * 57 + this.PageCount.GetHashCode();
-                
+                    hash = hash * 59 + this.PageCount.GetHashCode();
                 if (this.Read != null)
-                    hash = hash * 57 + this.Read.GetHashCode();
-                
+                    hash = hash * 59 + this.Read.GetHashCode();
                 if (this.CallerAddress != null)
-                    hash = hash * 57 + this.CallerAddress.GetHashCode();
-                
+                    hash = hash * 59 + this.CallerAddress.GetHashCode();
                 if (this.ReceiverAddress != null)
-                    hash = hash * 57 + this.ReceiverAddress.GetHashCode();
-                
+                    hash = hash * 59 + this.ReceiverAddress.GetHashCode();
                 if (this.Tags != null)
-                    hash = hash * 57 + this.Tags.GetHashCode();
-                
+                    hash = hash * 59 + this.Tags.GetHashCode();
                 if (this.TagValues != null)
-                    hash = hash * 57 + this.TagValues.GetHashCode();
-                
+                    hash = hash * 59 + this.TagValues.GetHashCode();
                 if (this.Attributes != null)
-                    hash = hash * 57 + this.Attributes.GetHashCode();
-                
+                    hash = hash * 59 + this.Attributes.GetHashCode();
                 if (this.AttributeGroupInstances != null)
-                    hash = hash * 57 + this.AttributeGroupInstances.GetHashCode();
-                
+                    hash = hash * 59 + this.AttributeGroupInstances.GetHashCode();
                 if (this.Thumbnails != null)
-                    hash = hash * 57 + this.Thumbnails.GetHashCode();
-                
+                    hash = hash * 59 + this.Thumbnails.GetHashCode();
                 if (this.UploadStatus != null)
-                    hash = hash * 57 + this.UploadStatus.GetHashCode();
-                
+                    hash = hash * 59 + this.UploadStatus.GetHashCode();
                 if (this.UploadDestinationUri != null)
-                    hash = hash * 57 + this.UploadDestinationUri.GetHashCode();
-                
+                    hash = hash * 59 + this.UploadDestinationUri.GetHashCode();
                 if (this.UploadMethod != null)
-                    hash = hash * 57 + this.UploadMethod.GetHashCode();
-                
+                    hash = hash * 59 + this.UploadMethod.GetHashCode();
                 if (this.LockInfo != null)
-                    hash = hash * 57 + this.LockInfo.GetHashCode();
-                
+                    hash = hash * 59 + this.LockInfo.GetHashCode();
                 if (this.Acl != null)
-                    hash = hash * 57 + this.Acl.GetHashCode();
-                
+                    hash = hash * 59 + this.Acl.GetHashCode();
                 if (this.SharingStatus != null)
-                    hash = hash * 57 + this.SharingStatus.GetHashCode();
-                
+                    hash = hash * 59 + this.SharingStatus.GetHashCode();
                 if (this.SharingUri != null)
-                    hash = hash * 57 + this.SharingUri.GetHashCode();
-                
+                    hash = hash * 59 + this.SharingUri.GetHashCode();
                 if (this.DownloadSharingUri != null)
-                    hash = hash * 57 + this.DownloadSharingUri.GetHashCode();
-                
+                    hash = hash * 59 + this.DownloadSharingUri.GetHashCode();
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
-                
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

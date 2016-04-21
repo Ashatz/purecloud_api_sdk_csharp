@@ -4,37 +4,38 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// WorkItem entry found in result to a search.
     /// </summary>
     [DataContract]
-    public class WorkItemSearchDetails :  IEquatable<WorkItemSearchDetails>
-    {
+    public partial class WorkItemSearchDetails :  IEquatable<WorkItemSearchDetails>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="WorkItemSearchDetails" /> class.
+        /// Initializes a new instance of the <see cref="WorkItemSearchDetails" />class.
         /// </summary>
-        public WorkItemSearchDetails()
+        /// <param name="WorkItem">WorkItem.</param>
+
+        public WorkItemSearchDetails(WorkItemDetails WorkItem = null)
         {
+            this.WorkItem = WorkItem;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets WorkItem
         /// </summary>
         [DataMember(Name="workItem", EmitDefaultValue=false)]
         public WorkItemDetails WorkItem { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -44,11 +45,10 @@ namespace ININ.PureCloudApi.Model
             var sb = new StringBuilder();
             sb.Append("class WorkItemSearchDetails {\n");
             sb.Append("  WorkItem: ").Append(WorkItem).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -72,7 +72,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if WorkItemSearchDetails instances are equal
         /// </summary>
-        /// <param name="obj">Instance of WorkItemSearchDetails to be compared</param>
+        /// <param name="other">Instance of WorkItemSearchDetails to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(WorkItemSearchDetails other)
         {
@@ -80,7 +80,7 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.WorkItem == other.WorkItem ||
                     this.WorkItem != null &&
@@ -99,15 +99,11 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.WorkItem != null)
-                    hash = hash * 57 + this.WorkItem.GetHashCode();
-                
+                    hash = hash * 59 + this.WorkItem.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

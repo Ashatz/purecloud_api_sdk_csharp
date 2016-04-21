@@ -4,46 +4,48 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class OrgMediaUtilization :  IEquatable<OrgMediaUtilization>
-    {
+    public partial class OrgMediaUtilization :  IEquatable<OrgMediaUtilization>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="OrgMediaUtilization" /> class.
+        /// Initializes a new instance of the <see cref="OrgMediaUtilization" />class.
         /// </summary>
-        public OrgMediaUtilization()
+        /// <param name="MaximumCapacity">Defines the maximum number of conversations of this type that an agent can handle at one time..</param>
+        /// <param name="InterruptableMediaTypes">Defines the list of other media types that can interrupt a conversation of this media type.  Values can be: call, chat, email, or socialExpression.</param>
+
+        public OrgMediaUtilization(int? MaximumCapacity = null, List<string> InterruptableMediaTypes = null)
         {
+            this.MaximumCapacity = MaximumCapacity;
+            this.InterruptableMediaTypes = InterruptableMediaTypes;
             
         }
 
-        
+    
         /// <summary>
         /// Defines the maximum number of conversations of this type that an agent can handle at one time.
         /// </summary>
         /// <value>Defines the maximum number of conversations of this type that an agent can handle at one time.</value>
         [DataMember(Name="maximumCapacity", EmitDefaultValue=false)]
         public int? MaximumCapacity { get; set; }
-  
-        
+    
         /// <summary>
         /// Defines the list of other media types that can interrupt a conversation of this media type.  Values can be: call, chat, email, or socialExpression
         /// </summary>
         /// <value>Defines the list of other media types that can interrupt a conversation of this media type.  Values can be: call, chat, email, or socialExpression</value>
         [DataMember(Name="interruptableMediaTypes", EmitDefaultValue=false)]
         public List<string> InterruptableMediaTypes { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -54,11 +56,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class OrgMediaUtilization {\n");
             sb.Append("  MaximumCapacity: ").Append(MaximumCapacity).Append("\n");
             sb.Append("  InterruptableMediaTypes: ").Append(InterruptableMediaTypes).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -82,7 +83,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if OrgMediaUtilization instances are equal
         /// </summary>
-        /// <param name="obj">Instance of OrgMediaUtilization to be compared</param>
+        /// <param name="other">Instance of OrgMediaUtilization to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(OrgMediaUtilization other)
         {
@@ -90,12 +91,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.MaximumCapacity == other.MaximumCapacity ||
                     this.MaximumCapacity != null &&
                     this.MaximumCapacity.Equals(other.MaximumCapacity)
-                ) && 
+                ) &&
                 (
                     this.InterruptableMediaTypes == other.InterruptableMediaTypes ||
                     this.InterruptableMediaTypes != null &&
@@ -114,18 +115,13 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.MaximumCapacity != null)
-                    hash = hash * 57 + this.MaximumCapacity.GetHashCode();
-                
+                    hash = hash * 59 + this.MaximumCapacity.GetHashCode();
                 if (this.InterruptableMediaTypes != null)
-                    hash = hash * 57 + this.InterruptableMediaTypes.GetHashCode();
-                
+                    hash = hash * 59 + this.InterruptableMediaTypes.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

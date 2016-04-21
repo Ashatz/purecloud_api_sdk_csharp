@@ -4,73 +4,86 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class DomainPermission :  IEquatable<DomainPermission>
-    {
+    public partial class DomainPermission :  IEquatable<DomainPermission>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="DomainPermission" /> class.
+        /// Initializes a new instance of the <see cref="DomainPermission" />class.
         /// </summary>
-        public DomainPermission()
+        /// <param name="Domain">Domain.</param>
+        /// <param name="EntityType">EntityType.</param>
+        /// <param name="Action">Action.</param>
+        /// <param name="Label">Label.</param>
+        /// <param name="Licenses">Licenses.</param>
+        /// <param name="AllowsConditions">AllowsConditions (default to false).</param>
+
+        public DomainPermission(string Domain = null, string EntityType = null, string Action = null, string Label = null, List<string> Licenses = null, bool? AllowsConditions = null)
         {
-            this.AllowsConditions = false;
+            this.Domain = Domain;
+            this.EntityType = EntityType;
+            this.Action = Action;
+            this.Label = Label;
+            this.Licenses = Licenses;
+            // use default value if no "AllowsConditions" provided
+            if (AllowsConditions == null)
+            {
+                this.AllowsConditions = false;
+            }
+            else
+            {
+                this.AllowsConditions = AllowsConditions;
+            }
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets Domain
         /// </summary>
         [DataMember(Name="domain", EmitDefaultValue=false)]
         public string Domain { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets EntityType
         /// </summary>
         [DataMember(Name="entityType", EmitDefaultValue=false)]
         public string EntityType { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Action
         /// </summary>
         [DataMember(Name="action", EmitDefaultValue=false)]
         public string Action { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Label
         /// </summary>
         [DataMember(Name="label", EmitDefaultValue=false)]
         public string Label { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Licenses
         /// </summary>
         [DataMember(Name="licenses", EmitDefaultValue=false)]
         public List<string> Licenses { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets AllowsConditions
         /// </summary>
         [DataMember(Name="allowsConditions", EmitDefaultValue=false)]
         public bool? AllowsConditions { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -85,11 +98,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Label: ").Append(Label).Append("\n");
             sb.Append("  Licenses: ").Append(Licenses).Append("\n");
             sb.Append("  AllowsConditions: ").Append(AllowsConditions).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -113,7 +125,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if DomainPermission instances are equal
         /// </summary>
-        /// <param name="obj">Instance of DomainPermission to be compared</param>
+        /// <param name="other">Instance of DomainPermission to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(DomainPermission other)
         {
@@ -121,32 +133,32 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Domain == other.Domain ||
                     this.Domain != null &&
                     this.Domain.Equals(other.Domain)
-                ) && 
+                ) &&
                 (
                     this.EntityType == other.EntityType ||
                     this.EntityType != null &&
                     this.EntityType.Equals(other.EntityType)
-                ) && 
+                ) &&
                 (
                     this.Action == other.Action ||
                     this.Action != null &&
                     this.Action.Equals(other.Action)
-                ) && 
+                ) &&
                 (
                     this.Label == other.Label ||
                     this.Label != null &&
                     this.Label.Equals(other.Label)
-                ) && 
+                ) &&
                 (
                     this.Licenses == other.Licenses ||
                     this.Licenses != null &&
                     this.Licenses.SequenceEqual(other.Licenses)
-                ) && 
+                ) &&
                 (
                     this.AllowsConditions == other.AllowsConditions ||
                     this.AllowsConditions != null &&
@@ -165,30 +177,21 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Domain != null)
-                    hash = hash * 57 + this.Domain.GetHashCode();
-                
+                    hash = hash * 59 + this.Domain.GetHashCode();
                 if (this.EntityType != null)
-                    hash = hash * 57 + this.EntityType.GetHashCode();
-                
+                    hash = hash * 59 + this.EntityType.GetHashCode();
                 if (this.Action != null)
-                    hash = hash * 57 + this.Action.GetHashCode();
-                
+                    hash = hash * 59 + this.Action.GetHashCode();
                 if (this.Label != null)
-                    hash = hash * 57 + this.Label.GetHashCode();
-                
+                    hash = hash * 59 + this.Label.GetHashCode();
                 if (this.Licenses != null)
-                    hash = hash * 57 + this.Licenses.GetHashCode();
-                
+                    hash = hash * 59 + this.Licenses.GetHashCode();
                 if (this.AllowsConditions != null)
-                    hash = hash * 57 + this.AllowsConditions.GetHashCode();
-                
+                    hash = hash * 59 + this.AllowsConditions.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

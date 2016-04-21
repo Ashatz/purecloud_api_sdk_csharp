@@ -4,58 +4,77 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class NumberDefinition :  IEquatable<NumberDefinition>
-    {
+    public partial class NumberDefinition :  IEquatable<NumberDefinition>
+    { 
+
         /// <summary>
-        /// Initializes a new instance of the <see cref="NumberDefinition" /> class.
+        /// Gets or Sets Type
         /// </summary>
-        public NumberDefinition()
-        {
+        [JsonConverter(typeof(StringEnumConverter))]
+                public enum TypeEnum {
             
+            [EnumMember(Value = "INTEGER")]
+            Integer,
+            
+            [EnumMember(Value = "DECIMAL")]
+            Decimal
         }
 
         
+
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
         [DataMember(Name="type", EmitDefaultValue=false)]
-        public string Type { get; set; }
-  
-        
+        public TypeEnum? Type { get; set; }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="NumberDefinition" />class.
+        /// </summary>
+        /// <param name="Type">Type.</param>
+        /// <param name="MinimumValue">MinimumValue.</param>
+        /// <param name="MaximumValue">MaximumValue.</param>
+        /// <param name="DecimalPlaces">DecimalPlaces.</param>
+
+        public NumberDefinition(TypeEnum? Type = null, double? MinimumValue = null, double? MaximumValue = null, int? DecimalPlaces = null)
+        {
+            this.Type = Type;
+            this.MinimumValue = MinimumValue;
+            this.MaximumValue = MaximumValue;
+            this.DecimalPlaces = DecimalPlaces;
+            
+        }
+
+    
         /// <summary>
         /// Gets or Sets MinimumValue
         /// </summary>
         [DataMember(Name="minimumValue", EmitDefaultValue=false)]
         public double? MinimumValue { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets MaximumValue
         /// </summary>
         [DataMember(Name="maximumValue", EmitDefaultValue=false)]
         public double? MaximumValue { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets DecimalPlaces
         /// </summary>
         [DataMember(Name="decimalPlaces", EmitDefaultValue=false)]
         public int? DecimalPlaces { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -68,11 +87,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  MinimumValue: ").Append(MinimumValue).Append("\n");
             sb.Append("  MaximumValue: ").Append(MaximumValue).Append("\n");
             sb.Append("  DecimalPlaces: ").Append(DecimalPlaces).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -96,7 +114,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if NumberDefinition instances are equal
         /// </summary>
-        /// <param name="obj">Instance of NumberDefinition to be compared</param>
+        /// <param name="other">Instance of NumberDefinition to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(NumberDefinition other)
         {
@@ -104,22 +122,22 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Type == other.Type ||
                     this.Type != null &&
                     this.Type.Equals(other.Type)
-                ) && 
+                ) &&
                 (
                     this.MinimumValue == other.MinimumValue ||
                     this.MinimumValue != null &&
                     this.MinimumValue.Equals(other.MinimumValue)
-                ) && 
+                ) &&
                 (
                     this.MaximumValue == other.MaximumValue ||
                     this.MaximumValue != null &&
                     this.MaximumValue.Equals(other.MaximumValue)
-                ) && 
+                ) &&
                 (
                     this.DecimalPlaces == other.DecimalPlaces ||
                     this.DecimalPlaces != null &&
@@ -138,24 +156,17 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Type != null)
-                    hash = hash * 57 + this.Type.GetHashCode();
-                
+                    hash = hash * 59 + this.Type.GetHashCode();
                 if (this.MinimumValue != null)
-                    hash = hash * 57 + this.MinimumValue.GetHashCode();
-                
+                    hash = hash * 59 + this.MinimumValue.GetHashCode();
                 if (this.MaximumValue != null)
-                    hash = hash * 57 + this.MaximumValue.GetHashCode();
-                
+                    hash = hash * 59 + this.MaximumValue.GetHashCode();
                 if (this.DecimalPlaces != null)
-                    hash = hash * 57 + this.DecimalPlaces.GetHashCode();
-                
+                    hash = hash * 59 + this.DecimalPlaces.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

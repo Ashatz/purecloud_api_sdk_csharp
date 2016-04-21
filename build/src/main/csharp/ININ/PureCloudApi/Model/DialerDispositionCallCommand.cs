@@ -4,51 +4,54 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class DialerDispositionCallCommand :  IEquatable<DialerDispositionCallCommand>
-    {
+    public partial class DialerDispositionCallCommand :  IEquatable<DialerDispositionCallCommand>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="DialerDispositionCallCommand" /> class.
+        /// Initializes a new instance of the <see cref="DialerDispositionCallCommand" />class.
         /// </summary>
-        public DialerDispositionCallCommand()
+        /// <param name="CallId">CallId.</param>
+        /// <param name="WrapupCodeId">WrapupCodeId.</param>
+        /// <param name="Contact">Contact.</param>
+
+        public DialerDispositionCallCommand(string CallId = null, string WrapupCodeId = null, Contact Contact = null)
         {
+            this.CallId = CallId;
+            this.WrapupCodeId = WrapupCodeId;
+            this.Contact = Contact;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets CallId
         /// </summary>
         [DataMember(Name="callId", EmitDefaultValue=false)]
         public string CallId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets WrapupCodeId
         /// </summary>
         [DataMember(Name="wrapupCodeId", EmitDefaultValue=false)]
         public string WrapupCodeId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Contact
         /// </summary>
         [DataMember(Name="contact", EmitDefaultValue=false)]
         public Contact Contact { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -60,11 +63,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  CallId: ").Append(CallId).Append("\n");
             sb.Append("  WrapupCodeId: ").Append(WrapupCodeId).Append("\n");
             sb.Append("  Contact: ").Append(Contact).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -88,7 +90,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if DialerDispositionCallCommand instances are equal
         /// </summary>
-        /// <param name="obj">Instance of DialerDispositionCallCommand to be compared</param>
+        /// <param name="other">Instance of DialerDispositionCallCommand to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(DialerDispositionCallCommand other)
         {
@@ -96,17 +98,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.CallId == other.CallId ||
                     this.CallId != null &&
                     this.CallId.Equals(other.CallId)
-                ) && 
+                ) &&
                 (
                     this.WrapupCodeId == other.WrapupCodeId ||
                     this.WrapupCodeId != null &&
                     this.WrapupCodeId.Equals(other.WrapupCodeId)
-                ) && 
+                ) &&
                 (
                     this.Contact == other.Contact ||
                     this.Contact != null &&
@@ -125,21 +127,15 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.CallId != null)
-                    hash = hash * 57 + this.CallId.GetHashCode();
-                
+                    hash = hash * 59 + this.CallId.GetHashCode();
                 if (this.WrapupCodeId != null)
-                    hash = hash * 57 + this.WrapupCodeId.GetHashCode();
-                
+                    hash = hash * 59 + this.WrapupCodeId.GetHashCode();
                 if (this.Contact != null)
-                    hash = hash * 57 + this.Contact.GetHashCode();
-                
+                    hash = hash * 59 + this.Contact.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

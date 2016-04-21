@@ -4,74 +4,80 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class VoicemailMailboxInfo :  IEquatable<VoicemailMailboxInfo>
-    {
+    public partial class VoicemailMailboxInfo :  IEquatable<VoicemailMailboxInfo>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="VoicemailMailboxInfo" /> class.
+        /// Initializes a new instance of the <see cref="VoicemailMailboxInfo" />class.
         /// </summary>
-        public VoicemailMailboxInfo()
+        /// <param name="UsageSizeBytes">UsageSizeBytes.</param>
+        /// <param name="TotalCount">TotalCount.</param>
+        /// <param name="UnreadCount">UnreadCount.</param>
+        /// <param name="VoicemailPolicy">VoicemailPolicy.</param>
+        /// <param name="CreatedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="ModifiedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+
+        public VoicemailMailboxInfo(long? UsageSizeBytes = null, int? TotalCount = null, int? UnreadCount = null, VoicemailUserPolicy VoicemailPolicy = null, DateTime? CreatedDate = null, DateTime? ModifiedDate = null)
         {
+            this.UsageSizeBytes = UsageSizeBytes;
+            this.TotalCount = TotalCount;
+            this.UnreadCount = UnreadCount;
+            this.VoicemailPolicy = VoicemailPolicy;
+            this.CreatedDate = CreatedDate;
+            this.ModifiedDate = ModifiedDate;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets UsageSizeBytes
         /// </summary>
         [DataMember(Name="usageSizeBytes", EmitDefaultValue=false)]
         public long? UsageSizeBytes { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets TotalCount
         /// </summary>
         [DataMember(Name="totalCount", EmitDefaultValue=false)]
         public int? TotalCount { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets UnreadCount
         /// </summary>
         [DataMember(Name="unreadCount", EmitDefaultValue=false)]
         public int? UnreadCount { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets VoicemailPolicy
         /// </summary>
         [DataMember(Name="voicemailPolicy", EmitDefaultValue=false)]
         public VoicemailUserPolicy VoicemailPolicy { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="createdDate", EmitDefaultValue=false)]
         public DateTime? CreatedDate { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="modifiedDate", EmitDefaultValue=false)]
         public DateTime? ModifiedDate { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -86,11 +92,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  VoicemailPolicy: ").Append(VoicemailPolicy).Append("\n");
             sb.Append("  CreatedDate: ").Append(CreatedDate).Append("\n");
             sb.Append("  ModifiedDate: ").Append(ModifiedDate).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -114,7 +119,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if VoicemailMailboxInfo instances are equal
         /// </summary>
-        /// <param name="obj">Instance of VoicemailMailboxInfo to be compared</param>
+        /// <param name="other">Instance of VoicemailMailboxInfo to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(VoicemailMailboxInfo other)
         {
@@ -122,32 +127,32 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.UsageSizeBytes == other.UsageSizeBytes ||
                     this.UsageSizeBytes != null &&
                     this.UsageSizeBytes.Equals(other.UsageSizeBytes)
-                ) && 
+                ) &&
                 (
                     this.TotalCount == other.TotalCount ||
                     this.TotalCount != null &&
                     this.TotalCount.Equals(other.TotalCount)
-                ) && 
+                ) &&
                 (
                     this.UnreadCount == other.UnreadCount ||
                     this.UnreadCount != null &&
                     this.UnreadCount.Equals(other.UnreadCount)
-                ) && 
+                ) &&
                 (
                     this.VoicemailPolicy == other.VoicemailPolicy ||
                     this.VoicemailPolicy != null &&
                     this.VoicemailPolicy.Equals(other.VoicemailPolicy)
-                ) && 
+                ) &&
                 (
                     this.CreatedDate == other.CreatedDate ||
                     this.CreatedDate != null &&
                     this.CreatedDate.Equals(other.CreatedDate)
-                ) && 
+                ) &&
                 (
                     this.ModifiedDate == other.ModifiedDate ||
                     this.ModifiedDate != null &&
@@ -166,30 +171,21 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.UsageSizeBytes != null)
-                    hash = hash * 57 + this.UsageSizeBytes.GetHashCode();
-                
+                    hash = hash * 59 + this.UsageSizeBytes.GetHashCode();
                 if (this.TotalCount != null)
-                    hash = hash * 57 + this.TotalCount.GetHashCode();
-                
+                    hash = hash * 59 + this.TotalCount.GetHashCode();
                 if (this.UnreadCount != null)
-                    hash = hash * 57 + this.UnreadCount.GetHashCode();
-                
+                    hash = hash * 59 + this.UnreadCount.GetHashCode();
                 if (this.VoicemailPolicy != null)
-                    hash = hash * 57 + this.VoicemailPolicy.GetHashCode();
-                
+                    hash = hash * 59 + this.VoicemailPolicy.GetHashCode();
                 if (this.CreatedDate != null)
-                    hash = hash * 57 + this.CreatedDate.GetHashCode();
-                
+                    hash = hash * 59 + this.CreatedDate.GetHashCode();
                 if (this.ModifiedDate != null)
-                    hash = hash * 57 + this.ModifiedDate.GetHashCode();
-                
+                    hash = hash * 59 + this.ModifiedDate.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

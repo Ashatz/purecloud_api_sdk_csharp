@@ -4,44 +4,46 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class PublishScriptRequestData :  IEquatable<PublishScriptRequestData>
-    {
+    public partial class PublishScriptRequestData :  IEquatable<PublishScriptRequestData>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="PublishScriptRequestData" /> class.
+        /// Initializes a new instance of the <see cref="PublishScriptRequestData" />class.
         /// </summary>
-        public PublishScriptRequestData()
+        /// <param name="ScriptId">ScriptId.</param>
+        /// <param name="VersionId">VersionId.</param>
+
+        public PublishScriptRequestData(string ScriptId = null, string VersionId = null)
         {
+            this.ScriptId = ScriptId;
+            this.VersionId = VersionId;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets ScriptId
         /// </summary>
         [DataMember(Name="scriptId", EmitDefaultValue=false)]
         public string ScriptId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets VersionId
         /// </summary>
         [DataMember(Name="versionId", EmitDefaultValue=false)]
         public string VersionId { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -52,11 +54,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class PublishScriptRequestData {\n");
             sb.Append("  ScriptId: ").Append(ScriptId).Append("\n");
             sb.Append("  VersionId: ").Append(VersionId).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -80,7 +81,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if PublishScriptRequestData instances are equal
         /// </summary>
-        /// <param name="obj">Instance of PublishScriptRequestData to be compared</param>
+        /// <param name="other">Instance of PublishScriptRequestData to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(PublishScriptRequestData other)
         {
@@ -88,12 +89,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.ScriptId == other.ScriptId ||
                     this.ScriptId != null &&
                     this.ScriptId.Equals(other.ScriptId)
-                ) && 
+                ) &&
                 (
                     this.VersionId == other.VersionId ||
                     this.VersionId != null &&
@@ -112,18 +113,13 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ScriptId != null)
-                    hash = hash * 57 + this.ScriptId.GetHashCode();
-                
+                    hash = hash * 59 + this.ScriptId.GetHashCode();
                 if (this.VersionId != null)
-                    hash = hash * 57 + this.VersionId.GetHashCode();
-                
+                    hash = hash * 59 + this.VersionId.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

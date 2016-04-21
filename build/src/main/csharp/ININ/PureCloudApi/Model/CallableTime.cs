@@ -4,44 +4,46 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class CallableTime :  IEquatable<CallableTime>
-    {
+    public partial class CallableTime :  IEquatable<CallableTime>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="CallableTime" /> class.
+        /// Initializes a new instance of the <see cref="CallableTime" />class.
         /// </summary>
-        public CallableTime()
+        /// <param name="TimeSlots">TimeSlots.</param>
+        /// <param name="TimeZoneId">TimeZoneId.</param>
+
+        public CallableTime(List<TimeSlot> TimeSlots = null, string TimeZoneId = null)
         {
+            this.TimeSlots = TimeSlots;
+            this.TimeZoneId = TimeZoneId;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets TimeSlots
         /// </summary>
         [DataMember(Name="timeSlots", EmitDefaultValue=false)]
         public List<TimeSlot> TimeSlots { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets TimeZoneId
         /// </summary>
         [DataMember(Name="timeZoneId", EmitDefaultValue=false)]
         public string TimeZoneId { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -52,11 +54,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class CallableTime {\n");
             sb.Append("  TimeSlots: ").Append(TimeSlots).Append("\n");
             sb.Append("  TimeZoneId: ").Append(TimeZoneId).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -80,7 +81,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if CallableTime instances are equal
         /// </summary>
-        /// <param name="obj">Instance of CallableTime to be compared</param>
+        /// <param name="other">Instance of CallableTime to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(CallableTime other)
         {
@@ -88,12 +89,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.TimeSlots == other.TimeSlots ||
                     this.TimeSlots != null &&
                     this.TimeSlots.SequenceEqual(other.TimeSlots)
-                ) && 
+                ) &&
                 (
                     this.TimeZoneId == other.TimeZoneId ||
                     this.TimeZoneId != null &&
@@ -112,18 +113,13 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.TimeSlots != null)
-                    hash = hash * 57 + this.TimeSlots.GetHashCode();
-                
+                    hash = hash * 59 + this.TimeSlots.GetHashCode();
                 if (this.TimeZoneId != null)
-                    hash = hash * 57 + this.TimeZoneId.GetHashCode();
-                
+                    hash = hash * 59 + this.TimeZoneId.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

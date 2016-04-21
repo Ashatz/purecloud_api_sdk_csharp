@@ -4,52 +4,53 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class VoicemailMediaInfo :  IEquatable<VoicemailMediaInfo>
-    {
+    public partial class VoicemailMediaInfo :  IEquatable<VoicemailMediaInfo>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="VoicemailMediaInfo" /> class.
+        /// Initializes a new instance of the <see cref="VoicemailMediaInfo" />class.
         /// </summary>
-        public VoicemailMediaInfo()
+        /// <param name="MediaFileUri">MediaFileUri.</param>
+        /// <param name="MediaImageUri">MediaImageUri.</param>
+
+        public VoicemailMediaInfo(string MediaFileUri = null, string MediaImageUri = null)
         {
+            this.MediaFileUri = MediaFileUri;
+            this.MediaImageUri = MediaImageUri;
             
         }
 
-        
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets MediaFileUri
         /// </summary>
         [DataMember(Name="mediaFileUri", EmitDefaultValue=false)]
         public string MediaFileUri { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets MediaImageUri
         /// </summary>
         [DataMember(Name="mediaImageUri", EmitDefaultValue=false)]
         public string MediaImageUri { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -61,11 +62,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  MediaFileUri: ").Append(MediaFileUri).Append("\n");
             sb.Append("  MediaImageUri: ").Append(MediaImageUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -89,7 +89,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if VoicemailMediaInfo instances are equal
         /// </summary>
-        /// <param name="obj">Instance of VoicemailMediaInfo to be compared</param>
+        /// <param name="other">Instance of VoicemailMediaInfo to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(VoicemailMediaInfo other)
         {
@@ -97,17 +97,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.MediaFileUri == other.MediaFileUri ||
                     this.MediaFileUri != null &&
                     this.MediaFileUri.Equals(other.MediaFileUri)
-                ) && 
+                ) &&
                 (
                     this.MediaImageUri == other.MediaImageUri ||
                     this.MediaImageUri != null &&
@@ -126,21 +126,15 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
-                
+                    hash = hash * 59 + this.Id.GetHashCode();
                 if (this.MediaFileUri != null)
-                    hash = hash * 57 + this.MediaFileUri.GetHashCode();
-                
+                    hash = hash * 59 + this.MediaFileUri.GetHashCode();
                 if (this.MediaImageUri != null)
-                    hash = hash * 57 + this.MediaImageUri.GetHashCode();
-                
+                    hash = hash * 59 + this.MediaImageUri.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

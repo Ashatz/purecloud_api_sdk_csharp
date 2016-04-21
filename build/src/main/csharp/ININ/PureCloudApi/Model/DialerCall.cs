@@ -4,44 +4,46 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class DialerCall :  IEquatable<DialerCall>
-    {
+    public partial class DialerCall :  IEquatable<DialerCall>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="DialerCall" /> class.
+        /// Initializes a new instance of the <see cref="DialerCall" />class.
         /// </summary>
-        public DialerCall()
+        /// <param name="CallId">CallId.</param>
+        /// <param name="ConversationId">ConversationId.</param>
+
+        public DialerCall(string CallId = null, string ConversationId = null)
         {
+            this.CallId = CallId;
+            this.ConversationId = ConversationId;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets CallId
         /// </summary>
         [DataMember(Name="callId", EmitDefaultValue=false)]
         public string CallId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ConversationId
         /// </summary>
         [DataMember(Name="conversationId", EmitDefaultValue=false)]
         public string ConversationId { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -52,11 +54,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class DialerCall {\n");
             sb.Append("  CallId: ").Append(CallId).Append("\n");
             sb.Append("  ConversationId: ").Append(ConversationId).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -80,7 +81,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if DialerCall instances are equal
         /// </summary>
-        /// <param name="obj">Instance of DialerCall to be compared</param>
+        /// <param name="other">Instance of DialerCall to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(DialerCall other)
         {
@@ -88,12 +89,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.CallId == other.CallId ||
                     this.CallId != null &&
                     this.CallId.Equals(other.CallId)
-                ) && 
+                ) &&
                 (
                     this.ConversationId == other.ConversationId ||
                     this.ConversationId != null &&
@@ -112,18 +113,13 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.CallId != null)
-                    hash = hash * 57 + this.CallId.GetHashCode();
-                
+                    hash = hash * 59 + this.CallId.GetHashCode();
                 if (this.ConversationId != null)
-                    hash = hash * 57 + this.ConversationId.GetHashCode();
-                
+                    hash = hash * 59 + this.ConversationId.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

@@ -4,44 +4,67 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class Occurrence :  IEquatable<Occurrence>
-    {
+    public partial class Occurrence :  IEquatable<Occurrence>
+    { 
+
         /// <summary>
-        /// Initializes a new instance of the <see cref="Occurrence" /> class.
+        /// Gets or Sets Type
         /// </summary>
-        public Occurrence()
-        {
+        [JsonConverter(typeof(StringEnumConverter))]
+                public enum TypeEnum {
             
+            [EnumMember(Value = "EVENT")]
+            Event,
+            
+            [EnumMember(Value = "SECONDS")]
+            Seconds,
+            
+            [EnumMember(Value = "MINUTES")]
+            Minutes,
+            
+            [EnumMember(Value = "INTERVALS")]
+            Intervals
         }
 
         
+
+        /// <summary>
+        /// Gets or Sets Type
+        /// </summary>
+        [DataMember(Name="type", EmitDefaultValue=false)]
+        public TypeEnum? Type { get; set; }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Occurrence" />class.
+        /// </summary>
+        /// <param name="Limit">Limit.</param>
+        /// <param name="Type">Type.</param>
+
+        public Occurrence(int? Limit = null, TypeEnum? Type = null)
+        {
+            this.Limit = Limit;
+            this.Type = Type;
+            
+        }
+
+    
         /// <summary>
         /// Gets or Sets Limit
         /// </summary>
         [DataMember(Name="limit", EmitDefaultValue=false)]
         public int? Limit { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets Type
-        /// </summary>
-        [DataMember(Name="type", EmitDefaultValue=false)]
-        public string Type { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -52,11 +75,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class Occurrence {\n");
             sb.Append("  Limit: ").Append(Limit).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -80,7 +102,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if Occurrence instances are equal
         /// </summary>
-        /// <param name="obj">Instance of Occurrence to be compared</param>
+        /// <param name="other">Instance of Occurrence to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(Occurrence other)
         {
@@ -88,12 +110,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Limit == other.Limit ||
                     this.Limit != null &&
                     this.Limit.Equals(other.Limit)
-                ) && 
+                ) &&
                 (
                     this.Type == other.Type ||
                     this.Type != null &&
@@ -112,18 +134,13 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Limit != null)
-                    hash = hash * 57 + this.Limit.GetHashCode();
-                
+                    hash = hash * 59 + this.Limit.GetHashCode();
                 if (this.Type != null)
-                    hash = hash * 57 + this.Type.GetHashCode();
-                
+                    hash = hash * 59 + this.Type.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

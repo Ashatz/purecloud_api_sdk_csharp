@@ -4,109 +4,134 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class FlowVersion :  IEquatable<FlowVersion>
-    {
+    public partial class FlowVersion :  IEquatable<FlowVersion>
+    { 
+
         /// <summary>
-        /// Initializes a new instance of the <see cref="FlowVersion" /> class.
+        /// Gets or Sets Type
         /// </summary>
-        public FlowVersion()
-        {
+        [JsonConverter(typeof(StringEnumConverter))]
+                public enum TypeEnum {
             
+            [EnumMember(Value = "PUBLISH")]
+            Publish,
+            
+            [EnumMember(Value = "CHECKIN")]
+            Checkin,
+            
+            [EnumMember(Value = "SAVE")]
+            Save
         }
 
         
+
+        /// <summary>
+        /// Gets or Sets Type
+        /// </summary>
+        [DataMember(Name="type", EmitDefaultValue=false)]
+        public TypeEnum? Type { get; set; }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="FlowVersion" />class.
+        /// </summary>
+        /// <param name="Name">Name.</param>
+        /// <param name="CommitVersion">CommitVersion.</param>
+        /// <param name="ConfigurationVersion">ConfigurationVersion.</param>
+        /// <param name="Type">Type.</param>
+        /// <param name="CreatedBy">CreatedBy.</param>
+        /// <param name="ConfigurationUri">ConfigurationUri.</param>
+        /// <param name="DateCreated">DateCreated.</param>
+        /// <param name="GenerationId">GenerationId.</param>
+        /// <param name="PublishResultUri">PublishResultUri.</param>
+
+        public FlowVersion(string Name = null, string CommitVersion = null, string ConfigurationVersion = null, TypeEnum? Type = null, UriReference CreatedBy = null, string ConfigurationUri = null, long? DateCreated = null, string GenerationId = null, string PublishResultUri = null)
+        {
+            this.Name = Name;
+            this.CommitVersion = CommitVersion;
+            this.ConfigurationVersion = ConfigurationVersion;
+            this.Type = Type;
+            this.CreatedBy = CreatedBy;
+            this.ConfigurationUri = ConfigurationUri;
+            this.DateCreated = DateCreated;
+            this.GenerationId = GenerationId;
+            this.PublishResultUri = PublishResultUri;
+            
+        }
+
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets CommitVersion
         /// </summary>
         [DataMember(Name="commitVersion", EmitDefaultValue=false)]
         public string CommitVersion { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ConfigurationVersion
         /// </summary>
         [DataMember(Name="configurationVersion", EmitDefaultValue=false)]
         public string ConfigurationVersion { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets Type
-        /// </summary>
-        [DataMember(Name="type", EmitDefaultValue=false)]
-        public string Type { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets CreatedBy
         /// </summary>
         [DataMember(Name="createdBy", EmitDefaultValue=false)]
         public UriReference CreatedBy { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ConfigurationUri
         /// </summary>
         [DataMember(Name="configurationUri", EmitDefaultValue=false)]
         public string ConfigurationUri { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets DateCreated
         /// </summary>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public long? DateCreated { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets GenerationId
         /// </summary>
         [DataMember(Name="generationId", EmitDefaultValue=false)]
         public string GenerationId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets PublishResultUri
         /// </summary>
         [DataMember(Name="publishResultUri", EmitDefaultValue=false)]
         public string PublishResultUri { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -126,11 +151,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  GenerationId: ").Append(GenerationId).Append("\n");
             sb.Append("  PublishResultUri: ").Append(PublishResultUri).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -154,7 +178,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if FlowVersion instances are equal
         /// </summary>
-        /// <param name="obj">Instance of FlowVersion to be compared</param>
+        /// <param name="other">Instance of FlowVersion to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(FlowVersion other)
         {
@@ -162,57 +186,57 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.CommitVersion == other.CommitVersion ||
                     this.CommitVersion != null &&
                     this.CommitVersion.Equals(other.CommitVersion)
-                ) && 
+                ) &&
                 (
                     this.ConfigurationVersion == other.ConfigurationVersion ||
                     this.ConfigurationVersion != null &&
                     this.ConfigurationVersion.Equals(other.ConfigurationVersion)
-                ) && 
+                ) &&
                 (
                     this.Type == other.Type ||
                     this.Type != null &&
                     this.Type.Equals(other.Type)
-                ) && 
+                ) &&
                 (
                     this.CreatedBy == other.CreatedBy ||
                     this.CreatedBy != null &&
                     this.CreatedBy.Equals(other.CreatedBy)
-                ) && 
+                ) &&
                 (
                     this.ConfigurationUri == other.ConfigurationUri ||
                     this.ConfigurationUri != null &&
                     this.ConfigurationUri.Equals(other.ConfigurationUri)
-                ) && 
+                ) &&
                 (
                     this.DateCreated == other.DateCreated ||
                     this.DateCreated != null &&
                     this.DateCreated.Equals(other.DateCreated)
-                ) && 
+                ) &&
                 (
                     this.GenerationId == other.GenerationId ||
                     this.GenerationId != null &&
                     this.GenerationId.Equals(other.GenerationId)
-                ) && 
+                ) &&
                 (
                     this.PublishResultUri == other.PublishResultUri ||
                     this.PublishResultUri != null &&
                     this.PublishResultUri.Equals(other.PublishResultUri)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
@@ -231,45 +255,31 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
-                
+                    hash = hash * 59 + this.Id.GetHashCode();
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
-                
+                    hash = hash * 59 + this.Name.GetHashCode();
                 if (this.CommitVersion != null)
-                    hash = hash * 57 + this.CommitVersion.GetHashCode();
-                
+                    hash = hash * 59 + this.CommitVersion.GetHashCode();
                 if (this.ConfigurationVersion != null)
-                    hash = hash * 57 + this.ConfigurationVersion.GetHashCode();
-                
+                    hash = hash * 59 + this.ConfigurationVersion.GetHashCode();
                 if (this.Type != null)
-                    hash = hash * 57 + this.Type.GetHashCode();
-                
+                    hash = hash * 59 + this.Type.GetHashCode();
                 if (this.CreatedBy != null)
-                    hash = hash * 57 + this.CreatedBy.GetHashCode();
-                
+                    hash = hash * 59 + this.CreatedBy.GetHashCode();
                 if (this.ConfigurationUri != null)
-                    hash = hash * 57 + this.ConfigurationUri.GetHashCode();
-                
+                    hash = hash * 59 + this.ConfigurationUri.GetHashCode();
                 if (this.DateCreated != null)
-                    hash = hash * 57 + this.DateCreated.GetHashCode();
-                
+                    hash = hash * 59 + this.DateCreated.GetHashCode();
                 if (this.GenerationId != null)
-                    hash = hash * 57 + this.GenerationId.GetHashCode();
-                
+                    hash = hash * 59 + this.GenerationId.GetHashCode();
                 if (this.PublishResultUri != null)
-                    hash = hash * 57 + this.PublishResultUri.GetHashCode();
-                
+                    hash = hash * 59 + this.PublishResultUri.GetHashCode();
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
-                
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

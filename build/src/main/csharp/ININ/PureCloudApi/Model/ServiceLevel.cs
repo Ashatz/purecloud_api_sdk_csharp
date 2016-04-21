@@ -4,44 +4,46 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class ServiceLevel :  IEquatable<ServiceLevel>
-    {
+    public partial class ServiceLevel :  IEquatable<ServiceLevel>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="ServiceLevel" /> class.
+        /// Initializes a new instance of the <see cref="ServiceLevel" />class.
         /// </summary>
-        public ServiceLevel()
+        /// <param name="Percentage">Percentage.</param>
+        /// <param name="DurationMs">DurationMs.</param>
+
+        public ServiceLevel(double? Percentage = null, long? DurationMs = null)
         {
+            this.Percentage = Percentage;
+            this.DurationMs = DurationMs;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets Percentage
         /// </summary>
         [DataMember(Name="percentage", EmitDefaultValue=false)]
         public double? Percentage { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets DurationMs
         /// </summary>
         [DataMember(Name="durationMs", EmitDefaultValue=false)]
         public long? DurationMs { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -52,11 +54,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class ServiceLevel {\n");
             sb.Append("  Percentage: ").Append(Percentage).Append("\n");
             sb.Append("  DurationMs: ").Append(DurationMs).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -80,7 +81,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if ServiceLevel instances are equal
         /// </summary>
-        /// <param name="obj">Instance of ServiceLevel to be compared</param>
+        /// <param name="other">Instance of ServiceLevel to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(ServiceLevel other)
         {
@@ -88,12 +89,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Percentage == other.Percentage ||
                     this.Percentage != null &&
                     this.Percentage.Equals(other.Percentage)
-                ) && 
+                ) &&
                 (
                     this.DurationMs == other.DurationMs ||
                     this.DurationMs != null &&
@@ -112,18 +113,13 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Percentage != null)
-                    hash = hash * 57 + this.Percentage.GetHashCode();
-                
+                    hash = hash * 59 + this.Percentage.GetHashCode();
                 if (this.DurationMs != null)
-                    hash = hash * 57 + this.DurationMs.GetHashCode();
-                
+                    hash = hash * 59 + this.DurationMs.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

@@ -4,44 +4,46 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class WorkItemCommand :  IEquatable<WorkItemCommand>
-    {
+    public partial class WorkItemCommand :  IEquatable<WorkItemCommand>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="WorkItemCommand" /> class.
+        /// Initializes a new instance of the <see cref="WorkItemCommand" />class.
         /// </summary>
-        public WorkItemCommand()
+        /// <param name="Id">Id.</param>
+        /// <param name="DisplayName">DisplayName.</param>
+
+        public WorkItemCommand(string Id = null, string DisplayName = null)
         {
+            this.Id = Id;
+            this.DisplayName = DisplayName;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets DisplayName
         /// </summary>
         [DataMember(Name="displayName", EmitDefaultValue=false)]
         public string DisplayName { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -52,11 +54,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class WorkItemCommand {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  DisplayName: ").Append(DisplayName).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -80,7 +81,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if WorkItemCommand instances are equal
         /// </summary>
-        /// <param name="obj">Instance of WorkItemCommand to be compared</param>
+        /// <param name="other">Instance of WorkItemCommand to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(WorkItemCommand other)
         {
@@ -88,12 +89,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.DisplayName == other.DisplayName ||
                     this.DisplayName != null &&
@@ -112,18 +113,13 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
-                
+                    hash = hash * 59 + this.Id.GetHashCode();
                 if (this.DisplayName != null)
-                    hash = hash * 57 + this.DisplayName.GetHashCode();
-                
+                    hash = hash * 59 + this.DisplayName.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

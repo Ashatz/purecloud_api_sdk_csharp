@@ -4,38 +4,39 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class EmailSetup :  IEquatable<EmailSetup>
-    {
+    public partial class EmailSetup :  IEquatable<EmailSetup>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="EmailSetup" /> class.
+        /// Initializes a new instance of the <see cref="EmailSetup" />class.
         /// </summary>
-        public EmailSetup()
+        /// <param name="RootDomain">The root PureCloud domain that all sub-domains are created from..</param>
+
+        public EmailSetup(string RootDomain = null)
         {
+            this.RootDomain = RootDomain;
             
         }
 
-        
+    
         /// <summary>
         /// The root PureCloud domain that all sub-domains are created from.
         /// </summary>
         /// <value>The root PureCloud domain that all sub-domains are created from.</value>
         [DataMember(Name="rootDomain", EmitDefaultValue=false)]
         public string RootDomain { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -45,11 +46,10 @@ namespace ININ.PureCloudApi.Model
             var sb = new StringBuilder();
             sb.Append("class EmailSetup {\n");
             sb.Append("  RootDomain: ").Append(RootDomain).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -73,7 +73,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if EmailSetup instances are equal
         /// </summary>
-        /// <param name="obj">Instance of EmailSetup to be compared</param>
+        /// <param name="other">Instance of EmailSetup to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(EmailSetup other)
         {
@@ -81,7 +81,7 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.RootDomain == other.RootDomain ||
                     this.RootDomain != null &&
@@ -100,15 +100,11 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.RootDomain != null)
-                    hash = hash * 57 + this.RootDomain.GetHashCode();
-                
+                    hash = hash * 59 + this.RootDomain.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

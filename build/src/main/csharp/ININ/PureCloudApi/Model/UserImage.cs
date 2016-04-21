@@ -4,44 +4,46 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class UserImage :  IEquatable<UserImage>
-    {
+    public partial class UserImage :  IEquatable<UserImage>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="UserImage" /> class.
+        /// Initializes a new instance of the <see cref="UserImage" />class.
         /// </summary>
-        public UserImage()
+        /// <param name="Resolution">Resolution.</param>
+        /// <param name="ImageUri">ImageUri.</param>
+
+        public UserImage(string Resolution = null, string ImageUri = null)
         {
+            this.Resolution = Resolution;
+            this.ImageUri = ImageUri;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets Resolution
         /// </summary>
         [DataMember(Name="resolution", EmitDefaultValue=false)]
         public string Resolution { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ImageUri
         /// </summary>
         [DataMember(Name="imageUri", EmitDefaultValue=false)]
         public string ImageUri { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -52,11 +54,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class UserImage {\n");
             sb.Append("  Resolution: ").Append(Resolution).Append("\n");
             sb.Append("  ImageUri: ").Append(ImageUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -80,7 +81,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if UserImage instances are equal
         /// </summary>
-        /// <param name="obj">Instance of UserImage to be compared</param>
+        /// <param name="other">Instance of UserImage to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(UserImage other)
         {
@@ -88,12 +89,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Resolution == other.Resolution ||
                     this.Resolution != null &&
                     this.Resolution.Equals(other.Resolution)
-                ) && 
+                ) &&
                 (
                     this.ImageUri == other.ImageUri ||
                     this.ImageUri != null &&
@@ -112,18 +113,13 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Resolution != null)
-                    hash = hash * 57 + this.Resolution.GetHashCode();
-                
+                    hash = hash * 59 + this.Resolution.GetHashCode();
                 if (this.ImageUri != null)
-                    hash = hash * 57 + this.ImageUri.GetHashCode();
-                
+                    hash = hash * 59 + this.ImageUri.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

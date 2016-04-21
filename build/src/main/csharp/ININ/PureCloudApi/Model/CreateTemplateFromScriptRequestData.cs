@@ -4,65 +4,70 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class CreateTemplateFromScriptRequestData :  IEquatable<CreateTemplateFromScriptRequestData>
-    {
+    public partial class CreateTemplateFromScriptRequestData :  IEquatable<CreateTemplateFromScriptRequestData>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="CreateTemplateFromScriptRequestData" /> class.
+        /// Initializes a new instance of the <see cref="CreateTemplateFromScriptRequestData" />class.
         /// </summary>
-        public CreateTemplateFromScriptRequestData()
+        /// <param name="Name">Name.</param>
+        /// <param name="Description">Description.</param>
+        /// <param name="Tags">Tags.</param>
+        /// <param name="ScriptId">ScriptId.</param>
+        /// <param name="UserId">UserId.</param>
+
+        public CreateTemplateFromScriptRequestData(string Name = null, string Description = null, List<string> Tags = null, string ScriptId = null, string UserId = null)
         {
+            this.Name = Name;
+            this.Description = Description;
+            this.Tags = Tags;
+            this.ScriptId = ScriptId;
+            this.UserId = UserId;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Description
         /// </summary>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Tags
         /// </summary>
         [DataMember(Name="tags", EmitDefaultValue=false)]
         public List<string> Tags { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ScriptId
         /// </summary>
         [DataMember(Name="scriptId", EmitDefaultValue=false)]
         public string ScriptId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets UserId
         /// </summary>
         [DataMember(Name="userId", EmitDefaultValue=false)]
         public string UserId { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -76,11 +81,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Tags: ").Append(Tags).Append("\n");
             sb.Append("  ScriptId: ").Append(ScriptId).Append("\n");
             sb.Append("  UserId: ").Append(UserId).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -104,7 +108,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if CreateTemplateFromScriptRequestData instances are equal
         /// </summary>
-        /// <param name="obj">Instance of CreateTemplateFromScriptRequestData to be compared</param>
+        /// <param name="other">Instance of CreateTemplateFromScriptRequestData to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(CreateTemplateFromScriptRequestData other)
         {
@@ -112,27 +116,27 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Description == other.Description ||
                     this.Description != null &&
                     this.Description.Equals(other.Description)
-                ) && 
+                ) &&
                 (
                     this.Tags == other.Tags ||
                     this.Tags != null &&
                     this.Tags.SequenceEqual(other.Tags)
-                ) && 
+                ) &&
                 (
                     this.ScriptId == other.ScriptId ||
                     this.ScriptId != null &&
                     this.ScriptId.Equals(other.ScriptId)
-                ) && 
+                ) &&
                 (
                     this.UserId == other.UserId ||
                     this.UserId != null &&
@@ -151,27 +155,19 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
-                
+                    hash = hash * 59 + this.Name.GetHashCode();
                 if (this.Description != null)
-                    hash = hash * 57 + this.Description.GetHashCode();
-                
+                    hash = hash * 59 + this.Description.GetHashCode();
                 if (this.Tags != null)
-                    hash = hash * 57 + this.Tags.GetHashCode();
-                
+                    hash = hash * 59 + this.Tags.GetHashCode();
                 if (this.ScriptId != null)
-                    hash = hash * 57 + this.ScriptId.GetHashCode();
-                
+                    hash = hash * 59 + this.ScriptId.GetHashCode();
                 if (this.UserId != null)
-                    hash = hash * 57 + this.UserId.GetHashCode();
-                
+                    hash = hash * 59 + this.UserId.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

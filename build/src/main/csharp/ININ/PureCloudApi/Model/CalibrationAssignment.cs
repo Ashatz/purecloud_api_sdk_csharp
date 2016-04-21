@@ -4,58 +4,62 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class CalibrationAssignment :  IEquatable<CalibrationAssignment>
-    {
+    public partial class CalibrationAssignment :  IEquatable<CalibrationAssignment>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="CalibrationAssignment" /> class.
+        /// Initializes a new instance of the <see cref="CalibrationAssignment" />class.
         /// </summary>
-        public CalibrationAssignment()
+        /// <param name="Calibrator">Calibrator.</param>
+        /// <param name="Evaluators">Evaluators.</param>
+        /// <param name="EvaluationForm">EvaluationForm.</param>
+        /// <param name="ExpertEvaluator">ExpertEvaluator.</param>
+
+        public CalibrationAssignment(User Calibrator = null, List<User> Evaluators = null, EvaluationForm EvaluationForm = null, User ExpertEvaluator = null)
         {
+            this.Calibrator = Calibrator;
+            this.Evaluators = Evaluators;
+            this.EvaluationForm = EvaluationForm;
+            this.ExpertEvaluator = ExpertEvaluator;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets Calibrator
         /// </summary>
         [DataMember(Name="calibrator", EmitDefaultValue=false)]
         public User Calibrator { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Evaluators
         /// </summary>
         [DataMember(Name="evaluators", EmitDefaultValue=false)]
         public List<User> Evaluators { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets EvaluationForm
         /// </summary>
         [DataMember(Name="evaluationForm", EmitDefaultValue=false)]
         public EvaluationForm EvaluationForm { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ExpertEvaluator
         /// </summary>
         [DataMember(Name="expertEvaluator", EmitDefaultValue=false)]
         public User ExpertEvaluator { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -68,11 +72,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Evaluators: ").Append(Evaluators).Append("\n");
             sb.Append("  EvaluationForm: ").Append(EvaluationForm).Append("\n");
             sb.Append("  ExpertEvaluator: ").Append(ExpertEvaluator).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -96,7 +99,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if CalibrationAssignment instances are equal
         /// </summary>
-        /// <param name="obj">Instance of CalibrationAssignment to be compared</param>
+        /// <param name="other">Instance of CalibrationAssignment to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(CalibrationAssignment other)
         {
@@ -104,22 +107,22 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Calibrator == other.Calibrator ||
                     this.Calibrator != null &&
                     this.Calibrator.Equals(other.Calibrator)
-                ) && 
+                ) &&
                 (
                     this.Evaluators == other.Evaluators ||
                     this.Evaluators != null &&
                     this.Evaluators.SequenceEqual(other.Evaluators)
-                ) && 
+                ) &&
                 (
                     this.EvaluationForm == other.EvaluationForm ||
                     this.EvaluationForm != null &&
                     this.EvaluationForm.Equals(other.EvaluationForm)
-                ) && 
+                ) &&
                 (
                     this.ExpertEvaluator == other.ExpertEvaluator ||
                     this.ExpertEvaluator != null &&
@@ -138,24 +141,17 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Calibrator != null)
-                    hash = hash * 57 + this.Calibrator.GetHashCode();
-                
+                    hash = hash * 59 + this.Calibrator.GetHashCode();
                 if (this.Evaluators != null)
-                    hash = hash * 57 + this.Evaluators.GetHashCode();
-                
+                    hash = hash * 59 + this.Evaluators.GetHashCode();
                 if (this.EvaluationForm != null)
-                    hash = hash * 57 + this.EvaluationForm.GetHashCode();
-                
+                    hash = hash * 59 + this.EvaluationForm.GetHashCode();
                 if (this.ExpertEvaluator != null)
-                    hash = hash * 57 + this.ExpertEvaluator.GetHashCode();
-                
+                    hash = hash * 59 + this.ExpertEvaluator.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

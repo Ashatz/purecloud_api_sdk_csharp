@@ -4,44 +4,46 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class App :  IEquatable<App>
-    {
+    public partial class App :  IEquatable<App>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="App" /> class.
+        /// Initializes a new instance of the <see cref="App" />class.
         /// </summary>
-        public App()
+        /// <param name="AppId">AppId.</param>
+        /// <param name="AppVersion">AppVersion.</param>
+
+        public App(string AppId = null, string AppVersion = null)
         {
+            this.AppId = AppId;
+            this.AppVersion = AppVersion;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets AppId
         /// </summary>
         [DataMember(Name="appId", EmitDefaultValue=false)]
         public string AppId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets AppVersion
         /// </summary>
         [DataMember(Name="appVersion", EmitDefaultValue=false)]
         public string AppVersion { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -52,11 +54,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class App {\n");
             sb.Append("  AppId: ").Append(AppId).Append("\n");
             sb.Append("  AppVersion: ").Append(AppVersion).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -80,7 +81,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if App instances are equal
         /// </summary>
-        /// <param name="obj">Instance of App to be compared</param>
+        /// <param name="other">Instance of App to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(App other)
         {
@@ -88,12 +89,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.AppId == other.AppId ||
                     this.AppId != null &&
                     this.AppId.Equals(other.AppId)
-                ) && 
+                ) &&
                 (
                     this.AppVersion == other.AppVersion ||
                     this.AppVersion != null &&
@@ -112,18 +113,13 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.AppId != null)
-                    hash = hash * 57 + this.AppId.GetHashCode();
-                
+                    hash = hash * 59 + this.AppId.GetHashCode();
                 if (this.AppVersion != null)
-                    hash = hash * 57 + this.AppVersion.GetHashCode();
-                
+                    hash = hash * 59 + this.AppVersion.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

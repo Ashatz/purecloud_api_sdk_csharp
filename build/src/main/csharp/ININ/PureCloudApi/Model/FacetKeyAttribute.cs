@@ -4,51 +4,54 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class FacetKeyAttribute :  IEquatable<FacetKeyAttribute>
-    {
+    public partial class FacetKeyAttribute :  IEquatable<FacetKeyAttribute>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="FacetKeyAttribute" /> class.
+        /// Initializes a new instance of the <see cref="FacetKeyAttribute" />class.
         /// </summary>
-        public FacetKeyAttribute()
+        /// <param name="Id">Id.</param>
+        /// <param name="Name">Name.</param>
+        /// <param name="Count">Count.</param>
+
+        public FacetKeyAttribute(string Id = null, string Name = null, int? Count = null)
         {
+            this.Id = Id;
+            this.Name = Name;
+            this.Count = Count;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Count
         /// </summary>
         [DataMember(Name="count", EmitDefaultValue=false)]
         public int? Count { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -60,11 +63,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Count: ").Append(Count).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -88,7 +90,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if FacetKeyAttribute instances are equal
         /// </summary>
-        /// <param name="obj">Instance of FacetKeyAttribute to be compared</param>
+        /// <param name="other">Instance of FacetKeyAttribute to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(FacetKeyAttribute other)
         {
@@ -96,17 +98,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Count == other.Count ||
                     this.Count != null &&
@@ -125,21 +127,15 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
-                
+                    hash = hash * 59 + this.Id.GetHashCode();
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
-                
+                    hash = hash * 59 + this.Name.GetHashCode();
                 if (this.Count != null)
-                    hash = hash * 57 + this.Count.GetHashCode();
-                
+                    hash = hash * 59 + this.Count.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

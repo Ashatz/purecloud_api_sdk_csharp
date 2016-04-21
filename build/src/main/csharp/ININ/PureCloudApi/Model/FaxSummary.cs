@@ -4,51 +4,54 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class FaxSummary :  IEquatable<FaxSummary>
-    {
+    public partial class FaxSummary :  IEquatable<FaxSummary>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="FaxSummary" /> class.
+        /// Initializes a new instance of the <see cref="FaxSummary" />class.
         /// </summary>
-        public FaxSummary()
+        /// <param name="ReadCount">ReadCount.</param>
+        /// <param name="UnreadCount">UnreadCount.</param>
+        /// <param name="TotalCount">TotalCount.</param>
+
+        public FaxSummary(int? ReadCount = null, int? UnreadCount = null, int? TotalCount = null)
         {
+            this.ReadCount = ReadCount;
+            this.UnreadCount = UnreadCount;
+            this.TotalCount = TotalCount;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets ReadCount
         /// </summary>
         [DataMember(Name="readCount", EmitDefaultValue=false)]
         public int? ReadCount { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets UnreadCount
         /// </summary>
         [DataMember(Name="unreadCount", EmitDefaultValue=false)]
         public int? UnreadCount { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets TotalCount
         /// </summary>
         [DataMember(Name="totalCount", EmitDefaultValue=false)]
         public int? TotalCount { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -60,11 +63,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  ReadCount: ").Append(ReadCount).Append("\n");
             sb.Append("  UnreadCount: ").Append(UnreadCount).Append("\n");
             sb.Append("  TotalCount: ").Append(TotalCount).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -88,7 +90,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if FaxSummary instances are equal
         /// </summary>
-        /// <param name="obj">Instance of FaxSummary to be compared</param>
+        /// <param name="other">Instance of FaxSummary to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(FaxSummary other)
         {
@@ -96,17 +98,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.ReadCount == other.ReadCount ||
                     this.ReadCount != null &&
                     this.ReadCount.Equals(other.ReadCount)
-                ) && 
+                ) &&
                 (
                     this.UnreadCount == other.UnreadCount ||
                     this.UnreadCount != null &&
                     this.UnreadCount.Equals(other.UnreadCount)
-                ) && 
+                ) &&
                 (
                     this.TotalCount == other.TotalCount ||
                     this.TotalCount != null &&
@@ -125,21 +127,15 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ReadCount != null)
-                    hash = hash * 57 + this.ReadCount.GetHashCode();
-                
+                    hash = hash * 59 + this.ReadCount.GetHashCode();
                 if (this.UnreadCount != null)
-                    hash = hash * 57 + this.UnreadCount.GetHashCode();
-                
+                    hash = hash * 59 + this.UnreadCount.GetHashCode();
                 if (this.TotalCount != null)
-                    hash = hash * 57 + this.TotalCount.GetHashCode();
-                
+                    hash = hash * 59 + this.TotalCount.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

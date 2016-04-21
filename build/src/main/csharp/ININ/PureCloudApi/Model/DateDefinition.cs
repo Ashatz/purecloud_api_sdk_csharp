@@ -4,37 +4,56 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class DateDefinition :  IEquatable<DateDefinition>
-    {
+    public partial class DateDefinition :  IEquatable<DateDefinition>
+    { 
+
         /// <summary>
-        /// Initializes a new instance of the <see cref="DateDefinition" /> class.
+        /// Gets or Sets Type
         /// </summary>
-        public DateDefinition()
-        {
+        [JsonConverter(typeof(StringEnumConverter))]
+                public enum TypeEnum {
             
+            [EnumMember(Value = "DATE")]
+            Date,
+            
+            [EnumMember(Value = "TIME")]
+            Time,
+            
+            [EnumMember(Value = "DATETIME")]
+            Datetime
         }
 
         
+
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
         [DataMember(Name="type", EmitDefaultValue=false)]
-        public string Type { get; set; }
-  
-        
-  
+        public TypeEnum? Type { get; set; }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="DateDefinition" />class.
+        /// </summary>
+        /// <param name="Type">Type.</param>
+
+        public DateDefinition(TypeEnum? Type = null)
+        {
+            this.Type = Type;
+            
+        }
+
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -44,11 +63,10 @@ namespace ININ.PureCloudApi.Model
             var sb = new StringBuilder();
             sb.Append("class DateDefinition {\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -72,7 +90,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if DateDefinition instances are equal
         /// </summary>
-        /// <param name="obj">Instance of DateDefinition to be compared</param>
+        /// <param name="other">Instance of DateDefinition to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(DateDefinition other)
         {
@@ -80,7 +98,7 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Type == other.Type ||
                     this.Type != null &&
@@ -99,15 +117,11 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Type != null)
-                    hash = hash * 57 + this.Type.GetHashCode();
-                
+                    hash = hash * 59 + this.Type.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

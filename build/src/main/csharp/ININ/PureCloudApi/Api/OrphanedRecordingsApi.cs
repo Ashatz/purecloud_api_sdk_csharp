@@ -1,46 +1,32 @@
 using System;
-using System.IO;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using RestSharp;
 using ININ.PureCloudApi.Client;
 using ININ.PureCloudApi.Model;
 
-
 namespace ININ.PureCloudApi.Api
 {
-    
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
     public interface IOrphanedRecordingsApi
     {
-        
+        #region Synchronous Operations
         /// <summary>
         /// Gets all orphan recordings
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
-        /// <param name="pageSize">The total page size requested</param>
-        /// <param name="pageNumber">The page number requested</param>
-        /// <param name="sortBy">variable name requested to sort by</param>
-        /// <param name="expand">variable name requested by expand list</param>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
+        /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
+        /// <param name="sortBy">variable name requested to sort by (optional)</param>
+        /// <param name="expand">variable name requested by expand list (optional)</param>
         /// <returns>OrphanRecordingListing</returns>
         OrphanRecordingListing OrphanrecordingsGet (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null);
-  
-        /// <summary>
-        /// Gets all orphan recordings
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <param name="pageSize">The total page size requested</param>
-        /// <param name="pageNumber">The page number requested</param>
-        /// <param name="sortBy">variable name requested to sort by</param>
-        /// <param name="expand">variable name requested by expand list</param>
-        /// <returns>ApiResponse of OrphanRecordingListing</returns>
-        ApiResponse<OrphanRecordingListing> OrphanrecordingsGetWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null);
 
         /// <summary>
         /// Gets all orphan recordings
@@ -48,10 +34,68 @@ namespace ININ.PureCloudApi.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <param name="pageSize">The total page size requested</param>
-        /// <param name="pageNumber">The page number requested</param>
-        /// <param name="sortBy">variable name requested to sort by</param>
-        /// <param name="expand">variable name requested by expand list</param>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
+        /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
+        /// <param name="sortBy">variable name requested to sort by (optional)</param>
+        /// <param name="expand">variable name requested by expand list (optional)</param>
+        /// <returns>ApiResponse of OrphanRecordingListing</returns>
+        ApiResponse<OrphanRecordingListing> OrphanrecordingsGetWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null);
+        /// <summary>
+        ///  deletes a single orphan recording
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="orphanId">Orphan ID</param>
+        /// <returns>OrphanRecording</returns>
+        OrphanRecording OrphanrecordingsOrphanidDelete (string orphanId);
+
+        /// <summary>
+        ///  deletes a single orphan recording
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="orphanId">Orphan ID</param>
+        /// <returns>ApiResponse of OrphanRecording</returns>
+        ApiResponse<OrphanRecording> OrphanrecordingsOrphanidDeleteWithHttpInfo (string orphanId);
+        /// <summary>
+        /// Gets a single orphan recording
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="orphanId">Orphan ID</param>
+        /// <returns>OrphanRecording</returns>
+        OrphanRecording OrphanrecordingsOrphanidGet (string orphanId);
+
+        /// <summary>
+        /// Gets a single orphan recording
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="orphanId">Orphan ID</param>
+        /// <returns>ApiResponse of OrphanRecording</returns>
+        ApiResponse<OrphanRecording> OrphanrecordingsOrphanidGetWithHttpInfo (string orphanId);
+        #endregion Synchronous Operations
+        #region Asynchronous Operations
+        /// <summary>
+        /// Gets all orphan recordings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
+        /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
+        /// <param name="sortBy">variable name requested to sort by (optional)</param>
+        /// <param name="expand">variable name requested by expand list (optional)</param>
         /// <returns>Task of OrphanRecordingListing</returns>
         System.Threading.Tasks.Task<OrphanRecordingListing> OrphanrecordingsGetAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null);
 
@@ -61,39 +105,41 @@ namespace ININ.PureCloudApi.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <param name="pageSize">The total page size requested</param>
-        /// <param name="pageNumber">The page number requested</param>
-        /// <param name="sortBy">variable name requested to sort by</param>
-        /// <param name="expand">variable name requested by expand list</param>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
+        /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
+        /// <param name="sortBy">variable name requested to sort by (optional)</param>
+        /// <param name="expand">variable name requested by expand list (optional)</param>
         /// <returns>Task of ApiResponse (OrphanRecordingListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<OrphanRecordingListing>> OrphanrecordingsGetAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null);
-        
         /// <summary>
-        /// Gets a single orphan recording
+        ///  deletes a single orphan recording
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orphanId">Orphan ID</param>
-        /// <returns>OrphanRecording</returns>
-        OrphanRecording OrphanrecordingsOrphanidGet (string orphanId);
-  
-        /// <summary>
-        /// Gets a single orphan recording
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <param name="orphanId">Orphan ID</param>
-        /// <returns>ApiResponse of OrphanRecording</returns>
-        ApiResponse<OrphanRecording> OrphanrecordingsOrphanidGetWithHttpInfo (string orphanId);
+        /// <returns>Task of OrphanRecording</returns>
+        System.Threading.Tasks.Task<OrphanRecording> OrphanrecordingsOrphanidDeleteAsync (string orphanId);
 
         /// <summary>
+        ///  deletes a single orphan recording
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="orphanId">Orphan ID</param>
+        /// <returns>Task of ApiResponse (OrphanRecording)</returns>
+        System.Threading.Tasks.Task<ApiResponse<OrphanRecording>> OrphanrecordingsOrphanidDeleteAsyncWithHttpInfo (string orphanId);
+        /// <summary>
         /// Gets a single orphan recording
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orphanId">Orphan ID</param>
         /// <returns>Task of OrphanRecording</returns>
         System.Threading.Tasks.Task<OrphanRecording> OrphanrecordingsOrphanidGetAsync (string orphanId);
@@ -104,52 +150,13 @@ namespace ININ.PureCloudApi.Api
         /// <remarks>
         /// 
         /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orphanId">Orphan ID</param>
         /// <returns>Task of ApiResponse (OrphanRecording)</returns>
         System.Threading.Tasks.Task<ApiResponse<OrphanRecording>> OrphanrecordingsOrphanidGetAsyncWithHttpInfo (string orphanId);
-        
-        /// <summary>
-        /// deletes a single orphan recording
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <param name="orphanId">Orphan ID</param>
-        /// <returns>OrphanRecording</returns>
-        OrphanRecording OrphanrecordingsOrphanidDelete (string orphanId);
-  
-        /// <summary>
-        /// deletes a single orphan recording
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <param name="orphanId">Orphan ID</param>
-        /// <returns>ApiResponse of OrphanRecording</returns>
-        ApiResponse<OrphanRecording> OrphanrecordingsOrphanidDeleteWithHttpInfo (string orphanId);
-
-        /// <summary>
-        /// deletes a single orphan recording
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <param name="orphanId">Orphan ID</param>
-        /// <returns>Task of OrphanRecording</returns>
-        System.Threading.Tasks.Task<OrphanRecording> OrphanrecordingsOrphanidDeleteAsync (string orphanId);
-
-        /// <summary>
-        /// deletes a single orphan recording
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <param name="orphanId">Orphan ID</param>
-        /// <returns>Task of ApiResponse (OrphanRecording)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrphanRecording>> OrphanrecordingsOrphanidDeleteAsyncWithHttpInfo (string orphanId);
-        
+        #endregion Asynchronous Operations
     }
-  
+
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
@@ -162,8 +169,14 @@ namespace ININ.PureCloudApi.Api
         public OrphanedRecordingsApi(String basePath)
         {
             this.Configuration = new Configuration(new ApiClient(basePath));
+
+            // ensure API client has configuration ready
+            if (Configuration.ApiClient.Configuration == null)
+            {
+                this.Configuration.ApiClient.Configuration = this.Configuration;
+            }
         }
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="OrphanedRecordingsApi"/> class
         /// using Configuration object
@@ -173,9 +186,15 @@ namespace ININ.PureCloudApi.Api
         public OrphanedRecordingsApi(Configuration configuration = null)
         {
             if (configuration == null) // use the default one in Configuration
-                this.Configuration = Configuration.Default; 
+                this.Configuration = Configuration.Default;
             else
                 this.Configuration = configuration;
+
+            // ensure API client has configuration ready
+            if (Configuration.ApiClient.Configuration == null)
+            {
+                this.Configuration.ApiClient.Configuration = this.Configuration;
+            }
         }
 
         /// <summary>
@@ -196,7 +215,7 @@ namespace ININ.PureCloudApi.Api
         {
             // do nothing
         }
-    
+
         /// <summary>
         /// Gets or sets the configuration object
         /// </summary>
@@ -224,477 +243,477 @@ namespace ININ.PureCloudApi.Api
         {
             this.Configuration.AddDefaultHeader(key, value);
         }
-   
-        
+
         /// <summary>
         /// Gets all orphan recordings 
         /// </summary>
-        /// <param name="pageSize">The total page size requested</param> 
-        /// <param name="pageNumber">The page number requested</param> 
-        /// <param name="sortBy">variable name requested to sort by</param> 
-        /// <param name="expand">variable name requested by expand list</param> 
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
+        /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
+        /// <param name="sortBy">variable name requested to sort by (optional)</param>
+        /// <param name="expand">variable name requested by expand list (optional)</param>
         /// <returns>OrphanRecordingListing</returns>
         public OrphanRecordingListing OrphanrecordingsGet (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null)
         {
-             ApiResponse<OrphanRecordingListing> response = OrphanrecordingsGetWithHttpInfo(pageSize, pageNumber, sortBy, expand);
-             return response.Data;
+             ApiResponse<OrphanRecordingListing> localVarResponse = OrphanrecordingsGetWithHttpInfo(pageSize, pageNumber, sortBy, expand);
+             return localVarResponse.Data;
         }
 
         /// <summary>
         /// Gets all orphan recordings 
         /// </summary>
-        /// <param name="pageSize">The total page size requested</param> 
-        /// <param name="pageNumber">The page number requested</param> 
-        /// <param name="sortBy">variable name requested to sort by</param> 
-        /// <param name="expand">variable name requested by expand list</param> 
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
+        /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
+        /// <param name="sortBy">variable name requested to sort by (optional)</param>
+        /// <param name="expand">variable name requested by expand list (optional)</param>
         /// <returns>ApiResponse of OrphanRecordingListing</returns>
         public ApiResponse< OrphanRecordingListing > OrphanrecordingsGetWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null)
         {
-            
-    
-            var path_ = "/api/v1/orphanrecordings";
-    
-            var pathParams = new Dictionary<String, String>();
-            var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var formParams = new Dictionary<String, String>();
-            var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            var localVarPath = "/api/v1/orphanrecordings";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            pathParams.Add("format", "json");
-            
-            if (pageSize != null) queryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
-            if (pageNumber != null) queryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
-            if (sortBy != null) queryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
-            if (expand != null) queryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
-            
-            
-            
-            
+            localVarPathParams.Add("format", "json");
+            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
+            if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-    
-            // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
 
-            int statusCode = (int) response.StatusCode;
-    
-            if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling OrphanrecordingsGet: " + response.Content, response.Content);
-            else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling OrphanrecordingsGet: " + response.ErrorMessage, response.ErrorMessage);
-    
-            return new ApiResponse<OrphanRecordingListing>(statusCode,
-                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (OrphanRecordingListing) Configuration.ApiClient.Deserialize(response, typeof(OrphanRecordingListing)));
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling OrphanrecordingsGet: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling OrphanrecordingsGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<OrphanRecordingListing>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (OrphanRecordingListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrphanRecordingListing)));
             
         }
-    
+
         /// <summary>
         /// Gets all orphan recordings 
         /// </summary>
-        /// <param name="pageSize">The total page size requested</param>
-        /// <param name="pageNumber">The page number requested</param>
-        /// <param name="sortBy">variable name requested to sort by</param>
-        /// <param name="expand">variable name requested by expand list</param>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
+        /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
+        /// <param name="sortBy">variable name requested to sort by (optional)</param>
+        /// <param name="expand">variable name requested by expand list (optional)</param>
         /// <returns>Task of OrphanRecordingListing</returns>
         public async System.Threading.Tasks.Task<OrphanRecordingListing> OrphanrecordingsGetAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null)
         {
-             ApiResponse<OrphanRecordingListing> response = await OrphanrecordingsGetAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand);
-             return response.Data;
+             ApiResponse<OrphanRecordingListing> localVarResponse = await OrphanrecordingsGetAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand);
+             return localVarResponse.Data;
 
         }
 
         /// <summary>
         /// Gets all orphan recordings 
         /// </summary>
-        /// <param name="pageSize">The total page size requested</param>
-        /// <param name="pageNumber">The page number requested</param>
-        /// <param name="sortBy">variable name requested to sort by</param>
-        /// <param name="expand">variable name requested by expand list</param>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
+        /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
+        /// <param name="sortBy">variable name requested to sort by (optional)</param>
+        /// <param name="expand">variable name requested by expand list (optional)</param>
         /// <returns>Task of ApiResponse (OrphanRecordingListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<OrphanRecordingListing>> OrphanrecordingsGetAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null)
         {
-            
-    
-            var path_ = "/api/v1/orphanrecordings";
-    
-            var pathParams = new Dictionary<String, String>();
-            var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
-            var formParams = new Dictionary<String, String>();
-            var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            var localVarPath = "/api/v1/orphanrecordings";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            pathParams.Add("format", "json");
-            
-            if (pageSize != null) queryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
-            if (pageNumber != null) queryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
-            if (sortBy != null) queryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
-            if (expand != null) queryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
-            
-            
-            
-            
+            localVarPathParams.Add("format", "json");
+            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
+            if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
 
-            int statusCode = (int) response.StatusCode;
- 
-            if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling OrphanrecordingsGet: " + response.Content, response.Content);
-            else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling OrphanrecordingsGet: " + response.ErrorMessage, response.ErrorMessage);
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            return new ApiResponse<OrphanRecordingListing>(statusCode,
-                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (OrphanRecordingListing) Configuration.ApiClient.Deserialize(response, typeof(OrphanRecordingListing)));
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling OrphanrecordingsGet: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling OrphanrecordingsGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<OrphanRecordingListing>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (OrphanRecordingListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrphanRecordingListing)));
             
-        }
-        
-        /// <summary>
-        /// Gets a single orphan recording 
-        /// </summary>
-        /// <param name="orphanId">Orphan ID</param> 
-        /// <returns>OrphanRecording</returns>
-        public OrphanRecording OrphanrecordingsOrphanidGet (string orphanId)
-        {
-             ApiResponse<OrphanRecording> response = OrphanrecordingsOrphanidGetWithHttpInfo(orphanId);
-             return response.Data;
         }
 
         /// <summary>
-        /// Gets a single orphan recording 
+        ///  deletes a single orphan recording 
         /// </summary>
-        /// <param name="orphanId">Orphan ID</param> 
-        /// <returns>ApiResponse of OrphanRecording</returns>
-        public ApiResponse< OrphanRecording > OrphanrecordingsOrphanidGetWithHttpInfo (string orphanId)
-        {
-            
-            // verify the required parameter 'orphanId' is set
-            if (orphanId == null) throw new ApiException(400, "Missing required parameter 'orphanId' when calling OrphanrecordingsOrphanidGet");
-            
-    
-            var path_ = "/api/v1/orphanrecordings/{orphanId}";
-    
-            var pathParams = new Dictionary<String, String>();
-            var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var formParams = new Dictionary<String, String>();
-            var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
-
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
-                "application/json"
-            };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            pathParams.Add("format", "json");
-            if (orphanId != null) pathParams.Add("orphanId", Configuration.ApiClient.ParameterToString(orphanId)); // path parameter
-            
-            
-            
-            
-            
-
-            
-            // authentication (PureCloud Auth) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-            
-    
-            // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
-
-            int statusCode = (int) response.StatusCode;
-    
-            if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling OrphanrecordingsOrphanidGet: " + response.Content, response.Content);
-            else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling OrphanrecordingsOrphanidGet: " + response.ErrorMessage, response.ErrorMessage);
-    
-            return new ApiResponse<OrphanRecording>(statusCode,
-                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (OrphanRecording) Configuration.ApiClient.Deserialize(response, typeof(OrphanRecording)));
-            
-        }
-    
-        /// <summary>
-        /// Gets a single orphan recording 
-        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orphanId">Orphan ID</param>
-        /// <returns>Task of OrphanRecording</returns>
-        public async System.Threading.Tasks.Task<OrphanRecording> OrphanrecordingsOrphanidGetAsync (string orphanId)
-        {
-             ApiResponse<OrphanRecording> response = await OrphanrecordingsOrphanidGetAsyncWithHttpInfo(orphanId);
-             return response.Data;
-
-        }
-
-        /// <summary>
-        /// Gets a single orphan recording 
-        /// </summary>
-        /// <param name="orphanId">Orphan ID</param>
-        /// <returns>Task of ApiResponse (OrphanRecording)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<OrphanRecording>> OrphanrecordingsOrphanidGetAsyncWithHttpInfo (string orphanId)
-        {
-            // verify the required parameter 'orphanId' is set
-            if (orphanId == null) throw new ApiException(400, "Missing required parameter 'orphanId' when calling OrphanrecordingsOrphanidGet");
-            
-    
-            var path_ = "/api/v1/orphanrecordings/{orphanId}";
-    
-            var pathParams = new Dictionary<String, String>();
-            var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
-            var formParams = new Dictionary<String, String>();
-            var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
-
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
-                "application/json"
-            };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            pathParams.Add("format", "json");
-            if (orphanId != null) pathParams.Add("orphanId", Configuration.ApiClient.ParameterToString(orphanId)); // path parameter
-            
-            
-            
-            
-            
-
-            
-            // authentication (PureCloud Auth) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-            
-
-            // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
-
-            int statusCode = (int) response.StatusCode;
- 
-            if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling OrphanrecordingsOrphanidGet: " + response.Content, response.Content);
-            else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling OrphanrecordingsOrphanidGet: " + response.ErrorMessage, response.ErrorMessage);
-
-            return new ApiResponse<OrphanRecording>(statusCode,
-                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (OrphanRecording) Configuration.ApiClient.Deserialize(response, typeof(OrphanRecording)));
-            
-        }
-        
-        /// <summary>
-        /// deletes a single orphan recording 
-        /// </summary>
-        /// <param name="orphanId">Orphan ID</param> 
         /// <returns>OrphanRecording</returns>
         public OrphanRecording OrphanrecordingsOrphanidDelete (string orphanId)
         {
-             ApiResponse<OrphanRecording> response = OrphanrecordingsOrphanidDeleteWithHttpInfo(orphanId);
-             return response.Data;
+             ApiResponse<OrphanRecording> localVarResponse = OrphanrecordingsOrphanidDeleteWithHttpInfo(orphanId);
+             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// deletes a single orphan recording 
+        ///  deletes a single orphan recording 
         /// </summary>
-        /// <param name="orphanId">Orphan ID</param> 
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="orphanId">Orphan ID</param>
         /// <returns>ApiResponse of OrphanRecording</returns>
         public ApiResponse< OrphanRecording > OrphanrecordingsOrphanidDeleteWithHttpInfo (string orphanId)
         {
-            
             // verify the required parameter 'orphanId' is set
-            if (orphanId == null) throw new ApiException(400, "Missing required parameter 'orphanId' when calling OrphanrecordingsOrphanidDelete");
-            
-    
-            var path_ = "/api/v1/orphanrecordings/{orphanId}";
-    
-            var pathParams = new Dictionary<String, String>();
-            var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var formParams = new Dictionary<String, String>();
-            var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            if (orphanId == null)
+                throw new ApiException(400, "Missing required parameter 'orphanId' when calling OrphanedRecordingsApi->OrphanrecordingsOrphanidDelete");
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            var localVarPath = "/api/v1/orphanrecordings/{orphanId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            pathParams.Add("format", "json");
-            if (orphanId != null) pathParams.Add("orphanId", Configuration.ApiClient.ParameterToString(orphanId)); // path parameter
-            
-            
-            
-            
-            
+            localVarPathParams.Add("format", "json");
+            if (orphanId != null) localVarPathParams.Add("orphanId", Configuration.ApiClient.ParameterToString(orphanId)); // path parameter
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-    
-            // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
 
-            int statusCode = (int) response.StatusCode;
-    
-            if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling OrphanrecordingsOrphanidDelete: " + response.Content, response.Content);
-            else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling OrphanrecordingsOrphanidDelete: " + response.ErrorMessage, response.ErrorMessage);
-    
-            return new ApiResponse<OrphanRecording>(statusCode,
-                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (OrphanRecording) Configuration.ApiClient.Deserialize(response, typeof(OrphanRecording)));
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling OrphanrecordingsOrphanidDelete: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling OrphanrecordingsOrphanidDelete: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<OrphanRecording>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (OrphanRecording) Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrphanRecording)));
             
         }
-    
+
         /// <summary>
-        /// deletes a single orphan recording 
+        ///  deletes a single orphan recording 
         /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orphanId">Orphan ID</param>
         /// <returns>Task of OrphanRecording</returns>
         public async System.Threading.Tasks.Task<OrphanRecording> OrphanrecordingsOrphanidDeleteAsync (string orphanId)
         {
-             ApiResponse<OrphanRecording> response = await OrphanrecordingsOrphanidDeleteAsyncWithHttpInfo(orphanId);
-             return response.Data;
+             ApiResponse<OrphanRecording> localVarResponse = await OrphanrecordingsOrphanidDeleteAsyncWithHttpInfo(orphanId);
+             return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// deletes a single orphan recording 
+        ///  deletes a single orphan recording 
         /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orphanId">Orphan ID</param>
         /// <returns>Task of ApiResponse (OrphanRecording)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<OrphanRecording>> OrphanrecordingsOrphanidDeleteAsyncWithHttpInfo (string orphanId)
         {
             // verify the required parameter 'orphanId' is set
-            if (orphanId == null) throw new ApiException(400, "Missing required parameter 'orphanId' when calling OrphanrecordingsOrphanidDelete");
-            
-    
-            var path_ = "/api/v1/orphanrecordings/{orphanId}";
-    
-            var pathParams = new Dictionary<String, String>();
-            var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
-            var formParams = new Dictionary<String, String>();
-            var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            if (orphanId == null)
+                throw new ApiException(400, "Missing required parameter 'orphanId' when calling OrphanedRecordingsApi->OrphanrecordingsOrphanidDelete");
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            var localVarPath = "/api/v1/orphanrecordings/{orphanId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            pathParams.Add("format", "json");
-            if (orphanId != null) pathParams.Add("orphanId", Configuration.ApiClient.ParameterToString(orphanId)); // path parameter
-            
-            
-            
-            
-            
+            localVarPathParams.Add("format", "json");
+            if (orphanId != null) localVarPathParams.Add("orphanId", Configuration.ApiClient.ParameterToString(orphanId)); // path parameter
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
 
-            int statusCode = (int) response.StatusCode;
- 
-            if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling OrphanrecordingsOrphanidDelete: " + response.Content, response.Content);
-            else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling OrphanrecordingsOrphanidDelete: " + response.ErrorMessage, response.ErrorMessage);
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            return new ApiResponse<OrphanRecording>(statusCode,
-                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (OrphanRecording) Configuration.ApiClient.Deserialize(response, typeof(OrphanRecording)));
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling OrphanrecordingsOrphanidDelete: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling OrphanrecordingsOrphanidDelete: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<OrphanRecording>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (OrphanRecording) Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrphanRecording)));
             
         }
-        
+
+        /// <summary>
+        /// Gets a single orphan recording 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="orphanId">Orphan ID</param>
+        /// <returns>OrphanRecording</returns>
+        public OrphanRecording OrphanrecordingsOrphanidGet (string orphanId)
+        {
+             ApiResponse<OrphanRecording> localVarResponse = OrphanrecordingsOrphanidGetWithHttpInfo(orphanId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Gets a single orphan recording 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="orphanId">Orphan ID</param>
+        /// <returns>ApiResponse of OrphanRecording</returns>
+        public ApiResponse< OrphanRecording > OrphanrecordingsOrphanidGetWithHttpInfo (string orphanId)
+        {
+            // verify the required parameter 'orphanId' is set
+            if (orphanId == null)
+                throw new ApiException(400, "Missing required parameter 'orphanId' when calling OrphanedRecordingsApi->OrphanrecordingsOrphanidGet");
+
+            var localVarPath = "/api/v1/orphanrecordings/{orphanId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (orphanId != null) localVarPathParams.Add("orphanId", Configuration.ApiClient.ParameterToString(orphanId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling OrphanrecordingsOrphanidGet: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling OrphanrecordingsOrphanidGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<OrphanRecording>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (OrphanRecording) Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrphanRecording)));
+            
+        }
+
+        /// <summary>
+        /// Gets a single orphan recording 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="orphanId">Orphan ID</param>
+        /// <returns>Task of OrphanRecording</returns>
+        public async System.Threading.Tasks.Task<OrphanRecording> OrphanrecordingsOrphanidGetAsync (string orphanId)
+        {
+             ApiResponse<OrphanRecording> localVarResponse = await OrphanrecordingsOrphanidGetAsyncWithHttpInfo(orphanId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Gets a single orphan recording 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="orphanId">Orphan ID</param>
+        /// <returns>Task of ApiResponse (OrphanRecording)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<OrphanRecording>> OrphanrecordingsOrphanidGetAsyncWithHttpInfo (string orphanId)
+        {
+            // verify the required parameter 'orphanId' is set
+            if (orphanId == null)
+                throw new ApiException(400, "Missing required parameter 'orphanId' when calling OrphanedRecordingsApi->OrphanrecordingsOrphanidGet");
+
+            var localVarPath = "/api/v1/orphanrecordings/{orphanId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (orphanId != null) localVarPathParams.Add("orphanId", Configuration.ApiClient.ParameterToString(orphanId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling OrphanrecordingsOrphanidGet: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling OrphanrecordingsOrphanidGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<OrphanRecording>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (OrphanRecording) Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrphanRecording)));
+            
+        }
+
     }
-    
 }

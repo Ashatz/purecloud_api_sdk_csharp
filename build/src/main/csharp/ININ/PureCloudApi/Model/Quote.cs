@@ -4,192 +4,271 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class Quote :  IEquatable<Quote>
-    {
+    public partial class Quote :  IEquatable<Quote>
+    { 
+
         /// <summary>
-        /// Initializes a new instance of the <see cref="Quote" /> class.
+        /// Gets or Sets Type
         /// </summary>
-        public Quote()
-        {
-            this.IsSubmitted = false;
-            this.IsPending = false;
-            this.IsFrozen = false;
-            this.IncludeVoiceCharges = false;
+        [JsonConverter(typeof(StringEnumConverter))]
+                public enum TypeEnum {
             
+            [EnumMember(Value = "NEW_SUBSCRIPTION")]
+            NewSubscription,
+            
+            [EnumMember(Value = "AMENDMENT")]
+            Amendment
+        }
+
+
+        /// <summary>
+        /// Gets or Sets Status
+        /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
+                public enum StatusEnum {
+            
+            [EnumMember(Value = "IN_PROGRESS")]
+            InProgress,
+            
+            [EnumMember(Value = "SUBMITTED")]
+            Submitted,
+            
+            [EnumMember(Value = "FROZEN")]
+            Frozen
         }
 
         
+
+        /// <summary>
+        /// Gets or Sets Type
+        /// </summary>
+        [DataMember(Name="type", EmitDefaultValue=false)]
+        public TypeEnum? Type { get; set; }
+    
+
+        /// <summary>
+        /// Gets or Sets Status
+        /// </summary>
+        [DataMember(Name="status", EmitDefaultValue=false)]
+        public StatusEnum? Status { get; set; }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Quote" />class.
+        /// </summary>
+        /// <param name="Name">Name.</param>
+        /// <param name="PurchaseOrder">PurchaseOrder.</param>
+        /// <param name="Type">Type.</param>
+        /// <param name="Status">Status.</param>
+        /// <param name="IsSubmitted">IsSubmitted (default to false).</param>
+        /// <param name="IsPending">IsPending (default to false).</param>
+        /// <param name="IsFrozen">IsFrozen (default to false).</param>
+        /// <param name="Currency">Currency.</param>
+        /// <param name="CreatedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="LastUpdatedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="BillingContactEmail">BillingContactEmail.</param>
+        /// <param name="BillingContactFirstName">BillingContactFirstName.</param>
+        /// <param name="BillingContactLastName">BillingContactLastName.</param>
+        /// <param name="BillingContactPhone">BillingContactPhone.</param>
+        /// <param name="IncludeVoiceCharges">IncludeVoiceCharges (default to false).</param>
+        /// <param name="Charges">Charges.</param>
+        /// <param name="EdgeControlModel">EdgeControlModel.</param>
+        /// <param name="ReferralCodes">ReferralCodes.</param>
+        /// <param name="DiscountCodes">DiscountCodes.</param>
+        /// <param name="SalesPartnerCode">SalesPartnerCode.</param>
+
+        public Quote(string Name = null, string PurchaseOrder = null, TypeEnum? Type = null, StatusEnum? Status = null, bool? IsSubmitted = null, bool? IsPending = null, bool? IsFrozen = null, string Currency = null, DateTime? CreatedDate = null, DateTime? LastUpdatedDate = null, string BillingContactEmail = null, string BillingContactFirstName = null, string BillingContactLastName = null, string BillingContactPhone = null, bool? IncludeVoiceCharges = null, List<QuoteCharge> Charges = null, string EdgeControlModel = null, List<string> ReferralCodes = null, List<string> DiscountCodes = null, string SalesPartnerCode = null)
+        {
+            this.Name = Name;
+            this.PurchaseOrder = PurchaseOrder;
+            this.Type = Type;
+            this.Status = Status;
+            // use default value if no "IsSubmitted" provided
+            if (IsSubmitted == null)
+            {
+                this.IsSubmitted = false;
+            }
+            else
+            {
+                this.IsSubmitted = IsSubmitted;
+            }
+            // use default value if no "IsPending" provided
+            if (IsPending == null)
+            {
+                this.IsPending = false;
+            }
+            else
+            {
+                this.IsPending = IsPending;
+            }
+            // use default value if no "IsFrozen" provided
+            if (IsFrozen == null)
+            {
+                this.IsFrozen = false;
+            }
+            else
+            {
+                this.IsFrozen = IsFrozen;
+            }
+            this.Currency = Currency;
+            this.CreatedDate = CreatedDate;
+            this.LastUpdatedDate = LastUpdatedDate;
+            this.BillingContactEmail = BillingContactEmail;
+            this.BillingContactFirstName = BillingContactFirstName;
+            this.BillingContactLastName = BillingContactLastName;
+            this.BillingContactPhone = BillingContactPhone;
+            // use default value if no "IncludeVoiceCharges" provided
+            if (IncludeVoiceCharges == null)
+            {
+                this.IncludeVoiceCharges = false;
+            }
+            else
+            {
+                this.IncludeVoiceCharges = IncludeVoiceCharges;
+            }
+            this.Charges = Charges;
+            this.EdgeControlModel = EdgeControlModel;
+            this.ReferralCodes = ReferralCodes;
+            this.DiscountCodes = DiscountCodes;
+            this.SalesPartnerCode = SalesPartnerCode;
+            
+        }
+
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets PurchaseOrder
         /// </summary>
         [DataMember(Name="purchaseOrder", EmitDefaultValue=false)]
         public string PurchaseOrder { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets Type
-        /// </summary>
-        [DataMember(Name="type", EmitDefaultValue=false)]
-        public string Type { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets Status
-        /// </summary>
-        [DataMember(Name="status", EmitDefaultValue=false)]
-        public string Status { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets IsSubmitted
         /// </summary>
         [DataMember(Name="isSubmitted", EmitDefaultValue=false)]
         public bool? IsSubmitted { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets IsPending
         /// </summary>
         [DataMember(Name="isPending", EmitDefaultValue=false)]
         public bool? IsPending { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets IsFrozen
         /// </summary>
         [DataMember(Name="isFrozen", EmitDefaultValue=false)]
         public bool? IsFrozen { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Currency
         /// </summary>
         [DataMember(Name="currency", EmitDefaultValue=false)]
         public string Currency { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="createdDate", EmitDefaultValue=false)]
         public DateTime? CreatedDate { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="lastUpdatedDate", EmitDefaultValue=false)]
         public DateTime? LastUpdatedDate { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets BillingContactEmail
         /// </summary>
         [DataMember(Name="billingContactEmail", EmitDefaultValue=false)]
         public string BillingContactEmail { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets BillingContactFirstName
         /// </summary>
         [DataMember(Name="billingContactFirstName", EmitDefaultValue=false)]
         public string BillingContactFirstName { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets BillingContactLastName
         /// </summary>
         [DataMember(Name="billingContactLastName", EmitDefaultValue=false)]
         public string BillingContactLastName { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets BillingContactPhone
         /// </summary>
         [DataMember(Name="billingContactPhone", EmitDefaultValue=false)]
         public string BillingContactPhone { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets IncludeVoiceCharges
         /// </summary>
         [DataMember(Name="includeVoiceCharges", EmitDefaultValue=false)]
         public bool? IncludeVoiceCharges { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Charges
         /// </summary>
         [DataMember(Name="charges", EmitDefaultValue=false)]
         public List<QuoteCharge> Charges { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets EdgeControlModel
         /// </summary>
         [DataMember(Name="edgeControlModel", EmitDefaultValue=false)]
         public string EdgeControlModel { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ReferralCodes
         /// </summary>
         [DataMember(Name="referralCodes", EmitDefaultValue=false)]
         public List<string> ReferralCodes { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets DiscountCodes
         /// </summary>
         [DataMember(Name="discountCodes", EmitDefaultValue=false)]
         public List<string> DiscountCodes { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets SalesPartnerCode
         /// </summary>
         [DataMember(Name="salesPartnerCode", EmitDefaultValue=false)]
         public string SalesPartnerCode { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -220,11 +299,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  DiscountCodes: ").Append(DiscountCodes).Append("\n");
             sb.Append("  SalesPartnerCode: ").Append(SalesPartnerCode).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -248,7 +326,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if Quote instances are equal
         /// </summary>
-        /// <param name="obj">Instance of Quote to be compared</param>
+        /// <param name="other">Instance of Quote to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(Quote other)
         {
@@ -256,112 +334,112 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.PurchaseOrder == other.PurchaseOrder ||
                     this.PurchaseOrder != null &&
                     this.PurchaseOrder.Equals(other.PurchaseOrder)
-                ) && 
+                ) &&
                 (
                     this.Type == other.Type ||
                     this.Type != null &&
                     this.Type.Equals(other.Type)
-                ) && 
+                ) &&
                 (
                     this.Status == other.Status ||
                     this.Status != null &&
                     this.Status.Equals(other.Status)
-                ) && 
+                ) &&
                 (
                     this.IsSubmitted == other.IsSubmitted ||
                     this.IsSubmitted != null &&
                     this.IsSubmitted.Equals(other.IsSubmitted)
-                ) && 
+                ) &&
                 (
                     this.IsPending == other.IsPending ||
                     this.IsPending != null &&
                     this.IsPending.Equals(other.IsPending)
-                ) && 
+                ) &&
                 (
                     this.IsFrozen == other.IsFrozen ||
                     this.IsFrozen != null &&
                     this.IsFrozen.Equals(other.IsFrozen)
-                ) && 
+                ) &&
                 (
                     this.Currency == other.Currency ||
                     this.Currency != null &&
                     this.Currency.Equals(other.Currency)
-                ) && 
+                ) &&
                 (
                     this.CreatedDate == other.CreatedDate ||
                     this.CreatedDate != null &&
                     this.CreatedDate.Equals(other.CreatedDate)
-                ) && 
+                ) &&
                 (
                     this.LastUpdatedDate == other.LastUpdatedDate ||
                     this.LastUpdatedDate != null &&
                     this.LastUpdatedDate.Equals(other.LastUpdatedDate)
-                ) && 
+                ) &&
                 (
                     this.BillingContactEmail == other.BillingContactEmail ||
                     this.BillingContactEmail != null &&
                     this.BillingContactEmail.Equals(other.BillingContactEmail)
-                ) && 
+                ) &&
                 (
                     this.BillingContactFirstName == other.BillingContactFirstName ||
                     this.BillingContactFirstName != null &&
                     this.BillingContactFirstName.Equals(other.BillingContactFirstName)
-                ) && 
+                ) &&
                 (
                     this.BillingContactLastName == other.BillingContactLastName ||
                     this.BillingContactLastName != null &&
                     this.BillingContactLastName.Equals(other.BillingContactLastName)
-                ) && 
+                ) &&
                 (
                     this.BillingContactPhone == other.BillingContactPhone ||
                     this.BillingContactPhone != null &&
                     this.BillingContactPhone.Equals(other.BillingContactPhone)
-                ) && 
+                ) &&
                 (
                     this.IncludeVoiceCharges == other.IncludeVoiceCharges ||
                     this.IncludeVoiceCharges != null &&
                     this.IncludeVoiceCharges.Equals(other.IncludeVoiceCharges)
-                ) && 
+                ) &&
                 (
                     this.Charges == other.Charges ||
                     this.Charges != null &&
                     this.Charges.SequenceEqual(other.Charges)
-                ) && 
+                ) &&
                 (
                     this.EdgeControlModel == other.EdgeControlModel ||
                     this.EdgeControlModel != null &&
                     this.EdgeControlModel.Equals(other.EdgeControlModel)
-                ) && 
+                ) &&
                 (
                     this.ReferralCodes == other.ReferralCodes ||
                     this.ReferralCodes != null &&
                     this.ReferralCodes.SequenceEqual(other.ReferralCodes)
-                ) && 
+                ) &&
                 (
                     this.DiscountCodes == other.DiscountCodes ||
                     this.DiscountCodes != null &&
                     this.DiscountCodes.SequenceEqual(other.DiscountCodes)
-                ) && 
+                ) &&
                 (
                     this.SalesPartnerCode == other.SalesPartnerCode ||
                     this.SalesPartnerCode != null &&
                     this.SalesPartnerCode.Equals(other.SalesPartnerCode)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
@@ -380,78 +458,53 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
-                
+                    hash = hash * 59 + this.Id.GetHashCode();
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
-                
+                    hash = hash * 59 + this.Name.GetHashCode();
                 if (this.PurchaseOrder != null)
-                    hash = hash * 57 + this.PurchaseOrder.GetHashCode();
-                
+                    hash = hash * 59 + this.PurchaseOrder.GetHashCode();
                 if (this.Type != null)
-                    hash = hash * 57 + this.Type.GetHashCode();
-                
+                    hash = hash * 59 + this.Type.GetHashCode();
                 if (this.Status != null)
-                    hash = hash * 57 + this.Status.GetHashCode();
-                
+                    hash = hash * 59 + this.Status.GetHashCode();
                 if (this.IsSubmitted != null)
-                    hash = hash * 57 + this.IsSubmitted.GetHashCode();
-                
+                    hash = hash * 59 + this.IsSubmitted.GetHashCode();
                 if (this.IsPending != null)
-                    hash = hash * 57 + this.IsPending.GetHashCode();
-                
+                    hash = hash * 59 + this.IsPending.GetHashCode();
                 if (this.IsFrozen != null)
-                    hash = hash * 57 + this.IsFrozen.GetHashCode();
-                
+                    hash = hash * 59 + this.IsFrozen.GetHashCode();
                 if (this.Currency != null)
-                    hash = hash * 57 + this.Currency.GetHashCode();
-                
+                    hash = hash * 59 + this.Currency.GetHashCode();
                 if (this.CreatedDate != null)
-                    hash = hash * 57 + this.CreatedDate.GetHashCode();
-                
+                    hash = hash * 59 + this.CreatedDate.GetHashCode();
                 if (this.LastUpdatedDate != null)
-                    hash = hash * 57 + this.LastUpdatedDate.GetHashCode();
-                
+                    hash = hash * 59 + this.LastUpdatedDate.GetHashCode();
                 if (this.BillingContactEmail != null)
-                    hash = hash * 57 + this.BillingContactEmail.GetHashCode();
-                
+                    hash = hash * 59 + this.BillingContactEmail.GetHashCode();
                 if (this.BillingContactFirstName != null)
-                    hash = hash * 57 + this.BillingContactFirstName.GetHashCode();
-                
+                    hash = hash * 59 + this.BillingContactFirstName.GetHashCode();
                 if (this.BillingContactLastName != null)
-                    hash = hash * 57 + this.BillingContactLastName.GetHashCode();
-                
+                    hash = hash * 59 + this.BillingContactLastName.GetHashCode();
                 if (this.BillingContactPhone != null)
-                    hash = hash * 57 + this.BillingContactPhone.GetHashCode();
-                
+                    hash = hash * 59 + this.BillingContactPhone.GetHashCode();
                 if (this.IncludeVoiceCharges != null)
-                    hash = hash * 57 + this.IncludeVoiceCharges.GetHashCode();
-                
+                    hash = hash * 59 + this.IncludeVoiceCharges.GetHashCode();
                 if (this.Charges != null)
-                    hash = hash * 57 + this.Charges.GetHashCode();
-                
+                    hash = hash * 59 + this.Charges.GetHashCode();
                 if (this.EdgeControlModel != null)
-                    hash = hash * 57 + this.EdgeControlModel.GetHashCode();
-                
+                    hash = hash * 59 + this.EdgeControlModel.GetHashCode();
                 if (this.ReferralCodes != null)
-                    hash = hash * 57 + this.ReferralCodes.GetHashCode();
-                
+                    hash = hash * 59 + this.ReferralCodes.GetHashCode();
                 if (this.DiscountCodes != null)
-                    hash = hash * 57 + this.DiscountCodes.GetHashCode();
-                
+                    hash = hash * 59 + this.DiscountCodes.GetHashCode();
                 if (this.SalesPartnerCode != null)
-                    hash = hash * 57 + this.SalesPartnerCode.GetHashCode();
-                
+                    hash = hash * 59 + this.SalesPartnerCode.GetHashCode();
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
-                
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

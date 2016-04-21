@@ -4,44 +4,46 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class PINConfiguration :  IEquatable<PINConfiguration>
-    {
+    public partial class PINConfiguration :  IEquatable<PINConfiguration>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="PINConfiguration" /> class.
+        /// Initializes a new instance of the <see cref="PINConfiguration" />class.
         /// </summary>
-        public PINConfiguration()
+        /// <param name="MinimumLength">MinimumLength.</param>
+        /// <param name="MaximumLength">MaximumLength.</param>
+
+        public PINConfiguration(int? MinimumLength = null, int? MaximumLength = null)
         {
+            this.MinimumLength = MinimumLength;
+            this.MaximumLength = MaximumLength;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets MinimumLength
         /// </summary>
         [DataMember(Name="minimumLength", EmitDefaultValue=false)]
         public int? MinimumLength { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets MaximumLength
         /// </summary>
         [DataMember(Name="maximumLength", EmitDefaultValue=false)]
         public int? MaximumLength { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -52,11 +54,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class PINConfiguration {\n");
             sb.Append("  MinimumLength: ").Append(MinimumLength).Append("\n");
             sb.Append("  MaximumLength: ").Append(MaximumLength).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -80,7 +81,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if PINConfiguration instances are equal
         /// </summary>
-        /// <param name="obj">Instance of PINConfiguration to be compared</param>
+        /// <param name="other">Instance of PINConfiguration to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(PINConfiguration other)
         {
@@ -88,12 +89,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.MinimumLength == other.MinimumLength ||
                     this.MinimumLength != null &&
                     this.MinimumLength.Equals(other.MinimumLength)
-                ) && 
+                ) &&
                 (
                     this.MaximumLength == other.MaximumLength ||
                     this.MaximumLength != null &&
@@ -112,18 +113,13 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.MinimumLength != null)
-                    hash = hash * 57 + this.MinimumLength.GetHashCode();
-                
+                    hash = hash * 59 + this.MinimumLength.GetHashCode();
                 if (this.MaximumLength != null)
-                    hash = hash * 57 + this.MaximumLength.GetHashCode();
-                
+                    hash = hash * 59 + this.MaximumLength.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

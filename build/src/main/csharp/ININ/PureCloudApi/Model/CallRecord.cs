@@ -4,45 +4,47 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class CallRecord :  IEquatable<CallRecord>
-    {
+    public partial class CallRecord :  IEquatable<CallRecord>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="CallRecord" /> class.
+        /// Initializes a new instance of the <see cref="CallRecord" />class.
         /// </summary>
-        public CallRecord()
+        /// <param name="LastAttempt">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="LastResult">LastResult.</param>
+
+        public CallRecord(DateTime? LastAttempt = null, string LastResult = null)
         {
+            this.LastAttempt = LastAttempt;
+            this.LastResult = LastResult;
             
         }
 
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="lastAttempt", EmitDefaultValue=false)]
         public DateTime? LastAttempt { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets LastResult
         /// </summary>
         [DataMember(Name="lastResult", EmitDefaultValue=false)]
         public string LastResult { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -53,11 +55,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class CallRecord {\n");
             sb.Append("  LastAttempt: ").Append(LastAttempt).Append("\n");
             sb.Append("  LastResult: ").Append(LastResult).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -81,7 +82,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if CallRecord instances are equal
         /// </summary>
-        /// <param name="obj">Instance of CallRecord to be compared</param>
+        /// <param name="other">Instance of CallRecord to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(CallRecord other)
         {
@@ -89,12 +90,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.LastAttempt == other.LastAttempt ||
                     this.LastAttempt != null &&
                     this.LastAttempt.Equals(other.LastAttempt)
-                ) && 
+                ) &&
                 (
                     this.LastResult == other.LastResult ||
                     this.LastResult != null &&
@@ -113,18 +114,13 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.LastAttempt != null)
-                    hash = hash * 57 + this.LastAttempt.GetHashCode();
-                
+                    hash = hash * 59 + this.LastAttempt.GetHashCode();
                 if (this.LastResult != null)
-                    hash = hash * 57 + this.LastResult.GetHashCode();
-                
+                    hash = hash * 59 + this.LastResult.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

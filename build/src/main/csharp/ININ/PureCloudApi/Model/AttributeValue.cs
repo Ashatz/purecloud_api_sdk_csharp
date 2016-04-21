@@ -4,44 +4,46 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class AttributeValue :  IEquatable<AttributeValue>
-    {
+    public partial class AttributeValue :  IEquatable<AttributeValue>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="AttributeValue" /> class.
+        /// Initializes a new instance of the <see cref="AttributeValue" />class.
         /// </summary>
-        public AttributeValue()
+        /// <param name="Attribute">Attribute.</param>
+        /// <param name="Values">Values.</param>
+
+        public AttributeValue(WorkspaceAttribute Attribute = null, List<string> Values = null)
         {
+            this.Attribute = Attribute;
+            this.Values = Values;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets Attribute
         /// </summary>
         [DataMember(Name="attribute", EmitDefaultValue=false)]
         public WorkspaceAttribute Attribute { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Values
         /// </summary>
         [DataMember(Name="values", EmitDefaultValue=false)]
         public List<string> Values { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -52,11 +54,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class AttributeValue {\n");
             sb.Append("  Attribute: ").Append(Attribute).Append("\n");
             sb.Append("  Values: ").Append(Values).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -80,7 +81,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if AttributeValue instances are equal
         /// </summary>
-        /// <param name="obj">Instance of AttributeValue to be compared</param>
+        /// <param name="other">Instance of AttributeValue to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(AttributeValue other)
         {
@@ -88,12 +89,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Attribute == other.Attribute ||
                     this.Attribute != null &&
                     this.Attribute.Equals(other.Attribute)
-                ) && 
+                ) &&
                 (
                     this.Values == other.Values ||
                     this.Values != null &&
@@ -112,18 +113,13 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Attribute != null)
-                    hash = hash * 57 + this.Attribute.GetHashCode();
-                
+                    hash = hash * 59 + this.Attribute.GetHashCode();
                 if (this.Values != null)
-                    hash = hash * 57 + this.Values.GetHashCode();
-                
+                    hash = hash * 59 + this.Values.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

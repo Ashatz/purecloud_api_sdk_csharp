@@ -4,37 +4,38 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class DomainOrganizationProduct :  IEquatable<DomainOrganizationProduct>
-    {
+    public partial class DomainOrganizationProduct :  IEquatable<DomainOrganizationProduct>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="DomainOrganizationProduct" /> class.
+        /// Initializes a new instance of the <see cref="DomainOrganizationProduct" />class.
         /// </summary>
-        public DomainOrganizationProduct()
+        /// <param name="Id">Id.</param>
+
+        public DomainOrganizationProduct(string Id = null)
         {
+            this.Id = Id;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -44,11 +45,10 @@ namespace ININ.PureCloudApi.Model
             var sb = new StringBuilder();
             sb.Append("class DomainOrganizationProduct {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -72,7 +72,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if DomainOrganizationProduct instances are equal
         /// </summary>
-        /// <param name="obj">Instance of DomainOrganizationProduct to be compared</param>
+        /// <param name="other">Instance of DomainOrganizationProduct to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(DomainOrganizationProduct other)
         {
@@ -80,7 +80,7 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
@@ -99,15 +99,11 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
-                
+                    hash = hash * 59 + this.Id.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

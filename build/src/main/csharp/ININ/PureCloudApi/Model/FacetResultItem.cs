@@ -4,81 +4,88 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class FacetResultItem :  IEquatable<FacetResultItem>
-    {
+    public partial class FacetResultItem :  IEquatable<FacetResultItem>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="FacetResultItem" /> class.
+        /// Initializes a new instance of the <see cref="FacetResultItem" />class.
         /// </summary>
-        public FacetResultItem()
+        /// <param name="Name">For TERM facets this will contain the value of the term that was found userid, docid, etc..</param>
+        /// <param name="Count">The number of items that matched the facetRequest..</param>
+        /// <param name="Document">Document.</param>
+        /// <param name="User">User.</param>
+        /// <param name="Queue">Queue.</param>
+        /// <param name="FlowConfigId">FlowConfigId.</param>
+        /// <param name="Workspace">Workspace.</param>
+
+        public FacetResultItem(string Name = null, long? Count = null, Document Document = null, User User = null, Queue Queue = null, FlowConfigId FlowConfigId = null, Workspace Workspace = null)
         {
+            this.Name = Name;
+            this.Count = Count;
+            this.Document = Document;
+            this.User = User;
+            this.Queue = Queue;
+            this.FlowConfigId = FlowConfigId;
+            this.Workspace = Workspace;
             
         }
 
-        
+    
         /// <summary>
         /// For TERM facets this will contain the value of the term that was found userid, docid, etc.
         /// </summary>
         /// <value>For TERM facets this will contain the value of the term that was found userid, docid, etc.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// The number of items that matched the facetRequest.
         /// </summary>
         /// <value>The number of items that matched the facetRequest.</value>
         [DataMember(Name="count", EmitDefaultValue=false)]
         public long? Count { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Document
         /// </summary>
         [DataMember(Name="document", EmitDefaultValue=false)]
         public Document Document { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets User
         /// </summary>
         [DataMember(Name="user", EmitDefaultValue=false)]
         public User User { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Queue
         /// </summary>
         [DataMember(Name="queue", EmitDefaultValue=false)]
         public Queue Queue { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets FlowConfigId
         /// </summary>
         [DataMember(Name="flowConfigId", EmitDefaultValue=false)]
         public FlowConfigId FlowConfigId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Workspace
         /// </summary>
         [DataMember(Name="workspace", EmitDefaultValue=false)]
         public Workspace Workspace { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -94,11 +101,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Queue: ").Append(Queue).Append("\n");
             sb.Append("  FlowConfigId: ").Append(FlowConfigId).Append("\n");
             sb.Append("  Workspace: ").Append(Workspace).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -122,7 +128,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if FacetResultItem instances are equal
         /// </summary>
-        /// <param name="obj">Instance of FacetResultItem to be compared</param>
+        /// <param name="other">Instance of FacetResultItem to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(FacetResultItem other)
         {
@@ -130,37 +136,37 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Count == other.Count ||
                     this.Count != null &&
                     this.Count.Equals(other.Count)
-                ) && 
+                ) &&
                 (
                     this.Document == other.Document ||
                     this.Document != null &&
                     this.Document.Equals(other.Document)
-                ) && 
+                ) &&
                 (
                     this.User == other.User ||
                     this.User != null &&
                     this.User.Equals(other.User)
-                ) && 
+                ) &&
                 (
                     this.Queue == other.Queue ||
                     this.Queue != null &&
                     this.Queue.Equals(other.Queue)
-                ) && 
+                ) &&
                 (
                     this.FlowConfigId == other.FlowConfigId ||
                     this.FlowConfigId != null &&
                     this.FlowConfigId.Equals(other.FlowConfigId)
-                ) && 
+                ) &&
                 (
                     this.Workspace == other.Workspace ||
                     this.Workspace != null &&
@@ -179,33 +185,23 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
-                
+                    hash = hash * 59 + this.Name.GetHashCode();
                 if (this.Count != null)
-                    hash = hash * 57 + this.Count.GetHashCode();
-                
+                    hash = hash * 59 + this.Count.GetHashCode();
                 if (this.Document != null)
-                    hash = hash * 57 + this.Document.GetHashCode();
-                
+                    hash = hash * 59 + this.Document.GetHashCode();
                 if (this.User != null)
-                    hash = hash * 57 + this.User.GetHashCode();
-                
+                    hash = hash * 59 + this.User.GetHashCode();
                 if (this.Queue != null)
-                    hash = hash * 57 + this.Queue.GetHashCode();
-                
+                    hash = hash * 59 + this.Queue.GetHashCode();
                 if (this.FlowConfigId != null)
-                    hash = hash * 57 + this.FlowConfigId.GetHashCode();
-                
+                    hash = hash * 59 + this.FlowConfigId.GetHashCode();
                 if (this.Workspace != null)
-                    hash = hash * 57 + this.Workspace.GetHashCode();
-                
+                    hash = hash * 59 + this.Workspace.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

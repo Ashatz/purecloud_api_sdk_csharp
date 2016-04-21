@@ -4,38 +4,46 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class BackendFlowAvailableActions :  IEquatable<BackendFlowAvailableActions>
-    {
+    public partial class BackendFlowAvailableActions :  IEquatable<BackendFlowAvailableActions>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="BackendFlowAvailableActions" /> class.
+        /// Initializes a new instance of the <see cref="BackendFlowAvailableActions" />class.
         /// </summary>
-        public BackendFlowAvailableActions()
+        /// <param name="CanTerminate">CanTerminate (default to false).</param>
+
+        public BackendFlowAvailableActions(bool? CanTerminate = null)
         {
-            this.CanTerminate = false;
+            // use default value if no "CanTerminate" provided
+            if (CanTerminate == null)
+            {
+                this.CanTerminate = false;
+            }
+            else
+            {
+                this.CanTerminate = CanTerminate;
+            }
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets CanTerminate
         /// </summary>
         [DataMember(Name="canTerminate", EmitDefaultValue=false)]
         public bool? CanTerminate { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -45,11 +53,10 @@ namespace ININ.PureCloudApi.Model
             var sb = new StringBuilder();
             sb.Append("class BackendFlowAvailableActions {\n");
             sb.Append("  CanTerminate: ").Append(CanTerminate).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -73,7 +80,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if BackendFlowAvailableActions instances are equal
         /// </summary>
-        /// <param name="obj">Instance of BackendFlowAvailableActions to be compared</param>
+        /// <param name="other">Instance of BackendFlowAvailableActions to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(BackendFlowAvailableActions other)
         {
@@ -81,7 +88,7 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.CanTerminate == other.CanTerminate ||
                     this.CanTerminate != null &&
@@ -100,15 +107,11 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.CanTerminate != null)
-                    hash = hash * 57 + this.CanTerminate.GetHashCode();
-                
+                    hash = hash * 59 + this.CanTerminate.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

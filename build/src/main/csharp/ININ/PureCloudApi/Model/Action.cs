@@ -4,58 +4,62 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class Action :  IEquatable<Action>
-    {
+    public partial class Action :  IEquatable<Action>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="Action" /> class.
+        /// Initializes a new instance of the <see cref="Action" />class.
         /// </summary>
-        public Action()
+        /// <param name="Type">Type.</param>
+        /// <param name="ActionTypeName">ActionTypeName.</param>
+        /// <param name="UpdateOption">UpdateOption.</param>
+        /// <param name="Properties">Properties.</param>
+
+        public Action(string Type = null, string ActionTypeName = null, string UpdateOption = null, Dictionary<string, string> Properties = null)
         {
+            this.Type = Type;
+            this.ActionTypeName = ActionTypeName;
+            this.UpdateOption = UpdateOption;
+            this.Properties = Properties;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public string Type { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ActionTypeName
         /// </summary>
         [DataMember(Name="actionTypeName", EmitDefaultValue=false)]
         public string ActionTypeName { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets UpdateOption
         /// </summary>
         [DataMember(Name="updateOption", EmitDefaultValue=false)]
         public string UpdateOption { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Properties
         /// </summary>
         [DataMember(Name="properties", EmitDefaultValue=false)]
         public Dictionary<string, string> Properties { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -68,11 +72,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  ActionTypeName: ").Append(ActionTypeName).Append("\n");
             sb.Append("  UpdateOption: ").Append(UpdateOption).Append("\n");
             sb.Append("  Properties: ").Append(Properties).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -96,7 +99,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if Action instances are equal
         /// </summary>
-        /// <param name="obj">Instance of Action to be compared</param>
+        /// <param name="other">Instance of Action to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(Action other)
         {
@@ -104,22 +107,22 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Type == other.Type ||
                     this.Type != null &&
                     this.Type.Equals(other.Type)
-                ) && 
+                ) &&
                 (
                     this.ActionTypeName == other.ActionTypeName ||
                     this.ActionTypeName != null &&
                     this.ActionTypeName.Equals(other.ActionTypeName)
-                ) && 
+                ) &&
                 (
                     this.UpdateOption == other.UpdateOption ||
                     this.UpdateOption != null &&
                     this.UpdateOption.Equals(other.UpdateOption)
-                ) && 
+                ) &&
                 (
                     this.Properties == other.Properties ||
                     this.Properties != null &&
@@ -138,24 +141,17 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Type != null)
-                    hash = hash * 57 + this.Type.GetHashCode();
-                
+                    hash = hash * 59 + this.Type.GetHashCode();
                 if (this.ActionTypeName != null)
-                    hash = hash * 57 + this.ActionTypeName.GetHashCode();
-                
+                    hash = hash * 59 + this.ActionTypeName.GetHashCode();
                 if (this.UpdateOption != null)
-                    hash = hash * 57 + this.UpdateOption.GetHashCode();
-                
+                    hash = hash * 59 + this.UpdateOption.GetHashCode();
                 if (this.Properties != null)
-                    hash = hash * 57 + this.Properties.GetHashCode();
-                
+                    hash = hash * 59 + this.Properties.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

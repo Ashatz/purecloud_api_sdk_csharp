@@ -4,44 +4,61 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class CreateShareRequestMember :  IEquatable<CreateShareRequestMember>
-    {
+    public partial class CreateShareRequestMember :  IEquatable<CreateShareRequestMember>
+    { 
+
         /// <summary>
-        /// Initializes a new instance of the <see cref="CreateShareRequestMember" /> class.
+        /// Gets or Sets MemberType
         /// </summary>
-        public CreateShareRequestMember()
-        {
+        [JsonConverter(typeof(StringEnumConverter))]
+                public enum MemberTypeEnum {
             
+            [EnumMember(Value = "USER")]
+            User,
+            
+            [EnumMember(Value = "PUBLIC")]
+            Public
         }
 
         
+
         /// <summary>
         /// Gets or Sets MemberType
         /// </summary>
         [DataMember(Name="memberType", EmitDefaultValue=false)]
-        public string MemberType { get; set; }
-  
-        
+        public MemberTypeEnum? MemberType { get; set; }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CreateShareRequestMember" />class.
+        /// </summary>
+        /// <param name="MemberType">MemberType.</param>
+        /// <param name="Member">Member.</param>
+
+        public CreateShareRequestMember(MemberTypeEnum? MemberType = null, Entity Member = null)
+        {
+            this.MemberType = MemberType;
+            this.Member = Member;
+            
+        }
+
+    
         /// <summary>
         /// Gets or Sets Member
         /// </summary>
         [DataMember(Name="member", EmitDefaultValue=false)]
         public Entity Member { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -52,11 +69,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class CreateShareRequestMember {\n");
             sb.Append("  MemberType: ").Append(MemberType).Append("\n");
             sb.Append("  Member: ").Append(Member).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -80,7 +96,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if CreateShareRequestMember instances are equal
         /// </summary>
-        /// <param name="obj">Instance of CreateShareRequestMember to be compared</param>
+        /// <param name="other">Instance of CreateShareRequestMember to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(CreateShareRequestMember other)
         {
@@ -88,12 +104,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.MemberType == other.MemberType ||
                     this.MemberType != null &&
                     this.MemberType.Equals(other.MemberType)
-                ) && 
+                ) &&
                 (
                     this.Member == other.Member ||
                     this.Member != null &&
@@ -112,18 +128,13 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.MemberType != null)
-                    hash = hash * 57 + this.MemberType.GetHashCode();
-                
+                    hash = hash * 59 + this.MemberType.GetHashCode();
                 if (this.Member != null)
-                    hash = hash * 57 + this.Member.GetHashCode();
-                
+                    hash = hash * 59 + this.Member.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

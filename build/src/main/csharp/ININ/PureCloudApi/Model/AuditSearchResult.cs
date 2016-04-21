@@ -4,72 +4,78 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class AuditSearchResult :  IEquatable<AuditSearchResult>
-    {
+    public partial class AuditSearchResult :  IEquatable<AuditSearchResult>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="AuditSearchResult" /> class.
+        /// Initializes a new instance of the <see cref="AuditSearchResult" />class.
         /// </summary>
-        public AuditSearchResult()
+        /// <param name="PageNumber">PageNumber.</param>
+        /// <param name="PageSize">PageSize.</param>
+        /// <param name="Total">Total.</param>
+        /// <param name="PageCount">PageCount.</param>
+        /// <param name="FacetInfo">FacetInfo.</param>
+        /// <param name="AuditMessages">AuditMessages.</param>
+
+        public AuditSearchResult(int? PageNumber = null, int? PageSize = null, int? Total = null, int? PageCount = null, List<FacetInfo> FacetInfo = null, List<AuditMessage> AuditMessages = null)
         {
+            this.PageNumber = PageNumber;
+            this.PageSize = PageSize;
+            this.Total = Total;
+            this.PageCount = PageCount;
+            this.FacetInfo = FacetInfo;
+            this.AuditMessages = AuditMessages;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets PageNumber
         /// </summary>
         [DataMember(Name="pageNumber", EmitDefaultValue=false)]
         public int? PageNumber { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets PageSize
         /// </summary>
         [DataMember(Name="pageSize", EmitDefaultValue=false)]
         public int? PageSize { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Total
         /// </summary>
         [DataMember(Name="total", EmitDefaultValue=false)]
         public int? Total { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets PageCount
         /// </summary>
         [DataMember(Name="pageCount", EmitDefaultValue=false)]
         public int? PageCount { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets FacetInfo
         /// </summary>
         [DataMember(Name="facetInfo", EmitDefaultValue=false)]
         public List<FacetInfo> FacetInfo { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets AuditMessages
         /// </summary>
         [DataMember(Name="auditMessages", EmitDefaultValue=false)]
         public List<AuditMessage> AuditMessages { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -84,11 +90,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  PageCount: ").Append(PageCount).Append("\n");
             sb.Append("  FacetInfo: ").Append(FacetInfo).Append("\n");
             sb.Append("  AuditMessages: ").Append(AuditMessages).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -112,7 +117,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if AuditSearchResult instances are equal
         /// </summary>
-        /// <param name="obj">Instance of AuditSearchResult to be compared</param>
+        /// <param name="other">Instance of AuditSearchResult to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(AuditSearchResult other)
         {
@@ -120,32 +125,32 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.PageNumber == other.PageNumber ||
                     this.PageNumber != null &&
                     this.PageNumber.Equals(other.PageNumber)
-                ) && 
+                ) &&
                 (
                     this.PageSize == other.PageSize ||
                     this.PageSize != null &&
                     this.PageSize.Equals(other.PageSize)
-                ) && 
+                ) &&
                 (
                     this.Total == other.Total ||
                     this.Total != null &&
                     this.Total.Equals(other.Total)
-                ) && 
+                ) &&
                 (
                     this.PageCount == other.PageCount ||
                     this.PageCount != null &&
                     this.PageCount.Equals(other.PageCount)
-                ) && 
+                ) &&
                 (
                     this.FacetInfo == other.FacetInfo ||
                     this.FacetInfo != null &&
                     this.FacetInfo.SequenceEqual(other.FacetInfo)
-                ) && 
+                ) &&
                 (
                     this.AuditMessages == other.AuditMessages ||
                     this.AuditMessages != null &&
@@ -164,30 +169,21 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.PageNumber != null)
-                    hash = hash * 57 + this.PageNumber.GetHashCode();
-                
+                    hash = hash * 59 + this.PageNumber.GetHashCode();
                 if (this.PageSize != null)
-                    hash = hash * 57 + this.PageSize.GetHashCode();
-                
+                    hash = hash * 59 + this.PageSize.GetHashCode();
                 if (this.Total != null)
-                    hash = hash * 57 + this.Total.GetHashCode();
-                
+                    hash = hash * 59 + this.Total.GetHashCode();
                 if (this.PageCount != null)
-                    hash = hash * 57 + this.PageCount.GetHashCode();
-                
+                    hash = hash * 59 + this.PageCount.GetHashCode();
                 if (this.FacetInfo != null)
-                    hash = hash * 57 + this.FacetInfo.GetHashCode();
-                
+                    hash = hash * 59 + this.FacetInfo.GetHashCode();
                 if (this.AuditMessages != null)
-                    hash = hash * 57 + this.AuditMessages.GetHashCode();
-                
+                    hash = hash * 59 + this.AuditMessages.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

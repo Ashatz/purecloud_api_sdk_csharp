@@ -4,37 +4,38 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class UnreadMetric :  IEquatable<UnreadMetric>
-    {
+    public partial class UnreadMetric :  IEquatable<UnreadMetric>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="UnreadMetric" /> class.
+        /// Initializes a new instance of the <see cref="UnreadMetric" />class.
         /// </summary>
-        public UnreadMetric()
+        /// <param name="Count">Count.</param>
+
+        public UnreadMetric(int? Count = null)
         {
+            this.Count = Count;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets Count
         /// </summary>
         [DataMember(Name="count", EmitDefaultValue=false)]
         public int? Count { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -44,11 +45,10 @@ namespace ININ.PureCloudApi.Model
             var sb = new StringBuilder();
             sb.Append("class UnreadMetric {\n");
             sb.Append("  Count: ").Append(Count).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -72,7 +72,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if UnreadMetric instances are equal
         /// </summary>
-        /// <param name="obj">Instance of UnreadMetric to be compared</param>
+        /// <param name="other">Instance of UnreadMetric to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(UnreadMetric other)
         {
@@ -80,7 +80,7 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Count == other.Count ||
                     this.Count != null &&
@@ -99,15 +99,11 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Count != null)
-                    hash = hash * 57 + this.Count.GetHashCode();
-                
+                    hash = hash * 59 + this.Count.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

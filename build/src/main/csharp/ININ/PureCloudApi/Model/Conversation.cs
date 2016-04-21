@@ -4,98 +4,122 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class Conversation :  IEquatable<Conversation>
-    {
+    public partial class Conversation :  IEquatable<Conversation>
+    { 
+
         /// <summary>
-        /// Initializes a new instance of the <see cref="Conversation" /> class.
+        /// On update, 'paused' initiates a secure pause, 'active' resumes any paused recordings; otherwise indicates state of conversation recording
         /// </summary>
-        public Conversation()
-        {
+        /// <value>On update, 'paused' initiates a secure pause, 'active' resumes any paused recordings; otherwise indicates state of conversation recording</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+                public enum RecordingStateEnum {
             
+            [EnumMember(Value = "ACTIVE")]
+            Active,
+            
+            [EnumMember(Value = "PAUSED")]
+            Paused,
+            
+            [EnumMember(Value = "NONE")]
+            None
         }
 
         
+
+        /// <summary>
+        /// On update, 'paused' initiates a secure pause, 'active' resumes any paused recordings; otherwise indicates state of conversation recording
+        /// </summary>
+        /// <value>On update, 'paused' initiates a secure pause, 'active' resumes any paused recordings; otherwise indicates state of conversation recording</value>
+        [DataMember(Name="recordingState", EmitDefaultValue=false)]
+        public RecordingStateEnum? RecordingState { get; set; }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Conversation" />class.
+        /// </summary>
+        /// <param name="Name">Name.</param>
+        /// <param name="StartTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="EndTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="Participants">Participants.</param>
+        /// <param name="ConversationIds">ConversationIds.</param>
+        /// <param name="MaxParticipants">MaxParticipants.</param>
+        /// <param name="RecordingState">On update, &#39;paused&#39; initiates a secure pause, &#39;active&#39; resumes any paused recordings; otherwise indicates state of conversation recording.</param>
+
+        public Conversation(string Name = null, DateTime? StartTime = null, DateTime? EndTime = null, List<Participant> Participants = null, List<string> ConversationIds = null, int? MaxParticipants = null, RecordingStateEnum? RecordingState = null)
+        {
+            this.Name = Name;
+            this.StartTime = StartTime;
+            this.EndTime = EndTime;
+            this.Participants = Participants;
+            this.ConversationIds = ConversationIds;
+            this.MaxParticipants = MaxParticipants;
+            this.RecordingState = RecordingState;
+            
+        }
+
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="startTime", EmitDefaultValue=false)]
         public DateTime? StartTime { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="endTime", EmitDefaultValue=false)]
         public DateTime? EndTime { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Participants
         /// </summary>
         [DataMember(Name="participants", EmitDefaultValue=false)]
         public List<Participant> Participants { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ConversationIds
         /// </summary>
         [DataMember(Name="conversationIds", EmitDefaultValue=false)]
         public List<string> ConversationIds { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets MaxParticipants
         /// </summary>
         [DataMember(Name="maxParticipants", EmitDefaultValue=false)]
         public int? MaxParticipants { get; set; }
-  
-        
-        /// <summary>
-        /// On update, 'paused' initiates a secure pause, 'active' resumes any paused recordings; otherwise indicates state of conversation recording
-        /// </summary>
-        /// <value>On update, 'paused' initiates a secure pause, 'active' resumes any paused recordings; otherwise indicates state of conversation recording</value>
-        [DataMember(Name="recordingState", EmitDefaultValue=false)]
-        public string RecordingState { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -113,11 +137,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  MaxParticipants: ").Append(MaxParticipants).Append("\n");
             sb.Append("  RecordingState: ").Append(RecordingState).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -141,7 +164,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if Conversation instances are equal
         /// </summary>
-        /// <param name="obj">Instance of Conversation to be compared</param>
+        /// <param name="other">Instance of Conversation to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(Conversation other)
         {
@@ -149,47 +172,47 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.StartTime == other.StartTime ||
                     this.StartTime != null &&
                     this.StartTime.Equals(other.StartTime)
-                ) && 
+                ) &&
                 (
                     this.EndTime == other.EndTime ||
                     this.EndTime != null &&
                     this.EndTime.Equals(other.EndTime)
-                ) && 
+                ) &&
                 (
                     this.Participants == other.Participants ||
                     this.Participants != null &&
                     this.Participants.SequenceEqual(other.Participants)
-                ) && 
+                ) &&
                 (
                     this.ConversationIds == other.ConversationIds ||
                     this.ConversationIds != null &&
                     this.ConversationIds.SequenceEqual(other.ConversationIds)
-                ) && 
+                ) &&
                 (
                     this.MaxParticipants == other.MaxParticipants ||
                     this.MaxParticipants != null &&
                     this.MaxParticipants.Equals(other.MaxParticipants)
-                ) && 
+                ) &&
                 (
                     this.RecordingState == other.RecordingState ||
                     this.RecordingState != null &&
                     this.RecordingState.Equals(other.RecordingState)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
@@ -208,39 +231,27 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
-                
+                    hash = hash * 59 + this.Id.GetHashCode();
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
-                
+                    hash = hash * 59 + this.Name.GetHashCode();
                 if (this.StartTime != null)
-                    hash = hash * 57 + this.StartTime.GetHashCode();
-                
+                    hash = hash * 59 + this.StartTime.GetHashCode();
                 if (this.EndTime != null)
-                    hash = hash * 57 + this.EndTime.GetHashCode();
-                
+                    hash = hash * 59 + this.EndTime.GetHashCode();
                 if (this.Participants != null)
-                    hash = hash * 57 + this.Participants.GetHashCode();
-                
+                    hash = hash * 59 + this.Participants.GetHashCode();
                 if (this.ConversationIds != null)
-                    hash = hash * 57 + this.ConversationIds.GetHashCode();
-                
+                    hash = hash * 59 + this.ConversationIds.GetHashCode();
                 if (this.MaxParticipants != null)
-                    hash = hash * 57 + this.MaxParticipants.GetHashCode();
-                
+                    hash = hash * 59 + this.MaxParticipants.GetHashCode();
                 if (this.RecordingState != null)
-                    hash = hash * 57 + this.RecordingState.GetHashCode();
-                
+                    hash = hash * 59 + this.RecordingState.GetHashCode();
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
-                
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

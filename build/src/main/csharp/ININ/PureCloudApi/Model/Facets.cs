@@ -4,44 +4,46 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class Facets :  IEquatable<Facets>
-    {
+    public partial class Facets :  IEquatable<Facets>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="Facets" /> class.
+        /// Initializes a new instance of the <see cref="Facets" />class.
         /// </summary>
-        public Facets()
+        /// <param name="Count">Count.</param>
+        /// <param name="FacetGroups">FacetGroups.</param>
+
+        public Facets(int? Count = null, List<FacetGroup> FacetGroups = null)
         {
+            this.Count = Count;
+            this.FacetGroups = FacetGroups;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets Count
         /// </summary>
         [DataMember(Name="count", EmitDefaultValue=false)]
         public int? Count { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets FacetGroups
         /// </summary>
         [DataMember(Name="facetGroups", EmitDefaultValue=false)]
         public List<FacetGroup> FacetGroups { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -52,11 +54,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class Facets {\n");
             sb.Append("  Count: ").Append(Count).Append("\n");
             sb.Append("  FacetGroups: ").Append(FacetGroups).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -80,7 +81,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if Facets instances are equal
         /// </summary>
-        /// <param name="obj">Instance of Facets to be compared</param>
+        /// <param name="other">Instance of Facets to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(Facets other)
         {
@@ -88,12 +89,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Count == other.Count ||
                     this.Count != null &&
                     this.Count.Equals(other.Count)
-                ) && 
+                ) &&
                 (
                     this.FacetGroups == other.FacetGroups ||
                     this.FacetGroups != null &&
@@ -112,18 +113,13 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Count != null)
-                    hash = hash * 57 + this.Count.GetHashCode();
-                
+                    hash = hash * 59 + this.Count.GetHashCode();
                 if (this.FacetGroups != null)
-                    hash = hash * 57 + this.FacetGroups.GetHashCode();
-                
+                    hash = hash * 59 + this.FacetGroups.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

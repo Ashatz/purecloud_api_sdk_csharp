@@ -4,60 +4,64 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class EdgeAutoUpdateConfig :  IEquatable<EdgeAutoUpdateConfig>
-    {
+    public partial class EdgeAutoUpdateConfig :  IEquatable<EdgeAutoUpdateConfig>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="EdgeAutoUpdateConfig" /> class.
+        /// Initializes a new instance of the <see cref="EdgeAutoUpdateConfig" />class.
         /// </summary>
-        public EdgeAutoUpdateConfig()
+        /// <param name="TimeZone">TimeZone.</param>
+        /// <param name="Rrule">Rrule.</param>
+        /// <param name="Start">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="End">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+
+        public EdgeAutoUpdateConfig(string TimeZone = null, string Rrule = null, DateTime? Start = null, DateTime? End = null)
         {
+            this.TimeZone = TimeZone;
+            this.Rrule = Rrule;
+            this.Start = Start;
+            this.End = End;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets TimeZone
         /// </summary>
         [DataMember(Name="timeZone", EmitDefaultValue=false)]
         public string TimeZone { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Rrule
         /// </summary>
         [DataMember(Name="rrule", EmitDefaultValue=false)]
         public string Rrule { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="start", EmitDefaultValue=false)]
         public DateTime? Start { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="end", EmitDefaultValue=false)]
         public DateTime? End { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -70,11 +74,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Rrule: ").Append(Rrule).Append("\n");
             sb.Append("  Start: ").Append(Start).Append("\n");
             sb.Append("  End: ").Append(End).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -98,7 +101,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if EdgeAutoUpdateConfig instances are equal
         /// </summary>
-        /// <param name="obj">Instance of EdgeAutoUpdateConfig to be compared</param>
+        /// <param name="other">Instance of EdgeAutoUpdateConfig to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(EdgeAutoUpdateConfig other)
         {
@@ -106,22 +109,22 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.TimeZone == other.TimeZone ||
                     this.TimeZone != null &&
                     this.TimeZone.Equals(other.TimeZone)
-                ) && 
+                ) &&
                 (
                     this.Rrule == other.Rrule ||
                     this.Rrule != null &&
                     this.Rrule.Equals(other.Rrule)
-                ) && 
+                ) &&
                 (
                     this.Start == other.Start ||
                     this.Start != null &&
                     this.Start.Equals(other.Start)
-                ) && 
+                ) &&
                 (
                     this.End == other.End ||
                     this.End != null &&
@@ -140,24 +143,17 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.TimeZone != null)
-                    hash = hash * 57 + this.TimeZone.GetHashCode();
-                
+                    hash = hash * 59 + this.TimeZone.GetHashCode();
                 if (this.Rrule != null)
-                    hash = hash * 57 + this.Rrule.GetHashCode();
-                
+                    hash = hash * 59 + this.Rrule.GetHashCode();
                 if (this.Start != null)
-                    hash = hash * 57 + this.Start.GetHashCode();
-                
+                    hash = hash * 59 + this.Start.GetHashCode();
                 if (this.End != null)
-                    hash = hash * 57 + this.End.GetHashCode();
-                
+                    hash = hash * 59 + this.End.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

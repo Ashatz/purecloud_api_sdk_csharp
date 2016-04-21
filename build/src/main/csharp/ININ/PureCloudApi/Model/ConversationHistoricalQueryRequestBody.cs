@@ -4,58 +4,62 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class ConversationHistoricalQueryRequestBody :  IEquatable<ConversationHistoricalQueryRequestBody>
-    {
+    public partial class ConversationHistoricalQueryRequestBody :  IEquatable<ConversationHistoricalQueryRequestBody>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="ConversationHistoricalQueryRequestBody" /> class.
+        /// Initializes a new instance of the <see cref="ConversationHistoricalQueryRequestBody" />class.
         /// </summary>
-        public ConversationHistoricalQueryRequestBody()
+        /// <param name="PageSize">PageSize.</param>
+        /// <param name="Maximum">Maximum.</param>
+        /// <param name="Filters">Filters.</param>
+        /// <param name="Facets">Facets.</param>
+
+        public ConversationHistoricalQueryRequestBody(int? PageSize = null, int? Maximum = null, List<ConversationHistoricalQueryRequestFilter> Filters = null, List<string> Facets = null)
         {
+            this.PageSize = PageSize;
+            this.Maximum = Maximum;
+            this.Filters = Filters;
+            this.Facets = Facets;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets PageSize
         /// </summary>
         [DataMember(Name="pageSize", EmitDefaultValue=false)]
         public int? PageSize { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Maximum
         /// </summary>
         [DataMember(Name="maximum", EmitDefaultValue=false)]
         public int? Maximum { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Filters
         /// </summary>
         [DataMember(Name="filters", EmitDefaultValue=false)]
         public List<ConversationHistoricalQueryRequestFilter> Filters { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Facets
         /// </summary>
         [DataMember(Name="facets", EmitDefaultValue=false)]
         public List<string> Facets { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -68,11 +72,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Maximum: ").Append(Maximum).Append("\n");
             sb.Append("  Filters: ").Append(Filters).Append("\n");
             sb.Append("  Facets: ").Append(Facets).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -96,7 +99,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if ConversationHistoricalQueryRequestBody instances are equal
         /// </summary>
-        /// <param name="obj">Instance of ConversationHistoricalQueryRequestBody to be compared</param>
+        /// <param name="other">Instance of ConversationHistoricalQueryRequestBody to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(ConversationHistoricalQueryRequestBody other)
         {
@@ -104,22 +107,22 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.PageSize == other.PageSize ||
                     this.PageSize != null &&
                     this.PageSize.Equals(other.PageSize)
-                ) && 
+                ) &&
                 (
                     this.Maximum == other.Maximum ||
                     this.Maximum != null &&
                     this.Maximum.Equals(other.Maximum)
-                ) && 
+                ) &&
                 (
                     this.Filters == other.Filters ||
                     this.Filters != null &&
                     this.Filters.SequenceEqual(other.Filters)
-                ) && 
+                ) &&
                 (
                     this.Facets == other.Facets ||
                     this.Facets != null &&
@@ -138,24 +141,17 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.PageSize != null)
-                    hash = hash * 57 + this.PageSize.GetHashCode();
-                
+                    hash = hash * 59 + this.PageSize.GetHashCode();
                 if (this.Maximum != null)
-                    hash = hash * 57 + this.Maximum.GetHashCode();
-                
+                    hash = hash * 59 + this.Maximum.GetHashCode();
                 if (this.Filters != null)
-                    hash = hash * 57 + this.Filters.GetHashCode();
-                
+                    hash = hash * 59 + this.Filters.GetHashCode();
                 if (this.Facets != null)
-                    hash = hash * 57 + this.Facets.GetHashCode();
-                
+                    hash = hash * 59 + this.Facets.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

@@ -4,37 +4,38 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class WorkspaceSummary :  IEquatable<WorkspaceSummary>
-    {
+    public partial class WorkspaceSummary :  IEquatable<WorkspaceSummary>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="WorkspaceSummary" /> class.
+        /// Initializes a new instance of the <see cref="WorkspaceSummary" />class.
         /// </summary>
-        public WorkspaceSummary()
+        /// <param name="TotalDocumentCount">TotalDocumentCount.</param>
+
+        public WorkspaceSummary(long? TotalDocumentCount = null)
         {
+            this.TotalDocumentCount = TotalDocumentCount;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets TotalDocumentCount
         /// </summary>
         [DataMember(Name="totalDocumentCount", EmitDefaultValue=false)]
         public long? TotalDocumentCount { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -44,11 +45,10 @@ namespace ININ.PureCloudApi.Model
             var sb = new StringBuilder();
             sb.Append("class WorkspaceSummary {\n");
             sb.Append("  TotalDocumentCount: ").Append(TotalDocumentCount).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -72,7 +72,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if WorkspaceSummary instances are equal
         /// </summary>
-        /// <param name="obj">Instance of WorkspaceSummary to be compared</param>
+        /// <param name="other">Instance of WorkspaceSummary to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(WorkspaceSummary other)
         {
@@ -80,7 +80,7 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.TotalDocumentCount == other.TotalDocumentCount ||
                     this.TotalDocumentCount != null &&
@@ -99,15 +99,11 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.TotalDocumentCount != null)
-                    hash = hash * 57 + this.TotalDocumentCount.GetHashCode();
-                
+                    hash = hash * 59 + this.TotalDocumentCount.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

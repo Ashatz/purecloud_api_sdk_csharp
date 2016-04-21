@@ -1,40 +1,29 @@
 using System;
-using System.IO;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using RestSharp;
 using ININ.PureCloudApi.Client;
 using ININ.PureCloudApi.Model;
 
-
 namespace ININ.PureCloudApi.Api
 {
-    
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
     public interface ILicensingApi
     {
-        
+        #region Synchronous Operations
         /// <summary>
         /// Get Licenses required for a set of permissions.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
-        /// <param name="permission">Permission</param>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="permission">Permission (optional)</param>
         /// <returns>List&lt;License&gt;</returns>
         List<License> LicensingLicensesGet (List<string> permission = null);
-  
-        /// <summary>
-        /// Get Licenses required for a set of permissions.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <param name="permission">Permission</param>
-        /// <returns>ApiResponse of List&lt;License&gt;</returns>
-        ApiResponse<List<License>> LicensingLicensesGetWithHttpInfo (List<string> permission = null);
 
         /// <summary>
         /// Get Licenses required for a set of permissions.
@@ -42,7 +31,121 @@ namespace ININ.PureCloudApi.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <param name="permission">Permission</param>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="permission">Permission (optional)</param>
+        /// <returns>ApiResponse of List&lt;License&gt;</returns>
+        ApiResponse<List<License>> LicensingLicensesGetWithHttpInfo (List<string> permission = null);
+        /// <summary>
+        /// Get org license assignments.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>OrgLicenseAssignment</returns>
+        OrgLicenseAssignment LicensingOrgassignmentsGet ();
+
+        /// <summary>
+        /// Get org license assignments.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of OrgLicenseAssignment</returns>
+        ApiResponse<OrgLicenseAssignment> LicensingOrgassignmentsGetWithHttpInfo ();
+        /// <summary>
+        /// Get org license assignment.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">ID</param>
+        /// <returns>OrgLicenseAssignment</returns>
+        OrgLicenseAssignment LicensingOrgassignmentsIdGet (string id);
+
+        /// <summary>
+        /// Get org license assignment.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">ID</param>
+        /// <returns>ApiResponse of OrgLicenseAssignment</returns>
+        ApiResponse<OrgLicenseAssignment> LicensingOrgassignmentsIdGetWithHttpInfo (string id);
+        /// <summary>
+        /// Get Licenses required per permission.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">ID (optional)</param>
+        /// <returns>List&lt;LicensesByPermission&gt;</returns>
+        List<LicensesByPermission> LicensingPermissionsGet (List<string> id = null);
+
+        /// <summary>
+        /// Get Licenses required per permission.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">ID (optional)</param>
+        /// <returns>ApiResponse of List&lt;LicensesByPermission&gt;</returns>
+        ApiResponse<List<LicensesByPermission>> LicensingPermissionsGetWithHttpInfo (List<string> id = null);
+        /// <summary>
+        /// Get user license assignments.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>UserLicenseAssignment</returns>
+        UserLicenseAssignment LicensingUserassignmentsGet ();
+
+        /// <summary>
+        /// Get user license assignments.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of UserLicenseAssignment</returns>
+        ApiResponse<UserLicenseAssignment> LicensingUserassignmentsGetWithHttpInfo ();
+        /// <summary>
+        /// Get user license assignment.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">ID</param>
+        /// <returns>UserLicenseAssignment</returns>
+        UserLicenseAssignment LicensingUserassignmentsIdGet (string id);
+
+        /// <summary>
+        /// Get user license assignment.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">ID</param>
+        /// <returns>ApiResponse of UserLicenseAssignment</returns>
+        ApiResponse<UserLicenseAssignment> LicensingUserassignmentsIdGetWithHttpInfo (string id);
+        #endregion Synchronous Operations
+        #region Asynchronous Operations
+        /// <summary>
+        /// Get Licenses required for a set of permissions.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="permission">Permission (optional)</param>
         /// <returns>Task of List&lt;License&gt;</returns>
         System.Threading.Tasks.Task<List<License>> LicensingLicensesGetAsync (List<string> permission = null);
 
@@ -52,34 +155,17 @@ namespace ININ.PureCloudApi.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <param name="permission">Permission</param>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="permission">Permission (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;License&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<License>>> LicensingLicensesGetAsyncWithHttpInfo (List<string> permission = null);
-        
         /// <summary>
         /// Get org license assignments.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
-        /// <returns>OrgLicenseAssignment</returns>
-        OrgLicenseAssignment LicensingOrgassignmentsGet ();
-  
-        /// <summary>
-        /// Get org license assignments.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <returns>ApiResponse of OrgLicenseAssignment</returns>
-        ApiResponse<OrgLicenseAssignment> LicensingOrgassignmentsGetWithHttpInfo ();
-
-        /// <summary>
-        /// Get org license assignments.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of OrgLicenseAssignment</returns>
         System.Threading.Tasks.Task<OrgLicenseAssignment> LicensingOrgassignmentsGetAsync ();
 
@@ -89,35 +175,16 @@ namespace ININ.PureCloudApi.Api
         /// <remarks>
         /// 
         /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (OrgLicenseAssignment)</returns>
         System.Threading.Tasks.Task<ApiResponse<OrgLicenseAssignment>> LicensingOrgassignmentsGetAsyncWithHttpInfo ();
-        
         /// <summary>
         /// Get org license assignment.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
-        /// <param name="id">ID</param>
-        /// <returns>OrgLicenseAssignment</returns>
-        OrgLicenseAssignment LicensingOrgassignmentsIdGet (string id);
-  
-        /// <summary>
-        /// Get org license assignment.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <param name="id">ID</param>
-        /// <returns>ApiResponse of OrgLicenseAssignment</returns>
-        ApiResponse<OrgLicenseAssignment> LicensingOrgassignmentsIdGetWithHttpInfo (string id);
-
-        /// <summary>
-        /// Get org license assignment.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID</param>
         /// <returns>Task of OrgLicenseAssignment</returns>
         System.Threading.Tasks.Task<OrgLicenseAssignment> LicensingOrgassignmentsIdGetAsync (string id);
@@ -128,37 +195,18 @@ namespace ININ.PureCloudApi.Api
         /// <remarks>
         /// 
         /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID</param>
         /// <returns>Task of ApiResponse (OrgLicenseAssignment)</returns>
         System.Threading.Tasks.Task<ApiResponse<OrgLicenseAssignment>> LicensingOrgassignmentsIdGetAsyncWithHttpInfo (string id);
-        
         /// <summary>
         /// Get Licenses required per permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
-        /// <param name="id">ID</param>
-        /// <returns>List&lt;LicensesByPermission&gt;</returns>
-        List<LicensesByPermission> LicensingPermissionsGet (List<string> id = null);
-  
-        /// <summary>
-        /// Get Licenses required per permission.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <param name="id">ID</param>
-        /// <returns>ApiResponse of List&lt;LicensesByPermission&gt;</returns>
-        ApiResponse<List<LicensesByPermission>> LicensingPermissionsGetWithHttpInfo (List<string> id = null);
-
-        /// <summary>
-        /// Get Licenses required per permission.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <param name="id">ID</param>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">ID (optional)</param>
         /// <returns>Task of List&lt;LicensesByPermission&gt;</returns>
         System.Threading.Tasks.Task<List<LicensesByPermission>> LicensingPermissionsGetAsync (List<string> id = null);
 
@@ -168,34 +216,17 @@ namespace ININ.PureCloudApi.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <param name="id">ID</param>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">ID (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;LicensesByPermission&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<LicensesByPermission>>> LicensingPermissionsGetAsyncWithHttpInfo (List<string> id = null);
-        
         /// <summary>
         /// Get user license assignments.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
-        /// <returns>UserLicenseAssignment</returns>
-        UserLicenseAssignment LicensingUserassignmentsGet ();
-  
-        /// <summary>
-        /// Get user license assignments.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <returns>ApiResponse of UserLicenseAssignment</returns>
-        ApiResponse<UserLicenseAssignment> LicensingUserassignmentsGetWithHttpInfo ();
-
-        /// <summary>
-        /// Get user license assignments.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of UserLicenseAssignment</returns>
         System.Threading.Tasks.Task<UserLicenseAssignment> LicensingUserassignmentsGetAsync ();
 
@@ -205,35 +236,16 @@ namespace ININ.PureCloudApi.Api
         /// <remarks>
         /// 
         /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (UserLicenseAssignment)</returns>
         System.Threading.Tasks.Task<ApiResponse<UserLicenseAssignment>> LicensingUserassignmentsGetAsyncWithHttpInfo ();
-        
         /// <summary>
         /// Get user license assignment.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
-        /// <param name="id">ID</param>
-        /// <returns>UserLicenseAssignment</returns>
-        UserLicenseAssignment LicensingUserassignmentsIdGet (string id);
-  
-        /// <summary>
-        /// Get user license assignment.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <param name="id">ID</param>
-        /// <returns>ApiResponse of UserLicenseAssignment</returns>
-        ApiResponse<UserLicenseAssignment> LicensingUserassignmentsIdGetWithHttpInfo (string id);
-
-        /// <summary>
-        /// Get user license assignment.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID</param>
         /// <returns>Task of UserLicenseAssignment</returns>
         System.Threading.Tasks.Task<UserLicenseAssignment> LicensingUserassignmentsIdGetAsync (string id);
@@ -244,12 +256,13 @@ namespace ININ.PureCloudApi.Api
         /// <remarks>
         /// 
         /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID</param>
         /// <returns>Task of ApiResponse (UserLicenseAssignment)</returns>
         System.Threading.Tasks.Task<ApiResponse<UserLicenseAssignment>> LicensingUserassignmentsIdGetAsyncWithHttpInfo (string id);
-        
+        #endregion Asynchronous Operations
     }
-  
+
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
@@ -262,8 +275,14 @@ namespace ININ.PureCloudApi.Api
         public LicensingApi(String basePath)
         {
             this.Configuration = new Configuration(new ApiClient(basePath));
+
+            // ensure API client has configuration ready
+            if (Configuration.ApiClient.Configuration == null)
+            {
+                this.Configuration.ApiClient.Configuration = this.Configuration;
+            }
         }
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="LicensingApi"/> class
         /// using Configuration object
@@ -273,9 +292,15 @@ namespace ININ.PureCloudApi.Api
         public LicensingApi(Configuration configuration = null)
         {
             if (configuration == null) // use the default one in Configuration
-                this.Configuration = Configuration.Default; 
+                this.Configuration = Configuration.Default;
             else
                 this.Configuration = configuration;
+
+            // ensure API client has configuration ready
+            if (Configuration.ApiClient.Configuration == null)
+            {
+                this.Configuration.ApiClient.Configuration = this.Configuration;
+            }
         }
 
         /// <summary>
@@ -296,7 +321,7 @@ namespace ININ.PureCloudApi.Api
         {
             // do nothing
         }
-    
+
         /// <summary>
         /// Gets or sets the configuration object
         /// </summary>
@@ -324,888 +349,888 @@ namespace ININ.PureCloudApi.Api
         {
             this.Configuration.AddDefaultHeader(key, value);
         }
-   
-        
+
         /// <summary>
         /// Get Licenses required for a set of permissions. 
         /// </summary>
-        /// <param name="permission">Permission</param> 
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="permission">Permission (optional)</param>
         /// <returns>List&lt;License&gt;</returns>
         public List<License> LicensingLicensesGet (List<string> permission = null)
         {
-             ApiResponse<List<License>> response = LicensingLicensesGetWithHttpInfo(permission);
-             return response.Data;
+             ApiResponse<List<License>> localVarResponse = LicensingLicensesGetWithHttpInfo(permission);
+             return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get Licenses required for a set of permissions. 
         /// </summary>
-        /// <param name="permission">Permission</param> 
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="permission">Permission (optional)</param>
         /// <returns>ApiResponse of List&lt;License&gt;</returns>
         public ApiResponse< List<License> > LicensingLicensesGetWithHttpInfo (List<string> permission = null)
         {
-            
-    
-            var path_ = "/api/v1/licensing/licenses";
-    
-            var pathParams = new Dictionary<String, String>();
-            var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var formParams = new Dictionary<String, String>();
-            var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            var localVarPath = "/api/v1/licensing/licenses";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            pathParams.Add("format", "json");
-            
-            if (permission != null) queryParams.Add("permission", Configuration.ApiClient.ParameterToString(permission)); // query parameter
-            
-            
-            
-            
+            localVarPathParams.Add("format", "json");
+            if (permission != null) localVarQueryParams.Add("permission", Configuration.ApiClient.ParameterToString(permission)); // query parameter
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-    
-            // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
 
-            int statusCode = (int) response.StatusCode;
-    
-            if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling LicensingLicensesGet: " + response.Content, response.Content);
-            else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling LicensingLicensesGet: " + response.ErrorMessage, response.ErrorMessage);
-    
-            return new ApiResponse<List<License>>(statusCode,
-                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<License>) Configuration.ApiClient.Deserialize(response, typeof(List<License>)));
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling LicensingLicensesGet: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling LicensingLicensesGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<List<License>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (List<License>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<License>)));
             
         }
-    
+
         /// <summary>
         /// Get Licenses required for a set of permissions. 
         /// </summary>
-        /// <param name="permission">Permission</param>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="permission">Permission (optional)</param>
         /// <returns>Task of List&lt;License&gt;</returns>
         public async System.Threading.Tasks.Task<List<License>> LicensingLicensesGetAsync (List<string> permission = null)
         {
-             ApiResponse<List<License>> response = await LicensingLicensesGetAsyncWithHttpInfo(permission);
-             return response.Data;
+             ApiResponse<List<License>> localVarResponse = await LicensingLicensesGetAsyncWithHttpInfo(permission);
+             return localVarResponse.Data;
 
         }
 
         /// <summary>
         /// Get Licenses required for a set of permissions. 
         /// </summary>
-        /// <param name="permission">Permission</param>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="permission">Permission (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;License&gt;)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<List<License>>> LicensingLicensesGetAsyncWithHttpInfo (List<string> permission = null)
         {
-            
-    
-            var path_ = "/api/v1/licensing/licenses";
-    
-            var pathParams = new Dictionary<String, String>();
-            var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
-            var formParams = new Dictionary<String, String>();
-            var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            var localVarPath = "/api/v1/licensing/licenses";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            pathParams.Add("format", "json");
-            
-            if (permission != null) queryParams.Add("permission", Configuration.ApiClient.ParameterToString(permission)); // query parameter
-            
-            
-            
-            
+            localVarPathParams.Add("format", "json");
+            if (permission != null) localVarQueryParams.Add("permission", Configuration.ApiClient.ParameterToString(permission)); // query parameter
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
 
-            int statusCode = (int) response.StatusCode;
- 
-            if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling LicensingLicensesGet: " + response.Content, response.Content);
-            else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling LicensingLicensesGet: " + response.ErrorMessage, response.ErrorMessage);
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            return new ApiResponse<List<License>>(statusCode,
-                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<License>) Configuration.ApiClient.Deserialize(response, typeof(List<License>)));
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling LicensingLicensesGet: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling LicensingLicensesGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<List<License>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (List<License>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<License>)));
             
         }
-        
+
         /// <summary>
         /// Get org license assignments. 
         /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>OrgLicenseAssignment</returns>
         public OrgLicenseAssignment LicensingOrgassignmentsGet ()
         {
-             ApiResponse<OrgLicenseAssignment> response = LicensingOrgassignmentsGetWithHttpInfo();
-             return response.Data;
+             ApiResponse<OrgLicenseAssignment> localVarResponse = LicensingOrgassignmentsGetWithHttpInfo();
+             return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get org license assignments. 
         /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of OrgLicenseAssignment</returns>
         public ApiResponse< OrgLicenseAssignment > LicensingOrgassignmentsGetWithHttpInfo ()
         {
-            
-    
-            var path_ = "/api/v1/licensing/orgassignments";
-    
-            var pathParams = new Dictionary<String, String>();
-            var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var formParams = new Dictionary<String, String>();
-            var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            var localVarPath = "/api/v1/licensing/orgassignments";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            pathParams.Add("format", "json");
-            
-            
-            
-            
-            
+            localVarPathParams.Add("format", "json");
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-    
-            // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
 
-            int statusCode = (int) response.StatusCode;
-    
-            if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling LicensingOrgassignmentsGet: " + response.Content, response.Content);
-            else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling LicensingOrgassignmentsGet: " + response.ErrorMessage, response.ErrorMessage);
-    
-            return new ApiResponse<OrgLicenseAssignment>(statusCode,
-                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (OrgLicenseAssignment) Configuration.ApiClient.Deserialize(response, typeof(OrgLicenseAssignment)));
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling LicensingOrgassignmentsGet: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling LicensingOrgassignmentsGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<OrgLicenseAssignment>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (OrgLicenseAssignment) Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrgLicenseAssignment)));
             
         }
-    
+
         /// <summary>
         /// Get org license assignments. 
         /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of OrgLicenseAssignment</returns>
         public async System.Threading.Tasks.Task<OrgLicenseAssignment> LicensingOrgassignmentsGetAsync ()
         {
-             ApiResponse<OrgLicenseAssignment> response = await LicensingOrgassignmentsGetAsyncWithHttpInfo();
-             return response.Data;
+             ApiResponse<OrgLicenseAssignment> localVarResponse = await LicensingOrgassignmentsGetAsyncWithHttpInfo();
+             return localVarResponse.Data;
 
         }
 
         /// <summary>
         /// Get org license assignments. 
         /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (OrgLicenseAssignment)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<OrgLicenseAssignment>> LicensingOrgassignmentsGetAsyncWithHttpInfo ()
         {
-            
-    
-            var path_ = "/api/v1/licensing/orgassignments";
-    
-            var pathParams = new Dictionary<String, String>();
-            var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
-            var formParams = new Dictionary<String, String>();
-            var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            var localVarPath = "/api/v1/licensing/orgassignments";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            pathParams.Add("format", "json");
-            
-            
-            
-            
-            
+            localVarPathParams.Add("format", "json");
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
 
-            int statusCode = (int) response.StatusCode;
- 
-            if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling LicensingOrgassignmentsGet: " + response.Content, response.Content);
-            else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling LicensingOrgassignmentsGet: " + response.ErrorMessage, response.ErrorMessage);
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            return new ApiResponse<OrgLicenseAssignment>(statusCode,
-                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (OrgLicenseAssignment) Configuration.ApiClient.Deserialize(response, typeof(OrgLicenseAssignment)));
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling LicensingOrgassignmentsGet: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling LicensingOrgassignmentsGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<OrgLicenseAssignment>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (OrgLicenseAssignment) Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrgLicenseAssignment)));
             
         }
-        
+
         /// <summary>
         /// Get org license assignment. 
         /// </summary>
-        /// <param name="id">ID</param> 
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">ID</param>
         /// <returns>OrgLicenseAssignment</returns>
         public OrgLicenseAssignment LicensingOrgassignmentsIdGet (string id)
         {
-             ApiResponse<OrgLicenseAssignment> response = LicensingOrgassignmentsIdGetWithHttpInfo(id);
-             return response.Data;
+             ApiResponse<OrgLicenseAssignment> localVarResponse = LicensingOrgassignmentsIdGetWithHttpInfo(id);
+             return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get org license assignment. 
         /// </summary>
-        /// <param name="id">ID</param> 
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">ID</param>
         /// <returns>ApiResponse of OrgLicenseAssignment</returns>
         public ApiResponse< OrgLicenseAssignment > LicensingOrgassignmentsIdGetWithHttpInfo (string id)
         {
-            
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling LicensingOrgassignmentsIdGet");
-            
-    
-            var path_ = "/api/v1/licensing/orgassignments/{id}";
-    
-            var pathParams = new Dictionary<String, String>();
-            var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var formParams = new Dictionary<String, String>();
-            var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling LicensingApi->LicensingOrgassignmentsIdGet");
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            var localVarPath = "/api/v1/licensing/orgassignments/{id}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            pathParams.Add("format", "json");
-            if (id != null) pathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-            
-            
-            
-            
-            
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-    
-            // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
 
-            int statusCode = (int) response.StatusCode;
-    
-            if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling LicensingOrgassignmentsIdGet: " + response.Content, response.Content);
-            else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling LicensingOrgassignmentsIdGet: " + response.ErrorMessage, response.ErrorMessage);
-    
-            return new ApiResponse<OrgLicenseAssignment>(statusCode,
-                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (OrgLicenseAssignment) Configuration.ApiClient.Deserialize(response, typeof(OrgLicenseAssignment)));
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling LicensingOrgassignmentsIdGet: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling LicensingOrgassignmentsIdGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<OrgLicenseAssignment>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (OrgLicenseAssignment) Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrgLicenseAssignment)));
             
         }
-    
+
         /// <summary>
         /// Get org license assignment. 
         /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID</param>
         /// <returns>Task of OrgLicenseAssignment</returns>
         public async System.Threading.Tasks.Task<OrgLicenseAssignment> LicensingOrgassignmentsIdGetAsync (string id)
         {
-             ApiResponse<OrgLicenseAssignment> response = await LicensingOrgassignmentsIdGetAsyncWithHttpInfo(id);
-             return response.Data;
+             ApiResponse<OrgLicenseAssignment> localVarResponse = await LicensingOrgassignmentsIdGetAsyncWithHttpInfo(id);
+             return localVarResponse.Data;
 
         }
 
         /// <summary>
         /// Get org license assignment. 
         /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID</param>
         /// <returns>Task of ApiResponse (OrgLicenseAssignment)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<OrgLicenseAssignment>> LicensingOrgassignmentsIdGetAsyncWithHttpInfo (string id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling LicensingOrgassignmentsIdGet");
-            
-    
-            var path_ = "/api/v1/licensing/orgassignments/{id}";
-    
-            var pathParams = new Dictionary<String, String>();
-            var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
-            var formParams = new Dictionary<String, String>();
-            var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling LicensingApi->LicensingOrgassignmentsIdGet");
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            var localVarPath = "/api/v1/licensing/orgassignments/{id}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            pathParams.Add("format", "json");
-            if (id != null) pathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-            
-            
-            
-            
-            
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
 
-            int statusCode = (int) response.StatusCode;
- 
-            if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling LicensingOrgassignmentsIdGet: " + response.Content, response.Content);
-            else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling LicensingOrgassignmentsIdGet: " + response.ErrorMessage, response.ErrorMessage);
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            return new ApiResponse<OrgLicenseAssignment>(statusCode,
-                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (OrgLicenseAssignment) Configuration.ApiClient.Deserialize(response, typeof(OrgLicenseAssignment)));
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling LicensingOrgassignmentsIdGet: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling LicensingOrgassignmentsIdGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<OrgLicenseAssignment>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (OrgLicenseAssignment) Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrgLicenseAssignment)));
             
         }
-        
+
         /// <summary>
         /// Get Licenses required per permission. 
         /// </summary>
-        /// <param name="id">ID</param> 
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">ID (optional)</param>
         /// <returns>List&lt;LicensesByPermission&gt;</returns>
         public List<LicensesByPermission> LicensingPermissionsGet (List<string> id = null)
         {
-             ApiResponse<List<LicensesByPermission>> response = LicensingPermissionsGetWithHttpInfo(id);
-             return response.Data;
+             ApiResponse<List<LicensesByPermission>> localVarResponse = LicensingPermissionsGetWithHttpInfo(id);
+             return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get Licenses required per permission. 
         /// </summary>
-        /// <param name="id">ID</param> 
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">ID (optional)</param>
         /// <returns>ApiResponse of List&lt;LicensesByPermission&gt;</returns>
         public ApiResponse< List<LicensesByPermission> > LicensingPermissionsGetWithHttpInfo (List<string> id = null)
         {
-            
-    
-            var path_ = "/api/v1/licensing/permissions";
-    
-            var pathParams = new Dictionary<String, String>();
-            var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var formParams = new Dictionary<String, String>();
-            var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            var localVarPath = "/api/v1/licensing/permissions";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            pathParams.Add("format", "json");
-            
-            if (id != null) queryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
-            
-            
-            
-            
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-    
-            // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
 
-            int statusCode = (int) response.StatusCode;
-    
-            if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling LicensingPermissionsGet: " + response.Content, response.Content);
-            else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling LicensingPermissionsGet: " + response.ErrorMessage, response.ErrorMessage);
-    
-            return new ApiResponse<List<LicensesByPermission>>(statusCode,
-                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<LicensesByPermission>) Configuration.ApiClient.Deserialize(response, typeof(List<LicensesByPermission>)));
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling LicensingPermissionsGet: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling LicensingPermissionsGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<List<LicensesByPermission>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (List<LicensesByPermission>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<LicensesByPermission>)));
             
         }
-    
+
         /// <summary>
         /// Get Licenses required per permission. 
         /// </summary>
-        /// <param name="id">ID</param>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">ID (optional)</param>
         /// <returns>Task of List&lt;LicensesByPermission&gt;</returns>
         public async System.Threading.Tasks.Task<List<LicensesByPermission>> LicensingPermissionsGetAsync (List<string> id = null)
         {
-             ApiResponse<List<LicensesByPermission>> response = await LicensingPermissionsGetAsyncWithHttpInfo(id);
-             return response.Data;
+             ApiResponse<List<LicensesByPermission>> localVarResponse = await LicensingPermissionsGetAsyncWithHttpInfo(id);
+             return localVarResponse.Data;
 
         }
 
         /// <summary>
         /// Get Licenses required per permission. 
         /// </summary>
-        /// <param name="id">ID</param>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">ID (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;LicensesByPermission&gt;)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<List<LicensesByPermission>>> LicensingPermissionsGetAsyncWithHttpInfo (List<string> id = null)
         {
-            
-    
-            var path_ = "/api/v1/licensing/permissions";
-    
-            var pathParams = new Dictionary<String, String>();
-            var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
-            var formParams = new Dictionary<String, String>();
-            var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            var localVarPath = "/api/v1/licensing/permissions";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            pathParams.Add("format", "json");
-            
-            if (id != null) queryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
-            
-            
-            
-            
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
 
-            int statusCode = (int) response.StatusCode;
- 
-            if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling LicensingPermissionsGet: " + response.Content, response.Content);
-            else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling LicensingPermissionsGet: " + response.ErrorMessage, response.ErrorMessage);
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            return new ApiResponse<List<LicensesByPermission>>(statusCode,
-                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<LicensesByPermission>) Configuration.ApiClient.Deserialize(response, typeof(List<LicensesByPermission>)));
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling LicensingPermissionsGet: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling LicensingPermissionsGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<List<LicensesByPermission>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (List<LicensesByPermission>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<LicensesByPermission>)));
             
         }
-        
+
         /// <summary>
         /// Get user license assignments. 
         /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>UserLicenseAssignment</returns>
         public UserLicenseAssignment LicensingUserassignmentsGet ()
         {
-             ApiResponse<UserLicenseAssignment> response = LicensingUserassignmentsGetWithHttpInfo();
-             return response.Data;
+             ApiResponse<UserLicenseAssignment> localVarResponse = LicensingUserassignmentsGetWithHttpInfo();
+             return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get user license assignments. 
         /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of UserLicenseAssignment</returns>
         public ApiResponse< UserLicenseAssignment > LicensingUserassignmentsGetWithHttpInfo ()
         {
-            
-    
-            var path_ = "/api/v1/licensing/userassignments";
-    
-            var pathParams = new Dictionary<String, String>();
-            var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var formParams = new Dictionary<String, String>();
-            var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            var localVarPath = "/api/v1/licensing/userassignments";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            pathParams.Add("format", "json");
-            
-            
-            
-            
-            
+            localVarPathParams.Add("format", "json");
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-    
-            // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
 
-            int statusCode = (int) response.StatusCode;
-    
-            if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling LicensingUserassignmentsGet: " + response.Content, response.Content);
-            else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling LicensingUserassignmentsGet: " + response.ErrorMessage, response.ErrorMessage);
-    
-            return new ApiResponse<UserLicenseAssignment>(statusCode,
-                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (UserLicenseAssignment) Configuration.ApiClient.Deserialize(response, typeof(UserLicenseAssignment)));
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling LicensingUserassignmentsGet: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling LicensingUserassignmentsGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UserLicenseAssignment>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (UserLicenseAssignment) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserLicenseAssignment)));
             
         }
-    
+
         /// <summary>
         /// Get user license assignments. 
         /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of UserLicenseAssignment</returns>
         public async System.Threading.Tasks.Task<UserLicenseAssignment> LicensingUserassignmentsGetAsync ()
         {
-             ApiResponse<UserLicenseAssignment> response = await LicensingUserassignmentsGetAsyncWithHttpInfo();
-             return response.Data;
+             ApiResponse<UserLicenseAssignment> localVarResponse = await LicensingUserassignmentsGetAsyncWithHttpInfo();
+             return localVarResponse.Data;
 
         }
 
         /// <summary>
         /// Get user license assignments. 
         /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (UserLicenseAssignment)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<UserLicenseAssignment>> LicensingUserassignmentsGetAsyncWithHttpInfo ()
         {
-            
-    
-            var path_ = "/api/v1/licensing/userassignments";
-    
-            var pathParams = new Dictionary<String, String>();
-            var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
-            var formParams = new Dictionary<String, String>();
-            var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            var localVarPath = "/api/v1/licensing/userassignments";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            pathParams.Add("format", "json");
-            
-            
-            
-            
-            
+            localVarPathParams.Add("format", "json");
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
 
-            int statusCode = (int) response.StatusCode;
- 
-            if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling LicensingUserassignmentsGet: " + response.Content, response.Content);
-            else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling LicensingUserassignmentsGet: " + response.ErrorMessage, response.ErrorMessage);
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            return new ApiResponse<UserLicenseAssignment>(statusCode,
-                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (UserLicenseAssignment) Configuration.ApiClient.Deserialize(response, typeof(UserLicenseAssignment)));
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling LicensingUserassignmentsGet: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling LicensingUserassignmentsGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UserLicenseAssignment>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (UserLicenseAssignment) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserLicenseAssignment)));
             
         }
-        
+
         /// <summary>
         /// Get user license assignment. 
         /// </summary>
-        /// <param name="id">ID</param> 
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">ID</param>
         /// <returns>UserLicenseAssignment</returns>
         public UserLicenseAssignment LicensingUserassignmentsIdGet (string id)
         {
-             ApiResponse<UserLicenseAssignment> response = LicensingUserassignmentsIdGetWithHttpInfo(id);
-             return response.Data;
+             ApiResponse<UserLicenseAssignment> localVarResponse = LicensingUserassignmentsIdGetWithHttpInfo(id);
+             return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get user license assignment. 
         /// </summary>
-        /// <param name="id">ID</param> 
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">ID</param>
         /// <returns>ApiResponse of UserLicenseAssignment</returns>
         public ApiResponse< UserLicenseAssignment > LicensingUserassignmentsIdGetWithHttpInfo (string id)
         {
-            
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling LicensingUserassignmentsIdGet");
-            
-    
-            var path_ = "/api/v1/licensing/userassignments/{id}";
-    
-            var pathParams = new Dictionary<String, String>();
-            var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var formParams = new Dictionary<String, String>();
-            var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling LicensingApi->LicensingUserassignmentsIdGet");
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            var localVarPath = "/api/v1/licensing/userassignments/{id}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            pathParams.Add("format", "json");
-            if (id != null) pathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-            
-            
-            
-            
-            
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-    
-            // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
 
-            int statusCode = (int) response.StatusCode;
-    
-            if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling LicensingUserassignmentsIdGet: " + response.Content, response.Content);
-            else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling LicensingUserassignmentsIdGet: " + response.ErrorMessage, response.ErrorMessage);
-    
-            return new ApiResponse<UserLicenseAssignment>(statusCode,
-                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (UserLicenseAssignment) Configuration.ApiClient.Deserialize(response, typeof(UserLicenseAssignment)));
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling LicensingUserassignmentsIdGet: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling LicensingUserassignmentsIdGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UserLicenseAssignment>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (UserLicenseAssignment) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserLicenseAssignment)));
             
         }
-    
+
         /// <summary>
         /// Get user license assignment. 
         /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID</param>
         /// <returns>Task of UserLicenseAssignment</returns>
         public async System.Threading.Tasks.Task<UserLicenseAssignment> LicensingUserassignmentsIdGetAsync (string id)
         {
-             ApiResponse<UserLicenseAssignment> response = await LicensingUserassignmentsIdGetAsyncWithHttpInfo(id);
-             return response.Data;
+             ApiResponse<UserLicenseAssignment> localVarResponse = await LicensingUserassignmentsIdGetAsyncWithHttpInfo(id);
+             return localVarResponse.Data;
 
         }
 
         /// <summary>
         /// Get user license assignment. 
         /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID</param>
         /// <returns>Task of ApiResponse (UserLicenseAssignment)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<UserLicenseAssignment>> LicensingUserassignmentsIdGetAsyncWithHttpInfo (string id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling LicensingUserassignmentsIdGet");
-            
-    
-            var path_ = "/api/v1/licensing/userassignments/{id}";
-    
-            var pathParams = new Dictionary<String, String>();
-            var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
-            var formParams = new Dictionary<String, String>();
-            var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling LicensingApi->LicensingUserassignmentsIdGet");
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            var localVarPath = "/api/v1/licensing/userassignments/{id}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            pathParams.Add("format", "json");
-            if (id != null) pathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-            
-            
-            
-            
-            
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
 
-            int statusCode = (int) response.StatusCode;
- 
-            if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling LicensingUserassignmentsIdGet: " + response.Content, response.Content);
-            else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling LicensingUserassignmentsIdGet: " + response.ErrorMessage, response.ErrorMessage);
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            return new ApiResponse<UserLicenseAssignment>(statusCode,
-                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (UserLicenseAssignment) Configuration.ApiClient.Deserialize(response, typeof(UserLicenseAssignment)));
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling LicensingUserassignmentsIdGet: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling LicensingUserassignmentsIdGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UserLicenseAssignment>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (UserLicenseAssignment) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserLicenseAssignment)));
             
         }
-        
+
     }
-    
 }

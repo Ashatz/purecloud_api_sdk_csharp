@@ -4,52 +4,62 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class DeltaResponse :  IEquatable<DeltaResponse>
-    {
+    public partial class DeltaResponse :  IEquatable<DeltaResponse>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="DeltaResponse" /> class.
+        /// Initializes a new instance of the <see cref="DeltaResponse" />class.
         /// </summary>
-        public DeltaResponse()
+        /// <param name="ContextToken">ContextToken.</param>
+        /// <param name="Documents">Documents.</param>
+        /// <param name="HasMore">HasMore (default to false).</param>
+
+        public DeltaResponse(string ContextToken = null, List<DeltaDocument> Documents = null, bool? HasMore = null)
         {
-            this.HasMore = false;
+            this.ContextToken = ContextToken;
+            this.Documents = Documents;
+            // use default value if no "HasMore" provided
+            if (HasMore == null)
+            {
+                this.HasMore = false;
+            }
+            else
+            {
+                this.HasMore = HasMore;
+            }
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets ContextToken
         /// </summary>
         [DataMember(Name="contextToken", EmitDefaultValue=false)]
         public string ContextToken { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Documents
         /// </summary>
         [DataMember(Name="documents", EmitDefaultValue=false)]
         public List<DeltaDocument> Documents { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets HasMore
         /// </summary>
         [DataMember(Name="hasMore", EmitDefaultValue=false)]
         public bool? HasMore { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -61,11 +71,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  ContextToken: ").Append(ContextToken).Append("\n");
             sb.Append("  Documents: ").Append(Documents).Append("\n");
             sb.Append("  HasMore: ").Append(HasMore).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -89,7 +98,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if DeltaResponse instances are equal
         /// </summary>
-        /// <param name="obj">Instance of DeltaResponse to be compared</param>
+        /// <param name="other">Instance of DeltaResponse to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(DeltaResponse other)
         {
@@ -97,17 +106,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.ContextToken == other.ContextToken ||
                     this.ContextToken != null &&
                     this.ContextToken.Equals(other.ContextToken)
-                ) && 
+                ) &&
                 (
                     this.Documents == other.Documents ||
                     this.Documents != null &&
                     this.Documents.SequenceEqual(other.Documents)
-                ) && 
+                ) &&
                 (
                     this.HasMore == other.HasMore ||
                     this.HasMore != null &&
@@ -126,21 +135,15 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ContextToken != null)
-                    hash = hash * 57 + this.ContextToken.GetHashCode();
-                
+                    hash = hash * 59 + this.ContextToken.GetHashCode();
                 if (this.Documents != null)
-                    hash = hash * 57 + this.Documents.GetHashCode();
-                
+                    hash = hash * 59 + this.Documents.GetHashCode();
                 if (this.HasMore != null)
-                    hash = hash * 57 + this.HasMore.GetHashCode();
-                
+                    hash = hash * 59 + this.HasMore.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

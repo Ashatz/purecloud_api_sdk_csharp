@@ -4,72 +4,78 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class ServiceType :  IEquatable<ServiceType>
-    {
+    public partial class ServiceType :  IEquatable<ServiceType>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="ServiceType" /> class.
+        /// Initializes a new instance of the <see cref="ServiceType" />class.
         /// </summary>
-        public ServiceType()
+        /// <param name="Type">Type.</param>
+        /// <param name="Parameters">Parameters.</param>
+        /// <param name="Codecs">Codecs.</param>
+        /// <param name="CallingPartyId">CallingPartyId.</param>
+        /// <param name="CallHistory">CallHistory.</param>
+        /// <param name="Prefix">Prefix.</param>
+
+        public ServiceType(string Type = null, Dictionary<string, string> Parameters = null, List<string> Codecs = null, string CallingPartyId = null, string CallHistory = null, string Prefix = null)
         {
+            this.Type = Type;
+            this.Parameters = Parameters;
+            this.Codecs = Codecs;
+            this.CallingPartyId = CallingPartyId;
+            this.CallHistory = CallHistory;
+            this.Prefix = Prefix;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public string Type { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Parameters
         /// </summary>
         [DataMember(Name="parameters", EmitDefaultValue=false)]
         public Dictionary<string, string> Parameters { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Codecs
         /// </summary>
         [DataMember(Name="codecs", EmitDefaultValue=false)]
         public List<string> Codecs { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets CallingPartyId
         /// </summary>
         [DataMember(Name="callingPartyId", EmitDefaultValue=false)]
         public string CallingPartyId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets CallHistory
         /// </summary>
         [DataMember(Name="callHistory", EmitDefaultValue=false)]
         public string CallHistory { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Prefix
         /// </summary>
         [DataMember(Name="prefix", EmitDefaultValue=false)]
         public string Prefix { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -84,11 +90,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  CallingPartyId: ").Append(CallingPartyId).Append("\n");
             sb.Append("  CallHistory: ").Append(CallHistory).Append("\n");
             sb.Append("  Prefix: ").Append(Prefix).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -112,7 +117,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if ServiceType instances are equal
         /// </summary>
-        /// <param name="obj">Instance of ServiceType to be compared</param>
+        /// <param name="other">Instance of ServiceType to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(ServiceType other)
         {
@@ -120,32 +125,32 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Type == other.Type ||
                     this.Type != null &&
                     this.Type.Equals(other.Type)
-                ) && 
+                ) &&
                 (
                     this.Parameters == other.Parameters ||
                     this.Parameters != null &&
                     this.Parameters.SequenceEqual(other.Parameters)
-                ) && 
+                ) &&
                 (
                     this.Codecs == other.Codecs ||
                     this.Codecs != null &&
                     this.Codecs.SequenceEqual(other.Codecs)
-                ) && 
+                ) &&
                 (
                     this.CallingPartyId == other.CallingPartyId ||
                     this.CallingPartyId != null &&
                     this.CallingPartyId.Equals(other.CallingPartyId)
-                ) && 
+                ) &&
                 (
                     this.CallHistory == other.CallHistory ||
                     this.CallHistory != null &&
                     this.CallHistory.Equals(other.CallHistory)
-                ) && 
+                ) &&
                 (
                     this.Prefix == other.Prefix ||
                     this.Prefix != null &&
@@ -164,30 +169,21 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Type != null)
-                    hash = hash * 57 + this.Type.GetHashCode();
-                
+                    hash = hash * 59 + this.Type.GetHashCode();
                 if (this.Parameters != null)
-                    hash = hash * 57 + this.Parameters.GetHashCode();
-                
+                    hash = hash * 59 + this.Parameters.GetHashCode();
                 if (this.Codecs != null)
-                    hash = hash * 57 + this.Codecs.GetHashCode();
-                
+                    hash = hash * 59 + this.Codecs.GetHashCode();
                 if (this.CallingPartyId != null)
-                    hash = hash * 57 + this.CallingPartyId.GetHashCode();
-                
+                    hash = hash * 59 + this.CallingPartyId.GetHashCode();
                 if (this.CallHistory != null)
-                    hash = hash * 57 + this.CallHistory.GetHashCode();
-                
+                    hash = hash * 59 + this.CallHistory.GetHashCode();
                 if (this.Prefix != null)
-                    hash = hash * 57 + this.Prefix.GetHashCode();
-                
+                    hash = hash * 59 + this.Prefix.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

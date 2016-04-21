@@ -4,37 +4,38 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class DeltaRequest :  IEquatable<DeltaRequest>
-    {
+    public partial class DeltaRequest :  IEquatable<DeltaRequest>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="DeltaRequest" /> class.
+        /// Initializes a new instance of the <see cref="DeltaRequest" />class.
         /// </summary>
-        public DeltaRequest()
+        /// <param name="ContextToken">ContextToken.</param>
+
+        public DeltaRequest(string ContextToken = null)
         {
+            this.ContextToken = ContextToken;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets ContextToken
         /// </summary>
         [DataMember(Name="contextToken", EmitDefaultValue=false)]
         public string ContextToken { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -44,11 +45,10 @@ namespace ININ.PureCloudApi.Model
             var sb = new StringBuilder();
             sb.Append("class DeltaRequest {\n");
             sb.Append("  ContextToken: ").Append(ContextToken).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -72,7 +72,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if DeltaRequest instances are equal
         /// </summary>
-        /// <param name="obj">Instance of DeltaRequest to be compared</param>
+        /// <param name="other">Instance of DeltaRequest to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(DeltaRequest other)
         {
@@ -80,7 +80,7 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.ContextToken == other.ContextToken ||
                     this.ContextToken != null &&
@@ -99,15 +99,11 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ContextToken != null)
-                    hash = hash * 57 + this.ContextToken.GetHashCode();
-                
+                    hash = hash * 59 + this.ContextToken.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

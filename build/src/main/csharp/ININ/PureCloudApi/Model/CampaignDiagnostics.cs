@@ -4,51 +4,54 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class CampaignDiagnostics :  IEquatable<CampaignDiagnostics>
-    {
+    public partial class CampaignDiagnostics :  IEquatable<CampaignDiagnostics>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="CampaignDiagnostics" /> class.
+        /// Initializes a new instance of the <see cref="CampaignDiagnostics" />class.
         /// </summary>
-        public CampaignDiagnostics()
+        /// <param name="CallableContacts">CallableContacts.</param>
+        /// <param name="QueueUtilizationDiagnostic">QueueUtilizationDiagnostic.</param>
+        /// <param name="OutstandingInteractionsCount">OutstandingInteractionsCount.</param>
+
+        public CampaignDiagnostics(CallableContactsDiagnostic CallableContacts = null, QueueUtilizationDiagnostic QueueUtilizationDiagnostic = null, int? OutstandingInteractionsCount = null)
         {
+            this.CallableContacts = CallableContacts;
+            this.QueueUtilizationDiagnostic = QueueUtilizationDiagnostic;
+            this.OutstandingInteractionsCount = OutstandingInteractionsCount;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets CallableContacts
         /// </summary>
         [DataMember(Name="callableContacts", EmitDefaultValue=false)]
         public CallableContactsDiagnostic CallableContacts { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets QueueUtilizationDiagnostic
         /// </summary>
         [DataMember(Name="queueUtilizationDiagnostic", EmitDefaultValue=false)]
         public QueueUtilizationDiagnostic QueueUtilizationDiagnostic { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets OutstandingInteractionsCount
         /// </summary>
         [DataMember(Name="outstandingInteractionsCount", EmitDefaultValue=false)]
         public int? OutstandingInteractionsCount { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -60,11 +63,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  CallableContacts: ").Append(CallableContacts).Append("\n");
             sb.Append("  QueueUtilizationDiagnostic: ").Append(QueueUtilizationDiagnostic).Append("\n");
             sb.Append("  OutstandingInteractionsCount: ").Append(OutstandingInteractionsCount).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -88,7 +90,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if CampaignDiagnostics instances are equal
         /// </summary>
-        /// <param name="obj">Instance of CampaignDiagnostics to be compared</param>
+        /// <param name="other">Instance of CampaignDiagnostics to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(CampaignDiagnostics other)
         {
@@ -96,17 +98,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.CallableContacts == other.CallableContacts ||
                     this.CallableContacts != null &&
                     this.CallableContacts.Equals(other.CallableContacts)
-                ) && 
+                ) &&
                 (
                     this.QueueUtilizationDiagnostic == other.QueueUtilizationDiagnostic ||
                     this.QueueUtilizationDiagnostic != null &&
                     this.QueueUtilizationDiagnostic.Equals(other.QueueUtilizationDiagnostic)
-                ) && 
+                ) &&
                 (
                     this.OutstandingInteractionsCount == other.OutstandingInteractionsCount ||
                     this.OutstandingInteractionsCount != null &&
@@ -125,21 +127,15 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.CallableContacts != null)
-                    hash = hash * 57 + this.CallableContacts.GetHashCode();
-                
+                    hash = hash * 59 + this.CallableContacts.GetHashCode();
                 if (this.QueueUtilizationDiagnostic != null)
-                    hash = hash * 57 + this.QueueUtilizationDiagnostic.GetHashCode();
-                
+                    hash = hash * 59 + this.QueueUtilizationDiagnostic.GetHashCode();
                 if (this.OutstandingInteractionsCount != null)
-                    hash = hash * 57 + this.OutstandingInteractionsCount.GetHashCode();
-                
+                    hash = hash * 59 + this.OutstandingInteractionsCount.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

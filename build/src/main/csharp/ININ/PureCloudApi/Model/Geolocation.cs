@@ -4,105 +4,118 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class Geolocation :  IEquatable<Geolocation>
-    {
+    public partial class Geolocation :  IEquatable<Geolocation>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="Geolocation" /> class.
+        /// Initializes a new instance of the <see cref="Geolocation" />class.
         /// </summary>
-        public Geolocation()
+        /// <param name="Name">Name.</param>
+        /// <param name="Type">A string used to describe the type of client the geolocation is being updated from e.g. ios, android, web, etc..</param>
+        /// <param name="Primary">A boolean used to tell whether or not to set this geolocation client as the primary on a PATCH (default to false).</param>
+        /// <param name="Latitude">Latitude.</param>
+        /// <param name="Longitude">Longitude.</param>
+        /// <param name="Country">Country.</param>
+        /// <param name="Region">Region.</param>
+        /// <param name="City">City.</param>
+
+        public Geolocation(string Name = null, string Type = null, bool? Primary = null, double? Latitude = null, double? Longitude = null, string Country = null, string Region = null, string City = null)
         {
-            this.Primary = false;
+            this.Name = Name;
+            this.Type = Type;
+            // use default value if no "Primary" provided
+            if (Primary == null)
+            {
+                this.Primary = false;
+            }
+            else
+            {
+                this.Primary = Primary;
+            }
+            this.Latitude = Latitude;
+            this.Longitude = Longitude;
+            this.Country = Country;
+            this.Region = Region;
+            this.City = City;
             
         }
 
-        
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// A string used to describe the type of client the geolocation is being updated from e.g. ios, android, web, etc.
         /// </summary>
         /// <value>A string used to describe the type of client the geolocation is being updated from e.g. ios, android, web, etc.</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public string Type { get; set; }
-  
-        
+    
         /// <summary>
         /// A boolean used to tell whether or not to set this geolocation client as the primary on a PATCH
         /// </summary>
         /// <value>A boolean used to tell whether or not to set this geolocation client as the primary on a PATCH</value>
         [DataMember(Name="primary", EmitDefaultValue=false)]
         public bool? Primary { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Latitude
         /// </summary>
         [DataMember(Name="latitude", EmitDefaultValue=false)]
         public double? Latitude { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Longitude
         /// </summary>
         [DataMember(Name="longitude", EmitDefaultValue=false)]
         public double? Longitude { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Country
         /// </summary>
         [DataMember(Name="country", EmitDefaultValue=false)]
         public string Country { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Region
         /// </summary>
         [DataMember(Name="region", EmitDefaultValue=false)]
         public string Region { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets City
         /// </summary>
         [DataMember(Name="city", EmitDefaultValue=false)]
         public string City { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -121,11 +134,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Region: ").Append(Region).Append("\n");
             sb.Append("  City: ").Append(City).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -149,7 +161,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if Geolocation instances are equal
         /// </summary>
-        /// <param name="obj">Instance of Geolocation to be compared</param>
+        /// <param name="other">Instance of Geolocation to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(Geolocation other)
         {
@@ -157,52 +169,52 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Type == other.Type ||
                     this.Type != null &&
                     this.Type.Equals(other.Type)
-                ) && 
+                ) &&
                 (
                     this.Primary == other.Primary ||
                     this.Primary != null &&
                     this.Primary.Equals(other.Primary)
-                ) && 
+                ) &&
                 (
                     this.Latitude == other.Latitude ||
                     this.Latitude != null &&
                     this.Latitude.Equals(other.Latitude)
-                ) && 
+                ) &&
                 (
                     this.Longitude == other.Longitude ||
                     this.Longitude != null &&
                     this.Longitude.Equals(other.Longitude)
-                ) && 
+                ) &&
                 (
                     this.Country == other.Country ||
                     this.Country != null &&
                     this.Country.Equals(other.Country)
-                ) && 
+                ) &&
                 (
                     this.Region == other.Region ||
                     this.Region != null &&
                     this.Region.Equals(other.Region)
-                ) && 
+                ) &&
                 (
                     this.City == other.City ||
                     this.City != null &&
                     this.City.Equals(other.City)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
@@ -221,42 +233,29 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
-                
+                    hash = hash * 59 + this.Id.GetHashCode();
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
-                
+                    hash = hash * 59 + this.Name.GetHashCode();
                 if (this.Type != null)
-                    hash = hash * 57 + this.Type.GetHashCode();
-                
+                    hash = hash * 59 + this.Type.GetHashCode();
                 if (this.Primary != null)
-                    hash = hash * 57 + this.Primary.GetHashCode();
-                
+                    hash = hash * 59 + this.Primary.GetHashCode();
                 if (this.Latitude != null)
-                    hash = hash * 57 + this.Latitude.GetHashCode();
-                
+                    hash = hash * 59 + this.Latitude.GetHashCode();
                 if (this.Longitude != null)
-                    hash = hash * 57 + this.Longitude.GetHashCode();
-                
+                    hash = hash * 59 + this.Longitude.GetHashCode();
                 if (this.Country != null)
-                    hash = hash * 57 + this.Country.GetHashCode();
-                
+                    hash = hash * 59 + this.Country.GetHashCode();
                 if (this.Region != null)
-                    hash = hash * 57 + this.Region.GetHashCode();
-                
+                    hash = hash * 59 + this.Region.GetHashCode();
                 if (this.City != null)
-                    hash = hash * 57 + this.City.GetHashCode();
-                
+                    hash = hash * 59 + this.City.GetHashCode();
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
-                
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

@@ -4,86 +4,121 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class FacetEntry :  IEquatable<FacetEntry>
-    {
+    public partial class FacetEntry :  IEquatable<FacetEntry>
+    { 
+
         /// <summary>
-        /// Initializes a new instance of the <see cref="FacetEntry" /> class.
+        /// Gets or Sets TermType
         /// </summary>
-        public FacetEntry()
-        {
+        [JsonConverter(typeof(StringEnumConverter))]
+                public enum TermTypeEnum {
             
+            [EnumMember(Value = "TERM")]
+            Term,
+            
+            [EnumMember(Value = "NUMBERRANGE")]
+            Numberrange,
+            
+            [EnumMember(Value = "NUMBERHISTOGRAM")]
+            Numberhistogram,
+            
+            [EnumMember(Value = "DATERANGE")]
+            Daterange,
+            
+            [EnumMember(Value = "DATEHISTOGRAM")]
+            Datehistogram,
+            
+            [EnumMember(Value = "ID")]
+            Id
         }
 
         
+
+        /// <summary>
+        /// Gets or Sets TermType
+        /// </summary>
+        [DataMember(Name="termType", EmitDefaultValue=false)]
+        public TermTypeEnum? TermType { get; set; }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="FacetEntry" />class.
+        /// </summary>
+        /// <param name="Attribute">Attribute.</param>
+        /// <param name="Statistics">Statistics.</param>
+        /// <param name="Other">Other.</param>
+        /// <param name="Total">Total.</param>
+        /// <param name="Missing">Missing.</param>
+        /// <param name="TermCount">TermCount.</param>
+        /// <param name="TermType">TermType.</param>
+        /// <param name="Terms">Terms.</param>
+
+        public FacetEntry(TermAttribute Attribute = null, FacetStatistics Statistics = null, long? Other = null, long? Total = null, long? Missing = null, int? TermCount = null, TermTypeEnum? TermType = null, List<FacetTerm> Terms = null)
+        {
+            this.Attribute = Attribute;
+            this.Statistics = Statistics;
+            this.Other = Other;
+            this.Total = Total;
+            this.Missing = Missing;
+            this.TermCount = TermCount;
+            this.TermType = TermType;
+            this.Terms = Terms;
+            
+        }
+
+    
         /// <summary>
         /// Gets or Sets Attribute
         /// </summary>
         [DataMember(Name="attribute", EmitDefaultValue=false)]
         public TermAttribute Attribute { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Statistics
         /// </summary>
         [DataMember(Name="statistics", EmitDefaultValue=false)]
         public FacetStatistics Statistics { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Other
         /// </summary>
         [DataMember(Name="other", EmitDefaultValue=false)]
         public long? Other { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Total
         /// </summary>
         [DataMember(Name="total", EmitDefaultValue=false)]
         public long? Total { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Missing
         /// </summary>
         [DataMember(Name="missing", EmitDefaultValue=false)]
         public long? Missing { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets TermCount
         /// </summary>
         [DataMember(Name="termCount", EmitDefaultValue=false)]
         public int? TermCount { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets TermType
-        /// </summary>
-        [DataMember(Name="termType", EmitDefaultValue=false)]
-        public string TermType { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Terms
         /// </summary>
         [DataMember(Name="terms", EmitDefaultValue=false)]
         public List<FacetTerm> Terms { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -100,11 +135,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  TermCount: ").Append(TermCount).Append("\n");
             sb.Append("  TermType: ").Append(TermType).Append("\n");
             sb.Append("  Terms: ").Append(Terms).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -128,7 +162,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if FacetEntry instances are equal
         /// </summary>
-        /// <param name="obj">Instance of FacetEntry to be compared</param>
+        /// <param name="other">Instance of FacetEntry to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(FacetEntry other)
         {
@@ -136,42 +170,42 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Attribute == other.Attribute ||
                     this.Attribute != null &&
                     this.Attribute.Equals(other.Attribute)
-                ) && 
+                ) &&
                 (
                     this.Statistics == other.Statistics ||
                     this.Statistics != null &&
                     this.Statistics.Equals(other.Statistics)
-                ) && 
+                ) &&
                 (
                     this.Other == other.Other ||
                     this.Other != null &&
                     this.Other.Equals(other.Other)
-                ) && 
+                ) &&
                 (
                     this.Total == other.Total ||
                     this.Total != null &&
                     this.Total.Equals(other.Total)
-                ) && 
+                ) &&
                 (
                     this.Missing == other.Missing ||
                     this.Missing != null &&
                     this.Missing.Equals(other.Missing)
-                ) && 
+                ) &&
                 (
                     this.TermCount == other.TermCount ||
                     this.TermCount != null &&
                     this.TermCount.Equals(other.TermCount)
-                ) && 
+                ) &&
                 (
                     this.TermType == other.TermType ||
                     this.TermType != null &&
                     this.TermType.Equals(other.TermType)
-                ) && 
+                ) &&
                 (
                     this.Terms == other.Terms ||
                     this.Terms != null &&
@@ -190,36 +224,25 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Attribute != null)
-                    hash = hash * 57 + this.Attribute.GetHashCode();
-                
+                    hash = hash * 59 + this.Attribute.GetHashCode();
                 if (this.Statistics != null)
-                    hash = hash * 57 + this.Statistics.GetHashCode();
-                
+                    hash = hash * 59 + this.Statistics.GetHashCode();
                 if (this.Other != null)
-                    hash = hash * 57 + this.Other.GetHashCode();
-                
+                    hash = hash * 59 + this.Other.GetHashCode();
                 if (this.Total != null)
-                    hash = hash * 57 + this.Total.GetHashCode();
-                
+                    hash = hash * 59 + this.Total.GetHashCode();
                 if (this.Missing != null)
-                    hash = hash * 57 + this.Missing.GetHashCode();
-                
+                    hash = hash * 59 + this.Missing.GetHashCode();
                 if (this.TermCount != null)
-                    hash = hash * 57 + this.TermCount.GetHashCode();
-                
+                    hash = hash * 59 + this.TermCount.GetHashCode();
                 if (this.TermType != null)
-                    hash = hash * 57 + this.TermType.GetHashCode();
-                
+                    hash = hash * 59 + this.TermType.GetHashCode();
                 if (this.Terms != null)
-                    hash = hash * 57 + this.Terms.GetHashCode();
-                
+                    hash = hash * 59 + this.Terms.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

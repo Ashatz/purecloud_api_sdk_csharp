@@ -4,79 +4,86 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class Charge :  IEquatable<Charge>
-    {
+    public partial class Charge :  IEquatable<Charge>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="Charge" /> class.
+        /// Initializes a new instance of the <see cref="Charge" />class.
         /// </summary>
-        public Charge()
+        /// <param name="LicenseCount">LicenseCount.</param>
+        /// <param name="Name">Name.</param>
+        /// <param name="Description">Description.</param>
+        /// <param name="Price">Price.</param>
+        /// <param name="UnitOfMeasure">UnitOfMeasure.</param>
+        /// <param name="BillingPeriod">BillingPeriod.</param>
+        /// <param name="Quantity">Quantity.</param>
+
+        public Charge(int? LicenseCount = null, string Name = null, string Description = null, double? Price = null, string UnitOfMeasure = null, string BillingPeriod = null, int? Quantity = null)
         {
+            this.LicenseCount = LicenseCount;
+            this.Name = Name;
+            this.Description = Description;
+            this.Price = Price;
+            this.UnitOfMeasure = UnitOfMeasure;
+            this.BillingPeriod = BillingPeriod;
+            this.Quantity = Quantity;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets LicenseCount
         /// </summary>
         [DataMember(Name="licenseCount", EmitDefaultValue=false)]
         public int? LicenseCount { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Description
         /// </summary>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Price
         /// </summary>
         [DataMember(Name="price", EmitDefaultValue=false)]
         public double? Price { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets UnitOfMeasure
         /// </summary>
         [DataMember(Name="unitOfMeasure", EmitDefaultValue=false)]
         public string UnitOfMeasure { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets BillingPeriod
         /// </summary>
         [DataMember(Name="billingPeriod", EmitDefaultValue=false)]
         public string BillingPeriod { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Quantity
         /// </summary>
         [DataMember(Name="quantity", EmitDefaultValue=false)]
         public int? Quantity { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -92,11 +99,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  UnitOfMeasure: ").Append(UnitOfMeasure).Append("\n");
             sb.Append("  BillingPeriod: ").Append(BillingPeriod).Append("\n");
             sb.Append("  Quantity: ").Append(Quantity).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -120,7 +126,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if Charge instances are equal
         /// </summary>
-        /// <param name="obj">Instance of Charge to be compared</param>
+        /// <param name="other">Instance of Charge to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(Charge other)
         {
@@ -128,37 +134,37 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.LicenseCount == other.LicenseCount ||
                     this.LicenseCount != null &&
                     this.LicenseCount.Equals(other.LicenseCount)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Description == other.Description ||
                     this.Description != null &&
                     this.Description.Equals(other.Description)
-                ) && 
+                ) &&
                 (
                     this.Price == other.Price ||
                     this.Price != null &&
                     this.Price.Equals(other.Price)
-                ) && 
+                ) &&
                 (
                     this.UnitOfMeasure == other.UnitOfMeasure ||
                     this.UnitOfMeasure != null &&
                     this.UnitOfMeasure.Equals(other.UnitOfMeasure)
-                ) && 
+                ) &&
                 (
                     this.BillingPeriod == other.BillingPeriod ||
                     this.BillingPeriod != null &&
                     this.BillingPeriod.Equals(other.BillingPeriod)
-                ) && 
+                ) &&
                 (
                     this.Quantity == other.Quantity ||
                     this.Quantity != null &&
@@ -177,33 +183,23 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.LicenseCount != null)
-                    hash = hash * 57 + this.LicenseCount.GetHashCode();
-                
+                    hash = hash * 59 + this.LicenseCount.GetHashCode();
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
-                
+                    hash = hash * 59 + this.Name.GetHashCode();
                 if (this.Description != null)
-                    hash = hash * 57 + this.Description.GetHashCode();
-                
+                    hash = hash * 59 + this.Description.GetHashCode();
                 if (this.Price != null)
-                    hash = hash * 57 + this.Price.GetHashCode();
-                
+                    hash = hash * 59 + this.Price.GetHashCode();
                 if (this.UnitOfMeasure != null)
-                    hash = hash * 57 + this.UnitOfMeasure.GetHashCode();
-                
+                    hash = hash * 59 + this.UnitOfMeasure.GetHashCode();
                 if (this.BillingPeriod != null)
-                    hash = hash * 57 + this.BillingPeriod.GetHashCode();
-                
+                    hash = hash * 59 + this.BillingPeriod.GetHashCode();
                 if (this.Quantity != null)
-                    hash = hash * 57 + this.Quantity.GetHashCode();
-                
+                    hash = hash * 59 + this.Quantity.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

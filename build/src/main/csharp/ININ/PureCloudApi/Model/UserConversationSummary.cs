@@ -4,72 +4,78 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class UserConversationSummary :  IEquatable<UserConversationSummary>
-    {
+    public partial class UserConversationSummary :  IEquatable<UserConversationSummary>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="UserConversationSummary" /> class.
+        /// Initializes a new instance of the <see cref="UserConversationSummary" />class.
         /// </summary>
-        public UserConversationSummary()
+        /// <param name="UserId">UserId.</param>
+        /// <param name="Call">Call.</param>
+        /// <param name="Email">Email.</param>
+        /// <param name="Chat">Chat.</param>
+        /// <param name="SocialExpression">SocialExpression.</param>
+        /// <param name="Video">Video.</param>
+
+        public UserConversationSummary(string UserId = null, MediaSummary Call = null, MediaSummary Email = null, MediaSummary Chat = null, MediaSummary SocialExpression = null, MediaSummary Video = null)
         {
+            this.UserId = UserId;
+            this.Call = Call;
+            this.Email = Email;
+            this.Chat = Chat;
+            this.SocialExpression = SocialExpression;
+            this.Video = Video;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets UserId
         /// </summary>
         [DataMember(Name="userId", EmitDefaultValue=false)]
         public string UserId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Call
         /// </summary>
         [DataMember(Name="call", EmitDefaultValue=false)]
         public MediaSummary Call { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Email
         /// </summary>
         [DataMember(Name="email", EmitDefaultValue=false)]
         public MediaSummary Email { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Chat
         /// </summary>
         [DataMember(Name="chat", EmitDefaultValue=false)]
         public MediaSummary Chat { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets SocialExpression
         /// </summary>
         [DataMember(Name="socialExpression", EmitDefaultValue=false)]
         public MediaSummary SocialExpression { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Video
         /// </summary>
         [DataMember(Name="video", EmitDefaultValue=false)]
         public MediaSummary Video { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -84,11 +90,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Chat: ").Append(Chat).Append("\n");
             sb.Append("  SocialExpression: ").Append(SocialExpression).Append("\n");
             sb.Append("  Video: ").Append(Video).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -112,7 +117,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if UserConversationSummary instances are equal
         /// </summary>
-        /// <param name="obj">Instance of UserConversationSummary to be compared</param>
+        /// <param name="other">Instance of UserConversationSummary to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(UserConversationSummary other)
         {
@@ -120,32 +125,32 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.UserId == other.UserId ||
                     this.UserId != null &&
                     this.UserId.Equals(other.UserId)
-                ) && 
+                ) &&
                 (
                     this.Call == other.Call ||
                     this.Call != null &&
                     this.Call.Equals(other.Call)
-                ) && 
+                ) &&
                 (
                     this.Email == other.Email ||
                     this.Email != null &&
                     this.Email.Equals(other.Email)
-                ) && 
+                ) &&
                 (
                     this.Chat == other.Chat ||
                     this.Chat != null &&
                     this.Chat.Equals(other.Chat)
-                ) && 
+                ) &&
                 (
                     this.SocialExpression == other.SocialExpression ||
                     this.SocialExpression != null &&
                     this.SocialExpression.Equals(other.SocialExpression)
-                ) && 
+                ) &&
                 (
                     this.Video == other.Video ||
                     this.Video != null &&
@@ -164,30 +169,21 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.UserId != null)
-                    hash = hash * 57 + this.UserId.GetHashCode();
-                
+                    hash = hash * 59 + this.UserId.GetHashCode();
                 if (this.Call != null)
-                    hash = hash * 57 + this.Call.GetHashCode();
-                
+                    hash = hash * 59 + this.Call.GetHashCode();
                 if (this.Email != null)
-                    hash = hash * 57 + this.Email.GetHashCode();
-                
+                    hash = hash * 59 + this.Email.GetHashCode();
                 if (this.Chat != null)
-                    hash = hash * 57 + this.Chat.GetHashCode();
-                
+                    hash = hash * 59 + this.Chat.GetHashCode();
                 if (this.SocialExpression != null)
-                    hash = hash * 57 + this.SocialExpression.GetHashCode();
-                
+                    hash = hash * 59 + this.SocialExpression.GetHashCode();
                 if (this.Video != null)
-                    hash = hash * 57 + this.Video.GetHashCode();
-                
+                    hash = hash * 59 + this.Video.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

@@ -4,37 +4,38 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class UrlResponse :  IEquatable<UrlResponse>
-    {
+    public partial class UrlResponse :  IEquatable<UrlResponse>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="UrlResponse" /> class.
+        /// Initializes a new instance of the <see cref="UrlResponse" />class.
         /// </summary>
-        public UrlResponse()
+        /// <param name="Url">Url.</param>
+
+        public UrlResponse(string Url = null)
         {
+            this.Url = Url;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets Url
         /// </summary>
         [DataMember(Name="url", EmitDefaultValue=false)]
         public string Url { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -44,11 +45,10 @@ namespace ININ.PureCloudApi.Model
             var sb = new StringBuilder();
             sb.Append("class UrlResponse {\n");
             sb.Append("  Url: ").Append(Url).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -72,7 +72,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if UrlResponse instances are equal
         /// </summary>
-        /// <param name="obj">Instance of UrlResponse to be compared</param>
+        /// <param name="other">Instance of UrlResponse to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(UrlResponse other)
         {
@@ -80,7 +80,7 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Url == other.Url ||
                     this.Url != null &&
@@ -99,15 +99,11 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Url != null)
-                    hash = hash * 57 + this.Url.GetHashCode();
-                
+                    hash = hash * 59 + this.Url.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

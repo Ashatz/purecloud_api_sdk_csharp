@@ -4,51 +4,84 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class PutManagementUnit :  IEquatable<PutManagementUnit>
-    {
+    public partial class PutManagementUnit :  IEquatable<PutManagementUnit>
+    { 
+
         /// <summary>
-        /// Initializes a new instance of the <see cref="PutManagementUnit" /> class.
+        /// Gets or Sets StartDayOfWeek
         /// </summary>
-        public PutManagementUnit()
-        {
+        [JsonConverter(typeof(StringEnumConverter))]
+                public enum StartDayOfWeekEnum {
             
+            [EnumMember(Value = "MONDAY")]
+            Monday,
+            
+            [EnumMember(Value = "TUESDAY")]
+            Tuesday,
+            
+            [EnumMember(Value = "WEDNESDAY")]
+            Wednesday,
+            
+            [EnumMember(Value = "THURSDAY")]
+            Thursday,
+            
+            [EnumMember(Value = "FRIDAY")]
+            Friday,
+            
+            [EnumMember(Value = "SATURDAY")]
+            Saturday,
+            
+            [EnumMember(Value = "SUNDAY")]
+            Sunday
         }
 
         
+
+        /// <summary>
+        /// Gets or Sets StartDayOfWeek
+        /// </summary>
+        [DataMember(Name="startDayOfWeek", EmitDefaultValue=false)]
+        public StartDayOfWeekEnum? StartDayOfWeek { get; set; }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PutManagementUnit" />class.
+        /// </summary>
+        /// <param name="Name">Name.</param>
+        /// <param name="StartDayOfWeek">StartDayOfWeek.</param>
+        /// <param name="Timezone">Timezone.</param>
+
+        public PutManagementUnit(string Name = null, StartDayOfWeekEnum? StartDayOfWeek = null, string Timezone = null)
+        {
+            this.Name = Name;
+            this.StartDayOfWeek = StartDayOfWeek;
+            this.Timezone = Timezone;
+            
+        }
+
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets StartDayOfWeek
-        /// </summary>
-        [DataMember(Name="startDayOfWeek", EmitDefaultValue=false)]
-        public string StartDayOfWeek { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Timezone
         /// </summary>
         [DataMember(Name="timezone", EmitDefaultValue=false)]
         public string Timezone { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -60,11 +93,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  StartDayOfWeek: ").Append(StartDayOfWeek).Append("\n");
             sb.Append("  Timezone: ").Append(Timezone).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -88,7 +120,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if PutManagementUnit instances are equal
         /// </summary>
-        /// <param name="obj">Instance of PutManagementUnit to be compared</param>
+        /// <param name="other">Instance of PutManagementUnit to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(PutManagementUnit other)
         {
@@ -96,17 +128,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.StartDayOfWeek == other.StartDayOfWeek ||
                     this.StartDayOfWeek != null &&
                     this.StartDayOfWeek.Equals(other.StartDayOfWeek)
-                ) && 
+                ) &&
                 (
                     this.Timezone == other.Timezone ||
                     this.Timezone != null &&
@@ -125,21 +157,15 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
-                
+                    hash = hash * 59 + this.Name.GetHashCode();
                 if (this.StartDayOfWeek != null)
-                    hash = hash * 57 + this.StartDayOfWeek.GetHashCode();
-                
+                    hash = hash * 59 + this.StartDayOfWeek.GetHashCode();
                 if (this.Timezone != null)
-                    hash = hash * 57 + this.Timezone.GetHashCode();
-                
+                    hash = hash * 59 + this.Timezone.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

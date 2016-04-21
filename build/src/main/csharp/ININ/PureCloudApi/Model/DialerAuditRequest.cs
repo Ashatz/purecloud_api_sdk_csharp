@@ -4,58 +4,62 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class DialerAuditRequest :  IEquatable<DialerAuditRequest>
-    {
+    public partial class DialerAuditRequest :  IEquatable<DialerAuditRequest>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="DialerAuditRequest" /> class.
+        /// Initializes a new instance of the <see cref="DialerAuditRequest" />class.
         /// </summary>
-        public DialerAuditRequest()
+        /// <param name="QueryPhrase">QueryPhrase.</param>
+        /// <param name="QueryFields">QueryFields.</param>
+        /// <param name="Facets">Facets.</param>
+        /// <param name="Filters">Filters.</param>
+
+        public DialerAuditRequest(string QueryPhrase = null, List<string> QueryFields = null, List<Facet> Facets = null, List<Filter> Filters = null)
         {
+            this.QueryPhrase = QueryPhrase;
+            this.QueryFields = QueryFields;
+            this.Facets = Facets;
+            this.Filters = Filters;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets QueryPhrase
         /// </summary>
         [DataMember(Name="queryPhrase", EmitDefaultValue=false)]
         public string QueryPhrase { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets QueryFields
         /// </summary>
         [DataMember(Name="queryFields", EmitDefaultValue=false)]
         public List<string> QueryFields { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Facets
         /// </summary>
         [DataMember(Name="facets", EmitDefaultValue=false)]
         public List<Facet> Facets { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Filters
         /// </summary>
         [DataMember(Name="filters", EmitDefaultValue=false)]
         public List<Filter> Filters { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -68,11 +72,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  QueryFields: ").Append(QueryFields).Append("\n");
             sb.Append("  Facets: ").Append(Facets).Append("\n");
             sb.Append("  Filters: ").Append(Filters).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -96,7 +99,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if DialerAuditRequest instances are equal
         /// </summary>
-        /// <param name="obj">Instance of DialerAuditRequest to be compared</param>
+        /// <param name="other">Instance of DialerAuditRequest to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(DialerAuditRequest other)
         {
@@ -104,22 +107,22 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.QueryPhrase == other.QueryPhrase ||
                     this.QueryPhrase != null &&
                     this.QueryPhrase.Equals(other.QueryPhrase)
-                ) && 
+                ) &&
                 (
                     this.QueryFields == other.QueryFields ||
                     this.QueryFields != null &&
                     this.QueryFields.SequenceEqual(other.QueryFields)
-                ) && 
+                ) &&
                 (
                     this.Facets == other.Facets ||
                     this.Facets != null &&
                     this.Facets.SequenceEqual(other.Facets)
-                ) && 
+                ) &&
                 (
                     this.Filters == other.Filters ||
                     this.Filters != null &&
@@ -138,24 +141,17 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.QueryPhrase != null)
-                    hash = hash * 57 + this.QueryPhrase.GetHashCode();
-                
+                    hash = hash * 59 + this.QueryPhrase.GetHashCode();
                 if (this.QueryFields != null)
-                    hash = hash * 57 + this.QueryFields.GetHashCode();
-                
+                    hash = hash * 59 + this.QueryFields.GetHashCode();
                 if (this.Facets != null)
-                    hash = hash * 57 + this.Facets.GetHashCode();
-                
+                    hash = hash * 59 + this.Facets.GetHashCode();
                 if (this.Filters != null)
-                    hash = hash * 57 + this.Filters.GetHashCode();
-                
+                    hash = hash * 59 + this.Filters.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

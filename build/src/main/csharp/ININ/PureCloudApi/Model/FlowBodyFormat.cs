@@ -4,51 +4,54 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class FlowBodyFormat :  IEquatable<FlowBodyFormat>
-    {
+    public partial class FlowBodyFormat :  IEquatable<FlowBodyFormat>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="FlowBodyFormat" /> class.
+        /// Initializes a new instance of the <see cref="FlowBodyFormat" />class.
         /// </summary>
-        public FlowBodyFormat()
+        /// <param name="Name">Name.</param>
+        /// <param name="Description">Description.</param>
+        /// <param name="SchemaUri">SchemaUri.</param>
+
+        public FlowBodyFormat(string Name = null, string Description = null, string SchemaUri = null)
         {
+            this.Name = Name;
+            this.Description = Description;
+            this.SchemaUri = SchemaUri;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Description
         /// </summary>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets SchemaUri
         /// </summary>
         [DataMember(Name="schemaUri", EmitDefaultValue=false)]
         public string SchemaUri { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -60,11 +63,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  SchemaUri: ").Append(SchemaUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -88,7 +90,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if FlowBodyFormat instances are equal
         /// </summary>
-        /// <param name="obj">Instance of FlowBodyFormat to be compared</param>
+        /// <param name="other">Instance of FlowBodyFormat to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(FlowBodyFormat other)
         {
@@ -96,17 +98,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Description == other.Description ||
                     this.Description != null &&
                     this.Description.Equals(other.Description)
-                ) && 
+                ) &&
                 (
                     this.SchemaUri == other.SchemaUri ||
                     this.SchemaUri != null &&
@@ -125,21 +127,15 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
-                
+                    hash = hash * 59 + this.Name.GetHashCode();
                 if (this.Description != null)
-                    hash = hash * 57 + this.Description.GetHashCode();
-                
+                    hash = hash * 59 + this.Description.GetHashCode();
                 if (this.SchemaUri != null)
-                    hash = hash * 57 + this.SchemaUri.GetHashCode();
-                
+                    hash = hash * 59 + this.SchemaUri.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

@@ -4,38 +4,47 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// Used to return response query results
     /// </summary>
     [DataContract]
-    public class ResponseQueryResults :  IEquatable<ResponseQueryResults>
-    {
+    public partial class ResponseQueryResults :  IEquatable<ResponseQueryResults>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="ResponseQueryResults" /> class.
+        /// Initializes a new instance of the <see cref="ResponseQueryResults" />class.
         /// </summary>
-        public ResponseQueryResults()
+        /// <param name="Results">Contains the query results (required).</param>
+
+        public ResponseQueryResults(ResponseEntityList Results = null)
         {
+            // to ensure "Results" is required (not null)
+            if (Results == null)
+            {
+                throw new InvalidDataException("Results is a required property for ResponseQueryResults and cannot be null");
+            }
+            else
+            {
+                this.Results = Results;
+            }
             
         }
 
-        
+    
         /// <summary>
         /// Contains the query results
         /// </summary>
         /// <value>Contains the query results</value>
         [DataMember(Name="results", EmitDefaultValue=false)]
         public ResponseEntityList Results { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -45,11 +54,10 @@ namespace ININ.PureCloudApi.Model
             var sb = new StringBuilder();
             sb.Append("class ResponseQueryResults {\n");
             sb.Append("  Results: ").Append(Results).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -73,7 +81,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if ResponseQueryResults instances are equal
         /// </summary>
-        /// <param name="obj">Instance of ResponseQueryResults to be compared</param>
+        /// <param name="other">Instance of ResponseQueryResults to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(ResponseQueryResults other)
         {
@@ -81,7 +89,7 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Results == other.Results ||
                     this.Results != null &&
@@ -100,15 +108,11 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Results != null)
-                    hash = hash * 57 + this.Results.GetHashCode();
-                
+                    hash = hash * 59 + this.Results.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

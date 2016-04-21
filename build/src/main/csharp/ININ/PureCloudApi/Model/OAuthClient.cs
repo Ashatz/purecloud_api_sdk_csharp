@@ -4,101 +4,137 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class OAuthClient :  IEquatable<OAuthClient>
-    {
+    public partial class OAuthClient :  IEquatable<OAuthClient>
+    { 
+        
+        public static string AuthorizedGrantTypes_Code = "CODE";
+        public static string AuthorizedGrantTypes_Token = "TOKEN";
+        public static string AuthorizedGrantTypes_Saml2bearer = "SAML2BEARER";
+        public static string AuthorizedGrantTypes_Password = "PASSWORD";
+        public static string AuthorizedGrantTypes_ClientCredentials = "CLIENT_CREDENTIALS";
+        
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="OAuthClient" /> class.
+        /// Initializes a new instance of the <see cref="OAuthClient" />class.
         /// </summary>
-        public OAuthClient()
+        /// <param name="Name">The name of the OAuth client. (required).</param>
+        /// <param name="AccessTokenValiditySeconds">The number of seconds, between 5mins and 48hrs, until tokens created with this client expire. If this field is omitted, a default of 24 hours will be applied..</param>
+        /// <param name="AuthorizedGrantTypes">One or more OAuth Grant/Client types supported by this client. (required).</param>
+        /// <param name="Description">Description.</param>
+        /// <param name="RegisteredRedirectUri">List of allowed callbacks for this client. For example: https://myap.example.com/auth/callback (required).</param>
+        /// <param name="Secret">System created secret assigned to this client. Secrets are required for code authorization grants..</param>
+        /// <param name="RoleIds">Roles assigned to this client. Roles only apply to clients using the client_credential grant.</param>
+
+        public OAuthClient(string Name = null, long? AccessTokenValiditySeconds = null, List<string> AuthorizedGrantTypes = null, string Description = null, List<string> RegisteredRedirectUri = null, string Secret = null, List<string> RoleIds = null)
         {
+            // to ensure "Name" is required (not null)
+            if (Name == null)
+            {
+                throw new InvalidDataException("Name is a required property for OAuthClient and cannot be null");
+            }
+            else
+            {
+                this.Name = Name;
+            }
+            // to ensure "AuthorizedGrantTypes" is required (not null)
+            if (AuthorizedGrantTypes == null)
+            {
+                throw new InvalidDataException("AuthorizedGrantTypes is a required property for OAuthClient and cannot be null");
+            }
+            else
+            {
+                this.AuthorizedGrantTypes = AuthorizedGrantTypes;
+            }
+            // to ensure "RegisteredRedirectUri" is required (not null)
+            if (RegisteredRedirectUri == null)
+            {
+                throw new InvalidDataException("RegisteredRedirectUri is a required property for OAuthClient and cannot be null");
+            }
+            else
+            {
+                this.RegisteredRedirectUri = RegisteredRedirectUri;
+            }
+            this.AccessTokenValiditySeconds = AccessTokenValiditySeconds;
+            this.Description = Description;
+            this.Secret = Secret;
+            this.RoleIds = RoleIds;
             
         }
 
-        
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// The name of the OAuth client.
         /// </summary>
         /// <value>The name of the OAuth client.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// The number of seconds, between 5mins and 48hrs, until tokens created with this client expire. If this field is omitted, a default of 24 hours will be applied.
         /// </summary>
         /// <value>The number of seconds, between 5mins and 48hrs, until tokens created with this client expire. If this field is omitted, a default of 24 hours will be applied.</value>
         [DataMember(Name="accessTokenValiditySeconds", EmitDefaultValue=false)]
         public long? AccessTokenValiditySeconds { get; set; }
-  
-        
+    
         /// <summary>
         /// One or more OAuth Grant/Client types supported by this client.
         /// </summary>
         /// <value>One or more OAuth Grant/Client types supported by this client.</value>
         [DataMember(Name="authorizedGrantTypes", EmitDefaultValue=false)]
         public List<string> AuthorizedGrantTypes { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Description
         /// </summary>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
-  
-        
+    
         /// <summary>
         /// List of allowed callbacks for this client. For example: https://myap.example.com/auth/callback
         /// </summary>
         /// <value>List of allowed callbacks for this client. For example: https://myap.example.com/auth/callback</value>
         [DataMember(Name="registeredRedirectUri", EmitDefaultValue=false)]
         public List<string> RegisteredRedirectUri { get; set; }
-  
-        
+    
         /// <summary>
         /// System created secret assigned to this client. Secrets are required for code authorization grants.
         /// </summary>
         /// <value>System created secret assigned to this client. Secrets are required for code authorization grants.</value>
         [DataMember(Name="secret", EmitDefaultValue=false)]
         public string Secret { get; set; }
-  
-        
+    
         /// <summary>
         /// Roles assigned to this client. Roles only apply to clients using the client_credential grant
         /// </summary>
         /// <value>Roles assigned to this client. Roles only apply to clients using the client_credential grant</value>
         [DataMember(Name="roleIds", EmitDefaultValue=false)]
         public List<string> RoleIds { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -116,11 +152,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Secret: ").Append(Secret).Append("\n");
             sb.Append("  RoleIds: ").Append(RoleIds).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -144,7 +179,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if OAuthClient instances are equal
         /// </summary>
-        /// <param name="obj">Instance of OAuthClient to be compared</param>
+        /// <param name="other">Instance of OAuthClient to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(OAuthClient other)
         {
@@ -152,47 +187,47 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.AccessTokenValiditySeconds == other.AccessTokenValiditySeconds ||
                     this.AccessTokenValiditySeconds != null &&
                     this.AccessTokenValiditySeconds.Equals(other.AccessTokenValiditySeconds)
-                ) && 
+                ) &&
                 (
                     this.AuthorizedGrantTypes == other.AuthorizedGrantTypes ||
                     this.AuthorizedGrantTypes != null &&
                     this.AuthorizedGrantTypes.SequenceEqual(other.AuthorizedGrantTypes)
-                ) && 
+                ) &&
                 (
                     this.Description == other.Description ||
                     this.Description != null &&
                     this.Description.Equals(other.Description)
-                ) && 
+                ) &&
                 (
                     this.RegisteredRedirectUri == other.RegisteredRedirectUri ||
                     this.RegisteredRedirectUri != null &&
                     this.RegisteredRedirectUri.SequenceEqual(other.RegisteredRedirectUri)
-                ) && 
+                ) &&
                 (
                     this.Secret == other.Secret ||
                     this.Secret != null &&
                     this.Secret.Equals(other.Secret)
-                ) && 
+                ) &&
                 (
                     this.RoleIds == other.RoleIds ||
                     this.RoleIds != null &&
                     this.RoleIds.SequenceEqual(other.RoleIds)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
@@ -211,39 +246,27 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
-                
+                    hash = hash * 59 + this.Id.GetHashCode();
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
-                
+                    hash = hash * 59 + this.Name.GetHashCode();
                 if (this.AccessTokenValiditySeconds != null)
-                    hash = hash * 57 + this.AccessTokenValiditySeconds.GetHashCode();
-                
+                    hash = hash * 59 + this.AccessTokenValiditySeconds.GetHashCode();
                 if (this.AuthorizedGrantTypes != null)
-                    hash = hash * 57 + this.AuthorizedGrantTypes.GetHashCode();
-                
+                    hash = hash * 59 + this.AuthorizedGrantTypes.GetHashCode();
                 if (this.Description != null)
-                    hash = hash * 57 + this.Description.GetHashCode();
-                
+                    hash = hash * 59 + this.Description.GetHashCode();
                 if (this.RegisteredRedirectUri != null)
-                    hash = hash * 57 + this.RegisteredRedirectUri.GetHashCode();
-                
+                    hash = hash * 59 + this.RegisteredRedirectUri.GetHashCode();
                 if (this.Secret != null)
-                    hash = hash * 57 + this.Secret.GetHashCode();
-                
+                    hash = hash * 59 + this.Secret.GetHashCode();
                 if (this.RoleIds != null)
-                    hash = hash * 57 + this.RoleIds.GetHashCode();
-                
+                    hash = hash * 59 + this.RoleIds.GetHashCode();
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
-                
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

@@ -4,86 +4,94 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class ErrorDetails :  IEquatable<ErrorDetails>
-    {
+    public partial class ErrorDetails :  IEquatable<ErrorDetails>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="ErrorDetails" /> class.
+        /// Initializes a new instance of the <see cref="ErrorDetails" />class.
         /// </summary>
-        public ErrorDetails()
+        /// <param name="Status">Status.</param>
+        /// <param name="Message">Message.</param>
+        /// <param name="MessageWithParams">MessageWithParams.</param>
+        /// <param name="MessageParams">MessageParams.</param>
+        /// <param name="Code">Code.</param>
+        /// <param name="ContextId">ContextId.</param>
+        /// <param name="Nested">Nested.</param>
+        /// <param name="Details">Details.</param>
+
+        public ErrorDetails(int? Status = null, string Message = null, string MessageWithParams = null, Dictionary<string, string> MessageParams = null, string Code = null, string ContextId = null, ErrorDetails Nested = null, string Details = null)
         {
+            this.Status = Status;
+            this.Message = Message;
+            this.MessageWithParams = MessageWithParams;
+            this.MessageParams = MessageParams;
+            this.Code = Code;
+            this.ContextId = ContextId;
+            this.Nested = Nested;
+            this.Details = Details;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public int? Status { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Message
         /// </summary>
         [DataMember(Name="message", EmitDefaultValue=false)]
         public string Message { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets MessageWithParams
         /// </summary>
         [DataMember(Name="messageWithParams", EmitDefaultValue=false)]
         public string MessageWithParams { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets MessageParams
         /// </summary>
         [DataMember(Name="messageParams", EmitDefaultValue=false)]
         public Dictionary<string, string> MessageParams { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Code
         /// </summary>
         [DataMember(Name="code", EmitDefaultValue=false)]
         public string Code { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ContextId
         /// </summary>
         [DataMember(Name="contextId", EmitDefaultValue=false)]
         public string ContextId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Nested
         /// </summary>
         [DataMember(Name="nested", EmitDefaultValue=false)]
         public ErrorDetails Nested { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Details
         /// </summary>
         [DataMember(Name="details", EmitDefaultValue=false)]
         public string Details { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -100,11 +108,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  ContextId: ").Append(ContextId).Append("\n");
             sb.Append("  Nested: ").Append(Nested).Append("\n");
             sb.Append("  Details: ").Append(Details).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -128,7 +135,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if ErrorDetails instances are equal
         /// </summary>
-        /// <param name="obj">Instance of ErrorDetails to be compared</param>
+        /// <param name="other">Instance of ErrorDetails to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(ErrorDetails other)
         {
@@ -136,42 +143,42 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Status == other.Status ||
                     this.Status != null &&
                     this.Status.Equals(other.Status)
-                ) && 
+                ) &&
                 (
                     this.Message == other.Message ||
                     this.Message != null &&
                     this.Message.Equals(other.Message)
-                ) && 
+                ) &&
                 (
                     this.MessageWithParams == other.MessageWithParams ||
                     this.MessageWithParams != null &&
                     this.MessageWithParams.Equals(other.MessageWithParams)
-                ) && 
+                ) &&
                 (
                     this.MessageParams == other.MessageParams ||
                     this.MessageParams != null &&
                     this.MessageParams.SequenceEqual(other.MessageParams)
-                ) && 
+                ) &&
                 (
                     this.Code == other.Code ||
                     this.Code != null &&
                     this.Code.Equals(other.Code)
-                ) && 
+                ) &&
                 (
                     this.ContextId == other.ContextId ||
                     this.ContextId != null &&
                     this.ContextId.Equals(other.ContextId)
-                ) && 
+                ) &&
                 (
                     this.Nested == other.Nested ||
                     this.Nested != null &&
                     this.Nested.Equals(other.Nested)
-                ) && 
+                ) &&
                 (
                     this.Details == other.Details ||
                     this.Details != null &&
@@ -190,36 +197,25 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Status != null)
-                    hash = hash * 57 + this.Status.GetHashCode();
-                
+                    hash = hash * 59 + this.Status.GetHashCode();
                 if (this.Message != null)
-                    hash = hash * 57 + this.Message.GetHashCode();
-                
+                    hash = hash * 59 + this.Message.GetHashCode();
                 if (this.MessageWithParams != null)
-                    hash = hash * 57 + this.MessageWithParams.GetHashCode();
-                
+                    hash = hash * 59 + this.MessageWithParams.GetHashCode();
                 if (this.MessageParams != null)
-                    hash = hash * 57 + this.MessageParams.GetHashCode();
-                
+                    hash = hash * 59 + this.MessageParams.GetHashCode();
                 if (this.Code != null)
-                    hash = hash * 57 + this.Code.GetHashCode();
-                
+                    hash = hash * 59 + this.Code.GetHashCode();
                 if (this.ContextId != null)
-                    hash = hash * 57 + this.ContextId.GetHashCode();
-                
+                    hash = hash * 59 + this.ContextId.GetHashCode();
                 if (this.Nested != null)
-                    hash = hash * 57 + this.Nested.GetHashCode();
-                
+                    hash = hash * 59 + this.Nested.GetHashCode();
                 if (this.Details != null)
-                    hash = hash * 57 + this.Details.GetHashCode();
-                
+                    hash = hash * 59 + this.Details.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

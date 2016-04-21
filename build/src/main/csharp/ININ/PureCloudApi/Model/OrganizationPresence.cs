@@ -4,105 +4,148 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class OrganizationPresence :  IEquatable<OrganizationPresence>
-    {
+    public partial class OrganizationPresence :  IEquatable<OrganizationPresence>
+    { 
+
         /// <summary>
-        /// Initializes a new instance of the <see cref="OrganizationPresence" /> class.
+        /// Gets or Sets SystemPresence
         /// </summary>
-        public OrganizationPresence()
-        {
-            this.Deactivated = false;
+        [JsonConverter(typeof(StringEnumConverter))]
+                public enum SystemPresenceEnum {
             
+            [EnumMember(Value = "AVAILABLE")]
+            Available,
+            
+            [EnumMember(Value = "AWAY")]
+            Away,
+            
+            [EnumMember(Value = "BUSY")]
+            Busy,
+            
+            [EnumMember(Value = "OUT_OF_OFFICE")]
+            OutOfOffice,
+            
+            [EnumMember(Value = "OFFLINE")]
+            Offline,
+            
+            [EnumMember(Value = "ON_QUEUE")]
+            OnQueue,
+            
+            [EnumMember(Value = "IDLE")]
+            Idle
         }
 
         
+
+        /// <summary>
+        /// Gets or Sets SystemPresence
+        /// </summary>
+        [DataMember(Name="systemPresence", EmitDefaultValue=false)]
+        public SystemPresenceEnum? SystemPresence { get; set; }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="OrganizationPresence" />class.
+        /// </summary>
+        /// <param name="Name">Name.</param>
+        /// <param name="LanguageLabels">LanguageLabels.</param>
+        /// <param name="SystemPresence">SystemPresence.</param>
+        /// <param name="Deactivated">Deactivated (default to false).</param>
+        /// <param name="CreatedBy">CreatedBy.</param>
+        /// <param name="CreatedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="ModifiedBy">ModifiedBy.</param>
+        /// <param name="ModifiedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+
+        public OrganizationPresence(string Name = null, Dictionary<string, string> LanguageLabels = null, SystemPresenceEnum? SystemPresence = null, bool? Deactivated = null, User CreatedBy = null, DateTime? CreatedDate = null, User ModifiedBy = null, DateTime? ModifiedDate = null)
+        {
+            this.Name = Name;
+            this.LanguageLabels = LanguageLabels;
+            this.SystemPresence = SystemPresence;
+            // use default value if no "Deactivated" provided
+            if (Deactivated == null)
+            {
+                this.Deactivated = false;
+            }
+            else
+            {
+                this.Deactivated = Deactivated;
+            }
+            this.CreatedBy = CreatedBy;
+            this.CreatedDate = CreatedDate;
+            this.ModifiedBy = ModifiedBy;
+            this.ModifiedDate = ModifiedDate;
+            
+        }
+
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets LanguageLabels
         /// </summary>
         [DataMember(Name="languageLabels", EmitDefaultValue=false)]
         public Dictionary<string, string> LanguageLabels { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets SystemPresence
-        /// </summary>
-        [DataMember(Name="systemPresence", EmitDefaultValue=false)]
-        public string SystemPresence { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Deactivated
         /// </summary>
         [DataMember(Name="deactivated", EmitDefaultValue=false)]
         public bool? Deactivated { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets CreatedBy
         /// </summary>
         [DataMember(Name="createdBy", EmitDefaultValue=false)]
         public User CreatedBy { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="createdDate", EmitDefaultValue=false)]
         public DateTime? CreatedDate { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ModifiedBy
         /// </summary>
         [DataMember(Name="modifiedBy", EmitDefaultValue=false)]
         public User ModifiedBy { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="modifiedDate", EmitDefaultValue=false)]
         public DateTime? ModifiedDate { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -121,11 +164,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  ModifiedBy: ").Append(ModifiedBy).Append("\n");
             sb.Append("  ModifiedDate: ").Append(ModifiedDate).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -149,7 +191,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if OrganizationPresence instances are equal
         /// </summary>
-        /// <param name="obj">Instance of OrganizationPresence to be compared</param>
+        /// <param name="other">Instance of OrganizationPresence to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(OrganizationPresence other)
         {
@@ -157,52 +199,52 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.LanguageLabels == other.LanguageLabels ||
                     this.LanguageLabels != null &&
                     this.LanguageLabels.SequenceEqual(other.LanguageLabels)
-                ) && 
+                ) &&
                 (
                     this.SystemPresence == other.SystemPresence ||
                     this.SystemPresence != null &&
                     this.SystemPresence.Equals(other.SystemPresence)
-                ) && 
+                ) &&
                 (
                     this.Deactivated == other.Deactivated ||
                     this.Deactivated != null &&
                     this.Deactivated.Equals(other.Deactivated)
-                ) && 
+                ) &&
                 (
                     this.CreatedBy == other.CreatedBy ||
                     this.CreatedBy != null &&
                     this.CreatedBy.Equals(other.CreatedBy)
-                ) && 
+                ) &&
                 (
                     this.CreatedDate == other.CreatedDate ||
                     this.CreatedDate != null &&
                     this.CreatedDate.Equals(other.CreatedDate)
-                ) && 
+                ) &&
                 (
                     this.ModifiedBy == other.ModifiedBy ||
                     this.ModifiedBy != null &&
                     this.ModifiedBy.Equals(other.ModifiedBy)
-                ) && 
+                ) &&
                 (
                     this.ModifiedDate == other.ModifiedDate ||
                     this.ModifiedDate != null &&
                     this.ModifiedDate.Equals(other.ModifiedDate)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
@@ -221,42 +263,29 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
-                
+                    hash = hash * 59 + this.Id.GetHashCode();
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
-                
+                    hash = hash * 59 + this.Name.GetHashCode();
                 if (this.LanguageLabels != null)
-                    hash = hash * 57 + this.LanguageLabels.GetHashCode();
-                
+                    hash = hash * 59 + this.LanguageLabels.GetHashCode();
                 if (this.SystemPresence != null)
-                    hash = hash * 57 + this.SystemPresence.GetHashCode();
-                
+                    hash = hash * 59 + this.SystemPresence.GetHashCode();
                 if (this.Deactivated != null)
-                    hash = hash * 57 + this.Deactivated.GetHashCode();
-                
+                    hash = hash * 59 + this.Deactivated.GetHashCode();
                 if (this.CreatedBy != null)
-                    hash = hash * 57 + this.CreatedBy.GetHashCode();
-                
+                    hash = hash * 59 + this.CreatedBy.GetHashCode();
                 if (this.CreatedDate != null)
-                    hash = hash * 57 + this.CreatedDate.GetHashCode();
-                
+                    hash = hash * 59 + this.CreatedDate.GetHashCode();
                 if (this.ModifiedBy != null)
-                    hash = hash * 57 + this.ModifiedBy.GetHashCode();
-                
+                    hash = hash * 59 + this.ModifiedBy.GetHashCode();
                 if (this.ModifiedDate != null)
-                    hash = hash * 57 + this.ModifiedDate.GetHashCode();
-                
+                    hash = hash * 59 + this.ModifiedDate.GetHashCode();
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
-                
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

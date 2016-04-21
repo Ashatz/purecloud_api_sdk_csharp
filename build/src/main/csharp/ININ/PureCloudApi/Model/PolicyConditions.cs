@@ -4,86 +4,102 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class PolicyConditions :  IEquatable<PolicyConditions>
-    {
+    public partial class PolicyConditions :  IEquatable<PolicyConditions>
+    { 
+        
+        public static string Directions_Inbound = "INBOUND";
+        public static string Directions_Outbound = "OUTBOUND";
+        
+        
+        public static string MediaTypes_Call = "CALL";
+        public static string MediaTypes_Chat = "CHAT";
+        
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="PolicyConditions" /> class.
+        /// Initializes a new instance of the <see cref="PolicyConditions" />class.
         /// </summary>
-        public PolicyConditions()
+        /// <param name="ForUsers">ForUsers.</param>
+        /// <param name="Directions">Directions.</param>
+        /// <param name="DateRanges">DateRanges.</param>
+        /// <param name="MediaTypes">MediaTypes.</param>
+        /// <param name="ForQueues">ForQueues.</param>
+        /// <param name="Duration">Duration.</param>
+        /// <param name="WrapupCodes">WrapupCodes.</param>
+        /// <param name="TimeAllowed">TimeAllowed.</param>
+
+        public PolicyConditions(List<User> ForUsers = null, List<string> Directions = null, List<string> DateRanges = null, List<string> MediaTypes = null, List<Queue> ForQueues = null, DurationCondition Duration = null, List<WrapupCode> WrapupCodes = null, TimeAllowed TimeAllowed = null)
         {
+            this.ForUsers = ForUsers;
+            this.Directions = Directions;
+            this.DateRanges = DateRanges;
+            this.MediaTypes = MediaTypes;
+            this.ForQueues = ForQueues;
+            this.Duration = Duration;
+            this.WrapupCodes = WrapupCodes;
+            this.TimeAllowed = TimeAllowed;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets ForUsers
         /// </summary>
         [DataMember(Name="forUsers", EmitDefaultValue=false)]
         public List<User> ForUsers { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Directions
         /// </summary>
         [DataMember(Name="directions", EmitDefaultValue=false)]
         public List<string> Directions { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets DateRanges
         /// </summary>
         [DataMember(Name="dateRanges", EmitDefaultValue=false)]
         public List<string> DateRanges { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets MediaTypes
         /// </summary>
         [DataMember(Name="mediaTypes", EmitDefaultValue=false)]
         public List<string> MediaTypes { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ForQueues
         /// </summary>
         [DataMember(Name="forQueues", EmitDefaultValue=false)]
         public List<Queue> ForQueues { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Duration
         /// </summary>
         [DataMember(Name="duration", EmitDefaultValue=false)]
         public DurationCondition Duration { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets WrapupCodes
         /// </summary>
         [DataMember(Name="wrapupCodes", EmitDefaultValue=false)]
         public List<WrapupCode> WrapupCodes { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets TimeAllowed
         /// </summary>
         [DataMember(Name="timeAllowed", EmitDefaultValue=false)]
         public TimeAllowed TimeAllowed { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -100,11 +116,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Duration: ").Append(Duration).Append("\n");
             sb.Append("  WrapupCodes: ").Append(WrapupCodes).Append("\n");
             sb.Append("  TimeAllowed: ").Append(TimeAllowed).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -128,7 +143,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if PolicyConditions instances are equal
         /// </summary>
-        /// <param name="obj">Instance of PolicyConditions to be compared</param>
+        /// <param name="other">Instance of PolicyConditions to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(PolicyConditions other)
         {
@@ -136,42 +151,42 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.ForUsers == other.ForUsers ||
                     this.ForUsers != null &&
                     this.ForUsers.SequenceEqual(other.ForUsers)
-                ) && 
+                ) &&
                 (
                     this.Directions == other.Directions ||
                     this.Directions != null &&
                     this.Directions.SequenceEqual(other.Directions)
-                ) && 
+                ) &&
                 (
                     this.DateRanges == other.DateRanges ||
                     this.DateRanges != null &&
                     this.DateRanges.SequenceEqual(other.DateRanges)
-                ) && 
+                ) &&
                 (
                     this.MediaTypes == other.MediaTypes ||
                     this.MediaTypes != null &&
                     this.MediaTypes.SequenceEqual(other.MediaTypes)
-                ) && 
+                ) &&
                 (
                     this.ForQueues == other.ForQueues ||
                     this.ForQueues != null &&
                     this.ForQueues.SequenceEqual(other.ForQueues)
-                ) && 
+                ) &&
                 (
                     this.Duration == other.Duration ||
                     this.Duration != null &&
                     this.Duration.Equals(other.Duration)
-                ) && 
+                ) &&
                 (
                     this.WrapupCodes == other.WrapupCodes ||
                     this.WrapupCodes != null &&
                     this.WrapupCodes.SequenceEqual(other.WrapupCodes)
-                ) && 
+                ) &&
                 (
                     this.TimeAllowed == other.TimeAllowed ||
                     this.TimeAllowed != null &&
@@ -190,36 +205,25 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ForUsers != null)
-                    hash = hash * 57 + this.ForUsers.GetHashCode();
-                
+                    hash = hash * 59 + this.ForUsers.GetHashCode();
                 if (this.Directions != null)
-                    hash = hash * 57 + this.Directions.GetHashCode();
-                
+                    hash = hash * 59 + this.Directions.GetHashCode();
                 if (this.DateRanges != null)
-                    hash = hash * 57 + this.DateRanges.GetHashCode();
-                
+                    hash = hash * 59 + this.DateRanges.GetHashCode();
                 if (this.MediaTypes != null)
-                    hash = hash * 57 + this.MediaTypes.GetHashCode();
-                
+                    hash = hash * 59 + this.MediaTypes.GetHashCode();
                 if (this.ForQueues != null)
-                    hash = hash * 57 + this.ForQueues.GetHashCode();
-                
+                    hash = hash * 59 + this.ForQueues.GetHashCode();
                 if (this.Duration != null)
-                    hash = hash * 57 + this.Duration.GetHashCode();
-                
+                    hash = hash * 59 + this.Duration.GetHashCode();
                 if (this.WrapupCodes != null)
-                    hash = hash * 57 + this.WrapupCodes.GetHashCode();
-                
+                    hash = hash * 59 + this.WrapupCodes.GetHashCode();
                 if (this.TimeAllowed != null)
-                    hash = hash * 57 + this.TimeAllowed.GetHashCode();
-                
+                    hash = hash * 59 + this.TimeAllowed.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

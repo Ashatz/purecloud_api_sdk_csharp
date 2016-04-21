@@ -4,44 +4,46 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class ColumnCollapse :  IEquatable<ColumnCollapse>
-    {
+    public partial class ColumnCollapse :  IEquatable<ColumnCollapse>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="ColumnCollapse" /> class.
+        /// Initializes a new instance of the <see cref="ColumnCollapse" />class.
         /// </summary>
-        public ColumnCollapse()
+        /// <param name="Label">Label.</param>
+        /// <param name="Columns">Columns.</param>
+
+        public ColumnCollapse(string Label = null, List<int?> Columns = null)
         {
+            this.Label = Label;
+            this.Columns = Columns;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets Label
         /// </summary>
         [DataMember(Name="label", EmitDefaultValue=false)]
         public string Label { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Columns
         /// </summary>
         [DataMember(Name="columns", EmitDefaultValue=false)]
         public List<int?> Columns { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -52,11 +54,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class ColumnCollapse {\n");
             sb.Append("  Label: ").Append(Label).Append("\n");
             sb.Append("  Columns: ").Append(Columns).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -80,7 +81,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if ColumnCollapse instances are equal
         /// </summary>
-        /// <param name="obj">Instance of ColumnCollapse to be compared</param>
+        /// <param name="other">Instance of ColumnCollapse to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(ColumnCollapse other)
         {
@@ -88,12 +89,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Label == other.Label ||
                     this.Label != null &&
                     this.Label.Equals(other.Label)
-                ) && 
+                ) &&
                 (
                     this.Columns == other.Columns ||
                     this.Columns != null &&
@@ -112,18 +113,13 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Label != null)
-                    hash = hash * 57 + this.Label.GetHashCode();
-                
+                    hash = hash * 59 + this.Label.GetHashCode();
                 if (this.Columns != null)
-                    hash = hash * 57 + this.Columns.GetHashCode();
-                
+                    hash = hash * 59 + this.Columns.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

@@ -4,44 +4,46 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class TimeInterval :  IEquatable<TimeInterval>
-    {
+    public partial class TimeInterval :  IEquatable<TimeInterval>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="TimeInterval" /> class.
+        /// Initializes a new instance of the <see cref="TimeInterval" />class.
         /// </summary>
-        public TimeInterval()
+        /// <param name="Days">Days.</param>
+        /// <param name="Hours">Hours.</param>
+
+        public TimeInterval(int? Days = null, int? Hours = null)
         {
+            this.Days = Days;
+            this.Hours = Hours;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets Days
         /// </summary>
         [DataMember(Name="days", EmitDefaultValue=false)]
         public int? Days { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Hours
         /// </summary>
         [DataMember(Name="hours", EmitDefaultValue=false)]
         public int? Hours { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -52,11 +54,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class TimeInterval {\n");
             sb.Append("  Days: ").Append(Days).Append("\n");
             sb.Append("  Hours: ").Append(Hours).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -80,7 +81,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if TimeInterval instances are equal
         /// </summary>
-        /// <param name="obj">Instance of TimeInterval to be compared</param>
+        /// <param name="other">Instance of TimeInterval to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(TimeInterval other)
         {
@@ -88,12 +89,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Days == other.Days ||
                     this.Days != null &&
                     this.Days.Equals(other.Days)
-                ) && 
+                ) &&
                 (
                     this.Hours == other.Hours ||
                     this.Hours != null &&
@@ -112,18 +113,13 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Days != null)
-                    hash = hash * 57 + this.Days.GetHashCode();
-                
+                    hash = hash * 59 + this.Days.GetHashCode();
                 if (this.Hours != null)
-                    hash = hash * 57 + this.Hours.GetHashCode();
-                
+                    hash = hash * 59 + this.Hours.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

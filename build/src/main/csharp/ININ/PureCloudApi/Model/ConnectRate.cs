@@ -4,51 +4,54 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class ConnectRate :  IEquatable<ConnectRate>
-    {
+    public partial class ConnectRate :  IEquatable<ConnectRate>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="ConnectRate" /> class.
+        /// Initializes a new instance of the <see cref="ConnectRate" />class.
         /// </summary>
-        public ConnectRate()
+        /// <param name="Attempts">Attempts.</param>
+        /// <param name="Connects">Connects.</param>
+        /// <param name="ConnectRatio">ConnectRatio.</param>
+
+        public ConnectRate(long? Attempts = null, long? Connects = null, double? ConnectRatio = null)
         {
+            this.Attempts = Attempts;
+            this.Connects = Connects;
+            this.ConnectRatio = ConnectRatio;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets Attempts
         /// </summary>
         [DataMember(Name="attempts", EmitDefaultValue=false)]
         public long? Attempts { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Connects
         /// </summary>
         [DataMember(Name="connects", EmitDefaultValue=false)]
         public long? Connects { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ConnectRatio
         /// </summary>
         [DataMember(Name="connectRatio", EmitDefaultValue=false)]
         public double? ConnectRatio { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -60,11 +63,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Attempts: ").Append(Attempts).Append("\n");
             sb.Append("  Connects: ").Append(Connects).Append("\n");
             sb.Append("  ConnectRatio: ").Append(ConnectRatio).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -88,7 +90,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if ConnectRate instances are equal
         /// </summary>
-        /// <param name="obj">Instance of ConnectRate to be compared</param>
+        /// <param name="other">Instance of ConnectRate to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(ConnectRate other)
         {
@@ -96,17 +98,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Attempts == other.Attempts ||
                     this.Attempts != null &&
                     this.Attempts.Equals(other.Attempts)
-                ) && 
+                ) &&
                 (
                     this.Connects == other.Connects ||
                     this.Connects != null &&
                     this.Connects.Equals(other.Connects)
-                ) && 
+                ) &&
                 (
                     this.ConnectRatio == other.ConnectRatio ||
                     this.ConnectRatio != null &&
@@ -125,21 +127,15 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Attempts != null)
-                    hash = hash * 57 + this.Attempts.GetHashCode();
-                
+                    hash = hash * 59 + this.Attempts.GetHashCode();
                 if (this.Connects != null)
-                    hash = hash * 57 + this.Connects.GetHashCode();
-                
+                    hash = hash * 59 + this.Connects.GetHashCode();
                 if (this.ConnectRatio != null)
-                    hash = hash * 57 + this.ConnectRatio.GetHashCode();
-                
+                    hash = hash * 59 + this.ConnectRatio.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

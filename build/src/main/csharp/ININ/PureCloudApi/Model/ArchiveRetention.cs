@@ -4,44 +4,58 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class ArchiveRetention :  IEquatable<ArchiveRetention>
-    {
+    public partial class ArchiveRetention :  IEquatable<ArchiveRetention>
+    { 
+
         /// <summary>
-        /// Initializes a new instance of the <see cref="ArchiveRetention" /> class.
+        /// Gets or Sets StorageMedium
         /// </summary>
-        public ArchiveRetention()
-        {
+        [JsonConverter(typeof(StringEnumConverter))]
+                public enum StorageMediumEnum {
             
+            [EnumMember(Value = "CLOUDARCHIVE")]
+            Cloudarchive
         }
 
         
+
+        /// <summary>
+        /// Gets or Sets StorageMedium
+        /// </summary>
+        [DataMember(Name="storageMedium", EmitDefaultValue=false)]
+        public StorageMediumEnum? StorageMedium { get; set; }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ArchiveRetention" />class.
+        /// </summary>
+        /// <param name="Days">Days.</param>
+        /// <param name="StorageMedium">StorageMedium.</param>
+
+        public ArchiveRetention(int? Days = null, StorageMediumEnum? StorageMedium = null)
+        {
+            this.Days = Days;
+            this.StorageMedium = StorageMedium;
+            
+        }
+
+    
         /// <summary>
         /// Gets or Sets Days
         /// </summary>
         [DataMember(Name="days", EmitDefaultValue=false)]
         public int? Days { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets StorageMedium
-        /// </summary>
-        [DataMember(Name="storageMedium", EmitDefaultValue=false)]
-        public string StorageMedium { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -52,11 +66,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class ArchiveRetention {\n");
             sb.Append("  Days: ").Append(Days).Append("\n");
             sb.Append("  StorageMedium: ").Append(StorageMedium).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -80,7 +93,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if ArchiveRetention instances are equal
         /// </summary>
-        /// <param name="obj">Instance of ArchiveRetention to be compared</param>
+        /// <param name="other">Instance of ArchiveRetention to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(ArchiveRetention other)
         {
@@ -88,12 +101,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Days == other.Days ||
                     this.Days != null &&
                     this.Days.Equals(other.Days)
-                ) && 
+                ) &&
                 (
                     this.StorageMedium == other.StorageMedium ||
                     this.StorageMedium != null &&
@@ -112,18 +125,13 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Days != null)
-                    hash = hash * 57 + this.Days.GetHashCode();
-                
+                    hash = hash * 59 + this.Days.GetHashCode();
                 if (this.StorageMedium != null)
-                    hash = hash * 57 + this.StorageMedium.GetHashCode();
-                
+                    hash = hash * 59 + this.StorageMedium.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

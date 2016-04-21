@@ -4,51 +4,54 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class GreetingAudioFile :  IEquatable<GreetingAudioFile>
-    {
+    public partial class GreetingAudioFile :  IEquatable<GreetingAudioFile>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="GreetingAudioFile" /> class.
+        /// Initializes a new instance of the <see cref="GreetingAudioFile" />class.
         /// </summary>
-        public GreetingAudioFile()
+        /// <param name="DurationMilliseconds">DurationMilliseconds.</param>
+        /// <param name="SizeBytes">SizeBytes.</param>
+        /// <param name="SelfUri">SelfUri.</param>
+
+        public GreetingAudioFile(long? DurationMilliseconds = null, long? SizeBytes = null, string SelfUri = null)
         {
+            this.DurationMilliseconds = DurationMilliseconds;
+            this.SizeBytes = SizeBytes;
+            this.SelfUri = SelfUri;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets DurationMilliseconds
         /// </summary>
         [DataMember(Name="durationMilliseconds", EmitDefaultValue=false)]
         public long? DurationMilliseconds { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets SizeBytes
         /// </summary>
         [DataMember(Name="sizeBytes", EmitDefaultValue=false)]
         public long? SizeBytes { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets SelfUri
         /// </summary>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -60,11 +63,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  DurationMilliseconds: ").Append(DurationMilliseconds).Append("\n");
             sb.Append("  SizeBytes: ").Append(SizeBytes).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -88,7 +90,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if GreetingAudioFile instances are equal
         /// </summary>
-        /// <param name="obj">Instance of GreetingAudioFile to be compared</param>
+        /// <param name="other">Instance of GreetingAudioFile to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(GreetingAudioFile other)
         {
@@ -96,17 +98,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.DurationMilliseconds == other.DurationMilliseconds ||
                     this.DurationMilliseconds != null &&
                     this.DurationMilliseconds.Equals(other.DurationMilliseconds)
-                ) && 
+                ) &&
                 (
                     this.SizeBytes == other.SizeBytes ||
                     this.SizeBytes != null &&
                     this.SizeBytes.Equals(other.SizeBytes)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
@@ -125,21 +127,15 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.DurationMilliseconds != null)
-                    hash = hash * 57 + this.DurationMilliseconds.GetHashCode();
-                
+                    hash = hash * 59 + this.DurationMilliseconds.GetHashCode();
                 if (this.SizeBytes != null)
-                    hash = hash * 57 + this.SizeBytes.GetHashCode();
-                
+                    hash = hash * 59 + this.SizeBytes.GetHashCode();
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
-                
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

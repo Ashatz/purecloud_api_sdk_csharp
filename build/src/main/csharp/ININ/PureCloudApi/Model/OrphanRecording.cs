@@ -4,111 +4,181 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class OrphanRecording :  IEquatable<OrphanRecording>
-    {
+    public partial class OrphanRecording :  IEquatable<OrphanRecording>
+    { 
+
         /// <summary>
-        /// Initializes a new instance of the <see cref="OrphanRecording" /> class.
+        /// Gets or Sets ProviderType
         /// </summary>
-        public OrphanRecording()
-        {
+        [JsonConverter(typeof(StringEnumConverter))]
+                public enum ProviderTypeEnum {
             
+            [EnumMember(Value = "EDGE")]
+            Edge,
+            
+            [EnumMember(Value = "CHAT")]
+            Chat,
+            
+            [EnumMember(Value = "EMAIL")]
+            Email
+        }
+
+
+        /// <summary>
+        /// Gets or Sets MediaType
+        /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
+                public enum MediaTypeEnum {
+            
+            [EnumMember(Value = "CALL")]
+            Call,
+            
+            [EnumMember(Value = "CHAT")]
+            Chat,
+            
+            [EnumMember(Value = "EMAIL")]
+            Email
+        }
+
+
+        /// <summary>
+        /// Gets or Sets FileState
+        /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
+                public enum FileStateEnum {
+            
+            [EnumMember(Value = "ARCHIVED")]
+            Archived,
+            
+            [EnumMember(Value = "AVAILABLE")]
+            Available,
+            
+            [EnumMember(Value = "DELETED")]
+            Deleted,
+            
+            [EnumMember(Value = "RESTORED")]
+            Restored,
+            
+            [EnumMember(Value = "RESTORING")]
+            Restoring,
+            
+            [EnumMember(Value = "UPLOADING")]
+            Uploading
         }
 
         
+
+        /// <summary>
+        /// Gets or Sets ProviderType
+        /// </summary>
+        [DataMember(Name="providerType", EmitDefaultValue=false)]
+        public ProviderTypeEnum? ProviderType { get; set; }
+    
+
+        /// <summary>
+        /// Gets or Sets MediaType
+        /// </summary>
+        [DataMember(Name="mediaType", EmitDefaultValue=false)]
+        public MediaTypeEnum? MediaType { get; set; }
+    
+
+        /// <summary>
+        /// Gets or Sets FileState
+        /// </summary>
+        [DataMember(Name="fileState", EmitDefaultValue=false)]
+        public FileStateEnum? FileState { get; set; }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="OrphanRecording" />class.
+        /// </summary>
+        /// <param name="Name">Name.</param>
+        /// <param name="CreatedTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="RecoveredTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="ProviderType">ProviderType.</param>
+        /// <param name="MediaSizeBytes">MediaSizeBytes.</param>
+        /// <param name="MediaType">MediaType.</param>
+        /// <param name="FileState">FileState.</param>
+        /// <param name="ProviderEndpoint">ProviderEndpoint.</param>
+        /// <param name="Recording">Recording.</param>
+
+        public OrphanRecording(string Name = null, DateTime? CreatedTime = null, DateTime? RecoveredTime = null, ProviderTypeEnum? ProviderType = null, long? MediaSizeBytes = null, MediaTypeEnum? MediaType = null, FileStateEnum? FileState = null, string ProviderEndpoint = null, Recording Recording = null)
+        {
+            this.Name = Name;
+            this.CreatedTime = CreatedTime;
+            this.RecoveredTime = RecoveredTime;
+            this.ProviderType = ProviderType;
+            this.MediaSizeBytes = MediaSizeBytes;
+            this.MediaType = MediaType;
+            this.FileState = FileState;
+            this.ProviderEndpoint = ProviderEndpoint;
+            this.Recording = Recording;
+            
+        }
+
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="createdTime", EmitDefaultValue=false)]
         public DateTime? CreatedTime { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="recoveredTime", EmitDefaultValue=false)]
         public DateTime? RecoveredTime { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets ProviderType
-        /// </summary>
-        [DataMember(Name="providerType", EmitDefaultValue=false)]
-        public string ProviderType { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets MediaSizeBytes
         /// </summary>
         [DataMember(Name="mediaSizeBytes", EmitDefaultValue=false)]
         public long? MediaSizeBytes { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets MediaType
-        /// </summary>
-        [DataMember(Name="mediaType", EmitDefaultValue=false)]
-        public string MediaType { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets FileState
-        /// </summary>
-        [DataMember(Name="fileState", EmitDefaultValue=false)]
-        public string FileState { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ProviderEndpoint
         /// </summary>
         [DataMember(Name="providerEndpoint", EmitDefaultValue=false)]
         public string ProviderEndpoint { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Recording
         /// </summary>
         [DataMember(Name="recording", EmitDefaultValue=false)]
         public Recording Recording { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -128,11 +198,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  ProviderEndpoint: ").Append(ProviderEndpoint).Append("\n");
             sb.Append("  Recording: ").Append(Recording).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -156,7 +225,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if OrphanRecording instances are equal
         /// </summary>
-        /// <param name="obj">Instance of OrphanRecording to be compared</param>
+        /// <param name="other">Instance of OrphanRecording to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(OrphanRecording other)
         {
@@ -164,57 +233,57 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.CreatedTime == other.CreatedTime ||
                     this.CreatedTime != null &&
                     this.CreatedTime.Equals(other.CreatedTime)
-                ) && 
+                ) &&
                 (
                     this.RecoveredTime == other.RecoveredTime ||
                     this.RecoveredTime != null &&
                     this.RecoveredTime.Equals(other.RecoveredTime)
-                ) && 
+                ) &&
                 (
                     this.ProviderType == other.ProviderType ||
                     this.ProviderType != null &&
                     this.ProviderType.Equals(other.ProviderType)
-                ) && 
+                ) &&
                 (
                     this.MediaSizeBytes == other.MediaSizeBytes ||
                     this.MediaSizeBytes != null &&
                     this.MediaSizeBytes.Equals(other.MediaSizeBytes)
-                ) && 
+                ) &&
                 (
                     this.MediaType == other.MediaType ||
                     this.MediaType != null &&
                     this.MediaType.Equals(other.MediaType)
-                ) && 
+                ) &&
                 (
                     this.FileState == other.FileState ||
                     this.FileState != null &&
                     this.FileState.Equals(other.FileState)
-                ) && 
+                ) &&
                 (
                     this.ProviderEndpoint == other.ProviderEndpoint ||
                     this.ProviderEndpoint != null &&
                     this.ProviderEndpoint.Equals(other.ProviderEndpoint)
-                ) && 
+                ) &&
                 (
                     this.Recording == other.Recording ||
                     this.Recording != null &&
                     this.Recording.Equals(other.Recording)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
@@ -233,45 +302,31 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
-                
+                    hash = hash * 59 + this.Id.GetHashCode();
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
-                
+                    hash = hash * 59 + this.Name.GetHashCode();
                 if (this.CreatedTime != null)
-                    hash = hash * 57 + this.CreatedTime.GetHashCode();
-                
+                    hash = hash * 59 + this.CreatedTime.GetHashCode();
                 if (this.RecoveredTime != null)
-                    hash = hash * 57 + this.RecoveredTime.GetHashCode();
-                
+                    hash = hash * 59 + this.RecoveredTime.GetHashCode();
                 if (this.ProviderType != null)
-                    hash = hash * 57 + this.ProviderType.GetHashCode();
-                
+                    hash = hash * 59 + this.ProviderType.GetHashCode();
                 if (this.MediaSizeBytes != null)
-                    hash = hash * 57 + this.MediaSizeBytes.GetHashCode();
-                
+                    hash = hash * 59 + this.MediaSizeBytes.GetHashCode();
                 if (this.MediaType != null)
-                    hash = hash * 57 + this.MediaType.GetHashCode();
-                
+                    hash = hash * 59 + this.MediaType.GetHashCode();
                 if (this.FileState != null)
-                    hash = hash * 57 + this.FileState.GetHashCode();
-                
+                    hash = hash * 59 + this.FileState.GetHashCode();
                 if (this.ProviderEndpoint != null)
-                    hash = hash * 57 + this.ProviderEndpoint.GetHashCode();
-                
+                    hash = hash * 59 + this.ProviderEndpoint.GetHashCode();
                 if (this.Recording != null)
-                    hash = hash * 57 + this.Recording.GetHashCode();
-                
+                    hash = hash * 59 + this.Recording.GetHashCode();
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
-                
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

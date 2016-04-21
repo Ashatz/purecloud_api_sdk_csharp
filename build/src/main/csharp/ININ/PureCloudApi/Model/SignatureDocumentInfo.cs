@@ -4,51 +4,54 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class SignatureDocumentInfo :  IEquatable<SignatureDocumentInfo>
-    {
+    public partial class SignatureDocumentInfo :  IEquatable<SignatureDocumentInfo>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="SignatureDocumentInfo" /> class.
+        /// Initializes a new instance of the <see cref="SignatureDocumentInfo" />class.
         /// </summary>
-        public SignatureDocumentInfo()
+        /// <param name="Org">Org.</param>
+        /// <param name="User">User.</param>
+        /// <param name="ReturnUrl">ReturnUrl.</param>
+
+        public SignatureDocumentInfo(Organization Org = null, User User = null, string ReturnUrl = null)
         {
+            this.Org = Org;
+            this.User = User;
+            this.ReturnUrl = ReturnUrl;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets Org
         /// </summary>
         [DataMember(Name="org", EmitDefaultValue=false)]
         public Organization Org { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets User
         /// </summary>
         [DataMember(Name="user", EmitDefaultValue=false)]
         public User User { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ReturnUrl
         /// </summary>
         [DataMember(Name="returnUrl", EmitDefaultValue=false)]
         public string ReturnUrl { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -60,11 +63,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Org: ").Append(Org).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  ReturnUrl: ").Append(ReturnUrl).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -88,7 +90,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if SignatureDocumentInfo instances are equal
         /// </summary>
-        /// <param name="obj">Instance of SignatureDocumentInfo to be compared</param>
+        /// <param name="other">Instance of SignatureDocumentInfo to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(SignatureDocumentInfo other)
         {
@@ -96,17 +98,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Org == other.Org ||
                     this.Org != null &&
                     this.Org.Equals(other.Org)
-                ) && 
+                ) &&
                 (
                     this.User == other.User ||
                     this.User != null &&
                     this.User.Equals(other.User)
-                ) && 
+                ) &&
                 (
                     this.ReturnUrl == other.ReturnUrl ||
                     this.ReturnUrl != null &&
@@ -125,21 +127,15 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Org != null)
-                    hash = hash * 57 + this.Org.GetHashCode();
-                
+                    hash = hash * 59 + this.Org.GetHashCode();
                 if (this.User != null)
-                    hash = hash * 57 + this.User.GetHashCode();
-                
+                    hash = hash * 59 + this.User.GetHashCode();
                 if (this.ReturnUrl != null)
-                    hash = hash * 57 + this.ReturnUrl.GetHashCode();
-                
+                    hash = hash * 59 + this.ReturnUrl.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

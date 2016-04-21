@@ -4,51 +4,54 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class ReplaceRequest :  IEquatable<ReplaceRequest>
-    {
+    public partial class ReplaceRequest :  IEquatable<ReplaceRequest>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="ReplaceRequest" /> class.
+        /// Initializes a new instance of the <see cref="ReplaceRequest" />class.
         /// </summary>
-        public ReplaceRequest()
+        /// <param name="ChangeNumber">ChangeNumber.</param>
+        /// <param name="Name">Name.</param>
+        /// <param name="AuthToken">AuthToken.</param>
+
+        public ReplaceRequest(int? ChangeNumber = null, string Name = null, string AuthToken = null)
         {
+            this.ChangeNumber = ChangeNumber;
+            this.Name = Name;
+            this.AuthToken = AuthToken;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets ChangeNumber
         /// </summary>
         [DataMember(Name="changeNumber", EmitDefaultValue=false)]
         public int? ChangeNumber { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets AuthToken
         /// </summary>
         [DataMember(Name="authToken", EmitDefaultValue=false)]
         public string AuthToken { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -60,11 +63,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  ChangeNumber: ").Append(ChangeNumber).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  AuthToken: ").Append(AuthToken).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -88,7 +90,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if ReplaceRequest instances are equal
         /// </summary>
-        /// <param name="obj">Instance of ReplaceRequest to be compared</param>
+        /// <param name="other">Instance of ReplaceRequest to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(ReplaceRequest other)
         {
@@ -96,17 +98,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.ChangeNumber == other.ChangeNumber ||
                     this.ChangeNumber != null &&
                     this.ChangeNumber.Equals(other.ChangeNumber)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.AuthToken == other.AuthToken ||
                     this.AuthToken != null &&
@@ -125,21 +127,15 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ChangeNumber != null)
-                    hash = hash * 57 + this.ChangeNumber.GetHashCode();
-                
+                    hash = hash * 59 + this.ChangeNumber.GetHashCode();
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
-                
+                    hash = hash * 59 + this.Name.GetHashCode();
                 if (this.AuthToken != null)
-                    hash = hash * 57 + this.AuthToken.GetHashCode();
-                
+                    hash = hash * 59 + this.AuthToken.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

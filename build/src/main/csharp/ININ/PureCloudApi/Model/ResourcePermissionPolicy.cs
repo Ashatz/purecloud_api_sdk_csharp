@@ -4,107 +4,118 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class ResourcePermissionPolicy :  IEquatable<ResourcePermissionPolicy>
-    {
+    public partial class ResourcePermissionPolicy :  IEquatable<ResourcePermissionPolicy>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="ResourcePermissionPolicy" /> class.
+        /// Initializes a new instance of the <see cref="ResourcePermissionPolicy" />class.
         /// </summary>
-        public ResourcePermissionPolicy()
+        /// <param name="OrgId">OrgId.</param>
+        /// <param name="Id">Id.</param>
+        /// <param name="Domain">Domain.</param>
+        /// <param name="EntityName">EntityName.</param>
+        /// <param name="PolicyName">PolicyName.</param>
+        /// <param name="PolicyDescription">PolicyDescription.</param>
+        /// <param name="ActionSetKey">ActionSetKey.</param>
+        /// <param name="ResourceConditionNode">ResourceConditionNode.</param>
+        /// <param name="NamedResources">NamedResources.</param>
+        /// <param name="ResourceCondition">ResourceCondition.</param>
+        /// <param name="ActionSet">ActionSet.</param>
+
+        public ResourcePermissionPolicy(string OrgId = null, string Id = null, string Domain = null, string EntityName = null, string PolicyName = null, string PolicyDescription = null, string ActionSetKey = null, ResourceConditionNode ResourceConditionNode = null, List<string> NamedResources = null, string ResourceCondition = null, List<string> ActionSet = null)
         {
+            this.OrgId = OrgId;
+            this.Id = Id;
+            this.Domain = Domain;
+            this.EntityName = EntityName;
+            this.PolicyName = PolicyName;
+            this.PolicyDescription = PolicyDescription;
+            this.ActionSetKey = ActionSetKey;
+            this.ResourceConditionNode = ResourceConditionNode;
+            this.NamedResources = NamedResources;
+            this.ResourceCondition = ResourceCondition;
+            this.ActionSet = ActionSet;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets OrgId
         /// </summary>
         [DataMember(Name="orgId", EmitDefaultValue=false)]
         public string OrgId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Domain
         /// </summary>
         [DataMember(Name="domain", EmitDefaultValue=false)]
         public string Domain { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets EntityName
         /// </summary>
         [DataMember(Name="entityName", EmitDefaultValue=false)]
         public string EntityName { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets PolicyName
         /// </summary>
         [DataMember(Name="policyName", EmitDefaultValue=false)]
         public string PolicyName { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets PolicyDescription
         /// </summary>
         [DataMember(Name="policyDescription", EmitDefaultValue=false)]
         public string PolicyDescription { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ActionSetKey
         /// </summary>
         [DataMember(Name="actionSetKey", EmitDefaultValue=false)]
         public string ActionSetKey { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ResourceConditionNode
         /// </summary>
         [DataMember(Name="resourceConditionNode", EmitDefaultValue=false)]
         public ResourceConditionNode ResourceConditionNode { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets NamedResources
         /// </summary>
         [DataMember(Name="namedResources", EmitDefaultValue=false)]
         public List<string> NamedResources { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ResourceCondition
         /// </summary>
         [DataMember(Name="resourceCondition", EmitDefaultValue=false)]
         public string ResourceCondition { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ActionSet
         /// </summary>
         [DataMember(Name="actionSet", EmitDefaultValue=false)]
         public List<string> ActionSet { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -124,11 +135,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  NamedResources: ").Append(NamedResources).Append("\n");
             sb.Append("  ResourceCondition: ").Append(ResourceCondition).Append("\n");
             sb.Append("  ActionSet: ").Append(ActionSet).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -152,7 +162,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if ResourcePermissionPolicy instances are equal
         /// </summary>
-        /// <param name="obj">Instance of ResourcePermissionPolicy to be compared</param>
+        /// <param name="other">Instance of ResourcePermissionPolicy to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(ResourcePermissionPolicy other)
         {
@@ -160,57 +170,57 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.OrgId == other.OrgId ||
                     this.OrgId != null &&
                     this.OrgId.Equals(other.OrgId)
-                ) && 
+                ) &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Domain == other.Domain ||
                     this.Domain != null &&
                     this.Domain.Equals(other.Domain)
-                ) && 
+                ) &&
                 (
                     this.EntityName == other.EntityName ||
                     this.EntityName != null &&
                     this.EntityName.Equals(other.EntityName)
-                ) && 
+                ) &&
                 (
                     this.PolicyName == other.PolicyName ||
                     this.PolicyName != null &&
                     this.PolicyName.Equals(other.PolicyName)
-                ) && 
+                ) &&
                 (
                     this.PolicyDescription == other.PolicyDescription ||
                     this.PolicyDescription != null &&
                     this.PolicyDescription.Equals(other.PolicyDescription)
-                ) && 
+                ) &&
                 (
                     this.ActionSetKey == other.ActionSetKey ||
                     this.ActionSetKey != null &&
                     this.ActionSetKey.Equals(other.ActionSetKey)
-                ) && 
+                ) &&
                 (
                     this.ResourceConditionNode == other.ResourceConditionNode ||
                     this.ResourceConditionNode != null &&
                     this.ResourceConditionNode.Equals(other.ResourceConditionNode)
-                ) && 
+                ) &&
                 (
                     this.NamedResources == other.NamedResources ||
                     this.NamedResources != null &&
                     this.NamedResources.SequenceEqual(other.NamedResources)
-                ) && 
+                ) &&
                 (
                     this.ResourceCondition == other.ResourceCondition ||
                     this.ResourceCondition != null &&
                     this.ResourceCondition.Equals(other.ResourceCondition)
-                ) && 
+                ) &&
                 (
                     this.ActionSet == other.ActionSet ||
                     this.ActionSet != null &&
@@ -229,45 +239,31 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.OrgId != null)
-                    hash = hash * 57 + this.OrgId.GetHashCode();
-                
+                    hash = hash * 59 + this.OrgId.GetHashCode();
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
-                
+                    hash = hash * 59 + this.Id.GetHashCode();
                 if (this.Domain != null)
-                    hash = hash * 57 + this.Domain.GetHashCode();
-                
+                    hash = hash * 59 + this.Domain.GetHashCode();
                 if (this.EntityName != null)
-                    hash = hash * 57 + this.EntityName.GetHashCode();
-                
+                    hash = hash * 59 + this.EntityName.GetHashCode();
                 if (this.PolicyName != null)
-                    hash = hash * 57 + this.PolicyName.GetHashCode();
-                
+                    hash = hash * 59 + this.PolicyName.GetHashCode();
                 if (this.PolicyDescription != null)
-                    hash = hash * 57 + this.PolicyDescription.GetHashCode();
-                
+                    hash = hash * 59 + this.PolicyDescription.GetHashCode();
                 if (this.ActionSetKey != null)
-                    hash = hash * 57 + this.ActionSetKey.GetHashCode();
-                
+                    hash = hash * 59 + this.ActionSetKey.GetHashCode();
                 if (this.ResourceConditionNode != null)
-                    hash = hash * 57 + this.ResourceConditionNode.GetHashCode();
-                
+                    hash = hash * 59 + this.ResourceConditionNode.GetHashCode();
                 if (this.NamedResources != null)
-                    hash = hash * 57 + this.NamedResources.GetHashCode();
-                
+                    hash = hash * 59 + this.NamedResources.GetHashCode();
                 if (this.ResourceCondition != null)
-                    hash = hash * 57 + this.ResourceCondition.GetHashCode();
-                
+                    hash = hash * 59 + this.ResourceCondition.GetHashCode();
                 if (this.ActionSet != null)
-                    hash = hash * 57 + this.ActionSet.GetHashCode();
-                
+                    hash = hash * 59 + this.ActionSet.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

@@ -4,39 +4,47 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// Used as the body to the lockFlow request.
     /// </summary>
     [DataContract]
-    public class FlowLockRequest :  IEquatable<FlowLockRequest>
-    {
+    public partial class FlowLockRequest :  IEquatable<FlowLockRequest>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="FlowLockRequest" /> class.
+        /// Initializes a new instance of the <see cref="FlowLockRequest" />class.
         /// </summary>
-        public FlowLockRequest()
+        /// <param name="Locked">Change the locked state of the flow definition.  True to attempt to lock for modification, false to release the lock. (required) (default to false).</param>
+
+        public FlowLockRequest(bool? Locked = null)
         {
-            this.Locked = false;
+            // to ensure "Locked" is required (not null)
+            if (Locked == null)
+            {
+                throw new InvalidDataException("Locked is a required property for FlowLockRequest and cannot be null");
+            }
+            else
+            {
+                this.Locked = Locked;
+            }
             
         }
 
-        
+    
         /// <summary>
         /// Change the locked state of the flow definition.  True to attempt to lock for modification, false to release the lock.
         /// </summary>
         /// <value>Change the locked state of the flow definition.  True to attempt to lock for modification, false to release the lock.</value>
         [DataMember(Name="locked", EmitDefaultValue=false)]
         public bool? Locked { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -46,11 +54,10 @@ namespace ININ.PureCloudApi.Model
             var sb = new StringBuilder();
             sb.Append("class FlowLockRequest {\n");
             sb.Append("  Locked: ").Append(Locked).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -74,7 +81,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if FlowLockRequest instances are equal
         /// </summary>
-        /// <param name="obj">Instance of FlowLockRequest to be compared</param>
+        /// <param name="other">Instance of FlowLockRequest to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(FlowLockRequest other)
         {
@@ -82,7 +89,7 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Locked == other.Locked ||
                     this.Locked != null &&
@@ -101,15 +108,11 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Locked != null)
-                    hash = hash * 57 + this.Locked.GetHashCode();
-                
+                    hash = hash * 59 + this.Locked.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

@@ -4,51 +4,54 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class MediaResult :  IEquatable<MediaResult>
-    {
+    public partial class MediaResult :  IEquatable<MediaResult>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="MediaResult" /> class.
+        /// Initializes a new instance of the <see cref="MediaResult" />class.
         /// </summary>
-        public MediaResult()
+        /// <param name="WaveUri">WaveUri.</param>
+        /// <param name="MediaUri">MediaUri.</param>
+        /// <param name="WaveformData">WaveformData.</param>
+
+        public MediaResult(string WaveUri = null, string MediaUri = null, List<float?> WaveformData = null)
         {
+            this.WaveUri = WaveUri;
+            this.MediaUri = MediaUri;
+            this.WaveformData = WaveformData;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets WaveUri
         /// </summary>
         [DataMember(Name="waveUri", EmitDefaultValue=false)]
         public string WaveUri { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets MediaUri
         /// </summary>
         [DataMember(Name="mediaUri", EmitDefaultValue=false)]
         public string MediaUri { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets WaveformData
         /// </summary>
         [DataMember(Name="waveformData", EmitDefaultValue=false)]
         public List<float?> WaveformData { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -60,11 +63,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  WaveUri: ").Append(WaveUri).Append("\n");
             sb.Append("  MediaUri: ").Append(MediaUri).Append("\n");
             sb.Append("  WaveformData: ").Append(WaveformData).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -88,7 +90,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if MediaResult instances are equal
         /// </summary>
-        /// <param name="obj">Instance of MediaResult to be compared</param>
+        /// <param name="other">Instance of MediaResult to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(MediaResult other)
         {
@@ -96,17 +98,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.WaveUri == other.WaveUri ||
                     this.WaveUri != null &&
                     this.WaveUri.Equals(other.WaveUri)
-                ) && 
+                ) &&
                 (
                     this.MediaUri == other.MediaUri ||
                     this.MediaUri != null &&
                     this.MediaUri.Equals(other.MediaUri)
-                ) && 
+                ) &&
                 (
                     this.WaveformData == other.WaveformData ||
                     this.WaveformData != null &&
@@ -125,21 +127,15 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.WaveUri != null)
-                    hash = hash * 57 + this.WaveUri.GetHashCode();
-                
+                    hash = hash * 59 + this.WaveUri.GetHashCode();
                 if (this.MediaUri != null)
-                    hash = hash * 57 + this.MediaUri.GetHashCode();
-                
+                    hash = hash * 59 + this.MediaUri.GetHashCode();
                 if (this.WaveformData != null)
-                    hash = hash * 57 + this.WaveformData.GetHashCode();
-                
+                    hash = hash * 59 + this.WaveformData.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

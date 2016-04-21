@@ -4,119 +4,169 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class Flow :  IEquatable<Flow>
-    {
+    public partial class Flow :  IEquatable<Flow>
+    { 
+
         /// <summary>
-        /// Initializes a new instance of the <see cref="Flow" /> class.
+        /// Gets or Sets Type
         /// </summary>
-        public Flow()
-        {
-            this.Active = false;
-            this.Deleted = false;
-            this.System = false;
+        [JsonConverter(typeof(StringEnumConverter))]
+                public enum TypeEnum {
             
+            [EnumMember(Value = "INBOUNDCALL")]
+            Inboundcall,
+            
+            [EnumMember(Value = "OUTBOUNDCALL")]
+            Outboundcall,
+            
+            [EnumMember(Value = "INQUEUECALL")]
+            Inqueuecall,
+            
+            [EnumMember(Value = "SPEECH")]
+            Speech
         }
 
         
+
+        /// <summary>
+        /// Gets or Sets Type
+        /// </summary>
+        [DataMember(Name="type", EmitDefaultValue=false)]
+        public TypeEnum? Type { get; set; }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Flow" />class.
+        /// </summary>
+        /// <param name="Name">Name.</param>
+        /// <param name="Description">Description.</param>
+        /// <param name="Type">Type.</param>
+        /// <param name="LockedUser">LockedUser.</param>
+        /// <param name="Active">Active (default to false).</param>
+        /// <param name="Deleted">Deleted (default to false).</param>
+        /// <param name="PublishedVersion">PublishedVersion.</param>
+        /// <param name="CheckedInVersion">CheckedInVersion.</param>
+        /// <param name="SavedVersion">SavedVersion.</param>
+        /// <param name="System">System (default to false).</param>
+
+        public Flow(string Name = null, string Description = null, TypeEnum? Type = null, UriReference LockedUser = null, bool? Active = null, bool? Deleted = null, FlowVersion PublishedVersion = null, FlowVersion CheckedInVersion = null, FlowVersion SavedVersion = null, bool? System = null)
+        {
+            this.Name = Name;
+            this.Description = Description;
+            this.Type = Type;
+            this.LockedUser = LockedUser;
+            // use default value if no "Active" provided
+            if (Active == null)
+            {
+                this.Active = false;
+            }
+            else
+            {
+                this.Active = Active;
+            }
+            // use default value if no "Deleted" provided
+            if (Deleted == null)
+            {
+                this.Deleted = false;
+            }
+            else
+            {
+                this.Deleted = Deleted;
+            }
+            this.PublishedVersion = PublishedVersion;
+            this.CheckedInVersion = CheckedInVersion;
+            this.SavedVersion = SavedVersion;
+            // use default value if no "System" provided
+            if (System == null)
+            {
+                this.System = false;
+            }
+            else
+            {
+                this.System = System;
+            }
+            
+        }
+
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Description
         /// </summary>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets Type
-        /// </summary>
-        [DataMember(Name="type", EmitDefaultValue=false)]
-        public string Type { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets LockedUser
         /// </summary>
         [DataMember(Name="lockedUser", EmitDefaultValue=false)]
         public UriReference LockedUser { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Active
         /// </summary>
         [DataMember(Name="active", EmitDefaultValue=false)]
         public bool? Active { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Deleted
         /// </summary>
         [DataMember(Name="deleted", EmitDefaultValue=false)]
         public bool? Deleted { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets PublishedVersion
         /// </summary>
         [DataMember(Name="publishedVersion", EmitDefaultValue=false)]
         public FlowVersion PublishedVersion { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets CheckedInVersion
         /// </summary>
         [DataMember(Name="checkedInVersion", EmitDefaultValue=false)]
         public FlowVersion CheckedInVersion { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets SavedVersion
         /// </summary>
         [DataMember(Name="savedVersion", EmitDefaultValue=false)]
         public FlowVersion SavedVersion { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets System
         /// </summary>
         [DataMember(Name="system", EmitDefaultValue=false)]
         public bool? System { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -137,11 +187,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  SavedVersion: ").Append(SavedVersion).Append("\n");
             sb.Append("  System: ").Append(System).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -165,7 +214,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if Flow instances are equal
         /// </summary>
-        /// <param name="obj">Instance of Flow to be compared</param>
+        /// <param name="other">Instance of Flow to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(Flow other)
         {
@@ -173,62 +222,62 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Description == other.Description ||
                     this.Description != null &&
                     this.Description.Equals(other.Description)
-                ) && 
+                ) &&
                 (
                     this.Type == other.Type ||
                     this.Type != null &&
                     this.Type.Equals(other.Type)
-                ) && 
+                ) &&
                 (
                     this.LockedUser == other.LockedUser ||
                     this.LockedUser != null &&
                     this.LockedUser.Equals(other.LockedUser)
-                ) && 
+                ) &&
                 (
                     this.Active == other.Active ||
                     this.Active != null &&
                     this.Active.Equals(other.Active)
-                ) && 
+                ) &&
                 (
                     this.Deleted == other.Deleted ||
                     this.Deleted != null &&
                     this.Deleted.Equals(other.Deleted)
-                ) && 
+                ) &&
                 (
                     this.PublishedVersion == other.PublishedVersion ||
                     this.PublishedVersion != null &&
                     this.PublishedVersion.Equals(other.PublishedVersion)
-                ) && 
+                ) &&
                 (
                     this.CheckedInVersion == other.CheckedInVersion ||
                     this.CheckedInVersion != null &&
                     this.CheckedInVersion.Equals(other.CheckedInVersion)
-                ) && 
+                ) &&
                 (
                     this.SavedVersion == other.SavedVersion ||
                     this.SavedVersion != null &&
                     this.SavedVersion.Equals(other.SavedVersion)
-                ) && 
+                ) &&
                 (
                     this.System == other.System ||
                     this.System != null &&
                     this.System.Equals(other.System)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
@@ -247,48 +296,33 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
-                
+                    hash = hash * 59 + this.Id.GetHashCode();
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
-                
+                    hash = hash * 59 + this.Name.GetHashCode();
                 if (this.Description != null)
-                    hash = hash * 57 + this.Description.GetHashCode();
-                
+                    hash = hash * 59 + this.Description.GetHashCode();
                 if (this.Type != null)
-                    hash = hash * 57 + this.Type.GetHashCode();
-                
+                    hash = hash * 59 + this.Type.GetHashCode();
                 if (this.LockedUser != null)
-                    hash = hash * 57 + this.LockedUser.GetHashCode();
-                
+                    hash = hash * 59 + this.LockedUser.GetHashCode();
                 if (this.Active != null)
-                    hash = hash * 57 + this.Active.GetHashCode();
-                
+                    hash = hash * 59 + this.Active.GetHashCode();
                 if (this.Deleted != null)
-                    hash = hash * 57 + this.Deleted.GetHashCode();
-                
+                    hash = hash * 59 + this.Deleted.GetHashCode();
                 if (this.PublishedVersion != null)
-                    hash = hash * 57 + this.PublishedVersion.GetHashCode();
-                
+                    hash = hash * 59 + this.PublishedVersion.GetHashCode();
                 if (this.CheckedInVersion != null)
-                    hash = hash * 57 + this.CheckedInVersion.GetHashCode();
-                
+                    hash = hash * 59 + this.CheckedInVersion.GetHashCode();
                 if (this.SavedVersion != null)
-                    hash = hash * 57 + this.SavedVersion.GetHashCode();
-                
+                    hash = hash * 59 + this.SavedVersion.GetHashCode();
                 if (this.System != null)
-                    hash = hash * 57 + this.System.GetHashCode();
-                
+                    hash = hash * 59 + this.System.GetHashCode();
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
-                
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

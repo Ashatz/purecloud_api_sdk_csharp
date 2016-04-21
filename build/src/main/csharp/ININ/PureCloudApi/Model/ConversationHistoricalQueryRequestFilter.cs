@@ -4,51 +4,162 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class ConversationHistoricalQueryRequestFilter :  IEquatable<ConversationHistoricalQueryRequestFilter>
-    {
+    public partial class ConversationHistoricalQueryRequestFilter :  IEquatable<ConversationHistoricalQueryRequestFilter>
+    { 
+
         /// <summary>
-        /// Initializes a new instance of the <see cref="ConversationHistoricalQueryRequestFilter" /> class.
+        /// Gets or Sets Target
         /// </summary>
-        public ConversationHistoricalQueryRequestFilter()
-        {
+        [JsonConverter(typeof(StringEnumConverter))]
+                public enum TargetEnum {
             
+            [EnumMember(Value = "interval")]
+            Interval,
+            
+            [EnumMember(Value = "agentId")]
+            Agentid,
+            
+            [EnumMember(Value = "queueId")]
+            Queueid,
+            
+            [EnumMember(Value = "purpose")]
+            Purpose,
+            
+            [EnumMember(Value = "duration")]
+            Duration,
+            
+            [EnumMember(Value = "active")]
+            Active,
+            
+            [EnumMember(Value = "freeText")]
+            Freetext,
+            
+            [EnumMember(Value = "recordingRestored")]
+            Recordingrestored,
+            
+            [EnumMember(Value = "connectedOnly")]
+            Connectedonly,
+            
+            [EnumMember(Value = "dialerCampaignId")]
+            Dialercampaignid,
+            
+            [EnumMember(Value = "wrapupCode")]
+            Wrapupcode,
+            
+            [EnumMember(Value = "direction")]
+            Direction,
+            
+            [EnumMember(Value = "mediaType")]
+            Mediatype,
+            
+            [EnumMember(Value = "disconnectType")]
+            Disconnecttype,
+            
+            [EnumMember(Value = "ani")]
+            Ani,
+            
+            [EnumMember(Value = "dnis")]
+            Dnis,
+            
+            [EnumMember(Value = "qualityEvaluationAgent")]
+            Qualityevaluationagent,
+            
+            [EnumMember(Value = "qualityEvaluator")]
+            Qualityevaluator,
+            
+            [EnumMember(Value = "qualityEvaluationForm")]
+            Qualityevaluationform,
+            
+            [EnumMember(Value = "qualityEvaluationScore")]
+            Qualityevaluationscore,
+            
+            [EnumMember(Value = "qualityEvaluationCriticalScore")]
+            Qualityevaluationcriticalscore
+        }
+
+
+        /// <summary>
+        /// Gets or Sets _Operator
+        /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
+                public enum _OperatorEnum {
+            
+            [EnumMember(Value = "equals")]
+            Equals,
+            
+            [EnumMember(Value = "lessthan")]
+            Lessthan,
+            
+            [EnumMember(Value = "lessthanequals")]
+            Lessthanequals,
+            
+            [EnumMember(Value = "greaterthan")]
+            Greaterthan,
+            
+            [EnumMember(Value = "greaterthanequals")]
+            Greaterthanequals,
+            
+            [EnumMember(Value = "between")]
+            Between,
+            
+            [EnumMember(Value = "before")]
+            Before,
+            
+            [EnumMember(Value = "after")]
+            After,
+            
+            [EnumMember(Value = "contains")]
+            Contains
         }
 
         
+
         /// <summary>
         /// Gets or Sets Target
         /// </summary>
         [DataMember(Name="target", EmitDefaultValue=false)]
-        public string Target { get; set; }
-  
-        
+        public TargetEnum? Target { get; set; }
+    
+
         /// <summary>
-        /// Gets or Sets Operator
+        /// Gets or Sets _Operator
         /// </summary>
         [DataMember(Name="operator", EmitDefaultValue=false)]
-        public string Operator { get; set; }
-  
-        
+        public _OperatorEnum? _Operator { get; set; }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ConversationHistoricalQueryRequestFilter" />class.
+        /// </summary>
+        /// <param name="Target">Target.</param>
+        /// <param name="_Operator">_Operator.</param>
+        /// <param name="Values">Values.</param>
+
+        public ConversationHistoricalQueryRequestFilter(TargetEnum? Target = null, _OperatorEnum? _Operator = null, List<string> Values = null)
+        {
+            this.Target = Target;
+            this._Operator = _Operator;
+            this.Values = Values;
+            
+        }
+
+    
         /// <summary>
         /// Gets or Sets Values
         /// </summary>
         [DataMember(Name="values", EmitDefaultValue=false)]
         public List<string> Values { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -58,13 +169,12 @@ namespace ININ.PureCloudApi.Model
             var sb = new StringBuilder();
             sb.Append("class ConversationHistoricalQueryRequestFilter {\n");
             sb.Append("  Target: ").Append(Target).Append("\n");
-            sb.Append("  Operator: ").Append(Operator).Append("\n");
+            sb.Append("  _Operator: ").Append(_Operator).Append("\n");
             sb.Append("  Values: ").Append(Values).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -88,7 +198,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if ConversationHistoricalQueryRequestFilter instances are equal
         /// </summary>
-        /// <param name="obj">Instance of ConversationHistoricalQueryRequestFilter to be compared</param>
+        /// <param name="other">Instance of ConversationHistoricalQueryRequestFilter to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(ConversationHistoricalQueryRequestFilter other)
         {
@@ -96,17 +206,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Target == other.Target ||
                     this.Target != null &&
                     this.Target.Equals(other.Target)
-                ) && 
+                ) &&
                 (
-                    this.Operator == other.Operator ||
-                    this.Operator != null &&
-                    this.Operator.Equals(other.Operator)
-                ) && 
+                    this._Operator == other._Operator ||
+                    this._Operator != null &&
+                    this._Operator.Equals(other._Operator)
+                ) &&
                 (
                     this.Values == other.Values ||
                     this.Values != null &&
@@ -125,21 +235,15 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Target != null)
-                    hash = hash * 57 + this.Target.GetHashCode();
-                
-                if (this.Operator != null)
-                    hash = hash * 57 + this.Operator.GetHashCode();
-                
+                    hash = hash * 59 + this.Target.GetHashCode();
+                if (this._Operator != null)
+                    hash = hash * 59 + this._Operator.GetHashCode();
                 if (this.Values != null)
-                    hash = hash * 57 + this.Values.GetHashCode();
-                
+                    hash = hash * 59 + this.Values.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

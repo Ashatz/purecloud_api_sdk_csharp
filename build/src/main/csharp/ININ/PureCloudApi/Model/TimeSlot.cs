@@ -4,51 +4,54 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class TimeSlot :  IEquatable<TimeSlot>
-    {
+    public partial class TimeSlot :  IEquatable<TimeSlot>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="TimeSlot" /> class.
+        /// Initializes a new instance of the <see cref="TimeSlot" />class.
         /// </summary>
-        public TimeSlot()
+        /// <param name="StartTime">StartTime.</param>
+        /// <param name="StopTime">StopTime.</param>
+        /// <param name="Day">Day.</param>
+
+        public TimeSlot(string StartTime = null, string StopTime = null, int? Day = null)
         {
+            this.StartTime = StartTime;
+            this.StopTime = StopTime;
+            this.Day = Day;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets StartTime
         /// </summary>
         [DataMember(Name="startTime", EmitDefaultValue=false)]
         public string StartTime { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets StopTime
         /// </summary>
         [DataMember(Name="stopTime", EmitDefaultValue=false)]
         public string StopTime { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Day
         /// </summary>
         [DataMember(Name="day", EmitDefaultValue=false)]
         public int? Day { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -60,11 +63,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  StartTime: ").Append(StartTime).Append("\n");
             sb.Append("  StopTime: ").Append(StopTime).Append("\n");
             sb.Append("  Day: ").Append(Day).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -88,7 +90,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if TimeSlot instances are equal
         /// </summary>
-        /// <param name="obj">Instance of TimeSlot to be compared</param>
+        /// <param name="other">Instance of TimeSlot to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(TimeSlot other)
         {
@@ -96,17 +98,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.StartTime == other.StartTime ||
                     this.StartTime != null &&
                     this.StartTime.Equals(other.StartTime)
-                ) && 
+                ) &&
                 (
                     this.StopTime == other.StopTime ||
                     this.StopTime != null &&
                     this.StopTime.Equals(other.StopTime)
-                ) && 
+                ) &&
                 (
                     this.Day == other.Day ||
                     this.Day != null &&
@@ -125,21 +127,15 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.StartTime != null)
-                    hash = hash * 57 + this.StartTime.GetHashCode();
-                
+                    hash = hash * 59 + this.StartTime.GetHashCode();
                 if (this.StopTime != null)
-                    hash = hash * 57 + this.StopTime.GetHashCode();
-                
+                    hash = hash * 59 + this.StopTime.GetHashCode();
                 if (this.Day != null)
-                    hash = hash * 57 + this.Day.GetHashCode();
-                
+                    hash = hash * 59 + this.Day.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

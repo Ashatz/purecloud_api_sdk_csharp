@@ -4,65 +4,70 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class ClientTransformModel :  IEquatable<ClientTransformModel>
-    {
+    public partial class ClientTransformModel :  IEquatable<ClientTransformModel>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="ClientTransformModel" /> class.
+        /// Initializes a new instance of the <see cref="ClientTransformModel" />class.
         /// </summary>
-        public ClientTransformModel()
+        /// <param name="Id">Id.</param>
+        /// <param name="EndpointId">EndpointId.</param>
+        /// <param name="FilenameReplaces">FilenameReplaces.</param>
+        /// <param name="Tags">Tags.</param>
+        /// <param name="Name">Name.</param>
+
+        public ClientTransformModel(string Id = null, string EndpointId = null, List<BasicTransform> FilenameReplaces = null, List<TagModel> Tags = null, string Name = null)
         {
+            this.Id = Id;
+            this.EndpointId = EndpointId;
+            this.FilenameReplaces = FilenameReplaces;
+            this.Tags = Tags;
+            this.Name = Name;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets EndpointId
         /// </summary>
         [DataMember(Name="endpointId", EmitDefaultValue=false)]
         public string EndpointId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets FilenameReplaces
         /// </summary>
         [DataMember(Name="filenameReplaces", EmitDefaultValue=false)]
         public List<BasicTransform> FilenameReplaces { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Tags
         /// </summary>
         [DataMember(Name="tags", EmitDefaultValue=false)]
         public List<TagModel> Tags { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -76,11 +81,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  FilenameReplaces: ").Append(FilenameReplaces).Append("\n");
             sb.Append("  Tags: ").Append(Tags).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -104,7 +108,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if ClientTransformModel instances are equal
         /// </summary>
-        /// <param name="obj">Instance of ClientTransformModel to be compared</param>
+        /// <param name="other">Instance of ClientTransformModel to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(ClientTransformModel other)
         {
@@ -112,27 +116,27 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.EndpointId == other.EndpointId ||
                     this.EndpointId != null &&
                     this.EndpointId.Equals(other.EndpointId)
-                ) && 
+                ) &&
                 (
                     this.FilenameReplaces == other.FilenameReplaces ||
                     this.FilenameReplaces != null &&
                     this.FilenameReplaces.SequenceEqual(other.FilenameReplaces)
-                ) && 
+                ) &&
                 (
                     this.Tags == other.Tags ||
                     this.Tags != null &&
                     this.Tags.SequenceEqual(other.Tags)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
@@ -151,27 +155,19 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
-                
+                    hash = hash * 59 + this.Id.GetHashCode();
                 if (this.EndpointId != null)
-                    hash = hash * 57 + this.EndpointId.GetHashCode();
-                
+                    hash = hash * 59 + this.EndpointId.GetHashCode();
                 if (this.FilenameReplaces != null)
-                    hash = hash * 57 + this.FilenameReplaces.GetHashCode();
-                
+                    hash = hash * 59 + this.FilenameReplaces.GetHashCode();
                 if (this.Tags != null)
-                    hash = hash * 57 + this.Tags.GetHashCode();
-                
+                    hash = hash * 59 + this.Tags.GetHashCode();
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
-                
+                    hash = hash * 59 + this.Name.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

@@ -4,44 +4,46 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class UserParam :  IEquatable<UserParam>
-    {
+    public partial class UserParam :  IEquatable<UserParam>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="UserParam" /> class.
+        /// Initializes a new instance of the <see cref="UserParam" />class.
         /// </summary>
-        public UserParam()
+        /// <param name="Key">Key.</param>
+        /// <param name="Value">Value.</param>
+
+        public UserParam(string Key = null, string Value = null)
         {
+            this.Key = Key;
+            this.Value = Value;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets Key
         /// </summary>
         [DataMember(Name="key", EmitDefaultValue=false)]
         public string Key { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Value
         /// </summary>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public string Value { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -52,11 +54,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class UserParam {\n");
             sb.Append("  Key: ").Append(Key).Append("\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -80,7 +81,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if UserParam instances are equal
         /// </summary>
-        /// <param name="obj">Instance of UserParam to be compared</param>
+        /// <param name="other">Instance of UserParam to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(UserParam other)
         {
@@ -88,12 +89,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Key == other.Key ||
                     this.Key != null &&
                     this.Key.Equals(other.Key)
-                ) && 
+                ) &&
                 (
                     this.Value == other.Value ||
                     this.Value != null &&
@@ -112,18 +113,13 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Key != null)
-                    hash = hash * 57 + this.Key.GetHashCode();
-                
+                    hash = hash * 59 + this.Key.GetHashCode();
                 if (this.Value != null)
-                    hash = hash * 57 + this.Value.GetHashCode();
-                
+                    hash = hash * 59 + this.Value.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

@@ -4,37 +4,38 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class SessionRequest :  IEquatable<SessionRequest>
-    {
+    public partial class SessionRequest :  IEquatable<SessionRequest>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="SessionRequest" /> class.
+        /// Initializes a new instance of the <see cref="SessionRequest" />class.
         /// </summary>
-        public SessionRequest()
+        /// <param name="MinutesToLive">MinutesToLive.</param>
+
+        public SessionRequest(long? MinutesToLive = null)
         {
+            this.MinutesToLive = MinutesToLive;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets MinutesToLive
         /// </summary>
         [DataMember(Name="minutesToLive", EmitDefaultValue=false)]
         public long? MinutesToLive { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -44,11 +45,10 @@ namespace ININ.PureCloudApi.Model
             var sb = new StringBuilder();
             sb.Append("class SessionRequest {\n");
             sb.Append("  MinutesToLive: ").Append(MinutesToLive).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -72,7 +72,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if SessionRequest instances are equal
         /// </summary>
-        /// <param name="obj">Instance of SessionRequest to be compared</param>
+        /// <param name="other">Instance of SessionRequest to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(SessionRequest other)
         {
@@ -80,7 +80,7 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.MinutesToLive == other.MinutesToLive ||
                     this.MinutesToLive != null &&
@@ -99,15 +99,11 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.MinutesToLive != null)
-                    hash = hash * 57 + this.MinutesToLive.GetHashCode();
-                
+                    hash = hash * 59 + this.MinutesToLive.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

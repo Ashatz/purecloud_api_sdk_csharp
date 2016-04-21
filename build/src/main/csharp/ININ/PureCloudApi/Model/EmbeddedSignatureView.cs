@@ -4,37 +4,38 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class EmbeddedSignatureView :  IEquatable<EmbeddedSignatureView>
-    {
+    public partial class EmbeddedSignatureView :  IEquatable<EmbeddedSignatureView>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="EmbeddedSignatureView" /> class.
+        /// Initializes a new instance of the <see cref="EmbeddedSignatureView" />class.
         /// </summary>
-        public EmbeddedSignatureView()
+        /// <param name="View">View.</param>
+
+        public EmbeddedSignatureView(View View = null)
         {
+            this.View = View;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets View
         /// </summary>
         [DataMember(Name="view", EmitDefaultValue=false)]
         public View View { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -44,11 +45,10 @@ namespace ININ.PureCloudApi.Model
             var sb = new StringBuilder();
             sb.Append("class EmbeddedSignatureView {\n");
             sb.Append("  View: ").Append(View).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -72,7 +72,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if EmbeddedSignatureView instances are equal
         /// </summary>
-        /// <param name="obj">Instance of EmbeddedSignatureView to be compared</param>
+        /// <param name="other">Instance of EmbeddedSignatureView to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(EmbeddedSignatureView other)
         {
@@ -80,7 +80,7 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.View == other.View ||
                     this.View != null &&
@@ -99,15 +99,11 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.View != null)
-                    hash = hash * 57 + this.View.GetHashCode();
-                
+                    hash = hash * 59 + this.View.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

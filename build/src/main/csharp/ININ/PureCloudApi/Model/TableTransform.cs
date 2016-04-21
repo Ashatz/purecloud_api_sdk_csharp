@@ -4,72 +4,78 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class TableTransform :  IEquatable<TableTransform>
-    {
+    public partial class TableTransform :  IEquatable<TableTransform>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="TableTransform" /> class.
+        /// Initializes a new instance of the <see cref="TableTransform" />class.
         /// </summary>
-        public TableTransform()
+        /// <param name="HeaderRow">HeaderRow.</param>
+        /// <param name="FirstData">FirstData.</param>
+        /// <param name="HeaderReplaces">HeaderReplaces.</param>
+        /// <param name="Columns">Columns.</param>
+        /// <param name="Unpivots">Unpivots.</param>
+        /// <param name="Collapses">Collapses.</param>
+
+        public TableTransform(int? HeaderRow = null, int? FirstData = null, List<IndexedTransform> HeaderReplaces = null, List<IndexedTransform> Columns = null, List<UnpivotColumns> Unpivots = null, List<ColumnCollapse> Collapses = null)
         {
+            this.HeaderRow = HeaderRow;
+            this.FirstData = FirstData;
+            this.HeaderReplaces = HeaderReplaces;
+            this.Columns = Columns;
+            this.Unpivots = Unpivots;
+            this.Collapses = Collapses;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets HeaderRow
         /// </summary>
         [DataMember(Name="headerRow", EmitDefaultValue=false)]
         public int? HeaderRow { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets FirstData
         /// </summary>
         [DataMember(Name="firstData", EmitDefaultValue=false)]
         public int? FirstData { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets HeaderReplaces
         /// </summary>
         [DataMember(Name="headerReplaces", EmitDefaultValue=false)]
         public List<IndexedTransform> HeaderReplaces { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Columns
         /// </summary>
         [DataMember(Name="columns", EmitDefaultValue=false)]
         public List<IndexedTransform> Columns { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Unpivots
         /// </summary>
         [DataMember(Name="unpivots", EmitDefaultValue=false)]
         public List<UnpivotColumns> Unpivots { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Collapses
         /// </summary>
         [DataMember(Name="collapses", EmitDefaultValue=false)]
         public List<ColumnCollapse> Collapses { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -84,11 +90,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Columns: ").Append(Columns).Append("\n");
             sb.Append("  Unpivots: ").Append(Unpivots).Append("\n");
             sb.Append("  Collapses: ").Append(Collapses).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -112,7 +117,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if TableTransform instances are equal
         /// </summary>
-        /// <param name="obj">Instance of TableTransform to be compared</param>
+        /// <param name="other">Instance of TableTransform to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(TableTransform other)
         {
@@ -120,32 +125,32 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.HeaderRow == other.HeaderRow ||
                     this.HeaderRow != null &&
                     this.HeaderRow.Equals(other.HeaderRow)
-                ) && 
+                ) &&
                 (
                     this.FirstData == other.FirstData ||
                     this.FirstData != null &&
                     this.FirstData.Equals(other.FirstData)
-                ) && 
+                ) &&
                 (
                     this.HeaderReplaces == other.HeaderReplaces ||
                     this.HeaderReplaces != null &&
                     this.HeaderReplaces.SequenceEqual(other.HeaderReplaces)
-                ) && 
+                ) &&
                 (
                     this.Columns == other.Columns ||
                     this.Columns != null &&
                     this.Columns.SequenceEqual(other.Columns)
-                ) && 
+                ) &&
                 (
                     this.Unpivots == other.Unpivots ||
                     this.Unpivots != null &&
                     this.Unpivots.SequenceEqual(other.Unpivots)
-                ) && 
+                ) &&
                 (
                     this.Collapses == other.Collapses ||
                     this.Collapses != null &&
@@ -164,30 +169,21 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.HeaderRow != null)
-                    hash = hash * 57 + this.HeaderRow.GetHashCode();
-                
+                    hash = hash * 59 + this.HeaderRow.GetHashCode();
                 if (this.FirstData != null)
-                    hash = hash * 57 + this.FirstData.GetHashCode();
-                
+                    hash = hash * 59 + this.FirstData.GetHashCode();
                 if (this.HeaderReplaces != null)
-                    hash = hash * 57 + this.HeaderReplaces.GetHashCode();
-                
+                    hash = hash * 59 + this.HeaderReplaces.GetHashCode();
                 if (this.Columns != null)
-                    hash = hash * 57 + this.Columns.GetHashCode();
-                
+                    hash = hash * 59 + this.Columns.GetHashCode();
                 if (this.Unpivots != null)
-                    hash = hash * 57 + this.Unpivots.GetHashCode();
-                
+                    hash = hash * 59 + this.Unpivots.GetHashCode();
                 if (this.Collapses != null)
-                    hash = hash * 57 + this.Collapses.GetHashCode();
-                
+                    hash = hash * 59 + this.Collapses.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

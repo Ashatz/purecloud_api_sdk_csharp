@@ -4,127 +4,149 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class TransformEndpoint :  IEquatable<TransformEndpoint>
-    {
+    public partial class TransformEndpoint :  IEquatable<TransformEndpoint>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="TransformEndpoint" /> class.
+        /// Initializes a new instance of the <see cref="TransformEndpoint" />class.
         /// </summary>
-        public TransformEndpoint()
+        /// <param name="Name">Name.</param>
+        /// <param name="SwaggerUrl">The Url to the swagger documentation of the endpoint where parsed entities will be posted.</param>
+        /// <param name="Route">The swagger route to use.</param>
+        /// <param name="Entity">The entity type being posted.</param>
+        /// <param name="ApiFunction">The swagger function being called.</param>
+        /// <param name="Ready">Whether this TransformEndpoint has been configured to work (security groups, permissions, etc) (required) (default to false).</param>
+        /// <param name="Active">Whether this TransformEndpoint is currently active and accepting transformation operations (default to false).</param>
+        /// <param name="BatchSize">The number of entities to send in an array for batch POSTs, or 0 for unbatched POSTs.</param>
+        /// <param name="Parallelism">The number of parallel POSTs to allow at once.</param>
+        /// <param name="UpdateProgressEvery">The swagger route to use.</param>
+
+        public TransformEndpoint(string Name = null, string SwaggerUrl = null, string Route = null, string Entity = null, string ApiFunction = null, bool? Ready = null, bool? Active = null, int? BatchSize = null, int? Parallelism = null, int? UpdateProgressEvery = null)
         {
-            this.Ready = false;
-            this.Active = false;
+            // to ensure "Ready" is required (not null)
+            if (Ready == null)
+            {
+                throw new InvalidDataException("Ready is a required property for TransformEndpoint and cannot be null");
+            }
+            else
+            {
+                this.Ready = Ready;
+            }
+            this.Name = Name;
+            this.SwaggerUrl = SwaggerUrl;
+            this.Route = Route;
+            this.Entity = Entity;
+            this.ApiFunction = ApiFunction;
+            // use default value if no "Active" provided
+            if (Active == null)
+            {
+                this.Active = false;
+            }
+            else
+            {
+                this.Active = Active;
+            }
+            this.BatchSize = BatchSize;
+            this.Parallelism = Parallelism;
+            this.UpdateProgressEvery = UpdateProgressEvery;
             
         }
 
-        
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// The Url to the swagger documentation of the endpoint where parsed entities will be posted
         /// </summary>
         /// <value>The Url to the swagger documentation of the endpoint where parsed entities will be posted</value>
         [DataMember(Name="swaggerUrl", EmitDefaultValue=false)]
         public string SwaggerUrl { get; set; }
-  
-        
+    
         /// <summary>
         /// The swagger route to use
         /// </summary>
         /// <value>The swagger route to use</value>
         [DataMember(Name="route", EmitDefaultValue=false)]
         public string Route { get; set; }
-  
-        
+    
         /// <summary>
         /// The entity type being posted
         /// </summary>
         /// <value>The entity type being posted</value>
         [DataMember(Name="entity", EmitDefaultValue=false)]
         public string Entity { get; set; }
-  
-        
+    
         /// <summary>
         /// The swagger function being called
         /// </summary>
         /// <value>The swagger function being called</value>
         [DataMember(Name="apiFunction", EmitDefaultValue=false)]
         public string ApiFunction { get; set; }
-  
-        
+    
         /// <summary>
         /// Whether this TransformEndpoint has been configured to work (security groups, permissions, etc)
         /// </summary>
         /// <value>Whether this TransformEndpoint has been configured to work (security groups, permissions, etc)</value>
         [DataMember(Name="ready", EmitDefaultValue=false)]
         public bool? Ready { get; set; }
-  
-        
+    
         /// <summary>
         /// Whether this TransformEndpoint is currently active and accepting transformation operations
         /// </summary>
         /// <value>Whether this TransformEndpoint is currently active and accepting transformation operations</value>
         [DataMember(Name="active", EmitDefaultValue=false)]
         public bool? Active { get; set; }
-  
-        
+    
         /// <summary>
         /// The number of entities to send in an array for batch POSTs, or 0 for unbatched POSTs
         /// </summary>
         /// <value>The number of entities to send in an array for batch POSTs, or 0 for unbatched POSTs</value>
         [DataMember(Name="batchSize", EmitDefaultValue=false)]
         public int? BatchSize { get; set; }
-  
-        
+    
         /// <summary>
         /// The number of parallel POSTs to allow at once
         /// </summary>
         /// <value>The number of parallel POSTs to allow at once</value>
         [DataMember(Name="parallelism", EmitDefaultValue=false)]
         public int? Parallelism { get; set; }
-  
-        
+    
         /// <summary>
         /// The swagger route to use
         /// </summary>
         /// <value>The swagger route to use</value>
         [DataMember(Name="updateProgressEvery", EmitDefaultValue=false)]
         public int? UpdateProgressEvery { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -145,11 +167,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Parallelism: ").Append(Parallelism).Append("\n");
             sb.Append("  UpdateProgressEvery: ").Append(UpdateProgressEvery).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -173,7 +194,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if TransformEndpoint instances are equal
         /// </summary>
-        /// <param name="obj">Instance of TransformEndpoint to be compared</param>
+        /// <param name="other">Instance of TransformEndpoint to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(TransformEndpoint other)
         {
@@ -181,62 +202,62 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.SwaggerUrl == other.SwaggerUrl ||
                     this.SwaggerUrl != null &&
                     this.SwaggerUrl.Equals(other.SwaggerUrl)
-                ) && 
+                ) &&
                 (
                     this.Route == other.Route ||
                     this.Route != null &&
                     this.Route.Equals(other.Route)
-                ) && 
+                ) &&
                 (
                     this.Entity == other.Entity ||
                     this.Entity != null &&
                     this.Entity.Equals(other.Entity)
-                ) && 
+                ) &&
                 (
                     this.ApiFunction == other.ApiFunction ||
                     this.ApiFunction != null &&
                     this.ApiFunction.Equals(other.ApiFunction)
-                ) && 
+                ) &&
                 (
                     this.Ready == other.Ready ||
                     this.Ready != null &&
                     this.Ready.Equals(other.Ready)
-                ) && 
+                ) &&
                 (
                     this.Active == other.Active ||
                     this.Active != null &&
                     this.Active.Equals(other.Active)
-                ) && 
+                ) &&
                 (
                     this.BatchSize == other.BatchSize ||
                     this.BatchSize != null &&
                     this.BatchSize.Equals(other.BatchSize)
-                ) && 
+                ) &&
                 (
                     this.Parallelism == other.Parallelism ||
                     this.Parallelism != null &&
                     this.Parallelism.Equals(other.Parallelism)
-                ) && 
+                ) &&
                 (
                     this.UpdateProgressEvery == other.UpdateProgressEvery ||
                     this.UpdateProgressEvery != null &&
                     this.UpdateProgressEvery.Equals(other.UpdateProgressEvery)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
@@ -255,48 +276,33 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
-                
+                    hash = hash * 59 + this.Id.GetHashCode();
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
-                
+                    hash = hash * 59 + this.Name.GetHashCode();
                 if (this.SwaggerUrl != null)
-                    hash = hash * 57 + this.SwaggerUrl.GetHashCode();
-                
+                    hash = hash * 59 + this.SwaggerUrl.GetHashCode();
                 if (this.Route != null)
-                    hash = hash * 57 + this.Route.GetHashCode();
-                
+                    hash = hash * 59 + this.Route.GetHashCode();
                 if (this.Entity != null)
-                    hash = hash * 57 + this.Entity.GetHashCode();
-                
+                    hash = hash * 59 + this.Entity.GetHashCode();
                 if (this.ApiFunction != null)
-                    hash = hash * 57 + this.ApiFunction.GetHashCode();
-                
+                    hash = hash * 59 + this.ApiFunction.GetHashCode();
                 if (this.Ready != null)
-                    hash = hash * 57 + this.Ready.GetHashCode();
-                
+                    hash = hash * 59 + this.Ready.GetHashCode();
                 if (this.Active != null)
-                    hash = hash * 57 + this.Active.GetHashCode();
-                
+                    hash = hash * 59 + this.Active.GetHashCode();
                 if (this.BatchSize != null)
-                    hash = hash * 57 + this.BatchSize.GetHashCode();
-                
+                    hash = hash * 59 + this.BatchSize.GetHashCode();
                 if (this.Parallelism != null)
-                    hash = hash * 57 + this.Parallelism.GetHashCode();
-                
+                    hash = hash * 59 + this.Parallelism.GetHashCode();
                 if (this.UpdateProgressEvery != null)
-                    hash = hash * 57 + this.UpdateProgressEvery.GetHashCode();
-                
+                    hash = hash * 59 + this.UpdateProgressEvery.GetHashCode();
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
-                
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

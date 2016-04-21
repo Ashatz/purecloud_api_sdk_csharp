@@ -4,51 +4,54 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class WorkItemCommandGroup :  IEquatable<WorkItemCommandGroup>
-    {
+    public partial class WorkItemCommandGroup :  IEquatable<WorkItemCommandGroup>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="WorkItemCommandGroup" /> class.
+        /// Initializes a new instance of the <see cref="WorkItemCommandGroup" />class.
         /// </summary>
-        public WorkItemCommandGroup()
+        /// <param name="Category">Category.</param>
+        /// <param name="DefaultCommandId">DefaultCommandId.</param>
+        /// <param name="Commands">Commands.</param>
+
+        public WorkItemCommandGroup(string Category = null, string DefaultCommandId = null, List<WorkItemCommand> Commands = null)
         {
+            this.Category = Category;
+            this.DefaultCommandId = DefaultCommandId;
+            this.Commands = Commands;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets Category
         /// </summary>
         [DataMember(Name="category", EmitDefaultValue=false)]
         public string Category { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets DefaultCommandId
         /// </summary>
         [DataMember(Name="defaultCommandId", EmitDefaultValue=false)]
         public string DefaultCommandId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Commands
         /// </summary>
         [DataMember(Name="commands", EmitDefaultValue=false)]
         public List<WorkItemCommand> Commands { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -60,11 +63,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Category: ").Append(Category).Append("\n");
             sb.Append("  DefaultCommandId: ").Append(DefaultCommandId).Append("\n");
             sb.Append("  Commands: ").Append(Commands).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -88,7 +90,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if WorkItemCommandGroup instances are equal
         /// </summary>
-        /// <param name="obj">Instance of WorkItemCommandGroup to be compared</param>
+        /// <param name="other">Instance of WorkItemCommandGroup to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(WorkItemCommandGroup other)
         {
@@ -96,17 +98,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Category == other.Category ||
                     this.Category != null &&
                     this.Category.Equals(other.Category)
-                ) && 
+                ) &&
                 (
                     this.DefaultCommandId == other.DefaultCommandId ||
                     this.DefaultCommandId != null &&
                     this.DefaultCommandId.Equals(other.DefaultCommandId)
-                ) && 
+                ) &&
                 (
                     this.Commands == other.Commands ||
                     this.Commands != null &&
@@ -125,21 +127,15 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Category != null)
-                    hash = hash * 57 + this.Category.GetHashCode();
-                
+                    hash = hash * 59 + this.Category.GetHashCode();
                 if (this.DefaultCommandId != null)
-                    hash = hash * 57 + this.DefaultCommandId.GetHashCode();
-                
+                    hash = hash * 59 + this.DefaultCommandId.GetHashCode();
                 if (this.Commands != null)
-                    hash = hash * 57 + this.Commands.GetHashCode();
-                
+                    hash = hash * 59 + this.Commands.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

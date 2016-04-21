@@ -4,46 +4,48 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class FlowBody :  IEquatable<FlowBody>
-    {
+    public partial class FlowBody :  IEquatable<FlowBody>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="FlowBody" /> class.
+        /// Initializes a new instance of the <see cref="FlowBody" />class.
         /// </summary>
-        public FlowBody()
+        /// <param name="Format">The &#39;format&#39; indicates the particular format of the &#39;body&#39; contents.  Reference the Automate documentation for format information..</param>
+        /// <param name="Body">The flow definition body according to the syntax supported by the &#39;format&#39;.  Use the /processautomation/flows/schemas endpoint to get detailed syntax information for each format..</param>
+
+        public FlowBody(string Format = null, Dictionary<string, Object> Body = null)
         {
+            this.Format = Format;
+            this.Body = Body;
             
         }
 
-        
+    
         /// <summary>
-        /// The 'format' indicates the particular format of the 'body' contents.  Reference the Automate documentation for format information.
+        /// The &#39;format&#39; indicates the particular format of the &#39;body&#39; contents.  Reference the Automate documentation for format information.
         /// </summary>
-        /// <value>The 'format' indicates the particular format of the 'body' contents.  Reference the Automate documentation for format information.</value>
+        /// <value>The &#39;format&#39; indicates the particular format of the &#39;body&#39; contents.  Reference the Automate documentation for format information.</value>
         [DataMember(Name="format", EmitDefaultValue=false)]
         public string Format { get; set; }
-  
-        
+    
         /// <summary>
-        /// The flow definition body according to the syntax supported by the 'format'.  Use the /processautomation/flows/schemas endpoint to get detailed syntax information for each format.
+        /// The flow definition body according to the syntax supported by the &#39;format&#39;.  Use the /processautomation/flows/schemas endpoint to get detailed syntax information for each format.
         /// </summary>
-        /// <value>The flow definition body according to the syntax supported by the 'format'.  Use the /processautomation/flows/schemas endpoint to get detailed syntax information for each format.</value>
+        /// <value>The flow definition body according to the syntax supported by the &#39;format&#39;.  Use the /processautomation/flows/schemas endpoint to get detailed syntax information for each format.</value>
         [DataMember(Name="body", EmitDefaultValue=false)]
-        public Dictionary<string, LineProperties> Body { get; set; }
-  
-        
-  
+        public Dictionary<string, Object> Body { get; set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -54,11 +56,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class FlowBody {\n");
             sb.Append("  Format: ").Append(Format).Append("\n");
             sb.Append("  Body: ").Append(Body).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -82,7 +83,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if FlowBody instances are equal
         /// </summary>
-        /// <param name="obj">Instance of FlowBody to be compared</param>
+        /// <param name="other">Instance of FlowBody to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(FlowBody other)
         {
@@ -90,12 +91,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Format == other.Format ||
                     this.Format != null &&
                     this.Format.Equals(other.Format)
-                ) && 
+                ) &&
                 (
                     this.Body == other.Body ||
                     this.Body != null &&
@@ -114,18 +115,13 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Format != null)
-                    hash = hash * 57 + this.Format.GetHashCode();
-                
+                    hash = hash * 59 + this.Format.GetHashCode();
                 if (this.Body != null)
-                    hash = hash * 57 + this.Body.GetHashCode();
-                
+                    hash = hash * 59 + this.Body.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

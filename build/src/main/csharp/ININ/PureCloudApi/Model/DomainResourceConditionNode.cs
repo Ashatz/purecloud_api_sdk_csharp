@@ -4,65 +4,112 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class DomainResourceConditionNode :  IEquatable<DomainResourceConditionNode>
-    {
+    public partial class DomainResourceConditionNode :  IEquatable<DomainResourceConditionNode>
+    { 
+
         /// <summary>
-        /// Initializes a new instance of the <see cref="DomainResourceConditionNode" /> class.
+        /// Gets or Sets _Operator
         /// </summary>
-        public DomainResourceConditionNode()
-        {
+        [JsonConverter(typeof(StringEnumConverter))]
+                public enum _OperatorEnum {
             
+            [EnumMember(Value = "EQ")]
+            Eq,
+            
+            [EnumMember(Value = "IN")]
+            In,
+            
+            [EnumMember(Value = "GE")]
+            Ge,
+            
+            [EnumMember(Value = "GT")]
+            Gt,
+            
+            [EnumMember(Value = "LE")]
+            Le,
+            
+            [EnumMember(Value = "LT")]
+            Lt
+        }
+
+
+        /// <summary>
+        /// Gets or Sets Conjunction
+        /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
+                public enum ConjunctionEnum {
+            
+            [EnumMember(Value = "AND")]
+            And,
+            
+            [EnumMember(Value = "OR")]
+            Or
         }
 
         
+
+        /// <summary>
+        /// Gets or Sets _Operator
+        /// </summary>
+        [DataMember(Name="operator", EmitDefaultValue=false)]
+        public _OperatorEnum? _Operator { get; set; }
+    
+
+        /// <summary>
+        /// Gets or Sets Conjunction
+        /// </summary>
+        [DataMember(Name="conjunction", EmitDefaultValue=false)]
+        public ConjunctionEnum? Conjunction { get; set; }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="DomainResourceConditionNode" />class.
+        /// </summary>
+        /// <param name="VariableName">VariableName.</param>
+        /// <param name="_Operator">_Operator.</param>
+        /// <param name="Operands">Operands.</param>
+        /// <param name="Conjunction">Conjunction.</param>
+        /// <param name="Terms">Terms.</param>
+
+        public DomainResourceConditionNode(string VariableName = null, _OperatorEnum? _Operator = null, List<DomainResourceConditionValue> Operands = null, ConjunctionEnum? Conjunction = null, List<DomainResourceConditionNode> Terms = null)
+        {
+            this.VariableName = VariableName;
+            this._Operator = _Operator;
+            this.Operands = Operands;
+            this.Conjunction = Conjunction;
+            this.Terms = Terms;
+            
+        }
+
+    
         /// <summary>
         /// Gets or Sets VariableName
         /// </summary>
         [DataMember(Name="variableName", EmitDefaultValue=false)]
         public string VariableName { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets Operator
-        /// </summary>
-        [DataMember(Name="operator", EmitDefaultValue=false)]
-        public string Operator { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Operands
         /// </summary>
         [DataMember(Name="operands", EmitDefaultValue=false)]
         public List<DomainResourceConditionValue> Operands { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets Conjunction
-        /// </summary>
-        [DataMember(Name="conjunction", EmitDefaultValue=false)]
-        public string Conjunction { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Terms
         /// </summary>
         [DataMember(Name="terms", EmitDefaultValue=false)]
         public List<DomainResourceConditionNode> Terms { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -72,15 +119,14 @@ namespace ININ.PureCloudApi.Model
             var sb = new StringBuilder();
             sb.Append("class DomainResourceConditionNode {\n");
             sb.Append("  VariableName: ").Append(VariableName).Append("\n");
-            sb.Append("  Operator: ").Append(Operator).Append("\n");
+            sb.Append("  _Operator: ").Append(_Operator).Append("\n");
             sb.Append("  Operands: ").Append(Operands).Append("\n");
             sb.Append("  Conjunction: ").Append(Conjunction).Append("\n");
             sb.Append("  Terms: ").Append(Terms).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -104,7 +150,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if DomainResourceConditionNode instances are equal
         /// </summary>
-        /// <param name="obj">Instance of DomainResourceConditionNode to be compared</param>
+        /// <param name="other">Instance of DomainResourceConditionNode to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(DomainResourceConditionNode other)
         {
@@ -112,27 +158,27 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.VariableName == other.VariableName ||
                     this.VariableName != null &&
                     this.VariableName.Equals(other.VariableName)
-                ) && 
+                ) &&
                 (
-                    this.Operator == other.Operator ||
-                    this.Operator != null &&
-                    this.Operator.Equals(other.Operator)
-                ) && 
+                    this._Operator == other._Operator ||
+                    this._Operator != null &&
+                    this._Operator.Equals(other._Operator)
+                ) &&
                 (
                     this.Operands == other.Operands ||
                     this.Operands != null &&
                     this.Operands.SequenceEqual(other.Operands)
-                ) && 
+                ) &&
                 (
                     this.Conjunction == other.Conjunction ||
                     this.Conjunction != null &&
                     this.Conjunction.Equals(other.Conjunction)
-                ) && 
+                ) &&
                 (
                     this.Terms == other.Terms ||
                     this.Terms != null &&
@@ -151,27 +197,19 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.VariableName != null)
-                    hash = hash * 57 + this.VariableName.GetHashCode();
-                
-                if (this.Operator != null)
-                    hash = hash * 57 + this.Operator.GetHashCode();
-                
+                    hash = hash * 59 + this.VariableName.GetHashCode();
+                if (this._Operator != null)
+                    hash = hash * 59 + this._Operator.GetHashCode();
                 if (this.Operands != null)
-                    hash = hash * 57 + this.Operands.GetHashCode();
-                
+                    hash = hash * 59 + this.Operands.GetHashCode();
                 if (this.Conjunction != null)
-                    hash = hash * 57 + this.Conjunction.GetHashCode();
-                
+                    hash = hash * 59 + this.Conjunction.GetHashCode();
                 if (this.Terms != null)
-                    hash = hash * 57 + this.Terms.GetHashCode();
-                
+                    hash = hash * 59 + this.Terms.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

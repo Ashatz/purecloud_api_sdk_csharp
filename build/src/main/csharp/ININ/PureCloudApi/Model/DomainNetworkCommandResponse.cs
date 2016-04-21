@@ -4,59 +4,70 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class DomainNetworkCommandResponse :  IEquatable<DomainNetworkCommandResponse>
-    {
+    public partial class DomainNetworkCommandResponse :  IEquatable<DomainNetworkCommandResponse>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="DomainNetworkCommandResponse" /> class.
+        /// Initializes a new instance of the <see cref="DomainNetworkCommandResponse" />class.
         /// </summary>
-        public DomainNetworkCommandResponse()
+        /// <param name="CorrelationId">CorrelationId.</param>
+        /// <param name="CommandName">CommandName.</param>
+        /// <param name="Acknowledged">Acknowledged (default to false).</param>
+        /// <param name="ErrorInfo">ErrorInfo.</param>
+
+        public DomainNetworkCommandResponse(string CorrelationId = null, string CommandName = null, bool? Acknowledged = null, ErrorDetails ErrorInfo = null)
         {
-            this.Acknowledged = false;
+            this.CorrelationId = CorrelationId;
+            this.CommandName = CommandName;
+            // use default value if no "Acknowledged" provided
+            if (Acknowledged == null)
+            {
+                this.Acknowledged = false;
+            }
+            else
+            {
+                this.Acknowledged = Acknowledged;
+            }
+            this.ErrorInfo = ErrorInfo;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets CorrelationId
         /// </summary>
         [DataMember(Name="correlationId", EmitDefaultValue=false)]
         public string CorrelationId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets CommandName
         /// </summary>
         [DataMember(Name="commandName", EmitDefaultValue=false)]
         public string CommandName { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Acknowledged
         /// </summary>
         [DataMember(Name="acknowledged", EmitDefaultValue=false)]
         public bool? Acknowledged { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ErrorInfo
         /// </summary>
         [DataMember(Name="errorInfo", EmitDefaultValue=false)]
         public ErrorDetails ErrorInfo { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -69,11 +80,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  CommandName: ").Append(CommandName).Append("\n");
             sb.Append("  Acknowledged: ").Append(Acknowledged).Append("\n");
             sb.Append("  ErrorInfo: ").Append(ErrorInfo).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -97,7 +107,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if DomainNetworkCommandResponse instances are equal
         /// </summary>
-        /// <param name="obj">Instance of DomainNetworkCommandResponse to be compared</param>
+        /// <param name="other">Instance of DomainNetworkCommandResponse to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(DomainNetworkCommandResponse other)
         {
@@ -105,22 +115,22 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.CorrelationId == other.CorrelationId ||
                     this.CorrelationId != null &&
                     this.CorrelationId.Equals(other.CorrelationId)
-                ) && 
+                ) &&
                 (
                     this.CommandName == other.CommandName ||
                     this.CommandName != null &&
                     this.CommandName.Equals(other.CommandName)
-                ) && 
+                ) &&
                 (
                     this.Acknowledged == other.Acknowledged ||
                     this.Acknowledged != null &&
                     this.Acknowledged.Equals(other.Acknowledged)
-                ) && 
+                ) &&
                 (
                     this.ErrorInfo == other.ErrorInfo ||
                     this.ErrorInfo != null &&
@@ -139,24 +149,17 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.CorrelationId != null)
-                    hash = hash * 57 + this.CorrelationId.GetHashCode();
-                
+                    hash = hash * 59 + this.CorrelationId.GetHashCode();
                 if (this.CommandName != null)
-                    hash = hash * 57 + this.CommandName.GetHashCode();
-                
+                    hash = hash * 59 + this.CommandName.GetHashCode();
                 if (this.Acknowledged != null)
-                    hash = hash * 57 + this.Acknowledged.GetHashCode();
-                
+                    hash = hash * 59 + this.Acknowledged.GetHashCode();
                 if (this.ErrorInfo != null)
-                    hash = hash * 57 + this.ErrorInfo.GetHashCode();
-                
+                    hash = hash * 59 + this.ErrorInfo.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

@@ -4,44 +4,46 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class QueryFacetInfo :  IEquatable<QueryFacetInfo>
-    {
+    public partial class QueryFacetInfo :  IEquatable<QueryFacetInfo>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="QueryFacetInfo" /> class.
+        /// Initializes a new instance of the <see cref="QueryFacetInfo" />class.
         /// </summary>
-        public QueryFacetInfo()
+        /// <param name="Attributes">Attributes.</param>
+        /// <param name="Facets">Facets.</param>
+
+        public QueryFacetInfo(List<FacetKeyAttribute> Attributes = null, List<FacetEntry> Facets = null)
         {
+            this.Attributes = Attributes;
+            this.Facets = Facets;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets Attributes
         /// </summary>
         [DataMember(Name="attributes", EmitDefaultValue=false)]
         public List<FacetKeyAttribute> Attributes { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Facets
         /// </summary>
         [DataMember(Name="facets", EmitDefaultValue=false)]
         public List<FacetEntry> Facets { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -52,11 +54,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class QueryFacetInfo {\n");
             sb.Append("  Attributes: ").Append(Attributes).Append("\n");
             sb.Append("  Facets: ").Append(Facets).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -80,7 +81,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if QueryFacetInfo instances are equal
         /// </summary>
-        /// <param name="obj">Instance of QueryFacetInfo to be compared</param>
+        /// <param name="other">Instance of QueryFacetInfo to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(QueryFacetInfo other)
         {
@@ -88,12 +89,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Attributes == other.Attributes ||
                     this.Attributes != null &&
                     this.Attributes.SequenceEqual(other.Attributes)
-                ) && 
+                ) &&
                 (
                     this.Facets == other.Facets ||
                     this.Facets != null &&
@@ -112,18 +113,13 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Attributes != null)
-                    hash = hash * 57 + this.Attributes.GetHashCode();
-                
+                    hash = hash * 59 + this.Attributes.GetHashCode();
                 if (this.Facets != null)
-                    hash = hash * 57 + this.Facets.GetHashCode();
-                
+                    hash = hash * 59 + this.Facets.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

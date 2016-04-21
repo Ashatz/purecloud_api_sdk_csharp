@@ -4,74 +4,94 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class QuestionScore :  IEquatable<QuestionScore>
-    {
+    public partial class QuestionScore :  IEquatable<QuestionScore>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="QuestionScore" /> class.
+        /// Initializes a new instance of the <see cref="QuestionScore" />class.
         /// </summary>
-        public QuestionScore()
+        /// <param name="QuestionId">QuestionId.</param>
+        /// <param name="AnswerId">AnswerId.</param>
+        /// <param name="Score">Score.</param>
+        /// <param name="MarkedNA">MarkedNA (default to false).</param>
+        /// <param name="FailedKillQuestion">FailedKillQuestion (default to false).</param>
+        /// <param name="Comments">Comments.</param>
+
+        public QuestionScore(string QuestionId = null, string AnswerId = null, int? Score = null, bool? MarkedNA = null, bool? FailedKillQuestion = null, string Comments = null)
         {
-            this.MarkedNA = false;
-            this.FailedKillQuestion = false;
+            this.QuestionId = QuestionId;
+            this.AnswerId = AnswerId;
+            this.Score = Score;
+            // use default value if no "MarkedNA" provided
+            if (MarkedNA == null)
+            {
+                this.MarkedNA = false;
+            }
+            else
+            {
+                this.MarkedNA = MarkedNA;
+            }
+            // use default value if no "FailedKillQuestion" provided
+            if (FailedKillQuestion == null)
+            {
+                this.FailedKillQuestion = false;
+            }
+            else
+            {
+                this.FailedKillQuestion = FailedKillQuestion;
+            }
+            this.Comments = Comments;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets QuestionId
         /// </summary>
         [DataMember(Name="questionId", EmitDefaultValue=false)]
         public string QuestionId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets AnswerId
         /// </summary>
         [DataMember(Name="answerId", EmitDefaultValue=false)]
         public string AnswerId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Score
         /// </summary>
         [DataMember(Name="score", EmitDefaultValue=false)]
         public int? Score { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets MarkedNA
         /// </summary>
         [DataMember(Name="markedNA", EmitDefaultValue=false)]
         public bool? MarkedNA { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets FailedKillQuestion
         /// </summary>
         [DataMember(Name="failedKillQuestion", EmitDefaultValue=false)]
         public bool? FailedKillQuestion { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Comments
         /// </summary>
         [DataMember(Name="comments", EmitDefaultValue=false)]
         public string Comments { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -86,11 +106,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  MarkedNA: ").Append(MarkedNA).Append("\n");
             sb.Append("  FailedKillQuestion: ").Append(FailedKillQuestion).Append("\n");
             sb.Append("  Comments: ").Append(Comments).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -114,7 +133,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if QuestionScore instances are equal
         /// </summary>
-        /// <param name="obj">Instance of QuestionScore to be compared</param>
+        /// <param name="other">Instance of QuestionScore to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(QuestionScore other)
         {
@@ -122,32 +141,32 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.QuestionId == other.QuestionId ||
                     this.QuestionId != null &&
                     this.QuestionId.Equals(other.QuestionId)
-                ) && 
+                ) &&
                 (
                     this.AnswerId == other.AnswerId ||
                     this.AnswerId != null &&
                     this.AnswerId.Equals(other.AnswerId)
-                ) && 
+                ) &&
                 (
                     this.Score == other.Score ||
                     this.Score != null &&
                     this.Score.Equals(other.Score)
-                ) && 
+                ) &&
                 (
                     this.MarkedNA == other.MarkedNA ||
                     this.MarkedNA != null &&
                     this.MarkedNA.Equals(other.MarkedNA)
-                ) && 
+                ) &&
                 (
                     this.FailedKillQuestion == other.FailedKillQuestion ||
                     this.FailedKillQuestion != null &&
                     this.FailedKillQuestion.Equals(other.FailedKillQuestion)
-                ) && 
+                ) &&
                 (
                     this.Comments == other.Comments ||
                     this.Comments != null &&
@@ -166,30 +185,21 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.QuestionId != null)
-                    hash = hash * 57 + this.QuestionId.GetHashCode();
-                
+                    hash = hash * 59 + this.QuestionId.GetHashCode();
                 if (this.AnswerId != null)
-                    hash = hash * 57 + this.AnswerId.GetHashCode();
-                
+                    hash = hash * 59 + this.AnswerId.GetHashCode();
                 if (this.Score != null)
-                    hash = hash * 57 + this.Score.GetHashCode();
-                
+                    hash = hash * 59 + this.Score.GetHashCode();
                 if (this.MarkedNA != null)
-                    hash = hash * 57 + this.MarkedNA.GetHashCode();
-                
+                    hash = hash * 59 + this.MarkedNA.GetHashCode();
                 if (this.FailedKillQuestion != null)
-                    hash = hash * 57 + this.FailedKillQuestion.GetHashCode();
-                
+                    hash = hash * 59 + this.FailedKillQuestion.GetHashCode();
                 if (this.Comments != null)
-                    hash = hash * 57 + this.Comments.GetHashCode();
-                
+                    hash = hash * 59 + this.Comments.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

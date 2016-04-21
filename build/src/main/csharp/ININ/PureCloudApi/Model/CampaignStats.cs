@@ -4,58 +4,62 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class CampaignStats :  IEquatable<CampaignStats>
-    {
+    public partial class CampaignStats :  IEquatable<CampaignStats>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="CampaignStats" /> class.
+        /// Initializes a new instance of the <see cref="CampaignStats" />class.
         /// </summary>
-        public CampaignStats()
+        /// <param name="ContactRate">ContactRate.</param>
+        /// <param name="IdleAgents">IdleAgents.</param>
+        /// <param name="AdjustedCallsPerAgent">AdjustedCallsPerAgent.</param>
+        /// <param name="OutstandingCalls">OutstandingCalls.</param>
+
+        public CampaignStats(ConnectRate ContactRate = null, int? IdleAgents = null, double? AdjustedCallsPerAgent = null, int? OutstandingCalls = null)
         {
+            this.ContactRate = ContactRate;
+            this.IdleAgents = IdleAgents;
+            this.AdjustedCallsPerAgent = AdjustedCallsPerAgent;
+            this.OutstandingCalls = OutstandingCalls;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets ContactRate
         /// </summary>
         [DataMember(Name="contactRate", EmitDefaultValue=false)]
         public ConnectRate ContactRate { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets IdleAgents
         /// </summary>
         [DataMember(Name="idleAgents", EmitDefaultValue=false)]
         public int? IdleAgents { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets AdjustedCallsPerAgent
         /// </summary>
         [DataMember(Name="adjustedCallsPerAgent", EmitDefaultValue=false)]
         public double? AdjustedCallsPerAgent { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets OutstandingCalls
         /// </summary>
         [DataMember(Name="outstandingCalls", EmitDefaultValue=false)]
         public int? OutstandingCalls { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -68,11 +72,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  IdleAgents: ").Append(IdleAgents).Append("\n");
             sb.Append("  AdjustedCallsPerAgent: ").Append(AdjustedCallsPerAgent).Append("\n");
             sb.Append("  OutstandingCalls: ").Append(OutstandingCalls).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -96,7 +99,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if CampaignStats instances are equal
         /// </summary>
-        /// <param name="obj">Instance of CampaignStats to be compared</param>
+        /// <param name="other">Instance of CampaignStats to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(CampaignStats other)
         {
@@ -104,22 +107,22 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.ContactRate == other.ContactRate ||
                     this.ContactRate != null &&
                     this.ContactRate.Equals(other.ContactRate)
-                ) && 
+                ) &&
                 (
                     this.IdleAgents == other.IdleAgents ||
                     this.IdleAgents != null &&
                     this.IdleAgents.Equals(other.IdleAgents)
-                ) && 
+                ) &&
                 (
                     this.AdjustedCallsPerAgent == other.AdjustedCallsPerAgent ||
                     this.AdjustedCallsPerAgent != null &&
                     this.AdjustedCallsPerAgent.Equals(other.AdjustedCallsPerAgent)
-                ) && 
+                ) &&
                 (
                     this.OutstandingCalls == other.OutstandingCalls ||
                     this.OutstandingCalls != null &&
@@ -138,24 +141,17 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ContactRate != null)
-                    hash = hash * 57 + this.ContactRate.GetHashCode();
-                
+                    hash = hash * 59 + this.ContactRate.GetHashCode();
                 if (this.IdleAgents != null)
-                    hash = hash * 57 + this.IdleAgents.GetHashCode();
-                
+                    hash = hash * 59 + this.IdleAgents.GetHashCode();
                 if (this.AdjustedCallsPerAgent != null)
-                    hash = hash * 57 + this.AdjustedCallsPerAgent.GetHashCode();
-                
+                    hash = hash * 59 + this.AdjustedCallsPerAgent.GetHashCode();
                 if (this.OutstandingCalls != null)
-                    hash = hash * 57 + this.OutstandingCalls.GetHashCode();
-                
+                    hash = hash * 59 + this.OutstandingCalls.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

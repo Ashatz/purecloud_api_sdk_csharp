@@ -4,46 +4,80 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// Used as the body to the transferWorkItem request.
     /// </summary>
     [DataContract]
-    public class WorkItemTransferRequest :  IEquatable<WorkItemTransferRequest>
-    {
+    public partial class WorkItemTransferRequest :  IEquatable<WorkItemTransferRequest>
+    { 
+
         /// <summary>
-        /// Initializes a new instance of the <see cref="WorkItemTransferRequest" /> class.
+        /// The type of the transferTarget, indicating whether you want to transfer to a User, or a Queue, etc.
         /// </summary>
-        public WorkItemTransferRequest()
-        {
+        /// <value>The type of the transferTarget, indicating whether you want to transfer to a User, or a Queue, etc.</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+                public enum TransferTargetTypeEnum {
             
+            [EnumMember(Value = "USER")]
+            User,
+            
+            [EnumMember(Value = "QUEUE")]
+            Queue
         }
 
         
+
         /// <summary>
         /// The type of the transferTarget, indicating whether you want to transfer to a User, or a Queue, etc.
         /// </summary>
         /// <value>The type of the transferTarget, indicating whether you want to transfer to a User, or a Queue, etc.</value>
         [DataMember(Name="transferTargetType", EmitDefaultValue=false)]
-        public string TransferTargetType { get; set; }
-  
-        
+        public TransferTargetTypeEnum? TransferTargetType { get; set; }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="WorkItemTransferRequest" />class.
+        /// </summary>
+        /// <param name="TransferTargetType">The type of the transferTarget, indicating whether you want to transfer to a User, or a Queue, etc. (required).</param>
+        /// <param name="TransferTarget">The destination to where the work item should be transferred. (required).</param>
+
+        public WorkItemTransferRequest(TransferTargetTypeEnum? TransferTargetType = null, string TransferTarget = null)
+        {
+            // to ensure "TransferTargetType" is required (not null)
+            if (TransferTargetType == null)
+            {
+                throw new InvalidDataException("TransferTargetType is a required property for WorkItemTransferRequest and cannot be null");
+            }
+            else
+            {
+                this.TransferTargetType = TransferTargetType;
+            }
+            // to ensure "TransferTarget" is required (not null)
+            if (TransferTarget == null)
+            {
+                throw new InvalidDataException("TransferTarget is a required property for WorkItemTransferRequest and cannot be null");
+            }
+            else
+            {
+                this.TransferTarget = TransferTarget;
+            }
+            
+        }
+
+    
         /// <summary>
         /// The destination to where the work item should be transferred.
         /// </summary>
         /// <value>The destination to where the work item should be transferred.</value>
         [DataMember(Name="transferTarget", EmitDefaultValue=false)]
         public string TransferTarget { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -54,11 +88,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class WorkItemTransferRequest {\n");
             sb.Append("  TransferTargetType: ").Append(TransferTargetType).Append("\n");
             sb.Append("  TransferTarget: ").Append(TransferTarget).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -82,7 +115,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if WorkItemTransferRequest instances are equal
         /// </summary>
-        /// <param name="obj">Instance of WorkItemTransferRequest to be compared</param>
+        /// <param name="other">Instance of WorkItemTransferRequest to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(WorkItemTransferRequest other)
         {
@@ -90,12 +123,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.TransferTargetType == other.TransferTargetType ||
                     this.TransferTargetType != null &&
                     this.TransferTargetType.Equals(other.TransferTargetType)
-                ) && 
+                ) &&
                 (
                     this.TransferTarget == other.TransferTarget ||
                     this.TransferTarget != null &&
@@ -114,18 +147,13 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.TransferTargetType != null)
-                    hash = hash * 57 + this.TransferTargetType.GetHashCode();
-                
+                    hash = hash * 59 + this.TransferTargetType.GetHashCode();
                 if (this.TransferTarget != null)
-                    hash = hash * 57 + this.TransferTarget.GetHashCode();
-                
+                    hash = hash * 59 + this.TransferTarget.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

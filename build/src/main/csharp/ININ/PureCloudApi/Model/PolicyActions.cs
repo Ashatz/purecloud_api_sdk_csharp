@@ -4,74 +4,94 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class PolicyActions :  IEquatable<PolicyActions>
-    {
+    public partial class PolicyActions :  IEquatable<PolicyActions>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="PolicyActions" /> class.
+        /// Initializes a new instance of the <see cref="PolicyActions" />class.
         /// </summary>
-        public PolicyActions()
+        /// <param name="RetainRecording">RetainRecording (default to false).</param>
+        /// <param name="DeleteRecording">DeleteRecording (default to false).</param>
+        /// <param name="AssignEvaluations">AssignEvaluations.</param>
+        /// <param name="AssignMeteredEvaluations">AssignMeteredEvaluations.</param>
+        /// <param name="AssignCalibrations">AssignCalibrations.</param>
+        /// <param name="RetentionDuration">RetentionDuration.</param>
+
+        public PolicyActions(bool? RetainRecording = null, bool? DeleteRecording = null, List<EvaluationAssignment> AssignEvaluations = null, List<MeteredEvaluationAssignment> AssignMeteredEvaluations = null, List<CalibrationAssignment> AssignCalibrations = null, RetentionDuration RetentionDuration = null)
         {
-            this.RetainRecording = false;
-            this.DeleteRecording = false;
+            // use default value if no "RetainRecording" provided
+            if (RetainRecording == null)
+            {
+                this.RetainRecording = false;
+            }
+            else
+            {
+                this.RetainRecording = RetainRecording;
+            }
+            // use default value if no "DeleteRecording" provided
+            if (DeleteRecording == null)
+            {
+                this.DeleteRecording = false;
+            }
+            else
+            {
+                this.DeleteRecording = DeleteRecording;
+            }
+            this.AssignEvaluations = AssignEvaluations;
+            this.AssignMeteredEvaluations = AssignMeteredEvaluations;
+            this.AssignCalibrations = AssignCalibrations;
+            this.RetentionDuration = RetentionDuration;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets RetainRecording
         /// </summary>
         [DataMember(Name="retainRecording", EmitDefaultValue=false)]
         public bool? RetainRecording { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets DeleteRecording
         /// </summary>
         [DataMember(Name="deleteRecording", EmitDefaultValue=false)]
         public bool? DeleteRecording { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets AssignEvaluations
         /// </summary>
         [DataMember(Name="assignEvaluations", EmitDefaultValue=false)]
         public List<EvaluationAssignment> AssignEvaluations { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets AssignMeteredEvaluations
         /// </summary>
         [DataMember(Name="assignMeteredEvaluations", EmitDefaultValue=false)]
         public List<MeteredEvaluationAssignment> AssignMeteredEvaluations { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets AssignCalibrations
         /// </summary>
         [DataMember(Name="assignCalibrations", EmitDefaultValue=false)]
         public List<CalibrationAssignment> AssignCalibrations { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets RetentionDuration
         /// </summary>
         [DataMember(Name="retentionDuration", EmitDefaultValue=false)]
         public RetentionDuration RetentionDuration { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -86,11 +106,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  AssignMeteredEvaluations: ").Append(AssignMeteredEvaluations).Append("\n");
             sb.Append("  AssignCalibrations: ").Append(AssignCalibrations).Append("\n");
             sb.Append("  RetentionDuration: ").Append(RetentionDuration).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -114,7 +133,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if PolicyActions instances are equal
         /// </summary>
-        /// <param name="obj">Instance of PolicyActions to be compared</param>
+        /// <param name="other">Instance of PolicyActions to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(PolicyActions other)
         {
@@ -122,32 +141,32 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.RetainRecording == other.RetainRecording ||
                     this.RetainRecording != null &&
                     this.RetainRecording.Equals(other.RetainRecording)
-                ) && 
+                ) &&
                 (
                     this.DeleteRecording == other.DeleteRecording ||
                     this.DeleteRecording != null &&
                     this.DeleteRecording.Equals(other.DeleteRecording)
-                ) && 
+                ) &&
                 (
                     this.AssignEvaluations == other.AssignEvaluations ||
                     this.AssignEvaluations != null &&
                     this.AssignEvaluations.SequenceEqual(other.AssignEvaluations)
-                ) && 
+                ) &&
                 (
                     this.AssignMeteredEvaluations == other.AssignMeteredEvaluations ||
                     this.AssignMeteredEvaluations != null &&
                     this.AssignMeteredEvaluations.SequenceEqual(other.AssignMeteredEvaluations)
-                ) && 
+                ) &&
                 (
                     this.AssignCalibrations == other.AssignCalibrations ||
                     this.AssignCalibrations != null &&
                     this.AssignCalibrations.SequenceEqual(other.AssignCalibrations)
-                ) && 
+                ) &&
                 (
                     this.RetentionDuration == other.RetentionDuration ||
                     this.RetentionDuration != null &&
@@ -166,30 +185,21 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.RetainRecording != null)
-                    hash = hash * 57 + this.RetainRecording.GetHashCode();
-                
+                    hash = hash * 59 + this.RetainRecording.GetHashCode();
                 if (this.DeleteRecording != null)
-                    hash = hash * 57 + this.DeleteRecording.GetHashCode();
-                
+                    hash = hash * 59 + this.DeleteRecording.GetHashCode();
                 if (this.AssignEvaluations != null)
-                    hash = hash * 57 + this.AssignEvaluations.GetHashCode();
-                
+                    hash = hash * 59 + this.AssignEvaluations.GetHashCode();
                 if (this.AssignMeteredEvaluations != null)
-                    hash = hash * 57 + this.AssignMeteredEvaluations.GetHashCode();
-                
+                    hash = hash * 59 + this.AssignMeteredEvaluations.GetHashCode();
                 if (this.AssignCalibrations != null)
-                    hash = hash * 57 + this.AssignCalibrations.GetHashCode();
-                
+                    hash = hash * 59 + this.AssignCalibrations.GetHashCode();
                 if (this.RetentionDuration != null)
-                    hash = hash * 57 + this.RetentionDuration.GetHashCode();
-                
+                    hash = hash * 59 + this.RetentionDuration.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

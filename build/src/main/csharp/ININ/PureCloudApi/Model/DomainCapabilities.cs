@@ -4,53 +4,70 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class DomainCapabilities :  IEquatable<DomainCapabilities>
-    {
+    public partial class DomainCapabilities :  IEquatable<DomainCapabilities>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="DomainCapabilities" /> class.
+        /// Initializes a new instance of the <see cref="DomainCapabilities" />class.
         /// </summary>
-        public DomainCapabilities()
+        /// <param name="Enabled">Enabled (default to false).</param>
+        /// <param name="Dhcp">Dhcp (default to false).</param>
+        /// <param name="Metric">Metric.</param>
+
+        public DomainCapabilities(bool? Enabled = null, bool? Dhcp = null, int? Metric = null)
         {
-            this.Enabled = false;
-            this.Dhcp = false;
+            // use default value if no "Enabled" provided
+            if (Enabled == null)
+            {
+                this.Enabled = false;
+            }
+            else
+            {
+                this.Enabled = Enabled;
+            }
+            // use default value if no "Dhcp" provided
+            if (Dhcp == null)
+            {
+                this.Dhcp = false;
+            }
+            else
+            {
+                this.Dhcp = Dhcp;
+            }
+            this.Metric = Metric;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets Enabled
         /// </summary>
         [DataMember(Name="enabled", EmitDefaultValue=false)]
         public bool? Enabled { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Dhcp
         /// </summary>
         [DataMember(Name="dhcp", EmitDefaultValue=false)]
         public bool? Dhcp { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Metric
         /// </summary>
         [DataMember(Name="metric", EmitDefaultValue=false)]
         public int? Metric { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -62,11 +79,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
             sb.Append("  Dhcp: ").Append(Dhcp).Append("\n");
             sb.Append("  Metric: ").Append(Metric).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -90,7 +106,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if DomainCapabilities instances are equal
         /// </summary>
-        /// <param name="obj">Instance of DomainCapabilities to be compared</param>
+        /// <param name="other">Instance of DomainCapabilities to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(DomainCapabilities other)
         {
@@ -98,17 +114,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Enabled == other.Enabled ||
                     this.Enabled != null &&
                     this.Enabled.Equals(other.Enabled)
-                ) && 
+                ) &&
                 (
                     this.Dhcp == other.Dhcp ||
                     this.Dhcp != null &&
                     this.Dhcp.Equals(other.Dhcp)
-                ) && 
+                ) &&
                 (
                     this.Metric == other.Metric ||
                     this.Metric != null &&
@@ -127,21 +143,15 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Enabled != null)
-                    hash = hash * 57 + this.Enabled.GetHashCode();
-                
+                    hash = hash * 59 + this.Enabled.GetHashCode();
                 if (this.Dhcp != null)
-                    hash = hash * 57 + this.Dhcp.GetHashCode();
-                
+                    hash = hash * 59 + this.Dhcp.GetHashCode();
                 if (this.Metric != null)
-                    hash = hash * 57 + this.Metric.GetHashCode();
-                
+                    hash = hash * 59 + this.Metric.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

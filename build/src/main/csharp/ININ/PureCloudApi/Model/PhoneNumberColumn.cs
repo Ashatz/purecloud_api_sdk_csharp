@@ -4,51 +4,54 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class PhoneNumberColumn :  IEquatable<PhoneNumberColumn>
-    {
+    public partial class PhoneNumberColumn :  IEquatable<PhoneNumberColumn>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="PhoneNumberColumn" /> class.
+        /// Initializes a new instance of the <see cref="PhoneNumberColumn" />class.
         /// </summary>
-        public PhoneNumberColumn()
+        /// <param name="ColumnName">ColumnName.</param>
+        /// <param name="Type">Type.</param>
+        /// <param name="CallableTimeColumn">CallableTimeColumn.</param>
+
+        public PhoneNumberColumn(string ColumnName = null, string Type = null, string CallableTimeColumn = null)
         {
+            this.ColumnName = ColumnName;
+            this.Type = Type;
+            this.CallableTimeColumn = CallableTimeColumn;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets ColumnName
         /// </summary>
         [DataMember(Name="columnName", EmitDefaultValue=false)]
         public string ColumnName { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public string Type { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets CallableTimeColumn
         /// </summary>
         [DataMember(Name="callableTimeColumn", EmitDefaultValue=false)]
         public string CallableTimeColumn { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -60,11 +63,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  ColumnName: ").Append(ColumnName).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  CallableTimeColumn: ").Append(CallableTimeColumn).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -88,7 +90,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if PhoneNumberColumn instances are equal
         /// </summary>
-        /// <param name="obj">Instance of PhoneNumberColumn to be compared</param>
+        /// <param name="other">Instance of PhoneNumberColumn to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(PhoneNumberColumn other)
         {
@@ -96,17 +98,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.ColumnName == other.ColumnName ||
                     this.ColumnName != null &&
                     this.ColumnName.Equals(other.ColumnName)
-                ) && 
+                ) &&
                 (
                     this.Type == other.Type ||
                     this.Type != null &&
                     this.Type.Equals(other.Type)
-                ) && 
+                ) &&
                 (
                     this.CallableTimeColumn == other.CallableTimeColumn ||
                     this.CallableTimeColumn != null &&
@@ -125,21 +127,15 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ColumnName != null)
-                    hash = hash * 57 + this.ColumnName.GetHashCode();
-                
+                    hash = hash * 59 + this.ColumnName.GetHashCode();
                 if (this.Type != null)
-                    hash = hash * 57 + this.Type.GetHashCode();
-                
+                    hash = hash * 59 + this.Type.GetHashCode();
                 if (this.CallableTimeColumn != null)
-                    hash = hash * 57 + this.CallableTimeColumn.GetHashCode();
-                
+                    hash = hash * 59 + this.CallableTimeColumn.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

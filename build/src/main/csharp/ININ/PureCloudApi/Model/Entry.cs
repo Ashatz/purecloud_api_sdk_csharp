@@ -4,44 +4,46 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class Entry :  IEquatable<Entry>
-    {
+    public partial class Entry :  IEquatable<Entry>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="Entry" /> class.
+        /// Initializes a new instance of the <see cref="Entry" />class.
         /// </summary>
-        public Entry()
+        /// <param name="Value">Value.</param>
+        /// <param name="Count">Count.</param>
+
+        public Entry(string Value = null, int? Count = null)
         {
+            this.Value = Value;
+            this.Count = Count;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets Value
         /// </summary>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public string Value { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Count
         /// </summary>
         [DataMember(Name="count", EmitDefaultValue=false)]
         public int? Count { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -52,11 +54,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class Entry {\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
             sb.Append("  Count: ").Append(Count).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -80,7 +81,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if Entry instances are equal
         /// </summary>
-        /// <param name="obj">Instance of Entry to be compared</param>
+        /// <param name="other">Instance of Entry to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(Entry other)
         {
@@ -88,12 +89,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Value == other.Value ||
                     this.Value != null &&
                     this.Value.Equals(other.Value)
-                ) && 
+                ) &&
                 (
                     this.Count == other.Count ||
                     this.Count != null &&
@@ -112,18 +113,13 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Value != null)
-                    hash = hash * 57 + this.Value.GetHashCode();
-                
+                    hash = hash * 59 + this.Value.GetHashCode();
                 if (this.Count != null)
-                    hash = hash * 57 + this.Count.GetHashCode();
-                
+                    hash = hash * 59 + this.Count.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

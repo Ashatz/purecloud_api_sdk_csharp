@@ -4,86 +4,94 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class QueueUtilizationDiagnostic :  IEquatable<QueueUtilizationDiagnostic>
-    {
+    public partial class QueueUtilizationDiagnostic :  IEquatable<QueueUtilizationDiagnostic>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="QueueUtilizationDiagnostic" /> class.
+        /// Initializes a new instance of the <see cref="QueueUtilizationDiagnostic" />class.
         /// </summary>
-        public QueueUtilizationDiagnostic()
+        /// <param name="Queue">Queue.</param>
+        /// <param name="UsersInQueue">UsersInQueue.</param>
+        /// <param name="ActiveUsersInQueue">ActiveUsersInQueue.</param>
+        /// <param name="UsersOnQueue">UsersOnQueue.</param>
+        /// <param name="UsersNotUtilized">UsersNotUtilized.</param>
+        /// <param name="UsersOnQueueWithStation">UsersOnQueueWithStation.</param>
+        /// <param name="UsersOnACampaignCall">UsersOnACampaignCall.</param>
+        /// <param name="UsersOnANonCampaignCall">UsersOnANonCampaignCall.</param>
+
+        public QueueUtilizationDiagnostic(UriReference Queue = null, int? UsersInQueue = null, int? ActiveUsersInQueue = null, int? UsersOnQueue = null, int? UsersNotUtilized = null, int? UsersOnQueueWithStation = null, int? UsersOnACampaignCall = null, int? UsersOnANonCampaignCall = null)
         {
+            this.Queue = Queue;
+            this.UsersInQueue = UsersInQueue;
+            this.ActiveUsersInQueue = ActiveUsersInQueue;
+            this.UsersOnQueue = UsersOnQueue;
+            this.UsersNotUtilized = UsersNotUtilized;
+            this.UsersOnQueueWithStation = UsersOnQueueWithStation;
+            this.UsersOnACampaignCall = UsersOnACampaignCall;
+            this.UsersOnANonCampaignCall = UsersOnANonCampaignCall;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets Queue
         /// </summary>
         [DataMember(Name="queue", EmitDefaultValue=false)]
         public UriReference Queue { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets UsersInQueue
         /// </summary>
         [DataMember(Name="usersInQueue", EmitDefaultValue=false)]
         public int? UsersInQueue { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ActiveUsersInQueue
         /// </summary>
         [DataMember(Name="activeUsersInQueue", EmitDefaultValue=false)]
         public int? ActiveUsersInQueue { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets UsersOnQueue
         /// </summary>
         [DataMember(Name="usersOnQueue", EmitDefaultValue=false)]
         public int? UsersOnQueue { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets UsersNotUtilized
         /// </summary>
         [DataMember(Name="usersNotUtilized", EmitDefaultValue=false)]
         public int? UsersNotUtilized { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets UsersOnQueueWithStation
         /// </summary>
         [DataMember(Name="usersOnQueueWithStation", EmitDefaultValue=false)]
         public int? UsersOnQueueWithStation { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets UsersOnACampaignCall
         /// </summary>
         [DataMember(Name="usersOnACampaignCall", EmitDefaultValue=false)]
         public int? UsersOnACampaignCall { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets UsersOnANonCampaignCall
         /// </summary>
         [DataMember(Name="usersOnANonCampaignCall", EmitDefaultValue=false)]
         public int? UsersOnANonCampaignCall { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -100,11 +108,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  UsersOnQueueWithStation: ").Append(UsersOnQueueWithStation).Append("\n");
             sb.Append("  UsersOnACampaignCall: ").Append(UsersOnACampaignCall).Append("\n");
             sb.Append("  UsersOnANonCampaignCall: ").Append(UsersOnANonCampaignCall).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -128,7 +135,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if QueueUtilizationDiagnostic instances are equal
         /// </summary>
-        /// <param name="obj">Instance of QueueUtilizationDiagnostic to be compared</param>
+        /// <param name="other">Instance of QueueUtilizationDiagnostic to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(QueueUtilizationDiagnostic other)
         {
@@ -136,42 +143,42 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Queue == other.Queue ||
                     this.Queue != null &&
                     this.Queue.Equals(other.Queue)
-                ) && 
+                ) &&
                 (
                     this.UsersInQueue == other.UsersInQueue ||
                     this.UsersInQueue != null &&
                     this.UsersInQueue.Equals(other.UsersInQueue)
-                ) && 
+                ) &&
                 (
                     this.ActiveUsersInQueue == other.ActiveUsersInQueue ||
                     this.ActiveUsersInQueue != null &&
                     this.ActiveUsersInQueue.Equals(other.ActiveUsersInQueue)
-                ) && 
+                ) &&
                 (
                     this.UsersOnQueue == other.UsersOnQueue ||
                     this.UsersOnQueue != null &&
                     this.UsersOnQueue.Equals(other.UsersOnQueue)
-                ) && 
+                ) &&
                 (
                     this.UsersNotUtilized == other.UsersNotUtilized ||
                     this.UsersNotUtilized != null &&
                     this.UsersNotUtilized.Equals(other.UsersNotUtilized)
-                ) && 
+                ) &&
                 (
                     this.UsersOnQueueWithStation == other.UsersOnQueueWithStation ||
                     this.UsersOnQueueWithStation != null &&
                     this.UsersOnQueueWithStation.Equals(other.UsersOnQueueWithStation)
-                ) && 
+                ) &&
                 (
                     this.UsersOnACampaignCall == other.UsersOnACampaignCall ||
                     this.UsersOnACampaignCall != null &&
                     this.UsersOnACampaignCall.Equals(other.UsersOnACampaignCall)
-                ) && 
+                ) &&
                 (
                     this.UsersOnANonCampaignCall == other.UsersOnANonCampaignCall ||
                     this.UsersOnANonCampaignCall != null &&
@@ -190,36 +197,25 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Queue != null)
-                    hash = hash * 57 + this.Queue.GetHashCode();
-                
+                    hash = hash * 59 + this.Queue.GetHashCode();
                 if (this.UsersInQueue != null)
-                    hash = hash * 57 + this.UsersInQueue.GetHashCode();
-                
+                    hash = hash * 59 + this.UsersInQueue.GetHashCode();
                 if (this.ActiveUsersInQueue != null)
-                    hash = hash * 57 + this.ActiveUsersInQueue.GetHashCode();
-                
+                    hash = hash * 59 + this.ActiveUsersInQueue.GetHashCode();
                 if (this.UsersOnQueue != null)
-                    hash = hash * 57 + this.UsersOnQueue.GetHashCode();
-                
+                    hash = hash * 59 + this.UsersOnQueue.GetHashCode();
                 if (this.UsersNotUtilized != null)
-                    hash = hash * 57 + this.UsersNotUtilized.GetHashCode();
-                
+                    hash = hash * 59 + this.UsersNotUtilized.GetHashCode();
                 if (this.UsersOnQueueWithStation != null)
-                    hash = hash * 57 + this.UsersOnQueueWithStation.GetHashCode();
-                
+                    hash = hash * 59 + this.UsersOnQueueWithStation.GetHashCode();
                 if (this.UsersOnACampaignCall != null)
-                    hash = hash * 57 + this.UsersOnACampaignCall.GetHashCode();
-                
+                    hash = hash * 59 + this.UsersOnACampaignCall.GetHashCode();
                 if (this.UsersOnANonCampaignCall != null)
-                    hash = hash * 57 + this.UsersOnANonCampaignCall.GetHashCode();
-                
+                    hash = hash * 59 + this.UsersOnANonCampaignCall.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

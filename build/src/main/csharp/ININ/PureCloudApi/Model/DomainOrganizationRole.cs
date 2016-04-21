@@ -4,118 +4,140 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class DomainOrganizationRole :  IEquatable<DomainOrganizationRole>
-    {
+    public partial class DomainOrganizationRole :  IEquatable<DomainOrganizationRole>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="DomainOrganizationRole" /> class.
+        /// Initializes a new instance of the <see cref="DomainOrganizationRole" />class.
         /// </summary>
-        public DomainOrganizationRole()
+        /// <param name="Name">Name.</param>
+        /// <param name="Description">Description.</param>
+        /// <param name="DefaultRoleId">DefaultRoleId.</param>
+        /// <param name="Permissions">Permissions.</param>
+        /// <param name="Licenses">Licenses.</param>
+        /// <param name="PermissionPolicies">PermissionPolicies.</param>
+        /// <param name="Code">Code.</param>
+        /// <param name="UserCount">UserCount.</param>
+        /// <param name="RoleNeedsUpdate">RoleNeedsUpdate (default to false).</param>
+        /// <param name="_Default">_Default (default to false).</param>
+
+        public DomainOrganizationRole(string Name = null, string Description = null, string DefaultRoleId = null, List<string> Permissions = null, List<string> Licenses = null, List<DomainPermissionPolicy> PermissionPolicies = null, string Code = null, int? UserCount = null, bool? RoleNeedsUpdate = null, bool? _Default = null)
         {
-            this.RoleNeedsUpdate = false;
-            this.Default = false;
+            this.Name = Name;
+            this.Description = Description;
+            this.DefaultRoleId = DefaultRoleId;
+            this.Permissions = Permissions;
+            this.Licenses = Licenses;
+            this.PermissionPolicies = PermissionPolicies;
+            this.Code = Code;
+            this.UserCount = UserCount;
+            // use default value if no "RoleNeedsUpdate" provided
+            if (RoleNeedsUpdate == null)
+            {
+                this.RoleNeedsUpdate = false;
+            }
+            else
+            {
+                this.RoleNeedsUpdate = RoleNeedsUpdate;
+            }
+            // use default value if no "_Default" provided
+            if (_Default == null)
+            {
+                this._Default = false;
+            }
+            else
+            {
+                this._Default = _Default;
+            }
             
         }
 
-        
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Description
         /// </summary>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets DefaultRoleId
         /// </summary>
         [DataMember(Name="defaultRoleId", EmitDefaultValue=false)]
         public string DefaultRoleId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Permissions
         /// </summary>
         [DataMember(Name="permissions", EmitDefaultValue=false)]
         public List<string> Permissions { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Licenses
         /// </summary>
         [DataMember(Name="licenses", EmitDefaultValue=false)]
         public List<string> Licenses { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets PermissionPolicies
         /// </summary>
         [DataMember(Name="permissionPolicies", EmitDefaultValue=false)]
         public List<DomainPermissionPolicy> PermissionPolicies { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Code
         /// </summary>
         [DataMember(Name="code", EmitDefaultValue=false)]
         public string Code { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets UserCount
         /// </summary>
         [DataMember(Name="userCount", EmitDefaultValue=false)]
         public int? UserCount { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets RoleNeedsUpdate
         /// </summary>
         [DataMember(Name="roleNeedsUpdate", EmitDefaultValue=false)]
         public bool? RoleNeedsUpdate { get; set; }
-  
-        
+    
         /// <summary>
-        /// Gets or Sets Default
+        /// Gets or Sets _Default
         /// </summary>
         [DataMember(Name="default", EmitDefaultValue=false)]
-        public bool? Default { get; set; }
-  
-        
+        public bool? _Default { get; set; }
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -134,13 +156,12 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Code: ").Append(Code).Append("\n");
             sb.Append("  UserCount: ").Append(UserCount).Append("\n");
             sb.Append("  RoleNeedsUpdate: ").Append(RoleNeedsUpdate).Append("\n");
-            sb.Append("  Default: ").Append(Default).Append("\n");
+            sb.Append("  _Default: ").Append(_Default).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -164,7 +185,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if DomainOrganizationRole instances are equal
         /// </summary>
-        /// <param name="obj">Instance of DomainOrganizationRole to be compared</param>
+        /// <param name="other">Instance of DomainOrganizationRole to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(DomainOrganizationRole other)
         {
@@ -172,62 +193,62 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Description == other.Description ||
                     this.Description != null &&
                     this.Description.Equals(other.Description)
-                ) && 
+                ) &&
                 (
                     this.DefaultRoleId == other.DefaultRoleId ||
                     this.DefaultRoleId != null &&
                     this.DefaultRoleId.Equals(other.DefaultRoleId)
-                ) && 
+                ) &&
                 (
                     this.Permissions == other.Permissions ||
                     this.Permissions != null &&
                     this.Permissions.SequenceEqual(other.Permissions)
-                ) && 
+                ) &&
                 (
                     this.Licenses == other.Licenses ||
                     this.Licenses != null &&
                     this.Licenses.SequenceEqual(other.Licenses)
-                ) && 
+                ) &&
                 (
                     this.PermissionPolicies == other.PermissionPolicies ||
                     this.PermissionPolicies != null &&
                     this.PermissionPolicies.SequenceEqual(other.PermissionPolicies)
-                ) && 
+                ) &&
                 (
                     this.Code == other.Code ||
                     this.Code != null &&
                     this.Code.Equals(other.Code)
-                ) && 
+                ) &&
                 (
                     this.UserCount == other.UserCount ||
                     this.UserCount != null &&
                     this.UserCount.Equals(other.UserCount)
-                ) && 
+                ) &&
                 (
                     this.RoleNeedsUpdate == other.RoleNeedsUpdate ||
                     this.RoleNeedsUpdate != null &&
                     this.RoleNeedsUpdate.Equals(other.RoleNeedsUpdate)
-                ) && 
+                ) &&
                 (
-                    this.Default == other.Default ||
-                    this.Default != null &&
-                    this.Default.Equals(other.Default)
-                ) && 
+                    this._Default == other._Default ||
+                    this._Default != null &&
+                    this._Default.Equals(other._Default)
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
@@ -246,48 +267,33 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
-                
+                    hash = hash * 59 + this.Id.GetHashCode();
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
-                
+                    hash = hash * 59 + this.Name.GetHashCode();
                 if (this.Description != null)
-                    hash = hash * 57 + this.Description.GetHashCode();
-                
+                    hash = hash * 59 + this.Description.GetHashCode();
                 if (this.DefaultRoleId != null)
-                    hash = hash * 57 + this.DefaultRoleId.GetHashCode();
-                
+                    hash = hash * 59 + this.DefaultRoleId.GetHashCode();
                 if (this.Permissions != null)
-                    hash = hash * 57 + this.Permissions.GetHashCode();
-                
+                    hash = hash * 59 + this.Permissions.GetHashCode();
                 if (this.Licenses != null)
-                    hash = hash * 57 + this.Licenses.GetHashCode();
-                
+                    hash = hash * 59 + this.Licenses.GetHashCode();
                 if (this.PermissionPolicies != null)
-                    hash = hash * 57 + this.PermissionPolicies.GetHashCode();
-                
+                    hash = hash * 59 + this.PermissionPolicies.GetHashCode();
                 if (this.Code != null)
-                    hash = hash * 57 + this.Code.GetHashCode();
-                
+                    hash = hash * 59 + this.Code.GetHashCode();
                 if (this.UserCount != null)
-                    hash = hash * 57 + this.UserCount.GetHashCode();
-                
+                    hash = hash * 59 + this.UserCount.GetHashCode();
                 if (this.RoleNeedsUpdate != null)
-                    hash = hash * 57 + this.RoleNeedsUpdate.GetHashCode();
-                
-                if (this.Default != null)
-                    hash = hash * 57 + this.Default.GetHashCode();
-                
+                    hash = hash * 59 + this.RoleNeedsUpdate.GetHashCode();
+                if (this._Default != null)
+                    hash = hash * 59 + this._Default.GetHashCode();
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
-                
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

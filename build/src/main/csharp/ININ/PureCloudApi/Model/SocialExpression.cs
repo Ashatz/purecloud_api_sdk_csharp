@@ -4,102 +4,188 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class SocialExpression :  IEquatable<SocialExpression>
-    {
+    public partial class SocialExpression :  IEquatable<SocialExpression>
+    { 
+
         /// <summary>
-        /// Initializes a new instance of the <see cref="SocialExpression" /> class.
+        /// Gets or Sets State
         /// </summary>
-        public SocialExpression()
-        {
-            this.Held = false;
+        [JsonConverter(typeof(StringEnumConverter))]
+                public enum StateEnum {
             
+            [EnumMember(Value = "ALERTING")]
+            Alerting,
+            
+            [EnumMember(Value = "DIALING")]
+            Dialing,
+            
+            [EnumMember(Value = "CONTACTING")]
+            Contacting,
+            
+            [EnumMember(Value = "OFFERING")]
+            Offering,
+            
+            [EnumMember(Value = "CONNECTED")]
+            Connected,
+            
+            [EnumMember(Value = "DISCONNECTED")]
+            Disconnected,
+            
+            [EnumMember(Value = "TERMINATED")]
+            Terminated,
+            
+            [EnumMember(Value = "NONE")]
+            None
+        }
+
+
+        /// <summary>
+        /// Gets or Sets DisconnectType
+        /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
+                public enum DisconnectTypeEnum {
+            
+            [EnumMember(Value = "ENDPOINT")]
+            Endpoint,
+            
+            [EnumMember(Value = "CLIENT")]
+            Client,
+            
+            [EnumMember(Value = "SYSTEM")]
+            System,
+            
+            [EnumMember(Value = "TRANSFER")]
+            Transfer,
+            
+            [EnumMember(Value = "TRANSFER_CONFERENCE")]
+            TransferConference,
+            
+            [EnumMember(Value = "TRANSFER_CONSULT")]
+            TransferConsult,
+            
+            [EnumMember(Value = "ERROR")]
+            Error,
+            
+            [EnumMember(Value = "PEER")]
+            Peer,
+            
+            [EnumMember(Value = "OTHER")]
+            Other
         }
 
         
+
         /// <summary>
         /// Gets or Sets State
         /// </summary>
         [DataMember(Name="state", EmitDefaultValue=false)]
-        public string State { get; set; }
-  
-        
+        public StateEnum? State { get; set; }
+    
+
+        /// <summary>
+        /// Gets or Sets DisconnectType
+        /// </summary>
+        [DataMember(Name="disconnectType", EmitDefaultValue=false)]
+        public DisconnectTypeEnum? DisconnectType { get; set; }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="SocialExpression" />class.
+        /// </summary>
+        /// <param name="State">State.</param>
+        /// <param name="Id">Id.</param>
+        /// <param name="SocialMediaId">SocialMediaId.</param>
+        /// <param name="SocialMediaHub">SocialMediaHub.</param>
+        /// <param name="PreviewText">PreviewText.</param>
+        /// <param name="RecordingId">RecordingId.</param>
+        /// <param name="Segments">Segments.</param>
+        /// <param name="Held">Held (default to false).</param>
+        /// <param name="DisconnectType">DisconnectType.</param>
+        /// <param name="StartHoldTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+
+        public SocialExpression(StateEnum? State = null, string Id = null, string SocialMediaId = null, string SocialMediaHub = null, string PreviewText = null, string RecordingId = null, List<Segment> Segments = null, bool? Held = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null)
+        {
+            this.State = State;
+            this.Id = Id;
+            this.SocialMediaId = SocialMediaId;
+            this.SocialMediaHub = SocialMediaHub;
+            this.PreviewText = PreviewText;
+            this.RecordingId = RecordingId;
+            this.Segments = Segments;
+            // use default value if no "Held" provided
+            if (Held == null)
+            {
+                this.Held = false;
+            }
+            else
+            {
+                this.Held = Held;
+            }
+            this.DisconnectType = DisconnectType;
+            this.StartHoldTime = StartHoldTime;
+            
+        }
+
+    
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets SocialMediaId
         /// </summary>
         [DataMember(Name="socialMediaId", EmitDefaultValue=false)]
         public string SocialMediaId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets SocialMediaHub
         /// </summary>
         [DataMember(Name="socialMediaHub", EmitDefaultValue=false)]
         public string SocialMediaHub { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets PreviewText
         /// </summary>
         [DataMember(Name="previewText", EmitDefaultValue=false)]
         public string PreviewText { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets RecordingId
         /// </summary>
         [DataMember(Name="recordingId", EmitDefaultValue=false)]
         public string RecordingId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Segments
         /// </summary>
         [DataMember(Name="segments", EmitDefaultValue=false)]
         public List<Segment> Segments { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Held
         /// </summary>
         [DataMember(Name="held", EmitDefaultValue=false)]
         public bool? Held { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets DisconnectType
-        /// </summary>
-        [DataMember(Name="disconnectType", EmitDefaultValue=false)]
-        public string DisconnectType { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="startHoldTime", EmitDefaultValue=false)]
         public DateTime? StartHoldTime { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -118,11 +204,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Held: ").Append(Held).Append("\n");
             sb.Append("  DisconnectType: ").Append(DisconnectType).Append("\n");
             sb.Append("  StartHoldTime: ").Append(StartHoldTime).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -146,7 +231,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if SocialExpression instances are equal
         /// </summary>
-        /// <param name="obj">Instance of SocialExpression to be compared</param>
+        /// <param name="other">Instance of SocialExpression to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(SocialExpression other)
         {
@@ -154,52 +239,52 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.State == other.State ||
                     this.State != null &&
                     this.State.Equals(other.State)
-                ) && 
+                ) &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.SocialMediaId == other.SocialMediaId ||
                     this.SocialMediaId != null &&
                     this.SocialMediaId.Equals(other.SocialMediaId)
-                ) && 
+                ) &&
                 (
                     this.SocialMediaHub == other.SocialMediaHub ||
                     this.SocialMediaHub != null &&
                     this.SocialMediaHub.Equals(other.SocialMediaHub)
-                ) && 
+                ) &&
                 (
                     this.PreviewText == other.PreviewText ||
                     this.PreviewText != null &&
                     this.PreviewText.Equals(other.PreviewText)
-                ) && 
+                ) &&
                 (
                     this.RecordingId == other.RecordingId ||
                     this.RecordingId != null &&
                     this.RecordingId.Equals(other.RecordingId)
-                ) && 
+                ) &&
                 (
                     this.Segments == other.Segments ||
                     this.Segments != null &&
                     this.Segments.SequenceEqual(other.Segments)
-                ) && 
+                ) &&
                 (
                     this.Held == other.Held ||
                     this.Held != null &&
                     this.Held.Equals(other.Held)
-                ) && 
+                ) &&
                 (
                     this.DisconnectType == other.DisconnectType ||
                     this.DisconnectType != null &&
                     this.DisconnectType.Equals(other.DisconnectType)
-                ) && 
+                ) &&
                 (
                     this.StartHoldTime == other.StartHoldTime ||
                     this.StartHoldTime != null &&
@@ -218,42 +303,29 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.State != null)
-                    hash = hash * 57 + this.State.GetHashCode();
-                
+                    hash = hash * 59 + this.State.GetHashCode();
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
-                
+                    hash = hash * 59 + this.Id.GetHashCode();
                 if (this.SocialMediaId != null)
-                    hash = hash * 57 + this.SocialMediaId.GetHashCode();
-                
+                    hash = hash * 59 + this.SocialMediaId.GetHashCode();
                 if (this.SocialMediaHub != null)
-                    hash = hash * 57 + this.SocialMediaHub.GetHashCode();
-                
+                    hash = hash * 59 + this.SocialMediaHub.GetHashCode();
                 if (this.PreviewText != null)
-                    hash = hash * 57 + this.PreviewText.GetHashCode();
-                
+                    hash = hash * 59 + this.PreviewText.GetHashCode();
                 if (this.RecordingId != null)
-                    hash = hash * 57 + this.RecordingId.GetHashCode();
-                
+                    hash = hash * 59 + this.RecordingId.GetHashCode();
                 if (this.Segments != null)
-                    hash = hash * 57 + this.Segments.GetHashCode();
-                
+                    hash = hash * 59 + this.Segments.GetHashCode();
                 if (this.Held != null)
-                    hash = hash * 57 + this.Held.GetHashCode();
-                
+                    hash = hash * 59 + this.Held.GetHashCode();
                 if (this.DisconnectType != null)
-                    hash = hash * 57 + this.DisconnectType.GetHashCode();
-                
+                    hash = hash * 59 + this.DisconnectType.GetHashCode();
                 if (this.StartHoldTime != null)
-                    hash = hash * 57 + this.StartHoldTime.GetHashCode();
-                
+                    hash = hash * 59 + this.StartHoldTime.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

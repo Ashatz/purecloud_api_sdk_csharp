@@ -4,51 +4,69 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class DurationCondition :  IEquatable<DurationCondition>
-    {
+    public partial class DurationCondition :  IEquatable<DurationCondition>
+    { 
+
         /// <summary>
-        /// Initializes a new instance of the <see cref="DurationCondition" /> class.
+        /// Gets or Sets DurationTarget
         /// </summary>
-        public DurationCondition()
-        {
+        [JsonConverter(typeof(StringEnumConverter))]
+                public enum DurationTargetEnum {
             
+            [EnumMember(Value = "DURATION")]
+            Duration,
+            
+            [EnumMember(Value = "DURATION_RANGE")]
+            DurationRange
         }
 
         
+
         /// <summary>
         /// Gets or Sets DurationTarget
         /// </summary>
         [DataMember(Name="durationTarget", EmitDefaultValue=false)]
-        public string DurationTarget { get; set; }
-  
-        
+        public DurationTargetEnum? DurationTarget { get; set; }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="DurationCondition" />class.
+        /// </summary>
+        /// <param name="DurationTarget">DurationTarget.</param>
+        /// <param name="DurationOperator">DurationOperator.</param>
+        /// <param name="DurationRange">DurationRange.</param>
+
+        public DurationCondition(DurationTargetEnum? DurationTarget = null, string DurationOperator = null, string DurationRange = null)
+        {
+            this.DurationTarget = DurationTarget;
+            this.DurationOperator = DurationOperator;
+            this.DurationRange = DurationRange;
+            
+        }
+
+    
         /// <summary>
         /// Gets or Sets DurationOperator
         /// </summary>
         [DataMember(Name="durationOperator", EmitDefaultValue=false)]
         public string DurationOperator { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets DurationRange
         /// </summary>
         [DataMember(Name="durationRange", EmitDefaultValue=false)]
         public string DurationRange { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -60,11 +78,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  DurationTarget: ").Append(DurationTarget).Append("\n");
             sb.Append("  DurationOperator: ").Append(DurationOperator).Append("\n");
             sb.Append("  DurationRange: ").Append(DurationRange).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -88,7 +105,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if DurationCondition instances are equal
         /// </summary>
-        /// <param name="obj">Instance of DurationCondition to be compared</param>
+        /// <param name="other">Instance of DurationCondition to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(DurationCondition other)
         {
@@ -96,17 +113,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.DurationTarget == other.DurationTarget ||
                     this.DurationTarget != null &&
                     this.DurationTarget.Equals(other.DurationTarget)
-                ) && 
+                ) &&
                 (
                     this.DurationOperator == other.DurationOperator ||
                     this.DurationOperator != null &&
                     this.DurationOperator.Equals(other.DurationOperator)
-                ) && 
+                ) &&
                 (
                     this.DurationRange == other.DurationRange ||
                     this.DurationRange != null &&
@@ -125,21 +142,15 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.DurationTarget != null)
-                    hash = hash * 57 + this.DurationTarget.GetHashCode();
-                
+                    hash = hash * 59 + this.DurationTarget.GetHashCode();
                 if (this.DurationOperator != null)
-                    hash = hash * 57 + this.DurationOperator.GetHashCode();
-                
+                    hash = hash * 59 + this.DurationOperator.GetHashCode();
                 if (this.DurationRange != null)
-                    hash = hash * 57 + this.DurationRange.GetHashCode();
-                
+                    hash = hash * 59 + this.DurationRange.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

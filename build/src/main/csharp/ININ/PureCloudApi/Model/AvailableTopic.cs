@@ -4,38 +4,37 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class AvailableTopic :  IEquatable<AvailableTopic>
-    {
+    public partial class AvailableTopic :  IEquatable<AvailableTopic>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="AvailableTopic" /> class.
+        /// Initializes a new instance of the <see cref="AvailableTopic" />class.
         /// </summary>
+
         public AvailableTopic()
         {
             
         }
 
-        
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
-  
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -45,11 +44,10 @@ namespace ININ.PureCloudApi.Model
             var sb = new StringBuilder();
             sb.Append("class AvailableTopic {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -73,7 +71,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if AvailableTopic instances are equal
         /// </summary>
-        /// <param name="obj">Instance of AvailableTopic to be compared</param>
+        /// <param name="other">Instance of AvailableTopic to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(AvailableTopic other)
         {
@@ -81,7 +79,7 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
@@ -100,15 +98,11 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
-                
+                    hash = hash * 59 + this.Id.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

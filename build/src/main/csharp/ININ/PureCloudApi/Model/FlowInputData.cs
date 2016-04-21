@@ -4,38 +4,39 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// launch parameters or initializations for variables in the flow.
     /// </summary>
     [DataContract]
-    public class FlowInputData :  IEquatable<FlowInputData>
-    {
+    public partial class FlowInputData :  IEquatable<FlowInputData>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="FlowInputData" /> class.
+        /// Initializes a new instance of the <see cref="FlowInputData" />class.
         /// </summary>
-        public FlowInputData()
+        /// <param name="LinkedDocumentIds">A list of document IDs to link with the new flow instance..</param>
+
+        public FlowInputData(List<string> LinkedDocumentIds = null)
         {
+            this.LinkedDocumentIds = LinkedDocumentIds;
             
         }
 
-        
+    
         /// <summary>
         /// A list of document IDs to link with the new flow instance.
         /// </summary>
         /// <value>A list of document IDs to link with the new flow instance.</value>
         [DataMember(Name="linkedDocumentIds", EmitDefaultValue=false)]
         public List<string> LinkedDocumentIds { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -45,11 +46,10 @@ namespace ININ.PureCloudApi.Model
             var sb = new StringBuilder();
             sb.Append("class FlowInputData {\n");
             sb.Append("  LinkedDocumentIds: ").Append(LinkedDocumentIds).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -73,7 +73,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if FlowInputData instances are equal
         /// </summary>
-        /// <param name="obj">Instance of FlowInputData to be compared</param>
+        /// <param name="other">Instance of FlowInputData to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(FlowInputData other)
         {
@@ -81,7 +81,7 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.LinkedDocumentIds == other.LinkedDocumentIds ||
                     this.LinkedDocumentIds != null &&
@@ -100,15 +100,11 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.LinkedDocumentIds != null)
-                    hash = hash * 57 + this.LinkedDocumentIds.GetHashCode();
-                
+                    hash = hash * 59 + this.LinkedDocumentIds.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

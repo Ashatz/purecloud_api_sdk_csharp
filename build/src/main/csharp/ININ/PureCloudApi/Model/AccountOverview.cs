@@ -4,90 +4,108 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class AccountOverview :  IEquatable<AccountOverview>
-    {
+    public partial class AccountOverview :  IEquatable<AccountOverview>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="AccountOverview" /> class.
+        /// Initializes a new instance of the <see cref="AccountOverview" />class.
         /// </summary>
-        public AccountOverview()
+        /// <param name="Name">Name.</param>
+        /// <param name="IsSuperUser">IsSuperUser (default to false).</param>
+        /// <param name="HasAccountNumber">HasAccountNumber (default to false).</param>
+        /// <param name="UsageCharges">UsageCharges.</param>
+        /// <param name="DomesticChargesTotal">DomesticChargesTotal.</param>
+        /// <param name="InternationalChargesTotal">InternationalChargesTotal.</param>
+
+        public AccountOverview(string Name = null, bool? IsSuperUser = null, bool? HasAccountNumber = null, List<Charge> UsageCharges = null, int? DomesticChargesTotal = null, int? InternationalChargesTotal = null)
         {
-            this.IsSuperUser = false;
-            this.HasAccountNumber = false;
+            this.Name = Name;
+            // use default value if no "IsSuperUser" provided
+            if (IsSuperUser == null)
+            {
+                this.IsSuperUser = false;
+            }
+            else
+            {
+                this.IsSuperUser = IsSuperUser;
+            }
+            // use default value if no "HasAccountNumber" provided
+            if (HasAccountNumber == null)
+            {
+                this.HasAccountNumber = false;
+            }
+            else
+            {
+                this.HasAccountNumber = HasAccountNumber;
+            }
+            this.UsageCharges = UsageCharges;
+            this.DomesticChargesTotal = DomesticChargesTotal;
+            this.InternationalChargesTotal = InternationalChargesTotal;
             
         }
 
-        
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets IsSuperUser
         /// </summary>
         [DataMember(Name="isSuperUser", EmitDefaultValue=false)]
         public bool? IsSuperUser { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets HasAccountNumber
         /// </summary>
         [DataMember(Name="hasAccountNumber", EmitDefaultValue=false)]
         public bool? HasAccountNumber { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets UsageCharges
         /// </summary>
         [DataMember(Name="usageCharges", EmitDefaultValue=false)]
         public List<Charge> UsageCharges { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets DomesticChargesTotal
         /// </summary>
         [DataMember(Name="domesticChargesTotal", EmitDefaultValue=false)]
         public int? DomesticChargesTotal { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets InternationalChargesTotal
         /// </summary>
         [DataMember(Name="internationalChargesTotal", EmitDefaultValue=false)]
         public int? InternationalChargesTotal { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -104,11 +122,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  DomesticChargesTotal: ").Append(DomesticChargesTotal).Append("\n");
             sb.Append("  InternationalChargesTotal: ").Append(InternationalChargesTotal).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -132,7 +149,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if AccountOverview instances are equal
         /// </summary>
-        /// <param name="obj">Instance of AccountOverview to be compared</param>
+        /// <param name="other">Instance of AccountOverview to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(AccountOverview other)
         {
@@ -140,42 +157,42 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.IsSuperUser == other.IsSuperUser ||
                     this.IsSuperUser != null &&
                     this.IsSuperUser.Equals(other.IsSuperUser)
-                ) && 
+                ) &&
                 (
                     this.HasAccountNumber == other.HasAccountNumber ||
                     this.HasAccountNumber != null &&
                     this.HasAccountNumber.Equals(other.HasAccountNumber)
-                ) && 
+                ) &&
                 (
                     this.UsageCharges == other.UsageCharges ||
                     this.UsageCharges != null &&
                     this.UsageCharges.SequenceEqual(other.UsageCharges)
-                ) && 
+                ) &&
                 (
                     this.DomesticChargesTotal == other.DomesticChargesTotal ||
                     this.DomesticChargesTotal != null &&
                     this.DomesticChargesTotal.Equals(other.DomesticChargesTotal)
-                ) && 
+                ) &&
                 (
                     this.InternationalChargesTotal == other.InternationalChargesTotal ||
                     this.InternationalChargesTotal != null &&
                     this.InternationalChargesTotal.Equals(other.InternationalChargesTotal)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
@@ -194,36 +211,25 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
-                
+                    hash = hash * 59 + this.Id.GetHashCode();
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
-                
+                    hash = hash * 59 + this.Name.GetHashCode();
                 if (this.IsSuperUser != null)
-                    hash = hash * 57 + this.IsSuperUser.GetHashCode();
-                
+                    hash = hash * 59 + this.IsSuperUser.GetHashCode();
                 if (this.HasAccountNumber != null)
-                    hash = hash * 57 + this.HasAccountNumber.GetHashCode();
-                
+                    hash = hash * 59 + this.HasAccountNumber.GetHashCode();
                 if (this.UsageCharges != null)
-                    hash = hash * 57 + this.UsageCharges.GetHashCode();
-                
+                    hash = hash * 59 + this.UsageCharges.GetHashCode();
                 if (this.DomesticChargesTotal != null)
-                    hash = hash * 57 + this.DomesticChargesTotal.GetHashCode();
-                
+                    hash = hash * 59 + this.DomesticChargesTotal.GetHashCode();
                 if (this.InternationalChargesTotal != null)
-                    hash = hash * 57 + this.InternationalChargesTotal.GetHashCode();
-                
+                    hash = hash * 59 + this.InternationalChargesTotal.GetHashCode();
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
-                
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

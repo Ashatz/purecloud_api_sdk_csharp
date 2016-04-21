@@ -4,73 +4,87 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class Destination :  IEquatable<Destination>
-    {
+    public partial class Destination :  IEquatable<Destination>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="Destination" /> class.
+        /// Initializes a new instance of the <see cref="Destination" />class.
         /// </summary>
-        public Destination()
+        /// <param name="AccountCodeDigits">AccountCodeDigits.</param>
+        /// <param name="PostConnectDigits">PostConnectDigits.</param>
+        /// <param name="Address">Address or phone number. (required).</param>
+        /// <param name="Name">Name.</param>
+        /// <param name="UserId">UserId.</param>
+        /// <param name="QueueId">QueueId.</param>
+
+        public Destination(string AccountCodeDigits = null, string PostConnectDigits = null, string Address = null, string Name = null, string UserId = null, string QueueId = null)
         {
+            // to ensure "Address" is required (not null)
+            if (Address == null)
+            {
+                throw new InvalidDataException("Address is a required property for Destination and cannot be null");
+            }
+            else
+            {
+                this.Address = Address;
+            }
+            this.AccountCodeDigits = AccountCodeDigits;
+            this.PostConnectDigits = PostConnectDigits;
+            this.Name = Name;
+            this.UserId = UserId;
+            this.QueueId = QueueId;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets AccountCodeDigits
         /// </summary>
         [DataMember(Name="accountCodeDigits", EmitDefaultValue=false)]
         public string AccountCodeDigits { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets PostConnectDigits
         /// </summary>
         [DataMember(Name="postConnectDigits", EmitDefaultValue=false)]
         public string PostConnectDigits { get; set; }
-  
-        
+    
         /// <summary>
         /// Address or phone number.
         /// </summary>
         /// <value>Address or phone number.</value>
         [DataMember(Name="address", EmitDefaultValue=false)]
         public string Address { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets UserId
         /// </summary>
         [DataMember(Name="userId", EmitDefaultValue=false)]
         public string UserId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets QueueId
         /// </summary>
         [DataMember(Name="queueId", EmitDefaultValue=false)]
         public string QueueId { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -85,11 +99,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  UserId: ").Append(UserId).Append("\n");
             sb.Append("  QueueId: ").Append(QueueId).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -113,7 +126,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if Destination instances are equal
         /// </summary>
-        /// <param name="obj">Instance of Destination to be compared</param>
+        /// <param name="other">Instance of Destination to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(Destination other)
         {
@@ -121,32 +134,32 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.AccountCodeDigits == other.AccountCodeDigits ||
                     this.AccountCodeDigits != null &&
                     this.AccountCodeDigits.Equals(other.AccountCodeDigits)
-                ) && 
+                ) &&
                 (
                     this.PostConnectDigits == other.PostConnectDigits ||
                     this.PostConnectDigits != null &&
                     this.PostConnectDigits.Equals(other.PostConnectDigits)
-                ) && 
+                ) &&
                 (
                     this.Address == other.Address ||
                     this.Address != null &&
                     this.Address.Equals(other.Address)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.UserId == other.UserId ||
                     this.UserId != null &&
                     this.UserId.Equals(other.UserId)
-                ) && 
+                ) &&
                 (
                     this.QueueId == other.QueueId ||
                     this.QueueId != null &&
@@ -165,30 +178,21 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.AccountCodeDigits != null)
-                    hash = hash * 57 + this.AccountCodeDigits.GetHashCode();
-                
+                    hash = hash * 59 + this.AccountCodeDigits.GetHashCode();
                 if (this.PostConnectDigits != null)
-                    hash = hash * 57 + this.PostConnectDigits.GetHashCode();
-                
+                    hash = hash * 59 + this.PostConnectDigits.GetHashCode();
                 if (this.Address != null)
-                    hash = hash * 57 + this.Address.GetHashCode();
-                
+                    hash = hash * 59 + this.Address.GetHashCode();
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
-                
+                    hash = hash * 59 + this.Name.GetHashCode();
                 if (this.UserId != null)
-                    hash = hash * 57 + this.UserId.GetHashCode();
-                
+                    hash = hash * 59 + this.UserId.GetHashCode();
                 if (this.QueueId != null)
-                    hash = hash * 57 + this.QueueId.GetHashCode();
-                
+                    hash = hash * 59 + this.QueueId.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

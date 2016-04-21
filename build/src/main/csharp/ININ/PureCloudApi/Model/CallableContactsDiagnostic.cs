@@ -4,51 +4,54 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class CallableContactsDiagnostic :  IEquatable<CallableContactsDiagnostic>
-    {
+    public partial class CallableContactsDiagnostic :  IEquatable<CallableContactsDiagnostic>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="CallableContactsDiagnostic" /> class.
+        /// Initializes a new instance of the <see cref="CallableContactsDiagnostic" />class.
         /// </summary>
-        public CallableContactsDiagnostic()
+        /// <param name="DncLists">DncLists.</param>
+        /// <param name="CallableTimeSet">CallableTimeSet.</param>
+        /// <param name="RuleSets">RuleSets.</param>
+
+        public CallableContactsDiagnostic(List<UriReference> DncLists = null, UriReference CallableTimeSet = null, List<UriReference> RuleSets = null)
         {
+            this.DncLists = DncLists;
+            this.CallableTimeSet = CallableTimeSet;
+            this.RuleSets = RuleSets;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets DncLists
         /// </summary>
         [DataMember(Name="dncLists", EmitDefaultValue=false)]
         public List<UriReference> DncLists { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets CallableTimeSet
         /// </summary>
         [DataMember(Name="callableTimeSet", EmitDefaultValue=false)]
         public UriReference CallableTimeSet { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets RuleSets
         /// </summary>
         [DataMember(Name="ruleSets", EmitDefaultValue=false)]
         public List<UriReference> RuleSets { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -60,11 +63,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  DncLists: ").Append(DncLists).Append("\n");
             sb.Append("  CallableTimeSet: ").Append(CallableTimeSet).Append("\n");
             sb.Append("  RuleSets: ").Append(RuleSets).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -88,7 +90,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if CallableContactsDiagnostic instances are equal
         /// </summary>
-        /// <param name="obj">Instance of CallableContactsDiagnostic to be compared</param>
+        /// <param name="other">Instance of CallableContactsDiagnostic to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(CallableContactsDiagnostic other)
         {
@@ -96,17 +98,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.DncLists == other.DncLists ||
                     this.DncLists != null &&
                     this.DncLists.SequenceEqual(other.DncLists)
-                ) && 
+                ) &&
                 (
                     this.CallableTimeSet == other.CallableTimeSet ||
                     this.CallableTimeSet != null &&
                     this.CallableTimeSet.Equals(other.CallableTimeSet)
-                ) && 
+                ) &&
                 (
                     this.RuleSets == other.RuleSets ||
                     this.RuleSets != null &&
@@ -125,21 +127,15 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.DncLists != null)
-                    hash = hash * 57 + this.DncLists.GetHashCode();
-                
+                    hash = hash * 59 + this.DncLists.GetHashCode();
                 if (this.CallableTimeSet != null)
-                    hash = hash * 57 + this.CallableTimeSet.GetHashCode();
-                
+                    hash = hash * 59 + this.CallableTimeSet.GetHashCode();
                 if (this.RuleSets != null)
-                    hash = hash * 57 + this.RuleSets.GetHashCode();
-                
+                    hash = hash * 59 + this.RuleSets.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

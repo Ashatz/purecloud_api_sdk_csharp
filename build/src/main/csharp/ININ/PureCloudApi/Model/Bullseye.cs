@@ -4,37 +4,38 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class Bullseye :  IEquatable<Bullseye>
-    {
+    public partial class Bullseye :  IEquatable<Bullseye>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="Bullseye" /> class.
+        /// Initializes a new instance of the <see cref="Bullseye" />class.
         /// </summary>
-        public Bullseye()
+        /// <param name="Rings">Rings.</param>
+
+        public Bullseye(List<Ring> Rings = null)
         {
+            this.Rings = Rings;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets Rings
         /// </summary>
         [DataMember(Name="rings", EmitDefaultValue=false)]
         public List<Ring> Rings { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -44,11 +45,10 @@ namespace ININ.PureCloudApi.Model
             var sb = new StringBuilder();
             sb.Append("class Bullseye {\n");
             sb.Append("  Rings: ").Append(Rings).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -72,7 +72,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if Bullseye instances are equal
         /// </summary>
-        /// <param name="obj">Instance of Bullseye to be compared</param>
+        /// <param name="other">Instance of Bullseye to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(Bullseye other)
         {
@@ -80,7 +80,7 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Rings == other.Rings ||
                     this.Rings != null &&
@@ -99,15 +99,11 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Rings != null)
-                    hash = hash * 57 + this.Rings.GetHashCode();
-                
+                    hash = hash * 59 + this.Rings.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

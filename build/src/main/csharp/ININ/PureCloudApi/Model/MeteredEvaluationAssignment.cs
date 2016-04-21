@@ -4,73 +4,86 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class MeteredEvaluationAssignment :  IEquatable<MeteredEvaluationAssignment>
-    {
+    public partial class MeteredEvaluationAssignment :  IEquatable<MeteredEvaluationAssignment>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="MeteredEvaluationAssignment" /> class.
+        /// Initializes a new instance of the <see cref="MeteredEvaluationAssignment" />class.
         /// </summary>
-        public MeteredEvaluationAssignment()
+        /// <param name="EvaluationContextId">EvaluationContextId.</param>
+        /// <param name="Evaluators">Evaluators.</param>
+        /// <param name="MaxNumberEvaluations">MaxNumberEvaluations.</param>
+        /// <param name="EvaluationForm">EvaluationForm.</param>
+        /// <param name="AssignToActiveUser">AssignToActiveUser (default to false).</param>
+        /// <param name="TimeInterval">TimeInterval.</param>
+
+        public MeteredEvaluationAssignment(string EvaluationContextId = null, List<User> Evaluators = null, int? MaxNumberEvaluations = null, EvaluationForm EvaluationForm = null, bool? AssignToActiveUser = null, TimeInterval TimeInterval = null)
         {
-            this.AssignToActiveUser = false;
+            this.EvaluationContextId = EvaluationContextId;
+            this.Evaluators = Evaluators;
+            this.MaxNumberEvaluations = MaxNumberEvaluations;
+            this.EvaluationForm = EvaluationForm;
+            // use default value if no "AssignToActiveUser" provided
+            if (AssignToActiveUser == null)
+            {
+                this.AssignToActiveUser = false;
+            }
+            else
+            {
+                this.AssignToActiveUser = AssignToActiveUser;
+            }
+            this.TimeInterval = TimeInterval;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets EvaluationContextId
         /// </summary>
         [DataMember(Name="evaluationContextId", EmitDefaultValue=false)]
         public string EvaluationContextId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Evaluators
         /// </summary>
         [DataMember(Name="evaluators", EmitDefaultValue=false)]
         public List<User> Evaluators { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets MaxNumberEvaluations
         /// </summary>
         [DataMember(Name="maxNumberEvaluations", EmitDefaultValue=false)]
         public int? MaxNumberEvaluations { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets EvaluationForm
         /// </summary>
         [DataMember(Name="evaluationForm", EmitDefaultValue=false)]
         public EvaluationForm EvaluationForm { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets AssignToActiveUser
         /// </summary>
         [DataMember(Name="assignToActiveUser", EmitDefaultValue=false)]
         public bool? AssignToActiveUser { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets TimeInterval
         /// </summary>
         [DataMember(Name="timeInterval", EmitDefaultValue=false)]
         public TimeInterval TimeInterval { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -85,11 +98,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  EvaluationForm: ").Append(EvaluationForm).Append("\n");
             sb.Append("  AssignToActiveUser: ").Append(AssignToActiveUser).Append("\n");
             sb.Append("  TimeInterval: ").Append(TimeInterval).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -113,7 +125,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if MeteredEvaluationAssignment instances are equal
         /// </summary>
-        /// <param name="obj">Instance of MeteredEvaluationAssignment to be compared</param>
+        /// <param name="other">Instance of MeteredEvaluationAssignment to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(MeteredEvaluationAssignment other)
         {
@@ -121,32 +133,32 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.EvaluationContextId == other.EvaluationContextId ||
                     this.EvaluationContextId != null &&
                     this.EvaluationContextId.Equals(other.EvaluationContextId)
-                ) && 
+                ) &&
                 (
                     this.Evaluators == other.Evaluators ||
                     this.Evaluators != null &&
                     this.Evaluators.SequenceEqual(other.Evaluators)
-                ) && 
+                ) &&
                 (
                     this.MaxNumberEvaluations == other.MaxNumberEvaluations ||
                     this.MaxNumberEvaluations != null &&
                     this.MaxNumberEvaluations.Equals(other.MaxNumberEvaluations)
-                ) && 
+                ) &&
                 (
                     this.EvaluationForm == other.EvaluationForm ||
                     this.EvaluationForm != null &&
                     this.EvaluationForm.Equals(other.EvaluationForm)
-                ) && 
+                ) &&
                 (
                     this.AssignToActiveUser == other.AssignToActiveUser ||
                     this.AssignToActiveUser != null &&
                     this.AssignToActiveUser.Equals(other.AssignToActiveUser)
-                ) && 
+                ) &&
                 (
                     this.TimeInterval == other.TimeInterval ||
                     this.TimeInterval != null &&
@@ -165,30 +177,21 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.EvaluationContextId != null)
-                    hash = hash * 57 + this.EvaluationContextId.GetHashCode();
-                
+                    hash = hash * 59 + this.EvaluationContextId.GetHashCode();
                 if (this.Evaluators != null)
-                    hash = hash * 57 + this.Evaluators.GetHashCode();
-                
+                    hash = hash * 59 + this.Evaluators.GetHashCode();
                 if (this.MaxNumberEvaluations != null)
-                    hash = hash * 57 + this.MaxNumberEvaluations.GetHashCode();
-                
+                    hash = hash * 59 + this.MaxNumberEvaluations.GetHashCode();
                 if (this.EvaluationForm != null)
-                    hash = hash * 57 + this.EvaluationForm.GetHashCode();
-                
+                    hash = hash * 59 + this.EvaluationForm.GetHashCode();
                 if (this.AssignToActiveUser != null)
-                    hash = hash * 57 + this.AssignToActiveUser.GetHashCode();
-                
+                    hash = hash * 59 + this.AssignToActiveUser.GetHashCode();
                 if (this.TimeInterval != null)
-                    hash = hash * 57 + this.TimeInterval.GetHashCode();
-                
+                    hash = hash * 59 + this.TimeInterval.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

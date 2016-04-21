@@ -4,89 +4,168 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class CommandStatus :  IEquatable<CommandStatus>
-    {
+    public partial class CommandStatus :  IEquatable<CommandStatus>
+    { 
+
         /// <summary>
-        /// Initializes a new instance of the <see cref="CommandStatus" /> class.
+        /// Gets or Sets StatusCode
         /// </summary>
-        public CommandStatus()
-        {
+        [JsonConverter(typeof(StringEnumConverter))]
+                public enum StatusCodeEnum {
             
+            [EnumMember(Value = "INPROGRESS")]
+            Inprogress,
+            
+            [EnumMember(Value = "COMPLETE")]
+            Complete,
+            
+            [EnumMember(Value = "ERROR")]
+            Error,
+            
+            [EnumMember(Value = "CANCELING")]
+            Canceling,
+            
+            [EnumMember(Value = "CANCELED")]
+            Canceled
+        }
+
+
+        /// <summary>
+        /// Gets or Sets CommandType
+        /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
+                public enum CommandTypeEnum {
+            
+            [EnumMember(Value = "UPLOAD")]
+            Upload,
+            
+            [EnumMember(Value = "COPYDOCUMENT")]
+            Copydocument,
+            
+            [EnumMember(Value = "MOVEDOCUMENT")]
+            Movedocument,
+            
+            [EnumMember(Value = "DELETEWORKSPACE")]
+            Deleteworkspace,
+            
+            [EnumMember(Value = "DELETEDOCUMENT")]
+            Deletedocument,
+            
+            [EnumMember(Value = "DELETETAG")]
+            Deletetag,
+            
+            [EnumMember(Value = "UPDATETAG")]
+            Updatetag,
+            
+            [EnumMember(Value = "UPDATEATTRIBUTE")]
+            Updateattribute,
+            
+            [EnumMember(Value = "DELETEATTRIBUTE")]
+            Deleteattribute,
+            
+            [EnumMember(Value = "DELETEATTRIBUTEGROUPINSTANCE")]
+            Deleteattributegroupinstance,
+            
+            [EnumMember(Value = "UPDATEATTRIBUTEGROUPINSTANCE")]
+            Updateattributegroupinstance,
+            
+            [EnumMember(Value = "REINDEX")]
+            Reindex,
+            
+            [EnumMember(Value = "CLEANUP")]
+            Cleanup,
+            
+            [EnumMember(Value = "REPLACEDOCUMENT")]
+            Replacedocument
         }
 
         
+
+        /// <summary>
+        /// Gets or Sets StatusCode
+        /// </summary>
+        [DataMember(Name="statusCode", EmitDefaultValue=false)]
+        public StatusCodeEnum? StatusCode { get; set; }
+    
+
+        /// <summary>
+        /// Gets or Sets CommandType
+        /// </summary>
+        [DataMember(Name="commandType", EmitDefaultValue=false)]
+        public CommandTypeEnum? CommandType { get; set; }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CommandStatus" />class.
+        /// </summary>
+        /// <param name="Name">Name.</param>
+        /// <param name="Expiration">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="UserId">UserId.</param>
+        /// <param name="StatusCode">StatusCode.</param>
+        /// <param name="CommandType">CommandType.</param>
+        /// <param name="Document">Document.</param>
+
+        public CommandStatus(string Name = null, DateTime? Expiration = null, string UserId = null, StatusCodeEnum? StatusCode = null, CommandTypeEnum? CommandType = null, Document Document = null)
+        {
+            this.Name = Name;
+            this.Expiration = Expiration;
+            this.UserId = UserId;
+            this.StatusCode = StatusCode;
+            this.CommandType = CommandType;
+            this.Document = Document;
+            
+        }
+
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="expiration", EmitDefaultValue=false)]
         public DateTime? Expiration { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets UserId
         /// </summary>
         [DataMember(Name="userId", EmitDefaultValue=false)]
         public string UserId { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets StatusCode
-        /// </summary>
-        [DataMember(Name="statusCode", EmitDefaultValue=false)]
-        public string StatusCode { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets CommandType
-        /// </summary>
-        [DataMember(Name="commandType", EmitDefaultValue=false)]
-        public string CommandType { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Document
         /// </summary>
         [DataMember(Name="document", EmitDefaultValue=false)]
         public Document Document { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -103,11 +182,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  CommandType: ").Append(CommandType).Append("\n");
             sb.Append("  Document: ").Append(Document).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -131,7 +209,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if CommandStatus instances are equal
         /// </summary>
-        /// <param name="obj">Instance of CommandStatus to be compared</param>
+        /// <param name="other">Instance of CommandStatus to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(CommandStatus other)
         {
@@ -139,42 +217,42 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Expiration == other.Expiration ||
                     this.Expiration != null &&
                     this.Expiration.Equals(other.Expiration)
-                ) && 
+                ) &&
                 (
                     this.UserId == other.UserId ||
                     this.UserId != null &&
                     this.UserId.Equals(other.UserId)
-                ) && 
+                ) &&
                 (
                     this.StatusCode == other.StatusCode ||
                     this.StatusCode != null &&
                     this.StatusCode.Equals(other.StatusCode)
-                ) && 
+                ) &&
                 (
                     this.CommandType == other.CommandType ||
                     this.CommandType != null &&
                     this.CommandType.Equals(other.CommandType)
-                ) && 
+                ) &&
                 (
                     this.Document == other.Document ||
                     this.Document != null &&
                     this.Document.Equals(other.Document)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
@@ -193,36 +271,25 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
-                
+                    hash = hash * 59 + this.Id.GetHashCode();
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
-                
+                    hash = hash * 59 + this.Name.GetHashCode();
                 if (this.Expiration != null)
-                    hash = hash * 57 + this.Expiration.GetHashCode();
-                
+                    hash = hash * 59 + this.Expiration.GetHashCode();
                 if (this.UserId != null)
-                    hash = hash * 57 + this.UserId.GetHashCode();
-                
+                    hash = hash * 59 + this.UserId.GetHashCode();
                 if (this.StatusCode != null)
-                    hash = hash * 57 + this.StatusCode.GetHashCode();
-                
+                    hash = hash * 59 + this.StatusCode.GetHashCode();
                 if (this.CommandType != null)
-                    hash = hash * 57 + this.CommandType.GetHashCode();
-                
+                    hash = hash * 59 + this.CommandType.GetHashCode();
                 if (this.Document != null)
-                    hash = hash * 57 + this.Document.GetHashCode();
-                
+                    hash = hash * 59 + this.Document.GetHashCode();
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
-                
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

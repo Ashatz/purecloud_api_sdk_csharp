@@ -4,51 +4,75 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class Reaction :  IEquatable<Reaction>
-    {
+    public partial class Reaction :  IEquatable<Reaction>
+    { 
+
         /// <summary>
-        /// Initializes a new instance of the <see cref="Reaction" /> class.
+        /// Gets or Sets ReactionType
         /// </summary>
-        public Reaction()
-        {
+        [JsonConverter(typeof(StringEnumConverter))]
+                public enum ReactionTypeEnum {
             
+            [EnumMember(Value = "HANGUP")]
+            Hangup,
+            
+            [EnumMember(Value = "TRANSFER")]
+            Transfer,
+            
+            [EnumMember(Value = "TRANSFER_FLOW")]
+            TransferFlow,
+            
+            [EnumMember(Value = "PLAY_FILE")]
+            PlayFile
         }
 
         
+
+        /// <summary>
+        /// Gets or Sets ReactionType
+        /// </summary>
+        [DataMember(Name="reactionType", EmitDefaultValue=false)]
+        public ReactionTypeEnum? ReactionType { get; set; }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Reaction" />class.
+        /// </summary>
+        /// <param name="Data">Data.</param>
+        /// <param name="Name">Name.</param>
+        /// <param name="ReactionType">ReactionType.</param>
+
+        public Reaction(string Data = null, string Name = null, ReactionTypeEnum? ReactionType = null)
+        {
+            this.Data = Data;
+            this.Name = Name;
+            this.ReactionType = ReactionType;
+            
+        }
+
+    
         /// <summary>
         /// Gets or Sets Data
         /// </summary>
         [DataMember(Name="data", EmitDefaultValue=false)]
         public string Data { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets ReactionType
-        /// </summary>
-        [DataMember(Name="reactionType", EmitDefaultValue=false)]
-        public string ReactionType { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -60,11 +84,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Data: ").Append(Data).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  ReactionType: ").Append(ReactionType).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -88,7 +111,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if Reaction instances are equal
         /// </summary>
-        /// <param name="obj">Instance of Reaction to be compared</param>
+        /// <param name="other">Instance of Reaction to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(Reaction other)
         {
@@ -96,17 +119,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Data == other.Data ||
                     this.Data != null &&
                     this.Data.Equals(other.Data)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.ReactionType == other.ReactionType ||
                     this.ReactionType != null &&
@@ -125,21 +148,15 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Data != null)
-                    hash = hash * 57 + this.Data.GetHashCode();
-                
+                    hash = hash * 59 + this.Data.GetHashCode();
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
-                
+                    hash = hash * 59 + this.Name.GetHashCode();
                 if (this.ReactionType != null)
-                    hash = hash * 57 + this.ReactionType.GetHashCode();
-                
+                    hash = hash * 59 + this.ReactionType.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

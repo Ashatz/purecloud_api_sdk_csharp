@@ -4,44 +4,46 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class MediaSummary :  IEquatable<MediaSummary>
-    {
+    public partial class MediaSummary :  IEquatable<MediaSummary>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="MediaSummary" /> class.
+        /// Initializes a new instance of the <see cref="MediaSummary" />class.
         /// </summary>
-        public MediaSummary()
+        /// <param name="ContactCenter">ContactCenter.</param>
+        /// <param name="Enterprise">Enterprise.</param>
+
+        public MediaSummary(int? ContactCenter = null, int? Enterprise = null)
         {
+            this.ContactCenter = ContactCenter;
+            this.Enterprise = Enterprise;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets ContactCenter
         /// </summary>
         [DataMember(Name="contactCenter", EmitDefaultValue=false)]
         public int? ContactCenter { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Enterprise
         /// </summary>
         [DataMember(Name="enterprise", EmitDefaultValue=false)]
         public int? Enterprise { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -52,11 +54,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class MediaSummary {\n");
             sb.Append("  ContactCenter: ").Append(ContactCenter).Append("\n");
             sb.Append("  Enterprise: ").Append(Enterprise).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -80,7 +81,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if MediaSummary instances are equal
         /// </summary>
-        /// <param name="obj">Instance of MediaSummary to be compared</param>
+        /// <param name="other">Instance of MediaSummary to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(MediaSummary other)
         {
@@ -88,12 +89,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.ContactCenter == other.ContactCenter ||
                     this.ContactCenter != null &&
                     this.ContactCenter.Equals(other.ContactCenter)
-                ) && 
+                ) &&
                 (
                     this.Enterprise == other.Enterprise ||
                     this.Enterprise != null &&
@@ -112,18 +113,13 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ContactCenter != null)
-                    hash = hash * 57 + this.ContactCenter.GetHashCode();
-                
+                    hash = hash * 59 + this.ContactCenter.GetHashCode();
                 if (this.Enterprise != null)
-                    hash = hash * 57 + this.Enterprise.GetHashCode();
-                
+                    hash = hash * 59 + this.Enterprise.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

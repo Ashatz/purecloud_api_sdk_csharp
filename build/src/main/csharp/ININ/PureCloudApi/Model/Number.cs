@@ -4,44 +4,46 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class Number :  IEquatable<Number>
-    {
+    public partial class Number :  IEquatable<Number>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="Number" /> class.
+        /// Initializes a new instance of the <see cref="Number" />class.
         /// </summary>
-        public Number()
+        /// <param name="Start">Start.</param>
+        /// <param name="End">End.</param>
+
+        public Number(string Start = null, string End = null)
         {
+            this.Start = Start;
+            this.End = End;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets Start
         /// </summary>
         [DataMember(Name="start", EmitDefaultValue=false)]
         public string Start { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets End
         /// </summary>
         [DataMember(Name="end", EmitDefaultValue=false)]
         public string End { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -52,11 +54,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class Number {\n");
             sb.Append("  Start: ").Append(Start).Append("\n");
             sb.Append("  End: ").Append(End).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -80,7 +81,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if Number instances are equal
         /// </summary>
-        /// <param name="obj">Instance of Number to be compared</param>
+        /// <param name="other">Instance of Number to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(Number other)
         {
@@ -88,12 +89,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Start == other.Start ||
                     this.Start != null &&
                     this.Start.Equals(other.Start)
-                ) && 
+                ) &&
                 (
                     this.End == other.End ||
                     this.End != null &&
@@ -112,18 +113,13 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Start != null)
-                    hash = hash * 57 + this.Start.GetHashCode();
-                
+                    hash = hash * 59 + this.Start.GetHashCode();
                 if (this.End != null)
-                    hash = hash * 57 + this.End.GetHashCode();
-                
+                    hash = hash * 59 + this.End.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

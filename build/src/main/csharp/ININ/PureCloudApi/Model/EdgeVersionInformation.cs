@@ -4,37 +4,38 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class EdgeVersionInformation :  IEquatable<EdgeVersionInformation>
-    {
+    public partial class EdgeVersionInformation :  IEquatable<EdgeVersionInformation>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="EdgeVersionInformation" /> class.
+        /// Initializes a new instance of the <see cref="EdgeVersionInformation" />class.
         /// </summary>
-        public EdgeVersionInformation()
+        /// <param name="SoftwareVersion">SoftwareVersion.</param>
+
+        public EdgeVersionInformation(string SoftwareVersion = null)
         {
+            this.SoftwareVersion = SoftwareVersion;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets SoftwareVersion
         /// </summary>
         [DataMember(Name="softwareVersion", EmitDefaultValue=false)]
         public string SoftwareVersion { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -44,11 +45,10 @@ namespace ININ.PureCloudApi.Model
             var sb = new StringBuilder();
             sb.Append("class EdgeVersionInformation {\n");
             sb.Append("  SoftwareVersion: ").Append(SoftwareVersion).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -72,7 +72,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if EdgeVersionInformation instances are equal
         /// </summary>
-        /// <param name="obj">Instance of EdgeVersionInformation to be compared</param>
+        /// <param name="other">Instance of EdgeVersionInformation to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(EdgeVersionInformation other)
         {
@@ -80,7 +80,7 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.SoftwareVersion == other.SoftwareVersion ||
                     this.SoftwareVersion != null &&
@@ -99,15 +99,11 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.SoftwareVersion != null)
-                    hash = hash * 57 + this.SoftwareVersion.GetHashCode();
-                
+                    hash = hash * 59 + this.SoftwareVersion.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

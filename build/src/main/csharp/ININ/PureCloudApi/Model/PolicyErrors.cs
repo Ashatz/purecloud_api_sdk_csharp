@@ -4,37 +4,38 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class PolicyErrors :  IEquatable<PolicyErrors>
-    {
+    public partial class PolicyErrors :  IEquatable<PolicyErrors>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="PolicyErrors" /> class.
+        /// Initializes a new instance of the <see cref="PolicyErrors" />class.
         /// </summary>
-        public PolicyErrors()
+        /// <param name="PolicyErrorMessages">PolicyErrorMessages.</param>
+
+        public PolicyErrors(List<PolicyErrorMessage> PolicyErrorMessages = null)
         {
+            this.PolicyErrorMessages = PolicyErrorMessages;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets PolicyErrorMessages
         /// </summary>
         [DataMember(Name="policyErrorMessages", EmitDefaultValue=false)]
         public List<PolicyErrorMessage> PolicyErrorMessages { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -44,11 +45,10 @@ namespace ININ.PureCloudApi.Model
             var sb = new StringBuilder();
             sb.Append("class PolicyErrors {\n");
             sb.Append("  PolicyErrorMessages: ").Append(PolicyErrorMessages).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -72,7 +72,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if PolicyErrors instances are equal
         /// </summary>
-        /// <param name="obj">Instance of PolicyErrors to be compared</param>
+        /// <param name="other">Instance of PolicyErrors to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(PolicyErrors other)
         {
@@ -80,7 +80,7 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.PolicyErrorMessages == other.PolicyErrorMessages ||
                     this.PolicyErrorMessages != null &&
@@ -99,15 +99,11 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.PolicyErrorMessages != null)
-                    hash = hash * 57 + this.PolicyErrorMessages.GetHashCode();
-                
+                    hash = hash * 59 + this.PolicyErrorMessages.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

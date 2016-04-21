@@ -4,167 +4,200 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class IVR :  IEquatable<IVR>
-    {
+    public partial class IVR :  IEquatable<IVR>
+    { 
+
         /// <summary>
-        /// Initializes a new instance of the <see cref="IVR" /> class.
+        /// Gets or Sets State
         /// </summary>
-        public IVR()
-        {
+        [JsonConverter(typeof(StringEnumConverter))]
+                public enum StateEnum {
             
+            [EnumMember(Value = "ACTIVE")]
+            Active,
+            
+            [EnumMember(Value = "DELETED")]
+            Deleted,
+            
+            [EnumMember(Value = "INACTIVE")]
+            Inactive
         }
 
         
+
+        /// <summary>
+        /// Gets or Sets State
+        /// </summary>
+        [DataMember(Name="state", EmitDefaultValue=false)]
+        public StateEnum? State { get; set; }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="IVR" />class.
+        /// </summary>
+        /// <param name="Name">Name.</param>
+        /// <param name="Description">Description.</param>
+        /// <param name="Version">Version.</param>
+        /// <param name="DateCreated">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="DateModified">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="ModifiedBy">ModifiedBy.</param>
+        /// <param name="CreatedBy">CreatedBy.</param>
+        /// <param name="State">State.</param>
+        /// <param name="ModifiedByApp">ModifiedByApp.</param>
+        /// <param name="CreatedByApp">CreatedByApp.</param>
+        /// <param name="IvrUri">IvrUri.</param>
+        /// <param name="Dnis">Dnis.</param>
+        /// <param name="FlowId">FlowId.</param>
+        /// <param name="ScheduleId">ScheduleId.</param>
+        /// <param name="OpenHoursFlow">OpenHoursFlow.</param>
+        /// <param name="ClosedHoursFlow">ClosedHoursFlow.</param>
+        /// <param name="ScheduleGroup">ScheduleGroup.</param>
+
+        public IVR(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, string IvrUri = null, List<string> Dnis = null, string FlowId = null, string ScheduleId = null, UriReference OpenHoursFlow = null, UriReference ClosedHoursFlow = null, UriReference ScheduleGroup = null)
+        {
+            this.Name = Name;
+            this.Description = Description;
+            this.Version = Version;
+            this.DateCreated = DateCreated;
+            this.DateModified = DateModified;
+            this.ModifiedBy = ModifiedBy;
+            this.CreatedBy = CreatedBy;
+            this.State = State;
+            this.ModifiedByApp = ModifiedByApp;
+            this.CreatedByApp = CreatedByApp;
+            this.IvrUri = IvrUri;
+            this.Dnis = Dnis;
+            this.FlowId = FlowId;
+            this.ScheduleId = ScheduleId;
+            this.OpenHoursFlow = OpenHoursFlow;
+            this.ClosedHoursFlow = ClosedHoursFlow;
+            this.ScheduleGroup = ScheduleGroup;
+            
+        }
+
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Description
         /// </summary>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Version
         /// </summary>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public int? Version { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
         public DateTime? DateModified { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ModifiedBy
         /// </summary>
         [DataMember(Name="modifiedBy", EmitDefaultValue=false)]
         public string ModifiedBy { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets CreatedBy
         /// </summary>
         [DataMember(Name="createdBy", EmitDefaultValue=false)]
         public string CreatedBy { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets State
-        /// </summary>
-        [DataMember(Name="state", EmitDefaultValue=false)]
-        public string State { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ModifiedByApp
         /// </summary>
         [DataMember(Name="modifiedByApp", EmitDefaultValue=false)]
         public string ModifiedByApp { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets CreatedByApp
         /// </summary>
         [DataMember(Name="createdByApp", EmitDefaultValue=false)]
         public string CreatedByApp { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets IvrUri
         /// </summary>
         [DataMember(Name="ivrUri", EmitDefaultValue=false)]
         public string IvrUri { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Dnis
         /// </summary>
         [DataMember(Name="dnis", EmitDefaultValue=false)]
         public List<string> Dnis { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets FlowId
         /// </summary>
         [DataMember(Name="flowId", EmitDefaultValue=false)]
         public string FlowId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ScheduleId
         /// </summary>
         [DataMember(Name="scheduleId", EmitDefaultValue=false)]
         public string ScheduleId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets OpenHoursFlow
         /// </summary>
         [DataMember(Name="openHoursFlow", EmitDefaultValue=false)]
         public UriReference OpenHoursFlow { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ClosedHoursFlow
         /// </summary>
         [DataMember(Name="closedHoursFlow", EmitDefaultValue=false)]
         public UriReference ClosedHoursFlow { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ScheduleGroup
         /// </summary>
         [DataMember(Name="scheduleGroup", EmitDefaultValue=false)]
         public UriReference ScheduleGroup { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -192,11 +225,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  ClosedHoursFlow: ").Append(ClosedHoursFlow).Append("\n");
             sb.Append("  ScheduleGroup: ").Append(ScheduleGroup).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -220,7 +252,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if IVR instances are equal
         /// </summary>
-        /// <param name="obj">Instance of IVR to be compared</param>
+        /// <param name="other">Instance of IVR to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(IVR other)
         {
@@ -228,97 +260,97 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Description == other.Description ||
                     this.Description != null &&
                     this.Description.Equals(other.Description)
-                ) && 
+                ) &&
                 (
                     this.Version == other.Version ||
                     this.Version != null &&
                     this.Version.Equals(other.Version)
-                ) && 
+                ) &&
                 (
                     this.DateCreated == other.DateCreated ||
                     this.DateCreated != null &&
                     this.DateCreated.Equals(other.DateCreated)
-                ) && 
+                ) &&
                 (
                     this.DateModified == other.DateModified ||
                     this.DateModified != null &&
                     this.DateModified.Equals(other.DateModified)
-                ) && 
+                ) &&
                 (
                     this.ModifiedBy == other.ModifiedBy ||
                     this.ModifiedBy != null &&
                     this.ModifiedBy.Equals(other.ModifiedBy)
-                ) && 
+                ) &&
                 (
                     this.CreatedBy == other.CreatedBy ||
                     this.CreatedBy != null &&
                     this.CreatedBy.Equals(other.CreatedBy)
-                ) && 
+                ) &&
                 (
                     this.State == other.State ||
                     this.State != null &&
                     this.State.Equals(other.State)
-                ) && 
+                ) &&
                 (
                     this.ModifiedByApp == other.ModifiedByApp ||
                     this.ModifiedByApp != null &&
                     this.ModifiedByApp.Equals(other.ModifiedByApp)
-                ) && 
+                ) &&
                 (
                     this.CreatedByApp == other.CreatedByApp ||
                     this.CreatedByApp != null &&
                     this.CreatedByApp.Equals(other.CreatedByApp)
-                ) && 
+                ) &&
                 (
                     this.IvrUri == other.IvrUri ||
                     this.IvrUri != null &&
                     this.IvrUri.Equals(other.IvrUri)
-                ) && 
+                ) &&
                 (
                     this.Dnis == other.Dnis ||
                     this.Dnis != null &&
                     this.Dnis.SequenceEqual(other.Dnis)
-                ) && 
+                ) &&
                 (
                     this.FlowId == other.FlowId ||
                     this.FlowId != null &&
                     this.FlowId.Equals(other.FlowId)
-                ) && 
+                ) &&
                 (
                     this.ScheduleId == other.ScheduleId ||
                     this.ScheduleId != null &&
                     this.ScheduleId.Equals(other.ScheduleId)
-                ) && 
+                ) &&
                 (
                     this.OpenHoursFlow == other.OpenHoursFlow ||
                     this.OpenHoursFlow != null &&
                     this.OpenHoursFlow.Equals(other.OpenHoursFlow)
-                ) && 
+                ) &&
                 (
                     this.ClosedHoursFlow == other.ClosedHoursFlow ||
                     this.ClosedHoursFlow != null &&
                     this.ClosedHoursFlow.Equals(other.ClosedHoursFlow)
-                ) && 
+                ) &&
                 (
                     this.ScheduleGroup == other.ScheduleGroup ||
                     this.ScheduleGroup != null &&
                     this.ScheduleGroup.Equals(other.ScheduleGroup)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
@@ -337,69 +369,47 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
-                
+                    hash = hash * 59 + this.Id.GetHashCode();
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
-                
+                    hash = hash * 59 + this.Name.GetHashCode();
                 if (this.Description != null)
-                    hash = hash * 57 + this.Description.GetHashCode();
-                
+                    hash = hash * 59 + this.Description.GetHashCode();
                 if (this.Version != null)
-                    hash = hash * 57 + this.Version.GetHashCode();
-                
+                    hash = hash * 59 + this.Version.GetHashCode();
                 if (this.DateCreated != null)
-                    hash = hash * 57 + this.DateCreated.GetHashCode();
-                
+                    hash = hash * 59 + this.DateCreated.GetHashCode();
                 if (this.DateModified != null)
-                    hash = hash * 57 + this.DateModified.GetHashCode();
-                
+                    hash = hash * 59 + this.DateModified.GetHashCode();
                 if (this.ModifiedBy != null)
-                    hash = hash * 57 + this.ModifiedBy.GetHashCode();
-                
+                    hash = hash * 59 + this.ModifiedBy.GetHashCode();
                 if (this.CreatedBy != null)
-                    hash = hash * 57 + this.CreatedBy.GetHashCode();
-                
+                    hash = hash * 59 + this.CreatedBy.GetHashCode();
                 if (this.State != null)
-                    hash = hash * 57 + this.State.GetHashCode();
-                
+                    hash = hash * 59 + this.State.GetHashCode();
                 if (this.ModifiedByApp != null)
-                    hash = hash * 57 + this.ModifiedByApp.GetHashCode();
-                
+                    hash = hash * 59 + this.ModifiedByApp.GetHashCode();
                 if (this.CreatedByApp != null)
-                    hash = hash * 57 + this.CreatedByApp.GetHashCode();
-                
+                    hash = hash * 59 + this.CreatedByApp.GetHashCode();
                 if (this.IvrUri != null)
-                    hash = hash * 57 + this.IvrUri.GetHashCode();
-                
+                    hash = hash * 59 + this.IvrUri.GetHashCode();
                 if (this.Dnis != null)
-                    hash = hash * 57 + this.Dnis.GetHashCode();
-                
+                    hash = hash * 59 + this.Dnis.GetHashCode();
                 if (this.FlowId != null)
-                    hash = hash * 57 + this.FlowId.GetHashCode();
-                
+                    hash = hash * 59 + this.FlowId.GetHashCode();
                 if (this.ScheduleId != null)
-                    hash = hash * 57 + this.ScheduleId.GetHashCode();
-                
+                    hash = hash * 59 + this.ScheduleId.GetHashCode();
                 if (this.OpenHoursFlow != null)
-                    hash = hash * 57 + this.OpenHoursFlow.GetHashCode();
-                
+                    hash = hash * 59 + this.OpenHoursFlow.GetHashCode();
                 if (this.ClosedHoursFlow != null)
-                    hash = hash * 57 + this.ClosedHoursFlow.GetHashCode();
-                
+                    hash = hash * 59 + this.ClosedHoursFlow.GetHashCode();
                 if (this.ScheduleGroup != null)
-                    hash = hash * 57 + this.ScheduleGroup.GetHashCode();
-                
+                    hash = hash * 59 + this.ScheduleGroup.GetHashCode();
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
-                
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

@@ -4,39 +4,47 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// Used as the body to the activateFlow request.
     /// </summary>
     [DataContract]
-    public class FlowActivateRequest :  IEquatable<FlowActivateRequest>
-    {
+    public partial class FlowActivateRequest :  IEquatable<FlowActivateRequest>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="FlowActivateRequest" /> class.
+        /// Initializes a new instance of the <see cref="FlowActivateRequest" />class.
         /// </summary>
-        public FlowActivateRequest()
+        /// <param name="Activated">Change the activated state of the flow definition.  True to activate the flow definition so it can be launched, false to disable the flow. (required) (default to false).</param>
+
+        public FlowActivateRequest(bool? Activated = null)
         {
-            this.Activated = false;
+            // to ensure "Activated" is required (not null)
+            if (Activated == null)
+            {
+                throw new InvalidDataException("Activated is a required property for FlowActivateRequest and cannot be null");
+            }
+            else
+            {
+                this.Activated = Activated;
+            }
             
         }
 
-        
+    
         /// <summary>
         /// Change the activated state of the flow definition.  True to activate the flow definition so it can be launched, false to disable the flow.
         /// </summary>
         /// <value>Change the activated state of the flow definition.  True to activate the flow definition so it can be launched, false to disable the flow.</value>
         [DataMember(Name="activated", EmitDefaultValue=false)]
         public bool? Activated { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -46,11 +54,10 @@ namespace ININ.PureCloudApi.Model
             var sb = new StringBuilder();
             sb.Append("class FlowActivateRequest {\n");
             sb.Append("  Activated: ").Append(Activated).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -74,7 +81,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if FlowActivateRequest instances are equal
         /// </summary>
-        /// <param name="obj">Instance of FlowActivateRequest to be compared</param>
+        /// <param name="other">Instance of FlowActivateRequest to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(FlowActivateRequest other)
         {
@@ -82,7 +89,7 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Activated == other.Activated ||
                     this.Activated != null &&
@@ -101,15 +108,11 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Activated != null)
-                    hash = hash * 57 + this.Activated.GetHashCode();
-                
+                    hash = hash * 59 + this.Activated.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

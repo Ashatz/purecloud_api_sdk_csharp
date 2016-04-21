@@ -4,58 +4,62 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class Detail :  IEquatable<Detail>
-    {
+    public partial class Detail :  IEquatable<Detail>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="Detail" /> class.
+        /// Initializes a new instance of the <see cref="Detail" />class.
         /// </summary>
-        public Detail()
+        /// <param name="ErrorCode">ErrorCode.</param>
+        /// <param name="FieldName">FieldName.</param>
+        /// <param name="EntityId">EntityId.</param>
+        /// <param name="EntityName">EntityName.</param>
+
+        public Detail(string ErrorCode = null, string FieldName = null, string EntityId = null, string EntityName = null)
         {
+            this.ErrorCode = ErrorCode;
+            this.FieldName = FieldName;
+            this.EntityId = EntityId;
+            this.EntityName = EntityName;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets ErrorCode
         /// </summary>
         [DataMember(Name="errorCode", EmitDefaultValue=false)]
         public string ErrorCode { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets FieldName
         /// </summary>
         [DataMember(Name="fieldName", EmitDefaultValue=false)]
         public string FieldName { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets EntityId
         /// </summary>
         [DataMember(Name="entityId", EmitDefaultValue=false)]
         public string EntityId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets EntityName
         /// </summary>
         [DataMember(Name="entityName", EmitDefaultValue=false)]
         public string EntityName { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -68,11 +72,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  FieldName: ").Append(FieldName).Append("\n");
             sb.Append("  EntityId: ").Append(EntityId).Append("\n");
             sb.Append("  EntityName: ").Append(EntityName).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -96,7 +99,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if Detail instances are equal
         /// </summary>
-        /// <param name="obj">Instance of Detail to be compared</param>
+        /// <param name="other">Instance of Detail to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(Detail other)
         {
@@ -104,22 +107,22 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.ErrorCode == other.ErrorCode ||
                     this.ErrorCode != null &&
                     this.ErrorCode.Equals(other.ErrorCode)
-                ) && 
+                ) &&
                 (
                     this.FieldName == other.FieldName ||
                     this.FieldName != null &&
                     this.FieldName.Equals(other.FieldName)
-                ) && 
+                ) &&
                 (
                     this.EntityId == other.EntityId ||
                     this.EntityId != null &&
                     this.EntityId.Equals(other.EntityId)
-                ) && 
+                ) &&
                 (
                     this.EntityName == other.EntityName ||
                     this.EntityName != null &&
@@ -138,24 +141,17 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ErrorCode != null)
-                    hash = hash * 57 + this.ErrorCode.GetHashCode();
-                
+                    hash = hash * 59 + this.ErrorCode.GetHashCode();
                 if (this.FieldName != null)
-                    hash = hash * 57 + this.FieldName.GetHashCode();
-                
+                    hash = hash * 59 + this.FieldName.GetHashCode();
                 if (this.EntityId != null)
-                    hash = hash * 57 + this.EntityId.GetHashCode();
-                
+                    hash = hash * 59 + this.EntityId.GetHashCode();
                 if (this.EntityName != null)
-                    hash = hash * 57 + this.EntityName.GetHashCode();
-                
+                    hash = hash * 59 + this.EntityName.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

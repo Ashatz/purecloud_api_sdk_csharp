@@ -4,37 +4,38 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class ParticipantAttributes :  IEquatable<ParticipantAttributes>
-    {
+    public partial class ParticipantAttributes :  IEquatable<ParticipantAttributes>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="ParticipantAttributes" /> class.
+        /// Initializes a new instance of the <see cref="ParticipantAttributes" />class.
         /// </summary>
-        public ParticipantAttributes()
+        /// <param name="Attributes">Attributes.</param>
+
+        public ParticipantAttributes(Dictionary<string, string> Attributes = null)
         {
+            this.Attributes = Attributes;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets Attributes
         /// </summary>
         [DataMember(Name="attributes", EmitDefaultValue=false)]
         public Dictionary<string, string> Attributes { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -44,11 +45,10 @@ namespace ININ.PureCloudApi.Model
             var sb = new StringBuilder();
             sb.Append("class ParticipantAttributes {\n");
             sb.Append("  Attributes: ").Append(Attributes).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -72,7 +72,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if ParticipantAttributes instances are equal
         /// </summary>
-        /// <param name="obj">Instance of ParticipantAttributes to be compared</param>
+        /// <param name="other">Instance of ParticipantAttributes to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(ParticipantAttributes other)
         {
@@ -80,7 +80,7 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Attributes == other.Attributes ||
                     this.Attributes != null &&
@@ -99,15 +99,11 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Attributes != null)
-                    hash = hash * 57 + this.Attributes.GetHashCode();
-                
+                    hash = hash * 59 + this.Attributes.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

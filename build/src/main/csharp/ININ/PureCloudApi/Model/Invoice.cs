@@ -4,97 +4,102 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class Invoice :  IEquatable<Invoice>
-    {
+    public partial class Invoice :  IEquatable<Invoice>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="Invoice" /> class.
+        /// Initializes a new instance of the <see cref="Invoice" />class.
         /// </summary>
-        public Invoice()
+        /// <param name="Name">Name.</param>
+        /// <param name="InvoiceNumber">InvoiceNumber.</param>
+        /// <param name="InvoiceDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="DueDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="Amount">Amount.</param>
+        /// <param name="Balance">Balance.</param>
+        /// <param name="Status">Status.</param>
+
+        public Invoice(string Name = null, string InvoiceNumber = null, DateTime? InvoiceDate = null, DateTime? DueDate = null, string Amount = null, string Balance = null, string Status = null)
         {
+            this.Name = Name;
+            this.InvoiceNumber = InvoiceNumber;
+            this.InvoiceDate = InvoiceDate;
+            this.DueDate = DueDate;
+            this.Amount = Amount;
+            this.Balance = Balance;
+            this.Status = Status;
             
         }
 
-        
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets InvoiceNumber
         /// </summary>
         [DataMember(Name="invoiceNumber", EmitDefaultValue=false)]
         public string InvoiceNumber { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="invoiceDate", EmitDefaultValue=false)]
         public DateTime? InvoiceDate { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dueDate", EmitDefaultValue=false)]
         public DateTime? DueDate { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Amount
         /// </summary>
         [DataMember(Name="amount", EmitDefaultValue=false)]
         public string Amount { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Balance
         /// </summary>
         [DataMember(Name="balance", EmitDefaultValue=false)]
         public string Balance { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public string Status { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -112,11 +117,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Balance: ").Append(Balance).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -140,7 +144,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if Invoice instances are equal
         /// </summary>
-        /// <param name="obj">Instance of Invoice to be compared</param>
+        /// <param name="other">Instance of Invoice to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(Invoice other)
         {
@@ -148,47 +152,47 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.InvoiceNumber == other.InvoiceNumber ||
                     this.InvoiceNumber != null &&
                     this.InvoiceNumber.Equals(other.InvoiceNumber)
-                ) && 
+                ) &&
                 (
                     this.InvoiceDate == other.InvoiceDate ||
                     this.InvoiceDate != null &&
                     this.InvoiceDate.Equals(other.InvoiceDate)
-                ) && 
+                ) &&
                 (
                     this.DueDate == other.DueDate ||
                     this.DueDate != null &&
                     this.DueDate.Equals(other.DueDate)
-                ) && 
+                ) &&
                 (
                     this.Amount == other.Amount ||
                     this.Amount != null &&
                     this.Amount.Equals(other.Amount)
-                ) && 
+                ) &&
                 (
                     this.Balance == other.Balance ||
                     this.Balance != null &&
                     this.Balance.Equals(other.Balance)
-                ) && 
+                ) &&
                 (
                     this.Status == other.Status ||
                     this.Status != null &&
                     this.Status.Equals(other.Status)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
@@ -207,39 +211,27 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
-                
+                    hash = hash * 59 + this.Id.GetHashCode();
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
-                
+                    hash = hash * 59 + this.Name.GetHashCode();
                 if (this.InvoiceNumber != null)
-                    hash = hash * 57 + this.InvoiceNumber.GetHashCode();
-                
+                    hash = hash * 59 + this.InvoiceNumber.GetHashCode();
                 if (this.InvoiceDate != null)
-                    hash = hash * 57 + this.InvoiceDate.GetHashCode();
-                
+                    hash = hash * 59 + this.InvoiceDate.GetHashCode();
                 if (this.DueDate != null)
-                    hash = hash * 57 + this.DueDate.GetHashCode();
-                
+                    hash = hash * 59 + this.DueDate.GetHashCode();
                 if (this.Amount != null)
-                    hash = hash * 57 + this.Amount.GetHashCode();
-                
+                    hash = hash * 59 + this.Amount.GetHashCode();
                 if (this.Balance != null)
-                    hash = hash * 57 + this.Balance.GetHashCode();
-                
+                    hash = hash * 59 + this.Balance.GetHashCode();
                 if (this.Status != null)
-                    hash = hash * 57 + this.Status.GetHashCode();
-                
+                    hash = hash * 59 + this.Status.GetHashCode();
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
-                
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

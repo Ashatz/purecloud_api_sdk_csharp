@@ -4,54 +4,100 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// Used to filter response queries
     /// </summary>
     [DataContract]
-    public class Filter :  IEquatable<Filter>
-    {
+    public partial class Filter :  IEquatable<Filter>
+    { 
+
         /// <summary>
-        /// Initializes a new instance of the <see cref="Filter" /> class.
+        /// Filter operation: IN, EQUALS, NOTEQUALS.
         /// </summary>
-        public Filter()
-        {
+        /// <value>Filter operation: IN, EQUALS, NOTEQUALS.</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+                public enum _OperatorEnum {
             
+            [EnumMember(Value = "IN")]
+            In,
+            
+            [EnumMember(Value = "EQUALS")]
+            Equals,
+            
+            [EnumMember(Value = "NOTEQUALS")]
+            Notequals
         }
 
         
-        /// <summary>
-        /// Field to filter on. Allowed values are 'name' and 'libraryId.
-        /// </summary>
-        /// <value>Field to filter on. Allowed values are 'name' and 'libraryId.</value>
-        [DataMember(Name="name", EmitDefaultValue=false)]
-        public string Name { get; set; }
-  
-        
+
         /// <summary>
         /// Filter operation: IN, EQUALS, NOTEQUALS.
         /// </summary>
         /// <value>Filter operation: IN, EQUALS, NOTEQUALS.</value>
         [DataMember(Name="operator", EmitDefaultValue=false)]
-        public string Operator { get; set; }
-  
-        
+        public _OperatorEnum? _Operator { get; set; }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Filter" />class.
+        /// </summary>
+        /// <param name="Name">Field to filter on. Allowed values are &#39;name&#39; and &#39;libraryId. (required).</param>
+        /// <param name="_Operator">Filter operation: IN, EQUALS, NOTEQUALS. (required).</param>
+        /// <param name="Values">Values to filter on. (required).</param>
+
+        public Filter(string Name = null, _OperatorEnum? _Operator = null, List<string> Values = null)
+        {
+            // to ensure "Name" is required (not null)
+            if (Name == null)
+            {
+                throw new InvalidDataException("Name is a required property for Filter and cannot be null");
+            }
+            else
+            {
+                this.Name = Name;
+            }
+            // to ensure "_Operator" is required (not null)
+            if (_Operator == null)
+            {
+                throw new InvalidDataException("_Operator is a required property for Filter and cannot be null");
+            }
+            else
+            {
+                this._Operator = _Operator;
+            }
+            // to ensure "Values" is required (not null)
+            if (Values == null)
+            {
+                throw new InvalidDataException("Values is a required property for Filter and cannot be null");
+            }
+            else
+            {
+                this.Values = Values;
+            }
+            
+        }
+
+    
+        /// <summary>
+        /// Field to filter on. Allowed values are &#39;name&#39; and &#39;libraryId.
+        /// </summary>
+        /// <value>Field to filter on. Allowed values are &#39;name&#39; and &#39;libraryId.</value>
+        [DataMember(Name="name", EmitDefaultValue=false)]
+        public string Name { get; set; }
+    
         /// <summary>
         /// Values to filter on.
         /// </summary>
         /// <value>Values to filter on.</value>
         [DataMember(Name="values", EmitDefaultValue=false)]
         public List<string> Values { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -61,13 +107,12 @@ namespace ININ.PureCloudApi.Model
             var sb = new StringBuilder();
             sb.Append("class Filter {\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  Operator: ").Append(Operator).Append("\n");
+            sb.Append("  _Operator: ").Append(_Operator).Append("\n");
             sb.Append("  Values: ").Append(Values).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -91,7 +136,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if Filter instances are equal
         /// </summary>
-        /// <param name="obj">Instance of Filter to be compared</param>
+        /// <param name="other">Instance of Filter to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(Filter other)
         {
@@ -99,17 +144,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
-                    this.Operator == other.Operator ||
-                    this.Operator != null &&
-                    this.Operator.Equals(other.Operator)
-                ) && 
+                    this._Operator == other._Operator ||
+                    this._Operator != null &&
+                    this._Operator.Equals(other._Operator)
+                ) &&
                 (
                     this.Values == other.Values ||
                     this.Values != null &&
@@ -128,21 +173,15 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
-                
-                if (this.Operator != null)
-                    hash = hash * 57 + this.Operator.GetHashCode();
-                
+                    hash = hash * 59 + this.Name.GetHashCode();
+                if (this._Operator != null)
+                    hash = hash * 59 + this._Operator.GetHashCode();
                 if (this.Values != null)
-                    hash = hash * 57 + this.Values.GetHashCode();
-                
+                    hash = hash * 59 + this.Values.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

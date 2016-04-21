@@ -4,44 +4,46 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class BatchCommand :  IEquatable<BatchCommand>
-    {
+    public partial class BatchCommand :  IEquatable<BatchCommand>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="BatchCommand" /> class.
+        /// Initializes a new instance of the <see cref="BatchCommand" />class.
         /// </summary>
-        public BatchCommand()
+        /// <param name="Items">Items.</param>
+        /// <param name="CommandId">CommandId.</param>
+
+        public BatchCommand(List<BatchItem> Items = null, string CommandId = null)
         {
+            this.Items = Items;
+            this.CommandId = CommandId;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets Items
         /// </summary>
         [DataMember(Name="items", EmitDefaultValue=false)]
         public List<BatchItem> Items { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets CommandId
         /// </summary>
         [DataMember(Name="commandId", EmitDefaultValue=false)]
         public string CommandId { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -52,11 +54,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class BatchCommand {\n");
             sb.Append("  Items: ").Append(Items).Append("\n");
             sb.Append("  CommandId: ").Append(CommandId).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -80,7 +81,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if BatchCommand instances are equal
         /// </summary>
-        /// <param name="obj">Instance of BatchCommand to be compared</param>
+        /// <param name="other">Instance of BatchCommand to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(BatchCommand other)
         {
@@ -88,12 +89,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Items == other.Items ||
                     this.Items != null &&
                     this.Items.SequenceEqual(other.Items)
-                ) && 
+                ) &&
                 (
                     this.CommandId == other.CommandId ||
                     this.CommandId != null &&
@@ -112,18 +113,13 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Items != null)
-                    hash = hash * 57 + this.Items.GetHashCode();
-                
+                    hash = hash * 59 + this.Items.GetHashCode();
                 if (this.CommandId != null)
-                    hash = hash * 57 + this.CommandId.GetHashCode();
-                
+                    hash = hash * 59 + this.CommandId.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

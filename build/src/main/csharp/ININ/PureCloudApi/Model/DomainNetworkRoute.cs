@@ -4,66 +4,78 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class DomainNetworkRoute :  IEquatable<DomainNetworkRoute>
-    {
+    public partial class DomainNetworkRoute :  IEquatable<DomainNetworkRoute>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="DomainNetworkRoute" /> class.
+        /// Initializes a new instance of the <see cref="DomainNetworkRoute" />class.
         /// </summary>
-        public DomainNetworkRoute()
+        /// <param name="Prefix">Prefix.</param>
+        /// <param name="Nexthop">Nexthop.</param>
+        /// <param name="Persistent">Persistent (default to false).</param>
+        /// <param name="Metric">Metric.</param>
+        /// <param name="Family">Family.</param>
+
+        public DomainNetworkRoute(string Prefix = null, string Nexthop = null, bool? Persistent = null, int? Metric = null, int? Family = null)
         {
-            this.Persistent = false;
+            this.Prefix = Prefix;
+            this.Nexthop = Nexthop;
+            // use default value if no "Persistent" provided
+            if (Persistent == null)
+            {
+                this.Persistent = false;
+            }
+            else
+            {
+                this.Persistent = Persistent;
+            }
+            this.Metric = Metric;
+            this.Family = Family;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets Prefix
         /// </summary>
         [DataMember(Name="prefix", EmitDefaultValue=false)]
         public string Prefix { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Nexthop
         /// </summary>
         [DataMember(Name="nexthop", EmitDefaultValue=false)]
         public string Nexthop { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Persistent
         /// </summary>
         [DataMember(Name="persistent", EmitDefaultValue=false)]
         public bool? Persistent { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Metric
         /// </summary>
         [DataMember(Name="metric", EmitDefaultValue=false)]
         public int? Metric { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Family
         /// </summary>
         [DataMember(Name="family", EmitDefaultValue=false)]
         public int? Family { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -77,11 +89,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Persistent: ").Append(Persistent).Append("\n");
             sb.Append("  Metric: ").Append(Metric).Append("\n");
             sb.Append("  Family: ").Append(Family).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -105,7 +116,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if DomainNetworkRoute instances are equal
         /// </summary>
-        /// <param name="obj">Instance of DomainNetworkRoute to be compared</param>
+        /// <param name="other">Instance of DomainNetworkRoute to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(DomainNetworkRoute other)
         {
@@ -113,27 +124,27 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Prefix == other.Prefix ||
                     this.Prefix != null &&
                     this.Prefix.Equals(other.Prefix)
-                ) && 
+                ) &&
                 (
                     this.Nexthop == other.Nexthop ||
                     this.Nexthop != null &&
                     this.Nexthop.Equals(other.Nexthop)
-                ) && 
+                ) &&
                 (
                     this.Persistent == other.Persistent ||
                     this.Persistent != null &&
                     this.Persistent.Equals(other.Persistent)
-                ) && 
+                ) &&
                 (
                     this.Metric == other.Metric ||
                     this.Metric != null &&
                     this.Metric.Equals(other.Metric)
-                ) && 
+                ) &&
                 (
                     this.Family == other.Family ||
                     this.Family != null &&
@@ -152,27 +163,19 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Prefix != null)
-                    hash = hash * 57 + this.Prefix.GetHashCode();
-                
+                    hash = hash * 59 + this.Prefix.GetHashCode();
                 if (this.Nexthop != null)
-                    hash = hash * 57 + this.Nexthop.GetHashCode();
-                
+                    hash = hash * 59 + this.Nexthop.GetHashCode();
                 if (this.Persistent != null)
-                    hash = hash * 57 + this.Persistent.GetHashCode();
-                
+                    hash = hash * 59 + this.Persistent.GetHashCode();
                 if (this.Metric != null)
-                    hash = hash * 57 + this.Metric.GetHashCode();
-                
+                    hash = hash * 59 + this.Metric.GetHashCode();
                 if (this.Family != null)
-                    hash = hash * 57 + this.Family.GetHashCode();
-                
+                    hash = hash * 59 + this.Family.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

@@ -4,67 +4,91 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class NumberOrderRequest :  IEquatable<NumberOrderRequest>
-    {
+    public partial class NumberOrderRequest :  IEquatable<NumberOrderRequest>
+    { 
+
         /// <summary>
-        /// Initializes a new instance of the <see cref="NumberOrderRequest" /> class.
+        /// The type of phone number (eg us-domestic, toll-free, etc), to determine which third-party api(s) to use for the order request.
         /// </summary>
-        public NumberOrderRequest()
-        {
+        /// <value>The type of phone number (eg us-domestic, toll-free, etc), to determine which third-party api(s) to use for the order request.</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+                public enum PhoneNumberTypeEnum {
             
+            [EnumMember(Value = "TOLL_FREE")]
+            TollFree,
+            
+            [EnumMember(Value = "CN_DOMESTIC")]
+            CnDomestic,
+            
+            [EnumMember(Value = "US_DOMESTIC")]
+            UsDomestic
         }
 
         
+
+        /// <summary>
+        /// The type of phone number (eg us-domestic, toll-free, etc), to determine which third-party api(s) to use for the order request.
+        /// </summary>
+        /// <value>The type of phone number (eg us-domestic, toll-free, etc), to determine which third-party api(s) to use for the order request.</value>
+        [DataMember(Name="phoneNumberType", EmitDefaultValue=false)]
+        public PhoneNumberTypeEnum? PhoneNumberType { get; set; }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="NumberOrderRequest" />class.
+        /// </summary>
+        /// <param name="OrderTns">OrderTns.</param>
+        /// <param name="ReservationIds">ReservationIds.</param>
+        /// <param name="OrderId">OrderId.</param>
+        /// <param name="EffectiveDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="PhoneNumberType">The type of phone number (eg us-domestic, toll-free, etc), to determine which third-party api(s) to use for the order request..</param>
+
+        public NumberOrderRequest(List<string> OrderTns = null, List<string> ReservationIds = null, string OrderId = null, DateTime? EffectiveDate = null, PhoneNumberTypeEnum? PhoneNumberType = null)
+        {
+            this.OrderTns = OrderTns;
+            this.ReservationIds = ReservationIds;
+            this.OrderId = OrderId;
+            this.EffectiveDate = EffectiveDate;
+            this.PhoneNumberType = PhoneNumberType;
+            
+        }
+
+    
         /// <summary>
         /// Gets or Sets OrderTns
         /// </summary>
         [DataMember(Name="orderTns", EmitDefaultValue=false)]
         public List<string> OrderTns { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ReservationIds
         /// </summary>
         [DataMember(Name="reservationIds", EmitDefaultValue=false)]
         public List<string> ReservationIds { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets OrderId
         /// </summary>
         [DataMember(Name="orderId", EmitDefaultValue=false)]
         public string OrderId { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="effectiveDate", EmitDefaultValue=false)]
         public DateTime? EffectiveDate { get; set; }
-  
-        
-        /// <summary>
-        /// The type of phone number (eg us-domestic, toll-free, etc), to determine which third-party api(s) to use for the order request.
-        /// </summary>
-        /// <value>The type of phone number (eg us-domestic, toll-free, etc), to determine which third-party api(s) to use for the order request.</value>
-        [DataMember(Name="phoneNumberType", EmitDefaultValue=false)]
-        public string PhoneNumberType { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -78,11 +102,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  OrderId: ").Append(OrderId).Append("\n");
             sb.Append("  EffectiveDate: ").Append(EffectiveDate).Append("\n");
             sb.Append("  PhoneNumberType: ").Append(PhoneNumberType).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -106,7 +129,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if NumberOrderRequest instances are equal
         /// </summary>
-        /// <param name="obj">Instance of NumberOrderRequest to be compared</param>
+        /// <param name="other">Instance of NumberOrderRequest to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(NumberOrderRequest other)
         {
@@ -114,27 +137,27 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.OrderTns == other.OrderTns ||
                     this.OrderTns != null &&
                     this.OrderTns.SequenceEqual(other.OrderTns)
-                ) && 
+                ) &&
                 (
                     this.ReservationIds == other.ReservationIds ||
                     this.ReservationIds != null &&
                     this.ReservationIds.SequenceEqual(other.ReservationIds)
-                ) && 
+                ) &&
                 (
                     this.OrderId == other.OrderId ||
                     this.OrderId != null &&
                     this.OrderId.Equals(other.OrderId)
-                ) && 
+                ) &&
                 (
                     this.EffectiveDate == other.EffectiveDate ||
                     this.EffectiveDate != null &&
                     this.EffectiveDate.Equals(other.EffectiveDate)
-                ) && 
+                ) &&
                 (
                     this.PhoneNumberType == other.PhoneNumberType ||
                     this.PhoneNumberType != null &&
@@ -153,27 +176,19 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.OrderTns != null)
-                    hash = hash * 57 + this.OrderTns.GetHashCode();
-                
+                    hash = hash * 59 + this.OrderTns.GetHashCode();
                 if (this.ReservationIds != null)
-                    hash = hash * 57 + this.ReservationIds.GetHashCode();
-                
+                    hash = hash * 59 + this.ReservationIds.GetHashCode();
                 if (this.OrderId != null)
-                    hash = hash * 57 + this.OrderId.GetHashCode();
-                
+                    hash = hash * 59 + this.OrderId.GetHashCode();
                 if (this.EffectiveDate != null)
-                    hash = hash * 57 + this.EffectiveDate.GetHashCode();
-                
+                    hash = hash * 59 + this.EffectiveDate.GetHashCode();
                 if (this.PhoneNumberType != null)
-                    hash = hash * 57 + this.PhoneNumberType.GetHashCode();
-                
+                    hash = hash * 59 + this.PhoneNumberType.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

@@ -4,52 +4,71 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class LocationEmergencyNumber :  IEquatable<LocationEmergencyNumber>
-    {
+    public partial class LocationEmergencyNumber :  IEquatable<LocationEmergencyNumber>
+    { 
+
         /// <summary>
-        /// Initializes a new instance of the <see cref="LocationEmergencyNumber" /> class.
+        /// The type of emergency number.
         /// </summary>
-        public LocationEmergencyNumber()
-        {
+        /// <value>The type of emergency number.</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+                public enum TypeEnum {
             
+            [EnumMember(Value = "default")]
+            Default,
+            
+            [EnumMember(Value = "elin")]
+            Elin
         }
 
         
-        /// <summary>
-        /// Gets or Sets E164
-        /// </summary>
-        [DataMember(Name="e164", EmitDefaultValue=false)]
-        public string E164 { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets Number
-        /// </summary>
-        [DataMember(Name="number", EmitDefaultValue=false)]
-        public string Number { get; set; }
-  
-        
+
         /// <summary>
         /// The type of emergency number.
         /// </summary>
         /// <value>The type of emergency number.</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
-        public string Type { get; set; }
-  
-        
-  
+        public TypeEnum? Type { get; set; }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="LocationEmergencyNumber" />class.
+        /// </summary>
+        /// <param name="E164">E164.</param>
+        /// <param name="Number">Number.</param>
+        /// <param name="Type">The type of emergency number..</param>
+
+        public LocationEmergencyNumber(string E164 = null, string Number = null, TypeEnum? Type = null)
+        {
+            this.E164 = E164;
+            this.Number = Number;
+            this.Type = Type;
+            
+        }
+
+    
+        /// <summary>
+        /// Gets or Sets E164
+        /// </summary>
+        [DataMember(Name="e164", EmitDefaultValue=false)]
+        public string E164 { get; set; }
+    
+        /// <summary>
+        /// Gets or Sets Number
+        /// </summary>
+        [DataMember(Name="number", EmitDefaultValue=false)]
+        public string Number { get; set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -61,11 +80,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  E164: ").Append(E164).Append("\n");
             sb.Append("  Number: ").Append(Number).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -89,7 +107,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if LocationEmergencyNumber instances are equal
         /// </summary>
-        /// <param name="obj">Instance of LocationEmergencyNumber to be compared</param>
+        /// <param name="other">Instance of LocationEmergencyNumber to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(LocationEmergencyNumber other)
         {
@@ -97,17 +115,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.E164 == other.E164 ||
                     this.E164 != null &&
                     this.E164.Equals(other.E164)
-                ) && 
+                ) &&
                 (
                     this.Number == other.Number ||
                     this.Number != null &&
                     this.Number.Equals(other.Number)
-                ) && 
+                ) &&
                 (
                     this.Type == other.Type ||
                     this.Type != null &&
@@ -126,21 +144,15 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.E164 != null)
-                    hash = hash * 57 + this.E164.GetHashCode();
-                
+                    hash = hash * 59 + this.E164.GetHashCode();
                 if (this.Number != null)
-                    hash = hash * 57 + this.Number.GetHashCode();
-                
+                    hash = hash * 59 + this.Number.GetHashCode();
                 if (this.Type != null)
-                    hash = hash * 57 + this.Type.GetHashCode();
-                
+                    hash = hash * 59 + this.Type.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

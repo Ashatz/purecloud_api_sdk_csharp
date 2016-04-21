@@ -4,44 +4,61 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class SortField :  IEquatable<SortField>
-    {
+    public partial class SortField :  IEquatable<SortField>
+    { 
+
         /// <summary>
-        /// Initializes a new instance of the <see cref="SortField" /> class.
+        /// Gets or Sets SortType
         /// </summary>
-        public SortField()
-        {
+        [JsonConverter(typeof(StringEnumConverter))]
+                public enum SortTypeEnum {
             
+            [EnumMember(Value = "ASCENDING")]
+            Ascending,
+            
+            [EnumMember(Value = "DESCENDING")]
+            Descending
         }
 
         
+
+        /// <summary>
+        /// Gets or Sets SortType
+        /// </summary>
+        [DataMember(Name="sortType", EmitDefaultValue=false)]
+        public SortTypeEnum? SortType { get; set; }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="SortField" />class.
+        /// </summary>
+        /// <param name="Name">Name.</param>
+        /// <param name="SortType">SortType.</param>
+
+        public SortField(string Name = null, SortTypeEnum? SortType = null)
+        {
+            this.Name = Name;
+            this.SortType = SortType;
+            
+        }
+
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets SortType
-        /// </summary>
-        [DataMember(Name="sortType", EmitDefaultValue=false)]
-        public string SortType { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -52,11 +69,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class SortField {\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  SortType: ").Append(SortType).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -80,7 +96,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if SortField instances are equal
         /// </summary>
-        /// <param name="obj">Instance of SortField to be compared</param>
+        /// <param name="other">Instance of SortField to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(SortField other)
         {
@@ -88,12 +104,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.SortType == other.SortType ||
                     this.SortType != null &&
@@ -112,18 +128,13 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
-                
+                    hash = hash * 59 + this.Name.GetHashCode();
                 if (this.SortType != null)
-                    hash = hash * 57 + this.SortType.GetHashCode();
-                
+                    hash = hash * 59 + this.SortType.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

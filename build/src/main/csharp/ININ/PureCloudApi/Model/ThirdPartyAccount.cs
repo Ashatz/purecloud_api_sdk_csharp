@@ -4,81 +4,84 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class ThirdPartyAccount :  IEquatable<ThirdPartyAccount>
-    {
+    public partial class ThirdPartyAccount :  IEquatable<ThirdPartyAccount>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="ThirdPartyAccount" /> class.
+        /// Initializes a new instance of the <see cref="ThirdPartyAccount" />class.
         /// </summary>
-        public ThirdPartyAccount()
+        /// <param name="Name">Name.</param>
+        /// <param name="AccountNumber">AccountNumber.</param>
+        /// <param name="Currency">Currency.</param>
+        /// <param name="Invoices">Invoices.</param>
+        /// <param name="Subscriptions">Subscriptions.</param>
+
+        public ThirdPartyAccount(string Name = null, string AccountNumber = null, string Currency = null, List<Invoice> Invoices = null, List<ThirdPartySubscription> Subscriptions = null)
         {
+            this.Name = Name;
+            this.AccountNumber = AccountNumber;
+            this.Currency = Currency;
+            this.Invoices = Invoices;
+            this.Subscriptions = Subscriptions;
             
         }
 
-        
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets AccountNumber
         /// </summary>
         [DataMember(Name="accountNumber", EmitDefaultValue=false)]
         public string AccountNumber { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Currency
         /// </summary>
         [DataMember(Name="currency", EmitDefaultValue=false)]
         public string Currency { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Invoices
         /// </summary>
         [DataMember(Name="invoices", EmitDefaultValue=false)]
         public List<Invoice> Invoices { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Subscriptions
         /// </summary>
         [DataMember(Name="subscriptions", EmitDefaultValue=false)]
         public List<ThirdPartySubscription> Subscriptions { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -94,11 +97,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Invoices: ").Append(Invoices).Append("\n");
             sb.Append("  Subscriptions: ").Append(Subscriptions).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -122,7 +124,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if ThirdPartyAccount instances are equal
         /// </summary>
-        /// <param name="obj">Instance of ThirdPartyAccount to be compared</param>
+        /// <param name="other">Instance of ThirdPartyAccount to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(ThirdPartyAccount other)
         {
@@ -130,37 +132,37 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.AccountNumber == other.AccountNumber ||
                     this.AccountNumber != null &&
                     this.AccountNumber.Equals(other.AccountNumber)
-                ) && 
+                ) &&
                 (
                     this.Currency == other.Currency ||
                     this.Currency != null &&
                     this.Currency.Equals(other.Currency)
-                ) && 
+                ) &&
                 (
                     this.Invoices == other.Invoices ||
                     this.Invoices != null &&
                     this.Invoices.SequenceEqual(other.Invoices)
-                ) && 
+                ) &&
                 (
                     this.Subscriptions == other.Subscriptions ||
                     this.Subscriptions != null &&
                     this.Subscriptions.SequenceEqual(other.Subscriptions)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
@@ -179,33 +181,23 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
-                
+                    hash = hash * 59 + this.Id.GetHashCode();
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
-                
+                    hash = hash * 59 + this.Name.GetHashCode();
                 if (this.AccountNumber != null)
-                    hash = hash * 57 + this.AccountNumber.GetHashCode();
-                
+                    hash = hash * 59 + this.AccountNumber.GetHashCode();
                 if (this.Currency != null)
-                    hash = hash * 57 + this.Currency.GetHashCode();
-                
+                    hash = hash * 59 + this.Currency.GetHashCode();
                 if (this.Invoices != null)
-                    hash = hash * 57 + this.Invoices.GetHashCode();
-                
+                    hash = hash * 59 + this.Invoices.GetHashCode();
                 if (this.Subscriptions != null)
-                    hash = hash * 57 + this.Subscriptions.GetHashCode();
-                
+                    hash = hash * 59 + this.Subscriptions.GetHashCode();
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
-                
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

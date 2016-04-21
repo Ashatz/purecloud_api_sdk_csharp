@@ -4,38 +4,47 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// Used as the body to the associateWithWorkspaces request.
     /// </summary>
     [DataContract]
-    public class FlowAssociateWorkspacesRequest :  IEquatable<FlowAssociateWorkspacesRequest>
-    {
+    public partial class FlowAssociateWorkspacesRequest :  IEquatable<FlowAssociateWorkspacesRequest>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="FlowAssociateWorkspacesRequest" /> class.
+        /// Initializes a new instance of the <see cref="FlowAssociateWorkspacesRequest" />class.
         /// </summary>
-        public FlowAssociateWorkspacesRequest()
+        /// <param name="Workspaces">The list of Workspaces to associate with a flow.  Can be null/empty to remove associations. (required).</param>
+
+        public FlowAssociateWorkspacesRequest(List<string> Workspaces = null)
         {
+            // to ensure "Workspaces" is required (not null)
+            if (Workspaces == null)
+            {
+                throw new InvalidDataException("Workspaces is a required property for FlowAssociateWorkspacesRequest and cannot be null");
+            }
+            else
+            {
+                this.Workspaces = Workspaces;
+            }
             
         }
 
-        
+    
         /// <summary>
         /// The list of Workspaces to associate with a flow.  Can be null/empty to remove associations.
         /// </summary>
         /// <value>The list of Workspaces to associate with a flow.  Can be null/empty to remove associations.</value>
         [DataMember(Name="workspaces", EmitDefaultValue=false)]
         public List<string> Workspaces { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -45,11 +54,10 @@ namespace ININ.PureCloudApi.Model
             var sb = new StringBuilder();
             sb.Append("class FlowAssociateWorkspacesRequest {\n");
             sb.Append("  Workspaces: ").Append(Workspaces).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -73,7 +81,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if FlowAssociateWorkspacesRequest instances are equal
         /// </summary>
-        /// <param name="obj">Instance of FlowAssociateWorkspacesRequest to be compared</param>
+        /// <param name="other">Instance of FlowAssociateWorkspacesRequest to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(FlowAssociateWorkspacesRequest other)
         {
@@ -81,7 +89,7 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Workspaces == other.Workspaces ||
                     this.Workspaces != null &&
@@ -100,15 +108,11 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Workspaces != null)
-                    hash = hash * 57 + this.Workspaces.GetHashCode();
-                
+                    hash = hash * 59 + this.Workspaces.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

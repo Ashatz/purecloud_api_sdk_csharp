@@ -1,42 +1,30 @@
 using System;
-using System.IO;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using RestSharp;
 using ININ.PureCloudApi.Client;
 using ININ.PureCloudApi.Model;
 
-
 namespace ININ.PureCloudApi.Api
 {
-    
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
     public interface IDownloadsApi
     {
-        
+        #region Synchronous Operations
         /// <summary>
         /// OAuth Callback used during code authorization grant flow.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
-        /// <param name="code"></param>
-        /// <param name="state"></param>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="code"> (optional)</param>
+        /// <param name="state"> (optional)</param>
         /// <returns></returns>
         void DownloadsCallbackGet (string code = null, string state = null);
-  
-        /// <summary>
-        /// OAuth Callback used during code authorization grant flow.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <param name="code"></param>
-        /// <param name="state"></param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DownloadsCallbackGetWithHttpInfo (string code = null, string state = null);
 
         /// <summary>
         /// OAuth Callback used during code authorization grant flow.
@@ -44,8 +32,45 @@ namespace ININ.PureCloudApi.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <param name="code"></param>
-        /// <param name="state"></param>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="code"> (optional)</param>
+        /// <param name="state"> (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DownloadsCallbackGetWithHttpInfo (string code = null, string state = null);
+        /// <summary>
+        /// Issues a redirect to a signed secure download URL for specified download
+        /// </summary>
+        /// <remarks>
+        /// this method will issue a redirect to the url to the content
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="downloadId">Download ID</param>
+        /// <param name="contentDisposition"> (optional, default to attachment)</param>
+        /// <returns>UrlResponse</returns>
+        UrlResponse DownloadsDownloadidGet (string downloadId, string contentDisposition = null);
+
+        /// <summary>
+        /// Issues a redirect to a signed secure download URL for specified download
+        /// </summary>
+        /// <remarks>
+        /// this method will issue a redirect to the url to the content
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="downloadId">Download ID</param>
+        /// <param name="contentDisposition"> (optional, default to attachment)</param>
+        /// <returns>ApiResponse of UrlResponse</returns>
+        ApiResponse<UrlResponse> DownloadsDownloadidGetWithHttpInfo (string downloadId, string contentDisposition = null);
+        #endregion Synchronous Operations
+        #region Asynchronous Operations
+        /// <summary>
+        /// OAuth Callback used during code authorization grant flow.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="code"> (optional)</param>
+        /// <param name="state"> (optional)</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task DownloadsCallbackGetAsync (string code = null, string state = null);
 
@@ -55,41 +80,20 @@ namespace ININ.PureCloudApi.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <param name="code"></param>
-        /// <param name="state"></param>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="code"> (optional)</param>
+        /// <param name="state"> (optional)</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DownloadsCallbackGetAsyncWithHttpInfo (string code = null, string state = null);
-        
         /// <summary>
         /// Issues a redirect to a signed secure download URL for specified download
         /// </summary>
         /// <remarks>
         /// this method will issue a redirect to the url to the content
         /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="downloadId">Download ID</param>
-        /// <param name="contentDisposition"></param>
-        /// <returns>UrlResponse</returns>
-        UrlResponse DownloadsDownloadidGet (string downloadId, string contentDisposition = null);
-  
-        /// <summary>
-        /// Issues a redirect to a signed secure download URL for specified download
-        /// </summary>
-        /// <remarks>
-        /// this method will issue a redirect to the url to the content
-        /// </remarks>
-        /// <param name="downloadId">Download ID</param>
-        /// <param name="contentDisposition"></param>
-        /// <returns>ApiResponse of UrlResponse</returns>
-        ApiResponse<UrlResponse> DownloadsDownloadidGetWithHttpInfo (string downloadId, string contentDisposition = null);
-
-        /// <summary>
-        /// Issues a redirect to a signed secure download URL for specified download
-        /// </summary>
-        /// <remarks>
-        /// this method will issue a redirect to the url to the content
-        /// </remarks>
-        /// <param name="downloadId">Download ID</param>
-        /// <param name="contentDisposition"></param>
+        /// <param name="contentDisposition"> (optional, default to attachment)</param>
         /// <returns>Task of UrlResponse</returns>
         System.Threading.Tasks.Task<UrlResponse> DownloadsDownloadidGetAsync (string downloadId, string contentDisposition = null);
 
@@ -99,13 +103,14 @@ namespace ININ.PureCloudApi.Api
         /// <remarks>
         /// this method will issue a redirect to the url to the content
         /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="downloadId">Download ID</param>
-        /// <param name="contentDisposition"></param>
+        /// <param name="contentDisposition"> (optional, default to attachment)</param>
         /// <returns>Task of ApiResponse (UrlResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<UrlResponse>> DownloadsDownloadidGetAsyncWithHttpInfo (string downloadId, string contentDisposition = null);
-        
+        #endregion Asynchronous Operations
     }
-  
+
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
@@ -118,8 +123,14 @@ namespace ININ.PureCloudApi.Api
         public DownloadsApi(String basePath)
         {
             this.Configuration = new Configuration(new ApiClient(basePath));
+
+            // ensure API client has configuration ready
+            if (Configuration.ApiClient.Configuration == null)
+            {
+                this.Configuration.ApiClient.Configuration = this.Configuration;
+            }
         }
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="DownloadsApi"/> class
         /// using Configuration object
@@ -129,9 +140,15 @@ namespace ININ.PureCloudApi.Api
         public DownloadsApi(Configuration configuration = null)
         {
             if (configuration == null) // use the default one in Configuration
-                this.Configuration = Configuration.Default; 
+                this.Configuration = Configuration.Default;
             else
                 this.Configuration = configuration;
+
+            // ensure API client has configuration ready
+            if (Configuration.ApiClient.Configuration == null)
+            {
+                this.Configuration.ApiClient.Configuration = this.Configuration;
+            }
         }
 
         /// <summary>
@@ -152,7 +169,7 @@ namespace ININ.PureCloudApi.Api
         {
             // do nothing
         }
-    
+
         /// <summary>
         /// Gets or sets the configuration object
         /// </summary>
@@ -180,13 +197,13 @@ namespace ININ.PureCloudApi.Api
         {
             this.Configuration.AddDefaultHeader(key, value);
         }
-   
-        
+
         /// <summary>
         /// OAuth Callback used during code authorization grant flow. 
         /// </summary>
-        /// <param name="code"></param> 
-        /// <param name="state"></param> 
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="code"> (optional)</param>
+        /// <param name="state"> (optional)</param>
         /// <returns></returns>
         public void DownloadsCallbackGet (string code = null, string state = null)
         {
@@ -196,72 +213,72 @@ namespace ININ.PureCloudApi.Api
         /// <summary>
         /// OAuth Callback used during code authorization grant flow. 
         /// </summary>
-        /// <param name="code"></param> 
-        /// <param name="state"></param> 
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="code"> (optional)</param>
+        /// <param name="state"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DownloadsCallbackGetWithHttpInfo (string code = null, string state = null)
         {
-            
-    
-            var path_ = "/api/v1/downloads/callback";
-    
-            var pathParams = new Dictionary<String, String>();
-            var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var formParams = new Dictionary<String, String>();
-            var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            var localVarPath = "/api/v1/downloads/callback";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            pathParams.Add("format", "json");
-            
-            if (code != null) queryParams.Add("code", Configuration.ApiClient.ParameterToString(code)); // query parameter
-            if (state != null) queryParams.Add("state", Configuration.ApiClient.ParameterToString(state)); // query parameter
-            
-            
-            
-            
+            localVarPathParams.Add("format", "json");
+            if (code != null) localVarQueryParams.Add("code", Configuration.ApiClient.ParameterToString(code)); // query parameter
+            if (state != null) localVarQueryParams.Add("state", Configuration.ApiClient.ParameterToString(state)); // query parameter
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-    
-            // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
 
-            int statusCode = (int) response.StatusCode;
-    
-            if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DownloadsCallbackGet: " + response.Content, response.Content);
-            else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DownloadsCallbackGet: " + response.ErrorMessage, response.ErrorMessage);
-    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DownloadsCallbackGet: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DownloadsCallbackGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
             
-            return new ApiResponse<Object>(statusCode,
-                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
         }
-    
+
         /// <summary>
         /// OAuth Callback used during code authorization grant flow. 
         /// </summary>
-        /// <param name="code"></param>
-        /// <param name="state"></param>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="code"> (optional)</param>
+        /// <param name="state"> (optional)</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task DownloadsCallbackGetAsync (string code = null, string state = null)
         {
@@ -272,225 +289,224 @@ namespace ININ.PureCloudApi.Api
         /// <summary>
         /// OAuth Callback used during code authorization grant flow. 
         /// </summary>
-        /// <param name="code"></param>
-        /// <param name="state"></param>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="code"> (optional)</param>
+        /// <param name="state"> (optional)</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DownloadsCallbackGetAsyncWithHttpInfo (string code = null, string state = null)
         {
-            
-    
-            var path_ = "/api/v1/downloads/callback";
-    
-            var pathParams = new Dictionary<String, String>();
-            var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
-            var formParams = new Dictionary<String, String>();
-            var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            var localVarPath = "/api/v1/downloads/callback";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            pathParams.Add("format", "json");
-            
-            if (code != null) queryParams.Add("code", Configuration.ApiClient.ParameterToString(code)); // query parameter
-            if (state != null) queryParams.Add("state", Configuration.ApiClient.ParameterToString(state)); // query parameter
-            
-            
-            
-            
+            localVarPathParams.Add("format", "json");
+            if (code != null) localVarQueryParams.Add("code", Configuration.ApiClient.ParameterToString(code)); // query parameter
+            if (state != null) localVarQueryParams.Add("state", Configuration.ApiClient.ParameterToString(state)); // query parameter
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
 
-            int statusCode = (int) response.StatusCode;
- 
-            if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DownloadsCallbackGet: " + response.Content, response.Content);
-            else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DownloadsCallbackGet: " + response.ErrorMessage, response.ErrorMessage);
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DownloadsCallbackGet: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DownloadsCallbackGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             
-            return new ApiResponse<Object>(statusCode,
-                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
         }
-        
+
         /// <summary>
         /// Issues a redirect to a signed secure download URL for specified download this method will issue a redirect to the url to the content
         /// </summary>
-        /// <param name="downloadId">Download ID</param> 
-        /// <param name="contentDisposition"></param> 
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="downloadId">Download ID</param>
+        /// <param name="contentDisposition"> (optional, default to attachment)</param>
         /// <returns>UrlResponse</returns>
         public UrlResponse DownloadsDownloadidGet (string downloadId, string contentDisposition = null)
         {
-             ApiResponse<UrlResponse> response = DownloadsDownloadidGetWithHttpInfo(downloadId, contentDisposition);
-             return response.Data;
+             ApiResponse<UrlResponse> localVarResponse = DownloadsDownloadidGetWithHttpInfo(downloadId, contentDisposition);
+             return localVarResponse.Data;
         }
 
         /// <summary>
         /// Issues a redirect to a signed secure download URL for specified download this method will issue a redirect to the url to the content
         /// </summary>
-        /// <param name="downloadId">Download ID</param> 
-        /// <param name="contentDisposition"></param> 
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="downloadId">Download ID</param>
+        /// <param name="contentDisposition"> (optional, default to attachment)</param>
         /// <returns>ApiResponse of UrlResponse</returns>
         public ApiResponse< UrlResponse > DownloadsDownloadidGetWithHttpInfo (string downloadId, string contentDisposition = null)
         {
-            
             // verify the required parameter 'downloadId' is set
-            if (downloadId == null) throw new ApiException(400, "Missing required parameter 'downloadId' when calling DownloadsDownloadidGet");
-            
-    
-            var path_ = "/api/v1/downloads/{downloadId}";
-    
-            var pathParams = new Dictionary<String, String>();
-            var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var formParams = new Dictionary<String, String>();
-            var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            if (downloadId == null)
+                throw new ApiException(400, "Missing required parameter 'downloadId' when calling DownloadsApi->DownloadsDownloadidGet");
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            var localVarPath = "/api/v1/downloads/{downloadId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            pathParams.Add("format", "json");
-            if (downloadId != null) pathParams.Add("downloadId", Configuration.ApiClient.ParameterToString(downloadId)); // path parameter
-            
-            if (contentDisposition != null) queryParams.Add("contentDisposition", Configuration.ApiClient.ParameterToString(contentDisposition)); // query parameter
-            
-            
-            
-            
+            localVarPathParams.Add("format", "json");
+            if (downloadId != null) localVarPathParams.Add("downloadId", Configuration.ApiClient.ParameterToString(downloadId)); // path parameter
+            if (contentDisposition != null) localVarQueryParams.Add("contentDisposition", Configuration.ApiClient.ParameterToString(contentDisposition)); // query parameter
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-    
-            // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
 
-            int statusCode = (int) response.StatusCode;
-    
-            if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DownloadsDownloadidGet: " + response.Content, response.Content);
-            else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DownloadsDownloadidGet: " + response.ErrorMessage, response.ErrorMessage);
-    
-            return new ApiResponse<UrlResponse>(statusCode,
-                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (UrlResponse) Configuration.ApiClient.Deserialize(response, typeof(UrlResponse)));
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DownloadsDownloadidGet: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DownloadsDownloadidGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UrlResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (UrlResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UrlResponse)));
             
         }
-    
+
         /// <summary>
         /// Issues a redirect to a signed secure download URL for specified download this method will issue a redirect to the url to the content
         /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="downloadId">Download ID</param>
-        /// <param name="contentDisposition"></param>
+        /// <param name="contentDisposition"> (optional, default to attachment)</param>
         /// <returns>Task of UrlResponse</returns>
         public async System.Threading.Tasks.Task<UrlResponse> DownloadsDownloadidGetAsync (string downloadId, string contentDisposition = null)
         {
-             ApiResponse<UrlResponse> response = await DownloadsDownloadidGetAsyncWithHttpInfo(downloadId, contentDisposition);
-             return response.Data;
+             ApiResponse<UrlResponse> localVarResponse = await DownloadsDownloadidGetAsyncWithHttpInfo(downloadId, contentDisposition);
+             return localVarResponse.Data;
 
         }
 
         /// <summary>
         /// Issues a redirect to a signed secure download URL for specified download this method will issue a redirect to the url to the content
         /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="downloadId">Download ID</param>
-        /// <param name="contentDisposition"></param>
+        /// <param name="contentDisposition"> (optional, default to attachment)</param>
         /// <returns>Task of ApiResponse (UrlResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<UrlResponse>> DownloadsDownloadidGetAsyncWithHttpInfo (string downloadId, string contentDisposition = null)
         {
             // verify the required parameter 'downloadId' is set
-            if (downloadId == null) throw new ApiException(400, "Missing required parameter 'downloadId' when calling DownloadsDownloadidGet");
-            
-    
-            var path_ = "/api/v1/downloads/{downloadId}";
-    
-            var pathParams = new Dictionary<String, String>();
-            var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
-            var formParams = new Dictionary<String, String>();
-            var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            if (downloadId == null)
+                throw new ApiException(400, "Missing required parameter 'downloadId' when calling DownloadsApi->DownloadsDownloadidGet");
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            var localVarPath = "/api/v1/downloads/{downloadId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            pathParams.Add("format", "json");
-            if (downloadId != null) pathParams.Add("downloadId", Configuration.ApiClient.ParameterToString(downloadId)); // path parameter
-            
-            if (contentDisposition != null) queryParams.Add("contentDisposition", Configuration.ApiClient.ParameterToString(contentDisposition)); // query parameter
-            
-            
-            
-            
+            localVarPathParams.Add("format", "json");
+            if (downloadId != null) localVarPathParams.Add("downloadId", Configuration.ApiClient.ParameterToString(downloadId)); // path parameter
+            if (contentDisposition != null) localVarQueryParams.Add("contentDisposition", Configuration.ApiClient.ParameterToString(contentDisposition)); // query parameter
 
-            
             // authentication (PureCloud Auth) required
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
 
-            int statusCode = (int) response.StatusCode;
- 
-            if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DownloadsDownloadidGet: " + response.Content, response.Content);
-            else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DownloadsDownloadidGet: " + response.ErrorMessage, response.ErrorMessage);
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            return new ApiResponse<UrlResponse>(statusCode,
-                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (UrlResponse) Configuration.ApiClient.Deserialize(response, typeof(UrlResponse)));
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DownloadsDownloadidGet: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DownloadsDownloadidGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UrlResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (UrlResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UrlResponse)));
             
         }
-        
+
     }
-    
 }

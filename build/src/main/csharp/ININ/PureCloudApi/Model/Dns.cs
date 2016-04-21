@@ -4,51 +4,54 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class Dns :  IEquatable<Dns>
-    {
+    public partial class Dns :  IEquatable<Dns>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="Dns" /> class.
+        /// Initializes a new instance of the <see cref="Dns" />class.
         /// </summary>
-        public Dns()
+        /// <param name="Id">Id.</param>
+        /// <param name="Ip">Ip.</param>
+        /// <param name="Port">Port.</param>
+
+        public Dns(string Id = null, string Ip = null, int? Port = null)
         {
+            this.Id = Id;
+            this.Ip = Ip;
+            this.Port = Port;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Ip
         /// </summary>
         [DataMember(Name="ip", EmitDefaultValue=false)]
         public string Ip { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Port
         /// </summary>
         [DataMember(Name="port", EmitDefaultValue=false)]
         public int? Port { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -60,11 +63,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Ip: ").Append(Ip).Append("\n");
             sb.Append("  Port: ").Append(Port).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -88,7 +90,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if Dns instances are equal
         /// </summary>
-        /// <param name="obj">Instance of Dns to be compared</param>
+        /// <param name="other">Instance of Dns to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(Dns other)
         {
@@ -96,17 +98,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Ip == other.Ip ||
                     this.Ip != null &&
                     this.Ip.Equals(other.Ip)
-                ) && 
+                ) &&
                 (
                     this.Port == other.Port ||
                     this.Port != null &&
@@ -125,21 +127,15 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
-                
+                    hash = hash * 59 + this.Id.GetHashCode();
                 if (this.Ip != null)
-                    hash = hash * 57 + this.Ip.GetHashCode();
-                
+                    hash = hash * 59 + this.Ip.GetHashCode();
                 if (this.Port != null)
-                    hash = hash * 57 + this.Port.GetHashCode();
-                
+                    hash = hash * 59 + this.Port.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

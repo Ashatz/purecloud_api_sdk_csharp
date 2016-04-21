@@ -4,51 +4,54 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class TagQueryRequest :  IEquatable<TagQueryRequest>
-    {
+    public partial class TagQueryRequest :  IEquatable<TagQueryRequest>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="TagQueryRequest" /> class.
+        /// Initializes a new instance of the <see cref="TagQueryRequest" />class.
         /// </summary>
-        public TagQueryRequest()
+        /// <param name="Query">Query.</param>
+        /// <param name="PageNumber">PageNumber.</param>
+        /// <param name="PageSize">PageSize.</param>
+
+        public TagQueryRequest(string Query = null, int? PageNumber = null, int? PageSize = null)
         {
+            this.Query = Query;
+            this.PageNumber = PageNumber;
+            this.PageSize = PageSize;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets Query
         /// </summary>
         [DataMember(Name="query", EmitDefaultValue=false)]
         public string Query { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets PageNumber
         /// </summary>
         [DataMember(Name="pageNumber", EmitDefaultValue=false)]
         public int? PageNumber { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets PageSize
         /// </summary>
         [DataMember(Name="pageSize", EmitDefaultValue=false)]
         public int? PageSize { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -60,11 +63,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Query: ").Append(Query).Append("\n");
             sb.Append("  PageNumber: ").Append(PageNumber).Append("\n");
             sb.Append("  PageSize: ").Append(PageSize).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -88,7 +90,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if TagQueryRequest instances are equal
         /// </summary>
-        /// <param name="obj">Instance of TagQueryRequest to be compared</param>
+        /// <param name="other">Instance of TagQueryRequest to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(TagQueryRequest other)
         {
@@ -96,17 +98,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Query == other.Query ||
                     this.Query != null &&
                     this.Query.Equals(other.Query)
-                ) && 
+                ) &&
                 (
                     this.PageNumber == other.PageNumber ||
                     this.PageNumber != null &&
                     this.PageNumber.Equals(other.PageNumber)
-                ) && 
+                ) &&
                 (
                     this.PageSize == other.PageSize ||
                     this.PageSize != null &&
@@ -125,21 +127,15 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Query != null)
-                    hash = hash * 57 + this.Query.GetHashCode();
-                
+                    hash = hash * 59 + this.Query.GetHashCode();
                 if (this.PageNumber != null)
-                    hash = hash * 57 + this.PageNumber.GetHashCode();
-                
+                    hash = hash * 59 + this.PageNumber.GetHashCode();
                 if (this.PageSize != null)
-                    hash = hash * 57 + this.PageSize.GetHashCode();
-                
+                    hash = hash * 59 + this.PageSize.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

@@ -4,45 +4,54 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class SortItem :  IEquatable<SortItem>
-    {
+    public partial class SortItem :  IEquatable<SortItem>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="SortItem" /> class.
+        /// Initializes a new instance of the <see cref="SortItem" />class.
         /// </summary>
-        public SortItem()
+        /// <param name="Name">Name.</param>
+        /// <param name="Ascending">Ascending (default to false).</param>
+
+        public SortItem(string Name = null, bool? Ascending = null)
         {
-            this.Ascending = false;
+            this.Name = Name;
+            // use default value if no "Ascending" provided
+            if (Ascending == null)
+            {
+                this.Ascending = false;
+            }
+            else
+            {
+                this.Ascending = Ascending;
+            }
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Ascending
         /// </summary>
         [DataMember(Name="ascending", EmitDefaultValue=false)]
         public bool? Ascending { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -53,11 +62,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class SortItem {\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Ascending: ").Append(Ascending).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -81,7 +89,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if SortItem instances are equal
         /// </summary>
-        /// <param name="obj">Instance of SortItem to be compared</param>
+        /// <param name="other">Instance of SortItem to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(SortItem other)
         {
@@ -89,12 +97,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Ascending == other.Ascending ||
                     this.Ascending != null &&
@@ -113,18 +121,13 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
-                
+                    hash = hash * 59 + this.Name.GetHashCode();
                 if (this.Ascending != null)
-                    hash = hash * 57 + this.Ascending.GetHashCode();
-                
+                    hash = hash * 59 + this.Ascending.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

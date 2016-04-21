@@ -4,68 +4,76 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class TagValue :  IEquatable<TagValue>
-    {
+    public partial class TagValue :  IEquatable<TagValue>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="TagValue" /> class.
+        /// Initializes a new instance of the <see cref="TagValue" />class.
         /// </summary>
-        public TagValue()
+        /// <param name="Name">Name.</param>
+        /// <param name="InUse">InUse (default to false).</param>
+        /// <param name="Acl">Acl.</param>
+
+        public TagValue(string Name = null, bool? InUse = null, List<string> Acl = null)
         {
-            this.InUse = false;
+            this.Name = Name;
+            // use default value if no "InUse" provided
+            if (InUse == null)
+            {
+                this.InUse = false;
+            }
+            else
+            {
+                this.InUse = InUse;
+            }
+            this.Acl = Acl;
             
         }
 
-        
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets InUse
         /// </summary>
         [DataMember(Name="inUse", EmitDefaultValue=false)]
         public bool? InUse { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Acl
         /// </summary>
         [DataMember(Name="acl", EmitDefaultValue=false)]
         public List<string> Acl { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -79,11 +87,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  InUse: ").Append(InUse).Append("\n");
             sb.Append("  Acl: ").Append(Acl).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -107,7 +114,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if TagValue instances are equal
         /// </summary>
-        /// <param name="obj">Instance of TagValue to be compared</param>
+        /// <param name="other">Instance of TagValue to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(TagValue other)
         {
@@ -115,27 +122,27 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.InUse == other.InUse ||
                     this.InUse != null &&
                     this.InUse.Equals(other.InUse)
-                ) && 
+                ) &&
                 (
                     this.Acl == other.Acl ||
                     this.Acl != null &&
                     this.Acl.SequenceEqual(other.Acl)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
@@ -154,27 +161,19 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
-                
+                    hash = hash * 59 + this.Id.GetHashCode();
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
-                
+                    hash = hash * 59 + this.Name.GetHashCode();
                 if (this.InUse != null)
-                    hash = hash * 57 + this.InUse.GetHashCode();
-                
+                    hash = hash * 59 + this.InUse.GetHashCode();
                 if (this.Acl != null)
-                    hash = hash * 57 + this.Acl.GetHashCode();
-                
+                    hash = hash * 59 + this.Acl.GetHashCode();
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
-                
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

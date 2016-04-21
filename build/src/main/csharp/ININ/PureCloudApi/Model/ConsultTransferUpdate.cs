@@ -4,38 +4,66 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class ConsultTransferUpdate :  IEquatable<ConsultTransferUpdate>
-    {
+    public partial class ConsultTransferUpdate :  IEquatable<ConsultTransferUpdate>
+    { 
+
         /// <summary>
-        /// Initializes a new instance of the <see cref="ConsultTransferUpdate" /> class.
+        /// Determines to whom the initiating participant is speaking.
         /// </summary>
-        public ConsultTransferUpdate()
-        {
+        /// <value>Determines to whom the initiating participant is speaking.</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+                public enum SpeakToEnum {
             
+            [EnumMember(Value = "DESTINATION")]
+            Destination,
+            
+            [EnumMember(Value = "OBJECT")]
+            Object,
+            
+            [EnumMember(Value = "BOTH")]
+            Both
         }
 
         
+
         /// <summary>
         /// Determines to whom the initiating participant is speaking.
         /// </summary>
         /// <value>Determines to whom the initiating participant is speaking.</value>
         [DataMember(Name="speakTo", EmitDefaultValue=false)]
-        public string SpeakTo { get; set; }
-  
-        
-  
+        public SpeakToEnum? SpeakTo { get; set; }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ConsultTransferUpdate" />class.
+        /// </summary>
+        /// <param name="SpeakTo">Determines to whom the initiating participant is speaking. (required).</param>
+
+        public ConsultTransferUpdate(SpeakToEnum? SpeakTo = null)
+        {
+            // to ensure "SpeakTo" is required (not null)
+            if (SpeakTo == null)
+            {
+                throw new InvalidDataException("SpeakTo is a required property for ConsultTransferUpdate and cannot be null");
+            }
+            else
+            {
+                this.SpeakTo = SpeakTo;
+            }
+            
+        }
+
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -45,11 +73,10 @@ namespace ININ.PureCloudApi.Model
             var sb = new StringBuilder();
             sb.Append("class ConsultTransferUpdate {\n");
             sb.Append("  SpeakTo: ").Append(SpeakTo).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -73,7 +100,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if ConsultTransferUpdate instances are equal
         /// </summary>
-        /// <param name="obj">Instance of ConsultTransferUpdate to be compared</param>
+        /// <param name="other">Instance of ConsultTransferUpdate to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(ConsultTransferUpdate other)
         {
@@ -81,7 +108,7 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.SpeakTo == other.SpeakTo ||
                     this.SpeakTo != null &&
@@ -100,15 +127,11 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.SpeakTo != null)
-                    hash = hash * 57 + this.SpeakTo.GetHashCode();
-                
+                    hash = hash * 59 + this.SpeakTo.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

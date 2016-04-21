@@ -4,74 +4,76 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class AttributeGroupInstance :  IEquatable<AttributeGroupInstance>
-    {
+    public partial class AttributeGroupInstance :  IEquatable<AttributeGroupInstance>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="AttributeGroupInstance" /> class.
+        /// Initializes a new instance of the <see cref="AttributeGroupInstance" />class.
         /// </summary>
-        public AttributeGroupInstance()
+        /// <param name="Name">Name.</param>
+        /// <param name="Members">Members.</param>
+        /// <param name="Workspace">Workspace.</param>
+        /// <param name="Attribute">Attribute.</param>
+
+        public AttributeGroupInstance(string Name = null, List<AttributeValue> Members = null, UriReference Workspace = null, UriReference Attribute = null)
         {
+            this.Name = Name;
+            this.Members = Members;
+            this.Workspace = Workspace;
+            this.Attribute = Attribute;
             
         }
 
-        
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Members
         /// </summary>
         [DataMember(Name="members", EmitDefaultValue=false)]
         public List<AttributeValue> Members { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Workspace
         /// </summary>
         [DataMember(Name="workspace", EmitDefaultValue=false)]
         public UriReference Workspace { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Attribute
         /// </summary>
         [DataMember(Name="attribute", EmitDefaultValue=false)]
         public UriReference Attribute { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -86,11 +88,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Workspace: ").Append(Workspace).Append("\n");
             sb.Append("  Attribute: ").Append(Attribute).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -114,7 +115,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if AttributeGroupInstance instances are equal
         /// </summary>
-        /// <param name="obj">Instance of AttributeGroupInstance to be compared</param>
+        /// <param name="other">Instance of AttributeGroupInstance to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(AttributeGroupInstance other)
         {
@@ -122,32 +123,32 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Members == other.Members ||
                     this.Members != null &&
                     this.Members.SequenceEqual(other.Members)
-                ) && 
+                ) &&
                 (
                     this.Workspace == other.Workspace ||
                     this.Workspace != null &&
                     this.Workspace.Equals(other.Workspace)
-                ) && 
+                ) &&
                 (
                     this.Attribute == other.Attribute ||
                     this.Attribute != null &&
                     this.Attribute.Equals(other.Attribute)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
@@ -166,30 +167,21 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
-                
+                    hash = hash * 59 + this.Id.GetHashCode();
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
-                
+                    hash = hash * 59 + this.Name.GetHashCode();
                 if (this.Members != null)
-                    hash = hash * 57 + this.Members.GetHashCode();
-                
+                    hash = hash * 59 + this.Members.GetHashCode();
                 if (this.Workspace != null)
-                    hash = hash * 57 + this.Workspace.GetHashCode();
-                
+                    hash = hash * 59 + this.Workspace.GetHashCode();
                 if (this.Attribute != null)
-                    hash = hash * 57 + this.Attribute.GetHashCode();
-                
+                    hash = hash * 59 + this.Attribute.GetHashCode();
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
-                
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

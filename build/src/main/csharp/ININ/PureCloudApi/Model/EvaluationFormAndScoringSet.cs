@@ -4,44 +4,46 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class EvaluationFormAndScoringSet :  IEquatable<EvaluationFormAndScoringSet>
-    {
+    public partial class EvaluationFormAndScoringSet :  IEquatable<EvaluationFormAndScoringSet>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="EvaluationFormAndScoringSet" /> class.
+        /// Initializes a new instance of the <see cref="EvaluationFormAndScoringSet" />class.
         /// </summary>
-        public EvaluationFormAndScoringSet()
+        /// <param name="EvaluationForm">EvaluationForm.</param>
+        /// <param name="Answers">Answers.</param>
+
+        public EvaluationFormAndScoringSet(EvaluationForm EvaluationForm = null, EvaluationScoringSet Answers = null)
         {
+            this.EvaluationForm = EvaluationForm;
+            this.Answers = Answers;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets EvaluationForm
         /// </summary>
         [DataMember(Name="evaluationForm", EmitDefaultValue=false)]
         public EvaluationForm EvaluationForm { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Answers
         /// </summary>
         [DataMember(Name="answers", EmitDefaultValue=false)]
         public EvaluationScoringSet Answers { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -52,11 +54,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class EvaluationFormAndScoringSet {\n");
             sb.Append("  EvaluationForm: ").Append(EvaluationForm).Append("\n");
             sb.Append("  Answers: ").Append(Answers).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -80,7 +81,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if EvaluationFormAndScoringSet instances are equal
         /// </summary>
-        /// <param name="obj">Instance of EvaluationFormAndScoringSet to be compared</param>
+        /// <param name="other">Instance of EvaluationFormAndScoringSet to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(EvaluationFormAndScoringSet other)
         {
@@ -88,12 +89,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.EvaluationForm == other.EvaluationForm ||
                     this.EvaluationForm != null &&
                     this.EvaluationForm.Equals(other.EvaluationForm)
-                ) && 
+                ) &&
                 (
                     this.Answers == other.Answers ||
                     this.Answers != null &&
@@ -112,18 +113,13 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.EvaluationForm != null)
-                    hash = hash * 57 + this.EvaluationForm.GetHashCode();
-                
+                    hash = hash * 59 + this.EvaluationForm.GetHashCode();
                 if (this.Answers != null)
-                    hash = hash * 57 + this.Answers.GetHashCode();
-                
+                    hash = hash * 59 + this.Answers.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

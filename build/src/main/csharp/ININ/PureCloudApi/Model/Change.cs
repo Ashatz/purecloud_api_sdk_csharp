@@ -4,58 +4,62 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class Change :  IEquatable<Change>
-    {
+    public partial class Change :  IEquatable<Change>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="Change" /> class.
+        /// Initializes a new instance of the <see cref="Change" />class.
         /// </summary>
-        public Change()
+        /// <param name="Entity">Entity.</param>
+        /// <param name="Property">Property.</param>
+        /// <param name="OldValues">OldValues.</param>
+        /// <param name="NewValues">NewValues.</param>
+
+        public Change(Entity Entity = null, string Property = null, List<string> OldValues = null, List<string> NewValues = null)
         {
+            this.Entity = Entity;
+            this.Property = Property;
+            this.OldValues = OldValues;
+            this.NewValues = NewValues;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets Entity
         /// </summary>
         [DataMember(Name="entity", EmitDefaultValue=false)]
         public Entity Entity { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Property
         /// </summary>
         [DataMember(Name="property", EmitDefaultValue=false)]
         public string Property { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets OldValues
         /// </summary>
         [DataMember(Name="oldValues", EmitDefaultValue=false)]
         public List<string> OldValues { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets NewValues
         /// </summary>
         [DataMember(Name="newValues", EmitDefaultValue=false)]
         public List<string> NewValues { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -68,11 +72,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Property: ").Append(Property).Append("\n");
             sb.Append("  OldValues: ").Append(OldValues).Append("\n");
             sb.Append("  NewValues: ").Append(NewValues).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -96,7 +99,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if Change instances are equal
         /// </summary>
-        /// <param name="obj">Instance of Change to be compared</param>
+        /// <param name="other">Instance of Change to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(Change other)
         {
@@ -104,22 +107,22 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Entity == other.Entity ||
                     this.Entity != null &&
                     this.Entity.Equals(other.Entity)
-                ) && 
+                ) &&
                 (
                     this.Property == other.Property ||
                     this.Property != null &&
                     this.Property.Equals(other.Property)
-                ) && 
+                ) &&
                 (
                     this.OldValues == other.OldValues ||
                     this.OldValues != null &&
                     this.OldValues.SequenceEqual(other.OldValues)
-                ) && 
+                ) &&
                 (
                     this.NewValues == other.NewValues ||
                     this.NewValues != null &&
@@ -138,24 +141,17 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Entity != null)
-                    hash = hash * 57 + this.Entity.GetHashCode();
-                
+                    hash = hash * 59 + this.Entity.GetHashCode();
                 if (this.Property != null)
-                    hash = hash * 57 + this.Property.GetHashCode();
-                
+                    hash = hash * 59 + this.Property.GetHashCode();
                 if (this.OldValues != null)
-                    hash = hash * 57 + this.OldValues.GetHashCode();
-                
+                    hash = hash * 59 + this.OldValues.GetHashCode();
                 if (this.NewValues != null)
-                    hash = hash * 57 + this.NewValues.GetHashCode();
-                
+                    hash = hash * 59 + this.NewValues.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

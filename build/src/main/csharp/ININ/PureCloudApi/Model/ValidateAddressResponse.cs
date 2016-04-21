@@ -4,45 +4,54 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class ValidateAddressResponse :  IEquatable<ValidateAddressResponse>
-    {
+    public partial class ValidateAddressResponse :  IEquatable<ValidateAddressResponse>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="ValidateAddressResponse" /> class.
+        /// Initializes a new instance of the <see cref="ValidateAddressResponse" />class.
         /// </summary>
-        public ValidateAddressResponse()
+        /// <param name="Valid">Valid (default to false).</param>
+        /// <param name="Response">Response.</param>
+
+        public ValidateAddressResponse(bool? Valid = null, Response Response = null)
         {
-            this.Valid = false;
+            // use default value if no "Valid" provided
+            if (Valid == null)
+            {
+                this.Valid = false;
+            }
+            else
+            {
+                this.Valid = Valid;
+            }
+            this.Response = Response;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets Valid
         /// </summary>
         [DataMember(Name="valid", EmitDefaultValue=false)]
         public bool? Valid { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Response
         /// </summary>
         [DataMember(Name="response", EmitDefaultValue=false)]
         public Response Response { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -53,11 +62,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class ValidateAddressResponse {\n");
             sb.Append("  Valid: ").Append(Valid).Append("\n");
             sb.Append("  Response: ").Append(Response).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -81,7 +89,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if ValidateAddressResponse instances are equal
         /// </summary>
-        /// <param name="obj">Instance of ValidateAddressResponse to be compared</param>
+        /// <param name="other">Instance of ValidateAddressResponse to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(ValidateAddressResponse other)
         {
@@ -89,12 +97,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Valid == other.Valid ||
                     this.Valid != null &&
                     this.Valid.Equals(other.Valid)
-                ) && 
+                ) &&
                 (
                     this.Response == other.Response ||
                     this.Response != null &&
@@ -113,18 +121,13 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Valid != null)
-                    hash = hash * 57 + this.Valid.GetHashCode();
-                
+                    hash = hash * 59 + this.Valid.GetHashCode();
                 if (this.Response != null)
-                    hash = hash * 57 + this.Response.GetHashCode();
-                
+                    hash = hash * 59 + this.Response.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

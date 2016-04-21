@@ -4,30 +4,30 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class BatchItemBody :  IEquatable<BatchItemBody>
-    {
+    public partial class BatchItemBody :  IEquatable<BatchItemBody>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="BatchItemBody" /> class.
+        /// Initializes a new instance of the <see cref="BatchItemBody" />class.
         /// </summary>
+
         public BatchItemBody()
         {
             
         }
 
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -36,11 +36,10 @@ namespace ININ.PureCloudApi.Model
         {
             var sb = new StringBuilder();
             sb.Append("class BatchItemBody {\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -64,7 +63,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if BatchItemBody instances are equal
         /// </summary>
-        /// <param name="obj">Instance of BatchItemBody to be compared</param>
+        /// <param name="other">Instance of BatchItemBody to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(BatchItemBody other)
         {
@@ -72,7 +71,7 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return false;
+            return true && false;
         }
 
         /// <summary>
@@ -86,12 +85,9 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 return hash;
             }
         }
 
     }
-
-
 }

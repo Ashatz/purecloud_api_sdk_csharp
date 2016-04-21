@@ -2,7 +2,7 @@ var archiver = require('archiver');
 var Q = require('q');
 var fs = require('fs');
 
-zipDoxygenFiles('doxygen-csharp.zip')
+zipDocFiles('docs.zip')
 	.then(function() {
 		console.log('archiveDocs script complete');
 		// Have to explicitly exit because promises keep the node process running
@@ -14,7 +14,7 @@ zipDoxygenFiles('doxygen-csharp.zip')
 		process.exit(1);
 	});
 
-function zipDoxygenFiles(zipPath) {
+function zipDocFiles(zipPath) {
 	var deferred = Q.defer();
 
 	var output = fs.createWriteStream(zipPath);
@@ -39,7 +39,7 @@ function zipDoxygenFiles(zipPath) {
 
 	// Add files to archive and write it
 	archive
-		.directory('doxygen','')
+		.directory('build/docs','')
 		.finalize();
 
 	return deferred.promise;

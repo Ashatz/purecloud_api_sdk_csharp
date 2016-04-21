@@ -4,44 +4,46 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class MediaSetting :  IEquatable<MediaSetting>
-    {
+    public partial class MediaSetting :  IEquatable<MediaSetting>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="MediaSetting" /> class.
+        /// Initializes a new instance of the <see cref="MediaSetting" />class.
         /// </summary>
-        public MediaSetting()
+        /// <param name="AlertingTimeoutSeconds">AlertingTimeoutSeconds.</param>
+        /// <param name="ServiceLevel">ServiceLevel.</param>
+
+        public MediaSetting(int? AlertingTimeoutSeconds = null, ServiceLevel ServiceLevel = null)
         {
+            this.AlertingTimeoutSeconds = AlertingTimeoutSeconds;
+            this.ServiceLevel = ServiceLevel;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets AlertingTimeoutSeconds
         /// </summary>
         [DataMember(Name="alertingTimeoutSeconds", EmitDefaultValue=false)]
         public int? AlertingTimeoutSeconds { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ServiceLevel
         /// </summary>
         [DataMember(Name="serviceLevel", EmitDefaultValue=false)]
         public ServiceLevel ServiceLevel { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -52,11 +54,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class MediaSetting {\n");
             sb.Append("  AlertingTimeoutSeconds: ").Append(AlertingTimeoutSeconds).Append("\n");
             sb.Append("  ServiceLevel: ").Append(ServiceLevel).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -80,7 +81,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if MediaSetting instances are equal
         /// </summary>
-        /// <param name="obj">Instance of MediaSetting to be compared</param>
+        /// <param name="other">Instance of MediaSetting to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(MediaSetting other)
         {
@@ -88,12 +89,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.AlertingTimeoutSeconds == other.AlertingTimeoutSeconds ||
                     this.AlertingTimeoutSeconds != null &&
                     this.AlertingTimeoutSeconds.Equals(other.AlertingTimeoutSeconds)
-                ) && 
+                ) &&
                 (
                     this.ServiceLevel == other.ServiceLevel ||
                     this.ServiceLevel != null &&
@@ -112,18 +113,13 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.AlertingTimeoutSeconds != null)
-                    hash = hash * 57 + this.AlertingTimeoutSeconds.GetHashCode();
-                
+                    hash = hash * 59 + this.AlertingTimeoutSeconds.GetHashCode();
                 if (this.ServiceLevel != null)
-                    hash = hash * 57 + this.ServiceLevel.GetHashCode();
-                
+                    hash = hash * 59 + this.ServiceLevel.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

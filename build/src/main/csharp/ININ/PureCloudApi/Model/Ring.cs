@@ -4,44 +4,46 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class Ring :  IEquatable<Ring>
-    {
+    public partial class Ring :  IEquatable<Ring>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="Ring" /> class.
+        /// Initializes a new instance of the <see cref="Ring" />class.
         /// </summary>
-        public Ring()
+        /// <param name="ExpansionCriteria">ExpansionCriteria.</param>
+        /// <param name="Actions">Actions.</param>
+
+        public Ring(List<ExpansionCriterium> ExpansionCriteria = null, Actions Actions = null)
         {
+            this.ExpansionCriteria = ExpansionCriteria;
+            this.Actions = Actions;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets ExpansionCriteria
         /// </summary>
         [DataMember(Name="expansionCriteria", EmitDefaultValue=false)]
         public List<ExpansionCriterium> ExpansionCriteria { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Actions
         /// </summary>
         [DataMember(Name="actions", EmitDefaultValue=false)]
         public Actions Actions { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -52,11 +54,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class Ring {\n");
             sb.Append("  ExpansionCriteria: ").Append(ExpansionCriteria).Append("\n");
             sb.Append("  Actions: ").Append(Actions).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -80,7 +81,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if Ring instances are equal
         /// </summary>
-        /// <param name="obj">Instance of Ring to be compared</param>
+        /// <param name="other">Instance of Ring to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(Ring other)
         {
@@ -88,12 +89,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.ExpansionCriteria == other.ExpansionCriteria ||
                     this.ExpansionCriteria != null &&
                     this.ExpansionCriteria.SequenceEqual(other.ExpansionCriteria)
-                ) && 
+                ) &&
                 (
                     this.Actions == other.Actions ||
                     this.Actions != null &&
@@ -112,18 +113,13 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ExpansionCriteria != null)
-                    hash = hash * 57 + this.ExpansionCriteria.GetHashCode();
-                
+                    hash = hash * 59 + this.ExpansionCriteria.GetHashCode();
                 if (this.Actions != null)
-                    hash = hash * 57 + this.Actions.GetHashCode();
-                
+                    hash = hash * 59 + this.Actions.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

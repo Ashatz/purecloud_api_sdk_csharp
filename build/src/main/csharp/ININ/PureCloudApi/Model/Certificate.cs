@@ -4,38 +4,47 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// Represents a certificate to parse.
     /// </summary>
     [DataContract]
-    public class Certificate :  IEquatable<Certificate>
-    {
+    public partial class Certificate :  IEquatable<Certificate>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="Certificate" /> class.
+        /// Initializes a new instance of the <see cref="Certificate" />class.
         /// </summary>
-        public Certificate()
+        /// <param name="_Certificate">The certificate to parse. (required).</param>
+
+        public Certificate(string _Certificate = null)
         {
+            // to ensure "_Certificate" is required (not null)
+            if (_Certificate == null)
+            {
+                throw new InvalidDataException("_Certificate is a required property for Certificate and cannot be null");
+            }
+            else
+            {
+                this._Certificate = _Certificate;
+            }
             
         }
 
-        
+    
         /// <summary>
         /// The certificate to parse.
         /// </summary>
         /// <value>The certificate to parse.</value>
         [DataMember(Name="certificate", EmitDefaultValue=false)]
         public string _Certificate { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -45,11 +54,10 @@ namespace ININ.PureCloudApi.Model
             var sb = new StringBuilder();
             sb.Append("class Certificate {\n");
             sb.Append("  _Certificate: ").Append(_Certificate).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -73,7 +81,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if Certificate instances are equal
         /// </summary>
-        /// <param name="obj">Instance of Certificate to be compared</param>
+        /// <param name="other">Instance of Certificate to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(Certificate other)
         {
@@ -81,7 +89,7 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this._Certificate == other._Certificate ||
                     this._Certificate != null &&
@@ -100,15 +108,11 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this._Certificate != null)
-                    hash = hash * 57 + this._Certificate.GetHashCode();
-                
+                    hash = hash * 59 + this._Certificate.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

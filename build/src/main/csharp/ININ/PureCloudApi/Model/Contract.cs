@@ -4,74 +4,76 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class Contract :  IEquatable<Contract>
-    {
+    public partial class Contract :  IEquatable<Contract>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="Contract" /> class.
+        /// Initializes a new instance of the <see cref="Contract" />class.
         /// </summary>
-        public Contract()
+        /// <param name="Name">Name.</param>
+        /// <param name="Quote">Quote.</param>
+        /// <param name="SignerUrl">SignerUrl.</param>
+        /// <param name="Job">Job.</param>
+
+        public Contract(string Name = null, Quote Quote = null, string SignerUrl = null, ContractJob Job = null)
         {
+            this.Name = Name;
+            this.Quote = Quote;
+            this.SignerUrl = SignerUrl;
+            this.Job = Job;
             
         }
 
-        
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Quote
         /// </summary>
         [DataMember(Name="quote", EmitDefaultValue=false)]
         public Quote Quote { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets SignerUrl
         /// </summary>
         [DataMember(Name="signerUrl", EmitDefaultValue=false)]
         public string SignerUrl { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Job
         /// </summary>
         [DataMember(Name="job", EmitDefaultValue=false)]
         public ContractJob Job { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -86,11 +88,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  SignerUrl: ").Append(SignerUrl).Append("\n");
             sb.Append("  Job: ").Append(Job).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -114,7 +115,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if Contract instances are equal
         /// </summary>
-        /// <param name="obj">Instance of Contract to be compared</param>
+        /// <param name="other">Instance of Contract to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(Contract other)
         {
@@ -122,32 +123,32 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Quote == other.Quote ||
                     this.Quote != null &&
                     this.Quote.Equals(other.Quote)
-                ) && 
+                ) &&
                 (
                     this.SignerUrl == other.SignerUrl ||
                     this.SignerUrl != null &&
                     this.SignerUrl.Equals(other.SignerUrl)
-                ) && 
+                ) &&
                 (
                     this.Job == other.Job ||
                     this.Job != null &&
                     this.Job.Equals(other.Job)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
@@ -166,30 +167,21 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
-                
+                    hash = hash * 59 + this.Id.GetHashCode();
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
-                
+                    hash = hash * 59 + this.Name.GetHashCode();
                 if (this.Quote != null)
-                    hash = hash * 57 + this.Quote.GetHashCode();
-                
+                    hash = hash * 59 + this.Quote.GetHashCode();
                 if (this.SignerUrl != null)
-                    hash = hash * 57 + this.SignerUrl.GetHashCode();
-                
+                    hash = hash * 59 + this.SignerUrl.GetHashCode();
                 if (this.Job != null)
-                    hash = hash * 57 + this.Job.GetHashCode();
-                
+                    hash = hash * 59 + this.Job.GetHashCode();
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
-                
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

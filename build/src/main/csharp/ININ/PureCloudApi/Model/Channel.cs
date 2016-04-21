@@ -4,45 +4,45 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class Channel :  IEquatable<Channel>
-    {
+    public partial class Channel :  IEquatable<Channel>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="Channel" /> class.
+        /// Initializes a new instance of the <see cref="Channel" />class.
         /// </summary>
-        public Channel()
+        /// <param name="ConnectUri">ConnectUri.</param>
+
+        public Channel(string ConnectUri = null)
         {
+            this.ConnectUri = ConnectUri;
             
         }
 
-        
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets ConnectUri
         /// </summary>
         [DataMember(Name="connectUri", EmitDefaultValue=false)]
         public string ConnectUri { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -53,11 +53,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class Channel {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  ConnectUri: ").Append(ConnectUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -81,7 +80,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if Channel instances are equal
         /// </summary>
-        /// <param name="obj">Instance of Channel to be compared</param>
+        /// <param name="other">Instance of Channel to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(Channel other)
         {
@@ -89,12 +88,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.ConnectUri == other.ConnectUri ||
                     this.ConnectUri != null &&
@@ -113,18 +112,13 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
-                
+                    hash = hash * 59 + this.Id.GetHashCode();
                 if (this.ConnectUri != null)
-                    hash = hash * 57 + this.ConnectUri.GetHashCode();
-                
+                    hash = hash * 59 + this.ConnectUri.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

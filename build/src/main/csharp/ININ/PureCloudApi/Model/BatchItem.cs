@@ -4,51 +4,54 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class BatchItem :  IEquatable<BatchItem>
-    {
+    public partial class BatchItem :  IEquatable<BatchItem>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="BatchItem" /> class.
+        /// Initializes a new instance of the <see cref="BatchItem" />class.
         /// </summary>
-        public BatchItem()
+        /// <param name="Method">Method.</param>
+        /// <param name="Url">Url.</param>
+        /// <param name="Body">Body.</param>
+
+        public BatchItem(string Method = null, string Url = null, BatchItemBody Body = null)
         {
+            this.Method = Method;
+            this.Url = Url;
+            this.Body = Body;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets Method
         /// </summary>
         [DataMember(Name="method", EmitDefaultValue=false)]
         public string Method { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Url
         /// </summary>
         [DataMember(Name="url", EmitDefaultValue=false)]
         public string Url { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Body
         /// </summary>
         [DataMember(Name="body", EmitDefaultValue=false)]
         public BatchItemBody Body { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -60,11 +63,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Method: ").Append(Method).Append("\n");
             sb.Append("  Url: ").Append(Url).Append("\n");
             sb.Append("  Body: ").Append(Body).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -88,7 +90,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if BatchItem instances are equal
         /// </summary>
-        /// <param name="obj">Instance of BatchItem to be compared</param>
+        /// <param name="other">Instance of BatchItem to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(BatchItem other)
         {
@@ -96,17 +98,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Method == other.Method ||
                     this.Method != null &&
                     this.Method.Equals(other.Method)
-                ) && 
+                ) &&
                 (
                     this.Url == other.Url ||
                     this.Url != null &&
                     this.Url.Equals(other.Url)
-                ) && 
+                ) &&
                 (
                     this.Body == other.Body ||
                     this.Body != null &&
@@ -125,21 +127,15 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Method != null)
-                    hash = hash * 57 + this.Method.GetHashCode();
-                
+                    hash = hash * 59 + this.Method.GetHashCode();
                 if (this.Url != null)
-                    hash = hash * 57 + this.Url.GetHashCode();
-                
+                    hash = hash * 59 + this.Url.GetHashCode();
                 if (this.Body != null)
-                    hash = hash * 57 + this.Body.GetHashCode();
-                
+                    hash = hash * 59 + this.Body.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

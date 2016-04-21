@@ -4,70 +4,75 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class WorkItemCache :  IEquatable<WorkItemCache>
-    {
+    public partial class WorkItemCache :  IEquatable<WorkItemCache>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="WorkItemCache" /> class.
+        /// Initializes a new instance of the <see cref="WorkItemCache" />class.
         /// </summary>
-        public WorkItemCache()
+        /// <param name="WorkItemExecId">The workItem instance ID that owns this cache..</param>
+        /// <param name="SaveTime">The time that the workItem cache was last saved. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="SaveUser">The user that last saved the workItem cache..</param>
+        /// <param name="SaveComment">An optional comment made during the last save.</param>
+        /// <param name="DataItems">The data items that are present within the cache..</param>
+
+        public WorkItemCache(string WorkItemExecId = null, DateTime? SaveTime = null, User SaveUser = null, string SaveComment = null, List<DataItem> DataItems = null)
         {
+            this.WorkItemExecId = WorkItemExecId;
+            this.SaveTime = SaveTime;
+            this.SaveUser = SaveUser;
+            this.SaveComment = SaveComment;
+            this.DataItems = DataItems;
             
         }
 
-        
+    
         /// <summary>
         /// The workItem instance ID that owns this cache.
         /// </summary>
         /// <value>The workItem instance ID that owns this cache.</value>
         [DataMember(Name="workItemExecId", EmitDefaultValue=false)]
         public string WorkItemExecId { get; set; }
-  
-        
+    
         /// <summary>
         /// The time that the workItem cache was last saved. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>The time that the workItem cache was last saved. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="saveTime", EmitDefaultValue=false)]
         public DateTime? SaveTime { get; set; }
-  
-        
+    
         /// <summary>
         /// The user that last saved the workItem cache.
         /// </summary>
         /// <value>The user that last saved the workItem cache.</value>
         [DataMember(Name="saveUser", EmitDefaultValue=false)]
         public User SaveUser { get; set; }
-  
-        
+    
         /// <summary>
         /// An optional comment made during the last save
         /// </summary>
         /// <value>An optional comment made during the last save</value>
         [DataMember(Name="saveComment", EmitDefaultValue=false)]
         public string SaveComment { get; set; }
-  
-        
+    
         /// <summary>
         /// The data items that are present within the cache.
         /// </summary>
         /// <value>The data items that are present within the cache.</value>
         [DataMember(Name="dataItems", EmitDefaultValue=false)]
         public List<DataItem> DataItems { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -81,11 +86,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  SaveUser: ").Append(SaveUser).Append("\n");
             sb.Append("  SaveComment: ").Append(SaveComment).Append("\n");
             sb.Append("  DataItems: ").Append(DataItems).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -109,7 +113,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if WorkItemCache instances are equal
         /// </summary>
-        /// <param name="obj">Instance of WorkItemCache to be compared</param>
+        /// <param name="other">Instance of WorkItemCache to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(WorkItemCache other)
         {
@@ -117,27 +121,27 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.WorkItemExecId == other.WorkItemExecId ||
                     this.WorkItemExecId != null &&
                     this.WorkItemExecId.Equals(other.WorkItemExecId)
-                ) && 
+                ) &&
                 (
                     this.SaveTime == other.SaveTime ||
                     this.SaveTime != null &&
                     this.SaveTime.Equals(other.SaveTime)
-                ) && 
+                ) &&
                 (
                     this.SaveUser == other.SaveUser ||
                     this.SaveUser != null &&
                     this.SaveUser.Equals(other.SaveUser)
-                ) && 
+                ) &&
                 (
                     this.SaveComment == other.SaveComment ||
                     this.SaveComment != null &&
                     this.SaveComment.Equals(other.SaveComment)
-                ) && 
+                ) &&
                 (
                     this.DataItems == other.DataItems ||
                     this.DataItems != null &&
@@ -156,27 +160,19 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.WorkItemExecId != null)
-                    hash = hash * 57 + this.WorkItemExecId.GetHashCode();
-                
+                    hash = hash * 59 + this.WorkItemExecId.GetHashCode();
                 if (this.SaveTime != null)
-                    hash = hash * 57 + this.SaveTime.GetHashCode();
-                
+                    hash = hash * 59 + this.SaveTime.GetHashCode();
                 if (this.SaveUser != null)
-                    hash = hash * 57 + this.SaveUser.GetHashCode();
-                
+                    hash = hash * 59 + this.SaveUser.GetHashCode();
                 if (this.SaveComment != null)
-                    hash = hash * 57 + this.SaveComment.GetHashCode();
-                
+                    hash = hash * 59 + this.SaveComment.GetHashCode();
                 if (this.DataItems != null)
-                    hash = hash * 57 + this.DataItems.GetHashCode();
-                
+                    hash = hash * 59 + this.DataItems.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

@@ -4,86 +4,100 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class EdgeInterface :  IEquatable<EdgeInterface>
-    {
+    public partial class EdgeInterface :  IEquatable<EdgeInterface>
+    { 
+        
+        public static string LineTypes_Tie = "TIE";
+        public static string LineTypes_Network = "NETWORK";
+        public static string LineTypes_Trunk = "TRUNK";
+        public static string LineTypes_Station = "STATION";
+        
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="EdgeInterface" /> class.
+        /// Initializes a new instance of the <see cref="EdgeInterface" />class.
         /// </summary>
-        public EdgeInterface()
+        /// <param name="Type">Type.</param>
+        /// <param name="IpAddress">IpAddress.</param>
+        /// <param name="Name">Name.</param>
+        /// <param name="MacAddress">MacAddress.</param>
+        /// <param name="IfName">IfName.</param>
+        /// <param name="Endpoints">Endpoints.</param>
+        /// <param name="LineTypes">LineTypes.</param>
+        /// <param name="AddressFamilyId">AddressFamilyId.</param>
+
+        public EdgeInterface(string Type = null, string IpAddress = null, string Name = null, string MacAddress = null, string IfName = null, List<UriReference> Endpoints = null, List<string> LineTypes = null, string AddressFamilyId = null)
         {
+            this.Type = Type;
+            this.IpAddress = IpAddress;
+            this.Name = Name;
+            this.MacAddress = MacAddress;
+            this.IfName = IfName;
+            this.Endpoints = Endpoints;
+            this.LineTypes = LineTypes;
+            this.AddressFamilyId = AddressFamilyId;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public string Type { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets IpAddress
         /// </summary>
         [DataMember(Name="ipAddress", EmitDefaultValue=false)]
         public string IpAddress { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets MacAddress
         /// </summary>
         [DataMember(Name="macAddress", EmitDefaultValue=false)]
         public string MacAddress { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets IfName
         /// </summary>
         [DataMember(Name="ifName", EmitDefaultValue=false)]
         public string IfName { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Endpoints
         /// </summary>
         [DataMember(Name="endpoints", EmitDefaultValue=false)]
         public List<UriReference> Endpoints { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets LineTypes
         /// </summary>
         [DataMember(Name="lineTypes", EmitDefaultValue=false)]
         public List<string> LineTypes { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets AddressFamilyId
         /// </summary>
         [DataMember(Name="addressFamilyId", EmitDefaultValue=false)]
         public string AddressFamilyId { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -100,11 +114,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Endpoints: ").Append(Endpoints).Append("\n");
             sb.Append("  LineTypes: ").Append(LineTypes).Append("\n");
             sb.Append("  AddressFamilyId: ").Append(AddressFamilyId).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -128,7 +141,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if EdgeInterface instances are equal
         /// </summary>
-        /// <param name="obj">Instance of EdgeInterface to be compared</param>
+        /// <param name="other">Instance of EdgeInterface to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(EdgeInterface other)
         {
@@ -136,42 +149,42 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Type == other.Type ||
                     this.Type != null &&
                     this.Type.Equals(other.Type)
-                ) && 
+                ) &&
                 (
                     this.IpAddress == other.IpAddress ||
                     this.IpAddress != null &&
                     this.IpAddress.Equals(other.IpAddress)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.MacAddress == other.MacAddress ||
                     this.MacAddress != null &&
                     this.MacAddress.Equals(other.MacAddress)
-                ) && 
+                ) &&
                 (
                     this.IfName == other.IfName ||
                     this.IfName != null &&
                     this.IfName.Equals(other.IfName)
-                ) && 
+                ) &&
                 (
                     this.Endpoints == other.Endpoints ||
                     this.Endpoints != null &&
                     this.Endpoints.SequenceEqual(other.Endpoints)
-                ) && 
+                ) &&
                 (
                     this.LineTypes == other.LineTypes ||
                     this.LineTypes != null &&
                     this.LineTypes.SequenceEqual(other.LineTypes)
-                ) && 
+                ) &&
                 (
                     this.AddressFamilyId == other.AddressFamilyId ||
                     this.AddressFamilyId != null &&
@@ -190,36 +203,25 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Type != null)
-                    hash = hash * 57 + this.Type.GetHashCode();
-                
+                    hash = hash * 59 + this.Type.GetHashCode();
                 if (this.IpAddress != null)
-                    hash = hash * 57 + this.IpAddress.GetHashCode();
-                
+                    hash = hash * 59 + this.IpAddress.GetHashCode();
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
-                
+                    hash = hash * 59 + this.Name.GetHashCode();
                 if (this.MacAddress != null)
-                    hash = hash * 57 + this.MacAddress.GetHashCode();
-                
+                    hash = hash * 59 + this.MacAddress.GetHashCode();
                 if (this.IfName != null)
-                    hash = hash * 57 + this.IfName.GetHashCode();
-                
+                    hash = hash * 59 + this.IfName.GetHashCode();
                 if (this.Endpoints != null)
-                    hash = hash * 57 + this.Endpoints.GetHashCode();
-                
+                    hash = hash * 59 + this.Endpoints.GetHashCode();
                 if (this.LineTypes != null)
-                    hash = hash * 57 + this.LineTypes.GetHashCode();
-                
+                    hash = hash * 59 + this.LineTypes.GetHashCode();
                 if (this.AddressFamilyId != null)
-                    hash = hash * 57 + this.AddressFamilyId.GetHashCode();
-                
+                    hash = hash * 59 + this.AddressFamilyId.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

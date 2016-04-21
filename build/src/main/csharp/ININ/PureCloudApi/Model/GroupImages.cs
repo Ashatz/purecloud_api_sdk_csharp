@@ -4,37 +4,38 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class GroupImages :  IEquatable<GroupImages>
-    {
+    public partial class GroupImages :  IEquatable<GroupImages>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="GroupImages" /> class.
+        /// Initializes a new instance of the <see cref="GroupImages" />class.
         /// </summary>
-        public GroupImages()
+        /// <param name="ActiveImages">ActiveImages.</param>
+
+        public GroupImages(List<UserImage> ActiveImages = null)
         {
+            this.ActiveImages = ActiveImages;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets ActiveImages
         /// </summary>
         [DataMember(Name="activeImages", EmitDefaultValue=false)]
         public List<UserImage> ActiveImages { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -44,11 +45,10 @@ namespace ININ.PureCloudApi.Model
             var sb = new StringBuilder();
             sb.Append("class GroupImages {\n");
             sb.Append("  ActiveImages: ").Append(ActiveImages).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -72,7 +72,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if GroupImages instances are equal
         /// </summary>
-        /// <param name="obj">Instance of GroupImages to be compared</param>
+        /// <param name="other">Instance of GroupImages to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(GroupImages other)
         {
@@ -80,7 +80,7 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.ActiveImages == other.ActiveImages ||
                     this.ActiveImages != null &&
@@ -99,15 +99,11 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ActiveImages != null)
-                    hash = hash * 57 + this.ActiveImages.GetHashCode();
-                
+                    hash = hash * 59 + this.ActiveImages.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

@@ -4,88 +4,92 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class DomainPhysicalInterface :  IEquatable<DomainPhysicalInterface>
-    {
+    public partial class DomainPhysicalInterface :  IEquatable<DomainPhysicalInterface>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="DomainPhysicalInterface" /> class.
+        /// Initializes a new instance of the <see cref="DomainPhysicalInterface" />class.
         /// </summary>
-        public DomainPhysicalInterface()
+        /// <param name="Name">Name.</param>
+        /// <param name="EdgeUri">EdgeUri.</param>
+        /// <param name="FriendlyName">FriendlyName.</param>
+        /// <param name="HardwareAddress">HardwareAddress.</param>
+        /// <param name="PortLabel">PortLabel.</param>
+        /// <param name="PhysicalCapabilities">PhysicalCapabilities.</param>
+
+        public DomainPhysicalInterface(string Name = null, string EdgeUri = null, string FriendlyName = null, string HardwareAddress = null, string PortLabel = null, DomainPhysicalCapabilities PhysicalCapabilities = null)
         {
+            this.Name = Name;
+            this.EdgeUri = EdgeUri;
+            this.FriendlyName = FriendlyName;
+            this.HardwareAddress = HardwareAddress;
+            this.PortLabel = PortLabel;
+            this.PhysicalCapabilities = PhysicalCapabilities;
             
         }
 
-        
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets EdgeUri
         /// </summary>
         [DataMember(Name="edgeUri", EmitDefaultValue=false)]
         public string EdgeUri { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets FriendlyName
         /// </summary>
         [DataMember(Name="friendlyName", EmitDefaultValue=false)]
         public string FriendlyName { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets HardwareAddress
         /// </summary>
         [DataMember(Name="hardwareAddress", EmitDefaultValue=false)]
         public string HardwareAddress { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets PortLabel
         /// </summary>
         [DataMember(Name="portLabel", EmitDefaultValue=false)]
         public string PortLabel { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets PhysicalCapabilities
         /// </summary>
         [DataMember(Name="physicalCapabilities", EmitDefaultValue=false)]
         public DomainPhysicalCapabilities PhysicalCapabilities { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -102,11 +106,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  PortLabel: ").Append(PortLabel).Append("\n");
             sb.Append("  PhysicalCapabilities: ").Append(PhysicalCapabilities).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -130,7 +133,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if DomainPhysicalInterface instances are equal
         /// </summary>
-        /// <param name="obj">Instance of DomainPhysicalInterface to be compared</param>
+        /// <param name="other">Instance of DomainPhysicalInterface to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(DomainPhysicalInterface other)
         {
@@ -138,42 +141,42 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.EdgeUri == other.EdgeUri ||
                     this.EdgeUri != null &&
                     this.EdgeUri.Equals(other.EdgeUri)
-                ) && 
+                ) &&
                 (
                     this.FriendlyName == other.FriendlyName ||
                     this.FriendlyName != null &&
                     this.FriendlyName.Equals(other.FriendlyName)
-                ) && 
+                ) &&
                 (
                     this.HardwareAddress == other.HardwareAddress ||
                     this.HardwareAddress != null &&
                     this.HardwareAddress.Equals(other.HardwareAddress)
-                ) && 
+                ) &&
                 (
                     this.PortLabel == other.PortLabel ||
                     this.PortLabel != null &&
                     this.PortLabel.Equals(other.PortLabel)
-                ) && 
+                ) &&
                 (
                     this.PhysicalCapabilities == other.PhysicalCapabilities ||
                     this.PhysicalCapabilities != null &&
                     this.PhysicalCapabilities.Equals(other.PhysicalCapabilities)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
@@ -192,36 +195,25 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
-                
+                    hash = hash * 59 + this.Id.GetHashCode();
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
-                
+                    hash = hash * 59 + this.Name.GetHashCode();
                 if (this.EdgeUri != null)
-                    hash = hash * 57 + this.EdgeUri.GetHashCode();
-                
+                    hash = hash * 59 + this.EdgeUri.GetHashCode();
                 if (this.FriendlyName != null)
-                    hash = hash * 57 + this.FriendlyName.GetHashCode();
-                
+                    hash = hash * 59 + this.FriendlyName.GetHashCode();
                 if (this.HardwareAddress != null)
-                    hash = hash * 57 + this.HardwareAddress.GetHashCode();
-                
+                    hash = hash * 59 + this.HardwareAddress.GetHashCode();
                 if (this.PortLabel != null)
-                    hash = hash * 57 + this.PortLabel.GetHashCode();
-                
+                    hash = hash * 59 + this.PortLabel.GetHashCode();
                 if (this.PhysicalCapabilities != null)
-                    hash = hash * 57 + this.PhysicalCapabilities.GetHashCode();
-                
+                    hash = hash * 59 + this.PhysicalCapabilities.GetHashCode();
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
-                
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

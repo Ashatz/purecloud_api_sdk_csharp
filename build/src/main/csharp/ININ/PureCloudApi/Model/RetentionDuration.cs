@@ -4,44 +4,46 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class RetentionDuration :  IEquatable<RetentionDuration>
-    {
+    public partial class RetentionDuration :  IEquatable<RetentionDuration>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="RetentionDuration" /> class.
+        /// Initializes a new instance of the <see cref="RetentionDuration" />class.
         /// </summary>
-        public RetentionDuration()
+        /// <param name="ArchiveRetention">ArchiveRetention.</param>
+        /// <param name="DeleteRetention">DeleteRetention.</param>
+
+        public RetentionDuration(ArchiveRetention ArchiveRetention = null, DeleteRetention DeleteRetention = null)
         {
+            this.ArchiveRetention = ArchiveRetention;
+            this.DeleteRetention = DeleteRetention;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets ArchiveRetention
         /// </summary>
         [DataMember(Name="archiveRetention", EmitDefaultValue=false)]
         public ArchiveRetention ArchiveRetention { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets DeleteRetention
         /// </summary>
         [DataMember(Name="deleteRetention", EmitDefaultValue=false)]
         public DeleteRetention DeleteRetention { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -52,11 +54,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class RetentionDuration {\n");
             sb.Append("  ArchiveRetention: ").Append(ArchiveRetention).Append("\n");
             sb.Append("  DeleteRetention: ").Append(DeleteRetention).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -80,7 +81,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if RetentionDuration instances are equal
         /// </summary>
-        /// <param name="obj">Instance of RetentionDuration to be compared</param>
+        /// <param name="other">Instance of RetentionDuration to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(RetentionDuration other)
         {
@@ -88,12 +89,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.ArchiveRetention == other.ArchiveRetention ||
                     this.ArchiveRetention != null &&
                     this.ArchiveRetention.Equals(other.ArchiveRetention)
-                ) && 
+                ) &&
                 (
                     this.DeleteRetention == other.DeleteRetention ||
                     this.DeleteRetention != null &&
@@ -112,18 +113,13 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ArchiveRetention != null)
-                    hash = hash * 57 + this.ArchiveRetention.GetHashCode();
-                
+                    hash = hash * 59 + this.ArchiveRetention.GetHashCode();
                 if (this.DeleteRetention != null)
-                    hash = hash * 57 + this.DeleteRetention.GetHashCode();
-                
+                    hash = hash * 59 + this.DeleteRetention.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

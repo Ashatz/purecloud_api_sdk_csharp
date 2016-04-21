@@ -4,93 +4,102 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class ChatMessage :  IEquatable<ChatMessage>
-    {
+    public partial class ChatMessage :  IEquatable<ChatMessage>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="ChatMessage" /> class.
+        /// Initializes a new instance of the <see cref="ChatMessage" />class.
         /// </summary>
-        public ChatMessage()
+        /// <param name="Body">Body.</param>
+        /// <param name="Id">Id.</param>
+        /// <param name="To">To.</param>
+        /// <param name="From">From.</param>
+        /// <param name="Utc">Utc.</param>
+        /// <param name="Chat">Chat.</param>
+        /// <param name="Message">Message.</param>
+        /// <param name="Type">Type.</param>
+        /// <param name="User">User.</param>
+
+        public ChatMessage(string Body = null, string Id = null, string To = null, string From = null, string Utc = null, string Chat = null, string Message = null, string Type = null, ChatMessageUser User = null)
         {
+            this.Body = Body;
+            this.Id = Id;
+            this.To = To;
+            this.From = From;
+            this.Utc = Utc;
+            this.Chat = Chat;
+            this.Message = Message;
+            this.Type = Type;
+            this.User = User;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets Body
         /// </summary>
         [DataMember(Name="body", EmitDefaultValue=false)]
         public string Body { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets To
         /// </summary>
         [DataMember(Name="to", EmitDefaultValue=false)]
         public string To { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets From
         /// </summary>
         [DataMember(Name="from", EmitDefaultValue=false)]
         public string From { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Utc
         /// </summary>
         [DataMember(Name="utc", EmitDefaultValue=false)]
         public string Utc { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Chat
         /// </summary>
         [DataMember(Name="chat", EmitDefaultValue=false)]
         public string Chat { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Message
         /// </summary>
         [DataMember(Name="message", EmitDefaultValue=false)]
         public string Message { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public string Type { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets User
         /// </summary>
         [DataMember(Name="user", EmitDefaultValue=false)]
         public ChatMessageUser User { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -108,11 +117,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Message: ").Append(Message).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -136,7 +144,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if ChatMessage instances are equal
         /// </summary>
-        /// <param name="obj">Instance of ChatMessage to be compared</param>
+        /// <param name="other">Instance of ChatMessage to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(ChatMessage other)
         {
@@ -144,47 +152,47 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Body == other.Body ||
                     this.Body != null &&
                     this.Body.Equals(other.Body)
-                ) && 
+                ) &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.To == other.To ||
                     this.To != null &&
                     this.To.Equals(other.To)
-                ) && 
+                ) &&
                 (
                     this.From == other.From ||
                     this.From != null &&
                     this.From.Equals(other.From)
-                ) && 
+                ) &&
                 (
                     this.Utc == other.Utc ||
                     this.Utc != null &&
                     this.Utc.Equals(other.Utc)
-                ) && 
+                ) &&
                 (
                     this.Chat == other.Chat ||
                     this.Chat != null &&
                     this.Chat.Equals(other.Chat)
-                ) && 
+                ) &&
                 (
                     this.Message == other.Message ||
                     this.Message != null &&
                     this.Message.Equals(other.Message)
-                ) && 
+                ) &&
                 (
                     this.Type == other.Type ||
                     this.Type != null &&
                     this.Type.Equals(other.Type)
-                ) && 
+                ) &&
                 (
                     this.User == other.User ||
                     this.User != null &&
@@ -203,39 +211,27 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Body != null)
-                    hash = hash * 57 + this.Body.GetHashCode();
-                
+                    hash = hash * 59 + this.Body.GetHashCode();
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
-                
+                    hash = hash * 59 + this.Id.GetHashCode();
                 if (this.To != null)
-                    hash = hash * 57 + this.To.GetHashCode();
-                
+                    hash = hash * 59 + this.To.GetHashCode();
                 if (this.From != null)
-                    hash = hash * 57 + this.From.GetHashCode();
-                
+                    hash = hash * 59 + this.From.GetHashCode();
                 if (this.Utc != null)
-                    hash = hash * 57 + this.Utc.GetHashCode();
-                
+                    hash = hash * 59 + this.Utc.GetHashCode();
                 if (this.Chat != null)
-                    hash = hash * 57 + this.Chat.GetHashCode();
-                
+                    hash = hash * 59 + this.Chat.GetHashCode();
                 if (this.Message != null)
-                    hash = hash * 57 + this.Message.GetHashCode();
-                
+                    hash = hash * 59 + this.Message.GetHashCode();
                 if (this.Type != null)
-                    hash = hash * 57 + this.Type.GetHashCode();
-                
+                    hash = hash * 59 + this.Type.GetHashCode();
                 if (this.User != null)
-                    hash = hash * 57 + this.User.GetHashCode();
-                
+                    hash = hash * 59 + this.User.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

@@ -4,65 +4,70 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class ContactCallbackRequest :  IEquatable<ContactCallbackRequest>
-    {
+    public partial class ContactCallbackRequest :  IEquatable<ContactCallbackRequest>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="ContactCallbackRequest" /> class.
+        /// Initializes a new instance of the <see cref="ContactCallbackRequest" />class.
         /// </summary>
-        public ContactCallbackRequest()
+        /// <param name="CampaignId">CampaignId.</param>
+        /// <param name="ContactListId">ContactListId.</param>
+        /// <param name="ContactId">ContactId.</param>
+        /// <param name="PhoneColumn">PhoneColumn.</param>
+        /// <param name="Schedule">Schedule.</param>
+
+        public ContactCallbackRequest(string CampaignId = null, string ContactListId = null, string ContactId = null, string PhoneColumn = null, string Schedule = null)
         {
+            this.CampaignId = CampaignId;
+            this.ContactListId = ContactListId;
+            this.ContactId = ContactId;
+            this.PhoneColumn = PhoneColumn;
+            this.Schedule = Schedule;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets CampaignId
         /// </summary>
         [DataMember(Name="campaignId", EmitDefaultValue=false)]
         public string CampaignId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ContactListId
         /// </summary>
         [DataMember(Name="contactListId", EmitDefaultValue=false)]
         public string ContactListId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ContactId
         /// </summary>
         [DataMember(Name="contactId", EmitDefaultValue=false)]
         public string ContactId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets PhoneColumn
         /// </summary>
         [DataMember(Name="phoneColumn", EmitDefaultValue=false)]
         public string PhoneColumn { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Schedule
         /// </summary>
         [DataMember(Name="schedule", EmitDefaultValue=false)]
         public string Schedule { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -76,11 +81,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  ContactId: ").Append(ContactId).Append("\n");
             sb.Append("  PhoneColumn: ").Append(PhoneColumn).Append("\n");
             sb.Append("  Schedule: ").Append(Schedule).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -104,7 +108,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if ContactCallbackRequest instances are equal
         /// </summary>
-        /// <param name="obj">Instance of ContactCallbackRequest to be compared</param>
+        /// <param name="other">Instance of ContactCallbackRequest to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(ContactCallbackRequest other)
         {
@@ -112,27 +116,27 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.CampaignId == other.CampaignId ||
                     this.CampaignId != null &&
                     this.CampaignId.Equals(other.CampaignId)
-                ) && 
+                ) &&
                 (
                     this.ContactListId == other.ContactListId ||
                     this.ContactListId != null &&
                     this.ContactListId.Equals(other.ContactListId)
-                ) && 
+                ) &&
                 (
                     this.ContactId == other.ContactId ||
                     this.ContactId != null &&
                     this.ContactId.Equals(other.ContactId)
-                ) && 
+                ) &&
                 (
                     this.PhoneColumn == other.PhoneColumn ||
                     this.PhoneColumn != null &&
                     this.PhoneColumn.Equals(other.PhoneColumn)
-                ) && 
+                ) &&
                 (
                     this.Schedule == other.Schedule ||
                     this.Schedule != null &&
@@ -151,27 +155,19 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.CampaignId != null)
-                    hash = hash * 57 + this.CampaignId.GetHashCode();
-                
+                    hash = hash * 59 + this.CampaignId.GetHashCode();
                 if (this.ContactListId != null)
-                    hash = hash * 57 + this.ContactListId.GetHashCode();
-                
+                    hash = hash * 59 + this.ContactListId.GetHashCode();
                 if (this.ContactId != null)
-                    hash = hash * 57 + this.ContactId.GetHashCode();
-                
+                    hash = hash * 59 + this.ContactId.GetHashCode();
                 if (this.PhoneColumn != null)
-                    hash = hash * 57 + this.PhoneColumn.GetHashCode();
-                
+                    hash = hash * 59 + this.PhoneColumn.GetHashCode();
                 if (this.Schedule != null)
-                    hash = hash * 57 + this.Schedule.GetHashCode();
-                
+                    hash = hash * 59 + this.Schedule.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

@@ -4,44 +4,46 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class PenetrationRateId :  IEquatable<PenetrationRateId>
-    {
+    public partial class PenetrationRateId :  IEquatable<PenetrationRateId>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="PenetrationRateId" /> class.
+        /// Initializes a new instance of the <see cref="PenetrationRateId" />class.
         /// </summary>
-        public PenetrationRateId()
+        /// <param name="ContactList">ContactList.</param>
+        /// <param name="Qualifier">Qualifier.</param>
+
+        public PenetrationRateId(UriReference ContactList = null, UriReference Qualifier = null)
         {
+            this.ContactList = ContactList;
+            this.Qualifier = Qualifier;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets ContactList
         /// </summary>
         [DataMember(Name="contactList", EmitDefaultValue=false)]
         public UriReference ContactList { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Qualifier
         /// </summary>
         [DataMember(Name="qualifier", EmitDefaultValue=false)]
         public UriReference Qualifier { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -52,11 +54,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class PenetrationRateId {\n");
             sb.Append("  ContactList: ").Append(ContactList).Append("\n");
             sb.Append("  Qualifier: ").Append(Qualifier).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -80,7 +81,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if PenetrationRateId instances are equal
         /// </summary>
-        /// <param name="obj">Instance of PenetrationRateId to be compared</param>
+        /// <param name="other">Instance of PenetrationRateId to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(PenetrationRateId other)
         {
@@ -88,12 +89,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.ContactList == other.ContactList ||
                     this.ContactList != null &&
                     this.ContactList.Equals(other.ContactList)
-                ) && 
+                ) &&
                 (
                     this.Qualifier == other.Qualifier ||
                     this.Qualifier != null &&
@@ -112,18 +113,13 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ContactList != null)
-                    hash = hash * 57 + this.ContactList.GetHashCode();
-                
+                    hash = hash * 59 + this.ContactList.GetHashCode();
                 if (this.Qualifier != null)
-                    hash = hash * 57 + this.Qualifier.GetHashCode();
-                
+                    hash = hash * 59 + this.Qualifier.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

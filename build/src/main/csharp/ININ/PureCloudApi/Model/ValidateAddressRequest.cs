@@ -4,37 +4,38 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class ValidateAddressRequest :  IEquatable<ValidateAddressRequest>
-    {
+    public partial class ValidateAddressRequest :  IEquatable<ValidateAddressRequest>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="ValidateAddressRequest" /> class.
+        /// Initializes a new instance of the <see cref="ValidateAddressRequest" />class.
         /// </summary>
-        public ValidateAddressRequest()
+        /// <param name="Address">Address.</param>
+
+        public ValidateAddressRequest(Address Address = null)
         {
+            this.Address = Address;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets Address
         /// </summary>
         [DataMember(Name="address", EmitDefaultValue=false)]
         public Address Address { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -44,11 +45,10 @@ namespace ININ.PureCloudApi.Model
             var sb = new StringBuilder();
             sb.Append("class ValidateAddressRequest {\n");
             sb.Append("  Address: ").Append(Address).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -72,7 +72,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if ValidateAddressRequest instances are equal
         /// </summary>
-        /// <param name="obj">Instance of ValidateAddressRequest to be compared</param>
+        /// <param name="other">Instance of ValidateAddressRequest to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(ValidateAddressRequest other)
         {
@@ -80,7 +80,7 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Address == other.Address ||
                     this.Address != null &&
@@ -99,15 +99,11 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Address != null)
-                    hash = hash * 57 + this.Address.GetHashCode();
-                
+                    hash = hash * 59 + this.Address.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

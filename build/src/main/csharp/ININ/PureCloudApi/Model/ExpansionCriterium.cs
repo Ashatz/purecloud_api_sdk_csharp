@@ -4,44 +4,58 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class ExpansionCriterium :  IEquatable<ExpansionCriterium>
-    {
+    public partial class ExpansionCriterium :  IEquatable<ExpansionCriterium>
+    { 
+
         /// <summary>
-        /// Initializes a new instance of the <see cref="ExpansionCriterium" /> class.
+        /// Gets or Sets Type
         /// </summary>
-        public ExpansionCriterium()
-        {
+        [JsonConverter(typeof(StringEnumConverter))]
+                public enum TypeEnum {
             
+            [EnumMember(Value = "TIMEOUT_SECONDS")]
+            Seconds
         }
 
         
+
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
         [DataMember(Name="type", EmitDefaultValue=false)]
-        public string Type { get; set; }
-  
-        
+        public TypeEnum? Type { get; set; }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ExpansionCriterium" />class.
+        /// </summary>
+        /// <param name="Type">Type.</param>
+        /// <param name="Threshold">Threshold.</param>
+
+        public ExpansionCriterium(TypeEnum? Type = null, double? Threshold = null)
+        {
+            this.Type = Type;
+            this.Threshold = Threshold;
+            
+        }
+
+    
         /// <summary>
         /// Gets or Sets Threshold
         /// </summary>
         [DataMember(Name="threshold", EmitDefaultValue=false)]
         public double? Threshold { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -52,11 +66,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class ExpansionCriterium {\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Threshold: ").Append(Threshold).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -80,7 +93,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if ExpansionCriterium instances are equal
         /// </summary>
-        /// <param name="obj">Instance of ExpansionCriterium to be compared</param>
+        /// <param name="other">Instance of ExpansionCriterium to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(ExpansionCriterium other)
         {
@@ -88,12 +101,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Type == other.Type ||
                     this.Type != null &&
                     this.Type.Equals(other.Type)
-                ) && 
+                ) &&
                 (
                     this.Threshold == other.Threshold ||
                     this.Threshold != null &&
@@ -112,18 +125,13 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Type != null)
-                    hash = hash * 57 + this.Type.GetHashCode();
-                
+                    hash = hash * 59 + this.Type.GetHashCode();
                 if (this.Threshold != null)
-                    hash = hash * 57 + this.Threshold.GetHashCode();
-                
+                    hash = hash * 59 + this.Threshold.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

@@ -4,54 +4,73 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// Data elements associated with a history event
     /// </summary>
     [DataContract]
-    public class DataItem :  IEquatable<DataItem>
-    {
+    public partial class DataItem :  IEquatable<DataItem>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="DataItem" /> class.
+        /// Initializes a new instance of the <see cref="DataItem" />class.
         /// </summary>
-        public DataItem()
+        /// <param name="ParameterName">The name of the data element associated with a history event. (required).</param>
+        /// <param name="ParameterType">The type of the data element associated with a history event. (required).</param>
+        /// <param name="ParameterValues">The values of the data element associated with a history event..</param>
+
+        public DataItem(string ParameterName = null, string ParameterType = null, Value ParameterValues = null)
         {
+            // to ensure "ParameterName" is required (not null)
+            if (ParameterName == null)
+            {
+                throw new InvalidDataException("ParameterName is a required property for DataItem and cannot be null");
+            }
+            else
+            {
+                this.ParameterName = ParameterName;
+            }
+            // to ensure "ParameterType" is required (not null)
+            if (ParameterType == null)
+            {
+                throw new InvalidDataException("ParameterType is a required property for DataItem and cannot be null");
+            }
+            else
+            {
+                this.ParameterType = ParameterType;
+            }
+            this.ParameterValues = ParameterValues;
             
         }
 
-        
+    
         /// <summary>
         /// The name of the data element associated with a history event.
         /// </summary>
         /// <value>The name of the data element associated with a history event.</value>
         [DataMember(Name="parameterName", EmitDefaultValue=false)]
         public string ParameterName { get; set; }
-  
-        
+    
         /// <summary>
         /// The type of the data element associated with a history event.
         /// </summary>
         /// <value>The type of the data element associated with a history event.</value>
         [DataMember(Name="parameterType", EmitDefaultValue=false)]
         public string ParameterType { get; set; }
-  
-        
+    
         /// <summary>
         /// The values of the data element associated with a history event.
         /// </summary>
         /// <value>The values of the data element associated with a history event.</value>
         [DataMember(Name="parameterValues", EmitDefaultValue=false)]
         public Value ParameterValues { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -63,11 +82,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  ParameterName: ").Append(ParameterName).Append("\n");
             sb.Append("  ParameterType: ").Append(ParameterType).Append("\n");
             sb.Append("  ParameterValues: ").Append(ParameterValues).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -91,7 +109,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if DataItem instances are equal
         /// </summary>
-        /// <param name="obj">Instance of DataItem to be compared</param>
+        /// <param name="other">Instance of DataItem to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(DataItem other)
         {
@@ -99,17 +117,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.ParameterName == other.ParameterName ||
                     this.ParameterName != null &&
                     this.ParameterName.Equals(other.ParameterName)
-                ) && 
+                ) &&
                 (
                     this.ParameterType == other.ParameterType ||
                     this.ParameterType != null &&
                     this.ParameterType.Equals(other.ParameterType)
-                ) && 
+                ) &&
                 (
                     this.ParameterValues == other.ParameterValues ||
                     this.ParameterValues != null &&
@@ -128,21 +146,15 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ParameterName != null)
-                    hash = hash * 57 + this.ParameterName.GetHashCode();
-                
+                    hash = hash * 59 + this.ParameterName.GetHashCode();
                 if (this.ParameterType != null)
-                    hash = hash * 57 + this.ParameterType.GetHashCode();
-                
+                    hash = hash * 59 + this.ParameterType.GetHashCode();
                 if (this.ParameterValues != null)
-                    hash = hash * 57 + this.ParameterValues.GetHashCode();
-                
+                    hash = hash * 59 + this.ParameterValues.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

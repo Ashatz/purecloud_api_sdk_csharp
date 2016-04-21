@@ -4,46 +4,62 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class DomainPhysicalCapabilities :  IEquatable<DomainPhysicalCapabilities>
-    {
+    public partial class DomainPhysicalCapabilities :  IEquatable<DomainPhysicalCapabilities>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="DomainPhysicalCapabilities" /> class.
+        /// Initializes a new instance of the <see cref="DomainPhysicalCapabilities" />class.
         /// </summary>
-        public DomainPhysicalCapabilities()
+        /// <param name="Vlan">Vlan (default to false).</param>
+        /// <param name="Team">Team (default to false).</param>
+
+        public DomainPhysicalCapabilities(bool? Vlan = null, bool? Team = null)
         {
-            this.Vlan = false;
-            this.Team = false;
+            // use default value if no "Vlan" provided
+            if (Vlan == null)
+            {
+                this.Vlan = false;
+            }
+            else
+            {
+                this.Vlan = Vlan;
+            }
+            // use default value if no "Team" provided
+            if (Team == null)
+            {
+                this.Team = false;
+            }
+            else
+            {
+                this.Team = Team;
+            }
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets Vlan
         /// </summary>
         [DataMember(Name="vlan", EmitDefaultValue=false)]
         public bool? Vlan { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Team
         /// </summary>
         [DataMember(Name="team", EmitDefaultValue=false)]
         public bool? Team { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -54,11 +70,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class DomainPhysicalCapabilities {\n");
             sb.Append("  Vlan: ").Append(Vlan).Append("\n");
             sb.Append("  Team: ").Append(Team).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -82,7 +97,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if DomainPhysicalCapabilities instances are equal
         /// </summary>
-        /// <param name="obj">Instance of DomainPhysicalCapabilities to be compared</param>
+        /// <param name="other">Instance of DomainPhysicalCapabilities to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(DomainPhysicalCapabilities other)
         {
@@ -90,12 +105,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Vlan == other.Vlan ||
                     this.Vlan != null &&
                     this.Vlan.Equals(other.Vlan)
-                ) && 
+                ) &&
                 (
                     this.Team == other.Team ||
                     this.Team != null &&
@@ -114,18 +129,13 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Vlan != null)
-                    hash = hash * 57 + this.Vlan.GetHashCode();
-                
+                    hash = hash * 59 + this.Vlan.GetHashCode();
                 if (this.Team != null)
-                    hash = hash * 57 + this.Team.GetHashCode();
-                
+                    hash = hash * 59 + this.Team.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

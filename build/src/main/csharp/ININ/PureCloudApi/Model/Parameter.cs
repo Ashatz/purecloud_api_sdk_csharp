@@ -4,59 +4,118 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class Parameter :  IEquatable<Parameter>
-    {
+    public partial class Parameter :  IEquatable<Parameter>
+    { 
+
         /// <summary>
-        /// Initializes a new instance of the <see cref="Parameter" /> class.
+        /// Gets or Sets ParameterType
         /// </summary>
-        public Parameter()
-        {
-            this.Required = false;
+        [JsonConverter(typeof(StringEnumConverter))]
+                public enum ParameterTypeEnum {
             
+            [EnumMember(Value = "UUID")]
+            Uuid,
+            
+            [EnumMember(Value = "STRING")]
+            String,
+            
+            [EnumMember(Value = "UUIDLIST")]
+            Uuidlist,
+            
+            [EnumMember(Value = "STRINGLIST")]
+            Stringlist
+        }
+
+
+        /// <summary>
+        /// Gets or Sets Domain
+        /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
+                public enum DomainEnum {
+            
+            [EnumMember(Value = "USERID")]
+            Userid,
+            
+            [EnumMember(Value = "QUEUEID")]
+            Queueid,
+            
+            [EnumMember(Value = "MEDIATYPE")]
+            Mediatype,
+            
+            [EnumMember(Value = "DIALERCAMPAIGNID")]
+            Dialercampaignid,
+            
+            [EnumMember(Value = "QMEVALFORMID")]
+            Qmevalformid,
+            
+            [EnumMember(Value = "UNKNOWN")]
+            Unknown
         }
 
         
+
+        /// <summary>
+        /// Gets or Sets ParameterType
+        /// </summary>
+        [DataMember(Name="parameterType", EmitDefaultValue=false)]
+        public ParameterTypeEnum? ParameterType { get; set; }
+    
+
+        /// <summary>
+        /// Gets or Sets Domain
+        /// </summary>
+        [DataMember(Name="domain", EmitDefaultValue=false)]
+        public DomainEnum? Domain { get; set; }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Parameter" />class.
+        /// </summary>
+        /// <param name="Name">Name.</param>
+        /// <param name="ParameterType">ParameterType.</param>
+        /// <param name="Domain">Domain.</param>
+        /// <param name="Required">Required (default to false).</param>
+
+        public Parameter(string Name = null, ParameterTypeEnum? ParameterType = null, DomainEnum? Domain = null, bool? Required = null)
+        {
+            this.Name = Name;
+            this.ParameterType = ParameterType;
+            this.Domain = Domain;
+            // use default value if no "Required" provided
+            if (Required == null)
+            {
+                this.Required = false;
+            }
+            else
+            {
+                this.Required = Required;
+            }
+            
+        }
+
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets ParameterType
-        /// </summary>
-        [DataMember(Name="parameterType", EmitDefaultValue=false)]
-        public string ParameterType { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets Domain
-        /// </summary>
-        [DataMember(Name="domain", EmitDefaultValue=false)]
-        public string Domain { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Required
         /// </summary>
         [DataMember(Name="required", EmitDefaultValue=false)]
         public bool? Required { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -69,11 +128,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  ParameterType: ").Append(ParameterType).Append("\n");
             sb.Append("  Domain: ").Append(Domain).Append("\n");
             sb.Append("  Required: ").Append(Required).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -97,7 +155,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if Parameter instances are equal
         /// </summary>
-        /// <param name="obj">Instance of Parameter to be compared</param>
+        /// <param name="other">Instance of Parameter to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(Parameter other)
         {
@@ -105,22 +163,22 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.ParameterType == other.ParameterType ||
                     this.ParameterType != null &&
                     this.ParameterType.Equals(other.ParameterType)
-                ) && 
+                ) &&
                 (
                     this.Domain == other.Domain ||
                     this.Domain != null &&
                     this.Domain.Equals(other.Domain)
-                ) && 
+                ) &&
                 (
                     this.Required == other.Required ||
                     this.Required != null &&
@@ -139,24 +197,17 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
-                
+                    hash = hash * 59 + this.Name.GetHashCode();
                 if (this.ParameterType != null)
-                    hash = hash * 57 + this.ParameterType.GetHashCode();
-                
+                    hash = hash * 59 + this.ParameterType.GetHashCode();
                 if (this.Domain != null)
-                    hash = hash * 57 + this.Domain.GetHashCode();
-                
+                    hash = hash * 59 + this.Domain.GetHashCode();
                 if (this.Required != null)
-                    hash = hash * 57 + this.Required.GetHashCode();
-                
+                    hash = hash * 59 + this.Required.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

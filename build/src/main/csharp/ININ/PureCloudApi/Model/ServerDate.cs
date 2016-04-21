@@ -4,38 +4,39 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class ServerDate :  IEquatable<ServerDate>
-    {
+    public partial class ServerDate :  IEquatable<ServerDate>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="ServerDate" /> class.
+        /// Initializes a new instance of the <see cref="ServerDate" />class.
         /// </summary>
-        public ServerDate()
+        /// <param name="CurrentDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+
+        public ServerDate(DateTime? CurrentDate = null)
         {
+            this.CurrentDate = CurrentDate;
             
         }
 
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="currentDate", EmitDefaultValue=false)]
         public DateTime? CurrentDate { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -45,11 +46,10 @@ namespace ININ.PureCloudApi.Model
             var sb = new StringBuilder();
             sb.Append("class ServerDate {\n");
             sb.Append("  CurrentDate: ").Append(CurrentDate).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -73,7 +73,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if ServerDate instances are equal
         /// </summary>
-        /// <param name="obj">Instance of ServerDate to be compared</param>
+        /// <param name="other">Instance of ServerDate to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(ServerDate other)
         {
@@ -81,7 +81,7 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.CurrentDate == other.CurrentDate ||
                     this.CurrentDate != null &&
@@ -100,15 +100,11 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.CurrentDate != null)
-                    hash = hash * 57 + this.CurrentDate.GetHashCode();
-                
+                    hash = hash * 59 + this.CurrentDate.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

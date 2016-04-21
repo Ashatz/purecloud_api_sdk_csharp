@@ -4,88 +4,92 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class Address :  IEquatable<Address>
-    {
+    public partial class Address :  IEquatable<Address>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="Address" /> class.
+        /// Initializes a new instance of the <see cref="Address" />class.
         /// </summary>
-        public Address()
+        /// <param name="Name">Name.</param>
+        /// <param name="Street">Street.</param>
+        /// <param name="City">City.</param>
+        /// <param name="CountryName">CountryName.</param>
+        /// <param name="StateName">StateName.</param>
+        /// <param name="PostalCode">PostalCode.</param>
+
+        public Address(string Name = null, string Street = null, string City = null, string CountryName = null, string StateName = null, string PostalCode = null)
         {
+            this.Name = Name;
+            this.Street = Street;
+            this.City = City;
+            this.CountryName = CountryName;
+            this.StateName = StateName;
+            this.PostalCode = PostalCode;
             
         }
 
-        
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Street
         /// </summary>
         [DataMember(Name="street", EmitDefaultValue=false)]
         public string Street { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets City
         /// </summary>
         [DataMember(Name="city", EmitDefaultValue=false)]
         public string City { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets CountryName
         /// </summary>
         [DataMember(Name="countryName", EmitDefaultValue=false)]
         public string CountryName { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets StateName
         /// </summary>
         [DataMember(Name="stateName", EmitDefaultValue=false)]
         public string StateName { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets PostalCode
         /// </summary>
         [DataMember(Name="postalCode", EmitDefaultValue=false)]
         public string PostalCode { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -102,11 +106,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  StateName: ").Append(StateName).Append("\n");
             sb.Append("  PostalCode: ").Append(PostalCode).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -130,7 +133,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if Address instances are equal
         /// </summary>
-        /// <param name="obj">Instance of Address to be compared</param>
+        /// <param name="other">Instance of Address to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(Address other)
         {
@@ -138,42 +141,42 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Street == other.Street ||
                     this.Street != null &&
                     this.Street.Equals(other.Street)
-                ) && 
+                ) &&
                 (
                     this.City == other.City ||
                     this.City != null &&
                     this.City.Equals(other.City)
-                ) && 
+                ) &&
                 (
                     this.CountryName == other.CountryName ||
                     this.CountryName != null &&
                     this.CountryName.Equals(other.CountryName)
-                ) && 
+                ) &&
                 (
                     this.StateName == other.StateName ||
                     this.StateName != null &&
                     this.StateName.Equals(other.StateName)
-                ) && 
+                ) &&
                 (
                     this.PostalCode == other.PostalCode ||
                     this.PostalCode != null &&
                     this.PostalCode.Equals(other.PostalCode)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
@@ -192,36 +195,25 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
-                
+                    hash = hash * 59 + this.Id.GetHashCode();
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
-                
+                    hash = hash * 59 + this.Name.GetHashCode();
                 if (this.Street != null)
-                    hash = hash * 57 + this.Street.GetHashCode();
-                
+                    hash = hash * 59 + this.Street.GetHashCode();
                 if (this.City != null)
-                    hash = hash * 57 + this.City.GetHashCode();
-                
+                    hash = hash * 59 + this.City.GetHashCode();
                 if (this.CountryName != null)
-                    hash = hash * 57 + this.CountryName.GetHashCode();
-                
+                    hash = hash * 59 + this.CountryName.GetHashCode();
                 if (this.StateName != null)
-                    hash = hash * 57 + this.StateName.GetHashCode();
-                
+                    hash = hash * 59 + this.StateName.GetHashCode();
                 if (this.PostalCode != null)
-                    hash = hash * 57 + this.PostalCode.GetHashCode();
-                
+                    hash = hash * 59 + this.PostalCode.GetHashCode();
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
-                
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

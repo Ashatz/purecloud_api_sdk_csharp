@@ -4,52 +4,76 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class RoutingStatus :  IEquatable<RoutingStatus>
-    {
+    public partial class RoutingStatus :  IEquatable<RoutingStatus>
+    { 
+
         /// <summary>
-        /// Initializes a new instance of the <see cref="RoutingStatus" /> class.
+        /// Gets or Sets Status
         /// </summary>
-        public RoutingStatus()
-        {
+        [JsonConverter(typeof(StringEnumConverter))]
+                public enum StatusEnum {
             
+            [EnumMember(Value = "OFF_QUEUE")]
+            OffQueue,
+            
+            [EnumMember(Value = "IDLE")]
+            Idle,
+            
+            [EnumMember(Value = "INTERACTING")]
+            Interacting,
+            
+            [EnumMember(Value = "NOT_RESPONDING")]
+            NotResponding
         }
 
         
+
+        /// <summary>
+        /// Gets or Sets Status
+        /// </summary>
+        [DataMember(Name="status", EmitDefaultValue=false)]
+        public StatusEnum? Status { get; set; }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="RoutingStatus" />class.
+        /// </summary>
+        /// <param name="UserId">UserId.</param>
+        /// <param name="Status">Status.</param>
+        /// <param name="StartTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+
+        public RoutingStatus(string UserId = null, StatusEnum? Status = null, DateTime? StartTime = null)
+        {
+            this.UserId = UserId;
+            this.Status = Status;
+            this.StartTime = StartTime;
+            
+        }
+
+    
         /// <summary>
         /// Gets or Sets UserId
         /// </summary>
         [DataMember(Name="userId", EmitDefaultValue=false)]
         public string UserId { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets Status
-        /// </summary>
-        [DataMember(Name="status", EmitDefaultValue=false)]
-        public string Status { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="startTime", EmitDefaultValue=false)]
         public DateTime? StartTime { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -61,11 +85,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  UserId: ").Append(UserId).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  StartTime: ").Append(StartTime).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -89,7 +112,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if RoutingStatus instances are equal
         /// </summary>
-        /// <param name="obj">Instance of RoutingStatus to be compared</param>
+        /// <param name="other">Instance of RoutingStatus to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(RoutingStatus other)
         {
@@ -97,17 +120,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.UserId == other.UserId ||
                     this.UserId != null &&
                     this.UserId.Equals(other.UserId)
-                ) && 
+                ) &&
                 (
                     this.Status == other.Status ||
                     this.Status != null &&
                     this.Status.Equals(other.Status)
-                ) && 
+                ) &&
                 (
                     this.StartTime == other.StartTime ||
                     this.StartTime != null &&
@@ -126,21 +149,15 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.UserId != null)
-                    hash = hash * 57 + this.UserId.GetHashCode();
-                
+                    hash = hash * 59 + this.UserId.GetHashCode();
                 if (this.Status != null)
-                    hash = hash * 57 + this.Status.GetHashCode();
-                
+                    hash = hash * 59 + this.Status.GetHashCode();
                 if (this.StartTime != null)
-                    hash = hash * 57 + this.StartTime.GetHashCode();
-                
+                    hash = hash * 59 + this.StartTime.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

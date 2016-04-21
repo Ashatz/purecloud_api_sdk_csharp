@@ -4,37 +4,38 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class Agent :  IEquatable<Agent>
-    {
+    public partial class Agent :  IEquatable<Agent>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="Agent" /> class.
+        /// Initializes a new instance of the <see cref="Agent" />class.
         /// </summary>
-        public Agent()
+        /// <param name="Stage">Stage.</param>
+
+        public Agent(string Stage = null)
         {
+            this.Stage = Stage;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets Stage
         /// </summary>
         [DataMember(Name="stage", EmitDefaultValue=false)]
         public string Stage { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -44,11 +45,10 @@ namespace ININ.PureCloudApi.Model
             var sb = new StringBuilder();
             sb.Append("class Agent {\n");
             sb.Append("  Stage: ").Append(Stage).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -72,7 +72,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if Agent instances are equal
         /// </summary>
-        /// <param name="obj">Instance of Agent to be compared</param>
+        /// <param name="other">Instance of Agent to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(Agent other)
         {
@@ -80,7 +80,7 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Stage == other.Stage ||
                     this.Stage != null &&
@@ -99,15 +99,11 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Stage != null)
-                    hash = hash * 57 + this.Stage.GetHashCode();
-                
+                    hash = hash * 59 + this.Stage.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

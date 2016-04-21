@@ -4,37 +4,38 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class Chat :  IEquatable<Chat>
-    {
+    public partial class Chat :  IEquatable<Chat>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="Chat" /> class.
+        /// Initializes a new instance of the <see cref="Chat" />class.
         /// </summary>
-        public Chat()
+        /// <param name="JabberId">JabberId.</param>
+
+        public Chat(string JabberId = null)
         {
+            this.JabberId = JabberId;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets JabberId
         /// </summary>
         [DataMember(Name="jabberId", EmitDefaultValue=false)]
         public string JabberId { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -44,11 +45,10 @@ namespace ININ.PureCloudApi.Model
             var sb = new StringBuilder();
             sb.Append("class Chat {\n");
             sb.Append("  JabberId: ").Append(JabberId).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -72,7 +72,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if Chat instances are equal
         /// </summary>
-        /// <param name="obj">Instance of Chat to be compared</param>
+        /// <param name="other">Instance of Chat to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(Chat other)
         {
@@ -80,7 +80,7 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.JabberId == other.JabberId ||
                     this.JabberId != null &&
@@ -99,15 +99,11 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.JabberId != null)
-                    hash = hash * 57 + this.JabberId.GetHashCode();
-                
+                    hash = hash * 59 + this.JabberId.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

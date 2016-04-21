@@ -4,37 +4,38 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class PhonesReboot :  IEquatable<PhonesReboot>
-    {
+    public partial class PhonesReboot :  IEquatable<PhonesReboot>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="PhonesReboot" /> class.
+        /// Initializes a new instance of the <see cref="PhonesReboot" />class.
         /// </summary>
-        public PhonesReboot()
+        /// <param name="PhoneIds">PhoneIds.</param>
+
+        public PhonesReboot(List<string> PhoneIds = null)
         {
+            this.PhoneIds = PhoneIds;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets PhoneIds
         /// </summary>
         [DataMember(Name="phoneIds", EmitDefaultValue=false)]
         public List<string> PhoneIds { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -44,11 +45,10 @@ namespace ININ.PureCloudApi.Model
             var sb = new StringBuilder();
             sb.Append("class PhonesReboot {\n");
             sb.Append("  PhoneIds: ").Append(PhoneIds).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -72,7 +72,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if PhonesReboot instances are equal
         /// </summary>
-        /// <param name="obj">Instance of PhonesReboot to be compared</param>
+        /// <param name="other">Instance of PhonesReboot to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(PhonesReboot other)
         {
@@ -80,7 +80,7 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.PhoneIds == other.PhoneIds ||
                     this.PhoneIds != null &&
@@ -99,15 +99,11 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.PhoneIds != null)
-                    hash = hash * 57 + this.PhoneIds.GetHashCode();
-                
+                    hash = hash * 59 + this.PhoneIds.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

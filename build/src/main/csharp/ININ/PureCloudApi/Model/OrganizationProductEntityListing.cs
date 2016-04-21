@@ -4,65 +4,70 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class OrganizationProductEntityListing :  IEquatable<OrganizationProductEntityListing>
-    {
+    public partial class OrganizationProductEntityListing :  IEquatable<OrganizationProductEntityListing>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="OrganizationProductEntityListing" /> class.
+        /// Initializes a new instance of the <see cref="OrganizationProductEntityListing" />class.
         /// </summary>
-        public OrganizationProductEntityListing()
+        /// <param name="PageSize">PageSize.</param>
+        /// <param name="PageNumber">PageNumber.</param>
+        /// <param name="Total">Total.</param>
+        /// <param name="Entities">Entities.</param>
+        /// <param name="PageCount">PageCount.</param>
+
+        public OrganizationProductEntityListing(int? PageSize = null, int? PageNumber = null, long? Total = null, List<DomainOrganizationProduct> Entities = null, int? PageCount = null)
         {
+            this.PageSize = PageSize;
+            this.PageNumber = PageNumber;
+            this.Total = Total;
+            this.Entities = Entities;
+            this.PageCount = PageCount;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets PageSize
         /// </summary>
         [DataMember(Name="pageSize", EmitDefaultValue=false)]
         public int? PageSize { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets PageNumber
         /// </summary>
         [DataMember(Name="pageNumber", EmitDefaultValue=false)]
         public int? PageNumber { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Total
         /// </summary>
         [DataMember(Name="total", EmitDefaultValue=false)]
         public long? Total { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Entities
         /// </summary>
         [DataMember(Name="entities", EmitDefaultValue=false)]
         public List<DomainOrganizationProduct> Entities { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets PageCount
         /// </summary>
         [DataMember(Name="pageCount", EmitDefaultValue=false)]
         public int? PageCount { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -76,11 +81,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Total: ").Append(Total).Append("\n");
             sb.Append("  Entities: ").Append(Entities).Append("\n");
             sb.Append("  PageCount: ").Append(PageCount).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -104,7 +108,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if OrganizationProductEntityListing instances are equal
         /// </summary>
-        /// <param name="obj">Instance of OrganizationProductEntityListing to be compared</param>
+        /// <param name="other">Instance of OrganizationProductEntityListing to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(OrganizationProductEntityListing other)
         {
@@ -112,27 +116,27 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.PageSize == other.PageSize ||
                     this.PageSize != null &&
                     this.PageSize.Equals(other.PageSize)
-                ) && 
+                ) &&
                 (
                     this.PageNumber == other.PageNumber ||
                     this.PageNumber != null &&
                     this.PageNumber.Equals(other.PageNumber)
-                ) && 
+                ) &&
                 (
                     this.Total == other.Total ||
                     this.Total != null &&
                     this.Total.Equals(other.Total)
-                ) && 
+                ) &&
                 (
                     this.Entities == other.Entities ||
                     this.Entities != null &&
                     this.Entities.SequenceEqual(other.Entities)
-                ) && 
+                ) &&
                 (
                     this.PageCount == other.PageCount ||
                     this.PageCount != null &&
@@ -151,27 +155,19 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.PageSize != null)
-                    hash = hash * 57 + this.PageSize.GetHashCode();
-                
+                    hash = hash * 59 + this.PageSize.GetHashCode();
                 if (this.PageNumber != null)
-                    hash = hash * 57 + this.PageNumber.GetHashCode();
-                
+                    hash = hash * 59 + this.PageNumber.GetHashCode();
                 if (this.Total != null)
-                    hash = hash * 57 + this.Total.GetHashCode();
-                
+                    hash = hash * 59 + this.Total.GetHashCode();
                 if (this.Entities != null)
-                    hash = hash * 57 + this.Entities.GetHashCode();
-                
+                    hash = hash * 59 + this.Entities.GetHashCode();
                 if (this.PageCount != null)
-                    hash = hash * 57 + this.PageCount.GetHashCode();
-                
+                    hash = hash * 59 + this.PageCount.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

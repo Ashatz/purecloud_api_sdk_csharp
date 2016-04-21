@@ -4,51 +4,54 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class Vpn :  IEquatable<Vpn>
-    {
+    public partial class Vpn :  IEquatable<Vpn>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="Vpn" /> class.
+        /// Initializes a new instance of the <see cref="Vpn" />class.
         /// </summary>
-        public Vpn()
+        /// <param name="Type">Type.</param>
+        /// <param name="Ip">Ip.</param>
+        /// <param name="Psk">Psk.</param>
+
+        public Vpn(string Type = null, string Ip = null, string Psk = null)
         {
+            this.Type = Type;
+            this.Ip = Ip;
+            this.Psk = Psk;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public string Type { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Ip
         /// </summary>
         [DataMember(Name="ip", EmitDefaultValue=false)]
         public string Ip { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Psk
         /// </summary>
         [DataMember(Name="psk", EmitDefaultValue=false)]
         public string Psk { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -60,11 +63,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Ip: ").Append(Ip).Append("\n");
             sb.Append("  Psk: ").Append(Psk).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -88,7 +90,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if Vpn instances are equal
         /// </summary>
-        /// <param name="obj">Instance of Vpn to be compared</param>
+        /// <param name="other">Instance of Vpn to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(Vpn other)
         {
@@ -96,17 +98,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Type == other.Type ||
                     this.Type != null &&
                     this.Type.Equals(other.Type)
-                ) && 
+                ) &&
                 (
                     this.Ip == other.Ip ||
                     this.Ip != null &&
                     this.Ip.Equals(other.Ip)
-                ) && 
+                ) &&
                 (
                     this.Psk == other.Psk ||
                     this.Psk != null &&
@@ -125,21 +127,15 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Type != null)
-                    hash = hash * 57 + this.Type.GetHashCode();
-                
+                    hash = hash * 59 + this.Type.GetHashCode();
                 if (this.Ip != null)
-                    hash = hash * 57 + this.Ip.GetHashCode();
-                
+                    hash = hash * 59 + this.Ip.GetHashCode();
                 if (this.Psk != null)
-                    hash = hash * 57 + this.Psk.GetHashCode();
-                
+                    hash = hash * 59 + this.Psk.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }

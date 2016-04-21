@@ -4,44 +4,46 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class TraceList :  IEquatable<TraceList>
-    {
+    public partial class TraceList :  IEquatable<TraceList>
+    { 
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="TraceList" /> class.
+        /// Initializes a new instance of the <see cref="TraceList" />class.
         /// </summary>
-        public TraceList()
+        /// <param name="App">App.</param>
+        /// <param name="Traces">Traces.</param>
+
+        public TraceList(App App = null, List<Trace> Traces = null)
         {
+            this.App = App;
+            this.Traces = Traces;
             
         }
 
-        
+    
         /// <summary>
         /// Gets or Sets App
         /// </summary>
         [DataMember(Name="app", EmitDefaultValue=false)]
         public App App { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Traces
         /// </summary>
         [DataMember(Name="traces", EmitDefaultValue=false)]
         public List<Trace> Traces { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -52,11 +54,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class TraceList {\n");
             sb.Append("  App: ").Append(App).Append("\n");
             sb.Append("  Traces: ").Append(Traces).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -80,7 +81,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if TraceList instances are equal
         /// </summary>
-        /// <param name="obj">Instance of TraceList to be compared</param>
+        /// <param name="other">Instance of TraceList to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(TraceList other)
         {
@@ -88,12 +89,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.App == other.App ||
                     this.App != null &&
                     this.App.Equals(other.App)
-                ) && 
+                ) &&
                 (
                     this.Traces == other.Traces ||
                     this.Traces != null &&
@@ -112,18 +113,13 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.App != null)
-                    hash = hash * 57 + this.App.GetHashCode();
-                
+                    hash = hash * 59 + this.App.GetHashCode();
                 if (this.Traces != null)
-                    hash = hash * 57 + this.Traces.GetHashCode();
-                
+                    hash = hash * 59 + this.Traces.GetHashCode();
                 return hash;
             }
         }
 
     }
-
-
 }
