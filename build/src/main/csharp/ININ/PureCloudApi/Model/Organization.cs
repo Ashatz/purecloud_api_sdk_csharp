@@ -23,6 +23,7 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
                 public enum StateEnum {
+<<<<<<< HEAD
             
             [EnumMember(Value = "ACTIVE")]
             Active,
@@ -32,6 +33,17 @@ namespace ININ.PureCloudApi.Model
             
             [EnumMember(Value = "INACTIVE")]
             Inactive
+=======
+            
+            [EnumMember(Value = "ACTIVE")]
+            Active,
+            
+            [EnumMember(Value = "INACTIVE")]
+            Inactive,
+            
+            [EnumMember(Value = "DELETED")]
+            Deleted
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         }
 
         
@@ -83,6 +95,56 @@ namespace ININ.PureCloudApi.Model
 
     
         /// <summary>
+        /// Gets or Sets State
+        /// </summary>
+        [DataMember(Name="state", EmitDefaultValue=false)]
+        public StateEnum? State { get; set; }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Organization" />class.
+        /// </summary>
+        /// <param name="Name">Name.</param>
+        /// <param name="ThirdPartyOrgId">ThirdPartyOrgId.</param>
+        /// <param name="ThirdPartyOrgName">ThirdPartyOrgName.</param>
+        /// <param name="ThirdPartyURI">ThirdPartyURI.</param>
+        /// <param name="Domain">Domain.</param>
+        /// <param name="Version">The current version of the organization. (required).</param>
+        /// <param name="State">State.</param>
+        /// <param name="DefaultSiteId">DefaultSiteId.</param>
+        /// <param name="Deletable">Deletable (default to false).</param>
+
+        public Organization(string Name = null, string ThirdPartyOrgId = null, string ThirdPartyOrgName = null, string ThirdPartyURI = null, string Domain = null, int? Version = null, StateEnum? State = null, string DefaultSiteId = null, bool? Deletable = null)
+        {
+            // to ensure "Version" is required (not null)
+            if (Version == null)
+            {
+                throw new InvalidDataException("Version is a required property for Organization and cannot be null");
+            }
+            else
+            {
+                this.Version = Version;
+            }
+            this.Name = Name;
+            this.ThirdPartyOrgId = ThirdPartyOrgId;
+            this.ThirdPartyOrgName = ThirdPartyOrgName;
+            this.ThirdPartyURI = ThirdPartyURI;
+            this.Domain = Domain;
+            this.State = State;
+            this.DefaultSiteId = DefaultSiteId;
+            // use default value if no "Deletable" provided
+            if (Deletable == null)
+            {
+                this.Deletable = false;
+            }
+            else
+            {
+                this.Deletable = Deletable;
+            }
+            
+        }
+
+    
+        /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
@@ -113,6 +175,7 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="thirdPartyURI", EmitDefaultValue=false)]
         public string ThirdPartyURI { get; set; }
     
+<<<<<<< HEAD
         /// <summary>
         /// Gets or Sets AdminUsername
         /// </summary>
@@ -125,6 +188,8 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="adminPassword", EmitDefaultValue=false)]
         public string AdminPassword { get; set; }
     
+=======
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// Gets or Sets Domain
         /// </summary>
@@ -132,8 +197,9 @@ namespace ININ.PureCloudApi.Model
         public string Domain { get; set; }
     
         /// <summary>
-        /// Gets or Sets Version
+        /// The current version of the organization.
         /// </summary>
+        /// <value>The current version of the organization.</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public int? Version { get; set; }
     
@@ -169,8 +235,6 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  ThirdPartyOrgId: ").Append(ThirdPartyOrgId).Append("\n");
             sb.Append("  ThirdPartyOrgName: ").Append(ThirdPartyOrgName).Append("\n");
             sb.Append("  ThirdPartyURI: ").Append(ThirdPartyURI).Append("\n");
-            sb.Append("  AdminUsername: ").Append(AdminUsername).Append("\n");
-            sb.Append("  AdminPassword: ").Append(AdminPassword).Append("\n");
             sb.Append("  Domain: ").Append(Domain).Append("\n");
             sb.Append("  Version: ").Append(Version).Append("\n");
             sb.Append("  State: ").Append(State).Append("\n");
@@ -238,6 +302,7 @@ namespace ININ.PureCloudApi.Model
                     this.ThirdPartyURI != null &&
                     this.ThirdPartyURI.Equals(other.ThirdPartyURI)
                 ) &&
+<<<<<<< HEAD
                 (
                     this.AdminUsername == other.AdminUsername ||
                     this.AdminUsername != null &&
@@ -248,6 +313,8 @@ namespace ININ.PureCloudApi.Model
                     this.AdminPassword != null &&
                     this.AdminPassword.Equals(other.AdminPassword)
                 ) &&
+=======
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 (
                     this.Domain == other.Domain ||
                     this.Domain != null &&
@@ -301,10 +368,13 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.ThirdPartyOrgName.GetHashCode();
                 if (this.ThirdPartyURI != null)
                     hash = hash * 59 + this.ThirdPartyURI.GetHashCode();
+<<<<<<< HEAD
                 if (this.AdminUsername != null)
                     hash = hash * 59 + this.AdminUsername.GetHashCode();
                 if (this.AdminPassword != null)
                     hash = hash * 59 + this.AdminPassword.GetHashCode();
+=======
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 if (this.Domain != null)
                     hash = hash * 59 + this.Domain.GetHashCode();
                 if (this.Version != null)

@@ -76,14 +76,20 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
     
+<<<<<<< HEAD
 
+=======
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// Gets or Sets Method
         /// </summary>
         [DataMember(Name="method", EmitDefaultValue=false)]
         public MethodEnum? Method { get; set; }
     
+<<<<<<< HEAD
 
+=======
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// Gets or Sets Encoding
         /// </summary>

@@ -29,16 +29,47 @@ namespace ININ.PureCloudApi.Model
             
             [EnumMember(Value = "VARIABLE")]
             Variable,
+<<<<<<< HEAD
             
             [EnumMember(Value = "USER")]
             User,
             
+=======
+            
+            [EnumMember(Value = "USER")]
+            User,
+            
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             [EnumMember(Value = "QUEUE")]
             Queue
         }
 
         
 
+        /// <summary>
+        /// Gets or Sets Type
+        /// </summary>
+        [DataMember(Name="type", EmitDefaultValue=false)]
+        public TypeEnum? Type { get; set; }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="DomainResourceConditionValue" />class.
+        /// </summary>
+        /// <param name="User">User.</param>
+        /// <param name="Queue">Queue.</param>
+        /// <param name="Value">Value.</param>
+        /// <param name="Type">Type.</param>
+
+        public DomainResourceConditionValue(User User = null, Queue Queue = null, string Value = null, TypeEnum? Type = null)
+        {
+            this.User = User;
+            this.Queue = Queue;
+            this.Value = Value;
+            this.Type = Type;
+            
+        }
+
+    
         /// <summary>
         /// Gets or Sets Type
         /// </summary>

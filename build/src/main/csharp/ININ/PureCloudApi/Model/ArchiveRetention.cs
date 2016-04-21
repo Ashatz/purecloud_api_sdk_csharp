@@ -51,6 +51,26 @@ namespace ININ.PureCloudApi.Model
 
     
         /// <summary>
+        /// Gets or Sets StorageMedium
+        /// </summary>
+        [DataMember(Name="storageMedium", EmitDefaultValue=false)]
+        public StorageMediumEnum? StorageMedium { get; set; }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ArchiveRetention" />class.
+        /// </summary>
+        /// <param name="Days">Days.</param>
+        /// <param name="StorageMedium">StorageMedium.</param>
+
+        public ArchiveRetention(int? Days = null, StorageMediumEnum? StorageMedium = null)
+        {
+            this.Days = Days;
+            this.StorageMedium = StorageMedium;
+            
+        }
+
+    
+        /// <summary>
         /// Gets or Sets Days
         /// </summary>
         [DataMember(Name="days", EmitDefaultValue=false)]

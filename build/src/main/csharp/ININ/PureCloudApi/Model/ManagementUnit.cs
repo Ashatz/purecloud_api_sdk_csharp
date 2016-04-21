@@ -22,15 +22,24 @@ namespace ININ.PureCloudApi.Model
         /// Initializes a new instance of the <see cref="ManagementUnit" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
+<<<<<<< HEAD
         /// <param name="Id">Id.</param>
+=======
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <param name="StartDayOfWeek">StartDayOfWeek.</param>
         /// <param name="Timezone">Timezone.</param>
         /// <param name="Version">Version.</param>
 
+<<<<<<< HEAD
         public ManagementUnit(string Name = null, string Id = null, string StartDayOfWeek = null, string Timezone = null, int? Version = null)
         {
             this.Name = Name;
             this.Id = Id;
+=======
+        public ManagementUnit(string Name = null, string StartDayOfWeek = null, string Timezone = null, int? Version = null)
+        {
+            this.Name = Name;
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             this.StartDayOfWeek = StartDayOfWeek;
             this.Timezone = Timezone;
             this.Version = Version;
@@ -38,18 +47,31 @@ namespace ININ.PureCloudApi.Model
         }
 
     
+<<<<<<< HEAD
+=======
+        /// <summary>
+        /// The globally unique identifier for the object.
+        /// </summary>
+        /// <value>The globally unique identifier for the object.</value>
+        [DataMember(Name="id", EmitDefaultValue=false)]
+        public string Id { get; private set; }
+    
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
     
+<<<<<<< HEAD
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
     
+=======
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// Gets or Sets StartDayOfWeek
         /// </summary>
@@ -68,6 +90,16 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="version", EmitDefaultValue=false)]
         public int? Version { get; set; }
     
+<<<<<<< HEAD
+=======
+        /// <summary>
+        /// The URI for this object
+        /// </summary>
+        /// <value>The URI for this object</value>
+        [DataMember(Name="selfUri", EmitDefaultValue=false)]
+        public string SelfUri { get; private set; }
+    
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -76,11 +108,15 @@ namespace ININ.PureCloudApi.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ManagementUnit {\n");
-            sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  StartDayOfWeek: ").Append(StartDayOfWeek).Append("\n");
             sb.Append("  Timezone: ").Append(Timezone).Append("\n");
             sb.Append("  Version: ").Append(Version).Append("\n");
+<<<<<<< HEAD
+=======
+            sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -117,16 +153,27 @@ namespace ININ.PureCloudApi.Model
                 return false;
 
             return true &&
+<<<<<<< HEAD
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
                 ) &&
+=======
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
                 ) &&
+<<<<<<< HEAD
+=======
+                (
+                    this.Name == other.Name ||
+                    this.Name != null &&
+                    this.Name.Equals(other.Name)
+                ) &&
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 (
                     this.StartDayOfWeek == other.StartDayOfWeek ||
                     this.StartDayOfWeek != null &&
@@ -141,6 +188,11 @@ namespace ININ.PureCloudApi.Model
                     this.Version == other.Version ||
                     this.Version != null &&
                     this.Version.Equals(other.Version)
+                ) &&
+                (
+                    this.SelfUri == other.SelfUri ||
+                    this.SelfUri != null &&
+                    this.SelfUri.Equals(other.SelfUri)
                 );
         }
 
@@ -155,16 +207,28 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+<<<<<<< HEAD
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+=======
+                if (this.Id != null)
+                    hash = hash * 59 + this.Id.GetHashCode();
+                if (this.Name != null)
+                    hash = hash * 59 + this.Name.GetHashCode();
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 if (this.StartDayOfWeek != null)
                     hash = hash * 59 + this.StartDayOfWeek.GetHashCode();
                 if (this.Timezone != null)
                     hash = hash * 59 + this.Timezone.GetHashCode();
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
+<<<<<<< HEAD
+=======
+                if (this.SelfUri != null)
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 return hash;
             }
         }

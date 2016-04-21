@@ -21,13 +21,37 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WorkItemActions" />class.
         /// </summary>
+<<<<<<< HEAD
 
         public WorkItemActions()
+=======
+        /// <param name="CanSubmit">CanSubmit (default to false).</param>
+
+        public WorkItemActions(bool? CanSubmit = null)
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         {
+            // use default value if no "CanSubmit" provided
+            if (CanSubmit == null)
+            {
+                this.CanSubmit = false;
+            }
+            else
+            {
+                this.CanSubmit = CanSubmit;
+            }
             
         }
 
     
+<<<<<<< HEAD
+=======
+        /// <summary>
+        /// Gets or Sets CanSubmit
+        /// </summary>
+        [DataMember(Name="canSubmit", EmitDefaultValue=false)]
+        public bool? CanSubmit { get; set; }
+    
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -36,6 +60,10 @@ namespace ININ.PureCloudApi.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WorkItemActions {\n");
+<<<<<<< HEAD
+=======
+            sb.Append("  CanSubmit: ").Append(CanSubmit).Append("\n");
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -71,7 +99,16 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
+<<<<<<< HEAD
             return true && false;
+=======
+            return true &&
+                (
+                    this.CanSubmit == other.CanSubmit ||
+                    this.CanSubmit != null &&
+                    this.CanSubmit.Equals(other.CanSubmit)
+                );
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         }
 
         /// <summary>
@@ -85,6 +122,11 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+<<<<<<< HEAD
+=======
+                if (this.CanSubmit != null)
+                    hash = hash * 59 + this.CanSubmit.GetHashCode();
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 return hash;
             }
         }

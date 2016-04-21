@@ -23,6 +23,7 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
                 public enum StatusEnum {
+<<<<<<< HEAD
             
             [EnumMember(Value = "ON")]
             On,
@@ -30,6 +31,15 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "OFF")]
             Off,
             
+=======
+            
+            [EnumMember(Value = "ON")]
+            On,
+            
+            [EnumMember(Value = "OFF")]
+            Off,
+            
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             [EnumMember(Value = "COMPLETE")]
             Complete
         }
@@ -64,6 +74,48 @@ namespace ININ.PureCloudApi.Model
             this.CurrentCampaign = CurrentCampaign;
             this.Status = Status;
             this.StopMessage = StopMessage;
+            
+        }
+
+    
+        /// <summary>
+        /// Gets or Sets Status
+        /// </summary>
+        [DataMember(Name="status", EmitDefaultValue=false)]
+        public StatusEnum? Status { get; set; }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CampaignSequence" />class.
+        /// </summary>
+        /// <param name="Name">Name.</param>
+        /// <param name="DateCreated">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="DateModified">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="Version">Version.</param>
+        /// <param name="Campaigns">Campaigns.</param>
+        /// <param name="CurrentCampaign">CurrentCampaign.</param>
+        /// <param name="Status">Status.</param>
+        /// <param name="StopMessage">StopMessage.</param>
+        /// <param name="Repeat">Repeat (default to false).</param>
+
+        public CampaignSequence(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, List<UriReference> Campaigns = null, int? CurrentCampaign = null, StatusEnum? Status = null, string StopMessage = null, bool? Repeat = null)
+        {
+            this.Name = Name;
+            this.DateCreated = DateCreated;
+            this.DateModified = DateModified;
+            this.Version = Version;
+            this.Campaigns = Campaigns;
+            this.CurrentCampaign = CurrentCampaign;
+            this.Status = Status;
+            this.StopMessage = StopMessage;
+            // use default value if no "Repeat" provided
+            if (Repeat == null)
+            {
+                this.Repeat = false;
+            }
+            else
+            {
+                this.Repeat = Repeat;
+            }
             
         }
 
@@ -119,6 +171,15 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="stopMessage", EmitDefaultValue=false)]
         public string StopMessage { get; set; }
     
+<<<<<<< HEAD
+=======
+        /// <summary>
+        /// Gets or Sets Repeat
+        /// </summary>
+        [DataMember(Name="repeat", EmitDefaultValue=false)]
+        public bool? Repeat { get; set; }
+    
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// The URI for this object
         /// </summary>
@@ -143,6 +204,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  CurrentCampaign: ").Append(CurrentCampaign).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  StopMessage: ").Append(StopMessage).Append("\n");
+            sb.Append("  Repeat: ").Append(Repeat).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -225,6 +287,14 @@ namespace ININ.PureCloudApi.Model
                     this.StopMessage != null &&
                     this.StopMessage.Equals(other.StopMessage)
                 ) &&
+<<<<<<< HEAD
+=======
+                (
+                    this.Repeat == other.Repeat ||
+                    this.Repeat != null &&
+                    this.Repeat.Equals(other.Repeat)
+                ) &&
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
@@ -261,6 +331,11 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.Status.GetHashCode();
                 if (this.StopMessage != null)
                     hash = hash * 59 + this.StopMessage.GetHashCode();
+<<<<<<< HEAD
+=======
+                if (this.Repeat != null)
+                    hash = hash * 59 + this.Repeat.GetHashCode();
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;

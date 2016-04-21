@@ -26,8 +26,14 @@ namespace ININ.PureCloudApi.Model
         /// <param name="DualRegisters">DualRegisters (default to false).</param>
         /// <param name="HardwareIdType">HardwareIdType.</param>
         /// <param name="AllowReboot">AllowReboot (default to false).</param>
+<<<<<<< HEAD
 
         public PhoneCapabilities(bool? Provisions = null, bool? Registers = null, bool? DualRegisters = null, string HardwareIdType = null, bool? AllowReboot = null)
+=======
+        /// <param name="NoRebalance">NoRebalance (default to false).</param>
+
+        public PhoneCapabilities(bool? Provisions = null, bool? Registers = null, bool? DualRegisters = null, string HardwareIdType = null, bool? AllowReboot = null, bool? NoRebalance = null)
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         {
             // use default value if no "Provisions" provided
             if (Provisions == null)
@@ -66,6 +72,18 @@ namespace ININ.PureCloudApi.Model
             {
                 this.AllowReboot = AllowReboot;
             }
+<<<<<<< HEAD
+=======
+            // use default value if no "NoRebalance" provided
+            if (NoRebalance == null)
+            {
+                this.NoRebalance = false;
+            }
+            else
+            {
+                this.NoRebalance = NoRebalance;
+            }
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
@@ -100,6 +118,15 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="allowReboot", EmitDefaultValue=false)]
         public bool? AllowReboot { get; set; }
     
+<<<<<<< HEAD
+=======
+        /// <summary>
+        /// Gets or Sets NoRebalance
+        /// </summary>
+        [DataMember(Name="noRebalance", EmitDefaultValue=false)]
+        public bool? NoRebalance { get; set; }
+    
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -113,6 +140,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  DualRegisters: ").Append(DualRegisters).Append("\n");
             sb.Append("  HardwareIdType: ").Append(HardwareIdType).Append("\n");
             sb.Append("  AllowReboot: ").Append(AllowReboot).Append("\n");
+<<<<<<< HEAD
+=======
+            sb.Append("  NoRebalance: ").Append(NoRebalance).Append("\n");
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -173,6 +204,11 @@ namespace ININ.PureCloudApi.Model
                     this.AllowReboot == other.AllowReboot ||
                     this.AllowReboot != null &&
                     this.AllowReboot.Equals(other.AllowReboot)
+                ) &&
+                (
+                    this.NoRebalance == other.NoRebalance ||
+                    this.NoRebalance != null &&
+                    this.NoRebalance.Equals(other.NoRebalance)
                 );
         }
 
@@ -197,6 +233,11 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.HardwareIdType.GetHashCode();
                 if (this.AllowReboot != null)
                     hash = hash * 59 + this.AllowReboot.GetHashCode();
+<<<<<<< HEAD
+=======
+                if (this.NoRebalance != null)
+                    hash = hash * 59 + this.NoRebalance.GetHashCode();
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 return hash;
             }
         }

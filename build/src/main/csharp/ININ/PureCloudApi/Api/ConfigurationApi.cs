@@ -14,6 +14,7 @@ namespace ININ.PureCloudApi.Api
     public interface IConfigurationApi
     {
         #region Synchronous Operations
+<<<<<<< HEAD
         /// <summary>
         /// Delete a DID Pool by ID.
         /// </summary>
@@ -171,6 +172,10 @@ namespace ININ.PureCloudApi.Api
         ApiResponse<DID> ConfigurationDidsDididPutWithHttpInfo (string didId, DID body = null);
         /// <summary>
         /// Get a listing of DIDs
+=======
+        /// <summary>
+        /// Get encryption key list
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
@@ -178,6 +183,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+<<<<<<< HEAD
         /// <param name="sortBy">Sort by (optional, default to number)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
         /// <param name="phoneNumber">Filter by phoneNumber (optional)</param>
@@ -211,21 +217,38 @@ namespace ININ.PureCloudApi.Api
 
         /// <summary>
         /// Delete a certificate authority.
+=======
+        /// <returns>EncryptionKeyEntityListing</returns>
+        EncryptionKeyEntityListing GetRecordingkeys (int? pageSize = null, int? pageNumber = null);
+
+        /// <summary>
+        /// Get encryption key list
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="certificateId">Certificate ID</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> ConfigurationEdgesCertificateauthoritiesCertificateidDeleteWithHttpInfo (string certificateId);
         /// <summary>
         /// Get a certificate authority.
+=======
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>ApiResponse of EncryptionKeyEntityListing</returns>
+        ApiResponse<EncryptionKeyEntityListing> GetRecordingkeysWithHttpInfo (int? pageSize = null, int? pageNumber = null);
+        /// <summary>
+        /// Get key rotation schedule
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="certificateId">Certificate ID</param>
         /// <returns>DomainCertificateAuthority</returns>
         DomainCertificateAuthority ConfigurationEdgesCertificateauthoritiesCertificateidGet (string certificateId);
@@ -254,22 +277,37 @@ namespace ININ.PureCloudApi.Api
 
         /// <summary>
         /// Update a certificate authority.
+=======
+        /// <returns>KeyRotationSchedule</returns>
+        KeyRotationSchedule GetRecordingkeysRotationschedule ();
+
+        /// <summary>
+        /// Get key rotation schedule
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="certificateId">Certificate ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of DomainCertificateAuthority</returns>
         ApiResponse<DomainCertificateAuthority> ConfigurationEdgesCertificateauthoritiesCertificateidPutWithHttpInfo (string certificateId, DomainCertificateAuthority body = null);
         /// <summary>
         /// Get the list of certificate authorities.
+=======
+        /// <returns>ApiResponse of KeyRotationSchedule</returns>
+        ApiResponse<KeyRotationSchedule> GetRecordingkeysRotationscheduleWithHttpInfo ();
+        /// <summary>
+        /// Create encryption key
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <returns>CertificateAuthorityEntityListing</returns>
         CertificateAuthorityEntityListing ConfigurationEdgesCertificateauthoritiesGet ();
 
@@ -295,21 +333,36 @@ namespace ININ.PureCloudApi.Api
 
         /// <summary>
         /// Create a certificate authority.
+=======
+        /// <returns>EncryptionKey</returns>
+        EncryptionKey PostRecordingkeys ();
+
+        /// <summary>
+        /// Create encryption key
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="body">CertificateAuthority (optional)</param>
         /// <returns>ApiResponse of DomainCertificateAuthority</returns>
         ApiResponse<DomainCertificateAuthority> ConfigurationEdgesCertificateauthoritiesPostWithHttpInfo (DomainCertificateAuthority body = null);
         /// <summary>
         /// Delete a edge.
+=======
+        /// <returns>ApiResponse of EncryptionKey</returns>
+        ApiResponse<EncryptionKey> PostRecordingkeysWithHttpInfo ();
+        /// <summary>
+        /// Update key rotation schedule
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="edgeId">Edge ID</param>
         /// <returns>string</returns>
         string ConfigurationEdgesEdgeidDelete (string edgeId);
@@ -337,21 +390,40 @@ namespace ININ.PureCloudApi.Api
 
         /// <summary>
         /// Get edge.
+=======
+        /// <param name="body">KeyRotationSchedule (optional)</param>
+        /// <returns>KeyRotationSchedule</returns>
+        KeyRotationSchedule PutRecordingkeysRotationschedule (KeyRotationSchedule body = null);
+
+        /// <summary>
+        /// Update key rotation schedule
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="edgeId">Edge ID</param>
         /// <returns>ApiResponse of Edge</returns>
         ApiResponse<Edge> ConfigurationEdgesEdgeidGetWithHttpInfo (string edgeId);
         /// <summary>
         /// Get the list of lines.
+=======
+        /// <param name="body">KeyRotationSchedule (optional)</param>
+        /// <returns>ApiResponse of KeyRotationSchedule</returns>
+        ApiResponse<KeyRotationSchedule> PutRecordingkeysRotationscheduleWithHttpInfo (KeyRotationSchedule body = null);
+        #endregion Synchronous Operations
+        #region Asynchronous Operations
+        /// <summary>
+        /// Get encryption key list
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="edgeId">Edge ID</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -384,22 +456,41 @@ namespace ININ.PureCloudApi.Api
 
         /// <summary>
         /// Get line
+=======
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>Task of EncryptionKeyEntityListing</returns>
+        System.Threading.Tasks.Task<EncryptionKeyEntityListing> GetRecordingkeysAsync (int? pageSize = null, int? pageNumber = null);
+
+        /// <summary>
+        /// Get encryption key list
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="edgeId">Edge ID</param>
         /// <param name="lineId">Line ID</param>
         /// <returns>ApiResponse of EdgeLine</returns>
         ApiResponse<EdgeLine> ConfigurationEdgesEdgeidLinesLineidGetWithHttpInfo (string edgeId, string lineId);
         /// <summary>
         /// Update a line.
+=======
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>Task of ApiResponse (EncryptionKeyEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EncryptionKeyEntityListing>> GetRecordingkeysAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null);
+        /// <summary>
+        /// Get key rotation schedule
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="edgeId">Edge ID</param>
         /// <param name="lineId">Line ID</param>
         /// <param name="body">Line (optional)</param>
@@ -408,11 +499,19 @@ namespace ININ.PureCloudApi.Api
 
         /// <summary>
         /// Update a line.
+=======
+        /// <returns>Task of KeyRotationSchedule</returns>
+        System.Threading.Tasks.Task<KeyRotationSchedule> GetRecordingkeysRotationscheduleAsync ();
+
+        /// <summary>
+        /// Get key rotation schedule
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="edgeId">Edge ID</param>
         /// <param name="lineId">Line ID</param>
         /// <param name="body">Line (optional)</param>
@@ -420,11 +519,18 @@ namespace ININ.PureCloudApi.Api
         ApiResponse<EdgeLine> ConfigurationEdgesEdgeidLinesLineidPutWithHttpInfo (string edgeId, string lineId, EdgeLine body = null);
         /// <summary>
         /// Get edge logical interfaces.
+=======
+        /// <returns>Task of ApiResponse (KeyRotationSchedule)</returns>
+        System.Threading.Tasks.Task<ApiResponse<KeyRotationSchedule>> GetRecordingkeysRotationscheduleAsyncWithHttpInfo ();
+        /// <summary>
+        /// Create encryption key
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// Retrieve a list of all configured logical interfaces from a specific edge.
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="edgeId">Edge ID</param>
         /// <returns>LogicalInterfaceEntityListing</returns>
         LogicalInterfaceEntityListing ConfigurationEdgesEdgeidLogicalinterfacesGet (string edgeId);
@@ -441,11 +547,19 @@ namespace ININ.PureCloudApi.Api
         ApiResponse<LogicalInterfaceEntityListing> ConfigurationEdgesEdgeidLogicalinterfacesGetWithHttpInfo (string edgeId);
         /// <summary>
         /// Delete an edge logical interface
+=======
+        /// <returns>Task of EncryptionKey</returns>
+        System.Threading.Tasks.Task<EncryptionKey> PostRecordingkeysAsync ();
+
+        /// <summary>
+        /// Create encryption key
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="edgeId">Edge ID</param>
         /// <param name="interfaceId">Interface ID</param>
         /// <returns></returns>
@@ -453,28 +567,57 @@ namespace ININ.PureCloudApi.Api
 
         /// <summary>
         /// Delete an edge logical interface
+=======
+        /// <returns>Task of ApiResponse (EncryptionKey)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EncryptionKey>> PostRecordingkeysAsyncWithHttpInfo ();
+        /// <summary>
+        /// Update key rotation schedule
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="edgeId">Edge ID</param>
         /// <param name="interfaceId">Interface ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> ConfigurationEdgesEdgeidLogicalinterfacesInterfaceidDeleteWithHttpInfo (string edgeId, string interfaceId);
         /// <summary>
         /// Get an edge logical interface
+=======
+        /// <param name="body">KeyRotationSchedule (optional)</param>
+        /// <returns>Task of KeyRotationSchedule</returns>
+        System.Threading.Tasks.Task<KeyRotationSchedule> PutRecordingkeysRotationscheduleAsync (KeyRotationSchedule body = null);
+
+        /// <summary>
+        /// Update key rotation schedule
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="edgeId">Edge ID</param>
         /// <param name="interfaceId">Interface ID</param>
         /// <returns>DomainLogicalInterface</returns>
         DomainLogicalInterface ConfigurationEdgesEdgeidLogicalinterfacesInterfaceidGet (string edgeId, string interfaceId);
+=======
+        /// <param name="body">KeyRotationSchedule (optional)</param>
+        /// <returns>Task of ApiResponse (KeyRotationSchedule)</returns>
+        System.Threading.Tasks.Task<ApiResponse<KeyRotationSchedule>> PutRecordingkeysRotationscheduleAsyncWithHttpInfo (KeyRotationSchedule body = null);
+        #endregion Asynchronous Operations
+    }
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
+    /// <summary>
+    /// Represents a collection of functions to interact with the API endpoints
+    /// </summary>
+    public class ConfigurationApi : IConfigurationApi
+    {
         /// <summary>
+<<<<<<< HEAD
         /// Get an edge logical interface
         /// </summary>
         /// <remarks>
@@ -15873,11 +16016,55 @@ namespace ININ.PureCloudApi.Api
         {
              ApiResponse<List<NumberPlan>> localVarResponse = ConfigurationSitesSiteidNumberplansGetWithHttpInfo(siteId);
              return localVarResponse.Data;
+=======
+        /// Initializes a new instance of the <see cref="ConfigurationApi"/> class.
+        /// </summary>
+        /// <returns></returns>
+        public ConfigurationApi(String basePath)
+        {
+            this.Configuration = new Configuration(new ApiClient(basePath));
+
+            // ensure API client has configuration ready
+            if (Configuration.ApiClient.Configuration == null)
+            {
+                this.Configuration.ApiClient.Configuration = this.Configuration;
+            }
         }
 
         /// <summary>
-        /// Get the list of Number Plans for this Site. 
+        /// Initializes a new instance of the <see cref="ConfigurationApi"/> class
+        /// using Configuration object
         /// </summary>
+        /// <param name="configuration">An instance of Configuration</param>
+        /// <returns></returns>
+        public ConfigurationApi(Configuration configuration = null)
+        {
+            if (configuration == null) // use the default one in Configuration
+                this.Configuration = Configuration.Default;
+            else
+                this.Configuration = configuration;
+
+            // ensure API client has configuration ready
+            if (Configuration.ApiClient.Configuration == null)
+            {
+                this.Configuration.ApiClient.Configuration = this.Configuration;
+            }
+        }
+
+        /// <summary>
+        /// Gets the base path of the API client.
+        /// </summary>
+        /// <value>The base path</value>
+        public String GetBasePath()
+        {
+            return this.Configuration.ApiClient.RestClient.BaseUrl.ToString();
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
+        }
+
+        /// <summary>
+        /// Sets the base path of the API client.
+        /// </summary>
+<<<<<<< HEAD
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="siteId">Site ID</param>
         /// <returns>ApiResponse of List&lt;NumberPlan&gt;</returns>
@@ -15939,9 +16126,25 @@ namespace ININ.PureCloudApi.Api
             
         }
 
+=======
+        /// <value>The base path</value>
+        [Obsolete("SetBasePath is deprecated, please do 'Configuraiton.ApiClient = new ApiClient(\"http://new-path\")' instead.")]
+        public void SetBasePath(String basePath)
+        {
+            // do nothing
+        }
+
         /// <summary>
-        /// Get the list of Number Plans for this Site. 
+        /// Gets or sets the configuration object
         /// </summary>
+        /// <value>An instance of the Configuration</value>
+        public Configuration Configuration {get; set;}
+
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
+        /// <summary>
+        /// Gets the default header.
+        /// </summary>
+<<<<<<< HEAD
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="siteId">Site ID</param>
         /// <returns>Task of List&lt;NumberPlan&gt;</returns>
@@ -15950,11 +16153,19 @@ namespace ININ.PureCloudApi.Api
              ApiResponse<List<NumberPlan>> localVarResponse = await ConfigurationSitesSiteidNumberplansGetAsyncWithHttpInfo(siteId);
              return localVarResponse.Data;
 
+=======
+        /// <returns>Dictionary of HTTP header</returns>
+        [Obsolete("DefaultHeader is deprecated, please use Configuration.DefaultHeader instead.")]
+        public Dictionary<String, String> DefaultHeader()
+        {
+            return this.Configuration.DefaultHeader;
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         }
 
         /// <summary>
-        /// Get the list of Number Plans for this Site. 
+        /// Add default header.
         /// </summary>
+<<<<<<< HEAD
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="siteId">Site ID</param>
         /// <returns>Task of ApiResponse (List&lt;NumberPlan&gt;)</returns>
@@ -16026,10 +16237,32 @@ namespace ININ.PureCloudApi.Api
         public NumberPlan ConfigurationSitesSiteidNumberplansNumberplanidGet (string siteId, string numberPlanId)
         {
              ApiResponse<NumberPlan> localVarResponse = ConfigurationSitesSiteidNumberplansNumberplanidGetWithHttpInfo(siteId, numberPlanId);
+=======
+        /// <param name="key">Header field name.</param>
+        /// <param name="value">Header field value.</param>
+        /// <returns></returns>
+        [Obsolete("AddDefaultHeader is deprecated, please use Configuration.AddDefaultHeader instead.")]
+        public void AddDefaultHeader(string key, string value)
+        {
+            this.Configuration.AddDefaultHeader(key, value);
+        }
+
+        /// <summary>
+        /// Get encryption key list 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>EncryptionKeyEntityListing</returns>
+        public EncryptionKeyEntityListing GetRecordingkeys (int? pageSize = null, int? pageNumber = null)
+        {
+             ApiResponse<EncryptionKeyEntityListing> localVarResponse = GetRecordingkeysWithHttpInfo(pageSize, pageNumber);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Get a Number Plan by ID. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -16046,6 +16279,18 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'numberPlanId' when calling ConfigurationApi->ConfigurationSitesSiteidNumberplansNumberplanidGet");
 
             var localVarPath = "/api/v1/configuration/sites/{siteId}/numberplans/{numberPlanId}";
+=======
+        /// Get encryption key list 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>ApiResponse of EncryptionKeyEntityListing</returns>
+        public ApiResponse< EncryptionKeyEntityListing > GetRecordingkeysWithHttpInfo (int? pageSize = null, int? pageNumber = null)
+        {
+
+            var localVarPath = "/api/v2/recording/recordingkeys";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -16070,8 +16315,13 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (siteId != null) localVarPathParams.Add("siteId", Configuration.ApiClient.ParameterToString(siteId)); // path parameter
             if (numberPlanId != null) localVarPathParams.Add("numberPlanId", Configuration.ApiClient.ParameterToString(numberPlanId)); // path parameter
+=======
+            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -16088,6 +16338,7 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling ConfigurationSitesSiteidNumberplansNumberplanidGet: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ConfigurationSitesSiteidNumberplansNumberplanidGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -16095,10 +16346,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<NumberPlan>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (NumberPlan) Configuration.ApiClient.Deserialize(localVarResponse, typeof(NumberPlan)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling GetRecordingkeys: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRecordingkeys: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EncryptionKeyEntityListing>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (EncryptionKeyEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EncryptionKeyEntityListing)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Get a Number Plan by ID. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -16108,11 +16369,23 @@ namespace ININ.PureCloudApi.Api
         public async System.Threading.Tasks.Task<NumberPlan> ConfigurationSitesSiteidNumberplansNumberplanidGetAsync (string siteId, string numberPlanId)
         {
              ApiResponse<NumberPlan> localVarResponse = await ConfigurationSitesSiteidNumberplansNumberplanidGetAsyncWithHttpInfo(siteId, numberPlanId);
+=======
+        /// Get encryption key list 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>Task of EncryptionKeyEntityListing</returns>
+        public async System.Threading.Tasks.Task<EncryptionKeyEntityListing> GetRecordingkeysAsync (int? pageSize = null, int? pageNumber = null)
+        {
+             ApiResponse<EncryptionKeyEntityListing> localVarResponse = await GetRecordingkeysAsyncWithHttpInfo(pageSize, pageNumber);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
 
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Get a Number Plan by ID. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -16129,6 +16402,18 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'numberPlanId' when calling ConfigurationApi->ConfigurationSitesSiteidNumberplansNumberplanidGet");
 
             var localVarPath = "/api/v1/configuration/sites/{siteId}/numberplans/{numberPlanId}";
+=======
+        /// Get encryption key list 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>Task of ApiResponse (EncryptionKeyEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<EncryptionKeyEntityListing>> GetRecordingkeysAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null)
+        {
+
+            var localVarPath = "/api/v2/recording/recordingkeys";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -16153,8 +16438,13 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (siteId != null) localVarPathParams.Add("siteId", Configuration.ApiClient.ParameterToString(siteId)); // path parameter
             if (numberPlanId != null) localVarPathParams.Add("numberPlanId", Configuration.ApiClient.ParameterToString(numberPlanId)); // path parameter
+=======
+            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -16167,6 +16457,7 @@ namespace ININ.PureCloudApi.Api
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
+<<<<<<< HEAD
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
@@ -16178,10 +16469,24 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<NumberPlan>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (NumberPlan) Configuration.ApiClient.Deserialize(localVarResponse, typeof(NumberPlan)));
+=======
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRecordingkeys: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRecordingkeys: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EncryptionKeyEntityListing>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (EncryptionKeyEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EncryptionKeyEntityListing)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Update the list of Number Plans. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -16191,10 +16496,20 @@ namespace ININ.PureCloudApi.Api
         public List<NumberPlan> ConfigurationSitesSiteidNumberplansPut (string siteId, List<NumberPlan> body = null)
         {
              ApiResponse<List<NumberPlan>> localVarResponse = ConfigurationSitesSiteidNumberplansPutWithHttpInfo(siteId, body);
+=======
+        /// Get key rotation schedule 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>KeyRotationSchedule</returns>
+        public KeyRotationSchedule GetRecordingkeysRotationschedule ()
+        {
+             ApiResponse<KeyRotationSchedule> localVarResponse = GetRecordingkeysRotationscheduleWithHttpInfo();
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Update the list of Number Plans. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -16208,6 +16523,16 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'siteId' when calling ConfigurationApi->ConfigurationSitesSiteidNumberplansPut");
 
             var localVarPath = "/api/v1/configuration/sites/{siteId}/numberplans";
+=======
+        /// Get key rotation schedule 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of KeyRotationSchedule</returns>
+        public ApiResponse< KeyRotationSchedule > GetRecordingkeysRotationscheduleWithHttpInfo ()
+        {
+
+            var localVarPath = "/api/v2/recording/recordingkeys/rotationschedule";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -16232,6 +16557,7 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (siteId != null) localVarPathParams.Add("siteId", Configuration.ApiClient.ParameterToString(siteId)); // path parameter
             if (body.GetType() != typeof(byte[]))
             {
@@ -16241,6 +16567,8 @@ namespace ININ.PureCloudApi.Api
             {
                 localVarPostBody = body; // byte array
             }
+=======
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -16251,6 +16579,7 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+<<<<<<< HEAD
                 Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -16264,10 +16593,26 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<List<NumberPlan>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (List<NumberPlan>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<NumberPlan>)));
+=======
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRecordingkeysRotationschedule: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRecordingkeysRotationschedule: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<KeyRotationSchedule>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (KeyRotationSchedule) Configuration.ApiClient.Deserialize(localVarResponse, typeof(KeyRotationSchedule)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Update the list of Number Plans. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -16277,11 +16622,21 @@ namespace ININ.PureCloudApi.Api
         public async System.Threading.Tasks.Task<List<NumberPlan>> ConfigurationSitesSiteidNumberplansPutAsync (string siteId, List<NumberPlan> body = null)
         {
              ApiResponse<List<NumberPlan>> localVarResponse = await ConfigurationSitesSiteidNumberplansPutAsyncWithHttpInfo(siteId, body);
+=======
+        /// Get key rotation schedule 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of KeyRotationSchedule</returns>
+        public async System.Threading.Tasks.Task<KeyRotationSchedule> GetRecordingkeysRotationscheduleAsync ()
+        {
+             ApiResponse<KeyRotationSchedule> localVarResponse = await GetRecordingkeysRotationscheduleAsyncWithHttpInfo();
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
 
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Update the list of Number Plans. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -16295,6 +16650,16 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'siteId' when calling ConfigurationApi->ConfigurationSitesSiteidNumberplansPut");
 
             var localVarPath = "/api/v1/configuration/sites/{siteId}/numberplans";
+=======
+        /// Get key rotation schedule 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (KeyRotationSchedule)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<KeyRotationSchedule>> GetRecordingkeysRotationscheduleAsyncWithHttpInfo ()
+        {
+
+            var localVarPath = "/api/v2/recording/recordingkeys/rotationschedule";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -16319,6 +16684,7 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (siteId != null) localVarPathParams.Add("siteId", Configuration.ApiClient.ParameterToString(siteId)); // path parameter
             if (body.GetType() != typeof(byte[]))
             {
@@ -16328,6 +16694,8 @@ namespace ININ.PureCloudApi.Api
             {
                 localVarPostBody = body; // byte array
             }
+=======
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -16338,6 +16706,7 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+<<<<<<< HEAD
                 Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -16351,10 +16720,26 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<List<NumberPlan>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (List<NumberPlan>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<NumberPlan>)));
+=======
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRecordingkeysRotationschedule: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRecordingkeysRotationschedule: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<KeyRotationSchedule>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (KeyRotationSchedule) Configuration.ApiClient.Deserialize(localVarResponse, typeof(KeyRotationSchedule)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Update a endpoint. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -16364,10 +16749,20 @@ namespace ININ.PureCloudApi.Api
         public Site ConfigurationSitesSiteidPut (string siteId, Site body = null)
         {
              ApiResponse<Site> localVarResponse = ConfigurationSitesSiteidPutWithHttpInfo(siteId, body);
+=======
+        /// Create encryption key 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>EncryptionKey</returns>
+        public EncryptionKey PostRecordingkeys ()
+        {
+             ApiResponse<EncryptionKey> localVarResponse = PostRecordingkeysWithHttpInfo();
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Update a endpoint. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -16381,6 +16776,16 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'siteId' when calling ConfigurationApi->ConfigurationSitesSiteidPut");
 
             var localVarPath = "/api/v1/configuration/sites/{siteId}";
+=======
+        /// Create encryption key 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of EncryptionKey</returns>
+        public ApiResponse< EncryptionKey > PostRecordingkeysWithHttpInfo ()
+        {
+
+            var localVarPath = "/api/v2/recording/recordingkeys";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -16405,6 +16810,7 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (siteId != null) localVarPathParams.Add("siteId", Configuration.ApiClient.ParameterToString(siteId)); // path parameter
             if (body.GetType() != typeof(byte[]))
             {
@@ -16414,6 +16820,8 @@ namespace ININ.PureCloudApi.Api
             {
                 localVarPostBody = body; // byte array
             }
+=======
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -16424,6 +16832,7 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+<<<<<<< HEAD
                 Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -16437,10 +16846,26 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<Site>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Site) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Site)));
+=======
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostRecordingkeys: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostRecordingkeys: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EncryptionKey>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (EncryptionKey) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EncryptionKey)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Update a endpoint. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -16450,11 +16875,21 @@ namespace ININ.PureCloudApi.Api
         public async System.Threading.Tasks.Task<Site> ConfigurationSitesSiteidPutAsync (string siteId, Site body = null)
         {
              ApiResponse<Site> localVarResponse = await ConfigurationSitesSiteidPutAsyncWithHttpInfo(siteId, body);
+=======
+        /// Create encryption key 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of EncryptionKey</returns>
+        public async System.Threading.Tasks.Task<EncryptionKey> PostRecordingkeysAsync ()
+        {
+             ApiResponse<EncryptionKey> localVarResponse = await PostRecordingkeysAsyncWithHttpInfo();
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
 
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Update a endpoint. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -16468,6 +16903,16 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'siteId' when calling ConfigurationApi->ConfigurationSitesSiteidPut");
 
             var localVarPath = "/api/v1/configuration/sites/{siteId}";
+=======
+        /// Create encryption key 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (EncryptionKey)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<EncryptionKey>> PostRecordingkeysAsyncWithHttpInfo ()
+        {
+
+            var localVarPath = "/api/v2/recording/recordingkeys";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -16492,6 +16937,7 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (siteId != null) localVarPathParams.Add("siteId", Configuration.ApiClient.ParameterToString(siteId)); // path parameter
             if (body.GetType() != typeof(byte[]))
             {
@@ -16501,6 +16947,8 @@ namespace ININ.PureCloudApi.Api
             {
                 localVarPostBody = body; // byte array
             }
+=======
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -16511,6 +16959,7 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+<<<<<<< HEAD
                 Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -16524,24 +16973,47 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<Site>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Site) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Site)));
+=======
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostRecordingkeys: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostRecordingkeys: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EncryptionKey>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (EncryptionKey) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EncryptionKey)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
-        /// Triggers the rebalance operation. 
+        /// Update key rotation schedule 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="siteId">Site ID</param>
         /// <returns></returns>
         public void ConfigurationSitesSiteidRebalancePost (string siteId)
+=======
+        /// <param name="body">KeyRotationSchedule (optional)</param>
+        /// <returns>KeyRotationSchedule</returns>
+        public KeyRotationSchedule PutRecordingkeysRotationschedule (KeyRotationSchedule body = null)
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         {
-             ConfigurationSitesSiteidRebalancePostWithHttpInfo(siteId);
+             ApiResponse<KeyRotationSchedule> localVarResponse = PutRecordingkeysRotationscheduleWithHttpInfo(body);
+             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Triggers the rebalance operation. 
+        /// Update key rotation schedule 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="siteId">Site ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> ConfigurationSitesSiteidRebalancePostWithHttpInfo (string siteId)
@@ -16551,6 +17023,14 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'siteId' when calling ConfigurationApi->ConfigurationSitesSiteidRebalancePost");
 
             var localVarPath = "/api/v1/configuration/sites/{siteId}/rebalance";
+=======
+        /// <param name="body">KeyRotationSchedule (optional)</param>
+        /// <returns>ApiResponse of KeyRotationSchedule</returns>
+        public ApiResponse< KeyRotationSchedule > PutRecordingkeysRotationscheduleWithHttpInfo (KeyRotationSchedule body = null)
+        {
+
+            var localVarPath = "/api/v2/recording/recordingkeys/rotationschedule";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -16575,7 +17055,18 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (siteId != null) localVarPathParams.Add("siteId", Configuration.ApiClient.ParameterToString(siteId)); // path parameter
+=======
+            if (body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -16586,6 +17077,7 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+<<<<<<< HEAD
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -16600,24 +17092,48 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
+=======
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutRecordingkeysRotationschedule: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutRecordingkeysRotationschedule: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<KeyRotationSchedule>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (KeyRotationSchedule) Configuration.ApiClient.Deserialize(localVarResponse, typeof(KeyRotationSchedule)));
+            
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         }
 
         /// <summary>
-        /// Triggers the rebalance operation. 
+        /// Update key rotation schedule 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="siteId">Site ID</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task ConfigurationSitesSiteidRebalancePostAsync (string siteId)
+=======
+        /// <param name="body">KeyRotationSchedule (optional)</param>
+        /// <returns>Task of KeyRotationSchedule</returns>
+        public async System.Threading.Tasks.Task<KeyRotationSchedule> PutRecordingkeysRotationscheduleAsync (KeyRotationSchedule body = null)
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         {
-             await ConfigurationSitesSiteidRebalancePostAsyncWithHttpInfo(siteId);
+             ApiResponse<KeyRotationSchedule> localVarResponse = await PutRecordingkeysRotationscheduleAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Triggers the rebalance operation. 
+        /// Update key rotation schedule 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="siteId">Site ID</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> ConfigurationSitesSiteidRebalancePostAsyncWithHttpInfo (string siteId)
@@ -16627,6 +17143,14 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'siteId' when calling ConfigurationApi->ConfigurationSitesSiteidRebalancePost");
 
             var localVarPath = "/api/v1/configuration/sites/{siteId}/rebalance";
+=======
+        /// <param name="body">KeyRotationSchedule (optional)</param>
+        /// <returns>Task of ApiResponse (KeyRotationSchedule)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<KeyRotationSchedule>> PutRecordingkeysRotationscheduleAsyncWithHttpInfo (KeyRotationSchedule body = null)
+        {
+
+            var localVarPath = "/api/v2/recording/recordingkeys/rotationschedule";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -16651,7 +17175,18 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (siteId != null) localVarPathParams.Add("siteId", Configuration.ApiClient.ParameterToString(siteId)); // path parameter
+=======
+            if (body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -16662,6 +17197,7 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+<<<<<<< HEAD
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -16671,11 +17207,28 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException (localVarStatusCode, "Error calling ConfigurationSitesSiteidRebalancePost: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ConfigurationSitesSiteidRebalancePost: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+=======
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
 
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutRecordingkeysRotationschedule: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutRecordingkeysRotationschedule: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<KeyRotationSchedule>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (KeyRotationSchedule) Configuration.ApiClient.Deserialize(localVarResponse, typeof(KeyRotationSchedule)));
             
+<<<<<<< HEAD
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
+=======
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         }
 
     }

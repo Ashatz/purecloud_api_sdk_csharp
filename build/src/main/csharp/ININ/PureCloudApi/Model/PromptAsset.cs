@@ -28,9 +28,17 @@ namespace ININ.PureCloudApi.Model
         /// <param name="TtsString">TtsString.</param>
         /// <param name="UploadStatus">UploadStatus.</param>
         /// <param name="UploadUri">UploadUri.</param>
+<<<<<<< HEAD
         /// <param name="DurationSeconds">DurationSeconds.</param>
 
         public PromptAsset(string Name = null, string PromptId = null, string Language = null, string MediaUri = null, string TtsString = null, string UploadStatus = null, string UploadUri = null, double? DurationSeconds = null)
+=======
+        /// <param name="LanguageDefault">LanguageDefault (default to false).</param>
+        /// <param name="Tags">Tags.</param>
+        /// <param name="DurationSeconds">DurationSeconds.</param>
+
+        public PromptAsset(string Name = null, string PromptId = null, string Language = null, string MediaUri = null, string TtsString = null, string UploadStatus = null, string UploadUri = null, bool? LanguageDefault = null, Dictionary<string, string> Tags = null, double? DurationSeconds = null)
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         {
             this.Name = Name;
             this.PromptId = PromptId;
@@ -39,6 +47,19 @@ namespace ININ.PureCloudApi.Model
             this.TtsString = TtsString;
             this.UploadStatus = UploadStatus;
             this.UploadUri = UploadUri;
+<<<<<<< HEAD
+=======
+            // use default value if no "LanguageDefault" provided
+            if (LanguageDefault == null)
+            {
+                this.LanguageDefault = false;
+            }
+            else
+            {
+                this.LanguageDefault = LanguageDefault;
+            }
+            this.Tags = Tags;
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             this.DurationSeconds = DurationSeconds;
             
         }
@@ -93,6 +114,21 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="uploadUri", EmitDefaultValue=false)]
         public string UploadUri { get; set; }
     
+<<<<<<< HEAD
+=======
+        /// <summary>
+        /// Gets or Sets LanguageDefault
+        /// </summary>
+        [DataMember(Name="languageDefault", EmitDefaultValue=false)]
+        public bool? LanguageDefault { get; set; }
+    
+        /// <summary>
+        /// Gets or Sets Tags
+        /// </summary>
+        [DataMember(Name="tags", EmitDefaultValue=false)]
+        public Dictionary<string, string> Tags { get; set; }
+    
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// Gets or Sets DurationSeconds
         /// </summary>
@@ -122,6 +158,8 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  TtsString: ").Append(TtsString).Append("\n");
             sb.Append("  UploadStatus: ").Append(UploadStatus).Append("\n");
             sb.Append("  UploadUri: ").Append(UploadUri).Append("\n");
+            sb.Append("  LanguageDefault: ").Append(LanguageDefault).Append("\n");
+            sb.Append("  Tags: ").Append(Tags).Append("\n");
             sb.Append("  DurationSeconds: ").Append(DurationSeconds).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
@@ -200,6 +238,19 @@ namespace ININ.PureCloudApi.Model
                     this.UploadUri != null &&
                     this.UploadUri.Equals(other.UploadUri)
                 ) &&
+<<<<<<< HEAD
+=======
+                (
+                    this.LanguageDefault == other.LanguageDefault ||
+                    this.LanguageDefault != null &&
+                    this.LanguageDefault.Equals(other.LanguageDefault)
+                ) &&
+                (
+                    this.Tags == other.Tags ||
+                    this.Tags != null &&
+                    this.Tags.SequenceEqual(other.Tags)
+                ) &&
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 (
                     this.DurationSeconds == other.DurationSeconds ||
                     this.DurationSeconds != null &&
@@ -239,6 +290,13 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.UploadStatus.GetHashCode();
                 if (this.UploadUri != null)
                     hash = hash * 59 + this.UploadUri.GetHashCode();
+<<<<<<< HEAD
+=======
+                if (this.LanguageDefault != null)
+                    hash = hash * 59 + this.LanguageDefault.GetHashCode();
+                if (this.Tags != null)
+                    hash = hash * 59 + this.Tags.GetHashCode();
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 if (this.DurationSeconds != null)
                     hash = hash * 59 + this.DurationSeconds.GetHashCode();
                 if (this.SelfUri != null)

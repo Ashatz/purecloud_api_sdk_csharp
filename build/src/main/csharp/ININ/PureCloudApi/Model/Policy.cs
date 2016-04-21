@@ -27,11 +27,19 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Order">Order.</param>
         /// <param name="Description">Description.</param>
         /// <param name="Enabled">Enabled (default to false).</param>
+<<<<<<< HEAD
+=======
+        /// <param name="MediaPolicies">Conditions and actions per media type.</param>
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <param name="Conditions">Conditions.</param>
         /// <param name="Actions">Actions.</param>
         /// <param name="PolicyErrors">PolicyErrors.</param>
 
+<<<<<<< HEAD
         public Policy(string Name = null, DateTime? ModifiedDate = null, DateTime? CreatedDate = null, int? Order = null, string Description = null, bool? Enabled = null, PolicyConditions Conditions = null, PolicyActions Actions = null, PolicyErrors PolicyErrors = null)
+=======
+        public Policy(string Name = null, DateTime? ModifiedDate = null, DateTime? CreatedDate = null, int? Order = null, string Description = null, bool? Enabled = null, MediaPolicies MediaPolicies = null, PolicyConditions Conditions = null, PolicyActions Actions = null, PolicyErrors PolicyErrors = null)
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         {
             this.Name = Name;
             this.ModifiedDate = ModifiedDate;
@@ -47,6 +55,10 @@ namespace ININ.PureCloudApi.Model
             {
                 this.Enabled = Enabled;
             }
+<<<<<<< HEAD
+=======
+            this.MediaPolicies = MediaPolicies;
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             this.Conditions = Conditions;
             this.Actions = Actions;
             this.PolicyErrors = PolicyErrors;
@@ -100,14 +112,23 @@ namespace ININ.PureCloudApi.Model
         public bool? Enabled { get; set; }
     
         /// <summary>
-        /// Gets or Sets Conditions
+        /// Conditions and actions per media type
         /// </summary>
+        /// <value>Conditions and actions per media type</value>
+        [DataMember(Name="mediaPolicies", EmitDefaultValue=false)]
+        public MediaPolicies MediaPolicies { get; set; }
+    
+        /// <summary>
+        /// Conditions
+        /// </summary>
+        /// <value>Conditions</value>
         [DataMember(Name="conditions", EmitDefaultValue=false)]
         public PolicyConditions Conditions { get; set; }
     
         /// <summary>
-        /// Gets or Sets Actions
+        /// Actions
         /// </summary>
+        /// <value>Actions</value>
         [DataMember(Name="actions", EmitDefaultValue=false)]
         public PolicyActions Actions { get; set; }
     
@@ -139,6 +160,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Order: ").Append(Order).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
+            sb.Append("  MediaPolicies: ").Append(MediaPolicies).Append("\n");
             sb.Append("  Conditions: ").Append(Conditions).Append("\n");
             sb.Append("  Actions: ").Append(Actions).Append("\n");
             sb.Append("  PolicyErrors: ").Append(PolicyErrors).Append("\n");
@@ -214,6 +236,14 @@ namespace ININ.PureCloudApi.Model
                     this.Enabled != null &&
                     this.Enabled.Equals(other.Enabled)
                 ) &&
+<<<<<<< HEAD
+=======
+                (
+                    this.MediaPolicies == other.MediaPolicies ||
+                    this.MediaPolicies != null &&
+                    this.MediaPolicies.Equals(other.MediaPolicies)
+                ) &&
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 (
                     this.Conditions == other.Conditions ||
                     this.Conditions != null &&
@@ -261,6 +291,11 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.Description.GetHashCode();
                 if (this.Enabled != null)
                     hash = hash * 59 + this.Enabled.GetHashCode();
+<<<<<<< HEAD
+=======
+                if (this.MediaPolicies != null)
+                    hash = hash * 59 + this.MediaPolicies.GetHashCode();
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 if (this.Conditions != null)
                     hash = hash * 59 + this.Conditions.GetHashCode();
                 if (this.Actions != null)

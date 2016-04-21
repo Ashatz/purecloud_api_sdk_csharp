@@ -22,6 +22,7 @@ namespace ININ.PureCloudApi.Model
         /// Initializes a new instance of the <see cref="TimeZone" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
+<<<<<<< HEAD
         /// <param name="StandardOffset">StandardOffset.</param>
         /// <param name="Offset">Offset.</param>
 
@@ -29,6 +30,13 @@ namespace ININ.PureCloudApi.Model
         {
             this.Name = Name;
             this.StandardOffset = StandardOffset;
+=======
+        /// <param name="Offset">Offset.</param>
+
+        public TimeZone(string Name = null, long? Offset = null)
+        {
+            this.Name = Name;
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             this.Offset = Offset;
             
         }
@@ -47,12 +55,15 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
     
+<<<<<<< HEAD
         /// <summary>
         /// Gets or Sets StandardOffset
         /// </summary>
         [DataMember(Name="standardOffset", EmitDefaultValue=false)]
         public long? StandardOffset { get; set; }
     
+=======
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// Gets or Sets Offset
         /// </summary>
@@ -76,7 +87,6 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class TimeZone {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  StandardOffset: ").Append(StandardOffset).Append("\n");
             sb.Append("  Offset: ").Append(Offset).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
@@ -125,11 +135,14 @@ namespace ININ.PureCloudApi.Model
                     this.Name != null &&
                     this.Name.Equals(other.Name)
                 ) &&
+<<<<<<< HEAD
                 (
                     this.StandardOffset == other.StandardOffset ||
                     this.StandardOffset != null &&
                     this.StandardOffset.Equals(other.StandardOffset)
                 ) &&
+=======
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 (
                     this.Offset == other.Offset ||
                     this.Offset != null &&
@@ -157,8 +170,11 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.Id.GetHashCode();
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+<<<<<<< HEAD
                 if (this.StandardOffset != null)
                     hash = hash * 59 + this.StandardOffset.GetHashCode();
+=======
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 if (this.Offset != null)
                     hash = hash * 59 + this.Offset.GetHashCode();
                 if (this.SelfUri != null)

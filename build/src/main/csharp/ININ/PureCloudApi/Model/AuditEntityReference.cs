@@ -35,6 +35,7 @@ namespace ININ.PureCloudApi.Model
             
             [EnumMember(Value = "DOWNLOAD")]
             Download,
+<<<<<<< HEAD
             
             [EnumMember(Value = "FAX")]
             Fax,
@@ -42,6 +43,15 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "GROUP")]
             Group,
             
+=======
+            
+            [EnumMember(Value = "FAX")]
+            Fax,
+            
+            [EnumMember(Value = "GROUP")]
+            Group,
+            
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             [EnumMember(Value = "RECORDING")]
             Recording,
             
@@ -55,6 +65,7 @@ namespace ININ.PureCloudApi.Model
             User,
             
             [EnumMember(Value = "PUBLIC")]
+<<<<<<< HEAD
             Public,
             
             [EnumMember(Value = "FILE")]
@@ -74,10 +85,39 @@ namespace ININ.PureCloudApi.Model
             
             [EnumMember(Value = "THUMBNAIL")]
             Thumbnail
+=======
+            Public
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         }
 
         
 
+        /// <summary>
+        /// Gets or Sets Type
+        /// </summary>
+        [DataMember(Name="type", EmitDefaultValue=false)]
+        public TypeEnum? Type { get; set; }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="AuditEntityReference" />class.
+        /// </summary>
+        /// <param name="Id">Id.</param>
+        /// <param name="Name">Name.</param>
+        /// <param name="SelfUri">SelfUri.</param>
+        /// <param name="Type">Type.</param>
+        /// <param name="Action">Action.</param>
+
+        public AuditEntityReference(string Id = null, string Name = null, string SelfUri = null, TypeEnum? Type = null, string Action = null)
+        {
+            this.Id = Id;
+            this.Name = Name;
+            this.SelfUri = SelfUri;
+            this.Type = Type;
+            this.Action = Action;
+            
+        }
+
+    
         /// <summary>
         /// Gets or Sets Type
         /// </summary>

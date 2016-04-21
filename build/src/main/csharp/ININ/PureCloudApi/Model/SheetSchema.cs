@@ -24,10 +24,17 @@ namespace ININ.PureCloudApi.Model
         /// <value>Rate type for the sheet.</value>
         [JsonConverter(typeof(StringEnumConverter))]
                 public enum RateTypeEnum {
+<<<<<<< HEAD
             
             [EnumMember(Value = "INTRASTATE")]
             Intrastate,
             
+=======
+            
+            [EnumMember(Value = "INTRASTATE")]
+            Intrastate,
+            
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             [EnumMember(Value = "INTERSTATE")]
             Interstate,
             
@@ -38,6 +45,79 @@ namespace ININ.PureCloudApi.Model
         
 
         /// <summary>
+        /// Rate type for the sheet.
+        /// </summary>
+        /// <value>Rate type for the sheet.</value>
+        [DataMember(Name="RateType", EmitDefaultValue=false)]
+        public RateTypeEnum? RateType { get; set; }
+    
+        /// <summary>
+<<<<<<< HEAD
+        /// Initializes a new instance of the <see cref="SheetSchema" />class.
+        /// </summary>
+        /// <param name="HeaderRow">Row number for the XLSX sheet&#39;s headers.  This is zero indexed (i.e. 0 is row 1). (required).</param>
+        /// <param name="DataRow">Row number of the first line of data in the sheet.  This is zero indexed (i.e. 0 is row 1) (required).</param>
+        /// <param name="HeaderMappings">XLSX sheet header name to object name mappings. For example, \&quot;ROUTE_TEL_PREFIX\&quot; to \&quot;Prefix\&quot; might be one such mapping. (required).</param>
+        /// <param name="RateType">Rate type for the sheet. (required).</param>
+        /// <param name="SheetNumber">Sheet number within the XLSX file.  This is zero indexed (i.e. 0 is page 1). (required).</param>
+        /// <param name="DateFormat">A date format that represents the date time stamp you want to parse. This is based on the reference time of Mon Jan 2 15:04:05 MST 2006. For example, if you had the date 13-OCT-2015, this parameter should be 02-Jan-2006. As another example, if you have the date 2014-09-20, this parameter should be 2006-01-02..</param>
+
+        public SheetSchema(int? HeaderRow = null, int? DataRow = null, Dictionary<string, string> HeaderMappings = null, RateTypeEnum? RateType = null, int? SheetNumber = null, string DateFormat = null)
+        {
+            // to ensure "HeaderRow" is required (not null)
+            if (HeaderRow == null)
+            {
+                throw new InvalidDataException("HeaderRow is a required property for SheetSchema and cannot be null");
+            }
+            else
+            {
+                this.HeaderRow = HeaderRow;
+            }
+            // to ensure "DataRow" is required (not null)
+            if (DataRow == null)
+            {
+                throw new InvalidDataException("DataRow is a required property for SheetSchema and cannot be null");
+            }
+            else
+            {
+                this.DataRow = DataRow;
+            }
+            // to ensure "HeaderMappings" is required (not null)
+            if (HeaderMappings == null)
+            {
+                throw new InvalidDataException("HeaderMappings is a required property for SheetSchema and cannot be null");
+            }
+            else
+            {
+                this.HeaderMappings = HeaderMappings;
+            }
+            // to ensure "RateType" is required (not null)
+            if (RateType == null)
+            {
+                throw new InvalidDataException("RateType is a required property for SheetSchema and cannot be null");
+            }
+            else
+            {
+                this.RateType = RateType;
+            }
+            // to ensure "SheetNumber" is required (not null)
+            if (SheetNumber == null)
+            {
+                throw new InvalidDataException("SheetNumber is a required property for SheetSchema and cannot be null");
+            }
+            else
+            {
+                this.SheetNumber = SheetNumber;
+            }
+            this.DateFormat = DateFormat;
+            
+        }
+
+    
+        /// <summary>
+        /// Row number for the XLSX sheet&#39;s headers.  This is zero indexed (i.e. 0 is row 1).
+        /// </summary>
+=======
         /// Rate type for the sheet.
         /// </summary>
         /// <value>Rate type for the sheet.</value>
@@ -109,6 +189,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Row number for the XLSX sheet&#39;s headers.  This is zero indexed (i.e. 0 is row 1).
         /// </summary>
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <value>Row number for the XLSX sheet&#39;s headers.  This is zero indexed (i.e. 0 is row 1).</value>
         [DataMember(Name="HeaderRow", EmitDefaultValue=false)]
         public int? HeaderRow { get; set; }

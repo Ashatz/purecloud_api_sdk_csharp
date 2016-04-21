@@ -27,16 +27,52 @@ namespace ININ.PureCloudApi.Model
             
             [EnumMember(Value = "UNKNOWN")]
             Unknown,
+<<<<<<< HEAD
             
             [EnumMember(Value = "MAIN")]
             Main,
             
+=======
+            
+            [EnumMember(Value = "MAIN")]
+            Main,
+            
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             [EnumMember(Value = "SECONDARY")]
             Secondary
         }
 
         
 
+        /// <summary>
+        /// the document association type
+        /// </summary>
+        /// <value>the document association type</value>
+        [DataMember(Name="documentAssociationType", EmitDefaultValue=false)]
+        public DocumentAssociationTypeEnum? DocumentAssociationType { get; set; }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="AssociatedDocument" />class.
+        /// </summary>
+        /// <param name="Document">the document associated with the workitem (required).</param>
+        /// <param name="DocumentAssociationType">the document association type.</param>
+
+        public AssociatedDocument(Document Document = null, DocumentAssociationTypeEnum? DocumentAssociationType = null)
+        {
+            // to ensure "Document" is required (not null)
+            if (Document == null)
+            {
+                throw new InvalidDataException("Document is a required property for AssociatedDocument and cannot be null");
+            }
+            else
+            {
+                this.Document = Document;
+            }
+            this.DocumentAssociationType = DocumentAssociationType;
+            
+        }
+
+    
         /// <summary>
         /// the document association type
         /// </summary>

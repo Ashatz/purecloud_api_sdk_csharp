@@ -8,12 +8,17 @@ set /p PACKAGE_VERSION=<bin\VERSION
 rmdir /S /Q build
 mkdir build
 
-REM set executable=bin\swagger-codegen-cli.jar
-set executable=lib\swagger-codegen-cli.jar
+set executable=%WORKSPACE%\swagger-codegen\modules\swagger-codegen-cli\target\swagger-codegen-cli.jar
 set JAVA_OPTS=%JAVA_OPTS% -XX:MaxPermSize=256M -Xmx1024M -DloggerPath=conf/log4j.properties
+<<<<<<< HEAD
 set ags=generate -i lib\swagger.json -l csharp -o build -c bin/config-csharp.json -t swagger_template
+=======
+set ags=generate -i swagger.json -l purecloudcsharp -o build -c bin/config-csharp.json
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
 call java %JAVA_OPTS% -jar %executable% %ags%
+
+xcopy %WORKSPACE%\repo\Extensions %WORKSPACE%\repo\build\src\main\csharp\ININ\PureCloudApi\Extensions\ /S
 
 cd %WORKSPACE%\repo\build
 call compile.bat

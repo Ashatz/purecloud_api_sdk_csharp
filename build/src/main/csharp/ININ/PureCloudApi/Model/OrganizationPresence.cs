@@ -89,6 +89,46 @@ namespace ININ.PureCloudApi.Model
 
     
         /// <summary>
+        /// Gets or Sets SystemPresence
+        /// </summary>
+        [DataMember(Name="systemPresence", EmitDefaultValue=false)]
+        public SystemPresenceEnum? SystemPresence { get; set; }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="OrganizationPresence" />class.
+        /// </summary>
+        /// <param name="Name">Name.</param>
+        /// <param name="LanguageLabels">LanguageLabels.</param>
+        /// <param name="SystemPresence">SystemPresence.</param>
+        /// <param name="Deactivated">Deactivated (default to false).</param>
+        /// <param name="CreatedBy">CreatedBy.</param>
+        /// <param name="CreatedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="ModifiedBy">ModifiedBy.</param>
+        /// <param name="ModifiedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+
+        public OrganizationPresence(string Name = null, Dictionary<string, string> LanguageLabels = null, SystemPresenceEnum? SystemPresence = null, bool? Deactivated = null, User CreatedBy = null, DateTime? CreatedDate = null, User ModifiedBy = null, DateTime? ModifiedDate = null)
+        {
+            this.Name = Name;
+            this.LanguageLabels = LanguageLabels;
+            this.SystemPresence = SystemPresence;
+            // use default value if no "Deactivated" provided
+            if (Deactivated == null)
+            {
+                this.Deactivated = false;
+            }
+            else
+            {
+                this.Deactivated = Deactivated;
+            }
+            this.CreatedBy = CreatedBy;
+            this.CreatedDate = CreatedDate;
+            this.ModifiedBy = ModifiedBy;
+            this.ModifiedDate = ModifiedDate;
+            
+        }
+
+    
+        /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>

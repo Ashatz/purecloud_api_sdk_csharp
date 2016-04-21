@@ -23,16 +23,43 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
                 public enum SortTypeEnum {
+<<<<<<< HEAD
             
             [EnumMember(Value = "ASCENDING")]
             Ascending,
             
+=======
+            
+            [EnumMember(Value = "ASCENDING")]
+            Ascending,
+            
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             [EnumMember(Value = "DESCENDING")]
             Descending
         }
 
         
 
+        /// <summary>
+        /// Gets or Sets SortType
+        /// </summary>
+        [DataMember(Name="sortType", EmitDefaultValue=false)]
+        public SortTypeEnum? SortType { get; set; }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="SortField" />class.
+        /// </summary>
+        /// <param name="Name">Name.</param>
+        /// <param name="SortType">SortType.</param>
+
+        public SortField(string Name = null, SortTypeEnum? SortType = null)
+        {
+            this.Name = Name;
+            this.SortType = SortType;
+            
+        }
+
+    
         /// <summary>
         /// Gets or Sets SortType
         /// </summary>

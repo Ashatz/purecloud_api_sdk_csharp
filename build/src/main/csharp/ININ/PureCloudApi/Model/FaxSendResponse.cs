@@ -56,6 +56,28 @@ namespace ININ.PureCloudApi.Model
 
     
         /// <summary>
+        /// Gets or Sets UploadMethodType
+        /// </summary>
+        [DataMember(Name="uploadMethodType", EmitDefaultValue=false)]
+        public UploadMethodTypeEnum? UploadMethodType { get; set; }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="FaxSendResponse" />class.
+        /// </summary>
+        /// <param name="Name">Name.</param>
+        /// <param name="UploadDestinationUri">UploadDestinationUri.</param>
+        /// <param name="UploadMethodType">UploadMethodType.</param>
+
+        public FaxSendResponse(string Name = null, string UploadDestinationUri = null, UploadMethodTypeEnum? UploadMethodType = null)
+        {
+            this.Name = Name;
+            this.UploadDestinationUri = UploadDestinationUri;
+            this.UploadMethodType = UploadMethodType;
+            
+        }
+
+    
+        /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>

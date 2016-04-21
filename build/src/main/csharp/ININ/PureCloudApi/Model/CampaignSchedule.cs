@@ -29,7 +29,11 @@ namespace ININ.PureCloudApi.Model
         /// <param name="TimeZone">TimeZone.</param>
         /// <param name="Campaign">Campaign.</param>
 
+<<<<<<< HEAD
         public CampaignSchedule(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, List<Interval> Intervals = null, string TimeZone = null, UriReference Campaign = null)
+=======
+        public CampaignSchedule(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, List<CampaignScheduleIntervals> Intervals = null, string TimeZone = null, UriReference Campaign = null)
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         {
             this.Name = Name;
             this.DateCreated = DateCreated;
@@ -79,7 +83,11 @@ namespace ININ.PureCloudApi.Model
         /// Gets or Sets Intervals
         /// </summary>
         [DataMember(Name="intervals", EmitDefaultValue=false)]
+<<<<<<< HEAD
         public List<Interval> Intervals { get; set; }
+=======
+        public List<CampaignScheduleIntervals> Intervals { get; set; }
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
     
         /// <summary>
         /// Gets or Sets TimeZone

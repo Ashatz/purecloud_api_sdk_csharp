@@ -23,15 +23,27 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <param name="UserId">UserId.</param>
         /// <param name="Call">Call.</param>
+<<<<<<< HEAD
+=======
+        /// <param name="Callback">Callback.</param>
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <param name="Email">Email.</param>
         /// <param name="Chat">Chat.</param>
         /// <param name="SocialExpression">SocialExpression.</param>
         /// <param name="Video">Video.</param>
 
+<<<<<<< HEAD
         public UserConversationSummary(string UserId = null, MediaSummary Call = null, MediaSummary Email = null, MediaSummary Chat = null, MediaSummary SocialExpression = null, MediaSummary Video = null)
         {
             this.UserId = UserId;
             this.Call = Call;
+=======
+        public UserConversationSummary(string UserId = null, MediaSummary Call = null, MediaSummary Callback = null, MediaSummary Email = null, MediaSummary Chat = null, MediaSummary SocialExpression = null, MediaSummary Video = null)
+        {
+            this.UserId = UserId;
+            this.Call = Call;
+            this.Callback = Callback;
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             this.Email = Email;
             this.Chat = Chat;
             this.SocialExpression = SocialExpression;
@@ -52,6 +64,15 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="call", EmitDefaultValue=false)]
         public MediaSummary Call { get; set; }
     
+<<<<<<< HEAD
+=======
+        /// <summary>
+        /// Gets or Sets Callback
+        /// </summary>
+        [DataMember(Name="callback", EmitDefaultValue=false)]
+        public MediaSummary Callback { get; set; }
+    
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// Gets or Sets Email
         /// </summary>
@@ -86,6 +107,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class UserConversationSummary {\n");
             sb.Append("  UserId: ").Append(UserId).Append("\n");
             sb.Append("  Call: ").Append(Call).Append("\n");
+            sb.Append("  Callback: ").Append(Callback).Append("\n");
             sb.Append("  Email: ").Append(Email).Append("\n");
             sb.Append("  Chat: ").Append(Chat).Append("\n");
             sb.Append("  SocialExpression: ").Append(SocialExpression).Append("\n");
@@ -136,6 +158,14 @@ namespace ININ.PureCloudApi.Model
                     this.Call != null &&
                     this.Call.Equals(other.Call)
                 ) &&
+<<<<<<< HEAD
+=======
+                (
+                    this.Callback == other.Callback ||
+                    this.Callback != null &&
+                    this.Callback.Equals(other.Callback)
+                ) &&
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 (
                     this.Email == other.Email ||
                     this.Email != null &&
@@ -173,6 +203,11 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.UserId.GetHashCode();
                 if (this.Call != null)
                     hash = hash * 59 + this.Call.GetHashCode();
+<<<<<<< HEAD
+=======
+                if (this.Callback != null)
+                    hash = hash * 59 + this.Callback.GetHashCode();
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 if (this.Email != null)
                     hash = hash * 59 + this.Email.GetHashCode();
                 if (this.Chat != null)

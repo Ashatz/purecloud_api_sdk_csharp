@@ -26,7 +26,11 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Facets">Facets.</param>
         /// <param name="Filters">Filters.</param>
 
+<<<<<<< HEAD
         public DialerAuditRequest(string QueryPhrase = null, List<string> QueryFields = null, List<Facet> Facets = null, List<Filter> Filters = null)
+=======
+        public DialerAuditRequest(string QueryPhrase = null, List<string> QueryFields = null, List<AuditFacet> Facets = null, List<AuditFilter> Filters = null)
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         {
             this.QueryPhrase = QueryPhrase;
             this.QueryFields = QueryFields;
@@ -52,13 +56,21 @@ namespace ININ.PureCloudApi.Model
         /// Gets or Sets Facets
         /// </summary>
         [DataMember(Name="facets", EmitDefaultValue=false)]
+<<<<<<< HEAD
         public List<Facet> Facets { get; set; }
+=======
+        public List<AuditFacet> Facets { get; set; }
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
     
         /// <summary>
         /// Gets or Sets Filters
         /// </summary>
         [DataMember(Name="filters", EmitDefaultValue=false)]
+<<<<<<< HEAD
         public List<Filter> Filters { get; set; }
+=======
+        public List<AuditFilter> Filters { get; set; }
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
     
         /// <summary>
         /// Returns the string presentation of the object

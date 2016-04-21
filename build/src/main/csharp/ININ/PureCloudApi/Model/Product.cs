@@ -62,6 +62,28 @@ namespace ININ.PureCloudApi.Model
 
     
         /// <summary>
+        /// Gets or Sets Status
+        /// </summary>
+        [DataMember(Name="status", EmitDefaultValue=false)]
+        public StatusEnum? Status { get; set; }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Product" />class.
+        /// </summary>
+        /// <param name="Name">Name.</param>
+        /// <param name="Status">Status.</param>
+        /// <param name="Comments">Comments.</param>
+
+        public Product(string Name = null, StatusEnum? Status = null, List<string> Comments = null)
+        {
+            this.Name = Name;
+            this.Status = Status;
+            this.Comments = Comments;
+            
+        }
+
+    
+        /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>

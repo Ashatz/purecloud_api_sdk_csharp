@@ -24,7 +24,11 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Name">Name.</param>
         /// <param name="Version">Version of this flow config..</param>
 
+<<<<<<< HEAD
         public FlowConfigId(string Name = nullstring Version = null)
+=======
+        public FlowConfigId(string Name = null, string Version = null)
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         {
             this.Name = Name;
             this.Version = Version;

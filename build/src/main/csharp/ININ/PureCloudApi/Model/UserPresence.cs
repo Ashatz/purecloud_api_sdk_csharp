@@ -22,6 +22,7 @@ namespace ININ.PureCloudApi.Model
         /// Initializes a new instance of the <see cref="UserPresence" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
+<<<<<<< HEAD
         /// <param name="User">User.</param>
         /// <param name="Source">Represents the source where the Presence was set. Some examples are: PURECLOUD, LYNC, OUTLOOK, etc..</param>
         /// <param name="PresenceDefinition">PresenceDefinition.</param>
@@ -38,6 +39,28 @@ namespace ININ.PureCloudApi.Model
             this.Message = Message;
             this.ModifiedBy = ModifiedBy;
             this.ModifiedDate = ModifiedDate;
+=======
+        /// <param name="Source">Represents the source where the Presence was set. Some examples are: PURECLOUD, LYNC, OUTLOOK, etc..</param>
+        /// <param name="Primary">A boolean used to tell whether or not to set this presence source as the primary on a PATCH (default to false).</param>
+        /// <param name="PresenceDefinition">PresenceDefinition.</param>
+        /// <param name="Message">Message.</param>
+
+        public UserPresence(string Name = null, string Source = null, bool? Primary = null, OrganizationPresence PresenceDefinition = null, string Message = null)
+        {
+            this.Name = Name;
+            this.Source = Source;
+            // use default value if no "Primary" provided
+            if (Primary == null)
+            {
+                this.Primary = false;
+            }
+            else
+            {
+                this.Primary = Primary;
+            }
+            this.PresenceDefinition = PresenceDefinition;
+            this.Message = Message;
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
@@ -55,12 +78,15 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
     
+<<<<<<< HEAD
         /// <summary>
         /// Gets or Sets User
         /// </summary>
         [DataMember(Name="user", EmitDefaultValue=false)]
         public User User { get; set; }
     
+=======
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// Represents the source where the Presence was set. Some examples are: PURECLOUD, LYNC, OUTLOOK, etc.
         /// </summary>
@@ -68,6 +94,16 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="source", EmitDefaultValue=false)]
         public string Source { get; set; }
     
+<<<<<<< HEAD
+=======
+        /// <summary>
+        /// A boolean used to tell whether or not to set this presence source as the primary on a PATCH
+        /// </summary>
+        /// <value>A boolean used to tell whether or not to set this presence source as the primary on a PATCH</value>
+        [DataMember(Name="primary", EmitDefaultValue=false)]
+        public bool? Primary { get; set; }
+    
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// Gets or Sets PresenceDefinition
         /// </summary>
@@ -80,6 +116,7 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="message", EmitDefaultValue=false)]
         public string Message { get; set; }
     
+<<<<<<< HEAD
         /// <summary>
         /// Gets or Sets ModifiedBy
         /// </summary>
@@ -93,6 +130,8 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="modifiedDate", EmitDefaultValue=false)]
         public DateTime? ModifiedDate { get; set; }
     
+=======
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// The URI for this object
         /// </summary>
@@ -110,12 +149,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class UserPresence {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  Source: ").Append(Source).Append("\n");
+            sb.Append("  Primary: ").Append(Primary).Append("\n");
             sb.Append("  PresenceDefinition: ").Append(PresenceDefinition).Append("\n");
             sb.Append("  Message: ").Append(Message).Append("\n");
-            sb.Append("  ModifiedBy: ").Append(ModifiedBy).Append("\n");
-            sb.Append("  ModifiedDate: ").Append(ModifiedDate).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -163,16 +200,27 @@ namespace ININ.PureCloudApi.Model
                     this.Name != null &&
                     this.Name.Equals(other.Name)
                 ) &&
+<<<<<<< HEAD
                 (
                     this.User == other.User ||
                     this.User != null &&
                     this.User.Equals(other.User)
                 ) &&
+=======
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 (
                     this.Source == other.Source ||
                     this.Source != null &&
                     this.Source.Equals(other.Source)
                 ) &&
+<<<<<<< HEAD
+=======
+                (
+                    this.Primary == other.Primary ||
+                    this.Primary != null &&
+                    this.Primary.Equals(other.Primary)
+                ) &&
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 (
                     this.PresenceDefinition == other.PresenceDefinition ||
                     this.PresenceDefinition != null &&
@@ -183,6 +231,7 @@ namespace ININ.PureCloudApi.Model
                     this.Message != null &&
                     this.Message.Equals(other.Message)
                 ) &&
+<<<<<<< HEAD
                 (
                     this.ModifiedBy == other.ModifiedBy ||
                     this.ModifiedBy != null &&
@@ -193,6 +242,8 @@ namespace ININ.PureCloudApi.Model
                     this.ModifiedDate != null &&
                     this.ModifiedDate.Equals(other.ModifiedDate)
                 ) &&
+=======
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
@@ -215,18 +266,28 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.Id.GetHashCode();
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+<<<<<<< HEAD
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();
                 if (this.Source != null)
                     hash = hash * 59 + this.Source.GetHashCode();
+=======
+                if (this.Source != null)
+                    hash = hash * 59 + this.Source.GetHashCode();
+                if (this.Primary != null)
+                    hash = hash * 59 + this.Primary.GetHashCode();
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 if (this.PresenceDefinition != null)
                     hash = hash * 59 + this.PresenceDefinition.GetHashCode();
                 if (this.Message != null)
                     hash = hash * 59 + this.Message.GetHashCode();
+<<<<<<< HEAD
                 if (this.ModifiedBy != null)
                     hash = hash * 59 + this.ModifiedBy.GetHashCode();
                 if (this.ModifiedDate != null)
                     hash = hash * 59 + this.ModifiedDate.GetHashCode();
+=======
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;

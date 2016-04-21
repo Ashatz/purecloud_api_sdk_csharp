@@ -1,0 +1,152 @@
+using System;
+using System.Linq;
+using System.IO;
+using System.Text;
+using System.Collections;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Runtime.Serialization;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+
+namespace ININ.PureCloudApi.Model
+{
+    /// <summary>
+    /// 
+    /// </summary>
+    [DataContract]
+<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/Interval.cs
+    public partial class Interval :  IEquatable<Interval>
+    { 
+        
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Interval" />class.
+        /// </summary>
+        /// <param name="Start">Start.</param>
+        /// <param name="End">End.</param>
+
+        public Interval(string Start = null, string End = null)
+=======
+    public partial class CampaignScheduleIntervals :  IEquatable<CampaignScheduleIntervals>
+    { 
+        
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CampaignScheduleIntervals" />class.
+        /// </summary>
+        /// <param name="Start">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="End">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+
+        public CampaignScheduleIntervals(DateTime? Start = null, DateTime? End = null)
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/CampaignScheduleIntervals.cs
+        {
+            this.Start = Start;
+            this.End = End;
+            
+        }
+
+    
+        /// <summary>
+        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// </summary>
+        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        [DataMember(Name="start", EmitDefaultValue=false)]
+<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/Interval.cs
+        public string Start { get; set; }
+=======
+        public DateTime? Start { get; set; }
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/CampaignScheduleIntervals.cs
+    
+        /// <summary>
+        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// </summary>
+        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        [DataMember(Name="end", EmitDefaultValue=false)]
+<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/Interval.cs
+        public string End { get; set; }
+=======
+        public DateTime? End { get; set; }
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/CampaignScheduleIntervals.cs
+    
+        /// <summary>
+        /// Returns the string presentation of the object
+        /// </summary>
+        /// <returns>String presentation of the object</returns>
+        public override string ToString()
+        {
+            var sb = new StringBuilder();
+            sb.Append("class CampaignScheduleIntervals {\n");
+            sb.Append("  Start: ").Append(Start).Append("\n");
+            sb.Append("  End: ").Append(End).Append("\n");
+            sb.Append("}\n");
+            return sb.ToString();
+        }
+
+        /// <summary>
+        /// Returns the JSON string presentation of the object
+        /// </summary>
+        /// <returns>JSON string presentation of the object</returns>
+        public string ToJson()
+        {
+            return JsonConvert.SerializeObject(this, Formatting.Indented);
+        }
+
+        /// <summary>
+        /// Returns true if objects are equal
+        /// </summary>
+        /// <param name="obj">Object to be compared</param>
+        /// <returns>Boolean</returns>
+        public override bool Equals(object obj)
+        {
+            // credit: http://stackoverflow.com/a/10454552/677735
+            return this.Equals(obj as CampaignScheduleIntervals);
+        }
+
+        /// <summary>
+        /// Returns true if CampaignScheduleIntervals instances are equal
+        /// </summary>
+<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/Interval.cs
+        /// <param name="other">Instance of Interval to be compared</param>
+=======
+        /// <param name="other">Instance of CampaignScheduleIntervals to be compared</param>
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/CampaignScheduleIntervals.cs
+        /// <returns>Boolean</returns>
+        public bool Equals(CampaignScheduleIntervals other)
+        {
+            // credit: http://stackoverflow.com/a/10454552/677735
+            if (other == null)
+                return false;
+
+            return true &&
+                (
+                    this.Start == other.Start ||
+                    this.Start != null &&
+                    this.Start.Equals(other.Start)
+                ) &&
+                (
+                    this.End == other.End ||
+                    this.End != null &&
+                    this.End.Equals(other.End)
+                );
+        }
+
+        /// <summary>
+        /// Gets the hash code
+        /// </summary>
+        /// <returns>Hash code</returns>
+        public override int GetHashCode()
+        {
+            // credit: http://stackoverflow.com/a/263416/677735
+            unchecked // Overflow is fine, just wrap
+            {
+                int hash = 41;
+                // Suitable nullity checks etc, of course :)
+                if (this.Start != null)
+                    hash = hash * 59 + this.Start.GetHashCode();
+                if (this.End != null)
+                    hash = hash * 59 + this.End.GetHashCode();
+                return hash;
+            }
+        }
+
+    }
+}

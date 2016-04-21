@@ -74,6 +74,40 @@ namespace ININ.PureCloudApi.Model
 
     
         /// <summary>
+        /// Gets or Sets LineType
+        /// </summary>
+        [DataMember(Name="lineType", EmitDefaultValue=false)]
+        public LineTypeEnum? LineType { get; set; }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EdgeLine" />class.
+        /// </summary>
+        /// <param name="Name">Name.</param>
+        /// <param name="Schema">Schema.</param>
+        /// <param name="Properties">Properties.</param>
+        /// <param name="Edge">Edge.</param>
+        /// <param name="EdgeGroup">EdgeGroup.</param>
+        /// <param name="LineType">LineType.</param>
+        /// <param name="Endpoint">Endpoint.</param>
+        /// <param name="IpAddress">IpAddress.</param>
+        /// <param name="LogicalInterfaceId">LogicalInterfaceId.</param>
+
+        public EdgeLine(string Name = null, UriReference Schema = null, Dictionary<string, Object> Properties = null, Edge Edge = null, EdgeGroup EdgeGroup = null, LineTypeEnum? LineType = null, Endpoint Endpoint = null, string IpAddress = null, string LogicalInterfaceId = null)
+        {
+            this.Name = Name;
+            this.Schema = Schema;
+            this.Properties = Properties;
+            this.Edge = Edge;
+            this.EdgeGroup = EdgeGroup;
+            this.LineType = LineType;
+            this.Endpoint = Endpoint;
+            this.IpAddress = IpAddress;
+            this.LogicalInterfaceId = LogicalInterfaceId;
+            
+        }
+
+    
+        /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>

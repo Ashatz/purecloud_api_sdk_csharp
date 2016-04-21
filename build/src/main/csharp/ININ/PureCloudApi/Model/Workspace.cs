@@ -76,6 +76,48 @@ namespace ININ.PureCloudApi.Model
 
     
         /// <summary>
+        /// Gets or Sets Type
+        /// </summary>
+        [DataMember(Name="type", EmitDefaultValue=false)]
+        public TypeEnum? Type { get; set; }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Workspace" />class.
+        /// </summary>
+        /// <param name="Name">Name.</param>
+        /// <param name="Type">Type.</param>
+        /// <param name="IsCurrentUserWorkspace">IsCurrentUserWorkspace (default to false).</param>
+        /// <param name="User">User.</param>
+        /// <param name="Bucket">Bucket.</param>
+        /// <param name="DateCreated">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="DateModified">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="Summary">Summary.</param>
+        /// <param name="Acl">Acl.</param>
+
+        public Workspace(string Name = null, TypeEnum? Type = null, bool? IsCurrentUserWorkspace = null, UriReference User = null, string Bucket = null, DateTime? DateCreated = null, DateTime? DateModified = null, WorkspaceSummary Summary = null, List<string> Acl = null)
+        {
+            this.Name = Name;
+            this.Type = Type;
+            // use default value if no "IsCurrentUserWorkspace" provided
+            if (IsCurrentUserWorkspace == null)
+            {
+                this.IsCurrentUserWorkspace = false;
+            }
+            else
+            {
+                this.IsCurrentUserWorkspace = IsCurrentUserWorkspace;
+            }
+            this.User = User;
+            this.Bucket = Bucket;
+            this.DateCreated = DateCreated;
+            this.DateModified = DateModified;
+            this.Summary = Summary;
+            this.Acl = Acl;
+            
+        }
+
+    
+        /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>

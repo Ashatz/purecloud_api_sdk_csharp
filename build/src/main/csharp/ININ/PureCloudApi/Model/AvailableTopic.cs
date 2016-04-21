@@ -21,9 +21,18 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AvailableTopic" />class.
         /// </summary>
+<<<<<<< HEAD
 
         public AvailableTopic()
+=======
+        /// <param name="Description">Description.</param>
+        /// <param name="Schema">Schema.</param>
+
+        public AvailableTopic(string Description = null, Dictionary<string, Object> Schema = null)
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         {
+            this.Description = Description;
+            this.Schema = Schema;
             
         }
 
@@ -35,6 +44,21 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
     
+<<<<<<< HEAD
+=======
+        /// <summary>
+        /// Gets or Sets Description
+        /// </summary>
+        [DataMember(Name="description", EmitDefaultValue=false)]
+        public string Description { get; set; }
+    
+        /// <summary>
+        /// Gets or Sets Schema
+        /// </summary>
+        [DataMember(Name="schema", EmitDefaultValue=false)]
+        public Dictionary<string, Object> Schema { get; set; }
+    
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -44,6 +68,11 @@ namespace ININ.PureCloudApi.Model
             var sb = new StringBuilder();
             sb.Append("class AvailableTopic {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
+<<<<<<< HEAD
+=======
+            sb.Append("  Description: ").Append(Description).Append("\n");
+            sb.Append("  Schema: ").Append(Schema).Append("\n");
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -84,6 +113,16 @@ namespace ININ.PureCloudApi.Model
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
+                ) &&
+                (
+                    this.Description == other.Description ||
+                    this.Description != null &&
+                    this.Description.Equals(other.Description)
+                ) &&
+                (
+                    this.Schema == other.Schema ||
+                    this.Schema != null &&
+                    this.Schema.SequenceEqual(other.Schema)
                 );
         }
 
@@ -100,6 +139,13 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+<<<<<<< HEAD
+=======
+                if (this.Description != null)
+                    hash = hash * 59 + this.Description.GetHashCode();
+                if (this.Schema != null)
+                    hash = hash * 59 + this.Schema.GetHashCode();
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 return hash;
             }
         }

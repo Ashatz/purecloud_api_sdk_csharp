@@ -21,6 +21,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserAuthorization" />class.
         /// </summary>
+<<<<<<< HEAD
         /// <param name="Name">Name.</param>
         /// <param name="Licenses">Licenses.</param>
         /// <param name="Roles">Roles.</param>
@@ -31,6 +32,14 @@ namespace ININ.PureCloudApi.Model
         {
             this.Name = Name;
             this.Licenses = Licenses;
+=======
+        /// <param name="Roles">Roles.</param>
+        /// <param name="Permissions">A collection of the permissions granted by all assigned roles.</param>
+        /// <param name="PermissionPolicies">The policies configured for assigned permissions..</param>
+
+        public UserAuthorization(List<DomainRole> Roles = null, List<string> Permissions = null, List<ResourcePermissionPolicy> PermissionPolicies = null)
+        {
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             this.Roles = Roles;
             this.Permissions = Permissions;
             this.PermissionPolicies = PermissionPolicies;
@@ -38,6 +47,7 @@ namespace ININ.PureCloudApi.Model
         }
 
     
+<<<<<<< HEAD
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
@@ -57,24 +67,33 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="licenses", EmitDefaultValue=false)]
         public List<string> Licenses { get; set; }
     
+=======
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// Gets or Sets Roles
         /// </summary>
         [DataMember(Name="roles", EmitDefaultValue=false)]
+<<<<<<< HEAD
         public List<string> Roles { get; set; }
+=======
+        public List<DomainRole> Roles { get; set; }
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
     
         /// <summary>
-        /// Gets or Sets Permissions
+        /// A collection of the permissions granted by all assigned roles
         /// </summary>
+        /// <value>A collection of the permissions granted by all assigned roles</value>
         [DataMember(Name="permissions", EmitDefaultValue=false)]
         public List<string> Permissions { get; set; }
     
         /// <summary>
-        /// Gets or Sets PermissionPolicies
+        /// The policies configured for assigned permissions.
         /// </summary>
+        /// <value>The policies configured for assigned permissions.</value>
         [DataMember(Name="permissionPolicies", EmitDefaultValue=false)]
         public List<ResourcePermissionPolicy> PermissionPolicies { get; set; }
     
+<<<<<<< HEAD
         /// <summary>
         /// The URI for this object
         /// </summary>
@@ -82,6 +101,8 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
     
+=======
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -90,13 +111,13 @@ namespace ININ.PureCloudApi.Model
         {
             var sb = new StringBuilder();
             sb.Append("class UserAuthorization {\n");
-            sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  Licenses: ").Append(Licenses).Append("\n");
             sb.Append("  Roles: ").Append(Roles).Append("\n");
             sb.Append("  Permissions: ").Append(Permissions).Append("\n");
             sb.Append("  PermissionPolicies: ").Append(PermissionPolicies).Append("\n");
+<<<<<<< HEAD
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
+=======
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -133,6 +154,7 @@ namespace ININ.PureCloudApi.Model
                 return false;
 
             return true &&
+<<<<<<< HEAD
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
@@ -148,6 +170,8 @@ namespace ININ.PureCloudApi.Model
                     this.Licenses != null &&
                     this.Licenses.SequenceEqual(other.Licenses)
                 ) &&
+=======
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 (
                     this.Roles == other.Roles ||
                     this.Roles != null &&
@@ -162,11 +186,14 @@ namespace ININ.PureCloudApi.Model
                     this.PermissionPolicies == other.PermissionPolicies ||
                     this.PermissionPolicies != null &&
                     this.PermissionPolicies.SequenceEqual(other.PermissionPolicies)
+<<<<<<< HEAD
                 ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
+=======
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 );
         }
 
@@ -181,20 +208,26 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+<<<<<<< HEAD
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
                 if (this.Licenses != null)
                     hash = hash * 59 + this.Licenses.GetHashCode();
+=======
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 if (this.Roles != null)
                     hash = hash * 59 + this.Roles.GetHashCode();
                 if (this.Permissions != null)
                     hash = hash * 59 + this.Permissions.GetHashCode();
                 if (this.PermissionPolicies != null)
                     hash = hash * 59 + this.PermissionPolicies.GetHashCode();
+<<<<<<< HEAD
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
+=======
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 return hash;
             }
         }

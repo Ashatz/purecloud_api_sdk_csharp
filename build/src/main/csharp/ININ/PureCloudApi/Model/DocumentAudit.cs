@@ -94,6 +94,15 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "CONVERT")]
             Convert,
             
+<<<<<<< HEAD
+=======
+            [EnumMember(Value = "FAX")]
+            Fax,
+            
+            [EnumMember(Value = "CREATE_COVERPAGE")]
+            CreateCoverpage,
+            
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             [EnumMember(Value = "USER_ADD")]
             UserAdd,
             
@@ -219,6 +228,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "CONVERT")]
             Convert,
             
+<<<<<<< HEAD
             [EnumMember(Value = "USER_ADD")]
             UserAdd,
             
@@ -234,6 +244,29 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "MEMBER_UPDATE")]
             MemberUpdate,
             
+=======
+            [EnumMember(Value = "FAX")]
+            Fax,
+            
+            [EnumMember(Value = "CREATE_COVERPAGE")]
+            CreateCoverpage,
+            
+            [EnumMember(Value = "USER_ADD")]
+            UserAdd,
+            
+            [EnumMember(Value = "USER_REMOVE")]
+            UserRemove,
+            
+            [EnumMember(Value = "MEMBER_ADD")]
+            MemberAdd,
+            
+            [EnumMember(Value = "MEMBER_REMOVE")]
+            MemberRemove,
+            
+            [EnumMember(Value = "MEMBER_UPDATE")]
+            MemberUpdate,
+            
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             [EnumMember(Value = "TAG_ADD")]
             TagAdd,
             
@@ -318,6 +351,76 @@ namespace ININ.PureCloudApi.Model
         public ActionContextEnum? ActionContext { get; set; }
     
 
+        /// <summary>
+        /// Gets or Sets Action
+        /// </summary>
+        [DataMember(Name="action", EmitDefaultValue=false)]
+        public ActionEnum? Action { get; set; }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="DocumentAudit" />class.
+        /// </summary>
+        /// <param name="Name">Name.</param>
+        /// <param name="User">User.</param>
+        /// <param name="Workspace">Workspace.</param>
+        /// <param name="TransactionId">TransactionId.</param>
+        /// <param name="TransactionInitiator">TransactionInitiator (default to false).</param>
+        /// <param name="Application">Application.</param>
+        /// <param name="ServiceName">ServiceName.</param>
+        /// <param name="Level">Level.</param>
+        /// <param name="Timestamp">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="Status">Status.</param>
+        /// <param name="ActionContext">ActionContext.</param>
+        /// <param name="Action">Action.</param>
+        /// <param name="Entity">Entity.</param>
+        /// <param name="Changes">Changes.</param>
+
+        public DocumentAudit(string Name = null, UriReference User = null, UriReference Workspace = null, string TransactionId = null, bool? TransactionInitiator = null, string Application = null, string ServiceName = null, LevelEnum? Level = null, DateTime? Timestamp = null, StatusEnum? Status = null, ActionContextEnum? ActionContext = null, ActionEnum? Action = null, AuditEntityReference Entity = null, List<AuditChange> Changes = null)
+        {
+            this.Name = Name;
+            this.User = User;
+            this.Workspace = Workspace;
+            this.TransactionId = TransactionId;
+            // use default value if no "TransactionInitiator" provided
+            if (TransactionInitiator == null)
+            {
+                this.TransactionInitiator = false;
+            }
+            else
+            {
+                this.TransactionInitiator = TransactionInitiator;
+            }
+            this.Application = Application;
+            this.ServiceName = ServiceName;
+            this.Level = Level;
+            this.Timestamp = Timestamp;
+            this.Status = Status;
+            this.ActionContext = ActionContext;
+            this.Action = Action;
+            this.Entity = Entity;
+            this.Changes = Changes;
+            
+        }
+
+    
+        /// <summary>
+        /// Gets or Sets Level
+        /// </summary>
+        [DataMember(Name="level", EmitDefaultValue=false)]
+        public LevelEnum? Level { get; set; }
+    
+        /// <summary>
+        /// Gets or Sets Status
+        /// </summary>
+        [DataMember(Name="status", EmitDefaultValue=false)]
+        public StatusEnum? Status { get; set; }
+    
+        /// <summary>
+        /// Gets or Sets ActionContext
+        /// </summary>
+        [DataMember(Name="actionContext", EmitDefaultValue=false)]
+        public ActionContextEnum? ActionContext { get; set; }
+    
         /// <summary>
         /// Gets or Sets Action
         /// </summary>

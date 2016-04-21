@@ -27,11 +27,19 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "ACTIVE")]
             Active,
             
+<<<<<<< HEAD
             [EnumMember(Value = "DELETED")]
             Deleted,
             
             [EnumMember(Value = "INACTIVE")]
             Inactive
+=======
+            [EnumMember(Value = "INACTIVE")]
+            Inactive,
+            
+            [EnumMember(Value = "DELETED")]
+            Deleted
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         }
 
 
@@ -57,6 +65,76 @@ namespace ININ.PureCloudApi.Model
         public StateEnum? State { get; set; }
     
 
+        /// <summary>
+        /// Gets or Sets Distribution
+        /// </summary>
+        [DataMember(Name="distribution", EmitDefaultValue=false)]
+        public DistributionEnum? Distribution { get; set; }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="OutboundRoute" />class.
+        /// </summary>
+        /// <param name="Name">Name.</param>
+        /// <param name="Description">Description.</param>
+        /// <param name="Version">Version.</param>
+        /// <param name="DateCreated">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="DateModified">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="ModifiedBy">ModifiedBy.</param>
+        /// <param name="CreatedBy">CreatedBy.</param>
+        /// <param name="State">State.</param>
+        /// <param name="ModifiedByApp">ModifiedByApp.</param>
+        /// <param name="CreatedByApp">CreatedByApp.</param>
+        /// <param name="Site">Site.</param>
+        /// <param name="ClassificationTypes">ClassificationTypes.</param>
+        /// <param name="Enabled">Enabled (default to false).</param>
+        /// <param name="Distribution">Distribution.</param>
+        /// <param name="Managed">Managed (default to false).</param>
+        /// <param name="ExternalTrunkBases">Trunk base settings of trunkType \&quot;EXTERNAL\&quot;.  This base must also be set on an edge logical interface for correct routing..</param>
+
+        public OutboundRoute(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, Site Site = null, List<string> ClassificationTypes = null, bool? Enabled = null, DistributionEnum? Distribution = null, bool? Managed = null, List<UriReference> ExternalTrunkBases = null)
+        {
+            this.Name = Name;
+            this.Description = Description;
+            this.Version = Version;
+            this.DateCreated = DateCreated;
+            this.DateModified = DateModified;
+            this.ModifiedBy = ModifiedBy;
+            this.CreatedBy = CreatedBy;
+            this.State = State;
+            this.ModifiedByApp = ModifiedByApp;
+            this.CreatedByApp = CreatedByApp;
+            this.Site = Site;
+            this.ClassificationTypes = ClassificationTypes;
+            // use default value if no "Enabled" provided
+            if (Enabled == null)
+            {
+                this.Enabled = false;
+            }
+            else
+            {
+                this.Enabled = Enabled;
+            }
+            this.Distribution = Distribution;
+            // use default value if no "Managed" provided
+            if (Managed == null)
+            {
+                this.Managed = false;
+            }
+            else
+            {
+                this.Managed = Managed;
+            }
+            this.ExternalTrunkBases = ExternalTrunkBases;
+            
+        }
+
+    
+        /// <summary>
+        /// Gets or Sets State
+        /// </summary>
+        [DataMember(Name="state", EmitDefaultValue=false)]
+        public StateEnum? State { get; set; }
+    
         /// <summary>
         /// Gets or Sets Distribution
         /// </summary>

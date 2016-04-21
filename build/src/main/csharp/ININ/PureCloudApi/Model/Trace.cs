@@ -70,6 +70,36 @@ namespace ININ.PureCloudApi.Model
 
     
         /// <summary>
+        /// Gets or Sets Level
+        /// </summary>
+        [DataMember(Name="level", EmitDefaultValue=false)]
+        public LevelEnum? Level { get; set; }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Trace" />class.
+        /// </summary>
+        /// <param name="Topic">Topic.</param>
+        /// <param name="Timestamp">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="Level">Level.</param>
+        /// <param name="Message">Message.</param>
+        /// <param name="Details">Details.</param>
+        /// <param name="TimestampString">TimestampString.</param>
+        /// <param name="DetailsString">DetailsString.</param>
+
+        public Trace(string Topic = null, DateTime? Timestamp = null, LevelEnum? Level = null, string Message = null, Object Details = null, string TimestampString = null, string DetailsString = null)
+        {
+            this.Topic = Topic;
+            this.Timestamp = Timestamp;
+            this.Level = Level;
+            this.Message = Message;
+            this.Details = Details;
+            this.TimestampString = TimestampString;
+            this.DetailsString = DetailsString;
+            
+        }
+
+    
+        /// <summary>
         /// Gets or Sets Topic
         /// </summary>
         [DataMember(Name="topic", EmitDefaultValue=false)]

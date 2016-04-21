@@ -62,7 +62,10 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="configState", EmitDefaultValue=false)]
         public ConfigStateEnum? ConfigState { get; set; }
     
+<<<<<<< HEAD
 
+=======
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// Type of flow this definition describes
         /// </summary>

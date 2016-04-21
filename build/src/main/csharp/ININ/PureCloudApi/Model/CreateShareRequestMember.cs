@@ -23,10 +23,17 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
                 public enum MemberTypeEnum {
+<<<<<<< HEAD
             
             [EnumMember(Value = "USER")]
             User,
             
+=======
+            
+            [EnumMember(Value = "USER")]
+            User,
+            
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             [EnumMember(Value = "PUBLIC")]
             Public
         }
@@ -45,7 +52,11 @@ namespace ININ.PureCloudApi.Model
         /// <param name="MemberType">MemberType.</param>
         /// <param name="Member">Member.</param>
 
+<<<<<<< HEAD
         public CreateShareRequestMember(MemberTypeEnum? MemberType = null, Entity Member = null)
+=======
+        public CreateShareRequestMember(MemberTypeEnum? MemberType = null, MemberEntity Member = null)
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         {
             this.MemberType = MemberType;
             this.Member = Member;
@@ -57,7 +68,11 @@ namespace ININ.PureCloudApi.Model
         /// Gets or Sets Member
         /// </summary>
         [DataMember(Name="member", EmitDefaultValue=false)]
+<<<<<<< HEAD
         public Entity Member { get; set; }
+=======
+        public MemberEntity Member { get; set; }
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
     
         /// <summary>
         /// Returns the string presentation of the object

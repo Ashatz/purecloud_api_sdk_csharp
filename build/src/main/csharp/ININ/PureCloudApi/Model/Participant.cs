@@ -29,10 +29,17 @@ namespace ININ.PureCloudApi.Model
             
             [EnumMember(Value = "OPTIONAL")]
             Optional,
+<<<<<<< HEAD
             
             [EnumMember(Value = "TIMEOUT")]
             Timeout,
             
+=======
+            
+            [EnumMember(Value = "TIMEOUT")]
+            Timeout,
+            
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             [EnumMember(Value = "FORCED_TIMEOUT")]
             ForcedTimeout
         }
@@ -142,6 +149,102 @@ namespace ININ.PureCloudApi.Model
 
     
         /// <summary>
+        /// Gets or Sets WrapupPrompt
+        /// </summary>
+        [DataMember(Name="wrapupPrompt", EmitDefaultValue=false)]
+        public WrapupPromptEnum? WrapupPrompt { get; set; }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Participant" />class.
+        /// </summary>
+        /// <param name="Id">Id.</param>
+        /// <param name="StartTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="EndTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="ConnectedTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="Name">Name.</param>
+        /// <param name="UserUri">UserUri.</param>
+        /// <param name="UserId">UserId.</param>
+        /// <param name="ExternalContactId">ExternalContactId.</param>
+        /// <param name="QueueId">QueueId.</param>
+        /// <param name="GroupId">GroupId.</param>
+        /// <param name="QueueName">QueueName.</param>
+        /// <param name="Purpose">Purpose.</param>
+        /// <param name="ParticipantType">ParticipantType.</param>
+        /// <param name="ConsultParticipantId">ConsultParticipantId.</param>
+        /// <param name="Address">Address.</param>
+        /// <param name="Ani">Ani.</param>
+        /// <param name="Dnis">Dnis.</param>
+        /// <param name="Locale">Locale.</param>
+        /// <param name="WrapupRequired">WrapupRequired (default to false).</param>
+        /// <param name="WrapupPrompt">WrapupPrompt.</param>
+        /// <param name="WrapupTimeoutMs">WrapupTimeoutMs.</param>
+        /// <param name="WrapupSkipped">WrapupSkipped (default to false).</param>
+        /// <param name="Wrapup">Wrapup.</param>
+        /// <param name="MonitoredParticipantId">MonitoredParticipantId.</param>
+        /// <param name="Attributes">Attributes.</param>
+        /// <param name="Calls">Calls.</param>
+        /// <param name="Callbacks">Callbacks.</param>
+        /// <param name="Chats">Chats.</param>
+        /// <param name="Emails">Emails.</param>
+        /// <param name="SocialExpressions">SocialExpressions.</param>
+        /// <param name="Videos">Videos.</param>
+        /// <param name="Evaluations">Evaluations.</param>
+
+        public Participant(string Id = null, DateTime? StartTime = null, DateTime? EndTime = null, DateTime? ConnectedTime = null, string Name = null, string UserUri = null, string UserId = null, string ExternalContactId = null, string QueueId = null, string GroupId = null, string QueueName = null, string Purpose = null, string ParticipantType = null, string ConsultParticipantId = null, string Address = null, string Ani = null, string Dnis = null, string Locale = null, bool? WrapupRequired = null, WrapupPromptEnum? WrapupPrompt = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, Wrapup Wrapup = null, string MonitoredParticipantId = null, Dictionary<string, string> Attributes = null, List<Call> Calls = null, List<Callback> Callbacks = null, List<ConversationChat> Chats = null, List<Email> Emails = null, List<SocialExpression> SocialExpressions = null, List<Video> Videos = null, List<Evaluation> Evaluations = null)
+        {
+            this.Id = Id;
+            this.StartTime = StartTime;
+            this.EndTime = EndTime;
+            this.ConnectedTime = ConnectedTime;
+            this.Name = Name;
+            this.UserUri = UserUri;
+            this.UserId = UserId;
+            this.ExternalContactId = ExternalContactId;
+            this.QueueId = QueueId;
+            this.GroupId = GroupId;
+            this.QueueName = QueueName;
+            this.Purpose = Purpose;
+            this.ParticipantType = ParticipantType;
+            this.ConsultParticipantId = ConsultParticipantId;
+            this.Address = Address;
+            this.Ani = Ani;
+            this.Dnis = Dnis;
+            this.Locale = Locale;
+            // use default value if no "WrapupRequired" provided
+            if (WrapupRequired == null)
+            {
+                this.WrapupRequired = false;
+            }
+            else
+            {
+                this.WrapupRequired = WrapupRequired;
+            }
+            this.WrapupPrompt = WrapupPrompt;
+            this.WrapupTimeoutMs = WrapupTimeoutMs;
+            // use default value if no "WrapupSkipped" provided
+            if (WrapupSkipped == null)
+            {
+                this.WrapupSkipped = false;
+            }
+            else
+            {
+                this.WrapupSkipped = WrapupSkipped;
+            }
+            this.Wrapup = Wrapup;
+            this.MonitoredParticipantId = MonitoredParticipantId;
+            this.Attributes = Attributes;
+            this.Calls = Calls;
+            this.Callbacks = Callbacks;
+            this.Chats = Chats;
+            this.Emails = Emails;
+            this.SocialExpressions = SocialExpressions;
+            this.Videos = Videos;
+            this.Evaluations = Evaluations;
+            
+        }
+
+    
+        /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
@@ -186,6 +289,15 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="userId", EmitDefaultValue=false)]
         public string UserId { get; set; }
     
+<<<<<<< HEAD
+=======
+        /// <summary>
+        /// Gets or Sets ExternalContactId
+        /// </summary>
+        [DataMember(Name="externalContactId", EmitDefaultValue=false)]
+        public string ExternalContactId { get; set; }
+    
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// Gets or Sets QueueId
         /// </summary>
@@ -252,12 +364,15 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="wrapupRequired", EmitDefaultValue=false)]
         public bool? WrapupRequired { get; set; }
     
+<<<<<<< HEAD
         /// <summary>
         /// Gets or Sets WrapupExpected
         /// </summary>
         [DataMember(Name="wrapupExpected", EmitDefaultValue=false)]
         public bool? WrapupExpected { get; set; }
     
+=======
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// Gets or Sets WrapupTimeoutMs
         /// </summary>
@@ -294,11 +409,24 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="calls", EmitDefaultValue=false)]
         public List<Call> Calls { get; set; }
     
+<<<<<<< HEAD
+=======
+        /// <summary>
+        /// Gets or Sets Callbacks
+        /// </summary>
+        [DataMember(Name="callbacks", EmitDefaultValue=false)]
+        public List<Callback> Callbacks { get; set; }
+    
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// Gets or Sets Chats
         /// </summary>
         [DataMember(Name="chats", EmitDefaultValue=false)]
+<<<<<<< HEAD
         public List<Chat> Chats { get; set; }
+=======
+        public List<ConversationChat> Chats { get; set; }
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
     
         /// <summary>
         /// Gets or Sets Emails
@@ -339,6 +467,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  UserUri: ").Append(UserUri).Append("\n");
             sb.Append("  UserId: ").Append(UserId).Append("\n");
+            sb.Append("  ExternalContactId: ").Append(ExternalContactId).Append("\n");
             sb.Append("  QueueId: ").Append(QueueId).Append("\n");
             sb.Append("  GroupId: ").Append(GroupId).Append("\n");
             sb.Append("  QueueName: ").Append(QueueName).Append("\n");
@@ -350,7 +479,6 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Dnis: ").Append(Dnis).Append("\n");
             sb.Append("  Locale: ").Append(Locale).Append("\n");
             sb.Append("  WrapupRequired: ").Append(WrapupRequired).Append("\n");
-            sb.Append("  WrapupExpected: ").Append(WrapupExpected).Append("\n");
             sb.Append("  WrapupPrompt: ").Append(WrapupPrompt).Append("\n");
             sb.Append("  WrapupTimeoutMs: ").Append(WrapupTimeoutMs).Append("\n");
             sb.Append("  WrapupSkipped: ").Append(WrapupSkipped).Append("\n");
@@ -358,6 +486,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  MonitoredParticipantId: ").Append(MonitoredParticipantId).Append("\n");
             sb.Append("  Attributes: ").Append(Attributes).Append("\n");
             sb.Append("  Calls: ").Append(Calls).Append("\n");
+            sb.Append("  Callbacks: ").Append(Callbacks).Append("\n");
             sb.Append("  Chats: ").Append(Chats).Append("\n");
             sb.Append("  Emails: ").Append(Emails).Append("\n");
             sb.Append("  SocialExpressions: ").Append(SocialExpressions).Append("\n");
@@ -434,6 +563,14 @@ namespace ININ.PureCloudApi.Model
                     this.UserId != null &&
                     this.UserId.Equals(other.UserId)
                 ) &&
+<<<<<<< HEAD
+=======
+                (
+                    this.ExternalContactId == other.ExternalContactId ||
+                    this.ExternalContactId != null &&
+                    this.ExternalContactId.Equals(other.ExternalContactId)
+                ) &&
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 (
                     this.QueueId == other.QueueId ||
                     this.QueueId != null &&
@@ -489,11 +626,14 @@ namespace ININ.PureCloudApi.Model
                     this.WrapupRequired != null &&
                     this.WrapupRequired.Equals(other.WrapupRequired)
                 ) &&
+<<<<<<< HEAD
                 (
                     this.WrapupExpected == other.WrapupExpected ||
                     this.WrapupExpected != null &&
                     this.WrapupExpected.Equals(other.WrapupExpected)
                 ) &&
+=======
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 (
                     this.WrapupPrompt == other.WrapupPrompt ||
                     this.WrapupPrompt != null &&
@@ -529,6 +669,14 @@ namespace ININ.PureCloudApi.Model
                     this.Calls != null &&
                     this.Calls.SequenceEqual(other.Calls)
                 ) &&
+<<<<<<< HEAD
+=======
+                (
+                    this.Callbacks == other.Callbacks ||
+                    this.Callbacks != null &&
+                    this.Callbacks.SequenceEqual(other.Callbacks)
+                ) &&
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 (
                     this.Chats == other.Chats ||
                     this.Chats != null &&
@@ -581,6 +729,11 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.UserUri.GetHashCode();
                 if (this.UserId != null)
                     hash = hash * 59 + this.UserId.GetHashCode();
+<<<<<<< HEAD
+=======
+                if (this.ExternalContactId != null)
+                    hash = hash * 59 + this.ExternalContactId.GetHashCode();
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 if (this.QueueId != null)
                     hash = hash * 59 + this.QueueId.GetHashCode();
                 if (this.GroupId != null)
@@ -603,8 +756,11 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.Locale.GetHashCode();
                 if (this.WrapupRequired != null)
                     hash = hash * 59 + this.WrapupRequired.GetHashCode();
+<<<<<<< HEAD
                 if (this.WrapupExpected != null)
                     hash = hash * 59 + this.WrapupExpected.GetHashCode();
+=======
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 if (this.WrapupPrompt != null)
                     hash = hash * 59 + this.WrapupPrompt.GetHashCode();
                 if (this.WrapupTimeoutMs != null)
@@ -619,6 +775,11 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.Attributes.GetHashCode();
                 if (this.Calls != null)
                     hash = hash * 59 + this.Calls.GetHashCode();
+<<<<<<< HEAD
+=======
+                if (this.Callbacks != null)
+                    hash = hash * 59 + this.Callbacks.GetHashCode();
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 if (this.Chats != null)
                     hash = hash * 59 + this.Chats.GetHashCode();
                 if (this.Emails != null)

@@ -17,6 +17,7 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class Contact :  IEquatable<Contact>
     { 
+<<<<<<< HEAD
         
         /// <summary>
         /// Initializes a new instance of the <see cref="Contact" />class.
@@ -44,9 +45,26 @@ namespace ININ.PureCloudApi.Model
                 this.Callable = Callable;
             }
             this.PhoneNumberStatus = PhoneNumberStatus;
+=======
+
+        /// <summary>
+        /// Gets or Sets MediaType
+        /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
+                public enum MediaTypeEnum {
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
+            [EnumMember(Value = "PHONE")]
+            Phone,
+            
+            [EnumMember(Value = "EMAIL")]
+            Email,
+            
+            [EnumMember(Value = "SMS")]
+            Sms
         }
 
+<<<<<<< HEAD
     
         /// <summary>
         /// The globally unique identifier for the object.
@@ -61,42 +79,105 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
     
+=======
+
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
-        /// Gets or Sets ContactListId
+        /// Gets or Sets Type
         /// </summary>
+<<<<<<< HEAD
         [DataMember(Name="contactListId", EmitDefaultValue=false)]
         public string ContactListId { get; set; }
     
+=======
+        [JsonConverter(typeof(StringEnumConverter))]
+                public enum TypeEnum {
+            
+            [EnumMember(Value = "PRIMARY")]
+            Primary,
+            
+            [EnumMember(Value = "WORK")]
+            Work,
+            
+            [EnumMember(Value = "HOME")]
+            Home,
+            
+            [EnumMember(Value = "MOBILE")]
+            Mobile,
+            
+            [EnumMember(Value = "MAIN")]
+            Main
+        }
+
+        
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
-        /// Gets or Sets Data
+        /// Gets or Sets MediaType
         /// </summary>
+<<<<<<< HEAD
         [DataMember(Name="data", EmitDefaultValue=false)]
         public Dictionary<string, Object> Data { get; set; }
+=======
+        [DataMember(Name="mediaType", EmitDefaultValue=false)]
+        public MediaTypeEnum? MediaType { get; set; }
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
     
         /// <summary>
-        /// Gets or Sets CallRecords
+        /// Gets or Sets Type
         /// </summary>
+<<<<<<< HEAD
         [DataMember(Name="callRecords", EmitDefaultValue=false)]
         public Dictionary<string, CallRecord> CallRecords { get; set; }
+=======
+        [DataMember(Name="type", EmitDefaultValue=false)]
+        public TypeEnum? Type { get; set; }
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
     
         /// <summary>
-        /// Gets or Sets Callable
+        /// Initializes a new instance of the <see cref="Contact" />class.
         /// </summary>
+<<<<<<< HEAD
         [DataMember(Name="callable", EmitDefaultValue=false)]
         public bool? Callable { get; set; }
+=======
+        /// <param name="Address">Email address or phone number for this contact type.</param>
+        /// <param name="MediaType">MediaType.</param>
+        /// <param name="Type">Type.</param>
+
+        public Contact(string Address = null, MediaTypeEnum? MediaType = null, TypeEnum? Type = null)
+        {
+            this.Address = Address;
+            this.MediaType = MediaType;
+            this.Type = Type;
+            
+        }
+
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
     
         /// <summary>
-        /// Gets or Sets PhoneNumberStatus
+        /// Email address or phone number for this contact type
         /// </summary>
+<<<<<<< HEAD
         [DataMember(Name="phoneNumberStatus", EmitDefaultValue=false)]
         public Dictionary<string, PhoneNumberStatus> PhoneNumberStatus { get; set; }
+=======
+        /// <value>Email address or phone number for this contact type</value>
+        [DataMember(Name="address", EmitDefaultValue=false)]
+        public string Address { get; set; }
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
     
         /// <summary>
-        /// The URI for this object
+        /// Formatted version of the address property
         /// </summary>
+<<<<<<< HEAD
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
+=======
+        /// <value>Formatted version of the address property</value>
+        [DataMember(Name="display", EmitDefaultValue=false)]
+        public string Display { get; private set; }
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -106,6 +187,7 @@ namespace ININ.PureCloudApi.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Contact {\n");
+<<<<<<< HEAD
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  ContactListId: ").Append(ContactListId).Append("\n");
@@ -114,6 +196,12 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Callable: ").Append(Callable).Append("\n");
             sb.Append("  PhoneNumberStatus: ").Append(PhoneNumberStatus).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
+=======
+            sb.Append("  Address: ").Append(Address).Append("\n");
+            sb.Append("  Display: ").Append(Display).Append("\n");
+            sb.Append("  MediaType: ").Append(MediaType).Append("\n");
+            sb.Append("  Type: ").Append(Type).Append("\n");
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -150,6 +238,7 @@ namespace ININ.PureCloudApi.Model
                 return false;
 
             return true &&
+<<<<<<< HEAD
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
@@ -189,6 +278,27 @@ namespace ININ.PureCloudApi.Model
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
+=======
+                (
+                    this.Address == other.Address ||
+                    this.Address != null &&
+                    this.Address.Equals(other.Address)
+                ) &&
+                (
+                    this.Display == other.Display ||
+                    this.Display != null &&
+                    this.Display.Equals(other.Display)
+                ) &&
+                (
+                    this.MediaType == other.MediaType ||
+                    this.MediaType != null &&
+                    this.MediaType.Equals(other.MediaType)
+                ) &&
+                (
+                    this.Type == other.Type ||
+                    this.Type != null &&
+                    this.Type.Equals(other.Type)
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 );
         }
 
@@ -203,6 +313,7 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+<<<<<<< HEAD
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
                 if (this.Name != null)
@@ -219,6 +330,16 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.PhoneNumberStatus.GetHashCode();
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
+=======
+                if (this.Address != null)
+                    hash = hash * 59 + this.Address.GetHashCode();
+                if (this.Display != null)
+                    hash = hash * 59 + this.Display.GetHashCode();
+                if (this.MediaType != null)
+                    hash = hash * 59 + this.MediaType.GetHashCode();
+                if (this.Type != null)
+                    hash = hash * 59 + this.Type.GetHashCode();
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 return hash;
             }
         }

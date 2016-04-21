@@ -37,10 +37,14 @@ namespace ININ.PureCloudApi.Model
             Boolean,
             
             [EnumMember(Value = "LIST")]
+<<<<<<< HEAD
             List,
             
             [EnumMember(Value = "GROUP")]
             Group
+=======
+            List
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         }
 
 
@@ -72,7 +76,14 @@ namespace ININ.PureCloudApi.Model
             Greaterthan,
             
             [EnumMember(Value = "GREATERTHANEQUALS")]
+<<<<<<< HEAD
             Greaterthanequals
+=======
+            Greaterthanequals,
+            
+            [EnumMember(Value = "CONTAINS")]
+            Contains
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         }
 
         
@@ -83,7 +94,10 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
     
+<<<<<<< HEAD
 
+=======
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// Gets or Sets _Operator
         /// </summary>

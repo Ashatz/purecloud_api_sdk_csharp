@@ -66,6 +66,38 @@ namespace ININ.PureCloudApi.Model
 
     
         /// <summary>
+        /// Gets or Sets OwnerType
+        /// </summary>
+        [DataMember(Name="ownerType", EmitDefaultValue=false)]
+        public OwnerTypeEnum? OwnerType { get; set; }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="DefaultGreetingList" />class.
+        /// </summary>
+        /// <param name="Name">Name.</param>
+        /// <param name="Owner">Owner.</param>
+        /// <param name="OwnerType">OwnerType.</param>
+        /// <param name="Greetings">Greetings.</param>
+        /// <param name="CreatedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="CreatedBy">CreatedBy.</param>
+        /// <param name="ModifiedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="ModifiedBy">ModifiedBy.</param>
+
+        public DefaultGreetingList(string Name = null, GreetingOwner Owner = null, OwnerTypeEnum? OwnerType = null, Dictionary<string, Greeting> Greetings = null, DateTime? CreatedDate = null, string CreatedBy = null, DateTime? ModifiedDate = null, string ModifiedBy = null)
+        {
+            this.Name = Name;
+            this.Owner = Owner;
+            this.OwnerType = OwnerType;
+            this.Greetings = Greetings;
+            this.CreatedDate = CreatedDate;
+            this.CreatedBy = CreatedBy;
+            this.ModifiedDate = ModifiedDate;
+            this.ModifiedBy = ModifiedBy;
+            
+        }
+
+    
+        /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>

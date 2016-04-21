@@ -25,17 +25,25 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Workspace">Workspace.</param>
         /// <param name="Tags">Tags.</param>
         /// <param name="TagIds">TagIds.</param>
+<<<<<<< HEAD
         /// <param name="Attributes">Attributes.</param>
         /// <param name="AttributeGroupInstances">AttributeGroupInstances.</param>
 
         public DocumentUpload(string Name = null, UriReference Workspace = null, List<string> Tags = null, List<string> TagIds = null, List<AttributeValue> Attributes = null, List<AttributeGroupInstance> AttributeGroupInstances = null)
+=======
+
+        public DocumentUpload(string Name = null, UriReference Workspace = null, List<string> Tags = null, List<string> TagIds = null)
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         {
             this.Name = Name;
             this.Workspace = Workspace;
             this.Tags = Tags;
             this.TagIds = TagIds;
+<<<<<<< HEAD
             this.Attributes = Attributes;
             this.AttributeGroupInstances = AttributeGroupInstances;
+=======
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
@@ -64,6 +72,7 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="tagIds", EmitDefaultValue=false)]
         public List<string> TagIds { get; set; }
     
+<<<<<<< HEAD
         /// <summary>
         /// Gets or Sets Attributes
         /// </summary>
@@ -76,6 +85,8 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="attributeGroupInstances", EmitDefaultValue=false)]
         public List<AttributeGroupInstance> AttributeGroupInstances { get; set; }
     
+=======
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -88,8 +99,11 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Workspace: ").Append(Workspace).Append("\n");
             sb.Append("  Tags: ").Append(Tags).Append("\n");
             sb.Append("  TagIds: ").Append(TagIds).Append("\n");
+<<<<<<< HEAD
             sb.Append("  Attributes: ").Append(Attributes).Append("\n");
             sb.Append("  AttributeGroupInstances: ").Append(AttributeGroupInstances).Append("\n");
+=======
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -145,6 +159,7 @@ namespace ININ.PureCloudApi.Model
                     this.TagIds == other.TagIds ||
                     this.TagIds != null &&
                     this.TagIds.SequenceEqual(other.TagIds)
+<<<<<<< HEAD
                 ) &&
                 (
                     this.Attributes == other.Attributes ||
@@ -155,6 +170,8 @@ namespace ININ.PureCloudApi.Model
                     this.AttributeGroupInstances == other.AttributeGroupInstances ||
                     this.AttributeGroupInstances != null &&
                     this.AttributeGroupInstances.SequenceEqual(other.AttributeGroupInstances)
+=======
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 );
         }
 
@@ -177,10 +194,13 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.Tags.GetHashCode();
                 if (this.TagIds != null)
                     hash = hash * 59 + this.TagIds.GetHashCode();
+<<<<<<< HEAD
                 if (this.Attributes != null)
                     hash = hash * 59 + this.Attributes.GetHashCode();
                 if (this.AttributeGroupInstances != null)
                     hash = hash * 59 + this.AttributeGroupInstances.GetHashCode();
+=======
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 return hash;
             }
         }

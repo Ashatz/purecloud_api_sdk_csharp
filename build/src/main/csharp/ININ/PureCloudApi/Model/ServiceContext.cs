@@ -21,13 +21,29 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ServiceContext" />class.
         /// </summary>
+<<<<<<< HEAD
 
         public ServiceContext()
+=======
+        /// <param name="Name">Name.</param>
+
+        public ServiceContext(string Name = null)
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         {
+            this.Name = Name;
             
         }
 
     
+<<<<<<< HEAD
+=======
+        /// <summary>
+        /// Gets or Sets Name
+        /// </summary>
+        [DataMember(Name="name", EmitDefaultValue=false)]
+        public string Name { get; set; }
+    
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -36,6 +52,10 @@ namespace ININ.PureCloudApi.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ServiceContext {\n");
+<<<<<<< HEAD
+=======
+            sb.Append("  Name: ").Append(Name).Append("\n");
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -71,7 +91,16 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
+<<<<<<< HEAD
             return true && false;
+=======
+            return true &&
+                (
+                    this.Name == other.Name ||
+                    this.Name != null &&
+                    this.Name.Equals(other.Name)
+                );
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         }
 
         /// <summary>
@@ -85,6 +114,11 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+<<<<<<< HEAD
+=======
+                if (this.Name != null)
+                    hash = hash * 59 + this.Name.GetHashCode();
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 return hash;
             }
         }

@@ -33,6 +33,7 @@ namespace ININ.PureCloudApi.Model
             
             [EnumMember(Value = "TEST")]
             Test,
+<<<<<<< HEAD
             
             [EnumMember(Value = "AUTOMATIC")]
             Automatic
@@ -52,6 +53,27 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "RUNNING")]
             Running,
             
+=======
+            
+            [EnumMember(Value = "AUTOMATIC")]
+            Automatic
+        }
+
+
+        /// <summary>
+        /// The flow's running status, which indicates whether the flow is running normally or completed, etc.
+        /// </summary>
+        /// <value>The flow's running status, which indicates whether the flow is running normally or completed, etc.</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+                public enum StatusEnum {
+            
+            [EnumMember(Value = "UNKNOWN")]
+            Unknown,
+            
+            [EnumMember(Value = "RUNNING")]
+            Running,
+            
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             [EnumMember(Value = "ERROR")]
             Error,
             
@@ -72,6 +94,74 @@ namespace ININ.PureCloudApi.Model
         public LaunchTypeEnum? LaunchType { get; set; }
     
 
+        /// <summary>
+        /// The flow's running status, which indicates whether the flow is running normally or completed, etc.
+        /// </summary>
+        /// <value>The flow's running status, which indicates whether the flow is running normally or completed, etc.</value>
+        [DataMember(Name="status", EmitDefaultValue=false)]
+        public StatusEnum? Status { get; set; }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="FlowDetails" />class.
+        /// </summary>
+        /// <param name="Name">Name.</param>
+        /// <param name="FlowConfigId">The FlowConfigId that was used to launch this flow. (required).</param>
+        /// <param name="LaunchTime">The time the flow was launched. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (required).</param>
+        /// <param name="LaunchType">The launch mode for this flow instance. (required).</param>
+        /// <param name="LaunchedBy">The user who launched the flow, if the flow was launched as the result of that user&#39;s action..</param>
+        /// <param name="Status">The flow&#39;s running status, which indicates whether the flow is running normally or completed, etc..</param>
+        /// <param name="AssociatedDocuments">The documents associated with this flow..</param>
+        /// <param name="FlowCompletionTime">The time the flow completed, if applicable. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="FlowCompletionReason">The completion reason set at the flow completion time, if applicable..</param>
+        /// <param name="FlowErrorInfo">Additional information if the flow is in error.</param>
+
+        public FlowDetails(string Name = null, FlowConfigId FlowConfigId = null, DateTime? LaunchTime = null, LaunchTypeEnum? LaunchType = null, User LaunchedBy = null, StatusEnum? Status = null, List<AssociatedDocument> AssociatedDocuments = null, DateTime? FlowCompletionTime = null, string FlowCompletionReason = null, ErrorBody FlowErrorInfo = null)
+        {
+            // to ensure "FlowConfigId" is required (not null)
+            if (FlowConfigId == null)
+            {
+                throw new InvalidDataException("FlowConfigId is a required property for FlowDetails and cannot be null");
+            }
+            else
+            {
+                this.FlowConfigId = FlowConfigId;
+            }
+            // to ensure "LaunchTime" is required (not null)
+            if (LaunchTime == null)
+            {
+                throw new InvalidDataException("LaunchTime is a required property for FlowDetails and cannot be null");
+            }
+            else
+            {
+                this.LaunchTime = LaunchTime;
+            }
+            // to ensure "LaunchType" is required (not null)
+            if (LaunchType == null)
+            {
+                throw new InvalidDataException("LaunchType is a required property for FlowDetails and cannot be null");
+            }
+            else
+            {
+                this.LaunchType = LaunchType;
+            }
+            this.Name = Name;
+            this.LaunchedBy = LaunchedBy;
+            this.Status = Status;
+            this.AssociatedDocuments = AssociatedDocuments;
+            this.FlowCompletionTime = FlowCompletionTime;
+            this.FlowCompletionReason = FlowCompletionReason;
+            this.FlowErrorInfo = FlowErrorInfo;
+            
+        }
+
+    
+        /// <summary>
+        /// The launch mode for this flow instance.
+        /// </summary>
+        /// <value>The launch mode for this flow instance.</value>
+        [DataMember(Name="launchType", EmitDefaultValue=false)]
+        public LaunchTypeEnum? LaunchType { get; set; }
+    
         /// <summary>
         /// The flow's running status, which indicates whether the flow is running normally or completed, etc.
         /// </summary>

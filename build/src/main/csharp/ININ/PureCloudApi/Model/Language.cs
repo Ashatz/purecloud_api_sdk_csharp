@@ -17,6 +17,7 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class Language :  IEquatable<Language>
     { 
+<<<<<<< HEAD
         
         /// <summary>
         /// Initializes a new instance of the <see cref="Language" />class.
@@ -26,6 +27,46 @@ namespace ININ.PureCloudApi.Model
         public Language(string Name = null)
         {
             this.Name = Name;
+=======
+
+        /// <summary>
+        /// Gets or Sets State
+        /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
+                public enum StateEnum {
+            
+            [EnumMember(Value = "ACTIVE")]
+            Active,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
+            
+            [EnumMember(Value = "INACTIVE")]
+            Inactive,
+            
+            [EnumMember(Value = "DELETED")]
+            Deleted
+        }
+
+    
+        /// <summary>
+        /// Gets or Sets State
+        /// </summary>
+        [DataMember(Name="state", EmitDefaultValue=false)]
+        public StateEnum? State { get; set; }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Language" />class.
+        /// </summary>
+        /// <param name="Name">Name.</param>
+        /// <param name="DateModified">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="State">State.</param>
+        /// <param name="Version">Version.</param>
+
+        public Language(string Name = null, DateTime? DateModified = null, StateEnum? State = null, string Version = null)
+        {
+            this.Name = Name;
+            this.DateModified = DateModified;
+            this.State = State;
+            this.Version = Version;
             
         }
 
@@ -43,6 +84,22 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
     
+<<<<<<< HEAD
+=======
+        /// <summary>
+        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// </summary>
+        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        [DataMember(Name="dateModified", EmitDefaultValue=false)]
+        public DateTime? DateModified { get; set; }
+    
+        /// <summary>
+        /// Gets or Sets Version
+        /// </summary>
+        [DataMember(Name="version", EmitDefaultValue=false)]
+        public string Version { get; set; }
+    
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// The URI for this object
         /// </summary>
@@ -60,6 +117,9 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class Language {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  DateModified: ").Append(DateModified).Append("\n");
+            sb.Append("  State: ").Append(State).Append("\n");
+            sb.Append("  Version: ").Append(Version).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -107,6 +167,24 @@ namespace ININ.PureCloudApi.Model
                     this.Name != null &&
                     this.Name.Equals(other.Name)
                 ) &&
+<<<<<<< HEAD
+=======
+                (
+                    this.DateModified == other.DateModified ||
+                    this.DateModified != null &&
+                    this.DateModified.Equals(other.DateModified)
+                ) &&
+                (
+                    this.State == other.State ||
+                    this.State != null &&
+                    this.State.Equals(other.State)
+                ) &&
+                (
+                    this.Version == other.Version ||
+                    this.Version != null &&
+                    this.Version.Equals(other.Version)
+                ) &&
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
@@ -129,6 +207,15 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.Id.GetHashCode();
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+<<<<<<< HEAD
+=======
+                if (this.DateModified != null)
+                    hash = hash * 59 + this.DateModified.GetHashCode();
+                if (this.State != null)
+                    hash = hash * 59 + this.State.GetHashCode();
+                if (this.Version != null)
+                    hash = hash * 59 + this.Version.GetHashCode();
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;

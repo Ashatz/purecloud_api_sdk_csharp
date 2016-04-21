@@ -17,6 +17,7 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class User :  IEquatable<User>
     { 
+<<<<<<< HEAD
         
         /// <summary>
         /// Initializes a new instance of the <see cref="User" />class.
@@ -76,6 +77,72 @@ namespace ININ.PureCloudApi.Model
             this.RequestedStatus = RequestedStatus;
             this.DefaultStationUri = DefaultStationUri;
             this.StationUri = StationUri;
+=======
+
+        /// <summary>
+        /// The current state for this user.
+        /// </summary>
+        /// <value>The current state for this user.</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+                public enum StateEnum {
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
+            
+            [EnumMember(Value = "ACTIVE")]
+            Active,
+            
+            [EnumMember(Value = "INACTIVE")]
+            Inactive,
+            
+            [EnumMember(Value = "DELETED")]
+            Deleted
+        }
+
+    
+        /// <summary>
+        /// The current state for this user.
+        /// </summary>
+        /// <value>The current state for this user.</value>
+        [DataMember(Name="state", EmitDefaultValue=false)]
+        public StateEnum? State { get; set; }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="User" />class.
+        /// </summary>
+        /// <param name="Name">Name.</param>
+        /// <param name="Chat">Chat.</param>
+        /// <param name="Department">Department.</param>
+        /// <param name="Email">Email.</param>
+        /// <param name="PrimaryContactInfo">Auto populated from addresses..</param>
+        /// <param name="Addresses">Email addresses and phone numbers for this user.</param>
+        /// <param name="Title">Title.</param>
+        /// <param name="Username">Username.</param>
+        /// <param name="Images">Images.</param>
+        /// <param name="RoutingStatus">ACD routing status.</param>
+        /// <param name="Presence">Active presence.</param>
+        /// <param name="ConversationSummary">Summary of conversion statistics for conversation types..</param>
+        /// <param name="OutOfOffice">Determine if out of office is enabled.</param>
+        /// <param name="Geolocation">Current geolocation position.</param>
+        /// <param name="Station">Effective, default, and last station information.</param>
+        /// <param name="Authorization">Roles and permissions assigned to the user.</param>
+
+        public User(string Name = null, Chat Chat = null, string Department = null, string Email = null, List<Contact> PrimaryContactInfo = null, List<Contact> Addresses = null, string Title = null, string Username = null, List<UserImage> Images = null, RoutingStatus RoutingStatus = null, UserPresence Presence = null, UserConversationSummary ConversationSummary = null, OutOfOffice OutOfOffice = null, Geolocation Geolocation = null, UserStations Station = null, UserAuthorization Authorization = null)
+        {
+            this.Name = Name;
+            this.Chat = Chat;
+            this.Department = Department;
+            this.Email = Email;
+            this.PrimaryContactInfo = PrimaryContactInfo;
+            this.Addresses = Addresses;
+            this.Title = Title;
+            this.Username = Username;
+            this.Images = Images;
+            this.RoutingStatus = RoutingStatus;
+            this.Presence = Presence;
+            this.ConversationSummary = ConversationSummary;
+            this.OutOfOffice = OutOfOffice;
+            this.Geolocation = Geolocation;
+            this.Station = Station;
+            this.Authorization = Authorization;
             
         }
 
@@ -94,10 +161,21 @@ namespace ININ.PureCloudApi.Model
         public string Name { get; set; }
     
         /// <summary>
-        /// Gets or Sets Username
+        /// Gets or Sets Chat
         /// </summary>
+<<<<<<< HEAD
         [DataMember(Name="username", EmitDefaultValue=false)]
         public string Username { get; set; }
+=======
+        [DataMember(Name="chat", EmitDefaultValue=false)]
+        public Chat Chat { get; set; }
+    
+        /// <summary>
+        /// Gets or Sets Department
+        /// </summary>
+        [DataMember(Name="department", EmitDefaultValue=false)]
+        public string Department { get; set; }
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
     
         /// <summary>
         /// Gets or Sets Email
@@ -106,14 +184,21 @@ namespace ININ.PureCloudApi.Model
         public string Email { get; set; }
     
         /// <summary>
-        /// Gets or Sets DisplayName
+        /// Auto populated from addresses.
         /// </summary>
+<<<<<<< HEAD
         [DataMember(Name="displayName", EmitDefaultValue=false)]
         public string DisplayName { get; set; }
+=======
+        /// <value>Auto populated from addresses.</value>
+        [DataMember(Name="primaryContactInfo", EmitDefaultValue=false)]
+        public List<Contact> PrimaryContactInfo { get; set; }
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
     
         /// <summary>
-        /// Gets or Sets PhoneNumber
+        /// Email addresses and phone numbers for this user
         /// </summary>
+<<<<<<< HEAD
         [DataMember(Name="phoneNumber", EmitDefaultValue=false)]
         public string PhoneNumber { get; set; }
     
@@ -134,31 +219,60 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         [DataMember(Name="roles", EmitDefaultValue=false)]
         public List<DomainOrganizationRole> Roles { get; set; }
-    
-        /// <summary>
-        /// Gets or Sets VoicemailEnabled
-        /// </summary>
-        [DataMember(Name="voicemailEnabled", EmitDefaultValue=false)]
-        public bool? VoicemailEnabled { get; set; }
-    
-        /// <summary>
-        /// Gets or Sets Department
-        /// </summary>
-        [DataMember(Name="department", EmitDefaultValue=false)]
-        public string Department { get; set; }
+=======
+        /// <value>Email addresses and phone numbers for this user</value>
+        [DataMember(Name="addresses", EmitDefaultValue=false)]
+        public List<Contact> Addresses { get; set; }
     
         /// <summary>
         /// Gets or Sets Title
         /// </summary>
         [DataMember(Name="title", EmitDefaultValue=false)]
         public string Title { get; set; }
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
     
         /// <summary>
-        /// Gets or Sets RoutingStatus
+        /// Gets or Sets Username
         /// </summary>
+<<<<<<< HEAD
+        [DataMember(Name="voicemailEnabled", EmitDefaultValue=false)]
+        public bool? VoicemailEnabled { get; set; }
+=======
+        [DataMember(Name="username", EmitDefaultValue=false)]
+        public string Username { get; set; }
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
+    
+        /// <summary>
+        /// Gets or Sets Images
+        /// </summary>
+<<<<<<< HEAD
+        [DataMember(Name="department", EmitDefaultValue=false)]
+        public string Department { get; set; }
+=======
+        [DataMember(Name="images", EmitDefaultValue=false)]
+        public List<UserImage> Images { get; set; }
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
+    
+        /// <summary>
+        /// Required when updating. Version must be the current version. Only the system can assign version.
+        /// </summary>
+<<<<<<< HEAD
+        [DataMember(Name="title", EmitDefaultValue=false)]
+        public string Title { get; set; }
+=======
+        /// <value>Required when updating. Version must be the current version. Only the system can assign version.</value>
+        [DataMember(Name="version", EmitDefaultValue=false)]
+        public string Version { get; private set; }
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
+    
+        /// <summary>
+        /// ACD routing status
+        /// </summary>
+        /// <value>ACD routing status</value>
         [DataMember(Name="routingStatus", EmitDefaultValue=false)]
         public RoutingStatus RoutingStatus { get; set; }
     
+<<<<<<< HEAD
         /// <summary>
         /// Gets or Sets Password
         /// </summary>
@@ -171,35 +285,59 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="primaryPresence", EmitDefaultValue=false)]
         public UserPresence PrimaryPresence { get; set; }
     
+=======
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
-        /// Gets or Sets Conversations
+        /// Active presence
         /// </summary>
+<<<<<<< HEAD
         [DataMember(Name="conversations", EmitDefaultValue=false)]
         public UserConversationSummary Conversations { get; set; }
+=======
+        /// <value>Active presence</value>
+        [DataMember(Name="presence", EmitDefaultValue=false)]
+        public UserPresence Presence { get; set; }
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
     
         /// <summary>
-        /// Gets or Sets ConversationSummary
+        /// Summary of conversion statistics for conversation types.
         /// </summary>
+        /// <value>Summary of conversion statistics for conversation types.</value>
         [DataMember(Name="conversationSummary", EmitDefaultValue=false)]
         public UserConversationSummary ConversationSummary { get; set; }
     
         /// <summary>
-        /// Gets or Sets OutOfOffice
+        /// Determine if out of office is enabled
         /// </summary>
+        /// <value>Determine if out of office is enabled</value>
         [DataMember(Name="outOfOffice", EmitDefaultValue=false)]
         public OutOfOffice OutOfOffice { get; set; }
     
         /// <summary>
-        /// Gets or Sets Geolocation
+        /// Current geolocation position
         /// </summary>
+        /// <value>Current geolocation position</value>
         [DataMember(Name="geolocation", EmitDefaultValue=false)]
         public Geolocation Geolocation { get; set; }
     
         /// <summary>
-        /// Gets or Sets Permissions
+        /// Effective, default, and last station information
         /// </summary>
+<<<<<<< HEAD
         [DataMember(Name="permissions", EmitDefaultValue=false)]
         public List<string> Permissions { get; set; }
+=======
+        /// <value>Effective, default, and last station information</value>
+        [DataMember(Name="station", EmitDefaultValue=false)]
+        public UserStations Station { get; set; }
+    
+        /// <summary>
+        /// Roles and permissions assigned to the user
+        /// </summary>
+        /// <value>Roles and permissions assigned to the user</value>
+        [DataMember(Name="authorization", EmitDefaultValue=false)]
+        public UserAuthorization Authorization { get; set; }
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
     
         /// <summary>
         /// The URI for this object
@@ -208,6 +346,7 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
     
+<<<<<<< HEAD
         /// <summary>
         /// Gets or Sets RequestedStatus
         /// </summary>
@@ -232,6 +371,8 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="lastStationUri", EmitDefaultValue=false)]
         public string LastStationUri { get; private set; }
     
+=======
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -242,29 +383,31 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class User {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  Username: ").Append(Username).Append("\n");
-            sb.Append("  Email: ").Append(Email).Append("\n");
-            sb.Append("  DisplayName: ").Append(DisplayName).Append("\n");
-            sb.Append("  PhoneNumber: ").Append(PhoneNumber).Append("\n");
-            sb.Append("  UserImages: ").Append(UserImages).Append("\n");
             sb.Append("  Chat: ").Append(Chat).Append("\n");
-            sb.Append("  Roles: ").Append(Roles).Append("\n");
-            sb.Append("  VoicemailEnabled: ").Append(VoicemailEnabled).Append("\n");
             sb.Append("  Department: ").Append(Department).Append("\n");
+            sb.Append("  Email: ").Append(Email).Append("\n");
+            sb.Append("  PrimaryContactInfo: ").Append(PrimaryContactInfo).Append("\n");
+            sb.Append("  Addresses: ").Append(Addresses).Append("\n");
+            sb.Append("  State: ").Append(State).Append("\n");
             sb.Append("  Title: ").Append(Title).Append("\n");
+            sb.Append("  Username: ").Append(Username).Append("\n");
+            sb.Append("  Images: ").Append(Images).Append("\n");
+            sb.Append("  Version: ").Append(Version).Append("\n");
             sb.Append("  RoutingStatus: ").Append(RoutingStatus).Append("\n");
-            sb.Append("  Password: ").Append(Password).Append("\n");
-            sb.Append("  PrimaryPresence: ").Append(PrimaryPresence).Append("\n");
-            sb.Append("  Conversations: ").Append(Conversations).Append("\n");
+            sb.Append("  Presence: ").Append(Presence).Append("\n");
             sb.Append("  ConversationSummary: ").Append(ConversationSummary).Append("\n");
             sb.Append("  OutOfOffice: ").Append(OutOfOffice).Append("\n");
             sb.Append("  Geolocation: ").Append(Geolocation).Append("\n");
-            sb.Append("  Permissions: ").Append(Permissions).Append("\n");
+            sb.Append("  Station: ").Append(Station).Append("\n");
+            sb.Append("  Authorization: ").Append(Authorization).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
+<<<<<<< HEAD
             sb.Append("  RequestedStatus: ").Append(RequestedStatus).Append("\n");
             sb.Append("  DefaultStationUri: ").Append(DefaultStationUri).Append("\n");
             sb.Append("  StationUri: ").Append(StationUri).Append("\n");
             sb.Append("  LastStationUri: ").Append(LastStationUri).Append("\n");
+=======
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -311,6 +454,7 @@ namespace ININ.PureCloudApi.Model
                     this.Name != null &&
                     this.Name.Equals(other.Name)
                 ) &&
+<<<<<<< HEAD
                 (
                     this.Username == other.Username ||
                     this.Username != null &&
@@ -336,11 +480,14 @@ namespace ININ.PureCloudApi.Model
                     this.UserImages != null &&
                     this.UserImages.SequenceEqual(other.UserImages)
                 ) &&
+=======
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 (
                     this.Chat == other.Chat ||
                     this.Chat != null &&
                     this.Chat.Equals(other.Chat)
                 ) &&
+<<<<<<< HEAD
                 (
                     this.Roles == other.Roles ||
                     this.Roles != null &&
@@ -351,21 +498,65 @@ namespace ININ.PureCloudApi.Model
                     this.VoicemailEnabled != null &&
                     this.VoicemailEnabled.Equals(other.VoicemailEnabled)
                 ) &&
+=======
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 (
                     this.Department == other.Department ||
                     this.Department != null &&
                     this.Department.Equals(other.Department)
                 ) &&
+<<<<<<< HEAD
+=======
+                (
+                    this.Email == other.Email ||
+                    this.Email != null &&
+                    this.Email.Equals(other.Email)
+                ) &&
+                (
+                    this.PrimaryContactInfo == other.PrimaryContactInfo ||
+                    this.PrimaryContactInfo != null &&
+                    this.PrimaryContactInfo.SequenceEqual(other.PrimaryContactInfo)
+                ) &&
+                (
+                    this.Addresses == other.Addresses ||
+                    this.Addresses != null &&
+                    this.Addresses.SequenceEqual(other.Addresses)
+                ) &&
+                (
+                    this.State == other.State ||
+                    this.State != null &&
+                    this.State.Equals(other.State)
+                ) &&
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 (
                     this.Title == other.Title ||
                     this.Title != null &&
                     this.Title.Equals(other.Title)
                 ) &&
+<<<<<<< HEAD
+=======
+                (
+                    this.Username == other.Username ||
+                    this.Username != null &&
+                    this.Username.Equals(other.Username)
+                ) &&
+                (
+                    this.Images == other.Images ||
+                    this.Images != null &&
+                    this.Images.SequenceEqual(other.Images)
+                ) &&
+                (
+                    this.Version == other.Version ||
+                    this.Version != null &&
+                    this.Version.Equals(other.Version)
+                ) &&
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 (
                     this.RoutingStatus == other.RoutingStatus ||
                     this.RoutingStatus != null &&
                     this.RoutingStatus.Equals(other.RoutingStatus)
                 ) &&
+<<<<<<< HEAD
                 (
                     this.Password == other.Password ||
                     this.Password != null &&
@@ -380,6 +571,12 @@ namespace ININ.PureCloudApi.Model
                     this.Conversations == other.Conversations ||
                     this.Conversations != null &&
                     this.Conversations.Equals(other.Conversations)
+=======
+                (
+                    this.Presence == other.Presence ||
+                    this.Presence != null &&
+                    this.Presence.Equals(other.Presence)
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 ) &&
                 (
                     this.ConversationSummary == other.ConversationSummary ||
@@ -396,15 +593,28 @@ namespace ININ.PureCloudApi.Model
                     this.Geolocation != null &&
                     this.Geolocation.Equals(other.Geolocation)
                 ) &&
+<<<<<<< HEAD
                 (
                     this.Permissions == other.Permissions ||
                     this.Permissions != null &&
                     this.Permissions.SequenceEqual(other.Permissions)
+=======
+                (
+                    this.Station == other.Station ||
+                    this.Station != null &&
+                    this.Station.Equals(other.Station)
+                ) &&
+                (
+                    this.Authorization == other.Authorization ||
+                    this.Authorization != null &&
+                    this.Authorization.Equals(other.Authorization)
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
+<<<<<<< HEAD
                 ) &&
                 (
                     this.RequestedStatus == other.RequestedStatus ||
@@ -425,6 +635,8 @@ namespace ININ.PureCloudApi.Model
                     this.LastStationUri == other.LastStationUri ||
                     this.LastStationUri != null &&
                     this.LastStationUri.Equals(other.LastStationUri)
+=======
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 );
         }
 
@@ -443,6 +655,7 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.Id.GetHashCode();
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+<<<<<<< HEAD
                 if (this.Username != null)
                     hash = hash * 59 + this.Username.GetHashCode();
                 if (this.Email != null)
@@ -471,12 +684,39 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.PrimaryPresence.GetHashCode();
                 if (this.Conversations != null)
                     hash = hash * 59 + this.Conversations.GetHashCode();
+=======
+                if (this.Chat != null)
+                    hash = hash * 59 + this.Chat.GetHashCode();
+                if (this.Department != null)
+                    hash = hash * 59 + this.Department.GetHashCode();
+                if (this.Email != null)
+                    hash = hash * 59 + this.Email.GetHashCode();
+                if (this.PrimaryContactInfo != null)
+                    hash = hash * 59 + this.PrimaryContactInfo.GetHashCode();
+                if (this.Addresses != null)
+                    hash = hash * 59 + this.Addresses.GetHashCode();
+                if (this.State != null)
+                    hash = hash * 59 + this.State.GetHashCode();
+                if (this.Title != null)
+                    hash = hash * 59 + this.Title.GetHashCode();
+                if (this.Username != null)
+                    hash = hash * 59 + this.Username.GetHashCode();
+                if (this.Images != null)
+                    hash = hash * 59 + this.Images.GetHashCode();
+                if (this.Version != null)
+                    hash = hash * 59 + this.Version.GetHashCode();
+                if (this.RoutingStatus != null)
+                    hash = hash * 59 + this.RoutingStatus.GetHashCode();
+                if (this.Presence != null)
+                    hash = hash * 59 + this.Presence.GetHashCode();
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 if (this.ConversationSummary != null)
                     hash = hash * 59 + this.ConversationSummary.GetHashCode();
                 if (this.OutOfOffice != null)
                     hash = hash * 59 + this.OutOfOffice.GetHashCode();
                 if (this.Geolocation != null)
                     hash = hash * 59 + this.Geolocation.GetHashCode();
+<<<<<<< HEAD
                 if (this.Permissions != null)
                     hash = hash * 59 + this.Permissions.GetHashCode();
                 if (this.SelfUri != null)
@@ -489,6 +729,14 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.StationUri.GetHashCode();
                 if (this.LastStationUri != null)
                     hash = hash * 59 + this.LastStationUri.GetHashCode();
+=======
+                if (this.Station != null)
+                    hash = hash * 59 + this.Station.GetHashCode();
+                if (this.Authorization != null)
+                    hash = hash * 59 + this.Authorization.GetHashCode();
+                if (this.SelfUri != null)
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 return hash;
             }
         }

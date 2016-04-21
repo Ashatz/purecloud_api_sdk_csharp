@@ -28,8 +28,14 @@ namespace ININ.PureCloudApi.Model
         /// <param name="UnitOfMeasure">UnitOfMeasure.</param>
         /// <param name="BillingPeriod">BillingPeriod.</param>
         /// <param name="Quantity">Quantity.</param>
+<<<<<<< HEAD
 
         public Charge(int? LicenseCount = null, string Name = null, string Description = null, double? Price = null, string UnitOfMeasure = null, string BillingPeriod = null, int? Quantity = null)
+=======
+        /// <param name="IncludedUnits">IncludedUnits.</param>
+
+        public Charge(int? LicenseCount = null, string Name = null, string Description = null, double? Price = null, string UnitOfMeasure = null, string BillingPeriod = null, int? Quantity = null, int? IncludedUnits = null)
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         {
             this.LicenseCount = LicenseCount;
             this.Name = Name;
@@ -38,6 +44,10 @@ namespace ININ.PureCloudApi.Model
             this.UnitOfMeasure = UnitOfMeasure;
             this.BillingPeriod = BillingPeriod;
             this.Quantity = Quantity;
+<<<<<<< HEAD
+=======
+            this.IncludedUnits = IncludedUnits;
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
@@ -84,6 +94,15 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="quantity", EmitDefaultValue=false)]
         public int? Quantity { get; set; }
     
+<<<<<<< HEAD
+=======
+        /// <summary>
+        /// Gets or Sets IncludedUnits
+        /// </summary>
+        [DataMember(Name="includedUnits", EmitDefaultValue=false)]
+        public int? IncludedUnits { get; set; }
+    
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -99,6 +118,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  UnitOfMeasure: ").Append(UnitOfMeasure).Append("\n");
             sb.Append("  BillingPeriod: ").Append(BillingPeriod).Append("\n");
             sb.Append("  Quantity: ").Append(Quantity).Append("\n");
+<<<<<<< HEAD
+=======
+            sb.Append("  IncludedUnits: ").Append(IncludedUnits).Append("\n");
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -169,6 +192,11 @@ namespace ININ.PureCloudApi.Model
                     this.Quantity == other.Quantity ||
                     this.Quantity != null &&
                     this.Quantity.Equals(other.Quantity)
+                ) &&
+                (
+                    this.IncludedUnits == other.IncludedUnits ||
+                    this.IncludedUnits != null &&
+                    this.IncludedUnits.Equals(other.IncludedUnits)
                 );
         }
 
@@ -197,6 +225,11 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.BillingPeriod.GetHashCode();
                 if (this.Quantity != null)
                     hash = hash * 59 + this.Quantity.GetHashCode();
+<<<<<<< HEAD
+=======
+                if (this.IncludedUnits != null)
+                    hash = hash * 59 + this.IncludedUnits.GetHashCode();
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 return hash;
             }
         }

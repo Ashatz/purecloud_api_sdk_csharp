@@ -29,7 +29,11 @@ namespace ININ.PureCloudApi.Model
         /// <param name="BillingAddress">The account billing address. (required).</param>
         /// <param name="Currency">The account currency. (required).</param>
 
+<<<<<<< HEAD
         public CustomerAccount(string Name = null, bool? IsFrozen = null, string OrgLegalName = null, string OrgPhone = null, bool? IsTaxExempt = null, Address BillingAddress = null, string Currency = null)
+=======
+        public CustomerAccount(string Name = null, bool? IsFrozen = null, string OrgLegalName = null, string OrgPhone = null, bool? IsTaxExempt = null, BillingAddress BillingAddress = null, string Currency = null)
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         {
             // to ensure "IsFrozen" is required (not null)
             if (IsFrozen == null)
@@ -136,7 +140,11 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <value>The account billing address.</value>
         [DataMember(Name="billingAddress", EmitDefaultValue=false)]
+<<<<<<< HEAD
         public Address BillingAddress { get; set; }
+=======
+        public BillingAddress BillingAddress { get; set; }
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
     
         /// <summary>
         /// The account currency.

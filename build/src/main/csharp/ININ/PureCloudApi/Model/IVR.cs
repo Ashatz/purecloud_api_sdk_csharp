@@ -27,15 +27,73 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "ACTIVE")]
             Active,
             
+<<<<<<< HEAD
             [EnumMember(Value = "DELETED")]
             Deleted,
             
             [EnumMember(Value = "INACTIVE")]
             Inactive
+=======
+            [EnumMember(Value = "INACTIVE")]
+            Inactive,
+            
+            [EnumMember(Value = "DELETED")]
+            Deleted
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         }
 
         
 
+        /// <summary>
+        /// Gets or Sets State
+        /// </summary>
+        [DataMember(Name="state", EmitDefaultValue=false)]
+        public StateEnum? State { get; set; }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="IVR" />class.
+        /// </summary>
+        /// <param name="Name">Name.</param>
+        /// <param name="Description">Description.</param>
+        /// <param name="Version">Version.</param>
+        /// <param name="DateCreated">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="DateModified">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="ModifiedBy">ModifiedBy.</param>
+        /// <param name="CreatedBy">CreatedBy.</param>
+        /// <param name="State">State.</param>
+        /// <param name="ModifiedByApp">ModifiedByApp.</param>
+        /// <param name="CreatedByApp">CreatedByApp.</param>
+        /// <param name="IvrUri">IvrUri.</param>
+        /// <param name="Dnis">Dnis.</param>
+        /// <param name="FlowId">FlowId.</param>
+        /// <param name="ScheduleId">ScheduleId.</param>
+        /// <param name="OpenHoursFlow">OpenHoursFlow.</param>
+        /// <param name="ClosedHoursFlow">ClosedHoursFlow.</param>
+        /// <param name="ScheduleGroup">ScheduleGroup.</param>
+
+        public IVR(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, string IvrUri = null, List<string> Dnis = null, string FlowId = null, string ScheduleId = null, UriReference OpenHoursFlow = null, UriReference ClosedHoursFlow = null, UriReference ScheduleGroup = null)
+        {
+            this.Name = Name;
+            this.Description = Description;
+            this.Version = Version;
+            this.DateCreated = DateCreated;
+            this.DateModified = DateModified;
+            this.ModifiedBy = ModifiedBy;
+            this.CreatedBy = CreatedBy;
+            this.State = State;
+            this.ModifiedByApp = ModifiedByApp;
+            this.CreatedByApp = CreatedByApp;
+            this.IvrUri = IvrUri;
+            this.Dnis = Dnis;
+            this.FlowId = FlowId;
+            this.ScheduleId = ScheduleId;
+            this.OpenHoursFlow = OpenHoursFlow;
+            this.ClosedHoursFlow = ClosedHoursFlow;
+            this.ScheduleGroup = ScheduleGroup;
+            
+        }
+
+    
         /// <summary>
         /// Gets or Sets State
         /// </summary>

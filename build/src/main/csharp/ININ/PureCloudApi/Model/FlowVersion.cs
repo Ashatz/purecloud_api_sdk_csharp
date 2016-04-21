@@ -71,6 +71,40 @@ namespace ININ.PureCloudApi.Model
 
     
         /// <summary>
+        /// Gets or Sets Type
+        /// </summary>
+        [DataMember(Name="type", EmitDefaultValue=false)]
+        public TypeEnum? Type { get; set; }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="FlowVersion" />class.
+        /// </summary>
+        /// <param name="Name">Name.</param>
+        /// <param name="CommitVersion">CommitVersion.</param>
+        /// <param name="ConfigurationVersion">ConfigurationVersion.</param>
+        /// <param name="Type">Type.</param>
+        /// <param name="CreatedBy">CreatedBy.</param>
+        /// <param name="ConfigurationUri">ConfigurationUri.</param>
+        /// <param name="DateCreated">DateCreated.</param>
+        /// <param name="GenerationId">GenerationId.</param>
+        /// <param name="PublishResultUri">PublishResultUri.</param>
+
+        public FlowVersion(string Name = null, string CommitVersion = null, string ConfigurationVersion = null, TypeEnum? Type = null, UriReference CreatedBy = null, string ConfigurationUri = null, long? DateCreated = null, string GenerationId = null, string PublishResultUri = null)
+        {
+            this.Name = Name;
+            this.CommitVersion = CommitVersion;
+            this.ConfigurationVersion = ConfigurationVersion;
+            this.Type = Type;
+            this.CreatedBy = CreatedBy;
+            this.ConfigurationUri = ConfigurationUri;
+            this.DateCreated = DateCreated;
+            this.GenerationId = GenerationId;
+            this.PublishResultUri = PublishResultUri;
+            
+        }
+
+    
+        /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>

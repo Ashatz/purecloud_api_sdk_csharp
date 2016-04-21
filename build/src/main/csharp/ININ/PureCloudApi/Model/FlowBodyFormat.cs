@@ -21,6 +21,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FlowBodyFormat" />class.
         /// </summary>
+<<<<<<< HEAD
         /// <param name="Name">Name.</param>
         /// <param name="Description">Description.</param>
         /// <param name="SchemaUri">SchemaUri.</param>
@@ -30,15 +31,29 @@ namespace ININ.PureCloudApi.Model
             this.Name = Name;
             this.Description = Description;
             this.SchemaUri = SchemaUri;
+=======
+        /// <param name="SchemaUri">SchemaUri.</param>
+        /// <param name="Description">Description.</param>
+
+        public FlowBodyFormat(string SchemaUri = null, string Description = null)
+        {
+            this.SchemaUri = SchemaUri;
+            this.Description = Description;
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
     
         /// <summary>
-        /// Gets or Sets Name
+        /// Gets or Sets SchemaUri
         /// </summary>
+<<<<<<< HEAD
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+=======
+        [DataMember(Name="schemaUri", EmitDefaultValue=false)]
+        public string SchemaUri { get; set; }
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
     
         /// <summary>
         /// Gets or Sets Description
@@ -46,12 +61,15 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
     
+<<<<<<< HEAD
         /// <summary>
         /// Gets or Sets SchemaUri
         /// </summary>
         [DataMember(Name="schemaUri", EmitDefaultValue=false)]
         public string SchemaUri { get; set; }
     
+=======
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -60,9 +78,11 @@ namespace ININ.PureCloudApi.Model
         {
             var sb = new StringBuilder();
             sb.Append("class FlowBodyFormat {\n");
-            sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  SchemaUri: ").Append(SchemaUri).Append("\n");
+<<<<<<< HEAD
+=======
+            sb.Append("  Description: ").Append(Description).Append("\n");
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -100,19 +120,28 @@ namespace ININ.PureCloudApi.Model
 
             return true &&
                 (
+<<<<<<< HEAD
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
+=======
+                    this.SchemaUri == other.SchemaUri ||
+                    this.SchemaUri != null &&
+                    this.SchemaUri.Equals(other.SchemaUri)
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 ) &&
                 (
                     this.Description == other.Description ||
                     this.Description != null &&
                     this.Description.Equals(other.Description)
+<<<<<<< HEAD
                 ) &&
                 (
                     this.SchemaUri == other.SchemaUri ||
                     this.SchemaUri != null &&
                     this.SchemaUri.Equals(other.SchemaUri)
+=======
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 );
         }
 
@@ -127,12 +156,19 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+<<<<<<< HEAD
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
                 if (this.SchemaUri != null)
                     hash = hash * 59 + this.SchemaUri.GetHashCode();
+=======
+                if (this.SchemaUri != null)
+                    hash = hash * 59 + this.SchemaUri.GetHashCode();
+                if (this.Description != null)
+                    hash = hash * 59 + this.Description.GetHashCode();
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 return hash;
             }
         }

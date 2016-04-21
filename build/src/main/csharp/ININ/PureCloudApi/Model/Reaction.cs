@@ -62,6 +62,28 @@ namespace ININ.PureCloudApi.Model
 
     
         /// <summary>
+        /// Gets or Sets ReactionType
+        /// </summary>
+        [DataMember(Name="reactionType", EmitDefaultValue=false)]
+        public ReactionTypeEnum? ReactionType { get; set; }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Reaction" />class.
+        /// </summary>
+        /// <param name="Data">Data.</param>
+        /// <param name="Name">Name.</param>
+        /// <param name="ReactionType">ReactionType.</param>
+
+        public Reaction(string Data = null, string Name = null, ReactionTypeEnum? ReactionType = null)
+        {
+            this.Data = Data;
+            this.Name = Name;
+            this.ReactionType = ReactionType;
+            
+        }
+
+    
+        /// <summary>
         /// Gets or Sets Data
         /// </summary>
         [DataMember(Name="data", EmitDefaultValue=false)]

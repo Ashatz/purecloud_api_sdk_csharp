@@ -73,6 +73,30 @@ namespace ININ.PureCloudApi.Model
 
     
         /// <summary>
+        /// Gets or Sets Action
+        /// </summary>
+        [DataMember(Name="action", EmitDefaultValue=false)]
+        public ActionEnum? Action { get; set; }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="LockInfo" />class.
+        /// </summary>
+        /// <param name="LockedBy">LockedBy.</param>
+        /// <param name="DateCreated">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="DateExpires">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="Action">Action.</param>
+
+        public LockInfo(UriReference LockedBy = null, DateTime? DateCreated = null, DateTime? DateExpires = null, ActionEnum? Action = null)
+        {
+            this.LockedBy = LockedBy;
+            this.DateCreated = DateCreated;
+            this.DateExpires = DateExpires;
+            this.Action = Action;
+            
+        }
+
+    
+        /// <summary>
         /// Gets or Sets LockedBy
         /// </summary>
         [DataMember(Name="lockedBy", EmitDefaultValue=false)]

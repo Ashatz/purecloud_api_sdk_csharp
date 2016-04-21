@@ -76,6 +76,12 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "TRANSFER_CONSULT")]
             TransferConsult,
             
+<<<<<<< HEAD
+=======
+            [EnumMember(Value = "TRANSFER_FORWARD")]
+            TransferForward,
+            
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             [EnumMember(Value = "ERROR")]
             Error,
             
@@ -94,14 +100,20 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
     
+<<<<<<< HEAD
 
+=======
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// Gets or Sets Direction
         /// </summary>
         [DataMember(Name="direction", EmitDefaultValue=false)]
         public DirectionEnum? Direction { get; set; }
     
+<<<<<<< HEAD
 
+=======
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// Gets or Sets DisconnectType
         /// </summary>
@@ -122,8 +134,15 @@ namespace ININ.PureCloudApi.Model
         /// <param name="ErrorInfo">ErrorInfo.</param>
         /// <param name="DisconnectType">DisconnectType.</param>
         /// <param name="StartHoldTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+<<<<<<< HEAD
 
         public Email(StateEnum? State = null, string Id = null, bool? Held = null, string Subject = null, int? MessagesSent = null, List<Segment> Segments = null, DirectionEnum? Direction = null, string RecordingId = null, ErrorBody ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null)
+=======
+        /// <param name="ConnectedTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="DisconnectedTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+
+        public Email(StateEnum? State = null, string Id = null, bool? Held = null, string Subject = null, int? MessagesSent = null, List<Segment> Segments = null, DirectionEnum? Direction = null, string RecordingId = null, ErrorBody ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null)
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         {
             this.State = State;
             this.Id = Id;
@@ -144,6 +163,11 @@ namespace ININ.PureCloudApi.Model
             this.ErrorInfo = ErrorInfo;
             this.DisconnectType = DisconnectType;
             this.StartHoldTime = StartHoldTime;
+<<<<<<< HEAD
+=======
+            this.ConnectedTime = ConnectedTime;
+            this.DisconnectedTime = DisconnectedTime;
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
@@ -197,6 +221,23 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="startHoldTime", EmitDefaultValue=false)]
         public DateTime? StartHoldTime { get; set; }
     
+<<<<<<< HEAD
+=======
+        /// <summary>
+        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// </summary>
+        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        [DataMember(Name="connectedTime", EmitDefaultValue=false)]
+        public DateTime? ConnectedTime { get; set; }
+    
+        /// <summary>
+        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// </summary>
+        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        [DataMember(Name="disconnectedTime", EmitDefaultValue=false)]
+        public DateTime? DisconnectedTime { get; set; }
+    
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -216,6 +257,11 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  ErrorInfo: ").Append(ErrorInfo).Append("\n");
             sb.Append("  DisconnectType: ").Append(DisconnectType).Append("\n");
             sb.Append("  StartHoldTime: ").Append(StartHoldTime).Append("\n");
+<<<<<<< HEAD
+=======
+            sb.Append("  ConnectedTime: ").Append(ConnectedTime).Append("\n");
+            sb.Append("  DisconnectedTime: ").Append(DisconnectedTime).Append("\n");
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -306,6 +352,16 @@ namespace ININ.PureCloudApi.Model
                     this.StartHoldTime == other.StartHoldTime ||
                     this.StartHoldTime != null &&
                     this.StartHoldTime.Equals(other.StartHoldTime)
+                ) &&
+                (
+                    this.ConnectedTime == other.ConnectedTime ||
+                    this.ConnectedTime != null &&
+                    this.ConnectedTime.Equals(other.ConnectedTime)
+                ) &&
+                (
+                    this.DisconnectedTime == other.DisconnectedTime ||
+                    this.DisconnectedTime != null &&
+                    this.DisconnectedTime.Equals(other.DisconnectedTime)
                 );
         }
 
@@ -342,6 +398,13 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.DisconnectType.GetHashCode();
                 if (this.StartHoldTime != null)
                     hash = hash * 59 + this.StartHoldTime.GetHashCode();
+<<<<<<< HEAD
+=======
+                if (this.ConnectedTime != null)
+                    hash = hash * 59 + this.ConnectedTime.GetHashCode();
+                if (this.DisconnectedTime != null)
+                    hash = hash * 59 + this.DisconnectedTime.GetHashCode();
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 return hash;
             }
         }

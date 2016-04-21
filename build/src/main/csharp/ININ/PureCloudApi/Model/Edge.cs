@@ -27,11 +27,19 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "ACTIVE")]
             Active,
             
+<<<<<<< HEAD
             [EnumMember(Value = "DELETED")]
             Deleted,
             
             [EnumMember(Value = "INACTIVE")]
             Inactive
+=======
+            [EnumMember(Value = "INACTIVE")]
+            Inactive,
+            
+            [EnumMember(Value = "DELETED")]
+            Deleted
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         }
 
 
@@ -58,6 +66,7 @@ namespace ININ.PureCloudApi.Model
             
             [EnumMember(Value = "AWAITING_BOOTSTRAP")]
             AwaitingBootstrap,
+<<<<<<< HEAD
             
             [EnumMember(Value = "ACTIVE")]
             Active,
@@ -82,6 +91,32 @@ namespace ININ.PureCloudApi.Model
         [JsonConverter(typeof(StringEnumConverter))]
                 public enum OnlineStatusEnum {
             
+=======
+            
+            [EnumMember(Value = "ACTIVE")]
+            Active,
+            
+            [EnumMember(Value = "INACTIVE")]
+            Inactive,
+            
+            [EnumMember(Value = "RMA")]
+            Rma,
+            
+            [EnumMember(Value = "UNPAIRING")]
+            Unpairing,
+            
+            [EnumMember(Value = "UNPAIRED")]
+            Unpaired
+        }
+
+
+        /// <summary>
+        /// Gets or Sets OnlineStatus
+        /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
+                public enum OnlineStatusEnum {
+            
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             [EnumMember(Value = "ONLINE")]
             Online,
             
@@ -105,6 +140,116 @@ namespace ININ.PureCloudApi.Model
         public StatusCodeEnum? StatusCode { get; set; }
     
 
+        /// <summary>
+        /// Gets or Sets OnlineStatus
+        /// </summary>
+        [DataMember(Name="onlineStatus", EmitDefaultValue=false)]
+        public OnlineStatusEnum? OnlineStatus { get; set; }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Edge" />class.
+        /// </summary>
+        /// <param name="Name">Name.</param>
+        /// <param name="Description">Description.</param>
+        /// <param name="Version">Version.</param>
+        /// <param name="DateCreated">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="DateModified">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="ModifiedBy">ModifiedBy.</param>
+        /// <param name="CreatedBy">CreatedBy.</param>
+        /// <param name="State">State.</param>
+        /// <param name="ModifiedByApp">ModifiedByApp.</param>
+        /// <param name="CreatedByApp">CreatedByApp.</param>
+        /// <param name="Interfaces">Interfaces.</param>
+        /// <param name="Make">Make.</param>
+        /// <param name="Model">Model.</param>
+        /// <param name="ApiVersion">ApiVersion.</param>
+        /// <param name="SoftwareVersion">SoftwareVersion.</param>
+        /// <param name="SoftwareVersionTimestamp">SoftwareVersionTimestamp.</param>
+        /// <param name="SoftwareVersionPlatform">SoftwareVersionPlatform.</param>
+        /// <param name="SoftwareVersionConfiguration">SoftwareVersionConfiguration.</param>
+        /// <param name="FullSoftwareVersion">FullSoftwareVersion.</param>
+        /// <param name="PairingId">PairingId.</param>
+        /// <param name="Fingerprint">Fingerprint.</param>
+        /// <param name="FingerprintHint">FingerprintHint.</param>
+        /// <param name="CurrentVersion">CurrentVersion.</param>
+        /// <param name="StagedVersion">StagedVersion.</param>
+        /// <param name="Patch">Patch.</param>
+        /// <param name="StatusCode">StatusCode.</param>
+        /// <param name="EdgeGroup">EdgeGroup.</param>
+        /// <param name="Site">Site.</param>
+        /// <param name="SoftwareStatus">SoftwareStatus.</param>
+        /// <param name="OnlineStatus">OnlineStatus.</param>
+        /// <param name="SerialNumber">SerialNumber.</param>
+        /// <param name="PhysicalEdge">PhysicalEdge (default to false).</param>
+        /// <param name="Managed">Managed (default to false).</param>
+
+        public Edge(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, List<EdgeInterface> Interfaces = null, string Make = null, string Model = null, string ApiVersion = null, string SoftwareVersion = null, string SoftwareVersionTimestamp = null, string SoftwareVersionPlatform = null, string SoftwareVersionConfiguration = null, string FullSoftwareVersion = null, string PairingId = null, string Fingerprint = null, string FingerprintHint = null, string CurrentVersion = null, string StagedVersion = null, string Patch = null, StatusCodeEnum? StatusCode = null, EdgeGroup EdgeGroup = null, UriReference Site = null, DomainEdgeSoftwareUpdateDto SoftwareStatus = null, OnlineStatusEnum? OnlineStatus = null, string SerialNumber = null, bool? PhysicalEdge = null, bool? Managed = null)
+        {
+            this.Name = Name;
+            this.Description = Description;
+            this.Version = Version;
+            this.DateCreated = DateCreated;
+            this.DateModified = DateModified;
+            this.ModifiedBy = ModifiedBy;
+            this.CreatedBy = CreatedBy;
+            this.State = State;
+            this.ModifiedByApp = ModifiedByApp;
+            this.CreatedByApp = CreatedByApp;
+            this.Interfaces = Interfaces;
+            this.Make = Make;
+            this.Model = Model;
+            this.ApiVersion = ApiVersion;
+            this.SoftwareVersion = SoftwareVersion;
+            this.SoftwareVersionTimestamp = SoftwareVersionTimestamp;
+            this.SoftwareVersionPlatform = SoftwareVersionPlatform;
+            this.SoftwareVersionConfiguration = SoftwareVersionConfiguration;
+            this.FullSoftwareVersion = FullSoftwareVersion;
+            this.PairingId = PairingId;
+            this.Fingerprint = Fingerprint;
+            this.FingerprintHint = FingerprintHint;
+            this.CurrentVersion = CurrentVersion;
+            this.StagedVersion = StagedVersion;
+            this.Patch = Patch;
+            this.StatusCode = StatusCode;
+            this.EdgeGroup = EdgeGroup;
+            this.Site = Site;
+            this.SoftwareStatus = SoftwareStatus;
+            this.OnlineStatus = OnlineStatus;
+            this.SerialNumber = SerialNumber;
+            // use default value if no "PhysicalEdge" provided
+            if (PhysicalEdge == null)
+            {
+                this.PhysicalEdge = false;
+            }
+            else
+            {
+                this.PhysicalEdge = PhysicalEdge;
+            }
+            // use default value if no "Managed" provided
+            if (Managed == null)
+            {
+                this.Managed = false;
+            }
+            else
+            {
+                this.Managed = Managed;
+            }
+            
+        }
+
+    
+        /// <summary>
+        /// Gets or Sets State
+        /// </summary>
+        [DataMember(Name="state", EmitDefaultValue=false)]
+        public StateEnum? State { get; set; }
+    
+        /// <summary>
+        /// Gets or Sets StatusCode
+        /// </summary>
+        [DataMember(Name="statusCode", EmitDefaultValue=false)]
+        public StatusCodeEnum? StatusCode { get; set; }
+    
         /// <summary>
         /// Gets or Sets OnlineStatus
         /// </summary>

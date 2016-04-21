@@ -24,16 +24,46 @@ namespace ININ.PureCloudApi.Model
         /// <value>The type of emergency number.</value>
         [JsonConverter(typeof(StringEnumConverter))]
                 public enum TypeEnum {
+<<<<<<< HEAD
             
             [EnumMember(Value = "default")]
             Default,
             
+=======
+            
+            [EnumMember(Value = "default")]
+            Default,
+            
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             [EnumMember(Value = "elin")]
             Elin
         }
 
         
 
+        /// <summary>
+        /// The type of emergency number.
+        /// </summary>
+        /// <value>The type of emergency number.</value>
+        [DataMember(Name="type", EmitDefaultValue=false)]
+        public TypeEnum? Type { get; set; }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="LocationEmergencyNumber" />class.
+        /// </summary>
+        /// <param name="E164">E164.</param>
+        /// <param name="Number">Number.</param>
+        /// <param name="Type">The type of emergency number..</param>
+
+        public LocationEmergencyNumber(string E164 = null, string Number = null, TypeEnum? Type = null)
+        {
+            this.E164 = E164;
+            this.Number = Number;
+            this.Type = Type;
+            
+        }
+
+    
         /// <summary>
         /// The type of emergency number.
         /// </summary>

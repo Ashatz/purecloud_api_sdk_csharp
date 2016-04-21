@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace ININ.PureCloudApi.Model
 {
     /// <summary>
-    /// Passed into a terminate command to customize the termination/cancellation action.
+    /// Passed into a terminate command to customize the termination action.
     /// </summary>
     [DataContract]
     public partial class FlowTerminateRequest :  IEquatable<FlowTerminateRequest>
@@ -21,6 +21,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FlowTerminateRequest" />class.
         /// </summary>
+<<<<<<< HEAD
         /// <param name="Force">force the termination of a flow. (default to false).</param>
         /// <param name="Reason">Reason for termination..</param>
 
@@ -35,14 +36,21 @@ namespace ININ.PureCloudApi.Model
             {
                 this.Force = Force;
             }
+=======
+        /// <param name="Reason">Reason code for a termination..</param>
+
+        public FlowTerminateRequest(string Reason = null)
+        {
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             this.Reason = Reason;
             
         }
 
     
         /// <summary>
-        /// force the termination of a flow.
+        /// Reason code for a termination.
         /// </summary>
+<<<<<<< HEAD
         /// <value>force the termination of a flow.</value>
         [DataMember(Name="force", EmitDefaultValue=false)]
         public bool? Force { get; set; }
@@ -51,6 +59,9 @@ namespace ININ.PureCloudApi.Model
         /// Reason for termination.
         /// </summary>
         /// <value>Reason for termination.</value>
+=======
+        /// <value>Reason code for a termination.</value>
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         [DataMember(Name="reason", EmitDefaultValue=false)]
         public string Reason { get; set; }
     
@@ -62,7 +73,6 @@ namespace ININ.PureCloudApi.Model
         {
             var sb = new StringBuilder();
             sb.Append("class FlowTerminateRequest {\n");
-            sb.Append("  Force: ").Append(Force).Append("\n");
             sb.Append("  Reason: ").Append(Reason).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -100,11 +110,14 @@ namespace ININ.PureCloudApi.Model
                 return false;
 
             return true &&
+<<<<<<< HEAD
                 (
                     this.Force == other.Force ||
                     this.Force != null &&
                     this.Force.Equals(other.Force)
                 ) &&
+=======
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 (
                     this.Reason == other.Reason ||
                     this.Reason != null &&
@@ -123,8 +136,11 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+<<<<<<< HEAD
                 if (this.Force != null)
                     hash = hash * 59 + this.Force.GetHashCode();
+=======
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 if (this.Reason != null)
                     hash = hash * 59 + this.Reason.GetHashCode();
                 return hash;

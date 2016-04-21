@@ -27,11 +27,19 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "ACTIVE")]
             Active,
             
+<<<<<<< HEAD
             [EnumMember(Value = "DELETED")]
             Deleted,
             
             [EnumMember(Value = "INACTIVE")]
             Inactive
+=======
+            [EnumMember(Value = "INACTIVE")]
+            Inactive,
+            
+            [EnumMember(Value = "DELETED")]
+            Deleted
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         }
 
 
@@ -49,6 +57,7 @@ namespace ININ.PureCloudApi.Model
             
             [EnumMember(Value = "UPDATING")]
             Updating,
+<<<<<<< HEAD
             
             [EnumMember(Value = "OK")]
             Ok,
@@ -56,6 +65,15 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "EXCEPTION")]
             Exception,
             
+=======
+            
+            [EnumMember(Value = "OK")]
+            Ok,
+            
+            [EnumMember(Value = "EXCEPTION")]
+            Exception,
+            
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             [EnumMember(Value = "DELETING")]
             Deleting
         }
@@ -139,6 +157,130 @@ namespace ININ.PureCloudApi.Model
             this.LastModifiedUserId = LastModifiedUserId;
             this.LastModifiedCorrelationId = LastModifiedCorrelationId;
             this.CommandResponses = CommandResponses;
+            
+        }
+
+    
+        /// <summary>
+        /// Gets or Sets State
+        /// </summary>
+        [DataMember(Name="state", EmitDefaultValue=false)]
+        public StateEnum? State { get; set; }
+    
+        /// <summary>
+        /// Gets or Sets CurrentState
+        /// </summary>
+        [DataMember(Name="currentState", EmitDefaultValue=false)]
+        public CurrentStateEnum? CurrentState { get; set; }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="DomainLogicalInterface" />class.
+        /// </summary>
+        /// <param name="Name">Name.</param>
+        /// <param name="Description">Description.</param>
+        /// <param name="Version">Version.</param>
+        /// <param name="DateCreated">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="DateModified">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="ModifiedBy">ModifiedBy.</param>
+        /// <param name="CreatedBy">CreatedBy.</param>
+        /// <param name="State">State.</param>
+        /// <param name="ModifiedByApp">ModifiedByApp.</param>
+        /// <param name="CreatedByApp">CreatedByApp.</param>
+        /// <param name="EdgeUri">EdgeUri.</param>
+        /// <param name="EdgeAssignedId">EdgeAssignedId.</param>
+        /// <param name="FriendlyName">FriendlyName.</param>
+        /// <param name="VlanTagId">VlanTagId.</param>
+        /// <param name="HardwareAddress">HardwareAddress.</param>
+        /// <param name="PhysicalAdapterId">PhysicalAdapterId.</param>
+        /// <param name="IpAddress">IpAddress.</param>
+        /// <param name="Gateway">Gateway.</param>
+        /// <param name="PrimaryDns">PrimaryDns.</param>
+        /// <param name="SecondaryDns">SecondaryDns.</param>
+        /// <param name="IfStatus">IfStatus.</param>
+        /// <param name="Routes">Routes.</param>
+        /// <param name="Addresses">Addresses.</param>
+        /// <param name="Ipv4Capabilities">Ipv4Capabilities.</param>
+        /// <param name="Ipv6Capabilities">Ipv6Capabilities.</param>
+        /// <param name="CurrentState">CurrentState.</param>
+        /// <param name="LastModifiedUserId">LastModifiedUserId.</param>
+        /// <param name="LastModifiedCorrelationId">LastModifiedCorrelationId.</param>
+        /// <param name="CommandResponses">CommandResponses.</param>
+        /// <param name="InheritPhoneTrunkBases">Phone trunk base assignment will be inherited from the Edge Group. (default to false).</param>
+        /// <param name="InheritPhoneTrunkBasesIPv4">The IPv4 phone trunk base assignment will be inherited from the Edge Group. (default to false).</param>
+        /// <param name="InheritPhoneTrunkBasesIPv6">The IPv6 phone trunk base assignment will be inherited from the Edge Group. (default to false).</param>
+        /// <param name="UseForInternalEdgeCommunication">This interface will be used for all internal edge-to-edge communication using settings from the edgeTrunkBaseAssignment on the Edge Group. (default to false).</param>
+        /// <param name="ExternalTrunkBaseAssignments">External trunk base settings to use for external communication from this interface..</param>
+        /// <param name="PhoneTrunkBaseAssignments">Phone trunk base settings to use for phone communication from this interface.  These settings will be ignored when \&quot;inheritPhoneTrunkBases\&quot; is true..</param>
+
+        public DomainLogicalInterface(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, string EdgeUri = null, string EdgeAssignedId = null, string FriendlyName = null, int? VlanTagId = null, string HardwareAddress = null, string PhysicalAdapterId = null, string IpAddress = null, string Gateway = null, string PrimaryDns = null, string SecondaryDns = null, string IfStatus = null, List<DomainNetworkRoute> Routes = null, List<DomainNetworkAddress> Addresses = null, DomainCapabilities Ipv4Capabilities = null, DomainCapabilities Ipv6Capabilities = null, CurrentStateEnum? CurrentState = null, string LastModifiedUserId = null, string LastModifiedCorrelationId = null, List<DomainNetworkCommandResponse> CommandResponses = null, bool? InheritPhoneTrunkBases = null, bool? InheritPhoneTrunkBasesIPv4 = null, bool? InheritPhoneTrunkBasesIPv6 = null, bool? UseForInternalEdgeCommunication = null, List<TrunkBaseAssignment> ExternalTrunkBaseAssignments = null, List<TrunkBaseAssignment> PhoneTrunkBaseAssignments = null)
+        {
+            this.Name = Name;
+            this.Description = Description;
+            this.Version = Version;
+            this.DateCreated = DateCreated;
+            this.DateModified = DateModified;
+            this.ModifiedBy = ModifiedBy;
+            this.CreatedBy = CreatedBy;
+            this.State = State;
+            this.ModifiedByApp = ModifiedByApp;
+            this.CreatedByApp = CreatedByApp;
+            this.EdgeUri = EdgeUri;
+            this.EdgeAssignedId = EdgeAssignedId;
+            this.FriendlyName = FriendlyName;
+            this.VlanTagId = VlanTagId;
+            this.HardwareAddress = HardwareAddress;
+            this.PhysicalAdapterId = PhysicalAdapterId;
+            this.IpAddress = IpAddress;
+            this.Gateway = Gateway;
+            this.PrimaryDns = PrimaryDns;
+            this.SecondaryDns = SecondaryDns;
+            this.IfStatus = IfStatus;
+            this.Routes = Routes;
+            this.Addresses = Addresses;
+            this.Ipv4Capabilities = Ipv4Capabilities;
+            this.Ipv6Capabilities = Ipv6Capabilities;
+            this.CurrentState = CurrentState;
+            this.LastModifiedUserId = LastModifiedUserId;
+            this.LastModifiedCorrelationId = LastModifiedCorrelationId;
+            this.CommandResponses = CommandResponses;
+            // use default value if no "InheritPhoneTrunkBases" provided
+            if (InheritPhoneTrunkBases == null)
+            {
+                this.InheritPhoneTrunkBases = false;
+            }
+            else
+            {
+                this.InheritPhoneTrunkBases = InheritPhoneTrunkBases;
+            }
+            // use default value if no "InheritPhoneTrunkBasesIPv4" provided
+            if (InheritPhoneTrunkBasesIPv4 == null)
+            {
+                this.InheritPhoneTrunkBasesIPv4 = false;
+            }
+            else
+            {
+                this.InheritPhoneTrunkBasesIPv4 = InheritPhoneTrunkBasesIPv4;
+            }
+            // use default value if no "InheritPhoneTrunkBasesIPv6" provided
+            if (InheritPhoneTrunkBasesIPv6 == null)
+            {
+                this.InheritPhoneTrunkBasesIPv6 = false;
+            }
+            else
+            {
+                this.InheritPhoneTrunkBasesIPv6 = InheritPhoneTrunkBasesIPv6;
+            }
+            // use default value if no "UseForInternalEdgeCommunication" provided
+            if (UseForInternalEdgeCommunication == null)
+            {
+                this.UseForInternalEdgeCommunication = false;
+            }
+            else
+            {
+                this.UseForInternalEdgeCommunication = UseForInternalEdgeCommunication;
+            }
+            this.ExternalTrunkBaseAssignments = ExternalTrunkBaseAssignments;
+            this.PhoneTrunkBaseAssignments = PhoneTrunkBaseAssignments;
             
         }
 
@@ -314,6 +456,51 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="commandResponses", EmitDefaultValue=false)]
         public List<DomainNetworkCommandResponse> CommandResponses { get; set; }
     
+<<<<<<< HEAD
+=======
+        /// <summary>
+        /// Phone trunk base assignment will be inherited from the Edge Group.
+        /// </summary>
+        /// <value>Phone trunk base assignment will be inherited from the Edge Group.</value>
+        [DataMember(Name="inheritPhoneTrunkBases", EmitDefaultValue=false)]
+        public bool? InheritPhoneTrunkBases { get; set; }
+    
+        /// <summary>
+        /// The IPv4 phone trunk base assignment will be inherited from the Edge Group.
+        /// </summary>
+        /// <value>The IPv4 phone trunk base assignment will be inherited from the Edge Group.</value>
+        [DataMember(Name="inheritPhoneTrunkBasesIPv4", EmitDefaultValue=false)]
+        public bool? InheritPhoneTrunkBasesIPv4 { get; set; }
+    
+        /// <summary>
+        /// The IPv6 phone trunk base assignment will be inherited from the Edge Group.
+        /// </summary>
+        /// <value>The IPv6 phone trunk base assignment will be inherited from the Edge Group.</value>
+        [DataMember(Name="inheritPhoneTrunkBasesIPv6", EmitDefaultValue=false)]
+        public bool? InheritPhoneTrunkBasesIPv6 { get; set; }
+    
+        /// <summary>
+        /// This interface will be used for all internal edge-to-edge communication using settings from the edgeTrunkBaseAssignment on the Edge Group.
+        /// </summary>
+        /// <value>This interface will be used for all internal edge-to-edge communication using settings from the edgeTrunkBaseAssignment on the Edge Group.</value>
+        [DataMember(Name="useForInternalEdgeCommunication", EmitDefaultValue=false)]
+        public bool? UseForInternalEdgeCommunication { get; set; }
+    
+        /// <summary>
+        /// External trunk base settings to use for external communication from this interface.
+        /// </summary>
+        /// <value>External trunk base settings to use for external communication from this interface.</value>
+        [DataMember(Name="externalTrunkBaseAssignments", EmitDefaultValue=false)]
+        public List<TrunkBaseAssignment> ExternalTrunkBaseAssignments { get; set; }
+    
+        /// <summary>
+        /// Phone trunk base settings to use for phone communication from this interface.  These settings will be ignored when \&quot;inheritPhoneTrunkBases\&quot; is true.
+        /// </summary>
+        /// <value>Phone trunk base settings to use for phone communication from this interface.  These settings will be ignored when \&quot;inheritPhoneTrunkBases\&quot; is true.</value>
+        [DataMember(Name="phoneTrunkBaseAssignments", EmitDefaultValue=false)]
+        public List<TrunkBaseAssignment> PhoneTrunkBaseAssignments { get; set; }
+    
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// The URI for this object
         /// </summary>
@@ -359,6 +546,12 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  LastModifiedUserId: ").Append(LastModifiedUserId).Append("\n");
             sb.Append("  LastModifiedCorrelationId: ").Append(LastModifiedCorrelationId).Append("\n");
             sb.Append("  CommandResponses: ").Append(CommandResponses).Append("\n");
+            sb.Append("  InheritPhoneTrunkBases: ").Append(InheritPhoneTrunkBases).Append("\n");
+            sb.Append("  InheritPhoneTrunkBasesIPv4: ").Append(InheritPhoneTrunkBasesIPv4).Append("\n");
+            sb.Append("  InheritPhoneTrunkBasesIPv6: ").Append(InheritPhoneTrunkBasesIPv6).Append("\n");
+            sb.Append("  UseForInternalEdgeCommunication: ").Append(UseForInternalEdgeCommunication).Append("\n");
+            sb.Append("  ExternalTrunkBaseAssignments: ").Append(ExternalTrunkBaseAssignments).Append("\n");
+            sb.Append("  PhoneTrunkBaseAssignments: ").Append(PhoneTrunkBaseAssignments).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -546,6 +739,39 @@ namespace ININ.PureCloudApi.Model
                     this.CommandResponses != null &&
                     this.CommandResponses.SequenceEqual(other.CommandResponses)
                 ) &&
+<<<<<<< HEAD
+=======
+                (
+                    this.InheritPhoneTrunkBases == other.InheritPhoneTrunkBases ||
+                    this.InheritPhoneTrunkBases != null &&
+                    this.InheritPhoneTrunkBases.Equals(other.InheritPhoneTrunkBases)
+                ) &&
+                (
+                    this.InheritPhoneTrunkBasesIPv4 == other.InheritPhoneTrunkBasesIPv4 ||
+                    this.InheritPhoneTrunkBasesIPv4 != null &&
+                    this.InheritPhoneTrunkBasesIPv4.Equals(other.InheritPhoneTrunkBasesIPv4)
+                ) &&
+                (
+                    this.InheritPhoneTrunkBasesIPv6 == other.InheritPhoneTrunkBasesIPv6 ||
+                    this.InheritPhoneTrunkBasesIPv6 != null &&
+                    this.InheritPhoneTrunkBasesIPv6.Equals(other.InheritPhoneTrunkBasesIPv6)
+                ) &&
+                (
+                    this.UseForInternalEdgeCommunication == other.UseForInternalEdgeCommunication ||
+                    this.UseForInternalEdgeCommunication != null &&
+                    this.UseForInternalEdgeCommunication.Equals(other.UseForInternalEdgeCommunication)
+                ) &&
+                (
+                    this.ExternalTrunkBaseAssignments == other.ExternalTrunkBaseAssignments ||
+                    this.ExternalTrunkBaseAssignments != null &&
+                    this.ExternalTrunkBaseAssignments.SequenceEqual(other.ExternalTrunkBaseAssignments)
+                ) &&
+                (
+                    this.PhoneTrunkBaseAssignments == other.PhoneTrunkBaseAssignments ||
+                    this.PhoneTrunkBaseAssignments != null &&
+                    this.PhoneTrunkBaseAssignments.SequenceEqual(other.PhoneTrunkBaseAssignments)
+                ) &&
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
@@ -624,6 +850,21 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.LastModifiedCorrelationId.GetHashCode();
                 if (this.CommandResponses != null)
                     hash = hash * 59 + this.CommandResponses.GetHashCode();
+<<<<<<< HEAD
+=======
+                if (this.InheritPhoneTrunkBases != null)
+                    hash = hash * 59 + this.InheritPhoneTrunkBases.GetHashCode();
+                if (this.InheritPhoneTrunkBasesIPv4 != null)
+                    hash = hash * 59 + this.InheritPhoneTrunkBasesIPv4.GetHashCode();
+                if (this.InheritPhoneTrunkBasesIPv6 != null)
+                    hash = hash * 59 + this.InheritPhoneTrunkBasesIPv6.GetHashCode();
+                if (this.UseForInternalEdgeCommunication != null)
+                    hash = hash * 59 + this.UseForInternalEdgeCommunication.GetHashCode();
+                if (this.ExternalTrunkBaseAssignments != null)
+                    hash = hash * 59 + this.ExternalTrunkBaseAssignments.GetHashCode();
+                if (this.PhoneTrunkBaseAssignments != null)
+                    hash = hash * 59 + this.PhoneTrunkBaseAssignments.GetHashCode();
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;

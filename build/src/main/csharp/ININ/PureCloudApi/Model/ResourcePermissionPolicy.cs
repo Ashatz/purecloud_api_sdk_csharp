@@ -21,7 +21,10 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ResourcePermissionPolicy" />class.
         /// </summary>
+<<<<<<< HEAD
         /// <param name="OrgId">OrgId.</param>
+=======
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <param name="Id">Id.</param>
         /// <param name="Domain">Domain.</param>
         /// <param name="EntityName">EntityName.</param>
@@ -33,9 +36,14 @@ namespace ININ.PureCloudApi.Model
         /// <param name="ResourceCondition">ResourceCondition.</param>
         /// <param name="ActionSet">ActionSet.</param>
 
+<<<<<<< HEAD
         public ResourcePermissionPolicy(string OrgId = null, string Id = null, string Domain = null, string EntityName = null, string PolicyName = null, string PolicyDescription = null, string ActionSetKey = null, ResourceConditionNode ResourceConditionNode = null, List<string> NamedResources = null, string ResourceCondition = null, List<string> ActionSet = null)
         {
             this.OrgId = OrgId;
+=======
+        public ResourcePermissionPolicy(string Id = null, string Domain = null, string EntityName = null, string PolicyName = null, string PolicyDescription = null, string ActionSetKey = null, ResourceConditionNode ResourceConditionNode = null, List<string> NamedResources = null, string ResourceCondition = null, List<string> ActionSet = null)
+        {
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             this.Id = Id;
             this.Domain = Domain;
             this.EntityName = EntityName;
@@ -50,12 +58,15 @@ namespace ININ.PureCloudApi.Model
         }
 
     
+<<<<<<< HEAD
         /// <summary>
         /// Gets or Sets OrgId
         /// </summary>
         [DataMember(Name="orgId", EmitDefaultValue=false)]
         public string OrgId { get; set; }
     
+=======
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
@@ -124,7 +135,6 @@ namespace ININ.PureCloudApi.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ResourcePermissionPolicy {\n");
-            sb.Append("  OrgId: ").Append(OrgId).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Domain: ").Append(Domain).Append("\n");
             sb.Append("  EntityName: ").Append(EntityName).Append("\n");
@@ -171,11 +181,14 @@ namespace ININ.PureCloudApi.Model
                 return false;
 
             return true &&
+<<<<<<< HEAD
                 (
                     this.OrgId == other.OrgId ||
                     this.OrgId != null &&
                     this.OrgId.Equals(other.OrgId)
                 ) &&
+=======
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
@@ -239,8 +252,11 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+<<<<<<< HEAD
                 if (this.OrgId != null)
                     hash = hash * 59 + this.OrgId.GetHashCode();
+=======
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
                 if (this.Domain != null)

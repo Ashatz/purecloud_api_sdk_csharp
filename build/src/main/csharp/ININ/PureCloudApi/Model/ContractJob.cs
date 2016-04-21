@@ -61,6 +61,29 @@ namespace ININ.PureCloudApi.Model
 
     
         /// <summary>
+        /// The current status of the job.
+        /// </summary>
+        /// <value>The current status of the job.</value>
+        [DataMember(Name="status", EmitDefaultValue=false)]
+        public StatusEnum? Status { get; set; }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ContractJob" />class.
+        /// </summary>
+        /// <param name="Name">Name.</param>
+        /// <param name="Contract">Contract.</param>
+        /// <param name="Status">The current status of the job..</param>
+
+        public ContractJob(string Name = null, Contract Contract = null, StatusEnum? Status = null)
+        {
+            this.Name = Name;
+            this.Contract = Contract;
+            this.Status = Status;
+            
+        }
+
+    
+        /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>

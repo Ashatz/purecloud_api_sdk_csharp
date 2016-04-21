@@ -27,11 +27,19 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "ACTIVE")]
             Active,
             
+<<<<<<< HEAD
             [EnumMember(Value = "DELETED")]
             Deleted,
             
             [EnumMember(Value = "INACTIVE")]
             Inactive
+=======
+            [EnumMember(Value = "INACTIVE")]
+            Inactive,
+            
+            [EnumMember(Value = "DELETED")]
+            Deleted
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         }
 
         
@@ -66,6 +74,68 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Managed">Managed (default to false).</param>
 
         public Site(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, List<UriReference> PrimarySites = null, List<UriReference> SecondarySites = null, List<Edge> PrimaryEdges = null, List<Edge> SecondaryEdges = null, List<OrganizationAddress> Addresses = null, List<Edge> Edges = null, EdgeAutoUpdateConfig EdgeAutoUpdateConfig = null, UriReference Location = null, bool? Managed = null)
+        {
+            this.Name = Name;
+            this.Description = Description;
+            this.Version = Version;
+            this.DateCreated = DateCreated;
+            this.DateModified = DateModified;
+            this.ModifiedBy = ModifiedBy;
+            this.CreatedBy = CreatedBy;
+            this.State = State;
+            this.ModifiedByApp = ModifiedByApp;
+            this.CreatedByApp = CreatedByApp;
+            this.PrimarySites = PrimarySites;
+            this.SecondarySites = SecondarySites;
+            this.PrimaryEdges = PrimaryEdges;
+            this.SecondaryEdges = SecondaryEdges;
+            this.Addresses = Addresses;
+            this.Edges = Edges;
+            this.EdgeAutoUpdateConfig = EdgeAutoUpdateConfig;
+            this.Location = Location;
+            // use default value if no "Managed" provided
+            if (Managed == null)
+            {
+                this.Managed = false;
+            }
+            else
+            {
+                this.Managed = Managed;
+            }
+            
+        }
+
+    
+        /// <summary>
+        /// Gets or Sets State
+        /// </summary>
+        [DataMember(Name="state", EmitDefaultValue=false)]
+        public StateEnum? State { get; set; }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Site" />class.
+        /// </summary>
+        /// <param name="Name">Name.</param>
+        /// <param name="Description">Description.</param>
+        /// <param name="Version">Version.</param>
+        /// <param name="DateCreated">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="DateModified">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="ModifiedBy">ModifiedBy.</param>
+        /// <param name="CreatedBy">CreatedBy.</param>
+        /// <param name="State">State.</param>
+        /// <param name="ModifiedByApp">ModifiedByApp.</param>
+        /// <param name="CreatedByApp">CreatedByApp.</param>
+        /// <param name="PrimarySites">PrimarySites.</param>
+        /// <param name="SecondarySites">SecondarySites.</param>
+        /// <param name="PrimaryEdges">PrimaryEdges.</param>
+        /// <param name="SecondaryEdges">SecondaryEdges.</param>
+        /// <param name="Addresses">Addresses.</param>
+        /// <param name="Edges">Edges.</param>
+        /// <param name="EdgeAutoUpdateConfig">Recurrance rule, time zone, and start/end settings for automatic edge updates for this site.</param>
+        /// <param name="Location">Location.</param>
+        /// <param name="Managed">Managed (default to false).</param>
+
+        public Site(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, List<UriReference> PrimarySites = null, List<UriReference> SecondarySites = null, List<Edge> PrimaryEdges = null, List<Edge> SecondaryEdges = null, List<Contact> Addresses = null, List<Edge> Edges = null, EdgeAutoUpdateConfig EdgeAutoUpdateConfig = null, UriReference Location = null, bool? Managed = null)
         {
             this.Name = Name;
             this.Description = Description;
@@ -189,7 +259,11 @@ namespace ININ.PureCloudApi.Model
         /// Gets or Sets Addresses
         /// </summary>
         [DataMember(Name="addresses", EmitDefaultValue=false)]
+<<<<<<< HEAD
         public List<OrganizationAddress> Addresses { get; set; }
+=======
+        public List<Contact> Addresses { get; set; }
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
     
         /// <summary>
         /// Gets or Sets Edges

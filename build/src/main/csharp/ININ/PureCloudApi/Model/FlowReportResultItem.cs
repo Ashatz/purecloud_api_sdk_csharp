@@ -117,6 +117,79 @@ namespace ININ.PureCloudApi.Model
 
     
         /// <summary>
+        /// The flow's running status, which indicates whether the flow is running normally or in error, etc;
+        /// </summary>
+        /// <value>The flow's running status, which indicates whether the flow is running normally or in error, etc;</value>
+        [DataMember(Name="flowStatus", EmitDefaultValue=false)]
+        public FlowStatusEnum? FlowStatus { get; set; }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="FlowReportResultItem" />class.
+        /// </summary>
+        /// <param name="FlowExecId">The flow instance ID for this process (required).</param>
+        /// <param name="FlowConfigId">The flow config ID that this workitem was created from. (required).</param>
+        /// <param name="FlowInstanceName">The instance name for this flow in relation to its primary document.  If the flow is not a document-centric type, this value will be empty..</param>
+        /// <param name="AssociatedDocument">the document for this flow (if this flow was launched via a document).</param>
+        /// <param name="FlowStatus">The flow&#39;s running status, which indicates whether the flow is running normally or in error, etc;.</param>
+        /// <param name="CurrentState">The current state of the flow (EG what action is being processed) (required).</param>
+        /// <param name="StartDateTime">The time the flow was started. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (required).</param>
+        /// <param name="EndDateTime">The time the flow ended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="WorkItemUserAssignees">List of users currently assigned to a workItem.</param>
+        /// <param name="CompletedUser">User that completed the flow.</param>
+        /// <param name="CompletionReason">Reason for completion.</param>
+        /// <param name="FlowErrorInfo">Additional information if the flow is in error.</param>
+
+        public FlowReportResultItem(FlowExecId FlowExecId = null, FlowConfigId FlowConfigId = null, string FlowInstanceName = null, AssociatedDocument AssociatedDocument = null, FlowStatusEnum? FlowStatus = null, string CurrentState = null, DateTime? StartDateTime = null, DateTime? EndDateTime = null, List<User> WorkItemUserAssignees = null, User CompletedUser = null, string CompletionReason = null, ErrorBody FlowErrorInfo = null)
+        {
+            // to ensure "FlowExecId" is required (not null)
+            if (FlowExecId == null)
+            {
+                throw new InvalidDataException("FlowExecId is a required property for FlowReportResultItem and cannot be null");
+            }
+            else
+            {
+                this.FlowExecId = FlowExecId;
+            }
+            // to ensure "FlowConfigId" is required (not null)
+            if (FlowConfigId == null)
+            {
+                throw new InvalidDataException("FlowConfigId is a required property for FlowReportResultItem and cannot be null");
+            }
+            else
+            {
+                this.FlowConfigId = FlowConfigId;
+            }
+            // to ensure "CurrentState" is required (not null)
+            if (CurrentState == null)
+            {
+                throw new InvalidDataException("CurrentState is a required property for FlowReportResultItem and cannot be null");
+            }
+            else
+            {
+                this.CurrentState = CurrentState;
+            }
+            // to ensure "StartDateTime" is required (not null)
+            if (StartDateTime == null)
+            {
+                throw new InvalidDataException("StartDateTime is a required property for FlowReportResultItem and cannot be null");
+            }
+            else
+            {
+                this.StartDateTime = StartDateTime;
+            }
+            this.FlowInstanceName = FlowInstanceName;
+            this.AssociatedDocument = AssociatedDocument;
+            this.FlowStatus = FlowStatus;
+            this.EndDateTime = EndDateTime;
+            this.WorkItemUserAssignees = WorkItemUserAssignees;
+            this.CompletedUser = CompletedUser;
+            this.CompletionReason = CompletionReason;
+            this.FlowErrorInfo = FlowErrorInfo;
+            
+        }
+
+    
+        /// <summary>
         /// The flow instance ID for this process
         /// </summary>
         /// <value>The flow instance ID for this process</value>

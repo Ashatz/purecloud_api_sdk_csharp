@@ -27,10 +27,17 @@ namespace ININ.PureCloudApi.Model
             
             [EnumMember(Value = "OPERATIONAL")]
             Operational,
+<<<<<<< HEAD
             
             [EnumMember(Value = "DEGRADED")]
             Degraded,
             
+=======
+            
+            [EnumMember(Value = "DEGRADED")]
+            Degraded,
+            
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             [EnumMember(Value = "OFFLINE")]
             Offline
         }
@@ -80,7 +87,10 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="operationalStatus", EmitDefaultValue=false)]
         public OperationalStatusEnum? OperationalStatus { get; set; }
     
+<<<<<<< HEAD
 
+=======
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// The status of the primary or secondary Edges assigned to the phone lines.
         /// </summary>
@@ -88,7 +98,10 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="edgesStatus", EmitDefaultValue=false)]
         public EdgesStatusEnum? EdgesStatus { get; set; }
     
+<<<<<<< HEAD
 
+=======
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// The phone status's edge assignment type.
         /// </summary>

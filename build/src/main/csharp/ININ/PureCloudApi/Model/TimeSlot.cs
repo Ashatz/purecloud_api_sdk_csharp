@@ -21,9 +21,15 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TimeSlot" />class.
         /// </summary>
+<<<<<<< HEAD
         /// <param name="StartTime">StartTime.</param>
         /// <param name="StopTime">StopTime.</param>
         /// <param name="Day">Day.</param>
+=======
+        /// <param name="StartTime">start time in xx:xx:xx.xxx format.</param>
+        /// <param name="StopTime">stop time in xx:xx:xx.xxx format.</param>
+        /// <param name="Day">Day for this time slot, Monday &#x3D; 1 ... Sunday &#x3D; 7.</param>
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
         public TimeSlot(string StartTime = null, string StopTime = null, int? Day = null)
         {
@@ -35,20 +41,23 @@ namespace ININ.PureCloudApi.Model
 
     
         /// <summary>
-        /// Gets or Sets StartTime
+        /// start time in xx:xx:xx.xxx format
         /// </summary>
+        /// <value>start time in xx:xx:xx.xxx format</value>
         [DataMember(Name="startTime", EmitDefaultValue=false)]
         public string StartTime { get; set; }
     
         /// <summary>
-        /// Gets or Sets StopTime
+        /// stop time in xx:xx:xx.xxx format
         /// </summary>
+        /// <value>stop time in xx:xx:xx.xxx format</value>
         [DataMember(Name="stopTime", EmitDefaultValue=false)]
         public string StopTime { get; set; }
     
         /// <summary>
-        /// Gets or Sets Day
+        /// Day for this time slot, Monday &#x3D; 1 ... Sunday &#x3D; 7
         /// </summary>
+        /// <value>Day for this time slot, Monday &#x3D; 1 ... Sunday &#x3D; 7</value>
         [DataMember(Name="day", EmitDefaultValue=false)]
         public int? Day { get; set; }
     

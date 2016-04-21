@@ -100,6 +100,66 @@ namespace ININ.PureCloudApi.Model
 
     
         /// <summary>
+        /// Gets or Sets Type
+        /// </summary>
+        [DataMember(Name="type", EmitDefaultValue=false)]
+        public TypeEnum? Type { get; set; }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Flow" />class.
+        /// </summary>
+        /// <param name="Name">Name.</param>
+        /// <param name="Description">Description.</param>
+        /// <param name="Type">Type.</param>
+        /// <param name="LockedUser">LockedUser.</param>
+        /// <param name="Active">Active (default to false).</param>
+        /// <param name="Deleted">Deleted (default to false).</param>
+        /// <param name="PublishedVersion">PublishedVersion.</param>
+        /// <param name="CheckedInVersion">CheckedInVersion.</param>
+        /// <param name="SavedVersion">SavedVersion.</param>
+        /// <param name="System">System (default to false).</param>
+
+        public Flow(string Name = null, string Description = null, TypeEnum? Type = null, UriReference LockedUser = null, bool? Active = null, bool? Deleted = null, FlowVersion PublishedVersion = null, FlowVersion CheckedInVersion = null, FlowVersion SavedVersion = null, bool? System = null)
+        {
+            this.Name = Name;
+            this.Description = Description;
+            this.Type = Type;
+            this.LockedUser = LockedUser;
+            // use default value if no "Active" provided
+            if (Active == null)
+            {
+                this.Active = false;
+            }
+            else
+            {
+                this.Active = Active;
+            }
+            // use default value if no "Deleted" provided
+            if (Deleted == null)
+            {
+                this.Deleted = false;
+            }
+            else
+            {
+                this.Deleted = Deleted;
+            }
+            this.PublishedVersion = PublishedVersion;
+            this.CheckedInVersion = CheckedInVersion;
+            this.SavedVersion = SavedVersion;
+            // use default value if no "System" provided
+            if (System == null)
+            {
+                this.System = false;
+            }
+            else
+            {
+                this.System = System;
+            }
+            
+        }
+
+    
+        /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>

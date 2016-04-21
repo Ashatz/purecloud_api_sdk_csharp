@@ -64,6 +64,36 @@ namespace ININ.PureCloudApi.Model
 
     
         /// <summary>
+        /// Gets or Sets MemberType
+        /// </summary>
+        [DataMember(Name="memberType", EmitDefaultValue=false)]
+        public MemberTypeEnum? MemberType { get; set; }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="WorkspaceMember" />class.
+        /// </summary>
+        /// <param name="Name">Name.</param>
+        /// <param name="Workspace">Workspace.</param>
+        /// <param name="MemberType">MemberType.</param>
+        /// <param name="Member">Member.</param>
+        /// <param name="User">User.</param>
+        /// <param name="Group">Group.</param>
+        /// <param name="SecurityProfile">SecurityProfile.</param>
+
+        public WorkspaceMember(string Name = null, UriReference Workspace = null, MemberTypeEnum? MemberType = null, UriReference Member = null, User User = null, Group Group = null, SecurityProfile SecurityProfile = null)
+        {
+            this.Name = Name;
+            this.Workspace = Workspace;
+            this.MemberType = MemberType;
+            this.Member = Member;
+            this.User = User;
+            this.Group = Group;
+            this.SecurityProfile = SecurityProfile;
+            
+        }
+
+    
+        /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>

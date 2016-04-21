@@ -15,12 +15,13 @@ namespace ININ.PureCloudApi.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Retrieves audits for dialer.
+        /// Delete callable time set
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="body">AuditSearch (optional)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -29,14 +30,20 @@ namespace ININ.PureCloudApi.Api
         /// <param name="facetsOnly">Facets only (optional, default to false)</param>
         /// <returns>AuditSearchResult</returns>
         AuditSearchResult OutboundAuditsPost (DialerAuditRequest body = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, bool? facetsOnly = null);
+=======
+        /// <param name="callableTimeSetId">Callable Time Set ID</param>
+        /// <returns>string</returns>
+        string DeleteCallabletimesetsCallabletimesetId (string callableTimeSetId);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
         /// <summary>
-        /// Retrieves audits for dialer.
+        /// Delete callable time set
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="body">AuditSearch (optional)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -47,43 +54,77 @@ namespace ININ.PureCloudApi.Api
         ApiResponse<AuditSearchResult> OutboundAuditsPostWithHttpInfo (DialerAuditRequest body = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, bool? facetsOnly = null);
         /// <summary>
         /// Delete callable time set
+=======
+        /// <param name="callableTimeSetId">Callable Time Set ID</param>
+        /// <returns>ApiResponse of string</returns>
+        ApiResponse<string> DeleteCallabletimesetsCallabletimesetIdWithHttpInfo (string callableTimeSetId);
+        /// <summary>
+        /// Delete a dialer call analysis response set.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="callableTimeSetId">Callable Time Set ID</param>
         /// <returns>string</returns>
         string OutboundCallabletimesetsCallabletimesetidDelete (string callableTimeSetId);
 
         /// <summary>
         /// Delete callable time set
+=======
+        /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
+        /// <returns>string</returns>
+        string DeleteCallanalysisresponsesetsCallanalysissetId (string callAnalysisSetId);
+
+        /// <summary>
+        /// Delete a dialer call analysis response set.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="callableTimeSetId">Callable Time Set ID</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> OutboundCallabletimesetsCallabletimesetidDeleteWithHttpInfo (string callableTimeSetId);
         /// <summary>
         /// Get callable time set
+=======
+        /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
+        /// <returns>ApiResponse of string</returns>
+        ApiResponse<string> DeleteCallanalysisresponsesetsCallanalysissetIdWithHttpInfo (string callAnalysisSetId);
+        /// <summary>
+        /// Delete a campaign.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="callableTimeSetId">Callable Time Set ID</param>
         /// <returns>CallableTimeSet</returns>
         CallableTimeSet OutboundCallabletimesetsCallabletimesetidGet (string callableTimeSetId);
 
         /// <summary>
         /// Get callable time set
+=======
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>string</returns>
+        string DeleteCampaignsCampaignId (string campaignId);
+
+        /// <summary>
+        /// Delete a campaign.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="callableTimeSetId">Callable Time Set ID</param>
         /// <returns>ApiResponse of CallableTimeSet</returns>
         ApiResponse<CallableTimeSet> OutboundCallabletimesetsCallabletimesetidGetWithHttpInfo (string callableTimeSetId);
@@ -112,11 +153,19 @@ namespace ININ.PureCloudApi.Api
         ApiResponse<CallableTimeSet> OutboundCallabletimesetsCallabletimesetidPutWithHttpInfo (string callableTimeSetId, CallableTimeSet body = null);
         /// <summary>
         /// Query callable time set list
+=======
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>ApiResponse of string</returns>
+        ApiResponse<string> DeleteCampaignsCampaignIdWithHttpInfo (string campaignId);
+        /// <summary>
+        /// Reset campaign progress and recycle the campaign
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
@@ -125,14 +174,20 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>CallableTimeSetEntityListing</returns>
         CallableTimeSetEntityListing OutboundCallabletimesetsGet (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null);
+=======
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>string</returns>
+        string DeleteCampaignsCampaignIdProgress (string campaignId);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
         /// <summary>
-        /// Query callable time set list
+        /// Reset campaign progress and recycle the campaign
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
@@ -141,76 +196,132 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>ApiResponse of CallableTimeSetEntityListing</returns>
         ApiResponse<CallableTimeSetEntityListing> OutboundCallabletimesetsGetWithHttpInfo (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null);
+=======
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>ApiResponse of string</returns>
+        ApiResponse<string> DeleteCampaignsCampaignIdProgressWithHttpInfo (string campaignId);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
-        /// Create callable time set
+        /// Delete a contact list.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="body">DialerCallableTimeSet (optional)</param>
         /// <returns>CallableTimeSet</returns>
         CallableTimeSet OutboundCallabletimesetsPost (CallableTimeSet body = null);
+=======
+        /// <param name="contactListId">ContactList ID</param>
+        /// <returns>string</returns>
+        string DeleteContactlistsContactlistId (string contactListId);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
         /// <summary>
-        /// Create callable time set
+        /// Delete a contact list.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="body">DialerCallableTimeSet (optional)</param>
         /// <returns>ApiResponse of CallableTimeSet</returns>
         ApiResponse<CallableTimeSet> OutboundCallabletimesetsPostWithHttpInfo (CallableTimeSet body = null);
         /// <summary>
         /// Delete a dialer call analysis response set.
+=======
+        /// <param name="contactListId">ContactList ID</param>
+        /// <returns>ApiResponse of string</returns>
+        ApiResponse<string> DeleteContactlistsContactlistIdWithHttpInfo (string contactListId);
+        /// <summary>
+        /// Delete a contact.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
         /// <returns>string</returns>
         string OutboundCallanalysisresponsesetsCallanalysissetidDelete (string callAnalysisSetId);
 
         /// <summary>
         /// Delete a dialer call analysis response set.
+=======
+        /// <param name="contactListId">Contact List ID</param>
+        /// <param name="contactId">Contact ID</param>
+        /// <returns>string</returns>
+        string DeleteContactlistsContactlistIdContactsContactId (string contactListId, string contactId);
+
+        /// <summary>
+        /// Delete a contact.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> OutboundCallanalysisresponsesetsCallanalysissetidDeleteWithHttpInfo (string callAnalysisSetId);
         /// <summary>
         /// Get a dialer call analysis response set.
+=======
+        /// <param name="contactListId">Contact List ID</param>
+        /// <param name="contactId">Contact ID</param>
+        /// <returns>ApiResponse of string</returns>
+        ApiResponse<string> DeleteContactlistsContactlistIdContactsContactIdWithHttpInfo (string contactListId, string contactId);
+        /// <summary>
+        /// Delete dialer DNC list
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
         /// <returns>ResponseSet</returns>
         ResponseSet OutboundCallanalysisresponsesetsCallanalysissetidGet (string callAnalysisSetId);
 
         /// <summary>
         /// Get a dialer call analysis response set.
+=======
+        /// <param name="dncListId">DncList ID</param>
+        /// <returns>string</returns>
+        string DeleteDnclistsDnclistId (string dncListId);
+
+        /// <summary>
+        /// Delete dialer DNC list
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
         /// <returns>ApiResponse of ResponseSet</returns>
         ApiResponse<ResponseSet> OutboundCallanalysisresponsesetsCallanalysissetidGetWithHttpInfo (string callAnalysisSetId);
         /// <summary>
         /// Update a dialer call analysis response set.
+=======
+        /// <param name="dncListId">DncList ID</param>
+        /// <returns>ApiResponse of string</returns>
+        ApiResponse<string> DeleteDnclistsDnclistIdWithHttpInfo (string dncListId);
+        /// <summary>
+        /// Delete a Rule set.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
         /// <param name="body">ResponseSet (optional)</param>
         /// <returns>ResponseSet</returns>
@@ -218,22 +329,39 @@ namespace ININ.PureCloudApi.Api
 
         /// <summary>
         /// Update a dialer call analysis response set.
+=======
+        /// <param name="ruleSetId">Rule Set ID</param>
+        /// <returns>string</returns>
+        string DeleteRulesetsRulesetId (string ruleSetId);
+
+        /// <summary>
+        /// Delete a Rule set.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
         /// <param name="body">ResponseSet (optional)</param>
         /// <returns>ApiResponse of ResponseSet</returns>
         ApiResponse<ResponseSet> OutboundCallanalysisresponsesetsCallanalysissetidPutWithHttpInfo (string callAnalysisSetId, ResponseSet body = null);
         /// <summary>
         /// Query a list of dialer call analysis response sets.
+=======
+        /// <param name="ruleSetId">Rule Set ID</param>
+        /// <returns>ApiResponse of string</returns>
+        ApiResponse<string> DeleteRulesetsRulesetIdWithHttpInfo (string ruleSetId);
+        /// <summary>
+        /// Delete a dialer campaign schedule.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
@@ -245,11 +373,20 @@ namespace ININ.PureCloudApi.Api
 
         /// <summary>
         /// Query a list of dialer call analysis response sets.
+=======
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>string</returns>
+        string DeleteSchedulesCampaignsCampaignId (string campaignId);
+
+        /// <summary>
+        /// Delete a dialer campaign schedule.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
@@ -260,32 +397,57 @@ namespace ININ.PureCloudApi.Api
         ApiResponse<ResponseSetEntityListing> OutboundCallanalysisresponsesetsGetWithHttpInfo (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null);
         /// <summary>
         /// Create a dialer call analysis response set.
+=======
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>ApiResponse of string</returns>
+        ApiResponse<string> DeleteSchedulesCampaignsCampaignIdWithHttpInfo (string campaignId);
+        /// <summary>
+        /// Delete a dialer sequence schedule.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="body">ResponseSet (optional)</param>
         /// <returns>ResponseSet</returns>
         ResponseSet OutboundCallanalysisresponsesetsPost (ResponseSet body = null);
 
         /// <summary>
         /// Create a dialer call analysis response set.
+=======
+        /// <param name="sequenceId">Sequence ID</param>
+        /// <returns>string</returns>
+        string DeleteSchedulesSequencesSequenceId (string sequenceId);
+
+        /// <summary>
+        /// Delete a dialer sequence schedule.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="body">ResponseSet (optional)</param>
         /// <returns>ApiResponse of ResponseSet</returns>
         ApiResponse<ResponseSet> OutboundCallanalysisresponsesetsPostWithHttpInfo (ResponseSet body = null);
         /// <summary>
         /// Send notification that an agent&#39;s state changed 
+=======
+        /// <param name="sequenceId">Sequence ID</param>
+        /// <returns>ApiResponse of string</returns>
+        ApiResponse<string> DeleteSchedulesSequencesSequenceIdWithHttpInfo (string sequenceId);
+        /// <summary>
+        /// Delete a dialer campaign sequence.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// New agent state.
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="campaignId">Campaign ID</param>
         /// <param name="userId">Agent&#39;s user ID</param>
         /// <param name="body">agent (optional)</param>
@@ -294,11 +456,20 @@ namespace ININ.PureCloudApi.Api
 
         /// <summary>
         /// Send notification that an agent&#39;s state changed 
+=======
+        /// <param name="sequenceId">Campaign Sequence ID</param>
+        /// <returns>string</returns>
+        string DeleteSequencesSequenceId (string sequenceId);
+
+        /// <summary>
+        /// Delete a dialer campaign sequence.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// New agent state.
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="campaignId">Campaign ID</param>
         /// <param name="userId">Agent&#39;s user ID</param>
         /// <param name="body">agent (optional)</param>
@@ -306,11 +477,19 @@ namespace ININ.PureCloudApi.Api
         ApiResponse<string> OutboundCampaignsCampaignidAgentsUseridPutWithHttpInfo (string campaignId, string userId, Agent body = null);
         /// <summary>
         /// Schedule a Callback for a Dialer Campaign
+=======
+        /// <param name="sequenceId">Campaign Sequence ID</param>
+        /// <returns>ApiResponse of string</returns>
+        ApiResponse<string> DeleteSequencesSequenceIdWithHttpInfo (string sequenceId);
+        /// <summary>
+        /// Query callable time set list
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="campaignId">Campaign ID</param>
         /// <param name="body">ContactCallbackRequest (optional)</param>
         /// <returns>ContactCallbackRequest</returns>
@@ -318,36 +497,77 @@ namespace ININ.PureCloudApi.Api
 
         /// <summary>
         /// Schedule a Callback for a Dialer Campaign
+=======
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <returns>CallableTimeSetEntityListing</returns>
+        CallableTimeSetEntityListing GetCallabletimesets (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null);
+
+        /// <summary>
+        /// Query callable time set list
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="campaignId">Campaign ID</param>
         /// <param name="body">ContactCallbackRequest (optional)</param>
         /// <returns>ApiResponse of ContactCallbackRequest</returns>
         ApiResponse<ContactCallbackRequest> OutboundCampaignsCampaignidCallbackSchedulePostWithHttpInfo (string campaignId, ContactCallbackRequest body = null);
         /// <summary>
         /// Delete a campaign.
+=======
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <returns>ApiResponse of CallableTimeSetEntityListing</returns>
+        ApiResponse<CallableTimeSetEntityListing> GetCallabletimesetsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null);
+        /// <summary>
+        /// Get callable time set
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>string</returns>
         string OutboundCampaignsCampaignidDelete (string campaignId);
 
         /// <summary>
         /// Delete a campaign.
+=======
+        /// <param name="callableTimeSetId">Callable Time Set ID</param>
+        /// <returns>CallableTimeSet</returns>
+        CallableTimeSet GetCallabletimesetsCallabletimesetId (string callableTimeSetId);
+
+        /// <summary>
+        /// Get callable time set
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> OutboundCampaignsCampaignidDeleteWithHttpInfo (string campaignId);
+=======
+        /// <param name="callableTimeSetId">Callable Time Set ID</param>
+        /// <returns>ApiResponse of CallableTimeSet</returns>
+        ApiResponse<CallableTimeSet> GetCallabletimesetsCallabletimesetIdWithHttpInfo (string callableTimeSetId);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// Get campaign diagnostics
         /// </summary>
@@ -355,9 +575,20 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>CampaignDiagnostics</returns>
         CampaignDiagnostics OutboundCampaignsCampaignidDiagnosticsGet (string campaignId);
+=======
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <returns>ResponseSetEntityListing</returns>
+        ResponseSetEntityListing GetCallanalysisresponsesets (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
         /// <summary>
         /// Get campaign diagnostics
@@ -366,37 +597,68 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>ApiResponse of CampaignDiagnostics</returns>
         ApiResponse<CampaignDiagnostics> OutboundCampaignsCampaignidDiagnosticsGetWithHttpInfo (string campaignId);
         /// <summary>
         /// Get dialer campaign.
+=======
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <returns>ApiResponse of ResponseSetEntityListing</returns>
+        ApiResponse<ResponseSetEntityListing> GetCallanalysisresponsesetsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null);
+        /// <summary>
+        /// Get a dialer call analysis response set.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Campaign</returns>
         Campaign OutboundCampaignsCampaignidGet (string campaignId);
 
         /// <summary>
         /// Get dialer campaign.
+=======
+        /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
+        /// <returns>ResponseSet</returns>
+        ResponseSet GetCallanalysisresponsesetsCallanalysissetId (string callAnalysisSetId);
+
+        /// <summary>
+        /// Get a dialer call analysis response set.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>ApiResponse of Campaign</returns>
         ApiResponse<Campaign> OutboundCampaignsCampaignidGetWithHttpInfo (string campaignId);
         /// <summary>
         /// Update a campaign.
+=======
+        /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
+        /// <returns>ApiResponse of ResponseSet</returns>
+        ApiResponse<ResponseSet> GetCallanalysisresponsesetsCallanalysissetIdWithHttpInfo (string callAnalysisSetId);
+        /// <summary>
+        /// Query a list of dialer campaigns.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="campaignId">Campaign ID</param>
         /// <param name="body">Campaign (optional)</param>
         /// <returns>Campaign</returns>
@@ -404,43 +666,95 @@ namespace ININ.PureCloudApi.Api
 
         /// <summary>
         /// Update a campaign.
+=======
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="contactListId">Contact List ID (optional)</param>
+        /// <param name="dncListId">DNC list ID (optional)</param>
+        /// <param name="distributionQueueId">Distribution queue ID (optional)</param>
+        /// <param name="edgeGroupId">Edge group ID (optional)</param>
+        /// <param name="callAnalysisResponseSetId">Call analysis response set ID (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <returns>CampaignEntityListing</returns>
+        CampaignEntityListing GetCampaigns (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string contactListId = null, string dncListId = null, string distributionQueueId = null, string edgeGroupId = null, string callAnalysisResponseSetId = null, string sortBy = null, string sortOrder = null);
+
+        /// <summary>
+        /// Query a list of dialer campaigns.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="campaignId">Campaign ID</param>
         /// <param name="body">Campaign (optional)</param>
         /// <returns>ApiResponse of Campaign</returns>
         ApiResponse<Campaign> OutboundCampaignsCampaignidPutWithHttpInfo (string campaignId, Campaign body = null);
         /// <summary>
         /// Get statistics about a Dialer Campaign
+=======
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="contactListId">Contact List ID (optional)</param>
+        /// <param name="dncListId">DNC list ID (optional)</param>
+        /// <param name="distributionQueueId">Distribution queue ID (optional)</param>
+        /// <param name="edgeGroupId">Edge group ID (optional)</param>
+        /// <param name="callAnalysisResponseSetId">Call analysis response set ID (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <returns>ApiResponse of CampaignEntityListing</returns>
+        ApiResponse<CampaignEntityListing> GetCampaignsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string contactListId = null, string dncListId = null, string distributionQueueId = null, string edgeGroupId = null, string callAnalysisResponseSetId = null, string sortBy = null, string sortOrder = null);
+        /// <summary>
+        /// Get dialer campaign.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
+<<<<<<< HEAD
         /// <returns>CampaignStats</returns>
         CampaignStats OutboundCampaignsCampaignidStatsGet (string campaignId);
 
         /// <summary>
         /// Get statistics about a Dialer Campaign
+=======
+        /// <returns>Campaign</returns>
+        Campaign GetCampaignsCampaignId (string campaignId);
+
+        /// <summary>
+        /// Get dialer campaign.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
+<<<<<<< HEAD
         /// <returns>ApiResponse of CampaignStats</returns>
         ApiResponse<CampaignStats> OutboundCampaignsCampaignidStatsGetWithHttpInfo (string campaignId);
         /// <summary>
         /// Query a list of dialer campaigns.
+=======
+        /// <returns>ApiResponse of Campaign</returns>
+        ApiResponse<Campaign> GetCampaignsCampaignIdWithHttpInfo (string campaignId);
+        /// <summary>
+        /// Get campaign diagnostics
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
@@ -457,11 +771,20 @@ namespace ININ.PureCloudApi.Api
 
         /// <summary>
         /// Query a list of dialer campaigns.
+=======
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>CampaignDiagnostics</returns>
+        CampaignDiagnostics GetCampaignsCampaignIdDiagnostics (string campaignId);
+
+        /// <summary>
+        /// Get campaign diagnostics
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
@@ -477,32 +800,57 @@ namespace ININ.PureCloudApi.Api
         ApiResponse<CampaignEntityListing> OutboundCampaignsGetWithHttpInfo (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string contactListId = null, string dncListId = null, string distributionQueueId = null, string edgeGroupId = null, string callAnalysisResponseSetId = null, string sortBy = null, string sortOrder = null);
         /// <summary>
         /// Create a campaign.
+=======
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>ApiResponse of CampaignDiagnostics</returns>
+        ApiResponse<CampaignDiagnostics> GetCampaignsCampaignIdDiagnosticsWithHttpInfo (string campaignId);
+        /// <summary>
+        /// Get campaign progress
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="body">Campaign (optional)</param>
         /// <returns>Campaign</returns>
         Campaign OutboundCampaignsPost (Campaign body = null);
 
         /// <summary>
         /// Create a campaign.
+=======
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>CampaignProgress</returns>
+        CampaignProgress GetCampaignsCampaignIdProgress (string campaignId);
+
+        /// <summary>
+        /// Get campaign progress
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="body">Campaign (optional)</param>
         /// <returns>ApiResponse of Campaign</returns>
         ApiResponse<Campaign> OutboundCampaignsPostWithHttpInfo (Campaign body = null);
         /// <summary>
         /// Get Dialer campaign&#39;s penetration rate
+=======
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>ApiResponse of CampaignProgress</returns>
+        ApiResponse<CampaignProgress> GetCampaignsCampaignIdProgressWithHttpInfo (string campaignId);
+        /// <summary>
+        /// Get statistics about a Dialer Campaign
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// Get dialer campaign&#39;s penetration rate.
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="contactListId">ContactList ID</param>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>PenetrationRate</returns>
@@ -510,22 +858,39 @@ namespace ININ.PureCloudApi.Api
 
         /// <summary>
         /// Get Dialer campaign&#39;s penetration rate
+=======
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>CampaignStats</returns>
+        CampaignStats GetCampaignsCampaignIdStats (string campaignId);
+
+        /// <summary>
+        /// Get statistics about a Dialer Campaign
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// Get dialer campaign&#39;s penetration rate.
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="contactListId">ContactList ID</param>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>ApiResponse of PenetrationRate</returns>
         ApiResponse<PenetrationRate> OutboundContactlistsContactlistidCampaignidPenetrationrateGetWithHttpInfo (string contactListId, string campaignId);
         /// <summary>
         /// Delete a contact.
+=======
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>ApiResponse of CampaignStats</returns>
+        ApiResponse<CampaignStats> GetCampaignsCampaignIdStatsWithHttpInfo (string campaignId);
+        /// <summary>
+        /// Query a list of contact lists.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="contactId">Contact ID</param>
         /// <returns>string</returns>
@@ -533,15 +898,43 @@ namespace ININ.PureCloudApi.Api
 
         /// <summary>
         /// Delete a contact.
+=======
+        /// <param name="includeImportStatus">Include import status (optional, default to false)</param>
+        /// <param name="includeSize">Include size (optional, default to false)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <returns>ContactListEntityListing</returns>
+        ContactListEntityListing GetContactlists (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null);
+
+        /// <summary>
+        /// Query a list of contact lists.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="contactId">Contact ID</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> OutboundContactlistsContactlistidContactsContactidDeleteWithHttpInfo (string contactListId, string contactId);
+=======
+        /// <param name="includeImportStatus">Include import status (optional, default to false)</param>
+        /// <param name="includeSize">Include size (optional, default to false)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <returns>ApiResponse of ContactListEntityListing</returns>
+        ApiResponse<ContactListEntityListing> GetContactlistsWithHttpInfo (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// Get dialer contactList.
         /// </summary>
@@ -549,10 +942,18 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="contactId">Contact ID</param>
         /// <returns>Contact</returns>
         Contact OutboundContactlistsContactlistidContactsContactidGet (string contactListId, string contactId);
+=======
+        /// <param name="contactListId">ContactList ID</param>
+        /// <param name="includeImportStatus">Import status (optional, default to false)</param>
+        /// <param name="includeSize">Include size (optional, default to false)</param>
+        /// <returns>ContactList</returns>
+        ContactList GetContactlistsContactlistId (string contactListId, bool? includeImportStatus = null, bool? includeSize = null);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
         /// <summary>
         /// Get dialer contactList.
@@ -561,12 +962,22 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="contactId">Contact ID</param>
         /// <returns>ApiResponse of Contact</returns>
         ApiResponse<Contact> OutboundContactlistsContactlistidContactsContactidGetWithHttpInfo (string contactListId, string contactId);
         /// <summary>
         /// Update a contact.
+=======
+        /// <param name="contactListId">ContactList ID</param>
+        /// <param name="includeImportStatus">Import status (optional, default to false)</param>
+        /// <param name="includeSize">Include size (optional, default to false)</param>
+        /// <returns>ApiResponse of ContactList</returns>
+        ApiResponse<ContactList> GetContactlistsContactlistIdWithHttpInfo (string contactListId, bool? includeImportStatus = null, bool? includeSize = null);
+        /// <summary>
+        /// Get dialer contactList.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
@@ -574,12 +985,20 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="contactId">Contact ID</param>
+<<<<<<< HEAD
         /// <param name="body">Contact (optional)</param>
         /// <returns>Contact</returns>
         Contact OutboundContactlistsContactlistidContactsContactidPut (string contactListId, string contactId, Contact body = null);
 
         /// <summary>
         /// Update a contact.
+=======
+        /// <returns>DialerContact</returns>
+        DialerContact GetContactlistsContactlistIdContactsContactId (string contactListId, string contactId);
+
+        /// <summary>
+        /// Get dialer contactList.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
@@ -587,16 +1006,24 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="contactId">Contact ID</param>
+<<<<<<< HEAD
         /// <param name="body">Contact (optional)</param>
         /// <returns>ApiResponse of Contact</returns>
         ApiResponse<Contact> OutboundContactlistsContactlistidContactsContactidPutWithHttpInfo (string contactListId, string contactId, Contact body = null);
         /// <summary>
         /// Add contacts to a contact list.
+=======
+        /// <returns>ApiResponse of DialerContact</returns>
+        ApiResponse<DialerContact> GetContactlistsContactlistIdContactsContactIdWithHttpInfo (string contactListId, string contactId);
+        /// <summary>
+        /// Get dialer contactList import status.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="body">Contact (optional)</param>
         /// <param name="priority"> (optional)</param>
@@ -605,11 +1032,20 @@ namespace ININ.PureCloudApi.Api
 
         /// <summary>
         /// Add contacts to a contact list.
+=======
+        /// <param name="contactListId">ContactList ID</param>
+        /// <returns>ImportStatus</returns>
+        ImportStatus GetContactlistsContactlistIdImportstatus (string contactListId);
+
+        /// <summary>
+        /// Get dialer contactList import status.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="body">Contact (optional)</param>
         /// <param name="priority"> (optional)</param>
@@ -617,53 +1053,113 @@ namespace ININ.PureCloudApi.Api
         ApiResponse<Contact> OutboundContactlistsContactlistidContactsPostWithHttpInfo (string contactListId, List<Contact> body = null, bool? priority = null);
         /// <summary>
         /// Delete a contact list.
+=======
+        /// <param name="contactListId">ContactList ID</param>
+        /// <returns>ApiResponse of ImportStatus</returns>
+        ApiResponse<ImportStatus> GetContactlistsContactlistIdImportstatusWithHttpInfo (string contactListId);
+        /// <summary>
+        /// Query dialer DNC lists
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="contactListId">ContactList ID</param>
         /// <returns>string</returns>
         string OutboundContactlistsContactlistidDelete (string contactListId);
 
         /// <summary>
         /// Delete a contact list.
+=======
+        /// <param name="includeImportStatus">Import status (optional, default to false)</param>
+        /// <param name="includeSize">Include size (optional, default to false)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional)</param>
+        /// <returns>DncListEntityListing</returns>
+        DncListEntityListing GetDnclists (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null);
+
+        /// <summary>
+        /// Query dialer DNC lists
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="contactListId">ContactList ID</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> OutboundContactlistsContactlistidDeleteWithHttpInfo (string contactListId);
         /// <summary>
         /// Initiate the export of a contact list.
+=======
+        /// <param name="includeImportStatus">Import status (optional, default to false)</param>
+        /// <param name="includeSize">Include size (optional, default to false)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional)</param>
+        /// <returns>ApiResponse of DncListEntityListing</returns>
+        ApiResponse<DncListEntityListing> GetDnclistsWithHttpInfo (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null);
+        /// <summary>
+        /// Get dialer DNC list
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// Returns 200 if received OK.
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="contactListId">ContactList ID</param>
         /// <returns>string</returns>
         string OutboundContactlistsContactlistidExportPost (string contactListId);
 
         /// <summary>
         /// Initiate the export of a contact list.
+=======
+        /// <param name="dncListId">DncList ID</param>
+        /// <param name="includeImportStatus">Import status (optional, default to false)</param>
+        /// <param name="includeSize">Include size (optional, default to false)</param>
+        /// <returns>DncList</returns>
+        DncList GetDnclistsDnclistId (string dncListId, bool? includeImportStatus = null, bool? includeSize = null);
+
+        /// <summary>
+        /// Get dialer DNC list
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// Returns 200 if received OK.
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="contactListId">ContactList ID</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> OutboundContactlistsContactlistidExportPostWithHttpInfo (string contactListId);
         /// <summary>
         /// Get dialer contactList.
+=======
+        /// <param name="dncListId">DncList ID</param>
+        /// <param name="includeImportStatus">Import status (optional, default to false)</param>
+        /// <param name="includeSize">Include size (optional, default to false)</param>
+        /// <returns>ApiResponse of DncList</returns>
+        ApiResponse<DncList> GetDnclistsDnclistIdWithHttpInfo (string dncListId, bool? includeImportStatus = null, bool? includeSize = null);
+        /// <summary>
+        /// Get dialer dncList import status.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="contactListId">ContactList ID</param>
         /// <param name="importStatus">Import status (optional, default to false)</param>
         /// <param name="includeSize">Include size (optional, default to false)</param>
@@ -672,11 +1168,20 @@ namespace ININ.PureCloudApi.Api
 
         /// <summary>
         /// Get dialer contactList.
+=======
+        /// <param name="dncListId">DncList ID</param>
+        /// <returns>ImportStatus</returns>
+        ImportStatus GetDnclistsDnclistIdImportstatus (string dncListId);
+
+        /// <summary>
+        /// Get dialer dncList import status.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="contactListId">ContactList ID</param>
         /// <param name="importStatus">Import status (optional, default to false)</param>
         /// <param name="includeSize">Include size (optional, default to false)</param>
@@ -684,32 +1189,67 @@ namespace ININ.PureCloudApi.Api
         ApiResponse<ContactList> OutboundContactlistsContactlistidGetWithHttpInfo (string contactListId, bool? importStatus = null, bool? includeSize = null);
         /// <summary>
         /// Get dialer contactList import status.
+=======
+        /// <param name="dncListId">DncList ID</param>
+        /// <returns>ApiResponse of ImportStatus</returns>
+        ApiResponse<ImportStatus> GetDnclistsDnclistIdImportstatusWithHttpInfo (string dncListId);
+        /// <summary>
+        /// Query a list of Rule Sets.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="contactListId">ContactList ID</param>
         /// <returns>ImportStatus</returns>
         ImportStatus OutboundContactlistsContactlistidImportstatusGet (string contactListId);
 
         /// <summary>
         /// Get dialer contactList import status.
+=======
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <returns>RuleSetEntityListing</returns>
+        RuleSetEntityListing GetRulesets (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null);
+
+        /// <summary>
+        /// Query a list of Rule Sets.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="contactListId">ContactList ID</param>
         /// <returns>ApiResponse of ImportStatus</returns>
         ApiResponse<ImportStatus> OutboundContactlistsContactlistidImportstatusGetWithHttpInfo (string contactListId);
         /// <summary>
         /// Update a contact list.
+=======
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <returns>ApiResponse of RuleSetEntityListing</returns>
+        ApiResponse<RuleSetEntityListing> GetRulesetsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null);
+        /// <summary>
+        /// Get a Rule Set by ID.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="contactListId">ContactList ID</param>
         /// <param name="body">ContactList (optional)</param>
         /// <returns>ContactList</returns>
@@ -717,22 +1257,39 @@ namespace ININ.PureCloudApi.Api
 
         /// <summary>
         /// Update a contact list.
+=======
+        /// <param name="ruleSetId">Rule Set ID</param>
+        /// <returns>RuleSet</returns>
+        RuleSet GetRulesetsRulesetId (string ruleSetId);
+
+        /// <summary>
+        /// Get a Rule Set by ID.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="contactListId">ContactList ID</param>
         /// <param name="body">ContactList (optional)</param>
         /// <returns>ApiResponse of ContactList</returns>
         ApiResponse<ContactList> OutboundContactlistsContactlistidPutWithHttpInfo (string contactListId, ContactList body = null);
         /// <summary>
         /// Query a list of contact lists.
+=======
+        /// <param name="ruleSetId">Rule Set ID</param>
+        /// <returns>ApiResponse of RuleSet</returns>
+        ApiResponse<RuleSet> GetRulesetsRulesetIdWithHttpInfo (string ruleSetId);
+        /// <summary>
+        /// Query for a list of dialer campaign schedules.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="importStatus">Import status (optional, default to false)</param>
         /// <param name="includeSize">Include size (optional, default to false)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -746,11 +1303,19 @@ namespace ININ.PureCloudApi.Api
 
         /// <summary>
         /// Query a list of contact lists.
+=======
+        /// <returns>List&lt;CampaignSchedule&gt;</returns>
+        List<CampaignSchedule> GetSchedulesCampaigns ();
+
+        /// <summary>
+        /// Query for a list of dialer campaign schedules.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="importStatus">Import status (optional, default to false)</param>
         /// <param name="includeSize">Include size (optional, default to false)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -763,116 +1328,226 @@ namespace ININ.PureCloudApi.Api
         ApiResponse<ContactListEntityListing> OutboundContactlistsGetWithHttpInfo (bool? importStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null);
         /// <summary>
         /// Get penetration rates for a list of penetration rate identifiers (contact list id and qualifier id)
+=======
+        /// <returns>ApiResponse of List&lt;CampaignSchedule&gt;</returns>
+        ApiResponse<List<CampaignSchedule>> GetSchedulesCampaignsWithHttpInfo ();
+        /// <summary>
+        /// Get a dialer campaign schedule.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="body">PenetrationRateIdentifierList (optional)</param>
         /// <returns>List&lt;PenetrationRate&gt;</returns>
         List<PenetrationRate> OutboundContactlistsPenetrationratesPost (List<PenetrationRateId> body = null);
 
         /// <summary>
         /// Get penetration rates for a list of penetration rate identifiers (contact list id and qualifier id)
+=======
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>CampaignSchedule</returns>
+        CampaignSchedule GetSchedulesCampaignsCampaignId (string campaignId);
+
+        /// <summary>
+        /// Get a dialer campaign schedule.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="body">PenetrationRateIdentifierList (optional)</param>
         /// <returns>ApiResponse of List&lt;PenetrationRate&gt;</returns>
         ApiResponse<List<PenetrationRate>> OutboundContactlistsPenetrationratesPostWithHttpInfo (List<PenetrationRateId> body = null);
         /// <summary>
         /// Create a contact List.
+=======
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>ApiResponse of CampaignSchedule</returns>
+        ApiResponse<CampaignSchedule> GetSchedulesCampaignsCampaignIdWithHttpInfo (string campaignId);
+        /// <summary>
+        /// Query for a list of dialer sequence schedules.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="body">ContactList (optional)</param>
         /// <returns>ContactList</returns>
         ContactList OutboundContactlistsPost (ContactList body = null);
 
         /// <summary>
         /// Create a contact List.
+=======
+        /// <returns>List&lt;SequenceSchedule&gt;</returns>
+        List<SequenceSchedule> GetSchedulesSequences ();
+
+        /// <summary>
+        /// Query for a list of dialer sequence schedules.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="body">ContactList (optional)</param>
         /// <returns>ApiResponse of ContactList</returns>
         ApiResponse<ContactList> OutboundContactlistsPostWithHttpInfo (ContactList body = null);
         /// <summary>
         /// Add phone numbers to a Dialer DNC list.
+=======
+        /// <returns>ApiResponse of List&lt;SequenceSchedule&gt;</returns>
+        ApiResponse<List<SequenceSchedule>> GetSchedulesSequencesWithHttpInfo ();
+        /// <summary>
+        /// Get a dialer sequence schedule.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="conversationId">Conversation ID</param>
         /// <returns></returns>
         void OutboundConversationsConversationidDncPost (string conversationId);
 
         /// <summary>
         /// Add phone numbers to a Dialer DNC list.
+=======
+        /// <param name="sequenceId">Sequence ID</param>
+        /// <returns>SequenceSchedule</returns>
+        SequenceSchedule GetSchedulesSequencesSequenceId (string sequenceId);
+
+        /// <summary>
+        /// Get a dialer sequence schedule.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="conversationId">Conversation ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> OutboundConversationsConversationidDncPostWithHttpInfo (string conversationId);
         /// <summary>
         /// Delete dialer DNC list
+=======
+        /// <param name="sequenceId">Sequence ID</param>
+        /// <returns>ApiResponse of SequenceSchedule</returns>
+        ApiResponse<SequenceSchedule> GetSchedulesSequencesSequenceIdWithHttpInfo (string sequenceId);
+        /// <summary>
+        /// Query a list of dialer campaign sequences.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="dncListId">DncList ID</param>
         /// <returns>string</returns>
         string OutboundDnclistsDnclistidDelete (string dncListId);
 
         /// <summary>
         /// Delete dialer DNC list
+=======
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <returns>CampaignSequenceEntityListing</returns>
+        CampaignSequenceEntityListing GetSequences (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null);
+
+        /// <summary>
+        /// Query a list of dialer campaign sequences.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <returns>ApiResponse of CampaignSequenceEntityListing</returns>
+        ApiResponse<CampaignSequenceEntityListing> GetSequencesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null);
+        /// <summary>
+        /// Get a dialer campaign sequence.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="dncListId">DncList ID</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> OutboundDnclistsDnclistidDeleteWithHttpInfo (string dncListId);
         /// <summary>
         /// Initiate the export of a dnc list.
+=======
+        /// <param name="sequenceId">Campaign Sequence ID</param>
+        /// <returns>CampaignSequence</returns>
+        CampaignSequence GetSequencesSequenceId (string sequenceId);
+
+        /// <summary>
+        /// Get a dialer campaign sequence.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// Returns 200 if received OK.
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="dncListId">DncList ID</param>
         /// <returns>string</returns>
         string OutboundDnclistsDnclistidExportPost (string dncListId);
 
         /// <summary>
         /// Initiate the export of a dnc list.
+=======
+        /// <param name="sequenceId">Campaign Sequence ID</param>
+        /// <returns>ApiResponse of CampaignSequence</returns>
+        ApiResponse<CampaignSequence> GetSequencesSequenceIdWithHttpInfo (string sequenceId);
+        /// <summary>
+        /// Get the Dialer wrap up code mapping.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// Returns 200 if received OK.
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="dncListId">DncList ID</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> OutboundDnclistsDnclistidExportPostWithHttpInfo (string dncListId);
         /// <summary>
         /// Get dialer DNC list
+=======
+        /// <returns>WrapUpCodeMapping</returns>
+        WrapUpCodeMapping GetWrapupcodemappings ();
+
+        /// <summary>
+        /// Get the Dialer wrap up code mapping.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="dncListId">DncList ID</param>
         /// <param name="importStatus">Import status (optional, default to false)</param>
         /// <param name="includeSize">Include size (optional, default to false)</param>
@@ -881,11 +1556,18 @@ namespace ININ.PureCloudApi.Api
 
         /// <summary>
         /// Get dialer DNC list
+=======
+        /// <returns>ApiResponse of WrapUpCodeMapping</returns>
+        ApiResponse<WrapUpCodeMapping> GetWrapupcodemappingsWithHttpInfo ();
+        /// <summary>
+        /// Retrieves audits for dialer.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="dncListId">DncList ID</param>
         /// <param name="importStatus">Import status (optional, default to false)</param>
         /// <param name="includeSize">Include size (optional, default to false)</param>
@@ -893,32 +1575,68 @@ namespace ININ.PureCloudApi.Api
         ApiResponse<DncList> OutboundDnclistsDnclistidGetWithHttpInfo (string dncListId, bool? importStatus = null, bool? includeSize = null);
         /// <summary>
         /// Get dialer dncList import status.
+=======
+        /// <param name="body">AuditSearch (optional)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">Sort by (optional, default to entity.name)</param>
+        /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
+        /// <param name="facetsOnly">Facets only (optional, default to false)</param>
+        /// <returns>AuditSearchResult</returns>
+        AuditSearchResult PostAudits (DialerAuditRequest body = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, bool? facetsOnly = null);
+
+        /// <summary>
+        /// Retrieves audits for dialer.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="dncListId">DncList ID</param>
         /// <returns>ImportStatus</returns>
         ImportStatus OutboundDnclistsDnclistidImportstatusGet (string dncListId);
 
         /// <summary>
         /// Get dialer dncList import status.
+=======
+        /// <param name="body">AuditSearch (optional)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">Sort by (optional, default to entity.name)</param>
+        /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
+        /// <param name="facetsOnly">Facets only (optional, default to false)</param>
+        /// <returns>ApiResponse of AuditSearchResult</returns>
+        ApiResponse<AuditSearchResult> PostAuditsWithHttpInfo (DialerAuditRequest body = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, bool? facetsOnly = null);
+        /// <summary>
+        /// Create callable time set
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="dncListId">DncList ID</param>
         /// <returns>ApiResponse of ImportStatus</returns>
         ApiResponse<ImportStatus> OutboundDnclistsDnclistidImportstatusGetWithHttpInfo (string dncListId);
         /// <summary>
         /// Add phone numbers to a Dialer DNC list.
+=======
+        /// <param name="body">DialerCallableTimeSet (optional)</param>
+        /// <returns>CallableTimeSet</returns>
+        CallableTimeSet PostCallabletimesets (CallableTimeSet body = null);
+
+        /// <summary>
+        /// Create callable time set
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="dncListId">DncList ID</param>
         /// <param name="body">DNC Phone Numbers (optional)</param>
         /// <returns></returns>
@@ -926,22 +1644,39 @@ namespace ININ.PureCloudApi.Api
 
         /// <summary>
         /// Add phone numbers to a Dialer DNC list.
+=======
+        /// <param name="body">DialerCallableTimeSet (optional)</param>
+        /// <returns>ApiResponse of CallableTimeSet</returns>
+        ApiResponse<CallableTimeSet> PostCallabletimesetsWithHttpInfo (CallableTimeSet body = null);
+        /// <summary>
+        /// Create a dialer call analysis response set.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="dncListId">DncList ID</param>
         /// <param name="body">DNC Phone Numbers (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> OutboundDnclistsDnclistidPhonenumbersPostWithHttpInfo (string dncListId, List<string> body = null);
         /// <summary>
         /// Update dialer DNC list
+=======
+        /// <param name="body">ResponseSet (optional)</param>
+        /// <returns>ResponseSet</returns>
+        ResponseSet PostCallanalysisresponsesets (ResponseSet body = null);
+
+        /// <summary>
+        /// Create a dialer call analysis response set.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="dncListId">DncList ID</param>
         /// <param name="body">DncList (optional)</param>
         /// <returns>DncList</returns>
@@ -949,22 +1684,39 @@ namespace ININ.PureCloudApi.Api
 
         /// <summary>
         /// Update dialer DNC list
+=======
+        /// <param name="body">ResponseSet (optional)</param>
+        /// <returns>ApiResponse of ResponseSet</returns>
+        ApiResponse<ResponseSet> PostCallanalysisresponsesetsWithHttpInfo (ResponseSet body = null);
+        /// <summary>
+        /// Create a campaign.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="dncListId">DncList ID</param>
         /// <param name="body">DncList (optional)</param>
         /// <returns>ApiResponse of DncList</returns>
         ApiResponse<DncList> OutboundDnclistsDnclistidPutWithHttpInfo (string dncListId, DncList body = null);
         /// <summary>
         /// Query dialer DNC lists
+=======
+        /// <param name="body">Campaign (optional)</param>
+        /// <returns>Campaign</returns>
+        Campaign PostCampaigns (Campaign body = null);
+
+        /// <summary>
+        /// Create a campaign.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="importStatus">Import status (optional, default to false)</param>
         /// <param name="includeSize">Include size (optional, default to false)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -978,11 +1730,19 @@ namespace ININ.PureCloudApi.Api
 
         /// <summary>
         /// Query dialer DNC lists
+=======
+        /// <param name="body">Campaign (optional)</param>
+        /// <returns>ApiResponse of Campaign</returns>
+        ApiResponse<Campaign> PostCampaignsWithHttpInfo (Campaign body = null);
+        /// <summary>
+        /// Schedule a Callback for a Dialer Campaign
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="importStatus">Import status (optional, default to false)</param>
         /// <param name="includeSize">Include size (optional, default to false)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -995,35 +1755,68 @@ namespace ININ.PureCloudApi.Api
         ApiResponse<DncListEntityListing> OutboundDnclistsGetWithHttpInfo (bool? importStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null);
         /// <summary>
         /// Create dialer DNC list
+=======
+        /// <param name="campaignId">Campaign ID</param>
+        /// <param name="body">ContactCallbackRequest (optional)</param>
+        /// <returns>ContactCallbackRequest</returns>
+        ContactCallbackRequest PostCampaignsCampaignIdCallbackSchedule (string campaignId, ContactCallbackRequest body = null);
+
+        /// <summary>
+        /// Schedule a Callback for a Dialer Campaign
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="body">DncList (optional)</param>
         /// <returns>DncList</returns>
         DncList OutboundDnclistsPost (DncList body = null);
 
         /// <summary>
         /// Create dialer DNC list
+=======
+        /// <param name="campaignId">Campaign ID</param>
+        /// <param name="body">ContactCallbackRequest (optional)</param>
+        /// <returns>ApiResponse of ContactCallbackRequest</returns>
+        ApiResponse<ContactCallbackRequest> PostCampaignsCampaignIdCallbackScheduleWithHttpInfo (string campaignId, ContactCallbackRequest body = null);
+        /// <summary>
+        /// Get progress for a list of campaigns
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="body">DncList (optional)</param>
         /// <returns>ApiResponse of DncList</returns>
         ApiResponse<DncList> OutboundDnclistsPostWithHttpInfo (DncList body = null);
         /// <summary>
         /// Get dialer preview for user
+=======
+        /// <param name="body">Campaign IDs (optional)</param>
+        /// <returns>List&lt;CampaignProgress&gt;</returns>
+        List<CampaignProgress> PostCampaignsProgress (List<string> body = null);
+
+        /// <summary>
+        /// Get progress for a list of campaigns
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <returns>List&lt;Preview&gt;</returns>
         List<Preview> OutboundPreviewsGet ();
 
+=======
+        /// <param name="body">Campaign IDs (optional)</param>
+        /// <returns>ApiResponse of List&lt;CampaignProgress&gt;</returns>
+        ApiResponse<List<CampaignProgress>> PostCampaignsProgressWithHttpInfo (List<string> body = null);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// Get dialer preview for user
         /// </summary>
@@ -1031,8 +1824,15 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <returns>ApiResponse of List&lt;Preview&gt;</returns>
         ApiResponse<List<Preview>> OutboundPreviewsGetWithHttpInfo ();
+=======
+        /// <param name="body">ContactList (optional)</param>
+        /// <returns>ContactList</returns>
+        ContactList PostContactlists (ContactList body = null);
+
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// Disposition preview call
         /// </summary>
@@ -1040,6 +1840,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="previewId">preview ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns>string</returns>
@@ -1047,43 +1848,81 @@ namespace ININ.PureCloudApi.Api
 
         /// <summary>
         /// Disposition preview call
+=======
+        /// <param name="body">ContactList (optional)</param>
+        /// <returns>ApiResponse of ContactList</returns>
+        ApiResponse<ContactList> PostContactlistsWithHttpInfo (ContactList body = null);
+        /// <summary>
+        /// Add contacts to a contact list.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="previewId">preview ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> OutboundPreviewsPreviewidDispositioncallPostWithHttpInfo (string previewId, DialerDispositionCallCommand body = null);
         /// <summary>
         /// Get dialer preview
+=======
+        /// <param name="contactListId">Contact List ID</param>
+        /// <param name="body">Contact (optional)</param>
+        /// <param name="priority"> (optional)</param>
+        /// <returns>DialerContact</returns>
+        DialerContact PostContactlistsContactlistIdContacts (string contactListId, List<DialerContact> body = null, bool? priority = null);
+
+        /// <summary>
+        /// Add contacts to a contact list.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="previewId">preview ID</param>
         /// <returns>Preview</returns>
         Preview OutboundPreviewsPreviewidGet (string previewId);
 
         /// <summary>
         /// Get dialer preview
+=======
+        /// <param name="contactListId">Contact List ID</param>
+        /// <param name="body">Contact (optional)</param>
+        /// <param name="priority"> (optional)</param>
+        /// <returns>ApiResponse of DialerContact</returns>
+        ApiResponse<DialerContact> PostContactlistsContactlistIdContactsWithHttpInfo (string contactListId, List<DialerContact> body = null, bool? priority = null);
+        /// <summary>
+        /// Initiate the export of a contact list.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
-        /// 
+        /// Returns 200 if received OK.
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="previewId">preview ID</param>
         /// <returns>ApiResponse of Preview</returns>
         ApiResponse<Preview> OutboundPreviewsPreviewidGetWithHttpInfo (string previewId);
         /// <summary>
         /// place preview call
+=======
+        /// <param name="contactListId">ContactList ID</param>
+        /// <returns>string</returns>
+        string PostContactlistsContactlistIdExport (string contactListId);
+
+        /// <summary>
+        /// Initiate the export of a contact list.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
-        /// 
+        /// Returns 200 if received OK.
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="previewId">preview ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns>DialerCall</returns>
@@ -1091,22 +1930,39 @@ namespace ININ.PureCloudApi.Api
 
         /// <summary>
         /// place preview call
+=======
+        /// <param name="contactListId">ContactList ID</param>
+        /// <returns>ApiResponse of string</returns>
+        ApiResponse<string> PostContactlistsContactlistIdExportWithHttpInfo (string contactListId);
+        /// <summary>
+        /// Add phone numbers to a Dialer DNC list.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="previewId">preview ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of DialerCall</returns>
         ApiResponse<DialerCall> OutboundPreviewsPreviewidPlacecallPostWithHttpInfo (string previewId, DialerPlaceCallCommand body = null);
         /// <summary>
         /// Query a list of Rule Sets.
+=======
+        /// <param name="conversationId">Conversation ID</param>
+        /// <returns></returns>
+        void PostConversationsConversationIdDnc (string conversationId);
+
+        /// <summary>
+        /// Add phone numbers to a Dialer DNC list.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
@@ -1118,11 +1974,19 @@ namespace ININ.PureCloudApi.Api
 
         /// <summary>
         /// Query a list of Rule Sets.
+=======
+        /// <param name="conversationId">Conversation ID</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> PostConversationsConversationIdDncWithHttpInfo (string conversationId);
+        /// <summary>
+        /// Create dialer DNC list
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
@@ -1133,64 +1997,117 @@ namespace ININ.PureCloudApi.Api
         ApiResponse<RuleSetEntityListing> OutboundRulesetsGetWithHttpInfo (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null);
         /// <summary>
         /// Create a Dialer Call Analysis Response Set.
+=======
+        /// <param name="body">DncList (optional)</param>
+        /// <returns>DncList</returns>
+        DncList PostDnclists (DncList body = null);
+
+        /// <summary>
+        /// Create dialer DNC list
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="body">RuleSet (optional)</param>
         /// <returns>RuleSet</returns>
         RuleSet OutboundRulesetsPost (RuleSet body = null);
 
         /// <summary>
         /// Create a Dialer Call Analysis Response Set.
+=======
+        /// <param name="body">DncList (optional)</param>
+        /// <returns>ApiResponse of DncList</returns>
+        ApiResponse<DncList> PostDnclistsWithHttpInfo (DncList body = null);
+        /// <summary>
+        /// Initiate the export of a dnc list.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
-        /// 
+        /// Returns 200 if received OK.
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="body">RuleSet (optional)</param>
         /// <returns>ApiResponse of RuleSet</returns>
         ApiResponse<RuleSet> OutboundRulesetsPostWithHttpInfo (RuleSet body = null);
         /// <summary>
         /// Delete a Rule set.
+=======
+        /// <param name="dncListId">DncList ID</param>
+        /// <returns>string</returns>
+        string PostDnclistsDnclistIdExport (string dncListId);
+
+        /// <summary>
+        /// Initiate the export of a dnc list.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
-        /// 
+        /// Returns 200 if received OK.
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="ruleSetId">Rule Set ID</param>
         /// <returns>string</returns>
         string OutboundRulesetsRulesetidDelete (string ruleSetId);
 
         /// <summary>
         /// Delete a Rule set.
+=======
+        /// <param name="dncListId">DncList ID</param>
+        /// <returns>ApiResponse of string</returns>
+        ApiResponse<string> PostDnclistsDnclistIdExportWithHttpInfo (string dncListId);
+        /// <summary>
+        /// Add phone numbers to a Dialer DNC list.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="ruleSetId">Rule Set ID</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> OutboundRulesetsRulesetidDeleteWithHttpInfo (string ruleSetId);
         /// <summary>
         /// Get a Rule Set by ID.
+=======
+        /// <param name="dncListId">DncList ID</param>
+        /// <param name="body">DNC Phone Numbers (optional)</param>
+        /// <returns></returns>
+        void PostDnclistsDnclistIdPhonenumbers (string dncListId, List<string> body = null);
+
+        /// <summary>
+        /// Add phone numbers to a Dialer DNC list.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="ruleSetId">Rule Set ID</param>
         /// <returns>RuleSet</returns>
         RuleSet OutboundRulesetsRulesetidGet (string ruleSetId);
 
         /// <summary>
         /// Get a Rule Set by ID.
+=======
+        /// <param name="dncListId">DncList ID</param>
+        /// <param name="body">DNC Phone Numbers (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> PostDnclistsDnclistIdPhonenumbersWithHttpInfo (string dncListId, List<string> body = null);
+        /// <summary>
+        /// Create a Dialer Call Analysis Response Set.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="ruleSetId">Rule Set ID</param>
         /// <returns>ApiResponse of RuleSet</returns>
         ApiResponse<RuleSet> OutboundRulesetsRulesetidGetWithHttpInfo (string ruleSetId);
@@ -1208,64 +2125,117 @@ namespace ININ.PureCloudApi.Api
 
         /// <summary>
         /// Update a RuleSet.
+=======
+        /// <param name="body">RuleSet (optional)</param>
+        /// <returns>RuleSet</returns>
+        RuleSet PostRulesets (RuleSet body = null);
+
+        /// <summary>
+        /// Create a Dialer Call Analysis Response Set.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="ruleSetId">Rule Set ID</param>
         /// <param name="body">RuleSet (optional)</param>
         /// <returns>ApiResponse of RuleSet</returns>
         ApiResponse<RuleSet> OutboundRulesetsRulesetidPutWithHttpInfo (string ruleSetId, RuleSet body = null);
         /// <summary>
         /// Delete a dialer campaign schedule.
+=======
+        /// <param name="body">RuleSet (optional)</param>
+        /// <returns>ApiResponse of RuleSet</returns>
+        ApiResponse<RuleSet> PostRulesetsWithHttpInfo (RuleSet body = null);
+        /// <summary>
+        /// Create a new campaign sequence.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>string</returns>
         string OutboundSchedulesCampaignsCampaignidDelete (string campaignId);
 
         /// <summary>
         /// Delete a dialer campaign schedule.
+=======
+        /// <param name="body">Organization (optional)</param>
+        /// <returns>CampaignSequence</returns>
+        CampaignSequence PostSequences (CampaignSequence body = null);
+
+        /// <summary>
+        /// Create a new campaign sequence.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> OutboundSchedulesCampaignsCampaignidDeleteWithHttpInfo (string campaignId);
         /// <summary>
         /// Get a dialer campaign schedule.
+=======
+        /// <param name="body">Organization (optional)</param>
+        /// <returns>ApiResponse of CampaignSequence</returns>
+        ApiResponse<CampaignSequence> PostSequencesWithHttpInfo (CampaignSequence body = null);
+        /// <summary>
+        /// Update callable time set
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>CampaignSchedule</returns>
         CampaignSchedule OutboundSchedulesCampaignsCampaignidGet (string campaignId);
 
         /// <summary>
         /// Get a dialer campaign schedule.
+=======
+        /// <param name="callableTimeSetId">Callable Time Set ID</param>
+        /// <param name="body">DialerCallableTimeSet (optional)</param>
+        /// <returns>CallableTimeSet</returns>
+        CallableTimeSet PutCallabletimesetsCallabletimesetId (string callableTimeSetId, CallableTimeSet body = null);
+
+        /// <summary>
+        /// Update callable time set
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>ApiResponse of CampaignSchedule</returns>
         ApiResponse<CampaignSchedule> OutboundSchedulesCampaignsCampaignidGetWithHttpInfo (string campaignId);
         /// <summary>
         /// Update a new campaign schedule.
+=======
+        /// <param name="callableTimeSetId">Callable Time Set ID</param>
+        /// <param name="body">DialerCallableTimeSet (optional)</param>
+        /// <returns>ApiResponse of CallableTimeSet</returns>
+        ApiResponse<CallableTimeSet> PutCallabletimesetsCallabletimesetIdWithHttpInfo (string callableTimeSetId, CallableTimeSet body = null);
+        /// <summary>
+        /// Update a dialer call analysis response set.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="campaignId">Campaign ID</param>
         /// <param name="body">CampaignSchedule (optional)</param>
         /// <returns>CampaignSchedule</returns>
@@ -1273,74 +2243,149 @@ namespace ININ.PureCloudApi.Api
 
         /// <summary>
         /// Update a new campaign schedule.
+=======
+        /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
+        /// <param name="body">ResponseSet (optional)</param>
+        /// <returns>ResponseSet</returns>
+        ResponseSet PutCallanalysisresponsesetsCallanalysissetId (string callAnalysisSetId, ResponseSet body = null);
+
+        /// <summary>
+        /// Update a dialer call analysis response set.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="campaignId">Campaign ID</param>
         /// <param name="body">CampaignSchedule (optional)</param>
         /// <returns>ApiResponse of CampaignSchedule</returns>
         ApiResponse<CampaignSchedule> OutboundSchedulesCampaignsCampaignidPutWithHttpInfo (string campaignId, CampaignSchedule body = null);
         /// <summary>
         /// Query for a list of dialer campaign schedules.
+=======
+        /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
+        /// <param name="body">ResponseSet (optional)</param>
+        /// <returns>ApiResponse of ResponseSet</returns>
+        ApiResponse<ResponseSet> PutCallanalysisresponsesetsCallanalysissetIdWithHttpInfo (string callAnalysisSetId, ResponseSet body = null);
+        /// <summary>
+        /// Update a campaign.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <returns>List&lt;CampaignSchedule&gt;</returns>
         List<CampaignSchedule> OutboundSchedulesCampaignsGet ();
 
         /// <summary>
         /// Query for a list of dialer campaign schedules.
+=======
+        /// <param name="campaignId">Campaign ID</param>
+        /// <param name="body">Campaign (optional)</param>
+        /// <returns>Campaign</returns>
+        Campaign PutCampaignsCampaignId (string campaignId, Campaign body = null);
+
+        /// <summary>
+        /// Update a campaign.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <returns>ApiResponse of List&lt;CampaignSchedule&gt;</returns>
         ApiResponse<List<CampaignSchedule>> OutboundSchedulesCampaignsGetWithHttpInfo ();
         /// <summary>
         /// Query for a list of dialer sequence schedules.
+=======
+        /// <param name="campaignId">Campaign ID</param>
+        /// <param name="body">Campaign (optional)</param>
+        /// <returns>ApiResponse of Campaign</returns>
+        ApiResponse<Campaign> PutCampaignsCampaignIdWithHttpInfo (string campaignId, Campaign body = null);
+        /// <summary>
+        /// Send notification that an agent&#39;s state changed 
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
-        /// 
+        /// New agent state.
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <returns>List&lt;SequenceSchedule&gt;</returns>
         List<SequenceSchedule> OutboundSchedulesSequencesGet ();
 
         /// <summary>
         /// Query for a list of dialer sequence schedules.
+=======
+        /// <param name="campaignId">Campaign ID</param>
+        /// <param name="userId">Agent&#39;s user ID</param>
+        /// <param name="body">agent (optional)</param>
+        /// <returns>string</returns>
+        string PutCampaignsCampaignIdAgentsUserId (string campaignId, string userId, Agent body = null);
+
+        /// <summary>
+        /// Send notification that an agent&#39;s state changed 
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
-        /// 
+        /// New agent state.
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <returns>ApiResponse of List&lt;SequenceSchedule&gt;</returns>
         ApiResponse<List<SequenceSchedule>> OutboundSchedulesSequencesGetWithHttpInfo ();
         /// <summary>
         /// Delete a dialer sequence schedule.
+=======
+        /// <param name="campaignId">Campaign ID</param>
+        /// <param name="userId">Agent&#39;s user ID</param>
+        /// <param name="body">agent (optional)</param>
+        /// <returns>ApiResponse of string</returns>
+        ApiResponse<string> PutCampaignsCampaignIdAgentsUserIdWithHttpInfo (string campaignId, string userId, Agent body = null);
+        /// <summary>
+        /// Update a contact list.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="sequenceId">Sequence ID</param>
         /// <returns>string</returns>
         string OutboundSchedulesSequencesSequenceidDelete (string sequenceId);
 
         /// <summary>
         /// Delete a dialer sequence schedule.
+=======
+        /// <param name="contactListId">ContactList ID</param>
+        /// <param name="body">ContactList (optional)</param>
+        /// <returns>ContactList</returns>
+        ContactList PutContactlistsContactlistId (string contactListId, ContactList body = null);
+
+        /// <summary>
+        /// Update a contact list.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="sequenceId">Sequence ID</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> OutboundSchedulesSequencesSequenceidDeleteWithHttpInfo (string sequenceId);
+=======
+        /// <param name="contactListId">ContactList ID</param>
+        /// <param name="body">ContactList (optional)</param>
+        /// <returns>ApiResponse of ContactList</returns>
+        ApiResponse<ContactList> PutContactlistsContactlistIdWithHttpInfo (string contactListId, ContactList body = null);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// Get a dialer sequence schedule.
         /// </summary>
@@ -1348,9 +2393,17 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="sequenceId">Sequence ID</param>
         /// <returns>SequenceSchedule</returns>
         SequenceSchedule OutboundSchedulesSequencesSequenceidGet (string sequenceId);
+=======
+        /// <param name="contactListId">Contact List ID</param>
+        /// <param name="contactId">Contact ID</param>
+        /// <param name="body">Contact (optional)</param>
+        /// <returns>DialerContact</returns>
+        DialerContact PutContactlistsContactlistIdContactsContactId (string contactListId, string contactId, DialerContact body = null);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
         /// <summary>
         /// Get a dialer sequence schedule.
@@ -1359,16 +2412,27 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="sequenceId">Sequence ID</param>
         /// <returns>ApiResponse of SequenceSchedule</returns>
         ApiResponse<SequenceSchedule> OutboundSchedulesSequencesSequenceidGetWithHttpInfo (string sequenceId);
         /// <summary>
         /// Update a new sequence schedule.
+=======
+        /// <param name="contactListId">Contact List ID</param>
+        /// <param name="contactId">Contact ID</param>
+        /// <param name="body">Contact (optional)</param>
+        /// <returns>ApiResponse of DialerContact</returns>
+        ApiResponse<DialerContact> PutContactlistsContactlistIdContactsContactIdWithHttpInfo (string contactListId, string contactId, DialerContact body = null);
+        /// <summary>
+        /// Update dialer DNC list
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="sequenceId">Sequence ID</param>
         /// <param name="body">SequenceSchedule (optional)</param>
         /// <returns>SequenceSchedule</returns>
@@ -1376,22 +2440,41 @@ namespace ININ.PureCloudApi.Api
 
         /// <summary>
         /// Update a new sequence schedule.
+=======
+        /// <param name="dncListId">DncList ID</param>
+        /// <param name="body">DncList (optional)</param>
+        /// <returns>DncList</returns>
+        DncList PutDnclistsDnclistId (string dncListId, DncList body = null);
+
+        /// <summary>
+        /// Update dialer DNC list
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="sequenceId">Sequence ID</param>
         /// <param name="body">SequenceSchedule (optional)</param>
         /// <returns>ApiResponse of SequenceSchedule</returns>
         ApiResponse<SequenceSchedule> OutboundSchedulesSequencesSequenceidPutWithHttpInfo (string sequenceId, SequenceSchedule body = null);
         /// <summary>
         /// Query a list of dialer campaign sequences.
+=======
+        /// <param name="dncListId">DncList ID</param>
+        /// <param name="body">DncList (optional)</param>
+        /// <returns>ApiResponse of DncList</returns>
+        ApiResponse<DncList> PutDnclistsDnclistIdWithHttpInfo (string dncListId, DncList body = null);
+        /// <summary>
+        /// Update a RuleSet.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
@@ -1403,11 +2486,21 @@ namespace ININ.PureCloudApi.Api
 
         /// <summary>
         /// Query a list of dialer campaign sequences.
+=======
+        /// <param name="ruleSetId">Rule Set ID</param>
+        /// <param name="body">RuleSet (optional)</param>
+        /// <returns>RuleSet</returns>
+        RuleSet PutRulesetsRulesetId (string ruleSetId, RuleSet body = null);
+
+        /// <summary>
+        /// Update a RuleSet.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
@@ -1418,67 +2511,111 @@ namespace ININ.PureCloudApi.Api
         ApiResponse<CampaignSequenceEntityListing> OutboundSequencesGetWithHttpInfo (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null);
         /// <summary>
         /// Create a new campaign sequence.
+=======
+        /// <param name="ruleSetId">Rule Set ID</param>
+        /// <param name="body">RuleSet (optional)</param>
+        /// <returns>ApiResponse of RuleSet</returns>
+        ApiResponse<RuleSet> PutRulesetsRulesetIdWithHttpInfo (string ruleSetId, RuleSet body = null);
+        /// <summary>
+        /// Update a new campaign schedule.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="body">Organization (optional)</param>
         /// <returns>CampaignSequence</returns>
         CampaignSequence OutboundSequencesPost (CampaignSequence body = null);
 
         /// <summary>
         /// Create a new campaign sequence.
+=======
+        /// <param name="campaignId">Campaign ID</param>
+        /// <param name="body">CampaignSchedule (optional)</param>
+        /// <returns>CampaignSchedule</returns>
+        CampaignSchedule PutSchedulesCampaignsCampaignId (string campaignId, CampaignSchedule body = null);
+
+        /// <summary>
+        /// Update a new campaign schedule.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="body">Organization (optional)</param>
         /// <returns>ApiResponse of CampaignSequence</returns>
         ApiResponse<CampaignSequence> OutboundSequencesPostWithHttpInfo (CampaignSequence body = null);
         /// <summary>
         /// Delete a dialer campaign sequence.
+=======
+        /// <param name="campaignId">Campaign ID</param>
+        /// <param name="body">CampaignSchedule (optional)</param>
+        /// <returns>ApiResponse of CampaignSchedule</returns>
+        ApiResponse<CampaignSchedule> PutSchedulesCampaignsCampaignIdWithHttpInfo (string campaignId, CampaignSchedule body = null);
+        /// <summary>
+        /// Update a new sequence schedule.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="sequenceId">Campaign Sequence ID</param>
         /// <returns>string</returns>
         string OutboundSequencesSequenceidDelete (string sequenceId);
 
         /// <summary>
         /// Delete a dialer campaign sequence.
+=======
+        /// <param name="sequenceId">Sequence ID</param>
+        /// <param name="body">SequenceSchedule (optional)</param>
+        /// <returns>SequenceSchedule</returns>
+        SequenceSchedule PutSchedulesSequencesSequenceId (string sequenceId, SequenceSchedule body = null);
+
+        /// <summary>
+        /// Update a new sequence schedule.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="sequenceId">Campaign Sequence ID</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> OutboundSequencesSequenceidDeleteWithHttpInfo (string sequenceId);
         /// <summary>
         /// Get a dialer campaign sequence.
+=======
+        /// <param name="sequenceId">Sequence ID</param>
+        /// <param name="body">SequenceSchedule (optional)</param>
+        /// <returns>ApiResponse of SequenceSchedule</returns>
+        ApiResponse<SequenceSchedule> PutSchedulesSequencesSequenceIdWithHttpInfo (string sequenceId, SequenceSchedule body = null);
+        /// <summary>
+        /// Update a new campaign sequence.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId">Campaign Sequence ID</param>
+<<<<<<< HEAD
         /// <returns>CampaignSequence</returns>
         CampaignSequence OutboundSequencesSequenceidGet (string sequenceId);
 
         /// <summary>
         /// Get a dialer campaign sequence.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sequenceId">Campaign Sequence ID</param>
-        /// <returns>ApiResponse of CampaignSequence</returns>
-        ApiResponse<CampaignSequence> OutboundSequencesSequenceidGetWithHttpInfo (string sequenceId);
+=======
+        /// <param name="body">Organization (optional)</param>
+        /// <returns>CampaignSequence</returns>
+        CampaignSequence PutSequencesSequenceId (string sequenceId, CampaignSequence body = null);
+
         /// <summary>
         /// Update a new campaign sequence.
         /// </summary>
@@ -1486,6 +2623,38 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sequenceId">Campaign Sequence ID</param>
+        /// <param name="body">Organization (optional)</param>
+        /// <returns>ApiResponse of CampaignSequence</returns>
+        ApiResponse<CampaignSequence> PutSequencesSequenceIdWithHttpInfo (string sequenceId, CampaignSequence body = null);
+        /// <summary>
+        /// Update the Dialer wrap up code mapping.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
+        /// <param name="sequenceId">Campaign Sequence ID</param>
+        /// <returns>ApiResponse of CampaignSequence</returns>
+        ApiResponse<CampaignSequence> OutboundSequencesSequenceidGetWithHttpInfo (string sequenceId);
+        /// <summary>
+        /// Update a new campaign sequence.
+=======
+        /// <param name="body">wrapUpCodeMapping (optional)</param>
+        /// <returns>WrapUpCodeMapping</returns>
+        WrapUpCodeMapping PutWrapupcodemappings (WrapUpCodeMapping body = null);
+
+        /// <summary>
+        /// Update the Dialer wrap up code mapping.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="sequenceId">Campaign Sequence ID</param>
         /// <param name="body">Organization (optional)</param>
         /// <returns>CampaignSequence</returns>
@@ -1493,11 +2662,21 @@ namespace ININ.PureCloudApi.Api
 
         /// <summary>
         /// Update a new campaign sequence.
+=======
+        /// <param name="body">wrapUpCodeMapping (optional)</param>
+        /// <returns>ApiResponse of WrapUpCodeMapping</returns>
+        ApiResponse<WrapUpCodeMapping> PutWrapupcodemappingsWithHttpInfo (WrapUpCodeMapping body = null);
+        #endregion Synchronous Operations
+        #region Asynchronous Operations
+        /// <summary>
+        /// Delete callable time set
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="sequenceId">Campaign Sequence ID</param>
         /// <param name="body">Organization (optional)</param>
         /// <returns>ApiResponse of CampaignSequence</returns>
@@ -1514,20 +2693,37 @@ namespace ININ.PureCloudApi.Api
 
         /// <summary>
         /// Get the Dialer wrap up code mapping.
+=======
+        /// <param name="callableTimeSetId">Callable Time Set ID</param>
+        /// <returns>Task of string</returns>
+        System.Threading.Tasks.Task<string> DeleteCallabletimesetsCallabletimesetIdAsync (string callableTimeSetId);
+
+        /// <summary>
+        /// Delete callable time set
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <returns>ApiResponse of WrapUpCodeMapping</returns>
         ApiResponse<WrapUpCodeMapping> OutboundWrapupcodemappingsGetWithHttpInfo ();
         /// <summary>
         /// Update the Dialer wrap up code mapping.
+=======
+        /// <param name="callableTimeSetId">Callable Time Set ID</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        System.Threading.Tasks.Task<ApiResponse<string>> DeleteCallabletimesetsCallabletimesetIdAsyncWithHttpInfo (string callableTimeSetId);
+        /// <summary>
+        /// Delete a dialer call analysis response set.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="body">wrapUpCodeMapping (optional)</param>
         /// <returns>WrapUpCodeMapping</returns>
         WrapUpCodeMapping OutboundWrapupcodemappingsPut (WrapUpCodeMapping body = null);
@@ -2028,34 +3224,64 @@ namespace ININ.PureCloudApi.Api
         System.Threading.Tasks.Task<ApiResponse<Campaign>> OutboundCampaignsPostAsyncWithHttpInfo (Campaign body = null);
         /// <summary>
         /// Get Dialer campaign&#39;s penetration rate
-        /// </summary>
-        /// <remarks>
-        /// Get dialer campaign&#39;s penetration rate.
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="contactListId">ContactList ID</param>
-        /// <param name="campaignId">Campaign ID</param>
-        /// <returns>Task of PenetrationRate</returns>
-        System.Threading.Tasks.Task<PenetrationRate> OutboundContactlistsContactlistidCampaignidPenetrationrateGetAsync (string contactListId, string campaignId);
+=======
+        /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
+        /// <returns>Task of string</returns>
+        System.Threading.Tasks.Task<string> DeleteCallanalysisresponsesetsCallanalysissetIdAsync (string callAnalysisSetId);
 
         /// <summary>
-        /// Get Dialer campaign&#39;s penetration rate
+        /// Delete a dialer call analysis response set.
         /// </summary>
         /// <remarks>
-        /// Get dialer campaign&#39;s penetration rate.
+        /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        System.Threading.Tasks.Task<ApiResponse<string>> DeleteCallanalysisresponsesetsCallanalysissetIdAsyncWithHttpInfo (string callAnalysisSetId);
+        /// <summary>
+        /// Delete a campaign.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
+        /// <param name="contactListId">ContactList ID</param>
+=======
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>Task of string</returns>
+        System.Threading.Tasks.Task<string> DeleteCampaignsCampaignIdAsync (string campaignId);
+
+        /// <summary>
+        /// Delete a campaign.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="contactListId">ContactList ID</param>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Task of ApiResponse (PenetrationRate)</returns>
         System.Threading.Tasks.Task<ApiResponse<PenetrationRate>> OutboundContactlistsContactlistidCampaignidPenetrationrateGetAsyncWithHttpInfo (string contactListId, string campaignId);
         /// <summary>
         /// Delete a contact.
+=======
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        System.Threading.Tasks.Task<ApiResponse<string>> DeleteCampaignsCampaignIdAsyncWithHttpInfo (string campaignId);
+        /// <summary>
+        /// Reset campaign progress and recycle the campaign
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="contactId">Contact ID</param>
         /// <returns>Task of string</returns>
@@ -2063,11 +3289,20 @@ namespace ININ.PureCloudApi.Api
 
         /// <summary>
         /// Delete a contact.
+=======
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>Task of string</returns>
+        System.Threading.Tasks.Task<string> DeleteCampaignsCampaignIdProgressAsync (string campaignId);
+
+        /// <summary>
+        /// Reset campaign progress and recycle the campaign
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="contactId">Contact ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
@@ -2086,11 +3321,19 @@ namespace ININ.PureCloudApi.Api
 
         /// <summary>
         /// Get dialer contactList.
+=======
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        System.Threading.Tasks.Task<ApiResponse<string>> DeleteCampaignsCampaignIdProgressAsyncWithHttpInfo (string campaignId);
+        /// <summary>
+        /// Delete a contact list.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="contactId">Contact ID</param>
         /// <returns>Task of ApiResponse (Contact)</returns>
@@ -2122,11 +3365,20 @@ namespace ININ.PureCloudApi.Api
         System.Threading.Tasks.Task<ApiResponse<Contact>> OutboundContactlistsContactlistidContactsContactidPutAsyncWithHttpInfo (string contactListId, string contactId, Contact body = null);
         /// <summary>
         /// Add contacts to a contact list.
+=======
+        /// <param name="contactListId">ContactList ID</param>
+        /// <returns>Task of string</returns>
+        System.Threading.Tasks.Task<string> DeleteContactlistsContactlistIdAsync (string contactListId);
+
+        /// <summary>
+        /// Delete a contact list.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="body">Contact (optional)</param>
         /// <param name="priority"> (optional)</param>
@@ -2135,34 +3387,60 @@ namespace ININ.PureCloudApi.Api
 
         /// <summary>
         /// Add contacts to a contact list.
+=======
+        /// <param name="contactListId">ContactList ID</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        System.Threading.Tasks.Task<ApiResponse<string>> DeleteContactlistsContactlistIdAsyncWithHttpInfo (string contactListId);
+        /// <summary>
+        /// Delete a contact.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">Contact List ID</param>
+<<<<<<< HEAD
         /// <param name="body">Contact (optional)</param>
         /// <param name="priority"> (optional)</param>
         /// <returns>Task of ApiResponse (Contact)</returns>
         System.Threading.Tasks.Task<ApiResponse<Contact>> OutboundContactlistsContactlistidContactsPostAsyncWithHttpInfo (string contactListId, List<Contact> body = null, bool? priority = null);
         /// <summary>
         /// Delete a contact list.
+=======
+        /// <param name="contactId">Contact ID</param>
+        /// <returns>Task of string</returns>
+        System.Threading.Tasks.Task<string> DeleteContactlistsContactlistIdContactsContactIdAsync (string contactListId, string contactId);
+
+        /// <summary>
+        /// Delete a contact.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="contactListId">ContactList ID</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> OutboundContactlistsContactlistidDeleteAsync (string contactListId);
 
         /// <summary>
         /// Delete a contact list.
+=======
+        /// <param name="contactListId">Contact List ID</param>
+        /// <param name="contactId">Contact ID</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        System.Threading.Tasks.Task<ApiResponse<string>> DeleteContactlistsContactlistIdContactsContactIdAsyncWithHttpInfo (string contactListId, string contactId);
+        /// <summary>
+        /// Delete dialer DNC list
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="contactListId">ContactList ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> OutboundContactlistsContactlistidDeleteAsyncWithHttpInfo (string contactListId);
@@ -2179,21 +3457,38 @@ namespace ININ.PureCloudApi.Api
 
         /// <summary>
         /// Initiate the export of a contact list.
+=======
+        /// <param name="dncListId">DncList ID</param>
+        /// <returns>Task of string</returns>
+        System.Threading.Tasks.Task<string> DeleteDnclistsDnclistIdAsync (string dncListId);
+
+        /// <summary>
+        /// Delete dialer DNC list
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// Returns 200 if received OK.
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="contactListId">ContactList ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> OutboundContactlistsContactlistidExportPostAsyncWithHttpInfo (string contactListId);
         /// <summary>
         /// Get dialer contactList.
+=======
+        /// <param name="dncListId">DncList ID</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        System.Threading.Tasks.Task<ApiResponse<string>> DeleteDnclistsDnclistIdAsyncWithHttpInfo (string dncListId);
+        /// <summary>
+        /// Delete a Rule set.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="contactListId">ContactList ID</param>
         /// <param name="importStatus">Import status (optional, default to false)</param>
         /// <param name="includeSize">Include size (optional, default to false)</param>
@@ -2202,11 +3497,20 @@ namespace ININ.PureCloudApi.Api
 
         /// <summary>
         /// Get dialer contactList.
+=======
+        /// <param name="ruleSetId">Rule Set ID</param>
+        /// <returns>Task of string</returns>
+        System.Threading.Tasks.Task<string> DeleteRulesetsRulesetIdAsync (string ruleSetId);
+
+        /// <summary>
+        /// Delete a Rule set.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="contactListId">ContactList ID</param>
         /// <param name="importStatus">Import status (optional, default to false)</param>
         /// <param name="includeSize">Include size (optional, default to false)</param>
@@ -2214,32 +3518,57 @@ namespace ININ.PureCloudApi.Api
         System.Threading.Tasks.Task<ApiResponse<ContactList>> OutboundContactlistsContactlistidGetAsyncWithHttpInfo (string contactListId, bool? importStatus = null, bool? includeSize = null);
         /// <summary>
         /// Get dialer contactList import status.
+=======
+        /// <param name="ruleSetId">Rule Set ID</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        System.Threading.Tasks.Task<ApiResponse<string>> DeleteRulesetsRulesetIdAsyncWithHttpInfo (string ruleSetId);
+        /// <summary>
+        /// Delete a dialer campaign schedule.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="contactListId">ContactList ID</param>
         /// <returns>Task of ImportStatus</returns>
         System.Threading.Tasks.Task<ImportStatus> OutboundContactlistsContactlistidImportstatusGetAsync (string contactListId);
 
         /// <summary>
         /// Get dialer contactList import status.
+=======
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>Task of string</returns>
+        System.Threading.Tasks.Task<string> DeleteSchedulesCampaignsCampaignIdAsync (string campaignId);
+
+        /// <summary>
+        /// Delete a dialer campaign schedule.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="contactListId">ContactList ID</param>
         /// <returns>Task of ApiResponse (ImportStatus)</returns>
         System.Threading.Tasks.Task<ApiResponse<ImportStatus>> OutboundContactlistsContactlistidImportstatusGetAsyncWithHttpInfo (string contactListId);
         /// <summary>
         /// Update a contact list.
+=======
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        System.Threading.Tasks.Task<ApiResponse<string>> DeleteSchedulesCampaignsCampaignIdAsyncWithHttpInfo (string campaignId);
+        /// <summary>
+        /// Delete a dialer sequence schedule.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="contactListId">ContactList ID</param>
         /// <param name="body">ContactList (optional)</param>
         /// <returns>Task of ContactList</returns>
@@ -2247,22 +3576,39 @@ namespace ININ.PureCloudApi.Api
 
         /// <summary>
         /// Update a contact list.
+=======
+        /// <param name="sequenceId">Sequence ID</param>
+        /// <returns>Task of string</returns>
+        System.Threading.Tasks.Task<string> DeleteSchedulesSequencesSequenceIdAsync (string sequenceId);
+
+        /// <summary>
+        /// Delete a dialer sequence schedule.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="contactListId">ContactList ID</param>
         /// <param name="body">ContactList (optional)</param>
         /// <returns>Task of ApiResponse (ContactList)</returns>
         System.Threading.Tasks.Task<ApiResponse<ContactList>> OutboundContactlistsContactlistidPutAsyncWithHttpInfo (string contactListId, ContactList body = null);
         /// <summary>
         /// Query a list of contact lists.
+=======
+        /// <param name="sequenceId">Sequence ID</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        System.Threading.Tasks.Task<ApiResponse<string>> DeleteSchedulesSequencesSequenceIdAsyncWithHttpInfo (string sequenceId);
+        /// <summary>
+        /// Delete a dialer campaign sequence.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="importStatus">Import status (optional, default to false)</param>
         /// <param name="includeSize">Include size (optional, default to false)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -2276,11 +3622,20 @@ namespace ININ.PureCloudApi.Api
 
         /// <summary>
         /// Query a list of contact lists.
+=======
+        /// <param name="sequenceId">Campaign Sequence ID</param>
+        /// <returns>Task of string</returns>
+        System.Threading.Tasks.Task<string> DeleteSequencesSequenceIdAsync (string sequenceId);
+
+        /// <summary>
+        /// Delete a dialer campaign sequence.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="importStatus">Import status (optional, default to false)</param>
         /// <param name="includeSize">Include size (optional, default to false)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -2293,116 +3648,251 @@ namespace ININ.PureCloudApi.Api
         System.Threading.Tasks.Task<ApiResponse<ContactListEntityListing>> OutboundContactlistsGetAsyncWithHttpInfo (bool? importStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null);
         /// <summary>
         /// Get penetration rates for a list of penetration rate identifiers (contact list id and qualifier id)
+=======
+        /// <param name="sequenceId">Campaign Sequence ID</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        System.Threading.Tasks.Task<ApiResponse<string>> DeleteSequencesSequenceIdAsyncWithHttpInfo (string sequenceId);
+        /// <summary>
+        /// Query callable time set list
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="body">PenetrationRateIdentifierList (optional)</param>
         /// <returns>Task of List&lt;PenetrationRate&gt;</returns>
         System.Threading.Tasks.Task<List<PenetrationRate>> OutboundContactlistsPenetrationratesPostAsync (List<PenetrationRateId> body = null);
 
         /// <summary>
         /// Get penetration rates for a list of penetration rate identifiers (contact list id and qualifier id)
+=======
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <returns>Task of CallableTimeSetEntityListing</returns>
+        System.Threading.Tasks.Task<CallableTimeSetEntityListing> GetCallabletimesetsAsync (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null);
+
+        /// <summary>
+        /// Query callable time set list
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="body">PenetrationRateIdentifierList (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;PenetrationRate&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<PenetrationRate>>> OutboundContactlistsPenetrationratesPostAsyncWithHttpInfo (List<PenetrationRateId> body = null);
         /// <summary>
         /// Create a contact List.
+=======
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <returns>Task of ApiResponse (CallableTimeSetEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CallableTimeSetEntityListing>> GetCallabletimesetsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null);
+        /// <summary>
+        /// Get callable time set
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="body">ContactList (optional)</param>
         /// <returns>Task of ContactList</returns>
         System.Threading.Tasks.Task<ContactList> OutboundContactlistsPostAsync (ContactList body = null);
 
         /// <summary>
         /// Create a contact List.
+=======
+        /// <param name="callableTimeSetId">Callable Time Set ID</param>
+        /// <returns>Task of CallableTimeSet</returns>
+        System.Threading.Tasks.Task<CallableTimeSet> GetCallabletimesetsCallabletimesetIdAsync (string callableTimeSetId);
+
+        /// <summary>
+        /// Get callable time set
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="body">ContactList (optional)</param>
         /// <returns>Task of ApiResponse (ContactList)</returns>
         System.Threading.Tasks.Task<ApiResponse<ContactList>> OutboundContactlistsPostAsyncWithHttpInfo (ContactList body = null);
         /// <summary>
         /// Add phone numbers to a Dialer DNC list.
+=======
+        /// <param name="callableTimeSetId">Callable Time Set ID</param>
+        /// <returns>Task of ApiResponse (CallableTimeSet)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CallableTimeSet>> GetCallabletimesetsCallabletimesetIdAsyncWithHttpInfo (string callableTimeSetId);
+        /// <summary>
+        /// Query a list of dialer call analysis response sets.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="conversationId">Conversation ID</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task OutboundConversationsConversationidDncPostAsync (string conversationId);
 
         /// <summary>
         /// Add phone numbers to a Dialer DNC list.
+=======
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <returns>Task of ResponseSetEntityListing</returns>
+        System.Threading.Tasks.Task<ResponseSetEntityListing> GetCallanalysisresponsesetsAsync (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null);
+
+        /// <summary>
+        /// Query a list of dialer call analysis response sets.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="conversationId">Conversation ID</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> OutboundConversationsConversationidDncPostAsyncWithHttpInfo (string conversationId);
+=======
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <returns>Task of ApiResponse (ResponseSetEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ResponseSetEntityListing>> GetCallanalysisresponsesetsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
-        /// Delete dialer DNC list
+        /// Get a dialer call analysis response set.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="dncListId">DncList ID</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> OutboundDnclistsDnclistidDeleteAsync (string dncListId);
+=======
+        /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
+        /// <returns>Task of ResponseSet</returns>
+        System.Threading.Tasks.Task<ResponseSet> GetCallanalysisresponsesetsCallanalysissetIdAsync (string callAnalysisSetId);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
         /// <summary>
-        /// Delete dialer DNC list
+        /// Get a dialer call analysis response set.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="dncListId">DncList ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> OutboundDnclistsDnclistidDeleteAsyncWithHttpInfo (string dncListId);
+=======
+        /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
+        /// <returns>Task of ApiResponse (ResponseSet)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ResponseSet>> GetCallanalysisresponsesetsCallanalysissetIdAsyncWithHttpInfo (string callAnalysisSetId);
         /// <summary>
-        /// Initiate the export of a dnc list.
+        /// Query a list of dialer campaigns.
         /// </summary>
         /// <remarks>
-        /// Returns 200 if received OK.
+        /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="contactListId">Contact List ID (optional)</param>
+        /// <param name="dncListId">DNC list ID (optional)</param>
+        /// <param name="distributionQueueId">Distribution queue ID (optional)</param>
+        /// <param name="edgeGroupId">Edge group ID (optional)</param>
+        /// <param name="callAnalysisResponseSetId">Call analysis response set ID (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <returns>Task of CampaignEntityListing</returns>
+        System.Threading.Tasks.Task<CampaignEntityListing> GetCampaignsAsync (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string contactListId = null, string dncListId = null, string distributionQueueId = null, string edgeGroupId = null, string callAnalysisResponseSetId = null, string sortBy = null, string sortOrder = null);
+
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
+        /// <summary>
+        /// Query a list of dialer campaigns.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="dncListId">DncList ID</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> OutboundDnclistsDnclistidExportPostAsync (string dncListId);
 
+=======
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="contactListId">Contact List ID (optional)</param>
+        /// <param name="dncListId">DNC list ID (optional)</param>
+        /// <param name="distributionQueueId">Distribution queue ID (optional)</param>
+        /// <param name="edgeGroupId">Edge group ID (optional)</param>
+        /// <param name="callAnalysisResponseSetId">Call analysis response set ID (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <returns>Task of ApiResponse (CampaignEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CampaignEntityListing>> GetCampaignsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string contactListId = null, string dncListId = null, string distributionQueueId = null, string edgeGroupId = null, string callAnalysisResponseSetId = null, string sortBy = null, string sortOrder = null);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
-        /// Initiate the export of a dnc list.
+        /// Get dialer campaign.
         /// </summary>
         /// <remarks>
-        /// Returns 200 if received OK.
+        /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="dncListId">DncList ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> OutboundDnclistsDnclistidExportPostAsyncWithHttpInfo (string dncListId);
         /// <summary>
         /// Get dialer DNC list
+=======
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>Task of Campaign</returns>
+        System.Threading.Tasks.Task<Campaign> GetCampaignsCampaignIdAsync (string campaignId);
+
+        /// <summary>
+        /// Get dialer campaign.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="dncListId">DncList ID</param>
         /// <param name="importStatus">Import status (optional, default to false)</param>
         /// <param name="includeSize">Include size (optional, default to false)</param>
@@ -2411,67 +3901,168 @@ namespace ININ.PureCloudApi.Api
 
         /// <summary>
         /// Get dialer DNC list
+=======
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>Task of ApiResponse (Campaign)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Campaign>> GetCampaignsCampaignIdAsyncWithHttpInfo (string campaignId);
+        /// <summary>
+        /// Get campaign diagnostics
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="dncListId">DncList ID</param>
         /// <param name="importStatus">Import status (optional, default to false)</param>
         /// <param name="includeSize">Include size (optional, default to false)</param>
         /// <returns>Task of ApiResponse (DncList)</returns>
         System.Threading.Tasks.Task<ApiResponse<DncList>> OutboundDnclistsDnclistidGetAsyncWithHttpInfo (string dncListId, bool? importStatus = null, bool? includeSize = null);
+=======
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>Task of CampaignDiagnostics</returns>
+        System.Threading.Tasks.Task<CampaignDiagnostics> GetCampaignsCampaignIdDiagnosticsAsync (string campaignId);
+
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
-        /// Get dialer dncList import status.
+        /// Get campaign diagnostics
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="dncListId">DncList ID</param>
         /// <returns>Task of ImportStatus</returns>
         System.Threading.Tasks.Task<ImportStatus> OutboundDnclistsDnclistidImportstatusGetAsync (string dncListId);
 
+=======
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>Task of ApiResponse (CampaignDiagnostics)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CampaignDiagnostics>> GetCampaignsCampaignIdDiagnosticsAsyncWithHttpInfo (string campaignId);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
-        /// Get dialer dncList import status.
+        /// Get campaign progress
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="dncListId">DncList ID</param>
         /// <returns>Task of ApiResponse (ImportStatus)</returns>
         System.Threading.Tasks.Task<ApiResponse<ImportStatus>> OutboundDnclistsDnclistidImportstatusGetAsyncWithHttpInfo (string dncListId);
+=======
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>Task of CampaignProgress</returns>
+        System.Threading.Tasks.Task<CampaignProgress> GetCampaignsCampaignIdProgressAsync (string campaignId);
+
         /// <summary>
-        /// Add phone numbers to a Dialer DNC list.
+        /// Get campaign progress
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>Task of ApiResponse (CampaignProgress)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CampaignProgress>> GetCampaignsCampaignIdProgressAsyncWithHttpInfo (string campaignId);
+        /// <summary>
+        /// Get statistics about a Dialer Campaign
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>Task of CampaignStats</returns>
+        System.Threading.Tasks.Task<CampaignStats> GetCampaignsCampaignIdStatsAsync (string campaignId);
+
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
+        /// <summary>
+        /// Get statistics about a Dialer Campaign
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="dncListId">DncList ID</param>
         /// <param name="body">DNC Phone Numbers (optional)</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task OutboundDnclistsDnclistidPhonenumbersPostAsync (string dncListId, List<string> body = null);
 
+=======
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>Task of ApiResponse (CampaignStats)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CampaignStats>> GetCampaignsCampaignIdStatsAsyncWithHttpInfo (string campaignId);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
-        /// Add phone numbers to a Dialer DNC list.
+        /// Query a list of contact lists.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="dncListId">DncList ID</param>
         /// <param name="body">DNC Phone Numbers (optional)</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> OutboundDnclistsDnclistidPhonenumbersPostAsyncWithHttpInfo (string dncListId, List<string> body = null);
         /// <summary>
         /// Update dialer DNC list
+=======
+        /// <param name="includeImportStatus">Include import status (optional, default to false)</param>
+        /// <param name="includeSize">Include size (optional, default to false)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <returns>Task of ContactListEntityListing</returns>
+        System.Threading.Tasks.Task<ContactListEntityListing> GetContactlistsAsync (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null);
+
+        /// <summary>
+        /// Query a list of contact lists.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="includeImportStatus">Include import status (optional, default to false)</param>
+        /// <param name="includeSize">Include size (optional, default to false)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <returns>Task of ApiResponse (ContactListEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ContactListEntityListing>> GetContactlistsAsyncWithHttpInfo (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null);
+        /// <summary>
+        /// Get dialer contactList.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">ContactList ID</param>
+        /// <param name="includeImportStatus">Import status (optional, default to false)</param>
+        /// <param name="includeSize">Include size (optional, default to false)</param>
+        /// <returns>Task of ContactList</returns>
+        System.Threading.Tasks.Task<ContactList> GetContactlistsContactlistIdAsync (string contactListId, bool? includeImportStatus = null, bool? includeSize = null);
+
+        /// <summary>
+        /// Get dialer contactList.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="dncListId">DncList ID</param>
         /// <param name="body">DncList (optional)</param>
         /// <returns>Task of DncList</returns>
@@ -2479,22 +4070,42 @@ namespace ININ.PureCloudApi.Api
 
         /// <summary>
         /// Update dialer DNC list
+=======
+        /// <param name="contactListId">ContactList ID</param>
+        /// <param name="includeImportStatus">Import status (optional, default to false)</param>
+        /// <param name="includeSize">Include size (optional, default to false)</param>
+        /// <returns>Task of ApiResponse (ContactList)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ContactList>> GetContactlistsContactlistIdAsyncWithHttpInfo (string contactListId, bool? includeImportStatus = null, bool? includeSize = null);
+        /// <summary>
+        /// Get dialer contactList.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="dncListId">DncList ID</param>
         /// <param name="body">DncList (optional)</param>
         /// <returns>Task of ApiResponse (DncList)</returns>
         System.Threading.Tasks.Task<ApiResponse<DncList>> OutboundDnclistsDnclistidPutAsyncWithHttpInfo (string dncListId, DncList body = null);
         /// <summary>
         /// Query dialer DNC lists
+=======
+        /// <param name="contactListId">Contact List ID</param>
+        /// <param name="contactId">Contact ID</param>
+        /// <returns>Task of DialerContact</returns>
+        System.Threading.Tasks.Task<DialerContact> GetContactlistsContactlistIdContactsContactIdAsync (string contactListId, string contactId);
+
+        /// <summary>
+        /// Get dialer contactList.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="importStatus">Import status (optional, default to false)</param>
         /// <param name="includeSize">Include size (optional, default to false)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -2508,11 +4119,20 @@ namespace ININ.PureCloudApi.Api
 
         /// <summary>
         /// Query dialer DNC lists
+=======
+        /// <param name="contactListId">Contact List ID</param>
+        /// <param name="contactId">Contact ID</param>
+        /// <returns>Task of ApiResponse (DialerContact)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DialerContact>> GetContactlistsContactlistIdContactsContactIdAsyncWithHttpInfo (string contactListId, string contactId);
+        /// <summary>
+        /// Get dialer contactList import status.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="importStatus">Import status (optional, default to false)</param>
         /// <param name="includeSize">Include size (optional, default to false)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -2525,111 +4145,181 @@ namespace ININ.PureCloudApi.Api
         System.Threading.Tasks.Task<ApiResponse<DncListEntityListing>> OutboundDnclistsGetAsyncWithHttpInfo (bool? importStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null);
         /// <summary>
         /// Create dialer DNC list
+=======
+        /// <param name="contactListId">ContactList ID</param>
+        /// <returns>Task of ImportStatus</returns>
+        System.Threading.Tasks.Task<ImportStatus> GetContactlistsContactlistIdImportstatusAsync (string contactListId);
+
+        /// <summary>
+        /// Get dialer contactList import status.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="body">DncList (optional)</param>
         /// <returns>Task of DncList</returns>
         System.Threading.Tasks.Task<DncList> OutboundDnclistsPostAsync (DncList body = null);
 
         /// <summary>
         /// Create dialer DNC list
+=======
+        /// <param name="contactListId">ContactList ID</param>
+        /// <returns>Task of ApiResponse (ImportStatus)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ImportStatus>> GetContactlistsContactlistIdImportstatusAsyncWithHttpInfo (string contactListId);
+        /// <summary>
+        /// Query dialer DNC lists
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="body">DncList (optional)</param>
         /// <returns>Task of ApiResponse (DncList)</returns>
         System.Threading.Tasks.Task<ApiResponse<DncList>> OutboundDnclistsPostAsyncWithHttpInfo (DncList body = null);
         /// <summary>
         /// Get dialer preview for user
+=======
+        /// <param name="includeImportStatus">Import status (optional, default to false)</param>
+        /// <param name="includeSize">Include size (optional, default to false)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional)</param>
+        /// <returns>Task of DncListEntityListing</returns>
+        System.Threading.Tasks.Task<DncListEntityListing> GetDnclistsAsync (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null);
+
+        /// <summary>
+        /// Query dialer DNC lists
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <returns>Task of List&lt;Preview&gt;</returns>
         System.Threading.Tasks.Task<List<Preview>> OutboundPreviewsGetAsync ();
 
         /// <summary>
         /// Get dialer preview for user
+=======
+        /// <param name="includeImportStatus">Import status (optional, default to false)</param>
+        /// <param name="includeSize">Include size (optional, default to false)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional)</param>
+        /// <returns>Task of ApiResponse (DncListEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DncListEntityListing>> GetDnclistsAsyncWithHttpInfo (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null);
+        /// <summary>
+        /// Get dialer DNC list
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <returns>Task of ApiResponse (List&lt;Preview&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<Preview>>> OutboundPreviewsGetAsyncWithHttpInfo ();
+=======
+        /// <param name="dncListId">DncList ID</param>
+        /// <param name="includeImportStatus">Import status (optional, default to false)</param>
+        /// <param name="includeSize">Include size (optional, default to false)</param>
+        /// <returns>Task of DncList</returns>
+        System.Threading.Tasks.Task<DncList> GetDnclistsDnclistIdAsync (string dncListId, bool? includeImportStatus = null, bool? includeSize = null);
+
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
-        /// Disposition preview call
+        /// Get dialer DNC list
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="previewId">preview ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> OutboundPreviewsPreviewidDispositioncallPostAsync (string previewId, DialerDispositionCallCommand body = null);
 
+=======
+        /// <param name="dncListId">DncList ID</param>
+        /// <param name="includeImportStatus">Import status (optional, default to false)</param>
+        /// <param name="includeSize">Include size (optional, default to false)</param>
+        /// <returns>Task of ApiResponse (DncList)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DncList>> GetDnclistsDnclistIdAsyncWithHttpInfo (string dncListId, bool? includeImportStatus = null, bool? includeSize = null);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
-        /// Disposition preview call
+        /// Get dialer dncList import status.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="previewId">preview ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> OutboundPreviewsPreviewidDispositioncallPostAsyncWithHttpInfo (string previewId, DialerDispositionCallCommand body = null);
         /// <summary>
         /// Get dialer preview
+=======
+        /// <param name="dncListId">DncList ID</param>
+        /// <returns>Task of ImportStatus</returns>
+        System.Threading.Tasks.Task<ImportStatus> GetDnclistsDnclistIdImportstatusAsync (string dncListId);
+
+        /// <summary>
+        /// Get dialer dncList import status.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="previewId">preview ID</param>
         /// <returns>Task of Preview</returns>
         System.Threading.Tasks.Task<Preview> OutboundPreviewsPreviewidGetAsync (string previewId);
 
         /// <summary>
         /// Get dialer preview
+=======
+        /// <param name="dncListId">DncList ID</param>
+        /// <returns>Task of ApiResponse (ImportStatus)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ImportStatus>> GetDnclistsDnclistIdImportstatusAsyncWithHttpInfo (string dncListId);
+        /// <summary>
+        /// Query a list of Rule Sets.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="previewId">preview ID</param>
         /// <returns>Task of ApiResponse (Preview)</returns>
         System.Threading.Tasks.Task<ApiResponse<Preview>> OutboundPreviewsPreviewidGetAsyncWithHttpInfo (string previewId);
-        /// <summary>
-        /// place preview call
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="previewId">preview ID</param>
-        /// <param name="body"> (optional)</param>
-        /// <returns>Task of DialerCall</returns>
-        System.Threading.Tasks.Task<DialerCall> OutboundPreviewsPreviewidPlacecallPostAsync (string previewId, DialerPlaceCallCommand body = null);
+=======
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <returns>Task of RuleSetEntityListing</returns>
+        System.Threading.Tasks.Task<RuleSetEntityListing> GetRulesetsAsync (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null);
 
-        /// <summary>
-        /// place preview call
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="previewId">preview ID</param>
-        /// <param name="body"> (optional)</param>
-        /// <returns>Task of ApiResponse (DialerCall)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DialerCall>> OutboundPreviewsPreviewidPlacecallPostAsyncWithHttpInfo (string previewId, DialerPlaceCallCommand body = null);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// Query a list of Rule Sets.
         /// </summary>
@@ -2637,6 +4327,68 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
+        /// <param name="previewId">preview ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of DialerCall</returns>
+        System.Threading.Tasks.Task<DialerCall> OutboundPreviewsPreviewidPlacecallPostAsync (string previewId, DialerPlaceCallCommand body = null);
+
+=======
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <returns>Task of ApiResponse (RuleSetEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RuleSetEntityListing>> GetRulesetsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
+        /// <summary>
+        /// Get a Rule Set by ID.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
+        /// <param name="previewId">preview ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse (DialerCall)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DialerCall>> OutboundPreviewsPreviewidPlacecallPostAsyncWithHttpInfo (string previewId, DialerPlaceCallCommand body = null);
+=======
+        /// <param name="ruleSetId">Rule Set ID</param>
+        /// <returns>Task of RuleSet</returns>
+        System.Threading.Tasks.Task<RuleSet> GetRulesetsRulesetIdAsync (string ruleSetId);
+
+        /// <summary>
+        /// Get a Rule Set by ID.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ruleSetId">Rule Set ID</param>
+        /// <returns>Task of ApiResponse (RuleSet)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RuleSet>> GetRulesetsRulesetIdAsyncWithHttpInfo (string ruleSetId);
+        /// <summary>
+        /// Query for a list of dialer campaign schedules.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of List&lt;CampaignSchedule&gt;</returns>
+        System.Threading.Tasks.Task<List<CampaignSchedule>> GetSchedulesCampaignsAsync ();
+
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
+        /// <summary>
+        /// Query for a list of dialer campaign schedules.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
@@ -2646,13 +4398,18 @@ namespace ININ.PureCloudApi.Api
         /// <returns>Task of RuleSetEntityListing</returns>
         System.Threading.Tasks.Task<RuleSetEntityListing> OutboundRulesetsGetAsync (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null);
 
+=======
+        /// <returns>Task of ApiResponse (List&lt;CampaignSchedule&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<CampaignSchedule>>> GetSchedulesCampaignsAsyncWithHttpInfo ();
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
-        /// Query a list of Rule Sets.
+        /// Get a dialer campaign schedule.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
@@ -2661,123 +4418,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>Task of ApiResponse (RuleSetEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<RuleSetEntityListing>> OutboundRulesetsGetAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null);
-        /// <summary>
-        /// Create a Dialer Call Analysis Response Set.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">RuleSet (optional)</param>
-        /// <returns>Task of RuleSet</returns>
-        System.Threading.Tasks.Task<RuleSet> OutboundRulesetsPostAsync (RuleSet body = null);
-
-        /// <summary>
-        /// Create a Dialer Call Analysis Response Set.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">RuleSet (optional)</param>
-        /// <returns>Task of ApiResponse (RuleSet)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RuleSet>> OutboundRulesetsPostAsyncWithHttpInfo (RuleSet body = null);
-        /// <summary>
-        /// Delete a Rule set.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="ruleSetId">Rule Set ID</param>
-        /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> OutboundRulesetsRulesetidDeleteAsync (string ruleSetId);
-
-        /// <summary>
-        /// Delete a Rule set.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="ruleSetId">Rule Set ID</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> OutboundRulesetsRulesetidDeleteAsyncWithHttpInfo (string ruleSetId);
-        /// <summary>
-        /// Get a Rule Set by ID.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="ruleSetId">Rule Set ID</param>
-        /// <returns>Task of RuleSet</returns>
-        System.Threading.Tasks.Task<RuleSet> OutboundRulesetsRulesetidGetAsync (string ruleSetId);
-
-        /// <summary>
-        /// Get a Rule Set by ID.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="ruleSetId">Rule Set ID</param>
-        /// <returns>Task of ApiResponse (RuleSet)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RuleSet>> OutboundRulesetsRulesetidGetAsyncWithHttpInfo (string ruleSetId);
-        /// <summary>
-        /// Update a RuleSet.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="ruleSetId">Rule Set ID</param>
-        /// <param name="body">RuleSet (optional)</param>
-        /// <returns>Task of RuleSet</returns>
-        System.Threading.Tasks.Task<RuleSet> OutboundRulesetsRulesetidPutAsync (string ruleSetId, RuleSet body = null);
-
-        /// <summary>
-        /// Update a RuleSet.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="ruleSetId">Rule Set ID</param>
-        /// <param name="body">RuleSet (optional)</param>
-        /// <returns>Task of ApiResponse (RuleSet)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RuleSet>> OutboundRulesetsRulesetidPutAsyncWithHttpInfo (string ruleSetId, RuleSet body = null);
-        /// <summary>
-        /// Delete a dialer campaign schedule.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="campaignId">Campaign ID</param>
-        /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> OutboundSchedulesCampaignsCampaignidDeleteAsync (string campaignId);
-
-        /// <summary>
-        /// Delete a dialer campaign schedule.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="campaignId">Campaign ID</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> OutboundSchedulesCampaignsCampaignidDeleteAsyncWithHttpInfo (string campaignId);
-        /// <summary>
-        /// Get a dialer campaign schedule.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+=======
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Task of CampaignSchedule</returns>
-        System.Threading.Tasks.Task<CampaignSchedule> OutboundSchedulesCampaignsCampaignidGetAsync (string campaignId);
+        System.Threading.Tasks.Task<CampaignSchedule> GetSchedulesCampaignsCampaignIdAsync (string campaignId);
 
         /// <summary>
         /// Get a dialer campaign schedule.
@@ -2788,49 +4432,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Task of ApiResponse (CampaignSchedule)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CampaignSchedule>> OutboundSchedulesCampaignsCampaignidGetAsyncWithHttpInfo (string campaignId);
-        /// <summary>
-        /// Update a new campaign schedule.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="campaignId">Campaign ID</param>
-        /// <param name="body">CampaignSchedule (optional)</param>
-        /// <returns>Task of CampaignSchedule</returns>
-        System.Threading.Tasks.Task<CampaignSchedule> OutboundSchedulesCampaignsCampaignidPutAsync (string campaignId, CampaignSchedule body = null);
-
-        /// <summary>
-        /// Update a new campaign schedule.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="campaignId">Campaign ID</param>
-        /// <param name="body">CampaignSchedule (optional)</param>
-        /// <returns>Task of ApiResponse (CampaignSchedule)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CampaignSchedule>> OutboundSchedulesCampaignsCampaignidPutAsyncWithHttpInfo (string campaignId, CampaignSchedule body = null);
-        /// <summary>
-        /// Query for a list of dialer campaign schedules.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of List&lt;CampaignSchedule&gt;</returns>
-        System.Threading.Tasks.Task<List<CampaignSchedule>> OutboundSchedulesCampaignsGetAsync ();
-
-        /// <summary>
-        /// Query for a list of dialer campaign schedules.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (List&lt;CampaignSchedule&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<CampaignSchedule>>> OutboundSchedulesCampaignsGetAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<ApiResponse<CampaignSchedule>> GetSchedulesCampaignsCampaignIdAsyncWithHttpInfo (string campaignId);
         /// <summary>
         /// Query for a list of dialer sequence schedules.
         /// </summary>
@@ -2839,8 +4441,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of List&lt;SequenceSchedule&gt;</returns>
-        System.Threading.Tasks.Task<List<SequenceSchedule>> OutboundSchedulesSequencesGetAsync ();
+        System.Threading.Tasks.Task<List<SequenceSchedule>> GetSchedulesSequencesAsync ();
 
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// Query for a list of dialer sequence schedules.
         /// </summary>
@@ -2848,73 +4451,75 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
+        /// <param name="body">RuleSet (optional)</param>
+        /// <returns>Task of RuleSet</returns>
+        System.Threading.Tasks.Task<RuleSet> OutboundRulesetsPostAsync (RuleSet body = null);
+
+=======
         /// <returns>Task of ApiResponse (List&lt;SequenceSchedule&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<SequenceSchedule>>> OutboundSchedulesSequencesGetAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<ApiResponse<List<SequenceSchedule>>> GetSchedulesSequencesAsyncWithHttpInfo ();
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
-        /// Delete a dialer sequence schedule.
+        /// Get a dialer sequence schedule.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
+        /// <param name="body">RuleSet (optional)</param>
+        /// <returns>Task of ApiResponse (RuleSet)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RuleSet>> OutboundRulesetsPostAsyncWithHttpInfo (RuleSet body = null);
+        /// <summary>
+        /// Delete a Rule set.
+=======
         /// <param name="sequenceId">Sequence ID</param>
+        /// <returns>Task of SequenceSchedule</returns>
+        System.Threading.Tasks.Task<SequenceSchedule> GetSchedulesSequencesSequenceIdAsync (string sequenceId);
+
+        /// <summary>
+        /// Get a dialer sequence schedule.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
+        /// <param name="ruleSetId">Rule Set ID</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> OutboundSchedulesSequencesSequenceidDeleteAsync (string sequenceId);
+        System.Threading.Tasks.Task<string> OutboundRulesetsRulesetidDeleteAsync (string ruleSetId);
 
         /// <summary>
-        /// Delete a dialer sequence schedule.
+        /// Delete a Rule set.
+=======
+        /// <param name="sequenceId">Sequence ID</param>
+        /// <returns>Task of ApiResponse (SequenceSchedule)</returns>
+        System.Threading.Tasks.Task<ApiResponse<SequenceSchedule>> GetSchedulesSequencesSequenceIdAsyncWithHttpInfo (string sequenceId);
+        /// <summary>
+        /// Query a list of dialer campaign sequences.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sequenceId">Sequence ID</param>
+<<<<<<< HEAD
+        /// <param name="ruleSetId">Rule Set ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> OutboundSchedulesSequencesSequenceidDeleteAsyncWithHttpInfo (string sequenceId);
-        /// <summary>
-        /// Get a dialer sequence schedule.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sequenceId">Sequence ID</param>
-        /// <returns>Task of SequenceSchedule</returns>
-        System.Threading.Tasks.Task<SequenceSchedule> OutboundSchedulesSequencesSequenceidGetAsync (string sequenceId);
+        System.Threading.Tasks.Task<ApiResponse<string>> OutboundRulesetsRulesetidDeleteAsyncWithHttpInfo (string ruleSetId);
+=======
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <returns>Task of CampaignSequenceEntityListing</returns>
+        System.Threading.Tasks.Task<CampaignSequenceEntityListing> GetSequencesAsync (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null);
 
-        /// <summary>
-        /// Get a dialer sequence schedule.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sequenceId">Sequence ID</param>
-        /// <returns>Task of ApiResponse (SequenceSchedule)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SequenceSchedule>> OutboundSchedulesSequencesSequenceidGetAsyncWithHttpInfo (string sequenceId);
-        /// <summary>
-        /// Update a new sequence schedule.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sequenceId">Sequence ID</param>
-        /// <param name="body">SequenceSchedule (optional)</param>
-        /// <returns>Task of SequenceSchedule</returns>
-        System.Threading.Tasks.Task<SequenceSchedule> OutboundSchedulesSequencesSequenceidPutAsync (string sequenceId, SequenceSchedule body = null);
-
-        /// <summary>
-        /// Update a new sequence schedule.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sequenceId">Sequence ID</param>
-        /// <param name="body">SequenceSchedule (optional)</param>
-        /// <returns>Task of ApiResponse (SequenceSchedule)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SequenceSchedule>> OutboundSchedulesSequencesSequenceidPutAsyncWithHttpInfo (string sequenceId, SequenceSchedule body = null);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// Query a list of dialer campaign sequences.
         /// </summary>
@@ -2922,6 +4527,638 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
+        /// <param name="ruleSetId">Rule Set ID</param>
+        /// <returns>Task of RuleSet</returns>
+        System.Threading.Tasks.Task<RuleSet> OutboundRulesetsRulesetidGetAsync (string ruleSetId);
+
+=======
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <returns>Task of ApiResponse (CampaignSequenceEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CampaignSequenceEntityListing>> GetSequencesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
+        /// <summary>
+        /// Get a dialer campaign sequence.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
+        /// <param name="ruleSetId">Rule Set ID</param>
+        /// <returns>Task of ApiResponse (RuleSet)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RuleSet>> OutboundRulesetsRulesetidGetAsyncWithHttpInfo (string ruleSetId);
+=======
+        /// <param name="sequenceId">Campaign Sequence ID</param>
+        /// <returns>Task of CampaignSequence</returns>
+        System.Threading.Tasks.Task<CampaignSequence> GetSequencesSequenceIdAsync (string sequenceId);
+
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
+        /// <summary>
+        /// Get a dialer campaign sequence.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
+        /// <param name="ruleSetId">Rule Set ID</param>
+        /// <param name="body">RuleSet (optional)</param>
+        /// <returns>Task of RuleSet</returns>
+        System.Threading.Tasks.Task<RuleSet> OutboundRulesetsRulesetidPutAsync (string ruleSetId, RuleSet body = null);
+
+=======
+        /// <param name="sequenceId">Campaign Sequence ID</param>
+        /// <returns>Task of ApiResponse (CampaignSequence)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CampaignSequence>> GetSequencesSequenceIdAsyncWithHttpInfo (string sequenceId);
+        /// <summary>
+        /// Get the Dialer wrap up code mapping.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of WrapUpCodeMapping</returns>
+        System.Threading.Tasks.Task<WrapUpCodeMapping> GetWrapupcodemappingsAsync ();
+
+        /// <summary>
+        /// Get the Dialer wrap up code mapping.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (WrapUpCodeMapping)</returns>
+        System.Threading.Tasks.Task<ApiResponse<WrapUpCodeMapping>> GetWrapupcodemappingsAsyncWithHttpInfo ();
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
+        /// <summary>
+        /// Retrieves audits for dialer.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
+        /// <param name="ruleSetId">Rule Set ID</param>
+        /// <param name="body">RuleSet (optional)</param>
+        /// <returns>Task of ApiResponse (RuleSet)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RuleSet>> OutboundRulesetsRulesetidPutAsyncWithHttpInfo (string ruleSetId, RuleSet body = null);
+        /// <summary>
+        /// Delete a dialer campaign schedule.
+=======
+        /// <param name="body">AuditSearch (optional)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">Sort by (optional, default to entity.name)</param>
+        /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
+        /// <param name="facetsOnly">Facets only (optional, default to false)</param>
+        /// <returns>Task of AuditSearchResult</returns>
+        System.Threading.Tasks.Task<AuditSearchResult> PostAuditsAsync (DialerAuditRequest body = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, bool? facetsOnly = null);
+
+        /// <summary>
+        /// Retrieves audits for dialer.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">AuditSearch (optional)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">Sort by (optional, default to entity.name)</param>
+        /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
+        /// <param name="facetsOnly">Facets only (optional, default to false)</param>
+        /// <returns>Task of ApiResponse (AuditSearchResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AuditSearchResult>> PostAuditsAsyncWithHttpInfo (DialerAuditRequest body = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, bool? facetsOnly = null);
+        /// <summary>
+        /// Create callable time set
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">DialerCallableTimeSet (optional)</param>
+        /// <returns>Task of CallableTimeSet</returns>
+        System.Threading.Tasks.Task<CallableTimeSet> PostCallabletimesetsAsync (CallableTimeSet body = null);
+
+        /// <summary>
+        /// Create callable time set
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>Task of string</returns>
+        System.Threading.Tasks.Task<string> OutboundSchedulesCampaignsCampaignidDeleteAsync (string campaignId);
+
+        /// <summary>
+        /// Delete a dialer campaign schedule.
+=======
+        /// <param name="body">DialerCallableTimeSet (optional)</param>
+        /// <returns>Task of ApiResponse (CallableTimeSet)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CallableTimeSet>> PostCallabletimesetsAsyncWithHttpInfo (CallableTimeSet body = null);
+        /// <summary>
+        /// Create a dialer call analysis response set.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">ResponseSet (optional)</param>
+        /// <returns>Task of ResponseSet</returns>
+        System.Threading.Tasks.Task<ResponseSet> PostCallanalysisresponsesetsAsync (ResponseSet body = null);
+
+        /// <summary>
+        /// Create a dialer call analysis response set.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">ResponseSet (optional)</param>
+        /// <returns>Task of ApiResponse (ResponseSet)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ResponseSet>> PostCallanalysisresponsesetsAsyncWithHttpInfo (ResponseSet body = null);
+        /// <summary>
+        /// Create a campaign.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Campaign (optional)</param>
+        /// <returns>Task of Campaign</returns>
+        System.Threading.Tasks.Task<Campaign> PostCampaignsAsync (Campaign body = null);
+
+        /// <summary>
+        /// Create a campaign.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Campaign (optional)</param>
+        /// <returns>Task of ApiResponse (Campaign)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Campaign>> PostCampaignsAsyncWithHttpInfo (Campaign body = null);
+        /// <summary>
+        /// Schedule a Callback for a Dialer Campaign
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <param name="body">ContactCallbackRequest (optional)</param>
+        /// <returns>Task of ContactCallbackRequest</returns>
+        System.Threading.Tasks.Task<ContactCallbackRequest> PostCampaignsCampaignIdCallbackScheduleAsync (string campaignId, ContactCallbackRequest body = null);
+
+        /// <summary>
+        /// Schedule a Callback for a Dialer Campaign
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <param name="body">ContactCallbackRequest (optional)</param>
+        /// <returns>Task of ApiResponse (ContactCallbackRequest)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ContactCallbackRequest>> PostCampaignsCampaignIdCallbackScheduleAsyncWithHttpInfo (string campaignId, ContactCallbackRequest body = null);
+        /// <summary>
+        /// Get progress for a list of campaigns
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        System.Threading.Tasks.Task<ApiResponse<string>> OutboundSchedulesCampaignsCampaignidDeleteAsyncWithHttpInfo (string campaignId);
+=======
+        /// <param name="body">Campaign IDs (optional)</param>
+        /// <returns>Task of List&lt;CampaignProgress&gt;</returns>
+        System.Threading.Tasks.Task<List<CampaignProgress>> PostCampaignsProgressAsync (List<string> body = null);
+
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
+        /// <summary>
+        /// Get progress for a list of campaigns
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>Task of CampaignSchedule</returns>
+        System.Threading.Tasks.Task<CampaignSchedule> OutboundSchedulesCampaignsCampaignidGetAsync (string campaignId);
+
+=======
+        /// <param name="body">Campaign IDs (optional)</param>
+        /// <returns>Task of ApiResponse (List&lt;CampaignProgress&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<CampaignProgress>>> PostCampaignsProgressAsyncWithHttpInfo (List<string> body = null);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
+        /// <summary>
+        /// Create a contact List.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>Task of ApiResponse (CampaignSchedule)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CampaignSchedule>> OutboundSchedulesCampaignsCampaignidGetAsyncWithHttpInfo (string campaignId);
+        /// <summary>
+        /// Update a new campaign schedule.
+=======
+        /// <param name="body">ContactList (optional)</param>
+        /// <returns>Task of ContactList</returns>
+        System.Threading.Tasks.Task<ContactList> PostContactlistsAsync (ContactList body = null);
+
+        /// <summary>
+        /// Create a contact List.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">ContactList (optional)</param>
+        /// <returns>Task of ApiResponse (ContactList)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ContactList>> PostContactlistsAsyncWithHttpInfo (ContactList body = null);
+        /// <summary>
+        /// Add contacts to a contact list.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">Contact List ID</param>
+        /// <param name="body">Contact (optional)</param>
+        /// <param name="priority"> (optional)</param>
+        /// <returns>Task of DialerContact</returns>
+        System.Threading.Tasks.Task<DialerContact> PostContactlistsContactlistIdContactsAsync (string contactListId, List<DialerContact> body = null, bool? priority = null);
+
+        /// <summary>
+        /// Add contacts to a contact list.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">Contact List ID</param>
+        /// <param name="body">Contact (optional)</param>
+        /// <param name="priority"> (optional)</param>
+        /// <returns>Task of ApiResponse (DialerContact)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DialerContact>> PostContactlistsContactlistIdContactsAsyncWithHttpInfo (string contactListId, List<DialerContact> body = null, bool? priority = null);
+        /// <summary>
+        /// Initiate the export of a contact list.
+        /// </summary>
+        /// <remarks>
+        /// Returns 200 if received OK.
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">ContactList ID</param>
+        /// <returns>Task of string</returns>
+        System.Threading.Tasks.Task<string> PostContactlistsContactlistIdExportAsync (string contactListId);
+
+        /// <summary>
+        /// Initiate the export of a contact list.
+        /// </summary>
+        /// <remarks>
+        /// Returns 200 if received OK.
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">ContactList ID</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        System.Threading.Tasks.Task<ApiResponse<string>> PostContactlistsContactlistIdExportAsyncWithHttpInfo (string contactListId);
+        /// <summary>
+        /// Add phone numbers to a Dialer DNC list.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Conversation ID</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task PostConversationsConversationIdDncAsync (string conversationId);
+
+        /// <summary>
+        /// Add phone numbers to a Dialer DNC list.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
+        /// <param name="campaignId">Campaign ID</param>
+        /// <param name="body">CampaignSchedule (optional)</param>
+        /// <returns>Task of CampaignSchedule</returns>
+        System.Threading.Tasks.Task<CampaignSchedule> OutboundSchedulesCampaignsCampaignidPutAsync (string campaignId, CampaignSchedule body = null);
+
+        /// <summary>
+        /// Update a new campaign schedule.
+=======
+        /// <param name="conversationId">Conversation ID</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostConversationsConversationIdDncAsyncWithHttpInfo (string conversationId);
+        /// <summary>
+        /// Create dialer DNC list
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
+        /// <param name="campaignId">Campaign ID</param>
+        /// <param name="body">CampaignSchedule (optional)</param>
+        /// <returns>Task of ApiResponse (CampaignSchedule)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CampaignSchedule>> OutboundSchedulesCampaignsCampaignidPutAsyncWithHttpInfo (string campaignId, CampaignSchedule body = null);
+        /// <summary>
+        /// Query for a list of dialer campaign schedules.
+=======
+        /// <param name="body">DncList (optional)</param>
+        /// <returns>Task of DncList</returns>
+        System.Threading.Tasks.Task<DncList> PostDnclistsAsync (DncList body = null);
+
+        /// <summary>
+        /// Create dialer DNC list
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
+        /// <returns>Task of List&lt;CampaignSchedule&gt;</returns>
+        System.Threading.Tasks.Task<List<CampaignSchedule>> OutboundSchedulesCampaignsGetAsync ();
+
+        /// <summary>
+        /// Query for a list of dialer campaign schedules.
+=======
+        /// <param name="body">DncList (optional)</param>
+        /// <returns>Task of ApiResponse (DncList)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DncList>> PostDnclistsAsyncWithHttpInfo (DncList body = null);
+        /// <summary>
+        /// Initiate the export of a dnc list.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
+        /// </summary>
+        /// <remarks>
+        /// Returns 200 if received OK.
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
+        /// <returns>Task of ApiResponse (List&lt;CampaignSchedule&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<CampaignSchedule>>> OutboundSchedulesCampaignsGetAsyncWithHttpInfo ();
+=======
+        /// <param name="dncListId">DncList ID</param>
+        /// <returns>Task of string</returns>
+        System.Threading.Tasks.Task<string> PostDnclistsDnclistIdExportAsync (string dncListId);
+
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
+        /// <summary>
+        /// Initiate the export of a dnc list.
+        /// </summary>
+        /// <remarks>
+        /// Returns 200 if received OK.
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
+        /// <returns>Task of List&lt;SequenceSchedule&gt;</returns>
+        System.Threading.Tasks.Task<List<SequenceSchedule>> OutboundSchedulesSequencesGetAsync ();
+
+=======
+        /// <param name="dncListId">DncList ID</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        System.Threading.Tasks.Task<ApiResponse<string>> PostDnclistsDnclistIdExportAsyncWithHttpInfo (string dncListId);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
+        /// <summary>
+        /// Add phone numbers to a Dialer DNC list.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
+        /// <returns>Task of ApiResponse (List&lt;SequenceSchedule&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<SequenceSchedule>>> OutboundSchedulesSequencesGetAsyncWithHttpInfo ();
+        /// <summary>
+        /// Delete a dialer sequence schedule.
+=======
+        /// <param name="dncListId">DncList ID</param>
+        /// <param name="body">DNC Phone Numbers (optional)</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task PostDnclistsDnclistIdPhonenumbersAsync (string dncListId, List<string> body = null);
+
+        /// <summary>
+        /// Add phone numbers to a Dialer DNC list.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
+        /// <param name="sequenceId">Sequence ID</param>
+        /// <returns>Task of string</returns>
+        System.Threading.Tasks.Task<string> OutboundSchedulesSequencesSequenceidDeleteAsync (string sequenceId);
+
+        /// <summary>
+        /// Delete a dialer sequence schedule.
+=======
+        /// <param name="dncListId">DncList ID</param>
+        /// <param name="body">DNC Phone Numbers (optional)</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostDnclistsDnclistIdPhonenumbersAsyncWithHttpInfo (string dncListId, List<string> body = null);
+        /// <summary>
+        /// Create a Dialer Call Analysis Response Set.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
+        /// <param name="sequenceId">Sequence ID</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        System.Threading.Tasks.Task<ApiResponse<string>> OutboundSchedulesSequencesSequenceidDeleteAsyncWithHttpInfo (string sequenceId);
+=======
+        /// <param name="body">RuleSet (optional)</param>
+        /// <returns>Task of RuleSet</returns>
+        System.Threading.Tasks.Task<RuleSet> PostRulesetsAsync (RuleSet body = null);
+
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
+        /// <summary>
+        /// Create a Dialer Call Analysis Response Set.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
+        /// <param name="sequenceId">Sequence ID</param>
+        /// <returns>Task of SequenceSchedule</returns>
+        System.Threading.Tasks.Task<SequenceSchedule> OutboundSchedulesSequencesSequenceidGetAsync (string sequenceId);
+
+=======
+        /// <param name="body">RuleSet (optional)</param>
+        /// <returns>Task of ApiResponse (RuleSet)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RuleSet>> PostRulesetsAsyncWithHttpInfo (RuleSet body = null);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
+        /// <summary>
+        /// Create a new campaign sequence.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
+        /// <param name="sequenceId">Sequence ID</param>
+        /// <returns>Task of ApiResponse (SequenceSchedule)</returns>
+        System.Threading.Tasks.Task<ApiResponse<SequenceSchedule>> OutboundSchedulesSequencesSequenceidGetAsyncWithHttpInfo (string sequenceId);
+        /// <summary>
+        /// Update a new sequence schedule.
+=======
+        /// <param name="body">Organization (optional)</param>
+        /// <returns>Task of CampaignSequence</returns>
+        System.Threading.Tasks.Task<CampaignSequence> PostSequencesAsync (CampaignSequence body = null);
+
+        /// <summary>
+        /// Create a new campaign sequence.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
+        /// <param name="sequenceId">Sequence ID</param>
+        /// <param name="body">SequenceSchedule (optional)</param>
+        /// <returns>Task of SequenceSchedule</returns>
+        System.Threading.Tasks.Task<SequenceSchedule> OutboundSchedulesSequencesSequenceidPutAsync (string sequenceId, SequenceSchedule body = null);
+=======
+        /// <param name="body">Organization (optional)</param>
+        /// <returns>Task of ApiResponse (CampaignSequence)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CampaignSequence>> PostSequencesAsyncWithHttpInfo (CampaignSequence body = null);
+        /// <summary>
+        /// Update callable time set
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callableTimeSetId">Callable Time Set ID</param>
+        /// <param name="body">DialerCallableTimeSet (optional)</param>
+        /// <returns>Task of CallableTimeSet</returns>
+        System.Threading.Tasks.Task<CallableTimeSet> PutCallabletimesetsCallabletimesetIdAsync (string callableTimeSetId, CallableTimeSet body = null);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
+
+        /// <summary>
+        /// Update callable time set
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
+        /// <param name="sequenceId">Sequence ID</param>
+        /// <param name="body">SequenceSchedule (optional)</param>
+        /// <returns>Task of ApiResponse (SequenceSchedule)</returns>
+        System.Threading.Tasks.Task<ApiResponse<SequenceSchedule>> OutboundSchedulesSequencesSequenceidPutAsyncWithHttpInfo (string sequenceId, SequenceSchedule body = null);
+=======
+        /// <param name="callableTimeSetId">Callable Time Set ID</param>
+        /// <param name="body">DialerCallableTimeSet (optional)</param>
+        /// <returns>Task of ApiResponse (CallableTimeSet)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CallableTimeSet>> PutCallabletimesetsCallabletimesetIdAsyncWithHttpInfo (string callableTimeSetId, CallableTimeSet body = null);
+        /// <summary>
+        /// Update a dialer call analysis response set.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
+        /// <param name="body">ResponseSet (optional)</param>
+        /// <returns>Task of ResponseSet</returns>
+        System.Threading.Tasks.Task<ResponseSet> PutCallanalysisresponsesetsCallanalysissetIdAsync (string callAnalysisSetId, ResponseSet body = null);
+
+        /// <summary>
+        /// Update a dialer call analysis response set.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
+        /// <param name="body">ResponseSet (optional)</param>
+        /// <returns>Task of ApiResponse (ResponseSet)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ResponseSet>> PutCallanalysisresponsesetsCallanalysissetIdAsyncWithHttpInfo (string callAnalysisSetId, ResponseSet body = null);
+        /// <summary>
+        /// Update a campaign.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <param name="body">Campaign (optional)</param>
+        /// <returns>Task of Campaign</returns>
+        System.Threading.Tasks.Task<Campaign> PutCampaignsCampaignIdAsync (string campaignId, Campaign body = null);
+
+        /// <summary>
+        /// Update a campaign.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <param name="body">Campaign (optional)</param>
+        /// <returns>Task of ApiResponse (Campaign)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Campaign>> PutCampaignsCampaignIdAsyncWithHttpInfo (string campaignId, Campaign body = null);
+        /// <summary>
+        /// Send notification that an agent&#39;s state changed 
+        /// </summary>
+        /// <remarks>
+        /// New agent state.
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <param name="userId">Agent&#39;s user ID</param>
+        /// <param name="body">agent (optional)</param>
+        /// <returns>Task of string</returns>
+        System.Threading.Tasks.Task<string> PutCampaignsCampaignIdAgentsUserIdAsync (string campaignId, string userId, Agent body = null);
+
+        /// <summary>
+        /// Send notification that an agent&#39;s state changed 
+        /// </summary>
+        /// <remarks>
+        /// New agent state.
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <param name="userId">Agent&#39;s user ID</param>
+        /// <param name="body">agent (optional)</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        System.Threading.Tasks.Task<ApiResponse<string>> PutCampaignsCampaignIdAgentsUserIdAsyncWithHttpInfo (string campaignId, string userId, Agent body = null);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
+        /// <summary>
+        /// Update a contact list.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
@@ -2930,14 +5167,21 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>Task of CampaignSequenceEntityListing</returns>
         System.Threading.Tasks.Task<CampaignSequenceEntityListing> OutboundSequencesGetAsync (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null);
+=======
+        /// <param name="contactListId">ContactList ID</param>
+        /// <param name="body">ContactList (optional)</param>
+        /// <returns>Task of ContactList</returns>
+        System.Threading.Tasks.Task<ContactList> PutContactlistsContactlistIdAsync (string contactListId, ContactList body = null);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
         /// <summary>
-        /// Query a list of dialer campaign sequences.
+        /// Update a contact list.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
@@ -2946,69 +5190,170 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>Task of ApiResponse (CampaignSequenceEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<CampaignSequenceEntityListing>> OutboundSequencesGetAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null);
+=======
+        /// <param name="contactListId">ContactList ID</param>
+        /// <param name="body">ContactList (optional)</param>
+        /// <returns>Task of ApiResponse (ContactList)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ContactList>> PutContactlistsContactlistIdAsyncWithHttpInfo (string contactListId, ContactList body = null);
         /// <summary>
-        /// Create a new campaign sequence.
+        /// Update a contact.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">Contact List ID</param>
+        /// <param name="contactId">Contact ID</param>
+        /// <param name="body">Contact (optional)</param>
+        /// <returns>Task of DialerContact</returns>
+        System.Threading.Tasks.Task<DialerContact> PutContactlistsContactlistIdContactsContactIdAsync (string contactListId, string contactId, DialerContact body = null);
+
+        /// <summary>
+        /// Update a contact.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">Contact List ID</param>
+        /// <param name="contactId">Contact ID</param>
+        /// <param name="body">Contact (optional)</param>
+        /// <returns>Task of ApiResponse (DialerContact)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DialerContact>> PutContactlistsContactlistIdContactsContactIdAsyncWithHttpInfo (string contactListId, string contactId, DialerContact body = null);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
+        /// <summary>
+        /// Update dialer DNC list
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="body">Organization (optional)</param>
         /// <returns>Task of CampaignSequence</returns>
         System.Threading.Tasks.Task<CampaignSequence> OutboundSequencesPostAsync (CampaignSequence body = null);
+=======
+        /// <param name="dncListId">DncList ID</param>
+        /// <param name="body">DncList (optional)</param>
+        /// <returns>Task of DncList</returns>
+        System.Threading.Tasks.Task<DncList> PutDnclistsDnclistIdAsync (string dncListId, DncList body = null);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
         /// <summary>
-        /// Create a new campaign sequence.
+        /// Update dialer DNC list
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="body">Organization (optional)</param>
         /// <returns>Task of ApiResponse (CampaignSequence)</returns>
         System.Threading.Tasks.Task<ApiResponse<CampaignSequence>> OutboundSequencesPostAsyncWithHttpInfo (CampaignSequence body = null);
         /// <summary>
         /// Delete a dialer campaign sequence.
+=======
+        /// <param name="dncListId">DncList ID</param>
+        /// <param name="body">DncList (optional)</param>
+        /// <returns>Task of ApiResponse (DncList)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DncList>> PutDnclistsDnclistIdAsyncWithHttpInfo (string dncListId, DncList body = null);
+        /// <summary>
+        /// Update a RuleSet.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="sequenceId">Campaign Sequence ID</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> OutboundSequencesSequenceidDeleteAsync (string sequenceId);
 
         /// <summary>
         /// Delete a dialer campaign sequence.
+=======
+        /// <param name="ruleSetId">Rule Set ID</param>
+        /// <param name="body">RuleSet (optional)</param>
+        /// <returns>Task of RuleSet</returns>
+        System.Threading.Tasks.Task<RuleSet> PutRulesetsRulesetIdAsync (string ruleSetId, RuleSet body = null);
+
+        /// <summary>
+        /// Update a RuleSet.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="sequenceId">Campaign Sequence ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> OutboundSequencesSequenceidDeleteAsyncWithHttpInfo (string sequenceId);
+=======
+        /// <param name="ruleSetId">Rule Set ID</param>
+        /// <param name="body">RuleSet (optional)</param>
+        /// <returns>Task of ApiResponse (RuleSet)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RuleSet>> PutRulesetsRulesetIdAsyncWithHttpInfo (string ruleSetId, RuleSet body = null);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
-        /// Get a dialer campaign sequence.
+        /// Update a new campaign schedule.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="sequenceId">Campaign Sequence ID</param>
         /// <returns>Task of CampaignSequence</returns>
         System.Threading.Tasks.Task<CampaignSequence> OutboundSequencesSequenceidGetAsync (string sequenceId);
+=======
+        /// <param name="campaignId">Campaign ID</param>
+        /// <param name="body">CampaignSchedule (optional)</param>
+        /// <returns>Task of CampaignSchedule</returns>
+        System.Threading.Tasks.Task<CampaignSchedule> PutSchedulesCampaignsCampaignIdAsync (string campaignId, CampaignSchedule body = null);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
         /// <summary>
-        /// Get a dialer campaign sequence.
+        /// Update a new campaign schedule.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="sequenceId">Campaign Sequence ID</param>
         /// <returns>Task of ApiResponse (CampaignSequence)</returns>
         System.Threading.Tasks.Task<ApiResponse<CampaignSequence>> OutboundSequencesSequenceidGetAsyncWithHttpInfo (string sequenceId);
+=======
+        /// <param name="campaignId">Campaign ID</param>
+        /// <param name="body">CampaignSchedule (optional)</param>
+        /// <returns>Task of ApiResponse (CampaignSchedule)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CampaignSchedule>> PutSchedulesCampaignsCampaignIdAsyncWithHttpInfo (string campaignId, CampaignSchedule body = null);
+        /// <summary>
+        /// Update a new sequence schedule.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sequenceId">Sequence ID</param>
+        /// <param name="body">SequenceSchedule (optional)</param>
+        /// <returns>Task of SequenceSchedule</returns>
+        System.Threading.Tasks.Task<SequenceSchedule> PutSchedulesSequencesSequenceIdAsync (string sequenceId, SequenceSchedule body = null);
+
+        /// <summary>
+        /// Update a new sequence schedule.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sequenceId">Sequence ID</param>
+        /// <param name="body">SequenceSchedule (optional)</param>
+        /// <returns>Task of ApiResponse (SequenceSchedule)</returns>
+        System.Threading.Tasks.Task<ApiResponse<SequenceSchedule>> PutSchedulesSequencesSequenceIdAsyncWithHttpInfo (string sequenceId, SequenceSchedule body = null);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// Update a new campaign sequence.
         /// </summary>
@@ -3019,7 +5364,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sequenceId">Campaign Sequence ID</param>
         /// <param name="body">Organization (optional)</param>
         /// <returns>Task of CampaignSequence</returns>
-        System.Threading.Tasks.Task<CampaignSequence> OutboundSequencesSequenceidPutAsync (string sequenceId, CampaignSequence body = null);
+        System.Threading.Tasks.Task<CampaignSequence> PutSequencesSequenceIdAsync (string sequenceId, CampaignSequence body = null);
 
         /// <summary>
         /// Update a new campaign sequence.
@@ -3031,6 +5376,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sequenceId">Campaign Sequence ID</param>
         /// <param name="body">Organization (optional)</param>
         /// <returns>Task of ApiResponse (CampaignSequence)</returns>
+<<<<<<< HEAD
         System.Threading.Tasks.Task<ApiResponse<CampaignSequence>> OutboundSequencesSequenceidPutAsyncWithHttpInfo (string sequenceId, CampaignSequence body = null);
         /// <summary>
         /// Get the Dialer wrap up code mapping.
@@ -3051,6 +5397,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (WrapUpCodeMapping)</returns>
         System.Threading.Tasks.Task<ApiResponse<WrapUpCodeMapping>> OutboundWrapupcodemappingsGetAsyncWithHttpInfo ();
+=======
+        System.Threading.Tasks.Task<ApiResponse<CampaignSequence>> PutSequencesSequenceIdAsyncWithHttpInfo (string sequenceId, CampaignSequence body = null);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// Update the Dialer wrap up code mapping.
         /// </summary>
@@ -3060,7 +5409,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">wrapUpCodeMapping (optional)</param>
         /// <returns>Task of WrapUpCodeMapping</returns>
-        System.Threading.Tasks.Task<WrapUpCodeMapping> OutboundWrapupcodemappingsPutAsync (WrapUpCodeMapping body = null);
+        System.Threading.Tasks.Task<WrapUpCodeMapping> PutWrapupcodemappingsAsync (WrapUpCodeMapping body = null);
 
         /// <summary>
         /// Update the Dialer wrap up code mapping.
@@ -3071,7 +5420,11 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">wrapUpCodeMapping (optional)</param>
         /// <returns>Task of ApiResponse (WrapUpCodeMapping)</returns>
+<<<<<<< HEAD
         System.Threading.Tasks.Task<ApiResponse<WrapUpCodeMapping>> OutboundWrapupcodemappingsPutAsyncWithHttpInfo (WrapUpCodeMapping body = null);
+=======
+        System.Threading.Tasks.Task<ApiResponse<WrapUpCodeMapping>> PutWrapupcodemappingsAsyncWithHttpInfo (WrapUpCodeMapping body = null);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         #endregion Asynchronous Operations
     }
 
@@ -3163,9 +5516,10 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Retrieves audits for dialer. 
+        /// Delete callable time set 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="body">AuditSearch (optional)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -3176,13 +5530,21 @@ namespace ININ.PureCloudApi.Api
         public AuditSearchResult OutboundAuditsPost (DialerAuditRequest body = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, bool? facetsOnly = null)
         {
              ApiResponse<AuditSearchResult> localVarResponse = OutboundAuditsPostWithHttpInfo(body, pageSize, pageNumber, sortBy, sortOrder, facetsOnly);
+=======
+        /// <param name="callableTimeSetId">Callable Time Set ID</param>
+        /// <returns>string</returns>
+        public string DeleteCallabletimesetsCallabletimesetId (string callableTimeSetId)
+        {
+             ApiResponse<string> localVarResponse = DeleteCallabletimesetsCallabletimesetIdWithHttpInfo(callableTimeSetId);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Retrieves audits for dialer. 
+        /// Delete callable time set 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="body">AuditSearch (optional)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -3194,6 +5556,17 @@ namespace ININ.PureCloudApi.Api
         {
 
             var localVarPath = "/api/v1/outbound/audits";
+=======
+        /// <param name="callableTimeSetId">Callable Time Set ID</param>
+        /// <returns>ApiResponse of string</returns>
+        public ApiResponse< string > DeleteCallabletimesetsCallabletimesetIdWithHttpInfo (string callableTimeSetId)
+        {
+            // verify the required parameter 'callableTimeSetId' is set
+            if (callableTimeSetId == null)
+                throw new ApiException(400, "Missing required parameter 'callableTimeSetId' when calling OutboundApi->DeleteCallabletimesetsCallabletimesetId");
+
+            var localVarPath = "/api/v2/outbound/callabletimesets/{callableTimeSetId}";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -3218,6 +5591,7 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
             if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
@@ -3231,6 +5605,9 @@ namespace ININ.PureCloudApi.Api
             {
                 localVarPostBody = body; // byte array
             }
+=======
+            if (callableTimeSetId != null) localVarPathParams.Add("callableTimeSetId", Configuration.ApiClient.ParameterToString(callableTimeSetId)); // path parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -3241,12 +5618,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+<<<<<<< HEAD
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundAuditsPost: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundAuditsPost: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -3254,13 +5636,23 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<AuditSearchResult>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (AuditSearchResult) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AuditSearchResult)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling DeleteCallabletimesetsCallabletimesetId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteCallabletimesetsCallabletimesetId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
-        /// Retrieves audits for dialer. 
+        /// Delete callable time set 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="body">AuditSearch (optional)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -3271,14 +5663,22 @@ namespace ININ.PureCloudApi.Api
         public async System.Threading.Tasks.Task<AuditSearchResult> OutboundAuditsPostAsync (DialerAuditRequest body = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, bool? facetsOnly = null)
         {
              ApiResponse<AuditSearchResult> localVarResponse = await OutboundAuditsPostAsyncWithHttpInfo(body, pageSize, pageNumber, sortBy, sortOrder, facetsOnly);
+=======
+        /// <param name="callableTimeSetId">Callable Time Set ID</param>
+        /// <returns>Task of string</returns>
+        public async System.Threading.Tasks.Task<string> DeleteCallabletimesetsCallabletimesetIdAsync (string callableTimeSetId)
+        {
+             ApiResponse<string> localVarResponse = await DeleteCallabletimesetsCallabletimesetIdAsyncWithHttpInfo(callableTimeSetId);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Retrieves audits for dialer. 
+        /// Delete callable time set 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="body">AuditSearch (optional)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -3290,6 +5690,17 @@ namespace ININ.PureCloudApi.Api
         {
 
             var localVarPath = "/api/v1/outbound/audits";
+=======
+        /// <param name="callableTimeSetId">Callable Time Set ID</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteCallabletimesetsCallabletimesetIdAsyncWithHttpInfo (string callableTimeSetId)
+        {
+            // verify the required parameter 'callableTimeSetId' is set
+            if (callableTimeSetId == null)
+                throw new ApiException(400, "Missing required parameter 'callableTimeSetId' when calling OutboundApi->DeleteCallabletimesetsCallabletimesetId");
+
+            var localVarPath = "/api/v2/outbound/callabletimesets/{callableTimeSetId}";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -3314,6 +5725,7 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
             if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
@@ -3327,6 +5739,9 @@ namespace ININ.PureCloudApi.Api
             {
                 localVarPostBody = body; // byte array
             }
+=======
+            if (callableTimeSetId != null) localVarPathParams.Add("callableTimeSetId", Configuration.ApiClient.ParameterToString(callableTimeSetId)); // path parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -3337,12 +5752,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+<<<<<<< HEAD
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundAuditsPost: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundAuditsPost: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -3350,10 +5770,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<AuditSearchResult>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (AuditSearchResult) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AuditSearchResult)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling DeleteCallabletimesetsCallabletimesetId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteCallabletimesetsCallabletimesetId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Delete callable time set 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3362,10 +5792,21 @@ namespace ININ.PureCloudApi.Api
         public string OutboundCallabletimesetsCallabletimesetidDelete (string callableTimeSetId)
         {
              ApiResponse<string> localVarResponse = OutboundCallabletimesetsCallabletimesetidDeleteWithHttpInfo(callableTimeSetId);
+=======
+        /// Delete a dialer call analysis response set. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
+        /// <returns>string</returns>
+        public string DeleteCallanalysisresponsesetsCallanalysissetId (string callAnalysisSetId)
+        {
+             ApiResponse<string> localVarResponse = DeleteCallanalysisresponsesetsCallanalysissetIdWithHttpInfo(callAnalysisSetId);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Delete callable time set 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3378,6 +5819,20 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'callableTimeSetId' when calling OutboundApi->OutboundCallabletimesetsCallabletimesetidDelete");
 
             var localVarPath = "/api/v1/outbound/callabletimesets/{callableTimeSetId}";
+=======
+        /// Delete a dialer call analysis response set. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
+        /// <returns>ApiResponse of string</returns>
+        public ApiResponse< string > DeleteCallanalysisresponsesetsCallanalysissetIdWithHttpInfo (string callAnalysisSetId)
+        {
+            // verify the required parameter 'callAnalysisSetId' is set
+            if (callAnalysisSetId == null)
+                throw new ApiException(400, "Missing required parameter 'callAnalysisSetId' when calling OutboundApi->DeleteCallanalysisresponsesetsCallanalysissetId");
+
+            var localVarPath = "/api/v2/outbound/callanalysisresponsesets/{callAnalysisSetId}";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -3402,7 +5857,11 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (callableTimeSetId != null) localVarPathParams.Add("callableTimeSetId", Configuration.ApiClient.ParameterToString(callableTimeSetId)); // path parameter
+=======
+            if (callAnalysisSetId != null) localVarPathParams.Add("callAnalysisSetId", Configuration.ApiClient.ParameterToString(callAnalysisSetId)); // path parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -3419,9 +5878,15 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundCallabletimesetsCallabletimesetidDelete: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundCallabletimesetsCallabletimesetidDelete: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+=======
+                throw new ApiException (localVarStatusCode, "Error calling DeleteCallanalysisresponsesetsCallanalysissetId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteCallanalysisresponsesetsCallanalysissetId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3430,6 +5895,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Delete callable time set 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3438,11 +5904,22 @@ namespace ININ.PureCloudApi.Api
         public async System.Threading.Tasks.Task<string> OutboundCallabletimesetsCallabletimesetidDeleteAsync (string callableTimeSetId)
         {
              ApiResponse<string> localVarResponse = await OutboundCallabletimesetsCallabletimesetidDeleteAsyncWithHttpInfo(callableTimeSetId);
+=======
+        /// Delete a dialer call analysis response set. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
+        /// <returns>Task of string</returns>
+        public async System.Threading.Tasks.Task<string> DeleteCallanalysisresponsesetsCallanalysissetIdAsync (string callAnalysisSetId)
+        {
+             ApiResponse<string> localVarResponse = await DeleteCallanalysisresponsesetsCallanalysissetIdAsyncWithHttpInfo(callAnalysisSetId);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
 
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Delete callable time set 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3455,6 +5932,20 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'callableTimeSetId' when calling OutboundApi->OutboundCallabletimesetsCallabletimesetidDelete");
 
             var localVarPath = "/api/v1/outbound/callabletimesets/{callableTimeSetId}";
+=======
+        /// Delete a dialer call analysis response set. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteCallanalysisresponsesetsCallanalysissetIdAsyncWithHttpInfo (string callAnalysisSetId)
+        {
+            // verify the required parameter 'callAnalysisSetId' is set
+            if (callAnalysisSetId == null)
+                throw new ApiException(400, "Missing required parameter 'callAnalysisSetId' when calling OutboundApi->DeleteCallanalysisresponsesetsCallanalysissetId");
+
+            var localVarPath = "/api/v2/outbound/callanalysisresponsesets/{callAnalysisSetId}";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -3479,7 +5970,11 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (callableTimeSetId != null) localVarPathParams.Add("callableTimeSetId", Configuration.ApiClient.ParameterToString(callableTimeSetId)); // path parameter
+=======
+            if (callAnalysisSetId != null) localVarPathParams.Add("callAnalysisSetId", Configuration.ApiClient.ParameterToString(callAnalysisSetId)); // path parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -3496,9 +5991,15 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundCallabletimesetsCallabletimesetidDelete: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundCallabletimesetsCallabletimesetidDelete: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+=======
+                throw new ApiException (localVarStatusCode, "Error calling DeleteCallanalysisresponsesetsCallanalysissetId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteCallanalysisresponsesetsCallanalysissetId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3507,6 +6008,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Get callable time set 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3515,10 +6017,21 @@ namespace ININ.PureCloudApi.Api
         public CallableTimeSet OutboundCallabletimesetsCallabletimesetidGet (string callableTimeSetId)
         {
              ApiResponse<CallableTimeSet> localVarResponse = OutboundCallabletimesetsCallabletimesetidGetWithHttpInfo(callableTimeSetId);
+=======
+        /// Delete a campaign. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>string</returns>
+        public string DeleteCampaignsCampaignId (string campaignId)
+        {
+             ApiResponse<string> localVarResponse = DeleteCampaignsCampaignIdWithHttpInfo(campaignId);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Get callable time set 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3531,6 +6044,20 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'callableTimeSetId' when calling OutboundApi->OutboundCallabletimesetsCallabletimesetidGet");
 
             var localVarPath = "/api/v1/outbound/callabletimesets/{callableTimeSetId}";
+=======
+        /// Delete a campaign. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>ApiResponse of string</returns>
+        public ApiResponse< string > DeleteCampaignsCampaignIdWithHttpInfo (string campaignId)
+        {
+            // verify the required parameter 'campaignId' is set
+            if (campaignId == null)
+                throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->DeleteCampaignsCampaignId");
+
+            var localVarPath = "/api/v2/outbound/campaigns/{campaignId}";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -3555,7 +6082,11 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (callableTimeSetId != null) localVarPathParams.Add("callableTimeSetId", Configuration.ApiClient.ParameterToString(callableTimeSetId)); // path parameter
+=======
+            if (campaignId != null) localVarPathParams.Add("campaignId", Configuration.ApiClient.ParameterToString(campaignId)); // path parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -3566,12 +6097,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+<<<<<<< HEAD
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundCallabletimesetsCallabletimesetidGet: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundCallabletimesetsCallabletimesetidGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -3579,10 +6115,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<CallableTimeSet>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (CallableTimeSet) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CallableTimeSet)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling DeleteCampaignsCampaignId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteCampaignsCampaignId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Get callable time set 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3591,11 +6137,22 @@ namespace ININ.PureCloudApi.Api
         public async System.Threading.Tasks.Task<CallableTimeSet> OutboundCallabletimesetsCallabletimesetidGetAsync (string callableTimeSetId)
         {
              ApiResponse<CallableTimeSet> localVarResponse = await OutboundCallabletimesetsCallabletimesetidGetAsyncWithHttpInfo(callableTimeSetId);
+=======
+        /// Delete a campaign. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>Task of string</returns>
+        public async System.Threading.Tasks.Task<string> DeleteCampaignsCampaignIdAsync (string campaignId)
+        {
+             ApiResponse<string> localVarResponse = await DeleteCampaignsCampaignIdAsyncWithHttpInfo(campaignId);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
 
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Get callable time set 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3608,6 +6165,20 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'callableTimeSetId' when calling OutboundApi->OutboundCallabletimesetsCallabletimesetidGet");
 
             var localVarPath = "/api/v1/outbound/callabletimesets/{callableTimeSetId}";
+=======
+        /// Delete a campaign. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteCampaignsCampaignIdAsyncWithHttpInfo (string campaignId)
+        {
+            // verify the required parameter 'campaignId' is set
+            if (campaignId == null)
+                throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->DeleteCampaignsCampaignId");
+
+            var localVarPath = "/api/v2/outbound/campaigns/{campaignId}";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -3632,7 +6203,11 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (callableTimeSetId != null) localVarPathParams.Add("callableTimeSetId", Configuration.ApiClient.ParameterToString(callableTimeSetId)); // path parameter
+=======
+            if (campaignId != null) localVarPathParams.Add("campaignId", Configuration.ApiClient.ParameterToString(campaignId)); // path parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -3643,12 +6218,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+<<<<<<< HEAD
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundCallabletimesetsCallabletimesetidGet: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundCallabletimesetsCallabletimesetidGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -3656,10 +6236,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<CallableTimeSet>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (CallableTimeSet) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CallableTimeSet)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling DeleteCampaignsCampaignId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteCampaignsCampaignId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Update callable time set 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3669,10 +6259,21 @@ namespace ININ.PureCloudApi.Api
         public CallableTimeSet OutboundCallabletimesetsCallabletimesetidPut (string callableTimeSetId, CallableTimeSet body = null)
         {
              ApiResponse<CallableTimeSet> localVarResponse = OutboundCallabletimesetsCallabletimesetidPutWithHttpInfo(callableTimeSetId, body);
+=======
+        /// Reset campaign progress and recycle the campaign 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>string</returns>
+        public string DeleteCampaignsCampaignIdProgress (string campaignId)
+        {
+             ApiResponse<string> localVarResponse = DeleteCampaignsCampaignIdProgressWithHttpInfo(campaignId);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Update callable time set 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3686,6 +6287,20 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'callableTimeSetId' when calling OutboundApi->OutboundCallabletimesetsCallabletimesetidPut");
 
             var localVarPath = "/api/v1/outbound/callabletimesets/{callableTimeSetId}";
+=======
+        /// Reset campaign progress and recycle the campaign 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>ApiResponse of string</returns>
+        public ApiResponse< string > DeleteCampaignsCampaignIdProgressWithHttpInfo (string campaignId)
+        {
+            // verify the required parameter 'campaignId' is set
+            if (campaignId == null)
+                throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->DeleteCampaignsCampaignIdProgress");
+
+            var localVarPath = "/api/v2/outbound/campaigns/{campaignId}/progress";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -3710,6 +6325,7 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (callableTimeSetId != null) localVarPathParams.Add("callableTimeSetId", Configuration.ApiClient.ParameterToString(callableTimeSetId)); // path parameter
             if (body.GetType() != typeof(byte[]))
             {
@@ -3719,6 +6335,9 @@ namespace ININ.PureCloudApi.Api
             {
                 localVarPostBody = body; // byte array
             }
+=======
+            if (campaignId != null) localVarPathParams.Add("campaignId", Configuration.ApiClient.ParameterToString(campaignId)); // path parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -3729,12 +6348,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+<<<<<<< HEAD
                 Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundCallabletimesetsCallabletimesetidPut: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundCallabletimesetsCallabletimesetidPut: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -3742,10 +6366,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<CallableTimeSet>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (CallableTimeSet) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CallableTimeSet)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling DeleteCampaignsCampaignIdProgress: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteCampaignsCampaignIdProgress: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Update callable time set 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3755,11 +6389,22 @@ namespace ININ.PureCloudApi.Api
         public async System.Threading.Tasks.Task<CallableTimeSet> OutboundCallabletimesetsCallabletimesetidPutAsync (string callableTimeSetId, CallableTimeSet body = null)
         {
              ApiResponse<CallableTimeSet> localVarResponse = await OutboundCallabletimesetsCallabletimesetidPutAsyncWithHttpInfo(callableTimeSetId, body);
+=======
+        /// Reset campaign progress and recycle the campaign 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>Task of string</returns>
+        public async System.Threading.Tasks.Task<string> DeleteCampaignsCampaignIdProgressAsync (string campaignId)
+        {
+             ApiResponse<string> localVarResponse = await DeleteCampaignsCampaignIdProgressAsyncWithHttpInfo(campaignId);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
 
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Update callable time set 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3773,6 +6418,20 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'callableTimeSetId' when calling OutboundApi->OutboundCallabletimesetsCallabletimesetidPut");
 
             var localVarPath = "/api/v1/outbound/callabletimesets/{callableTimeSetId}";
+=======
+        /// Reset campaign progress and recycle the campaign 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteCampaignsCampaignIdProgressAsyncWithHttpInfo (string campaignId)
+        {
+            // verify the required parameter 'campaignId' is set
+            if (campaignId == null)
+                throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->DeleteCampaignsCampaignIdProgress");
+
+            var localVarPath = "/api/v2/outbound/campaigns/{campaignId}/progress";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -3797,6 +6456,7 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (callableTimeSetId != null) localVarPathParams.Add("callableTimeSetId", Configuration.ApiClient.ParameterToString(callableTimeSetId)); // path parameter
             if (body.GetType() != typeof(byte[]))
             {
@@ -3806,6 +6466,9 @@ namespace ININ.PureCloudApi.Api
             {
                 localVarPostBody = body; // byte array
             }
+=======
+            if (campaignId != null) localVarPathParams.Add("campaignId", Configuration.ApiClient.ParameterToString(campaignId)); // path parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -3816,12 +6479,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+<<<<<<< HEAD
                 Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundCallabletimesetsCallabletimesetidPut: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundCallabletimesetsCallabletimesetidPut: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -3829,10 +6497,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<CallableTimeSet>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (CallableTimeSet) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CallableTimeSet)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling DeleteCampaignsCampaignIdProgress: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteCampaignsCampaignIdProgress: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Query callable time set list 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3846,10 +6524,21 @@ namespace ININ.PureCloudApi.Api
         public CallableTimeSetEntityListing OutboundCallabletimesetsGet (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
         {
              ApiResponse<CallableTimeSetEntityListing> localVarResponse = OutboundCallabletimesetsGetWithHttpInfo(pageSize, pageNumber, filterType, name, sortBy, sortOrder);
+=======
+        /// Delete a contact list. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">ContactList ID</param>
+        /// <returns>string</returns>
+        public string DeleteContactlistsContactlistId (string contactListId)
+        {
+             ApiResponse<string> localVarResponse = DeleteContactlistsContactlistIdWithHttpInfo(contactListId);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Query callable time set list 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3864,6 +6553,20 @@ namespace ININ.PureCloudApi.Api
         {
 
             var localVarPath = "/api/v1/outbound/callabletimesets";
+=======
+        /// Delete a contact list. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">ContactList ID</param>
+        /// <returns>ApiResponse of string</returns>
+        public ApiResponse< string > DeleteContactlistsContactlistIdWithHttpInfo (string contactListId)
+        {
+            // verify the required parameter 'contactListId' is set
+            if (contactListId == null)
+                throw new ApiException(400, "Missing required parameter 'contactListId' when calling OutboundApi->DeleteContactlistsContactlistId");
+
+            var localVarPath = "/api/v2/outbound/contactlists/{contactListId}";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -3888,12 +6591,16 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
             if (filterType != null) localVarQueryParams.Add("filterType", Configuration.ApiClient.ParameterToString(filterType)); // query parameter
             if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
             if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
             if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
+=======
+            if (contactListId != null) localVarPathParams.Add("contactListId", Configuration.ApiClient.ParameterToString(contactListId)); // path parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -3904,12 +6611,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+<<<<<<< HEAD
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundCallabletimesetsGet: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundCallabletimesetsGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -3917,10 +6629,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<CallableTimeSetEntityListing>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (CallableTimeSetEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CallableTimeSetEntityListing)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling DeleteContactlistsContactlistId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteContactlistsContactlistId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Query callable time set list 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3934,11 +6656,22 @@ namespace ININ.PureCloudApi.Api
         public async System.Threading.Tasks.Task<CallableTimeSetEntityListing> OutboundCallabletimesetsGetAsync (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
         {
              ApiResponse<CallableTimeSetEntityListing> localVarResponse = await OutboundCallabletimesetsGetAsyncWithHttpInfo(pageSize, pageNumber, filterType, name, sortBy, sortOrder);
+=======
+        /// Delete a contact list. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">ContactList ID</param>
+        /// <returns>Task of string</returns>
+        public async System.Threading.Tasks.Task<string> DeleteContactlistsContactlistIdAsync (string contactListId)
+        {
+             ApiResponse<string> localVarResponse = await DeleteContactlistsContactlistIdAsyncWithHttpInfo(contactListId);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
 
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Query callable time set list 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3953,6 +6686,20 @@ namespace ININ.PureCloudApi.Api
         {
 
             var localVarPath = "/api/v1/outbound/callabletimesets";
+=======
+        /// Delete a contact list. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">ContactList ID</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteContactlistsContactlistIdAsyncWithHttpInfo (string contactListId)
+        {
+            // verify the required parameter 'contactListId' is set
+            if (contactListId == null)
+                throw new ApiException(400, "Missing required parameter 'contactListId' when calling OutboundApi->DeleteContactlistsContactlistId");
+
+            var localVarPath = "/api/v2/outbound/contactlists/{contactListId}";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -3977,12 +6724,16 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
             if (filterType != null) localVarQueryParams.Add("filterType", Configuration.ApiClient.ParameterToString(filterType)); // query parameter
             if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
             if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
             if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
+=======
+            if (contactListId != null) localVarPathParams.Add("contactListId", Configuration.ApiClient.ParameterToString(contactListId)); // path parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -3993,12 +6744,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+<<<<<<< HEAD
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundCallabletimesetsGet: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundCallabletimesetsGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -4006,10 +6762,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<CallableTimeSetEntityListing>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (CallableTimeSetEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CallableTimeSetEntityListing)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling DeleteContactlistsContactlistId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteContactlistsContactlistId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Create callable time set 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -4018,10 +6784,22 @@ namespace ININ.PureCloudApi.Api
         public CallableTimeSet OutboundCallabletimesetsPost (CallableTimeSet body = null)
         {
              ApiResponse<CallableTimeSet> localVarResponse = OutboundCallabletimesetsPostWithHttpInfo(body);
+=======
+        /// Delete a contact. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">Contact List ID</param>
+        /// <param name="contactId">Contact ID</param>
+        /// <returns>string</returns>
+        public string DeleteContactlistsContactlistIdContactsContactId (string contactListId, string contactId)
+        {
+             ApiResponse<string> localVarResponse = DeleteContactlistsContactlistIdContactsContactIdWithHttpInfo(contactListId, contactId);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Create callable time set 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -4031,6 +6809,24 @@ namespace ININ.PureCloudApi.Api
         {
 
             var localVarPath = "/api/v1/outbound/callabletimesets";
+=======
+        /// Delete a contact. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">Contact List ID</param>
+        /// <param name="contactId">Contact ID</param>
+        /// <returns>ApiResponse of string</returns>
+        public ApiResponse< string > DeleteContactlistsContactlistIdContactsContactIdWithHttpInfo (string contactListId, string contactId)
+        {
+            // verify the required parameter 'contactListId' is set
+            if (contactListId == null)
+                throw new ApiException(400, "Missing required parameter 'contactListId' when calling OutboundApi->DeleteContactlistsContactlistIdContactsContactId");
+            // verify the required parameter 'contactId' is set
+            if (contactId == null)
+                throw new ApiException(400, "Missing required parameter 'contactId' when calling OutboundApi->DeleteContactlistsContactlistIdContactsContactId");
+
+            var localVarPath = "/api/v2/outbound/contactlists/{contactListId}/contacts/{contactId}";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -4055,6 +6851,7 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -4063,6 +6860,10 @@ namespace ININ.PureCloudApi.Api
             {
                 localVarPostBody = body; // byte array
             }
+=======
+            if (contactListId != null) localVarPathParams.Add("contactListId", Configuration.ApiClient.ParameterToString(contactListId)); // path parameter
+            if (contactId != null) localVarPathParams.Add("contactId", Configuration.ApiClient.ParameterToString(contactId)); // path parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -4073,12 +6874,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+<<<<<<< HEAD
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundCallabletimesetsPost: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundCallabletimesetsPost: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -4086,10 +6892,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<CallableTimeSet>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (CallableTimeSet) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CallableTimeSet)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling DeleteContactlistsContactlistIdContactsContactId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteContactlistsContactlistIdContactsContactId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Create callable time set 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -4098,11 +6914,23 @@ namespace ININ.PureCloudApi.Api
         public async System.Threading.Tasks.Task<CallableTimeSet> OutboundCallabletimesetsPostAsync (CallableTimeSet body = null)
         {
              ApiResponse<CallableTimeSet> localVarResponse = await OutboundCallabletimesetsPostAsyncWithHttpInfo(body);
+=======
+        /// Delete a contact. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">Contact List ID</param>
+        /// <param name="contactId">Contact ID</param>
+        /// <returns>Task of string</returns>
+        public async System.Threading.Tasks.Task<string> DeleteContactlistsContactlistIdContactsContactIdAsync (string contactListId, string contactId)
+        {
+             ApiResponse<string> localVarResponse = await DeleteContactlistsContactlistIdContactsContactIdAsyncWithHttpInfo(contactListId, contactId);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
 
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Create callable time set 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -4112,6 +6940,24 @@ namespace ININ.PureCloudApi.Api
         {
 
             var localVarPath = "/api/v1/outbound/callabletimesets";
+=======
+        /// Delete a contact. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">Contact List ID</param>
+        /// <param name="contactId">Contact ID</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteContactlistsContactlistIdContactsContactIdAsyncWithHttpInfo (string contactListId, string contactId)
+        {
+            // verify the required parameter 'contactListId' is set
+            if (contactListId == null)
+                throw new ApiException(400, "Missing required parameter 'contactListId' when calling OutboundApi->DeleteContactlistsContactlistIdContactsContactId");
+            // verify the required parameter 'contactId' is set
+            if (contactId == null)
+                throw new ApiException(400, "Missing required parameter 'contactId' when calling OutboundApi->DeleteContactlistsContactlistIdContactsContactId");
+
+            var localVarPath = "/api/v2/outbound/contactlists/{contactListId}/contacts/{contactId}";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -4136,6 +6982,7 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -4144,6 +6991,10 @@ namespace ININ.PureCloudApi.Api
             {
                 localVarPostBody = body; // byte array
             }
+=======
+            if (contactListId != null) localVarPathParams.Add("contactListId", Configuration.ApiClient.ParameterToString(contactListId)); // path parameter
+            if (contactId != null) localVarPathParams.Add("contactId", Configuration.ApiClient.ParameterToString(contactId)); // path parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -4154,12 +7005,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+<<<<<<< HEAD
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundCallabletimesetsPost: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundCallabletimesetsPost: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -4167,10 +7023,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<CallableTimeSet>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (CallableTimeSet) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CallableTimeSet)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling DeleteContactlistsContactlistIdContactsContactId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteContactlistsContactlistIdContactsContactId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Delete a dialer call analysis response set. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -4179,10 +7045,21 @@ namespace ININ.PureCloudApi.Api
         public string OutboundCallanalysisresponsesetsCallanalysissetidDelete (string callAnalysisSetId)
         {
              ApiResponse<string> localVarResponse = OutboundCallanalysisresponsesetsCallanalysissetidDeleteWithHttpInfo(callAnalysisSetId);
+=======
+        /// Delete dialer DNC list 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dncListId">DncList ID</param>
+        /// <returns>string</returns>
+        public string DeleteDnclistsDnclistId (string dncListId)
+        {
+             ApiResponse<string> localVarResponse = DeleteDnclistsDnclistIdWithHttpInfo(dncListId);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Delete a dialer call analysis response set. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -4195,6 +7072,20 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'callAnalysisSetId' when calling OutboundApi->OutboundCallanalysisresponsesetsCallanalysissetidDelete");
 
             var localVarPath = "/api/v1/outbound/callanalysisresponsesets/{callAnalysisSetId}";
+=======
+        /// Delete dialer DNC list 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dncListId">DncList ID</param>
+        /// <returns>ApiResponse of string</returns>
+        public ApiResponse< string > DeleteDnclistsDnclistIdWithHttpInfo (string dncListId)
+        {
+            // verify the required parameter 'dncListId' is set
+            if (dncListId == null)
+                throw new ApiException(400, "Missing required parameter 'dncListId' when calling OutboundApi->DeleteDnclistsDnclistId");
+
+            var localVarPath = "/api/v2/outbound/dnclists/{dncListId}";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -4219,7 +7110,11 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (callAnalysisSetId != null) localVarPathParams.Add("callAnalysisSetId", Configuration.ApiClient.ParameterToString(callAnalysisSetId)); // path parameter
+=======
+            if (dncListId != null) localVarPathParams.Add("dncListId", Configuration.ApiClient.ParameterToString(dncListId)); // path parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -4236,9 +7131,15 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundCallanalysisresponsesetsCallanalysissetidDelete: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundCallanalysisresponsesetsCallanalysissetidDelete: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+=======
+                throw new ApiException (localVarStatusCode, "Error calling DeleteDnclistsDnclistId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteDnclistsDnclistId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4247,6 +7148,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Delete a dialer call analysis response set. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -4255,11 +7157,22 @@ namespace ININ.PureCloudApi.Api
         public async System.Threading.Tasks.Task<string> OutboundCallanalysisresponsesetsCallanalysissetidDeleteAsync (string callAnalysisSetId)
         {
              ApiResponse<string> localVarResponse = await OutboundCallanalysisresponsesetsCallanalysissetidDeleteAsyncWithHttpInfo(callAnalysisSetId);
+=======
+        /// Delete dialer DNC list 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dncListId">DncList ID</param>
+        /// <returns>Task of string</returns>
+        public async System.Threading.Tasks.Task<string> DeleteDnclistsDnclistIdAsync (string dncListId)
+        {
+             ApiResponse<string> localVarResponse = await DeleteDnclistsDnclistIdAsyncWithHttpInfo(dncListId);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
 
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Delete a dialer call analysis response set. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -4272,6 +7185,20 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'callAnalysisSetId' when calling OutboundApi->OutboundCallanalysisresponsesetsCallanalysissetidDelete");
 
             var localVarPath = "/api/v1/outbound/callanalysisresponsesets/{callAnalysisSetId}";
+=======
+        /// Delete dialer DNC list 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dncListId">DncList ID</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteDnclistsDnclistIdAsyncWithHttpInfo (string dncListId)
+        {
+            // verify the required parameter 'dncListId' is set
+            if (dncListId == null)
+                throw new ApiException(400, "Missing required parameter 'dncListId' when calling OutboundApi->DeleteDnclistsDnclistId");
+
+            var localVarPath = "/api/v2/outbound/dnclists/{dncListId}";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -4296,7 +7223,11 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (callAnalysisSetId != null) localVarPathParams.Add("callAnalysisSetId", Configuration.ApiClient.ParameterToString(callAnalysisSetId)); // path parameter
+=======
+            if (dncListId != null) localVarPathParams.Add("dncListId", Configuration.ApiClient.ParameterToString(dncListId)); // path parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -4313,9 +7244,15 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundCallanalysisresponsesetsCallanalysissetidDelete: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundCallanalysisresponsesetsCallanalysissetidDelete: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+=======
+                throw new ApiException (localVarStatusCode, "Error calling DeleteDnclistsDnclistId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteDnclistsDnclistId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4324,6 +7261,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Get a dialer call analysis response set. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -4332,10 +7270,21 @@ namespace ININ.PureCloudApi.Api
         public ResponseSet OutboundCallanalysisresponsesetsCallanalysissetidGet (string callAnalysisSetId)
         {
              ApiResponse<ResponseSet> localVarResponse = OutboundCallanalysisresponsesetsCallanalysissetidGetWithHttpInfo(callAnalysisSetId);
+=======
+        /// Delete a Rule set. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ruleSetId">Rule Set ID</param>
+        /// <returns>string</returns>
+        public string DeleteRulesetsRulesetId (string ruleSetId)
+        {
+             ApiResponse<string> localVarResponse = DeleteRulesetsRulesetIdWithHttpInfo(ruleSetId);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Get a dialer call analysis response set. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -4348,6 +7297,20 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'callAnalysisSetId' when calling OutboundApi->OutboundCallanalysisresponsesetsCallanalysissetidGet");
 
             var localVarPath = "/api/v1/outbound/callanalysisresponsesets/{callAnalysisSetId}";
+=======
+        /// Delete a Rule set. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ruleSetId">Rule Set ID</param>
+        /// <returns>ApiResponse of string</returns>
+        public ApiResponse< string > DeleteRulesetsRulesetIdWithHttpInfo (string ruleSetId)
+        {
+            // verify the required parameter 'ruleSetId' is set
+            if (ruleSetId == null)
+                throw new ApiException(400, "Missing required parameter 'ruleSetId' when calling OutboundApi->DeleteRulesetsRulesetId");
+
+            var localVarPath = "/api/v2/outbound/rulesets/{ruleSetId}";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -4372,7 +7335,11 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (callAnalysisSetId != null) localVarPathParams.Add("callAnalysisSetId", Configuration.ApiClient.ParameterToString(callAnalysisSetId)); // path parameter
+=======
+            if (ruleSetId != null) localVarPathParams.Add("ruleSetId", Configuration.ApiClient.ParameterToString(ruleSetId)); // path parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -4383,12 +7350,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+<<<<<<< HEAD
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundCallanalysisresponsesetsCallanalysissetidGet: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundCallanalysisresponsesetsCallanalysissetidGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -4396,10 +7368,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<ResponseSet>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ResponseSet) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseSet)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling DeleteRulesetsRulesetId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteRulesetsRulesetId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Get a dialer call analysis response set. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -4408,11 +7390,22 @@ namespace ININ.PureCloudApi.Api
         public async System.Threading.Tasks.Task<ResponseSet> OutboundCallanalysisresponsesetsCallanalysissetidGetAsync (string callAnalysisSetId)
         {
              ApiResponse<ResponseSet> localVarResponse = await OutboundCallanalysisresponsesetsCallanalysissetidGetAsyncWithHttpInfo(callAnalysisSetId);
+=======
+        /// Delete a Rule set. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ruleSetId">Rule Set ID</param>
+        /// <returns>Task of string</returns>
+        public async System.Threading.Tasks.Task<string> DeleteRulesetsRulesetIdAsync (string ruleSetId)
+        {
+             ApiResponse<string> localVarResponse = await DeleteRulesetsRulesetIdAsyncWithHttpInfo(ruleSetId);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
 
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Get a dialer call analysis response set. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -4425,6 +7418,20 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'callAnalysisSetId' when calling OutboundApi->OutboundCallanalysisresponsesetsCallanalysissetidGet");
 
             var localVarPath = "/api/v1/outbound/callanalysisresponsesets/{callAnalysisSetId}";
+=======
+        /// Delete a Rule set. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ruleSetId">Rule Set ID</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteRulesetsRulesetIdAsyncWithHttpInfo (string ruleSetId)
+        {
+            // verify the required parameter 'ruleSetId' is set
+            if (ruleSetId == null)
+                throw new ApiException(400, "Missing required parameter 'ruleSetId' when calling OutboundApi->DeleteRulesetsRulesetId");
+
+            var localVarPath = "/api/v2/outbound/rulesets/{ruleSetId}";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -4449,7 +7456,11 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (callAnalysisSetId != null) localVarPathParams.Add("callAnalysisSetId", Configuration.ApiClient.ParameterToString(callAnalysisSetId)); // path parameter
+=======
+            if (ruleSetId != null) localVarPathParams.Add("ruleSetId", Configuration.ApiClient.ParameterToString(ruleSetId)); // path parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -4460,12 +7471,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+<<<<<<< HEAD
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundCallanalysisresponsesetsCallanalysissetidGet: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundCallanalysisresponsesetsCallanalysissetidGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -4473,10 +7489,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<ResponseSet>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ResponseSet) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseSet)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling DeleteRulesetsRulesetId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteRulesetsRulesetId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Update a dialer call analysis response set. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -4486,10 +7512,21 @@ namespace ININ.PureCloudApi.Api
         public ResponseSet OutboundCallanalysisresponsesetsCallanalysissetidPut (string callAnalysisSetId, ResponseSet body = null)
         {
              ApiResponse<ResponseSet> localVarResponse = OutboundCallanalysisresponsesetsCallanalysissetidPutWithHttpInfo(callAnalysisSetId, body);
+=======
+        /// Delete a dialer campaign schedule. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>string</returns>
+        public string DeleteSchedulesCampaignsCampaignId (string campaignId)
+        {
+             ApiResponse<string> localVarResponse = DeleteSchedulesCampaignsCampaignIdWithHttpInfo(campaignId);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Update a dialer call analysis response set. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -4503,6 +7540,20 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'callAnalysisSetId' when calling OutboundApi->OutboundCallanalysisresponsesetsCallanalysissetidPut");
 
             var localVarPath = "/api/v1/outbound/callanalysisresponsesets/{callAnalysisSetId}";
+=======
+        /// Delete a dialer campaign schedule. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>ApiResponse of string</returns>
+        public ApiResponse< string > DeleteSchedulesCampaignsCampaignIdWithHttpInfo (string campaignId)
+        {
+            // verify the required parameter 'campaignId' is set
+            if (campaignId == null)
+                throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->DeleteSchedulesCampaignsCampaignId");
+
+            var localVarPath = "/api/v2/outbound/schedules/campaigns/{campaignId}";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -4527,6 +7578,7 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (callAnalysisSetId != null) localVarPathParams.Add("callAnalysisSetId", Configuration.ApiClient.ParameterToString(callAnalysisSetId)); // path parameter
             if (body.GetType() != typeof(byte[]))
             {
@@ -4536,6 +7588,9 @@ namespace ININ.PureCloudApi.Api
             {
                 localVarPostBody = body; // byte array
             }
+=======
+            if (campaignId != null) localVarPathParams.Add("campaignId", Configuration.ApiClient.ParameterToString(campaignId)); // path parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -4546,12 +7601,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+<<<<<<< HEAD
                 Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundCallanalysisresponsesetsCallanalysissetidPut: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundCallanalysisresponsesetsCallanalysissetidPut: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -4559,10 +7619,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<ResponseSet>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ResponseSet) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseSet)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling DeleteSchedulesCampaignsCampaignId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteSchedulesCampaignsCampaignId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Update a dialer call analysis response set. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -4572,11 +7642,22 @@ namespace ININ.PureCloudApi.Api
         public async System.Threading.Tasks.Task<ResponseSet> OutboundCallanalysisresponsesetsCallanalysissetidPutAsync (string callAnalysisSetId, ResponseSet body = null)
         {
              ApiResponse<ResponseSet> localVarResponse = await OutboundCallanalysisresponsesetsCallanalysissetidPutAsyncWithHttpInfo(callAnalysisSetId, body);
+=======
+        /// Delete a dialer campaign schedule. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>Task of string</returns>
+        public async System.Threading.Tasks.Task<string> DeleteSchedulesCampaignsCampaignIdAsync (string campaignId)
+        {
+             ApiResponse<string> localVarResponse = await DeleteSchedulesCampaignsCampaignIdAsyncWithHttpInfo(campaignId);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
 
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Update a dialer call analysis response set. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -4590,6 +7671,20 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'callAnalysisSetId' when calling OutboundApi->OutboundCallanalysisresponsesetsCallanalysissetidPut");
 
             var localVarPath = "/api/v1/outbound/callanalysisresponsesets/{callAnalysisSetId}";
+=======
+        /// Delete a dialer campaign schedule. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteSchedulesCampaignsCampaignIdAsyncWithHttpInfo (string campaignId)
+        {
+            // verify the required parameter 'campaignId' is set
+            if (campaignId == null)
+                throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->DeleteSchedulesCampaignsCampaignId");
+
+            var localVarPath = "/api/v2/outbound/schedules/campaigns/{campaignId}";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -4614,6 +7709,7 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (callAnalysisSetId != null) localVarPathParams.Add("callAnalysisSetId", Configuration.ApiClient.ParameterToString(callAnalysisSetId)); // path parameter
             if (body.GetType() != typeof(byte[]))
             {
@@ -4623,6 +7719,9 @@ namespace ININ.PureCloudApi.Api
             {
                 localVarPostBody = body; // byte array
             }
+=======
+            if (campaignId != null) localVarPathParams.Add("campaignId", Configuration.ApiClient.ParameterToString(campaignId)); // path parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -4633,12 +7732,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+<<<<<<< HEAD
                 Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundCallanalysisresponsesetsCallanalysissetidPut: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundCallanalysisresponsesetsCallanalysissetidPut: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -4646,10 +7750,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<ResponseSet>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ResponseSet) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseSet)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling DeleteSchedulesCampaignsCampaignId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteSchedulesCampaignsCampaignId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Query a list of dialer call analysis response sets. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -4663,10 +7777,21 @@ namespace ININ.PureCloudApi.Api
         public ResponseSetEntityListing OutboundCallanalysisresponsesetsGet (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
         {
              ApiResponse<ResponseSetEntityListing> localVarResponse = OutboundCallanalysisresponsesetsGetWithHttpInfo(pageSize, pageNumber, filterType, name, sortBy, sortOrder);
+=======
+        /// Delete a dialer sequence schedule. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sequenceId">Sequence ID</param>
+        /// <returns>string</returns>
+        public string DeleteSchedulesSequencesSequenceId (string sequenceId)
+        {
+             ApiResponse<string> localVarResponse = DeleteSchedulesSequencesSequenceIdWithHttpInfo(sequenceId);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Query a list of dialer call analysis response sets. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -4681,6 +7806,20 @@ namespace ININ.PureCloudApi.Api
         {
 
             var localVarPath = "/api/v1/outbound/callanalysisresponsesets";
+=======
+        /// Delete a dialer sequence schedule. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sequenceId">Sequence ID</param>
+        /// <returns>ApiResponse of string</returns>
+        public ApiResponse< string > DeleteSchedulesSequencesSequenceIdWithHttpInfo (string sequenceId)
+        {
+            // verify the required parameter 'sequenceId' is set
+            if (sequenceId == null)
+                throw new ApiException(400, "Missing required parameter 'sequenceId' when calling OutboundApi->DeleteSchedulesSequencesSequenceId");
+
+            var localVarPath = "/api/v2/outbound/schedules/sequences/{sequenceId}";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -4705,12 +7844,16 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
             if (filterType != null) localVarQueryParams.Add("filterType", Configuration.ApiClient.ParameterToString(filterType)); // query parameter
             if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
             if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
             if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
+=======
+            if (sequenceId != null) localVarPathParams.Add("sequenceId", Configuration.ApiClient.ParameterToString(sequenceId)); // path parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -4721,12 +7864,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+<<<<<<< HEAD
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundCallanalysisresponsesetsGet: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundCallanalysisresponsesetsGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -4734,10 +7882,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<ResponseSetEntityListing>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ResponseSetEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseSetEntityListing)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling DeleteSchedulesSequencesSequenceId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteSchedulesSequencesSequenceId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Query a list of dialer call analysis response sets. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -4751,11 +7909,22 @@ namespace ININ.PureCloudApi.Api
         public async System.Threading.Tasks.Task<ResponseSetEntityListing> OutboundCallanalysisresponsesetsGetAsync (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
         {
              ApiResponse<ResponseSetEntityListing> localVarResponse = await OutboundCallanalysisresponsesetsGetAsyncWithHttpInfo(pageSize, pageNumber, filterType, name, sortBy, sortOrder);
+=======
+        /// Delete a dialer sequence schedule. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sequenceId">Sequence ID</param>
+        /// <returns>Task of string</returns>
+        public async System.Threading.Tasks.Task<string> DeleteSchedulesSequencesSequenceIdAsync (string sequenceId)
+        {
+             ApiResponse<string> localVarResponse = await DeleteSchedulesSequencesSequenceIdAsyncWithHttpInfo(sequenceId);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
 
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Query a list of dialer call analysis response sets. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -4770,6 +7939,20 @@ namespace ININ.PureCloudApi.Api
         {
 
             var localVarPath = "/api/v1/outbound/callanalysisresponsesets";
+=======
+        /// Delete a dialer sequence schedule. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sequenceId">Sequence ID</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteSchedulesSequencesSequenceIdAsyncWithHttpInfo (string sequenceId)
+        {
+            // verify the required parameter 'sequenceId' is set
+            if (sequenceId == null)
+                throw new ApiException(400, "Missing required parameter 'sequenceId' when calling OutboundApi->DeleteSchedulesSequencesSequenceId");
+
+            var localVarPath = "/api/v2/outbound/schedules/sequences/{sequenceId}";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -4794,12 +7977,16 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
             if (filterType != null) localVarQueryParams.Add("filterType", Configuration.ApiClient.ParameterToString(filterType)); // query parameter
             if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
             if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
             if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
+=======
+            if (sequenceId != null) localVarPathParams.Add("sequenceId", Configuration.ApiClient.ParameterToString(sequenceId)); // path parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -4810,12 +7997,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+<<<<<<< HEAD
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundCallanalysisresponsesetsGet: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundCallanalysisresponsesetsGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -4823,10 +8015,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<ResponseSetEntityListing>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ResponseSetEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseSetEntityListing)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling DeleteSchedulesSequencesSequenceId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteSchedulesSequencesSequenceId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Create a dialer call analysis response set. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -4835,10 +8037,21 @@ namespace ININ.PureCloudApi.Api
         public ResponseSet OutboundCallanalysisresponsesetsPost (ResponseSet body = null)
         {
              ApiResponse<ResponseSet> localVarResponse = OutboundCallanalysisresponsesetsPostWithHttpInfo(body);
+=======
+        /// Delete a dialer campaign sequence. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sequenceId">Campaign Sequence ID</param>
+        /// <returns>string</returns>
+        public string DeleteSequencesSequenceId (string sequenceId)
+        {
+             ApiResponse<string> localVarResponse = DeleteSequencesSequenceIdWithHttpInfo(sequenceId);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Create a dialer call analysis response set. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -4848,6 +8061,20 @@ namespace ININ.PureCloudApi.Api
         {
 
             var localVarPath = "/api/v1/outbound/callanalysisresponsesets";
+=======
+        /// Delete a dialer campaign sequence. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sequenceId">Campaign Sequence ID</param>
+        /// <returns>ApiResponse of string</returns>
+        public ApiResponse< string > DeleteSequencesSequenceIdWithHttpInfo (string sequenceId)
+        {
+            // verify the required parameter 'sequenceId' is set
+            if (sequenceId == null)
+                throw new ApiException(400, "Missing required parameter 'sequenceId' when calling OutboundApi->DeleteSequencesSequenceId");
+
+            var localVarPath = "/api/v2/outbound/sequences/{sequenceId}";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -4872,6 +8099,7 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -4880,6 +8108,9 @@ namespace ININ.PureCloudApi.Api
             {
                 localVarPostBody = body; // byte array
             }
+=======
+            if (sequenceId != null) localVarPathParams.Add("sequenceId", Configuration.ApiClient.ParameterToString(sequenceId)); // path parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -4890,12 +8121,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+<<<<<<< HEAD
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundCallanalysisresponsesetsPost: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundCallanalysisresponsesetsPost: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -4903,10 +8139,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<ResponseSet>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ResponseSet) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseSet)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling DeleteSequencesSequenceId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteSequencesSequenceId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Create a dialer call analysis response set. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -4915,11 +8161,22 @@ namespace ININ.PureCloudApi.Api
         public async System.Threading.Tasks.Task<ResponseSet> OutboundCallanalysisresponsesetsPostAsync (ResponseSet body = null)
         {
              ApiResponse<ResponseSet> localVarResponse = await OutboundCallanalysisresponsesetsPostAsyncWithHttpInfo(body);
+=======
+        /// Delete a dialer campaign sequence. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sequenceId">Campaign Sequence ID</param>
+        /// <returns>Task of string</returns>
+        public async System.Threading.Tasks.Task<string> DeleteSequencesSequenceIdAsync (string sequenceId)
+        {
+             ApiResponse<string> localVarResponse = await DeleteSequencesSequenceIdAsyncWithHttpInfo(sequenceId);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
 
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Create a dialer call analysis response set. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -4929,6 +8186,20 @@ namespace ININ.PureCloudApi.Api
         {
 
             var localVarPath = "/api/v1/outbound/callanalysisresponsesets";
+=======
+        /// Delete a dialer campaign sequence. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sequenceId">Campaign Sequence ID</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteSequencesSequenceIdAsyncWithHttpInfo (string sequenceId)
+        {
+            // verify the required parameter 'sequenceId' is set
+            if (sequenceId == null)
+                throw new ApiException(400, "Missing required parameter 'sequenceId' when calling OutboundApi->DeleteSequencesSequenceId");
+
+            var localVarPath = "/api/v2/outbound/sequences/{sequenceId}";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -4953,6 +8224,7 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -4961,6 +8233,9 @@ namespace ININ.PureCloudApi.Api
             {
                 localVarPostBody = body; // byte array
             }
+=======
+            if (sequenceId != null) localVarPathParams.Add("sequenceId", Configuration.ApiClient.ParameterToString(sequenceId)); // path parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -4971,12 +8246,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+<<<<<<< HEAD
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundCallanalysisresponsesetsPost: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundCallanalysisresponsesetsPost: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -4984,10 +8264,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<ResponseSet>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ResponseSet) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseSet)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling DeleteSequencesSequenceId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteSequencesSequenceId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Send notification that an agent&#39;s state changed  New agent state.
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -4998,10 +8288,26 @@ namespace ININ.PureCloudApi.Api
         public string OutboundCampaignsCampaignidAgentsUseridPut (string campaignId, string userId, Agent body = null)
         {
              ApiResponse<string> localVarResponse = OutboundCampaignsCampaignidAgentsUseridPutWithHttpInfo(campaignId, userId, body);
+=======
+        /// Query callable time set list 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <returns>CallableTimeSetEntityListing</returns>
+        public CallableTimeSetEntityListing GetCallabletimesets (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
+        {
+             ApiResponse<CallableTimeSetEntityListing> localVarResponse = GetCallabletimesetsWithHttpInfo(pageSize, pageNumber, filterType, name, sortBy, sortOrder);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Send notification that an agent&#39;s state changed  New agent state.
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -5019,6 +8325,22 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'userId' when calling OutboundApi->OutboundCampaignsCampaignidAgentsUseridPut");
 
             var localVarPath = "/api/v1/outbound/campaigns/{campaignId}/agents/{userId}";
+=======
+        /// Query callable time set list 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <returns>ApiResponse of CallableTimeSetEntityListing</returns>
+        public ApiResponse< CallableTimeSetEntityListing > GetCallabletimesetsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
+        {
+
+            var localVarPath = "/api/v2/outbound/callabletimesets";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -5043,6 +8365,7 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (campaignId != null) localVarPathParams.Add("campaignId", Configuration.ApiClient.ParameterToString(campaignId)); // path parameter
             if (userId != null) localVarPathParams.Add("userId", Configuration.ApiClient.ParameterToString(userId)); // path parameter
             if (body.GetType() != typeof(byte[]))
@@ -5053,6 +8376,14 @@ namespace ININ.PureCloudApi.Api
             {
                 localVarPostBody = body; // byte array
             }
+=======
+            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            if (filterType != null) localVarQueryParams.Add("filterType", Configuration.ApiClient.ParameterToString(filterType)); // query parameter
+            if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
+            if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
+            if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -5063,12 +8394,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+<<<<<<< HEAD
                 Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundCampaignsCampaignidAgentsUseridPut: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundCampaignsCampaignidAgentsUseridPut: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -5076,10 +8412,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling GetCallabletimesets: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetCallabletimesets: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CallableTimeSetEntityListing>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (CallableTimeSetEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CallableTimeSetEntityListing)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Send notification that an agent&#39;s state changed  New agent state.
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -5090,11 +8436,27 @@ namespace ININ.PureCloudApi.Api
         public async System.Threading.Tasks.Task<string> OutboundCampaignsCampaignidAgentsUseridPutAsync (string campaignId, string userId, Agent body = null)
         {
              ApiResponse<string> localVarResponse = await OutboundCampaignsCampaignidAgentsUseridPutAsyncWithHttpInfo(campaignId, userId, body);
+=======
+        /// Query callable time set list 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <returns>Task of CallableTimeSetEntityListing</returns>
+        public async System.Threading.Tasks.Task<CallableTimeSetEntityListing> GetCallabletimesetsAsync (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
+        {
+             ApiResponse<CallableTimeSetEntityListing> localVarResponse = await GetCallabletimesetsAsyncWithHttpInfo(pageSize, pageNumber, filterType, name, sortBy, sortOrder);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
 
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Send notification that an agent&#39;s state changed  New agent state.
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -5112,6 +8474,22 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'userId' when calling OutboundApi->OutboundCampaignsCampaignidAgentsUseridPut");
 
             var localVarPath = "/api/v1/outbound/campaigns/{campaignId}/agents/{userId}";
+=======
+        /// Query callable time set list 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <returns>Task of ApiResponse (CallableTimeSetEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CallableTimeSetEntityListing>> GetCallabletimesetsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
+        {
+
+            var localVarPath = "/api/v2/outbound/callabletimesets";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -5136,6 +8514,7 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (campaignId != null) localVarPathParams.Add("campaignId", Configuration.ApiClient.ParameterToString(campaignId)); // path parameter
             if (userId != null) localVarPathParams.Add("userId", Configuration.ApiClient.ParameterToString(userId)); // path parameter
             if (body.GetType() != typeof(byte[]))
@@ -5146,6 +8525,14 @@ namespace ININ.PureCloudApi.Api
             {
                 localVarPostBody = body; // byte array
             }
+=======
+            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            if (filterType != null) localVarQueryParams.Add("filterType", Configuration.ApiClient.ParameterToString(filterType)); // query parameter
+            if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
+            if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
+            if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -5156,12 +8543,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+<<<<<<< HEAD
                 Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundCampaignsCampaignidAgentsUseridPut: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundCampaignsCampaignidAgentsUseridPut: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -5169,10 +8561,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling GetCallabletimesets: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetCallabletimesets: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CallableTimeSetEntityListing>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (CallableTimeSetEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CallableTimeSetEntityListing)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Schedule a Callback for a Dialer Campaign 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -5182,10 +8584,21 @@ namespace ININ.PureCloudApi.Api
         public ContactCallbackRequest OutboundCampaignsCampaignidCallbackSchedulePost (string campaignId, ContactCallbackRequest body = null)
         {
              ApiResponse<ContactCallbackRequest> localVarResponse = OutboundCampaignsCampaignidCallbackSchedulePostWithHttpInfo(campaignId, body);
+=======
+        /// Get callable time set 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callableTimeSetId">Callable Time Set ID</param>
+        /// <returns>CallableTimeSet</returns>
+        public CallableTimeSet GetCallabletimesetsCallabletimesetId (string callableTimeSetId)
+        {
+             ApiResponse<CallableTimeSet> localVarResponse = GetCallabletimesetsCallabletimesetIdWithHttpInfo(callableTimeSetId);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Schedule a Callback for a Dialer Campaign 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -5199,6 +8612,20 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->OutboundCampaignsCampaignidCallbackSchedulePost");
 
             var localVarPath = "/api/v1/outbound/campaigns/{campaignId}/callback/schedule";
+=======
+        /// Get callable time set 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callableTimeSetId">Callable Time Set ID</param>
+        /// <returns>ApiResponse of CallableTimeSet</returns>
+        public ApiResponse< CallableTimeSet > GetCallabletimesetsCallabletimesetIdWithHttpInfo (string callableTimeSetId)
+        {
+            // verify the required parameter 'callableTimeSetId' is set
+            if (callableTimeSetId == null)
+                throw new ApiException(400, "Missing required parameter 'callableTimeSetId' when calling OutboundApi->GetCallabletimesetsCallabletimesetId");
+
+            var localVarPath = "/api/v2/outbound/callabletimesets/{callableTimeSetId}";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -5223,6 +8650,7 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (campaignId != null) localVarPathParams.Add("campaignId", Configuration.ApiClient.ParameterToString(campaignId)); // path parameter
             if (body.GetType() != typeof(byte[]))
             {
@@ -5232,6 +8660,9 @@ namespace ININ.PureCloudApi.Api
             {
                 localVarPostBody = body; // byte array
             }
+=======
+            if (callableTimeSetId != null) localVarPathParams.Add("callableTimeSetId", Configuration.ApiClient.ParameterToString(callableTimeSetId)); // path parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -5242,12 +8673,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+<<<<<<< HEAD
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundCampaignsCampaignidCallbackSchedulePost: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundCampaignsCampaignidCallbackSchedulePost: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -5255,10 +8691,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<ContactCallbackRequest>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ContactCallbackRequest) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContactCallbackRequest)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling GetCallabletimesetsCallabletimesetId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetCallabletimesetsCallabletimesetId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CallableTimeSet>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (CallableTimeSet) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CallableTimeSet)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Schedule a Callback for a Dialer Campaign 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -5268,11 +8714,22 @@ namespace ININ.PureCloudApi.Api
         public async System.Threading.Tasks.Task<ContactCallbackRequest> OutboundCampaignsCampaignidCallbackSchedulePostAsync (string campaignId, ContactCallbackRequest body = null)
         {
              ApiResponse<ContactCallbackRequest> localVarResponse = await OutboundCampaignsCampaignidCallbackSchedulePostAsyncWithHttpInfo(campaignId, body);
+=======
+        /// Get callable time set 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callableTimeSetId">Callable Time Set ID</param>
+        /// <returns>Task of CallableTimeSet</returns>
+        public async System.Threading.Tasks.Task<CallableTimeSet> GetCallabletimesetsCallabletimesetIdAsync (string callableTimeSetId)
+        {
+             ApiResponse<CallableTimeSet> localVarResponse = await GetCallabletimesetsCallabletimesetIdAsyncWithHttpInfo(callableTimeSetId);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
 
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Schedule a Callback for a Dialer Campaign 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -5286,6 +8743,20 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->OutboundCampaignsCampaignidCallbackSchedulePost");
 
             var localVarPath = "/api/v1/outbound/campaigns/{campaignId}/callback/schedule";
+=======
+        /// Get callable time set 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callableTimeSetId">Callable Time Set ID</param>
+        /// <returns>Task of ApiResponse (CallableTimeSet)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CallableTimeSet>> GetCallabletimesetsCallabletimesetIdAsyncWithHttpInfo (string callableTimeSetId)
+        {
+            // verify the required parameter 'callableTimeSetId' is set
+            if (callableTimeSetId == null)
+                throw new ApiException(400, "Missing required parameter 'callableTimeSetId' when calling OutboundApi->GetCallabletimesetsCallabletimesetId");
+
+            var localVarPath = "/api/v2/outbound/callabletimesets/{callableTimeSetId}";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -5310,6 +8781,7 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (campaignId != null) localVarPathParams.Add("campaignId", Configuration.ApiClient.ParameterToString(campaignId)); // path parameter
             if (body.GetType() != typeof(byte[]))
             {
@@ -5319,6 +8791,9 @@ namespace ININ.PureCloudApi.Api
             {
                 localVarPostBody = body; // byte array
             }
+=======
+            if (callableTimeSetId != null) localVarPathParams.Add("callableTimeSetId", Configuration.ApiClient.ParameterToString(callableTimeSetId)); // path parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -5329,12 +8804,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+<<<<<<< HEAD
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundCampaignsCampaignidCallbackSchedulePost: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundCampaignsCampaignidCallbackSchedulePost: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -5342,10 +8822,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<ContactCallbackRequest>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ContactCallbackRequest) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContactCallbackRequest)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling GetCallabletimesetsCallabletimesetId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetCallabletimesetsCallabletimesetId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CallableTimeSet>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (CallableTimeSet) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CallableTimeSet)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Delete a campaign. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -5354,10 +8844,26 @@ namespace ININ.PureCloudApi.Api
         public string OutboundCampaignsCampaignidDelete (string campaignId)
         {
              ApiResponse<string> localVarResponse = OutboundCampaignsCampaignidDeleteWithHttpInfo(campaignId);
+=======
+        /// Query a list of dialer call analysis response sets. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <returns>ResponseSetEntityListing</returns>
+        public ResponseSetEntityListing GetCallanalysisresponsesets (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
+        {
+             ApiResponse<ResponseSetEntityListing> localVarResponse = GetCallanalysisresponsesetsWithHttpInfo(pageSize, pageNumber, filterType, name, sortBy, sortOrder);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Delete a campaign. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -5370,6 +8876,22 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->OutboundCampaignsCampaignidDelete");
 
             var localVarPath = "/api/v1/outbound/campaigns/{campaignId}";
+=======
+        /// Query a list of dialer call analysis response sets. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <returns>ApiResponse of ResponseSetEntityListing</returns>
+        public ApiResponse< ResponseSetEntityListing > GetCallanalysisresponsesetsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
+        {
+
+            var localVarPath = "/api/v2/outbound/callanalysisresponsesets";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -5394,7 +8916,16 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (campaignId != null) localVarPathParams.Add("campaignId", Configuration.ApiClient.ParameterToString(campaignId)); // path parameter
+=======
+            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            if (filterType != null) localVarQueryParams.Add("filterType", Configuration.ApiClient.ParameterToString(filterType)); // query parameter
+            if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
+            if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
+            if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -5405,12 +8936,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+<<<<<<< HEAD
                 Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundCampaignsCampaignidDelete: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundCampaignsCampaignidDelete: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -5418,10 +8954,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling GetCallanalysisresponsesets: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetCallanalysisresponsesets: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ResponseSetEntityListing>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ResponseSetEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseSetEntityListing)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Delete a campaign. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -5430,11 +8976,27 @@ namespace ININ.PureCloudApi.Api
         public async System.Threading.Tasks.Task<string> OutboundCampaignsCampaignidDeleteAsync (string campaignId)
         {
              ApiResponse<string> localVarResponse = await OutboundCampaignsCampaignidDeleteAsyncWithHttpInfo(campaignId);
+=======
+        /// Query a list of dialer call analysis response sets. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <returns>Task of ResponseSetEntityListing</returns>
+        public async System.Threading.Tasks.Task<ResponseSetEntityListing> GetCallanalysisresponsesetsAsync (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
+        {
+             ApiResponse<ResponseSetEntityListing> localVarResponse = await GetCallanalysisresponsesetsAsyncWithHttpInfo(pageSize, pageNumber, filterType, name, sortBy, sortOrder);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
 
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Delete a campaign. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -5447,6 +9009,22 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->OutboundCampaignsCampaignidDelete");
 
             var localVarPath = "/api/v1/outbound/campaigns/{campaignId}";
+=======
+        /// Query a list of dialer call analysis response sets. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <returns>Task of ApiResponse (ResponseSetEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ResponseSetEntityListing>> GetCallanalysisresponsesetsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
+        {
+
+            var localVarPath = "/api/v2/outbound/callanalysisresponsesets";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -5471,7 +9049,16 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (campaignId != null) localVarPathParams.Add("campaignId", Configuration.ApiClient.ParameterToString(campaignId)); // path parameter
+=======
+            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            if (filterType != null) localVarQueryParams.Add("filterType", Configuration.ApiClient.ParameterToString(filterType)); // query parameter
+            if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
+            if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
+            if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -5482,12 +9069,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+<<<<<<< HEAD
                 Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundCampaignsCampaignidDelete: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundCampaignsCampaignidDelete: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -5495,10 +9087,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling GetCallanalysisresponsesets: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetCallanalysisresponsesets: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ResponseSetEntityListing>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ResponseSetEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseSetEntityListing)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Get campaign diagnostics 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -5507,10 +9109,21 @@ namespace ININ.PureCloudApi.Api
         public CampaignDiagnostics OutboundCampaignsCampaignidDiagnosticsGet (string campaignId)
         {
              ApiResponse<CampaignDiagnostics> localVarResponse = OutboundCampaignsCampaignidDiagnosticsGetWithHttpInfo(campaignId);
+=======
+        /// Get a dialer call analysis response set. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
+        /// <returns>ResponseSet</returns>
+        public ResponseSet GetCallanalysisresponsesetsCallanalysissetId (string callAnalysisSetId)
+        {
+             ApiResponse<ResponseSet> localVarResponse = GetCallanalysisresponsesetsCallanalysissetIdWithHttpInfo(callAnalysisSetId);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Get campaign diagnostics 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -5523,6 +9136,20 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->OutboundCampaignsCampaignidDiagnosticsGet");
 
             var localVarPath = "/api/v1/outbound/campaigns/{campaignId}/diagnostics";
+=======
+        /// Get a dialer call analysis response set. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
+        /// <returns>ApiResponse of ResponseSet</returns>
+        public ApiResponse< ResponseSet > GetCallanalysisresponsesetsCallanalysissetIdWithHttpInfo (string callAnalysisSetId)
+        {
+            // verify the required parameter 'callAnalysisSetId' is set
+            if (callAnalysisSetId == null)
+                throw new ApiException(400, "Missing required parameter 'callAnalysisSetId' when calling OutboundApi->GetCallanalysisresponsesetsCallanalysissetId");
+
+            var localVarPath = "/api/v2/outbound/callanalysisresponsesets/{callAnalysisSetId}";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -5547,7 +9174,11 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (campaignId != null) localVarPathParams.Add("campaignId", Configuration.ApiClient.ParameterToString(campaignId)); // path parameter
+=======
+            if (callAnalysisSetId != null) localVarPathParams.Add("callAnalysisSetId", Configuration.ApiClient.ParameterToString(callAnalysisSetId)); // path parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -5564,6 +9195,7 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundCampaignsCampaignidDiagnosticsGet: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundCampaignsCampaignidDiagnosticsGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -5571,10 +9203,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<CampaignDiagnostics>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (CampaignDiagnostics) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CampaignDiagnostics)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling GetCallanalysisresponsesetsCallanalysissetId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetCallanalysisresponsesetsCallanalysissetId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ResponseSet>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ResponseSet) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseSet)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Get campaign diagnostics 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -5583,11 +9225,22 @@ namespace ININ.PureCloudApi.Api
         public async System.Threading.Tasks.Task<CampaignDiagnostics> OutboundCampaignsCampaignidDiagnosticsGetAsync (string campaignId)
         {
              ApiResponse<CampaignDiagnostics> localVarResponse = await OutboundCampaignsCampaignidDiagnosticsGetAsyncWithHttpInfo(campaignId);
+=======
+        /// Get a dialer call analysis response set. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
+        /// <returns>Task of ResponseSet</returns>
+        public async System.Threading.Tasks.Task<ResponseSet> GetCallanalysisresponsesetsCallanalysissetIdAsync (string callAnalysisSetId)
+        {
+             ApiResponse<ResponseSet> localVarResponse = await GetCallanalysisresponsesetsCallanalysissetIdAsyncWithHttpInfo(callAnalysisSetId);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
 
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Get campaign diagnostics 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -5600,6 +9253,20 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->OutboundCampaignsCampaignidDiagnosticsGet");
 
             var localVarPath = "/api/v1/outbound/campaigns/{campaignId}/diagnostics";
+=======
+        /// Get a dialer call analysis response set. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
+        /// <returns>Task of ApiResponse (ResponseSet)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ResponseSet>> GetCallanalysisresponsesetsCallanalysissetIdAsyncWithHttpInfo (string callAnalysisSetId)
+        {
+            // verify the required parameter 'callAnalysisSetId' is set
+            if (callAnalysisSetId == null)
+                throw new ApiException(400, "Missing required parameter 'callAnalysisSetId' when calling OutboundApi->GetCallanalysisresponsesetsCallanalysissetId");
+
+            var localVarPath = "/api/v2/outbound/callanalysisresponsesets/{callAnalysisSetId}";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -5624,7 +9291,11 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (campaignId != null) localVarPathParams.Add("campaignId", Configuration.ApiClient.ParameterToString(campaignId)); // path parameter
+=======
+            if (callAnalysisSetId != null) localVarPathParams.Add("callAnalysisSetId", Configuration.ApiClient.ParameterToString(callAnalysisSetId)); // path parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -5641,6 +9312,7 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundCampaignsCampaignidDiagnosticsGet: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundCampaignsCampaignidDiagnosticsGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -5648,10 +9320,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<CampaignDiagnostics>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (CampaignDiagnostics) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CampaignDiagnostics)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling GetCallanalysisresponsesetsCallanalysissetId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetCallanalysisresponsesetsCallanalysissetId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ResponseSet>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ResponseSet) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseSet)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Get dialer campaign. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -5660,10 +9342,31 @@ namespace ININ.PureCloudApi.Api
         public Campaign OutboundCampaignsCampaignidGet (string campaignId)
         {
              ApiResponse<Campaign> localVarResponse = OutboundCampaignsCampaignidGetWithHttpInfo(campaignId);
+=======
+        /// Query a list of dialer campaigns. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="contactListId">Contact List ID (optional)</param>
+        /// <param name="dncListId">DNC list ID (optional)</param>
+        /// <param name="distributionQueueId">Distribution queue ID (optional)</param>
+        /// <param name="edgeGroupId">Edge group ID (optional)</param>
+        /// <param name="callAnalysisResponseSetId">Call analysis response set ID (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <returns>CampaignEntityListing</returns>
+        public CampaignEntityListing GetCampaigns (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string contactListId = null, string dncListId = null, string distributionQueueId = null, string edgeGroupId = null, string callAnalysisResponseSetId = null, string sortBy = null, string sortOrder = null)
+        {
+             ApiResponse<CampaignEntityListing> localVarResponse = GetCampaignsWithHttpInfo(pageSize, pageNumber, filterType, name, contactListId, dncListId, distributionQueueId, edgeGroupId, callAnalysisResponseSetId, sortBy, sortOrder);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Get dialer campaign. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -5676,6 +9379,27 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->OutboundCampaignsCampaignidGet");
 
             var localVarPath = "/api/v1/outbound/campaigns/{campaignId}";
+=======
+        /// Query a list of dialer campaigns. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="contactListId">Contact List ID (optional)</param>
+        /// <param name="dncListId">DNC list ID (optional)</param>
+        /// <param name="distributionQueueId">Distribution queue ID (optional)</param>
+        /// <param name="edgeGroupId">Edge group ID (optional)</param>
+        /// <param name="callAnalysisResponseSetId">Call analysis response set ID (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <returns>ApiResponse of CampaignEntityListing</returns>
+        public ApiResponse< CampaignEntityListing > GetCampaignsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string contactListId = null, string dncListId = null, string distributionQueueId = null, string edgeGroupId = null, string callAnalysisResponseSetId = null, string sortBy = null, string sortOrder = null)
+        {
+
+            var localVarPath = "/api/v2/outbound/campaigns";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -5700,7 +9424,21 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (campaignId != null) localVarPathParams.Add("campaignId", Configuration.ApiClient.ParameterToString(campaignId)); // path parameter
+=======
+            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            if (filterType != null) localVarQueryParams.Add("filterType", Configuration.ApiClient.ParameterToString(filterType)); // query parameter
+            if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
+            if (contactListId != null) localVarQueryParams.Add("contactListId", Configuration.ApiClient.ParameterToString(contactListId)); // query parameter
+            if (dncListId != null) localVarQueryParams.Add("dncListId", Configuration.ApiClient.ParameterToString(dncListId)); // query parameter
+            if (distributionQueueId != null) localVarQueryParams.Add("distributionQueueId", Configuration.ApiClient.ParameterToString(distributionQueueId)); // query parameter
+            if (edgeGroupId != null) localVarQueryParams.Add("edgeGroupId", Configuration.ApiClient.ParameterToString(edgeGroupId)); // query parameter
+            if (callAnalysisResponseSetId != null) localVarQueryParams.Add("callAnalysisResponseSetId", Configuration.ApiClient.ParameterToString(callAnalysisResponseSetId)); // query parameter
+            if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
+            if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -5717,6 +9455,7 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundCampaignsCampaignidGet: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundCampaignsCampaignidGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -5724,10 +9463,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<Campaign>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Campaign) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Campaign)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling GetCampaigns: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetCampaigns: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CampaignEntityListing>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (CampaignEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CampaignEntityListing)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Get dialer campaign. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -5736,11 +9485,32 @@ namespace ININ.PureCloudApi.Api
         public async System.Threading.Tasks.Task<Campaign> OutboundCampaignsCampaignidGetAsync (string campaignId)
         {
              ApiResponse<Campaign> localVarResponse = await OutboundCampaignsCampaignidGetAsyncWithHttpInfo(campaignId);
+=======
+        /// Query a list of dialer campaigns. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="contactListId">Contact List ID (optional)</param>
+        /// <param name="dncListId">DNC list ID (optional)</param>
+        /// <param name="distributionQueueId">Distribution queue ID (optional)</param>
+        /// <param name="edgeGroupId">Edge group ID (optional)</param>
+        /// <param name="callAnalysisResponseSetId">Call analysis response set ID (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <returns>Task of CampaignEntityListing</returns>
+        public async System.Threading.Tasks.Task<CampaignEntityListing> GetCampaignsAsync (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string contactListId = null, string dncListId = null, string distributionQueueId = null, string edgeGroupId = null, string callAnalysisResponseSetId = null, string sortBy = null, string sortOrder = null)
+        {
+             ApiResponse<CampaignEntityListing> localVarResponse = await GetCampaignsAsyncWithHttpInfo(pageSize, pageNumber, filterType, name, contactListId, dncListId, distributionQueueId, edgeGroupId, callAnalysisResponseSetId, sortBy, sortOrder);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
 
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Get dialer campaign. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -5753,6 +9523,27 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->OutboundCampaignsCampaignidGet");
 
             var localVarPath = "/api/v1/outbound/campaigns/{campaignId}";
+=======
+        /// Query a list of dialer campaigns. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="contactListId">Contact List ID (optional)</param>
+        /// <param name="dncListId">DNC list ID (optional)</param>
+        /// <param name="distributionQueueId">Distribution queue ID (optional)</param>
+        /// <param name="edgeGroupId">Edge group ID (optional)</param>
+        /// <param name="callAnalysisResponseSetId">Call analysis response set ID (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <returns>Task of ApiResponse (CampaignEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CampaignEntityListing>> GetCampaignsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string contactListId = null, string dncListId = null, string distributionQueueId = null, string edgeGroupId = null, string callAnalysisResponseSetId = null, string sortBy = null, string sortOrder = null)
+        {
+
+            var localVarPath = "/api/v2/outbound/campaigns";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -5777,7 +9568,21 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (campaignId != null) localVarPathParams.Add("campaignId", Configuration.ApiClient.ParameterToString(campaignId)); // path parameter
+=======
+            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            if (filterType != null) localVarQueryParams.Add("filterType", Configuration.ApiClient.ParameterToString(filterType)); // query parameter
+            if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
+            if (contactListId != null) localVarQueryParams.Add("contactListId", Configuration.ApiClient.ParameterToString(contactListId)); // query parameter
+            if (dncListId != null) localVarQueryParams.Add("dncListId", Configuration.ApiClient.ParameterToString(dncListId)); // query parameter
+            if (distributionQueueId != null) localVarQueryParams.Add("distributionQueueId", Configuration.ApiClient.ParameterToString(distributionQueueId)); // query parameter
+            if (edgeGroupId != null) localVarQueryParams.Add("edgeGroupId", Configuration.ApiClient.ParameterToString(edgeGroupId)); // query parameter
+            if (callAnalysisResponseSetId != null) localVarQueryParams.Add("callAnalysisResponseSetId", Configuration.ApiClient.ParameterToString(callAnalysisResponseSetId)); // query parameter
+            if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
+            if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -5794,6 +9599,7 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundCampaignsCampaignidGet: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundCampaignsCampaignidGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -5801,10 +9607,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<Campaign>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Campaign) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Campaign)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling GetCampaigns: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetCampaigns: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CampaignEntityListing>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (CampaignEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CampaignEntityListing)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Update a campaign. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -5814,10 +9630,21 @@ namespace ININ.PureCloudApi.Api
         public Campaign OutboundCampaignsCampaignidPut (string campaignId, Campaign body = null)
         {
              ApiResponse<Campaign> localVarResponse = OutboundCampaignsCampaignidPutWithHttpInfo(campaignId, body);
+=======
+        /// Get dialer campaign. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>Campaign</returns>
+        public Campaign GetCampaignsCampaignId (string campaignId)
+        {
+             ApiResponse<Campaign> localVarResponse = GetCampaignsCampaignIdWithHttpInfo(campaignId);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Update a campaign. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -5831,6 +9658,20 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->OutboundCampaignsCampaignidPut");
 
             var localVarPath = "/api/v1/outbound/campaigns/{campaignId}";
+=======
+        /// Get dialer campaign. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>ApiResponse of Campaign</returns>
+        public ApiResponse< Campaign > GetCampaignsCampaignIdWithHttpInfo (string campaignId)
+        {
+            // verify the required parameter 'campaignId' is set
+            if (campaignId == null)
+                throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->GetCampaignsCampaignId");
+
+            var localVarPath = "/api/v2/outbound/campaigns/{campaignId}";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -5856,6 +9697,7 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (campaignId != null) localVarPathParams.Add("campaignId", Configuration.ApiClient.ParameterToString(campaignId)); // path parameter
+<<<<<<< HEAD
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -5864,6 +9706,8 @@ namespace ININ.PureCloudApi.Api
             {
                 localVarPostBody = body; // byte array
             }
+=======
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -5874,15 +9718,25 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+<<<<<<< HEAD
                 Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundCampaignsCampaignidPut: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundCampaignsCampaignidPut: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+=======
+                throw new ApiException (localVarStatusCode, "Error calling GetCampaignsCampaignId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetCampaignsCampaignId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             return new ApiResponse<Campaign>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5891,6 +9745,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Update a campaign. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -5900,11 +9755,22 @@ namespace ININ.PureCloudApi.Api
         public async System.Threading.Tasks.Task<Campaign> OutboundCampaignsCampaignidPutAsync (string campaignId, Campaign body = null)
         {
              ApiResponse<Campaign> localVarResponse = await OutboundCampaignsCampaignidPutAsyncWithHttpInfo(campaignId, body);
+=======
+        /// Get dialer campaign. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>Task of Campaign</returns>
+        public async System.Threading.Tasks.Task<Campaign> GetCampaignsCampaignIdAsync (string campaignId)
+        {
+             ApiResponse<Campaign> localVarResponse = await GetCampaignsCampaignIdAsyncWithHttpInfo(campaignId);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
 
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Update a campaign. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -5918,6 +9784,20 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->OutboundCampaignsCampaignidPut");
 
             var localVarPath = "/api/v1/outbound/campaigns/{campaignId}";
+=======
+        /// Get dialer campaign. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>Task of ApiResponse (Campaign)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Campaign>> GetCampaignsCampaignIdAsyncWithHttpInfo (string campaignId)
+        {
+            // verify the required parameter 'campaignId' is set
+            if (campaignId == null)
+                throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->GetCampaignsCampaignId");
+
+            var localVarPath = "/api/v2/outbound/campaigns/{campaignId}";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -5943,6 +9823,7 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (campaignId != null) localVarPathParams.Add("campaignId", Configuration.ApiClient.ParameterToString(campaignId)); // path parameter
+<<<<<<< HEAD
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -5951,6 +9832,8 @@ namespace ININ.PureCloudApi.Api
             {
                 localVarPostBody = body; // byte array
             }
+=======
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -5961,15 +9844,25 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+<<<<<<< HEAD
                 Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundCampaignsCampaignidPut: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundCampaignsCampaignidPut: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+=======
+                throw new ApiException (localVarStatusCode, "Error calling GetCampaignsCampaignId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetCampaignsCampaignId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             return new ApiResponse<Campaign>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5978,6 +9871,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Get statistics about a Dialer Campaign 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -5986,10 +9880,21 @@ namespace ININ.PureCloudApi.Api
         public CampaignStats OutboundCampaignsCampaignidStatsGet (string campaignId)
         {
              ApiResponse<CampaignStats> localVarResponse = OutboundCampaignsCampaignidStatsGetWithHttpInfo(campaignId);
+=======
+        /// Get campaign diagnostics 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>CampaignDiagnostics</returns>
+        public CampaignDiagnostics GetCampaignsCampaignIdDiagnostics (string campaignId)
+        {
+             ApiResponse<CampaignDiagnostics> localVarResponse = GetCampaignsCampaignIdDiagnosticsWithHttpInfo(campaignId);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Get statistics about a Dialer Campaign 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -6002,6 +9907,20 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->OutboundCampaignsCampaignidStatsGet");
 
             var localVarPath = "/api/v1/outbound/campaigns/{campaignId}/stats";
+=======
+        /// Get campaign diagnostics 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>ApiResponse of CampaignDiagnostics</returns>
+        public ApiResponse< CampaignDiagnostics > GetCampaignsCampaignIdDiagnosticsWithHttpInfo (string campaignId)
+        {
+            // verify the required parameter 'campaignId' is set
+            if (campaignId == null)
+                throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->GetCampaignsCampaignIdDiagnostics");
+
+            var localVarPath = "/api/v2/outbound/campaigns/{campaignId}/diagnostics";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -6043,6 +9962,7 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundCampaignsCampaignidStatsGet: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundCampaignsCampaignidStatsGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -6050,10 +9970,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<CampaignStats>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (CampaignStats) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CampaignStats)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling GetCampaignsCampaignIdDiagnostics: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetCampaignsCampaignIdDiagnostics: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CampaignDiagnostics>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (CampaignDiagnostics) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CampaignDiagnostics)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Get statistics about a Dialer Campaign 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -6062,11 +9992,22 @@ namespace ININ.PureCloudApi.Api
         public async System.Threading.Tasks.Task<CampaignStats> OutboundCampaignsCampaignidStatsGetAsync (string campaignId)
         {
              ApiResponse<CampaignStats> localVarResponse = await OutboundCampaignsCampaignidStatsGetAsyncWithHttpInfo(campaignId);
+=======
+        /// Get campaign diagnostics 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>Task of CampaignDiagnostics</returns>
+        public async System.Threading.Tasks.Task<CampaignDiagnostics> GetCampaignsCampaignIdDiagnosticsAsync (string campaignId)
+        {
+             ApiResponse<CampaignDiagnostics> localVarResponse = await GetCampaignsCampaignIdDiagnosticsAsyncWithHttpInfo(campaignId);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
 
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Get statistics about a Dialer Campaign 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -6079,6 +10020,20 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->OutboundCampaignsCampaignidStatsGet");
 
             var localVarPath = "/api/v1/outbound/campaigns/{campaignId}/stats";
+=======
+        /// Get campaign diagnostics 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>Task of ApiResponse (CampaignDiagnostics)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CampaignDiagnostics>> GetCampaignsCampaignIdDiagnosticsAsyncWithHttpInfo (string campaignId)
+        {
+            // verify the required parameter 'campaignId' is set
+            if (campaignId == null)
+                throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->GetCampaignsCampaignIdDiagnostics");
+
+            var localVarPath = "/api/v2/outbound/campaigns/{campaignId}/diagnostics";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -6120,6 +10075,7 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundCampaignsCampaignidStatsGet: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundCampaignsCampaignidStatsGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -6127,10 +10083,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<CampaignStats>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (CampaignStats) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CampaignStats)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling GetCampaignsCampaignIdDiagnostics: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetCampaignsCampaignIdDiagnostics: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CampaignDiagnostics>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (CampaignDiagnostics) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CampaignDiagnostics)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Query a list of dialer campaigns. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -6149,10 +10115,21 @@ namespace ININ.PureCloudApi.Api
         public CampaignEntityListing OutboundCampaignsGet (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string contactListId = null, string dncListId = null, string distributionQueueId = null, string edgeGroupId = null, string callAnalysisResponseSetId = null, string sortBy = null, string sortOrder = null)
         {
              ApiResponse<CampaignEntityListing> localVarResponse = OutboundCampaignsGetWithHttpInfo(pageSize, pageNumber, filterType, name, contactListId, dncListId, distributionQueueId, edgeGroupId, callAnalysisResponseSetId, sortBy, sortOrder);
+=======
+        /// Get campaign progress 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>CampaignProgress</returns>
+        public CampaignProgress GetCampaignsCampaignIdProgress (string campaignId)
+        {
+             ApiResponse<CampaignProgress> localVarResponse = GetCampaignsCampaignIdProgressWithHttpInfo(campaignId);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Query a list of dialer campaigns. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -6172,6 +10149,20 @@ namespace ININ.PureCloudApi.Api
         {
 
             var localVarPath = "/api/v1/outbound/campaigns";
+=======
+        /// Get campaign progress 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>ApiResponse of CampaignProgress</returns>
+        public ApiResponse< CampaignProgress > GetCampaignsCampaignIdProgressWithHttpInfo (string campaignId)
+        {
+            // verify the required parameter 'campaignId' is set
+            if (campaignId == null)
+                throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->GetCampaignsCampaignIdProgress");
+
+            var localVarPath = "/api/v2/outbound/campaigns/{campaignId}/progress";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -6196,6 +10187,7 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
             if (filterType != null) localVarQueryParams.Add("filterType", Configuration.ApiClient.ParameterToString(filterType)); // query parameter
@@ -6207,6 +10199,9 @@ namespace ININ.PureCloudApi.Api
             if (callAnalysisResponseSetId != null) localVarQueryParams.Add("callAnalysisResponseSetId", Configuration.ApiClient.ParameterToString(callAnalysisResponseSetId)); // query parameter
             if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
             if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
+=======
+            if (campaignId != null) localVarPathParams.Add("campaignId", Configuration.ApiClient.ParameterToString(campaignId)); // path parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -6223,6 +10218,7 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundCampaignsGet: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundCampaignsGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -6230,10 +10226,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<CampaignEntityListing>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (CampaignEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CampaignEntityListing)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling GetCampaignsCampaignIdProgress: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetCampaignsCampaignIdProgress: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CampaignProgress>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (CampaignProgress) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CampaignProgress)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Query a list of dialer campaigns. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -6252,11 +10258,22 @@ namespace ININ.PureCloudApi.Api
         public async System.Threading.Tasks.Task<CampaignEntityListing> OutboundCampaignsGetAsync (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string contactListId = null, string dncListId = null, string distributionQueueId = null, string edgeGroupId = null, string callAnalysisResponseSetId = null, string sortBy = null, string sortOrder = null)
         {
              ApiResponse<CampaignEntityListing> localVarResponse = await OutboundCampaignsGetAsyncWithHttpInfo(pageSize, pageNumber, filterType, name, contactListId, dncListId, distributionQueueId, edgeGroupId, callAnalysisResponseSetId, sortBy, sortOrder);
+=======
+        /// Get campaign progress 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>Task of CampaignProgress</returns>
+        public async System.Threading.Tasks.Task<CampaignProgress> GetCampaignsCampaignIdProgressAsync (string campaignId)
+        {
+             ApiResponse<CampaignProgress> localVarResponse = await GetCampaignsCampaignIdProgressAsyncWithHttpInfo(campaignId);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
 
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Query a list of dialer campaigns. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -6276,6 +10293,20 @@ namespace ININ.PureCloudApi.Api
         {
 
             var localVarPath = "/api/v1/outbound/campaigns";
+=======
+        /// Get campaign progress 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>Task of ApiResponse (CampaignProgress)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CampaignProgress>> GetCampaignsCampaignIdProgressAsyncWithHttpInfo (string campaignId)
+        {
+            // verify the required parameter 'campaignId' is set
+            if (campaignId == null)
+                throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->GetCampaignsCampaignIdProgress");
+
+            var localVarPath = "/api/v2/outbound/campaigns/{campaignId}/progress";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -6300,6 +10331,7 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
             if (filterType != null) localVarQueryParams.Add("filterType", Configuration.ApiClient.ParameterToString(filterType)); // query parameter
@@ -6311,6 +10343,9 @@ namespace ININ.PureCloudApi.Api
             if (callAnalysisResponseSetId != null) localVarQueryParams.Add("callAnalysisResponseSetId", Configuration.ApiClient.ParameterToString(callAnalysisResponseSetId)); // query parameter
             if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
             if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
+=======
+            if (campaignId != null) localVarPathParams.Add("campaignId", Configuration.ApiClient.ParameterToString(campaignId)); // path parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -6327,6 +10362,7 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundCampaignsGet: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundCampaignsGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -6334,6 +10370,15 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<CampaignEntityListing>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (CampaignEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CampaignEntityListing)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling GetCampaignsCampaignIdProgress: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetCampaignsCampaignIdProgress: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CampaignProgress>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (CampaignProgress) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CampaignProgress)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
@@ -6341,11 +10386,19 @@ namespace ININ.PureCloudApi.Api
         /// Create a campaign. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="body">Campaign (optional)</param>
         /// <returns>Campaign</returns>
         public Campaign OutboundCampaignsPost (Campaign body = null)
         {
              ApiResponse<Campaign> localVarResponse = OutboundCampaignsPostWithHttpInfo(body);
+=======
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>CampaignStats</returns>
+        public CampaignStats GetCampaignsCampaignIdStats (string campaignId)
+        {
+             ApiResponse<CampaignStats> localVarResponse = GetCampaignsCampaignIdStatsWithHttpInfo(campaignId);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
         }
 
@@ -6353,12 +10406,24 @@ namespace ININ.PureCloudApi.Api
         /// Create a campaign. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="body">Campaign (optional)</param>
         /// <returns>ApiResponse of Campaign</returns>
         public ApiResponse< Campaign > OutboundCampaignsPostWithHttpInfo (Campaign body = null)
         {
 
             var localVarPath = "/api/v1/outbound/campaigns";
+=======
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>ApiResponse of CampaignStats</returns>
+        public ApiResponse< CampaignStats > GetCampaignsCampaignIdStatsWithHttpInfo (string campaignId)
+        {
+            // verify the required parameter 'campaignId' is set
+            if (campaignId == null)
+                throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->GetCampaignsCampaignIdStats");
+
+            var localVarPath = "/api/v2/outbound/campaigns/{campaignId}/stats";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -6383,6 +10448,7 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -6391,6 +10457,9 @@ namespace ININ.PureCloudApi.Api
             {
                 localVarPostBody = body; // byte array
             }
+=======
+            if (campaignId != null) localVarPathParams.Add("campaignId", Configuration.ApiClient.ParameterToString(campaignId)); // path parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -6401,12 +10470,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+<<<<<<< HEAD
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundCampaignsPost: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundCampaignsPost: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -6414,6 +10488,15 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<Campaign>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Campaign) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Campaign)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling GetCampaignsCampaignIdStats: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetCampaignsCampaignIdStats: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CampaignStats>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (CampaignStats) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CampaignStats)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
@@ -6421,11 +10504,19 @@ namespace ININ.PureCloudApi.Api
         /// Create a campaign. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="body">Campaign (optional)</param>
         /// <returns>Task of Campaign</returns>
         public async System.Threading.Tasks.Task<Campaign> OutboundCampaignsPostAsync (Campaign body = null)
         {
              ApiResponse<Campaign> localVarResponse = await OutboundCampaignsPostAsyncWithHttpInfo(body);
+=======
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>Task of CampaignStats</returns>
+        public async System.Threading.Tasks.Task<CampaignStats> GetCampaignsCampaignIdStatsAsync (string campaignId)
+        {
+             ApiResponse<CampaignStats> localVarResponse = await GetCampaignsCampaignIdStatsAsyncWithHttpInfo(campaignId);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
 
         }
@@ -6434,12 +10525,24 @@ namespace ININ.PureCloudApi.Api
         /// Create a campaign. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="body">Campaign (optional)</param>
         /// <returns>Task of ApiResponse (Campaign)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Campaign>> OutboundCampaignsPostAsyncWithHttpInfo (Campaign body = null)
         {
 
             var localVarPath = "/api/v1/outbound/campaigns";
+=======
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>Task of ApiResponse (CampaignStats)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CampaignStats>> GetCampaignsCampaignIdStatsAsyncWithHttpInfo (string campaignId)
+        {
+            // verify the required parameter 'campaignId' is set
+            if (campaignId == null)
+                throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->GetCampaignsCampaignIdStats");
+
+            var localVarPath = "/api/v2/outbound/campaigns/{campaignId}/stats";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -6464,6 +10567,7 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -6472,6 +10576,9 @@ namespace ININ.PureCloudApi.Api
             {
                 localVarPostBody = body; // byte array
             }
+=======
+            if (campaignId != null) localVarPathParams.Add("campaignId", Configuration.ApiClient.ParameterToString(campaignId)); // path parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -6482,12 +10589,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+<<<<<<< HEAD
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundCampaignsPost: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundCampaignsPost: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -6495,6 +10607,15 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<Campaign>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Campaign) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Campaign)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling GetCampaignsCampaignIdStats: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetCampaignsCampaignIdStats: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CampaignStats>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (CampaignStats) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CampaignStats)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
@@ -6502,12 +10623,27 @@ namespace ININ.PureCloudApi.Api
         /// Get Dialer campaign&#39;s penetration rate Get dialer campaign&#39;s penetration rate.
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="contactListId">ContactList ID</param>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>PenetrationRate</returns>
         public PenetrationRate OutboundContactlistsContactlistidCampaignidPenetrationrateGet (string contactListId, string campaignId)
         {
              ApiResponse<PenetrationRate> localVarResponse = OutboundContactlistsContactlistidCampaignidPenetrationrateGetWithHttpInfo(contactListId, campaignId);
+=======
+        /// <param name="includeImportStatus">Include import status (optional, default to false)</param>
+        /// <param name="includeSize">Include size (optional, default to false)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <returns>ContactListEntityListing</returns>
+        public ContactListEntityListing GetContactlists (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
+        {
+             ApiResponse<ContactListEntityListing> localVarResponse = GetContactlistsWithHttpInfo(includeImportStatus, includeSize, pageSize, pageNumber, filterType, name, sortBy, sortOrder);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
         }
 
@@ -6515,6 +10651,7 @@ namespace ININ.PureCloudApi.Api
         /// Get Dialer campaign&#39;s penetration rate Get dialer campaign&#39;s penetration rate.
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="contactListId">ContactList ID</param>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>ApiResponse of PenetrationRate</returns>
@@ -6528,6 +10665,21 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->OutboundContactlistsContactlistidCampaignidPenetrationrateGet");
 
             var localVarPath = "/api/v1/outbound/contactlists/{contactListId}/{campaignId}/penetrationrate";
+=======
+        /// <param name="includeImportStatus">Include import status (optional, default to false)</param>
+        /// <param name="includeSize">Include size (optional, default to false)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <returns>ApiResponse of ContactListEntityListing</returns>
+        public ApiResponse< ContactListEntityListing > GetContactlistsWithHttpInfo (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
+        {
+
+            var localVarPath = "/api/v2/outbound/contactlists";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -6552,8 +10704,19 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (contactListId != null) localVarPathParams.Add("contactListId", Configuration.ApiClient.ParameterToString(contactListId)); // path parameter
             if (campaignId != null) localVarPathParams.Add("campaignId", Configuration.ApiClient.ParameterToString(campaignId)); // path parameter
+=======
+            if (includeImportStatus != null) localVarQueryParams.Add("includeImportStatus", Configuration.ApiClient.ParameterToString(includeImportStatus)); // query parameter
+            if (includeSize != null) localVarQueryParams.Add("includeSize", Configuration.ApiClient.ParameterToString(includeSize)); // query parameter
+            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            if (filterType != null) localVarQueryParams.Add("filterType", Configuration.ApiClient.ParameterToString(filterType)); // query parameter
+            if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
+            if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
+            if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -6570,6 +10733,7 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundContactlistsContactlistidCampaignidPenetrationrateGet: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundContactlistsContactlistidCampaignidPenetrationrateGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -6577,6 +10741,15 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<PenetrationRate>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (PenetrationRate) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PenetrationRate)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling GetContactlists: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetContactlists: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ContactListEntityListing>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ContactListEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContactListEntityListing)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
@@ -6584,12 +10757,27 @@ namespace ININ.PureCloudApi.Api
         /// Get Dialer campaign&#39;s penetration rate Get dialer campaign&#39;s penetration rate.
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="contactListId">ContactList ID</param>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Task of PenetrationRate</returns>
         public async System.Threading.Tasks.Task<PenetrationRate> OutboundContactlistsContactlistidCampaignidPenetrationrateGetAsync (string contactListId, string campaignId)
         {
              ApiResponse<PenetrationRate> localVarResponse = await OutboundContactlistsContactlistidCampaignidPenetrationrateGetAsyncWithHttpInfo(contactListId, campaignId);
+=======
+        /// <param name="includeImportStatus">Include import status (optional, default to false)</param>
+        /// <param name="includeSize">Include size (optional, default to false)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <returns>Task of ContactListEntityListing</returns>
+        public async System.Threading.Tasks.Task<ContactListEntityListing> GetContactlistsAsync (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
+        {
+             ApiResponse<ContactListEntityListing> localVarResponse = await GetContactlistsAsyncWithHttpInfo(includeImportStatus, includeSize, pageSize, pageNumber, filterType, name, sortBy, sortOrder);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
 
         }
@@ -6598,6 +10786,7 @@ namespace ININ.PureCloudApi.Api
         /// Get Dialer campaign&#39;s penetration rate Get dialer campaign&#39;s penetration rate.
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="contactListId">ContactList ID</param>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Task of ApiResponse (PenetrationRate)</returns>
@@ -6611,6 +10800,21 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->OutboundContactlistsContactlistidCampaignidPenetrationrateGet");
 
             var localVarPath = "/api/v1/outbound/contactlists/{contactListId}/{campaignId}/penetrationrate";
+=======
+        /// <param name="includeImportStatus">Include import status (optional, default to false)</param>
+        /// <param name="includeSize">Include size (optional, default to false)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <returns>Task of ApiResponse (ContactListEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ContactListEntityListing>> GetContactlistsAsyncWithHttpInfo (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
+        {
+
+            var localVarPath = "/api/v2/outbound/contactlists";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -6635,8 +10839,19 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (contactListId != null) localVarPathParams.Add("contactListId", Configuration.ApiClient.ParameterToString(contactListId)); // path parameter
             if (campaignId != null) localVarPathParams.Add("campaignId", Configuration.ApiClient.ParameterToString(campaignId)); // path parameter
+=======
+            if (includeImportStatus != null) localVarQueryParams.Add("includeImportStatus", Configuration.ApiClient.ParameterToString(includeImportStatus)); // query parameter
+            if (includeSize != null) localVarQueryParams.Add("includeSize", Configuration.ApiClient.ParameterToString(includeSize)); // query parameter
+            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            if (filterType != null) localVarQueryParams.Add("filterType", Configuration.ApiClient.ParameterToString(filterType)); // query parameter
+            if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
+            if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
+            if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -6653,6 +10868,7 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundContactlistsContactlistidCampaignidPenetrationrateGet: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundContactlistsContactlistidCampaignidPenetrationrateGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -6660,10 +10876,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<PenetrationRate>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (PenetrationRate) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PenetrationRate)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling GetContactlists: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetContactlists: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ContactListEntityListing>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ContactListEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContactListEntityListing)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Delete a contact. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -6673,10 +10899,23 @@ namespace ININ.PureCloudApi.Api
         public string OutboundContactlistsContactlistidContactsContactidDelete (string contactListId, string contactId)
         {
              ApiResponse<string> localVarResponse = OutboundContactlistsContactlistidContactsContactidDeleteWithHttpInfo(contactListId, contactId);
+=======
+        /// Get dialer contactList. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">ContactList ID</param>
+        /// <param name="includeImportStatus">Import status (optional, default to false)</param>
+        /// <param name="includeSize">Include size (optional, default to false)</param>
+        /// <returns>ContactList</returns>
+        public ContactList GetContactlistsContactlistId (string contactListId, bool? includeImportStatus = null, bool? includeSize = null)
+        {
+             ApiResponse<ContactList> localVarResponse = GetContactlistsContactlistIdWithHttpInfo(contactListId, includeImportStatus, includeSize);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Delete a contact. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -6693,6 +10932,22 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'contactId' when calling OutboundApi->OutboundContactlistsContactlistidContactsContactidDelete");
 
             var localVarPath = "/api/v1/outbound/contactlists/{contactListId}/contacts/{contactId}";
+=======
+        /// Get dialer contactList. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">ContactList ID</param>
+        /// <param name="includeImportStatus">Import status (optional, default to false)</param>
+        /// <param name="includeSize">Include size (optional, default to false)</param>
+        /// <returns>ApiResponse of ContactList</returns>
+        public ApiResponse< ContactList > GetContactlistsContactlistIdWithHttpInfo (string contactListId, bool? includeImportStatus = null, bool? includeSize = null)
+        {
+            // verify the required parameter 'contactListId' is set
+            if (contactListId == null)
+                throw new ApiException(400, "Missing required parameter 'contactListId' when calling OutboundApi->GetContactlistsContactlistId");
+
+            var localVarPath = "/api/v2/outbound/contactlists/{contactListId}";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -6718,7 +10973,12 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (contactListId != null) localVarPathParams.Add("contactListId", Configuration.ApiClient.ParameterToString(contactListId)); // path parameter
+<<<<<<< HEAD
             if (contactId != null) localVarPathParams.Add("contactId", Configuration.ApiClient.ParameterToString(contactId)); // path parameter
+=======
+            if (includeImportStatus != null) localVarQueryParams.Add("includeImportStatus", Configuration.ApiClient.ParameterToString(includeImportStatus)); // query parameter
+            if (includeSize != null) localVarQueryParams.Add("includeSize", Configuration.ApiClient.ParameterToString(includeSize)); // query parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -6729,12 +10989,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+<<<<<<< HEAD
                 Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundContactlistsContactlistidContactsContactidDelete: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundContactlistsContactlistidContactsContactidDelete: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -6742,10 +11007,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling GetContactlistsContactlistId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetContactlistsContactlistId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ContactList>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ContactList) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContactList)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Delete a contact. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -6755,11 +11030,24 @@ namespace ININ.PureCloudApi.Api
         public async System.Threading.Tasks.Task<string> OutboundContactlistsContactlistidContactsContactidDeleteAsync (string contactListId, string contactId)
         {
              ApiResponse<string> localVarResponse = await OutboundContactlistsContactlistidContactsContactidDeleteAsyncWithHttpInfo(contactListId, contactId);
+=======
+        /// Get dialer contactList. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">ContactList ID</param>
+        /// <param name="includeImportStatus">Import status (optional, default to false)</param>
+        /// <param name="includeSize">Include size (optional, default to false)</param>
+        /// <returns>Task of ContactList</returns>
+        public async System.Threading.Tasks.Task<ContactList> GetContactlistsContactlistIdAsync (string contactListId, bool? includeImportStatus = null, bool? includeSize = null)
+        {
+             ApiResponse<ContactList> localVarResponse = await GetContactlistsContactlistIdAsyncWithHttpInfo(contactListId, includeImportStatus, includeSize);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
 
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Delete a contact. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -6776,6 +11064,22 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'contactId' when calling OutboundApi->OutboundContactlistsContactlistidContactsContactidDelete");
 
             var localVarPath = "/api/v1/outbound/contactlists/{contactListId}/contacts/{contactId}";
+=======
+        /// Get dialer contactList. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">ContactList ID</param>
+        /// <param name="includeImportStatus">Import status (optional, default to false)</param>
+        /// <param name="includeSize">Include size (optional, default to false)</param>
+        /// <returns>Task of ApiResponse (ContactList)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ContactList>> GetContactlistsContactlistIdAsyncWithHttpInfo (string contactListId, bool? includeImportStatus = null, bool? includeSize = null)
+        {
+            // verify the required parameter 'contactListId' is set
+            if (contactListId == null)
+                throw new ApiException(400, "Missing required parameter 'contactListId' when calling OutboundApi->GetContactlistsContactlistId");
+
+            var localVarPath = "/api/v2/outbound/contactlists/{contactListId}";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -6801,7 +11105,12 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (contactListId != null) localVarPathParams.Add("contactListId", Configuration.ApiClient.ParameterToString(contactListId)); // path parameter
+<<<<<<< HEAD
             if (contactId != null) localVarPathParams.Add("contactId", Configuration.ApiClient.ParameterToString(contactId)); // path parameter
+=======
+            if (includeImportStatus != null) localVarQueryParams.Add("includeImportStatus", Configuration.ApiClient.ParameterToString(includeImportStatus)); // query parameter
+            if (includeSize != null) localVarQueryParams.Add("includeSize", Configuration.ApiClient.ParameterToString(includeSize)); // query parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -6812,12 +11121,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+<<<<<<< HEAD
                 Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundContactlistsContactlistidContactsContactidDelete: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundContactlistsContactlistidContactsContactidDelete: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -6825,6 +11139,15 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling GetContactlistsContactlistId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetContactlistsContactlistId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ContactList>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ContactList) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContactList)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
@@ -6834,10 +11157,17 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="contactId">Contact ID</param>
+<<<<<<< HEAD
         /// <returns>Contact</returns>
         public Contact OutboundContactlistsContactlistidContactsContactidGet (string contactListId, string contactId)
         {
              ApiResponse<Contact> localVarResponse = OutboundContactlistsContactlistidContactsContactidGetWithHttpInfo(contactListId, contactId);
+=======
+        /// <returns>DialerContact</returns>
+        public DialerContact GetContactlistsContactlistIdContactsContactId (string contactListId, string contactId)
+        {
+             ApiResponse<DialerContact> localVarResponse = GetContactlistsContactlistIdContactsContactIdWithHttpInfo(contactListId, contactId);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
         }
 
@@ -6847,6 +11177,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="contactId">Contact ID</param>
+<<<<<<< HEAD
         /// <returns>ApiResponse of Contact</returns>
         public ApiResponse< Contact > OutboundContactlistsContactlistidContactsContactidGetWithHttpInfo (string contactListId, string contactId)
         {
@@ -6858,6 +11189,19 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'contactId' when calling OutboundApi->OutboundContactlistsContactlistidContactsContactidGet");
 
             var localVarPath = "/api/v1/outbound/contactlists/{contactListId}/contacts/{contactId}";
+=======
+        /// <returns>ApiResponse of DialerContact</returns>
+        public ApiResponse< DialerContact > GetContactlistsContactlistIdContactsContactIdWithHttpInfo (string contactListId, string contactId)
+        {
+            // verify the required parameter 'contactListId' is set
+            if (contactListId == null)
+                throw new ApiException(400, "Missing required parameter 'contactListId' when calling OutboundApi->GetContactlistsContactlistIdContactsContactId");
+            // verify the required parameter 'contactId' is set
+            if (contactId == null)
+                throw new ApiException(400, "Missing required parameter 'contactId' when calling OutboundApi->GetContactlistsContactlistIdContactsContactId");
+
+            var localVarPath = "/api/v2/outbound/contactlists/{contactListId}/contacts/{contactId}";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -6900,6 +11244,7 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundContactlistsContactlistidContactsContactidGet: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundContactlistsContactlistidContactsContactidGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -6907,6 +11252,15 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<Contact>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Contact) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Contact)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling GetContactlistsContactlistIdContactsContactId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetContactlistsContactlistIdContactsContactId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DialerContact>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (DialerContact) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DialerContact)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
@@ -6916,10 +11270,17 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="contactId">Contact ID</param>
+<<<<<<< HEAD
         /// <returns>Task of Contact</returns>
         public async System.Threading.Tasks.Task<Contact> OutboundContactlistsContactlistidContactsContactidGetAsync (string contactListId, string contactId)
         {
              ApiResponse<Contact> localVarResponse = await OutboundContactlistsContactlistidContactsContactidGetAsyncWithHttpInfo(contactListId, contactId);
+=======
+        /// <returns>Task of DialerContact</returns>
+        public async System.Threading.Tasks.Task<DialerContact> GetContactlistsContactlistIdContactsContactIdAsync (string contactListId, string contactId)
+        {
+             ApiResponse<DialerContact> localVarResponse = await GetContactlistsContactlistIdContactsContactIdAsyncWithHttpInfo(contactListId, contactId);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
 
         }
@@ -6930,6 +11291,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="contactId">Contact ID</param>
+<<<<<<< HEAD
         /// <returns>Task of ApiResponse (Contact)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Contact>> OutboundContactlistsContactlistidContactsContactidGetAsyncWithHttpInfo (string contactListId, string contactId)
         {
@@ -6941,6 +11303,19 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'contactId' when calling OutboundApi->OutboundContactlistsContactlistidContactsContactidGet");
 
             var localVarPath = "/api/v1/outbound/contactlists/{contactListId}/contacts/{contactId}";
+=======
+        /// <returns>Task of ApiResponse (DialerContact)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DialerContact>> GetContactlistsContactlistIdContactsContactIdAsyncWithHttpInfo (string contactListId, string contactId)
+        {
+            // verify the required parameter 'contactListId' is set
+            if (contactListId == null)
+                throw new ApiException(400, "Missing required parameter 'contactListId' when calling OutboundApi->GetContactlistsContactlistIdContactsContactId");
+            // verify the required parameter 'contactId' is set
+            if (contactId == null)
+                throw new ApiException(400, "Missing required parameter 'contactId' when calling OutboundApi->GetContactlistsContactlistIdContactsContactId");
+
+            var localVarPath = "/api/v2/outbound/contactlists/{contactListId}/contacts/{contactId}";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -6983,6 +11358,7 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundContactlistsContactlistidContactsContactidGet: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundContactlistsContactlistidContactsContactidGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -6990,10 +11366,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<Contact>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Contact) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Contact)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling GetContactlistsContactlistIdContactsContactId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetContactlistsContactlistIdContactsContactId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DialerContact>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (DialerContact) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DialerContact)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Update a contact. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -7004,10 +11390,21 @@ namespace ININ.PureCloudApi.Api
         public Contact OutboundContactlistsContactlistidContactsContactidPut (string contactListId, string contactId, Contact body = null)
         {
              ApiResponse<Contact> localVarResponse = OutboundContactlistsContactlistidContactsContactidPutWithHttpInfo(contactListId, contactId, body);
+=======
+        /// Get dialer contactList import status. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">ContactList ID</param>
+        /// <returns>ImportStatus</returns>
+        public ImportStatus GetContactlistsContactlistIdImportstatus (string contactListId)
+        {
+             ApiResponse<ImportStatus> localVarResponse = GetContactlistsContactlistIdImportstatusWithHttpInfo(contactListId);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Update a contact. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -7025,6 +11422,20 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'contactId' when calling OutboundApi->OutboundContactlistsContactlistidContactsContactidPut");
 
             var localVarPath = "/api/v1/outbound/contactlists/{contactListId}/contacts/{contactId}";
+=======
+        /// Get dialer contactList import status. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">ContactList ID</param>
+        /// <returns>ApiResponse of ImportStatus</returns>
+        public ApiResponse< ImportStatus > GetContactlistsContactlistIdImportstatusWithHttpInfo (string contactListId)
+        {
+            // verify the required parameter 'contactListId' is set
+            if (contactListId == null)
+                throw new ApiException(400, "Missing required parameter 'contactListId' when calling OutboundApi->GetContactlistsContactlistIdImportstatus");
+
+            var localVarPath = "/api/v2/outbound/contactlists/{contactListId}/importstatus";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -7050,6 +11461,7 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (contactListId != null) localVarPathParams.Add("contactListId", Configuration.ApiClient.ParameterToString(contactListId)); // path parameter
+<<<<<<< HEAD
             if (contactId != null) localVarPathParams.Add("contactId", Configuration.ApiClient.ParameterToString(contactId)); // path parameter
             if (body.GetType() != typeof(byte[]))
             {
@@ -7059,6 +11471,8 @@ namespace ININ.PureCloudApi.Api
             {
                 localVarPostBody = body; // byte array
             }
+=======
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -7069,12 +11483,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+<<<<<<< HEAD
                 Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundContactlistsContactlistidContactsContactidPut: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundContactlistsContactlistidContactsContactidPut: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -7082,10 +11501,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<Contact>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Contact) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Contact)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling GetContactlistsContactlistIdImportstatus: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetContactlistsContactlistIdImportstatus: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ImportStatus>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ImportStatus) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ImportStatus)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Update a contact. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -7096,11 +11525,22 @@ namespace ININ.PureCloudApi.Api
         public async System.Threading.Tasks.Task<Contact> OutboundContactlistsContactlistidContactsContactidPutAsync (string contactListId, string contactId, Contact body = null)
         {
              ApiResponse<Contact> localVarResponse = await OutboundContactlistsContactlistidContactsContactidPutAsyncWithHttpInfo(contactListId, contactId, body);
+=======
+        /// Get dialer contactList import status. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">ContactList ID</param>
+        /// <returns>Task of ImportStatus</returns>
+        public async System.Threading.Tasks.Task<ImportStatus> GetContactlistsContactlistIdImportstatusAsync (string contactListId)
+        {
+             ApiResponse<ImportStatus> localVarResponse = await GetContactlistsContactlistIdImportstatusAsyncWithHttpInfo(contactListId);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
 
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Update a contact. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -7118,6 +11558,20 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'contactId' when calling OutboundApi->OutboundContactlistsContactlistidContactsContactidPut");
 
             var localVarPath = "/api/v1/outbound/contactlists/{contactListId}/contacts/{contactId}";
+=======
+        /// Get dialer contactList import status. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">ContactList ID</param>
+        /// <returns>Task of ApiResponse (ImportStatus)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ImportStatus>> GetContactlistsContactlistIdImportstatusAsyncWithHttpInfo (string contactListId)
+        {
+            // verify the required parameter 'contactListId' is set
+            if (contactListId == null)
+                throw new ApiException(400, "Missing required parameter 'contactListId' when calling OutboundApi->GetContactlistsContactlistIdImportstatus");
+
+            var localVarPath = "/api/v2/outbound/contactlists/{contactListId}/importstatus";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -7143,6 +11597,7 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (contactListId != null) localVarPathParams.Add("contactListId", Configuration.ApiClient.ParameterToString(contactListId)); // path parameter
+<<<<<<< HEAD
             if (contactId != null) localVarPathParams.Add("contactId", Configuration.ApiClient.ParameterToString(contactId)); // path parameter
             if (body.GetType() != typeof(byte[]))
             {
@@ -7152,6 +11607,8 @@ namespace ININ.PureCloudApi.Api
             {
                 localVarPostBody = body; // byte array
             }
+=======
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -7162,12 +11619,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+<<<<<<< HEAD
                 Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundContactlistsContactlistidContactsContactidPut: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundContactlistsContactlistidContactsContactidPut: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -7175,10 +11637,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<Contact>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Contact) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Contact)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling GetContactlistsContactlistIdImportstatus: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetContactlistsContactlistIdImportstatus: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ImportStatus>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ImportStatus) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ImportStatus)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Add contacts to a contact list. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -7189,10 +11661,28 @@ namespace ININ.PureCloudApi.Api
         public Contact OutboundContactlistsContactlistidContactsPost (string contactListId, List<Contact> body = null, bool? priority = null)
         {
              ApiResponse<Contact> localVarResponse = OutboundContactlistsContactlistidContactsPostWithHttpInfo(contactListId, body, priority);
+=======
+        /// Query dialer DNC lists 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="includeImportStatus">Import status (optional, default to false)</param>
+        /// <param name="includeSize">Include size (optional, default to false)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional)</param>
+        /// <returns>DncListEntityListing</returns>
+        public DncListEntityListing GetDnclists (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
+        {
+             ApiResponse<DncListEntityListing> localVarResponse = GetDnclistsWithHttpInfo(includeImportStatus, includeSize, pageSize, pageNumber, filterType, name, sortBy, sortOrder);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Add contacts to a contact list. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -7207,6 +11697,24 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'contactListId' when calling OutboundApi->OutboundContactlistsContactlistidContactsPost");
 
             var localVarPath = "/api/v1/outbound/contactlists/{contactListId}/contacts";
+=======
+        /// Query dialer DNC lists 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="includeImportStatus">Import status (optional, default to false)</param>
+        /// <param name="includeSize">Include size (optional, default to false)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional)</param>
+        /// <returns>ApiResponse of DncListEntityListing</returns>
+        public ApiResponse< DncListEntityListing > GetDnclistsWithHttpInfo (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
+        {
+
+            var localVarPath = "/api/v2/outbound/dnclists";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -7231,6 +11739,7 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (contactListId != null) localVarPathParams.Add("contactListId", Configuration.ApiClient.ParameterToString(contactListId)); // path parameter
             if (priority != null) localVarQueryParams.Add("priority", Configuration.ApiClient.ParameterToString(priority)); // query parameter
             if (body.GetType() != typeof(byte[]))
@@ -7241,6 +11750,16 @@ namespace ININ.PureCloudApi.Api
             {
                 localVarPostBody = body; // byte array
             }
+=======
+            if (includeImportStatus != null) localVarQueryParams.Add("includeImportStatus", Configuration.ApiClient.ParameterToString(includeImportStatus)); // query parameter
+            if (includeSize != null) localVarQueryParams.Add("includeSize", Configuration.ApiClient.ParameterToString(includeSize)); // query parameter
+            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            if (filterType != null) localVarQueryParams.Add("filterType", Configuration.ApiClient.ParameterToString(filterType)); // query parameter
+            if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
+            if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
+            if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -7251,12 +11770,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+<<<<<<< HEAD
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundContactlistsContactlistidContactsPost: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundContactlistsContactlistidContactsPost: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -7264,10 +11788,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<Contact>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Contact) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Contact)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling GetDnclists: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetDnclists: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DncListEntityListing>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (DncListEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DncListEntityListing)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Add contacts to a contact list. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -7278,11 +11812,29 @@ namespace ININ.PureCloudApi.Api
         public async System.Threading.Tasks.Task<Contact> OutboundContactlistsContactlistidContactsPostAsync (string contactListId, List<Contact> body = null, bool? priority = null)
         {
              ApiResponse<Contact> localVarResponse = await OutboundContactlistsContactlistidContactsPostAsyncWithHttpInfo(contactListId, body, priority);
+=======
+        /// Query dialer DNC lists 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="includeImportStatus">Import status (optional, default to false)</param>
+        /// <param name="includeSize">Include size (optional, default to false)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional)</param>
+        /// <returns>Task of DncListEntityListing</returns>
+        public async System.Threading.Tasks.Task<DncListEntityListing> GetDnclistsAsync (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
+        {
+             ApiResponse<DncListEntityListing> localVarResponse = await GetDnclistsAsyncWithHttpInfo(includeImportStatus, includeSize, pageSize, pageNumber, filterType, name, sortBy, sortOrder);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
 
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Add contacts to a contact list. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -7297,6 +11849,24 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'contactListId' when calling OutboundApi->OutboundContactlistsContactlistidContactsPost");
 
             var localVarPath = "/api/v1/outbound/contactlists/{contactListId}/contacts";
+=======
+        /// Query dialer DNC lists 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="includeImportStatus">Import status (optional, default to false)</param>
+        /// <param name="includeSize">Include size (optional, default to false)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional)</param>
+        /// <returns>Task of ApiResponse (DncListEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DncListEntityListing>> GetDnclistsAsyncWithHttpInfo (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
+        {
+
+            var localVarPath = "/api/v2/outbound/dnclists";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -7321,6 +11891,7 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (contactListId != null) localVarPathParams.Add("contactListId", Configuration.ApiClient.ParameterToString(contactListId)); // path parameter
             if (priority != null) localVarQueryParams.Add("priority", Configuration.ApiClient.ParameterToString(priority)); // query parameter
             if (body.GetType() != typeof(byte[]))
@@ -7331,6 +11902,16 @@ namespace ININ.PureCloudApi.Api
             {
                 localVarPostBody = body; // byte array
             }
+=======
+            if (includeImportStatus != null) localVarQueryParams.Add("includeImportStatus", Configuration.ApiClient.ParameterToString(includeImportStatus)); // query parameter
+            if (includeSize != null) localVarQueryParams.Add("includeSize", Configuration.ApiClient.ParameterToString(includeSize)); // query parameter
+            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            if (filterType != null) localVarQueryParams.Add("filterType", Configuration.ApiClient.ParameterToString(filterType)); // query parameter
+            if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
+            if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
+            if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -7341,12 +11922,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+<<<<<<< HEAD
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundContactlistsContactlistidContactsPost: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundContactlistsContactlistidContactsPost: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -7354,25 +11940,45 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<Contact>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Contact) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Contact)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling GetDnclists: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetDnclists: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DncListEntityListing>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (DncListEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DncListEntityListing)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
-        /// Delete a contact list. 
+        /// Get dialer DNC list 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="contactListId">ContactList ID</param>
         /// <returns>string</returns>
         public string OutboundContactlistsContactlistidDelete (string contactListId)
         {
              ApiResponse<string> localVarResponse = OutboundContactlistsContactlistidDeleteWithHttpInfo(contactListId);
+=======
+        /// <param name="dncListId">DncList ID</param>
+        /// <param name="includeImportStatus">Import status (optional, default to false)</param>
+        /// <param name="includeSize">Include size (optional, default to false)</param>
+        /// <returns>DncList</returns>
+        public DncList GetDnclistsDnclistId (string dncListId, bool? includeImportStatus = null, bool? includeSize = null)
+        {
+             ApiResponse<DncList> localVarResponse = GetDnclistsDnclistIdWithHttpInfo(dncListId, includeImportStatus, includeSize);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Delete a contact list. 
+        /// Get dialer DNC list 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="contactListId">ContactList ID</param>
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > OutboundContactlistsContactlistidDeleteWithHttpInfo (string contactListId)
@@ -7382,6 +11988,19 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'contactListId' when calling OutboundApi->OutboundContactlistsContactlistidDelete");
 
             var localVarPath = "/api/v1/outbound/contactlists/{contactListId}";
+=======
+        /// <param name="dncListId">DncList ID</param>
+        /// <param name="includeImportStatus">Import status (optional, default to false)</param>
+        /// <param name="includeSize">Include size (optional, default to false)</param>
+        /// <returns>ApiResponse of DncList</returns>
+        public ApiResponse< DncList > GetDnclistsDnclistIdWithHttpInfo (string dncListId, bool? includeImportStatus = null, bool? includeSize = null)
+        {
+            // verify the required parameter 'dncListId' is set
+            if (dncListId == null)
+                throw new ApiException(400, "Missing required parameter 'dncListId' when calling OutboundApi->GetDnclistsDnclistId");
+
+            var localVarPath = "/api/v2/outbound/dnclists/{dncListId}";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -7406,7 +12025,13 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (contactListId != null) localVarPathParams.Add("contactListId", Configuration.ApiClient.ParameterToString(contactListId)); // path parameter
+=======
+            if (dncListId != null) localVarPathParams.Add("dncListId", Configuration.ApiClient.ParameterToString(dncListId)); // path parameter
+            if (includeImportStatus != null) localVarQueryParams.Add("includeImportStatus", Configuration.ApiClient.ParameterToString(includeImportStatus)); // query parameter
+            if (includeSize != null) localVarQueryParams.Add("includeSize", Configuration.ApiClient.ParameterToString(includeSize)); // query parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -7417,12 +12042,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+<<<<<<< HEAD
                 Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundContactlistsContactlistidDelete: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundContactlistsContactlistidDelete: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -7430,26 +12060,46 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling GetDnclistsDnclistId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetDnclistsDnclistId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DncList>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (DncList) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DncList)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
-        /// Delete a contact list. 
+        /// Get dialer DNC list 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="contactListId">ContactList ID</param>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> OutboundContactlistsContactlistidDeleteAsync (string contactListId)
         {
              ApiResponse<string> localVarResponse = await OutboundContactlistsContactlistidDeleteAsyncWithHttpInfo(contactListId);
+=======
+        /// <param name="dncListId">DncList ID</param>
+        /// <param name="includeImportStatus">Import status (optional, default to false)</param>
+        /// <param name="includeSize">Include size (optional, default to false)</param>
+        /// <returns>Task of DncList</returns>
+        public async System.Threading.Tasks.Task<DncList> GetDnclistsDnclistIdAsync (string dncListId, bool? includeImportStatus = null, bool? includeSize = null)
+        {
+             ApiResponse<DncList> localVarResponse = await GetDnclistsDnclistIdAsyncWithHttpInfo(dncListId, includeImportStatus, includeSize);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Delete a contact list. 
+        /// Get dialer DNC list 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="contactListId">ContactList ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> OutboundContactlistsContactlistidDeleteAsyncWithHttpInfo (string contactListId)
@@ -7459,6 +12109,19 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'contactListId' when calling OutboundApi->OutboundContactlistsContactlistidDelete");
 
             var localVarPath = "/api/v1/outbound/contactlists/{contactListId}";
+=======
+        /// <param name="dncListId">DncList ID</param>
+        /// <param name="includeImportStatus">Import status (optional, default to false)</param>
+        /// <param name="includeSize">Include size (optional, default to false)</param>
+        /// <returns>Task of ApiResponse (DncList)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DncList>> GetDnclistsDnclistIdAsyncWithHttpInfo (string dncListId, bool? includeImportStatus = null, bool? includeSize = null)
+        {
+            // verify the required parameter 'dncListId' is set
+            if (dncListId == null)
+                throw new ApiException(400, "Missing required parameter 'dncListId' when calling OutboundApi->GetDnclistsDnclistId");
+
+            var localVarPath = "/api/v2/outbound/dnclists/{dncListId}";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -7483,7 +12146,13 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (contactListId != null) localVarPathParams.Add("contactListId", Configuration.ApiClient.ParameterToString(contactListId)); // path parameter
+=======
+            if (dncListId != null) localVarPathParams.Add("dncListId", Configuration.ApiClient.ParameterToString(dncListId)); // path parameter
+            if (includeImportStatus != null) localVarQueryParams.Add("includeImportStatus", Configuration.ApiClient.ParameterToString(includeImportStatus)); // query parameter
+            if (includeSize != null) localVarQueryParams.Add("includeSize", Configuration.ApiClient.ParameterToString(includeSize)); // query parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -7494,12 +12163,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+<<<<<<< HEAD
                 Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundContactlistsContactlistidDelete: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundContactlistsContactlistidDelete: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -7507,10 +12181,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling GetDnclistsDnclistId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetDnclistsDnclistId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DncList>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (DncList) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DncList)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Initiate the export of a contact list. Returns 200 if received OK.
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -7519,10 +12203,21 @@ namespace ININ.PureCloudApi.Api
         public string OutboundContactlistsContactlistidExportPost (string contactListId)
         {
              ApiResponse<string> localVarResponse = OutboundContactlistsContactlistidExportPostWithHttpInfo(contactListId);
+=======
+        /// Get dialer dncList import status. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dncListId">DncList ID</param>
+        /// <returns>ImportStatus</returns>
+        public ImportStatus GetDnclistsDnclistIdImportstatus (string dncListId)
+        {
+             ApiResponse<ImportStatus> localVarResponse = GetDnclistsDnclistIdImportstatusWithHttpInfo(dncListId);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Initiate the export of a contact list. Returns 200 if received OK.
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -7535,6 +12230,20 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'contactListId' when calling OutboundApi->OutboundContactlistsContactlistidExportPost");
 
             var localVarPath = "/api/v1/outbound/contactlists/{contactListId}/export";
+=======
+        /// Get dialer dncList import status. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dncListId">DncList ID</param>
+        /// <returns>ApiResponse of ImportStatus</returns>
+        public ApiResponse< ImportStatus > GetDnclistsDnclistIdImportstatusWithHttpInfo (string dncListId)
+        {
+            // verify the required parameter 'dncListId' is set
+            if (dncListId == null)
+                throw new ApiException(400, "Missing required parameter 'dncListId' when calling OutboundApi->GetDnclistsDnclistIdImportstatus");
+
+            var localVarPath = "/api/v2/outbound/dnclists/{dncListId}/importstatus";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -7559,7 +12268,11 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (contactListId != null) localVarPathParams.Add("contactListId", Configuration.ApiClient.ParameterToString(contactListId)); // path parameter
+=======
+            if (dncListId != null) localVarPathParams.Add("dncListId", Configuration.ApiClient.ParameterToString(dncListId)); // path parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -7570,12 +12283,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+<<<<<<< HEAD
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundContactlistsContactlistidExportPost: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundContactlistsContactlistidExportPost: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -7583,10 +12301,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling GetDnclistsDnclistIdImportstatus: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetDnclistsDnclistIdImportstatus: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ImportStatus>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ImportStatus) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ImportStatus)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Initiate the export of a contact list. Returns 200 if received OK.
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -7595,11 +12323,22 @@ namespace ININ.PureCloudApi.Api
         public async System.Threading.Tasks.Task<string> OutboundContactlistsContactlistidExportPostAsync (string contactListId)
         {
              ApiResponse<string> localVarResponse = await OutboundContactlistsContactlistidExportPostAsyncWithHttpInfo(contactListId);
+=======
+        /// Get dialer dncList import status. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dncListId">DncList ID</param>
+        /// <returns>Task of ImportStatus</returns>
+        public async System.Threading.Tasks.Task<ImportStatus> GetDnclistsDnclistIdImportstatusAsync (string dncListId)
+        {
+             ApiResponse<ImportStatus> localVarResponse = await GetDnclistsDnclistIdImportstatusAsyncWithHttpInfo(dncListId);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
 
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Initiate the export of a contact list. Returns 200 if received OK.
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -7612,6 +12351,20 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'contactListId' when calling OutboundApi->OutboundContactlistsContactlistidExportPost");
 
             var localVarPath = "/api/v1/outbound/contactlists/{contactListId}/export";
+=======
+        /// Get dialer dncList import status. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dncListId">DncList ID</param>
+        /// <returns>Task of ApiResponse (ImportStatus)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ImportStatus>> GetDnclistsDnclistIdImportstatusAsyncWithHttpInfo (string dncListId)
+        {
+            // verify the required parameter 'dncListId' is set
+            if (dncListId == null)
+                throw new ApiException(400, "Missing required parameter 'dncListId' when calling OutboundApi->GetDnclistsDnclistIdImportstatus");
+
+            var localVarPath = "/api/v2/outbound/dnclists/{dncListId}/importstatus";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -7636,7 +12389,11 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (contactListId != null) localVarPathParams.Add("contactListId", Configuration.ApiClient.ParameterToString(contactListId)); // path parameter
+=======
+            if (dncListId != null) localVarPathParams.Add("dncListId", Configuration.ApiClient.ParameterToString(dncListId)); // path parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -7647,12 +12404,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+<<<<<<< HEAD
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundContactlistsContactlistidExportPost: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundContactlistsContactlistidExportPost: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -7660,13 +12422,23 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling GetDnclistsDnclistIdImportstatus: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetDnclistsDnclistIdImportstatus: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ImportStatus>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ImportStatus) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ImportStatus)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
-        /// Get dialer contactList. 
+        /// Query a list of Rule Sets. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="contactListId">ContactList ID</param>
         /// <param name="importStatus">Import status (optional, default to false)</param>
         /// <param name="includeSize">Include size (optional, default to false)</param>
@@ -7674,13 +12446,26 @@ namespace ININ.PureCloudApi.Api
         public ContactList OutboundContactlistsContactlistidGet (string contactListId, bool? importStatus = null, bool? includeSize = null)
         {
              ApiResponse<ContactList> localVarResponse = OutboundContactlistsContactlistidGetWithHttpInfo(contactListId, importStatus, includeSize);
+=======
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <returns>RuleSetEntityListing</returns>
+        public RuleSetEntityListing GetRulesets (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
+        {
+             ApiResponse<RuleSetEntityListing> localVarResponse = GetRulesetsWithHttpInfo(pageSize, pageNumber, filterType, name, sortBy, sortOrder);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Get dialer contactList. 
+        /// Query a list of Rule Sets. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="contactListId">ContactList ID</param>
         /// <param name="importStatus">Import status (optional, default to false)</param>
         /// <param name="includeSize">Include size (optional, default to false)</param>
@@ -7692,6 +12477,19 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'contactListId' when calling OutboundApi->OutboundContactlistsContactlistidGet");
 
             var localVarPath = "/api/v1/outbound/contactlists/{contactListId}";
+=======
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <returns>ApiResponse of RuleSetEntityListing</returns>
+        public ApiResponse< RuleSetEntityListing > GetRulesetsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
+        {
+
+            var localVarPath = "/api/v2/outbound/rulesets";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -7716,9 +12514,18 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (contactListId != null) localVarPathParams.Add("contactListId", Configuration.ApiClient.ParameterToString(contactListId)); // path parameter
             if (importStatus != null) localVarQueryParams.Add("importStatus", Configuration.ApiClient.ParameterToString(importStatus)); // query parameter
             if (includeSize != null) localVarQueryParams.Add("includeSize", Configuration.ApiClient.ParameterToString(includeSize)); // query parameter
+=======
+            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            if (filterType != null) localVarQueryParams.Add("filterType", Configuration.ApiClient.ParameterToString(filterType)); // query parameter
+            if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
+            if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
+            if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -7735,6 +12542,7 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundContactlistsContactlistidGet: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundContactlistsContactlistidGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -7742,13 +12550,23 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<ContactList>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ContactList) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContactList)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling GetRulesets: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRulesets: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<RuleSetEntityListing>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RuleSetEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RuleSetEntityListing)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
-        /// Get dialer contactList. 
+        /// Query a list of Rule Sets. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="contactListId">ContactList ID</param>
         /// <param name="importStatus">Import status (optional, default to false)</param>
         /// <param name="includeSize">Include size (optional, default to false)</param>
@@ -7756,14 +12574,27 @@ namespace ININ.PureCloudApi.Api
         public async System.Threading.Tasks.Task<ContactList> OutboundContactlistsContactlistidGetAsync (string contactListId, bool? importStatus = null, bool? includeSize = null)
         {
              ApiResponse<ContactList> localVarResponse = await OutboundContactlistsContactlistidGetAsyncWithHttpInfo(contactListId, importStatus, includeSize);
+=======
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <returns>Task of RuleSetEntityListing</returns>
+        public async System.Threading.Tasks.Task<RuleSetEntityListing> GetRulesetsAsync (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
+        {
+             ApiResponse<RuleSetEntityListing> localVarResponse = await GetRulesetsAsyncWithHttpInfo(pageSize, pageNumber, filterType, name, sortBy, sortOrder);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Get dialer contactList. 
+        /// Query a list of Rule Sets. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="contactListId">ContactList ID</param>
         /// <param name="importStatus">Import status (optional, default to false)</param>
         /// <param name="includeSize">Include size (optional, default to false)</param>
@@ -7775,6 +12606,19 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'contactListId' when calling OutboundApi->OutboundContactlistsContactlistidGet");
 
             var localVarPath = "/api/v1/outbound/contactlists/{contactListId}";
+=======
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <returns>Task of ApiResponse (RuleSetEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RuleSetEntityListing>> GetRulesetsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
+        {
+
+            var localVarPath = "/api/v2/outbound/rulesets";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -7799,9 +12643,18 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (contactListId != null) localVarPathParams.Add("contactListId", Configuration.ApiClient.ParameterToString(contactListId)); // path parameter
             if (importStatus != null) localVarQueryParams.Add("importStatus", Configuration.ApiClient.ParameterToString(importStatus)); // query parameter
             if (includeSize != null) localVarQueryParams.Add("includeSize", Configuration.ApiClient.ParameterToString(includeSize)); // query parameter
+=======
+            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            if (filterType != null) localVarQueryParams.Add("filterType", Configuration.ApiClient.ParameterToString(filterType)); // query parameter
+            if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
+            if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
+            if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -7818,6 +12671,7 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundContactlistsContactlistidGet: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundContactlistsContactlistidGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -7825,10 +12679,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<ContactList>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ContactList) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContactList)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling GetRulesets: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRulesets: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<RuleSetEntityListing>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RuleSetEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RuleSetEntityListing)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Get dialer contactList import status. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -7837,10 +12701,21 @@ namespace ININ.PureCloudApi.Api
         public ImportStatus OutboundContactlistsContactlistidImportstatusGet (string contactListId)
         {
              ApiResponse<ImportStatus> localVarResponse = OutboundContactlistsContactlistidImportstatusGetWithHttpInfo(contactListId);
+=======
+        /// Get a Rule Set by ID. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ruleSetId">Rule Set ID</param>
+        /// <returns>RuleSet</returns>
+        public RuleSet GetRulesetsRulesetId (string ruleSetId)
+        {
+             ApiResponse<RuleSet> localVarResponse = GetRulesetsRulesetIdWithHttpInfo(ruleSetId);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Get dialer contactList import status. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -7853,6 +12728,20 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'contactListId' when calling OutboundApi->OutboundContactlistsContactlistidImportstatusGet");
 
             var localVarPath = "/api/v1/outbound/contactlists/{contactListId}/importstatus";
+=======
+        /// Get a Rule Set by ID. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ruleSetId">Rule Set ID</param>
+        /// <returns>ApiResponse of RuleSet</returns>
+        public ApiResponse< RuleSet > GetRulesetsRulesetIdWithHttpInfo (string ruleSetId)
+        {
+            // verify the required parameter 'ruleSetId' is set
+            if (ruleSetId == null)
+                throw new ApiException(400, "Missing required parameter 'ruleSetId' when calling OutboundApi->GetRulesetsRulesetId");
+
+            var localVarPath = "/api/v2/outbound/rulesets/{ruleSetId}";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -7877,7 +12766,11 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (contactListId != null) localVarPathParams.Add("contactListId", Configuration.ApiClient.ParameterToString(contactListId)); // path parameter
+=======
+            if (ruleSetId != null) localVarPathParams.Add("ruleSetId", Configuration.ApiClient.ParameterToString(ruleSetId)); // path parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -7894,6 +12787,7 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundContactlistsContactlistidImportstatusGet: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundContactlistsContactlistidImportstatusGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -7901,10 +12795,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<ImportStatus>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ImportStatus) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ImportStatus)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling GetRulesetsRulesetId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRulesetsRulesetId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<RuleSet>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RuleSet) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RuleSet)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Get dialer contactList import status. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -7913,11 +12817,22 @@ namespace ININ.PureCloudApi.Api
         public async System.Threading.Tasks.Task<ImportStatus> OutboundContactlistsContactlistidImportstatusGetAsync (string contactListId)
         {
              ApiResponse<ImportStatus> localVarResponse = await OutboundContactlistsContactlistidImportstatusGetAsyncWithHttpInfo(contactListId);
+=======
+        /// Get a Rule Set by ID. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ruleSetId">Rule Set ID</param>
+        /// <returns>Task of RuleSet</returns>
+        public async System.Threading.Tasks.Task<RuleSet> GetRulesetsRulesetIdAsync (string ruleSetId)
+        {
+             ApiResponse<RuleSet> localVarResponse = await GetRulesetsRulesetIdAsyncWithHttpInfo(ruleSetId);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
 
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Get dialer contactList import status. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -7930,6 +12845,20 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'contactListId' when calling OutboundApi->OutboundContactlistsContactlistidImportstatusGet");
 
             var localVarPath = "/api/v1/outbound/contactlists/{contactListId}/importstatus";
+=======
+        /// Get a Rule Set by ID. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ruleSetId">Rule Set ID</param>
+        /// <returns>Task of ApiResponse (RuleSet)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RuleSet>> GetRulesetsRulesetIdAsyncWithHttpInfo (string ruleSetId)
+        {
+            // verify the required parameter 'ruleSetId' is set
+            if (ruleSetId == null)
+                throw new ApiException(400, "Missing required parameter 'ruleSetId' when calling OutboundApi->GetRulesetsRulesetId");
+
+            var localVarPath = "/api/v2/outbound/rulesets/{ruleSetId}";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -7954,7 +12883,11 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (contactListId != null) localVarPathParams.Add("contactListId", Configuration.ApiClient.ParameterToString(contactListId)); // path parameter
+=======
+            if (ruleSetId != null) localVarPathParams.Add("ruleSetId", Configuration.ApiClient.ParameterToString(ruleSetId)); // path parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -7971,6 +12904,7 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundContactlistsContactlistidImportstatusGet: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundContactlistsContactlistidImportstatusGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -7978,10 +12912,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<ImportStatus>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ImportStatus) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ImportStatus)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling GetRulesetsRulesetId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRulesetsRulesetId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<RuleSet>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RuleSet) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RuleSet)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Update a contact list. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -7991,10 +12935,20 @@ namespace ININ.PureCloudApi.Api
         public ContactList OutboundContactlistsContactlistidPut (string contactListId, ContactList body = null)
         {
              ApiResponse<ContactList> localVarResponse = OutboundContactlistsContactlistidPutWithHttpInfo(contactListId, body);
+=======
+        /// Query for a list of dialer campaign schedules. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List&lt;CampaignSchedule&gt;</returns>
+        public List<CampaignSchedule> GetSchedulesCampaigns ()
+        {
+             ApiResponse<List<CampaignSchedule>> localVarResponse = GetSchedulesCampaignsWithHttpInfo();
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Update a contact list. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -8008,6 +12962,16 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'contactListId' when calling OutboundApi->OutboundContactlistsContactlistidPut");
 
             var localVarPath = "/api/v1/outbound/contactlists/{contactListId}";
+=======
+        /// Query for a list of dialer campaign schedules. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List&lt;CampaignSchedule&gt;</returns>
+        public ApiResponse< List<CampaignSchedule> > GetSchedulesCampaignsWithHttpInfo ()
+        {
+
+            var localVarPath = "/api/v2/outbound/schedules/campaigns";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -8032,6 +12996,7 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (contactListId != null) localVarPathParams.Add("contactListId", Configuration.ApiClient.ParameterToString(contactListId)); // path parameter
             if (body.GetType() != typeof(byte[]))
             {
@@ -8041,6 +13006,8 @@ namespace ININ.PureCloudApi.Api
             {
                 localVarPostBody = body; // byte array
             }
+=======
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -8051,12 +13018,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+<<<<<<< HEAD
                 Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundContactlistsContactlistidPut: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundContactlistsContactlistidPut: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -8064,10 +13036,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<ContactList>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ContactList) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContactList)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling GetSchedulesCampaigns: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetSchedulesCampaigns: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<List<CampaignSchedule>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (List<CampaignSchedule>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CampaignSchedule>)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Update a contact list. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -8077,11 +13059,21 @@ namespace ININ.PureCloudApi.Api
         public async System.Threading.Tasks.Task<ContactList> OutboundContactlistsContactlistidPutAsync (string contactListId, ContactList body = null)
         {
              ApiResponse<ContactList> localVarResponse = await OutboundContactlistsContactlistidPutAsyncWithHttpInfo(contactListId, body);
+=======
+        /// Query for a list of dialer campaign schedules. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of List&lt;CampaignSchedule&gt;</returns>
+        public async System.Threading.Tasks.Task<List<CampaignSchedule>> GetSchedulesCampaignsAsync ()
+        {
+             ApiResponse<List<CampaignSchedule>> localVarResponse = await GetSchedulesCampaignsAsyncWithHttpInfo();
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
 
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Update a contact list. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -8095,6 +13087,16 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'contactListId' when calling OutboundApi->OutboundContactlistsContactlistidPut");
 
             var localVarPath = "/api/v1/outbound/contactlists/{contactListId}";
+=======
+        /// Query for a list of dialer campaign schedules. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (List&lt;CampaignSchedule&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<CampaignSchedule>>> GetSchedulesCampaignsAsyncWithHttpInfo ()
+        {
+
+            var localVarPath = "/api/v2/outbound/schedules/campaigns";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -8119,6 +13121,7 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (contactListId != null) localVarPathParams.Add("contactListId", Configuration.ApiClient.ParameterToString(contactListId)); // path parameter
             if (body.GetType() != typeof(byte[]))
             {
@@ -8128,6 +13131,8 @@ namespace ININ.PureCloudApi.Api
             {
                 localVarPostBody = body; // byte array
             }
+=======
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -8138,12 +13143,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+<<<<<<< HEAD
                 Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundContactlistsContactlistidPut: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundContactlistsContactlistidPut: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -8151,10 +13161,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<ContactList>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ContactList) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContactList)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling GetSchedulesCampaigns: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetSchedulesCampaigns: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<List<CampaignSchedule>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (List<CampaignSchedule>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CampaignSchedule>)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Query a list of contact lists. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -8170,10 +13190,21 @@ namespace ININ.PureCloudApi.Api
         public ContactListEntityListing OutboundContactlistsGet (bool? importStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
         {
              ApiResponse<ContactListEntityListing> localVarResponse = OutboundContactlistsGetWithHttpInfo(importStatus, includeSize, pageSize, pageNumber, filterType, name, sortBy, sortOrder);
+=======
+        /// Get a dialer campaign schedule. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>CampaignSchedule</returns>
+        public CampaignSchedule GetSchedulesCampaignsCampaignId (string campaignId)
+        {
+             ApiResponse<CampaignSchedule> localVarResponse = GetSchedulesCampaignsCampaignIdWithHttpInfo(campaignId);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Query a list of contact lists. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -8190,6 +13221,20 @@ namespace ININ.PureCloudApi.Api
         {
 
             var localVarPath = "/api/v1/outbound/contactlists";
+=======
+        /// Get a dialer campaign schedule. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>ApiResponse of CampaignSchedule</returns>
+        public ApiResponse< CampaignSchedule > GetSchedulesCampaignsCampaignIdWithHttpInfo (string campaignId)
+        {
+            // verify the required parameter 'campaignId' is set
+            if (campaignId == null)
+                throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->GetSchedulesCampaignsCampaignId");
+
+            var localVarPath = "/api/v2/outbound/schedules/campaigns/{campaignId}";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -8214,6 +13259,7 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (importStatus != null) localVarQueryParams.Add("importStatus", Configuration.ApiClient.ParameterToString(importStatus)); // query parameter
             if (includeSize != null) localVarQueryParams.Add("includeSize", Configuration.ApiClient.ParameterToString(includeSize)); // query parameter
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
@@ -8222,6 +13268,9 @@ namespace ININ.PureCloudApi.Api
             if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
             if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
             if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
+=======
+            if (campaignId != null) localVarPathParams.Add("campaignId", Configuration.ApiClient.ParameterToString(campaignId)); // path parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -8238,6 +13287,7 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundContactlistsGet: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundContactlistsGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -8245,10 +13295,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<ContactListEntityListing>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ContactListEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContactListEntityListing)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling GetSchedulesCampaignsCampaignId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetSchedulesCampaignsCampaignId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CampaignSchedule>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (CampaignSchedule) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CampaignSchedule)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Query a list of contact lists. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -8264,11 +13324,22 @@ namespace ININ.PureCloudApi.Api
         public async System.Threading.Tasks.Task<ContactListEntityListing> OutboundContactlistsGetAsync (bool? importStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
         {
              ApiResponse<ContactListEntityListing> localVarResponse = await OutboundContactlistsGetAsyncWithHttpInfo(importStatus, includeSize, pageSize, pageNumber, filterType, name, sortBy, sortOrder);
+=======
+        /// Get a dialer campaign schedule. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>Task of CampaignSchedule</returns>
+        public async System.Threading.Tasks.Task<CampaignSchedule> GetSchedulesCampaignsCampaignIdAsync (string campaignId)
+        {
+             ApiResponse<CampaignSchedule> localVarResponse = await GetSchedulesCampaignsCampaignIdAsyncWithHttpInfo(campaignId);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
 
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Query a list of contact lists. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -8285,6 +13356,20 @@ namespace ININ.PureCloudApi.Api
         {
 
             var localVarPath = "/api/v1/outbound/contactlists";
+=======
+        /// Get a dialer campaign schedule. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>Task of ApiResponse (CampaignSchedule)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CampaignSchedule>> GetSchedulesCampaignsCampaignIdAsyncWithHttpInfo (string campaignId)
+        {
+            // verify the required parameter 'campaignId' is set
+            if (campaignId == null)
+                throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->GetSchedulesCampaignsCampaignId");
+
+            var localVarPath = "/api/v2/outbound/schedules/campaigns/{campaignId}";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -8309,6 +13394,7 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (importStatus != null) localVarQueryParams.Add("importStatus", Configuration.ApiClient.ParameterToString(importStatus)); // query parameter
             if (includeSize != null) localVarQueryParams.Add("includeSize", Configuration.ApiClient.ParameterToString(includeSize)); // query parameter
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
@@ -8317,6 +13403,9 @@ namespace ININ.PureCloudApi.Api
             if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
             if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
             if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
+=======
+            if (campaignId != null) localVarPathParams.Add("campaignId", Configuration.ApiClient.ParameterToString(campaignId)); // path parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -8333,6 +13422,7 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundContactlistsGet: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundContactlistsGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -8340,10 +13430,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<ContactListEntityListing>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ContactListEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContactListEntityListing)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling GetSchedulesCampaignsCampaignId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetSchedulesCampaignsCampaignId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CampaignSchedule>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (CampaignSchedule) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CampaignSchedule)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Get penetration rates for a list of penetration rate identifiers (contact list id and qualifier id) 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -8352,10 +13452,20 @@ namespace ININ.PureCloudApi.Api
         public List<PenetrationRate> OutboundContactlistsPenetrationratesPost (List<PenetrationRateId> body = null)
         {
              ApiResponse<List<PenetrationRate>> localVarResponse = OutboundContactlistsPenetrationratesPostWithHttpInfo(body);
+=======
+        /// Query for a list of dialer sequence schedules. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List&lt;SequenceSchedule&gt;</returns>
+        public List<SequenceSchedule> GetSchedulesSequences ()
+        {
+             ApiResponse<List<SequenceSchedule>> localVarResponse = GetSchedulesSequencesWithHttpInfo();
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Get penetration rates for a list of penetration rate identifiers (contact list id and qualifier id) 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -8365,6 +13475,16 @@ namespace ININ.PureCloudApi.Api
         {
 
             var localVarPath = "/api/v1/outbound/contactlists/penetrationrates";
+=======
+        /// Query for a list of dialer sequence schedules. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List&lt;SequenceSchedule&gt;</returns>
+        public ApiResponse< List<SequenceSchedule> > GetSchedulesSequencesWithHttpInfo ()
+        {
+
+            var localVarPath = "/api/v2/outbound/schedules/sequences";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -8389,6 +13509,7 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -8397,6 +13518,8 @@ namespace ININ.PureCloudApi.Api
             {
                 localVarPostBody = body; // byte array
             }
+=======
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -8407,12 +13530,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+<<<<<<< HEAD
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundContactlistsPenetrationratesPost: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundContactlistsPenetrationratesPost: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -8420,10 +13548,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<List<PenetrationRate>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (List<PenetrationRate>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<PenetrationRate>)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling GetSchedulesSequences: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetSchedulesSequences: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<List<SequenceSchedule>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (List<SequenceSchedule>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<SequenceSchedule>)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Get penetration rates for a list of penetration rate identifiers (contact list id and qualifier id) 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -8432,11 +13570,21 @@ namespace ININ.PureCloudApi.Api
         public async System.Threading.Tasks.Task<List<PenetrationRate>> OutboundContactlistsPenetrationratesPostAsync (List<PenetrationRateId> body = null)
         {
              ApiResponse<List<PenetrationRate>> localVarResponse = await OutboundContactlistsPenetrationratesPostAsyncWithHttpInfo(body);
+=======
+        /// Query for a list of dialer sequence schedules. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of List&lt;SequenceSchedule&gt;</returns>
+        public async System.Threading.Tasks.Task<List<SequenceSchedule>> GetSchedulesSequencesAsync ()
+        {
+             ApiResponse<List<SequenceSchedule>> localVarResponse = await GetSchedulesSequencesAsyncWithHttpInfo();
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
 
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Get penetration rates for a list of penetration rate identifiers (contact list id and qualifier id) 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -8446,6 +13594,16 @@ namespace ININ.PureCloudApi.Api
         {
 
             var localVarPath = "/api/v1/outbound/contactlists/penetrationrates";
+=======
+        /// Query for a list of dialer sequence schedules. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (List&lt;SequenceSchedule&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<SequenceSchedule>>> GetSchedulesSequencesAsyncWithHttpInfo ()
+        {
+
+            var localVarPath = "/api/v2/outbound/schedules/sequences";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -8470,6 +13628,7 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -8478,6 +13637,8 @@ namespace ININ.PureCloudApi.Api
             {
                 localVarPostBody = body; // byte array
             }
+=======
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -8488,12 +13649,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+<<<<<<< HEAD
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundContactlistsPenetrationratesPost: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundContactlistsPenetrationratesPost: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -8501,10 +13667,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<List<PenetrationRate>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (List<PenetrationRate>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<PenetrationRate>)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling GetSchedulesSequences: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetSchedulesSequences: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<List<SequenceSchedule>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (List<SequenceSchedule>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<SequenceSchedule>)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Create a contact List. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -8513,10 +13689,21 @@ namespace ININ.PureCloudApi.Api
         public ContactList OutboundContactlistsPost (ContactList body = null)
         {
              ApiResponse<ContactList> localVarResponse = OutboundContactlistsPostWithHttpInfo(body);
+=======
+        /// Get a dialer sequence schedule. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sequenceId">Sequence ID</param>
+        /// <returns>SequenceSchedule</returns>
+        public SequenceSchedule GetSchedulesSequencesSequenceId (string sequenceId)
+        {
+             ApiResponse<SequenceSchedule> localVarResponse = GetSchedulesSequencesSequenceIdWithHttpInfo(sequenceId);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Create a contact List. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -8526,6 +13713,20 @@ namespace ININ.PureCloudApi.Api
         {
 
             var localVarPath = "/api/v1/outbound/contactlists";
+=======
+        /// Get a dialer sequence schedule. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sequenceId">Sequence ID</param>
+        /// <returns>ApiResponse of SequenceSchedule</returns>
+        public ApiResponse< SequenceSchedule > GetSchedulesSequencesSequenceIdWithHttpInfo (string sequenceId)
+        {
+            // verify the required parameter 'sequenceId' is set
+            if (sequenceId == null)
+                throw new ApiException(400, "Missing required parameter 'sequenceId' when calling OutboundApi->GetSchedulesSequencesSequenceId");
+
+            var localVarPath = "/api/v2/outbound/schedules/sequences/{sequenceId}";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -8550,6 +13751,7 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -8558,6 +13760,9 @@ namespace ININ.PureCloudApi.Api
             {
                 localVarPostBody = body; // byte array
             }
+=======
+            if (sequenceId != null) localVarPathParams.Add("sequenceId", Configuration.ApiClient.ParameterToString(sequenceId)); // path parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -8568,12 +13773,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+<<<<<<< HEAD
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundContactlistsPost: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundContactlistsPost: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -8581,10 +13791,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<ContactList>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ContactList) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContactList)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling GetSchedulesSequencesSequenceId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetSchedulesSequencesSequenceId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SequenceSchedule>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (SequenceSchedule) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SequenceSchedule)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Create a contact List. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -8593,11 +13813,22 @@ namespace ININ.PureCloudApi.Api
         public async System.Threading.Tasks.Task<ContactList> OutboundContactlistsPostAsync (ContactList body = null)
         {
              ApiResponse<ContactList> localVarResponse = await OutboundContactlistsPostAsyncWithHttpInfo(body);
+=======
+        /// Get a dialer sequence schedule. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sequenceId">Sequence ID</param>
+        /// <returns>Task of SequenceSchedule</returns>
+        public async System.Threading.Tasks.Task<SequenceSchedule> GetSchedulesSequencesSequenceIdAsync (string sequenceId)
+        {
+             ApiResponse<SequenceSchedule> localVarResponse = await GetSchedulesSequencesSequenceIdAsyncWithHttpInfo(sequenceId);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
 
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Create a contact List. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -8607,6 +13838,20 @@ namespace ININ.PureCloudApi.Api
         {
 
             var localVarPath = "/api/v1/outbound/contactlists";
+=======
+        /// Get a dialer sequence schedule. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sequenceId">Sequence ID</param>
+        /// <returns>Task of ApiResponse (SequenceSchedule)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<SequenceSchedule>> GetSchedulesSequencesSequenceIdAsyncWithHttpInfo (string sequenceId)
+        {
+            // verify the required parameter 'sequenceId' is set
+            if (sequenceId == null)
+                throw new ApiException(400, "Missing required parameter 'sequenceId' when calling OutboundApi->GetSchedulesSequencesSequenceId");
+
+            var localVarPath = "/api/v2/outbound/schedules/sequences/{sequenceId}";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -8631,6 +13876,7 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -8639,6 +13885,9 @@ namespace ININ.PureCloudApi.Api
             {
                 localVarPostBody = body; // byte array
             }
+=======
+            if (sequenceId != null) localVarPathParams.Add("sequenceId", Configuration.ApiClient.ParameterToString(sequenceId)); // path parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -8649,12 +13898,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+<<<<<<< HEAD
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundContactlistsPost: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundContactlistsPost: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -8662,24 +13916,46 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<ContactList>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ContactList) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContactList)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling GetSchedulesSequencesSequenceId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetSchedulesSequencesSequenceId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SequenceSchedule>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (SequenceSchedule) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SequenceSchedule)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
-        /// Add phone numbers to a Dialer DNC list. 
+        /// Query a list of dialer campaign sequences. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="conversationId">Conversation ID</param>
         /// <returns></returns>
         public void OutboundConversationsConversationidDncPost (string conversationId)
+=======
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <returns>CampaignSequenceEntityListing</returns>
+        public CampaignSequenceEntityListing GetSequences (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         {
-             OutboundConversationsConversationidDncPostWithHttpInfo(conversationId);
+             ApiResponse<CampaignSequenceEntityListing> localVarResponse = GetSequencesWithHttpInfo(pageSize, pageNumber, filterType, name, sortBy, sortOrder);
+             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Add phone numbers to a Dialer DNC list. 
+        /// Query a list of dialer campaign sequences. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="conversationId">Conversation ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> OutboundConversationsConversationidDncPostWithHttpInfo (string conversationId)
@@ -8689,6 +13965,19 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'conversationId' when calling OutboundApi->OutboundConversationsConversationidDncPost");
 
             var localVarPath = "/api/v1/outbound/conversations/{conversationId}/dnc";
+=======
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <returns>ApiResponse of CampaignSequenceEntityListing</returns>
+        public ApiResponse< CampaignSequenceEntityListing > GetSequencesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
+        {
+
+            var localVarPath = "/api/v2/outbound/sequences";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -8713,7 +14002,16 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
+=======
+            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            if (filterType != null) localVarQueryParams.Add("filterType", Configuration.ApiClient.ParameterToString(filterType)); // query parameter
+            if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
+            if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
+            if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -8724,12 +14022,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+<<<<<<< HEAD
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundConversationsConversationidDncPost: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundConversationsConversationidDncPost: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -8738,24 +14041,47 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
+=======
+                throw new ApiException (localVarStatusCode, "Error calling GetSequences: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetSequences: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CampaignSequenceEntityListing>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (CampaignSequenceEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CampaignSequenceEntityListing)));
+            
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         }
 
         /// <summary>
-        /// Add phone numbers to a Dialer DNC list. 
+        /// Query a list of dialer campaign sequences. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="conversationId">Conversation ID</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task OutboundConversationsConversationidDncPostAsync (string conversationId)
+=======
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <returns>Task of CampaignSequenceEntityListing</returns>
+        public async System.Threading.Tasks.Task<CampaignSequenceEntityListing> GetSequencesAsync (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         {
-             await OutboundConversationsConversationidDncPostAsyncWithHttpInfo(conversationId);
+             ApiResponse<CampaignSequenceEntityListing> localVarResponse = await GetSequencesAsyncWithHttpInfo(pageSize, pageNumber, filterType, name, sortBy, sortOrder);
+             return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Add phone numbers to a Dialer DNC list. 
+        /// Query a list of dialer campaign sequences. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="conversationId">Conversation ID</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> OutboundConversationsConversationidDncPostAsyncWithHttpInfo (string conversationId)
@@ -8765,6 +14091,19 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'conversationId' when calling OutboundApi->OutboundConversationsConversationidDncPost");
 
             var localVarPath = "/api/v1/outbound/conversations/{conversationId}/dnc";
+=======
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <returns>Task of ApiResponse (CampaignSequenceEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CampaignSequenceEntityListing>> GetSequencesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
+        {
+
+            var localVarPath = "/api/v2/outbound/sequences";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -8789,7 +14128,16 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
+=======
+            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            if (filterType != null) localVarQueryParams.Add("filterType", Configuration.ApiClient.ParameterToString(filterType)); // query parameter
+            if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
+            if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
+            if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -8800,17 +14148,31 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+<<<<<<< HEAD
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundConversationsConversationidDncPost: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundConversationsConversationidDncPost: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+=======
+                throw new ApiException (localVarStatusCode, "Error calling GetSequences: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetSequences: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
+            return new ApiResponse<CampaignSequenceEntityListing>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (CampaignSequenceEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CampaignSequenceEntityListing)));
             
+<<<<<<< HEAD
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
@@ -8825,10 +14187,24 @@ namespace ININ.PureCloudApi.Api
         public string OutboundDnclistsDnclistidDelete (string dncListId)
         {
              ApiResponse<string> localVarResponse = OutboundDnclistsDnclistidDeleteWithHttpInfo(dncListId);
+=======
+        }
+
+        /// <summary>
+        /// Get a dialer campaign sequence. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sequenceId">Campaign Sequence ID</param>
+        /// <returns>CampaignSequence</returns>
+        public CampaignSequence GetSequencesSequenceId (string sequenceId)
+        {
+             ApiResponse<CampaignSequence> localVarResponse = GetSequencesSequenceIdWithHttpInfo(sequenceId);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Delete dialer DNC list 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -8841,6 +14217,20 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'dncListId' when calling OutboundApi->OutboundDnclistsDnclistidDelete");
 
             var localVarPath = "/api/v1/outbound/dnclists/{dncListId}";
+=======
+        /// Get a dialer campaign sequence. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sequenceId">Campaign Sequence ID</param>
+        /// <returns>ApiResponse of CampaignSequence</returns>
+        public ApiResponse< CampaignSequence > GetSequencesSequenceIdWithHttpInfo (string sequenceId)
+        {
+            // verify the required parameter 'sequenceId' is set
+            if (sequenceId == null)
+                throw new ApiException(400, "Missing required parameter 'sequenceId' when calling OutboundApi->GetSequencesSequenceId");
+
+            var localVarPath = "/api/v2/outbound/sequences/{sequenceId}";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -8865,7 +14255,11 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (dncListId != null) localVarPathParams.Add("dncListId", Configuration.ApiClient.ParameterToString(dncListId)); // path parameter
+=======
+            if (sequenceId != null) localVarPathParams.Add("sequenceId", Configuration.ApiClient.ParameterToString(sequenceId)); // path parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -8876,12 +14270,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+<<<<<<< HEAD
                 Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundDnclistsDnclistidDelete: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundDnclistsDnclistidDelete: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -8889,10 +14288,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling GetSequencesSequenceId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetSequencesSequenceId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CampaignSequence>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (CampaignSequence) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CampaignSequence)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Delete dialer DNC list 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -8901,11 +14310,22 @@ namespace ININ.PureCloudApi.Api
         public async System.Threading.Tasks.Task<string> OutboundDnclistsDnclistidDeleteAsync (string dncListId)
         {
              ApiResponse<string> localVarResponse = await OutboundDnclistsDnclistidDeleteAsyncWithHttpInfo(dncListId);
+=======
+        /// Get a dialer campaign sequence. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sequenceId">Campaign Sequence ID</param>
+        /// <returns>Task of CampaignSequence</returns>
+        public async System.Threading.Tasks.Task<CampaignSequence> GetSequencesSequenceIdAsync (string sequenceId)
+        {
+             ApiResponse<CampaignSequence> localVarResponse = await GetSequencesSequenceIdAsyncWithHttpInfo(sequenceId);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
 
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Delete dialer DNC list 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -8918,6 +14338,20 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'dncListId' when calling OutboundApi->OutboundDnclistsDnclistidDelete");
 
             var localVarPath = "/api/v1/outbound/dnclists/{dncListId}";
+=======
+        /// Get a dialer campaign sequence. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sequenceId">Campaign Sequence ID</param>
+        /// <returns>Task of ApiResponse (CampaignSequence)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CampaignSequence>> GetSequencesSequenceIdAsyncWithHttpInfo (string sequenceId)
+        {
+            // verify the required parameter 'sequenceId' is set
+            if (sequenceId == null)
+                throw new ApiException(400, "Missing required parameter 'sequenceId' when calling OutboundApi->GetSequencesSequenceId");
+
+            var localVarPath = "/api/v2/outbound/sequences/{sequenceId}";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -8942,7 +14376,11 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (dncListId != null) localVarPathParams.Add("dncListId", Configuration.ApiClient.ParameterToString(dncListId)); // path parameter
+=======
+            if (sequenceId != null) localVarPathParams.Add("sequenceId", Configuration.ApiClient.ParameterToString(sequenceId)); // path parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -8953,12 +14391,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+<<<<<<< HEAD
                 Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundDnclistsDnclistidDelete: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundDnclistsDnclistidDelete: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -8966,10 +14409,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling GetSequencesSequenceId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetSequencesSequenceId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CampaignSequence>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (CampaignSequence) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CampaignSequence)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Initiate the export of a dnc list. Returns 200 if received OK.
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -8978,10 +14431,20 @@ namespace ININ.PureCloudApi.Api
         public string OutboundDnclistsDnclistidExportPost (string dncListId)
         {
              ApiResponse<string> localVarResponse = OutboundDnclistsDnclistidExportPostWithHttpInfo(dncListId);
+=======
+        /// Get the Dialer wrap up code mapping. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>WrapUpCodeMapping</returns>
+        public WrapUpCodeMapping GetWrapupcodemappings ()
+        {
+             ApiResponse<WrapUpCodeMapping> localVarResponse = GetWrapupcodemappingsWithHttpInfo();
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Initiate the export of a dnc list. Returns 200 if received OK.
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -8994,6 +14457,16 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'dncListId' when calling OutboundApi->OutboundDnclistsDnclistidExportPost");
 
             var localVarPath = "/api/v1/outbound/dnclists/{dncListId}/export";
+=======
+        /// Get the Dialer wrap up code mapping. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of WrapUpCodeMapping</returns>
+        public ApiResponse< WrapUpCodeMapping > GetWrapupcodemappingsWithHttpInfo ()
+        {
+
+            var localVarPath = "/api/v2/outbound/wrapupcodemappings";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -9018,7 +14491,10 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (dncListId != null) localVarPathParams.Add("dncListId", Configuration.ApiClient.ParameterToString(dncListId)); // path parameter
+=======
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -9029,12 +14505,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+<<<<<<< HEAD
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundDnclistsDnclistidExportPost: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundDnclistsDnclistidExportPost: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -9042,10 +14523,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling GetWrapupcodemappings: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWrapupcodemappings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WrapUpCodeMapping>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (WrapUpCodeMapping) Configuration.ApiClient.Deserialize(localVarResponse, typeof(WrapUpCodeMapping)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Initiate the export of a dnc list. Returns 200 if received OK.
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -9054,11 +14545,21 @@ namespace ININ.PureCloudApi.Api
         public async System.Threading.Tasks.Task<string> OutboundDnclistsDnclistidExportPostAsync (string dncListId)
         {
              ApiResponse<string> localVarResponse = await OutboundDnclistsDnclistidExportPostAsyncWithHttpInfo(dncListId);
+=======
+        /// Get the Dialer wrap up code mapping. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of WrapUpCodeMapping</returns>
+        public async System.Threading.Tasks.Task<WrapUpCodeMapping> GetWrapupcodemappingsAsync ()
+        {
+             ApiResponse<WrapUpCodeMapping> localVarResponse = await GetWrapupcodemappingsAsyncWithHttpInfo();
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
 
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Initiate the export of a dnc list. Returns 200 if received OK.
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -9071,6 +14572,16 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'dncListId' when calling OutboundApi->OutboundDnclistsDnclistidExportPost");
 
             var localVarPath = "/api/v1/outbound/dnclists/{dncListId}/export";
+=======
+        /// Get the Dialer wrap up code mapping. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (WrapUpCodeMapping)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<WrapUpCodeMapping>> GetWrapupcodemappingsAsyncWithHttpInfo ()
+        {
+
+            var localVarPath = "/api/v2/outbound/wrapupcodemappings";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -9095,7 +14606,10 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (dncListId != null) localVarPathParams.Add("dncListId", Configuration.ApiClient.ParameterToString(dncListId)); // path parameter
+=======
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -9106,12 +14620,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+<<<<<<< HEAD
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundDnclistsDnclistidExportPost: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundDnclistsDnclistidExportPost: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -9119,13 +14638,23 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling GetWrapupcodemappings: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWrapupcodemappings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WrapUpCodeMapping>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (WrapUpCodeMapping) Configuration.ApiClient.Deserialize(localVarResponse, typeof(WrapUpCodeMapping)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
-        /// Get dialer DNC list 
+        /// Retrieves audits for dialer. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="dncListId">DncList ID</param>
         /// <param name="importStatus">Import status (optional, default to false)</param>
         /// <param name="includeSize">Include size (optional, default to false)</param>
@@ -9133,13 +14662,26 @@ namespace ININ.PureCloudApi.Api
         public DncList OutboundDnclistsDnclistidGet (string dncListId, bool? importStatus = null, bool? includeSize = null)
         {
              ApiResponse<DncList> localVarResponse = OutboundDnclistsDnclistidGetWithHttpInfo(dncListId, importStatus, includeSize);
+=======
+        /// <param name="body">AuditSearch (optional)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">Sort by (optional, default to entity.name)</param>
+        /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
+        /// <param name="facetsOnly">Facets only (optional, default to false)</param>
+        /// <returns>AuditSearchResult</returns>
+        public AuditSearchResult PostAudits (DialerAuditRequest body = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, bool? facetsOnly = null)
+        {
+             ApiResponse<AuditSearchResult> localVarResponse = PostAuditsWithHttpInfo(body, pageSize, pageNumber, sortBy, sortOrder, facetsOnly);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Get dialer DNC list 
+        /// Retrieves audits for dialer. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="dncListId">DncList ID</param>
         /// <param name="importStatus">Import status (optional, default to false)</param>
         /// <param name="includeSize">Include size (optional, default to false)</param>
@@ -9151,6 +14693,19 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'dncListId' when calling OutboundApi->OutboundDnclistsDnclistidGet");
 
             var localVarPath = "/api/v1/outbound/dnclists/{dncListId}";
+=======
+        /// <param name="body">AuditSearch (optional)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">Sort by (optional, default to entity.name)</param>
+        /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
+        /// <param name="facetsOnly">Facets only (optional, default to false)</param>
+        /// <returns>ApiResponse of AuditSearchResult</returns>
+        public ApiResponse< AuditSearchResult > PostAuditsWithHttpInfo (DialerAuditRequest body = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, bool? facetsOnly = null)
+        {
+
+            var localVarPath = "/api/v2/outbound/audits";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -9175,9 +14730,25 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (dncListId != null) localVarPathParams.Add("dncListId", Configuration.ApiClient.ParameterToString(dncListId)); // path parameter
             if (importStatus != null) localVarQueryParams.Add("importStatus", Configuration.ApiClient.ParameterToString(importStatus)); // query parameter
             if (includeSize != null) localVarQueryParams.Add("includeSize", Configuration.ApiClient.ParameterToString(includeSize)); // query parameter
+=======
+            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
+            if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
+            if (facetsOnly != null) localVarQueryParams.Add("facetsOnly", Configuration.ApiClient.ParameterToString(facetsOnly)); // query parameter
+            if (body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -9188,12 +14759,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+<<<<<<< HEAD
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundDnclistsDnclistidGet: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundDnclistsDnclistidGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -9201,13 +14777,23 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<DncList>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (DncList) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DncList)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PostAudits: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostAudits: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AuditSearchResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (AuditSearchResult) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AuditSearchResult)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
-        /// Get dialer DNC list 
+        /// Retrieves audits for dialer. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="dncListId">DncList ID</param>
         /// <param name="importStatus">Import status (optional, default to false)</param>
         /// <param name="includeSize">Include size (optional, default to false)</param>
@@ -9215,14 +14801,27 @@ namespace ININ.PureCloudApi.Api
         public async System.Threading.Tasks.Task<DncList> OutboundDnclistsDnclistidGetAsync (string dncListId, bool? importStatus = null, bool? includeSize = null)
         {
              ApiResponse<DncList> localVarResponse = await OutboundDnclistsDnclistidGetAsyncWithHttpInfo(dncListId, importStatus, includeSize);
+=======
+        /// <param name="body">AuditSearch (optional)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">Sort by (optional, default to entity.name)</param>
+        /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
+        /// <param name="facetsOnly">Facets only (optional, default to false)</param>
+        /// <returns>Task of AuditSearchResult</returns>
+        public async System.Threading.Tasks.Task<AuditSearchResult> PostAuditsAsync (DialerAuditRequest body = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, bool? facetsOnly = null)
+        {
+             ApiResponse<AuditSearchResult> localVarResponse = await PostAuditsAsyncWithHttpInfo(body, pageSize, pageNumber, sortBy, sortOrder, facetsOnly);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Get dialer DNC list 
+        /// Retrieves audits for dialer. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="dncListId">DncList ID</param>
         /// <param name="importStatus">Import status (optional, default to false)</param>
         /// <param name="includeSize">Include size (optional, default to false)</param>
@@ -9234,6 +14833,19 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'dncListId' when calling OutboundApi->OutboundDnclistsDnclistidGet");
 
             var localVarPath = "/api/v1/outbound/dnclists/{dncListId}";
+=======
+        /// <param name="body">AuditSearch (optional)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">Sort by (optional, default to entity.name)</param>
+        /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
+        /// <param name="facetsOnly">Facets only (optional, default to false)</param>
+        /// <returns>Task of ApiResponse (AuditSearchResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AuditSearchResult>> PostAuditsAsyncWithHttpInfo (DialerAuditRequest body = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, bool? facetsOnly = null)
+        {
+
+            var localVarPath = "/api/v2/outbound/audits";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -9258,9 +14870,25 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (dncListId != null) localVarPathParams.Add("dncListId", Configuration.ApiClient.ParameterToString(dncListId)); // path parameter
             if (importStatus != null) localVarQueryParams.Add("importStatus", Configuration.ApiClient.ParameterToString(importStatus)); // query parameter
             if (includeSize != null) localVarQueryParams.Add("includeSize", Configuration.ApiClient.ParameterToString(includeSize)); // query parameter
+=======
+            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
+            if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
+            if (facetsOnly != null) localVarQueryParams.Add("facetsOnly", Configuration.ApiClient.ParameterToString(facetsOnly)); // query parameter
+            if (body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -9271,12 +14899,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+<<<<<<< HEAD
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundDnclistsDnclistidGet: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundDnclistsDnclistidGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -9284,10 +14917,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<DncList>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (DncList) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DncList)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PostAudits: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostAudits: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AuditSearchResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (AuditSearchResult) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AuditSearchResult)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Get dialer dncList import status. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -9296,10 +14939,21 @@ namespace ININ.PureCloudApi.Api
         public ImportStatus OutboundDnclistsDnclistidImportstatusGet (string dncListId)
         {
              ApiResponse<ImportStatus> localVarResponse = OutboundDnclistsDnclistidImportstatusGetWithHttpInfo(dncListId);
+=======
+        /// Create callable time set 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">DialerCallableTimeSet (optional)</param>
+        /// <returns>CallableTimeSet</returns>
+        public CallableTimeSet PostCallabletimesets (CallableTimeSet body = null)
+        {
+             ApiResponse<CallableTimeSet> localVarResponse = PostCallabletimesetsWithHttpInfo(body);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Get dialer dncList import status. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -9312,6 +14966,17 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'dncListId' when calling OutboundApi->OutboundDnclistsDnclistidImportstatusGet");
 
             var localVarPath = "/api/v1/outbound/dnclists/{dncListId}/importstatus";
+=======
+        /// Create callable time set 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">DialerCallableTimeSet (optional)</param>
+        /// <returns>ApiResponse of CallableTimeSet</returns>
+        public ApiResponse< CallableTimeSet > PostCallabletimesetsWithHttpInfo (CallableTimeSet body = null)
+        {
+
+            var localVarPath = "/api/v2/outbound/callabletimesets";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -9336,7 +15001,18 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (dncListId != null) localVarPathParams.Add("dncListId", Configuration.ApiClient.ParameterToString(dncListId)); // path parameter
+=======
+            if (body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -9347,12 +15023,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+<<<<<<< HEAD
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundDnclistsDnclistidImportstatusGet: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundDnclistsDnclistidImportstatusGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -9360,10 +15041,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<ImportStatus>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ImportStatus) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ImportStatus)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PostCallabletimesets: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostCallabletimesets: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CallableTimeSet>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (CallableTimeSet) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CallableTimeSet)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Get dialer dncList import status. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -9372,11 +15063,22 @@ namespace ININ.PureCloudApi.Api
         public async System.Threading.Tasks.Task<ImportStatus> OutboundDnclistsDnclistidImportstatusGetAsync (string dncListId)
         {
              ApiResponse<ImportStatus> localVarResponse = await OutboundDnclistsDnclistidImportstatusGetAsyncWithHttpInfo(dncListId);
+=======
+        /// Create callable time set 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">DialerCallableTimeSet (optional)</param>
+        /// <returns>Task of CallableTimeSet</returns>
+        public async System.Threading.Tasks.Task<CallableTimeSet> PostCallabletimesetsAsync (CallableTimeSet body = null)
+        {
+             ApiResponse<CallableTimeSet> localVarResponse = await PostCallabletimesetsAsyncWithHttpInfo(body);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
 
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Get dialer dncList import status. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -9389,6 +15091,17 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'dncListId' when calling OutboundApi->OutboundDnclistsDnclistidImportstatusGet");
 
             var localVarPath = "/api/v1/outbound/dnclists/{dncListId}/importstatus";
+=======
+        /// Create callable time set 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">DialerCallableTimeSet (optional)</param>
+        /// <returns>Task of ApiResponse (CallableTimeSet)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CallableTimeSet>> PostCallabletimesetsAsyncWithHttpInfo (CallableTimeSet body = null)
+        {
+
+            var localVarPath = "/api/v2/outbound/callabletimesets";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -9413,7 +15126,18 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (dncListId != null) localVarPathParams.Add("dncListId", Configuration.ApiClient.ParameterToString(dncListId)); // path parameter
+=======
+            if (body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -9424,12 +15148,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+<<<<<<< HEAD
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundDnclistsDnclistidImportstatusGet: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundDnclistsDnclistidImportstatusGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -9437,10 +15166,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<ImportStatus>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ImportStatus) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ImportStatus)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PostCallabletimesets: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostCallabletimesets: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CallableTimeSet>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (CallableTimeSet) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CallableTimeSet)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Add phone numbers to a Dialer DNC list. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -9466,6 +15205,29 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'dncListId' when calling OutboundApi->OutboundDnclistsDnclistidPhonenumbersPost");
 
             var localVarPath = "/api/v1/outbound/dnclists/{dncListId}/phonenumbers";
+=======
+        /// Create a dialer call analysis response set. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">ResponseSet (optional)</param>
+        /// <returns>ResponseSet</returns>
+        public ResponseSet PostCallanalysisresponsesets (ResponseSet body = null)
+        {
+             ApiResponse<ResponseSet> localVarResponse = PostCallanalysisresponsesetsWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create a dialer call analysis response set. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">ResponseSet (optional)</param>
+        /// <returns>ApiResponse of ResponseSet</returns>
+        public ApiResponse< ResponseSet > PostCallanalysisresponsesetsWithHttpInfo (ResponseSet body = null)
+        {
+
+            var localVarPath = "/api/v2/outbound/callanalysisresponsesets";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -9490,7 +15252,10 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (dncListId != null) localVarPathParams.Add("dncListId", Configuration.ApiClient.ParameterToString(dncListId)); // path parameter
+=======
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -9515,10 +15280,20 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundDnclistsDnclistidPhonenumbersPost: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundDnclistsDnclistidPhonenumbersPost: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PostCallanalysisresponsesets: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostCallanalysisresponsesets: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ResponseSet>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ResponseSet) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseSet)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -9526,6 +15301,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Add phone numbers to a Dialer DNC list. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -9535,10 +15311,22 @@ namespace ININ.PureCloudApi.Api
         public async System.Threading.Tasks.Task OutboundDnclistsDnclistidPhonenumbersPostAsync (string dncListId, List<string> body = null)
         {
              await OutboundDnclistsDnclistidPhonenumbersPostAsyncWithHttpInfo(dncListId, body);
+=======
+        /// Create a dialer call analysis response set. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">ResponseSet (optional)</param>
+        /// <returns>Task of ResponseSet</returns>
+        public async System.Threading.Tasks.Task<ResponseSet> PostCallanalysisresponsesetsAsync (ResponseSet body = null)
+        {
+             ApiResponse<ResponseSet> localVarResponse = await PostCallanalysisresponsesetsAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Add phone numbers to a Dialer DNC list. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -9552,6 +15340,17 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'dncListId' when calling OutboundApi->OutboundDnclistsDnclistidPhonenumbersPost");
 
             var localVarPath = "/api/v1/outbound/dnclists/{dncListId}/phonenumbers";
+=======
+        /// Create a dialer call analysis response set. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">ResponseSet (optional)</param>
+        /// <returns>Task of ApiResponse (ResponseSet)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ResponseSet>> PostCallanalysisresponsesetsAsyncWithHttpInfo (ResponseSet body = null)
+        {
+
+            var localVarPath = "/api/v2/outbound/callanalysisresponsesets";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -9576,7 +15375,10 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (dncListId != null) localVarPathParams.Add("dncListId", Configuration.ApiClient.ParameterToString(dncListId)); // path parameter
+=======
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -9601,10 +15403,20 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundDnclistsDnclistidPhonenumbersPost: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundDnclistsDnclistidPhonenumbersPost: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PostCallanalysisresponsesets: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostCallanalysisresponsesets: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ResponseSet>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ResponseSet) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseSet)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -9612,6 +15424,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Update dialer DNC list 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -9621,10 +15434,21 @@ namespace ININ.PureCloudApi.Api
         public DncList OutboundDnclistsDnclistidPut (string dncListId, DncList body = null)
         {
              ApiResponse<DncList> localVarResponse = OutboundDnclistsDnclistidPutWithHttpInfo(dncListId, body);
+=======
+        /// Create a campaign. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Campaign (optional)</param>
+        /// <returns>Campaign</returns>
+        public Campaign PostCampaigns (Campaign body = null)
+        {
+             ApiResponse<Campaign> localVarResponse = PostCampaignsWithHttpInfo(body);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Update dialer DNC list 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -9638,6 +15462,17 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'dncListId' when calling OutboundApi->OutboundDnclistsDnclistidPut");
 
             var localVarPath = "/api/v1/outbound/dnclists/{dncListId}";
+=======
+        /// Create a campaign. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Campaign (optional)</param>
+        /// <returns>ApiResponse of Campaign</returns>
+        public ApiResponse< Campaign > PostCampaignsWithHttpInfo (Campaign body = null)
+        {
+
+            var localVarPath = "/api/v2/outbound/campaigns";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -9662,7 +15497,10 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (dncListId != null) localVarPathParams.Add("dncListId", Configuration.ApiClient.ParameterToString(dncListId)); // path parameter
+=======
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -9681,12 +15519,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+<<<<<<< HEAD
                 Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundDnclistsDnclistidPut: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundDnclistsDnclistidPut: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -9694,10 +15537,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<DncList>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (DncList) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DncList)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PostCampaigns: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostCampaigns: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Campaign>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Campaign) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Campaign)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Update dialer DNC list 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -9707,11 +15560,22 @@ namespace ININ.PureCloudApi.Api
         public async System.Threading.Tasks.Task<DncList> OutboundDnclistsDnclistidPutAsync (string dncListId, DncList body = null)
         {
              ApiResponse<DncList> localVarResponse = await OutboundDnclistsDnclistidPutAsyncWithHttpInfo(dncListId, body);
+=======
+        /// Create a campaign. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Campaign (optional)</param>
+        /// <returns>Task of Campaign</returns>
+        public async System.Threading.Tasks.Task<Campaign> PostCampaignsAsync (Campaign body = null)
+        {
+             ApiResponse<Campaign> localVarResponse = await PostCampaignsAsyncWithHttpInfo(body);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
 
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Update dialer DNC list 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -9725,6 +15589,17 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'dncListId' when calling OutboundApi->OutboundDnclistsDnclistidPut");
 
             var localVarPath = "/api/v1/outbound/dnclists/{dncListId}";
+=======
+        /// Create a campaign. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Campaign (optional)</param>
+        /// <returns>Task of ApiResponse (Campaign)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Campaign>> PostCampaignsAsyncWithHttpInfo (Campaign body = null)
+        {
+
+            var localVarPath = "/api/v2/outbound/campaigns";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -9749,7 +15624,10 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (dncListId != null) localVarPathParams.Add("dncListId", Configuration.ApiClient.ParameterToString(dncListId)); // path parameter
+=======
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -9768,12 +15646,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+<<<<<<< HEAD
                 Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundDnclistsDnclistidPut: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundDnclistsDnclistidPut: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -9781,10 +15664,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<DncList>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (DncList) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DncList)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PostCampaigns: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostCampaigns: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Campaign>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Campaign) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Campaign)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Query dialer DNC lists 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -9800,10 +15693,22 @@ namespace ININ.PureCloudApi.Api
         public DncListEntityListing OutboundDnclistsGet (bool? importStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
         {
              ApiResponse<DncListEntityListing> localVarResponse = OutboundDnclistsGetWithHttpInfo(importStatus, includeSize, pageSize, pageNumber, filterType, name, sortBy, sortOrder);
+=======
+        /// Schedule a Callback for a Dialer Campaign 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <param name="body">ContactCallbackRequest (optional)</param>
+        /// <returns>ContactCallbackRequest</returns>
+        public ContactCallbackRequest PostCampaignsCampaignIdCallbackSchedule (string campaignId, ContactCallbackRequest body = null)
+        {
+             ApiResponse<ContactCallbackRequest> localVarResponse = PostCampaignsCampaignIdCallbackScheduleWithHttpInfo(campaignId, body);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Query dialer DNC lists 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -9820,6 +15725,21 @@ namespace ININ.PureCloudApi.Api
         {
 
             var localVarPath = "/api/v1/outbound/dnclists";
+=======
+        /// Schedule a Callback for a Dialer Campaign 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <param name="body">ContactCallbackRequest (optional)</param>
+        /// <returns>ApiResponse of ContactCallbackRequest</returns>
+        public ApiResponse< ContactCallbackRequest > PostCampaignsCampaignIdCallbackScheduleWithHttpInfo (string campaignId, ContactCallbackRequest body = null)
+        {
+            // verify the required parameter 'campaignId' is set
+            if (campaignId == null)
+                throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->PostCampaignsCampaignIdCallbackSchedule");
+
+            var localVarPath = "/api/v2/outbound/campaigns/{campaignId}/callback/schedule";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -9844,6 +15764,7 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (importStatus != null) localVarQueryParams.Add("importStatus", Configuration.ApiClient.ParameterToString(importStatus)); // query parameter
             if (includeSize != null) localVarQueryParams.Add("includeSize", Configuration.ApiClient.ParameterToString(includeSize)); // query parameter
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
@@ -9852,6 +15773,17 @@ namespace ININ.PureCloudApi.Api
             if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
             if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
             if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
+=======
+            if (campaignId != null) localVarPathParams.Add("campaignId", Configuration.ApiClient.ParameterToString(campaignId)); // path parameter
+            if (body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -9862,12 +15794,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+<<<<<<< HEAD
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundDnclistsGet: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundDnclistsGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -9875,10 +15812,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<DncListEntityListing>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (DncListEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DncListEntityListing)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PostCampaignsCampaignIdCallbackSchedule: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostCampaignsCampaignIdCallbackSchedule: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ContactCallbackRequest>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ContactCallbackRequest) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContactCallbackRequest)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Query dialer DNC lists 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -9894,11 +15841,23 @@ namespace ININ.PureCloudApi.Api
         public async System.Threading.Tasks.Task<DncListEntityListing> OutboundDnclistsGetAsync (bool? importStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
         {
              ApiResponse<DncListEntityListing> localVarResponse = await OutboundDnclistsGetAsyncWithHttpInfo(importStatus, includeSize, pageSize, pageNumber, filterType, name, sortBy, sortOrder);
+=======
+        /// Schedule a Callback for a Dialer Campaign 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <param name="body">ContactCallbackRequest (optional)</param>
+        /// <returns>Task of ContactCallbackRequest</returns>
+        public async System.Threading.Tasks.Task<ContactCallbackRequest> PostCampaignsCampaignIdCallbackScheduleAsync (string campaignId, ContactCallbackRequest body = null)
+        {
+             ApiResponse<ContactCallbackRequest> localVarResponse = await PostCampaignsCampaignIdCallbackScheduleAsyncWithHttpInfo(campaignId, body);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
 
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Query dialer DNC lists 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -9915,6 +15874,21 @@ namespace ININ.PureCloudApi.Api
         {
 
             var localVarPath = "/api/v1/outbound/dnclists";
+=======
+        /// Schedule a Callback for a Dialer Campaign 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <param name="body">ContactCallbackRequest (optional)</param>
+        /// <returns>Task of ApiResponse (ContactCallbackRequest)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ContactCallbackRequest>> PostCampaignsCampaignIdCallbackScheduleAsyncWithHttpInfo (string campaignId, ContactCallbackRequest body = null)
+        {
+            // verify the required parameter 'campaignId' is set
+            if (campaignId == null)
+                throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->PostCampaignsCampaignIdCallbackSchedule");
+
+            var localVarPath = "/api/v2/outbound/campaigns/{campaignId}/callback/schedule";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -9939,6 +15913,7 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (importStatus != null) localVarQueryParams.Add("importStatus", Configuration.ApiClient.ParameterToString(importStatus)); // query parameter
             if (includeSize != null) localVarQueryParams.Add("includeSize", Configuration.ApiClient.ParameterToString(includeSize)); // query parameter
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
@@ -9947,6 +15922,17 @@ namespace ININ.PureCloudApi.Api
             if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
             if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
             if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
+=======
+            if (campaignId != null) localVarPathParams.Add("campaignId", Configuration.ApiClient.ParameterToString(campaignId)); // path parameter
+            if (body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -9957,12 +15943,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+<<<<<<< HEAD
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundDnclistsGet: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundDnclistsGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -9970,10 +15961,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<DncListEntityListing>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (DncListEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DncListEntityListing)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PostCampaignsCampaignIdCallbackSchedule: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostCampaignsCampaignIdCallbackSchedule: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ContactCallbackRequest>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ContactCallbackRequest) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContactCallbackRequest)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Create dialer DNC list 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -9982,10 +15983,21 @@ namespace ININ.PureCloudApi.Api
         public DncList OutboundDnclistsPost (DncList body = null)
         {
              ApiResponse<DncList> localVarResponse = OutboundDnclistsPostWithHttpInfo(body);
+=======
+        /// Get progress for a list of campaigns 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Campaign IDs (optional)</param>
+        /// <returns>List&lt;CampaignProgress&gt;</returns>
+        public List<CampaignProgress> PostCampaignsProgress (List<string> body = null)
+        {
+             ApiResponse<List<CampaignProgress>> localVarResponse = PostCampaignsProgressWithHttpInfo(body);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Create dialer DNC list 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -9995,6 +16007,17 @@ namespace ININ.PureCloudApi.Api
         {
 
             var localVarPath = "/api/v1/outbound/dnclists";
+=======
+        /// Get progress for a list of campaigns 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Campaign IDs (optional)</param>
+        /// <returns>ApiResponse of List&lt;CampaignProgress&gt;</returns>
+        public ApiResponse< List<CampaignProgress> > PostCampaignsProgressWithHttpInfo (List<string> body = null)
+        {
+
+            var localVarPath = "/api/v2/outbound/campaigns/progress";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -10043,6 +16066,7 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundDnclistsPost: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundDnclistsPost: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -10050,10 +16074,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<DncList>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (DncList) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DncList)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PostCampaignsProgress: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostCampaignsProgress: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<List<CampaignProgress>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (List<CampaignProgress>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CampaignProgress>)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Create dialer DNC list 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -10062,11 +16096,22 @@ namespace ININ.PureCloudApi.Api
         public async System.Threading.Tasks.Task<DncList> OutboundDnclistsPostAsync (DncList body = null)
         {
              ApiResponse<DncList> localVarResponse = await OutboundDnclistsPostAsyncWithHttpInfo(body);
+=======
+        /// Get progress for a list of campaigns 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Campaign IDs (optional)</param>
+        /// <returns>Task of List&lt;CampaignProgress&gt;</returns>
+        public async System.Threading.Tasks.Task<List<CampaignProgress>> PostCampaignsProgressAsync (List<string> body = null)
+        {
+             ApiResponse<List<CampaignProgress>> localVarResponse = await PostCampaignsProgressAsyncWithHttpInfo(body);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
 
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Create dialer DNC list 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -10076,6 +16121,17 @@ namespace ININ.PureCloudApi.Api
         {
 
             var localVarPath = "/api/v1/outbound/dnclists";
+=======
+        /// Get progress for a list of campaigns 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Campaign IDs (optional)</param>
+        /// <returns>Task of ApiResponse (List&lt;CampaignProgress&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<CampaignProgress>>> PostCampaignsProgressAsyncWithHttpInfo (List<string> body = null)
+        {
+
+            var localVarPath = "/api/v2/outbound/campaigns/progress";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -10120,6 +16176,7 @@ namespace ININ.PureCloudApi.Api
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
+<<<<<<< HEAD
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
@@ -10131,29 +16188,59 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<DncList>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (DncList) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DncList)));
+=======
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostCampaignsProgress: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostCampaignsProgress: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<List<CampaignProgress>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (List<CampaignProgress>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CampaignProgress>)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
-        /// Get dialer preview for user 
+        /// Create a contact List. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <returns>List&lt;Preview&gt;</returns>
         public List<Preview> OutboundPreviewsGet ()
         {
              ApiResponse<List<Preview>> localVarResponse = OutboundPreviewsGetWithHttpInfo();
+=======
+        /// <param name="body">ContactList (optional)</param>
+        /// <returns>ContactList</returns>
+        public ContactList PostContactlists (ContactList body = null)
+        {
+             ApiResponse<ContactList> localVarResponse = PostContactlistsWithHttpInfo(body);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Get dialer preview for user 
+        /// Create a contact List. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <returns>ApiResponse of List&lt;Preview&gt;</returns>
         public ApiResponse< List<Preview> > OutboundPreviewsGetWithHttpInfo ()
         {
 
             var localVarPath = "/api/v1/outbound/previews";
+=======
+        /// <param name="body">ContactList (optional)</param>
+        /// <returns>ApiResponse of ContactList</returns>
+        public ApiResponse< ContactList > PostContactlistsWithHttpInfo (ContactList body = null)
+        {
+
+            var localVarPath = "/api/v2/outbound/contactlists";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -10178,6 +16265,17 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
+=======
+            if (body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -10188,12 +16286,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+<<<<<<< HEAD
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundPreviewsGet: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundPreviewsGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -10201,30 +16304,56 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<List<Preview>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (List<Preview>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<Preview>)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PostContactlists: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostContactlists: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ContactList>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ContactList) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContactList)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
-        /// Get dialer preview for user 
+        /// Create a contact List. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <returns>Task of List&lt;Preview&gt;</returns>
         public async System.Threading.Tasks.Task<List<Preview>> OutboundPreviewsGetAsync ()
         {
              ApiResponse<List<Preview>> localVarResponse = await OutboundPreviewsGetAsyncWithHttpInfo();
+=======
+        /// <param name="body">ContactList (optional)</param>
+        /// <returns>Task of ContactList</returns>
+        public async System.Threading.Tasks.Task<ContactList> PostContactlistsAsync (ContactList body = null)
+        {
+             ApiResponse<ContactList> localVarResponse = await PostContactlistsAsyncWithHttpInfo(body);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Get dialer preview for user 
+        /// Create a contact List. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <returns>Task of ApiResponse (List&lt;Preview&gt;)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<List<Preview>>> OutboundPreviewsGetAsyncWithHttpInfo ()
         {
 
             var localVarPath = "/api/v1/outbound/previews";
+=======
+        /// <param name="body">ContactList (optional)</param>
+        /// <returns>Task of ApiResponse (ContactList)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ContactList>> PostContactlistsAsyncWithHttpInfo (ContactList body = null)
+        {
+
+            var localVarPath = "/api/v2/outbound/contactlists";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -10249,6 +16378,17 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
+=======
+            if (body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -10259,12 +16399,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+<<<<<<< HEAD
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundPreviewsGet: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundPreviewsGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -10272,10 +16417,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<List<Preview>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (List<Preview>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<Preview>)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PostContactlists: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostContactlists: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ContactList>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ContactList) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContactList)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Disposition preview call 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -10285,10 +16440,23 @@ namespace ININ.PureCloudApi.Api
         public string OutboundPreviewsPreviewidDispositioncallPost (string previewId, DialerDispositionCallCommand body = null)
         {
              ApiResponse<string> localVarResponse = OutboundPreviewsPreviewidDispositioncallPostWithHttpInfo(previewId, body);
+=======
+        /// Add contacts to a contact list. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">Contact List ID</param>
+        /// <param name="body">Contact (optional)</param>
+        /// <param name="priority"> (optional)</param>
+        /// <returns>DialerContact</returns>
+        public DialerContact PostContactlistsContactlistIdContacts (string contactListId, List<DialerContact> body = null, bool? priority = null)
+        {
+             ApiResponse<DialerContact> localVarResponse = PostContactlistsContactlistIdContactsWithHttpInfo(contactListId, body, priority);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Disposition preview call 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -10302,6 +16470,22 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'previewId' when calling OutboundApi->OutboundPreviewsPreviewidDispositioncallPost");
 
             var localVarPath = "/api/v1/outbound/previews/{previewId}/dispositioncall";
+=======
+        /// Add contacts to a contact list. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">Contact List ID</param>
+        /// <param name="body">Contact (optional)</param>
+        /// <param name="priority"> (optional)</param>
+        /// <returns>ApiResponse of DialerContact</returns>
+        public ApiResponse< DialerContact > PostContactlistsContactlistIdContactsWithHttpInfo (string contactListId, List<DialerContact> body = null, bool? priority = null)
+        {
+            // verify the required parameter 'contactListId' is set
+            if (contactListId == null)
+                throw new ApiException(400, "Missing required parameter 'contactListId' when calling OutboundApi->PostContactlistsContactlistIdContacts");
+
+            var localVarPath = "/api/v2/outbound/contactlists/{contactListId}/contacts";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -10326,7 +16510,12 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (previewId != null) localVarPathParams.Add("previewId", Configuration.ApiClient.ParameterToString(previewId)); // path parameter
+=======
+            if (contactListId != null) localVarPathParams.Add("contactListId", Configuration.ApiClient.ParameterToString(contactListId)); // path parameter
+            if (priority != null) localVarQueryParams.Add("priority", Configuration.ApiClient.ParameterToString(priority)); // query parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -10351,6 +16540,7 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundPreviewsPreviewidDispositioncallPost: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundPreviewsPreviewidDispositioncallPost: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -10358,10 +16548,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PostContactlistsContactlistIdContacts: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostContactlistsContactlistIdContacts: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DialerContact>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (DialerContact) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DialerContact)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Disposition preview call 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -10371,11 +16571,24 @@ namespace ININ.PureCloudApi.Api
         public async System.Threading.Tasks.Task<string> OutboundPreviewsPreviewidDispositioncallPostAsync (string previewId, DialerDispositionCallCommand body = null)
         {
              ApiResponse<string> localVarResponse = await OutboundPreviewsPreviewidDispositioncallPostAsyncWithHttpInfo(previewId, body);
+=======
+        /// Add contacts to a contact list. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">Contact List ID</param>
+        /// <param name="body">Contact (optional)</param>
+        /// <param name="priority"> (optional)</param>
+        /// <returns>Task of DialerContact</returns>
+        public async System.Threading.Tasks.Task<DialerContact> PostContactlistsContactlistIdContactsAsync (string contactListId, List<DialerContact> body = null, bool? priority = null)
+        {
+             ApiResponse<DialerContact> localVarResponse = await PostContactlistsContactlistIdContactsAsyncWithHttpInfo(contactListId, body, priority);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
 
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Disposition preview call 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -10389,6 +16602,22 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'previewId' when calling OutboundApi->OutboundPreviewsPreviewidDispositioncallPost");
 
             var localVarPath = "/api/v1/outbound/previews/{previewId}/dispositioncall";
+=======
+        /// Add contacts to a contact list. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">Contact List ID</param>
+        /// <param name="body">Contact (optional)</param>
+        /// <param name="priority"> (optional)</param>
+        /// <returns>Task of ApiResponse (DialerContact)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DialerContact>> PostContactlistsContactlistIdContactsAsyncWithHttpInfo (string contactListId, List<DialerContact> body = null, bool? priority = null)
+        {
+            // verify the required parameter 'contactListId' is set
+            if (contactListId == null)
+                throw new ApiException(400, "Missing required parameter 'contactListId' when calling OutboundApi->PostContactlistsContactlistIdContacts");
+
+            var localVarPath = "/api/v2/outbound/contactlists/{contactListId}/contacts";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -10413,7 +16642,12 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (previewId != null) localVarPathParams.Add("previewId", Configuration.ApiClient.ParameterToString(previewId)); // path parameter
+=======
+            if (contactListId != null) localVarPathParams.Add("contactListId", Configuration.ApiClient.ParameterToString(contactListId)); // path parameter
+            if (priority != null) localVarQueryParams.Add("priority", Configuration.ApiClient.ParameterToString(priority)); // query parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -10438,6 +16672,7 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundPreviewsPreviewidDispositioncallPost: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundPreviewsPreviewidDispositioncallPost: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -10445,10 +16680,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PostContactlistsContactlistIdContacts: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostContactlistsContactlistIdContacts: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DialerContact>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (DialerContact) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DialerContact)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Get dialer preview 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -10457,10 +16702,21 @@ namespace ININ.PureCloudApi.Api
         public Preview OutboundPreviewsPreviewidGet (string previewId)
         {
              ApiResponse<Preview> localVarResponse = OutboundPreviewsPreviewidGetWithHttpInfo(previewId);
+=======
+        /// Initiate the export of a contact list. Returns 200 if received OK.
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">ContactList ID</param>
+        /// <returns>string</returns>
+        public string PostContactlistsContactlistIdExport (string contactListId)
+        {
+             ApiResponse<string> localVarResponse = PostContactlistsContactlistIdExportWithHttpInfo(contactListId);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Get dialer preview 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -10473,6 +16729,20 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'previewId' when calling OutboundApi->OutboundPreviewsPreviewidGet");
 
             var localVarPath = "/api/v1/outbound/previews/{previewId}";
+=======
+        /// Initiate the export of a contact list. Returns 200 if received OK.
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">ContactList ID</param>
+        /// <returns>ApiResponse of string</returns>
+        public ApiResponse< string > PostContactlistsContactlistIdExportWithHttpInfo (string contactListId)
+        {
+            // verify the required parameter 'contactListId' is set
+            if (contactListId == null)
+                throw new ApiException(400, "Missing required parameter 'contactListId' when calling OutboundApi->PostContactlistsContactlistIdExport");
+
+            var localVarPath = "/api/v2/outbound/contactlists/{contactListId}/export";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -10497,7 +16767,11 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (previewId != null) localVarPathParams.Add("previewId", Configuration.ApiClient.ParameterToString(previewId)); // path parameter
+=======
+            if (contactListId != null) localVarPathParams.Add("contactListId", Configuration.ApiClient.ParameterToString(contactListId)); // path parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -10508,12 +16782,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+<<<<<<< HEAD
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundPreviewsPreviewidGet: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundPreviewsPreviewidGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -10521,10 +16800,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<Preview>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Preview) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Preview)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PostContactlistsContactlistIdExport: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostContactlistsContactlistIdExport: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Get dialer preview 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -10533,11 +16822,22 @@ namespace ININ.PureCloudApi.Api
         public async System.Threading.Tasks.Task<Preview> OutboundPreviewsPreviewidGetAsync (string previewId)
         {
              ApiResponse<Preview> localVarResponse = await OutboundPreviewsPreviewidGetAsyncWithHttpInfo(previewId);
+=======
+        /// Initiate the export of a contact list. Returns 200 if received OK.
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">ContactList ID</param>
+        /// <returns>Task of string</returns>
+        public async System.Threading.Tasks.Task<string> PostContactlistsContactlistIdExportAsync (string contactListId)
+        {
+             ApiResponse<string> localVarResponse = await PostContactlistsContactlistIdExportAsyncWithHttpInfo(contactListId);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
 
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Get dialer preview 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -10550,6 +16850,20 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'previewId' when calling OutboundApi->OutboundPreviewsPreviewidGet");
 
             var localVarPath = "/api/v1/outbound/previews/{previewId}";
+=======
+        /// Initiate the export of a contact list. Returns 200 if received OK.
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">ContactList ID</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<string>> PostContactlistsContactlistIdExportAsyncWithHttpInfo (string contactListId)
+        {
+            // verify the required parameter 'contactListId' is set
+            if (contactListId == null)
+                throw new ApiException(400, "Missing required parameter 'contactListId' when calling OutboundApi->PostContactlistsContactlistIdExport");
+
+            var localVarPath = "/api/v2/outbound/contactlists/{contactListId}/export";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -10574,7 +16888,11 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (previewId != null) localVarPathParams.Add("previewId", Configuration.ApiClient.ParameterToString(previewId)); // path parameter
+=======
+            if (contactListId != null) localVarPathParams.Add("contactListId", Configuration.ApiClient.ParameterToString(contactListId)); // path parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -10585,12 +16903,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+<<<<<<< HEAD
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundPreviewsPreviewidGet: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundPreviewsPreviewidGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -10598,13 +16921,23 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<Preview>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Preview) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Preview)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PostContactlistsContactlistIdExport: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostContactlistsContactlistIdExport: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
-        /// place preview call 
+        /// Add phone numbers to a Dialer DNC list. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="previewId">preview ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns>DialerCall</returns>
@@ -10612,12 +16945,20 @@ namespace ININ.PureCloudApi.Api
         {
              ApiResponse<DialerCall> localVarResponse = OutboundPreviewsPreviewidPlacecallPostWithHttpInfo(previewId, body);
              return localVarResponse.Data;
+=======
+        /// <param name="conversationId">Conversation ID</param>
+        /// <returns></returns>
+        public void PostConversationsConversationIdDnc (string conversationId)
+        {
+             PostConversationsConversationIdDncWithHttpInfo(conversationId);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         }
 
         /// <summary>
-        /// place preview call 
+        /// Add phone numbers to a Dialer DNC list. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="previewId">preview ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of DialerCall</returns>
@@ -10628,6 +16969,17 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'previewId' when calling OutboundApi->OutboundPreviewsPreviewidPlacecallPost");
 
             var localVarPath = "/api/v1/outbound/previews/{previewId}/placecall";
+=======
+        /// <param name="conversationId">Conversation ID</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> PostConversationsConversationIdDncWithHttpInfo (string conversationId)
+        {
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling OutboundApi->PostConversationsConversationIdDnc");
+
+            var localVarPath = "/api/v2/outbound/conversations/{conversationId}/dnc";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -10652,6 +17004,7 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (previewId != null) localVarPathParams.Add("previewId", Configuration.ApiClient.ParameterToString(previewId)); // path parameter
             if (body.GetType() != typeof(byte[]))
             {
@@ -10661,6 +17014,9 @@ namespace ININ.PureCloudApi.Api
             {
                 localVarPostBody = body; // byte array
             }
+=======
+            if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -10677,6 +17033,7 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundPreviewsPreviewidPlacecallPost: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundPreviewsPreviewidPlacecallPost: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -10684,13 +17041,23 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<DialerCall>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (DialerCall) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DialerCall)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsConversationIdDnc: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsConversationIdDnc: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
         }
 
         /// <summary>
-        /// place preview call 
+        /// Add phone numbers to a Dialer DNC list. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="previewId">preview ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of DialerCall</returns>
@@ -10698,13 +17065,21 @@ namespace ININ.PureCloudApi.Api
         {
              ApiResponse<DialerCall> localVarResponse = await OutboundPreviewsPreviewidPlacecallPostAsyncWithHttpInfo(previewId, body);
              return localVarResponse.Data;
+=======
+        /// <param name="conversationId">Conversation ID</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task PostConversationsConversationIdDncAsync (string conversationId)
+        {
+             await PostConversationsConversationIdDncAsyncWithHttpInfo(conversationId);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
         }
 
         /// <summary>
-        /// place preview call 
+        /// Add phone numbers to a Dialer DNC list. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="previewId">preview ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (DialerCall)</returns>
@@ -10715,6 +17090,17 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'previewId' when calling OutboundApi->OutboundPreviewsPreviewidPlacecallPost");
 
             var localVarPath = "/api/v1/outbound/previews/{previewId}/placecall";
+=======
+        /// <param name="conversationId">Conversation ID</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostConversationsConversationIdDncAsyncWithHttpInfo (string conversationId)
+        {
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling OutboundApi->PostConversationsConversationIdDnc");
+
+            var localVarPath = "/api/v2/outbound/conversations/{conversationId}/dnc";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -10739,6 +17125,7 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (previewId != null) localVarPathParams.Add("previewId", Configuration.ApiClient.ParameterToString(previewId)); // path parameter
             if (body.GetType() != typeof(byte[]))
             {
@@ -10748,6 +17135,9 @@ namespace ININ.PureCloudApi.Api
             {
                 localVarPostBody = body; // byte array
             }
+=======
+            if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -10764,6 +17154,7 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundPreviewsPreviewidPlacecallPost: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundPreviewsPreviewidPlacecallPost: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -10771,13 +17162,23 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<DialerCall>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (DialerCall) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DialerCall)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsConversationIdDnc: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsConversationIdDnc: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
         }
 
         /// <summary>
-        /// Query a list of Rule Sets. 
+        /// Create dialer DNC list 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
@@ -10788,13 +17189,21 @@ namespace ININ.PureCloudApi.Api
         public RuleSetEntityListing OutboundRulesetsGet (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
         {
              ApiResponse<RuleSetEntityListing> localVarResponse = OutboundRulesetsGetWithHttpInfo(pageSize, pageNumber, filterType, name, sortBy, sortOrder);
+=======
+        /// <param name="body">DncList (optional)</param>
+        /// <returns>DncList</returns>
+        public DncList PostDnclists (DncList body = null)
+        {
+             ApiResponse<DncList> localVarResponse = PostDnclistsWithHttpInfo(body);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Query a list of Rule Sets. 
+        /// Create dialer DNC list 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
@@ -10806,6 +17215,14 @@ namespace ININ.PureCloudApi.Api
         {
 
             var localVarPath = "/api/v1/outbound/rulesets";
+=======
+        /// <param name="body">DncList (optional)</param>
+        /// <returns>ApiResponse of DncList</returns>
+        public ApiResponse< DncList > PostDnclistsWithHttpInfo (DncList body = null)
+        {
+
+            var localVarPath = "/api/v2/outbound/dnclists";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -10830,12 +17247,23 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
             if (filterType != null) localVarQueryParams.Add("filterType", Configuration.ApiClient.ParameterToString(filterType)); // query parameter
             if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
             if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
             if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
+=======
+            if (body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -10846,12 +17274,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+<<<<<<< HEAD
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundRulesetsGet: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundRulesetsGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -10859,13 +17292,23 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<RuleSetEntityListing>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (RuleSetEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RuleSetEntityListing)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PostDnclists: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostDnclists: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DncList>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (DncList) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DncList)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
-        /// Query a list of Rule Sets. 
+        /// Create dialer DNC list 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
@@ -10876,14 +17319,22 @@ namespace ININ.PureCloudApi.Api
         public async System.Threading.Tasks.Task<RuleSetEntityListing> OutboundRulesetsGetAsync (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
         {
              ApiResponse<RuleSetEntityListing> localVarResponse = await OutboundRulesetsGetAsyncWithHttpInfo(pageSize, pageNumber, filterType, name, sortBy, sortOrder);
+=======
+        /// <param name="body">DncList (optional)</param>
+        /// <returns>Task of DncList</returns>
+        public async System.Threading.Tasks.Task<DncList> PostDnclistsAsync (DncList body = null)
+        {
+             ApiResponse<DncList> localVarResponse = await PostDnclistsAsyncWithHttpInfo(body);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Query a list of Rule Sets. 
+        /// Create dialer DNC list 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
@@ -10895,6 +17346,14 @@ namespace ININ.PureCloudApi.Api
         {
 
             var localVarPath = "/api/v1/outbound/rulesets";
+=======
+        /// <param name="body">DncList (optional)</param>
+        /// <returns>Task of ApiResponse (DncList)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DncList>> PostDnclistsAsyncWithHttpInfo (DncList body = null)
+        {
+
+            var localVarPath = "/api/v2/outbound/dnclists";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -10919,12 +17378,23 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
             if (filterType != null) localVarQueryParams.Add("filterType", Configuration.ApiClient.ParameterToString(filterType)); // query parameter
             if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
             if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
             if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
+=======
+            if (body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -10935,12 +17405,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+<<<<<<< HEAD
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundRulesetsGet: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundRulesetsGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -10948,31 +17423,60 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<RuleSetEntityListing>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (RuleSetEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RuleSetEntityListing)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PostDnclists: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostDnclists: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DncList>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (DncList) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DncList)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
-        /// Create a Dialer Call Analysis Response Set. 
+        /// Initiate the export of a dnc list. Returns 200 if received OK.
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="body">RuleSet (optional)</param>
         /// <returns>RuleSet</returns>
         public RuleSet OutboundRulesetsPost (RuleSet body = null)
         {
              ApiResponse<RuleSet> localVarResponse = OutboundRulesetsPostWithHttpInfo(body);
+=======
+        /// <param name="dncListId">DncList ID</param>
+        /// <returns>string</returns>
+        public string PostDnclistsDnclistIdExport (string dncListId)
+        {
+             ApiResponse<string> localVarResponse = PostDnclistsDnclistIdExportWithHttpInfo(dncListId);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Create a Dialer Call Analysis Response Set. 
+        /// Initiate the export of a dnc list. Returns 200 if received OK.
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="body">RuleSet (optional)</param>
         /// <returns>ApiResponse of RuleSet</returns>
         public ApiResponse< RuleSet > OutboundRulesetsPostWithHttpInfo (RuleSet body = null)
         {
 
             var localVarPath = "/api/v1/outbound/rulesets";
+=======
+        /// <param name="dncListId">DncList ID</param>
+        /// <returns>ApiResponse of string</returns>
+        public ApiResponse< string > PostDnclistsDnclistIdExportWithHttpInfo (string dncListId)
+        {
+            // verify the required parameter 'dncListId' is set
+            if (dncListId == null)
+                throw new ApiException(400, "Missing required parameter 'dncListId' when calling OutboundApi->PostDnclistsDnclistIdExport");
+
+            var localVarPath = "/api/v2/outbound/dnclists/{dncListId}/export";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -10997,6 +17501,7 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -11005,6 +17510,9 @@ namespace ININ.PureCloudApi.Api
             {
                 localVarPostBody = body; // byte array
             }
+=======
+            if (dncListId != null) localVarPathParams.Add("dncListId", Configuration.ApiClient.ParameterToString(dncListId)); // path parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -11021,6 +17529,7 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundRulesetsPost: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundRulesetsPost: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -11028,32 +17537,61 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<RuleSet>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (RuleSet) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RuleSet)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PostDnclistsDnclistIdExport: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostDnclistsDnclistIdExport: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
-        /// Create a Dialer Call Analysis Response Set. 
+        /// Initiate the export of a dnc list. Returns 200 if received OK.
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="body">RuleSet (optional)</param>
         /// <returns>Task of RuleSet</returns>
         public async System.Threading.Tasks.Task<RuleSet> OutboundRulesetsPostAsync (RuleSet body = null)
         {
              ApiResponse<RuleSet> localVarResponse = await OutboundRulesetsPostAsyncWithHttpInfo(body);
+=======
+        /// <param name="dncListId">DncList ID</param>
+        /// <returns>Task of string</returns>
+        public async System.Threading.Tasks.Task<string> PostDnclistsDnclistIdExportAsync (string dncListId)
+        {
+             ApiResponse<string> localVarResponse = await PostDnclistsDnclistIdExportAsyncWithHttpInfo(dncListId);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Create a Dialer Call Analysis Response Set. 
+        /// Initiate the export of a dnc list. Returns 200 if received OK.
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="body">RuleSet (optional)</param>
         /// <returns>Task of ApiResponse (RuleSet)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RuleSet>> OutboundRulesetsPostAsyncWithHttpInfo (RuleSet body = null)
         {
 
             var localVarPath = "/api/v1/outbound/rulesets";
+=======
+        /// <param name="dncListId">DncList ID</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<string>> PostDnclistsDnclistIdExportAsyncWithHttpInfo (string dncListId)
+        {
+            // verify the required parameter 'dncListId' is set
+            if (dncListId == null)
+                throw new ApiException(400, "Missing required parameter 'dncListId' when calling OutboundApi->PostDnclistsDnclistIdExport");
+
+            var localVarPath = "/api/v2/outbound/dnclists/{dncListId}/export";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -11078,6 +17616,7 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -11086,6 +17625,9 @@ namespace ININ.PureCloudApi.Api
             {
                 localVarPostBody = body; // byte array
             }
+=======
+            if (dncListId != null) localVarPathParams.Add("dncListId", Configuration.ApiClient.ParameterToString(dncListId)); // path parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -11102,6 +17644,7 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundRulesetsPost: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundRulesetsPost: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -11109,10 +17652,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<RuleSet>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (RuleSet) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RuleSet)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PostDnclistsDnclistIdExport: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostDnclistsDnclistIdExport: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Delete a Rule set. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -11137,6 +17690,33 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'ruleSetId' when calling OutboundApi->OutboundRulesetsRulesetidDelete");
 
             var localVarPath = "/api/v1/outbound/rulesets/{ruleSetId}";
+=======
+        /// Add phone numbers to a Dialer DNC list. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dncListId">DncList ID</param>
+        /// <param name="body">DNC Phone Numbers (optional)</param>
+        /// <returns></returns>
+        public void PostDnclistsDnclistIdPhonenumbers (string dncListId, List<string> body = null)
+        {
+             PostDnclistsDnclistIdPhonenumbersWithHttpInfo(dncListId, body);
+        }
+
+        /// <summary>
+        /// Add phone numbers to a Dialer DNC list. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dncListId">DncList ID</param>
+        /// <param name="body">DNC Phone Numbers (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> PostDnclistsDnclistIdPhonenumbersWithHttpInfo (string dncListId, List<string> body = null)
+        {
+            // verify the required parameter 'dncListId' is set
+            if (dncListId == null)
+                throw new ApiException(400, "Missing required parameter 'dncListId' when calling OutboundApi->PostDnclistsDnclistIdPhonenumbers");
+
+            var localVarPath = "/api/v2/outbound/dnclists/{dncListId}/phonenumbers";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -11161,7 +17741,19 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (ruleSetId != null) localVarPathParams.Add("ruleSetId", Configuration.ApiClient.ParameterToString(ruleSetId)); // path parameter
+=======
+            if (dncListId != null) localVarPathParams.Add("dncListId", Configuration.ApiClient.ParameterToString(dncListId)); // path parameter
+            if (body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -11172,12 +17764,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+<<<<<<< HEAD
                 Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundRulesetsRulesetidDelete: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundRulesetsRulesetidDelete: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -11185,10 +17782,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PostDnclistsDnclistIdPhonenumbers: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostDnclistsDnclistIdPhonenumbers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Delete a Rule set. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -11198,10 +17805,22 @@ namespace ININ.PureCloudApi.Api
         {
              ApiResponse<string> localVarResponse = await OutboundRulesetsRulesetidDeleteAsyncWithHttpInfo(ruleSetId);
              return localVarResponse.Data;
+=======
+        /// Add phone numbers to a Dialer DNC list. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dncListId">DncList ID</param>
+        /// <param name="body">DNC Phone Numbers (optional)</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task PostDnclistsDnclistIdPhonenumbersAsync (string dncListId, List<string> body = null)
+        {
+             await PostDnclistsDnclistIdPhonenumbersAsyncWithHttpInfo(dncListId, body);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Delete a Rule set. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -11214,6 +17833,21 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'ruleSetId' when calling OutboundApi->OutboundRulesetsRulesetidDelete");
 
             var localVarPath = "/api/v1/outbound/rulesets/{ruleSetId}";
+=======
+        /// Add phone numbers to a Dialer DNC list. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dncListId">DncList ID</param>
+        /// <param name="body">DNC Phone Numbers (optional)</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostDnclistsDnclistIdPhonenumbersAsyncWithHttpInfo (string dncListId, List<string> body = null)
+        {
+            // verify the required parameter 'dncListId' is set
+            if (dncListId == null)
+                throw new ApiException(400, "Missing required parameter 'dncListId' when calling OutboundApi->PostDnclistsDnclistIdPhonenumbers");
+
+            var localVarPath = "/api/v2/outbound/dnclists/{dncListId}/phonenumbers";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -11238,7 +17872,19 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (ruleSetId != null) localVarPathParams.Add("ruleSetId", Configuration.ApiClient.ParameterToString(ruleSetId)); // path parameter
+=======
+            if (dncListId != null) localVarPathParams.Add("dncListId", Configuration.ApiClient.ParameterToString(dncListId)); // path parameter
+            if (body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -11249,12 +17895,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+<<<<<<< HEAD
                 Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundRulesetsRulesetidDelete: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundRulesetsRulesetidDelete: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -11262,10 +17913,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PostDnclistsDnclistIdPhonenumbers: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostDnclistsDnclistIdPhonenumbers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Get a Rule Set by ID. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -11274,10 +17935,21 @@ namespace ININ.PureCloudApi.Api
         public RuleSet OutboundRulesetsRulesetidGet (string ruleSetId)
         {
              ApiResponse<RuleSet> localVarResponse = OutboundRulesetsRulesetidGetWithHttpInfo(ruleSetId);
+=======
+        /// Create a Dialer Call Analysis Response Set. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">RuleSet (optional)</param>
+        /// <returns>RuleSet</returns>
+        public RuleSet PostRulesets (RuleSet body = null)
+        {
+             ApiResponse<RuleSet> localVarResponse = PostRulesetsWithHttpInfo(body);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Get a Rule Set by ID. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -11290,6 +17962,17 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'ruleSetId' when calling OutboundApi->OutboundRulesetsRulesetidGet");
 
             var localVarPath = "/api/v1/outbound/rulesets/{ruleSetId}";
+=======
+        /// Create a Dialer Call Analysis Response Set. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">RuleSet (optional)</param>
+        /// <returns>ApiResponse of RuleSet</returns>
+        public ApiResponse< RuleSet > PostRulesetsWithHttpInfo (RuleSet body = null)
+        {
+
+            var localVarPath = "/api/v2/outbound/rulesets";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -11314,7 +17997,18 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (ruleSetId != null) localVarPathParams.Add("ruleSetId", Configuration.ApiClient.ParameterToString(ruleSetId)); // path parameter
+=======
+            if (body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -11325,15 +18019,25 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+<<<<<<< HEAD
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundRulesetsRulesetidGet: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundRulesetsRulesetidGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PostRulesets: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostRulesets: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             return new ApiResponse<RuleSet>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -11342,6 +18046,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Get a Rule Set by ID. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -11350,11 +18055,22 @@ namespace ININ.PureCloudApi.Api
         public async System.Threading.Tasks.Task<RuleSet> OutboundRulesetsRulesetidGetAsync (string ruleSetId)
         {
              ApiResponse<RuleSet> localVarResponse = await OutboundRulesetsRulesetidGetAsyncWithHttpInfo(ruleSetId);
+=======
+        /// Create a Dialer Call Analysis Response Set. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">RuleSet (optional)</param>
+        /// <returns>Task of RuleSet</returns>
+        public async System.Threading.Tasks.Task<RuleSet> PostRulesetsAsync (RuleSet body = null)
+        {
+             ApiResponse<RuleSet> localVarResponse = await PostRulesetsAsyncWithHttpInfo(body);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
 
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Get a Rule Set by ID. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -11367,6 +18083,17 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'ruleSetId' when calling OutboundApi->OutboundRulesetsRulesetidGet");
 
             var localVarPath = "/api/v1/outbound/rulesets/{ruleSetId}";
+=======
+        /// Create a Dialer Call Analysis Response Set. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">RuleSet (optional)</param>
+        /// <returns>Task of ApiResponse (RuleSet)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RuleSet>> PostRulesetsAsyncWithHttpInfo (RuleSet body = null)
+        {
+
+            var localVarPath = "/api/v2/outbound/rulesets";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -11391,7 +18118,18 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (ruleSetId != null) localVarPathParams.Add("ruleSetId", Configuration.ApiClient.ParameterToString(ruleSetId)); // path parameter
+=======
+            if (body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -11402,15 +18140,25 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+<<<<<<< HEAD
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundRulesetsRulesetidGet: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundRulesetsRulesetidGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PostRulesets: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostRulesets: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             return new ApiResponse<RuleSet>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -11419,6 +18167,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Update a RuleSet. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -11428,10 +18177,21 @@ namespace ININ.PureCloudApi.Api
         public RuleSet OutboundRulesetsRulesetidPut (string ruleSetId, RuleSet body = null)
         {
              ApiResponse<RuleSet> localVarResponse = OutboundRulesetsRulesetidPutWithHttpInfo(ruleSetId, body);
+=======
+        /// Create a new campaign sequence. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Organization (optional)</param>
+        /// <returns>CampaignSequence</returns>
+        public CampaignSequence PostSequences (CampaignSequence body = null)
+        {
+             ApiResponse<CampaignSequence> localVarResponse = PostSequencesWithHttpInfo(body);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Update a RuleSet. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -11445,6 +18205,17 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'ruleSetId' when calling OutboundApi->OutboundRulesetsRulesetidPut");
 
             var localVarPath = "/api/v1/outbound/rulesets/{ruleSetId}";
+=======
+        /// Create a new campaign sequence. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Organization (optional)</param>
+        /// <returns>ApiResponse of CampaignSequence</returns>
+        public ApiResponse< CampaignSequence > PostSequencesWithHttpInfo (CampaignSequence body = null)
+        {
+
+            var localVarPath = "/api/v2/outbound/sequences";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -11469,7 +18240,10 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (ruleSetId != null) localVarPathParams.Add("ruleSetId", Configuration.ApiClient.ParameterToString(ruleSetId)); // path parameter
+=======
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -11488,12 +18262,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+<<<<<<< HEAD
                 Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundRulesetsRulesetidPut: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundRulesetsRulesetidPut: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -11501,10 +18280,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<RuleSet>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (RuleSet) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RuleSet)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PostSequences: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostSequences: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CampaignSequence>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (CampaignSequence) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CampaignSequence)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Update a RuleSet. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -11514,11 +18303,22 @@ namespace ININ.PureCloudApi.Api
         public async System.Threading.Tasks.Task<RuleSet> OutboundRulesetsRulesetidPutAsync (string ruleSetId, RuleSet body = null)
         {
              ApiResponse<RuleSet> localVarResponse = await OutboundRulesetsRulesetidPutAsyncWithHttpInfo(ruleSetId, body);
+=======
+        /// Create a new campaign sequence. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Organization (optional)</param>
+        /// <returns>Task of CampaignSequence</returns>
+        public async System.Threading.Tasks.Task<CampaignSequence> PostSequencesAsync (CampaignSequence body = null)
+        {
+             ApiResponse<CampaignSequence> localVarResponse = await PostSequencesAsyncWithHttpInfo(body);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
 
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Update a RuleSet. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -11532,6 +18332,17 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'ruleSetId' when calling OutboundApi->OutboundRulesetsRulesetidPut");
 
             var localVarPath = "/api/v1/outbound/rulesets/{ruleSetId}";
+=======
+        /// Create a new campaign sequence. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Organization (optional)</param>
+        /// <returns>Task of ApiResponse (CampaignSequence)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CampaignSequence>> PostSequencesAsyncWithHttpInfo (CampaignSequence body = null)
+        {
+
+            var localVarPath = "/api/v2/outbound/sequences";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -11556,7 +18367,10 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (ruleSetId != null) localVarPathParams.Add("ruleSetId", Configuration.ApiClient.ParameterToString(ruleSetId)); // path parameter
+=======
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -11575,12 +18389,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+<<<<<<< HEAD
                 Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundRulesetsRulesetidPut: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundRulesetsRulesetidPut: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -11588,10 +18407,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<RuleSet>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (RuleSet) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RuleSet)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PostSequences: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostSequences: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CampaignSequence>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (CampaignSequence) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CampaignSequence)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Delete a dialer campaign schedule. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -11600,10 +18429,22 @@ namespace ININ.PureCloudApi.Api
         public string OutboundSchedulesCampaignsCampaignidDelete (string campaignId)
         {
              ApiResponse<string> localVarResponse = OutboundSchedulesCampaignsCampaignidDeleteWithHttpInfo(campaignId);
+=======
+        /// Update callable time set 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callableTimeSetId">Callable Time Set ID</param>
+        /// <param name="body">DialerCallableTimeSet (optional)</param>
+        /// <returns>CallableTimeSet</returns>
+        public CallableTimeSet PutCallabletimesetsCallabletimesetId (string callableTimeSetId, CallableTimeSet body = null)
+        {
+             ApiResponse<CallableTimeSet> localVarResponse = PutCallabletimesetsCallabletimesetIdWithHttpInfo(callableTimeSetId, body);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Delete a dialer campaign schedule. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -11616,6 +18457,21 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->OutboundSchedulesCampaignsCampaignidDelete");
 
             var localVarPath = "/api/v1/outbound/schedules/campaigns/{campaignId}";
+=======
+        /// Update callable time set 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callableTimeSetId">Callable Time Set ID</param>
+        /// <param name="body">DialerCallableTimeSet (optional)</param>
+        /// <returns>ApiResponse of CallableTimeSet</returns>
+        public ApiResponse< CallableTimeSet > PutCallabletimesetsCallabletimesetIdWithHttpInfo (string callableTimeSetId, CallableTimeSet body = null)
+        {
+            // verify the required parameter 'callableTimeSetId' is set
+            if (callableTimeSetId == null)
+                throw new ApiException(400, "Missing required parameter 'callableTimeSetId' when calling OutboundApi->PutCallabletimesetsCallabletimesetId");
+
+            var localVarPath = "/api/v2/outbound/callabletimesets/{callableTimeSetId}";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -11640,7 +18496,19 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (campaignId != null) localVarPathParams.Add("campaignId", Configuration.ApiClient.ParameterToString(campaignId)); // path parameter
+=======
+            if (callableTimeSetId != null) localVarPathParams.Add("callableTimeSetId", Configuration.ApiClient.ParameterToString(callableTimeSetId)); // path parameter
+            if (body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -11651,12 +18519,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+<<<<<<< HEAD
                 Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundSchedulesCampaignsCampaignidDelete: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundSchedulesCampaignsCampaignidDelete: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -11664,10 +18537,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PutCallabletimesetsCallabletimesetId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutCallabletimesetsCallabletimesetId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CallableTimeSet>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (CallableTimeSet) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CallableTimeSet)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Delete a dialer campaign schedule. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -11676,11 +18559,23 @@ namespace ININ.PureCloudApi.Api
         public async System.Threading.Tasks.Task<string> OutboundSchedulesCampaignsCampaignidDeleteAsync (string campaignId)
         {
              ApiResponse<string> localVarResponse = await OutboundSchedulesCampaignsCampaignidDeleteAsyncWithHttpInfo(campaignId);
+=======
+        /// Update callable time set 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callableTimeSetId">Callable Time Set ID</param>
+        /// <param name="body">DialerCallableTimeSet (optional)</param>
+        /// <returns>Task of CallableTimeSet</returns>
+        public async System.Threading.Tasks.Task<CallableTimeSet> PutCallabletimesetsCallabletimesetIdAsync (string callableTimeSetId, CallableTimeSet body = null)
+        {
+             ApiResponse<CallableTimeSet> localVarResponse = await PutCallabletimesetsCallabletimesetIdAsyncWithHttpInfo(callableTimeSetId, body);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
 
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Delete a dialer campaign schedule. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -11693,6 +18588,21 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->OutboundSchedulesCampaignsCampaignidDelete");
 
             var localVarPath = "/api/v1/outbound/schedules/campaigns/{campaignId}";
+=======
+        /// Update callable time set 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callableTimeSetId">Callable Time Set ID</param>
+        /// <param name="body">DialerCallableTimeSet (optional)</param>
+        /// <returns>Task of ApiResponse (CallableTimeSet)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CallableTimeSet>> PutCallabletimesetsCallabletimesetIdAsyncWithHttpInfo (string callableTimeSetId, CallableTimeSet body = null)
+        {
+            // verify the required parameter 'callableTimeSetId' is set
+            if (callableTimeSetId == null)
+                throw new ApiException(400, "Missing required parameter 'callableTimeSetId' when calling OutboundApi->PutCallabletimesetsCallabletimesetId");
+
+            var localVarPath = "/api/v2/outbound/callabletimesets/{callableTimeSetId}";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -11717,7 +18627,19 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (campaignId != null) localVarPathParams.Add("campaignId", Configuration.ApiClient.ParameterToString(campaignId)); // path parameter
+=======
+            if (callableTimeSetId != null) localVarPathParams.Add("callableTimeSetId", Configuration.ApiClient.ParameterToString(callableTimeSetId)); // path parameter
+            if (body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -11728,12 +18650,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+<<<<<<< HEAD
                 Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundSchedulesCampaignsCampaignidDelete: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundSchedulesCampaignsCampaignidDelete: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -11741,25 +18668,44 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PutCallabletimesetsCallabletimesetId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutCallabletimesetsCallabletimesetId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CallableTimeSet>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (CallableTimeSet) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CallableTimeSet)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
-        /// Get a dialer campaign schedule. 
+        /// Update a dialer call analysis response set. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>CampaignSchedule</returns>
         public CampaignSchedule OutboundSchedulesCampaignsCampaignidGet (string campaignId)
         {
              ApiResponse<CampaignSchedule> localVarResponse = OutboundSchedulesCampaignsCampaignidGetWithHttpInfo(campaignId);
+=======
+        /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
+        /// <param name="body">ResponseSet (optional)</param>
+        /// <returns>ResponseSet</returns>
+        public ResponseSet PutCallanalysisresponsesetsCallanalysissetId (string callAnalysisSetId, ResponseSet body = null)
+        {
+             ApiResponse<ResponseSet> localVarResponse = PutCallanalysisresponsesetsCallanalysissetIdWithHttpInfo(callAnalysisSetId, body);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Get a dialer campaign schedule. 
+        /// Update a dialer call analysis response set. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>ApiResponse of CampaignSchedule</returns>
         public ApiResponse< CampaignSchedule > OutboundSchedulesCampaignsCampaignidGetWithHttpInfo (string campaignId)
@@ -11769,6 +18715,18 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->OutboundSchedulesCampaignsCampaignidGet");
 
             var localVarPath = "/api/v1/outbound/schedules/campaigns/{campaignId}";
+=======
+        /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
+        /// <param name="body">ResponseSet (optional)</param>
+        /// <returns>ApiResponse of ResponseSet</returns>
+        public ApiResponse< ResponseSet > PutCallanalysisresponsesetsCallanalysissetIdWithHttpInfo (string callAnalysisSetId, ResponseSet body = null)
+        {
+            // verify the required parameter 'callAnalysisSetId' is set
+            if (callAnalysisSetId == null)
+                throw new ApiException(400, "Missing required parameter 'callAnalysisSetId' when calling OutboundApi->PutCallanalysisresponsesetsCallanalysissetId");
+
+            var localVarPath = "/api/v2/outbound/callanalysisresponsesets/{callAnalysisSetId}";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -11793,7 +18751,19 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (campaignId != null) localVarPathParams.Add("campaignId", Configuration.ApiClient.ParameterToString(campaignId)); // path parameter
+=======
+            if (callAnalysisSetId != null) localVarPathParams.Add("callAnalysisSetId", Configuration.ApiClient.ParameterToString(callAnalysisSetId)); // path parameter
+            if (body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -11804,12 +18774,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+<<<<<<< HEAD
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundSchedulesCampaignsCampaignidGet: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundSchedulesCampaignsCampaignidGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -11817,26 +18792,45 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<CampaignSchedule>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (CampaignSchedule) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CampaignSchedule)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PutCallanalysisresponsesetsCallanalysissetId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutCallanalysisresponsesetsCallanalysissetId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ResponseSet>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ResponseSet) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseSet)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
-        /// Get a dialer campaign schedule. 
+        /// Update a dialer call analysis response set. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Task of CampaignSchedule</returns>
         public async System.Threading.Tasks.Task<CampaignSchedule> OutboundSchedulesCampaignsCampaignidGetAsync (string campaignId)
         {
              ApiResponse<CampaignSchedule> localVarResponse = await OutboundSchedulesCampaignsCampaignidGetAsyncWithHttpInfo(campaignId);
+=======
+        /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
+        /// <param name="body">ResponseSet (optional)</param>
+        /// <returns>Task of ResponseSet</returns>
+        public async System.Threading.Tasks.Task<ResponseSet> PutCallanalysisresponsesetsCallanalysissetIdAsync (string callAnalysisSetId, ResponseSet body = null)
+        {
+             ApiResponse<ResponseSet> localVarResponse = await PutCallanalysisresponsesetsCallanalysissetIdAsyncWithHttpInfo(callAnalysisSetId, body);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Get a dialer campaign schedule. 
+        /// Update a dialer call analysis response set. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Task of ApiResponse (CampaignSchedule)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<CampaignSchedule>> OutboundSchedulesCampaignsCampaignidGetAsyncWithHttpInfo (string campaignId)
@@ -11846,6 +18840,18 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->OutboundSchedulesCampaignsCampaignidGet");
 
             var localVarPath = "/api/v1/outbound/schedules/campaigns/{campaignId}";
+=======
+        /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
+        /// <param name="body">ResponseSet (optional)</param>
+        /// <returns>Task of ApiResponse (ResponseSet)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ResponseSet>> PutCallanalysisresponsesetsCallanalysissetIdAsyncWithHttpInfo (string callAnalysisSetId, ResponseSet body = null)
+        {
+            // verify the required parameter 'callAnalysisSetId' is set
+            if (callAnalysisSetId == null)
+                throw new ApiException(400, "Missing required parameter 'callAnalysisSetId' when calling OutboundApi->PutCallanalysisresponsesetsCallanalysissetId");
+
+            var localVarPath = "/api/v2/outbound/callanalysisresponsesets/{callAnalysisSetId}";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -11870,7 +18876,19 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (campaignId != null) localVarPathParams.Add("campaignId", Configuration.ApiClient.ParameterToString(campaignId)); // path parameter
+=======
+            if (callAnalysisSetId != null) localVarPathParams.Add("callAnalysisSetId", Configuration.ApiClient.ParameterToString(callAnalysisSetId)); // path parameter
+            if (body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -11881,12 +18899,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+<<<<<<< HEAD
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundSchedulesCampaignsCampaignidGet: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundSchedulesCampaignsCampaignidGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -11894,27 +18917,45 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<CampaignSchedule>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (CampaignSchedule) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CampaignSchedule)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PutCallanalysisresponsesetsCallanalysissetId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutCallanalysisresponsesetsCallanalysissetId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ResponseSet>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ResponseSet) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseSet)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
-        /// Update a new campaign schedule. 
+        /// Update a campaign. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
+<<<<<<< HEAD
         /// <param name="body">CampaignSchedule (optional)</param>
         /// <returns>CampaignSchedule</returns>
         public CampaignSchedule OutboundSchedulesCampaignsCampaignidPut (string campaignId, CampaignSchedule body = null)
         {
              ApiResponse<CampaignSchedule> localVarResponse = OutboundSchedulesCampaignsCampaignidPutWithHttpInfo(campaignId, body);
+=======
+        /// <param name="body">Campaign (optional)</param>
+        /// <returns>Campaign</returns>
+        public Campaign PutCampaignsCampaignId (string campaignId, Campaign body = null)
+        {
+             ApiResponse<Campaign> localVarResponse = PutCampaignsCampaignIdWithHttpInfo(campaignId, body);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Update a new campaign schedule. 
+        /// Update a campaign. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
+<<<<<<< HEAD
         /// <param name="body">CampaignSchedule (optional)</param>
         /// <returns>ApiResponse of CampaignSchedule</returns>
         public ApiResponse< CampaignSchedule > OutboundSchedulesCampaignsCampaignidPutWithHttpInfo (string campaignId, CampaignSchedule body = null)
@@ -11924,6 +18965,17 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->OutboundSchedulesCampaignsCampaignidPut");
 
             var localVarPath = "/api/v1/outbound/schedules/campaigns/{campaignId}";
+=======
+        /// <param name="body">Campaign (optional)</param>
+        /// <returns>ApiResponse of Campaign</returns>
+        public ApiResponse< Campaign > PutCampaignsCampaignIdWithHttpInfo (string campaignId, Campaign body = null)
+        {
+            // verify the required parameter 'campaignId' is set
+            if (campaignId == null)
+                throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->PutCampaignsCampaignId");
+
+            var localVarPath = "/api/v2/outbound/campaigns/{campaignId}";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -11973,6 +19025,7 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundSchedulesCampaignsCampaignidPut: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundSchedulesCampaignsCampaignidPut: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -11980,28 +19033,46 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<CampaignSchedule>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (CampaignSchedule) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CampaignSchedule)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PutCampaignsCampaignId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutCampaignsCampaignId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Campaign>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Campaign) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Campaign)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
-        /// Update a new campaign schedule. 
+        /// Update a campaign. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
+<<<<<<< HEAD
         /// <param name="body">CampaignSchedule (optional)</param>
         /// <returns>Task of CampaignSchedule</returns>
         public async System.Threading.Tasks.Task<CampaignSchedule> OutboundSchedulesCampaignsCampaignidPutAsync (string campaignId, CampaignSchedule body = null)
         {
              ApiResponse<CampaignSchedule> localVarResponse = await OutboundSchedulesCampaignsCampaignidPutAsyncWithHttpInfo(campaignId, body);
+=======
+        /// <param name="body">Campaign (optional)</param>
+        /// <returns>Task of Campaign</returns>
+        public async System.Threading.Tasks.Task<Campaign> PutCampaignsCampaignIdAsync (string campaignId, Campaign body = null)
+        {
+             ApiResponse<Campaign> localVarResponse = await PutCampaignsCampaignIdAsyncWithHttpInfo(campaignId, body);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Update a new campaign schedule. 
+        /// Update a campaign. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
+<<<<<<< HEAD
         /// <param name="body">CampaignSchedule (optional)</param>
         /// <returns>Task of ApiResponse (CampaignSchedule)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<CampaignSchedule>> OutboundSchedulesCampaignsCampaignidPutAsyncWithHttpInfo (string campaignId, CampaignSchedule body = null)
@@ -12011,6 +19082,17 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->OutboundSchedulesCampaignsCampaignidPut");
 
             var localVarPath = "/api/v1/outbound/schedules/campaigns/{campaignId}";
+=======
+        /// <param name="body">Campaign (optional)</param>
+        /// <returns>Task of ApiResponse (Campaign)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Campaign>> PutCampaignsCampaignIdAsyncWithHttpInfo (string campaignId, Campaign body = null)
+        {
+            // verify the required parameter 'campaignId' is set
+            if (campaignId == null)
+                throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->PutCampaignsCampaignId");
+
+            var localVarPath = "/api/v2/outbound/campaigns/{campaignId}";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -12060,6 +19142,7 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundSchedulesCampaignsCampaignidPut: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundSchedulesCampaignsCampaignidPut: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -12067,10 +19150,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<CampaignSchedule>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (CampaignSchedule) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CampaignSchedule)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PutCampaignsCampaignId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutCampaignsCampaignId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Campaign>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Campaign) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Campaign)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Query for a list of dialer campaign schedules. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -12078,10 +19171,23 @@ namespace ININ.PureCloudApi.Api
         public List<CampaignSchedule> OutboundSchedulesCampaignsGet ()
         {
              ApiResponse<List<CampaignSchedule>> localVarResponse = OutboundSchedulesCampaignsGetWithHttpInfo();
+=======
+        /// Send notification that an agent&#39;s state changed  New agent state.
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <param name="userId">Agent&#39;s user ID</param>
+        /// <param name="body">agent (optional)</param>
+        /// <returns>string</returns>
+        public string PutCampaignsCampaignIdAgentsUserId (string campaignId, string userId, Agent body = null)
+        {
+             ApiResponse<string> localVarResponse = PutCampaignsCampaignIdAgentsUserIdWithHttpInfo(campaignId, userId, body);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Query for a list of dialer campaign schedules. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -12090,6 +19196,25 @@ namespace ININ.PureCloudApi.Api
         {
 
             var localVarPath = "/api/v1/outbound/schedules/campaigns";
+=======
+        /// Send notification that an agent&#39;s state changed  New agent state.
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <param name="userId">Agent&#39;s user ID</param>
+        /// <param name="body">agent (optional)</param>
+        /// <returns>ApiResponse of string</returns>
+        public ApiResponse< string > PutCampaignsCampaignIdAgentsUserIdWithHttpInfo (string campaignId, string userId, Agent body = null)
+        {
+            // verify the required parameter 'campaignId' is set
+            if (campaignId == null)
+                throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->PutCampaignsCampaignIdAgentsUserId");
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling OutboundApi->PutCampaignsCampaignIdAgentsUserId");
+
+            var localVarPath = "/api/v2/outbound/campaigns/{campaignId}/agents/{userId}";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -12114,6 +19239,19 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
+=======
+            if (campaignId != null) localVarPathParams.Add("campaignId", Configuration.ApiClient.ParameterToString(campaignId)); // path parameter
+            if (userId != null) localVarPathParams.Add("userId", Configuration.ApiClient.ParameterToString(userId)); // path parameter
+            if (body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -12124,12 +19262,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+<<<<<<< HEAD
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundSchedulesCampaignsGet: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundSchedulesCampaignsGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -12137,10 +19280,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<List<CampaignSchedule>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (List<CampaignSchedule>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CampaignSchedule>)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PutCampaignsCampaignIdAgentsUserId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutCampaignsCampaignIdAgentsUserId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Query for a list of dialer campaign schedules. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -12148,11 +19301,24 @@ namespace ININ.PureCloudApi.Api
         public async System.Threading.Tasks.Task<List<CampaignSchedule>> OutboundSchedulesCampaignsGetAsync ()
         {
              ApiResponse<List<CampaignSchedule>> localVarResponse = await OutboundSchedulesCampaignsGetAsyncWithHttpInfo();
+=======
+        /// Send notification that an agent&#39;s state changed  New agent state.
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <param name="userId">Agent&#39;s user ID</param>
+        /// <param name="body">agent (optional)</param>
+        /// <returns>Task of string</returns>
+        public async System.Threading.Tasks.Task<string> PutCampaignsCampaignIdAgentsUserIdAsync (string campaignId, string userId, Agent body = null)
+        {
+             ApiResponse<string> localVarResponse = await PutCampaignsCampaignIdAgentsUserIdAsyncWithHttpInfo(campaignId, userId, body);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
 
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Query for a list of dialer campaign schedules. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -12161,6 +19327,25 @@ namespace ININ.PureCloudApi.Api
         {
 
             var localVarPath = "/api/v1/outbound/schedules/campaigns";
+=======
+        /// Send notification that an agent&#39;s state changed  New agent state.
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <param name="userId">Agent&#39;s user ID</param>
+        /// <param name="body">agent (optional)</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<string>> PutCampaignsCampaignIdAgentsUserIdAsyncWithHttpInfo (string campaignId, string userId, Agent body = null)
+        {
+            // verify the required parameter 'campaignId' is set
+            if (campaignId == null)
+                throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->PutCampaignsCampaignIdAgentsUserId");
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling OutboundApi->PutCampaignsCampaignIdAgentsUserId");
+
+            var localVarPath = "/api/v2/outbound/campaigns/{campaignId}/agents/{userId}";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -12185,6 +19370,19 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
+=======
+            if (campaignId != null) localVarPathParams.Add("campaignId", Configuration.ApiClient.ParameterToString(campaignId)); // path parameter
+            if (userId != null) localVarPathParams.Add("userId", Configuration.ApiClient.ParameterToString(userId)); // path parameter
+            if (body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -12195,12 +19393,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+<<<<<<< HEAD
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundSchedulesCampaignsGet: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundSchedulesCampaignsGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -12208,29 +19411,60 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<List<CampaignSchedule>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (List<CampaignSchedule>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CampaignSchedule>)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PutCampaignsCampaignIdAgentsUserId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutCampaignsCampaignIdAgentsUserId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
-        /// Query for a list of dialer sequence schedules. 
+        /// Update a contact list. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <returns>List&lt;SequenceSchedule&gt;</returns>
         public List<SequenceSchedule> OutboundSchedulesSequencesGet ()
         {
              ApiResponse<List<SequenceSchedule>> localVarResponse = OutboundSchedulesSequencesGetWithHttpInfo();
+=======
+        /// <param name="contactListId">ContactList ID</param>
+        /// <param name="body">ContactList (optional)</param>
+        /// <returns>ContactList</returns>
+        public ContactList PutContactlistsContactlistId (string contactListId, ContactList body = null)
+        {
+             ApiResponse<ContactList> localVarResponse = PutContactlistsContactlistIdWithHttpInfo(contactListId, body);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Query for a list of dialer sequence schedules. 
+        /// Update a contact list. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <returns>ApiResponse of List&lt;SequenceSchedule&gt;</returns>
         public ApiResponse< List<SequenceSchedule> > OutboundSchedulesSequencesGetWithHttpInfo ()
         {
 
             var localVarPath = "/api/v1/outbound/schedules/sequences";
+=======
+        /// <param name="contactListId">ContactList ID</param>
+        /// <param name="body">ContactList (optional)</param>
+        /// <returns>ApiResponse of ContactList</returns>
+        public ApiResponse< ContactList > PutContactlistsContactlistIdWithHttpInfo (string contactListId, ContactList body = null)
+        {
+            // verify the required parameter 'contactListId' is set
+            if (contactListId == null)
+                throw new ApiException(400, "Missing required parameter 'contactListId' when calling OutboundApi->PutContactlistsContactlistId");
+
+            var localVarPath = "/api/v2/outbound/contactlists/{contactListId}";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -12255,6 +19489,18 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
+=======
+            if (contactListId != null) localVarPathParams.Add("contactListId", Configuration.ApiClient.ParameterToString(contactListId)); // path parameter
+            if (body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -12265,12 +19511,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+<<<<<<< HEAD
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundSchedulesSequencesGet: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundSchedulesSequencesGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -12278,30 +19529,61 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<List<SequenceSchedule>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (List<SequenceSchedule>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<SequenceSchedule>)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PutContactlistsContactlistId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutContactlistsContactlistId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ContactList>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ContactList) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContactList)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
-        /// Query for a list of dialer sequence schedules. 
+        /// Update a contact list. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <returns>Task of List&lt;SequenceSchedule&gt;</returns>
         public async System.Threading.Tasks.Task<List<SequenceSchedule>> OutboundSchedulesSequencesGetAsync ()
         {
              ApiResponse<List<SequenceSchedule>> localVarResponse = await OutboundSchedulesSequencesGetAsyncWithHttpInfo();
+=======
+        /// <param name="contactListId">ContactList ID</param>
+        /// <param name="body">ContactList (optional)</param>
+        /// <returns>Task of ContactList</returns>
+        public async System.Threading.Tasks.Task<ContactList> PutContactlistsContactlistIdAsync (string contactListId, ContactList body = null)
+        {
+             ApiResponse<ContactList> localVarResponse = await PutContactlistsContactlistIdAsyncWithHttpInfo(contactListId, body);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Query for a list of dialer sequence schedules. 
+        /// Update a contact list. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <returns>Task of ApiResponse (List&lt;SequenceSchedule&gt;)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<List<SequenceSchedule>>> OutboundSchedulesSequencesGetAsyncWithHttpInfo ()
         {
 
             var localVarPath = "/api/v1/outbound/schedules/sequences";
+=======
+        /// <param name="contactListId">ContactList ID</param>
+        /// <param name="body">ContactList (optional)</param>
+        /// <returns>Task of ApiResponse (ContactList)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ContactList>> PutContactlistsContactlistIdAsyncWithHttpInfo (string contactListId, ContactList body = null)
+        {
+            // verify the required parameter 'contactListId' is set
+            if (contactListId == null)
+                throw new ApiException(400, "Missing required parameter 'contactListId' when calling OutboundApi->PutContactlistsContactlistId");
+
+            var localVarPath = "/api/v2/outbound/contactlists/{contactListId}";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -12326,6 +19608,18 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
+=======
+            if (contactListId != null) localVarPathParams.Add("contactListId", Configuration.ApiClient.ParameterToString(contactListId)); // path parameter
+            if (body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -12336,12 +19630,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+<<<<<<< HEAD
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundSchedulesSequencesGet: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundSchedulesSequencesGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -12349,10 +19648,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<List<SequenceSchedule>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (List<SequenceSchedule>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<SequenceSchedule>)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PutContactlistsContactlistId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutContactlistsContactlistId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ContactList>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ContactList) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContactList)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Delete a dialer sequence schedule. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -12361,10 +19670,23 @@ namespace ININ.PureCloudApi.Api
         public string OutboundSchedulesSequencesSequenceidDelete (string sequenceId)
         {
              ApiResponse<string> localVarResponse = OutboundSchedulesSequencesSequenceidDeleteWithHttpInfo(sequenceId);
+=======
+        /// Update a contact. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">Contact List ID</param>
+        /// <param name="contactId">Contact ID</param>
+        /// <param name="body">Contact (optional)</param>
+        /// <returns>DialerContact</returns>
+        public DialerContact PutContactlistsContactlistIdContactsContactId (string contactListId, string contactId, DialerContact body = null)
+        {
+             ApiResponse<DialerContact> localVarResponse = PutContactlistsContactlistIdContactsContactIdWithHttpInfo(contactListId, contactId, body);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Delete a dialer sequence schedule. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -12377,6 +19699,25 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'sequenceId' when calling OutboundApi->OutboundSchedulesSequencesSequenceidDelete");
 
             var localVarPath = "/api/v1/outbound/schedules/sequences/{sequenceId}";
+=======
+        /// Update a contact. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">Contact List ID</param>
+        /// <param name="contactId">Contact ID</param>
+        /// <param name="body">Contact (optional)</param>
+        /// <returns>ApiResponse of DialerContact</returns>
+        public ApiResponse< DialerContact > PutContactlistsContactlistIdContactsContactIdWithHttpInfo (string contactListId, string contactId, DialerContact body = null)
+        {
+            // verify the required parameter 'contactListId' is set
+            if (contactListId == null)
+                throw new ApiException(400, "Missing required parameter 'contactListId' when calling OutboundApi->PutContactlistsContactlistIdContactsContactId");
+            // verify the required parameter 'contactId' is set
+            if (contactId == null)
+                throw new ApiException(400, "Missing required parameter 'contactId' when calling OutboundApi->PutContactlistsContactlistIdContactsContactId");
+
+            var localVarPath = "/api/v2/outbound/contactlists/{contactListId}/contacts/{contactId}";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -12401,7 +19742,20 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (sequenceId != null) localVarPathParams.Add("sequenceId", Configuration.ApiClient.ParameterToString(sequenceId)); // path parameter
+=======
+            if (contactListId != null) localVarPathParams.Add("contactListId", Configuration.ApiClient.ParameterToString(contactListId)); // path parameter
+            if (contactId != null) localVarPathParams.Add("contactId", Configuration.ApiClient.ParameterToString(contactId)); // path parameter
+            if (body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -12412,12 +19766,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+<<<<<<< HEAD
                 Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundSchedulesSequencesSequenceidDelete: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundSchedulesSequencesSequenceidDelete: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -12425,10 +19784,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PutContactlistsContactlistIdContactsContactId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutContactlistsContactlistIdContactsContactId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DialerContact>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (DialerContact) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DialerContact)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Delete a dialer sequence schedule. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -12437,11 +19806,24 @@ namespace ININ.PureCloudApi.Api
         public async System.Threading.Tasks.Task<string> OutboundSchedulesSequencesSequenceidDeleteAsync (string sequenceId)
         {
              ApiResponse<string> localVarResponse = await OutboundSchedulesSequencesSequenceidDeleteAsyncWithHttpInfo(sequenceId);
+=======
+        /// Update a contact. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">Contact List ID</param>
+        /// <param name="contactId">Contact ID</param>
+        /// <param name="body">Contact (optional)</param>
+        /// <returns>Task of DialerContact</returns>
+        public async System.Threading.Tasks.Task<DialerContact> PutContactlistsContactlistIdContactsContactIdAsync (string contactListId, string contactId, DialerContact body = null)
+        {
+             ApiResponse<DialerContact> localVarResponse = await PutContactlistsContactlistIdContactsContactIdAsyncWithHttpInfo(contactListId, contactId, body);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
 
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Delete a dialer sequence schedule. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -12454,6 +19836,25 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'sequenceId' when calling OutboundApi->OutboundSchedulesSequencesSequenceidDelete");
 
             var localVarPath = "/api/v1/outbound/schedules/sequences/{sequenceId}";
+=======
+        /// Update a contact. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">Contact List ID</param>
+        /// <param name="contactId">Contact ID</param>
+        /// <param name="body">Contact (optional)</param>
+        /// <returns>Task of ApiResponse (DialerContact)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DialerContact>> PutContactlistsContactlistIdContactsContactIdAsyncWithHttpInfo (string contactListId, string contactId, DialerContact body = null)
+        {
+            // verify the required parameter 'contactListId' is set
+            if (contactListId == null)
+                throw new ApiException(400, "Missing required parameter 'contactListId' when calling OutboundApi->PutContactlistsContactlistIdContactsContactId");
+            // verify the required parameter 'contactId' is set
+            if (contactId == null)
+                throw new ApiException(400, "Missing required parameter 'contactId' when calling OutboundApi->PutContactlistsContactlistIdContactsContactId");
+
+            var localVarPath = "/api/v2/outbound/contactlists/{contactListId}/contacts/{contactId}";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -12478,7 +19879,20 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (sequenceId != null) localVarPathParams.Add("sequenceId", Configuration.ApiClient.ParameterToString(sequenceId)); // path parameter
+=======
+            if (contactListId != null) localVarPathParams.Add("contactListId", Configuration.ApiClient.ParameterToString(contactListId)); // path parameter
+            if (contactId != null) localVarPathParams.Add("contactId", Configuration.ApiClient.ParameterToString(contactId)); // path parameter
+            if (body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -12489,12 +19903,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+<<<<<<< HEAD
                 Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundSchedulesSequencesSequenceidDelete: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundSchedulesSequencesSequenceidDelete: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -12502,10 +19921,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PutContactlistsContactlistIdContactsContactId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutContactlistsContactlistIdContactsContactId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DialerContact>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (DialerContact) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DialerContact)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Get a dialer sequence schedule. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -12514,10 +19943,22 @@ namespace ININ.PureCloudApi.Api
         public SequenceSchedule OutboundSchedulesSequencesSequenceidGet (string sequenceId)
         {
              ApiResponse<SequenceSchedule> localVarResponse = OutboundSchedulesSequencesSequenceidGetWithHttpInfo(sequenceId);
+=======
+        /// Update dialer DNC list 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dncListId">DncList ID</param>
+        /// <param name="body">DncList (optional)</param>
+        /// <returns>DncList</returns>
+        public DncList PutDnclistsDnclistId (string dncListId, DncList body = null)
+        {
+             ApiResponse<DncList> localVarResponse = PutDnclistsDnclistIdWithHttpInfo(dncListId, body);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Get a dialer sequence schedule. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -12530,6 +19971,21 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'sequenceId' when calling OutboundApi->OutboundSchedulesSequencesSequenceidGet");
 
             var localVarPath = "/api/v1/outbound/schedules/sequences/{sequenceId}";
+=======
+        /// Update dialer DNC list 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dncListId">DncList ID</param>
+        /// <param name="body">DncList (optional)</param>
+        /// <returns>ApiResponse of DncList</returns>
+        public ApiResponse< DncList > PutDnclistsDnclistIdWithHttpInfo (string dncListId, DncList body = null)
+        {
+            // verify the required parameter 'dncListId' is set
+            if (dncListId == null)
+                throw new ApiException(400, "Missing required parameter 'dncListId' when calling OutboundApi->PutDnclistsDnclistId");
+
+            var localVarPath = "/api/v2/outbound/dnclists/{dncListId}";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -12554,6 +20010,7 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (sequenceId != null) localVarPathParams.Add("sequenceId", Configuration.ApiClient.ParameterToString(sequenceId)); // path parameter
 
             // authentication (PureCloud Auth) required
@@ -12632,6 +20089,17 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (sequenceId != null) localVarPathParams.Add("sequenceId", Configuration.ApiClient.ParameterToString(sequenceId)); // path parameter
+=======
+            if (dncListId != null) localVarPathParams.Add("dncListId", Configuration.ApiClient.ParameterToString(dncListId)); // path parameter
+            if (body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -12641,6 +20109,7 @@ namespace ININ.PureCloudApi.Api
             }
 
             // make the HTTP request
+<<<<<<< HEAD
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
@@ -12741,10 +20210,27 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<SequenceSchedule>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (SequenceSchedule) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SequenceSchedule)));
+=======
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutDnclistsDnclistId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutDnclistsDnclistId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DncList>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (DncList) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DncList)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Update a new sequence schedule. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -12754,11 +20240,23 @@ namespace ININ.PureCloudApi.Api
         public async System.Threading.Tasks.Task<SequenceSchedule> OutboundSchedulesSequencesSequenceidPutAsync (string sequenceId, SequenceSchedule body = null)
         {
              ApiResponse<SequenceSchedule> localVarResponse = await OutboundSchedulesSequencesSequenceidPutAsyncWithHttpInfo(sequenceId, body);
+=======
+        /// Update dialer DNC list 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dncListId">DncList ID</param>
+        /// <param name="body">DncList (optional)</param>
+        /// <returns>Task of DncList</returns>
+        public async System.Threading.Tasks.Task<DncList> PutDnclistsDnclistIdAsync (string dncListId, DncList body = null)
+        {
+             ApiResponse<DncList> localVarResponse = await PutDnclistsDnclistIdAsyncWithHttpInfo(dncListId, body);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
 
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Update a new sequence schedule. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -12874,6 +20372,32 @@ namespace ININ.PureCloudApi.Api
             String[] localVarHttpContentTypes = new String[] {
                 "application/json"
             };
+=======
+        /// Update dialer DNC list 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dncListId">DncList ID</param>
+        /// <param name="body">DncList (optional)</param>
+        /// <returns>Task of ApiResponse (DncList)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DncList>> PutDnclistsDnclistIdAsyncWithHttpInfo (string dncListId, DncList body = null)
+        {
+            // verify the required parameter 'dncListId' is set
+            if (dncListId == null)
+                throw new ApiException(400, "Missing required parameter 'dncListId' when calling OutboundApi->PutDnclistsDnclistId");
+
+            var localVarPath = "/api/v2/outbound/dnclists/{dncListId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
@@ -12887,6 +20411,7 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
             if (filterType != null) localVarQueryParams.Add("filterType", Configuration.ApiClient.ParameterToString(filterType)); // query parameter
@@ -12982,6 +20507,17 @@ namespace ININ.PureCloudApi.Api
             if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
             if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
             if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
+=======
+            if (dncListId != null) localVarPathParams.Add("dncListId", Configuration.ApiClient.ParameterToString(dncListId)); // path parameter
+            if (body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -12992,6 +20528,7 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+<<<<<<< HEAD
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -13085,13 +20622,29 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<CampaignSequence>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (CampaignSequence) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CampaignSequence)));
+=======
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutDnclistsDnclistId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutDnclistsDnclistId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DncList>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (DncList) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DncList)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
-        /// Create a new campaign sequence. 
+        /// Update a RuleSet. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="body">Organization (optional)</param>
         /// <returns>Task of CampaignSequence</returns>
         public async System.Threading.Tasks.Task<CampaignSequence> OutboundSequencesPostAsync (CampaignSequence body = null)
@@ -13099,18 +20652,40 @@ namespace ININ.PureCloudApi.Api
              ApiResponse<CampaignSequence> localVarResponse = await OutboundSequencesPostAsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
+=======
+        /// <param name="ruleSetId">Rule Set ID</param>
+        /// <param name="body">RuleSet (optional)</param>
+        /// <returns>RuleSet</returns>
+        public RuleSet PutRulesetsRulesetId (string ruleSetId, RuleSet body = null)
+        {
+             ApiResponse<RuleSet> localVarResponse = PutRulesetsRulesetIdWithHttpInfo(ruleSetId, body);
+             return localVarResponse.Data;
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         }
 
         /// <summary>
-        /// Create a new campaign sequence. 
+        /// Update a RuleSet. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="body">Organization (optional)</param>
         /// <returns>Task of ApiResponse (CampaignSequence)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<CampaignSequence>> OutboundSequencesPostAsyncWithHttpInfo (CampaignSequence body = null)
         {
 
             var localVarPath = "/api/v1/outbound/sequences";
+=======
+        /// <param name="ruleSetId">Rule Set ID</param>
+        /// <param name="body">RuleSet (optional)</param>
+        /// <returns>ApiResponse of RuleSet</returns>
+        public ApiResponse< RuleSet > PutRulesetsRulesetIdWithHttpInfo (string ruleSetId, RuleSet body = null)
+        {
+            // verify the required parameter 'ruleSetId' is set
+            if (ruleSetId == null)
+                throw new ApiException(400, "Missing required parameter 'ruleSetId' when calling OutboundApi->PutRulesetsRulesetId");
+
+            var localVarPath = "/api/v2/outbound/rulesets/{ruleSetId}";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -13135,6 +20710,10 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
+=======
+            if (ruleSetId != null) localVarPathParams.Add("ruleSetId", Configuration.ApiClient.ParameterToString(ruleSetId)); // path parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -13152,6 +20731,7 @@ namespace ININ.PureCloudApi.Api
             }
 
             // make the HTTP request
+<<<<<<< HEAD
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
@@ -13242,10 +20822,27 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+=======
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutRulesetsRulesetId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutRulesetsRulesetId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<RuleSet>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RuleSet) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RuleSet)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Delete a dialer campaign sequence. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -13254,11 +20851,23 @@ namespace ININ.PureCloudApi.Api
         public async System.Threading.Tasks.Task<string> OutboundSequencesSequenceidDeleteAsync (string sequenceId)
         {
              ApiResponse<string> localVarResponse = await OutboundSequencesSequenceidDeleteAsyncWithHttpInfo(sequenceId);
+=======
+        /// Update a RuleSet. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ruleSetId">Rule Set ID</param>
+        /// <param name="body">RuleSet (optional)</param>
+        /// <returns>Task of RuleSet</returns>
+        public async System.Threading.Tasks.Task<RuleSet> PutRulesetsRulesetIdAsync (string ruleSetId, RuleSet body = null)
+        {
+             ApiResponse<RuleSet> localVarResponse = await PutRulesetsRulesetIdAsyncWithHttpInfo(ruleSetId, body);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
 
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Delete a dialer campaign sequence. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -13271,6 +20880,21 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'sequenceId' when calling OutboundApi->OutboundSequencesSequenceidDelete");
 
             var localVarPath = "/api/v1/outbound/sequences/{sequenceId}";
+=======
+        /// Update a RuleSet. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ruleSetId">Rule Set ID</param>
+        /// <param name="body">RuleSet (optional)</param>
+        /// <returns>Task of ApiResponse (RuleSet)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RuleSet>> PutRulesetsRulesetIdAsyncWithHttpInfo (string ruleSetId, RuleSet body = null)
+        {
+            // verify the required parameter 'ruleSetId' is set
+            if (ruleSetId == null)
+                throw new ApiException(400, "Missing required parameter 'ruleSetId' when calling OutboundApi->PutRulesetsRulesetId");
+
+            var localVarPath = "/api/v2/outbound/rulesets/{ruleSetId}";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -13295,7 +20919,19 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (sequenceId != null) localVarPathParams.Add("sequenceId", Configuration.ApiClient.ParameterToString(sequenceId)); // path parameter
+=======
+            if (ruleSetId != null) localVarPathParams.Add("ruleSetId", Configuration.ApiClient.ParameterToString(ruleSetId)); // path parameter
+            if (body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -13306,12 +20942,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+<<<<<<< HEAD
                 Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundSequencesSequenceidDelete: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundSequencesSequenceidDelete: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -13319,10 +20960,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PutRulesetsRulesetId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutRulesetsRulesetId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<RuleSet>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RuleSet) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RuleSet)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Get a dialer campaign sequence. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -13331,10 +20982,22 @@ namespace ININ.PureCloudApi.Api
         public CampaignSequence OutboundSequencesSequenceidGet (string sequenceId)
         {
              ApiResponse<CampaignSequence> localVarResponse = OutboundSequencesSequenceidGetWithHttpInfo(sequenceId);
+=======
+        /// Update a new campaign schedule. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <param name="body">CampaignSchedule (optional)</param>
+        /// <returns>CampaignSchedule</returns>
+        public CampaignSchedule PutSchedulesCampaignsCampaignId (string campaignId, CampaignSchedule body = null)
+        {
+             ApiResponse<CampaignSchedule> localVarResponse = PutSchedulesCampaignsCampaignIdWithHttpInfo(campaignId, body);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Get a dialer campaign sequence. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -13347,6 +21010,21 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'sequenceId' when calling OutboundApi->OutboundSequencesSequenceidGet");
 
             var localVarPath = "/api/v1/outbound/sequences/{sequenceId}";
+=======
+        /// Update a new campaign schedule. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <param name="body">CampaignSchedule (optional)</param>
+        /// <returns>ApiResponse of CampaignSchedule</returns>
+        public ApiResponse< CampaignSchedule > PutSchedulesCampaignsCampaignIdWithHttpInfo (string campaignId, CampaignSchedule body = null)
+        {
+            // verify the required parameter 'campaignId' is set
+            if (campaignId == null)
+                throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->PutSchedulesCampaignsCampaignId");
+
+            var localVarPath = "/api/v2/outbound/schedules/campaigns/{campaignId}";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -13371,7 +21049,19 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (sequenceId != null) localVarPathParams.Add("sequenceId", Configuration.ApiClient.ParameterToString(sequenceId)); // path parameter
+=======
+            if (campaignId != null) localVarPathParams.Add("campaignId", Configuration.ApiClient.ParameterToString(campaignId)); // path parameter
+            if (body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -13382,12 +21072,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+<<<<<<< HEAD
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundSequencesSequenceidGet: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundSequencesSequenceidGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -13395,10 +21090,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<CampaignSequence>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (CampaignSequence) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CampaignSequence)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PutSchedulesCampaignsCampaignId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutSchedulesCampaignsCampaignId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CampaignSchedule>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (CampaignSchedule) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CampaignSchedule)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Get a dialer campaign sequence. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -13407,11 +21112,23 @@ namespace ININ.PureCloudApi.Api
         public async System.Threading.Tasks.Task<CampaignSequence> OutboundSequencesSequenceidGetAsync (string sequenceId)
         {
              ApiResponse<CampaignSequence> localVarResponse = await OutboundSequencesSequenceidGetAsyncWithHttpInfo(sequenceId);
+=======
+        /// Update a new campaign schedule. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <param name="body">CampaignSchedule (optional)</param>
+        /// <returns>Task of CampaignSchedule</returns>
+        public async System.Threading.Tasks.Task<CampaignSchedule> PutSchedulesCampaignsCampaignIdAsync (string campaignId, CampaignSchedule body = null)
+        {
+             ApiResponse<CampaignSchedule> localVarResponse = await PutSchedulesCampaignsCampaignIdAsyncWithHttpInfo(campaignId, body);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
 
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Get a dialer campaign sequence. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -13424,6 +21141,21 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'sequenceId' when calling OutboundApi->OutboundSequencesSequenceidGet");
 
             var localVarPath = "/api/v1/outbound/sequences/{sequenceId}";
+=======
+        /// Update a new campaign schedule. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <param name="body">CampaignSchedule (optional)</param>
+        /// <returns>Task of ApiResponse (CampaignSchedule)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CampaignSchedule>> PutSchedulesCampaignsCampaignIdAsyncWithHttpInfo (string campaignId, CampaignSchedule body = null)
+        {
+            // verify the required parameter 'campaignId' is set
+            if (campaignId == null)
+                throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->PutSchedulesCampaignsCampaignId");
+
+            var localVarPath = "/api/v2/outbound/schedules/campaigns/{campaignId}";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -13448,7 +21180,19 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (sequenceId != null) localVarPathParams.Add("sequenceId", Configuration.ApiClient.ParameterToString(sequenceId)); // path parameter
+=======
+            if (campaignId != null) localVarPathParams.Add("campaignId", Configuration.ApiClient.ParameterToString(campaignId)); // path parameter
+            if (body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -13459,12 +21203,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+<<<<<<< HEAD
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundSequencesSequenceidGet: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundSequencesSequenceidGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -13472,10 +21221,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<CampaignSequence>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (CampaignSequence) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CampaignSequence)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PutSchedulesCampaignsCampaignId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutSchedulesCampaignsCampaignId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CampaignSchedule>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (CampaignSchedule) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CampaignSchedule)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Update a new campaign sequence. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -13485,10 +21244,22 @@ namespace ININ.PureCloudApi.Api
         public CampaignSequence OutboundSequencesSequenceidPut (string sequenceId, CampaignSequence body = null)
         {
              ApiResponse<CampaignSequence> localVarResponse = OutboundSequencesSequenceidPutWithHttpInfo(sequenceId, body);
+=======
+        /// Update a new sequence schedule. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sequenceId">Sequence ID</param>
+        /// <param name="body">SequenceSchedule (optional)</param>
+        /// <returns>SequenceSchedule</returns>
+        public SequenceSchedule PutSchedulesSequencesSequenceId (string sequenceId, SequenceSchedule body = null)
+        {
+             ApiResponse<SequenceSchedule> localVarResponse = PutSchedulesSequencesSequenceIdWithHttpInfo(sequenceId, body);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Update a new campaign sequence. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -13502,6 +21273,21 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'sequenceId' when calling OutboundApi->OutboundSequencesSequenceidPut");
 
             var localVarPath = "/api/v1/outbound/sequences/{sequenceId}";
+=======
+        /// Update a new sequence schedule. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sequenceId">Sequence ID</param>
+        /// <param name="body">SequenceSchedule (optional)</param>
+        /// <returns>ApiResponse of SequenceSchedule</returns>
+        public ApiResponse< SequenceSchedule > PutSchedulesSequencesSequenceIdWithHttpInfo (string sequenceId, SequenceSchedule body = null)
+        {
+            // verify the required parameter 'sequenceId' is set
+            if (sequenceId == null)
+                throw new ApiException(400, "Missing required parameter 'sequenceId' when calling OutboundApi->PutSchedulesSequencesSequenceId");
+
+            var localVarPath = "/api/v2/outbound/schedules/sequences/{sequenceId}";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -13551,6 +21337,7 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundSequencesSequenceidPut: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundSequencesSequenceidPut: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -13558,10 +21345,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<CampaignSequence>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (CampaignSequence) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CampaignSequence)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PutSchedulesSequencesSequenceId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutSchedulesSequencesSequenceId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SequenceSchedule>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (SequenceSchedule) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SequenceSchedule)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Update a new campaign sequence. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -13571,11 +21368,23 @@ namespace ININ.PureCloudApi.Api
         public async System.Threading.Tasks.Task<CampaignSequence> OutboundSequencesSequenceidPutAsync (string sequenceId, CampaignSequence body = null)
         {
              ApiResponse<CampaignSequence> localVarResponse = await OutboundSequencesSequenceidPutAsyncWithHttpInfo(sequenceId, body);
+=======
+        /// Update a new sequence schedule. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sequenceId">Sequence ID</param>
+        /// <param name="body">SequenceSchedule (optional)</param>
+        /// <returns>Task of SequenceSchedule</returns>
+        public async System.Threading.Tasks.Task<SequenceSchedule> PutSchedulesSequencesSequenceIdAsync (string sequenceId, SequenceSchedule body = null)
+        {
+             ApiResponse<SequenceSchedule> localVarResponse = await PutSchedulesSequencesSequenceIdAsyncWithHttpInfo(sequenceId, body);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
 
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Update a new campaign sequence. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -13589,6 +21398,21 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'sequenceId' when calling OutboundApi->OutboundSequencesSequenceidPut");
 
             var localVarPath = "/api/v1/outbound/sequences/{sequenceId}";
+=======
+        /// Update a new sequence schedule. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sequenceId">Sequence ID</param>
+        /// <param name="body">SequenceSchedule (optional)</param>
+        /// <returns>Task of ApiResponse (SequenceSchedule)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<SequenceSchedule>> PutSchedulesSequencesSequenceIdAsyncWithHttpInfo (string sequenceId, SequenceSchedule body = null)
+        {
+            // verify the required parameter 'sequenceId' is set
+            if (sequenceId == null)
+                throw new ApiException(400, "Missing required parameter 'sequenceId' when calling OutboundApi->PutSchedulesSequencesSequenceId");
+
+            var localVarPath = "/api/v2/outbound/schedules/sequences/{sequenceId}";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -13638,6 +21462,7 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundSequencesSequenceidPut: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundSequencesSequenceidPut: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -13645,29 +21470,60 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<CampaignSequence>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (CampaignSequence) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CampaignSequence)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PutSchedulesSequencesSequenceId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutSchedulesSequencesSequenceId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SequenceSchedule>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (SequenceSchedule) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SequenceSchedule)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
-        /// Get the Dialer wrap up code mapping. 
+        /// Update a new campaign sequence. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <returns>WrapUpCodeMapping</returns>
         public WrapUpCodeMapping OutboundWrapupcodemappingsGet ()
         {
              ApiResponse<WrapUpCodeMapping> localVarResponse = OutboundWrapupcodemappingsGetWithHttpInfo();
+=======
+        /// <param name="sequenceId">Campaign Sequence ID</param>
+        /// <param name="body">Organization (optional)</param>
+        /// <returns>CampaignSequence</returns>
+        public CampaignSequence PutSequencesSequenceId (string sequenceId, CampaignSequence body = null)
+        {
+             ApiResponse<CampaignSequence> localVarResponse = PutSequencesSequenceIdWithHttpInfo(sequenceId, body);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Get the Dialer wrap up code mapping. 
+        /// Update a new campaign sequence. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <returns>ApiResponse of WrapUpCodeMapping</returns>
         public ApiResponse< WrapUpCodeMapping > OutboundWrapupcodemappingsGetWithHttpInfo ()
         {
 
             var localVarPath = "/api/v1/outbound/wrapupcodemappings";
+=======
+        /// <param name="sequenceId">Campaign Sequence ID</param>
+        /// <param name="body">Organization (optional)</param>
+        /// <returns>ApiResponse of CampaignSequence</returns>
+        public ApiResponse< CampaignSequence > PutSequencesSequenceIdWithHttpInfo (string sequenceId, CampaignSequence body = null)
+        {
+            // verify the required parameter 'sequenceId' is set
+            if (sequenceId == null)
+                throw new ApiException(400, "Missing required parameter 'sequenceId' when calling OutboundApi->PutSequencesSequenceId");
+
+            var localVarPath = "/api/v2/outbound/sequences/{sequenceId}";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -13692,6 +21548,18 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
+=======
+            if (sequenceId != null) localVarPathParams.Add("sequenceId", Configuration.ApiClient.ParameterToString(sequenceId)); // path parameter
+            if (body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -13702,12 +21570,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+<<<<<<< HEAD
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundWrapupcodemappingsGet: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundWrapupcodemappingsGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -13715,30 +21588,61 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<WrapUpCodeMapping>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (WrapUpCodeMapping) Configuration.ApiClient.Deserialize(localVarResponse, typeof(WrapUpCodeMapping)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PutSequencesSequenceId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutSequencesSequenceId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CampaignSequence>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (CampaignSequence) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CampaignSequence)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
-        /// Get the Dialer wrap up code mapping. 
+        /// Update a new campaign sequence. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <returns>Task of WrapUpCodeMapping</returns>
         public async System.Threading.Tasks.Task<WrapUpCodeMapping> OutboundWrapupcodemappingsGetAsync ()
         {
              ApiResponse<WrapUpCodeMapping> localVarResponse = await OutboundWrapupcodemappingsGetAsyncWithHttpInfo();
+=======
+        /// <param name="sequenceId">Campaign Sequence ID</param>
+        /// <param name="body">Organization (optional)</param>
+        /// <returns>Task of CampaignSequence</returns>
+        public async System.Threading.Tasks.Task<CampaignSequence> PutSequencesSequenceIdAsync (string sequenceId, CampaignSequence body = null)
+        {
+             ApiResponse<CampaignSequence> localVarResponse = await PutSequencesSequenceIdAsyncWithHttpInfo(sequenceId, body);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Get the Dialer wrap up code mapping. 
+        /// Update a new campaign sequence. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <returns>Task of ApiResponse (WrapUpCodeMapping)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<WrapUpCodeMapping>> OutboundWrapupcodemappingsGetAsyncWithHttpInfo ()
         {
 
             var localVarPath = "/api/v1/outbound/wrapupcodemappings";
+=======
+        /// <param name="sequenceId">Campaign Sequence ID</param>
+        /// <param name="body">Organization (optional)</param>
+        /// <returns>Task of ApiResponse (CampaignSequence)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CampaignSequence>> PutSequencesSequenceIdAsyncWithHttpInfo (string sequenceId, CampaignSequence body = null)
+        {
+            // verify the required parameter 'sequenceId' is set
+            if (sequenceId == null)
+                throw new ApiException(400, "Missing required parameter 'sequenceId' when calling OutboundApi->PutSequencesSequenceId");
+
+            var localVarPath = "/api/v2/outbound/sequences/{sequenceId}";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -13763,6 +21667,18 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
+=======
+            if (sequenceId != null) localVarPathParams.Add("sequenceId", Configuration.ApiClient.ParameterToString(sequenceId)); // path parameter
+            if (body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -13773,12 +21689,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+<<<<<<< HEAD
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundWrapupcodemappingsGet: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundWrapupcodemappingsGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -13786,6 +21707,15 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<WrapUpCodeMapping>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (WrapUpCodeMapping) Configuration.ApiClient.Deserialize(localVarResponse, typeof(WrapUpCodeMapping)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PutSequencesSequenceId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutSequencesSequenceId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CampaignSequence>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (CampaignSequence) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CampaignSequence)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
@@ -13795,9 +21725,13 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">wrapUpCodeMapping (optional)</param>
         /// <returns>WrapUpCodeMapping</returns>
-        public WrapUpCodeMapping OutboundWrapupcodemappingsPut (WrapUpCodeMapping body = null)
+        public WrapUpCodeMapping PutWrapupcodemappings (WrapUpCodeMapping body = null)
         {
+<<<<<<< HEAD
              ApiResponse<WrapUpCodeMapping> localVarResponse = OutboundWrapupcodemappingsPutWithHttpInfo(body);
+=======
+             ApiResponse<WrapUpCodeMapping> localVarResponse = PutWrapupcodemappingsWithHttpInfo(body);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
         }
 
@@ -13807,10 +21741,14 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">wrapUpCodeMapping (optional)</param>
         /// <returns>ApiResponse of WrapUpCodeMapping</returns>
-        public ApiResponse< WrapUpCodeMapping > OutboundWrapupcodemappingsPutWithHttpInfo (WrapUpCodeMapping body = null)
+        public ApiResponse< WrapUpCodeMapping > PutWrapupcodemappingsWithHttpInfo (WrapUpCodeMapping body = null)
         {
 
+<<<<<<< HEAD
             var localVarPath = "/api/v1/outbound/wrapupcodemappings";
+=======
+            var localVarPath = "/api/v2/outbound/wrapupcodemappings";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -13859,9 +21797,15 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundWrapupcodemappingsPut: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundWrapupcodemappingsPut: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PutWrapupcodemappings: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutWrapupcodemappings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             return new ApiResponse<WrapUpCodeMapping>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -13875,9 +21819,13 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">wrapUpCodeMapping (optional)</param>
         /// <returns>Task of WrapUpCodeMapping</returns>
-        public async System.Threading.Tasks.Task<WrapUpCodeMapping> OutboundWrapupcodemappingsPutAsync (WrapUpCodeMapping body = null)
+        public async System.Threading.Tasks.Task<WrapUpCodeMapping> PutWrapupcodemappingsAsync (WrapUpCodeMapping body = null)
         {
+<<<<<<< HEAD
              ApiResponse<WrapUpCodeMapping> localVarResponse = await OutboundWrapupcodemappingsPutAsyncWithHttpInfo(body);
+=======
+             ApiResponse<WrapUpCodeMapping> localVarResponse = await PutWrapupcodemappingsAsyncWithHttpInfo(body);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
 
         }
@@ -13888,10 +21836,14 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">wrapUpCodeMapping (optional)</param>
         /// <returns>Task of ApiResponse (WrapUpCodeMapping)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<WrapUpCodeMapping>> OutboundWrapupcodemappingsPutAsyncWithHttpInfo (WrapUpCodeMapping body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<WrapUpCodeMapping>> PutWrapupcodemappingsAsyncWithHttpInfo (WrapUpCodeMapping body = null)
         {
 
+<<<<<<< HEAD
             var localVarPath = "/api/v1/outbound/wrapupcodemappings";
+=======
+            var localVarPath = "/api/v2/outbound/wrapupcodemappings";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -13940,9 +21892,15 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling OutboundWrapupcodemappingsPut: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling OutboundWrapupcodemappingsPut: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PutWrapupcodemappings: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutWrapupcodemappings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             return new ApiResponse<WrapUpCodeMapping>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

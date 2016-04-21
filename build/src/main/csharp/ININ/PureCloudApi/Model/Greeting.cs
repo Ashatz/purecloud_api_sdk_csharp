@@ -26,10 +26,17 @@ namespace ININ.PureCloudApi.Model
             
             [EnumMember(Value = "STATION")]
             Station,
+<<<<<<< HEAD
             
             [EnumMember(Value = "VOICEMAIL")]
             Voicemail,
             
+=======
+            
+            [EnumMember(Value = "VOICEMAIL")]
+            Voicemail,
+            
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             [EnumMember(Value = "NAME")]
             Name
         }
@@ -56,7 +63,10 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
     
+<<<<<<< HEAD
 
+=======
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// Gets or Sets OwnerType
         /// </summary>

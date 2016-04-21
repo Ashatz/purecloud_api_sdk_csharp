@@ -28,11 +28,14 @@ function main() {
 			version = val.substring(9);
 		} else if (stringStartsWith(val, '/token=')) {
 			token = val.substring(7);
-		} else if (stringStartsWith(val, '/releasenotes=')) {
-	        releaseNotes = val.substring(14);
-	    }
-
+		}
 	});
+
+	try {
+		releaseNotes = fs.readFileSync("RELEASENOTES", "UTF-8");
+	} catch(err) {
+		console.log(err);
+	}
 
 	// Create zip for release
 	var zipFileName = version + '.zip'

@@ -26,16 +26,53 @@ namespace ININ.PureCloudApi.Model
             
             [EnumMember(Value = "VALID")]
             Valid,
+<<<<<<< HEAD
             
             [EnumMember(Value = "INVALID")]
             Invalid,
             
+=======
+            
+            [EnumMember(Value = "INVALID")]
+            Invalid,
+            
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             [EnumMember(Value = "NOT_AVAILABLE")]
             NotAvailable
         }
 
         
 
+        /// <summary>
+        /// Gets or Sets MxRecordStatus
+        /// </summary>
+        [DataMember(Name="mxRecordStatus", EmitDefaultValue=false)]
+        public MxRecordStatusEnum? MxRecordStatus { get; set; }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="InboundDomain" />class.
+        /// </summary>
+        /// <param name="Name">Name.</param>
+        /// <param name="MxRecordStatus">MxRecordStatus.</param>
+        /// <param name="SubDomain">Indicates if this a PureCloud sub-domain.  If true, then the appropriate DNS records are created for sending/receiving email. (default to false).</param>
+
+        public InboundDomain(string Name = null, MxRecordStatusEnum? MxRecordStatus = null, bool? SubDomain = null)
+        {
+            this.Name = Name;
+            this.MxRecordStatus = MxRecordStatus;
+            // use default value if no "SubDomain" provided
+            if (SubDomain == null)
+            {
+                this.SubDomain = false;
+            }
+            else
+            {
+                this.SubDomain = SubDomain;
+            }
+            
+        }
+
+    
         /// <summary>
         /// Gets or Sets MxRecordStatus
         /// </summary>

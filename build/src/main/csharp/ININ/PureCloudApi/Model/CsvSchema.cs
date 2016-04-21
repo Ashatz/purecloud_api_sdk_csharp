@@ -107,6 +107,75 @@ namespace ININ.PureCloudApi.Model
 
     
         /// <summary>
+        /// Rate type for the sheet.
+        /// </summary>
+        /// <value>Rate type for the sheet.</value>
+        [DataMember(Name="RateType", EmitDefaultValue=false)]
+        public RateTypeEnum? RateType { get; set; }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CsvSchema" />class.
+        /// </summary>
+        /// <param name="HeaderRow">Row number for the CSV&#39;s headers.  This is zero indexed (i.e. 0 is row 1). (required).</param>
+        /// <param name="DataRow">Row number of the first line of data.  This is zero indexed (i.e. 0 is row 1). (required).</param>
+        /// <param name="HeaderMappings">CSV header name to object name mappings. For example, \&quot;ROUTE_TEL_PREFIX\&quot; to \&quot;Prefix\&quot; might be one such mapping. (required).</param>
+        /// <param name="RateType">Rate type for the sheet. (required).</param>
+        /// <param name="Name">Human readable name for schema. (required).</param>
+        /// <param name="DateFormat">A date format that represents the date time stamp you want to parse. This is based on the reference time of Mon Jan 2 15:04:05 MST 2006. For example, if you had the date 13-OCT-2015, this parameter should be 02-Jan-2006. As another example, if you have the date 2014-09-20, this parameter should be 2006-01-02..</param>
+
+        public CsvSchema(int? HeaderRow = null, int? DataRow = null, Dictionary<string, string> HeaderMappings = null, RateTypeEnum? RateType = null, string Name = null, string DateFormat = null)
+        {
+            // to ensure "HeaderRow" is required (not null)
+            if (HeaderRow == null)
+            {
+                throw new InvalidDataException("HeaderRow is a required property for CsvSchema and cannot be null");
+            }
+            else
+            {
+                this.HeaderRow = HeaderRow;
+            }
+            // to ensure "DataRow" is required (not null)
+            if (DataRow == null)
+            {
+                throw new InvalidDataException("DataRow is a required property for CsvSchema and cannot be null");
+            }
+            else
+            {
+                this.DataRow = DataRow;
+            }
+            // to ensure "HeaderMappings" is required (not null)
+            if (HeaderMappings == null)
+            {
+                throw new InvalidDataException("HeaderMappings is a required property for CsvSchema and cannot be null");
+            }
+            else
+            {
+                this.HeaderMappings = HeaderMappings;
+            }
+            // to ensure "RateType" is required (not null)
+            if (RateType == null)
+            {
+                throw new InvalidDataException("RateType is a required property for CsvSchema and cannot be null");
+            }
+            else
+            {
+                this.RateType = RateType;
+            }
+            // to ensure "Name" is required (not null)
+            if (Name == null)
+            {
+                throw new InvalidDataException("Name is a required property for CsvSchema and cannot be null");
+            }
+            else
+            {
+                this.Name = Name;
+            }
+            this.DateFormat = DateFormat;
+            
+        }
+
+    
+        /// <summary>
         /// Carrier ID associated with this CSV schema.
         /// </summary>
         /// <value>Carrier ID associated with this CSV schema.</value>

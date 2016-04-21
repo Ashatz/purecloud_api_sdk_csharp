@@ -15,26 +15,47 @@ namespace ININ.PureCloudApi.Api
     {
         #region Synchronous Operations
         /// <summary>
+<<<<<<< HEAD
         /// Get conversation
+=======
+        /// Cancel the transfer
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="conversationId">conversation ID</param>
         /// <returns>Conversation</returns>
         Conversation ConversationsConversationidGet (string conversationId);
 
         /// <summary>
         /// Get conversation
+=======
+        /// <param name="callId"></param>
+        /// <param name="participantId"></param>
+        /// <returns>string</returns>
+        string DeleteCallsCallIdParticipantsParticipantIdConsult (string callId, string participantId);
+
+        /// <summary>
+        /// Cancel the transfer
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="conversationId">conversation ID</param>
         /// <returns>ApiResponse of Conversation</returns>
         ApiResponse<Conversation> ConversationsConversationidGetWithHttpInfo (string conversationId);
+=======
+        /// <param name="callId"></param>
+        /// <param name="participantId"></param>
+        /// <returns>ApiResponse of string</returns>
+        ApiResponse<string> DeleteCallsCallIdParticipantsParticipantIdConsultWithHttpInfo (string callId, string participantId);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// Delete attachment from draft
         /// </summary>
@@ -42,10 +63,17 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="conversationId">conversation ID</param>
         /// <param name="attachmentId">attachment ID</param>
         /// <returns>string</returns>
         string ConversationsConversationidMessagesDraftAttachmentsAttachmentidDelete (string conversationId, string attachmentId);
+=======
+        /// <param name="emailId"></param>
+        /// <param name="attachmentId"></param>
+        /// <returns>string</returns>
+        string DeleteEmailsEmailIdMessagesDraftAttachmentsAttachmentId (string emailId, string attachmentId);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
         /// <summary>
         /// Delete attachment from draft
@@ -54,38 +82,63 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="conversationId">conversation ID</param>
         /// <param name="attachmentId">attachment ID</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> ConversationsConversationidMessagesDraftAttachmentsAttachmentidDeleteWithHttpInfo (string conversationId, string attachmentId);
         /// <summary>
         /// Get conversation draft reply
+=======
+        /// <param name="emailId"></param>
+        /// <param name="attachmentId"></param>
+        /// <returns>ApiResponse of string</returns>
+        ApiResponse<string> DeleteEmailsEmailIdMessagesDraftAttachmentsAttachmentIdWithHttpInfo (string emailId, string attachmentId);
+        /// <summary>
+        /// Get callback conversations
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="conversationId">conversation ID</param>
         /// <returns>EmailMessage</returns>
         EmailMessage ConversationsConversationidMessagesDraftGet (string conversationId);
 
         /// <summary>
         /// Get conversation draft reply
+=======
+        /// <returns>CallbackConversationEntityListing</returns>
+        CallbackConversationEntityListing GetCallbacks ();
+
+        /// <summary>
+        /// Get callback conversations
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="conversationId">conversation ID</param>
         /// <returns>ApiResponse of EmailMessage</returns>
         ApiResponse<EmailMessage> ConversationsConversationidMessagesDraftGetWithHttpInfo (string conversationId);
         /// <summary>
         /// Update conversation draft reply
+=======
+        /// <returns>ApiResponse of CallbackConversationEntityListing</returns>
+        ApiResponse<CallbackConversationEntityListing> GetCallbacksWithHttpInfo ();
+        /// <summary>
+        /// Get callback conversation
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="conversationId">conversation ID</param>
         /// <param name="body">Draft (optional)</param>
         /// <returns>EmailMessage</returns>
@@ -93,43 +146,81 @@ namespace ININ.PureCloudApi.Api
 
         /// <summary>
         /// Update conversation draft reply
+=======
+        /// <param name="callbackId"></param>
+        /// <returns>CallbackConversation</returns>
+        CallbackConversation GetCallbacksCallbackId (string callbackId);
+
+        /// <summary>
+        /// Get callback conversation
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="conversationId">conversation ID</param>
         /// <param name="body">Draft (optional)</param>
         /// <returns>ApiResponse of EmailMessage</returns>
         ApiResponse<EmailMessage> ConversationsConversationidMessagesDraftPutWithHttpInfo (string conversationId, EmailMessage body = null);
         /// <summary>
         /// Get conversation messages
+=======
+        /// <param name="callbackId"></param>
+        /// <returns>ApiResponse of CallbackConversation</returns>
+        ApiResponse<CallbackConversation> GetCallbacksCallbackIdWithHttpInfo (string callbackId);
+        /// <summary>
+        /// Get the wrap-up for this conversation participant. 
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="conversationId">conversation ID</param>
         /// <returns>EmailMessageListing</returns>
         EmailMessageListing ConversationsConversationidMessagesGet (string conversationId);
 
         /// <summary>
         /// Get conversation messages
+=======
+        /// <param name="callbackId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
+        /// <returns>WrapupCode</returns>
+        WrapupCode GetCallbacksCallbackIdParticipantsParticipantIdWrapup (string callbackId, string participantId, bool? provisional = null);
+
+        /// <summary>
+        /// Get the wrap-up for this conversation participant. 
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="conversationId">conversation ID</param>
         /// <returns>ApiResponse of EmailMessageListing</returns>
         ApiResponse<EmailMessageListing> ConversationsConversationidMessagesGetWithHttpInfo (string conversationId);
         /// <summary>
         /// Get conversation message
+=======
+        /// <param name="callbackId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
+        /// <returns>ApiResponse of WrapupCode</returns>
+        ApiResponse<WrapupCode> GetCallbacksCallbackIdParticipantsParticipantIdWrapupWithHttpInfo (string callbackId, string participantId, bool? provisional = null);
+        /// <summary>
+        /// Get list of wrapup codes for this conversation participant
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="conversationId">conversation ID</param>
         /// <param name="id">message ID</param>
         /// <returns>EmailMessage</returns>
@@ -137,22 +228,41 @@ namespace ININ.PureCloudApi.Api
 
         /// <summary>
         /// Get conversation message
+=======
+        /// <param name="callbackId"></param>
+        /// <param name="participantId"></param>
+        /// <returns>WrapupCode</returns>
+        WrapupCode GetCallbacksCallbackIdParticipantsParticipantIdWrapupcodes (string callbackId, string participantId);
+
+        /// <summary>
+        /// Get list of wrapup codes for this conversation participant
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="conversationId">conversation ID</param>
         /// <param name="id">message ID</param>
         /// <returns>ApiResponse of EmailMessage</returns>
         ApiResponse<EmailMessage> ConversationsConversationidMessagesIdGetWithHttpInfo (string conversationId, string id);
         /// <summary>
         /// Send an email reply
+=======
+        /// <param name="callbackId"></param>
+        /// <param name="participantId"></param>
+        /// <returns>ApiResponse of WrapupCode</returns>
+        ApiResponse<WrapupCode> GetCallbacksCallbackIdParticipantsParticipantIdWrapupcodesWithHttpInfo (string callbackId, string participantId);
+        /// <summary>
+        /// Get recent conversations
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="conversationId">conversation ID</param>
         /// <param name="body">Reply (optional)</param>
         /// <returns>EmailMessage</returns>
@@ -160,22 +270,37 @@ namespace ININ.PureCloudApi.Api
 
         /// <summary>
         /// Send an email reply
+=======
+        /// <returns>CallConversationEntityListing</returns>
+        CallConversationEntityListing GetCalls ();
+
+        /// <summary>
+        /// Get recent conversations
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="conversationId">conversation ID</param>
         /// <param name="body">Reply (optional)</param>
         /// <returns>ApiResponse of EmailMessage</returns>
         ApiResponse<EmailMessage> ConversationsConversationidMessagesPostWithHttpInfo (string conversationId, EmailMessage body = null);
         /// <summary>
         /// Update the attributes on a conversation participant.
+=======
+        /// <returns>ApiResponse of CallConversationEntityListing</returns>
+        ApiResponse<CallConversationEntityListing> GetCallsWithHttpInfo ();
+        /// <summary>
+        /// Get call conversation
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="conversationId">conversation ID</param>
         /// <param name="participantId">participant ID</param>
         /// <param name="body"> (optional)</param>
@@ -184,11 +309,20 @@ namespace ININ.PureCloudApi.Api
 
         /// <summary>
         /// Update the attributes on a conversation participant.
+=======
+        /// <param name="callId"></param>
+        /// <returns>CallConversation</returns>
+        CallConversation GetCallsCallId (string callId);
+
+        /// <summary>
+        /// Get call conversation
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="conversationId">conversation ID</param>
         /// <param name="participantId">participant ID</param>
         /// <param name="body"> (optional)</param>
@@ -196,11 +330,19 @@ namespace ININ.PureCloudApi.Api
         ApiResponse<Object> ConversationsConversationidParticipantsParticipantidAttributesPutWithHttpInfo (string conversationId, string participantId, ParticipantAttributes body = null);
         /// <summary>
         /// Cancel the transfer
+=======
+        /// <param name="callId"></param>
+        /// <returns>ApiResponse of CallConversation</returns>
+        ApiResponse<CallConversation> GetCallsCallIdWithHttpInfo (string callId);
+        /// <summary>
+        /// Get the wrap-up for this conversation participant. 
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="conversationId">conversation ID</param>
         /// <param name="participantId">The object of the transfer</param>
         /// <returns>string</returns>
@@ -208,22 +350,43 @@ namespace ININ.PureCloudApi.Api
 
         /// <summary>
         /// Cancel the transfer
+=======
+        /// <param name="callId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
+        /// <returns>WrapupCode</returns>
+        WrapupCode GetCallsCallIdParticipantsParticipantIdWrapup (string callId, string participantId, bool? provisional = null);
+
+        /// <summary>
+        /// Get the wrap-up for this conversation participant. 
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="conversationId">conversation ID</param>
         /// <param name="participantId">The object of the transfer</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> ConversationsConversationidParticipantsParticipantidConsultDeleteWithHttpInfo (string conversationId, string participantId);
         /// <summary>
         /// Initiate and update consult transfer
+=======
+        /// <param name="callId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
+        /// <returns>ApiResponse of WrapupCode</returns>
+        ApiResponse<WrapupCode> GetCallsCallIdParticipantsParticipantIdWrapupWithHttpInfo (string callId, string participantId, bool? provisional = null);
+        /// <summary>
+        /// Get list of wrapup codes for this conversation participant
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="conversationId">conversation ID</param>
         /// <param name="participantId">The object of the transfer</param>
         /// <param name="body">Destination address &amp; initial speak to (optional)</param>
@@ -232,11 +395,21 @@ namespace ININ.PureCloudApi.Api
 
         /// <summary>
         /// Initiate and update consult transfer
+=======
+        /// <param name="callId"></param>
+        /// <param name="participantId"></param>
+        /// <returns>WrapupCode</returns>
+        WrapupCode GetCallsCallIdParticipantsParticipantIdWrapupcodes (string callId, string participantId);
+
+        /// <summary>
+        /// Get list of wrapup codes for this conversation participant
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="conversationId">conversation ID</param>
         /// <param name="participantId">The object of the transfer</param>
         /// <param name="body">Destination address &amp; initial speak to (optional)</param>
@@ -244,11 +417,20 @@ namespace ININ.PureCloudApi.Api
         ApiResponse<ConsultTransferResponse> ConversationsConversationidParticipantsParticipantidConsultPostWithHttpInfo (string conversationId, string participantId, ConsultTransfer body = null);
         /// <summary>
         /// Change who can speak
+=======
+        /// <param name="callId"></param>
+        /// <param name="participantId"></param>
+        /// <returns>ApiResponse of WrapupCode</returns>
+        ApiResponse<WrapupCode> GetCallsCallIdParticipantsParticipantIdWrapupcodesWithHttpInfo (string callId, string participantId);
+        /// <summary>
+        /// Get the maximum number of participants that this user can have on a conference
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="conversationId">conversation ID</param>
         /// <param name="participantId">The object of the transfer</param>
         /// <param name="body">new speak to (optional)</param>
@@ -257,11 +439,19 @@ namespace ININ.PureCloudApi.Api
 
         /// <summary>
         /// Change who can speak
+=======
+        /// <returns>MaxParticipants</returns>
+        MaxParticipants GetCallsMaximumconferenceparties ();
+
+        /// <summary>
+        /// Get the maximum number of participants that this user can have on a conference
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="conversationId">conversation ID</param>
         /// <param name="participantId">The object of the transfer</param>
         /// <param name="body">new speak to (optional)</param>
@@ -269,11 +459,18 @@ namespace ININ.PureCloudApi.Api
         ApiResponse<ConsultTransferResponse> ConversationsConversationidParticipantsParticipantidConsultPutWithHttpInfo (string conversationId, string participantId, ConsultTransferUpdate body = null);
         /// <summary>
         /// Listen in on the conversation from the point of view of a given participant.
+=======
+        /// <returns>ApiResponse of MaxParticipants</returns>
+        ApiResponse<MaxParticipants> GetCallsMaximumconferencepartiesWithHttpInfo ();
+        /// <summary>
+        /// Get recent chat conversations
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="conversationId">conversation ID</param>
         /// <param name="participantId">participant ID</param>
         /// <returns></returns>
@@ -281,22 +478,37 @@ namespace ININ.PureCloudApi.Api
 
         /// <summary>
         /// Listen in on the conversation from the point of view of a given participant.
+=======
+        /// <returns>ChatConversationEntityListing</returns>
+        ChatConversationEntityListing GetChats ();
+
+        /// <summary>
+        /// Get recent chat conversations
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="conversationId">conversation ID</param>
         /// <param name="participantId">participant ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> ConversationsConversationidParticipantsParticipantidMonitorPostWithHttpInfo (string conversationId, string participantId);
         /// <summary>
         /// Update a participant.
+=======
+        /// <returns>ApiResponse of ChatConversationEntityListing</returns>
+        ApiResponse<ChatConversationEntityListing> GetChatsWithHttpInfo ();
+        /// <summary>
+        /// Get chat conversation
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// Specify the state as CONNECTED, DISCONNECTED. You can specify a wrap-up code.
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="conversationId">conversation ID</param>
         /// <param name="participantId">participant ID</param>
         /// <param name="body"> (optional)</param>
@@ -305,11 +517,20 @@ namespace ININ.PureCloudApi.Api
 
         /// <summary>
         /// Update a participant.
+=======
+        /// <param name="chatId"></param>
+        /// <returns>ChatConversation</returns>
+        ChatConversation GetChatsChatId (string chatId);
+
+        /// <summary>
+        /// Get chat conversation
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// Specify the state as CONNECTED, DISCONNECTED. You can specify a wrap-up code.
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="conversationId">conversation ID</param>
         /// <param name="participantId">participant ID</param>
         /// <param name="body"> (optional)</param>
@@ -317,11 +538,32 @@ namespace ININ.PureCloudApi.Api
         ApiResponse<Object> ConversationsConversationidParticipantsParticipantidPutWithHttpInfo (string conversationId, string participantId, ParticipantRequest body = null);
         /// <summary>
         /// Replace this participant with the specified user and/or address
+=======
+        /// <param name="chatId"></param>
+        /// <returns>ApiResponse of ChatConversation</returns>
+        ApiResponse<ChatConversation> GetChatsChatIdWithHttpInfo (string chatId);
+        /// <summary>
+        /// Get the wrap-up for this conversation participant. 
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="chatId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
+        /// <returns>WrapupCode</returns>
+        WrapupCode GetChatsChatIdParticipantsParticipantIdWrapup (string chatId, string participantId, bool? provisional = null);
+
+        /// <summary>
+        /// Get the wrap-up for this conversation participant. 
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="conversationId">conversation ID</param>
         /// <param name="participantId">participant ID</param>
         /// <param name="userId">The user that will replace this participant.  If address is not supplied then the user&#39;s Work address will be used.  This parameter is required when replacing a participant that has an active chat. (optional)</param>
@@ -334,11 +576,33 @@ namespace ININ.PureCloudApi.Api
 
         /// <summary>
         /// Replace this participant with the specified user and/or address
+=======
+        /// <param name="chatId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
+        /// <returns>ApiResponse of WrapupCode</returns>
+        ApiResponse<WrapupCode> GetChatsChatIdParticipantsParticipantIdWrapupWithHttpInfo (string chatId, string participantId, bool? provisional = null);
+        /// <summary>
+        /// Get list of wrapup codes for this conversation participant
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="chatId"></param>
+        /// <param name="participantId"></param>
+        /// <returns>WrapupCode</returns>
+        WrapupCode GetChatsChatIdParticipantsParticipantIdWrapupcodes (string chatId, string participantId);
+
+        /// <summary>
+        /// Get list of wrapup codes for this conversation participant
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="conversationId">conversation ID</param>
         /// <param name="participantId">participant ID</param>
         /// <param name="userId">The user that will replace this participant.  If address is not supplied then the user&#39;s Work address will be used.  This parameter is required when replacing a participant that has an active chat. (optional)</param>
@@ -350,12 +614,21 @@ namespace ININ.PureCloudApi.Api
         ApiResponse<Object> ConversationsConversationidParticipantsParticipantidReplacePostWithHttpInfo (string conversationId, string participantId, string userId = null, string address = null, string username = null, string queueId = null, bool? voicemail = null);
         /// <summary>
         /// Get the wrap-up for this conversation participant. 
+=======
+        /// <param name="chatId"></param>
+        /// <param name="participantId"></param>
+        /// <returns>ApiResponse of WrapupCode</returns>
+        ApiResponse<WrapupCode> GetChatsChatIdParticipantsParticipantIdWrapupcodesWithHttpInfo (string chatId, string participantId);
+        /// <summary>
+        /// Get conversation
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversation ID</param>
+<<<<<<< HEAD
         /// <param name="participantId">participant ID</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
         /// <returns>WrapupCode</returns>
@@ -363,18 +636,32 @@ namespace ININ.PureCloudApi.Api
 
         /// <summary>
         /// Get the wrap-up for this conversation participant. 
+=======
+        /// <returns>Conversation</returns>
+        Conversation GetConversationId (string conversationId);
+
+        /// <summary>
+        /// Get conversation
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversation ID</param>
+<<<<<<< HEAD
         /// <param name="participantId">participant ID</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
         /// <returns>ApiResponse of WrapupCode</returns>
         ApiResponse<WrapupCode> ConversationsConversationidParticipantsParticipantidWrapupGetWithHttpInfo (string conversationId, string participantId, bool? provisional = null);
         /// <summary>
         /// Get list of wrapup codes for this conversation participant
+=======
+        /// <returns>ApiResponse of Conversation</returns>
+        ApiResponse<Conversation> GetConversationIdWithHttpInfo (string conversationId);
+        /// <summary>
+        /// Get the wrap-up for this conversation participant. 
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
@@ -382,11 +669,20 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversation ID</param>
         /// <param name="participantId">participant ID</param>
+<<<<<<< HEAD
         /// <returns>WrapupCode</returns>
         WrapupCode ConversationsConversationidParticipantsParticipantidWrapupcodesGet (string conversationId, string participantId);
 
         /// <summary>
         /// Get list of wrapup codes for this conversation participant
+=======
+        /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
+        /// <returns>WrapupCode</returns>
+        WrapupCode GetConversationIdParticipantsParticipantIdWrapup (string conversationId, string participantId, bool? provisional = null);
+
+        /// <summary>
+        /// Get the wrap-up for this conversation participant. 
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
@@ -394,38 +690,64 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversation ID</param>
         /// <param name="participantId">participant ID</param>
+<<<<<<< HEAD
         /// <returns>ApiResponse of WrapupCode</returns>
         ApiResponse<WrapupCode> ConversationsConversationidParticipantsParticipantidWrapupcodesGetWithHttpInfo (string conversationId, string participantId);
         /// <summary>
         /// Add participants to a conversation
+=======
+        /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
+        /// <returns>ApiResponse of WrapupCode</returns>
+        ApiResponse<WrapupCode> GetConversationIdParticipantsParticipantIdWrapupWithHttpInfo (string conversationId, string participantId, bool? provisional = null);
+        /// <summary>
+        /// Get list of wrapup codes for this conversation participant
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversation ID</param>
+<<<<<<< HEAD
         /// <param name="body">Conversation (optional)</param>
         /// <returns>Conversation</returns>
         Conversation ConversationsConversationidParticipantsPost (string conversationId, Conversation body = null);
 
         /// <summary>
         /// Add participants to a conversation
+=======
+        /// <param name="participantId">participant ID</param>
+        /// <returns>WrapupCode</returns>
+        WrapupCode GetConversationIdParticipantsParticipantIdWrapupcodes (string conversationId, string participantId);
+
+        /// <summary>
+        /// Get list of wrapup codes for this conversation participant
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversation ID</param>
+<<<<<<< HEAD
         /// <param name="body">Conversation (optional)</param>
         /// <returns>ApiResponse of Conversation</returns>
         ApiResponse<Conversation> ConversationsConversationidParticipantsPostWithHttpInfo (string conversationId, Conversation body = null);
         /// <summary>
         /// Update conversation
+=======
+        /// <param name="participantId">participant ID</param>
+        /// <returns>ApiResponse of WrapupCode</returns>
+        ApiResponse<WrapupCode> GetConversationIdParticipantsParticipantIdWrapupcodesWithHttpInfo (string conversationId, string participantId);
+        /// <summary>
+        /// Get conversations
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="conversationId">conversation ID</param>
         /// <param name="body">Conversation (optional)</param>
         /// <returns>Conversation</returns>
@@ -433,75 +755,133 @@ namespace ININ.PureCloudApi.Api
 
         /// <summary>
         /// Update conversation
+=======
+        /// <param name="communicationType">Call or Chat communication filtering (optional)</param>
+        /// <returns>ConversationEntityListing</returns>
+        ConversationEntityListing GetConversations (string communicationType = null);
+
+        /// <summary>
+        /// Get conversations
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="conversationId">conversation ID</param>
         /// <param name="body">Conversation (optional)</param>
         /// <returns>ApiResponse of Conversation</returns>
         ApiResponse<Conversation> ConversationsConversationidPutWithHttpInfo (string conversationId, Conversation body = null);
         /// <summary>
         /// Get possible tags for Conversation
+=======
+        /// <param name="communicationType">Call or Chat communication filtering (optional)</param>
+        /// <returns>ApiResponse of ConversationEntityListing</returns>
+        ApiResponse<ConversationEntityListing> GetConversationsWithHttpInfo (string communicationType = null);
+        /// <summary>
+        /// Get a conversation by id
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="conversationId">conversation ID</param>
         /// <returns>Tag</returns>
         Tag ConversationsConversationidTagsGet (string conversationId);
 
         /// <summary>
         /// Get possible tags for Conversation
+=======
+        /// <param name="conversationId">conversationId</param>
+        /// <returns>AnalyticsConversation</returns>
+        AnalyticsConversation GetConversationsConversationIdDetails (string conversationId);
+
+        /// <summary>
+        /// Get a conversation by id
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="conversationId">conversation ID</param>
         /// <returns>ApiResponse of Tag</returns>
         ApiResponse<Tag> ConversationsConversationidTagsGetWithHttpInfo (string conversationId);
         /// <summary>
         /// Get possible wrap-up codes for Conversation
+=======
+        /// <param name="conversationId">conversationId</param>
+        /// <returns>ApiResponse of AnalyticsConversation</returns>
+        ApiResponse<AnalyticsConversation> GetConversationsConversationIdDetailsWithHttpInfo (string conversationId);
+        /// <summary>
+        /// Get recent email conversations
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="conversationId">conversation ID</param>
         /// <returns>WrapupCode</returns>
         WrapupCode ConversationsConversationidWrapupcodesGet (string conversationId);
 
         /// <summary>
         /// Get possible wrap-up codes for Conversation
+=======
+        /// <returns>EmailConversationEntityListing</returns>
+        EmailConversationEntityListing GetEmails ();
+
+        /// <summary>
+        /// Get recent email conversations
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="conversationId">conversation ID</param>
         /// <returns>ApiResponse of WrapupCode</returns>
         ApiResponse<WrapupCode> ConversationsConversationidWrapupcodesGetWithHttpInfo (string conversationId);
         /// <summary>
         /// Create Fax Conversation
+=======
+        /// <returns>ApiResponse of EmailConversationEntityListing</returns>
+        ApiResponse<EmailConversationEntityListing> GetEmailsWithHttpInfo ();
+        /// <summary>
+        /// Get email conversation
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="body">Fax (optional)</param>
         /// <returns>FaxSendResponse</returns>
         FaxSendResponse ConversationsFaxPost (FaxSendRequest body = null);
 
         /// <summary>
         /// Create Fax Conversation
+=======
+        /// <param name="emailId"></param>
+        /// <returns>EmailConversation</returns>
+        EmailConversation GetEmailsEmailId (string emailId);
+
+        /// <summary>
+        /// Get email conversation
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="body">Fax (optional)</param>
         /// <returns>ApiResponse of FaxSendResponse</returns>
         ApiResponse<FaxSendResponse> ConversationsFaxPostWithHttpInfo (FaxSendRequest body = null);
@@ -518,11 +898,19 @@ namespace ININ.PureCloudApi.Api
 
         /// <summary>
         /// Get conversations
+=======
+        /// <param name="emailId"></param>
+        /// <returns>ApiResponse of EmailConversation</returns>
+        ApiResponse<EmailConversation> GetEmailsEmailIdWithHttpInfo (string emailId);
+        /// <summary>
+        /// Get conversation messages
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="communicationType">Call or Chat communication filtering (optional)</param>
         /// <returns>ApiResponse of ConversationEntityListing</returns>
         ApiResponse<ConversationEntityListing> ConversationsGetWithHttpInfo (string communicationType = null);
@@ -538,20 +926,37 @@ namespace ININ.PureCloudApi.Api
 
         /// <summary>
         /// Get the maximum number of participants that this user can have on a conference
+=======
+        /// <param name="emailId"></param>
+        /// <returns>EmailMessageListing</returns>
+        EmailMessageListing GetEmailsEmailIdMessages (string emailId);
+
+        /// <summary>
+        /// Get conversation messages
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <returns>ApiResponse of MaxParticipants</returns>
         ApiResponse<MaxParticipants> ConversationsMaximumconferencepartiesGetWithHttpInfo ();
         /// <summary>
         /// Create conversation
+=======
+        /// <param name="emailId"></param>
+        /// <returns>ApiResponse of EmailMessageListing</returns>
+        ApiResponse<EmailMessageListing> GetEmailsEmailIdMessagesWithHttpInfo (string emailId);
+        /// <summary>
+        /// Get conversation draft reply
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="call">Phone number to call (optional)</param>
         /// <param name="callFrom">Queue id to place the call from (optional)</param>
         /// <param name="callQueueId">Queue id to call (optional)</param>
@@ -565,11 +970,20 @@ namespace ININ.PureCloudApi.Api
 
         /// <summary>
         /// Create conversation
+=======
+        /// <param name="emailId"></param>
+        /// <returns>EmailMessage</returns>
+        EmailMessage GetEmailsEmailIdMessagesDraft (string emailId);
+
+        /// <summary>
+        /// Get conversation draft reply
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="call">Phone number to call (optional)</param>
         /// <param name="callFrom">Queue id to place the call from (optional)</param>
         /// <param name="callQueueId">Queue id to call (optional)</param>
@@ -594,11 +1008,19 @@ namespace ININ.PureCloudApi.Api
 
         /// <summary>
         /// Query historical conversations with a date/time anchor
+=======
+        /// <param name="emailId"></param>
+        /// <returns>ApiResponse of EmailMessage</returns>
+        ApiResponse<EmailMessage> GetEmailsEmailIdMessagesDraftWithHttpInfo (string emailId);
+        /// <summary>
+        /// Get conversation message
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="anchor">Anchor</param>
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of ConversationQueryResponse</returns>
@@ -616,11 +1038,21 @@ namespace ININ.PureCloudApi.Api
 
         /// <summary>
         /// Query historical conversations
+=======
+        /// <param name="emailId"></param>
+        /// <param name="messageId"></param>
+        /// <returns>EmailMessage</returns>
+        EmailMessage GetEmailsEmailIdMessagesMessageId (string emailId, string messageId);
+
+        /// <summary>
+        /// Get conversation message
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of ConversationQueryResponse</returns>
         ApiResponse<ConversationQueryResponse> ConversationsQueryPostWithHttpInfo (ConversationHistoricalQueryRequestBody body = null);
@@ -628,76 +1060,141 @@ namespace ININ.PureCloudApi.Api
         #region Asynchronous Operations
         /// <summary>
         /// Get conversation
+=======
+        /// <param name="emailId"></param>
+        /// <param name="messageId"></param>
+        /// <returns>ApiResponse of EmailMessage</returns>
+        ApiResponse<EmailMessage> GetEmailsEmailIdMessagesMessageIdWithHttpInfo (string emailId, string messageId);
+        /// <summary>
+        /// Get the wrap-up for this conversation participant. 
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="conversationId">conversation ID</param>
         /// <returns>Task of Conversation</returns>
         System.Threading.Tasks.Task<Conversation> ConversationsConversationidGetAsync (string conversationId);
 
         /// <summary>
         /// Get conversation
+=======
+        /// <param name="emailId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
+        /// <returns>WrapupCode</returns>
+        WrapupCode GetEmailsEmailIdParticipantsParticipantIdWrapup (string emailId, string participantId, bool? provisional = null);
+
+        /// <summary>
+        /// Get the wrap-up for this conversation participant. 
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="conversationId">conversation ID</param>
         /// <returns>Task of ApiResponse (Conversation)</returns>
         System.Threading.Tasks.Task<ApiResponse<Conversation>> ConversationsConversationidGetAsyncWithHttpInfo (string conversationId);
+=======
+        /// <param name="emailId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
+        /// <returns>ApiResponse of WrapupCode</returns>
+        ApiResponse<WrapupCode> GetEmailsEmailIdParticipantsParticipantIdWrapupWithHttpInfo (string emailId, string participantId, bool? provisional = null);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
-        /// Delete attachment from draft
+        /// Get list of wrapup codes for this conversation participant
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="conversationId">conversation ID</param>
         /// <param name="attachmentId">attachment ID</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> ConversationsConversationidMessagesDraftAttachmentsAttachmentidDeleteAsync (string conversationId, string attachmentId);
+=======
+        /// <param name="emailId"></param>
+        /// <param name="participantId"></param>
+        /// <returns>WrapupCode</returns>
+        WrapupCode GetEmailsEmailIdParticipantsParticipantIdWrapupcodes (string emailId, string participantId);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
         /// <summary>
-        /// Delete attachment from draft
+        /// Get list of wrapup codes for this conversation participant
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="conversationId">conversation ID</param>
         /// <param name="attachmentId">attachment ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> ConversationsConversationidMessagesDraftAttachmentsAttachmentidDeleteAsyncWithHttpInfo (string conversationId, string attachmentId);
         /// <summary>
         /// Get conversation draft reply
+=======
+        /// <param name="emailId"></param>
+        /// <param name="participantId"></param>
+        /// <returns>ApiResponse of WrapupCode</returns>
+        ApiResponse<WrapupCode> GetEmailsEmailIdParticipantsParticipantIdWrapupcodesWithHttpInfo (string emailId, string participantId);
+        /// <summary>
+        /// Update conversation participant
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="conversationId">conversation ID</param>
         /// <returns>Task of EmailMessage</returns>
         System.Threading.Tasks.Task<EmailMessage> ConversationsConversationidMessagesDraftGetAsync (string conversationId);
 
         /// <summary>
         /// Get conversation draft reply
+=======
+        /// <param name="callbackId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns></returns>
+        void PatchCallbacksCallbackIdParticipantsParticipantId (string callbackId, string participantId, MediaParticipantRequest body = null);
+
+        /// <summary>
+        /// Update conversation participant
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="conversationId">conversation ID</param>
         /// <returns>Task of ApiResponse (EmailMessage)</returns>
         System.Threading.Tasks.Task<ApiResponse<EmailMessage>> ConversationsConversationidMessagesDraftGetAsyncWithHttpInfo (string conversationId);
         /// <summary>
         /// Update conversation draft reply
+=======
+        /// <param name="callbackId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> PatchCallbacksCallbackIdParticipantsParticipantIdWithHttpInfo (string callbackId, string participantId, MediaParticipantRequest body = null);
+        /// <summary>
+        /// Update the attributes on a conversation participant.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="conversationId">conversation ID</param>
         /// <param name="body">Draft (optional)</param>
         /// <returns>Task of EmailMessage</returns>
@@ -705,43 +1202,83 @@ namespace ININ.PureCloudApi.Api
 
         /// <summary>
         /// Update conversation draft reply
+=======
+        /// <param name="callbackId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns></returns>
+        void PatchCallbacksCallbackIdParticipantsParticipantIdAttributes (string callbackId, string participantId, ParticipantAttributes body = null);
+
+        /// <summary>
+        /// Update the attributes on a conversation participant.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="conversationId">conversation ID</param>
         /// <param name="body">Draft (optional)</param>
         /// <returns>Task of ApiResponse (EmailMessage)</returns>
         System.Threading.Tasks.Task<ApiResponse<EmailMessage>> ConversationsConversationidMessagesDraftPutAsyncWithHttpInfo (string conversationId, EmailMessage body = null);
         /// <summary>
         /// Get conversation messages
+=======
+        /// <param name="callbackId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> PatchCallbacksCallbackIdParticipantsParticipantIdAttributesWithHttpInfo (string callbackId, string participantId, ParticipantAttributes body = null);
+        /// <summary>
+        /// Update conversation
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="conversationId">conversation ID</param>
         /// <returns>Task of EmailMessageListing</returns>
         System.Threading.Tasks.Task<EmailMessageListing> ConversationsConversationidMessagesGetAsync (string conversationId);
 
         /// <summary>
         /// Get conversation messages
+=======
+        /// <param name="callId"></param>
+        /// <param name="body">Conversation (optional)</param>
+        /// <returns>Conversation</returns>
+        Conversation PatchCallsCallId (string callId, Conversation body = null);
+
+        /// <summary>
+        /// Update conversation
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="conversationId">conversation ID</param>
         /// <returns>Task of ApiResponse (EmailMessageListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<EmailMessageListing>> ConversationsConversationidMessagesGetAsyncWithHttpInfo (string conversationId);
         /// <summary>
         /// Get conversation message
+=======
+        /// <param name="callId"></param>
+        /// <param name="body">Conversation (optional)</param>
+        /// <returns>ApiResponse of Conversation</returns>
+        ApiResponse<Conversation> PatchCallsCallIdWithHttpInfo (string callId, Conversation body = null);
+        /// <summary>
+        /// Update conversation participant
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="conversationId">conversation ID</param>
         /// <param name="id">message ID</param>
         /// <returns>Task of EmailMessage</returns>
@@ -749,22 +1286,43 @@ namespace ININ.PureCloudApi.Api
 
         /// <summary>
         /// Get conversation message
+=======
+        /// <param name="callId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns></returns>
+        void PatchCallsCallIdParticipantsParticipantId (string callId, string participantId, MediaParticipantRequest body = null);
+
+        /// <summary>
+        /// Update conversation participant
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="conversationId">conversation ID</param>
         /// <param name="id">message ID</param>
         /// <returns>Task of ApiResponse (EmailMessage)</returns>
         System.Threading.Tasks.Task<ApiResponse<EmailMessage>> ConversationsConversationidMessagesIdGetAsyncWithHttpInfo (string conversationId, string id);
         /// <summary>
         /// Send an email reply
+=======
+        /// <param name="callId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> PatchCallsCallIdParticipantsParticipantIdWithHttpInfo (string callId, string participantId, MediaParticipantRequest body = null);
+        /// <summary>
+        /// Update the attributes on a conversation participant.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="conversationId">conversation ID</param>
         /// <param name="body">Reply (optional)</param>
         /// <returns>Task of EmailMessage</returns>
@@ -772,22 +1330,43 @@ namespace ININ.PureCloudApi.Api
 
         /// <summary>
         /// Send an email reply
+=======
+        /// <param name="callId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns></returns>
+        void PatchCallsCallIdParticipantsParticipantIdAttributes (string callId, string participantId, ParticipantAttributes body = null);
+
+        /// <summary>
+        /// Update the attributes on a conversation participant.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="conversationId">conversation ID</param>
         /// <param name="body">Reply (optional)</param>
         /// <returns>Task of ApiResponse (EmailMessage)</returns>
         System.Threading.Tasks.Task<ApiResponse<EmailMessage>> ConversationsConversationidMessagesPostAsyncWithHttpInfo (string conversationId, EmailMessage body = null);
         /// <summary>
         /// Update the attributes on a conversation participant.
+=======
+        /// <param name="callId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> PatchCallsCallIdParticipantsParticipantIdAttributesWithHttpInfo (string callId, string participantId, ParticipantAttributes body = null);
+        /// <summary>
+        /// Change who can speak
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="conversationId">conversation ID</param>
         /// <param name="participantId">participant ID</param>
         /// <param name="body"> (optional)</param>
@@ -796,6 +1375,112 @@ namespace ININ.PureCloudApi.Api
 
         /// <summary>
         /// Update the attributes on a conversation participant.
+=======
+        /// <param name="callId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body">new speak to (optional)</param>
+        /// <returns>ConsultTransferResponse</returns>
+        ConsultTransferResponse PatchCallsCallIdParticipantsParticipantIdConsult (string callId, string participantId, ConsultTransferUpdate body = null);
+
+        /// <summary>
+        /// Change who can speak
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="participantId">participant ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> ConversationsConversationidParticipantsParticipantidAttributesPutAsyncWithHttpInfo (string conversationId, string participantId, ParticipantAttributes body = null);
+        /// <summary>
+        /// Cancel the transfer
+=======
+        /// <param name="callId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body">new speak to (optional)</param>
+        /// <returns>ApiResponse of ConsultTransferResponse</returns>
+        ApiResponse<ConsultTransferResponse> PatchCallsCallIdParticipantsParticipantIdConsultWithHttpInfo (string callId, string participantId, ConsultTransferUpdate body = null);
+        /// <summary>
+        /// Update conversation participant
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="chatId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns></returns>
+        void PatchChatsChatIdParticipantsParticipantId (string chatId, string participantId, MediaParticipantRequest body = null);
+
+        /// <summary>
+        /// Update conversation participant
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="chatId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> PatchChatsChatIdParticipantsParticipantIdWithHttpInfo (string chatId, string participantId, MediaParticipantRequest body = null);
+        /// <summary>
+        /// Update the attributes on a conversation participant.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="chatId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns></returns>
+        void PatchChatsChatIdParticipantsParticipantIdAttributes (string chatId, string participantId, ParticipantAttributes body = null);
+
+        /// <summary>
+        /// Update the attributes on a conversation participant.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="chatId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> PatchChatsChatIdParticipantsParticipantIdAttributesWithHttpInfo (string chatId, string participantId, ParticipantAttributes body = null);
+        /// <summary>
+        /// Update a participant.
+        /// </summary>
+        /// <remarks>
+        /// Update conversation participant.
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="participantId">participant ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns></returns>
+        void PatchConversationIdParticipantsParticipantId (string conversationId, string participantId, MediaParticipantRequest body = null);
+
+        /// <summary>
+        /// Update a participant.
+        /// </summary>
+        /// <remarks>
+        /// Update conversation participant.
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="participantId">participant ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> PatchConversationIdParticipantsParticipantIdWithHttpInfo (string conversationId, string participantId, MediaParticipantRequest body = null);
+        /// <summary>
+        /// Update the attributes on a conversation participant.
         /// </summary>
         /// <remarks>
         /// 
@@ -804,15 +1489,55 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">conversation ID</param>
         /// <param name="participantId">participant ID</param>
         /// <param name="body"> (optional)</param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> ConversationsConversationidParticipantsParticipantidAttributesPutAsyncWithHttpInfo (string conversationId, string participantId, ParticipantAttributes body = null);
+        /// <returns></returns>
+        void PatchConversationIdParticipantsParticipantIdAttributes (string conversationId, string participantId, ParticipantAttributes body = null);
+
         /// <summary>
-        /// Cancel the transfer
+        /// Update the attributes on a conversation participant.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="participantId">participant ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> PatchConversationIdParticipantsParticipantIdAttributesWithHttpInfo (string conversationId, string participantId, ParticipantAttributes body = null);
+        /// <summary>
+        /// Update conversation participant
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns></returns>
+        void PatchEmailsEmailIdParticipantsParticipantId (string emailId, string participantId, MediaParticipantRequest body = null);
+
+        /// <summary>
+        /// Update conversation participant
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> PatchEmailsEmailIdParticipantsParticipantIdWithHttpInfo (string emailId, string participantId, MediaParticipantRequest body = null);
+        /// <summary>
+        /// Update the attributes on a conversation participant.
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="conversationId">conversation ID</param>
         /// <param name="participantId">The object of the transfer</param>
         /// <returns>Task of string</returns>
@@ -820,35 +1545,85 @@ namespace ININ.PureCloudApi.Api
 
         /// <summary>
         /// Cancel the transfer
+=======
+        /// <param name="emailId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns></returns>
+        void PatchEmailsEmailIdParticipantsParticipantIdAttributes (string emailId, string participantId, ParticipantAttributes body = null);
+
+        /// <summary>
+        /// Update the attributes on a conversation participant.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> PatchEmailsEmailIdParticipantsParticipantIdAttributesWithHttpInfo (string emailId, string participantId, ParticipantAttributes body = null);
+        /// <summary>
+        /// Replace this participant with the specified user and/or address
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callbackId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns></returns>
+        void PostCallbacksCallbackIdParticipantsParticipantIdReplace (string callbackId, string participantId, TransferRequest body = null);
+
+        /// <summary>
+        /// Replace this participant with the specified user and/or address
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="conversationId">conversation ID</param>
         /// <param name="participantId">The object of the transfer</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> ConversationsConversationidParticipantsParticipantidConsultDeleteAsyncWithHttpInfo (string conversationId, string participantId);
+=======
+        /// <param name="callbackId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> PostCallbacksCallbackIdParticipantsParticipantIdReplaceWithHttpInfo (string callbackId, string participantId, TransferRequest body = null);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
-        /// Initiate and update consult transfer
+        /// Create a call conversation
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="conversationId">conversation ID</param>
         /// <param name="participantId">The object of the transfer</param>
         /// <param name="body">Destination address &amp; initial speak to (optional)</param>
         /// <returns>Task of ConsultTransferResponse</returns>
         System.Threading.Tasks.Task<ConsultTransferResponse> ConversationsConversationidParticipantsParticipantidConsultPostAsync (string conversationId, string participantId, ConsultTransfer body = null);
+=======
+        /// <param name="body"> (optional)</param>
+        /// <returns>CreateCallResponse</returns>
+        CreateCallResponse PostCalls (CreateCallRequest body = null);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
         /// <summary>
-        /// Initiate and update consult transfer
+        /// Create a call conversation
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="conversationId">conversation ID</param>
         /// <param name="participantId">The object of the transfer</param>
         /// <param name="body">Destination address &amp; initial speak to (optional)</param>
@@ -856,11 +1631,42 @@ namespace ININ.PureCloudApi.Api
         System.Threading.Tasks.Task<ApiResponse<ConsultTransferResponse>> ConversationsConversationidParticipantsParticipantidConsultPostAsyncWithHttpInfo (string conversationId, string participantId, ConsultTransfer body = null);
         /// <summary>
         /// Change who can speak
+=======
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of CreateCallResponse</returns>
+        ApiResponse<CreateCallResponse> PostCallsWithHttpInfo (CreateCallRequest body = null);
+        /// <summary>
+        /// Add a new call to a conversation
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callId"></param>
+        /// <param name="body">Conversation (optional)</param>
+        /// <returns>Conversation</returns>
+        Conversation PostCallsCallId (string callId, CallCommand body = null);
+
+        /// <summary>
+        /// Add a new call to a conversation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callId"></param>
+        /// <param name="body">Conversation (optional)</param>
+        /// <returns>ApiResponse of Conversation</returns>
+        ApiResponse<Conversation> PostCallsCallIdWithHttpInfo (string callId, CallCommand body = null);
+        /// <summary>
+        /// Add participants to a conversation
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="conversationId">conversation ID</param>
         /// <param name="participantId">The object of the transfer</param>
         /// <param name="body">new speak to (optional)</param>
@@ -869,16 +1675,57 @@ namespace ININ.PureCloudApi.Api
 
         /// <summary>
         /// Change who can speak
+=======
+        /// <param name="callId"></param>
+        /// <param name="body">Conversation (optional)</param>
+        /// <returns>Conversation</returns>
+        Conversation PostCallsCallIdParticipants (string callId, Conversation body = null);
+
+        /// <summary>
+        /// Add participants to a conversation
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="conversationId">conversation ID</param>
         /// <param name="participantId">The object of the transfer</param>
         /// <param name="body">new speak to (optional)</param>
         /// <returns>Task of ApiResponse (ConsultTransferResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<ConsultTransferResponse>> ConversationsConversationidParticipantsParticipantidConsultPutAsyncWithHttpInfo (string conversationId, string participantId, ConsultTransferUpdate body = null);
+=======
+        /// <param name="callId"></param>
+        /// <param name="body">Conversation (optional)</param>
+        /// <returns>ApiResponse of Conversation</returns>
+        ApiResponse<Conversation> PostCallsCallIdParticipantsWithHttpInfo (string callId, Conversation body = null);
+        /// <summary>
+        /// Initiate and update consult transfer
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body">Destination address &amp; initial speak to (optional)</param>
+        /// <returns>ConsultTransferResponse</returns>
+        ConsultTransferResponse PostCallsCallIdParticipantsParticipantIdConsult (string callId, string participantId, ConsultTransfer body = null);
+
+        /// <summary>
+        /// Initiate and update consult transfer
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body">Destination address &amp; initial speak to (optional)</param>
+        /// <returns>ApiResponse of ConsultTransferResponse</returns>
+        ApiResponse<ConsultTransferResponse> PostCallsCallIdParticipantsParticipantIdConsultWithHttpInfo (string callId, string participantId, ConsultTransfer body = null);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// Listen in on the conversation from the point of view of a given participant.
         /// </summary>
@@ -886,10 +1733,17 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="conversationId">conversation ID</param>
         /// <param name="participantId">participant ID</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task ConversationsConversationidParticipantsParticipantidMonitorPostAsync (string conversationId, string participantId);
+=======
+        /// <param name="callId"></param>
+        /// <param name="participantId"></param>
+        /// <returns></returns>
+        void PostCallsCallIdParticipantsParticipantIdMonitor (string callId, string participantId);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
         /// <summary>
         /// Listen in on the conversation from the point of view of a given participant.
@@ -898,10 +1752,17 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="conversationId">conversation ID</param>
         /// <param name="participantId">participant ID</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> ConversationsConversationidParticipantsParticipantidMonitorPostAsyncWithHttpInfo (string conversationId, string participantId);
+=======
+        /// <param name="callId"></param>
+        /// <param name="participantId"></param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> PostCallsCallIdParticipantsParticipantIdMonitorWithHttpInfo (string callId, string participantId);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// Update a participant.
         /// </summary>
@@ -909,11 +1770,19 @@ namespace ININ.PureCloudApi.Api
         /// Specify the state as CONNECTED, DISCONNECTED. You can specify a wrap-up code.
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="conversationId">conversation ID</param>
         /// <param name="participantId">participant ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task ConversationsConversationidParticipantsParticipantidPutAsync (string conversationId, string participantId, ParticipantRequest body = null);
+=======
+        /// <param name="callId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns></returns>
+        void PostCallsCallIdParticipantsParticipantIdReplace (string callId, string participantId, TransferRequest body = null);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
         /// <summary>
         /// Update a participant.
@@ -922,11 +1791,19 @@ namespace ININ.PureCloudApi.Api
         /// Specify the state as CONNECTED, DISCONNECTED. You can specify a wrap-up code.
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="conversationId">conversation ID</param>
         /// <param name="participantId">participant ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> ConversationsConversationidParticipantsParticipantidPutAsyncWithHttpInfo (string conversationId, string participantId, ParticipantRequest body = null);
+=======
+        /// <param name="callId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> PostCallsCallIdParticipantsParticipantIdReplaceWithHttpInfo (string callId, string participantId, TransferRequest body = null);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// Replace this participant with the specified user and/or address
         /// </summary>
@@ -934,6 +1811,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="conversationId">conversation ID</param>
         /// <param name="participantId">participant ID</param>
         /// <param name="userId">The user that will replace this participant.  If address is not supplied then the user&#39;s Work address will be used.  This parameter is required when replacing a participant that has an active chat. (optional)</param>
@@ -943,6 +1821,13 @@ namespace ININ.PureCloudApi.Api
         /// <param name="voicemail">Indicates this participant will be replaced by the voicemail inbox of the participant. (optional)</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task ConversationsConversationidParticipantsParticipantidReplacePostAsync (string conversationId, string participantId, string userId = null, string address = null, string username = null, string queueId = null, bool? voicemail = null);
+=======
+        /// <param name="chatId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns></returns>
+        void PostChatsChatIdParticipantsParticipantIdReplace (string chatId, string participantId, TransferRequest body = null);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
         /// <summary>
         /// Replace this participant with the specified user and/or address
@@ -951,6 +1836,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="conversationId">conversation ID</param>
         /// <param name="participantId">participant ID</param>
         /// <param name="userId">The user that will replace this participant.  If address is not supplied then the user&#39;s Work address will be used.  This parameter is required when replacing a participant that has an active chat. (optional)</param>
@@ -962,6 +1848,14 @@ namespace ININ.PureCloudApi.Api
         System.Threading.Tasks.Task<ApiResponse<Object>> ConversationsConversationidParticipantsParticipantidReplacePostAsyncWithHttpInfo (string conversationId, string participantId, string userId = null, string address = null, string username = null, string queueId = null, bool? voicemail = null);
         /// <summary>
         /// Get the wrap-up for this conversation participant. 
+=======
+        /// <param name="chatId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> PostChatsChatIdParticipantsParticipantIdReplaceWithHttpInfo (string chatId, string participantId, TransferRequest body = null);
+        /// <summary>
+        /// Create a new callback for the specified participant on the conversation.
         /// </summary>
         /// <remarks>
         /// 
@@ -969,12 +1863,47 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversation ID</param>
         /// <param name="participantId">participant ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns></returns>
+        void PostConversationIdParticipantsParticipantIdCallbacks (string conversationId, string participantId, CreateCallbackCommand body = null);
+
+        /// <summary>
+        /// Create a new callback for the specified participant on the conversation.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="participantId">participant ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> PostConversationIdParticipantsParticipantIdCallbacksWithHttpInfo (string conversationId, string participantId, CreateCallbackCommand body = null);
+        /// <summary>
+        /// Replace this participant with the specified user and/or address
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="participantId">participant ID</param>
+<<<<<<< HEAD
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
         /// <returns>Task of WrapupCode</returns>
         System.Threading.Tasks.Task<WrapupCode> ConversationsConversationidParticipantsParticipantidWrapupGetAsync (string conversationId, string participantId, bool? provisional = null);
 
         /// <summary>
         /// Get the wrap-up for this conversation participant. 
+=======
+        /// <param name="body"> (optional)</param>
+        /// <returns></returns>
+        void PostConversationIdParticipantsParticipantIdReplace (string conversationId, string participantId, TransferRequest body = null);
+
+        /// <summary>
+        /// Replace this participant with the specified user and/or address
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
@@ -982,39 +1911,60 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversation ID</param>
         /// <param name="participantId">participant ID</param>
+<<<<<<< HEAD
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
         /// <returns>Task of ApiResponse (WrapupCode)</returns>
         System.Threading.Tasks.Task<ApiResponse<WrapupCode>> ConversationsConversationidParticipantsParticipantidWrapupGetAsyncWithHttpInfo (string conversationId, string participantId, bool? provisional = null);
+=======
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> PostConversationIdParticipantsParticipantIdReplaceWithHttpInfo (string conversationId, string participantId, TransferRequest body = null);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
-        /// Get list of wrapup codes for this conversation participant
+        /// Query for conversation aggregates
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="conversationId">conversation ID</param>
         /// <param name="participantId">participant ID</param>
         /// <returns>Task of WrapupCode</returns>
         System.Threading.Tasks.Task<WrapupCode> ConversationsConversationidParticipantsParticipantidWrapupcodesGetAsync (string conversationId, string participantId);
+=======
+        /// <param name="body">query (optional)</param>
+        /// <returns>AggregateQueryResponse</returns>
+        AggregateQueryResponse PostConversationsAggregatesQuery (AggregationQuery body = null);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
         /// <summary>
-        /// Get list of wrapup codes for this conversation participant
+        /// Query for conversation aggregates
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="conversationId">conversation ID</param>
         /// <param name="participantId">participant ID</param>
         /// <returns>Task of ApiResponse (WrapupCode)</returns>
         System.Threading.Tasks.Task<ApiResponse<WrapupCode>> ConversationsConversationidParticipantsParticipantidWrapupcodesGetAsyncWithHttpInfo (string conversationId, string participantId);
         /// <summary>
         /// Add participants to a conversation
+=======
+        /// <param name="body">query (optional)</param>
+        /// <returns>ApiResponse of AggregateQueryResponse</returns>
+        ApiResponse<AggregateQueryResponse> PostConversationsAggregatesQueryWithHttpInfo (AggregationQuery body = null);
+        /// <summary>
+        /// Index conversation properties
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="conversationId">conversation ID</param>
         /// <param name="body">Conversation (optional)</param>
         /// <returns>Task of Conversation</returns>
@@ -1022,22 +1972,41 @@ namespace ININ.PureCloudApi.Api
 
         /// <summary>
         /// Add participants to a conversation
+=======
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="body">request (optional)</param>
+        /// <returns>PropertyIndexRequest</returns>
+        PropertyIndexRequest PostConversationsConversationIdDetailsProperties (string conversationId, PropertyIndexRequest body = null);
+
+        /// <summary>
+        /// Index conversation properties
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="conversationId">conversation ID</param>
         /// <param name="body">Conversation (optional)</param>
         /// <returns>Task of ApiResponse (Conversation)</returns>
         System.Threading.Tasks.Task<ApiResponse<Conversation>> ConversationsConversationidParticipantsPostAsyncWithHttpInfo (string conversationId, Conversation body = null);
         /// <summary>
         /// Update conversation
+=======
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="body">request (optional)</param>
+        /// <returns>ApiResponse of PropertyIndexRequest</returns>
+        ApiResponse<PropertyIndexRequest> PostConversationsConversationIdDetailsPropertiesWithHttpInfo (string conversationId, PropertyIndexRequest body = null);
+        /// <summary>
+        /// Query for conversation details
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="conversationId">conversation ID</param>
         /// <param name="body">Conversation (optional)</param>
         /// <returns>Task of Conversation</returns>
@@ -1045,57 +2014,101 @@ namespace ININ.PureCloudApi.Api
 
         /// <summary>
         /// Update conversation
+=======
+        /// <param name="body">query (optional)</param>
+        /// <returns>AnalyticsConversationQueryResponse</returns>
+        AnalyticsConversationQueryResponse PostConversationsDetailsQuery (ConversationQuery body = null);
+
+        /// <summary>
+        /// Query for conversation details
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="conversationId">conversation ID</param>
         /// <param name="body">Conversation (optional)</param>
         /// <returns>Task of ApiResponse (Conversation)</returns>
         System.Threading.Tasks.Task<ApiResponse<Conversation>> ConversationsConversationidPutAsyncWithHttpInfo (string conversationId, Conversation body = null);
+=======
+        /// <param name="body">query (optional)</param>
+        /// <returns>ApiResponse of AnalyticsConversationQueryResponse</returns>
+        ApiResponse<AnalyticsConversationQueryResponse> PostConversationsDetailsQueryWithHttpInfo (ConversationQuery body = null);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
-        /// Get possible tags for Conversation
+        /// Send an email reply
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="conversationId">conversation ID</param>
         /// <returns>Task of Tag</returns>
         System.Threading.Tasks.Task<Tag> ConversationsConversationidTagsGetAsync (string conversationId);
+=======
+        /// <param name="emailId"></param>
+        /// <param name="body">Reply (optional)</param>
+        /// <returns>EmailMessage</returns>
+        EmailMessage PostEmailsEmailIdMessages (string emailId, EmailMessage body = null);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
         /// <summary>
-        /// Get possible tags for Conversation
+        /// Send an email reply
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="conversationId">conversation ID</param>
         /// <returns>Task of ApiResponse (Tag)</returns>
         System.Threading.Tasks.Task<ApiResponse<Tag>> ConversationsConversationidTagsGetAsyncWithHttpInfo (string conversationId);
+=======
+        /// <param name="emailId"></param>
+        /// <param name="body">Reply (optional)</param>
+        /// <returns>ApiResponse of EmailMessage</returns>
+        ApiResponse<EmailMessage> PostEmailsEmailIdMessagesWithHttpInfo (string emailId, EmailMessage body = null);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
-        /// Get possible wrap-up codes for Conversation
+        /// Replace this participant with the specified user and/or address
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="conversationId">conversation ID</param>
         /// <returns>Task of WrapupCode</returns>
         System.Threading.Tasks.Task<WrapupCode> ConversationsConversationidWrapupcodesGetAsync (string conversationId);
+=======
+        /// <param name="emailId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns></returns>
+        void PostEmailsEmailIdParticipantsParticipantIdReplace (string emailId, string participantId, TransferRequest body = null);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
         /// <summary>
-        /// Get possible wrap-up codes for Conversation
+        /// Replace this participant with the specified user and/or address
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+<<<<<<< HEAD
         /// <param name="conversationId">conversation ID</param>
         /// <returns>Task of ApiResponse (WrapupCode)</returns>
         System.Threading.Tasks.Task<ApiResponse<WrapupCode>> ConversationsConversationidWrapupcodesGetAsyncWithHttpInfo (string conversationId);
+=======
+        /// <param name="emailId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> PostEmailsEmailIdParticipantsParticipantIdReplaceWithHttpInfo (string emailId, string participantId, TransferRequest body = null);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// Create Fax Conversation
         /// </summary>
@@ -1104,8 +2117,13 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Fax (optional)</param>
+<<<<<<< HEAD
         /// <returns>Task of FaxSendResponse</returns>
         System.Threading.Tasks.Task<FaxSendResponse> ConversationsFaxPostAsync (FaxSendRequest body = null);
+=======
+        /// <returns>FaxSendResponse</returns>
+        FaxSendResponse PostFaxes (FaxSendRequest body = null);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
         /// <summary>
         /// Create Fax Conversation
@@ -1115,6 +2133,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Fax (optional)</param>
+<<<<<<< HEAD
         /// <returns>Task of ApiResponse (FaxSendResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<FaxSendResponse>> ConversationsFaxPostAsyncWithHttpInfo (FaxSendRequest body = null);
         /// <summary>
@@ -1259,6 +2278,1373 @@ namespace ININ.PureCloudApi.Api
             }
         }
 
+=======
+        /// <returns>ApiResponse of FaxSendResponse</returns>
+        ApiResponse<FaxSendResponse> PostFaxesWithHttpInfo (FaxSendRequest body = null);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
+        /// <summary>
+        /// Update conversation draft reply
+        /// </summary>
+<<<<<<< HEAD
+        /// <param name="configuration">An instance of Configuration</param>
+        /// <returns></returns>
+        public ConversationsApi(Configuration configuration = null)
+        {
+            if (configuration == null) // use the default one in Configuration
+                this.Configuration = Configuration.Default;
+            else
+                this.Configuration = configuration;
+
+            // ensure API client has configuration ready
+            if (Configuration.ApiClient.Configuration == null)
+            {
+                this.Configuration.ApiClient.Configuration = this.Configuration;
+            }
+        }
+=======
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailId"></param>
+        /// <param name="body">Draft (optional)</param>
+        /// <returns>EmailMessage</returns>
+        EmailMessage PutEmailsEmailIdMessagesDraft (string emailId, EmailMessage body = null);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
+
+        /// <summary>
+        /// Update conversation draft reply
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailId"></param>
+        /// <param name="body">Draft (optional)</param>
+        /// <returns>ApiResponse of EmailMessage</returns>
+        ApiResponse<EmailMessage> PutEmailsEmailIdMessagesDraftWithHttpInfo (string emailId, EmailMessage body = null);
+        #endregion Synchronous Operations
+        #region Asynchronous Operations
+        /// <summary>
+        /// Cancel the transfer
+        /// </summary>
+<<<<<<< HEAD
+        /// <value>The base path</value>
+        [Obsolete("SetBasePath is deprecated, please do 'Configuraiton.ApiClient = new ApiClient(\"http://new-path\")' instead.")]
+        public void SetBasePath(String basePath)
+        {
+            // do nothing
+        }
+=======
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callId"></param>
+        /// <param name="participantId"></param>
+        /// <returns>Task of string</returns>
+        System.Threading.Tasks.Task<string> DeleteCallsCallIdParticipantsParticipantIdConsultAsync (string callId, string participantId);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
+
+        /// <summary>
+        /// Cancel the transfer
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callId"></param>
+        /// <param name="participantId"></param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        System.Threading.Tasks.Task<ApiResponse<string>> DeleteCallsCallIdParticipantsParticipantIdConsultAsyncWithHttpInfo (string callId, string participantId);
+        /// <summary>
+        /// Delete attachment from draft
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailId"></param>
+        /// <param name="attachmentId"></param>
+        /// <returns>Task of string</returns>
+        System.Threading.Tasks.Task<string> DeleteEmailsEmailIdMessagesDraftAttachmentsAttachmentIdAsync (string emailId, string attachmentId);
+
+        /// <summary>
+        /// Delete attachment from draft
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailId"></param>
+        /// <param name="attachmentId"></param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        System.Threading.Tasks.Task<ApiResponse<string>> DeleteEmailsEmailIdMessagesDraftAttachmentsAttachmentIdAsyncWithHttpInfo (string emailId, string attachmentId);
+        /// <summary>
+        /// Get callback conversations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of CallbackConversationEntityListing</returns>
+        System.Threading.Tasks.Task<CallbackConversationEntityListing> GetCallbacksAsync ();
+
+        /// <summary>
+        /// Get callback conversations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (CallbackConversationEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CallbackConversationEntityListing>> GetCallbacksAsyncWithHttpInfo ();
+        /// <summary>
+        /// Get callback conversation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callbackId"></param>
+        /// <returns>Task of CallbackConversation</returns>
+        System.Threading.Tasks.Task<CallbackConversation> GetCallbacksCallbackIdAsync (string callbackId);
+
+        /// <summary>
+        /// Get callback conversation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callbackId"></param>
+        /// <returns>Task of ApiResponse (CallbackConversation)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CallbackConversation>> GetCallbacksCallbackIdAsyncWithHttpInfo (string callbackId);
+        /// <summary>
+        /// Get the wrap-up for this conversation participant. 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callbackId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
+        /// <returns>Task of WrapupCode</returns>
+        System.Threading.Tasks.Task<WrapupCode> GetCallbacksCallbackIdParticipantsParticipantIdWrapupAsync (string callbackId, string participantId, bool? provisional = null);
+
+        /// <summary>
+        /// Get the wrap-up for this conversation participant. 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callbackId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
+        /// <returns>Task of ApiResponse (WrapupCode)</returns>
+        System.Threading.Tasks.Task<ApiResponse<WrapupCode>> GetCallbacksCallbackIdParticipantsParticipantIdWrapupAsyncWithHttpInfo (string callbackId, string participantId, bool? provisional = null);
+        /// <summary>
+        /// Get list of wrapup codes for this conversation participant
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callbackId"></param>
+        /// <param name="participantId"></param>
+        /// <returns>Task of WrapupCode</returns>
+        System.Threading.Tasks.Task<WrapupCode> GetCallbacksCallbackIdParticipantsParticipantIdWrapupcodesAsync (string callbackId, string participantId);
+
+        /// <summary>
+        /// Get list of wrapup codes for this conversation participant
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callbackId"></param>
+        /// <param name="participantId"></param>
+        /// <returns>Task of ApiResponse (WrapupCode)</returns>
+        System.Threading.Tasks.Task<ApiResponse<WrapupCode>> GetCallbacksCallbackIdParticipantsParticipantIdWrapupcodesAsyncWithHttpInfo (string callbackId, string participantId);
+        /// <summary>
+        /// Get recent conversations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of CallConversationEntityListing</returns>
+        System.Threading.Tasks.Task<CallConversationEntityListing> GetCallsAsync ();
+
+        /// <summary>
+        /// Get recent conversations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (CallConversationEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CallConversationEntityListing>> GetCallsAsyncWithHttpInfo ();
+        /// <summary>
+        /// Get call conversation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callId"></param>
+        /// <returns>Task of CallConversation</returns>
+        System.Threading.Tasks.Task<CallConversation> GetCallsCallIdAsync (string callId);
+
+        /// <summary>
+        /// Get call conversation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callId"></param>
+        /// <returns>Task of ApiResponse (CallConversation)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CallConversation>> GetCallsCallIdAsyncWithHttpInfo (string callId);
+        /// <summary>
+        /// Get the wrap-up for this conversation participant. 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
+        /// <returns>Task of WrapupCode</returns>
+        System.Threading.Tasks.Task<WrapupCode> GetCallsCallIdParticipantsParticipantIdWrapupAsync (string callId, string participantId, bool? provisional = null);
+
+        /// <summary>
+        /// Get the wrap-up for this conversation participant. 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
+        /// <returns>Task of ApiResponse (WrapupCode)</returns>
+        System.Threading.Tasks.Task<ApiResponse<WrapupCode>> GetCallsCallIdParticipantsParticipantIdWrapupAsyncWithHttpInfo (string callId, string participantId, bool? provisional = null);
+        /// <summary>
+        /// Get list of wrapup codes for this conversation participant
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callId"></param>
+        /// <param name="participantId"></param>
+        /// <returns>Task of WrapupCode</returns>
+        System.Threading.Tasks.Task<WrapupCode> GetCallsCallIdParticipantsParticipantIdWrapupcodesAsync (string callId, string participantId);
+
+        /// <summary>
+        /// Get list of wrapup codes for this conversation participant
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callId"></param>
+        /// <param name="participantId"></param>
+        /// <returns>Task of ApiResponse (WrapupCode)</returns>
+        System.Threading.Tasks.Task<ApiResponse<WrapupCode>> GetCallsCallIdParticipantsParticipantIdWrapupcodesAsyncWithHttpInfo (string callId, string participantId);
+        /// <summary>
+        /// Get the maximum number of participants that this user can have on a conference
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of MaxParticipants</returns>
+        System.Threading.Tasks.Task<MaxParticipants> GetCallsMaximumconferencepartiesAsync ();
+
+        /// <summary>
+        /// Get the maximum number of participants that this user can have on a conference
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (MaxParticipants)</returns>
+        System.Threading.Tasks.Task<ApiResponse<MaxParticipants>> GetCallsMaximumconferencepartiesAsyncWithHttpInfo ();
+        /// <summary>
+        /// Get recent chat conversations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ChatConversationEntityListing</returns>
+        System.Threading.Tasks.Task<ChatConversationEntityListing> GetChatsAsync ();
+
+        /// <summary>
+        /// Get recent chat conversations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (ChatConversationEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ChatConversationEntityListing>> GetChatsAsyncWithHttpInfo ();
+        /// <summary>
+        /// Get chat conversation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="chatId"></param>
+        /// <returns>Task of ChatConversation</returns>
+        System.Threading.Tasks.Task<ChatConversation> GetChatsChatIdAsync (string chatId);
+
+        /// <summary>
+        /// Get chat conversation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="chatId"></param>
+        /// <returns>Task of ApiResponse (ChatConversation)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ChatConversation>> GetChatsChatIdAsyncWithHttpInfo (string chatId);
+        /// <summary>
+        /// Get the wrap-up for this conversation participant. 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="chatId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
+        /// <returns>Task of WrapupCode</returns>
+        System.Threading.Tasks.Task<WrapupCode> GetChatsChatIdParticipantsParticipantIdWrapupAsync (string chatId, string participantId, bool? provisional = null);
+
+        /// <summary>
+        /// Get the wrap-up for this conversation participant. 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="chatId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
+        /// <returns>Task of ApiResponse (WrapupCode)</returns>
+        System.Threading.Tasks.Task<ApiResponse<WrapupCode>> GetChatsChatIdParticipantsParticipantIdWrapupAsyncWithHttpInfo (string chatId, string participantId, bool? provisional = null);
+        /// <summary>
+        /// Get list of wrapup codes for this conversation participant
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="chatId"></param>
+        /// <param name="participantId"></param>
+        /// <returns>Task of WrapupCode</returns>
+        System.Threading.Tasks.Task<WrapupCode> GetChatsChatIdParticipantsParticipantIdWrapupcodesAsync (string chatId, string participantId);
+
+        /// <summary>
+        /// Get list of wrapup codes for this conversation participant
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="chatId"></param>
+        /// <param name="participantId"></param>
+        /// <returns>Task of ApiResponse (WrapupCode)</returns>
+        System.Threading.Tasks.Task<ApiResponse<WrapupCode>> GetChatsChatIdParticipantsParticipantIdWrapupcodesAsyncWithHttpInfo (string chatId, string participantId);
+        /// <summary>
+        /// Get conversation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <returns>Task of Conversation</returns>
+        System.Threading.Tasks.Task<Conversation> GetConversationIdAsync (string conversationId);
+
+        /// <summary>
+        /// Get conversation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <returns>Task of ApiResponse (Conversation)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Conversation>> GetConversationIdAsyncWithHttpInfo (string conversationId);
+        /// <summary>
+        /// Get the wrap-up for this conversation participant. 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="participantId">participant ID</param>
+        /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
+        /// <returns>Task of WrapupCode</returns>
+        System.Threading.Tasks.Task<WrapupCode> GetConversationIdParticipantsParticipantIdWrapupAsync (string conversationId, string participantId, bool? provisional = null);
+
+        /// <summary>
+        /// Get the wrap-up for this conversation participant. 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="participantId">participant ID</param>
+        /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
+        /// <returns>Task of ApiResponse (WrapupCode)</returns>
+        System.Threading.Tasks.Task<ApiResponse<WrapupCode>> GetConversationIdParticipantsParticipantIdWrapupAsyncWithHttpInfo (string conversationId, string participantId, bool? provisional = null);
+        /// <summary>
+        /// Get list of wrapup codes for this conversation participant
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="participantId">participant ID</param>
+        /// <returns>Task of WrapupCode</returns>
+        System.Threading.Tasks.Task<WrapupCode> GetConversationIdParticipantsParticipantIdWrapupcodesAsync (string conversationId, string participantId);
+
+        /// <summary>
+        /// Get list of wrapup codes for this conversation participant
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="participantId">participant ID</param>
+        /// <returns>Task of ApiResponse (WrapupCode)</returns>
+        System.Threading.Tasks.Task<ApiResponse<WrapupCode>> GetConversationIdParticipantsParticipantIdWrapupcodesAsyncWithHttpInfo (string conversationId, string participantId);
+        /// <summary>
+        /// Get conversations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="communicationType">Call or Chat communication filtering (optional)</param>
+        /// <returns>Task of ConversationEntityListing</returns>
+        System.Threading.Tasks.Task<ConversationEntityListing> GetConversationsAsync (string communicationType = null);
+
+        /// <summary>
+        /// Get conversations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="communicationType">Call or Chat communication filtering (optional)</param>
+        /// <returns>Task of ApiResponse (ConversationEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ConversationEntityListing>> GetConversationsAsyncWithHttpInfo (string communicationType = null);
+        /// <summary>
+        /// Get a conversation by id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <returns>Task of AnalyticsConversation</returns>
+        System.Threading.Tasks.Task<AnalyticsConversation> GetConversationsConversationIdDetailsAsync (string conversationId);
+
+        /// <summary>
+        /// Get a conversation by id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <returns>Task of ApiResponse (AnalyticsConversation)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AnalyticsConversation>> GetConversationsConversationIdDetailsAsyncWithHttpInfo (string conversationId);
+        /// <summary>
+        /// Get recent email conversations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of EmailConversationEntityListing</returns>
+        System.Threading.Tasks.Task<EmailConversationEntityListing> GetEmailsAsync ();
+
+        /// <summary>
+        /// Get recent email conversations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (EmailConversationEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EmailConversationEntityListing>> GetEmailsAsyncWithHttpInfo ();
+        /// <summary>
+        /// Get email conversation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailId"></param>
+        /// <returns>Task of EmailConversation</returns>
+        System.Threading.Tasks.Task<EmailConversation> GetEmailsEmailIdAsync (string emailId);
+
+        /// <summary>
+        /// Get email conversation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailId"></param>
+        /// <returns>Task of ApiResponse (EmailConversation)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EmailConversation>> GetEmailsEmailIdAsyncWithHttpInfo (string emailId);
+        /// <summary>
+        /// Get conversation messages
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailId"></param>
+        /// <returns>Task of EmailMessageListing</returns>
+        System.Threading.Tasks.Task<EmailMessageListing> GetEmailsEmailIdMessagesAsync (string emailId);
+
+        /// <summary>
+        /// Get conversation messages
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailId"></param>
+        /// <returns>Task of ApiResponse (EmailMessageListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EmailMessageListing>> GetEmailsEmailIdMessagesAsyncWithHttpInfo (string emailId);
+        /// <summary>
+        /// Get conversation draft reply
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailId"></param>
+        /// <returns>Task of EmailMessage</returns>
+        System.Threading.Tasks.Task<EmailMessage> GetEmailsEmailIdMessagesDraftAsync (string emailId);
+
+        /// <summary>
+        /// Get conversation draft reply
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailId"></param>
+        /// <returns>Task of ApiResponse (EmailMessage)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EmailMessage>> GetEmailsEmailIdMessagesDraftAsyncWithHttpInfo (string emailId);
+        /// <summary>
+        /// Get conversation message
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailId"></param>
+        /// <param name="messageId"></param>
+        /// <returns>Task of EmailMessage</returns>
+        System.Threading.Tasks.Task<EmailMessage> GetEmailsEmailIdMessagesMessageIdAsync (string emailId, string messageId);
+
+        /// <summary>
+        /// Get conversation message
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailId"></param>
+        /// <param name="messageId"></param>
+        /// <returns>Task of ApiResponse (EmailMessage)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EmailMessage>> GetEmailsEmailIdMessagesMessageIdAsyncWithHttpInfo (string emailId, string messageId);
+        /// <summary>
+        /// Get the wrap-up for this conversation participant. 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
+        /// <returns>Task of WrapupCode</returns>
+        System.Threading.Tasks.Task<WrapupCode> GetEmailsEmailIdParticipantsParticipantIdWrapupAsync (string emailId, string participantId, bool? provisional = null);
+
+        /// <summary>
+        /// Get the wrap-up for this conversation participant. 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
+        /// <returns>Task of ApiResponse (WrapupCode)</returns>
+        System.Threading.Tasks.Task<ApiResponse<WrapupCode>> GetEmailsEmailIdParticipantsParticipantIdWrapupAsyncWithHttpInfo (string emailId, string participantId, bool? provisional = null);
+        /// <summary>
+        /// Get list of wrapup codes for this conversation participant
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailId"></param>
+        /// <param name="participantId"></param>
+        /// <returns>Task of WrapupCode</returns>
+        System.Threading.Tasks.Task<WrapupCode> GetEmailsEmailIdParticipantsParticipantIdWrapupcodesAsync (string emailId, string participantId);
+
+        /// <summary>
+        /// Get list of wrapup codes for this conversation participant
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailId"></param>
+        /// <param name="participantId"></param>
+        /// <returns>Task of ApiResponse (WrapupCode)</returns>
+        System.Threading.Tasks.Task<ApiResponse<WrapupCode>> GetEmailsEmailIdParticipantsParticipantIdWrapupcodesAsyncWithHttpInfo (string emailId, string participantId);
+        /// <summary>
+        /// Update conversation participant
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callbackId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task PatchCallbacksCallbackIdParticipantsParticipantIdAsync (string callbackId, string participantId, MediaParticipantRequest body = null);
+
+        /// <summary>
+        /// Update conversation participant
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callbackId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> PatchCallbacksCallbackIdParticipantsParticipantIdAsyncWithHttpInfo (string callbackId, string participantId, MediaParticipantRequest body = null);
+        /// <summary>
+        /// Update the attributes on a conversation participant.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callbackId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task PatchCallbacksCallbackIdParticipantsParticipantIdAttributesAsync (string callbackId, string participantId, ParticipantAttributes body = null);
+
+        /// <summary>
+        /// Update the attributes on a conversation participant.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callbackId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> PatchCallbacksCallbackIdParticipantsParticipantIdAttributesAsyncWithHttpInfo (string callbackId, string participantId, ParticipantAttributes body = null);
+        /// <summary>
+        /// Update conversation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callId"></param>
+        /// <param name="body">Conversation (optional)</param>
+        /// <returns>Task of Conversation</returns>
+        System.Threading.Tasks.Task<Conversation> PatchCallsCallIdAsync (string callId, Conversation body = null);
+
+        /// <summary>
+        /// Update conversation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callId"></param>
+        /// <param name="body">Conversation (optional)</param>
+        /// <returns>Task of ApiResponse (Conversation)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Conversation>> PatchCallsCallIdAsyncWithHttpInfo (string callId, Conversation body = null);
+        /// <summary>
+        /// Update conversation participant
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task PatchCallsCallIdParticipantsParticipantIdAsync (string callId, string participantId, MediaParticipantRequest body = null);
+
+        /// <summary>
+        /// Update conversation participant
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> PatchCallsCallIdParticipantsParticipantIdAsyncWithHttpInfo (string callId, string participantId, MediaParticipantRequest body = null);
+        /// <summary>
+        /// Update the attributes on a conversation participant.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task PatchCallsCallIdParticipantsParticipantIdAttributesAsync (string callId, string participantId, ParticipantAttributes body = null);
+
+        /// <summary>
+        /// Update the attributes on a conversation participant.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> PatchCallsCallIdParticipantsParticipantIdAttributesAsyncWithHttpInfo (string callId, string participantId, ParticipantAttributes body = null);
+        /// <summary>
+        /// Change who can speak
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body">new speak to (optional)</param>
+        /// <returns>Task of ConsultTransferResponse</returns>
+        System.Threading.Tasks.Task<ConsultTransferResponse> PatchCallsCallIdParticipantsParticipantIdConsultAsync (string callId, string participantId, ConsultTransferUpdate body = null);
+
+        /// <summary>
+        /// Change who can speak
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body">new speak to (optional)</param>
+        /// <returns>Task of ApiResponse (ConsultTransferResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ConsultTransferResponse>> PatchCallsCallIdParticipantsParticipantIdConsultAsyncWithHttpInfo (string callId, string participantId, ConsultTransferUpdate body = null);
+        /// <summary>
+        /// Update conversation participant
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="chatId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task PatchChatsChatIdParticipantsParticipantIdAsync (string chatId, string participantId, MediaParticipantRequest body = null);
+
+        /// <summary>
+        /// Update conversation participant
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="chatId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> PatchChatsChatIdParticipantsParticipantIdAsyncWithHttpInfo (string chatId, string participantId, MediaParticipantRequest body = null);
+        /// <summary>
+        /// Update the attributes on a conversation participant.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="chatId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task PatchChatsChatIdParticipantsParticipantIdAttributesAsync (string chatId, string participantId, ParticipantAttributes body = null);
+
+        /// <summary>
+        /// Update the attributes on a conversation participant.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="chatId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> PatchChatsChatIdParticipantsParticipantIdAttributesAsyncWithHttpInfo (string chatId, string participantId, ParticipantAttributes body = null);
+        /// <summary>
+        /// Update a participant.
+        /// </summary>
+        /// <remarks>
+        /// Update conversation participant.
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="participantId">participant ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task PatchConversationIdParticipantsParticipantIdAsync (string conversationId, string participantId, MediaParticipantRequest body = null);
+
+        /// <summary>
+        /// Update a participant.
+        /// </summary>
+        /// <remarks>
+        /// Update conversation participant.
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="participantId">participant ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> PatchConversationIdParticipantsParticipantIdAsyncWithHttpInfo (string conversationId, string participantId, MediaParticipantRequest body = null);
+        /// <summary>
+        /// Update the attributes on a conversation participant.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="participantId">participant ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task PatchConversationIdParticipantsParticipantIdAttributesAsync (string conversationId, string participantId, ParticipantAttributes body = null);
+
+        /// <summary>
+        /// Update the attributes on a conversation participant.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="participantId">participant ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> PatchConversationIdParticipantsParticipantIdAttributesAsyncWithHttpInfo (string conversationId, string participantId, ParticipantAttributes body = null);
+        /// <summary>
+        /// Update conversation participant
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task PatchEmailsEmailIdParticipantsParticipantIdAsync (string emailId, string participantId, MediaParticipantRequest body = null);
+
+        /// <summary>
+        /// Update conversation participant
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> PatchEmailsEmailIdParticipantsParticipantIdAsyncWithHttpInfo (string emailId, string participantId, MediaParticipantRequest body = null);
+        /// <summary>
+        /// Update the attributes on a conversation participant.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task PatchEmailsEmailIdParticipantsParticipantIdAttributesAsync (string emailId, string participantId, ParticipantAttributes body = null);
+
+        /// <summary>
+        /// Update the attributes on a conversation participant.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> PatchEmailsEmailIdParticipantsParticipantIdAttributesAsyncWithHttpInfo (string emailId, string participantId, ParticipantAttributes body = null);
+        /// <summary>
+        /// Replace this participant with the specified user and/or address
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callbackId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task PostCallbacksCallbackIdParticipantsParticipantIdReplaceAsync (string callbackId, string participantId, TransferRequest body = null);
+
+        /// <summary>
+        /// Replace this participant with the specified user and/or address
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callbackId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostCallbacksCallbackIdParticipantsParticipantIdReplaceAsyncWithHttpInfo (string callbackId, string participantId, TransferRequest body = null);
+        /// <summary>
+        /// Create a call conversation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of CreateCallResponse</returns>
+        System.Threading.Tasks.Task<CreateCallResponse> PostCallsAsync (CreateCallRequest body = null);
+
+        /// <summary>
+        /// Create a call conversation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse (CreateCallResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CreateCallResponse>> PostCallsAsyncWithHttpInfo (CreateCallRequest body = null);
+        /// <summary>
+        /// Add a new call to a conversation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callId"></param>
+        /// <param name="body">Conversation (optional)</param>
+        /// <returns>Task of Conversation</returns>
+        System.Threading.Tasks.Task<Conversation> PostCallsCallIdAsync (string callId, CallCommand body = null);
+
+        /// <summary>
+        /// Add a new call to a conversation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callId"></param>
+        /// <param name="body">Conversation (optional)</param>
+        /// <returns>Task of ApiResponse (Conversation)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Conversation>> PostCallsCallIdAsyncWithHttpInfo (string callId, CallCommand body = null);
+        /// <summary>
+        /// Add participants to a conversation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callId"></param>
+        /// <param name="body">Conversation (optional)</param>
+        /// <returns>Task of Conversation</returns>
+        System.Threading.Tasks.Task<Conversation> PostCallsCallIdParticipantsAsync (string callId, Conversation body = null);
+
+        /// <summary>
+        /// Add participants to a conversation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callId"></param>
+        /// <param name="body">Conversation (optional)</param>
+        /// <returns>Task of ApiResponse (Conversation)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Conversation>> PostCallsCallIdParticipantsAsyncWithHttpInfo (string callId, Conversation body = null);
+        /// <summary>
+        /// Initiate and update consult transfer
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body">Destination address &amp; initial speak to (optional)</param>
+        /// <returns>Task of ConsultTransferResponse</returns>
+        System.Threading.Tasks.Task<ConsultTransferResponse> PostCallsCallIdParticipantsParticipantIdConsultAsync (string callId, string participantId, ConsultTransfer body = null);
+
+        /// <summary>
+        /// Initiate and update consult transfer
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body">Destination address &amp; initial speak to (optional)</param>
+        /// <returns>Task of ApiResponse (ConsultTransferResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ConsultTransferResponse>> PostCallsCallIdParticipantsParticipantIdConsultAsyncWithHttpInfo (string callId, string participantId, ConsultTransfer body = null);
+        /// <summary>
+        /// Listen in on the conversation from the point of view of a given participant.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callId"></param>
+        /// <param name="participantId"></param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task PostCallsCallIdParticipantsParticipantIdMonitorAsync (string callId, string participantId);
+
+        /// <summary>
+        /// Listen in on the conversation from the point of view of a given participant.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callId"></param>
+        /// <param name="participantId"></param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostCallsCallIdParticipantsParticipantIdMonitorAsyncWithHttpInfo (string callId, string participantId);
+        /// <summary>
+        /// Replace this participant with the specified user and/or address
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task PostCallsCallIdParticipantsParticipantIdReplaceAsync (string callId, string participantId, TransferRequest body = null);
+
+        /// <summary>
+        /// Replace this participant with the specified user and/or address
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostCallsCallIdParticipantsParticipantIdReplaceAsyncWithHttpInfo (string callId, string participantId, TransferRequest body = null);
+        /// <summary>
+        /// Replace this participant with the specified user and/or address
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="chatId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task PostChatsChatIdParticipantsParticipantIdReplaceAsync (string chatId, string participantId, TransferRequest body = null);
+
+        /// <summary>
+        /// Replace this participant with the specified user and/or address
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="chatId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostChatsChatIdParticipantsParticipantIdReplaceAsyncWithHttpInfo (string chatId, string participantId, TransferRequest body = null);
+        /// <summary>
+        /// Create a new callback for the specified participant on the conversation.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="participantId">participant ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task PostConversationIdParticipantsParticipantIdCallbacksAsync (string conversationId, string participantId, CreateCallbackCommand body = null);
+
+        /// <summary>
+        /// Create a new callback for the specified participant on the conversation.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="participantId">participant ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostConversationIdParticipantsParticipantIdCallbacksAsyncWithHttpInfo (string conversationId, string participantId, CreateCallbackCommand body = null);
+        /// <summary>
+        /// Replace this participant with the specified user and/or address
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="participantId">participant ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task PostConversationIdParticipantsParticipantIdReplaceAsync (string conversationId, string participantId, TransferRequest body = null);
+
+        /// <summary>
+        /// Replace this participant with the specified user and/or address
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="participantId">participant ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostConversationIdParticipantsParticipantIdReplaceAsyncWithHttpInfo (string conversationId, string participantId, TransferRequest body = null);
+        /// <summary>
+        /// Query for conversation aggregates
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query (optional)</param>
+        /// <returns>Task of AggregateQueryResponse</returns>
+        System.Threading.Tasks.Task<AggregateQueryResponse> PostConversationsAggregatesQueryAsync (AggregationQuery body = null);
+
+        /// <summary>
+        /// Query for conversation aggregates
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query (optional)</param>
+        /// <returns>Task of ApiResponse (AggregateQueryResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AggregateQueryResponse>> PostConversationsAggregatesQueryAsyncWithHttpInfo (AggregationQuery body = null);
+        /// <summary>
+        /// Index conversation properties
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="body">request (optional)</param>
+        /// <returns>Task of PropertyIndexRequest</returns>
+        System.Threading.Tasks.Task<PropertyIndexRequest> PostConversationsConversationIdDetailsPropertiesAsync (string conversationId, PropertyIndexRequest body = null);
+
+        /// <summary>
+        /// Index conversation properties
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="body">request (optional)</param>
+        /// <returns>Task of ApiResponse (PropertyIndexRequest)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PropertyIndexRequest>> PostConversationsConversationIdDetailsPropertiesAsyncWithHttpInfo (string conversationId, PropertyIndexRequest body = null);
+        /// <summary>
+        /// Query for conversation details
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query (optional)</param>
+        /// <returns>Task of AnalyticsConversationQueryResponse</returns>
+        System.Threading.Tasks.Task<AnalyticsConversationQueryResponse> PostConversationsDetailsQueryAsync (ConversationQuery body = null);
+
+        /// <summary>
+        /// Query for conversation details
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query (optional)</param>
+        /// <returns>Task of ApiResponse (AnalyticsConversationQueryResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AnalyticsConversationQueryResponse>> PostConversationsDetailsQueryAsyncWithHttpInfo (ConversationQuery body = null);
+        /// <summary>
+        /// Send an email reply
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailId"></param>
+        /// <param name="body">Reply (optional)</param>
+        /// <returns>Task of EmailMessage</returns>
+        System.Threading.Tasks.Task<EmailMessage> PostEmailsEmailIdMessagesAsync (string emailId, EmailMessage body = null);
+
+        /// <summary>
+        /// Send an email reply
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailId"></param>
+        /// <param name="body">Reply (optional)</param>
+        /// <returns>Task of ApiResponse (EmailMessage)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EmailMessage>> PostEmailsEmailIdMessagesAsyncWithHttpInfo (string emailId, EmailMessage body = null);
+        /// <summary>
+        /// Replace this participant with the specified user and/or address
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task PostEmailsEmailIdParticipantsParticipantIdReplaceAsync (string emailId, string participantId, TransferRequest body = null);
+
+        /// <summary>
+        /// Replace this participant with the specified user and/or address
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostEmailsEmailIdParticipantsParticipantIdReplaceAsyncWithHttpInfo (string emailId, string participantId, TransferRequest body = null);
+        /// <summary>
+        /// Create Fax Conversation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Fax (optional)</param>
+        /// <returns>Task of FaxSendResponse</returns>
+        System.Threading.Tasks.Task<FaxSendResponse> PostFaxesAsync (FaxSendRequest body = null);
+
+        /// <summary>
+        /// Create Fax Conversation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Fax (optional)</param>
+        /// <returns>Task of ApiResponse (FaxSendResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<FaxSendResponse>> PostFaxesAsyncWithHttpInfo (FaxSendRequest body = null);
+        /// <summary>
+        /// Update conversation draft reply
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailId"></param>
+        /// <param name="body">Draft (optional)</param>
+        /// <returns>Task of EmailMessage</returns>
+        System.Threading.Tasks.Task<EmailMessage> PutEmailsEmailIdMessagesDraftAsync (string emailId, EmailMessage body = null);
+
+        /// <summary>
+        /// Update conversation draft reply
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailId"></param>
+        /// <param name="body">Draft (optional)</param>
+        /// <returns>Task of ApiResponse (EmailMessage)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EmailMessage>> PutEmailsEmailIdMessagesDraftAsyncWithHttpInfo (string emailId, EmailMessage body = null);
+        #endregion Asynchronous Operations
+    }
+
+    /// <summary>
+    /// Represents a collection of functions to interact with the API endpoints
+    /// </summary>
+    public class ConversationsApi : IConversationsApi
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ConversationsApi"/> class.
+        /// </summary>
+        /// <returns></returns>
+        public ConversationsApi(String basePath)
+        {
+            this.Configuration = new Configuration(new ApiClient(basePath));
+
+            // ensure API client has configuration ready
+            if (Configuration.ApiClient.Configuration == null)
+            {
+                this.Configuration.ApiClient.Configuration = this.Configuration;
+            }
+        }
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationsApi"/> class
         /// using Configuration object
@@ -1327,14 +3713,2375 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
+        /// Cancel the transfer 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callId"></param>
+        /// <param name="participantId"></param>
+        /// <returns>string</returns>
+        public string DeleteCallsCallIdParticipantsParticipantIdConsult (string callId, string participantId)
+        {
+             ApiResponse<string> localVarResponse = DeleteCallsCallIdParticipantsParticipantIdConsultWithHttpInfo(callId, participantId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Cancel the transfer 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callId"></param>
+        /// <param name="participantId"></param>
+        /// <returns>ApiResponse of string</returns>
+        public ApiResponse< string > DeleteCallsCallIdParticipantsParticipantIdConsultWithHttpInfo (string callId, string participantId)
+        {
+            // verify the required parameter 'callId' is set
+            if (callId == null)
+                throw new ApiException(400, "Missing required parameter 'callId' when calling ConversationsApi->DeleteCallsCallIdParticipantsParticipantIdConsult");
+            // verify the required parameter 'participantId' is set
+            if (participantId == null)
+                throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->DeleteCallsCallIdParticipantsParticipantIdConsult");
+
+            var localVarPath = "/api/v2/conversations/calls/{callId}/participants/{participantId}/consult";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (callId != null) localVarPathParams.Add("callId", Configuration.ApiClient.ParameterToString(callId)); // path parameter
+            if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteCallsCallIdParticipantsParticipantIdConsult: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteCallsCallIdParticipantsParticipantIdConsult: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+            
+        }
+
+        /// <summary>
+        /// Cancel the transfer 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callId"></param>
+        /// <param name="participantId"></param>
+        /// <returns>Task of string</returns>
+        public async System.Threading.Tasks.Task<string> DeleteCallsCallIdParticipantsParticipantIdConsultAsync (string callId, string participantId)
+        {
+             ApiResponse<string> localVarResponse = await DeleteCallsCallIdParticipantsParticipantIdConsultAsyncWithHttpInfo(callId, participantId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Cancel the transfer 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callId"></param>
+        /// <param name="participantId"></param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteCallsCallIdParticipantsParticipantIdConsultAsyncWithHttpInfo (string callId, string participantId)
+        {
+            // verify the required parameter 'callId' is set
+            if (callId == null)
+                throw new ApiException(400, "Missing required parameter 'callId' when calling ConversationsApi->DeleteCallsCallIdParticipantsParticipantIdConsult");
+            // verify the required parameter 'participantId' is set
+            if (participantId == null)
+                throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->DeleteCallsCallIdParticipantsParticipantIdConsult");
+
+            var localVarPath = "/api/v2/conversations/calls/{callId}/participants/{participantId}/consult";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (callId != null) localVarPathParams.Add("callId", Configuration.ApiClient.ParameterToString(callId)); // path parameter
+            if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteCallsCallIdParticipantsParticipantIdConsult: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteCallsCallIdParticipantsParticipantIdConsult: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+            
+        }
+
+        /// <summary>
+        /// Delete attachment from draft 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailId"></param>
+        /// <param name="attachmentId"></param>
+        /// <returns>string</returns>
+        public string DeleteEmailsEmailIdMessagesDraftAttachmentsAttachmentId (string emailId, string attachmentId)
+        {
+             ApiResponse<string> localVarResponse = DeleteEmailsEmailIdMessagesDraftAttachmentsAttachmentIdWithHttpInfo(emailId, attachmentId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Delete attachment from draft 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailId"></param>
+        /// <param name="attachmentId"></param>
+        /// <returns>ApiResponse of string</returns>
+        public ApiResponse< string > DeleteEmailsEmailIdMessagesDraftAttachmentsAttachmentIdWithHttpInfo (string emailId, string attachmentId)
+        {
+            // verify the required parameter 'emailId' is set
+            if (emailId == null)
+                throw new ApiException(400, "Missing required parameter 'emailId' when calling ConversationsApi->DeleteEmailsEmailIdMessagesDraftAttachmentsAttachmentId");
+            // verify the required parameter 'attachmentId' is set
+            if (attachmentId == null)
+                throw new ApiException(400, "Missing required parameter 'attachmentId' when calling ConversationsApi->DeleteEmailsEmailIdMessagesDraftAttachmentsAttachmentId");
+
+            var localVarPath = "/api/v2/conversations/emails/{emailId}/messages/draft/attachments/{attachmentId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (emailId != null) localVarPathParams.Add("emailId", Configuration.ApiClient.ParameterToString(emailId)); // path parameter
+            if (attachmentId != null) localVarPathParams.Add("attachmentId", Configuration.ApiClient.ParameterToString(attachmentId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteEmailsEmailIdMessagesDraftAttachmentsAttachmentId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteEmailsEmailIdMessagesDraftAttachmentsAttachmentId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+            
+        }
+
+        /// <summary>
+        /// Delete attachment from draft 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailId"></param>
+        /// <param name="attachmentId"></param>
+        /// <returns>Task of string</returns>
+        public async System.Threading.Tasks.Task<string> DeleteEmailsEmailIdMessagesDraftAttachmentsAttachmentIdAsync (string emailId, string attachmentId)
+        {
+             ApiResponse<string> localVarResponse = await DeleteEmailsEmailIdMessagesDraftAttachmentsAttachmentIdAsyncWithHttpInfo(emailId, attachmentId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Delete attachment from draft 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailId"></param>
+        /// <param name="attachmentId"></param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteEmailsEmailIdMessagesDraftAttachmentsAttachmentIdAsyncWithHttpInfo (string emailId, string attachmentId)
+        {
+            // verify the required parameter 'emailId' is set
+            if (emailId == null)
+                throw new ApiException(400, "Missing required parameter 'emailId' when calling ConversationsApi->DeleteEmailsEmailIdMessagesDraftAttachmentsAttachmentId");
+            // verify the required parameter 'attachmentId' is set
+            if (attachmentId == null)
+                throw new ApiException(400, "Missing required parameter 'attachmentId' when calling ConversationsApi->DeleteEmailsEmailIdMessagesDraftAttachmentsAttachmentId");
+
+            var localVarPath = "/api/v2/conversations/emails/{emailId}/messages/draft/attachments/{attachmentId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (emailId != null) localVarPathParams.Add("emailId", Configuration.ApiClient.ParameterToString(emailId)); // path parameter
+            if (attachmentId != null) localVarPathParams.Add("attachmentId", Configuration.ApiClient.ParameterToString(attachmentId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteEmailsEmailIdMessagesDraftAttachmentsAttachmentId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteEmailsEmailIdMessagesDraftAttachmentsAttachmentId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+            
+        }
+
+        /// <summary>
+        /// Get callback conversations 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>CallbackConversationEntityListing</returns>
+        public CallbackConversationEntityListing GetCallbacks ()
+        {
+             ApiResponse<CallbackConversationEntityListing> localVarResponse = GetCallbacksWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get callback conversations 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of CallbackConversationEntityListing</returns>
+        public ApiResponse< CallbackConversationEntityListing > GetCallbacksWithHttpInfo ()
+        {
+
+            var localVarPath = "/api/v2/conversations/callbacks";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetCallbacks: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetCallbacks: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CallbackConversationEntityListing>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (CallbackConversationEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CallbackConversationEntityListing)));
+            
+        }
+
+        /// <summary>
+        /// Get callback conversations 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of CallbackConversationEntityListing</returns>
+        public async System.Threading.Tasks.Task<CallbackConversationEntityListing> GetCallbacksAsync ()
+        {
+             ApiResponse<CallbackConversationEntityListing> localVarResponse = await GetCallbacksAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get callback conversations 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (CallbackConversationEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CallbackConversationEntityListing>> GetCallbacksAsyncWithHttpInfo ()
+        {
+
+            var localVarPath = "/api/v2/conversations/callbacks";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetCallbacks: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetCallbacks: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CallbackConversationEntityListing>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (CallbackConversationEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CallbackConversationEntityListing)));
+            
+        }
+
+        /// <summary>
+        /// Get callback conversation 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callbackId"></param>
+        /// <returns>CallbackConversation</returns>
+        public CallbackConversation GetCallbacksCallbackId (string callbackId)
+        {
+             ApiResponse<CallbackConversation> localVarResponse = GetCallbacksCallbackIdWithHttpInfo(callbackId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get callback conversation 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callbackId"></param>
+        /// <returns>ApiResponse of CallbackConversation</returns>
+        public ApiResponse< CallbackConversation > GetCallbacksCallbackIdWithHttpInfo (string callbackId)
+        {
+            // verify the required parameter 'callbackId' is set
+            if (callbackId == null)
+                throw new ApiException(400, "Missing required parameter 'callbackId' when calling ConversationsApi->GetCallbacksCallbackId");
+
+            var localVarPath = "/api/v2/conversations/callbacks/{callbackId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (callbackId != null) localVarPathParams.Add("callbackId", Configuration.ApiClient.ParameterToString(callbackId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetCallbacksCallbackId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetCallbacksCallbackId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CallbackConversation>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (CallbackConversation) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CallbackConversation)));
+            
+        }
+
+        /// <summary>
+        /// Get callback conversation 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callbackId"></param>
+        /// <returns>Task of CallbackConversation</returns>
+        public async System.Threading.Tasks.Task<CallbackConversation> GetCallbacksCallbackIdAsync (string callbackId)
+        {
+             ApiResponse<CallbackConversation> localVarResponse = await GetCallbacksCallbackIdAsyncWithHttpInfo(callbackId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get callback conversation 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callbackId"></param>
+        /// <returns>Task of ApiResponse (CallbackConversation)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CallbackConversation>> GetCallbacksCallbackIdAsyncWithHttpInfo (string callbackId)
+        {
+            // verify the required parameter 'callbackId' is set
+            if (callbackId == null)
+                throw new ApiException(400, "Missing required parameter 'callbackId' when calling ConversationsApi->GetCallbacksCallbackId");
+
+            var localVarPath = "/api/v2/conversations/callbacks/{callbackId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (callbackId != null) localVarPathParams.Add("callbackId", Configuration.ApiClient.ParameterToString(callbackId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetCallbacksCallbackId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetCallbacksCallbackId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CallbackConversation>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (CallbackConversation) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CallbackConversation)));
+            
+        }
+
+        /// <summary>
+        /// Get the wrap-up for this conversation participant.  
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callbackId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
+        /// <returns>WrapupCode</returns>
+        public WrapupCode GetCallbacksCallbackIdParticipantsParticipantIdWrapup (string callbackId, string participantId, bool? provisional = null)
+        {
+             ApiResponse<WrapupCode> localVarResponse = GetCallbacksCallbackIdParticipantsParticipantIdWrapupWithHttpInfo(callbackId, participantId, provisional);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the wrap-up for this conversation participant.  
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callbackId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
+        /// <returns>ApiResponse of WrapupCode</returns>
+        public ApiResponse< WrapupCode > GetCallbacksCallbackIdParticipantsParticipantIdWrapupWithHttpInfo (string callbackId, string participantId, bool? provisional = null)
+        {
+            // verify the required parameter 'callbackId' is set
+            if (callbackId == null)
+                throw new ApiException(400, "Missing required parameter 'callbackId' when calling ConversationsApi->GetCallbacksCallbackIdParticipantsParticipantIdWrapup");
+            // verify the required parameter 'participantId' is set
+            if (participantId == null)
+                throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->GetCallbacksCallbackIdParticipantsParticipantIdWrapup");
+
+            var localVarPath = "/api/v2/conversations/callbacks/{callbackId}/participants/{participantId}/wrapup";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (callbackId != null) localVarPathParams.Add("callbackId", Configuration.ApiClient.ParameterToString(callbackId)); // path parameter
+            if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId)); // path parameter
+            if (provisional != null) localVarQueryParams.Add("provisional", Configuration.ApiClient.ParameterToString(provisional)); // query parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetCallbacksCallbackIdParticipantsParticipantIdWrapup: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetCallbacksCallbackIdParticipantsParticipantIdWrapup: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WrapupCode>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (WrapupCode) Configuration.ApiClient.Deserialize(localVarResponse, typeof(WrapupCode)));
+            
+        }
+
+        /// <summary>
+        /// Get the wrap-up for this conversation participant.  
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callbackId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
+        /// <returns>Task of WrapupCode</returns>
+        public async System.Threading.Tasks.Task<WrapupCode> GetCallbacksCallbackIdParticipantsParticipantIdWrapupAsync (string callbackId, string participantId, bool? provisional = null)
+        {
+             ApiResponse<WrapupCode> localVarResponse = await GetCallbacksCallbackIdParticipantsParticipantIdWrapupAsyncWithHttpInfo(callbackId, participantId, provisional);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the wrap-up for this conversation participant.  
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callbackId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
+        /// <returns>Task of ApiResponse (WrapupCode)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<WrapupCode>> GetCallbacksCallbackIdParticipantsParticipantIdWrapupAsyncWithHttpInfo (string callbackId, string participantId, bool? provisional = null)
+        {
+            // verify the required parameter 'callbackId' is set
+            if (callbackId == null)
+                throw new ApiException(400, "Missing required parameter 'callbackId' when calling ConversationsApi->GetCallbacksCallbackIdParticipantsParticipantIdWrapup");
+            // verify the required parameter 'participantId' is set
+            if (participantId == null)
+                throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->GetCallbacksCallbackIdParticipantsParticipantIdWrapup");
+
+            var localVarPath = "/api/v2/conversations/callbacks/{callbackId}/participants/{participantId}/wrapup";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (callbackId != null) localVarPathParams.Add("callbackId", Configuration.ApiClient.ParameterToString(callbackId)); // path parameter
+            if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId)); // path parameter
+            if (provisional != null) localVarQueryParams.Add("provisional", Configuration.ApiClient.ParameterToString(provisional)); // query parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetCallbacksCallbackIdParticipantsParticipantIdWrapup: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetCallbacksCallbackIdParticipantsParticipantIdWrapup: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WrapupCode>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (WrapupCode) Configuration.ApiClient.Deserialize(localVarResponse, typeof(WrapupCode)));
+            
+        }
+
+        /// <summary>
+        /// Get list of wrapup codes for this conversation participant 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callbackId"></param>
+        /// <param name="participantId"></param>
+        /// <returns>WrapupCode</returns>
+        public WrapupCode GetCallbacksCallbackIdParticipantsParticipantIdWrapupcodes (string callbackId, string participantId)
+        {
+             ApiResponse<WrapupCode> localVarResponse = GetCallbacksCallbackIdParticipantsParticipantIdWrapupcodesWithHttpInfo(callbackId, participantId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get list of wrapup codes for this conversation participant 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callbackId"></param>
+        /// <param name="participantId"></param>
+        /// <returns>ApiResponse of WrapupCode</returns>
+        public ApiResponse< WrapupCode > GetCallbacksCallbackIdParticipantsParticipantIdWrapupcodesWithHttpInfo (string callbackId, string participantId)
+        {
+            // verify the required parameter 'callbackId' is set
+            if (callbackId == null)
+                throw new ApiException(400, "Missing required parameter 'callbackId' when calling ConversationsApi->GetCallbacksCallbackIdParticipantsParticipantIdWrapupcodes");
+            // verify the required parameter 'participantId' is set
+            if (participantId == null)
+                throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->GetCallbacksCallbackIdParticipantsParticipantIdWrapupcodes");
+
+            var localVarPath = "/api/v2/conversations/callbacks/{callbackId}/participants/{participantId}/wrapupcodes";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (callbackId != null) localVarPathParams.Add("callbackId", Configuration.ApiClient.ParameterToString(callbackId)); // path parameter
+            if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetCallbacksCallbackIdParticipantsParticipantIdWrapupcodes: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetCallbacksCallbackIdParticipantsParticipantIdWrapupcodes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WrapupCode>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (WrapupCode) Configuration.ApiClient.Deserialize(localVarResponse, typeof(WrapupCode)));
+            
+        }
+
+        /// <summary>
+        /// Get list of wrapup codes for this conversation participant 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callbackId"></param>
+        /// <param name="participantId"></param>
+        /// <returns>Task of WrapupCode</returns>
+        public async System.Threading.Tasks.Task<WrapupCode> GetCallbacksCallbackIdParticipantsParticipantIdWrapupcodesAsync (string callbackId, string participantId)
+        {
+             ApiResponse<WrapupCode> localVarResponse = await GetCallbacksCallbackIdParticipantsParticipantIdWrapupcodesAsyncWithHttpInfo(callbackId, participantId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get list of wrapup codes for this conversation participant 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callbackId"></param>
+        /// <param name="participantId"></param>
+        /// <returns>Task of ApiResponse (WrapupCode)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<WrapupCode>> GetCallbacksCallbackIdParticipantsParticipantIdWrapupcodesAsyncWithHttpInfo (string callbackId, string participantId)
+        {
+            // verify the required parameter 'callbackId' is set
+            if (callbackId == null)
+                throw new ApiException(400, "Missing required parameter 'callbackId' when calling ConversationsApi->GetCallbacksCallbackIdParticipantsParticipantIdWrapupcodes");
+            // verify the required parameter 'participantId' is set
+            if (participantId == null)
+                throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->GetCallbacksCallbackIdParticipantsParticipantIdWrapupcodes");
+
+            var localVarPath = "/api/v2/conversations/callbacks/{callbackId}/participants/{participantId}/wrapupcodes";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (callbackId != null) localVarPathParams.Add("callbackId", Configuration.ApiClient.ParameterToString(callbackId)); // path parameter
+            if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetCallbacksCallbackIdParticipantsParticipantIdWrapupcodes: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetCallbacksCallbackIdParticipantsParticipantIdWrapupcodes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WrapupCode>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (WrapupCode) Configuration.ApiClient.Deserialize(localVarResponse, typeof(WrapupCode)));
+            
+        }
+
+        /// <summary>
+        /// Get recent conversations 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>CallConversationEntityListing</returns>
+        public CallConversationEntityListing GetCalls ()
+        {
+             ApiResponse<CallConversationEntityListing> localVarResponse = GetCallsWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get recent conversations 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of CallConversationEntityListing</returns>
+        public ApiResponse< CallConversationEntityListing > GetCallsWithHttpInfo ()
+        {
+
+            var localVarPath = "/api/v2/conversations/calls";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetCalls: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetCalls: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CallConversationEntityListing>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (CallConversationEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CallConversationEntityListing)));
+            
+        }
+
+        /// <summary>
+        /// Get recent conversations 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of CallConversationEntityListing</returns>
+        public async System.Threading.Tasks.Task<CallConversationEntityListing> GetCallsAsync ()
+        {
+             ApiResponse<CallConversationEntityListing> localVarResponse = await GetCallsAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get recent conversations 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (CallConversationEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CallConversationEntityListing>> GetCallsAsyncWithHttpInfo ()
+        {
+
+            var localVarPath = "/api/v2/conversations/calls";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetCalls: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetCalls: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CallConversationEntityListing>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (CallConversationEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CallConversationEntityListing)));
+            
+        }
+
+        /// <summary>
+        /// Get call conversation 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callId"></param>
+        /// <returns>CallConversation</returns>
+        public CallConversation GetCallsCallId (string callId)
+        {
+             ApiResponse<CallConversation> localVarResponse = GetCallsCallIdWithHttpInfo(callId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get call conversation 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callId"></param>
+        /// <returns>ApiResponse of CallConversation</returns>
+        public ApiResponse< CallConversation > GetCallsCallIdWithHttpInfo (string callId)
+        {
+            // verify the required parameter 'callId' is set
+            if (callId == null)
+                throw new ApiException(400, "Missing required parameter 'callId' when calling ConversationsApi->GetCallsCallId");
+
+            var localVarPath = "/api/v2/conversations/calls/{callId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (callId != null) localVarPathParams.Add("callId", Configuration.ApiClient.ParameterToString(callId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetCallsCallId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetCallsCallId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CallConversation>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (CallConversation) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CallConversation)));
+            
+        }
+
+        /// <summary>
+        /// Get call conversation 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callId"></param>
+        /// <returns>Task of CallConversation</returns>
+        public async System.Threading.Tasks.Task<CallConversation> GetCallsCallIdAsync (string callId)
+        {
+             ApiResponse<CallConversation> localVarResponse = await GetCallsCallIdAsyncWithHttpInfo(callId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get call conversation 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callId"></param>
+        /// <returns>Task of ApiResponse (CallConversation)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CallConversation>> GetCallsCallIdAsyncWithHttpInfo (string callId)
+        {
+            // verify the required parameter 'callId' is set
+            if (callId == null)
+                throw new ApiException(400, "Missing required parameter 'callId' when calling ConversationsApi->GetCallsCallId");
+
+            var localVarPath = "/api/v2/conversations/calls/{callId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (callId != null) localVarPathParams.Add("callId", Configuration.ApiClient.ParameterToString(callId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetCallsCallId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetCallsCallId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CallConversation>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (CallConversation) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CallConversation)));
+            
+        }
+
+        /// <summary>
+        /// Get the wrap-up for this conversation participant.  
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
+        /// <returns>WrapupCode</returns>
+        public WrapupCode GetCallsCallIdParticipantsParticipantIdWrapup (string callId, string participantId, bool? provisional = null)
+        {
+             ApiResponse<WrapupCode> localVarResponse = GetCallsCallIdParticipantsParticipantIdWrapupWithHttpInfo(callId, participantId, provisional);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the wrap-up for this conversation participant.  
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
+        /// <returns>ApiResponse of WrapupCode</returns>
+        public ApiResponse< WrapupCode > GetCallsCallIdParticipantsParticipantIdWrapupWithHttpInfo (string callId, string participantId, bool? provisional = null)
+        {
+            // verify the required parameter 'callId' is set
+            if (callId == null)
+                throw new ApiException(400, "Missing required parameter 'callId' when calling ConversationsApi->GetCallsCallIdParticipantsParticipantIdWrapup");
+            // verify the required parameter 'participantId' is set
+            if (participantId == null)
+                throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->GetCallsCallIdParticipantsParticipantIdWrapup");
+
+            var localVarPath = "/api/v2/conversations/calls/{callId}/participants/{participantId}/wrapup";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (callId != null) localVarPathParams.Add("callId", Configuration.ApiClient.ParameterToString(callId)); // path parameter
+            if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId)); // path parameter
+            if (provisional != null) localVarQueryParams.Add("provisional", Configuration.ApiClient.ParameterToString(provisional)); // query parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetCallsCallIdParticipantsParticipantIdWrapup: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetCallsCallIdParticipantsParticipantIdWrapup: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WrapupCode>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (WrapupCode) Configuration.ApiClient.Deserialize(localVarResponse, typeof(WrapupCode)));
+            
+        }
+
+        /// <summary>
+        /// Get the wrap-up for this conversation participant.  
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
+        /// <returns>Task of WrapupCode</returns>
+        public async System.Threading.Tasks.Task<WrapupCode> GetCallsCallIdParticipantsParticipantIdWrapupAsync (string callId, string participantId, bool? provisional = null)
+        {
+             ApiResponse<WrapupCode> localVarResponse = await GetCallsCallIdParticipantsParticipantIdWrapupAsyncWithHttpInfo(callId, participantId, provisional);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the wrap-up for this conversation participant.  
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
+        /// <returns>Task of ApiResponse (WrapupCode)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<WrapupCode>> GetCallsCallIdParticipantsParticipantIdWrapupAsyncWithHttpInfo (string callId, string participantId, bool? provisional = null)
+        {
+            // verify the required parameter 'callId' is set
+            if (callId == null)
+                throw new ApiException(400, "Missing required parameter 'callId' when calling ConversationsApi->GetCallsCallIdParticipantsParticipantIdWrapup");
+            // verify the required parameter 'participantId' is set
+            if (participantId == null)
+                throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->GetCallsCallIdParticipantsParticipantIdWrapup");
+
+            var localVarPath = "/api/v2/conversations/calls/{callId}/participants/{participantId}/wrapup";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (callId != null) localVarPathParams.Add("callId", Configuration.ApiClient.ParameterToString(callId)); // path parameter
+            if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId)); // path parameter
+            if (provisional != null) localVarQueryParams.Add("provisional", Configuration.ApiClient.ParameterToString(provisional)); // query parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetCallsCallIdParticipantsParticipantIdWrapup: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetCallsCallIdParticipantsParticipantIdWrapup: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WrapupCode>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (WrapupCode) Configuration.ApiClient.Deserialize(localVarResponse, typeof(WrapupCode)));
+            
+        }
+
+        /// <summary>
+        /// Get list of wrapup codes for this conversation participant 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callId"></param>
+        /// <param name="participantId"></param>
+        /// <returns>WrapupCode</returns>
+        public WrapupCode GetCallsCallIdParticipantsParticipantIdWrapupcodes (string callId, string participantId)
+        {
+             ApiResponse<WrapupCode> localVarResponse = GetCallsCallIdParticipantsParticipantIdWrapupcodesWithHttpInfo(callId, participantId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get list of wrapup codes for this conversation participant 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callId"></param>
+        /// <param name="participantId"></param>
+        /// <returns>ApiResponse of WrapupCode</returns>
+        public ApiResponse< WrapupCode > GetCallsCallIdParticipantsParticipantIdWrapupcodesWithHttpInfo (string callId, string participantId)
+        {
+            // verify the required parameter 'callId' is set
+            if (callId == null)
+                throw new ApiException(400, "Missing required parameter 'callId' when calling ConversationsApi->GetCallsCallIdParticipantsParticipantIdWrapupcodes");
+            // verify the required parameter 'participantId' is set
+            if (participantId == null)
+                throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->GetCallsCallIdParticipantsParticipantIdWrapupcodes");
+
+            var localVarPath = "/api/v2/conversations/calls/{callId}/participants/{participantId}/wrapupcodes";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (callId != null) localVarPathParams.Add("callId", Configuration.ApiClient.ParameterToString(callId)); // path parameter
+            if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetCallsCallIdParticipantsParticipantIdWrapupcodes: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetCallsCallIdParticipantsParticipantIdWrapupcodes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WrapupCode>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (WrapupCode) Configuration.ApiClient.Deserialize(localVarResponse, typeof(WrapupCode)));
+            
+        }
+
+        /// <summary>
+        /// Get list of wrapup codes for this conversation participant 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callId"></param>
+        /// <param name="participantId"></param>
+        /// <returns>Task of WrapupCode</returns>
+        public async System.Threading.Tasks.Task<WrapupCode> GetCallsCallIdParticipantsParticipantIdWrapupcodesAsync (string callId, string participantId)
+        {
+             ApiResponse<WrapupCode> localVarResponse = await GetCallsCallIdParticipantsParticipantIdWrapupcodesAsyncWithHttpInfo(callId, participantId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get list of wrapup codes for this conversation participant 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callId"></param>
+        /// <param name="participantId"></param>
+        /// <returns>Task of ApiResponse (WrapupCode)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<WrapupCode>> GetCallsCallIdParticipantsParticipantIdWrapupcodesAsyncWithHttpInfo (string callId, string participantId)
+        {
+            // verify the required parameter 'callId' is set
+            if (callId == null)
+                throw new ApiException(400, "Missing required parameter 'callId' when calling ConversationsApi->GetCallsCallIdParticipantsParticipantIdWrapupcodes");
+            // verify the required parameter 'participantId' is set
+            if (participantId == null)
+                throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->GetCallsCallIdParticipantsParticipantIdWrapupcodes");
+
+            var localVarPath = "/api/v2/conversations/calls/{callId}/participants/{participantId}/wrapupcodes";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (callId != null) localVarPathParams.Add("callId", Configuration.ApiClient.ParameterToString(callId)); // path parameter
+            if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetCallsCallIdParticipantsParticipantIdWrapupcodes: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetCallsCallIdParticipantsParticipantIdWrapupcodes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WrapupCode>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (WrapupCode) Configuration.ApiClient.Deserialize(localVarResponse, typeof(WrapupCode)));
+            
+        }
+
+        /// <summary>
+        /// Get the maximum number of participants that this user can have on a conference 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>MaxParticipants</returns>
+        public MaxParticipants GetCallsMaximumconferenceparties ()
+        {
+             ApiResponse<MaxParticipants> localVarResponse = GetCallsMaximumconferencepartiesWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the maximum number of participants that this user can have on a conference 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of MaxParticipants</returns>
+        public ApiResponse< MaxParticipants > GetCallsMaximumconferencepartiesWithHttpInfo ()
+        {
+
+            var localVarPath = "/api/v2/conversations/calls/maximumconferenceparties";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetCallsMaximumconferenceparties: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetCallsMaximumconferenceparties: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<MaxParticipants>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (MaxParticipants) Configuration.ApiClient.Deserialize(localVarResponse, typeof(MaxParticipants)));
+            
+        }
+
+        /// <summary>
+        /// Get the maximum number of participants that this user can have on a conference 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of MaxParticipants</returns>
+        public async System.Threading.Tasks.Task<MaxParticipants> GetCallsMaximumconferencepartiesAsync ()
+        {
+             ApiResponse<MaxParticipants> localVarResponse = await GetCallsMaximumconferencepartiesAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the maximum number of participants that this user can have on a conference 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (MaxParticipants)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<MaxParticipants>> GetCallsMaximumconferencepartiesAsyncWithHttpInfo ()
+        {
+
+            var localVarPath = "/api/v2/conversations/calls/maximumconferenceparties";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetCallsMaximumconferenceparties: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetCallsMaximumconferenceparties: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<MaxParticipants>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (MaxParticipants) Configuration.ApiClient.Deserialize(localVarResponse, typeof(MaxParticipants)));
+            
+        }
+
+        /// <summary>
+        /// Get recent chat conversations 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ChatConversationEntityListing</returns>
+        public ChatConversationEntityListing GetChats ()
+        {
+             ApiResponse<ChatConversationEntityListing> localVarResponse = GetChatsWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get recent chat conversations 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of ChatConversationEntityListing</returns>
+        public ApiResponse< ChatConversationEntityListing > GetChatsWithHttpInfo ()
+        {
+
+            var localVarPath = "/api/v2/conversations/chats";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetChats: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetChats: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ChatConversationEntityListing>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ChatConversationEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ChatConversationEntityListing)));
+            
+        }
+
+        /// <summary>
+        /// Get recent chat conversations 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ChatConversationEntityListing</returns>
+        public async System.Threading.Tasks.Task<ChatConversationEntityListing> GetChatsAsync ()
+        {
+             ApiResponse<ChatConversationEntityListing> localVarResponse = await GetChatsAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get recent chat conversations 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (ChatConversationEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ChatConversationEntityListing>> GetChatsAsyncWithHttpInfo ()
+        {
+
+            var localVarPath = "/api/v2/conversations/chats";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetChats: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetChats: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ChatConversationEntityListing>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ChatConversationEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ChatConversationEntityListing)));
+            
+        }
+
+        /// <summary>
+        /// Get chat conversation 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="chatId"></param>
+        /// <returns>ChatConversation</returns>
+        public ChatConversation GetChatsChatId (string chatId)
+        {
+             ApiResponse<ChatConversation> localVarResponse = GetChatsChatIdWithHttpInfo(chatId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get chat conversation 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="chatId"></param>
+        /// <returns>ApiResponse of ChatConversation</returns>
+        public ApiResponse< ChatConversation > GetChatsChatIdWithHttpInfo (string chatId)
+        {
+            // verify the required parameter 'chatId' is set
+            if (chatId == null)
+                throw new ApiException(400, "Missing required parameter 'chatId' when calling ConversationsApi->GetChatsChatId");
+
+            var localVarPath = "/api/v2/conversations/chats/{chatId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (chatId != null) localVarPathParams.Add("chatId", Configuration.ApiClient.ParameterToString(chatId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetChatsChatId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetChatsChatId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ChatConversation>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ChatConversation) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ChatConversation)));
+            
+        }
+
+        /// <summary>
+        /// Get chat conversation 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="chatId"></param>
+        /// <returns>Task of ChatConversation</returns>
+        public async System.Threading.Tasks.Task<ChatConversation> GetChatsChatIdAsync (string chatId)
+        {
+             ApiResponse<ChatConversation> localVarResponse = await GetChatsChatIdAsyncWithHttpInfo(chatId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get chat conversation 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="chatId"></param>
+        /// <returns>Task of ApiResponse (ChatConversation)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ChatConversation>> GetChatsChatIdAsyncWithHttpInfo (string chatId)
+        {
+            // verify the required parameter 'chatId' is set
+            if (chatId == null)
+                throw new ApiException(400, "Missing required parameter 'chatId' when calling ConversationsApi->GetChatsChatId");
+
+            var localVarPath = "/api/v2/conversations/chats/{chatId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (chatId != null) localVarPathParams.Add("chatId", Configuration.ApiClient.ParameterToString(chatId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetChatsChatId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetChatsChatId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ChatConversation>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ChatConversation) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ChatConversation)));
+            
+        }
+
+        /// <summary>
+        /// Get the wrap-up for this conversation participant.  
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="chatId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
+        /// <returns>WrapupCode</returns>
+        public WrapupCode GetChatsChatIdParticipantsParticipantIdWrapup (string chatId, string participantId, bool? provisional = null)
+        {
+             ApiResponse<WrapupCode> localVarResponse = GetChatsChatIdParticipantsParticipantIdWrapupWithHttpInfo(chatId, participantId, provisional);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the wrap-up for this conversation participant.  
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="chatId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
+        /// <returns>ApiResponse of WrapupCode</returns>
+        public ApiResponse< WrapupCode > GetChatsChatIdParticipantsParticipantIdWrapupWithHttpInfo (string chatId, string participantId, bool? provisional = null)
+        {
+            // verify the required parameter 'chatId' is set
+            if (chatId == null)
+                throw new ApiException(400, "Missing required parameter 'chatId' when calling ConversationsApi->GetChatsChatIdParticipantsParticipantIdWrapup");
+            // verify the required parameter 'participantId' is set
+            if (participantId == null)
+                throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->GetChatsChatIdParticipantsParticipantIdWrapup");
+
+            var localVarPath = "/api/v2/conversations/chats/{chatId}/participants/{participantId}/wrapup";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (chatId != null) localVarPathParams.Add("chatId", Configuration.ApiClient.ParameterToString(chatId)); // path parameter
+            if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId)); // path parameter
+            if (provisional != null) localVarQueryParams.Add("provisional", Configuration.ApiClient.ParameterToString(provisional)); // query parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetChatsChatIdParticipantsParticipantIdWrapup: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetChatsChatIdParticipantsParticipantIdWrapup: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WrapupCode>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (WrapupCode) Configuration.ApiClient.Deserialize(localVarResponse, typeof(WrapupCode)));
+            
+        }
+
+        /// <summary>
+        /// Get the wrap-up for this conversation participant.  
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="chatId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
+        /// <returns>Task of WrapupCode</returns>
+        public async System.Threading.Tasks.Task<WrapupCode> GetChatsChatIdParticipantsParticipantIdWrapupAsync (string chatId, string participantId, bool? provisional = null)
+        {
+             ApiResponse<WrapupCode> localVarResponse = await GetChatsChatIdParticipantsParticipantIdWrapupAsyncWithHttpInfo(chatId, participantId, provisional);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the wrap-up for this conversation participant.  
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="chatId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
+        /// <returns>Task of ApiResponse (WrapupCode)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<WrapupCode>> GetChatsChatIdParticipantsParticipantIdWrapupAsyncWithHttpInfo (string chatId, string participantId, bool? provisional = null)
+        {
+            // verify the required parameter 'chatId' is set
+            if (chatId == null)
+                throw new ApiException(400, "Missing required parameter 'chatId' when calling ConversationsApi->GetChatsChatIdParticipantsParticipantIdWrapup");
+            // verify the required parameter 'participantId' is set
+            if (participantId == null)
+                throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->GetChatsChatIdParticipantsParticipantIdWrapup");
+
+            var localVarPath = "/api/v2/conversations/chats/{chatId}/participants/{participantId}/wrapup";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (chatId != null) localVarPathParams.Add("chatId", Configuration.ApiClient.ParameterToString(chatId)); // path parameter
+            if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId)); // path parameter
+            if (provisional != null) localVarQueryParams.Add("provisional", Configuration.ApiClient.ParameterToString(provisional)); // query parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetChatsChatIdParticipantsParticipantIdWrapup: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetChatsChatIdParticipantsParticipantIdWrapup: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WrapupCode>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (WrapupCode) Configuration.ApiClient.Deserialize(localVarResponse, typeof(WrapupCode)));
+            
+        }
+
+        /// <summary>
+        /// Get list of wrapup codes for this conversation participant 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="chatId"></param>
+        /// <param name="participantId"></param>
+        /// <returns>WrapupCode</returns>
+        public WrapupCode GetChatsChatIdParticipantsParticipantIdWrapupcodes (string chatId, string participantId)
+        {
+             ApiResponse<WrapupCode> localVarResponse = GetChatsChatIdParticipantsParticipantIdWrapupcodesWithHttpInfo(chatId, participantId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get list of wrapup codes for this conversation participant 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="chatId"></param>
+        /// <param name="participantId"></param>
+        /// <returns>ApiResponse of WrapupCode</returns>
+        public ApiResponse< WrapupCode > GetChatsChatIdParticipantsParticipantIdWrapupcodesWithHttpInfo (string chatId, string participantId)
+        {
+            // verify the required parameter 'chatId' is set
+            if (chatId == null)
+                throw new ApiException(400, "Missing required parameter 'chatId' when calling ConversationsApi->GetChatsChatIdParticipantsParticipantIdWrapupcodes");
+            // verify the required parameter 'participantId' is set
+            if (participantId == null)
+                throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->GetChatsChatIdParticipantsParticipantIdWrapupcodes");
+
+            var localVarPath = "/api/v2/conversations/chats/{chatId}/participants/{participantId}/wrapupcodes";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (chatId != null) localVarPathParams.Add("chatId", Configuration.ApiClient.ParameterToString(chatId)); // path parameter
+            if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetChatsChatIdParticipantsParticipantIdWrapupcodes: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetChatsChatIdParticipantsParticipantIdWrapupcodes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WrapupCode>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (WrapupCode) Configuration.ApiClient.Deserialize(localVarResponse, typeof(WrapupCode)));
+            
+        }
+
+        /// <summary>
+        /// Get list of wrapup codes for this conversation participant 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="chatId"></param>
+        /// <param name="participantId"></param>
+        /// <returns>Task of WrapupCode</returns>
+        public async System.Threading.Tasks.Task<WrapupCode> GetChatsChatIdParticipantsParticipantIdWrapupcodesAsync (string chatId, string participantId)
+        {
+             ApiResponse<WrapupCode> localVarResponse = await GetChatsChatIdParticipantsParticipantIdWrapupcodesAsyncWithHttpInfo(chatId, participantId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get list of wrapup codes for this conversation participant 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="chatId"></param>
+        /// <param name="participantId"></param>
+        /// <returns>Task of ApiResponse (WrapupCode)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<WrapupCode>> GetChatsChatIdParticipantsParticipantIdWrapupcodesAsyncWithHttpInfo (string chatId, string participantId)
+        {
+            // verify the required parameter 'chatId' is set
+            if (chatId == null)
+                throw new ApiException(400, "Missing required parameter 'chatId' when calling ConversationsApi->GetChatsChatIdParticipantsParticipantIdWrapupcodes");
+            // verify the required parameter 'participantId' is set
+            if (participantId == null)
+                throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->GetChatsChatIdParticipantsParticipantIdWrapupcodes");
+
+            var localVarPath = "/api/v2/conversations/chats/{chatId}/participants/{participantId}/wrapupcodes";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (chatId != null) localVarPathParams.Add("chatId", Configuration.ApiClient.ParameterToString(chatId)); // path parameter
+            if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetChatsChatIdParticipantsParticipantIdWrapupcodes: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetChatsChatIdParticipantsParticipantIdWrapupcodes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WrapupCode>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (WrapupCode) Configuration.ApiClient.Deserialize(localVarResponse, typeof(WrapupCode)));
+            
+        }
+
+        /// <summary>
         /// Get conversation 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversation ID</param>
         /// <returns>Conversation</returns>
-        public Conversation ConversationsConversationidGet (string conversationId)
+        public Conversation GetConversationId (string conversationId)
         {
-             ApiResponse<Conversation> localVarResponse = ConversationsConversationidGetWithHttpInfo(conversationId);
+             ApiResponse<Conversation> localVarResponse = GetConversationIdWithHttpInfo(conversationId);
              return localVarResponse.Data;
         }
 
@@ -1344,13 +6091,13 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversation ID</param>
         /// <returns>ApiResponse of Conversation</returns>
-        public ApiResponse< Conversation > ConversationsConversationidGetWithHttpInfo (string conversationId)
+        public ApiResponse< Conversation > GetConversationIdWithHttpInfo (string conversationId)
         {
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
-                throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->ConversationsConversationidGet");
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->GetConversationId");
 
-            var localVarPath = "/api/v1/conversations/{conversationId}";
+            var localVarPath = "/api/v2/conversations/{conversationId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1392,9 +6139,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConversationsConversationidGet: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConversationsConversationidGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Conversation>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1408,9 +6155,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversation ID</param>
         /// <returns>Task of Conversation</returns>
-        public async System.Threading.Tasks.Task<Conversation> ConversationsConversationidGetAsync (string conversationId)
+        public async System.Threading.Tasks.Task<Conversation> GetConversationIdAsync (string conversationId)
         {
-             ApiResponse<Conversation> localVarResponse = await ConversationsConversationidGetAsyncWithHttpInfo(conversationId);
+             ApiResponse<Conversation> localVarResponse = await GetConversationIdAsyncWithHttpInfo(conversationId);
              return localVarResponse.Data;
 
         }
@@ -1421,13 +6168,13 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversation ID</param>
         /// <returns>Task of ApiResponse (Conversation)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Conversation>> ConversationsConversationidGetAsyncWithHttpInfo (string conversationId)
+        public async System.Threading.Tasks.Task<ApiResponse<Conversation>> GetConversationIdAsyncWithHttpInfo (string conversationId)
         {
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
-                throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->ConversationsConversationidGet");
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->GetConversationId");
 
-            var localVarPath = "/api/v1/conversations/{conversationId}";
+            var localVarPath = "/api/v2/conversations/{conversationId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1469,9 +6216,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConversationsConversationidGet: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConversationsConversationidGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Conversation>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1480,6 +6227,2556 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
+        /// Get the wrap-up for this conversation participant.  
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="participantId">participant ID</param>
+        /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
+        /// <returns>WrapupCode</returns>
+        public WrapupCode GetConversationIdParticipantsParticipantIdWrapup (string conversationId, string participantId, bool? provisional = null)
+        {
+             ApiResponse<WrapupCode> localVarResponse = GetConversationIdParticipantsParticipantIdWrapupWithHttpInfo(conversationId, participantId, provisional);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the wrap-up for this conversation participant.  
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="participantId">participant ID</param>
+        /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
+        /// <returns>ApiResponse of WrapupCode</returns>
+        public ApiResponse< WrapupCode > GetConversationIdParticipantsParticipantIdWrapupWithHttpInfo (string conversationId, string participantId, bool? provisional = null)
+        {
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->GetConversationIdParticipantsParticipantIdWrapup");
+            // verify the required parameter 'participantId' is set
+            if (participantId == null)
+                throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->GetConversationIdParticipantsParticipantIdWrapup");
+
+            var localVarPath = "/api/v2/conversations/{conversationId}/participants/{participantId}/wrapup";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
+            if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId)); // path parameter
+            if (provisional != null) localVarQueryParams.Add("provisional", Configuration.ApiClient.ParameterToString(provisional)); // query parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationIdParticipantsParticipantIdWrapup: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationIdParticipantsParticipantIdWrapup: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WrapupCode>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (WrapupCode) Configuration.ApiClient.Deserialize(localVarResponse, typeof(WrapupCode)));
+            
+        }
+
+        /// <summary>
+        /// Get the wrap-up for this conversation participant.  
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="participantId">participant ID</param>
+        /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
+        /// <returns>Task of WrapupCode</returns>
+        public async System.Threading.Tasks.Task<WrapupCode> GetConversationIdParticipantsParticipantIdWrapupAsync (string conversationId, string participantId, bool? provisional = null)
+        {
+             ApiResponse<WrapupCode> localVarResponse = await GetConversationIdParticipantsParticipantIdWrapupAsyncWithHttpInfo(conversationId, participantId, provisional);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the wrap-up for this conversation participant.  
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="participantId">participant ID</param>
+        /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
+        /// <returns>Task of ApiResponse (WrapupCode)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<WrapupCode>> GetConversationIdParticipantsParticipantIdWrapupAsyncWithHttpInfo (string conversationId, string participantId, bool? provisional = null)
+        {
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->GetConversationIdParticipantsParticipantIdWrapup");
+            // verify the required parameter 'participantId' is set
+            if (participantId == null)
+                throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->GetConversationIdParticipantsParticipantIdWrapup");
+
+            var localVarPath = "/api/v2/conversations/{conversationId}/participants/{participantId}/wrapup";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
+            if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId)); // path parameter
+            if (provisional != null) localVarQueryParams.Add("provisional", Configuration.ApiClient.ParameterToString(provisional)); // query parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationIdParticipantsParticipantIdWrapup: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationIdParticipantsParticipantIdWrapup: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WrapupCode>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (WrapupCode) Configuration.ApiClient.Deserialize(localVarResponse, typeof(WrapupCode)));
+            
+        }
+
+        /// <summary>
+        /// Get list of wrapup codes for this conversation participant 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="participantId">participant ID</param>
+        /// <returns>WrapupCode</returns>
+        public WrapupCode GetConversationIdParticipantsParticipantIdWrapupcodes (string conversationId, string participantId)
+        {
+             ApiResponse<WrapupCode> localVarResponse = GetConversationIdParticipantsParticipantIdWrapupcodesWithHttpInfo(conversationId, participantId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get list of wrapup codes for this conversation participant 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="participantId">participant ID</param>
+        /// <returns>ApiResponse of WrapupCode</returns>
+        public ApiResponse< WrapupCode > GetConversationIdParticipantsParticipantIdWrapupcodesWithHttpInfo (string conversationId, string participantId)
+        {
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->GetConversationIdParticipantsParticipantIdWrapupcodes");
+            // verify the required parameter 'participantId' is set
+            if (participantId == null)
+                throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->GetConversationIdParticipantsParticipantIdWrapupcodes");
+
+            var localVarPath = "/api/v2/conversations/{conversationId}/participants/{participantId}/wrapupcodes";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
+            if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationIdParticipantsParticipantIdWrapupcodes: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationIdParticipantsParticipantIdWrapupcodes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WrapupCode>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (WrapupCode) Configuration.ApiClient.Deserialize(localVarResponse, typeof(WrapupCode)));
+            
+        }
+
+        /// <summary>
+        /// Get list of wrapup codes for this conversation participant 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="participantId">participant ID</param>
+        /// <returns>Task of WrapupCode</returns>
+        public async System.Threading.Tasks.Task<WrapupCode> GetConversationIdParticipantsParticipantIdWrapupcodesAsync (string conversationId, string participantId)
+        {
+             ApiResponse<WrapupCode> localVarResponse = await GetConversationIdParticipantsParticipantIdWrapupcodesAsyncWithHttpInfo(conversationId, participantId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get list of wrapup codes for this conversation participant 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="participantId">participant ID</param>
+        /// <returns>Task of ApiResponse (WrapupCode)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<WrapupCode>> GetConversationIdParticipantsParticipantIdWrapupcodesAsyncWithHttpInfo (string conversationId, string participantId)
+        {
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->GetConversationIdParticipantsParticipantIdWrapupcodes");
+            // verify the required parameter 'participantId' is set
+            if (participantId == null)
+                throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->GetConversationIdParticipantsParticipantIdWrapupcodes");
+
+            var localVarPath = "/api/v2/conversations/{conversationId}/participants/{participantId}/wrapupcodes";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
+            if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationIdParticipantsParticipantIdWrapupcodes: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationIdParticipantsParticipantIdWrapupcodes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WrapupCode>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (WrapupCode) Configuration.ApiClient.Deserialize(localVarResponse, typeof(WrapupCode)));
+            
+        }
+
+        /// <summary>
+        /// Get conversations 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="communicationType">Call or Chat communication filtering (optional)</param>
+        /// <returns>ConversationEntityListing</returns>
+        public ConversationEntityListing GetConversations (string communicationType = null)
+        {
+             ApiResponse<ConversationEntityListing> localVarResponse = GetConversationsWithHttpInfo(communicationType);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get conversations 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="communicationType">Call or Chat communication filtering (optional)</param>
+        /// <returns>ApiResponse of ConversationEntityListing</returns>
+        public ApiResponse< ConversationEntityListing > GetConversationsWithHttpInfo (string communicationType = null)
+        {
+
+            var localVarPath = "/api/v2/conversations";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (communicationType != null) localVarQueryParams.Add("communicationType", Configuration.ApiClient.ParameterToString(communicationType)); // query parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversations: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversations: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ConversationEntityListing>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ConversationEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConversationEntityListing)));
+            
+        }
+
+        /// <summary>
+        /// Get conversations 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="communicationType">Call or Chat communication filtering (optional)</param>
+        /// <returns>Task of ConversationEntityListing</returns>
+        public async System.Threading.Tasks.Task<ConversationEntityListing> GetConversationsAsync (string communicationType = null)
+        {
+             ApiResponse<ConversationEntityListing> localVarResponse = await GetConversationsAsyncWithHttpInfo(communicationType);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get conversations 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="communicationType">Call or Chat communication filtering (optional)</param>
+        /// <returns>Task of ApiResponse (ConversationEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ConversationEntityListing>> GetConversationsAsyncWithHttpInfo (string communicationType = null)
+        {
+
+            var localVarPath = "/api/v2/conversations";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (communicationType != null) localVarQueryParams.Add("communicationType", Configuration.ApiClient.ParameterToString(communicationType)); // query parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversations: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversations: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ConversationEntityListing>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ConversationEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConversationEntityListing)));
+            
+        }
+
+        /// <summary>
+        /// Get a conversation by id 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <returns>AnalyticsConversation</returns>
+        public AnalyticsConversation GetConversationsConversationIdDetails (string conversationId)
+        {
+             ApiResponse<AnalyticsConversation> localVarResponse = GetConversationsConversationIdDetailsWithHttpInfo(conversationId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a conversation by id 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <returns>ApiResponse of AnalyticsConversation</returns>
+        public ApiResponse< AnalyticsConversation > GetConversationsConversationIdDetailsWithHttpInfo (string conversationId)
+        {
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->GetConversationsConversationIdDetails");
+
+            var localVarPath = "/api/v2/analytics/conversations/{conversationId}/details";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsConversationIdDetails: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsConversationIdDetails: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AnalyticsConversation>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (AnalyticsConversation) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AnalyticsConversation)));
+            
+        }
+
+        /// <summary>
+        /// Get a conversation by id 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <returns>Task of AnalyticsConversation</returns>
+        public async System.Threading.Tasks.Task<AnalyticsConversation> GetConversationsConversationIdDetailsAsync (string conversationId)
+        {
+             ApiResponse<AnalyticsConversation> localVarResponse = await GetConversationsConversationIdDetailsAsyncWithHttpInfo(conversationId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a conversation by id 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <returns>Task of ApiResponse (AnalyticsConversation)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AnalyticsConversation>> GetConversationsConversationIdDetailsAsyncWithHttpInfo (string conversationId)
+        {
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->GetConversationsConversationIdDetails");
+
+            var localVarPath = "/api/v2/analytics/conversations/{conversationId}/details";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsConversationIdDetails: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsConversationIdDetails: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AnalyticsConversation>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (AnalyticsConversation) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AnalyticsConversation)));
+            
+        }
+
+        /// <summary>
+        /// Get recent email conversations 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>EmailConversationEntityListing</returns>
+        public EmailConversationEntityListing GetEmails ()
+        {
+             ApiResponse<EmailConversationEntityListing> localVarResponse = GetEmailsWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get recent email conversations 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of EmailConversationEntityListing</returns>
+        public ApiResponse< EmailConversationEntityListing > GetEmailsWithHttpInfo ()
+        {
+
+            var localVarPath = "/api/v2/conversations/emails";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetEmails: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetEmails: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EmailConversationEntityListing>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (EmailConversationEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmailConversationEntityListing)));
+            
+        }
+
+        /// <summary>
+        /// Get recent email conversations 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of EmailConversationEntityListing</returns>
+        public async System.Threading.Tasks.Task<EmailConversationEntityListing> GetEmailsAsync ()
+        {
+             ApiResponse<EmailConversationEntityListing> localVarResponse = await GetEmailsAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get recent email conversations 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (EmailConversationEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<EmailConversationEntityListing>> GetEmailsAsyncWithHttpInfo ()
+        {
+
+            var localVarPath = "/api/v2/conversations/emails";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetEmails: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetEmails: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EmailConversationEntityListing>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (EmailConversationEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmailConversationEntityListing)));
+            
+        }
+
+        /// <summary>
+        /// Get email conversation 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailId"></param>
+        /// <returns>EmailConversation</returns>
+        public EmailConversation GetEmailsEmailId (string emailId)
+        {
+             ApiResponse<EmailConversation> localVarResponse = GetEmailsEmailIdWithHttpInfo(emailId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get email conversation 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailId"></param>
+        /// <returns>ApiResponse of EmailConversation</returns>
+        public ApiResponse< EmailConversation > GetEmailsEmailIdWithHttpInfo (string emailId)
+        {
+            // verify the required parameter 'emailId' is set
+            if (emailId == null)
+                throw new ApiException(400, "Missing required parameter 'emailId' when calling ConversationsApi->GetEmailsEmailId");
+
+            var localVarPath = "/api/v2/conversations/emails/{emailId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (emailId != null) localVarPathParams.Add("emailId", Configuration.ApiClient.ParameterToString(emailId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetEmailsEmailId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetEmailsEmailId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EmailConversation>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (EmailConversation) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmailConversation)));
+            
+        }
+
+        /// <summary>
+        /// Get email conversation 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailId"></param>
+        /// <returns>Task of EmailConversation</returns>
+        public async System.Threading.Tasks.Task<EmailConversation> GetEmailsEmailIdAsync (string emailId)
+        {
+             ApiResponse<EmailConversation> localVarResponse = await GetEmailsEmailIdAsyncWithHttpInfo(emailId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get email conversation 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailId"></param>
+        /// <returns>Task of ApiResponse (EmailConversation)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<EmailConversation>> GetEmailsEmailIdAsyncWithHttpInfo (string emailId)
+        {
+            // verify the required parameter 'emailId' is set
+            if (emailId == null)
+                throw new ApiException(400, "Missing required parameter 'emailId' when calling ConversationsApi->GetEmailsEmailId");
+
+            var localVarPath = "/api/v2/conversations/emails/{emailId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (emailId != null) localVarPathParams.Add("emailId", Configuration.ApiClient.ParameterToString(emailId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetEmailsEmailId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetEmailsEmailId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EmailConversation>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (EmailConversation) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmailConversation)));
+            
+        }
+
+        /// <summary>
+        /// Get conversation messages 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailId"></param>
+        /// <returns>EmailMessageListing</returns>
+        public EmailMessageListing GetEmailsEmailIdMessages (string emailId)
+        {
+             ApiResponse<EmailMessageListing> localVarResponse = GetEmailsEmailIdMessagesWithHttpInfo(emailId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get conversation messages 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailId"></param>
+        /// <returns>ApiResponse of EmailMessageListing</returns>
+        public ApiResponse< EmailMessageListing > GetEmailsEmailIdMessagesWithHttpInfo (string emailId)
+        {
+            // verify the required parameter 'emailId' is set
+            if (emailId == null)
+                throw new ApiException(400, "Missing required parameter 'emailId' when calling ConversationsApi->GetEmailsEmailIdMessages");
+
+            var localVarPath = "/api/v2/conversations/emails/{emailId}/messages";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (emailId != null) localVarPathParams.Add("emailId", Configuration.ApiClient.ParameterToString(emailId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetEmailsEmailIdMessages: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetEmailsEmailIdMessages: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EmailMessageListing>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (EmailMessageListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmailMessageListing)));
+            
+        }
+
+        /// <summary>
+        /// Get conversation messages 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailId"></param>
+        /// <returns>Task of EmailMessageListing</returns>
+        public async System.Threading.Tasks.Task<EmailMessageListing> GetEmailsEmailIdMessagesAsync (string emailId)
+        {
+             ApiResponse<EmailMessageListing> localVarResponse = await GetEmailsEmailIdMessagesAsyncWithHttpInfo(emailId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get conversation messages 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailId"></param>
+        /// <returns>Task of ApiResponse (EmailMessageListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<EmailMessageListing>> GetEmailsEmailIdMessagesAsyncWithHttpInfo (string emailId)
+        {
+            // verify the required parameter 'emailId' is set
+            if (emailId == null)
+                throw new ApiException(400, "Missing required parameter 'emailId' when calling ConversationsApi->GetEmailsEmailIdMessages");
+
+            var localVarPath = "/api/v2/conversations/emails/{emailId}/messages";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (emailId != null) localVarPathParams.Add("emailId", Configuration.ApiClient.ParameterToString(emailId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetEmailsEmailIdMessages: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetEmailsEmailIdMessages: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EmailMessageListing>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (EmailMessageListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmailMessageListing)));
+            
+        }
+
+        /// <summary>
+        /// Get conversation draft reply 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailId"></param>
+        /// <returns>EmailMessage</returns>
+        public EmailMessage GetEmailsEmailIdMessagesDraft (string emailId)
+        {
+             ApiResponse<EmailMessage> localVarResponse = GetEmailsEmailIdMessagesDraftWithHttpInfo(emailId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get conversation draft reply 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailId"></param>
+        /// <returns>ApiResponse of EmailMessage</returns>
+        public ApiResponse< EmailMessage > GetEmailsEmailIdMessagesDraftWithHttpInfo (string emailId)
+        {
+            // verify the required parameter 'emailId' is set
+            if (emailId == null)
+                throw new ApiException(400, "Missing required parameter 'emailId' when calling ConversationsApi->GetEmailsEmailIdMessagesDraft");
+
+            var localVarPath = "/api/v2/conversations/emails/{emailId}/messages/draft";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (emailId != null) localVarPathParams.Add("emailId", Configuration.ApiClient.ParameterToString(emailId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetEmailsEmailIdMessagesDraft: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetEmailsEmailIdMessagesDraft: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EmailMessage>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (EmailMessage) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmailMessage)));
+            
+        }
+
+        /// <summary>
+        /// Get conversation draft reply 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailId"></param>
+        /// <returns>Task of EmailMessage</returns>
+        public async System.Threading.Tasks.Task<EmailMessage> GetEmailsEmailIdMessagesDraftAsync (string emailId)
+        {
+             ApiResponse<EmailMessage> localVarResponse = await GetEmailsEmailIdMessagesDraftAsyncWithHttpInfo(emailId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get conversation draft reply 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailId"></param>
+        /// <returns>Task of ApiResponse (EmailMessage)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<EmailMessage>> GetEmailsEmailIdMessagesDraftAsyncWithHttpInfo (string emailId)
+        {
+            // verify the required parameter 'emailId' is set
+            if (emailId == null)
+                throw new ApiException(400, "Missing required parameter 'emailId' when calling ConversationsApi->GetEmailsEmailIdMessagesDraft");
+
+            var localVarPath = "/api/v2/conversations/emails/{emailId}/messages/draft";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (emailId != null) localVarPathParams.Add("emailId", Configuration.ApiClient.ParameterToString(emailId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetEmailsEmailIdMessagesDraft: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetEmailsEmailIdMessagesDraft: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EmailMessage>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (EmailMessage) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmailMessage)));
+            
+        }
+
+        /// <summary>
+        /// Get conversation message 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailId"></param>
+        /// <param name="messageId"></param>
+        /// <returns>EmailMessage</returns>
+        public EmailMessage GetEmailsEmailIdMessagesMessageId (string emailId, string messageId)
+        {
+             ApiResponse<EmailMessage> localVarResponse = GetEmailsEmailIdMessagesMessageIdWithHttpInfo(emailId, messageId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get conversation message 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailId"></param>
+        /// <param name="messageId"></param>
+        /// <returns>ApiResponse of EmailMessage</returns>
+        public ApiResponse< EmailMessage > GetEmailsEmailIdMessagesMessageIdWithHttpInfo (string emailId, string messageId)
+        {
+            // verify the required parameter 'emailId' is set
+            if (emailId == null)
+                throw new ApiException(400, "Missing required parameter 'emailId' when calling ConversationsApi->GetEmailsEmailIdMessagesMessageId");
+            // verify the required parameter 'messageId' is set
+            if (messageId == null)
+                throw new ApiException(400, "Missing required parameter 'messageId' when calling ConversationsApi->GetEmailsEmailIdMessagesMessageId");
+
+            var localVarPath = "/api/v2/conversations/emails/{emailId}/messages/{messageId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (emailId != null) localVarPathParams.Add("emailId", Configuration.ApiClient.ParameterToString(emailId)); // path parameter
+            if (messageId != null) localVarPathParams.Add("messageId", Configuration.ApiClient.ParameterToString(messageId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetEmailsEmailIdMessagesMessageId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetEmailsEmailIdMessagesMessageId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EmailMessage>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (EmailMessage) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmailMessage)));
+            
+        }
+
+        /// <summary>
+        /// Get conversation message 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailId"></param>
+        /// <param name="messageId"></param>
+        /// <returns>Task of EmailMessage</returns>
+        public async System.Threading.Tasks.Task<EmailMessage> GetEmailsEmailIdMessagesMessageIdAsync (string emailId, string messageId)
+        {
+             ApiResponse<EmailMessage> localVarResponse = await GetEmailsEmailIdMessagesMessageIdAsyncWithHttpInfo(emailId, messageId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get conversation message 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailId"></param>
+        /// <param name="messageId"></param>
+        /// <returns>Task of ApiResponse (EmailMessage)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<EmailMessage>> GetEmailsEmailIdMessagesMessageIdAsyncWithHttpInfo (string emailId, string messageId)
+        {
+            // verify the required parameter 'emailId' is set
+            if (emailId == null)
+                throw new ApiException(400, "Missing required parameter 'emailId' when calling ConversationsApi->GetEmailsEmailIdMessagesMessageId");
+            // verify the required parameter 'messageId' is set
+            if (messageId == null)
+                throw new ApiException(400, "Missing required parameter 'messageId' when calling ConversationsApi->GetEmailsEmailIdMessagesMessageId");
+
+            var localVarPath = "/api/v2/conversations/emails/{emailId}/messages/{messageId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (emailId != null) localVarPathParams.Add("emailId", Configuration.ApiClient.ParameterToString(emailId)); // path parameter
+            if (messageId != null) localVarPathParams.Add("messageId", Configuration.ApiClient.ParameterToString(messageId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetEmailsEmailIdMessagesMessageId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetEmailsEmailIdMessagesMessageId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EmailMessage>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (EmailMessage) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmailMessage)));
+            
+        }
+
+        /// <summary>
+        /// Get the wrap-up for this conversation participant.  
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
+        /// <returns>WrapupCode</returns>
+        public WrapupCode GetEmailsEmailIdParticipantsParticipantIdWrapup (string emailId, string participantId, bool? provisional = null)
+        {
+             ApiResponse<WrapupCode> localVarResponse = GetEmailsEmailIdParticipantsParticipantIdWrapupWithHttpInfo(emailId, participantId, provisional);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the wrap-up for this conversation participant.  
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
+        /// <returns>ApiResponse of WrapupCode</returns>
+        public ApiResponse< WrapupCode > GetEmailsEmailIdParticipantsParticipantIdWrapupWithHttpInfo (string emailId, string participantId, bool? provisional = null)
+        {
+            // verify the required parameter 'emailId' is set
+            if (emailId == null)
+                throw new ApiException(400, "Missing required parameter 'emailId' when calling ConversationsApi->GetEmailsEmailIdParticipantsParticipantIdWrapup");
+            // verify the required parameter 'participantId' is set
+            if (participantId == null)
+                throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->GetEmailsEmailIdParticipantsParticipantIdWrapup");
+
+            var localVarPath = "/api/v2/conversations/emails/{emailId}/participants/{participantId}/wrapup";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (emailId != null) localVarPathParams.Add("emailId", Configuration.ApiClient.ParameterToString(emailId)); // path parameter
+            if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId)); // path parameter
+            if (provisional != null) localVarQueryParams.Add("provisional", Configuration.ApiClient.ParameterToString(provisional)); // query parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetEmailsEmailIdParticipantsParticipantIdWrapup: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetEmailsEmailIdParticipantsParticipantIdWrapup: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WrapupCode>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (WrapupCode) Configuration.ApiClient.Deserialize(localVarResponse, typeof(WrapupCode)));
+            
+        }
+
+        /// <summary>
+        /// Get the wrap-up for this conversation participant.  
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
+        /// <returns>Task of WrapupCode</returns>
+        public async System.Threading.Tasks.Task<WrapupCode> GetEmailsEmailIdParticipantsParticipantIdWrapupAsync (string emailId, string participantId, bool? provisional = null)
+        {
+             ApiResponse<WrapupCode> localVarResponse = await GetEmailsEmailIdParticipantsParticipantIdWrapupAsyncWithHttpInfo(emailId, participantId, provisional);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the wrap-up for this conversation participant.  
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
+        /// <returns>Task of ApiResponse (WrapupCode)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<WrapupCode>> GetEmailsEmailIdParticipantsParticipantIdWrapupAsyncWithHttpInfo (string emailId, string participantId, bool? provisional = null)
+        {
+            // verify the required parameter 'emailId' is set
+            if (emailId == null)
+                throw new ApiException(400, "Missing required parameter 'emailId' when calling ConversationsApi->GetEmailsEmailIdParticipantsParticipantIdWrapup");
+            // verify the required parameter 'participantId' is set
+            if (participantId == null)
+                throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->GetEmailsEmailIdParticipantsParticipantIdWrapup");
+
+            var localVarPath = "/api/v2/conversations/emails/{emailId}/participants/{participantId}/wrapup";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (emailId != null) localVarPathParams.Add("emailId", Configuration.ApiClient.ParameterToString(emailId)); // path parameter
+            if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId)); // path parameter
+            if (provisional != null) localVarQueryParams.Add("provisional", Configuration.ApiClient.ParameterToString(provisional)); // query parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetEmailsEmailIdParticipantsParticipantIdWrapup: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetEmailsEmailIdParticipantsParticipantIdWrapup: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WrapupCode>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (WrapupCode) Configuration.ApiClient.Deserialize(localVarResponse, typeof(WrapupCode)));
+            
+        }
+
+        /// <summary>
+        /// Get list of wrapup codes for this conversation participant 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailId"></param>
+        /// <param name="participantId"></param>
+        /// <returns>WrapupCode</returns>
+        public WrapupCode GetEmailsEmailIdParticipantsParticipantIdWrapupcodes (string emailId, string participantId)
+        {
+             ApiResponse<WrapupCode> localVarResponse = GetEmailsEmailIdParticipantsParticipantIdWrapupcodesWithHttpInfo(emailId, participantId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get list of wrapup codes for this conversation participant 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailId"></param>
+        /// <param name="participantId"></param>
+        /// <returns>ApiResponse of WrapupCode</returns>
+        public ApiResponse< WrapupCode > GetEmailsEmailIdParticipantsParticipantIdWrapupcodesWithHttpInfo (string emailId, string participantId)
+        {
+            // verify the required parameter 'emailId' is set
+            if (emailId == null)
+                throw new ApiException(400, "Missing required parameter 'emailId' when calling ConversationsApi->GetEmailsEmailIdParticipantsParticipantIdWrapupcodes");
+            // verify the required parameter 'participantId' is set
+            if (participantId == null)
+                throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->GetEmailsEmailIdParticipantsParticipantIdWrapupcodes");
+
+            var localVarPath = "/api/v2/conversations/emails/{emailId}/participants/{participantId}/wrapupcodes";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (emailId != null) localVarPathParams.Add("emailId", Configuration.ApiClient.ParameterToString(emailId)); // path parameter
+            if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetEmailsEmailIdParticipantsParticipantIdWrapupcodes: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetEmailsEmailIdParticipantsParticipantIdWrapupcodes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WrapupCode>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (WrapupCode) Configuration.ApiClient.Deserialize(localVarResponse, typeof(WrapupCode)));
+            
+        }
+
+        /// <summary>
+        /// Get list of wrapup codes for this conversation participant 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailId"></param>
+        /// <param name="participantId"></param>
+        /// <returns>Task of WrapupCode</returns>
+        public async System.Threading.Tasks.Task<WrapupCode> GetEmailsEmailIdParticipantsParticipantIdWrapupcodesAsync (string emailId, string participantId)
+        {
+             ApiResponse<WrapupCode> localVarResponse = await GetEmailsEmailIdParticipantsParticipantIdWrapupcodesAsyncWithHttpInfo(emailId, participantId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get list of wrapup codes for this conversation participant 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailId"></param>
+        /// <param name="participantId"></param>
+        /// <returns>Task of ApiResponse (WrapupCode)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<WrapupCode>> GetEmailsEmailIdParticipantsParticipantIdWrapupcodesAsyncWithHttpInfo (string emailId, string participantId)
+        {
+            // verify the required parameter 'emailId' is set
+            if (emailId == null)
+                throw new ApiException(400, "Missing required parameter 'emailId' when calling ConversationsApi->GetEmailsEmailIdParticipantsParticipantIdWrapupcodes");
+            // verify the required parameter 'participantId' is set
+            if (participantId == null)
+                throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->GetEmailsEmailIdParticipantsParticipantIdWrapupcodes");
+
+            var localVarPath = "/api/v2/conversations/emails/{emailId}/participants/{participantId}/wrapupcodes";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (emailId != null) localVarPathParams.Add("emailId", Configuration.ApiClient.ParameterToString(emailId)); // path parameter
+            if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetEmailsEmailIdParticipantsParticipantIdWrapupcodes: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetEmailsEmailIdParticipantsParticipantIdWrapupcodes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WrapupCode>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (WrapupCode) Configuration.ApiClient.Deserialize(localVarResponse, typeof(WrapupCode)));
+            
+        }
+
+        /// <summary>
+        /// Update conversation participant 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callbackId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns></returns>
+        public void PatchCallbacksCallbackIdParticipantsParticipantId (string callbackId, string participantId, MediaParticipantRequest body = null)
+        {
+             PatchCallbacksCallbackIdParticipantsParticipantIdWithHttpInfo(callbackId, participantId, body);
+        }
+
+        /// <summary>
+        /// Update conversation participant 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callbackId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> PatchCallbacksCallbackIdParticipantsParticipantIdWithHttpInfo (string callbackId, string participantId, MediaParticipantRequest body = null)
+        {
+            // verify the required parameter 'callbackId' is set
+            if (callbackId == null)
+                throw new ApiException(400, "Missing required parameter 'callbackId' when calling ConversationsApi->PatchCallbacksCallbackIdParticipantsParticipantId");
+            // verify the required parameter 'participantId' is set
+            if (participantId == null)
+                throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->PatchCallbacksCallbackIdParticipantsParticipantId");
+
+            var localVarPath = "/api/v2/conversations/callbacks/{callbackId}/participants/{participantId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (callbackId != null) localVarPathParams.Add("callbackId", Configuration.ApiClient.ParameterToString(callbackId)); // path parameter
+            if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId)); // path parameter
+            if (body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchCallbacksCallbackIdParticipantsParticipantId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchCallbacksCallbackIdParticipantsParticipantId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// Update conversation participant 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callbackId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task PatchCallbacksCallbackIdParticipantsParticipantIdAsync (string callbackId, string participantId, MediaParticipantRequest body = null)
+        {
+             await PatchCallbacksCallbackIdParticipantsParticipantIdAsyncWithHttpInfo(callbackId, participantId, body);
+
+        }
+
+        /// <summary>
+        /// Update conversation participant 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callbackId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PatchCallbacksCallbackIdParticipantsParticipantIdAsyncWithHttpInfo (string callbackId, string participantId, MediaParticipantRequest body = null)
+        {
+            // verify the required parameter 'callbackId' is set
+            if (callbackId == null)
+                throw new ApiException(400, "Missing required parameter 'callbackId' when calling ConversationsApi->PatchCallbacksCallbackIdParticipantsParticipantId");
+            // verify the required parameter 'participantId' is set
+            if (participantId == null)
+                throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->PatchCallbacksCallbackIdParticipantsParticipantId");
+
+            var localVarPath = "/api/v2/conversations/callbacks/{callbackId}/participants/{participantId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (callbackId != null) localVarPathParams.Add("callbackId", Configuration.ApiClient.ParameterToString(callbackId)); // path parameter
+            if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId)); // path parameter
+            if (body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchCallbacksCallbackIdParticipantsParticipantId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchCallbacksCallbackIdParticipantsParticipantId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+<<<<<<< HEAD
+        /// Get conversation 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <returns>Conversation</returns>
+        public Conversation ConversationsConversationidGet (string conversationId)
+        {
+             ApiResponse<Conversation> localVarResponse = ConversationsConversationidGetWithHttpInfo(conversationId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get conversation 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <returns>ApiResponse of Conversation</returns>
+        public ApiResponse< Conversation > ConversationsConversationidGetWithHttpInfo (string conversationId)
+        {
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->ConversationsConversationidGet");
+
+            var localVarPath = "/api/v1/conversations/{conversationId}";
+=======
+        /// Update the attributes on a conversation participant. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callbackId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns></returns>
+        public void PatchCallbacksCallbackIdParticipantsParticipantIdAttributes (string callbackId, string participantId, ParticipantAttributes body = null)
+        {
+             PatchCallbacksCallbackIdParticipantsParticipantIdAttributesWithHttpInfo(callbackId, participantId, body);
+        }
+
+        /// <summary>
+        /// Update the attributes on a conversation participant. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callbackId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> PatchCallbacksCallbackIdParticipantsParticipantIdAttributesWithHttpInfo (string callbackId, string participantId, ParticipantAttributes body = null)
+        {
+            // verify the required parameter 'callbackId' is set
+            if (callbackId == null)
+                throw new ApiException(400, "Missing required parameter 'callbackId' when calling ConversationsApi->PatchCallbacksCallbackIdParticipantsParticipantIdAttributes");
+            // verify the required parameter 'participantId' is set
+            if (participantId == null)
+                throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->PatchCallbacksCallbackIdParticipantsParticipantIdAttributes");
+
+            var localVarPath = "/api/v2/conversations/callbacks/{callbackId}/participants/{participantId}/attributes";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
+            if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
+=======
+            if (callbackId != null) localVarPathParams.Add("callbackId", Configuration.ApiClient.ParameterToString(callbackId)); // path parameter
+            if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId)); // path parameter
+            if (body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+<<<<<<< HEAD
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+<<<<<<< HEAD
+                throw new ApiException (localVarStatusCode, "Error calling ConversationsConversationidGet: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ConversationsConversationidGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Conversation>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Conversation) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Conversation)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PatchCallbacksCallbackIdParticipantsParticipantIdAttributes: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchCallbacksCallbackIdParticipantsParticipantIdAttributes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
+            
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+<<<<<<< HEAD
+        /// Get conversation 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <returns>Task of Conversation</returns>
+        public async System.Threading.Tasks.Task<Conversation> ConversationsConversationidGetAsync (string conversationId)
+        {
+             ApiResponse<Conversation> localVarResponse = await ConversationsConversationidGetAsyncWithHttpInfo(conversationId);
+             return localVarResponse.Data;
+=======
+        /// Update the attributes on a conversation participant. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callbackId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task PatchCallbacksCallbackIdParticipantsParticipantIdAttributesAsync (string callbackId, string participantId, ParticipantAttributes body = null)
+        {
+             await PatchCallbacksCallbackIdParticipantsParticipantIdAttributesAsyncWithHttpInfo(callbackId, participantId, body);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
+
+        }
+
+        /// <summary>
+<<<<<<< HEAD
+        /// Get conversation 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <returns>Task of ApiResponse (Conversation)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Conversation>> ConversationsConversationidGetAsyncWithHttpInfo (string conversationId)
+        {
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->ConversationsConversationidGet");
+
+            var localVarPath = "/api/v1/conversations/{conversationId}";
+=======
+        /// Update the attributes on a conversation participant. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callbackId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PatchCallbacksCallbackIdParticipantsParticipantIdAttributesAsyncWithHttpInfo (string callbackId, string participantId, ParticipantAttributes body = null)
+        {
+            // verify the required parameter 'callbackId' is set
+            if (callbackId == null)
+                throw new ApiException(400, "Missing required parameter 'callbackId' when calling ConversationsApi->PatchCallbacksCallbackIdParticipantsParticipantIdAttributes");
+            // verify the required parameter 'participantId' is set
+            if (participantId == null)
+                throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->PatchCallbacksCallbackIdParticipantsParticipantIdAttributes");
+
+            var localVarPath = "/api/v2/conversations/callbacks/{callbackId}/participants/{participantId}/attributes";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
+            if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
+=======
+            if (callbackId != null) localVarPathParams.Add("callbackId", Configuration.ApiClient.ParameterToString(callbackId)); // path parameter
+            if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId)); // path parameter
+            if (body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchCallbacksCallbackIdParticipantsParticipantIdAttributes: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchCallbacksCallbackIdParticipantsParticipantIdAttributes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// Update conversation 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callId"></param>
+        /// <param name="body">Conversation (optional)</param>
+        /// <returns>Conversation</returns>
+        public Conversation PatchCallsCallId (string callId, Conversation body = null)
+        {
+             ApiResponse<Conversation> localVarResponse = PatchCallsCallIdWithHttpInfo(callId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update conversation 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callId"></param>
+        /// <param name="body">Conversation (optional)</param>
+        /// <returns>ApiResponse of Conversation</returns>
+        public ApiResponse< Conversation > PatchCallsCallIdWithHttpInfo (string callId, Conversation body = null)
+        {
+            // verify the required parameter 'callId' is set
+            if (callId == null)
+                throw new ApiException(400, "Missing required parameter 'callId' when calling ConversationsApi->PatchCallsCallId");
+
+            var localVarPath = "/api/v2/conversations/calls/{callId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (callId != null) localVarPathParams.Add("callId", Configuration.ApiClient.ParameterToString(callId)); // path parameter
+            if (body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchCallsCallId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchCallsCallId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Conversation>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Conversation) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Conversation)));
+            
+        }
+
+        /// <summary>
+        /// Update conversation 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callId"></param>
+        /// <param name="body">Conversation (optional)</param>
+        /// <returns>Task of Conversation</returns>
+        public async System.Threading.Tasks.Task<Conversation> PatchCallsCallIdAsync (string callId, Conversation body = null)
+        {
+             ApiResponse<Conversation> localVarResponse = await PatchCallsCallIdAsyncWithHttpInfo(callId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update conversation 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callId"></param>
+        /// <param name="body">Conversation (optional)</param>
+        /// <returns>Task of ApiResponse (Conversation)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Conversation>> PatchCallsCallIdAsyncWithHttpInfo (string callId, Conversation body = null)
+        {
+            // verify the required parameter 'callId' is set
+            if (callId == null)
+                throw new ApiException(400, "Missing required parameter 'callId' when calling ConversationsApi->PatchCallsCallId");
+
+            var localVarPath = "/api/v2/conversations/calls/{callId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (callId != null) localVarPathParams.Add("callId", Configuration.ApiClient.ParameterToString(callId)); // path parameter
+            if (body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchCallsCallId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchCallsCallId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Conversation>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Conversation) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Conversation)));
+            
+        }
+
+        /// <summary>
+        /// Update conversation participant 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns></returns>
+        public void PatchCallsCallIdParticipantsParticipantId (string callId, string participantId, MediaParticipantRequest body = null)
+        {
+             PatchCallsCallIdParticipantsParticipantIdWithHttpInfo(callId, participantId, body);
+        }
+
+        /// <summary>
+        /// Update conversation participant 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> PatchCallsCallIdParticipantsParticipantIdWithHttpInfo (string callId, string participantId, MediaParticipantRequest body = null)
+        {
+            // verify the required parameter 'callId' is set
+            if (callId == null)
+                throw new ApiException(400, "Missing required parameter 'callId' when calling ConversationsApi->PatchCallsCallIdParticipantsParticipantId");
+            // verify the required parameter 'participantId' is set
+            if (participantId == null)
+                throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->PatchCallsCallIdParticipantsParticipantId");
+
+            var localVarPath = "/api/v2/conversations/calls/{callId}/participants/{participantId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (callId != null) localVarPathParams.Add("callId", Configuration.ApiClient.ParameterToString(callId)); // path parameter
+            if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId)); // path parameter
+            if (body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchCallsCallIdParticipantsParticipantId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchCallsCallIdParticipantsParticipantId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// Update conversation participant 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task PatchCallsCallIdParticipantsParticipantIdAsync (string callId, string participantId, MediaParticipantRequest body = null)
+        {
+             await PatchCallsCallIdParticipantsParticipantIdAsyncWithHttpInfo(callId, participantId, body);
+
+        }
+
+        /// <summary>
+        /// Update conversation participant 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PatchCallsCallIdParticipantsParticipantIdAsyncWithHttpInfo (string callId, string participantId, MediaParticipantRequest body = null)
+        {
+            // verify the required parameter 'callId' is set
+            if (callId == null)
+                throw new ApiException(400, "Missing required parameter 'callId' when calling ConversationsApi->PatchCallsCallIdParticipantsParticipantId");
+            // verify the required parameter 'participantId' is set
+            if (participantId == null)
+                throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->PatchCallsCallIdParticipantsParticipantId");
+
+            var localVarPath = "/api/v2/conversations/calls/{callId}/participants/{participantId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (callId != null) localVarPathParams.Add("callId", Configuration.ApiClient.ParameterToString(callId)); // path parameter
+            if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId)); // path parameter
+            if (body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+<<<<<<< HEAD
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+<<<<<<< HEAD
+                throw new ApiException (localVarStatusCode, "Error calling ConversationsConversationidGet: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ConversationsConversationidGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Conversation>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Conversation) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Conversation)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PatchCallsCallIdParticipantsParticipantId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchCallsCallIdParticipantsParticipantId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
+            
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+<<<<<<< HEAD
         /// Delete attachment from draft 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1509,6 +8806,38 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'attachmentId' when calling ConversationsApi->ConversationsConversationidMessagesDraftAttachmentsAttachmentidDelete");
 
             var localVarPath = "/api/v1/conversations/{conversationId}/messages/draft/attachments/{attachmentId}";
+=======
+        /// Update the attributes on a conversation participant. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns></returns>
+        public void PatchCallsCallIdParticipantsParticipantIdAttributes (string callId, string participantId, ParticipantAttributes body = null)
+        {
+             PatchCallsCallIdParticipantsParticipantIdAttributesWithHttpInfo(callId, participantId, body);
+        }
+
+        /// <summary>
+        /// Update the attributes on a conversation participant. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> PatchCallsCallIdParticipantsParticipantIdAttributesWithHttpInfo (string callId, string participantId, ParticipantAttributes body = null)
+        {
+            // verify the required parameter 'callId' is set
+            if (callId == null)
+                throw new ApiException(400, "Missing required parameter 'callId' when calling ConversationsApi->PatchCallsCallIdParticipantsParticipantIdAttributes");
+            // verify the required parameter 'participantId' is set
+            if (participantId == null)
+                throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->PatchCallsCallIdParticipantsParticipantIdAttributes");
+
+            var localVarPath = "/api/v2/conversations/calls/{callId}/participants/{participantId}/attributes";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1533,8 +8862,21 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
             if (attachmentId != null) localVarPathParams.Add("attachmentId", Configuration.ApiClient.ParameterToString(attachmentId)); // path parameter
+=======
+            if (callId != null) localVarPathParams.Add("callId", Configuration.ApiClient.ParameterToString(callId)); // path parameter
+            if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId)); // path parameter
+            if (body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -1545,12 +8887,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+<<<<<<< HEAD
                 Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsConversationidMessagesDraftAttachmentsAttachmentidDelete: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsConversationidMessagesDraftAttachmentsAttachmentidDelete: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -1558,10 +8905,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PatchCallsCallIdParticipantsParticipantIdAttributes: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchCallsCallIdParticipantsParticipantIdAttributes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Delete attachment from draft 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1572,10 +8929,23 @@ namespace ININ.PureCloudApi.Api
         {
              ApiResponse<string> localVarResponse = await ConversationsConversationidMessagesDraftAttachmentsAttachmentidDeleteAsyncWithHttpInfo(conversationId, attachmentId);
              return localVarResponse.Data;
+=======
+        /// Update the attributes on a conversation participant. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task PatchCallsCallIdParticipantsParticipantIdAttributesAsync (string callId, string participantId, ParticipantAttributes body = null)
+        {
+             await PatchCallsCallIdParticipantsParticipantIdAttributesAsyncWithHttpInfo(callId, participantId, body);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Delete attachment from draft 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1592,6 +8962,25 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'attachmentId' when calling ConversationsApi->ConversationsConversationidMessagesDraftAttachmentsAttachmentidDelete");
 
             var localVarPath = "/api/v1/conversations/{conversationId}/messages/draft/attachments/{attachmentId}";
+=======
+        /// Update the attributes on a conversation participant. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PatchCallsCallIdParticipantsParticipantIdAttributesAsyncWithHttpInfo (string callId, string participantId, ParticipantAttributes body = null)
+        {
+            // verify the required parameter 'callId' is set
+            if (callId == null)
+                throw new ApiException(400, "Missing required parameter 'callId' when calling ConversationsApi->PatchCallsCallIdParticipantsParticipantIdAttributes");
+            // verify the required parameter 'participantId' is set
+            if (participantId == null)
+                throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->PatchCallsCallIdParticipantsParticipantIdAttributes");
+
+            var localVarPath = "/api/v2/conversations/calls/{callId}/participants/{participantId}/attributes";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1616,8 +9005,21 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
             if (attachmentId != null) localVarPathParams.Add("attachmentId", Configuration.ApiClient.ParameterToString(attachmentId)); // path parameter
+=======
+            if (callId != null) localVarPathParams.Add("callId", Configuration.ApiClient.ParameterToString(callId)); // path parameter
+            if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId)); // path parameter
+            if (body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -1628,12 +9030,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+<<<<<<< HEAD
                 Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsConversationidMessagesDraftAttachmentsAttachmentidDelete: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsConversationidMessagesDraftAttachmentsAttachmentidDelete: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -1641,10 +9048,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PatchCallsCallIdParticipantsParticipantIdAttributes: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchCallsCallIdParticipantsParticipantIdAttributes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Get conversation draft reply 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1653,10 +9070,23 @@ namespace ININ.PureCloudApi.Api
         public EmailMessage ConversationsConversationidMessagesDraftGet (string conversationId)
         {
              ApiResponse<EmailMessage> localVarResponse = ConversationsConversationidMessagesDraftGetWithHttpInfo(conversationId);
+=======
+        /// Change who can speak 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body">new speak to (optional)</param>
+        /// <returns>ConsultTransferResponse</returns>
+        public ConsultTransferResponse PatchCallsCallIdParticipantsParticipantIdConsult (string callId, string participantId, ConsultTransferUpdate body = null)
+        {
+             ApiResponse<ConsultTransferResponse> localVarResponse = PatchCallsCallIdParticipantsParticipantIdConsultWithHttpInfo(callId, participantId, body);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Get conversation draft reply 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1669,6 +9099,25 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->ConversationsConversationidMessagesDraftGet");
 
             var localVarPath = "/api/v1/conversations/{conversationId}/messages/draft";
+=======
+        /// Change who can speak 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body">new speak to (optional)</param>
+        /// <returns>ApiResponse of ConsultTransferResponse</returns>
+        public ApiResponse< ConsultTransferResponse > PatchCallsCallIdParticipantsParticipantIdConsultWithHttpInfo (string callId, string participantId, ConsultTransferUpdate body = null)
+        {
+            // verify the required parameter 'callId' is set
+            if (callId == null)
+                throw new ApiException(400, "Missing required parameter 'callId' when calling ConversationsApi->PatchCallsCallIdParticipantsParticipantIdConsult");
+            // verify the required parameter 'participantId' is set
+            if (participantId == null)
+                throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->PatchCallsCallIdParticipantsParticipantIdConsult");
+
+            var localVarPath = "/api/v2/conversations/calls/{callId}/participants/{participantId}/consult";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1693,7 +9142,20 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
+=======
+            if (callId != null) localVarPathParams.Add("callId", Configuration.ApiClient.ParameterToString(callId)); // path parameter
+            if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId)); // path parameter
+            if (body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -1704,12 +9166,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+<<<<<<< HEAD
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsConversationidMessagesDraftGet: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsConversationidMessagesDraftGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -1717,10 +9184,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<EmailMessage>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (EmailMessage) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmailMessage)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PatchCallsCallIdParticipantsParticipantIdConsult: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchCallsCallIdParticipantsParticipantIdConsult: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ConsultTransferResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ConsultTransferResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConsultTransferResponse)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Get conversation draft reply 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1729,11 +9206,24 @@ namespace ININ.PureCloudApi.Api
         public async System.Threading.Tasks.Task<EmailMessage> ConversationsConversationidMessagesDraftGetAsync (string conversationId)
         {
              ApiResponse<EmailMessage> localVarResponse = await ConversationsConversationidMessagesDraftGetAsyncWithHttpInfo(conversationId);
+=======
+        /// Change who can speak 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body">new speak to (optional)</param>
+        /// <returns>Task of ConsultTransferResponse</returns>
+        public async System.Threading.Tasks.Task<ConsultTransferResponse> PatchCallsCallIdParticipantsParticipantIdConsultAsync (string callId, string participantId, ConsultTransferUpdate body = null)
+        {
+             ApiResponse<ConsultTransferResponse> localVarResponse = await PatchCallsCallIdParticipantsParticipantIdConsultAsyncWithHttpInfo(callId, participantId, body);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
 
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Get conversation draft reply 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1746,6 +9236,25 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->ConversationsConversationidMessagesDraftGet");
 
             var localVarPath = "/api/v1/conversations/{conversationId}/messages/draft";
+=======
+        /// Change who can speak 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body">new speak to (optional)</param>
+        /// <returns>Task of ApiResponse (ConsultTransferResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ConsultTransferResponse>> PatchCallsCallIdParticipantsParticipantIdConsultAsyncWithHttpInfo (string callId, string participantId, ConsultTransferUpdate body = null)
+        {
+            // verify the required parameter 'callId' is set
+            if (callId == null)
+                throw new ApiException(400, "Missing required parameter 'callId' when calling ConversationsApi->PatchCallsCallIdParticipantsParticipantIdConsult");
+            // verify the required parameter 'participantId' is set
+            if (participantId == null)
+                throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->PatchCallsCallIdParticipantsParticipantIdConsult");
+
+            var localVarPath = "/api/v2/conversations/calls/{callId}/participants/{participantId}/consult";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1770,7 +9279,20 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
+=======
+            if (callId != null) localVarPathParams.Add("callId", Configuration.ApiClient.ParameterToString(callId)); // path parameter
+            if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId)); // path parameter
+            if (body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -1781,12 +9303,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+<<<<<<< HEAD
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsConversationidMessagesDraftGet: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsConversationidMessagesDraftGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -1794,10 +9321,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<EmailMessage>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (EmailMessage) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmailMessage)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PatchCallsCallIdParticipantsParticipantIdConsult: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchCallsCallIdParticipantsParticipantIdConsult: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ConsultTransferResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ConsultTransferResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConsultTransferResponse)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Update conversation draft reply 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1824,6 +9361,38 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->ConversationsConversationidMessagesDraftPut");
 
             var localVarPath = "/api/v1/conversations/{conversationId}/messages/draft";
+=======
+        /// Update conversation participant 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="chatId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns></returns>
+        public void PatchChatsChatIdParticipantsParticipantId (string chatId, string participantId, MediaParticipantRequest body = null)
+        {
+             PatchChatsChatIdParticipantsParticipantIdWithHttpInfo(chatId, participantId, body);
+        }
+
+        /// <summary>
+        /// Update conversation participant 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="chatId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> PatchChatsChatIdParticipantsParticipantIdWithHttpInfo (string chatId, string participantId, MediaParticipantRequest body = null)
+        {
+            // verify the required parameter 'chatId' is set
+            if (chatId == null)
+                throw new ApiException(400, "Missing required parameter 'chatId' when calling ConversationsApi->PatchChatsChatIdParticipantsParticipantId");
+            // verify the required parameter 'participantId' is set
+            if (participantId == null)
+                throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->PatchChatsChatIdParticipantsParticipantId");
+
+            var localVarPath = "/api/v2/conversations/chats/{chatId}/participants/{participantId}";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1848,7 +9417,12 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
+=======
+            if (chatId != null) localVarPathParams.Add("chatId", Configuration.ApiClient.ParameterToString(chatId)); // path parameter
+            if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId)); // path parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -1867,12 +9441,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+<<<<<<< HEAD
                 Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsConversationidMessagesDraftPut: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsConversationidMessagesDraftPut: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -1880,10 +9459,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<EmailMessage>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (EmailMessage) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmailMessage)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PatchChatsChatIdParticipantsParticipantId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchChatsChatIdParticipantsParticipantId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Update conversation draft reply 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1894,10 +9483,23 @@ namespace ININ.PureCloudApi.Api
         {
              ApiResponse<EmailMessage> localVarResponse = await ConversationsConversationidMessagesDraftPutAsyncWithHttpInfo(conversationId, body);
              return localVarResponse.Data;
+=======
+        /// Update conversation participant 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="chatId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task PatchChatsChatIdParticipantsParticipantIdAsync (string chatId, string participantId, MediaParticipantRequest body = null)
+        {
+             await PatchChatsChatIdParticipantsParticipantIdAsyncWithHttpInfo(chatId, participantId, body);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Update conversation draft reply 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1911,6 +9513,25 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->ConversationsConversationidMessagesDraftPut");
 
             var localVarPath = "/api/v1/conversations/{conversationId}/messages/draft";
+=======
+        /// Update conversation participant 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="chatId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PatchChatsChatIdParticipantsParticipantIdAsyncWithHttpInfo (string chatId, string participantId, MediaParticipantRequest body = null)
+        {
+            // verify the required parameter 'chatId' is set
+            if (chatId == null)
+                throw new ApiException(400, "Missing required parameter 'chatId' when calling ConversationsApi->PatchChatsChatIdParticipantsParticipantId");
+            // verify the required parameter 'participantId' is set
+            if (participantId == null)
+                throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->PatchChatsChatIdParticipantsParticipantId");
+
+            var localVarPath = "/api/v2/conversations/chats/{chatId}/participants/{participantId}";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1935,7 +9556,12 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
+=======
+            if (chatId != null) localVarPathParams.Add("chatId", Configuration.ApiClient.ParameterToString(chatId)); // path parameter
+            if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId)); // path parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -1954,12 +9580,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+<<<<<<< HEAD
                 Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsConversationidMessagesDraftPut: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsConversationidMessagesDraftPut: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -1967,10 +9598,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<EmailMessage>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (EmailMessage) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmailMessage)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PatchChatsChatIdParticipantsParticipantId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchChatsChatIdParticipantsParticipantId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Get conversation messages 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1995,6 +9636,38 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->ConversationsConversationidMessagesGet");
 
             var localVarPath = "/api/v1/conversations/{conversationId}/messages";
+=======
+        /// Update the attributes on a conversation participant. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="chatId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns></returns>
+        public void PatchChatsChatIdParticipantsParticipantIdAttributes (string chatId, string participantId, ParticipantAttributes body = null)
+        {
+             PatchChatsChatIdParticipantsParticipantIdAttributesWithHttpInfo(chatId, participantId, body);
+        }
+
+        /// <summary>
+        /// Update the attributes on a conversation participant. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="chatId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> PatchChatsChatIdParticipantsParticipantIdAttributesWithHttpInfo (string chatId, string participantId, ParticipantAttributes body = null)
+        {
+            // verify the required parameter 'chatId' is set
+            if (chatId == null)
+                throw new ApiException(400, "Missing required parameter 'chatId' when calling ConversationsApi->PatchChatsChatIdParticipantsParticipantIdAttributes");
+            // verify the required parameter 'participantId' is set
+            if (participantId == null)
+                throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->PatchChatsChatIdParticipantsParticipantIdAttributes");
+
+            var localVarPath = "/api/v2/conversations/chats/{chatId}/participants/{participantId}/attributes";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2019,7 +9692,20 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
+=======
+            if (chatId != null) localVarPathParams.Add("chatId", Configuration.ApiClient.ParameterToString(chatId)); // path parameter
+            if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId)); // path parameter
+            if (body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -2030,12 +9716,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+<<<<<<< HEAD
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsConversationidMessagesGet: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsConversationidMessagesGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -2043,10 +9734,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<EmailMessageListing>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (EmailMessageListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmailMessageListing)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PatchChatsChatIdParticipantsParticipantIdAttributes: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchChatsChatIdParticipantsParticipantIdAttributes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Get conversation messages 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -2056,10 +9757,23 @@ namespace ININ.PureCloudApi.Api
         {
              ApiResponse<EmailMessageListing> localVarResponse = await ConversationsConversationidMessagesGetAsyncWithHttpInfo(conversationId);
              return localVarResponse.Data;
+=======
+        /// Update the attributes on a conversation participant. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="chatId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task PatchChatsChatIdParticipantsParticipantIdAttributesAsync (string chatId, string participantId, ParticipantAttributes body = null)
+        {
+             await PatchChatsChatIdParticipantsParticipantIdAttributesAsyncWithHttpInfo(chatId, participantId, body);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Get conversation messages 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -2072,6 +9786,25 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->ConversationsConversationidMessagesGet");
 
             var localVarPath = "/api/v1/conversations/{conversationId}/messages";
+=======
+        /// Update the attributes on a conversation participant. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="chatId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PatchChatsChatIdParticipantsParticipantIdAttributesAsyncWithHttpInfo (string chatId, string participantId, ParticipantAttributes body = null)
+        {
+            // verify the required parameter 'chatId' is set
+            if (chatId == null)
+                throw new ApiException(400, "Missing required parameter 'chatId' when calling ConversationsApi->PatchChatsChatIdParticipantsParticipantIdAttributes");
+            // verify the required parameter 'participantId' is set
+            if (participantId == null)
+                throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->PatchChatsChatIdParticipantsParticipantIdAttributes");
+
+            var localVarPath = "/api/v2/conversations/chats/{chatId}/participants/{participantId}/attributes";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2096,7 +9829,20 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
+=======
+            if (chatId != null) localVarPathParams.Add("chatId", Configuration.ApiClient.ParameterToString(chatId)); // path parameter
+            if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId)); // path parameter
+            if (body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -2107,12 +9853,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+<<<<<<< HEAD
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsConversationidMessagesGet: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsConversationidMessagesGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -2120,10 +9871,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<EmailMessageListing>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (EmailMessageListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmailMessageListing)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PatchChatsChatIdParticipantsParticipantIdAttributes: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchChatsChatIdParticipantsParticipantIdAttributes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Get conversation message 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -2153,6 +9914,38 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'id' when calling ConversationsApi->ConversationsConversationidMessagesIdGet");
 
             var localVarPath = "/api/v1/conversations/{conversationId}/messages/{id}";
+=======
+        /// Update a participant. Update conversation participant.
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="participantId">participant ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns></returns>
+        public void PatchConversationIdParticipantsParticipantId (string conversationId, string participantId, MediaParticipantRequest body = null)
+        {
+             PatchConversationIdParticipantsParticipantIdWithHttpInfo(conversationId, participantId, body);
+        }
+
+        /// <summary>
+        /// Update a participant. Update conversation participant.
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="participantId">participant ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> PatchConversationIdParticipantsParticipantIdWithHttpInfo (string conversationId, string participantId, MediaParticipantRequest body = null)
+        {
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->PatchConversationIdParticipantsParticipantId");
+            // verify the required parameter 'participantId' is set
+            if (participantId == null)
+                throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->PatchConversationIdParticipantsParticipantId");
+
+            var localVarPath = "/api/v2/conversations/{conversationId}/participants/{participantId}";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2162,6 +9955,7 @@ namespace ININ.PureCloudApi.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+<<<<<<< HEAD
                 "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
@@ -2174,11 +9968,37 @@ namespace ININ.PureCloudApi.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+=======
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
+<<<<<<< HEAD
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+=======
+            if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId)); // path parameter
+            if (body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -2189,12 +10009,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+<<<<<<< HEAD
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsConversationidMessagesIdGet: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsConversationidMessagesIdGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -2202,10 +10027,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<EmailMessage>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (EmailMessage) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmailMessage)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PatchConversationIdParticipantsParticipantId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchConversationIdParticipantsParticipantId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Get conversation message 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -2216,10 +10051,23 @@ namespace ININ.PureCloudApi.Api
         {
              ApiResponse<EmailMessage> localVarResponse = await ConversationsConversationidMessagesIdGetAsyncWithHttpInfo(conversationId, id);
              return localVarResponse.Data;
+=======
+        /// Update a participant. Update conversation participant.
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="participantId">participant ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task PatchConversationIdParticipantsParticipantIdAsync (string conversationId, string participantId, MediaParticipantRequest body = null)
+        {
+             await PatchConversationIdParticipantsParticipantIdAsyncWithHttpInfo(conversationId, participantId, body);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Get conversation message 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -2236,6 +10084,25 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'id' when calling ConversationsApi->ConversationsConversationidMessagesIdGet");
 
             var localVarPath = "/api/v1/conversations/{conversationId}/messages/{id}";
+=======
+        /// Update a participant. Update conversation participant.
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="participantId">participant ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PatchConversationIdParticipantsParticipantIdAsyncWithHttpInfo (string conversationId, string participantId, MediaParticipantRequest body = null)
+        {
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->PatchConversationIdParticipantsParticipantId");
+            // verify the required parameter 'participantId' is set
+            if (participantId == null)
+                throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->PatchConversationIdParticipantsParticipantId");
+
+            var localVarPath = "/api/v2/conversations/{conversationId}/participants/{participantId}";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2261,7 +10128,19 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
+<<<<<<< HEAD
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+=======
+            if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId)); // path parameter
+            if (body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -2272,12 +10151,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+<<<<<<< HEAD
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsConversationidMessagesIdGet: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsConversationidMessagesIdGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -2285,10 +10169,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<EmailMessage>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (EmailMessage) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmailMessage)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PatchConversationIdParticipantsParticipantId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchConversationIdParticipantsParticipantId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Send an email reply 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -2315,6 +10209,38 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->ConversationsConversationidMessagesPost");
 
             var localVarPath = "/api/v1/conversations/{conversationId}/messages";
+=======
+        /// Update the attributes on a conversation participant. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="participantId">participant ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns></returns>
+        public void PatchConversationIdParticipantsParticipantIdAttributes (string conversationId, string participantId, ParticipantAttributes body = null)
+        {
+             PatchConversationIdParticipantsParticipantIdAttributesWithHttpInfo(conversationId, participantId, body);
+        }
+
+        /// <summary>
+        /// Update the attributes on a conversation participant. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="participantId">participant ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> PatchConversationIdParticipantsParticipantIdAttributesWithHttpInfo (string conversationId, string participantId, ParticipantAttributes body = null)
+        {
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->PatchConversationIdParticipantsParticipantIdAttributes");
+            // verify the required parameter 'participantId' is set
+            if (participantId == null)
+                throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->PatchConversationIdParticipantsParticipantIdAttributes");
+
+            var localVarPath = "/api/v2/conversations/{conversationId}/participants/{participantId}/attributes";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2340,6 +10266,10 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
+<<<<<<< HEAD
+=======
+            if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId)); // path parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -2358,12 +10288,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+<<<<<<< HEAD
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsConversationidMessagesPost: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsConversationidMessagesPost: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -2371,10 +10306,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<EmailMessage>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (EmailMessage) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmailMessage)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PatchConversationIdParticipantsParticipantIdAttributes: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchConversationIdParticipantsParticipantIdAttributes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Send an email reply 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -2385,10 +10330,23 @@ namespace ININ.PureCloudApi.Api
         {
              ApiResponse<EmailMessage> localVarResponse = await ConversationsConversationidMessagesPostAsyncWithHttpInfo(conversationId, body);
              return localVarResponse.Data;
+=======
+        /// Update the attributes on a conversation participant. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="participantId">participant ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task PatchConversationIdParticipantsParticipantIdAttributesAsync (string conversationId, string participantId, ParticipantAttributes body = null)
+        {
+             await PatchConversationIdParticipantsParticipantIdAttributesAsyncWithHttpInfo(conversationId, participantId, body);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Send an email reply 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -2402,6 +10360,25 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->ConversationsConversationidMessagesPost");
 
             var localVarPath = "/api/v1/conversations/{conversationId}/messages";
+=======
+        /// Update the attributes on a conversation participant. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="participantId">participant ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PatchConversationIdParticipantsParticipantIdAttributesAsyncWithHttpInfo (string conversationId, string participantId, ParticipantAttributes body = null)
+        {
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->PatchConversationIdParticipantsParticipantIdAttributes");
+            // verify the required parameter 'participantId' is set
+            if (participantId == null)
+                throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->PatchConversationIdParticipantsParticipantIdAttributes");
+
+            var localVarPath = "/api/v2/conversations/{conversationId}/participants/{participantId}/attributes";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2427,6 +10404,10 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
+<<<<<<< HEAD
+=======
+            if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId)); // path parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -2445,12 +10426,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+<<<<<<< HEAD
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsConversationidMessagesPost: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsConversationidMessagesPost: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -2458,10 +10444,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<EmailMessage>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (EmailMessage) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmailMessage)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PatchConversationIdParticipantsParticipantIdAttributes: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchConversationIdParticipantsParticipantIdAttributes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Update the attributes on a conversation participant. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -2492,6 +10488,38 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->ConversationsConversationidParticipantsParticipantidAttributesPut");
 
             var localVarPath = "/api/v1/conversations/{conversationId}/participants/{participantId}/attributes";
+=======
+        /// Update conversation participant 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns></returns>
+        public void PatchEmailsEmailIdParticipantsParticipantId (string emailId, string participantId, MediaParticipantRequest body = null)
+        {
+             PatchEmailsEmailIdParticipantsParticipantIdWithHttpInfo(emailId, participantId, body);
+        }
+
+        /// <summary>
+        /// Update conversation participant 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> PatchEmailsEmailIdParticipantsParticipantIdWithHttpInfo (string emailId, string participantId, MediaParticipantRequest body = null)
+        {
+            // verify the required parameter 'emailId' is set
+            if (emailId == null)
+                throw new ApiException(400, "Missing required parameter 'emailId' when calling ConversationsApi->PatchEmailsEmailIdParticipantsParticipantId");
+            // verify the required parameter 'participantId' is set
+            if (participantId == null)
+                throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->PatchEmailsEmailIdParticipantsParticipantId");
+
+            var localVarPath = "/api/v2/conversations/emails/{emailId}/participants/{participantId}";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2516,7 +10544,11 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
+=======
+            if (emailId != null) localVarPathParams.Add("emailId", Configuration.ApiClient.ParameterToString(emailId)); // path parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId)); // path parameter
             if (body.GetType() != typeof(byte[]))
             {
@@ -2536,15 +10568,25 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+<<<<<<< HEAD
                 Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsConversationidParticipantsParticipantidAttributesPut: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsConversationidParticipantsParticipantidAttributesPut: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PatchEmailsEmailIdParticipantsParticipantId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchEmailsEmailIdParticipantsParticipantId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             
             return new ApiResponse<Object>(localVarStatusCode,
@@ -2553,6 +10595,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Update the attributes on a conversation participant. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -2563,10 +10606,23 @@ namespace ININ.PureCloudApi.Api
         public async System.Threading.Tasks.Task ConversationsConversationidParticipantsParticipantidAttributesPutAsync (string conversationId, string participantId, ParticipantAttributes body = null)
         {
              await ConversationsConversationidParticipantsParticipantidAttributesPutAsyncWithHttpInfo(conversationId, participantId, body);
+=======
+        /// Update conversation participant 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task PatchEmailsEmailIdParticipantsParticipantIdAsync (string emailId, string participantId, MediaParticipantRequest body = null)
+        {
+             await PatchEmailsEmailIdParticipantsParticipantIdAsyncWithHttpInfo(emailId, participantId, body);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Update the attributes on a conversation participant. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -2584,6 +10640,25 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->ConversationsConversationidParticipantsParticipantidAttributesPut");
 
             var localVarPath = "/api/v1/conversations/{conversationId}/participants/{participantId}/attributes";
+=======
+        /// Update conversation participant 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PatchEmailsEmailIdParticipantsParticipantIdAsyncWithHttpInfo (string emailId, string participantId, MediaParticipantRequest body = null)
+        {
+            // verify the required parameter 'emailId' is set
+            if (emailId == null)
+                throw new ApiException(400, "Missing required parameter 'emailId' when calling ConversationsApi->PatchEmailsEmailIdParticipantsParticipantId");
+            // verify the required parameter 'participantId' is set
+            if (participantId == null)
+                throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->PatchEmailsEmailIdParticipantsParticipantId");
+
+            var localVarPath = "/api/v2/conversations/emails/{emailId}/participants/{participantId}";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2608,7 +10683,11 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
+=======
+            if (emailId != null) localVarPathParams.Add("emailId", Configuration.ApiClient.ParameterToString(emailId)); // path parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId)); // path parameter
             if (body.GetType() != typeof(byte[]))
             {
@@ -2628,15 +10707,25 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+<<<<<<< HEAD
                 Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsConversationidParticipantsParticipantidAttributesPut: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsConversationidParticipantsParticipantidAttributesPut: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PatchEmailsEmailIdParticipantsParticipantId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchEmailsEmailIdParticipantsParticipantId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             
             return new ApiResponse<Object>(localVarStatusCode,
@@ -2645,6 +10734,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Cancel the transfer 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -2674,6 +10764,38 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->ConversationsConversationidParticipantsParticipantidConsultDelete");
 
             var localVarPath = "/api/v1/conversations/{conversationId}/participants/{participantId}/consult";
+=======
+        /// Update the attributes on a conversation participant. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns></returns>
+        public void PatchEmailsEmailIdParticipantsParticipantIdAttributes (string emailId, string participantId, ParticipantAttributes body = null)
+        {
+             PatchEmailsEmailIdParticipantsParticipantIdAttributesWithHttpInfo(emailId, participantId, body);
+        }
+
+        /// <summary>
+        /// Update the attributes on a conversation participant. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> PatchEmailsEmailIdParticipantsParticipantIdAttributesWithHttpInfo (string emailId, string participantId, ParticipantAttributes body = null)
+        {
+            // verify the required parameter 'emailId' is set
+            if (emailId == null)
+                throw new ApiException(400, "Missing required parameter 'emailId' when calling ConversationsApi->PatchEmailsEmailIdParticipantsParticipantIdAttributes");
+            // verify the required parameter 'participantId' is set
+            if (participantId == null)
+                throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->PatchEmailsEmailIdParticipantsParticipantIdAttributes");
+
+            var localVarPath = "/api/v2/conversations/emails/{emailId}/participants/{participantId}/attributes";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2698,8 +10820,21 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
             if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId)); // path parameter
+=======
+            if (emailId != null) localVarPathParams.Add("emailId", Configuration.ApiClient.ParameterToString(emailId)); // path parameter
+            if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId)); // path parameter
+            if (body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -2710,12 +10845,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+<<<<<<< HEAD
                 Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsConversationidParticipantsParticipantidConsultDelete: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsConversationidParticipantsParticipantidConsultDelete: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -2723,10 +10863,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PatchEmailsEmailIdParticipantsParticipantIdAttributes: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchEmailsEmailIdParticipantsParticipantIdAttributes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Cancel the transfer 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -2737,10 +10887,23 @@ namespace ININ.PureCloudApi.Api
         {
              ApiResponse<string> localVarResponse = await ConversationsConversationidParticipantsParticipantidConsultDeleteAsyncWithHttpInfo(conversationId, participantId);
              return localVarResponse.Data;
+=======
+        /// Update the attributes on a conversation participant. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task PatchEmailsEmailIdParticipantsParticipantIdAttributesAsync (string emailId, string participantId, ParticipantAttributes body = null)
+        {
+             await PatchEmailsEmailIdParticipantsParticipantIdAttributesAsyncWithHttpInfo(emailId, participantId, body);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Cancel the transfer 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -2757,6 +10920,25 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->ConversationsConversationidParticipantsParticipantidConsultDelete");
 
             var localVarPath = "/api/v1/conversations/{conversationId}/participants/{participantId}/consult";
+=======
+        /// Update the attributes on a conversation participant. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PatchEmailsEmailIdParticipantsParticipantIdAttributesAsyncWithHttpInfo (string emailId, string participantId, ParticipantAttributes body = null)
+        {
+            // verify the required parameter 'emailId' is set
+            if (emailId == null)
+                throw new ApiException(400, "Missing required parameter 'emailId' when calling ConversationsApi->PatchEmailsEmailIdParticipantsParticipantIdAttributes");
+            // verify the required parameter 'participantId' is set
+            if (participantId == null)
+                throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->PatchEmailsEmailIdParticipantsParticipantIdAttributes");
+
+            var localVarPath = "/api/v2/conversations/emails/{emailId}/participants/{participantId}/attributes";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2781,8 +10963,21 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
             if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId)); // path parameter
+=======
+            if (emailId != null) localVarPathParams.Add("emailId", Configuration.ApiClient.ParameterToString(emailId)); // path parameter
+            if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId)); // path parameter
+            if (body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -2793,12 +10988,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+<<<<<<< HEAD
                 Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsConversationidParticipantsParticipantidConsultDelete: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsConversationidParticipantsParticipantidConsultDelete: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -2806,10 +11006,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PatchEmailsEmailIdParticipantsParticipantIdAttributes: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchEmailsEmailIdParticipantsParticipantIdAttributes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Initiate and update consult transfer 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -2841,6 +11051,38 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->ConversationsConversationidParticipantsParticipantidConsultPost");
 
             var localVarPath = "/api/v1/conversations/{conversationId}/participants/{participantId}/consult";
+=======
+        /// Replace this participant with the specified user and/or address 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callbackId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns></returns>
+        public void PostCallbacksCallbackIdParticipantsParticipantIdReplace (string callbackId, string participantId, TransferRequest body = null)
+        {
+             PostCallbacksCallbackIdParticipantsParticipantIdReplaceWithHttpInfo(callbackId, participantId, body);
+        }
+
+        /// <summary>
+        /// Replace this participant with the specified user and/or address 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callbackId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> PostCallbacksCallbackIdParticipantsParticipantIdReplaceWithHttpInfo (string callbackId, string participantId, TransferRequest body = null)
+        {
+            // verify the required parameter 'callbackId' is set
+            if (callbackId == null)
+                throw new ApiException(400, "Missing required parameter 'callbackId' when calling ConversationsApi->PostCallbacksCallbackIdParticipantsParticipantIdReplace");
+            // verify the required parameter 'participantId' is set
+            if (participantId == null)
+                throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->PostCallbacksCallbackIdParticipantsParticipantIdReplace");
+
+            var localVarPath = "/api/v2/conversations/callbacks/{callbackId}/participants/{participantId}/replace";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2865,7 +11107,11 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
+=======
+            if (callbackId != null) localVarPathParams.Add("callbackId", Configuration.ApiClient.ParameterToString(callbackId)); // path parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId)); // path parameter
             if (body.GetType() != typeof(byte[]))
             {
@@ -2891,6 +11137,7 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsConversationidParticipantsParticipantidConsultPost: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsConversationidParticipantsParticipantidConsultPost: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -2898,10 +11145,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<ConsultTransferResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ConsultTransferResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConsultTransferResponse)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PostCallbacksCallbackIdParticipantsParticipantIdReplace: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostCallbacksCallbackIdParticipantsParticipantIdReplace: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Initiate and update consult transfer 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -2913,10 +11170,23 @@ namespace ININ.PureCloudApi.Api
         {
              ApiResponse<ConsultTransferResponse> localVarResponse = await ConversationsConversationidParticipantsParticipantidConsultPostAsyncWithHttpInfo(conversationId, participantId, body);
              return localVarResponse.Data;
+=======
+        /// Replace this participant with the specified user and/or address 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callbackId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task PostCallbacksCallbackIdParticipantsParticipantIdReplaceAsync (string callbackId, string participantId, TransferRequest body = null)
+        {
+             await PostCallbacksCallbackIdParticipantsParticipantIdReplaceAsyncWithHttpInfo(callbackId, participantId, body);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Initiate and update consult transfer 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -2934,6 +11204,25 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->ConversationsConversationidParticipantsParticipantidConsultPost");
 
             var localVarPath = "/api/v1/conversations/{conversationId}/participants/{participantId}/consult";
+=======
+        /// Replace this participant with the specified user and/or address 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callbackId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostCallbacksCallbackIdParticipantsParticipantIdReplaceAsyncWithHttpInfo (string callbackId, string participantId, TransferRequest body = null)
+        {
+            // verify the required parameter 'callbackId' is set
+            if (callbackId == null)
+                throw new ApiException(400, "Missing required parameter 'callbackId' when calling ConversationsApi->PostCallbacksCallbackIdParticipantsParticipantIdReplace");
+            // verify the required parameter 'participantId' is set
+            if (participantId == null)
+                throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->PostCallbacksCallbackIdParticipantsParticipantIdReplace");
+
+            var localVarPath = "/api/v2/conversations/callbacks/{callbackId}/participants/{participantId}/replace";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2958,7 +11247,11 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
+=======
+            if (callbackId != null) localVarPathParams.Add("callbackId", Configuration.ApiClient.ParameterToString(callbackId)); // path parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId)); // path parameter
             if (body.GetType() != typeof(byte[]))
             {
@@ -2984,6 +11277,7 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsConversationidParticipantsParticipantidConsultPost: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsConversationidParticipantsParticipantidConsultPost: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -2991,10 +11285,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<ConsultTransferResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ConsultTransferResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConsultTransferResponse)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PostCallbacksCallbackIdParticipantsParticipantIdReplace: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostCallbacksCallbackIdParticipantsParticipantIdReplace: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Change who can speak 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3005,10 +11309,21 @@ namespace ININ.PureCloudApi.Api
         public ConsultTransferResponse ConversationsConversationidParticipantsParticipantidConsultPut (string conversationId, string participantId, ConsultTransferUpdate body = null)
         {
              ApiResponse<ConsultTransferResponse> localVarResponse = ConversationsConversationidParticipantsParticipantidConsultPutWithHttpInfo(conversationId, participantId, body);
+=======
+        /// Create a call conversation 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>CreateCallResponse</returns>
+        public CreateCallResponse PostCalls (CreateCallRequest body = null)
+        {
+             ApiResponse<CreateCallResponse> localVarResponse = PostCallsWithHttpInfo(body);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Change who can speak 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3026,6 +11341,17 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->ConversationsConversationidParticipantsParticipantidConsultPut");
 
             var localVarPath = "/api/v1/conversations/{conversationId}/participants/{participantId}/consult";
+=======
+        /// Create a call conversation 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of CreateCallResponse</returns>
+        public ApiResponse< CreateCallResponse > PostCallsWithHttpInfo (CreateCallRequest body = null)
+        {
+
+            var localVarPath = "/api/v2/conversations/calls";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -3050,8 +11376,11 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
             if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId)); // path parameter
+=======
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -3070,12 +11399,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+<<<<<<< HEAD
                 Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsConversationidParticipantsParticipantidConsultPut: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsConversationidParticipantsParticipantidConsultPut: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -3083,10 +11417,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<ConsultTransferResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ConsultTransferResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConsultTransferResponse)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PostCalls: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostCalls: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CreateCallResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (CreateCallResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CreateCallResponse)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Change who can speak 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3097,11 +11441,22 @@ namespace ININ.PureCloudApi.Api
         public async System.Threading.Tasks.Task<ConsultTransferResponse> ConversationsConversationidParticipantsParticipantidConsultPutAsync (string conversationId, string participantId, ConsultTransferUpdate body = null)
         {
              ApiResponse<ConsultTransferResponse> localVarResponse = await ConversationsConversationidParticipantsParticipantidConsultPutAsyncWithHttpInfo(conversationId, participantId, body);
+=======
+        /// Create a call conversation 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of CreateCallResponse</returns>
+        public async System.Threading.Tasks.Task<CreateCallResponse> PostCallsAsync (CreateCallRequest body = null)
+        {
+             ApiResponse<CreateCallResponse> localVarResponse = await PostCallsAsyncWithHttpInfo(body);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
 
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Change who can speak 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3119,6 +11474,17 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->ConversationsConversationidParticipantsParticipantidConsultPut");
 
             var localVarPath = "/api/v1/conversations/{conversationId}/participants/{participantId}/consult";
+=======
+        /// Create a call conversation 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse (CreateCallResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CreateCallResponse>> PostCallsAsyncWithHttpInfo (CreateCallRequest body = null)
+        {
+
+            var localVarPath = "/api/v2/conversations/calls";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -3143,8 +11509,11 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
             if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId)); // path parameter
+=======
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -3163,12 +11532,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+<<<<<<< HEAD
                 Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsConversationidParticipantsParticipantidConsultPut: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsConversationidParticipantsParticipantidConsultPut: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -3176,10 +11550,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<ConsultTransferResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ConsultTransferResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConsultTransferResponse)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PostCalls: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostCalls: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CreateCallResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (CreateCallResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CreateCallResponse)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Listen in on the conversation from the point of view of a given participant. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3208,6 +11592,34 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->ConversationsConversationidParticipantsParticipantidMonitorPost");
 
             var localVarPath = "/api/v1/conversations/{conversationId}/participants/{participantId}/monitor";
+=======
+        /// Add a new call to a conversation 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callId"></param>
+        /// <param name="body">Conversation (optional)</param>
+        /// <returns>Conversation</returns>
+        public Conversation PostCallsCallId (string callId, CallCommand body = null)
+        {
+             ApiResponse<Conversation> localVarResponse = PostCallsCallIdWithHttpInfo(callId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Add a new call to a conversation 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callId"></param>
+        /// <param name="body">Conversation (optional)</param>
+        /// <returns>ApiResponse of Conversation</returns>
+        public ApiResponse< Conversation > PostCallsCallIdWithHttpInfo (string callId, CallCommand body = null)
+        {
+            // verify the required parameter 'callId' is set
+            if (callId == null)
+                throw new ApiException(400, "Missing required parameter 'callId' when calling ConversationsApi->PostCallsCallId");
+
+            var localVarPath = "/api/v2/conversations/calls/{callId}";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -3232,8 +11644,20 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
             if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId)); // path parameter
+=======
+            if (callId != null) localVarPathParams.Add("callId", Configuration.ApiClient.ParameterToString(callId)); // path parameter
+            if (body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -3250,10 +11674,20 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsConversationidParticipantsParticipantidMonitorPost: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsConversationidParticipantsParticipantidMonitorPost: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PostCallsCallId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostCallsCallId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Conversation>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Conversation) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Conversation)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3261,6 +11695,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Listen in on the conversation from the point of view of a given participant. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3270,10 +11705,23 @@ namespace ININ.PureCloudApi.Api
         public async System.Threading.Tasks.Task ConversationsConversationidParticipantsParticipantidMonitorPostAsync (string conversationId, string participantId)
         {
              await ConversationsConversationidParticipantsParticipantidMonitorPostAsyncWithHttpInfo(conversationId, participantId);
+=======
+        /// Add a new call to a conversation 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callId"></param>
+        /// <param name="body">Conversation (optional)</param>
+        /// <returns>Task of Conversation</returns>
+        public async System.Threading.Tasks.Task<Conversation> PostCallsCallIdAsync (string callId, CallCommand body = null)
+        {
+             ApiResponse<Conversation> localVarResponse = await PostCallsCallIdAsyncWithHttpInfo(callId, body);
+             return localVarResponse.Data;
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Listen in on the conversation from the point of view of a given participant. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3290,6 +11738,21 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->ConversationsConversationidParticipantsParticipantidMonitorPost");
 
             var localVarPath = "/api/v1/conversations/{conversationId}/participants/{participantId}/monitor";
+=======
+        /// Add a new call to a conversation 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callId"></param>
+        /// <param name="body">Conversation (optional)</param>
+        /// <returns>Task of ApiResponse (Conversation)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Conversation>> PostCallsCallIdAsyncWithHttpInfo (string callId, CallCommand body = null)
+        {
+            // verify the required parameter 'callId' is set
+            if (callId == null)
+                throw new ApiException(400, "Missing required parameter 'callId' when calling ConversationsApi->PostCallsCallId");
+
+            var localVarPath = "/api/v2/conversations/calls/{callId}";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -3314,8 +11777,20 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
             if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId)); // path parameter
+=======
+            if (callId != null) localVarPathParams.Add("callId", Configuration.ApiClient.ParameterToString(callId)); // path parameter
+            if (body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -3332,10 +11807,20 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsConversationidParticipantsParticipantidMonitorPost: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsConversationidParticipantsParticipantidMonitorPost: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PostCallsCallId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostCallsCallId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Conversation>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Conversation) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Conversation)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3343,6 +11828,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Update a participant. Specify the state as CONNECTED, DISCONNECTED. You can specify a wrap-up code.
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3373,6 +11859,34 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->ConversationsConversationidParticipantsParticipantidPut");
 
             var localVarPath = "/api/v1/conversations/{conversationId}/participants/{participantId}";
+=======
+        /// Add participants to a conversation 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callId"></param>
+        /// <param name="body">Conversation (optional)</param>
+        /// <returns>Conversation</returns>
+        public Conversation PostCallsCallIdParticipants (string callId, Conversation body = null)
+        {
+             ApiResponse<Conversation> localVarResponse = PostCallsCallIdParticipantsWithHttpInfo(callId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Add participants to a conversation 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callId"></param>
+        /// <param name="body">Conversation (optional)</param>
+        /// <returns>ApiResponse of Conversation</returns>
+        public ApiResponse< Conversation > PostCallsCallIdParticipantsWithHttpInfo (string callId, Conversation body = null)
+        {
+            // verify the required parameter 'callId' is set
+            if (callId == null)
+                throw new ApiException(400, "Missing required parameter 'callId' when calling ConversationsApi->PostCallsCallIdParticipants");
+
+            var localVarPath = "/api/v2/conversations/calls/{callId}/participants";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -3397,8 +11911,12 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
             if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId)); // path parameter
+=======
+            if (callId != null) localVarPathParams.Add("callId", Configuration.ApiClient.ParameterToString(callId)); // path parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -3417,16 +11935,30 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+<<<<<<< HEAD
                 Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsConversationidParticipantsParticipantidPut: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsConversationidParticipantsParticipantidPut: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PostCallsCallIdParticipants: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostCallsCallIdParticipants: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Conversation>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Conversation) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Conversation)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3434,6 +11966,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Update a participant. Specify the state as CONNECTED, DISCONNECTED. You can specify a wrap-up code.
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3444,10 +11977,23 @@ namespace ININ.PureCloudApi.Api
         public async System.Threading.Tasks.Task ConversationsConversationidParticipantsParticipantidPutAsync (string conversationId, string participantId, ParticipantRequest body = null)
         {
              await ConversationsConversationidParticipantsParticipantidPutAsyncWithHttpInfo(conversationId, participantId, body);
+=======
+        /// Add participants to a conversation 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callId"></param>
+        /// <param name="body">Conversation (optional)</param>
+        /// <returns>Task of Conversation</returns>
+        public async System.Threading.Tasks.Task<Conversation> PostCallsCallIdParticipantsAsync (string callId, Conversation body = null)
+        {
+             ApiResponse<Conversation> localVarResponse = await PostCallsCallIdParticipantsAsyncWithHttpInfo(callId, body);
+             return localVarResponse.Data;
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Update a participant. Specify the state as CONNECTED, DISCONNECTED. You can specify a wrap-up code.
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3465,6 +12011,21 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->ConversationsConversationidParticipantsParticipantidPut");
 
             var localVarPath = "/api/v1/conversations/{conversationId}/participants/{participantId}";
+=======
+        /// Add participants to a conversation 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callId"></param>
+        /// <param name="body">Conversation (optional)</param>
+        /// <returns>Task of ApiResponse (Conversation)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Conversation>> PostCallsCallIdParticipantsAsyncWithHttpInfo (string callId, Conversation body = null)
+        {
+            // verify the required parameter 'callId' is set
+            if (callId == null)
+                throw new ApiException(400, "Missing required parameter 'callId' when calling ConversationsApi->PostCallsCallIdParticipants");
+
+            var localVarPath = "/api/v2/conversations/calls/{callId}/participants";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -3489,8 +12050,12 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
             if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId)); // path parameter
+=======
+            if (callId != null) localVarPathParams.Add("callId", Configuration.ApiClient.ParameterToString(callId)); // path parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -3509,16 +12074,30 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+<<<<<<< HEAD
                 Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsConversationidParticipantsParticipantidPut: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsConversationidParticipantsParticipantidPut: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PostCallsCallIdParticipants: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostCallsCallIdParticipants: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Conversation>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Conversation) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Conversation)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3526,6 +12105,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Replace this participant with the specified user and/or address 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3564,6 +12144,39 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->ConversationsConversationidParticipantsParticipantidReplacePost");
 
             var localVarPath = "/api/v1/conversations/{conversationId}/participants/{participantId}/replace";
+=======
+        /// Initiate and update consult transfer 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body">Destination address &amp; initial speak to (optional)</param>
+        /// <returns>ConsultTransferResponse</returns>
+        public ConsultTransferResponse PostCallsCallIdParticipantsParticipantIdConsult (string callId, string participantId, ConsultTransfer body = null)
+        {
+             ApiResponse<ConsultTransferResponse> localVarResponse = PostCallsCallIdParticipantsParticipantIdConsultWithHttpInfo(callId, participantId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Initiate and update consult transfer 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body">Destination address &amp; initial speak to (optional)</param>
+        /// <returns>ApiResponse of ConsultTransferResponse</returns>
+        public ApiResponse< ConsultTransferResponse > PostCallsCallIdParticipantsParticipantIdConsultWithHttpInfo (string callId, string participantId, ConsultTransfer body = null)
+        {
+            // verify the required parameter 'callId' is set
+            if (callId == null)
+                throw new ApiException(400, "Missing required parameter 'callId' when calling ConversationsApi->PostCallsCallIdParticipantsParticipantIdConsult");
+            // verify the required parameter 'participantId' is set
+            if (participantId == null)
+                throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->PostCallsCallIdParticipantsParticipantIdConsult");
+
+            var localVarPath = "/api/v2/conversations/calls/{callId}/participants/{participantId}/consult";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -3588,6 +12201,7 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
             if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId)); // path parameter
             if (userId != null) localVarQueryParams.Add("userId", Configuration.ApiClient.ParameterToString(userId)); // query parameter
@@ -3595,6 +12209,18 @@ namespace ININ.PureCloudApi.Api
             if (username != null) localVarQueryParams.Add("username", Configuration.ApiClient.ParameterToString(username)); // query parameter
             if (queueId != null) localVarQueryParams.Add("queueId", Configuration.ApiClient.ParameterToString(queueId)); // query parameter
             if (voicemail != null) localVarQueryParams.Add("voicemail", Configuration.ApiClient.ParameterToString(voicemail)); // query parameter
+=======
+            if (callId != null) localVarPathParams.Add("callId", Configuration.ApiClient.ParameterToString(callId)); // path parameter
+            if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId)); // path parameter
+            if (body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -3611,10 +12237,20 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsConversationidParticipantsParticipantidReplacePost: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsConversationidParticipantsParticipantidReplacePost: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PostCallsCallIdParticipantsParticipantIdConsult: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostCallsCallIdParticipantsParticipantIdConsult: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ConsultTransferResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ConsultTransferResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConsultTransferResponse)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3622,6 +12258,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Replace this participant with the specified user and/or address 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3636,10 +12273,24 @@ namespace ININ.PureCloudApi.Api
         public async System.Threading.Tasks.Task ConversationsConversationidParticipantsParticipantidReplacePostAsync (string conversationId, string participantId, string userId = null, string address = null, string username = null, string queueId = null, bool? voicemail = null)
         {
              await ConversationsConversationidParticipantsParticipantidReplacePostAsyncWithHttpInfo(conversationId, participantId, userId, address, username, queueId, voicemail);
+=======
+        /// Initiate and update consult transfer 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body">Destination address &amp; initial speak to (optional)</param>
+        /// <returns>Task of ConsultTransferResponse</returns>
+        public async System.Threading.Tasks.Task<ConsultTransferResponse> PostCallsCallIdParticipantsParticipantIdConsultAsync (string callId, string participantId, ConsultTransfer body = null)
+        {
+             ApiResponse<ConsultTransferResponse> localVarResponse = await PostCallsCallIdParticipantsParticipantIdConsultAsyncWithHttpInfo(callId, participantId, body);
+             return localVarResponse.Data;
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Replace this participant with the specified user and/or address 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3661,6 +12312,25 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->ConversationsConversationidParticipantsParticipantidReplacePost");
 
             var localVarPath = "/api/v1/conversations/{conversationId}/participants/{participantId}/replace";
+=======
+        /// Initiate and update consult transfer 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body">Destination address &amp; initial speak to (optional)</param>
+        /// <returns>Task of ApiResponse (ConsultTransferResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ConsultTransferResponse>> PostCallsCallIdParticipantsParticipantIdConsultAsyncWithHttpInfo (string callId, string participantId, ConsultTransfer body = null)
+        {
+            // verify the required parameter 'callId' is set
+            if (callId == null)
+                throw new ApiException(400, "Missing required parameter 'callId' when calling ConversationsApi->PostCallsCallIdParticipantsParticipantIdConsult");
+            // verify the required parameter 'participantId' is set
+            if (participantId == null)
+                throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->PostCallsCallIdParticipantsParticipantIdConsult");
+
+            var localVarPath = "/api/v2/conversations/calls/{callId}/participants/{participantId}/consult";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -3685,6 +12355,7 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
             if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId)); // path parameter
             if (userId != null) localVarQueryParams.Add("userId", Configuration.ApiClient.ParameterToString(userId)); // query parameter
@@ -3692,6 +12363,18 @@ namespace ININ.PureCloudApi.Api
             if (username != null) localVarQueryParams.Add("username", Configuration.ApiClient.ParameterToString(username)); // query parameter
             if (queueId != null) localVarQueryParams.Add("queueId", Configuration.ApiClient.ParameterToString(queueId)); // query parameter
             if (voicemail != null) localVarQueryParams.Add("voicemail", Configuration.ApiClient.ParameterToString(voicemail)); // query parameter
+=======
+            if (callId != null) localVarPathParams.Add("callId", Configuration.ApiClient.ParameterToString(callId)); // path parameter
+            if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId)); // path parameter
+            if (body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -3708,10 +12391,20 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsConversationidParticipantsParticipantidReplacePost: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsConversationidParticipantsParticipantidReplacePost: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PostCallsCallIdParticipantsParticipantIdConsult: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostCallsCallIdParticipantsParticipantIdConsult: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ConsultTransferResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ConsultTransferResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConsultTransferResponse)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3719,6 +12412,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Get the wrap-up for this conversation participant.  
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3750,6 +12444,36 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->ConversationsConversationidParticipantsParticipantidWrapupGet");
 
             var localVarPath = "/api/v1/conversations/{conversationId}/participants/{participantId}/wrapup";
+=======
+        /// Listen in on the conversation from the point of view of a given participant. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callId"></param>
+        /// <param name="participantId"></param>
+        /// <returns></returns>
+        public void PostCallsCallIdParticipantsParticipantIdMonitor (string callId, string participantId)
+        {
+             PostCallsCallIdParticipantsParticipantIdMonitorWithHttpInfo(callId, participantId);
+        }
+
+        /// <summary>
+        /// Listen in on the conversation from the point of view of a given participant. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callId"></param>
+        /// <param name="participantId"></param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> PostCallsCallIdParticipantsParticipantIdMonitorWithHttpInfo (string callId, string participantId)
+        {
+            // verify the required parameter 'callId' is set
+            if (callId == null)
+                throw new ApiException(400, "Missing required parameter 'callId' when calling ConversationsApi->PostCallsCallIdParticipantsParticipantIdMonitor");
+            // verify the required parameter 'participantId' is set
+            if (participantId == null)
+                throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->PostCallsCallIdParticipantsParticipantIdMonitor");
+
+            var localVarPath = "/api/v2/conversations/calls/{callId}/participants/{participantId}/monitor";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -3774,9 +12498,14 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
             if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId)); // path parameter
             if (provisional != null) localVarQueryParams.Add("provisional", Configuration.ApiClient.ParameterToString(provisional)); // query parameter
+=======
+            if (callId != null) localVarPathParams.Add("callId", Configuration.ApiClient.ParameterToString(callId)); // path parameter
+            if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId)); // path parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -3787,12 +12516,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+<<<<<<< HEAD
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsConversationidParticipantsParticipantidWrapupGet: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsConversationidParticipantsParticipantidWrapupGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -3800,10 +12534,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<WrapupCode>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (WrapupCode) Configuration.ApiClient.Deserialize(localVarResponse, typeof(WrapupCode)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PostCallsCallIdParticipantsParticipantIdMonitor: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostCallsCallIdParticipantsParticipantIdMonitor: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Get the wrap-up for this conversation participant.  
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3815,10 +12559,22 @@ namespace ININ.PureCloudApi.Api
         {
              ApiResponse<WrapupCode> localVarResponse = await ConversationsConversationidParticipantsParticipantidWrapupGetAsyncWithHttpInfo(conversationId, participantId, provisional);
              return localVarResponse.Data;
+=======
+        /// Listen in on the conversation from the point of view of a given participant. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callId"></param>
+        /// <param name="participantId"></param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task PostCallsCallIdParticipantsParticipantIdMonitorAsync (string callId, string participantId)
+        {
+             await PostCallsCallIdParticipantsParticipantIdMonitorAsyncWithHttpInfo(callId, participantId);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Get the wrap-up for this conversation participant.  
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3836,6 +12592,24 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->ConversationsConversationidParticipantsParticipantidWrapupGet");
 
             var localVarPath = "/api/v1/conversations/{conversationId}/participants/{participantId}/wrapup";
+=======
+        /// Listen in on the conversation from the point of view of a given participant. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callId"></param>
+        /// <param name="participantId"></param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostCallsCallIdParticipantsParticipantIdMonitorAsyncWithHttpInfo (string callId, string participantId)
+        {
+            // verify the required parameter 'callId' is set
+            if (callId == null)
+                throw new ApiException(400, "Missing required parameter 'callId' when calling ConversationsApi->PostCallsCallIdParticipantsParticipantIdMonitor");
+            // verify the required parameter 'participantId' is set
+            if (participantId == null)
+                throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->PostCallsCallIdParticipantsParticipantIdMonitor");
+
+            var localVarPath = "/api/v2/conversations/calls/{callId}/participants/{participantId}/monitor";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -3860,9 +12634,14 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
             if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId)); // path parameter
             if (provisional != null) localVarQueryParams.Add("provisional", Configuration.ApiClient.ParameterToString(provisional)); // query parameter
+=======
+            if (callId != null) localVarPathParams.Add("callId", Configuration.ApiClient.ParameterToString(callId)); // path parameter
+            if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId)); // path parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -3873,12 +12652,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+<<<<<<< HEAD
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsConversationidParticipantsParticipantidWrapupGet: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsConversationidParticipantsParticipantidWrapupGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -3886,10 +12670,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<WrapupCode>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (WrapupCode) Configuration.ApiClient.Deserialize(localVarResponse, typeof(WrapupCode)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PostCallsCallIdParticipantsParticipantIdMonitor: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostCallsCallIdParticipantsParticipantIdMonitor: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Get list of wrapup codes for this conversation participant 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3919,6 +12713,38 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->ConversationsConversationidParticipantsParticipantidWrapupcodesGet");
 
             var localVarPath = "/api/v1/conversations/{conversationId}/participants/{participantId}/wrapupcodes";
+=======
+        /// Replace this participant with the specified user and/or address 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns></returns>
+        public void PostCallsCallIdParticipantsParticipantIdReplace (string callId, string participantId, TransferRequest body = null)
+        {
+             PostCallsCallIdParticipantsParticipantIdReplaceWithHttpInfo(callId, participantId, body);
+        }
+
+        /// <summary>
+        /// Replace this participant with the specified user and/or address 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> PostCallsCallIdParticipantsParticipantIdReplaceWithHttpInfo (string callId, string participantId, TransferRequest body = null)
+        {
+            // verify the required parameter 'callId' is set
+            if (callId == null)
+                throw new ApiException(400, "Missing required parameter 'callId' when calling ConversationsApi->PostCallsCallIdParticipantsParticipantIdReplace");
+            // verify the required parameter 'participantId' is set
+            if (participantId == null)
+                throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->PostCallsCallIdParticipantsParticipantIdReplace");
+
+            var localVarPath = "/api/v2/conversations/calls/{callId}/participants/{participantId}/replace";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -3943,8 +12769,21 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
             if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId)); // path parameter
+=======
+            if (callId != null) localVarPathParams.Add("callId", Configuration.ApiClient.ParameterToString(callId)); // path parameter
+            if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId)); // path parameter
+            if (body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -3955,12 +12794,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+<<<<<<< HEAD
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsConversationidParticipantsParticipantidWrapupcodesGet: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsConversationidParticipantsParticipantidWrapupcodesGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -3982,10 +12826,34 @@ namespace ININ.PureCloudApi.Api
         {
              ApiResponse<WrapupCode> localVarResponse = await ConversationsConversationidParticipantsParticipantidWrapupcodesGetAsyncWithHttpInfo(conversationId, participantId);
              return localVarResponse.Data;
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PostCallsCallIdParticipantsParticipantIdReplace: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostCallsCallIdParticipantsParticipantIdReplace: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// Replace this participant with the specified user and/or address 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task PostCallsCallIdParticipantsParticipantIdReplaceAsync (string callId, string participantId, TransferRequest body = null)
+        {
+             await PostCallsCallIdParticipantsParticipantIdReplaceAsyncWithHttpInfo(callId, participantId, body);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Get list of wrapup codes for this conversation participant 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -4002,6 +12870,25 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->ConversationsConversationidParticipantsParticipantidWrapupcodesGet");
 
             var localVarPath = "/api/v1/conversations/{conversationId}/participants/{participantId}/wrapupcodes";
+=======
+        /// Replace this participant with the specified user and/or address 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="callId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostCallsCallIdParticipantsParticipantIdReplaceAsyncWithHttpInfo (string callId, string participantId, TransferRequest body = null)
+        {
+            // verify the required parameter 'callId' is set
+            if (callId == null)
+                throw new ApiException(400, "Missing required parameter 'callId' when calling ConversationsApi->PostCallsCallIdParticipantsParticipantIdReplace");
+            // verify the required parameter 'participantId' is set
+            if (participantId == null)
+                throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->PostCallsCallIdParticipantsParticipantIdReplace");
+
+            var localVarPath = "/api/v2/conversations/calls/{callId}/participants/{participantId}/replace";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -4026,8 +12913,21 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
             if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId)); // path parameter
+=======
+            if (callId != null) localVarPathParams.Add("callId", Configuration.ApiClient.ParameterToString(callId)); // path parameter
+            if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId)); // path parameter
+            if (body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -4038,10 +12938,22 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+<<<<<<< HEAD
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
+=======
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostCallsCallIdParticipantsParticipantIdReplace: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostCallsCallIdParticipantsParticipantIdReplace: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             if (localVarStatusCode >= 400)
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsConversationidParticipantsParticipantidWrapupcodesGet: " + localVarResponse.Content, localVarResponse.Content);
@@ -4052,6 +12964,7 @@ namespace ININ.PureCloudApi.Api
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (WrapupCode) Configuration.ApiClient.Deserialize(localVarResponse, typeof(WrapupCode)));
             
+<<<<<<< HEAD
         }
 
         /// <summary>
@@ -4081,6 +12994,44 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->ConversationsConversationidParticipantsPost");
 
             var localVarPath = "/api/v1/conversations/{conversationId}/participants";
+=======
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// Replace this participant with the specified user and/or address 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="chatId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns></returns>
+        public void PostChatsChatIdParticipantsParticipantIdReplace (string chatId, string participantId, TransferRequest body = null)
+        {
+             PostChatsChatIdParticipantsParticipantIdReplaceWithHttpInfo(chatId, participantId, body);
+        }
+
+        /// <summary>
+        /// Replace this participant with the specified user and/or address 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="chatId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> PostChatsChatIdParticipantsParticipantIdReplaceWithHttpInfo (string chatId, string participantId, TransferRequest body = null)
+        {
+            // verify the required parameter 'chatId' is set
+            if (chatId == null)
+                throw new ApiException(400, "Missing required parameter 'chatId' when calling ConversationsApi->PostChatsChatIdParticipantsParticipantIdReplace");
+            // verify the required parameter 'participantId' is set
+            if (participantId == null)
+                throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->PostChatsChatIdParticipantsParticipantIdReplace");
+
+            var localVarPath = "/api/v2/conversations/chats/{chatId}/participants/{participantId}/replace";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -4105,7 +13056,12 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
+=======
+            if (chatId != null) localVarPathParams.Add("chatId", Configuration.ApiClient.ParameterToString(chatId)); // path parameter
+            if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId)); // path parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -4130,6 +13086,7 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsConversationidParticipantsPost: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsConversationidParticipantsPost: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -4151,10 +13108,34 @@ namespace ININ.PureCloudApi.Api
         {
              ApiResponse<Conversation> localVarResponse = await ConversationsConversationidParticipantsPostAsyncWithHttpInfo(conversationId, body);
              return localVarResponse.Data;
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PostChatsChatIdParticipantsParticipantIdReplace: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostChatsChatIdParticipantsParticipantIdReplace: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// Replace this participant with the specified user and/or address 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="chatId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task PostChatsChatIdParticipantsParticipantIdReplaceAsync (string chatId, string participantId, TransferRequest body = null)
+        {
+             await PostChatsChatIdParticipantsParticipantIdReplaceAsyncWithHttpInfo(chatId, participantId, body);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Add participants to a conversation 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -4168,6 +13149,25 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->ConversationsConversationidParticipantsPost");
 
             var localVarPath = "/api/v1/conversations/{conversationId}/participants";
+=======
+        /// Replace this participant with the specified user and/or address 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="chatId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostChatsChatIdParticipantsParticipantIdReplaceAsyncWithHttpInfo (string chatId, string participantId, TransferRequest body = null)
+        {
+            // verify the required parameter 'chatId' is set
+            if (chatId == null)
+                throw new ApiException(400, "Missing required parameter 'chatId' when calling ConversationsApi->PostChatsChatIdParticipantsParticipantIdReplace");
+            // verify the required parameter 'participantId' is set
+            if (participantId == null)
+                throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->PostChatsChatIdParticipantsParticipantIdReplace");
+
+            var localVarPath = "/api/v2/conversations/chats/{chatId}/participants/{participantId}/replace";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -4192,7 +13192,12 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
+=======
+            if (chatId != null) localVarPathParams.Add("chatId", Configuration.ApiClient.ParameterToString(chatId)); // path parameter
+            if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId)); // path parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -4217,14 +13222,21 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsConversationidParticipantsPost: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsConversationidParticipantsPost: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PostChatsChatIdParticipantsParticipantIdReplace: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostChatsChatIdParticipantsParticipantIdReplace: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             return new ApiResponse<Conversation>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Conversation) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Conversation)));
             
+<<<<<<< HEAD
         }
 
         /// <summary>
@@ -4254,6 +13266,44 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->ConversationsConversationidPut");
 
             var localVarPath = "/api/v1/conversations/{conversationId}";
+=======
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// Create a new callback for the specified participant on the conversation. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="participantId">participant ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns></returns>
+        public void PostConversationIdParticipantsParticipantIdCallbacks (string conversationId, string participantId, CreateCallbackCommand body = null)
+        {
+             PostConversationIdParticipantsParticipantIdCallbacksWithHttpInfo(conversationId, participantId, body);
+        }
+
+        /// <summary>
+        /// Create a new callback for the specified participant on the conversation. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="participantId">participant ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> PostConversationIdParticipantsParticipantIdCallbacksWithHttpInfo (string conversationId, string participantId, CreateCallbackCommand body = null)
+        {
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->PostConversationIdParticipantsParticipantIdCallbacks");
+            // verify the required parameter 'participantId' is set
+            if (participantId == null)
+                throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->PostConversationIdParticipantsParticipantIdCallbacks");
+
+            var localVarPath = "/api/v2/conversations/{conversationId}/participants/{participantId}/callbacks";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -4279,6 +13329,10 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
+<<<<<<< HEAD
+=======
+            if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId)); // path parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -4297,12 +13351,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+<<<<<<< HEAD
                 Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsConversationidPut: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsConversationidPut: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -4310,10 +13369,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<Conversation>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Conversation) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Conversation)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationIdParticipantsParticipantIdCallbacks: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationIdParticipantsParticipantIdCallbacks: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Update conversation 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -4324,10 +13393,23 @@ namespace ININ.PureCloudApi.Api
         {
              ApiResponse<Conversation> localVarResponse = await ConversationsConversationidPutAsyncWithHttpInfo(conversationId, body);
              return localVarResponse.Data;
+=======
+        /// Create a new callback for the specified participant on the conversation. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="participantId">participant ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task PostConversationIdParticipantsParticipantIdCallbacksAsync (string conversationId, string participantId, CreateCallbackCommand body = null)
+        {
+             await PostConversationIdParticipantsParticipantIdCallbacksAsyncWithHttpInfo(conversationId, participantId, body);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Update conversation 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -4341,6 +13423,25 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->ConversationsConversationidPut");
 
             var localVarPath = "/api/v1/conversations/{conversationId}";
+=======
+        /// Create a new callback for the specified participant on the conversation. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="participantId">participant ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostConversationIdParticipantsParticipantIdCallbacksAsyncWithHttpInfo (string conversationId, string participantId, CreateCallbackCommand body = null)
+        {
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->PostConversationIdParticipantsParticipantIdCallbacks");
+            // verify the required parameter 'participantId' is set
+            if (participantId == null)
+                throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->PostConversationIdParticipantsParticipantIdCallbacks");
+
+            var localVarPath = "/api/v2/conversations/{conversationId}/participants/{participantId}/callbacks";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -4366,6 +13467,10 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
+<<<<<<< HEAD
+=======
+            if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId)); // path parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -4384,12 +13489,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+<<<<<<< HEAD
                 Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsConversationidPut: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsConversationidPut: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -4397,10 +13507,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<Conversation>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Conversation) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Conversation)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationIdParticipantsParticipantIdCallbacks: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationIdParticipantsParticipantIdCallbacks: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Get possible tags for Conversation 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -4425,6 +13545,38 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->ConversationsConversationidTagsGet");
 
             var localVarPath = "/api/v1/conversations/{conversationId}/tags";
+=======
+        /// Replace this participant with the specified user and/or address 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="participantId">participant ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns></returns>
+        public void PostConversationIdParticipantsParticipantIdReplace (string conversationId, string participantId, TransferRequest body = null)
+        {
+             PostConversationIdParticipantsParticipantIdReplaceWithHttpInfo(conversationId, participantId, body);
+        }
+
+        /// <summary>
+        /// Replace this participant with the specified user and/or address 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="participantId">participant ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> PostConversationIdParticipantsParticipantIdReplaceWithHttpInfo (string conversationId, string participantId, TransferRequest body = null)
+        {
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->PostConversationIdParticipantsParticipantIdReplace");
+            // verify the required parameter 'participantId' is set
+            if (participantId == null)
+                throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->PostConversationIdParticipantsParticipantIdReplace");
+
+            var localVarPath = "/api/v2/conversations/{conversationId}/participants/{participantId}/replace";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -4450,6 +13602,18 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
+<<<<<<< HEAD
+=======
+            if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId)); // path parameter
+            if (body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -4460,12 +13624,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+<<<<<<< HEAD
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsConversationidTagsGet: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsConversationidTagsGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -4473,10 +13642,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<Tag>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Tag) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Tag)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationIdParticipantsParticipantIdReplace: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationIdParticipantsParticipantIdReplace: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Get possible tags for Conversation 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -4486,10 +13665,23 @@ namespace ININ.PureCloudApi.Api
         {
              ApiResponse<Tag> localVarResponse = await ConversationsConversationidTagsGetAsyncWithHttpInfo(conversationId);
              return localVarResponse.Data;
+=======
+        /// Replace this participant with the specified user and/or address 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="participantId">participant ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task PostConversationIdParticipantsParticipantIdReplaceAsync (string conversationId, string participantId, TransferRequest body = null)
+        {
+             await PostConversationIdParticipantsParticipantIdReplaceAsyncWithHttpInfo(conversationId, participantId, body);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Get possible tags for Conversation 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -4502,6 +13694,25 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->ConversationsConversationidTagsGet");
 
             var localVarPath = "/api/v1/conversations/{conversationId}/tags";
+=======
+        /// Replace this participant with the specified user and/or address 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="participantId">participant ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostConversationIdParticipantsParticipantIdReplaceAsyncWithHttpInfo (string conversationId, string participantId, TransferRequest body = null)
+        {
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->PostConversationIdParticipantsParticipantIdReplace");
+            // verify the required parameter 'participantId' is set
+            if (participantId == null)
+                throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->PostConversationIdParticipantsParticipantIdReplace");
+
+            var localVarPath = "/api/v2/conversations/{conversationId}/participants/{participantId}/replace";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -4527,6 +13738,18 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
+<<<<<<< HEAD
+=======
+            if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId)); // path parameter
+            if (body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -4537,12 +13760,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+<<<<<<< HEAD
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsConversationidTagsGet: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsConversationidTagsGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -4550,10 +13778,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<Tag>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Tag) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Tag)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationIdParticipantsParticipantIdReplace: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationIdParticipantsParticipantIdReplace: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Get possible wrap-up codes for Conversation 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -4562,10 +13800,21 @@ namespace ININ.PureCloudApi.Api
         public WrapupCode ConversationsConversationidWrapupcodesGet (string conversationId)
         {
              ApiResponse<WrapupCode> localVarResponse = ConversationsConversationidWrapupcodesGetWithHttpInfo(conversationId);
+=======
+        /// Query for conversation aggregates 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query (optional)</param>
+        /// <returns>AggregateQueryResponse</returns>
+        public AggregateQueryResponse PostConversationsAggregatesQuery (AggregationQuery body = null)
+        {
+             ApiResponse<AggregateQueryResponse> localVarResponse = PostConversationsAggregatesQueryWithHttpInfo(body);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Get possible wrap-up codes for Conversation 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -4578,6 +13827,17 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->ConversationsConversationidWrapupcodesGet");
 
             var localVarPath = "/api/v1/conversations/{conversationId}/wrapupcodes";
+=======
+        /// Query for conversation aggregates 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query (optional)</param>
+        /// <returns>ApiResponse of AggregateQueryResponse</returns>
+        public ApiResponse< AggregateQueryResponse > PostConversationsAggregatesQueryWithHttpInfo (AggregationQuery body = null)
+        {
+
+            var localVarPath = "/api/v2/analytics/conversations/aggregates/query";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -4602,7 +13862,18 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
+=======
+            if (body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -4613,12 +13884,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+<<<<<<< HEAD
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsConversationidWrapupcodesGet: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsConversationidWrapupcodesGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -4626,10 +13902,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<WrapupCode>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (WrapupCode) Configuration.ApiClient.Deserialize(localVarResponse, typeof(WrapupCode)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsAggregatesQuery: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsAggregatesQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AggregateQueryResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (AggregateQueryResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AggregateQueryResponse)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Get possible wrap-up codes for Conversation 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -4638,11 +13924,22 @@ namespace ININ.PureCloudApi.Api
         public async System.Threading.Tasks.Task<WrapupCode> ConversationsConversationidWrapupcodesGetAsync (string conversationId)
         {
              ApiResponse<WrapupCode> localVarResponse = await ConversationsConversationidWrapupcodesGetAsyncWithHttpInfo(conversationId);
+=======
+        /// Query for conversation aggregates 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query (optional)</param>
+        /// <returns>Task of AggregateQueryResponse</returns>
+        public async System.Threading.Tasks.Task<AggregateQueryResponse> PostConversationsAggregatesQueryAsync (AggregationQuery body = null)
+        {
+             ApiResponse<AggregateQueryResponse> localVarResponse = await PostConversationsAggregatesQueryAsyncWithHttpInfo(body);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
 
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Get possible wrap-up codes for Conversation 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -4655,6 +13952,17 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->ConversationsConversationidWrapupcodesGet");
 
             var localVarPath = "/api/v1/conversations/{conversationId}/wrapupcodes";
+=======
+        /// Query for conversation aggregates 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query (optional)</param>
+        /// <returns>Task of ApiResponse (AggregateQueryResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AggregateQueryResponse>> PostConversationsAggregatesQueryAsyncWithHttpInfo (AggregationQuery body = null)
+        {
+
+            var localVarPath = "/api/v2/analytics/conversations/aggregates/query";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -4679,7 +13987,18 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
+=======
+            if (body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -4690,12 +14009,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+<<<<<<< HEAD
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsConversationidWrapupcodesGet: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsConversationidWrapupcodesGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -4703,10 +14027,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<WrapupCode>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (WrapupCode) Configuration.ApiClient.Deserialize(localVarResponse, typeof(WrapupCode)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsAggregatesQuery: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsAggregatesQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AggregateQueryResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (AggregateQueryResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AggregateQueryResponse)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Create Fax Conversation 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -4715,10 +14049,22 @@ namespace ININ.PureCloudApi.Api
         public FaxSendResponse ConversationsFaxPost (FaxSendRequest body = null)
         {
              ApiResponse<FaxSendResponse> localVarResponse = ConversationsFaxPostWithHttpInfo(body);
+=======
+        /// Index conversation properties 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="body">request (optional)</param>
+        /// <returns>PropertyIndexRequest</returns>
+        public PropertyIndexRequest PostConversationsConversationIdDetailsProperties (string conversationId, PropertyIndexRequest body = null)
+        {
+             ApiResponse<PropertyIndexRequest> localVarResponse = PostConversationsConversationIdDetailsPropertiesWithHttpInfo(conversationId, body);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Create Fax Conversation 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -4728,6 +14074,21 @@ namespace ININ.PureCloudApi.Api
         {
 
             var localVarPath = "/api/v1/conversations/fax";
+=======
+        /// Index conversation properties 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="body">request (optional)</param>
+        /// <returns>ApiResponse of PropertyIndexRequest</returns>
+        public ApiResponse< PropertyIndexRequest > PostConversationsConversationIdDetailsPropertiesWithHttpInfo (string conversationId, PropertyIndexRequest body = null)
+        {
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->PostConversationsConversationIdDetailsProperties");
+
+            var localVarPath = "/api/v2/analytics/conversations/{conversationId}/details/properties";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -4752,6 +14113,10 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
+=======
+            if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -4776,6 +14141,7 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsFaxPost: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsFaxPost: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -4783,10 +14149,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<FaxSendResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (FaxSendResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FaxSendResponse)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsConversationIdDetailsProperties: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsConversationIdDetailsProperties: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PropertyIndexRequest>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PropertyIndexRequest) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PropertyIndexRequest)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Create Fax Conversation 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -4795,11 +14171,23 @@ namespace ININ.PureCloudApi.Api
         public async System.Threading.Tasks.Task<FaxSendResponse> ConversationsFaxPostAsync (FaxSendRequest body = null)
         {
              ApiResponse<FaxSendResponse> localVarResponse = await ConversationsFaxPostAsyncWithHttpInfo(body);
+=======
+        /// Index conversation properties 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="body">request (optional)</param>
+        /// <returns>Task of PropertyIndexRequest</returns>
+        public async System.Threading.Tasks.Task<PropertyIndexRequest> PostConversationsConversationIdDetailsPropertiesAsync (string conversationId, PropertyIndexRequest body = null)
+        {
+             ApiResponse<PropertyIndexRequest> localVarResponse = await PostConversationsConversationIdDetailsPropertiesAsyncWithHttpInfo(conversationId, body);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
 
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Create Fax Conversation 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -4809,6 +14197,21 @@ namespace ININ.PureCloudApi.Api
         {
 
             var localVarPath = "/api/v1/conversations/fax";
+=======
+        /// Index conversation properties 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="body">request (optional)</param>
+        /// <returns>Task of ApiResponse (PropertyIndexRequest)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PropertyIndexRequest>> PostConversationsConversationIdDetailsPropertiesAsyncWithHttpInfo (string conversationId, PropertyIndexRequest body = null)
+        {
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->PostConversationsConversationIdDetailsProperties");
+
+            var localVarPath = "/api/v2/analytics/conversations/{conversationId}/details/properties";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -4833,6 +14236,10 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
+=======
+            if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -4853,6 +14260,7 @@ namespace ININ.PureCloudApi.Api
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
+<<<<<<< HEAD
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
@@ -4864,10 +14272,24 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<FaxSendResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (FaxSendResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FaxSendResponse)));
+=======
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsConversationIdDetailsProperties: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsConversationIdDetailsProperties: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PropertyIndexRequest>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PropertyIndexRequest) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PropertyIndexRequest)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Get conversations 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -4876,10 +14298,21 @@ namespace ININ.PureCloudApi.Api
         public ConversationEntityListing ConversationsGet (string communicationType = null)
         {
              ApiResponse<ConversationEntityListing> localVarResponse = ConversationsGetWithHttpInfo(communicationType);
+=======
+        /// Query for conversation details 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query (optional)</param>
+        /// <returns>AnalyticsConversationQueryResponse</returns>
+        public AnalyticsConversationQueryResponse PostConversationsDetailsQuery (ConversationQuery body = null)
+        {
+             ApiResponse<AnalyticsConversationQueryResponse> localVarResponse = PostConversationsDetailsQueryWithHttpInfo(body);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Get conversations 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -4889,6 +14322,17 @@ namespace ININ.PureCloudApi.Api
         {
 
             var localVarPath = "/api/v1/conversations";
+=======
+        /// Query for conversation details 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query (optional)</param>
+        /// <returns>ApiResponse of AnalyticsConversationQueryResponse</returns>
+        public ApiResponse< AnalyticsConversationQueryResponse > PostConversationsDetailsQueryWithHttpInfo (ConversationQuery body = null)
+        {
+
+            var localVarPath = "/api/v2/analytics/conversations/details/query";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -4913,7 +14357,18 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (communicationType != null) localVarQueryParams.Add("communicationType", Configuration.ApiClient.ParameterToString(communicationType)); // query parameter
+=======
+            if (body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -4924,12 +14379,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+<<<<<<< HEAD
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsGet: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -4937,10 +14397,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<ConversationEntityListing>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ConversationEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConversationEntityListing)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsDetailsQuery: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsDetailsQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AnalyticsConversationQueryResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (AnalyticsConversationQueryResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AnalyticsConversationQueryResponse)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Get conversations 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -4949,11 +14419,22 @@ namespace ININ.PureCloudApi.Api
         public async System.Threading.Tasks.Task<ConversationEntityListing> ConversationsGetAsync (string communicationType = null)
         {
              ApiResponse<ConversationEntityListing> localVarResponse = await ConversationsGetAsyncWithHttpInfo(communicationType);
+=======
+        /// Query for conversation details 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query (optional)</param>
+        /// <returns>Task of AnalyticsConversationQueryResponse</returns>
+        public async System.Threading.Tasks.Task<AnalyticsConversationQueryResponse> PostConversationsDetailsQueryAsync (ConversationQuery body = null)
+        {
+             ApiResponse<AnalyticsConversationQueryResponse> localVarResponse = await PostConversationsDetailsQueryAsyncWithHttpInfo(body);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
 
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Get conversations 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -4963,6 +14444,17 @@ namespace ININ.PureCloudApi.Api
         {
 
             var localVarPath = "/api/v1/conversations";
+=======
+        /// Query for conversation details 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query (optional)</param>
+        /// <returns>Task of ApiResponse (AnalyticsConversationQueryResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AnalyticsConversationQueryResponse>> PostConversationsDetailsQueryAsyncWithHttpInfo (ConversationQuery body = null)
+        {
+
+            var localVarPath = "/api/v2/analytics/conversations/details/query";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -4987,7 +14479,18 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (communicationType != null) localVarQueryParams.Add("communicationType", Configuration.ApiClient.ParameterToString(communicationType)); // query parameter
+=======
+            if (body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -4998,12 +14501,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+<<<<<<< HEAD
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsGet: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -5011,10 +14519,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<ConversationEntityListing>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ConversationEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConversationEntityListing)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsDetailsQuery: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsDetailsQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AnalyticsConversationQueryResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (AnalyticsConversationQueryResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AnalyticsConversationQueryResponse)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Get the maximum number of participants that this user can have on a conference 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -5022,10 +14540,22 @@ namespace ININ.PureCloudApi.Api
         public MaxParticipants ConversationsMaximumconferencepartiesGet ()
         {
              ApiResponse<MaxParticipants> localVarResponse = ConversationsMaximumconferencepartiesGetWithHttpInfo();
+=======
+        /// Send an email reply 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailId"></param>
+        /// <param name="body">Reply (optional)</param>
+        /// <returns>EmailMessage</returns>
+        public EmailMessage PostEmailsEmailIdMessages (string emailId, EmailMessage body = null)
+        {
+             ApiResponse<EmailMessage> localVarResponse = PostEmailsEmailIdMessagesWithHttpInfo(emailId, body);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Get the maximum number of participants that this user can have on a conference 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -5034,6 +14564,21 @@ namespace ININ.PureCloudApi.Api
         {
 
             var localVarPath = "/api/v1/conversations/maximumconferenceparties";
+=======
+        /// Send an email reply 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailId"></param>
+        /// <param name="body">Reply (optional)</param>
+        /// <returns>ApiResponse of EmailMessage</returns>
+        public ApiResponse< EmailMessage > PostEmailsEmailIdMessagesWithHttpInfo (string emailId, EmailMessage body = null)
+        {
+            // verify the required parameter 'emailId' is set
+            if (emailId == null)
+                throw new ApiException(400, "Missing required parameter 'emailId' when calling ConversationsApi->PostEmailsEmailIdMessages");
+
+            var localVarPath = "/api/v2/conversations/emails/{emailId}/messages";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -5058,6 +14603,18 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
+=======
+            if (emailId != null) localVarPathParams.Add("emailId", Configuration.ApiClient.ParameterToString(emailId)); // path parameter
+            if (body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -5068,12 +14625,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+<<<<<<< HEAD
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsMaximumconferencepartiesGet: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsMaximumconferencepartiesGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -5081,10 +14643,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<MaxParticipants>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (MaxParticipants) Configuration.ApiClient.Deserialize(localVarResponse, typeof(MaxParticipants)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PostEmailsEmailIdMessages: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostEmailsEmailIdMessages: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EmailMessage>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (EmailMessage) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmailMessage)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Get the maximum number of participants that this user can have on a conference 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -5092,11 +14664,23 @@ namespace ININ.PureCloudApi.Api
         public async System.Threading.Tasks.Task<MaxParticipants> ConversationsMaximumconferencepartiesGetAsync ()
         {
              ApiResponse<MaxParticipants> localVarResponse = await ConversationsMaximumconferencepartiesGetAsyncWithHttpInfo();
+=======
+        /// Send an email reply 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailId"></param>
+        /// <param name="body">Reply (optional)</param>
+        /// <returns>Task of EmailMessage</returns>
+        public async System.Threading.Tasks.Task<EmailMessage> PostEmailsEmailIdMessagesAsync (string emailId, EmailMessage body = null)
+        {
+             ApiResponse<EmailMessage> localVarResponse = await PostEmailsEmailIdMessagesAsyncWithHttpInfo(emailId, body);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
 
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Get the maximum number of participants that this user can have on a conference 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -5105,6 +14689,21 @@ namespace ININ.PureCloudApi.Api
         {
 
             var localVarPath = "/api/v1/conversations/maximumconferenceparties";
+=======
+        /// Send an email reply 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailId"></param>
+        /// <param name="body">Reply (optional)</param>
+        /// <returns>Task of ApiResponse (EmailMessage)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<EmailMessage>> PostEmailsEmailIdMessagesAsyncWithHttpInfo (string emailId, EmailMessage body = null)
+        {
+            // verify the required parameter 'emailId' is set
+            if (emailId == null)
+                throw new ApiException(400, "Missing required parameter 'emailId' when calling ConversationsApi->PostEmailsEmailIdMessages");
+
+            var localVarPath = "/api/v2/conversations/emails/{emailId}/messages";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -5129,6 +14728,18 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
+=======
+            if (emailId != null) localVarPathParams.Add("emailId", Configuration.ApiClient.ParameterToString(emailId)); // path parameter
+            if (body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -5139,12 +14750,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+<<<<<<< HEAD
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsMaximumconferencepartiesGet: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsMaximumconferencepartiesGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -5152,10 +14768,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<MaxParticipants>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (MaxParticipants) Configuration.ApiClient.Deserialize(localVarResponse, typeof(MaxParticipants)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PostEmailsEmailIdMessages: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostEmailsEmailIdMessages: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EmailMessage>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (EmailMessage) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmailMessage)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Create conversation 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -5191,6 +14817,38 @@ namespace ININ.PureCloudApi.Api
         {
 
             var localVarPath = "/api/v1/conversations";
+=======
+        /// Replace this participant with the specified user and/or address 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns></returns>
+        public void PostEmailsEmailIdParticipantsParticipantIdReplace (string emailId, string participantId, TransferRequest body = null)
+        {
+             PostEmailsEmailIdParticipantsParticipantIdReplaceWithHttpInfo(emailId, participantId, body);
+        }
+
+        /// <summary>
+        /// Replace this participant with the specified user and/or address 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> PostEmailsEmailIdParticipantsParticipantIdReplaceWithHttpInfo (string emailId, string participantId, TransferRequest body = null)
+        {
+            // verify the required parameter 'emailId' is set
+            if (emailId == null)
+                throw new ApiException(400, "Missing required parameter 'emailId' when calling ConversationsApi->PostEmailsEmailIdParticipantsParticipantIdReplace");
+            // verify the required parameter 'participantId' is set
+            if (participantId == null)
+                throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->PostEmailsEmailIdParticipantsParticipantIdReplace");
+
+            var localVarPath = "/api/v2/conversations/emails/{emailId}/participants/{participantId}/replace";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -5215,6 +14873,7 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (call != null) localVarQueryParams.Add("call", Configuration.ApiClient.ParameterToString(call)); // query parameter
             if (callFrom != null) localVarQueryParams.Add("callFrom", Configuration.ApiClient.ParameterToString(callFrom)); // query parameter
             if (callQueueId != null) localVarQueryParams.Add("callQueueId", Configuration.ApiClient.ParameterToString(callQueueId)); // query parameter
@@ -5222,6 +14881,10 @@ namespace ININ.PureCloudApi.Api
             if (priority != null) localVarQueryParams.Add("priority", Configuration.ApiClient.ParameterToString(priority)); // query parameter
             if (languageId != null) localVarQueryParams.Add("languageId", Configuration.ApiClient.ParameterToString(languageId)); // query parameter
             if (skillIds != null) localVarQueryParams.Add("skillIds", Configuration.ApiClient.ParameterToString(skillIds)); // query parameter
+=======
+            if (emailId != null) localVarPathParams.Add("emailId", Configuration.ApiClient.ParameterToString(emailId)); // path parameter
+            if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId)); // path parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -5246,6 +14909,7 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsPost: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsPost: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -5253,10 +14917,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<ConversationResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ConversationResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConversationResponse)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PostEmailsEmailIdParticipantsParticipantIdReplace: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostEmailsEmailIdParticipantsParticipantIdReplace: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Create conversation 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -5273,10 +14947,23 @@ namespace ININ.PureCloudApi.Api
         {
              ApiResponse<ConversationResponse> localVarResponse = await ConversationsPostAsyncWithHttpInfo(call, callFrom, callQueueId, callUserId, priority, languageId, skillIds, body);
              return localVarResponse.Data;
+=======
+        /// Replace this participant with the specified user and/or address 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task PostEmailsEmailIdParticipantsParticipantIdReplaceAsync (string emailId, string participantId, TransferRequest body = null)
+        {
+             await PostEmailsEmailIdParticipantsParticipantIdReplaceAsyncWithHttpInfo(emailId, participantId, body);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Create conversation 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -5293,6 +14980,25 @@ namespace ININ.PureCloudApi.Api
         {
 
             var localVarPath = "/api/v1/conversations";
+=======
+        /// Replace this participant with the specified user and/or address 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailId"></param>
+        /// <param name="participantId"></param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostEmailsEmailIdParticipantsParticipantIdReplaceAsyncWithHttpInfo (string emailId, string participantId, TransferRequest body = null)
+        {
+            // verify the required parameter 'emailId' is set
+            if (emailId == null)
+                throw new ApiException(400, "Missing required parameter 'emailId' when calling ConversationsApi->PostEmailsEmailIdParticipantsParticipantIdReplace");
+            // verify the required parameter 'participantId' is set
+            if (participantId == null)
+                throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->PostEmailsEmailIdParticipantsParticipantIdReplace");
+
+            var localVarPath = "/api/v2/conversations/emails/{emailId}/participants/{participantId}/replace";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -5317,6 +15023,7 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (call != null) localVarQueryParams.Add("call", Configuration.ApiClient.ParameterToString(call)); // query parameter
             if (callFrom != null) localVarQueryParams.Add("callFrom", Configuration.ApiClient.ParameterToString(callFrom)); // query parameter
             if (callQueueId != null) localVarQueryParams.Add("callQueueId", Configuration.ApiClient.ParameterToString(callQueueId)); // query parameter
@@ -5324,6 +15031,10 @@ namespace ININ.PureCloudApi.Api
             if (priority != null) localVarQueryParams.Add("priority", Configuration.ApiClient.ParameterToString(priority)); // query parameter
             if (languageId != null) localVarQueryParams.Add("languageId", Configuration.ApiClient.ParameterToString(languageId)); // query parameter
             if (skillIds != null) localVarQueryParams.Add("skillIds", Configuration.ApiClient.ParameterToString(skillIds)); // query parameter
+=======
+            if (emailId != null) localVarPathParams.Add("emailId", Configuration.ApiClient.ParameterToString(emailId)); // path parameter
+            if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId)); // path parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -5348,6 +15059,7 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsPost: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsPost: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -5355,10 +15067,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<ConversationResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ConversationResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConversationResponse)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PostEmailsEmailIdParticipantsParticipantIdReplace: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostEmailsEmailIdParticipantsParticipantIdReplace: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Query historical conversations with a date/time anchor 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -5368,10 +15090,21 @@ namespace ININ.PureCloudApi.Api
         public ConversationQueryResponse ConversationsQueryAnchorPost (string anchor, ConversationHistoricalQueryRequestBody body = null)
         {
              ApiResponse<ConversationQueryResponse> localVarResponse = ConversationsQueryAnchorPostWithHttpInfo(anchor, body);
+=======
+        /// Create Fax Conversation 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Fax (optional)</param>
+        /// <returns>FaxSendResponse</returns>
+        public FaxSendResponse PostFaxes (FaxSendRequest body = null)
+        {
+             ApiResponse<FaxSendResponse> localVarResponse = PostFaxesWithHttpInfo(body);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Query historical conversations with a date/time anchor 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -5385,6 +15118,17 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'anchor' when calling ConversationsApi->ConversationsQueryAnchorPost");
 
             var localVarPath = "/api/v1/conversations/query/{anchor}";
+=======
+        /// Create Fax Conversation 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Fax (optional)</param>
+        /// <returns>ApiResponse of FaxSendResponse</returns>
+        public ApiResponse< FaxSendResponse > PostFaxesWithHttpInfo (FaxSendRequest body = null)
+        {
+
+            var localVarPath = "/api/v2/conversations/faxes";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -5409,7 +15153,10 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (anchor != null) localVarPathParams.Add("anchor", Configuration.ApiClient.ParameterToString(anchor)); // path parameter
+=======
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -5434,6 +15181,7 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsQueryAnchorPost: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsQueryAnchorPost: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -5441,10 +15189,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<ConversationQueryResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ConversationQueryResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConversationQueryResponse)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PostFaxes: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostFaxes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<FaxSendResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (FaxSendResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FaxSendResponse)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Query historical conversations with a date/time anchor 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -5454,11 +15212,22 @@ namespace ININ.PureCloudApi.Api
         public async System.Threading.Tasks.Task<ConversationQueryResponse> ConversationsQueryAnchorPostAsync (string anchor, ConversationHistoricalQueryRequestBody body = null)
         {
              ApiResponse<ConversationQueryResponse> localVarResponse = await ConversationsQueryAnchorPostAsyncWithHttpInfo(anchor, body);
+=======
+        /// Create Fax Conversation 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Fax (optional)</param>
+        /// <returns>Task of FaxSendResponse</returns>
+        public async System.Threading.Tasks.Task<FaxSendResponse> PostFaxesAsync (FaxSendRequest body = null)
+        {
+             ApiResponse<FaxSendResponse> localVarResponse = await PostFaxesAsyncWithHttpInfo(body);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
 
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Query historical conversations with a date/time anchor 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -5472,6 +15241,17 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'anchor' when calling ConversationsApi->ConversationsQueryAnchorPost");
 
             var localVarPath = "/api/v1/conversations/query/{anchor}";
+=======
+        /// Create Fax Conversation 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Fax (optional)</param>
+        /// <returns>Task of ApiResponse (FaxSendResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<FaxSendResponse>> PostFaxesAsyncWithHttpInfo (FaxSendRequest body = null)
+        {
+
+            var localVarPath = "/api/v2/conversations/faxes";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -5496,7 +15276,10 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
             if (anchor != null) localVarPathParams.Add("anchor", Configuration.ApiClient.ParameterToString(anchor)); // path parameter
+=======
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -5521,6 +15304,7 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsQueryAnchorPost: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsQueryAnchorPost: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -5528,10 +15312,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<ConversationQueryResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ConversationQueryResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConversationQueryResponse)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PostFaxes: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostFaxes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<FaxSendResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (FaxSendResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FaxSendResponse)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Query historical conversations 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -5540,10 +15334,22 @@ namespace ININ.PureCloudApi.Api
         public ConversationQueryResponse ConversationsQueryPost (ConversationHistoricalQueryRequestBody body = null)
         {
              ApiResponse<ConversationQueryResponse> localVarResponse = ConversationsQueryPostWithHttpInfo(body);
+=======
+        /// Update conversation draft reply 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailId"></param>
+        /// <param name="body">Draft (optional)</param>
+        /// <returns>EmailMessage</returns>
+        public EmailMessage PutEmailsEmailIdMessagesDraft (string emailId, EmailMessage body = null)
+        {
+             ApiResponse<EmailMessage> localVarResponse = PutEmailsEmailIdMessagesDraftWithHttpInfo(emailId, body);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Query historical conversations 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -5553,6 +15359,21 @@ namespace ININ.PureCloudApi.Api
         {
 
             var localVarPath = "/api/v1/conversations/query";
+=======
+        /// Update conversation draft reply 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailId"></param>
+        /// <param name="body">Draft (optional)</param>
+        /// <returns>ApiResponse of EmailMessage</returns>
+        public ApiResponse< EmailMessage > PutEmailsEmailIdMessagesDraftWithHttpInfo (string emailId, EmailMessage body = null)
+        {
+            // verify the required parameter 'emailId' is set
+            if (emailId == null)
+                throw new ApiException(400, "Missing required parameter 'emailId' when calling ConversationsApi->PutEmailsEmailIdMessagesDraft");
+
+            var localVarPath = "/api/v2/conversations/emails/{emailId}/messages/draft";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -5577,6 +15398,10 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
+=======
+            if (emailId != null) localVarPathParams.Add("emailId", Configuration.ApiClient.ParameterToString(emailId)); // path parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -5595,12 +15420,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+<<<<<<< HEAD
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsQueryPost: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsQueryPost: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -5608,10 +15438,20 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<ConversationQueryResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ConversationQueryResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConversationQueryResponse)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PutEmailsEmailIdMessagesDraft: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutEmailsEmailIdMessagesDraft: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EmailMessage>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (EmailMessage) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmailMessage)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Query historical conversations 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -5620,11 +15460,23 @@ namespace ININ.PureCloudApi.Api
         public async System.Threading.Tasks.Task<ConversationQueryResponse> ConversationsQueryPostAsync (ConversationHistoricalQueryRequestBody body = null)
         {
              ApiResponse<ConversationQueryResponse> localVarResponse = await ConversationsQueryPostAsyncWithHttpInfo(body);
+=======
+        /// Update conversation draft reply 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailId"></param>
+        /// <param name="body">Draft (optional)</param>
+        /// <returns>Task of EmailMessage</returns>
+        public async System.Threading.Tasks.Task<EmailMessage> PutEmailsEmailIdMessagesDraftAsync (string emailId, EmailMessage body = null)
+        {
+             ApiResponse<EmailMessage> localVarResponse = await PutEmailsEmailIdMessagesDraftAsyncWithHttpInfo(emailId, body);
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
 
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Query historical conversations 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -5634,6 +15486,21 @@ namespace ININ.PureCloudApi.Api
         {
 
             var localVarPath = "/api/v1/conversations/query";
+=======
+        /// Update conversation draft reply 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailId"></param>
+        /// <param name="body">Draft (optional)</param>
+        /// <returns>Task of ApiResponse (EmailMessage)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<EmailMessage>> PutEmailsEmailIdMessagesDraftAsyncWithHttpInfo (string emailId, EmailMessage body = null)
+        {
+            // verify the required parameter 'emailId' is set
+            if (emailId == null)
+                throw new ApiException(400, "Missing required parameter 'emailId' when calling ConversationsApi->PutEmailsEmailIdMessagesDraft");
+
+            var localVarPath = "/api/v2/conversations/emails/{emailId}/messages/draft";
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -5658,6 +15525,10 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+<<<<<<< HEAD
+=======
+            if (emailId != null) localVarPathParams.Add("emailId", Configuration.ApiClient.ParameterToString(emailId)); // path parameter
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -5676,12 +15547,17 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+<<<<<<< HEAD
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+=======
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
+<<<<<<< HEAD
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsQueryPost: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ConversationsQueryPost: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -5689,6 +15565,15 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<ConversationQueryResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ConversationQueryResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConversationQueryResponse)));
+=======
+                throw new ApiException (localVarStatusCode, "Error calling PutEmailsEmailIdMessagesDraft: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutEmailsEmailIdMessagesDraft: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EmailMessage>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (EmailMessage) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmailMessage)));
+>>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
