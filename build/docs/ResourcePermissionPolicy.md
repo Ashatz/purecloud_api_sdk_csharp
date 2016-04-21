@@ -1,13 +1,12 @@
 ---
 title: ResourcePermissionPolicy
 ---
-## .ResourcePermissionPolicy
+## ININ.PureCloudApi.Model.ResourcePermissionPolicy
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **OrgId** | **string** |  | [optional] |
 | **Id** | **string** |  | [optional] |
 | **Domain** | **string** |  | [optional] |
 | **EntityName** | **string** |  | [optional] |

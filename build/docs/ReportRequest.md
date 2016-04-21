@@ -1,7 +1,7 @@
 ---
 title: ReportRequest
 ---
-## .ReportRequest
+## ININ.PureCloudApi.Model.ReportRequest
 
 ## Properties
 

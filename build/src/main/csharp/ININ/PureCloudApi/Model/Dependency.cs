@@ -108,38 +108,6 @@ namespace ININ.PureCloudApi.Model
 
     
         /// <summary>
-        /// Gets or Sets Type
-        /// </summary>
-        [DataMember(Name="type", EmitDefaultValue=false)]
-        public TypeEnum? Type { get; set; }
-    
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Dependency" />class.
-        /// </summary>
-        /// <param name="Name">Name.</param>
-        /// <param name="Version">Version.</param>
-        /// <param name="Type">Type.</param>
-        /// <param name="Deleted">Deleted (default to false).</param>
-
-        public Dependency(string Name = null, string Version = null, TypeEnum? Type = null, bool? Deleted = null)
-        {
-            this.Name = Name;
-            this.Version = Version;
-            this.Type = Type;
-            // use default value if no "Deleted" provided
-            if (Deleted == null)
-            {
-                this.Deleted = false;
-            }
-            else
-            {
-                this.Deleted = Deleted;
-            }
-            
-        }
-
-    
-        /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>

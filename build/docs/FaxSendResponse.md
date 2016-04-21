@@ -1,7 +1,7 @@
 ---
 title: FaxSendResponse
 ---
-## .FaxSendResponse
+## ININ.PureCloudApi.Model.FaxSendResponse
 
 ## Properties
 

@@ -1,7 +1,7 @@
 ---
 title: ContactCallbackRequest
 ---
-## .ContactCallbackRequest
+## ININ.PureCloudApi.Model.ContactCallbackRequest
 
 ## Properties
 

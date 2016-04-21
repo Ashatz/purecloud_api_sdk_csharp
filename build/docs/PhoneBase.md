@@ -1,7 +1,7 @@
 ---
 title: PhoneBase
 ---
-## .PhoneBase
+## ININ.PureCloudApi.Model.PhoneBase
 
 ## Properties
 

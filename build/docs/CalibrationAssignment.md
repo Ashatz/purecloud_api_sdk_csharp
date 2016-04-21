@@ -1,7 +1,7 @@
 ---
 title: CalibrationAssignment
 ---
-## .CalibrationAssignment
+## ININ.PureCloudApi.Model.CalibrationAssignment
 
 ## Properties
 

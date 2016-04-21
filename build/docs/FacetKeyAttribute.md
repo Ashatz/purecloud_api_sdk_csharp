@@ -1,7 +1,7 @@
 ---
 title: FacetKeyAttribute
 ---
-## .FacetKeyAttribute
+## ININ.PureCloudApi.Model.FacetKeyAttribute
 
 ## Properties
 

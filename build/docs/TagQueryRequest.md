@@ -1,7 +1,7 @@
 ---
 title: TagQueryRequest
 ---
-## .TagQueryRequest
+## ININ.PureCloudApi.Model.TagQueryRequest
 
 ## Properties
 

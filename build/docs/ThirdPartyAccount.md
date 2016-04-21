@@ -1,7 +1,7 @@
 ---
 title: ThirdPartyAccount
 ---
-## .ThirdPartyAccount
+## ININ.PureCloudApi.Model.ThirdPartyAccount
 
 ## Properties
 

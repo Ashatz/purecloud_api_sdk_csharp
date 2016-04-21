@@ -1,7 +1,7 @@
 ---
 title: LineEntityListing
 ---
-## .LineEntityListing
+## ININ.PureCloudApi.Model.LineEntityListing
 
 ## Properties
 
@@ -12,9 +12,9 @@ title: LineEntityListing
 | **Total** | **long?** |  | [optional] |
 | **Entities** | [**List&lt;Line&gt;**](Line.html) |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
+| **FirstUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **NextUri** | **string** |  | [optional] |
-| **FirstUri** | **string** |  | [optional] |
 | **LastUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
 {: class="table table-striped"}

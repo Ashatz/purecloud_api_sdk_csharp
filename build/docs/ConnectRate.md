@@ -1,7 +1,7 @@
 ---
 title: ConnectRate
 ---
-## .ConnectRate
+## ININ.PureCloudApi.Model.ConnectRate
 
 ## Properties
 

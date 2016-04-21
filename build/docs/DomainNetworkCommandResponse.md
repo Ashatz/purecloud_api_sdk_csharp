@@ -1,7 +1,7 @@
 ---
 title: DomainNetworkCommandResponse
 ---
-## .DomainNetworkCommandResponse
+## ININ.PureCloudApi.Model.DomainNetworkCommandResponse
 
 ## Properties
 

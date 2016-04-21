@@ -1,7 +1,7 @@
 ---
 title: User
 ---
-## .User
+## ININ.PureCloudApi.Model.User
 
 ## Properties
 
@@ -9,29 +9,24 @@ title: User
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** |  | [optional] |
-| **Username** | **string** |  | [optional] |
-| **Email** | **string** |  | [optional] |
-| **DisplayName** | **string** |  | [optional] |
-| **PhoneNumber** | **string** |  | [optional] |
-| **UserImages** | [**List&lt;UserImage&gt;**](UserImage.html) |  | [optional] |
 | **Chat** | [**Chat**](Chat.html) |  | [optional] |
-| **Roles** | [**List&lt;DomainOrganizationRole&gt;**](DomainOrganizationRole.html) |  | [optional] |
-| **VoicemailEnabled** | **bool?** |  | [optional] [default to false]|
 | **Department** | **string** |  | [optional] |
+| **Email** | **string** |  | [optional] |
+| **PrimaryContactInfo** | [**List&lt;Contact&gt;**](Contact.html) | Auto populated from addresses. | [optional] |
+| **Addresses** | [**List&lt;Contact&gt;**](Contact.html) | Email addresses and phone numbers for this user | [optional] |
+| **State** | **string** | The current state for this user. | [optional] |
 | **Title** | **string** |  | [optional] |
-| **RoutingStatus** | [**RoutingStatus**](RoutingStatus.html) |  | [optional] |
-| **Password** | **string** |  | [optional] |
-| **PrimaryPresence** | [**UserPresence**](UserPresence.html) |  | [optional] |
-| **Conversations** | [**UserConversationSummary**](UserConversationSummary.html) |  | [optional] |
-| **ConversationSummary** | [**UserConversationSummary**](UserConversationSummary.html) |  | [optional] |
-| **OutOfOffice** | [**OutOfOffice**](OutOfOffice.html) |  | [optional] |
-| **Geolocation** | [**Geolocation**](Geolocation.html) |  | [optional] |
-| **Permissions** | **List&lt;string&gt;** |  | [optional] |
+| **Username** | **string** |  | [optional] |
+| **Images** | [**List&lt;UserImage&gt;**](UserImage.html) |  | [optional] |
+| **Version** | **string** | Required when updating. Version must be the current version. Only the system can assign version. | [optional] |
+| **RoutingStatus** | [**RoutingStatus**](RoutingStatus.html) | ACD routing status | [optional] |
+| **Presence** | [**UserPresence**](UserPresence.html) | Active presence | [optional] |
+| **ConversationSummary** | [**UserConversationSummary**](UserConversationSummary.html) | Summary of conversion statistics for conversation types. | [optional] |
+| **OutOfOffice** | [**OutOfOffice**](OutOfOffice.html) | Determine if out of office is enabled | [optional] |
+| **Geolocation** | [**Geolocation**](Geolocation.html) | Current geolocation position | [optional] |
+| **Station** | [**UserStations**](UserStations.html) | Effective, default, and last station information | [optional] |
+| **Authorization** | [**UserAuthorization**](UserAuthorization.html) | Roles and permissions assigned to the user | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-| **RequestedStatus** | [**UserStatus**](UserStatus.html) |  | [optional] |
-| **DefaultStationUri** | **string** |  | [optional] |
-| **StationUri** | **string** |  | [optional] |
-| **LastStationUri** | **string** |  | [optional] |
 {: class="table table-striped"}
 
 

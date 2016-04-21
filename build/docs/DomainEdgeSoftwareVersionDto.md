@@ -1,7 +1,7 @@
 ---
 title: DomainEdgeSoftwareVersionDto
 ---
-## .DomainEdgeSoftwareVersionDto
+## ININ.PureCloudApi.Model.DomainEdgeSoftwareVersionDto
 
 ## Properties
 

@@ -1,7 +1,7 @@
 ---
 title: UserRecording
 ---
-## .UserRecording
+## ININ.PureCloudApi.Model.UserRecording
 
 ## Properties
 

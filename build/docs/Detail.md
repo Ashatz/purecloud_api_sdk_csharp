@@ -1,7 +1,7 @@
 ---
 title: Detail
 ---
-## .Detail
+## ININ.PureCloudApi.Model.Detail
 
 ## Properties
 

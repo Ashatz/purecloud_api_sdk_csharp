@@ -27,23 +27,6 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "ACTIVE")]
             Active,
             
-<<<<<<< HEAD
-            [EnumMember(Value = "DELETED")]
-            Deleted,
-            
-            [EnumMember(Value = "INACTIVE")]
-            Inactive
-        }
-
-
-        /// <summary>
-        /// The provider for this DID pool
-        /// </summary>
-        /// <value>The provider for this DID pool</value>
-        [JsonConverter(typeof(StringEnumConverter))]
-                public enum ProviderEnum {
-            
-=======
             [EnumMember(Value = "INACTIVE")]
             Inactive,
             
@@ -59,7 +42,6 @@ namespace ININ.PureCloudApi.Model
         [JsonConverter(typeof(StringEnumConverter))]
                 public enum ProviderEnum {
             
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             [EnumMember(Value = "PURE_CLOUD")]
             Cloud,
             
@@ -76,57 +58,6 @@ namespace ININ.PureCloudApi.Model
         public StateEnum? State { get; set; }
     
 
-        /// <summary>
-        /// The provider for this DID pool
-        /// </summary>
-        /// <value>The provider for this DID pool</value>
-        [DataMember(Name="provider", EmitDefaultValue=false)]
-        public ProviderEnum? Provider { get; set; }
-    
-        /// <summary>
-        /// Initializes a new instance of the <see cref="DIDPool" />class.
-        /// </summary>
-        /// <param name="Name">Name.</param>
-        /// <param name="Description">Description.</param>
-        /// <param name="Version">Version.</param>
-        /// <param name="DateCreated">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        /// <param name="DateModified">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        /// <param name="ModifiedBy">ModifiedBy.</param>
-        /// <param name="CreatedBy">CreatedBy.</param>
-        /// <param name="State">State.</param>
-        /// <param name="ModifiedByApp">ModifiedByApp.</param>
-        /// <param name="CreatedByApp">CreatedByApp.</param>
-        /// <param name="StartPhoneNumber">The starting phone number for the range of this DID pool. Must be in E.164 format.</param>
-        /// <param name="EndPhoneNumber">The ending phone number for the range of this DID pool. Must be in E.164 format.</param>
-        /// <param name="Comments">Comments.</param>
-        /// <param name="Provider">The provider for this DID pool.</param>
-
-        public DIDPool(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, string StartPhoneNumber = null, string EndPhoneNumber = null, string Comments = null, ProviderEnum? Provider = null)
-        {
-            this.Name = Name;
-            this.Description = Description;
-            this.Version = Version;
-            this.DateCreated = DateCreated;
-            this.DateModified = DateModified;
-            this.ModifiedBy = ModifiedBy;
-            this.CreatedBy = CreatedBy;
-            this.State = State;
-            this.ModifiedByApp = ModifiedByApp;
-            this.CreatedByApp = CreatedByApp;
-            this.StartPhoneNumber = StartPhoneNumber;
-            this.EndPhoneNumber = EndPhoneNumber;
-            this.Comments = Comments;
-            this.Provider = Provider;
-            
-        }
-
-    
-        /// <summary>
-        /// Gets or Sets State
-        /// </summary>
-        [DataMember(Name="state", EmitDefaultValue=false)]
-        public StateEnum? State { get; set; }
-    
         /// <summary>
         /// The provider for this DID pool
         /// </summary>

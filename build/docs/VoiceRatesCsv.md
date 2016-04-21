@@ -1,7 +1,7 @@
 ---
 title: VoiceRatesCsv
 ---
-## .VoiceRatesCsv
+## ININ.PureCloudApi.Model.VoiceRatesCsv
 
 ## Properties
 

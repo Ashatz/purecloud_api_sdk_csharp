@@ -1,7 +1,7 @@
 ---
 title: Trace
 ---
-## .Trace
+## ININ.PureCloudApi.Model.Trace
 
 ## Properties
 

@@ -1,7 +1,7 @@
 ---
 title: WrapUpCodeMapping
 ---
-## .WrapUpCodeMapping
+## ININ.PureCloudApi.Model.WrapUpCodeMapping
 
 ## Properties
 

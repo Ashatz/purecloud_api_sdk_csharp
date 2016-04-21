@@ -1,7 +1,7 @@
 ---
 title: QuestionGroupScore
 ---
-## .QuestionGroupScore
+## ININ.PureCloudApi.Model.QuestionGroupScore
 
 ## Properties
 

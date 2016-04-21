@@ -1,7 +1,7 @@
 ---
 title: ExpansionCriterium
 ---
-## .ExpansionCriterium
+## ININ.PureCloudApi.Model.ExpansionCriterium
 
 ## Properties
 

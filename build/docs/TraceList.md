@@ -1,7 +1,7 @@
 ---
 title: TraceList
 ---
-## .TraceList
+## ININ.PureCloudApi.Model.TraceList
 
 ## Properties
 

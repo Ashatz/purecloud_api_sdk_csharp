@@ -1,7 +1,7 @@
 ---
 title: BatchCommand
 ---
-## .BatchCommand
+## ININ.PureCloudApi.Model.BatchCommand
 
 ## Properties
 

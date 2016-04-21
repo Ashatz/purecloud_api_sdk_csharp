@@ -1,7 +1,7 @@
 ---
 title: LineStatus
 ---
-## .LineStatus
+## ININ.PureCloudApi.Model.LineStatus
 
 ## Properties
 

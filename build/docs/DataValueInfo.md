@@ -1,7 +1,7 @@
 ---
 title: DataValueInfo
 ---
-## .DataValueInfo
+## ININ.PureCloudApi.Model.DataValueInfo
 
 ## Properties
 

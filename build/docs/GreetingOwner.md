@@ -1,7 +1,7 @@
 ---
 title: GreetingOwner
 ---
-## .GreetingOwner
+## ININ.PureCloudApi.Model.GreetingOwner
 
 ## Properties
 

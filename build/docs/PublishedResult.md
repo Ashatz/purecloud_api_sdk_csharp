@@ -1,7 +1,7 @@
 ---
 title: PublishedResult
 ---
-## .PublishedResult
+## ININ.PureCloudApi.Model.PublishedResult
 
 ## Properties
 

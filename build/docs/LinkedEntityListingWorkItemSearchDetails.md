@@ -1,7 +1,7 @@
 ---
 title: LinkedEntityListingWorkItemSearchDetails
 ---
-## .LinkedEntityListingWorkItemSearchDetails
+## ININ.PureCloudApi.Model.LinkedEntityListingWorkItemSearchDetails
 
 ## Properties
 
@@ -12,9 +12,9 @@ title: LinkedEntityListingWorkItemSearchDetails
 | **Total** | **long?** |  | [optional] |
 | **Entities** | [**List&lt;WorkItemSearchDetails&gt;**](WorkItemSearchDetails.html) |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
+| **FirstUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **NextUri** | **string** |  | [optional] |
-| **FirstUri** | **string** |  | [optional] |
 | **LastUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
 {: class="table table-striped"}

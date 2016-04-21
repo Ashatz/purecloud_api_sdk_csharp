@@ -1,7 +1,7 @@
 ---
 title: PolicyConditions
 ---
-## .PolicyConditions
+## ININ.PureCloudApi.Model.PolicyConditions
 
 ## Properties
 

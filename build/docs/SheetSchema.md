@@ -1,7 +1,7 @@
 ---
 title: SheetSchema
 ---
-## .SheetSchema
+## ININ.PureCloudApi.Model.SheetSchema
 
 ## Properties
 

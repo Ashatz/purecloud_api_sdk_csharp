@@ -1,7 +1,7 @@
 ---
 title: FacetRequest
 ---
-## .FacetRequest
+## ININ.PureCloudApi.Model.FacetRequest
 
 ## Properties
 

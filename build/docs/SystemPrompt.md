@@ -1,7 +1,7 @@
 ---
 title: SystemPrompt
 ---
-## .SystemPrompt
+## ININ.PureCloudApi.Model.SystemPrompt
 
 ## Properties
 

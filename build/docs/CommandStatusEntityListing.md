@@ -1,7 +1,7 @@
 ---
 title: CommandStatusEntityListing
 ---
-## .CommandStatusEntityListing
+## ININ.PureCloudApi.Model.CommandStatusEntityListing
 
 ## Properties
 
@@ -12,9 +12,9 @@ title: CommandStatusEntityListing
 | **Total** | **long?** |  | [optional] |
 | **Entities** | [**List&lt;CommandStatus&gt;**](CommandStatus.html) |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
+| **FirstUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **NextUri** | **string** |  | [optional] |
-| **FirstUri** | **string** |  | [optional] |
 | **LastUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
 {: class="table table-striped"}

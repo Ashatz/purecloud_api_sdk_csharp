@@ -19,30 +19,6 @@ namespace ININ.PureCloudApi.Model
     { 
 
         /// <summary>
-<<<<<<< HEAD
-        /// Gets or Sets GroupType
-        /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
-                public enum GroupTypeEnum {
-            
-            [EnumMember(Value = "OFFICIAL")]
-            Official,
-            
-            [EnumMember(Value = "DISTRIBUTION_GROUP")]
-            DistributionGroup
-        }
-
-
-        /// <summary>
-        /// Gets or Sets GroupState
-        /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
-                public enum GroupStateEnum {
-            
-            [EnumMember(Value = "ACTIVE")]
-            Active,
-            
-=======
         /// Gets or Sets State
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
@@ -51,7 +27,6 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "ACTIVE")]
             Active,
             
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             [EnumMember(Value = "INACTIVE")]
             Inactive,
             
@@ -61,41 +36,6 @@ namespace ININ.PureCloudApi.Model
 
         
 
-        /// <summary>
-        /// Gets or Sets GroupType
-        /// </summary>
-        [DataMember(Name="groupType", EmitDefaultValue=false)]
-        public GroupTypeEnum? GroupType { get; set; }
-    
-
-        /// <summary>
-        /// Gets or Sets GroupState
-        /// </summary>
-        [DataMember(Name="groupState", EmitDefaultValue=false)]
-        public GroupStateEnum? GroupState { get; set; }
-    
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Group" />class.
-        /// </summary>
-        /// <param name="Name">Name.</param>
-        /// <param name="Description">Description.</param>
-        /// <param name="MemberCount">MemberCount.</param>
-        /// <param name="GroupType">GroupType.</param>
-        /// <param name="GroupImages">GroupImages.</param>
-        /// <param name="GroupState">GroupState.</param>
-
-        public Group(string Name = null, string Description = null, long? MemberCount = null, GroupTypeEnum? GroupType = null, GroupImages GroupImages = null, GroupStateEnum? GroupState = null)
-        {
-            this.Name = Name;
-            this.Description = Description;
-            this.MemberCount = MemberCount;
-            this.GroupType = GroupType;
-            this.GroupImages = GroupImages;
-            this.GroupState = GroupState;
-            
-        }
-
-    
         /// <summary>
         /// Gets or Sets State
         /// </summary>
@@ -147,8 +87,6 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
     
-<<<<<<< HEAD
-=======
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
@@ -156,29 +94,21 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
         public DateTime? DateModified { get; set; }
     
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// Gets or Sets MemberCount
         /// </summary>
         [DataMember(Name="memberCount", EmitDefaultValue=false)]
         public long? MemberCount { get; set; }
     
-<<<<<<< HEAD
-=======
         /// <summary>
         /// Gets or Sets Version
         /// </summary>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public double? Version { get; set; }
     
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// Gets or Sets Images
         /// </summary>
-<<<<<<< HEAD
-        [DataMember(Name="groupImages", EmitDefaultValue=false)]
-        public GroupImages GroupImages { get; set; }
-=======
         [DataMember(Name="images", EmitDefaultValue=false)]
         public List<UserImage> Images { get; set; }
     
@@ -187,7 +117,6 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         [DataMember(Name="addresses", EmitDefaultValue=false)]
         public List<Contact> Addresses { get; set; }
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
     
         /// <summary>
         /// The URI for this object
@@ -265,35 +194,16 @@ namespace ININ.PureCloudApi.Model
                     this.Description != null &&
                     this.Description.Equals(other.Description)
                 ) &&
-<<<<<<< HEAD
-=======
                 (
                     this.DateModified == other.DateModified ||
                     this.DateModified != null &&
                     this.DateModified.Equals(other.DateModified)
                 ) &&
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 (
                     this.MemberCount == other.MemberCount ||
                     this.MemberCount != null &&
                     this.MemberCount.Equals(other.MemberCount)
                 ) &&
-<<<<<<< HEAD
-                (
-                    this.GroupType == other.GroupType ||
-                    this.GroupType != null &&
-                    this.GroupType.Equals(other.GroupType)
-                ) &&
-                (
-                    this.GroupImages == other.GroupImages ||
-                    this.GroupImages != null &&
-                    this.GroupImages.Equals(other.GroupImages)
-                ) &&
-                (
-                    this.GroupState == other.GroupState ||
-                    this.GroupState != null &&
-                    this.GroupState.Equals(other.GroupState)
-=======
                 (
                     this.State == other.State ||
                     this.State != null &&
@@ -313,7 +223,6 @@ namespace ININ.PureCloudApi.Model
                     this.Addresses == other.Addresses ||
                     this.Addresses != null &&
                     this.Addresses.SequenceEqual(other.Addresses)
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 ) &&
                 (
                     this.SelfUri == other.SelfUri ||
@@ -339,16 +248,6 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.Name.GetHashCode();
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
-<<<<<<< HEAD
-                if (this.MemberCount != null)
-                    hash = hash * 59 + this.MemberCount.GetHashCode();
-                if (this.GroupType != null)
-                    hash = hash * 59 + this.GroupType.GetHashCode();
-                if (this.GroupImages != null)
-                    hash = hash * 59 + this.GroupImages.GetHashCode();
-                if (this.GroupState != null)
-                    hash = hash * 59 + this.GroupState.GetHashCode();
-=======
                 if (this.DateModified != null)
                     hash = hash * 59 + this.DateModified.GetHashCode();
                 if (this.MemberCount != null)
@@ -361,7 +260,6 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.Images.GetHashCode();
                 if (this.Addresses != null)
                     hash = hash * 59 + this.Addresses.GetHashCode();
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;

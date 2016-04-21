@@ -1,7 +1,7 @@
 ---
 title: ContentSortItem
 ---
-## .ContentSortItem
+## ININ.PureCloudApi.Model.ContentSortItem
 
 ## Properties
 

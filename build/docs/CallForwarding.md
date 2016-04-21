@@ -1,7 +1,7 @@
 ---
 title: CallForwarding
 ---
-## .CallForwarding
+## ININ.PureCloudApi.Model.CallForwarding
 
 ## Properties
 

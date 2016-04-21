@@ -1,7 +1,7 @@
 ---
 title: Invoice
 ---
-## .Invoice
+## ININ.PureCloudApi.Model.Invoice
 
 ## Properties
 

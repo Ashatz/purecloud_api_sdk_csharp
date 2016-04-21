@@ -1,7 +1,7 @@
 ---
 title: RoutingStatus
 ---
-## .RoutingStatus
+## ININ.PureCloudApi.Model.RoutingStatus
 
 ## Properties
 

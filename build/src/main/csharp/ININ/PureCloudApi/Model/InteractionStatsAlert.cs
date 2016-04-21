@@ -143,6 +143,7 @@ namespace ININ.PureCloudApi.Model
         public static string AlertTypes_Email = "EMAIL";
         
         
+
         /// <summary>
         /// The dimension of concern.
         /// </summary>
@@ -150,6 +151,7 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="dimension", EmitDefaultValue=false)]
         public DimensionEnum? Dimension { get; set; }
     
+
         /// <summary>
         /// The metric to be assessed.
         /// </summary>
@@ -157,6 +159,7 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="metric", EmitDefaultValue=false)]
         public MetricEnum? Metric { get; set; }
     
+
         /// <summary>
         /// The media type.
         /// </summary>
@@ -164,6 +167,7 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="mediaType", EmitDefaultValue=false)]
         public MediaTypeEnum? MediaType { get; set; }
     
+
         /// <summary>
         /// The comparison descriptor used against the metric's value.
         /// </summary>
@@ -171,6 +175,7 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="numericRange", EmitDefaultValue=false)]
         public NumericRangeEnum? NumericRange { get; set; }
     
+
         /// <summary>
         /// The statistic of concern for the metric.
         /// </summary>
@@ -186,7 +191,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="AlertTypes">A collection of notification methods. &#x3D; [&#39;SMS&#39;, &#39;DEVICE&#39;, &#39;EMAIL&#39;] (required).</param>
         /// <param name="RuleUri">RuleUri.</param>
 
-        public InteractionStatsAlert(bool? Unread = null, List<User> NotificationUsers = null, List<string> AlertTypes = null, string RuleUri = null)
+        public InteractionStatsAlert(bool? Unread = nullList<User> NotificationUsers = null, List<string> AlertTypes = null, string RuleUri = null)
         {
             // to ensure "Unread" is required (not null)
             if (Unread == null)

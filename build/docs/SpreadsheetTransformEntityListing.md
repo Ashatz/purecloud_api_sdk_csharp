@@ -1,7 +1,7 @@
 ---
 title: SpreadsheetTransformEntityListing
 ---
-## .SpreadsheetTransformEntityListing
+## ININ.PureCloudApi.Model.SpreadsheetTransformEntityListing
 
 ## Properties
 
@@ -10,11 +10,11 @@ title: SpreadsheetTransformEntityListing
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
-| **Entities** | [**List&lt;SpreadsheetTransform&gt;**](SpreadsheetTransform.html) |  | [optional] |
+| **Entities** | [**List&lt;ClientSpreadsheetTransform&gt;**](ClientSpreadsheetTransform.html) |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
+| **FirstUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **NextUri** | **string** |  | [optional] |
-| **FirstUri** | **string** |  | [optional] |
 | **LastUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
 {: class="table table-striped"}

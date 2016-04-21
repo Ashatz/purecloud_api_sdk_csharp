@@ -1,7 +1,7 @@
 ---
 title: CampaignEntityListing
 ---
-## .CampaignEntityListing
+## ININ.PureCloudApi.Model.CampaignEntityListing
 
 ## Properties
 
@@ -12,9 +12,9 @@ title: CampaignEntityListing
 | **Total** | **long?** |  | [optional] |
 | **Entities** | [**List&lt;Campaign&gt;**](Campaign.html) |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
+| **FirstUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **NextUri** | **string** |  | [optional] |
-| **FirstUri** | **string** |  | [optional] |
 | **LastUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
 {: class="table table-striped"}

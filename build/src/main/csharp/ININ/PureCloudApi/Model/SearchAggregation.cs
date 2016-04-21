@@ -38,6 +38,7 @@ namespace ININ.PureCloudApi.Model
         }
 
         
+
         /// <summary>
         /// Gets or Sets Type
         /// </summary>

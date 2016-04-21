@@ -1,7 +1,7 @@
 ---
 title: FavoriteTemplateRequestData
 ---
-## .FavoriteTemplateRequestData
+## ININ.PureCloudApi.Model.FavoriteTemplateRequestData
 
 ## Properties
 

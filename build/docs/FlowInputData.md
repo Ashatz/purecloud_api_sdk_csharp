@@ -1,7 +1,7 @@
 ---
 title: FlowInputData
 ---
-## .FlowInputData
+## ININ.PureCloudApi.Model.FlowInputData
 
 ## Properties
 

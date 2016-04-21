@@ -1,7 +1,7 @@
 ---
 title: LicensesByPermission
 ---
-## .LicensesByPermission
+## ININ.PureCloudApi.Model.LicensesByPermission
 
 ## Properties
 

@@ -1,7 +1,7 @@
 ---
 title: QueryFacetInfo
 ---
-## .QueryFacetInfo
+## ININ.PureCloudApi.Model.QueryFacetInfo
 
 ## Properties
 

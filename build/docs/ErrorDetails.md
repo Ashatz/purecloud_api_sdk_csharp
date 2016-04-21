@@ -1,7 +1,7 @@
 ---
 title: ErrorDetails
 ---
-## .ErrorDetails
+## ININ.PureCloudApi.Model.ErrorDetails
 
 ## Properties
 

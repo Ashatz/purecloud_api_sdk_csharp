@@ -68,10 +68,7 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="fieldType", EmitDefaultValue=false)]
         public FieldTypeEnum? FieldType { get; set; }
     
-<<<<<<< HEAD
 
-=======
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// the facet request type that was made.
         /// </summary>

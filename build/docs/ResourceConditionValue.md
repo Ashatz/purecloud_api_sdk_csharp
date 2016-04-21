@@ -1,7 +1,7 @@
 ---
 title: ResourceConditionValue
 ---
-## .ResourceConditionValue
+## ININ.PureCloudApi.Model.ResourceConditionValue
 
 ## Properties
 

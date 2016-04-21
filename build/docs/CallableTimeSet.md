@@ -1,7 +1,7 @@
 ---
 title: CallableTimeSet
 ---
-## .CallableTimeSet
+## ININ.PureCloudApi.Model.CallableTimeSet
 
 ## Properties
 

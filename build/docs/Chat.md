@@ -1,7 +1,7 @@
 ---
 title: Chat
 ---
-## .Chat
+## ININ.PureCloudApi.Model.Chat
 
 ## Properties
 

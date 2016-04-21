@@ -1,7 +1,7 @@
 ---
 title: VoiceXmlOperation
 ---
-## .VoiceXmlOperation
+## ININ.PureCloudApi.Model.VoiceXmlOperation
 
 ## Properties
 

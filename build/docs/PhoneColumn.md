@@ -1,7 +1,7 @@
 ---
 title: PhoneColumn
 ---
-## .PhoneColumn
+## ININ.PureCloudApi.Model.PhoneColumn
 
 ## Properties
 

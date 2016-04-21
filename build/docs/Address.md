@@ -1,20 +1,20 @@
 ---
 title: Address
 ---
-## .Address
+## ININ.PureCloudApi.Model.Address
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Id** | **string** | The globally unique identifier for the object. | [optional] |
-| **Name** | **string** |  | [optional] |
-| **Street** | **string** |  | [optional] |
-| **City** | **string** |  | [optional] |
-| **CountryName** | **string** |  | [optional] |
-| **StateName** | **string** |  | [optional] |
-| **PostalCode** | **string** |  | [optional] |
-| **SelfUri** | **string** | The URI for this object | [optional] |
+| **Country** | **string** |  | [optional] |
+| **A1** | **string** |  | [optional] |
+| **A3** | **string** |  | [optional] |
+| **RD** | **string** |  | [optional] |
+| **HNO** | **string** |  | [optional] |
+| **LOC** | **string** |  | [optional] |
+| **NAM** | **string** |  | [optional] |
+| **PC** | **string** |  | [optional] |
 {: class="table table-striped"}
 
 

@@ -35,11 +35,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="ShippingAddress">The quote shipping address. (required).</param>
         /// <param name="ForRelatedPart">The part number of a part related to the quote charge..</param>
 
-<<<<<<< HEAD
-        public QuoteCharge(string Id = null, string Sku = null, string Name = null, string ChargeType = null, int? Quantity = null, string ListTotal = null, string Total = null, string ListPriceDisplay = null, string Discount = null, string EffectivePrice = null, bool? ProductShippable = null, Address ShippingAddress = null, string ForRelatedPart = null)
-=======
         public QuoteCharge(string Id = null, string Sku = null, string Name = null, string ChargeType = null, int? Quantity = null, string ListTotal = null, string Total = null, string ListPriceDisplay = null, string Discount = null, string EffectivePrice = null, bool? ProductShippable = null, BillingAddress ShippingAddress = null, string ForRelatedPart = null)
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         {
             // to ensure "Id" is required (not null)
             if (Id == null)
@@ -236,11 +232,7 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <value>The quote shipping address.</value>
         [DataMember(Name="shippingAddress", EmitDefaultValue=false)]
-<<<<<<< HEAD
-        public Address ShippingAddress { get; set; }
-=======
         public BillingAddress ShippingAddress { get; set; }
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
     
         /// <summary>
         /// The part number of a part related to the quote charge.

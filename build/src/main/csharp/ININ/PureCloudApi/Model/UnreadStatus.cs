@@ -15,19 +15,6 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/SessionRequest.cs
-    public partial class SessionRequest :  IEquatable<SessionRequest>
-    { 
-        
-        /// <summary>
-        /// Initializes a new instance of the <see cref="SessionRequest" />class.
-        /// </summary>
-        /// <param name="MinutesToLive">MinutesToLive.</param>
-
-        public SessionRequest(long? MinutesToLive = null)
-        {
-            this.MinutesToLive = MinutesToLive;
-=======
     public partial class UnreadStatus :  IEquatable<UnreadStatus>
     { 
         
@@ -47,7 +34,6 @@ namespace ININ.PureCloudApi.Model
             {
                 this.Unread = Unread;
             }
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/UnreadStatus.cs
             
         }
 
@@ -55,14 +41,9 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Sets if the alert is read or unread.
         /// </summary>
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/SessionRequest.cs
-        [DataMember(Name="minutesToLive", EmitDefaultValue=false)]
-        public long? MinutesToLive { get; set; }
-=======
         /// <value>Sets if the alert is read or unread.</value>
         [DataMember(Name="unread", EmitDefaultValue=false)]
         public bool? Unread { get; set; }
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/UnreadStatus.cs
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -71,13 +52,8 @@ namespace ININ.PureCloudApi.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/SessionRequest.cs
-            sb.Append("class SessionRequest {\n");
-            sb.Append("  MinutesToLive: ").Append(MinutesToLive).Append("\n");
-=======
             sb.Append("class UnreadStatus {\n");
             sb.Append("  Unread: ").Append(Unread).Append("\n");
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/UnreadStatus.cs
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -105,11 +81,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if UnreadStatus instances are equal
         /// </summary>
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/SessionRequest.cs
-        /// <param name="other">Instance of SessionRequest to be compared</param>
-=======
         /// <param name="other">Instance of UnreadStatus to be compared</param>
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/UnreadStatus.cs
         /// <returns>Boolean</returns>
         public bool Equals(UnreadStatus other)
         {
@@ -136,13 +108,8 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/SessionRequest.cs
-                if (this.MinutesToLive != null)
-                    hash = hash * 59 + this.MinutesToLive.GetHashCode();
-=======
                 if (this.Unread != null)
                     hash = hash * 59 + this.Unread.GetHashCode();
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/UnreadStatus.cs
                 return hash;
             }
         }

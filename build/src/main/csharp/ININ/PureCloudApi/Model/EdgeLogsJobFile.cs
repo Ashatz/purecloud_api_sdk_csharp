@@ -39,6 +39,7 @@ namespace ININ.PureCloudApi.Model
         }
 
         
+
         /// <summary>
         /// The status of the upload of this file from the Edge to the cloud.  Use /upload to start an upload.
         /// </summary>

@@ -32,11 +32,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="PreviewModeAcceptedValues">PreviewModeAcceptedValues.</param>
         /// <param name="Size">Size.</param>
 
-<<<<<<< HEAD
-        public ContactList(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, List<string> ColumnNames = null, List<PhoneNumberColumn> PhoneColumns = null, ImportStatus ImportStatus = null, string PreviewModeColumnName = null, List<string> PreviewModeAcceptedValues = null, long? Size = null)
-=======
         public ContactList(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, List<string> ColumnNames = null, List<ContactPhoneNumberColumn> PhoneColumns = null, ImportStatus ImportStatus = null, string PreviewModeColumnName = null, List<string> PreviewModeAcceptedValues = null, long? Size = null)
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         {
             this.Name = Name;
             this.DateCreated = DateCreated;
@@ -95,11 +91,7 @@ namespace ININ.PureCloudApi.Model
         /// Gets or Sets PhoneColumns
         /// </summary>
         [DataMember(Name="phoneColumns", EmitDefaultValue=false)]
-<<<<<<< HEAD
-        public List<PhoneNumberColumn> PhoneColumns { get; set; }
-=======
         public List<ContactPhoneNumberColumn> PhoneColumns { get; set; }
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
     
         /// <summary>
         /// Gets or Sets ImportStatus

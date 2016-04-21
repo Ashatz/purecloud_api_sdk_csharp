@@ -1,7 +1,7 @@
 ---
 title: PhoneNumberColumn
 ---
-## .PhoneNumberColumn
+## ININ.PureCloudApi.Model.PhoneNumberColumn
 
 ## Properties
 
@@ -9,7 +9,6 @@ title: PhoneNumberColumn
 |------------ | ------------- | ------------- | -------------|
 | **ColumnName** | **string** |  | [optional] |
 | **Type** | **string** |  | [optional] |
-| **CallableTimeColumn** | **string** |  | [optional] |
 {: class="table table-striped"}
 
 

@@ -1,7 +1,7 @@
 ---
 title: WorkspaceCreate
 ---
-## .WorkspaceCreate
+## ININ.PureCloudApi.Model.WorkspaceCreate
 
 ## Properties
 

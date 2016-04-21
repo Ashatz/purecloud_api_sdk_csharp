@@ -1,7 +1,7 @@
 ---
 title: CallRecord
 ---
-## .CallRecord
+## ININ.PureCloudApi.Model.CallRecord
 
 ## Properties
 

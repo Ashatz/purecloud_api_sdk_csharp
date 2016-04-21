@@ -51,6 +51,7 @@ namespace ININ.PureCloudApi.Model
         }
 
         
+
         /// <summary>
         /// Sort the result set in ascending/descending order. Default is ascending
         /// </summary>
@@ -58,6 +59,7 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="order", EmitDefaultValue=false)]
         public OrderEnum? Order { get; set; }
     
+
         /// <summary>
         /// Specify which data element within the result set to use for sorting. The options  to use as a basis for sorting the results: conversationStart, segmentStart, and segmentEnd. If not specified, the default is conversationStart
         /// </summary>

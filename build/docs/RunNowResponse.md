@@ -1,7 +1,7 @@
 ---
 title: RunNowResponse
 ---
-## .RunNowResponse
+## ININ.PureCloudApi.Model.RunNowResponse
 
 ## Properties
 

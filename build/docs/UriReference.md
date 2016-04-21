@@ -1,7 +1,7 @@
 ---
 title: UriReference
 ---
-## .UriReference
+## ININ.PureCloudApi.Model.UriReference
 
 ## Properties
 

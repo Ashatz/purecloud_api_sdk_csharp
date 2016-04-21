@@ -1,7 +1,7 @@
 ---
 title: SocialAccount
 ---
-## .SocialAccount
+## ININ.PureCloudApi.Model.SocialAccount
 
 ## Properties
 

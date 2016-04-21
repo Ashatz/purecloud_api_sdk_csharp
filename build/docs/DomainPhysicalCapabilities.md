@@ -1,7 +1,7 @@
 ---
 title: DomainPhysicalCapabilities
 ---
-## .DomainPhysicalCapabilities
+## ININ.PureCloudApi.Model.DomainPhysicalCapabilities
 
 ## Properties
 

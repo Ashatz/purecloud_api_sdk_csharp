@@ -21,21 +21,6 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Campaign" />class.
         /// </summary>
-<<<<<<< HEAD
-        /// <param name="Id">Id.</param>
-        /// <param name="Name">Name.</param>
-        /// <param name="SelfUri">SelfUri.</param>
-        /// <param name="PhoneNumberColumns">PhoneNumberColumns.</param>
-        /// <param name="SkipPreviewDisabled">SkipPreviewDisabled (default to false).</param>
-        /// <param name="PreviewTimeOutSeconds">PreviewTimeOutSeconds.</param>
-
-        public Campaign(string Id = null, string Name = null, string SelfUri = null, List<PhoneNumberColumn> PhoneNumberColumns = null, bool? SkipPreviewDisabled = null, int? PreviewTimeOutSeconds = null)
-        {
-            this.Id = Id;
-            this.Name = Name;
-            this.SelfUri = SelfUri;
-            this.PhoneNumberColumns = PhoneNumberColumns;
-=======
         /// <param name="Name">Name.</param>
         /// <param name="DateCreated">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="DateModified">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
@@ -83,7 +68,6 @@ namespace ININ.PureCloudApi.Model
             this.CallerAddress = CallerAddress;
             this.OutboundLineCount = OutboundLineCount;
             this.RuleSets = RuleSets;
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             // use default value if no "SkipPreviewDisabled" provided
             if (SkipPreviewDisabled == null)
             {
@@ -94,8 +78,6 @@ namespace ININ.PureCloudApi.Model
                 this.SkipPreviewDisabled = SkipPreviewDisabled;
             }
             this.PreviewTimeOutSeconds = PreviewTimeOutSeconds;
-<<<<<<< HEAD
-=======
             // use default value if no "SingleNumberPreview" provided
             if (SingleNumberPreview == null)
             {
@@ -106,7 +88,6 @@ namespace ININ.PureCloudApi.Model
                 this.SingleNumberPreview = SingleNumberPreview;
             }
             this.ContactSort = ContactSort;
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
@@ -116,11 +97,7 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-<<<<<<< HEAD
-        public string Id { get; set; }
-=======
         public string Id { get; private set; }
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
     
         /// <summary>
         /// Gets or Sets Name
@@ -131,22 +108,13 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
-<<<<<<< HEAD
-        [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-=======
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; set; }
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
     
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
-<<<<<<< HEAD
-        [DataMember(Name="phoneNumberColumns", EmitDefaultValue=false)]
-        public List<PhoneNumberColumn> PhoneNumberColumns { get; set; }
-=======
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
         public DateTime? DateModified { get; set; }
@@ -252,7 +220,6 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         [DataMember(Name="ruleSets", EmitDefaultValue=false)]
         public List<UriReference> RuleSets { get; set; }
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
     
         /// <summary>
         /// Gets or Sets SkipPreviewDisabled
@@ -264,9 +231,6 @@ namespace ININ.PureCloudApi.Model
         /// Gets or Sets PreviewTimeOutSeconds
         /// </summary>
         [DataMember(Name="previewTimeOutSeconds", EmitDefaultValue=false)]
-<<<<<<< HEAD
-        public int? PreviewTimeOutSeconds { get; set; }
-=======
         public long? PreviewTimeOutSeconds { get; set; }
     
         /// <summary>
@@ -287,7 +251,6 @@ namespace ININ.PureCloudApi.Model
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -320,12 +283,9 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  RuleSets: ").Append(RuleSets).Append("\n");
             sb.Append("  SkipPreviewDisabled: ").Append(SkipPreviewDisabled).Append("\n");
             sb.Append("  PreviewTimeOutSeconds: ").Append(PreviewTimeOutSeconds).Append("\n");
-<<<<<<< HEAD
-=======
             sb.Append("  SingleNumberPreview: ").Append(SingleNumberPreview).Append("\n");
             sb.Append("  ContactSort: ").Append(ContactSort).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -373,16 +333,6 @@ namespace ININ.PureCloudApi.Model
                     this.Name.Equals(other.Name)
                 ) &&
                 (
-<<<<<<< HEAD
-                    this.SelfUri == other.SelfUri ||
-                    this.SelfUri != null &&
-                    this.SelfUri.Equals(other.SelfUri)
-                ) &&
-                (
-                    this.PhoneNumberColumns == other.PhoneNumberColumns ||
-                    this.PhoneNumberColumns != null &&
-                    this.PhoneNumberColumns.SequenceEqual(other.PhoneNumberColumns)
-=======
                     this.DateCreated == other.DateCreated ||
                     this.DateCreated != null &&
                     this.DateCreated.Equals(other.DateCreated)
@@ -476,7 +426,6 @@ namespace ININ.PureCloudApi.Model
                     this.RuleSets == other.RuleSets ||
                     this.RuleSets != null &&
                     this.RuleSets.SequenceEqual(other.RuleSets)
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 ) &&
                 (
                     this.SkipPreviewDisabled == other.SkipPreviewDisabled ||
@@ -520,12 +469,6 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.Id.GetHashCode();
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-<<<<<<< HEAD
-                if (this.SelfUri != null)
-                    hash = hash * 59 + this.SelfUri.GetHashCode();
-                if (this.PhoneNumberColumns != null)
-                    hash = hash * 59 + this.PhoneNumberColumns.GetHashCode();
-=======
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
                 if (this.DateModified != null)
@@ -564,20 +507,16 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.OutboundLineCount.GetHashCode();
                 if (this.RuleSets != null)
                     hash = hash * 59 + this.RuleSets.GetHashCode();
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 if (this.SkipPreviewDisabled != null)
                     hash = hash * 59 + this.SkipPreviewDisabled.GetHashCode();
                 if (this.PreviewTimeOutSeconds != null)
                     hash = hash * 59 + this.PreviewTimeOutSeconds.GetHashCode();
-<<<<<<< HEAD
-=======
                 if (this.SingleNumberPreview != null)
                     hash = hash * 59 + this.SingleNumberPreview.GetHashCode();
                 if (this.ContactSort != null)
                     hash = hash * 59 + this.ContactSort.GetHashCode();
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 return hash;
             }
         }

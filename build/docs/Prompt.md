@@ -1,7 +1,7 @@
 ---
 title: Prompt
 ---
-## .Prompt
+## ININ.PureCloudApi.Model.Prompt
 
 ## Properties
 

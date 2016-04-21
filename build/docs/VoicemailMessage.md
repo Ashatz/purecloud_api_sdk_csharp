@@ -1,7 +1,7 @@
 ---
 title: VoicemailMessage
 ---
-## .VoicemailMessage
+## ININ.PureCloudApi.Model.VoicemailMessage
 
 ## Properties
 

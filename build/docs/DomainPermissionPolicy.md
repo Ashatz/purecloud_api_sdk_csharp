@@ -1,7 +1,7 @@
 ---
 title: DomainPermissionPolicy
 ---
-## .DomainPermissionPolicy
+## ININ.PureCloudApi.Model.DomainPermissionPolicy
 
 ## Properties
 

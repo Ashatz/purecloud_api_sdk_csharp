@@ -1,7 +1,7 @@
 ---
 title: AccountOverview
 ---
-## .AccountOverview
+## ININ.PureCloudApi.Model.AccountOverview
 
 ## Properties
 

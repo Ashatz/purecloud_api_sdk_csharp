@@ -1,7 +1,7 @@
 ---
 title: Calibration
 ---
-## .Calibration
+## ININ.PureCloudApi.Model.Calibration
 
 ## Properties
 

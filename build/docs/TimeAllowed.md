@@ -1,7 +1,7 @@
 ---
 title: TimeAllowed
 ---
-## .TimeAllowed
+## ININ.PureCloudApi.Model.TimeAllowed
 
 ## Properties
 

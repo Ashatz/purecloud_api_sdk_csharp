@@ -1,7 +1,7 @@
 ---
 title: QueryResults
 ---
-## .QueryResults
+## ININ.PureCloudApi.Model.QueryResults
 
 ## Properties
 

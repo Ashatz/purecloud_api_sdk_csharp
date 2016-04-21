@@ -1,7 +1,7 @@
 ---
 title: ClientSpreadsheetTransform
 ---
-## .ClientSpreadsheetTransform
+## ININ.PureCloudApi.Model.ClientSpreadsheetTransform
 
 ## Properties
 

@@ -36,6 +36,7 @@ namespace ININ.PureCloudApi.Model
         }
 
         
+
         /// <summary>
         /// The current state for this skill.
         /// </summary>
@@ -50,7 +51,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="DateModified">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="Proficiency">Proficiency.</param>
 
-        public RoutingSkill(string Name = null, DateTime? DateModified = null, string Proficiency = null)
+        public RoutingSkill(string Name = null, DateTime? DateModified = nullstring Proficiency = null)
         {
             this.Name = Name;
             this.DateModified = DateModified;

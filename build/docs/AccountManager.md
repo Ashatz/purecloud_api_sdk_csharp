@@ -1,7 +1,7 @@
 ---
 title: AccountManager
 ---
-## .AccountManager
+## ININ.PureCloudApi.Model.AccountManager
 
 ## Properties
 

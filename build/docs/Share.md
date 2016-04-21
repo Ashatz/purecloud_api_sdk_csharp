@@ -1,7 +1,7 @@
 ---
 title: Share
 ---
-## .Share
+## ININ.PureCloudApi.Model.Share
 
 ## Properties
 

@@ -1,7 +1,7 @@
 ---
 title: Edge
 ---
-## .Edge
+## ININ.PureCloudApi.Model.Edge
 
 ## Properties
 

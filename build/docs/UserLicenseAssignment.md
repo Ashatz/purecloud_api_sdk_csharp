@@ -1,7 +1,7 @@
 ---
 title: UserLicenseAssignment
 ---
-## .UserLicenseAssignment
+## ININ.PureCloudApi.Model.UserLicenseAssignment
 
 ## Properties
 

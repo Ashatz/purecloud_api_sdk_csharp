@@ -1,7 +1,7 @@
 ---
 title: FlowConfigMetaData
 ---
-## .FlowConfigMetaData
+## ININ.PureCloudApi.Model.FlowConfigMetaData
 
 ## Properties
 

@@ -1,7 +1,7 @@
 ---
 title: CampaignStats
 ---
-## .CampaignStats
+## ININ.PureCloudApi.Model.CampaignStats
 
 ## Properties
 

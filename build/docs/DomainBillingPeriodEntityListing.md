@@ -1,7 +1,7 @@
 ---
 title: DomainBillingPeriodEntityListing
 ---
-## .DomainBillingPeriodEntityListing
+## ININ.PureCloudApi.Model.DomainBillingPeriodEntityListing
 
 ## Properties
 
@@ -12,9 +12,9 @@ title: DomainBillingPeriodEntityListing
 | **Total** | **long?** |  | [optional] |
 | **Entities** | [**List&lt;BillingPeriod&gt;**](BillingPeriod.html) |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
+| **FirstUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **NextUri** | **string** |  | [optional] |
-| **FirstUri** | **string** |  | [optional] |
 | **LastUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
 {: class="table table-striped"}

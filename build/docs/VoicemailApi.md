@@ -4,28 +4,28 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**ConfigurationUservoicemailpoliciesUseridGet**](VoicemailApi.md#configurationuservoicemailpoliciesuseridget) | **GET** /api/v1/configuration/uservoicemailpolicies/{userId} | Get a user&#39;s voicemail policy |
-| [**ConfigurationUservoicemailpoliciesUseridPatch**](VoicemailApi.md#configurationuservoicemailpoliciesuseridpatch) | **PATCH** /api/v1/configuration/uservoicemailpolicies/{userId} | Update a user&#39;s voicemail policy |
-| [**ConfigurationVoicemailpolicyGet**](VoicemailApi.md#configurationvoicemailpolicyget) | **GET** /api/v1/configuration/voicemailpolicy | Get a policy |
-| [**ConfigurationVoicemailpolicyPut**](VoicemailApi.md#configurationvoicemailpolicyput) | **PUT** /api/v1/configuration/voicemailpolicy | Update a policy |
-| [**VoicemailMailboxGet**](VoicemailApi.md#voicemailmailboxget) | **GET** /api/v1/voicemail/mailbox | Get mailbox information |
-| [**VoicemailMessagesDelete**](VoicemailApi.md#voicemailmessagesdelete) | **DELETE** /api/v1/voicemail/messages | Delete all voicemail messages |
-| [**VoicemailMessagesGet**](VoicemailApi.md#voicemailmessagesget) | **GET** /api/v1/voicemail/messages | List voicemail messages |
-| [**VoicemailMessagesMessageidDelete**](VoicemailApi.md#voicemailmessagesmessageiddelete) | **DELETE** /api/v1/voicemail/messages/{messageId} | Delete a message. |
-| [**VoicemailMessagesMessageidGet**](VoicemailApi.md#voicemailmessagesmessageidget) | **GET** /api/v1/voicemail/messages/{messageId} | Get message. |
-| [**VoicemailMessagesMessageidMediaGet**](VoicemailApi.md#voicemailmessagesmessageidmediaget) | **GET** /api/v1/voicemail/messages/{messageId}/media | Get media playback URI for this message |
-| [**VoicemailMessagesMessageidPut**](VoicemailApi.md#voicemailmessagesmessageidput) | **PUT** /api/v1/voicemail/messages/{messageId} | Update a message. |
+| [**DeleteMessages**](VoicemailApi.md#deletemessages) | **DELETE** /api/v2/voicemail/messages | Delete all voicemail messages |
+| [**DeleteMessagesMessageId**](VoicemailApi.md#deletemessagesmessageid) | **DELETE** /api/v2/voicemail/messages/{messageId} | Delete a message. |
+| [**GetMailbox**](VoicemailApi.md#getmailbox) | **GET** /api/v2/voicemail/mailbox | Get mailbox information |
+| [**GetMessages**](VoicemailApi.md#getmessages) | **GET** /api/v2/voicemail/messages | List voicemail messages |
+| [**GetMessagesMessageId**](VoicemailApi.md#getmessagesmessageid) | **GET** /api/v2/voicemail/messages/{messageId} | Get message. |
+| [**GetMessagesMessageIdMedia**](VoicemailApi.md#getmessagesmessageidmedia) | **GET** /api/v2/voicemail/messages/{messageId}/media | Get media playback URI for this message |
+| [**GetPolicy**](VoicemailApi.md#getpolicy) | **GET** /api/v2/voicemail/policy | Get a policy |
+| [**GetUserpoliciesUserId**](VoicemailApi.md#getuserpoliciesuserid) | **GET** /api/v2/voicemail/userpolicies/{userId} | Get a user&#39;s voicemail policy |
+| [**PatchUserpoliciesUserId**](VoicemailApi.md#patchuserpoliciesuserid) | **PATCH** /api/v2/voicemail/userpolicies/{userId} | Update a user&#39;s voicemail policy |
+| [**PutMessagesMessageId**](VoicemailApi.md#putmessagesmessageid) | **PUT** /api/v2/voicemail/messages/{messageId} | Update a message. |
+| [**PutPolicy**](VoicemailApi.md#putpolicy) | **PUT** /api/v2/voicemail/policy | Update a policy |
 {: class="table table-striped"}
 
-<a name="ConfigurationUservoicemailpoliciesUseridGet"></a>
-## [**VoicemailUserPolicy**](VoicemailUserPolicy.html) ConfigurationUservoicemailpoliciesUseridGet (string userId)
+<a name="DeleteMessages"></a>
+## string** DeleteMessages ()
 
-Get a user's voicemail policy
+Delete all voicemail messages
 
 
 
 ### Example
-```csharp
+~~~csharp
 using System;
 using System.Diagnostics;
 using ININ.PureCloudApi.Api;
@@ -34,7 +34,374 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class ConfigurationUservoicemailpoliciesUseridGetExample
+    public class DeleteMessagesExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new VoicemailApi();
+
+            try
+            {
+                // Delete all voicemail messages
+                string result = apiInstance.DeleteMessages();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling VoicemailApi.DeleteMessages: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+This endpoint does require any parameters.
+{: class="table table-striped"}
+
+### Return type
+
+**string**
+
+<a name="DeleteMessagesMessageId"></a>
+## string** DeleteMessagesMessageId (string messageId)
+
+Delete a message.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class DeleteMessagesMessageIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new VoicemailApi();
+            var messageId = messageId_example;  // string | Message ID
+
+            try
+            {
+                // Delete a message.
+                string result = apiInstance.DeleteMessagesMessageId(messageId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling VoicemailApi.DeleteMessagesMessageId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **messageId** | **string**| Message ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+**string**
+
+<a name="GetMailbox"></a>
+## [**VoicemailMailboxInfo**](VoicemailMailboxInfo.html) GetMailbox ()
+
+Get mailbox information
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetMailboxExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new VoicemailApi();
+
+            try
+            {
+                // Get mailbox information
+                VoicemailMailboxInfo result = apiInstance.GetMailbox();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling VoicemailApi.GetMailbox: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+This endpoint does require any parameters.
+{: class="table table-striped"}
+
+### Return type
+
+[**VoicemailMailboxInfo**](VoicemailMailboxInfo.md)
+
+<a name="GetMessages"></a>
+## [**VoicemailMessageEntityListing**](VoicemailMessageEntityListing.html) GetMessages ()
+
+List voicemail messages
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetMessagesExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new VoicemailApi();
+
+            try
+            {
+                // List voicemail messages
+                VoicemailMessageEntityListing result = apiInstance.GetMessages();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling VoicemailApi.GetMessages: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+This endpoint does require any parameters.
+{: class="table table-striped"}
+
+### Return type
+
+[**VoicemailMessageEntityListing**](VoicemailMessageEntityListing.md)
+
+<a name="GetMessagesMessageId"></a>
+## [**VoicemailMessage**](VoicemailMessage.html) GetMessagesMessageId (string messageId)
+
+Get message.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetMessagesMessageIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new VoicemailApi();
+            var messageId = messageId_example;  // string | Message ID
+
+            try
+            {
+                // Get message.
+                VoicemailMessage result = apiInstance.GetMessagesMessageId(messageId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling VoicemailApi.GetMessagesMessageId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **messageId** | **string**| Message ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**VoicemailMessage**](VoicemailMessage.md)
+
+<a name="GetMessagesMessageIdMedia"></a>
+## [**VoicemailMediaInfo**](VoicemailMediaInfo.html) GetMessagesMessageIdMedia (string messageId, string formatId = null)
+
+Get media playback URI for this message
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetMessagesMessageIdMediaExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new VoicemailApi();
+            var messageId = messageId_example;  // string | Message ID
+            var formatId = formatId_example;  // string | The desired media format (WEBM, WAV) (optional)  (default to WEBM)
+
+            try
+            {
+                // Get media playback URI for this message
+                VoicemailMediaInfo result = apiInstance.GetMessagesMessageIdMedia(messageId, formatId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling VoicemailApi.GetMessagesMessageIdMedia: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **messageId** | **string**| Message ID |  |
+| **formatId** | **string**| The desired media format (WEBM, WAV) | [optional] [default to WEBM] |
+{: class="table table-striped"}
+
+### Return type
+
+[**VoicemailMediaInfo**](VoicemailMediaInfo.md)
+
+<a name="GetPolicy"></a>
+## [**VoicemailOrganizationPolicy**](VoicemailOrganizationPolicy.html) GetPolicy ()
+
+Get a policy
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetPolicyExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new VoicemailApi();
+
+            try
+            {
+                // Get a policy
+                VoicemailOrganizationPolicy result = apiInstance.GetPolicy();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling VoicemailApi.GetPolicy: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+This endpoint does require any parameters.
+{: class="table table-striped"}
+
+### Return type
+
+[**VoicemailOrganizationPolicy**](VoicemailOrganizationPolicy.md)
+
+<a name="GetUserpoliciesUserId"></a>
+## [**VoicemailUserPolicy**](VoicemailUserPolicy.html) GetUserpoliciesUserId (string userId)
+
+Get a user's voicemail policy
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetUserpoliciesUserIdExample
     {
         public void main()
         {
@@ -48,17 +415,17 @@ namespace Example
             try
             {
                 // Get a user's voicemail policy
-                VoicemailUserPolicy result = apiInstance.ConfigurationUservoicemailpoliciesUseridGet(userId);
+                VoicemailUserPolicy result = apiInstance.GetUserpoliciesUserId(userId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling VoicemailApi.ConfigurationUservoicemailpoliciesUseridGet: " + e.Message );
+                Debug.Print("Exception when calling VoicemailApi.GetUserpoliciesUserId: " + e.Message );
             }
         }
     }
 }
-```
+~~~
 
 ### Parameters
 
@@ -72,15 +439,15 @@ namespace Example
 
 [**VoicemailUserPolicy**](VoicemailUserPolicy.md)
 
-<a name="ConfigurationUservoicemailpoliciesUseridPatch"></a>
-## [**VoicemailUserPolicy**](VoicemailUserPolicy.html) ConfigurationUservoicemailpoliciesUseridPatch (string userId, VoicemailUserPolicy body)
+<a name="PatchUserpoliciesUserId"></a>
+## [**VoicemailUserPolicy**](VoicemailUserPolicy.html) PatchUserpoliciesUserId (string userId, VoicemailUserPolicy body)
 
 Update a user's voicemail policy
 
 
 
 ### Example
-```csharp
+~~~csharp
 using System;
 using System.Diagnostics;
 using ININ.PureCloudApi.Api;
@@ -89,7 +456,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class ConfigurationUservoicemailpoliciesUseridPatchExample
+    public class PatchUserpoliciesUserIdExample
     {
         public void main()
         {
@@ -104,17 +471,17 @@ namespace Example
             try
             {
                 // Update a user's voicemail policy
-                VoicemailUserPolicy result = apiInstance.ConfigurationUservoicemailpoliciesUseridPatch(userId, body);
+                VoicemailUserPolicy result = apiInstance.PatchUserpoliciesUserId(userId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling VoicemailApi.ConfigurationUservoicemailpoliciesUseridPatch: " + e.Message );
+                Debug.Print("Exception when calling VoicemailApi.PatchUserpoliciesUserId: " + e.Message );
             }
         }
     }
 }
-```
+~~~
 
 ### Parameters
 
@@ -129,437 +496,15 @@ namespace Example
 
 [**VoicemailUserPolicy**](VoicemailUserPolicy.md)
 
-<a name="ConfigurationVoicemailpolicyGet"></a>
-## [**VoicemailOrganizationPolicy**](VoicemailOrganizationPolicy.html) ConfigurationVoicemailpolicyGet ()
-
-Get a policy
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class ConfigurationVoicemailpolicyGetExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new VoicemailApi();
-
-            try
-            {
-                // Get a policy
-                VoicemailOrganizationPolicy result = apiInstance.ConfigurationVoicemailpolicyGet();
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling VoicemailApi.ConfigurationVoicemailpolicyGet: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-This endpoint does require any parameters.
-{: class="table table-striped"}
-
-### Return type
-
-[**VoicemailOrganizationPolicy**](VoicemailOrganizationPolicy.md)
-
-<a name="ConfigurationVoicemailpolicyPut"></a>
-## [**VoicemailOrganizationPolicy**](VoicemailOrganizationPolicy.html) ConfigurationVoicemailpolicyPut (VoicemailOrganizationPolicy body = null)
-
-Update a policy
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class ConfigurationVoicemailpolicyPutExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new VoicemailApi();
-            var body = new VoicemailOrganizationPolicy(); // VoicemailOrganizationPolicy | Policy (optional) 
-
-            try
-            {
-                // Update a policy
-                VoicemailOrganizationPolicy result = apiInstance.ConfigurationVoicemailpolicyPut(body);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling VoicemailApi.ConfigurationVoicemailpolicyPut: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **body** | [**VoicemailOrganizationPolicy**](VoicemailOrganizationPolicy.md)| Policy | [optional]  |
-{: class="table table-striped"}
-
-### Return type
-
-[**VoicemailOrganizationPolicy**](VoicemailOrganizationPolicy.md)
-
-<a name="VoicemailMailboxGet"></a>
-## [**VoicemailMailboxInfo**](VoicemailMailboxInfo.html) VoicemailMailboxGet ()
-
-Get mailbox information
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class VoicemailMailboxGetExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new VoicemailApi();
-
-            try
-            {
-                // Get mailbox information
-                VoicemailMailboxInfo result = apiInstance.VoicemailMailboxGet();
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling VoicemailApi.VoicemailMailboxGet: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-This endpoint does require any parameters.
-{: class="table table-striped"}
-
-### Return type
-
-[**VoicemailMailboxInfo**](VoicemailMailboxInfo.md)
-
-<a name="VoicemailMessagesDelete"></a>
-## string** VoicemailMessagesDelete ()
-
-Delete all voicemail messages
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class VoicemailMessagesDeleteExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new VoicemailApi();
-
-            try
-            {
-                // Delete all voicemail messages
-                string result = apiInstance.VoicemailMessagesDelete();
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling VoicemailApi.VoicemailMessagesDelete: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-This endpoint does require any parameters.
-{: class="table table-striped"}
-
-### Return type
-
-**string**
-
-<a name="VoicemailMessagesGet"></a>
-## [**VoicemailMessageEntityListing**](VoicemailMessageEntityListing.html) VoicemailMessagesGet ()
-
-List voicemail messages
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class VoicemailMessagesGetExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new VoicemailApi();
-
-            try
-            {
-                // List voicemail messages
-                VoicemailMessageEntityListing result = apiInstance.VoicemailMessagesGet();
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling VoicemailApi.VoicemailMessagesGet: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-This endpoint does require any parameters.
-{: class="table table-striped"}
-
-### Return type
-
-[**VoicemailMessageEntityListing**](VoicemailMessageEntityListing.md)
-
-<a name="VoicemailMessagesMessageidDelete"></a>
-## string** VoicemailMessagesMessageidDelete (string messageId)
-
-Delete a message.
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class VoicemailMessagesMessageidDeleteExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new VoicemailApi();
-            var messageId = messageId_example;  // string | Message ID
-
-            try
-            {
-                // Delete a message.
-                string result = apiInstance.VoicemailMessagesMessageidDelete(messageId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling VoicemailApi.VoicemailMessagesMessageidDelete: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **messageId** | **string**| Message ID |  |
-{: class="table table-striped"}
-
-### Return type
-
-**string**
-
-<a name="VoicemailMessagesMessageidGet"></a>
-## [**VoicemailMessage**](VoicemailMessage.html) VoicemailMessagesMessageidGet (string messageId)
-
-Get message.
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class VoicemailMessagesMessageidGetExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new VoicemailApi();
-            var messageId = messageId_example;  // string | Message ID
-
-            try
-            {
-                // Get message.
-                VoicemailMessage result = apiInstance.VoicemailMessagesMessageidGet(messageId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling VoicemailApi.VoicemailMessagesMessageidGet: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **messageId** | **string**| Message ID |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**VoicemailMessage**](VoicemailMessage.md)
-
-<a name="VoicemailMessagesMessageidMediaGet"></a>
-## [**VoicemailMediaInfo**](VoicemailMediaInfo.html) VoicemailMessagesMessageidMediaGet (string messageId, string formatId = null)
-
-Get media playback URI for this message
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class VoicemailMessagesMessageidMediaGetExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new VoicemailApi();
-            var messageId = messageId_example;  // string | Message ID
-            var formatId = formatId_example;  // string | The desired format (WEBM, WAV, etc.) (optional)  (default to WEBM)
-
-            try
-            {
-                // Get media playback URI for this message
-                VoicemailMediaInfo result = apiInstance.VoicemailMessagesMessageidMediaGet(messageId, formatId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling VoicemailApi.VoicemailMessagesMessageidMediaGet: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **messageId** | **string**| Message ID |  |
-| **formatId** | **string**| The desired format (WEBM, WAV, etc.) | [optional] [default to WEBM] |
-{: class="table table-striped"}
-
-### Return type
-
-[**VoicemailMediaInfo**](VoicemailMediaInfo.md)
-
-<a name="VoicemailMessagesMessageidPut"></a>
-## [**VoicemailMessage**](VoicemailMessage.html) VoicemailMessagesMessageidPut (string messageId, VoicemailMessage body = null)
+<a name="PutMessagesMessageId"></a>
+## [**VoicemailMessage**](VoicemailMessage.html) PutMessagesMessageId (string messageId, VoicemailMessage body = null)
 
 Update a message.
 
 
 
 ### Example
-```csharp
+~~~csharp
 using System;
 using System.Diagnostics;
 using ININ.PureCloudApi.Api;
@@ -568,7 +513,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class VoicemailMessagesMessageidPutExample
+    public class PutMessagesMessageIdExample
     {
         public void main()
         {
@@ -583,17 +528,17 @@ namespace Example
             try
             {
                 // Update a message.
-                VoicemailMessage result = apiInstance.VoicemailMessagesMessageidPut(messageId, body);
+                VoicemailMessage result = apiInstance.PutMessagesMessageId(messageId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling VoicemailApi.VoicemailMessagesMessageidPut: " + e.Message );
+                Debug.Print("Exception when calling VoicemailApi.PutMessagesMessageId: " + e.Message );
             }
         }
     }
 }
-```
+~~~
 
 ### Parameters
 
@@ -607,4 +552,59 @@ namespace Example
 ### Return type
 
 [**VoicemailMessage**](VoicemailMessage.md)
+
+<a name="PutPolicy"></a>
+## [**VoicemailOrganizationPolicy**](VoicemailOrganizationPolicy.html) PutPolicy (VoicemailOrganizationPolicy body = null)
+
+Update a policy
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PutPolicyExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new VoicemailApi();
+            var body = new VoicemailOrganizationPolicy(); // VoicemailOrganizationPolicy | Policy (optional) 
+
+            try
+            {
+                // Update a policy
+                VoicemailOrganizationPolicy result = apiInstance.PutPolicy(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling VoicemailApi.PutPolicy: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**VoicemailOrganizationPolicy**](VoicemailOrganizationPolicy.md)| Policy | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**VoicemailOrganizationPolicy**](VoicemailOrganizationPolicy.md)
 

@@ -1,7 +1,7 @@
 ---
 title: IVR
 ---
-## .IVR
+## ININ.PureCloudApi.Model.IVR
 
 ## Properties
 

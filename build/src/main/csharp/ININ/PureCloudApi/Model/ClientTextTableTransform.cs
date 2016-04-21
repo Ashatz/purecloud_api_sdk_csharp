@@ -15,47 +15,31 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/ClientTransformModel.cs
-    public partial class ClientTransformModel :  IEquatable<ClientTransformModel>
-    { 
-        
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ClientTransformModel" />class.
-=======
     public partial class ClientTextTableTransform :  IEquatable<ClientTextTableTransform>
     { 
         
         /// <summary>
         /// Initializes a new instance of the <see cref="ClientTextTableTransform" />class.
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/ClientTextTableTransform.cs
         /// </summary>
         /// <param name="Id">Id.</param>
         /// <param name="EndpointId">EndpointId.</param>
         /// <param name="FilenameReplaces">FilenameReplaces.</param>
         /// <param name="Tags">Tags.</param>
         /// <param name="Name">Name.</param>
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/ClientTransformModel.cs
-
-        public ClientTransformModel(string Id = null, string EndpointId = null, List<BasicTransform> FilenameReplaces = null, List<TagModel> Tags = null, string Name = null)
-=======
         /// <param name="Comments">Comments.</param>
         /// <param name="Delimiter">Delimiter.</param>
         /// <param name="Table">Table.</param>
 
         public ClientTextTableTransform(string Id = null, string EndpointId = null, List<BasicTransform> FilenameReplaces = null, List<TagModel> Tags = null, string Name = null, string Comments = null, string Delimiter = null, TableTransform Table = null)
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/ClientTextTableTransform.cs
         {
             this.Id = Id;
             this.EndpointId = EndpointId;
             this.FilenameReplaces = FilenameReplaces;
             this.Tags = Tags;
             this.Name = Name;
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/ClientTransformModel.cs
-=======
             this.Comments = Comments;
             this.Delimiter = Delimiter;
             this.Table = Table;
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/ClientTextTableTransform.cs
             
         }
 
@@ -90,8 +74,6 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
     
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/ClientTransformModel.cs
-=======
         /// <summary>
         /// Gets or Sets Comments
         /// </summary>
@@ -110,7 +92,6 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="table", EmitDefaultValue=false)]
         public TableTransform Table { get; set; }
     
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/ClientTextTableTransform.cs
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -124,12 +105,9 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  FilenameReplaces: ").Append(FilenameReplaces).Append("\n");
             sb.Append("  Tags: ").Append(Tags).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/ClientTransformModel.cs
-=======
             sb.Append("  Comments: ").Append(Comments).Append("\n");
             sb.Append("  Delimiter: ").Append(Delimiter).Append("\n");
             sb.Append("  Table: ").Append(Table).Append("\n");
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/ClientTextTableTransform.cs
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -157,11 +135,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if ClientTextTableTransform instances are equal
         /// </summary>
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/ClientTransformModel.cs
-        /// <param name="other">Instance of ClientTransformModel to be compared</param>
-=======
         /// <param name="other">Instance of ClientTextTableTransform to be compared</param>
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/ClientTextTableTransform.cs
         /// <returns>Boolean</returns>
         public bool Equals(ClientTextTableTransform other)
         {
@@ -233,15 +207,12 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.Tags.GetHashCode();
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/ClientTransformModel.cs
-=======
                 if (this.Comments != null)
                     hash = hash * 59 + this.Comments.GetHashCode();
                 if (this.Delimiter != null)
                     hash = hash * 59 + this.Delimiter.GetHashCode();
                 if (this.Table != null)
                     hash = hash * 59 + this.Table.GetHashCode();
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/ClientTextTableTransform.cs
                 return hash;
             }
         }

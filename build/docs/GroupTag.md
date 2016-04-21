@@ -1,7 +1,7 @@
 ---
 title: GroupTag
 ---
-## .GroupTag
+## ININ.PureCloudApi.Model.GroupTag
 
 ## Properties
 

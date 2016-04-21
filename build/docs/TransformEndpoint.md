@@ -1,7 +1,7 @@
 ---
 title: TransformEndpoint
 ---
-## .TransformEndpoint
+## ININ.PureCloudApi.Model.TransformEndpoint
 
 ## Properties
 

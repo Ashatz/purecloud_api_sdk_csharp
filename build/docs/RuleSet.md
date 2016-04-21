@@ -1,7 +1,7 @@
 ---
 title: RuleSet
 ---
-## .RuleSet
+## ININ.PureCloudApi.Model.RuleSet
 
 ## Properties
 
@@ -14,7 +14,7 @@ title: RuleSet
 | **Version** | **int?** |  | [optional] |
 | **ContactList** | [**UriReference**](UriReference.html) |  | [optional] |
 | **Queue** | [**UriReference**](UriReference.html) |  | [optional] |
-| **Rules** | [**List&lt;Rule&gt;**](Rule.html) |  | [optional] |
+| **Rules** | [**List&lt;DialerRule&gt;**](DialerRule.html) |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

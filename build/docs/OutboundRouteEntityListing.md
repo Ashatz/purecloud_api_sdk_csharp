@@ -1,7 +1,7 @@
 ---
 title: OutboundRouteEntityListing
 ---
-## .OutboundRouteEntityListing
+## ININ.PureCloudApi.Model.OutboundRouteEntityListing
 
 ## Properties
 
@@ -12,9 +12,9 @@ title: OutboundRouteEntityListing
 | **Total** | **long?** |  | [optional] |
 | **Entities** | [**List&lt;OutboundRoute&gt;**](OutboundRoute.html) |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
+| **FirstUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **NextUri** | **string** |  | [optional] |
-| **FirstUri** | **string** |  | [optional] |
 | **LastUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
 {: class="table table-striped"}

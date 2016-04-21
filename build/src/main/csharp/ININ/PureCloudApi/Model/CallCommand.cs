@@ -15,19 +15,6 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/GroupImages.cs
-    public partial class GroupImages :  IEquatable<GroupImages>
-    { 
-        
-        /// <summary>
-        /// Initializes a new instance of the <see cref="GroupImages" />class.
-        /// </summary>
-        /// <param name="ActiveImages">ActiveImages.</param>
-
-        public GroupImages(List<UserImage> ActiveImages = null)
-        {
-            this.ActiveImages = ActiveImages;
-=======
     public partial class CallCommand :  IEquatable<CallCommand>
     { 
         
@@ -39,7 +26,6 @@ namespace ININ.PureCloudApi.Model
         public CallCommand(string CallNumber = null)
         {
             this.CallNumber = CallNumber;
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/CallCommand.cs
             
         }
 
@@ -47,13 +33,8 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Gets or Sets CallNumber
         /// </summary>
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/GroupImages.cs
-        [DataMember(Name="activeImages", EmitDefaultValue=false)]
-        public List<UserImage> ActiveImages { get; set; }
-=======
         [DataMember(Name="callNumber", EmitDefaultValue=false)]
         public string CallNumber { get; set; }
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/CallCommand.cs
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -62,13 +43,8 @@ namespace ININ.PureCloudApi.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/GroupImages.cs
-            sb.Append("class GroupImages {\n");
-            sb.Append("  ActiveImages: ").Append(ActiveImages).Append("\n");
-=======
             sb.Append("class CallCommand {\n");
             sb.Append("  CallNumber: ").Append(CallNumber).Append("\n");
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/CallCommand.cs
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -96,11 +72,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if CallCommand instances are equal
         /// </summary>
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/GroupImages.cs
-        /// <param name="other">Instance of GroupImages to be compared</param>
-=======
         /// <param name="other">Instance of CallCommand to be compared</param>
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/CallCommand.cs
         /// <returns>Boolean</returns>
         public bool Equals(CallCommand other)
         {
@@ -127,13 +99,8 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/GroupImages.cs
-                if (this.ActiveImages != null)
-                    hash = hash * 59 + this.ActiveImages.GetHashCode();
-=======
                 if (this.CallNumber != null)
                     hash = hash * 59 + this.CallNumber.GetHashCode();
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/CallCommand.cs
                 return hash;
             }
         }

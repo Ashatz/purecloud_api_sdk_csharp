@@ -1,7 +1,7 @@
 ---
 title: EdgeAutoUpdateConfig
 ---
-## .EdgeAutoUpdateConfig
+## ININ.PureCloudApi.Model.EdgeAutoUpdateConfig
 
 ## Properties
 

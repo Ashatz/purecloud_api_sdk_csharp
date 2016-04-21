@@ -1,7 +1,7 @@
 ---
 title: BatchReplyItem
 ---
-## .BatchReplyItem
+## ININ.PureCloudApi.Model.BatchReplyItem
 
 ## Properties
 

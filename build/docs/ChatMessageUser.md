@@ -1,7 +1,7 @@
 ---
 title: ChatMessageUser
 ---
-## .ChatMessageUser
+## ININ.PureCloudApi.Model.ChatMessageUser
 
 ## Properties
 

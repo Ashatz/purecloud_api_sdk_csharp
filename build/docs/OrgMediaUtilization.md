@@ -1,7 +1,7 @@
 ---
 title: OrgMediaUtilization
 ---
-## .OrgMediaUtilization
+## ININ.PureCloudApi.Model.OrgMediaUtilization
 
 ## Properties
 

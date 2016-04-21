@@ -23,17 +23,10 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
                 public enum ConjunctionEnum {
-<<<<<<< HEAD
             
             [EnumMember(Value = "AND")]
             And,
             
-=======
-            
-            [EnumMember(Value = "AND")]
-            And,
-            
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             [EnumMember(Value = "OR")]
             Or
         }
@@ -72,10 +65,7 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="conjunction", EmitDefaultValue=false)]
         public ConjunctionEnum? Conjunction { get; set; }
     
-<<<<<<< HEAD
 
-=======
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// Gets or Sets _Operator
         /// </summary>

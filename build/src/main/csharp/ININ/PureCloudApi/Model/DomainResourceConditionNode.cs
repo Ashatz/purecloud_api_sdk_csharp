@@ -26,17 +26,10 @@ namespace ININ.PureCloudApi.Model
             
             [EnumMember(Value = "EQ")]
             Eq,
-<<<<<<< HEAD
             
             [EnumMember(Value = "IN")]
             In,
             
-=======
-            
-            [EnumMember(Value = "IN")]
-            In,
-            
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             [EnumMember(Value = "GE")]
             Ge,
             
@@ -72,10 +65,7 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="operator", EmitDefaultValue=false)]
         public _OperatorEnum? _Operator { get; set; }
     
-<<<<<<< HEAD
 
-=======
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// Gets or Sets Conjunction
         /// </summary>

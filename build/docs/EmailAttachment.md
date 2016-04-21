@@ -1,7 +1,7 @@
 ---
 title: EmailAttachment
 ---
-## .EmailAttachment
+## ININ.PureCloudApi.Model.EmailAttachment
 
 ## Properties
 

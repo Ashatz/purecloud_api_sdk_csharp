@@ -1,7 +1,7 @@
 ---
 title: Certificate
 ---
-## .Certificate
+## ININ.PureCloudApi.Model.Certificate
 
 ## Properties
 

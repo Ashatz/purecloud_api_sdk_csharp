@@ -1,7 +1,7 @@
 ---
 title: BackendFlowAvailableActions
 ---
-## .BackendFlowAvailableActions
+## ININ.PureCloudApi.Model.BackendFlowAvailableActions
 
 ## Properties
 

@@ -1,7 +1,7 @@
 ---
 title: ErrorBody
 ---
-## .ErrorBody
+## ININ.PureCloudApi.Model.ErrorBody
 
 ## Properties
 

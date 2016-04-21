@@ -1,7 +1,7 @@
 ---
 title: Agent
 ---
-## .Agent
+## ININ.PureCloudApi.Model.Agent
 
 ## Properties
 

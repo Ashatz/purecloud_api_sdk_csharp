@@ -1,7 +1,7 @@
 ---
 title: OrphanRecording
 ---
-## .OrphanRecording
+## ININ.PureCloudApi.Model.OrphanRecording
 
 ## Properties
 
@@ -15,7 +15,7 @@ title: OrphanRecording
 | **MediaSizeBytes** | **long?** |  | [optional] |
 | **MediaType** | **string** |  | [optional] |
 | **FileState** | **string** |  | [optional] |
-| **ProviderEndpoint** | **string** |  | [optional] |
+| **ProviderEndpoint** | [**Endpoint**](Endpoint.html) |  | [optional] |
 | **Recording** | [**Recording**](Recording.html) |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}

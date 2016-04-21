@@ -1,7 +1,7 @@
 ---
 title: EmailAddress
 ---
-## .EmailAddress
+## ININ.PureCloudApi.Model.EmailAddress
 
 ## Properties
 

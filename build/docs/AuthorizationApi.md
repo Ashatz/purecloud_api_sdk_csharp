@@ -4,35 +4,34 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**AuthorizationLicensesGet**](AuthorizationApi.md#authorizationlicensesget) | **GET** /api/v1/authorization/licenses | Retrieve a list of all licenses defined in the system |
-| [**AuthorizationPermissionsGet**](AuthorizationApi.md#authorizationpermissionsget) | **GET** /api/v1/authorization/permissions | Get all permissions. |
-| [**AuthorizationProductsGet**](AuthorizationApi.md#authorizationproductsget) | **GET** /api/v1/authorization/products | Get the list of enabled products |
-| [**AuthorizationRolesDefaultPost**](AuthorizationApi.md#authorizationrolesdefaultpost) | **POST** /api/v1/authorization/roles/default | Restores all default roles |
-| [**AuthorizationRolesDefaultPut**](AuthorizationApi.md#authorizationrolesdefaultput) | **PUT** /api/v1/authorization/roles/default | Restore specified default roles |
-| [**AuthorizationRolesGet**](AuthorizationApi.md#authorizationrolesget) | **GET** /api/v1/authorization/roles | Retrieve a list of all roles defined for the organization |
-| [**AuthorizationRolesLeftroleidComparedefaultRightroleidGet**](AuthorizationApi.md#authorizationrolesleftroleidcomparedefaultrightroleidget) | **GET** /api/v1/authorization/roles/{leftRoleId}/comparedefault/{rightRoleId} | Get an org role to default role comparison comparison |
-| [**AuthorizationRolesLeftroleidComparedefaultRightroleidPost**](AuthorizationApi.md#authorizationrolesleftroleidcomparedefaultrightroleidpost) | **POST** /api/v1/authorization/roles/{leftRoleId}/comparedefault/{rightRoleId} |  Get an unsaved org role to default role comparison |
-| [**AuthorizationRolesPost**](AuthorizationApi.md#authorizationrolespost) | **POST** /api/v1/authorization/roles | Create an organization role. |
-| [**AuthorizationRolesRoleidDelete**](AuthorizationApi.md#authorizationrolesroleiddelete) | **DELETE** /api/v1/authorization/roles/{roleId} | Delete an organization role. |
-| [**AuthorizationRolesRoleidGet**](AuthorizationApi.md#authorizationrolesroleidget) | **GET** /api/v1/authorization/roles/{roleId} | Get a single organization role. |
-| [**AuthorizationRolesRoleidPatch**](AuthorizationApi.md#authorizationrolesroleidpatch) | **PATCH** /api/v1/authorization/roles/{roleId} | Patch Organization Role for needsUpdate Field |
-| [**AuthorizationRolesRoleidPut**](AuthorizationApi.md#authorizationrolesroleidput) | **PUT** /api/v1/authorization/roles/{roleId} | Update an organization role. |
-| [**AuthorizationRolesRoleidUsersAddPut**](AuthorizationApi.md#authorizationrolesroleidusersaddput) | **PUT** /api/v1/authorization/roles/{roleId}/users/add | Sets the users for the role |
-| [**AuthorizationRolesRoleidUsersRemovePut**](AuthorizationApi.md#authorizationrolesroleidusersremoveput) | **PUT** /api/v1/authorization/roles/{roleId}/users/remove | Removes the users from the role |
-| [**AuthorizationUsersUseridRolesDelete**](AuthorizationApi.md#authorizationusersuseridrolesdelete) | **DELETE** /api/v1/authorization/users/{userId}/roles | Removes all the roles from the user. |
-| [**AuthorizationUsersUseridRolesGet**](AuthorizationApi.md#authorizationusersuseridrolesget) | **GET** /api/v1/authorization/users/{userId}/roles | Get the list of roles for a user. |
-| [**AuthorizationUsersUseridRolesPut**](AuthorizationApi.md#authorizationusersuseridrolesput) | **PUT** /api/v1/authorization/users/{userId}/roles | Sets the user&#39;s roles |
+| [**DeleteRolesRoleId**](AuthorizationApi.md#deleterolesroleid) | **DELETE** /api/v2/authorization/roles/{roleId} | Delete an organization role. |
+| [**DeleteUserIdRoles**](AuthorizationApi.md#deleteuseridroles) | **DELETE** /api/v2/users/{userId}/roles | Removes all the roles from the user. |
+| [**GetPermissions**](AuthorizationApi.md#getpermissions) | **GET** /api/v2/authorization/permissions | Get all permissions. |
+| [**GetProducts**](AuthorizationApi.md#getproducts) | **GET** /api/v2/authorization/products | Get the list of enabled products |
+| [**GetRoles**](AuthorizationApi.md#getroles) | **GET** /api/v2/authorization/roles | Retrieve a list of all roles defined for the organization |
+| [**GetRolesLeftroleIdComparedefaultRightroleId**](AuthorizationApi.md#getrolesleftroleidcomparedefaultrightroleid) | **GET** /api/v2/authorization/roles/{leftRoleId}/comparedefault/{rightRoleId} | Get an org role to default role comparison comparison |
+| [**GetRolesRoleId**](AuthorizationApi.md#getrolesroleid) | **GET** /api/v2/authorization/roles/{roleId} | Get a single organization role. |
+| [**GetUserIdRoles**](AuthorizationApi.md#getuseridroles) | **GET** /api/v2/users/{userId}/roles | Returns a listing of roles and permissions for a user. |
+| [**PatchRolesRoleId**](AuthorizationApi.md#patchrolesroleid) | **PATCH** /api/v2/authorization/roles/{roleId} | Patch Organization Role for needsUpdate Field |
+| [**PostRoles**](AuthorizationApi.md#postroles) | **POST** /api/v2/authorization/roles | Create an organization role. |
+| [**PostRolesDefault**](AuthorizationApi.md#postrolesdefault) | **POST** /api/v2/authorization/roles/default | Restores all default roles |
+| [**PostRolesLeftroleIdComparedefaultRightroleId**](AuthorizationApi.md#postrolesleftroleidcomparedefaultrightroleid) | **POST** /api/v2/authorization/roles/{leftRoleId}/comparedefault/{rightRoleId} |  Get an unsaved org role to default role comparison |
+| [**PutRolesDefault**](AuthorizationApi.md#putrolesdefault) | **PUT** /api/v2/authorization/roles/default | Restore specified default roles |
+| [**PutRolesRoleId**](AuthorizationApi.md#putrolesroleid) | **PUT** /api/v2/authorization/roles/{roleId} | Update an organization role. |
+| [**PutRolesRoleIdUsersAdd**](AuthorizationApi.md#putrolesroleidusersadd) | **PUT** /api/v2/authorization/roles/{roleId}/users/add | Sets the users for the role |
+| [**PutRolesRoleIdUsersRemove**](AuthorizationApi.md#putrolesroleidusersremove) | **PUT** /api/v2/authorization/roles/{roleId}/users/remove | Removes the users from the role |
+| [**PutUserIdRoles**](AuthorizationApi.md#putuseridroles) | **PUT** /api/v2/users/{userId}/roles | Sets the user&#39;s roles |
 {: class="table table-striped"}
 
-<a name="AuthorizationLicensesGet"></a>
-## [**DomainLicenseEntityListing**](DomainLicenseEntityListing.html) AuthorizationLicensesGet (int? pageSize = null, int? pageNumber = null)
+<a name="DeleteRolesRoleId"></a>
+## void DeleteRolesRoleId (string roleId)
 
-Retrieve a list of all licenses defined in the system
+Delete an organization role.
 
 
 
 ### Example
-```csharp
+~~~csharp
 using System;
 using System.Diagnostics;
 using ININ.PureCloudApi.Api;
@@ -41,7 +40,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class AuthorizationLicensesGetExample
+    public class DeleteRolesRoleIdExample
     {
         public void main()
         {
@@ -50,46 +49,43 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new AuthorizationApi();
-            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var roleId = roleId_example;  // string | Role ID
 
             try
             {
-                // Retrieve a list of all licenses defined in the system
-                DomainLicenseEntityListing result = apiInstance.AuthorizationLicensesGet(pageSize, pageNumber);
-                Debug.WriteLine(result);
+                // Delete an organization role.
+                apiInstance.DeleteRolesRoleId(roleId);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling AuthorizationApi.AuthorizationLicensesGet: " + e.Message );
+                Debug.Print("Exception when calling AuthorizationApi.DeleteRolesRoleId: " + e.Message );
             }
         }
     }
 }
-```
+~~~
 
 ### Parameters
 
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **pageSize** | **int?**| Page size | [optional] [default to 25] |
-| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **roleId** | **string**| Role ID |  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**DomainLicenseEntityListing**](DomainLicenseEntityListing.md)
+void (empty response body)
 
-<a name="AuthorizationPermissionsGet"></a>
-## [**PermissionCollectionEntityListing**](PermissionCollectionEntityListing.html) AuthorizationPermissionsGet (int? pageSize = null, int? pageNumber = null)
+<a name="DeleteUserIdRoles"></a>
+## void DeleteUserIdRoles (string userId)
 
-Get all permissions.
+Removes all the roles from the user.
 
-Retrieve a list of all permission defined in the system.
+
 
 ### Example
-```csharp
+~~~csharp
 using System;
 using System.Diagnostics;
 using ININ.PureCloudApi.Api;
@@ -98,7 +94,61 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class AuthorizationPermissionsGetExample
+    public class DeleteUserIdRolesExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new AuthorizationApi();
+            var userId = userId_example;  // string | User ID
+
+            try
+            {
+                // Removes all the roles from the user.
+                apiInstance.DeleteUserIdRoles(userId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AuthorizationApi.DeleteUserIdRoles: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **userId** | **string**| User ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="GetPermissions"></a>
+## [**PermissionCollectionEntityListing**](PermissionCollectionEntityListing.html) GetPermissions (int? pageSize = null, int? pageNumber = null)
+
+Get all permissions.
+
+Retrieve a list of all permission defined in the system.
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetPermissionsExample
     {
         public void main()
         {
@@ -113,17 +163,17 @@ namespace Example
             try
             {
                 // Get all permissions.
-                PermissionCollectionEntityListing result = apiInstance.AuthorizationPermissionsGet(pageSize, pageNumber);
+                PermissionCollectionEntityListing result = apiInstance.GetPermissions(pageSize, pageNumber);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling AuthorizationApi.AuthorizationPermissionsGet: " + e.Message );
+                Debug.Print("Exception when calling AuthorizationApi.GetPermissions: " + e.Message );
             }
         }
     }
 }
-```
+~~~
 
 ### Parameters
 
@@ -138,15 +188,15 @@ namespace Example
 
 [**PermissionCollectionEntityListing**](PermissionCollectionEntityListing.md)
 
-<a name="AuthorizationProductsGet"></a>
-## [**OrganizationProductEntityListing**](OrganizationProductEntityListing.html) AuthorizationProductsGet ()
+<a name="GetProducts"></a>
+## [**OrganizationProductEntityListing**](OrganizationProductEntityListing.html) GetProducts ()
 
 Get the list of enabled products
 
 Gets the list of enabled products. Some example product names are: collaborateFree, collaboratePro, communicate, and engage.
 
 ### Example
-```csharp
+~~~csharp
 using System;
 using System.Diagnostics;
 using ININ.PureCloudApi.Api;
@@ -155,7 +205,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class AuthorizationProductsGetExample
+    public class GetProductsExample
     {
         public void main()
         {
@@ -168,17 +218,17 @@ namespace Example
             try
             {
                 // Get the list of enabled products
-                OrganizationProductEntityListing result = apiInstance.AuthorizationProductsGet();
+                OrganizationProductEntityListing result = apiInstance.GetProducts();
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling AuthorizationApi.AuthorizationProductsGet: " + e.Message );
+                Debug.Print("Exception when calling AuthorizationApi.GetProducts: " + e.Message );
             }
         }
     }
 }
-```
+~~~
 
 ### Parameters
 This endpoint does require any parameters.
@@ -188,125 +238,15 @@ This endpoint does require any parameters.
 
 [**OrganizationProductEntityListing**](OrganizationProductEntityListing.md)
 
-<a name="AuthorizationRolesDefaultPost"></a>
-## [**OrganizationRoleEntityListing**](OrganizationRoleEntityListing.html) AuthorizationRolesDefaultPost (bool? force = null)
-
-Restores all default roles
-
-This endpoint serves several purposes. 1. It provides the org with default roles. This is important for default roles that will be added after go-live (they can retroactively add the new default-role). Note: When not using a query param of force=true, it only adds the default roles not configured for the org; it does not overwrite roles. 2. Using the query param force=true, you can restore all default roles. Note: This does not have an effect on custom roles.
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class AuthorizationRolesDefaultPostExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new AuthorizationApi();
-            var force = true;  // bool? | Restore default roles (optional)  (default to false)
-
-            try
-            {
-                // Restores all default roles
-                OrganizationRoleEntityListing result = apiInstance.AuthorizationRolesDefaultPost(force);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling AuthorizationApi.AuthorizationRolesDefaultPost: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **force** | **bool?**| Restore default roles | [optional] [default to false] |
-{: class="table table-striped"}
-
-### Return type
-
-[**OrganizationRoleEntityListing**](OrganizationRoleEntityListing.md)
-
-<a name="AuthorizationRolesDefaultPut"></a>
-## [**OrganizationRoleEntityListing**](OrganizationRoleEntityListing.html) AuthorizationRolesDefaultPut (List<DomainOrganizationRole> body = null)
-
-Restore specified default roles
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class AuthorizationRolesDefaultPutExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new AuthorizationApi();
-            var body = new List<DomainOrganizationRole>(); // List<DomainOrganizationRole> |  (optional) 
-
-            try
-            {
-                // Restore specified default roles
-                OrganizationRoleEntityListing result = apiInstance.AuthorizationRolesDefaultPut(body);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling AuthorizationApi.AuthorizationRolesDefaultPut: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **body** | [**List<DomainOrganizationRole>**](DomainOrganizationRole.md)|  | [optional]  |
-{: class="table table-striped"}
-
-### Return type
-
-[**OrganizationRoleEntityListing**](OrganizationRoleEntityListing.md)
-
-<a name="AuthorizationRolesGet"></a>
-## [**OrganizationRoleEntityListing**](OrganizationRoleEntityListing.html) AuthorizationRolesGet (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, List<string> permission = null, bool? userCount = null)
+<a name="GetRoles"></a>
+## [**OrganizationRoleEntityListing**](OrganizationRoleEntityListing.html) GetRoles (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, List<string> permission = null, bool? userCount = null)
 
 Retrieve a list of all roles defined for the organization
 
 
 
 ### Example
-```csharp
+~~~csharp
 using System;
 using System.Diagnostics;
 using ININ.PureCloudApi.Api;
@@ -315,7 +255,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class AuthorizationRolesGetExample
+    public class GetRolesExample
     {
         public void main()
         {
@@ -328,23 +268,25 @@ namespace Example
             var pageNumber = 56;  // int? | The page number requested (optional)  (default to 1)
             var sortBy = sortBy_example;  // string | variable name requested to sort by (optional) 
             var expand = new List<string>(); // List<string> | variable name requested by expand list (optional) 
+            var nextPage = nextPage_example;  // string | next page token (optional) 
+            var previousPage = previousPage_example;  // string | Previous page token (optional) 
             var permission = new List<string>(); // List<string> |  (optional) 
             var userCount = true;  // bool? |  (optional)  (default to true)
 
             try
             {
                 // Retrieve a list of all roles defined for the organization
-                OrganizationRoleEntityListing result = apiInstance.AuthorizationRolesGet(pageSize, pageNumber, sortBy, expand, permission, userCount);
+                OrganizationRoleEntityListing result = apiInstance.GetRoles(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, permission, userCount);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling AuthorizationApi.AuthorizationRolesGet: " + e.Message );
+                Debug.Print("Exception when calling AuthorizationApi.GetRoles: " + e.Message );
             }
         }
     }
 }
-```
+~~~
 
 ### Parameters
 
@@ -355,6 +297,8 @@ namespace Example
 | **pageNumber** | **int?**| The page number requested | [optional] [default to 1] |
 | **sortBy** | **string**| variable name requested to sort by | [optional]  |
 | **expand** | [**List<string>**](string.md)| variable name requested by expand list | [optional]  |
+| **nextPage** | **string**| next page token | [optional]  |
+| **previousPage** | **string**| Previous page token | [optional]  |
 | **permission** | [**List<string>**](string.md)|  | [optional]  |
 | **userCount** | **bool?**|  | [optional] [default to true] |
 {: class="table table-striped"}
@@ -363,15 +307,15 @@ namespace Example
 
 [**OrganizationRoleEntityListing**](OrganizationRoleEntityListing.md)
 
-<a name="AuthorizationRolesLeftroleidComparedefaultRightroleidGet"></a>
-## [**DomainOrgRoleDifference**](DomainOrgRoleDifference.html) AuthorizationRolesLeftroleidComparedefaultRightroleidGet (string leftRoleId, string rightRoleId)
+<a name="GetRolesLeftroleIdComparedefaultRightroleId"></a>
+## [**DomainOrgRoleDifference**](DomainOrgRoleDifference.html) GetRolesLeftroleIdComparedefaultRightroleId (string leftRoleId, string rightRoleId)
 
 Get an org role to default role comparison comparison
 
 Compares any organization role to a default role id and show differences
 
 ### Example
-```csharp
+~~~csharp
 using System;
 using System.Diagnostics;
 using ININ.PureCloudApi.Api;
@@ -380,7 +324,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class AuthorizationRolesLeftroleidComparedefaultRightroleidGetExample
+    public class GetRolesLeftroleIdComparedefaultRightroleIdExample
     {
         public void main()
         {
@@ -395,17 +339,17 @@ namespace Example
             try
             {
                 // Get an org role to default role comparison comparison
-                DomainOrgRoleDifference result = apiInstance.AuthorizationRolesLeftroleidComparedefaultRightroleidGet(leftRoleId, rightRoleId);
+                DomainOrgRoleDifference result = apiInstance.GetRolesLeftroleIdComparedefaultRightroleId(leftRoleId, rightRoleId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling AuthorizationApi.AuthorizationRolesLeftroleidComparedefaultRightroleidGet: " + e.Message );
+                Debug.Print("Exception when calling AuthorizationApi.GetRolesLeftroleIdComparedefaultRightroleId: " + e.Message );
             }
         }
     }
 }
-```
+~~~
 
 ### Parameters
 
@@ -420,15 +364,15 @@ namespace Example
 
 [**DomainOrgRoleDifference**](DomainOrgRoleDifference.md)
 
-<a name="AuthorizationRolesLeftroleidComparedefaultRightroleidPost"></a>
-## [**DomainOrgRoleDifference**](DomainOrgRoleDifference.html) AuthorizationRolesLeftroleidComparedefaultRightroleidPost (string leftRoleId, string rightRoleId, DomainOrganizationRole body = null)
+<a name="GetRolesRoleId"></a>
+## [**DomainOrganizationRole**](DomainOrganizationRole.html) GetRolesRoleId (string roleId)
 
- Get an unsaved org role to default role comparison
+Get a single organization role.
 
-Allows users to compare their existing roles in an unsaved state to its default role
+Get the organization role specified by its ID.
 
 ### Example
-```csharp
+~~~csharp
 using System;
 using System.Diagnostics;
 using ININ.PureCloudApi.Api;
@@ -437,7 +381,284 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class AuthorizationRolesLeftroleidComparedefaultRightroleidPostExample
+    public class GetRolesRoleIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new AuthorizationApi();
+            var roleId = roleId_example;  // string | Role ID
+
+            try
+            {
+                // Get a single organization role.
+                DomainOrganizationRole result = apiInstance.GetRolesRoleId(roleId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AuthorizationApi.GetRolesRoleId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **roleId** | **string**| Role ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**DomainOrganizationRole**](DomainOrganizationRole.md)
+
+<a name="GetUserIdRoles"></a>
+## [**UserAuthorization**](UserAuthorization.html) GetUserIdRoles (string userId)
+
+Returns a listing of roles and permissions for a user.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetUserIdRolesExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new AuthorizationApi();
+            var userId = userId_example;  // string | User ID
+
+            try
+            {
+                // Returns a listing of roles and permissions for a user.
+                UserAuthorization result = apiInstance.GetUserIdRoles(userId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AuthorizationApi.GetUserIdRoles: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **userId** | **string**| User ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**UserAuthorization**](UserAuthorization.md)
+
+<a name="PatchRolesRoleId"></a>
+## [**DomainOrganizationRole**](DomainOrganizationRole.html) PatchRolesRoleId (string roleId, DomainOrganizationRole body = null)
+
+Patch Organization Role for needsUpdate Field
+
+Patch Organization Role for needsUpdate Field
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PatchRolesRoleIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new AuthorizationApi();
+            var roleId = roleId_example;  // string | Role ID
+            var body = new DomainOrganizationRole(); // DomainOrganizationRole |  (optional) 
+
+            try
+            {
+                // Patch Organization Role for needsUpdate Field
+                DomainOrganizationRole result = apiInstance.PatchRolesRoleId(roleId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AuthorizationApi.PatchRolesRoleId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **roleId** | **string**| Role ID |  |
+| **body** | [**DomainOrganizationRole**](DomainOrganizationRole.md)|  | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**DomainOrganizationRole**](DomainOrganizationRole.md)
+
+<a name="PostRoles"></a>
+## [**DomainOrganizationRole**](DomainOrganizationRole.html) PostRoles (DomainOrganizationRole body = null)
+
+Create an organization role.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PostRolesExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new AuthorizationApi();
+            var body = new DomainOrganizationRole(); // DomainOrganizationRole |  (optional) 
+
+            try
+            {
+                // Create an organization role.
+                DomainOrganizationRole result = apiInstance.PostRoles(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AuthorizationApi.PostRoles: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**DomainOrganizationRole**](DomainOrganizationRole.md)|  | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**DomainOrganizationRole**](DomainOrganizationRole.md)
+
+<a name="PostRolesDefault"></a>
+## [**OrganizationRoleEntityListing**](OrganizationRoleEntityListing.html) PostRolesDefault (bool? force = null)
+
+Restores all default roles
+
+This endpoint serves several purposes. 1. It provides the org with default roles. This is important for default roles that will be added after go-live (they can retroactively add the new default-role). Note: When not using a query param of force=true, it only adds the default roles not configured for the org; it does not overwrite roles. 2. Using the query param force=true, you can restore all default roles. Note: This does not have an effect on custom roles.
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PostRolesDefaultExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new AuthorizationApi();
+            var force = true;  // bool? | Restore default roles (optional)  (default to false)
+
+            try
+            {
+                // Restores all default roles
+                OrganizationRoleEntityListing result = apiInstance.PostRolesDefault(force);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AuthorizationApi.PostRolesDefault: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **force** | **bool?**| Restore default roles | [optional] [default to false] |
+{: class="table table-striped"}
+
+### Return type
+
+[**OrganizationRoleEntityListing**](OrganizationRoleEntityListing.md)
+
+<a name="PostRolesLeftroleIdComparedefaultRightroleId"></a>
+## [**DomainOrgRoleDifference**](DomainOrgRoleDifference.html) PostRolesLeftroleIdComparedefaultRightroleId (string leftRoleId, string rightRoleId, DomainOrganizationRole body = null)
+
+ Get an unsaved org role to default role comparison
+
+Allows users to compare their existing roles in an unsaved state to its default role
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PostRolesLeftroleIdComparedefaultRightroleIdExample
     {
         public void main()
         {
@@ -453,17 +674,17 @@ namespace Example
             try
             {
                 //  Get an unsaved org role to default role comparison
-                DomainOrgRoleDifference result = apiInstance.AuthorizationRolesLeftroleidComparedefaultRightroleidPost(leftRoleId, rightRoleId, body);
+                DomainOrgRoleDifference result = apiInstance.PostRolesLeftroleIdComparedefaultRightroleId(leftRoleId, rightRoleId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling AuthorizationApi.AuthorizationRolesLeftroleidComparedefaultRightroleidPost: " + e.Message );
+                Debug.Print("Exception when calling AuthorizationApi.PostRolesLeftroleIdComparedefaultRightroleId: " + e.Message );
             }
         }
     }
 }
-```
+~~~
 
 ### Parameters
 
@@ -479,15 +700,15 @@ namespace Example
 
 [**DomainOrgRoleDifference**](DomainOrgRoleDifference.md)
 
-<a name="AuthorizationRolesPost"></a>
-## [**DomainOrganizationRole**](DomainOrganizationRole.html) AuthorizationRolesPost (DomainOrganizationRole body = null)
+<a name="PutRolesDefault"></a>
+## [**OrganizationRoleEntityListing**](OrganizationRoleEntityListing.html) PutRolesDefault (List<DomainOrganizationRole> body = null)
 
-Create an organization role.
+Restore specified default roles
 
 
 
 ### Example
-```csharp
+~~~csharp
 using System;
 using System.Diagnostics;
 using ININ.PureCloudApi.Api;
@@ -496,7 +717,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class AuthorizationRolesPostExample
+    public class PutRolesDefaultExample
     {
         public void main()
         {
@@ -505,210 +726,44 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new AuthorizationApi();
-            var body = new DomainOrganizationRole(); // DomainOrganizationRole |  (optional) 
+            var body = new List<DomainOrganizationRole>(); // List<DomainOrganizationRole> |  (optional) 
 
             try
             {
-                // Create an organization role.
-                DomainOrganizationRole result = apiInstance.AuthorizationRolesPost(body);
+                // Restore specified default roles
+                OrganizationRoleEntityListing result = apiInstance.PutRolesDefault(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling AuthorizationApi.AuthorizationRolesPost: " + e.Message );
+                Debug.Print("Exception when calling AuthorizationApi.PutRolesDefault: " + e.Message );
             }
         }
     }
 }
-```
+~~~
 
 ### Parameters
 
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**DomainOrganizationRole**](DomainOrganizationRole.md)|  | [optional]  |
+| **body** | [**List<DomainOrganizationRole>**](DomainOrganizationRole.md)|  | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**DomainOrganizationRole**](DomainOrganizationRole.md)
+[**OrganizationRoleEntityListing**](OrganizationRoleEntityListing.md)
 
-<a name="AuthorizationRolesRoleidDelete"></a>
-## void AuthorizationRolesRoleidDelete (string roleId)
-
-Delete an organization role.
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class AuthorizationRolesRoleidDeleteExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new AuthorizationApi();
-            var roleId = roleId_example;  // string | Role ID
-
-            try
-            {
-                // Delete an organization role.
-                apiInstance.AuthorizationRolesRoleidDelete(roleId);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling AuthorizationApi.AuthorizationRolesRoleidDelete: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **roleId** | **string**| Role ID |  |
-{: class="table table-striped"}
-
-### Return type
-
-void (empty response body)
-
-<a name="AuthorizationRolesRoleidGet"></a>
-## [**DomainOrganizationRole**](DomainOrganizationRole.html) AuthorizationRolesRoleidGet (string roleId)
-
-Get a single organization role.
-
-Get the organization role specified by its ID.
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class AuthorizationRolesRoleidGetExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new AuthorizationApi();
-            var roleId = roleId_example;  // string | Role ID
-
-            try
-            {
-                // Get a single organization role.
-                DomainOrganizationRole result = apiInstance.AuthorizationRolesRoleidGet(roleId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling AuthorizationApi.AuthorizationRolesRoleidGet: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **roleId** | **string**| Role ID |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**DomainOrganizationRole**](DomainOrganizationRole.md)
-
-<a name="AuthorizationRolesRoleidPatch"></a>
-## [**DomainOrganizationRole**](DomainOrganizationRole.html) AuthorizationRolesRoleidPatch (string roleId, DomainOrganizationRole body = null)
-
-Patch Organization Role for needsUpdate Field
-
-Patch Organization Role for needsUpdate Field
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class AuthorizationRolesRoleidPatchExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new AuthorizationApi();
-            var roleId = roleId_example;  // string | Role ID
-            var body = new DomainOrganizationRole(); // DomainOrganizationRole |  (optional) 
-
-            try
-            {
-                // Patch Organization Role for needsUpdate Field
-                DomainOrganizationRole result = apiInstance.AuthorizationRolesRoleidPatch(roleId, body);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling AuthorizationApi.AuthorizationRolesRoleidPatch: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **roleId** | **string**| Role ID |  |
-| **body** | [**DomainOrganizationRole**](DomainOrganizationRole.md)|  | [optional]  |
-{: class="table table-striped"}
-
-### Return type
-
-[**DomainOrganizationRole**](DomainOrganizationRole.md)
-
-<a name="AuthorizationRolesRoleidPut"></a>
-## [**DomainOrganizationRole**](DomainOrganizationRole.html) AuthorizationRolesRoleidPut (string roleId, DomainOrganizationRole body = null)
+<a name="PutRolesRoleId"></a>
+## [**DomainOrganizationRole**](DomainOrganizationRole.html) PutRolesRoleId (string roleId, DomainOrganizationRole body = null)
 
 Update an organization role.
 
 Update
 
 ### Example
-```csharp
+~~~csharp
 using System;
 using System.Diagnostics;
 using ININ.PureCloudApi.Api;
@@ -717,7 +772,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class AuthorizationRolesRoleidPutExample
+    public class PutRolesRoleIdExample
     {
         public void main()
         {
@@ -732,17 +787,17 @@ namespace Example
             try
             {
                 // Update an organization role.
-                DomainOrganizationRole result = apiInstance.AuthorizationRolesRoleidPut(roleId, body);
+                DomainOrganizationRole result = apiInstance.PutRolesRoleId(roleId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling AuthorizationApi.AuthorizationRolesRoleidPut: " + e.Message );
+                Debug.Print("Exception when calling AuthorizationApi.PutRolesRoleId: " + e.Message );
             }
         }
     }
 }
-```
+~~~
 
 ### Parameters
 
@@ -757,15 +812,15 @@ namespace Example
 
 [**DomainOrganizationRole**](DomainOrganizationRole.md)
 
-<a name="AuthorizationRolesRoleidUsersAddPut"></a>
-## List&lt;string&gt;** AuthorizationRolesRoleidUsersAddPut (string roleId, List<string> body = null)
+<a name="PutRolesRoleIdUsersAdd"></a>
+## List&lt;string&gt;** PutRolesRoleIdUsersAdd (string roleId, List<string> body = null)
 
 Sets the users for the role
 
 
 
 ### Example
-```csharp
+~~~csharp
 using System;
 using System.Diagnostics;
 using ININ.PureCloudApi.Api;
@@ -774,7 +829,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class AuthorizationRolesRoleidUsersAddPutExample
+    public class PutRolesRoleIdUsersAddExample
     {
         public void main()
         {
@@ -789,17 +844,17 @@ namespace Example
             try
             {
                 // Sets the users for the role
-                List&lt;string&gt; result = apiInstance.AuthorizationRolesRoleidUsersAddPut(roleId, body);
+                List&lt;string&gt; result = apiInstance.PutRolesRoleIdUsersAdd(roleId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling AuthorizationApi.AuthorizationRolesRoleidUsersAddPut: " + e.Message );
+                Debug.Print("Exception when calling AuthorizationApi.PutRolesRoleIdUsersAdd: " + e.Message );
             }
         }
     }
 }
-```
+~~~
 
 ### Parameters
 
@@ -814,15 +869,15 @@ namespace Example
 
 **List<string>**
 
-<a name="AuthorizationRolesRoleidUsersRemovePut"></a>
-## List&lt;string&gt;** AuthorizationRolesRoleidUsersRemovePut (string roleId, List<string> body = null)
+<a name="PutRolesRoleIdUsersRemove"></a>
+## List&lt;string&gt;** PutRolesRoleIdUsersRemove (string roleId, List<string> body = null)
 
 Removes the users from the role
 
 
 
 ### Example
-```csharp
+~~~csharp
 using System;
 using System.Diagnostics;
 using ININ.PureCloudApi.Api;
@@ -831,7 +886,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class AuthorizationRolesRoleidUsersRemovePutExample
+    public class PutRolesRoleIdUsersRemoveExample
     {
         public void main()
         {
@@ -846,17 +901,17 @@ namespace Example
             try
             {
                 // Removes the users from the role
-                List&lt;string&gt; result = apiInstance.AuthorizationRolesRoleidUsersRemovePut(roleId, body);
+                List&lt;string&gt; result = apiInstance.PutRolesRoleIdUsersRemove(roleId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling AuthorizationApi.AuthorizationRolesRoleidUsersRemovePut: " + e.Message );
+                Debug.Print("Exception when calling AuthorizationApi.PutRolesRoleIdUsersRemove: " + e.Message );
             }
         }
     }
 }
-```
+~~~
 
 ### Parameters
 
@@ -871,124 +926,15 @@ namespace Example
 
 **List<string>**
 
-<a name="AuthorizationUsersUseridRolesDelete"></a>
-## void AuthorizationUsersUseridRolesDelete (string userId)
-
-Removes all the roles from the user.
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class AuthorizationUsersUseridRolesDeleteExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new AuthorizationApi();
-            var userId = userId_example;  // string | User ID
-
-            try
-            {
-                // Removes all the roles from the user.
-                apiInstance.AuthorizationUsersUseridRolesDelete(userId);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling AuthorizationApi.AuthorizationUsersUseridRolesDelete: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **userId** | **string**| User ID |  |
-{: class="table table-striped"}
-
-### Return type
-
-void (empty response body)
-
-<a name="AuthorizationUsersUseridRolesGet"></a>
-## [**UserAuthorization**](UserAuthorization.html) AuthorizationUsersUseridRolesGet (string userId)
-
-Get the list of roles for a user.
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class AuthorizationUsersUseridRolesGetExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new AuthorizationApi();
-            var userId = userId_example;  // string | User ID
-
-            try
-            {
-                // Get the list of roles for a user.
-                UserAuthorization result = apiInstance.AuthorizationUsersUseridRolesGet(userId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling AuthorizationApi.AuthorizationUsersUseridRolesGet: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **userId** | **string**| User ID |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**UserAuthorization**](UserAuthorization.md)
-
-<a name="AuthorizationUsersUseridRolesPut"></a>
-## List&lt;string&gt;** AuthorizationUsersUseridRolesPut (string userId, List<string> body = null)
+<a name="PutUserIdRoles"></a>
+## [**UserAuthorization**](UserAuthorization.html) PutUserIdRoles (string userId, List<string> body = null)
 
 Sets the user's roles
 
 
 
 ### Example
-```csharp
+~~~csharp
 using System;
 using System.Diagnostics;
 using ININ.PureCloudApi.Api;
@@ -997,7 +943,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class AuthorizationUsersUseridRolesPutExample
+    public class PutUserIdRolesExample
     {
         public void main()
         {
@@ -1012,17 +958,17 @@ namespace Example
             try
             {
                 // Sets the user's roles
-                List&lt;string&gt; result = apiInstance.AuthorizationUsersUseridRolesPut(userId, body);
+                UserAuthorization result = apiInstance.PutUserIdRoles(userId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling AuthorizationApi.AuthorizationUsersUseridRolesPut: " + e.Message );
+                Debug.Print("Exception when calling AuthorizationApi.PutUserIdRoles: " + e.Message );
             }
         }
     }
 }
-```
+~~~
 
 ### Parameters
 
@@ -1035,5 +981,5 @@ namespace Example
 
 ### Return type
 
-**List<string>**
+[**UserAuthorization**](UserAuthorization.md)
 

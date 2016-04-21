@@ -1,7 +1,7 @@
 ---
 title: Product
 ---
-## .Product
+## ININ.PureCloudApi.Model.Product
 
 ## Properties
 

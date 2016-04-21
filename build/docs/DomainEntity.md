@@ -1,7 +1,7 @@
 ---
 title: DomainEntity
 ---
-## .DomainEntity
+## ININ.PureCloudApi.Model.DomainEntity
 
 ## Properties
 

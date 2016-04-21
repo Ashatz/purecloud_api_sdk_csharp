@@ -1,7 +1,7 @@
 ---
 title: Entry
 ---
-## .Entry
+## ININ.PureCloudApi.Model.Entry
 
 ## Properties
 

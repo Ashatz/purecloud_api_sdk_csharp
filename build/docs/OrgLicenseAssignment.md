@@ -1,7 +1,7 @@
 ---
 title: OrgLicenseAssignment
 ---
-## .OrgLicenseAssignment
+## ININ.PureCloudApi.Model.OrgLicenseAssignment
 
 ## Properties
 

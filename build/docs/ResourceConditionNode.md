@@ -1,7 +1,7 @@
 ---
 title: ResourceConditionNode
 ---
-## .ResourceConditionNode
+## ININ.PureCloudApi.Model.ResourceConditionNode
 
 ## Properties
 

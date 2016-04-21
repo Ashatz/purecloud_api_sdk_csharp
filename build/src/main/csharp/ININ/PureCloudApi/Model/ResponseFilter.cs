@@ -15,11 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// Used to filter response queries
     /// </summary>
     [DataContract]
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/Filter.cs
-    public partial class Filter :  IEquatable<Filter>
-=======
     public partial class ResponseFilter :  IEquatable<ResponseFilter>
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/ResponseFilter.cs
     { 
 
         /// <summary>
@@ -40,10 +36,7 @@ namespace ININ.PureCloudApi.Model
         }
 
         
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/Filter.cs
 
-=======
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/ResponseFilter.cs
         /// <summary>
         /// Filter operation: IN, EQUALS, NOTEQUALS.
         /// </summary>
@@ -52,30 +45,18 @@ namespace ININ.PureCloudApi.Model
         public _OperatorEnum? _Operator { get; set; }
     
         /// <summary>
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/Filter.cs
-        /// Initializes a new instance of the <see cref="Filter" />class.
-=======
         /// Initializes a new instance of the <see cref="ResponseFilter" />class.
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/ResponseFilter.cs
         /// </summary>
         /// <param name="Name">Field to filter on. Allowed values are &#39;name&#39; and &#39;libraryId. (required).</param>
         /// <param name="_Operator">Filter operation: IN, EQUALS, NOTEQUALS. (required).</param>
         /// <param name="Values">Values to filter on. (required).</param>
 
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/Filter.cs
-        public Filter(string Name = null, _OperatorEnum? _Operator = null, List<string> Values = null)
-=======
         public ResponseFilter(string Name = null, _OperatorEnum? _Operator = null, List<string> Values = null)
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/ResponseFilter.cs
         {
             // to ensure "Name" is required (not null)
             if (Name == null)
             {
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/Filter.cs
-                throw new InvalidDataException("Name is a required property for Filter and cannot be null");
-=======
                 throw new InvalidDataException("Name is a required property for ResponseFilter and cannot be null");
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/ResponseFilter.cs
             }
             else
             {
@@ -84,11 +65,7 @@ namespace ININ.PureCloudApi.Model
             // to ensure "_Operator" is required (not null)
             if (_Operator == null)
             {
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/Filter.cs
-                throw new InvalidDataException("_Operator is a required property for Filter and cannot be null");
-=======
                 throw new InvalidDataException("_Operator is a required property for ResponseFilter and cannot be null");
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/ResponseFilter.cs
             }
             else
             {
@@ -97,11 +74,7 @@ namespace ININ.PureCloudApi.Model
             // to ensure "Values" is required (not null)
             if (Values == null)
             {
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/Filter.cs
-                throw new InvalidDataException("Values is a required property for Filter and cannot be null");
-=======
                 throw new InvalidDataException("Values is a required property for ResponseFilter and cannot be null");
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/ResponseFilter.cs
             }
             else
             {
@@ -163,11 +136,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if ResponseFilter instances are equal
         /// </summary>
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/Filter.cs
-        /// <param name="other">Instance of Filter to be compared</param>
-=======
         /// <param name="other">Instance of ResponseFilter to be compared</param>
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/ResponseFilter.cs
         /// <returns>Boolean</returns>
         public bool Equals(ResponseFilter other)
         {

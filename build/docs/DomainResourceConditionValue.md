@@ -1,7 +1,7 @@
 ---
 title: DomainResourceConditionValue
 ---
-## .DomainResourceConditionValue
+## ININ.PureCloudApi.Model.DomainResourceConditionValue
 
 ## Properties
 

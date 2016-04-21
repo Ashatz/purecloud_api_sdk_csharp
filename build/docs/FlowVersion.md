@@ -1,7 +1,7 @@
 ---
 title: FlowVersion
 ---
-## .FlowVersion
+## ININ.PureCloudApi.Model.FlowVersion
 
 ## Properties
 

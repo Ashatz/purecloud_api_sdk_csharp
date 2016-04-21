@@ -1,7 +1,7 @@
 ---
 title: Call
 ---
-## .Call
+## ININ.PureCloudApi.Model.Call
 
 ## Properties
 
@@ -21,6 +21,9 @@ title: Call
 | **DisconnectType** | **string** |  | [optional] |
 | **StartHoldTime** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **DocumentId** | **string** |  | [optional] |
+| **ConnectedTime** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
+| **DisconnectedTime** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
+| **DisconnectReasons** | [**List&lt;DisconnectReason&gt;**](DisconnectReason.html) |  | [optional] |
 {: class="table table-striped"}
 
 

@@ -1,7 +1,7 @@
 ---
 title: CommandStatus
 ---
-## .CommandStatus
+## ININ.PureCloudApi.Model.CommandStatus
 
 ## Properties
 

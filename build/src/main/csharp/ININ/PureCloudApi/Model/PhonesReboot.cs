@@ -22,19 +22,12 @@ namespace ININ.PureCloudApi.Model
         /// Initializes a new instance of the <see cref="PhonesReboot" />class.
         /// </summary>
         /// <param name="PhoneIds">PhoneIds.</param>
-<<<<<<< HEAD
-
-        public PhonesReboot(List<string> PhoneIds = null)
-        {
-            this.PhoneIds = PhoneIds;
-=======
         /// <param name="SiteId">SiteId.</param>
 
         public PhonesReboot(List<string> PhoneIds = null, string SiteId = null)
         {
             this.PhoneIds = PhoneIds;
             this.SiteId = SiteId;
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
@@ -45,15 +38,12 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="phoneIds", EmitDefaultValue=false)]
         public List<string> PhoneIds { get; set; }
     
-<<<<<<< HEAD
-=======
         /// <summary>
         /// Gets or Sets SiteId
         /// </summary>
         [DataMember(Name="siteId", EmitDefaultValue=false)]
         public string SiteId { get; set; }
     
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -63,10 +53,7 @@ namespace ININ.PureCloudApi.Model
             var sb = new StringBuilder();
             sb.Append("class PhonesReboot {\n");
             sb.Append("  PhoneIds: ").Append(PhoneIds).Append("\n");
-<<<<<<< HEAD
-=======
             sb.Append("  SiteId: ").Append(SiteId).Append("\n");
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -128,11 +115,8 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.PhoneIds != null)
                     hash = hash * 59 + this.PhoneIds.GetHashCode();
-<<<<<<< HEAD
-=======
                 if (this.SiteId != null)
                     hash = hash * 59 + this.SiteId.GetHashCode();
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 return hash;
             }
         }

@@ -27,19 +27,12 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Order">Order.</param>
         /// <param name="Description">Description.</param>
         /// <param name="Enabled">Enabled (default to false).</param>
-<<<<<<< HEAD
-=======
         /// <param name="MediaPolicies">Conditions and actions per media type.</param>
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <param name="Conditions">Conditions.</param>
         /// <param name="Actions">Actions.</param>
         /// <param name="PolicyErrors">PolicyErrors.</param>
 
-<<<<<<< HEAD
-        public Policy(string Name = null, DateTime? ModifiedDate = null, DateTime? CreatedDate = null, int? Order = null, string Description = null, bool? Enabled = null, PolicyConditions Conditions = null, PolicyActions Actions = null, PolicyErrors PolicyErrors = null)
-=======
         public Policy(string Name = null, DateTime? ModifiedDate = null, DateTime? CreatedDate = null, int? Order = null, string Description = null, bool? Enabled = null, MediaPolicies MediaPolicies = null, PolicyConditions Conditions = null, PolicyActions Actions = null, PolicyErrors PolicyErrors = null)
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         {
             this.Name = Name;
             this.ModifiedDate = ModifiedDate;
@@ -55,10 +48,7 @@ namespace ININ.PureCloudApi.Model
             {
                 this.Enabled = Enabled;
             }
-<<<<<<< HEAD
-=======
             this.MediaPolicies = MediaPolicies;
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             this.Conditions = Conditions;
             this.Actions = Actions;
             this.PolicyErrors = PolicyErrors;
@@ -236,14 +226,11 @@ namespace ININ.PureCloudApi.Model
                     this.Enabled != null &&
                     this.Enabled.Equals(other.Enabled)
                 ) &&
-<<<<<<< HEAD
-=======
                 (
                     this.MediaPolicies == other.MediaPolicies ||
                     this.MediaPolicies != null &&
                     this.MediaPolicies.Equals(other.MediaPolicies)
                 ) &&
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 (
                     this.Conditions == other.Conditions ||
                     this.Conditions != null &&
@@ -291,11 +278,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.Description.GetHashCode();
                 if (this.Enabled != null)
                     hash = hash * 59 + this.Enabled.GetHashCode();
-<<<<<<< HEAD
-=======
                 if (this.MediaPolicies != null)
                     hash = hash * 59 + this.MediaPolicies.GetHashCode();
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 if (this.Conditions != null)
                     hash = hash * 59 + this.Conditions.GetHashCode();
                 if (this.Actions != null)

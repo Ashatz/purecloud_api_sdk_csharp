@@ -1,7 +1,7 @@
 ---
 title: DigitLength
 ---
-## .DigitLength
+## ININ.PureCloudApi.Model.DigitLength
 
 ## Properties
 

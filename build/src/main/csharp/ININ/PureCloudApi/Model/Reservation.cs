@@ -63,31 +63,6 @@ namespace ININ.PureCloudApi.Model
 
     
         /// <summary>
-        /// The type of phone number (eg us-domestic, toll-free, etc).
-        /// </summary>
-        /// <value>The type of phone number (eg us-domestic, toll-free, etc).</value>
-        [DataMember(Name="phoneNumberType", EmitDefaultValue=false)]
-        public PhoneNumberTypeEnum? PhoneNumberType { get; set; }
-    
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Reservation" />class.
-        /// </summary>
-        /// <param name="Id">Id.</param>
-        /// <param name="ReservedTn">ReservedTn.</param>
-        /// <param name="ReservationExpires">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        /// <param name="PhoneNumberType">The type of phone number (eg us-domestic, toll-free, etc)..</param>
-
-        public Reservation(string Id = null, string ReservedTn = null, DateTime? ReservationExpires = null, PhoneNumberTypeEnum? PhoneNumberType = null)
-        {
-            this.Id = Id;
-            this.ReservedTn = ReservedTn;
-            this.ReservationExpires = ReservationExpires;
-            this.PhoneNumberType = PhoneNumberType;
-            
-        }
-
-    
-        /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]

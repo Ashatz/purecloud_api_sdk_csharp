@@ -1,7 +1,7 @@
 ---
 title: AvailableAdditionalServiceListing
 ---
-## .AvailableAdditionalServiceListing
+## ININ.PureCloudApi.Model.AvailableAdditionalServiceListing
 
 ## Properties
 
@@ -12,9 +12,9 @@ title: AvailableAdditionalServiceListing
 | **Total** | **long?** |  | [optional] |
 | **Entities** | [**List&lt;AvailableAdditionalService&gt;**](AvailableAdditionalService.html) |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
+| **FirstUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **NextUri** | **string** |  | [optional] |
-| **FirstUri** | **string** |  | [optional] |
 | **LastUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
 {: class="table table-striped"}

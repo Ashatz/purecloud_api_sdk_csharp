@@ -1,7 +1,7 @@
 ---
 title: SharedResponse
 ---
-## .SharedResponse
+## ININ.PureCloudApi.Model.SharedResponse
 
 ## Properties
 

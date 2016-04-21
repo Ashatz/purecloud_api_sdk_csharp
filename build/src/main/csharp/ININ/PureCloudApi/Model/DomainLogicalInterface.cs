@@ -27,19 +27,11 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "ACTIVE")]
             Active,
             
-<<<<<<< HEAD
-            [EnumMember(Value = "DELETED")]
-            Deleted,
-            
-            [EnumMember(Value = "INACTIVE")]
-            Inactive
-=======
             [EnumMember(Value = "INACTIVE")]
             Inactive,
             
             [EnumMember(Value = "DELETED")]
             Deleted
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         }
 
 
@@ -57,7 +49,6 @@ namespace ININ.PureCloudApi.Model
             
             [EnumMember(Value = "UPDATING")]
             Updating,
-<<<<<<< HEAD
             
             [EnumMember(Value = "OK")]
             Ok,
@@ -65,15 +56,6 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "EXCEPTION")]
             Exception,
             
-=======
-            
-            [EnumMember(Value = "OK")]
-            Ok,
-            
-            [EnumMember(Value = "EXCEPTION")]
-            Exception,
-            
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             [EnumMember(Value = "DELETING")]
             Deleting
         }
@@ -87,86 +69,6 @@ namespace ININ.PureCloudApi.Model
         public StateEnum? State { get; set; }
     
 
-        /// <summary>
-        /// Gets or Sets CurrentState
-        /// </summary>
-        [DataMember(Name="currentState", EmitDefaultValue=false)]
-        public CurrentStateEnum? CurrentState { get; set; }
-    
-        /// <summary>
-        /// Initializes a new instance of the <see cref="DomainLogicalInterface" />class.
-        /// </summary>
-        /// <param name="Name">Name.</param>
-        /// <param name="Description">Description.</param>
-        /// <param name="Version">Version.</param>
-        /// <param name="DateCreated">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        /// <param name="DateModified">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        /// <param name="ModifiedBy">ModifiedBy.</param>
-        /// <param name="CreatedBy">CreatedBy.</param>
-        /// <param name="State">State.</param>
-        /// <param name="ModifiedByApp">ModifiedByApp.</param>
-        /// <param name="CreatedByApp">CreatedByApp.</param>
-        /// <param name="EdgeUri">EdgeUri.</param>
-        /// <param name="EdgeAssignedId">EdgeAssignedId.</param>
-        /// <param name="FriendlyName">FriendlyName.</param>
-        /// <param name="VlanTagId">VlanTagId.</param>
-        /// <param name="HardwareAddress">HardwareAddress.</param>
-        /// <param name="PhysicalAdapterId">PhysicalAdapterId.</param>
-        /// <param name="IpAddress">IpAddress.</param>
-        /// <param name="Gateway">Gateway.</param>
-        /// <param name="PrimaryDns">PrimaryDns.</param>
-        /// <param name="SecondaryDns">SecondaryDns.</param>
-        /// <param name="IfStatus">IfStatus.</param>
-        /// <param name="Routes">Routes.</param>
-        /// <param name="Addresses">Addresses.</param>
-        /// <param name="Ipv4Capabilities">Ipv4Capabilities.</param>
-        /// <param name="Ipv6Capabilities">Ipv6Capabilities.</param>
-        /// <param name="CurrentState">CurrentState.</param>
-        /// <param name="LastModifiedUserId">LastModifiedUserId.</param>
-        /// <param name="LastModifiedCorrelationId">LastModifiedCorrelationId.</param>
-        /// <param name="CommandResponses">CommandResponses.</param>
-
-        public DomainLogicalInterface(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, string EdgeUri = null, string EdgeAssignedId = null, string FriendlyName = null, int? VlanTagId = null, string HardwareAddress = null, string PhysicalAdapterId = null, string IpAddress = null, string Gateway = null, string PrimaryDns = null, string SecondaryDns = null, string IfStatus = null, List<DomainNetworkRoute> Routes = null, List<DomainNetworkAddress> Addresses = null, DomainCapabilities Ipv4Capabilities = null, DomainCapabilities Ipv6Capabilities = null, CurrentStateEnum? CurrentState = null, string LastModifiedUserId = null, string LastModifiedCorrelationId = null, List<DomainNetworkCommandResponse> CommandResponses = null)
-        {
-            this.Name = Name;
-            this.Description = Description;
-            this.Version = Version;
-            this.DateCreated = DateCreated;
-            this.DateModified = DateModified;
-            this.ModifiedBy = ModifiedBy;
-            this.CreatedBy = CreatedBy;
-            this.State = State;
-            this.ModifiedByApp = ModifiedByApp;
-            this.CreatedByApp = CreatedByApp;
-            this.EdgeUri = EdgeUri;
-            this.EdgeAssignedId = EdgeAssignedId;
-            this.FriendlyName = FriendlyName;
-            this.VlanTagId = VlanTagId;
-            this.HardwareAddress = HardwareAddress;
-            this.PhysicalAdapterId = PhysicalAdapterId;
-            this.IpAddress = IpAddress;
-            this.Gateway = Gateway;
-            this.PrimaryDns = PrimaryDns;
-            this.SecondaryDns = SecondaryDns;
-            this.IfStatus = IfStatus;
-            this.Routes = Routes;
-            this.Addresses = Addresses;
-            this.Ipv4Capabilities = Ipv4Capabilities;
-            this.Ipv6Capabilities = Ipv6Capabilities;
-            this.CurrentState = CurrentState;
-            this.LastModifiedUserId = LastModifiedUserId;
-            this.LastModifiedCorrelationId = LastModifiedCorrelationId;
-            this.CommandResponses = CommandResponses;
-            
-        }
-
-    
-        /// <summary>
-        /// Gets or Sets State
-        /// </summary>
-        [DataMember(Name="state", EmitDefaultValue=false)]
-        public StateEnum? State { get; set; }
-    
         /// <summary>
         /// Gets or Sets CurrentState
         /// </summary>
@@ -456,8 +358,6 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="commandResponses", EmitDefaultValue=false)]
         public List<DomainNetworkCommandResponse> CommandResponses { get; set; }
     
-<<<<<<< HEAD
-=======
         /// <summary>
         /// Phone trunk base assignment will be inherited from the Edge Group.
         /// </summary>
@@ -500,7 +400,6 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="phoneTrunkBaseAssignments", EmitDefaultValue=false)]
         public List<TrunkBaseAssignment> PhoneTrunkBaseAssignments { get; set; }
     
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// The URI for this object
         /// </summary>
@@ -739,8 +638,6 @@ namespace ININ.PureCloudApi.Model
                     this.CommandResponses != null &&
                     this.CommandResponses.SequenceEqual(other.CommandResponses)
                 ) &&
-<<<<<<< HEAD
-=======
                 (
                     this.InheritPhoneTrunkBases == other.InheritPhoneTrunkBases ||
                     this.InheritPhoneTrunkBases != null &&
@@ -771,7 +668,6 @@ namespace ININ.PureCloudApi.Model
                     this.PhoneTrunkBaseAssignments != null &&
                     this.PhoneTrunkBaseAssignments.SequenceEqual(other.PhoneTrunkBaseAssignments)
                 ) &&
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
@@ -850,8 +746,6 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.LastModifiedCorrelationId.GetHashCode();
                 if (this.CommandResponses != null)
                     hash = hash * 59 + this.CommandResponses.GetHashCode();
-<<<<<<< HEAD
-=======
                 if (this.InheritPhoneTrunkBases != null)
                     hash = hash * 59 + this.InheritPhoneTrunkBases.GetHashCode();
                 if (this.InheritPhoneTrunkBasesIPv4 != null)
@@ -864,7 +758,6 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.ExternalTrunkBaseAssignments.GetHashCode();
                 if (this.PhoneTrunkBaseAssignments != null)
                     hash = hash * 59 + this.PhoneTrunkBaseAssignments.GetHashCode();
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;

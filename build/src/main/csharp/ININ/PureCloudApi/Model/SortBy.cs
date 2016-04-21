@@ -15,23 +15,6 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/FacetGroup.cs
-    public partial class FacetGroup :  IEquatable<FacetGroup>
-    { 
-        
-        /// <summary>
-        /// Initializes a new instance of the <see cref="FacetGroup" />class.
-        /// </summary>
-        /// <param name="Name">Name.</param>
-        /// <param name="Count">Count.</param>
-        /// <param name="Items">Items.</param>
-
-        public FacetGroup(string Name = null, int? Count = null, List<FacetItem> Items = null)
-        {
-            this.Name = Name;
-            this.Count = Count;
-            this.Items = Items;
-=======
     public partial class SortBy :  IEquatable<SortBy>
     { 
         
@@ -53,7 +36,6 @@ namespace ININ.PureCloudApi.Model
             {
                 this.Ascending = Ascending;
             }
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/SortBy.cs
             
         }
 
@@ -67,19 +49,8 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Gets or Sets Ascending
         /// </summary>
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/FacetGroup.cs
-        [DataMember(Name="count", EmitDefaultValue=false)]
-        public int? Count { get; set; }
-    
-        /// <summary>
-        /// Gets or Sets Items
-        /// </summary>
-        [DataMember(Name="items", EmitDefaultValue=false)]
-        public List<FacetItem> Items { get; set; }
-=======
         [DataMember(Name="ascending", EmitDefaultValue=false)]
         public bool? Ascending { get; set; }
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/SortBy.cs
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -90,12 +61,7 @@ namespace ININ.PureCloudApi.Model
             var sb = new StringBuilder();
             sb.Append("class SortBy {\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/FacetGroup.cs
-            sb.Append("  Count: ").Append(Count).Append("\n");
-            sb.Append("  Items: ").Append(Items).Append("\n");
-=======
             sb.Append("  Ascending: ").Append(Ascending).Append("\n");
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/SortBy.cs
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -123,11 +89,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if SortBy instances are equal
         /// </summary>
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/FacetGroup.cs
-        /// <param name="other">Instance of FacetGroup to be compared</param>
-=======
         /// <param name="other">Instance of SortBy to be compared</param>
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/SortBy.cs
         /// <returns>Boolean</returns>
         public bool Equals(SortBy other)
         {
@@ -141,14 +103,6 @@ namespace ININ.PureCloudApi.Model
                     this.Name != null &&
                     this.Name.Equals(other.Name)
                 ) &&
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/FacetGroup.cs
-                (
-                    this.Count == other.Count ||
-                    this.Count != null &&
-                    this.Count.Equals(other.Count)
-                ) &&
-=======
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/SortBy.cs
                 (
                     this.Ascending == other.Ascending ||
                     this.Ascending != null &&
@@ -169,15 +123,8 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/FacetGroup.cs
-                if (this.Count != null)
-                    hash = hash * 59 + this.Count.GetHashCode();
-                if (this.Items != null)
-                    hash = hash * 59 + this.Items.GetHashCode();
-=======
                 if (this.Ascending != null)
                     hash = hash * 59 + this.Ascending.GetHashCode();
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/SortBy.cs
                 return hash;
             }
         }

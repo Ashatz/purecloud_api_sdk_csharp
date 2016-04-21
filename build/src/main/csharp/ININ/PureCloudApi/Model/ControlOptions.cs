@@ -15,29 +15,6 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/Tag.cs
-    public partial class Tag :  IEquatable<Tag>
-    { 
-        
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Tag" />class.
-        /// </summary>
-        /// <param name="Label">Label.</param>
-        /// <param name="InteractionFlag">InteractionFlag (default to false).</param>
-
-        public Tag(string Label = null, bool? InteractionFlag = null)
-        {
-            this.Label = Label;
-            // use default value if no "InteractionFlag" provided
-            if (InteractionFlag == null)
-            {
-                this.InteractionFlag = false;
-            }
-            else
-            {
-                this.InteractionFlag = InteractionFlag;
-            }
-=======
     public partial class ControlOptions :  IEquatable<ControlOptions>
     { 
         
@@ -51,35 +28,22 @@ namespace ININ.PureCloudApi.Model
         {
             this.Value = Value;
             this.Label = Label;
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/ControlOptions.cs
             
         }
 
     
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/Tag.cs
-=======
         /// <summary>
         /// Gets or Sets Value
         /// </summary>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public string Value { get; set; }
     
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/ControlOptions.cs
         /// <summary>
         /// Gets or Sets Label
         /// </summary>
         [DataMember(Name="label", EmitDefaultValue=false)]
         public string Label { get; set; }
     
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/Tag.cs
-        /// <summary>
-        /// Gets or Sets InteractionFlag
-        /// </summary>
-        [DataMember(Name="interactionFlag", EmitDefaultValue=false)]
-        public bool? InteractionFlag { get; set; }
-    
-=======
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/ControlOptions.cs
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -90,10 +54,6 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class ControlOptions {\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
             sb.Append("  Label: ").Append(Label).Append("\n");
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/Tag.cs
-            sb.Append("  InteractionFlag: ").Append(InteractionFlag).Append("\n");
-=======
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/ControlOptions.cs
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -121,11 +81,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if ControlOptions instances are equal
         /// </summary>
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/Tag.cs
-        /// <param name="other">Instance of Tag to be compared</param>
-=======
         /// <param name="other">Instance of ControlOptions to be compared</param>
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/ControlOptions.cs
         /// <returns>Boolean</returns>
         public bool Equals(ControlOptions other)
         {
@@ -134,26 +90,15 @@ namespace ININ.PureCloudApi.Model
                 return false;
 
             return true &&
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/Tag.cs
-=======
                 (
                     this.Value == other.Value ||
                     this.Value != null &&
                     this.Value.Equals(other.Value)
                 ) &&
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/ControlOptions.cs
                 (
                     this.Label == other.Label ||
                     this.Label != null &&
                     this.Label.Equals(other.Label)
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/Tag.cs
-                ) &&
-                (
-                    this.InteractionFlag == other.InteractionFlag ||
-                    this.InteractionFlag != null &&
-                    this.InteractionFlag.Equals(other.InteractionFlag)
-=======
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/ControlOptions.cs
                 );
         }
 
@@ -168,17 +113,10 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/Tag.cs
-                if (this.Label != null)
-                    hash = hash * 59 + this.Label.GetHashCode();
-                if (this.InteractionFlag != null)
-                    hash = hash * 59 + this.InteractionFlag.GetHashCode();
-=======
                 if (this.Value != null)
                     hash = hash * 59 + this.Value.GetHashCode();
                 if (this.Label != null)
                     hash = hash * 59 + this.Label.GetHashCode();
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/ControlOptions.cs
                 return hash;
             }
         }

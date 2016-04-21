@@ -1,15 +1,16 @@
 ---
 title: Entity
 ---
-## .Entity
+## ININ.PureCloudApi.Model.Entity
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Kind** | **string** |  | [optional] |
+| **Type** | **string** |  | [optional] |
 | **Id** | **string** |  | [optional] |
 | **Name** | **string** |  | [optional] |
+| **SelfUri** | **string** |  | [optional] |
 {: class="table table-striped"}
 
 

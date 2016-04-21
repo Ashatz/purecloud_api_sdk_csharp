@@ -1,7 +1,7 @@
 ---
 title: LineBase
 ---
-## .LineBase
+## ININ.PureCloudApi.Model.LineBase
 
 ## Properties
 

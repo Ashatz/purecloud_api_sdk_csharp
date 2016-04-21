@@ -21,11 +21,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UnreadMetric" />class.
         /// </summary>
-<<<<<<< HEAD
-        /// <param name="Count">Count.</param>
-=======
         /// <param name="Count">The count of unread alerts for a specific rule type..</param>
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
         public UnreadMetric(int? Count = null)
         {

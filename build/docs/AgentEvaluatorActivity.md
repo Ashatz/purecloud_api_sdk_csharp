@@ -1,7 +1,7 @@
 ---
 title: AgentEvaluatorActivity
 ---
-## .AgentEvaluatorActivity
+## ININ.PureCloudApi.Model.AgentEvaluatorActivity
 
 ## Properties
 

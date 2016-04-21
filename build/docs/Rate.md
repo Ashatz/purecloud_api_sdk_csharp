@@ -1,7 +1,7 @@
 ---
 title: Rate
 ---
-## .Rate
+## ININ.PureCloudApi.Model.Rate
 
 ## Properties
 

@@ -1,7 +1,7 @@
 ---
 title: SpreadsheetTransform
 ---
-## .SpreadsheetTransform
+## ININ.PureCloudApi.Model.SpreadsheetTransform
 
 ## Properties
 

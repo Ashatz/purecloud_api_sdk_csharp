@@ -1,7 +1,7 @@
 ---
 title: FlowVersionEntityListing
 ---
-## .FlowVersionEntityListing
+## ININ.PureCloudApi.Model.FlowVersionEntityListing
 
 ## Properties
 
@@ -12,9 +12,9 @@ title: FlowVersionEntityListing
 | **Total** | **long?** |  | [optional] |
 | **Entities** | [**List&lt;FlowVersion&gt;**](FlowVersion.html) |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
+| **FirstUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **NextUri** | **string** |  | [optional] |
-| **FirstUri** | **string** |  | [optional] |
 | **LastUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
 {: class="table table-striped"}

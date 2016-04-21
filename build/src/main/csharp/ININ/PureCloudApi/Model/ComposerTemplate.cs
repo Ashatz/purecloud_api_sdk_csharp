@@ -15,11 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/Template.cs
-    public partial class Template :  IEquatable<Template>
-=======
     public partial class ComposerTemplate :  IEquatable<ComposerTemplate>
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/ComposerTemplate.cs
     { 
 
         /// <summary>
@@ -40,38 +36,6 @@ namespace ININ.PureCloudApi.Model
 
         
 
-        /// <summary>
-        /// Gets or Sets Level
-        /// </summary>
-        [DataMember(Name="level", EmitDefaultValue=false)]
-        public LevelEnum? Level { get; set; }
-    
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Template" />class.
-        /// </summary>
-        /// <param name="Name">Name.</param>
-        /// <param name="Description">Description.</param>
-        /// <param name="CreatedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        /// <param name="ModifiedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        /// <param name="Version">Version.</param>
-        /// <param name="Level">Level.</param>
-        /// <param name="Tags">Tags.</param>
-        /// <param name="Data">Data.</param>
-
-        public Template(string Name = null, string Description = null, DateTime? CreatedDate = null, DateTime? ModifiedDate = null, int? Version = null, LevelEnum? Level = null, List<string> Tags = null, Dictionary<string, Object> Data = null)
-        {
-            this.Name = Name;
-            this.Description = Description;
-            this.CreatedDate = CreatedDate;
-            this.ModifiedDate = ModifiedDate;
-            this.Version = Version;
-            this.Level = Level;
-            this.Tags = Tags;
-            this.Data = Data;
-            
-        }
-
-    
         /// <summary>
         /// Gets or Sets Level
         /// </summary>
@@ -207,11 +171,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if ComposerTemplate instances are equal
         /// </summary>
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/Template.cs
-        /// <param name="other">Instance of Template to be compared</param>
-=======
         /// <param name="other">Instance of ComposerTemplate to be compared</param>
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/ComposerTemplate.cs
         /// <returns>Boolean</returns>
         public bool Equals(ComposerTemplate other)
         {

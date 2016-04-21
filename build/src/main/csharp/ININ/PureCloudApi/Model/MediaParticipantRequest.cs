@@ -60,6 +60,7 @@ namespace ININ.PureCloudApi.Model
         }
 
         
+
         /// <summary>
         /// The state to update to set for this participant's communications.  Possible values are: 'connected' and 'disconnected'.
         /// </summary>

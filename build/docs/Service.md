@@ -1,7 +1,7 @@
 ---
 title: Service
 ---
-## .Service
+## ININ.PureCloudApi.Model.Service
 
 ## Properties
 
@@ -10,6 +10,7 @@ title: Service
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** |  | [optional] |
 | **Status** | **string** |  | [optional] |
+| **Domains** | **List&lt;string&gt;** | An inbound carrier specific domain (i.e. lb.domain.com) | [optional] |
 | **ServiceTypes** | [**List&lt;ServiceType&gt;**](ServiceType.html) |  | [optional] |
 | **Gateways** | [**List&lt;Gateway&gt;**](Gateway.html) |  | [optional] |
 | **Dns** | [**Dns**](Dns.html) |  | [optional] |

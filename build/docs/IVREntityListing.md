@@ -1,7 +1,7 @@
 ---
 title: IVREntityListing
 ---
-## .IVREntityListing
+## ININ.PureCloudApi.Model.IVREntityListing
 
 ## Properties
 
@@ -12,9 +12,9 @@ title: IVREntityListing
 | **Total** | **long?** |  | [optional] |
 | **Entities** | [**List&lt;IVR&gt;**](IVR.html) |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
+| **FirstUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **NextUri** | **string** |  | [optional] |
-| **FirstUri** | **string** |  | [optional] |
 | **LastUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
 {: class="table table-striped"}

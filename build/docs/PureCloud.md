@@ -1,7 +1,7 @@
 ---
 title: PureCloud
 ---
-## .PureCloud
+## ININ.PureCloudApi.Model.PureCloud
 
 ## Properties
 

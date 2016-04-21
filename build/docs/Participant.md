@@ -1,7 +1,7 @@
 ---
 title: Participant
 ---
-## .Participant
+## ININ.PureCloudApi.Model.Participant
 
 ## Properties
 
@@ -14,6 +14,7 @@ title: Participant
 | **Name** | **string** |  | [optional] |
 | **UserUri** | **string** |  | [optional] |
 | **UserId** | **string** |  | [optional] |
+| **ExternalContactId** | **string** |  | [optional] |
 | **QueueId** | **string** |  | [optional] |
 | **GroupId** | **string** |  | [optional] |
 | **QueueName** | **string** |  | [optional] |
@@ -25,7 +26,6 @@ title: Participant
 | **Dnis** | **string** |  | [optional] |
 | **Locale** | **string** |  | [optional] |
 | **WrapupRequired** | **bool?** |  | [optional] [default to false]|
-| **WrapupExpected** | **bool?** |  | [optional] [default to false]|
 | **WrapupPrompt** | **string** |  | [optional] |
 | **WrapupTimeoutMs** | **int?** |  | [optional] |
 | **WrapupSkipped** | **bool?** |  | [optional] [default to false]|
@@ -33,7 +33,8 @@ title: Participant
 | **MonitoredParticipantId** | **string** |  | [optional] |
 | **Attributes** | **Dictionary&lt;string, string&gt;** |  | [optional] |
 | **Calls** | [**List&lt;Call&gt;**](Call.html) |  | [optional] |
-| **Chats** | [**List&lt;Chat&gt;**](Chat.html) |  | [optional] |
+| **Callbacks** | [**List&lt;Callback&gt;**](Callback.html) |  | [optional] |
+| **Chats** | [**List&lt;ConversationChat&gt;**](ConversationChat.html) |  | [optional] |
 | **Emails** | [**List&lt;Email&gt;**](Email.html) |  | [optional] |
 | **SocialExpressions** | [**List&lt;SocialExpression&gt;**](SocialExpression.html) |  | [optional] |
 | **Videos** | [**List&lt;Video&gt;**](Video.html) |  | [optional] |

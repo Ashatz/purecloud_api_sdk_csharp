@@ -1,7 +1,7 @@
 ---
 title: InboundRoute
 ---
-## .InboundRoute
+## ININ.PureCloudApi.Model.InboundRoute
 
 ## Properties
 

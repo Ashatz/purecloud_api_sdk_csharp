@@ -1,7 +1,7 @@
 ---
 title: DIDPool
 ---
-## .DIDPool
+## ININ.PureCloudApi.Model.DIDPool
 
 ## Properties
 

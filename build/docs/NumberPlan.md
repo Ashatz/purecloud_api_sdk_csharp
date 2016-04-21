@@ -1,7 +1,7 @@
 ---
 title: NumberPlan
 ---
-## .NumberPlan
+## ININ.PureCloudApi.Model.NumberPlan
 
 ## Properties
 

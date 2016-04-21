@@ -4,78 +4,23 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**FaxDocumentsDocumentidContentGet**](FaxApi.md#faxdocumentsdocumentidcontentget) | **GET** /api/v1/fax/documents/{documentId}/content | Download a fax document. |
-| [**FaxDocumentsDocumentidDelete**](FaxApi.md#faxdocumentsdocumentiddelete) | **DELETE** /api/v1/fax/documents/{documentId} | Delete a fax document. |
-| [**FaxDocumentsDocumentidGet**](FaxApi.md#faxdocumentsdocumentidget) | **GET** /api/v1/fax/documents/{documentId} | Get a document. |
-| [**FaxDocumentsDocumentidPut**](FaxApi.md#faxdocumentsdocumentidput) | **PUT** /api/v1/fax/documents/{documentId} | Update a fax document. |
-| [**FaxDocumentsGet**](FaxApi.md#faxdocumentsget) | **GET** /api/v1/fax/documents | Get a list of fax documents. |
-| [**FaxSummaryGet**](FaxApi.md#faxsummaryget) | **GET** /api/v1/fax/summary | Get fax summary |
+| [**DeleteDocumentsDocumentId**](FaxApi.md#deletedocumentsdocumentid) | **DELETE** /api/v2/fax/documents/{documentId} | Delete a fax document. |
+| [**GetDocuments**](FaxApi.md#getdocuments) | **GET** /api/v2/fax/documents | Get a list of fax documents. |
+| [**GetDocumentsDocumentId**](FaxApi.md#getdocumentsdocumentid) | **GET** /api/v2/fax/documents/{documentId} | Get a document. |
+| [**GetDocumentsDocumentIdContent**](FaxApi.md#getdocumentsdocumentidcontent) | **GET** /api/v2/fax/documents/{documentId}/content | Download a fax document. |
+| [**GetSummary**](FaxApi.md#getsummary) | **GET** /api/v2/fax/summary | Get fax summary |
+| [**PutDocumentsDocumentId**](FaxApi.md#putdocumentsdocumentid) | **PUT** /api/v2/fax/documents/{documentId} | Update a fax document. |
 {: class="table table-striped"}
 
-<a name="FaxDocumentsDocumentidContentGet"></a>
-## [**DownloadResponse**](DownloadResponse.html) FaxDocumentsDocumentidContentGet (string documentId)
-
-Download a fax document.
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class FaxDocumentsDocumentidContentGetExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new FaxApi();
-            var documentId = documentId_example;  // string | Document ID
-
-            try
-            {
-                // Download a fax document.
-                DownloadResponse result = apiInstance.FaxDocumentsDocumentidContentGet(documentId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling FaxApi.FaxDocumentsDocumentidContentGet: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **documentId** | **string**| Document ID |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**DownloadResponse**](DownloadResponse.md)
-
-<a name="FaxDocumentsDocumentidDelete"></a>
-## void FaxDocumentsDocumentidDelete (string documentId)
+<a name="DeleteDocumentsDocumentId"></a>
+## void DeleteDocumentsDocumentId (string documentId)
 
 Delete a fax document.
 
 
 
 ### Example
-```csharp
+~~~csharp
 using System;
 using System.Diagnostics;
 using ININ.PureCloudApi.Api;
@@ -84,7 +29,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class FaxDocumentsDocumentidDeleteExample
+    public class DeleteDocumentsDocumentIdExample
     {
         public void main()
         {
@@ -98,16 +43,16 @@ namespace Example
             try
             {
                 // Delete a fax document.
-                apiInstance.FaxDocumentsDocumentidDelete(documentId);
+                apiInstance.DeleteDocumentsDocumentId(documentId);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling FaxApi.FaxDocumentsDocumentidDelete: " + e.Message );
+                Debug.Print("Exception when calling FaxApi.DeleteDocumentsDocumentId: " + e.Message );
             }
         }
     }
 }
-```
+~~~
 
 ### Parameters
 
@@ -121,127 +66,15 @@ namespace Example
 
 void (empty response body)
 
-<a name="FaxDocumentsDocumentidGet"></a>
-## [**FaxDocument**](FaxDocument.html) FaxDocumentsDocumentidGet (string documentId)
-
-Get a document.
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class FaxDocumentsDocumentidGetExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new FaxApi();
-            var documentId = documentId_example;  // string | Document ID
-
-            try
-            {
-                // Get a document.
-                FaxDocument result = apiInstance.FaxDocumentsDocumentidGet(documentId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling FaxApi.FaxDocumentsDocumentidGet: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **documentId** | **string**| Document ID |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**FaxDocument**](FaxDocument.md)
-
-<a name="FaxDocumentsDocumentidPut"></a>
-## [**FaxDocument**](FaxDocument.html) FaxDocumentsDocumentidPut (string documentId, FaxDocument body = null)
-
-Update a fax document.
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class FaxDocumentsDocumentidPutExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new FaxApi();
-            var documentId = documentId_example;  // string | Document ID
-            var body = new FaxDocument(); // FaxDocument | Document (optional) 
-
-            try
-            {
-                // Update a fax document.
-                FaxDocument result = apiInstance.FaxDocumentsDocumentidPut(documentId, body);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling FaxApi.FaxDocumentsDocumentidPut: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **documentId** | **string**| Document ID |  |
-| **body** | [**FaxDocument**](FaxDocument.md)| Document | [optional]  |
-{: class="table table-striped"}
-
-### Return type
-
-[**FaxDocument**](FaxDocument.md)
-
-<a name="FaxDocumentsGet"></a>
-## [**FaxDocumentEntityListing**](FaxDocumentEntityListing.html) FaxDocumentsGet (int? pageSize = null, int? pageNumber = null)
+<a name="GetDocuments"></a>
+## [**FaxDocumentEntityListing**](FaxDocumentEntityListing.html) GetDocuments (int? pageSize = null, int? pageNumber = null)
 
 Get a list of fax documents.
 
 
 
 ### Example
-```csharp
+~~~csharp
 using System;
 using System.Diagnostics;
 using ININ.PureCloudApi.Api;
@@ -250,7 +83,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class FaxDocumentsGetExample
+    public class GetDocumentsExample
     {
         public void main()
         {
@@ -265,17 +98,17 @@ namespace Example
             try
             {
                 // Get a list of fax documents.
-                FaxDocumentEntityListing result = apiInstance.FaxDocumentsGet(pageSize, pageNumber);
+                FaxDocumentEntityListing result = apiInstance.GetDocuments(pageSize, pageNumber);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling FaxApi.FaxDocumentsGet: " + e.Message );
+                Debug.Print("Exception when calling FaxApi.GetDocuments: " + e.Message );
             }
         }
     }
 }
-```
+~~~
 
 ### Parameters
 
@@ -290,15 +123,15 @@ namespace Example
 
 [**FaxDocumentEntityListing**](FaxDocumentEntityListing.md)
 
-<a name="FaxSummaryGet"></a>
-## [**FaxSummary**](FaxSummary.html) FaxSummaryGet ()
+<a name="GetDocumentsDocumentId"></a>
+## [**FaxDocument**](FaxDocument.html) GetDocumentsDocumentId (string documentId)
 
-Get fax summary
+Get a document.
 
 
 
 ### Example
-```csharp
+~~~csharp
 using System;
 using System.Diagnostics;
 using ININ.PureCloudApi.Api;
@@ -307,7 +140,117 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class FaxSummaryGetExample
+    public class GetDocumentsDocumentIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new FaxApi();
+            var documentId = documentId_example;  // string | Document ID
+
+            try
+            {
+                // Get a document.
+                FaxDocument result = apiInstance.GetDocumentsDocumentId(documentId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling FaxApi.GetDocumentsDocumentId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **documentId** | **string**| Document ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**FaxDocument**](FaxDocument.md)
+
+<a name="GetDocumentsDocumentIdContent"></a>
+## [**DownloadResponse**](DownloadResponse.html) GetDocumentsDocumentIdContent (string documentId)
+
+Download a fax document.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetDocumentsDocumentIdContentExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new FaxApi();
+            var documentId = documentId_example;  // string | Document ID
+
+            try
+            {
+                // Download a fax document.
+                DownloadResponse result = apiInstance.GetDocumentsDocumentIdContent(documentId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling FaxApi.GetDocumentsDocumentIdContent: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **documentId** | **string**| Document ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**DownloadResponse**](DownloadResponse.md)
+
+<a name="GetSummary"></a>
+## [**FaxSummary**](FaxSummary.html) GetSummary ()
+
+Get fax summary
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetSummaryExample
     {
         public void main()
         {
@@ -320,17 +263,17 @@ namespace Example
             try
             {
                 // Get fax summary
-                FaxSummary result = apiInstance.FaxSummaryGet();
+                FaxSummary result = apiInstance.GetSummary();
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling FaxApi.FaxSummaryGet: " + e.Message );
+                Debug.Print("Exception when calling FaxApi.GetSummary: " + e.Message );
             }
         }
     }
 }
-```
+~~~
 
 ### Parameters
 This endpoint does require any parameters.
@@ -339,4 +282,61 @@ This endpoint does require any parameters.
 ### Return type
 
 [**FaxSummary**](FaxSummary.md)
+
+<a name="PutDocumentsDocumentId"></a>
+## [**FaxDocument**](FaxDocument.html) PutDocumentsDocumentId (string documentId, FaxDocument body = null)
+
+Update a fax document.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PutDocumentsDocumentIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new FaxApi();
+            var documentId = documentId_example;  // string | Document ID
+            var body = new FaxDocument(); // FaxDocument | Document (optional) 
+
+            try
+            {
+                // Update a fax document.
+                FaxDocument result = apiInstance.PutDocumentsDocumentId(documentId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling FaxApi.PutDocumentsDocumentId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **documentId** | **string**| Document ID |  |
+| **body** | [**FaxDocument**](FaxDocument.md)| Document | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**FaxDocument**](FaxDocument.md)
 

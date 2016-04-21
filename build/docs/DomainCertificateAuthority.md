@@ -1,7 +1,7 @@
 ---
 title: DomainCertificateAuthority
 ---
-## .DomainCertificateAuthority
+## ININ.PureCloudApi.Model.DomainCertificateAuthority
 
 ## Properties
 

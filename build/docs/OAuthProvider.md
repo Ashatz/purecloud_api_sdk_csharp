@@ -1,7 +1,7 @@
 ---
 title: OAuthProvider
 ---
-## .OAuthProvider
+## ININ.PureCloudApi.Model.OAuthProvider
 
 ## Properties
 

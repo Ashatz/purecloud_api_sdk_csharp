@@ -1,7 +1,7 @@
 ---
 title: ServiceLevel
 ---
-## .ServiceLevel
+## ININ.PureCloudApi.Model.ServiceLevel
 
 ## Properties
 

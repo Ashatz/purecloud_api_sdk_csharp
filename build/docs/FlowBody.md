@@ -1,7 +1,7 @@
 ---
 title: FlowBody
 ---
-## .FlowBody
+## ININ.PureCloudApi.Model.FlowBody
 
 ## Properties
 

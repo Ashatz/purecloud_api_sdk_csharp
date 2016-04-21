@@ -1,7 +1,7 @@
 ---
 title: AuditSearchResult
 ---
-## .AuditSearchResult
+## ININ.PureCloudApi.Model.AuditSearchResult
 
 ## Properties
 

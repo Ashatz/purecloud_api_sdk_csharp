@@ -1,7 +1,7 @@
 ---
 title: FaxDocument
 ---
-## .FaxDocument
+## ININ.PureCloudApi.Model.FaxDocument
 
 ## Properties
 

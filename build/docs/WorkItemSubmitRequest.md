@@ -1,7 +1,7 @@
 ---
 title: WorkItemSubmitRequest
 ---
-## .WorkItemSubmitRequest
+## ININ.PureCloudApi.Model.WorkItemSubmitRequest
 
 ## Properties
 

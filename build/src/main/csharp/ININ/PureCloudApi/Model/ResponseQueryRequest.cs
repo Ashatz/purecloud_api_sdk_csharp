@@ -25,11 +25,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="PageSize">The maximum number of hits to return. Default: 25, Maximum: 500..</param>
         /// <param name="Filters">Filter the query results..</param>
 
-<<<<<<< HEAD
-        public ResponseQueryRequest(string QueryPhrase = null, int? PageSize = null, List<Filter> Filters = null)
-=======
         public ResponseQueryRequest(string QueryPhrase = null, int? PageSize = null, List<ResponseFilter> Filters = null)
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         {
             this.QueryPhrase = QueryPhrase;
             this.PageSize = PageSize;
@@ -57,11 +53,7 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <value>Filter the query results.</value>
         [DataMember(Name="filters", EmitDefaultValue=false)]
-<<<<<<< HEAD
-        public List<Filter> Filters { get; set; }
-=======
         public List<ResponseFilter> Filters { get; set; }
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
     
         /// <summary>
         /// Returns the string presentation of the object

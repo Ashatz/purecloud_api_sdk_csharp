@@ -1,7 +1,7 @@
 ---
 title: BasicTransform
 ---
-## .BasicTransform
+## ININ.PureCloudApi.Model.BasicTransform
 
 ## Properties
 

@@ -24,11 +24,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="ContactCenter">ContactCenter.</param>
         /// <param name="Enterprise">Enterprise.</param>
 
-<<<<<<< HEAD
-        public MediaSummary(int? ContactCenter = null, int? Enterprise = null)
-=======
         public MediaSummary(MediaSummaryDetail ContactCenter = null, MediaSummaryDetail Enterprise = null)
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         {
             this.ContactCenter = ContactCenter;
             this.Enterprise = Enterprise;
@@ -40,21 +36,13 @@ namespace ININ.PureCloudApi.Model
         /// Gets or Sets ContactCenter
         /// </summary>
         [DataMember(Name="contactCenter", EmitDefaultValue=false)]
-<<<<<<< HEAD
-        public int? ContactCenter { get; set; }
-=======
         public MediaSummaryDetail ContactCenter { get; set; }
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
     
         /// <summary>
         /// Gets or Sets Enterprise
         /// </summary>
         [DataMember(Name="enterprise", EmitDefaultValue=false)]
-<<<<<<< HEAD
-        public int? Enterprise { get; set; }
-=======
         public MediaSummaryDetail Enterprise { get; set; }
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
     
         /// <summary>
         /// Returns the string presentation of the object

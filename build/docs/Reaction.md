@@ -1,7 +1,7 @@
 ---
 title: Reaction
 ---
-## .Reaction
+## ININ.PureCloudApi.Model.Reaction
 
 ## Properties
 

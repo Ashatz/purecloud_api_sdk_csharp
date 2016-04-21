@@ -1,7 +1,7 @@
 ---
 title: ConsultTransferUpdate
 ---
-## .ConsultTransferUpdate
+## ININ.PureCloudApi.Model.ConsultTransferUpdate
 
 ## Properties
 

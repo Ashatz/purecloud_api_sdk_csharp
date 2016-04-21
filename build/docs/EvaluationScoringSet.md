@@ -1,7 +1,7 @@
 ---
 title: EvaluationScoringSet
 ---
-## .EvaluationScoringSet
+## ININ.PureCloudApi.Model.EvaluationScoringSet
 
 ## Properties
 

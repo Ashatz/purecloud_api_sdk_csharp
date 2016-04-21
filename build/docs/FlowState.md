@@ -1,7 +1,7 @@
 ---
 title: FlowState
 ---
-## .FlowState
+## ININ.PureCloudApi.Model.FlowState
 
 ## Properties
 

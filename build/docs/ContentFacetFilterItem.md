@@ -1,7 +1,7 @@
 ---
 title: ContentFacetFilterItem
 ---
-## .ContentFacetFilterItem
+## ININ.PureCloudApi.Model.ContentFacetFilterItem
 
 ## Properties
 

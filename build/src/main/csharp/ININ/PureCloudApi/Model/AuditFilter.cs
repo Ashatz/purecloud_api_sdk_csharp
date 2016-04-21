@@ -15,16 +15,6 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/FacetFilterItem.cs
-    public partial class FacetFilterItem :  IEquatable<FacetFilterItem>
-    { 
-
-        /// <summary>
-        /// Gets or Sets Type
-        /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
-                public enum TypeEnum {
-=======
     public partial class AuditFilter :  IEquatable<AuditFilter>
     { 
         
@@ -42,104 +32,6 @@ namespace ININ.PureCloudApi.Model
             this.Type = Type;
             this._Operator = _Operator;
             this.Values = Values;
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/AuditFilter.cs
-            
-            [EnumMember(Value = "NUMBER")]
-            Number,
-            
-            [EnumMember(Value = "STRING")]
-            String,
-            
-            [EnumMember(Value = "DATE")]
-            Date,
-            
-            [EnumMember(Value = "BOOLEAN")]
-            Boolean,
-            
-            [EnumMember(Value = "LIST")]
-            List,
-            
-            [EnumMember(Value = "GROUP")]
-            Group
-        }
-
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/FacetFilterItem.cs
-
-=======
-    
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/AuditFilter.cs
-        /// <summary>
-        /// Gets or Sets _Operator
-        /// </summary>
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/FacetFilterItem.cs
-        [JsonConverter(typeof(StringEnumConverter))]
-                public enum _OperatorEnum {
-            
-            [EnumMember(Value = "IN")]
-            In,
-            
-            [EnumMember(Value = "RANGE")]
-            Range,
-            
-            [EnumMember(Value = "EQUALS")]
-            Equals,
-            
-            [EnumMember(Value = "NOTEQUALS")]
-            Notequals,
-            
-            [EnumMember(Value = "LESSTHAN")]
-            Lessthan,
-            
-            [EnumMember(Value = "LESSTHANEQUALS")]
-            Lessthanequals,
-            
-            [EnumMember(Value = "GREATERTHAN")]
-            Greaterthan,
-            
-            [EnumMember(Value = "GREATERTHANEQUALS")]
-            Greaterthanequals
-        }
-
-        
-
-=======
-        [DataMember(Name="name", EmitDefaultValue=false)]
-        public string Name { get; set; }
-    
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/AuditFilter.cs
-        /// <summary>
-        /// Gets or Sets Type
-        /// </summary>
-        [DataMember(Name="type", EmitDefaultValue=false)]
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/FacetFilterItem.cs
-        public TypeEnum? Type { get; set; }
-    
-
-=======
-        public string Type { get; set; }
-    
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/AuditFilter.cs
-        /// <summary>
-        /// Gets or Sets _Operator
-        /// </summary>
-        [DataMember(Name="operator", EmitDefaultValue=false)]
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/FacetFilterItem.cs
-        public _OperatorEnum? _Operator { get; set; }
-    
-        /// <summary>
-        /// Initializes a new instance of the <see cref="FacetFilterItem" />class.
-        /// </summary>
-        /// <param name="Name">Name.</param>
-        /// <param name="Type">Type.</param>
-        /// <param name="_Operator">_Operator.</param>
-        /// <param name="Values">Values.</param>
-
-        public FacetFilterItem(string Name = null, TypeEnum? Type = null, _OperatorEnum? _Operator = null, List<string> Values = null)
-        {
-            this.Name = Name;
-            this.Type = Type;
-            this._Operator = _Operator;
-            this.Values = Values;
             
         }
 
@@ -149,9 +41,18 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-=======
+    
+        /// <summary>
+        /// Gets or Sets Type
+        /// </summary>
+        [DataMember(Name="type", EmitDefaultValue=false)]
+        public string Type { get; set; }
+    
+        /// <summary>
+        /// Gets or Sets _Operator
+        /// </summary>
+        [DataMember(Name="operator", EmitDefaultValue=false)]
         public string _Operator { get; set; }
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/AuditFilter.cs
     
         /// <summary>
         /// Gets or Sets Values
@@ -198,11 +99,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if AuditFilter instances are equal
         /// </summary>
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/FacetFilterItem.cs
-        /// <param name="other">Instance of FacetFilterItem to be compared</param>
-=======
         /// <param name="other">Instance of AuditFilter to be compared</param>
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/AuditFilter.cs
         /// <returns>Boolean</returns>
         public bool Equals(AuditFilter other)
         {

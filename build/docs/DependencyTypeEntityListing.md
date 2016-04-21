@@ -1,7 +1,7 @@
 ---
 title: DependencyTypeEntityListing
 ---
-## .DependencyTypeEntityListing
+## ININ.PureCloudApi.Model.DependencyTypeEntityListing
 
 ## Properties
 
@@ -12,9 +12,9 @@ title: DependencyTypeEntityListing
 | **Total** | **long?** |  | [optional] |
 | **Entities** | [**List&lt;DependencyType&gt;**](DependencyType.html) |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
+| **FirstUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **NextUri** | **string** |  | [optional] |
-| **FirstUri** | **string** |  | [optional] |
 | **LastUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
 {: class="table table-striped"}

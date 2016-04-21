@@ -1,7 +1,7 @@
 ---
 title: DeleteRetention
 ---
-## .DeleteRetention
+## ININ.PureCloudApi.Model.DeleteRetention
 
 ## Properties
 

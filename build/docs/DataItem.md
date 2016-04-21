@@ -1,7 +1,7 @@
 ---
 title: DataItem
 ---
-## .DataItem
+## ININ.PureCloudApi.Model.DataItem
 
 ## Properties
 

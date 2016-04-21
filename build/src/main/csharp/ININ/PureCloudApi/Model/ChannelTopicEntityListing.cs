@@ -15,34 +15,17 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/UserPresenceEntityListing.cs
-    public partial class UserPresenceEntityListing :  IEquatable<UserPresenceEntityListing>
-    { 
-        
-        /// <summary>
-        /// Initializes a new instance of the <see cref="UserPresenceEntityListing" />class.
-=======
     public partial class ChannelTopicEntityListing :  IEquatable<ChannelTopicEntityListing>
     { 
         
         /// <summary>
         /// Initializes a new instance of the <see cref="ChannelTopicEntityListing" />class.
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/ChannelTopicEntityListing.cs
         /// </summary>
         /// <param name="PageSize">PageSize.</param>
         /// <param name="PageNumber">PageNumber.</param>
         /// <param name="Total">Total.</param>
         /// <param name="Entities">Entities.</param>
         /// <param name="SelfUri">SelfUri.</param>
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/UserPresenceEntityListing.cs
-        /// <param name="PreviousUri">PreviousUri.</param>
-        /// <param name="NextUri">NextUri.</param>
-        /// <param name="FirstUri">FirstUri.</param>
-        /// <param name="LastUri">LastUri.</param>
-        /// <param name="PageCount">PageCount.</param>
-
-        public UserPresenceEntityListing(int? PageSize = null, int? PageNumber = null, long? Total = null, List<UserPresence> Entities = null, string SelfUri = null, string PreviousUri = null, string NextUri = null, string FirstUri = null, string LastUri = null, int? PageCount = null)
-=======
         /// <param name="FirstUri">FirstUri.</param>
         /// <param name="PreviousUri">PreviousUri.</param>
         /// <param name="NextUri">NextUri.</param>
@@ -50,22 +33,15 @@ namespace ININ.PureCloudApi.Model
         /// <param name="PageCount">PageCount.</param>
 
         public ChannelTopicEntityListing(int? PageSize = null, int? PageNumber = null, long? Total = null, List<ChannelTopic> Entities = null, string SelfUri = null, string FirstUri = null, string PreviousUri = null, string NextUri = null, string LastUri = null, int? PageCount = null)
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/ChannelTopicEntityListing.cs
         {
             this.PageSize = PageSize;
             this.PageNumber = PageNumber;
             this.Total = Total;
             this.Entities = Entities;
             this.SelfUri = SelfUri;
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/UserPresenceEntityListing.cs
-            this.PreviousUri = PreviousUri;
-            this.NextUri = NextUri;
-            this.FirstUri = FirstUri;
-=======
             this.FirstUri = FirstUri;
             this.PreviousUri = PreviousUri;
             this.NextUri = NextUri;
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/ChannelTopicEntityListing.cs
             this.LastUri = LastUri;
             this.PageCount = PageCount;
             
@@ -94,11 +70,7 @@ namespace ININ.PureCloudApi.Model
         /// Gets or Sets Entities
         /// </summary>
         [DataMember(Name="entities", EmitDefaultValue=false)]
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/UserPresenceEntityListing.cs
-        public List<UserPresence> Entities { get; set; }
-=======
         public List<ChannelTopic> Entities { get; set; }
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/ChannelTopicEntityListing.cs
     
         /// <summary>
         /// Gets or Sets SelfUri
@@ -106,15 +78,12 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; set; }
     
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/UserPresenceEntityListing.cs
-=======
         /// <summary>
         /// Gets or Sets FirstUri
         /// </summary>
         [DataMember(Name="firstUri", EmitDefaultValue=false)]
         public string FirstUri { get; set; }
     
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/ChannelTopicEntityListing.cs
         /// <summary>
         /// Gets or Sets PreviousUri
         /// </summary>
@@ -127,15 +96,6 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="nextUri", EmitDefaultValue=false)]
         public string NextUri { get; set; }
     
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/UserPresenceEntityListing.cs
-        /// <summary>
-        /// Gets or Sets FirstUri
-        /// </summary>
-        [DataMember(Name="firstUri", EmitDefaultValue=false)]
-        public string FirstUri { get; set; }
-    
-=======
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/ChannelTopicEntityListing.cs
         /// <summary>
         /// Gets or Sets LastUri
         /// </summary>
@@ -193,11 +153,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if ChannelTopicEntityListing instances are equal
         /// </summary>
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/UserPresenceEntityListing.cs
-        /// <param name="other">Instance of UserPresenceEntityListing to be compared</param>
-=======
         /// <param name="other">Instance of ChannelTopicEntityListing to be compared</param>
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/ChannelTopicEntityListing.cs
         /// <returns>Boolean</returns>
         public bool Equals(ChannelTopicEntityListing other)
         {
@@ -231,14 +187,11 @@ namespace ININ.PureCloudApi.Model
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
                 ) &&
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/UserPresenceEntityListing.cs
-=======
                 (
                     this.FirstUri == other.FirstUri ||
                     this.FirstUri != null &&
                     this.FirstUri.Equals(other.FirstUri)
                 ) &&
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/ChannelTopicEntityListing.cs
                 (
                     this.PreviousUri == other.PreviousUri ||
                     this.PreviousUri != null &&
@@ -249,14 +202,6 @@ namespace ININ.PureCloudApi.Model
                     this.NextUri != null &&
                     this.NextUri.Equals(other.NextUri)
                 ) &&
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/UserPresenceEntityListing.cs
-                (
-                    this.FirstUri == other.FirstUri ||
-                    this.FirstUri != null &&
-                    this.FirstUri.Equals(other.FirstUri)
-                ) &&
-=======
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/ChannelTopicEntityListing.cs
                 (
                     this.LastUri == other.LastUri ||
                     this.LastUri != null &&
@@ -290,20 +235,12 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.Entities.GetHashCode();
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/UserPresenceEntityListing.cs
-=======
                 if (this.FirstUri != null)
                     hash = hash * 59 + this.FirstUri.GetHashCode();
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/ChannelTopicEntityListing.cs
                 if (this.PreviousUri != null)
                     hash = hash * 59 + this.PreviousUri.GetHashCode();
                 if (this.NextUri != null)
                     hash = hash * 59 + this.NextUri.GetHashCode();
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/UserPresenceEntityListing.cs
-                if (this.FirstUri != null)
-                    hash = hash * 59 + this.FirstUri.GetHashCode();
-=======
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/ChannelTopicEntityListing.cs
                 if (this.LastUri != null)
                     hash = hash * 59 + this.LastUri.GetHashCode();
                 if (this.PageCount != null)

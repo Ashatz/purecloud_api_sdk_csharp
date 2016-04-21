@@ -82,47 +82,6 @@ namespace ININ.PureCloudApi.Model
 
     
         /// <summary>
-        /// launch type of the flow - NORMAL or TEST
-        /// </summary>
-        /// <value>launch type of the flow - NORMAL or TEST</value>
-        [DataMember(Name="launchType", EmitDefaultValue=false)]
-        public LaunchTypeEnum? LaunchType { get; set; }
-    
-        /// <summary>
-        /// Initializes a new instance of the <see cref="FlowLaunchRequest" />class.
-        /// </summary>
-        /// <param name="FlowConfigId">ID of the flow to launch, will launch the most recently published version if a specific version is not specified. (required).</param>
-        /// <param name="FlowInstanceName">The displayable instance name to assign to the new flow instance (or omit to have one automatically generated).</param>
-        /// <param name="InputData">contains launch parameters or initializations for variables in the flow..</param>
-        /// <param name="LaunchType">launch type of the flow - NORMAL or TEST (required).</param>
-
-        public FlowLaunchRequest(FlowConfigId FlowConfigId = null, string FlowInstanceName = null, FlowInputData InputData = null, LaunchTypeEnum? LaunchType = null)
-        {
-            // to ensure "FlowConfigId" is required (not null)
-            if (FlowConfigId == null)
-            {
-                throw new InvalidDataException("FlowConfigId is a required property for FlowLaunchRequest and cannot be null");
-            }
-            else
-            {
-                this.FlowConfigId = FlowConfigId;
-            }
-            // to ensure "LaunchType" is required (not null)
-            if (LaunchType == null)
-            {
-                throw new InvalidDataException("LaunchType is a required property for FlowLaunchRequest and cannot be null");
-            }
-            else
-            {
-                this.LaunchType = LaunchType;
-            }
-            this.FlowInstanceName = FlowInstanceName;
-            this.InputData = InputData;
-            
-        }
-
-    
-        /// <summary>
         /// ID of the flow to launch, will launch the most recently published version if a specific version is not specified.
         /// </summary>
         /// <value>ID of the flow to launch, will launch the most recently published version if a specific version is not specified.</value>

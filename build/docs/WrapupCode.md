@@ -1,7 +1,7 @@
 ---
 title: WrapupCode
 ---
-## .WrapupCode
+## ININ.PureCloudApi.Model.WrapupCode
 
 ## Properties
 

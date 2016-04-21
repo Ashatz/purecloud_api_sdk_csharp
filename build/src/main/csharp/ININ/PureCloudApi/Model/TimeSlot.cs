@@ -21,15 +21,9 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TimeSlot" />class.
         /// </summary>
-<<<<<<< HEAD
-        /// <param name="StartTime">StartTime.</param>
-        /// <param name="StopTime">StopTime.</param>
-        /// <param name="Day">Day.</param>
-=======
         /// <param name="StartTime">start time in xx:xx:xx.xxx format.</param>
         /// <param name="StopTime">stop time in xx:xx:xx.xxx format.</param>
         /// <param name="Day">Day for this time slot, Monday &#x3D; 1 ... Sunday &#x3D; 7.</param>
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
         public TimeSlot(string StartTime = null, string StopTime = null, int? Day = null)
         {

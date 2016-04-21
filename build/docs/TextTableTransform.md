@@ -1,7 +1,7 @@
 ---
 title: TextTableTransform
 ---
-## .TextTableTransform
+## ININ.PureCloudApi.Model.TextTableTransform
 
 ## Properties
 

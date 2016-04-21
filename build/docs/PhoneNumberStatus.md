@@ -1,7 +1,7 @@
 ---
 title: PhoneNumberStatus
 ---
-## .PhoneNumberStatus
+## ININ.PureCloudApi.Model.PhoneNumberStatus
 
 ## Properties
 

@@ -1,7 +1,7 @@
 ---
 title: Number
 ---
-## .Number
+## ININ.PureCloudApi.Model.Number
 
 ## Properties
 

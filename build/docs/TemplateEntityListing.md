@@ -1,7 +1,7 @@
 ---
 title: TemplateEntityListing
 ---
-## .TemplateEntityListing
+## ININ.PureCloudApi.Model.TemplateEntityListing
 
 ## Properties
 
@@ -10,11 +10,11 @@ title: TemplateEntityListing
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
-| **Entities** | [**List&lt;Template&gt;**](Template.html) |  | [optional] |
+| **Entities** | [**List&lt;ComposerTemplate&gt;**](ComposerTemplate.html) |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
+| **FirstUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **NextUri** | **string** |  | [optional] |
-| **FirstUri** | **string** |  | [optional] |
 | **LastUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
 {: class="table table-striped"}

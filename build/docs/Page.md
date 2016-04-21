@@ -1,7 +1,7 @@
 ---
 title: Page
 ---
-## .Page
+## ININ.PureCloudApi.Model.Page
 
 ## Properties
 

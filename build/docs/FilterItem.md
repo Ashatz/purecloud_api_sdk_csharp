@@ -1,7 +1,7 @@
 ---
 title: FilterItem
 ---
-## .FilterItem
+## ININ.PureCloudApi.Model.FilterItem
 
 ## Properties
 

@@ -1,7 +1,7 @@
 ---
 title: ContractJob
 ---
-## .ContractJob
+## ININ.PureCloudApi.Model.ContractJob
 
 ## Properties
 

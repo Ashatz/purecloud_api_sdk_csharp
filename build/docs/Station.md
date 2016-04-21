@@ -1,7 +1,7 @@
 ---
 title: Station
 ---
-## .Station
+## ININ.PureCloudApi.Model.Station
 
 ## Properties
 
@@ -14,6 +14,7 @@ title: Station
 | **UserId** | **string** |  | [optional] |
 | **PrimaryEdge** | [**UriReference**](UriReference.html) |  | [optional] |
 | **SecondaryEdge** | [**UriReference**](UriReference.html) |  | [optional] |
+| **Type** | **string** |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

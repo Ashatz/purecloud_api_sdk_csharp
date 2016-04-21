@@ -1,7 +1,7 @@
 ---
 title: QualityAudit
 ---
-## .QualityAudit
+## ININ.PureCloudApi.Model.QualityAudit
 
 ## Properties
 
@@ -11,10 +11,10 @@ title: QualityAudit
 | **Name** | **string** |  | [optional] |
 | **User** | [**User**](User.html) |  | [optional] |
 | **Timestamp** | **string** |  | [optional] |
-| **Level** | **string** |  | [optional] |
-| **Status** | **string** |  | [optional] |
 | **Entity** | [**Entity**](Entity.html) |  | [optional] |
+| **Level** | **string** |  | [optional] |
 | **Action** | **string** |  | [optional] |
+| **Status** | **string** |  | [optional] |
 | **Changes** | [**List&lt;Change&gt;**](Change.html) |  | [optional] |
 | **EntityType** | **string** |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |

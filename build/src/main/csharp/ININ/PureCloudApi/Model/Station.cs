@@ -48,34 +48,6 @@ namespace ININ.PureCloudApi.Model
         /// <param name="UserId">UserId.</param>
         /// <param name="PrimaryEdge">PrimaryEdge.</param>
         /// <param name="SecondaryEdge">SecondaryEdge.</param>
-
-        public Station(string Name = null, string Description = null, StatusEnum? Status = null, string UserId = null, UriReference PrimaryEdge = null, UriReference SecondaryEdge = null)
-        {
-            this.Name = Name;
-            this.Description = Description;
-            this.Status = Status;
-            this.UserId = UserId;
-            this.PrimaryEdge = PrimaryEdge;
-            this.SecondaryEdge = SecondaryEdge;
-            
-        }
-
-    
-        /// <summary>
-        /// Gets or Sets Status
-        /// </summary>
-        [DataMember(Name="status", EmitDefaultValue=false)]
-        public StatusEnum? Status { get; set; }
-    
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Station" />class.
-        /// </summary>
-        /// <param name="Name">Name.</param>
-        /// <param name="Description">Description.</param>
-        /// <param name="Status">Status.</param>
-        /// <param name="UserId">UserId.</param>
-        /// <param name="PrimaryEdge">PrimaryEdge.</param>
-        /// <param name="SecondaryEdge">SecondaryEdge.</param>
         /// <param name="Type">Type.</param>
 
         public Station(string Name = null, string Description = null, StatusEnum? Status = null, string UserId = null, UriReference PrimaryEdge = null, UriReference SecondaryEdge = null, string Type = null)
@@ -128,15 +100,12 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="secondaryEdge", EmitDefaultValue=false)]
         public UriReference SecondaryEdge { get; set; }
     
-<<<<<<< HEAD
-=======
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public string Type { get; set; }
     
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// The URI for this object
         /// </summary>
@@ -232,14 +201,11 @@ namespace ININ.PureCloudApi.Model
                     this.SecondaryEdge != null &&
                     this.SecondaryEdge.Equals(other.SecondaryEdge)
                 ) &&
-<<<<<<< HEAD
-=======
                 (
                     this.Type == other.Type ||
                     this.Type != null &&
                     this.Type.Equals(other.Type)
                 ) &&
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
@@ -272,11 +238,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.PrimaryEdge.GetHashCode();
                 if (this.SecondaryEdge != null)
                     hash = hash * 59 + this.SecondaryEdge.GetHashCode();
-<<<<<<< HEAD
-=======
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;

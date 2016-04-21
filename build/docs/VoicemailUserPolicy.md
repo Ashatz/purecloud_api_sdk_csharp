@@ -1,7 +1,7 @@
 ---
 title: VoicemailUserPolicy
 ---
-## .VoicemailUserPolicy
+## ININ.PureCloudApi.Model.VoicemailUserPolicy
 
 ## Properties
 

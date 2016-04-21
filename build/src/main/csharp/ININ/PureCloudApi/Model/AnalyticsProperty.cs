@@ -45,6 +45,7 @@ namespace ININ.PureCloudApi.Model
         }
 
         
+
         /// <summary>
         /// Indicates what the data type is (e.g. integer vs string) and therefore how to evaluate what would constitute a match
         /// </summary>

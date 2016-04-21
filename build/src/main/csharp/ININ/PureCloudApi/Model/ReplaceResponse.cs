@@ -23,51 +23,16 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
                 public enum UploadMethodEnum {
-<<<<<<< HEAD
             
             [EnumMember(Value = "SINGLE_PUT")]
             SinglePut,
             
-=======
-            
-            [EnumMember(Value = "SINGLE_PUT")]
-            SinglePut,
-            
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             [EnumMember(Value = "MULTIPART_POST")]
             MultipartPost
         }
 
         
 
-        /// <summary>
-        /// Gets or Sets UploadMethod
-        /// </summary>
-        [DataMember(Name="uploadMethod", EmitDefaultValue=false)]
-        public UploadMethodEnum? UploadMethod { get; set; }
-    
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ReplaceResponse" />class.
-        /// </summary>
-        /// <param name="Id">Id.</param>
-        /// <param name="Name">Name.</param>
-        /// <param name="ChangeNumber">ChangeNumber.</param>
-        /// <param name="UploadStatus">UploadStatus.</param>
-        /// <param name="UploadDestinationUri">UploadDestinationUri.</param>
-        /// <param name="UploadMethod">UploadMethod.</param>
-
-        public ReplaceResponse(string Id = null, string Name = null, int? ChangeNumber = null, UriReference UploadStatus = null, string UploadDestinationUri = null, UploadMethodEnum? UploadMethod = null)
-        {
-            this.Id = Id;
-            this.Name = Name;
-            this.ChangeNumber = ChangeNumber;
-            this.UploadStatus = UploadStatus;
-            this.UploadDestinationUri = UploadDestinationUri;
-            this.UploadMethod = UploadMethod;
-            
-        }
-
-    
         /// <summary>
         /// Gets or Sets UploadMethod
         /// </summary>

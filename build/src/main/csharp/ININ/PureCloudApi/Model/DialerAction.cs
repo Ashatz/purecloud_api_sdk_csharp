@@ -15,30 +15,18 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/Action.cs
-    public partial class Action :  IEquatable<Action>
-    { 
-        
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Action" />class.
-=======
     public partial class DialerAction :  IEquatable<DialerAction>
     { 
         
         /// <summary>
         /// Initializes a new instance of the <see cref="DialerAction" />class.
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/DialerAction.cs
         /// </summary>
         /// <param name="Type">Type.</param>
         /// <param name="ActionTypeName">ActionTypeName.</param>
         /// <param name="UpdateOption">UpdateOption.</param>
         /// <param name="Properties">Properties.</param>
 
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/Action.cs
-        public Action(string Type = null, string ActionTypeName = null, string UpdateOption = null, Dictionary<string, string> Properties = null)
-=======
         public DialerAction(string Type = null, string ActionTypeName = null, string UpdateOption = null, Dictionary<string, string> Properties = null)
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/DialerAction.cs
         {
             this.Type = Type;
             this.ActionTypeName = ActionTypeName;
@@ -111,11 +99,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if DialerAction instances are equal
         /// </summary>
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/Action.cs
-        /// <param name="other">Instance of Action to be compared</param>
-=======
         /// <param name="other">Instance of DialerAction to be compared</param>
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/DialerAction.cs
         /// <returns>Boolean</returns>
         public bool Equals(DialerAction other)
         {

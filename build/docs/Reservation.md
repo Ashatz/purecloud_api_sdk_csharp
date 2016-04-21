@@ -1,7 +1,7 @@
 ---
 title: Reservation
 ---
-## .Reservation
+## ININ.PureCloudApi.Model.Reservation
 
 ## Properties
 

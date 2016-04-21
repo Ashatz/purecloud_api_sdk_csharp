@@ -19,15 +19,9 @@ namespace ININ.PureCloudApi.Model
     { 
 
         /// <summary>
-<<<<<<< HEAD
-        /// On update, 'paused' initiates a secure pause, 'active' resumes any paused recordings; otherwise indicates state of conversation recording
-        /// </summary>
-        /// <value>On update, 'paused' initiates a secure pause, 'active' resumes any paused recordings; otherwise indicates state of conversation recording</value>
-=======
         /// On update, 'paused' initiates a secure pause, 'active' resumes any paused recordings; otherwise indicates state of conversation recording.
         /// </summary>
         /// <value>On update, 'paused' initiates a secure pause, 'active' resumes any paused recordings; otherwise indicates state of conversation recording.</value>
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         [JsonConverter(typeof(StringEnumConverter))]
                 public enum RecordingStateEnum {
             
@@ -43,37 +37,6 @@ namespace ININ.PureCloudApi.Model
 
         
 
-        /// <summary>
-        /// On update, 'paused' initiates a secure pause, 'active' resumes any paused recordings; otherwise indicates state of conversation recording
-        /// </summary>
-        /// <value>On update, 'paused' initiates a secure pause, 'active' resumes any paused recordings; otherwise indicates state of conversation recording</value>
-        [DataMember(Name="recordingState", EmitDefaultValue=false)]
-        public RecordingStateEnum? RecordingState { get; set; }
-    
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Conversation" />class.
-        /// </summary>
-        /// <param name="Name">Name.</param>
-        /// <param name="StartTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        /// <param name="EndTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        /// <param name="Participants">Participants.</param>
-        /// <param name="ConversationIds">ConversationIds.</param>
-        /// <param name="MaxParticipants">MaxParticipants.</param>
-        /// <param name="RecordingState">On update, &#39;paused&#39; initiates a secure pause, &#39;active&#39; resumes any paused recordings; otherwise indicates state of conversation recording.</param>
-
-        public Conversation(string Name = null, DateTime? StartTime = null, DateTime? EndTime = null, List<Participant> Participants = null, List<string> ConversationIds = null, int? MaxParticipants = null, RecordingStateEnum? RecordingState = null)
-        {
-            this.Name = Name;
-            this.StartTime = StartTime;
-            this.EndTime = EndTime;
-            this.Participants = Participants;
-            this.ConversationIds = ConversationIds;
-            this.MaxParticipants = MaxParticipants;
-            this.RecordingState = RecordingState;
-            
-        }
-
-    
         /// <summary>
         /// On update, 'paused' initiates a secure pause, 'active' resumes any paused recordings; otherwise indicates state of conversation recording.
         /// </summary>
@@ -150,8 +113,6 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="endTime", EmitDefaultValue=false)]
         public DateTime? EndTime { get; set; }
     
-<<<<<<< HEAD
-=======
         /// <summary>
         /// The address of the conversation as seen from an external participant. For phone calls this will be the DNIS for inbound calls and the ANI for outbound calls. For other media types this will be the address of the destination participant for inbound and the address of the initiating participant for outbound.
         /// </summary>
@@ -159,7 +120,6 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="address", EmitDefaultValue=false)]
         public string Address { get; set; }
     
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// The list of all participants in the conversation.
         /// </summary>
@@ -262,14 +222,11 @@ namespace ININ.PureCloudApi.Model
                     this.EndTime != null &&
                     this.EndTime.Equals(other.EndTime)
                 ) &&
-<<<<<<< HEAD
-=======
                 (
                     this.Address == other.Address ||
                     this.Address != null &&
                     this.Address.Equals(other.Address)
                 ) &&
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 (
                     this.Participants == other.Participants ||
                     this.Participants != null &&
@@ -316,11 +273,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.StartTime.GetHashCode();
                 if (this.EndTime != null)
                     hash = hash * 59 + this.EndTime.GetHashCode();
-<<<<<<< HEAD
-=======
                 if (this.Address != null)
                     hash = hash * 59 + this.Address.GetHashCode();
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 if (this.Participants != null)
                     hash = hash * 59 + this.Participants.GetHashCode();
                 if (this.ConversationIds != null)

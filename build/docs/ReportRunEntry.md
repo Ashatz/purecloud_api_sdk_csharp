@@ -1,7 +1,7 @@
 ---
 title: ReportRunEntry
 ---
-## .ReportRunEntry
+## ININ.PureCloudApi.Model.ReportRunEntry
 
 ## Properties
 

@@ -27,19 +27,11 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "ACTIVE")]
             Active,
             
-<<<<<<< HEAD
-            [EnumMember(Value = "DELETED")]
-            Deleted,
-            
-            [EnumMember(Value = "INACTIVE")]
-            Inactive
-=======
             [EnumMember(Value = "INACTIVE")]
             Inactive,
             
             [EnumMember(Value = "DELETED")]
             Deleted
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         }
 
 
@@ -51,17 +43,10 @@ namespace ININ.PureCloudApi.Model
             
             [EnumMember(Value = "NONE")]
             None,
-<<<<<<< HEAD
             
             [EnumMember(Value = "BEST")]
             Best,
             
-=======
-            
-            [EnumMember(Value = "BEST")]
-            Best,
-            
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             [EnumMember(Value = "ALL")]
             All
         }
@@ -75,68 +60,6 @@ namespace ININ.PureCloudApi.Model
         public StateEnum? State { get; set; }
     
 
-        /// <summary>
-        /// Gets or Sets SkillEvaluationMethod
-        /// </summary>
-        [DataMember(Name="skillEvaluationMethod", EmitDefaultValue=false)]
-        public SkillEvaluationMethodEnum? SkillEvaluationMethod { get; set; }
-    
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Queue" />class.
-        /// </summary>
-        /// <param name="Name">Name.</param>
-        /// <param name="Description">Description.</param>
-        /// <param name="Version">Version.</param>
-        /// <param name="DateCreated">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        /// <param name="DateModified">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        /// <param name="ModifiedBy">ModifiedBy.</param>
-        /// <param name="CreatedBy">CreatedBy.</param>
-        /// <param name="State">State.</param>
-        /// <param name="ModifiedByApp">ModifiedByApp.</param>
-        /// <param name="CreatedByApp">CreatedByApp.</param>
-        /// <param name="WrapupCodes">WrapupCodes.</param>
-        /// <param name="MediaSettings">MediaSettings.</param>
-        /// <param name="Bullseye">Bullseye.</param>
-        /// <param name="AcwSettings">AcwSettings.</param>
-        /// <param name="PhoneNumber">PhoneNumber.</param>
-        /// <param name="SkillEvaluationMethod">SkillEvaluationMethod.</param>
-        /// <param name="QueueFlow">QueueFlow.</param>
-        /// <param name="CallingPartyName">CallingPartyName.</param>
-        /// <param name="CallingPartyNumber">CallingPartyNumber.</param>
-        /// <param name="MemberCount">MemberCount.</param>
-
-        public Queue(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, List<UriReference> WrapupCodes = null, Dictionary<string, MediaSetting> MediaSettings = null, Bullseye Bullseye = null, AcwSettings AcwSettings = null, string PhoneNumber = null, SkillEvaluationMethodEnum? SkillEvaluationMethod = null, UriReference QueueFlow = null, string CallingPartyName = null, string CallingPartyNumber = null, int? MemberCount = null)
-        {
-            this.Name = Name;
-            this.Description = Description;
-            this.Version = Version;
-            this.DateCreated = DateCreated;
-            this.DateModified = DateModified;
-            this.ModifiedBy = ModifiedBy;
-            this.CreatedBy = CreatedBy;
-            this.State = State;
-            this.ModifiedByApp = ModifiedByApp;
-            this.CreatedByApp = CreatedByApp;
-            this.WrapupCodes = WrapupCodes;
-            this.MediaSettings = MediaSettings;
-            this.Bullseye = Bullseye;
-            this.AcwSettings = AcwSettings;
-            this.PhoneNumber = PhoneNumber;
-            this.SkillEvaluationMethod = SkillEvaluationMethod;
-            this.QueueFlow = QueueFlow;
-            this.CallingPartyName = CallingPartyName;
-            this.CallingPartyNumber = CallingPartyNumber;
-            this.MemberCount = MemberCount;
-            
-        }
-
-    
-        /// <summary>
-        /// Gets or Sets State
-        /// </summary>
-        [DataMember(Name="state", EmitDefaultValue=false)]
-        public StateEnum? State { get; set; }
-    
         /// <summary>
         /// Gets or Sets SkillEvaluationMethod
         /// </summary>
@@ -252,15 +175,6 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="createdByApp", EmitDefaultValue=false)]
         public string CreatedByApp { get; set; }
     
-<<<<<<< HEAD
-        /// <summary>
-        /// Gets or Sets WrapupCodes
-        /// </summary>
-        [DataMember(Name="wrapupCodes", EmitDefaultValue=false)]
-        public List<UriReference> WrapupCodes { get; set; }
-    
-=======
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// Gets or Sets MediaSettings
         /// </summary>
@@ -279,15 +193,6 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="acwSettings", EmitDefaultValue=false)]
         public AcwSettings AcwSettings { get; set; }
     
-<<<<<<< HEAD
-        /// <summary>
-        /// Gets or Sets PhoneNumber
-        /// </summary>
-        [DataMember(Name="phoneNumber", EmitDefaultValue=false)]
-        public string PhoneNumber { get; set; }
-    
-=======
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// Gets or Sets QueueFlow
         /// </summary>
@@ -438,14 +343,6 @@ namespace ININ.PureCloudApi.Model
                     this.CreatedByApp != null &&
                     this.CreatedByApp.Equals(other.CreatedByApp)
                 ) &&
-<<<<<<< HEAD
-                (
-                    this.WrapupCodes == other.WrapupCodes ||
-                    this.WrapupCodes != null &&
-                    this.WrapupCodes.SequenceEqual(other.WrapupCodes)
-                ) &&
-=======
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 (
                     this.MediaSettings == other.MediaSettings ||
                     this.MediaSettings != null &&
@@ -461,14 +358,6 @@ namespace ININ.PureCloudApi.Model
                     this.AcwSettings != null &&
                     this.AcwSettings.Equals(other.AcwSettings)
                 ) &&
-<<<<<<< HEAD
-                (
-                    this.PhoneNumber == other.PhoneNumber ||
-                    this.PhoneNumber != null &&
-                    this.PhoneNumber.Equals(other.PhoneNumber)
-                ) &&
-=======
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 (
                     this.SkillEvaluationMethod == other.SkillEvaluationMethod ||
                     this.SkillEvaluationMethod != null &&
@@ -534,22 +423,12 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.ModifiedByApp.GetHashCode();
                 if (this.CreatedByApp != null)
                     hash = hash * 59 + this.CreatedByApp.GetHashCode();
-<<<<<<< HEAD
-                if (this.WrapupCodes != null)
-                    hash = hash * 59 + this.WrapupCodes.GetHashCode();
-=======
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 if (this.MediaSettings != null)
                     hash = hash * 59 + this.MediaSettings.GetHashCode();
                 if (this.Bullseye != null)
                     hash = hash * 59 + this.Bullseye.GetHashCode();
                 if (this.AcwSettings != null)
                     hash = hash * 59 + this.AcwSettings.GetHashCode();
-<<<<<<< HEAD
-                if (this.PhoneNumber != null)
-                    hash = hash * 59 + this.PhoneNumber.GetHashCode();
-=======
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 if (this.SkillEvaluationMethod != null)
                     hash = hash * 59 + this.SkillEvaluationMethod.GetHashCode();
                 if (this.QueueFlow != null)

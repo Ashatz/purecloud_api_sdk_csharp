@@ -1,7 +1,7 @@
 ---
 title: ExtensionPool
 ---
-## .ExtensionPool
+## ININ.PureCloudApi.Model.ExtensionPool
 
 ## Properties
 

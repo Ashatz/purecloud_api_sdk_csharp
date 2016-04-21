@@ -1,7 +1,7 @@
 ---
 title: WorkItemCommand
 ---
-## .WorkItemCommand
+## ININ.PureCloudApi.Model.WorkItemCommand
 
 ## Properties
 

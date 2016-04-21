@@ -71,40 +71,6 @@ namespace ININ.PureCloudApi.Model
 
     
         /// <summary>
-        /// Gets or Sets RunStatus
-        /// </summary>
-        [DataMember(Name="runStatus", EmitDefaultValue=false)]
-        public RunStatusEnum? RunStatus { get; set; }
-    
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ReportRunEntry" />class.
-        /// </summary>
-        /// <param name="Name">Name.</param>
-        /// <param name="ReportId">ReportId.</param>
-        /// <param name="RunTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        /// <param name="RunStatus">RunStatus.</param>
-        /// <param name="ErrorMessage">ErrorMessage.</param>
-        /// <param name="RunDurationMsec">RunDurationMsec.</param>
-        /// <param name="ReportUrl">ReportUrl.</param>
-        /// <param name="ReportFormat">ReportFormat.</param>
-        /// <param name="ScheduleUri">ScheduleUri.</param>
-
-        public ReportRunEntry(string Name = null, string ReportId = null, DateTime? RunTime = null, RunStatusEnum? RunStatus = null, string ErrorMessage = null, long? RunDurationMsec = null, string ReportUrl = null, string ReportFormat = null, string ScheduleUri = null)
-        {
-            this.Name = Name;
-            this.ReportId = ReportId;
-            this.RunTime = RunTime;
-            this.RunStatus = RunStatus;
-            this.ErrorMessage = ErrorMessage;
-            this.RunDurationMsec = RunDurationMsec;
-            this.ReportUrl = ReportUrl;
-            this.ReportFormat = ReportFormat;
-            this.ScheduleUri = ScheduleUri;
-            
-        }
-
-    
-        /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>

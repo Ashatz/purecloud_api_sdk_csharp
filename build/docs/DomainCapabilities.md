@@ -1,7 +1,7 @@
 ---
 title: DomainCapabilities
 ---
-## .DomainCapabilities
+## ININ.PureCloudApi.Model.DomainCapabilities
 
 ## Properties
 

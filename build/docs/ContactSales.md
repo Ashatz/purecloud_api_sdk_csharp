@@ -1,7 +1,7 @@
 ---
 title: ContactSales
 ---
-## .ContactSales
+## ININ.PureCloudApi.Model.ContactSales
 
 ## Properties
 
@@ -19,8 +19,6 @@ title: ContactSales
 | **Language** | **string** |  | [optional] |
 | **ProductName** | **string** |  | [optional] |
 | **QuoteId** | **string** |  | [optional] |
-| **Industry** | **string** |  | [optional] |
-| **EstimatedUsers** | **string** |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

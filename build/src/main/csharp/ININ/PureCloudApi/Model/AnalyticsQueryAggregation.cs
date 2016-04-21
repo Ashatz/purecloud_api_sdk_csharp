@@ -33,6 +33,7 @@ namespace ININ.PureCloudApi.Model
         }
 
         
+
         /// <summary>
         /// Optional type, can usually be inferred
         /// </summary>

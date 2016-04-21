@@ -1,7 +1,7 @@
 ---
 title: OneLogin
 ---
-## .OneLogin
+## ININ.PureCloudApi.Model.OneLogin
 
 ## Properties
 

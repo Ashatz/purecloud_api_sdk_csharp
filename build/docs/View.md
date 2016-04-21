@@ -1,7 +1,7 @@
 ---
 title: View
 ---
-## .View
+## ININ.PureCloudApi.Model.View
 
 ## Properties
 

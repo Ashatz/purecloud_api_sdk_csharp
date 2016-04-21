@@ -27,65 +27,15 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "ACTIVE")]
             Active,
             
-<<<<<<< HEAD
-            [EnumMember(Value = "DELETED")]
-            Deleted,
-            
-            [EnumMember(Value = "INACTIVE")]
-            Inactive
-=======
             [EnumMember(Value = "INACTIVE")]
             Inactive,
             
             [EnumMember(Value = "DELETED")]
             Deleted
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         }
 
         
 
-        /// <summary>
-        /// Gets or Sets State
-        /// </summary>
-        [DataMember(Name="state", EmitDefaultValue=false)]
-        public StateEnum? State { get; set; }
-    
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ScheduleGroup" />class.
-        /// </summary>
-        /// <param name="Name">Name.</param>
-        /// <param name="Description">Description.</param>
-        /// <param name="Version">Version.</param>
-        /// <param name="DateCreated">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        /// <param name="DateModified">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        /// <param name="ModifiedBy">ModifiedBy.</param>
-        /// <param name="CreatedBy">CreatedBy.</param>
-        /// <param name="State">State.</param>
-        /// <param name="ModifiedByApp">ModifiedByApp.</param>
-        /// <param name="CreatedByApp">CreatedByApp.</param>
-        /// <param name="TimeZone">TimeZone.</param>
-        /// <param name="OpenSchedules">OpenSchedules.</param>
-        /// <param name="ClosedSchedules">ClosedSchedules.</param>
-
-        public ScheduleGroup(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, string TimeZone = null, List<UriReference> OpenSchedules = null, List<UriReference> ClosedSchedules = null)
-        {
-            this.Name = Name;
-            this.Description = Description;
-            this.Version = Version;
-            this.DateCreated = DateCreated;
-            this.DateModified = DateModified;
-            this.ModifiedBy = ModifiedBy;
-            this.CreatedBy = CreatedBy;
-            this.State = State;
-            this.ModifiedByApp = ModifiedByApp;
-            this.CreatedByApp = CreatedByApp;
-            this.TimeZone = TimeZone;
-            this.OpenSchedules = OpenSchedules;
-            this.ClosedSchedules = ClosedSchedules;
-            
-        }
-
-    
         /// <summary>
         /// Gets or Sets State
         /// </summary>

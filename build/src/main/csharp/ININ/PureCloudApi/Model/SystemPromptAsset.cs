@@ -23,17 +23,10 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
                 public enum UploadStatusEnum {
-<<<<<<< HEAD
             
             [EnumMember(Value = "CREATED")]
             Created,
             
-=======
-            
-            [EnumMember(Value = "CREATED")]
-            Created,
-            
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             [EnumMember(Value = "UPLOADED")]
             Uploaded,
             
@@ -43,48 +36,6 @@ namespace ININ.PureCloudApi.Model
 
         
 
-        /// <summary>
-        /// Gets or Sets UploadStatus
-        /// </summary>
-        [DataMember(Name="uploadStatus", EmitDefaultValue=false)]
-        public UploadStatusEnum? UploadStatus { get; set; }
-    
-        /// <summary>
-        /// Initializes a new instance of the <see cref="SystemPromptAsset" />class.
-        /// </summary>
-        /// <param name="Name">Name.</param>
-        /// <param name="PromptId">PromptId.</param>
-        /// <param name="Language">Language.</param>
-        /// <param name="DurationSeconds">DurationSeconds.</param>
-        /// <param name="MediaUri">MediaUri.</param>
-        /// <param name="TtsString">TtsString.</param>
-        /// <param name="UploadUri">UploadUri.</param>
-        /// <param name="UploadStatus">UploadStatus.</param>
-        /// <param name="HasDefault">HasDefault (default to false).</param>
-
-        public SystemPromptAsset(string Name = null, string PromptId = null, string Language = null, double? DurationSeconds = null, string MediaUri = null, string TtsString = null, string UploadUri = null, UploadStatusEnum? UploadStatus = null, bool? HasDefault = null)
-        {
-            this.Name = Name;
-            this.PromptId = PromptId;
-            this.Language = Language;
-            this.DurationSeconds = DurationSeconds;
-            this.MediaUri = MediaUri;
-            this.TtsString = TtsString;
-            this.UploadUri = UploadUri;
-            this.UploadStatus = UploadStatus;
-            // use default value if no "HasDefault" provided
-            if (HasDefault == null)
-            {
-                this.HasDefault = false;
-            }
-            else
-            {
-                this.HasDefault = HasDefault;
-            }
-            
-        }
-
-    
         /// <summary>
         /// Gets or Sets UploadStatus
         /// </summary>
@@ -194,8 +145,6 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="hasDefault", EmitDefaultValue=false)]
         public bool? HasDefault { get; set; }
     
-<<<<<<< HEAD
-=======
         /// <summary>
         /// Gets or Sets LanguageDefault
         /// </summary>
@@ -208,7 +157,6 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="tags", EmitDefaultValue=false)]
         public Dictionary<string, string> Tags { get; set; }
     
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// The URI for this object
         /// </summary>
@@ -323,8 +271,6 @@ namespace ININ.PureCloudApi.Model
                     this.HasDefault != null &&
                     this.HasDefault.Equals(other.HasDefault)
                 ) &&
-<<<<<<< HEAD
-=======
                 (
                     this.LanguageDefault == other.LanguageDefault ||
                     this.LanguageDefault != null &&
@@ -335,7 +281,6 @@ namespace ININ.PureCloudApi.Model
                     this.Tags != null &&
                     this.Tags.SequenceEqual(other.Tags)
                 ) &&
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
@@ -374,13 +319,10 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.UploadStatus.GetHashCode();
                 if (this.HasDefault != null)
                     hash = hash * 59 + this.HasDefault.GetHashCode();
-<<<<<<< HEAD
-=======
                 if (this.LanguageDefault != null)
                     hash = hash * 59 + this.LanguageDefault.GetHashCode();
                 if (this.Tags != null)
                     hash = hash * 59 + this.Tags.GetHashCode();
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;

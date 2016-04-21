@@ -1,7 +1,7 @@
 ---
 title: DurationCondition
 ---
-## .DurationCondition
+## ININ.PureCloudApi.Model.DurationCondition
 
 ## Properties
 

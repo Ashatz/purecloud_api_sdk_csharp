@@ -1,7 +1,7 @@
 ---
 title: Flow
 ---
-## .Flow
+## ININ.PureCloudApi.Model.Flow
 
 ## Properties
 

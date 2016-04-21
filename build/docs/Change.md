@@ -1,7 +1,7 @@
 ---
 title: Change
 ---
-## .Change
+## ININ.PureCloudApi.Model.Change
 
 ## Properties
 

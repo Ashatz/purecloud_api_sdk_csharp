@@ -1,7 +1,7 @@
 ---
 title: BillingPeriod
 ---
-## .BillingPeriod
+## ININ.PureCloudApi.Model.BillingPeriod
 
 ## Properties
 

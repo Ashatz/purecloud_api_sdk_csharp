@@ -1,7 +1,7 @@
 ---
 title: Workspace
 ---
-## .Workspace
+## ININ.PureCloudApi.Model.Workspace
 
 ## Properties
 

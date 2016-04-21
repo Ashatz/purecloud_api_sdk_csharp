@@ -1,7 +1,7 @@
 ---
 title: ValidateAddressRequest
 ---
-## .ValidateAddressRequest
+## ININ.PureCloudApi.Model.ValidateAddressRequest
 
 ## Properties
 

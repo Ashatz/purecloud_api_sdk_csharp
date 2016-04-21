@@ -1,7 +1,7 @@
 ---
 title: RetentionDuration
 ---
-## .RetentionDuration
+## ININ.PureCloudApi.Model.RetentionDuration
 
 ## Properties
 

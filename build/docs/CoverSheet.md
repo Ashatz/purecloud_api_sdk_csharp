@@ -1,7 +1,7 @@
 ---
 title: CoverSheet
 ---
-## .CoverSheet
+## ININ.PureCloudApi.Model.CoverSheet
 
 ## Properties
 

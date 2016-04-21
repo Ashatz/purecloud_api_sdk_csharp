@@ -1,7 +1,7 @@
 ---
 title: TagValueEntityListing
 ---
-## .TagValueEntityListing
+## ININ.PureCloudApi.Model.TagValueEntityListing
 
 ## Properties
 
@@ -12,9 +12,9 @@ title: TagValueEntityListing
 | **Total** | **long?** |  | [optional] |
 | **Entities** | [**List&lt;TagValue&gt;**](TagValue.html) |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
+| **FirstUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **NextUri** | **string** |  | [optional] |
-| **FirstUri** | **string** |  | [optional] |
 | **LastUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
 {: class="table table-striped"}

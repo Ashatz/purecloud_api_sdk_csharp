@@ -4,74 +4,24 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**NotificationsAvailabletopicsGet**](NotificationsApi.md#notificationsavailabletopicsget) | **GET** /api/v1/notifications/availabletopics | Get available notification topics. |
-| [**NotificationsChannelsChannelidSubscriptionsDelete**](NotificationsApi.md#notificationschannelschannelidsubscriptionsdelete) | **DELETE** /api/v1/notifications/channels/{channelId}/subscriptions | Remove all subscriptions |
-| [**NotificationsChannelsChannelidSubscriptionsGet**](NotificationsApi.md#notificationschannelschannelidsubscriptionsget) | **GET** /api/v1/notifications/channels/{channelId}/subscriptions | The list of all subscriptions for this channel |
-| [**NotificationsChannelsChannelidSubscriptionsPost**](NotificationsApi.md#notificationschannelschannelidsubscriptionspost) | **POST** /api/v1/notifications/channels/{channelId}/subscriptions | Add a list of subscriptions to the existing list of subscriptions |
-| [**NotificationsChannelsChannelidSubscriptionsPut**](NotificationsApi.md#notificationschannelschannelidsubscriptionsput) | **PUT** /api/v1/notifications/channels/{channelId}/subscriptions | Replace the current list of subscriptions with a new list. |
-| [**NotificationsChannelsGet**](NotificationsApi.md#notificationschannelsget) | **GET** /api/v1/notifications/channels | The list of existing channels |
-| [**NotificationsChannelsPost**](NotificationsApi.md#notificationschannelspost) | **POST** /api/v1/notifications/channels | Create a new channel |
+| [**DeleteChannelsChannelIdSubscriptions**](NotificationsApi.md#deletechannelschannelidsubscriptions) | **DELETE** /api/v2/notifications/channels/{channelId}/subscriptions | Remove all subscriptions |
+| [**GetAvailabletopics**](NotificationsApi.md#getavailabletopics) | **GET** /api/v2/notifications/availabletopics | Get available notification topics. |
+| [**GetChannels**](NotificationsApi.md#getchannels) | **GET** /api/v2/notifications/channels | The list of existing channels |
+| [**GetChannelsChannelIdSubscriptions**](NotificationsApi.md#getchannelschannelidsubscriptions) | **GET** /api/v2/notifications/channels/{channelId}/subscriptions | The list of all subscriptions for this channel |
+| [**PostChannels**](NotificationsApi.md#postchannels) | **POST** /api/v2/notifications/channels | Create a new channel |
+| [**PostChannelsChannelIdSubscriptions**](NotificationsApi.md#postchannelschannelidsubscriptions) | **POST** /api/v2/notifications/channels/{channelId}/subscriptions | Add a list of subscriptions to the existing list of subscriptions |
+| [**PutChannelsChannelIdSubscriptions**](NotificationsApi.md#putchannelschannelidsubscriptions) | **PUT** /api/v2/notifications/channels/{channelId}/subscriptions | Replace the current list of subscriptions with a new list. |
 {: class="table table-striped"}
 
-<a name="NotificationsAvailabletopicsGet"></a>
-## [**TopicEntityListing**](TopicEntityListing.html) NotificationsAvailabletopicsGet ()
-
-Get available notification topics.
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class NotificationsAvailabletopicsGetExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new NotificationsApi();
-
-            try
-            {
-                // Get available notification topics.
-                TopicEntityListing result = apiInstance.NotificationsAvailabletopicsGet();
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling NotificationsApi.NotificationsAvailabletopicsGet: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-This endpoint does require any parameters.
-{: class="table table-striped"}
-
-### Return type
-
-[**TopicEntityListing**](TopicEntityListing.md)
-
-<a name="NotificationsChannelsChannelidSubscriptionsDelete"></a>
-## string** NotificationsChannelsChannelidSubscriptionsDelete (string channelId)
+<a name="DeleteChannelsChannelIdSubscriptions"></a>
+## string** DeleteChannelsChannelIdSubscriptions (string channelId)
 
 Remove all subscriptions
 
 
 
 ### Example
-```csharp
+~~~csharp
 using System;
 using System.Diagnostics;
 using ININ.PureCloudApi.Api;
@@ -80,7 +30,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class NotificationsChannelsChannelidSubscriptionsDeleteExample
+    public class DeleteChannelsChannelIdSubscriptionsExample
     {
         public void main()
         {
@@ -94,17 +44,17 @@ namespace Example
             try
             {
                 // Remove all subscriptions
-                string result = apiInstance.NotificationsChannelsChannelidSubscriptionsDelete(channelId);
+                string result = apiInstance.DeleteChannelsChannelIdSubscriptions(channelId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling NotificationsApi.NotificationsChannelsChannelidSubscriptionsDelete: " + e.Message );
+                Debug.Print("Exception when calling NotificationsApi.DeleteChannelsChannelIdSubscriptions: " + e.Message );
             }
         }
     }
 }
-```
+~~~
 
 ### Parameters
 
@@ -118,15 +68,15 @@ namespace Example
 
 **string**
 
-<a name="NotificationsChannelsChannelidSubscriptionsGet"></a>
-## [**TopicEntityListing**](TopicEntityListing.html) NotificationsChannelsChannelidSubscriptionsGet (string channelId)
+<a name="GetAvailabletopics"></a>
+## [**AvailableTopicEntityListing**](AvailableTopicEntityListing.html) GetAvailabletopics (List<string> expand = null)
 
-The list of all subscriptions for this channel
+Get available notification topics.
 
 
 
 ### Example
-```csharp
+~~~csharp
 using System;
 using System.Diagnostics;
 using ININ.PureCloudApi.Api;
@@ -135,7 +85,112 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class NotificationsChannelsChannelidSubscriptionsGetExample
+    public class GetAvailabletopicsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new NotificationsApi();
+            var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
+
+            try
+            {
+                // Get available notification topics.
+                AvailableTopicEntityListing result = apiInstance.GetAvailabletopics(expand);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling NotificationsApi.GetAvailabletopics: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **expand** | [**List<string>**](string.md)| Which fields, if any, to expand | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**AvailableTopicEntityListing**](AvailableTopicEntityListing.md)
+
+<a name="GetChannels"></a>
+## [**ChannelEntityListing**](ChannelEntityListing.html) GetChannels ()
+
+The list of existing channels
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetChannelsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new NotificationsApi();
+
+            try
+            {
+                // The list of existing channels
+                ChannelEntityListing result = apiInstance.GetChannels();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling NotificationsApi.GetChannels: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+This endpoint does require any parameters.
+{: class="table table-striped"}
+
+### Return type
+
+[**ChannelEntityListing**](ChannelEntityListing.md)
+
+<a name="GetChannelsChannelIdSubscriptions"></a>
+## [**ChannelTopicEntityListing**](ChannelTopicEntityListing.html) GetChannelsChannelIdSubscriptions (string channelId)
+
+The list of all subscriptions for this channel
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetChannelsChannelIdSubscriptionsExample
     {
         public void main()
         {
@@ -149,17 +204,17 @@ namespace Example
             try
             {
                 // The list of all subscriptions for this channel
-                TopicEntityListing result = apiInstance.NotificationsChannelsChannelidSubscriptionsGet(channelId);
+                ChannelTopicEntityListing result = apiInstance.GetChannelsChannelIdSubscriptions(channelId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling NotificationsApi.NotificationsChannelsChannelidSubscriptionsGet: " + e.Message );
+                Debug.Print("Exception when calling NotificationsApi.GetChannelsChannelIdSubscriptions: " + e.Message );
             }
         }
     }
 }
-```
+~~~
 
 ### Parameters
 
@@ -171,17 +226,17 @@ namespace Example
 
 ### Return type
 
-[**TopicEntityListing**](TopicEntityListing.md)
+[**ChannelTopicEntityListing**](ChannelTopicEntityListing.md)
 
-<a name="NotificationsChannelsChannelidSubscriptionsPost"></a>
-## [**TopicEntityListing**](TopicEntityListing.html) NotificationsChannelsChannelidSubscriptionsPost (string channelId, List<ChannelTopic> body = null)
+<a name="PostChannels"></a>
+## [**Channel**](Channel.html) PostChannels ()
 
-Add a list of subscriptions to the existing list of subscriptions
+Create a new channel
 
-
+There is a limit of 10 channels. Creating an 11th channel will remove the channel with oldest last used date.
 
 ### Example
-```csharp
+~~~csharp
 using System;
 using System.Diagnostics;
 using ININ.PureCloudApi.Api;
@@ -190,7 +245,57 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class NotificationsChannelsChannelidSubscriptionsPostExample
+    public class PostChannelsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new NotificationsApi();
+
+            try
+            {
+                // Create a new channel
+                Channel result = apiInstance.PostChannels();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling NotificationsApi.PostChannels: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+This endpoint does require any parameters.
+{: class="table table-striped"}
+
+### Return type
+
+[**Channel**](Channel.md)
+
+<a name="PostChannelsChannelIdSubscriptions"></a>
+## [**ChannelTopicEntityListing**](ChannelTopicEntityListing.html) PostChannelsChannelIdSubscriptions (string channelId, List<ChannelTopic> body = null)
+
+Add a list of subscriptions to the existing list of subscriptions
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PostChannelsChannelIdSubscriptionsExample
     {
         public void main()
         {
@@ -205,17 +310,17 @@ namespace Example
             try
             {
                 // Add a list of subscriptions to the existing list of subscriptions
-                TopicEntityListing result = apiInstance.NotificationsChannelsChannelidSubscriptionsPost(channelId, body);
+                ChannelTopicEntityListing result = apiInstance.PostChannelsChannelIdSubscriptions(channelId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling NotificationsApi.NotificationsChannelsChannelidSubscriptionsPost: " + e.Message );
+                Debug.Print("Exception when calling NotificationsApi.PostChannelsChannelIdSubscriptions: " + e.Message );
             }
         }
     }
 }
-```
+~~~
 
 ### Parameters
 
@@ -228,17 +333,17 @@ namespace Example
 
 ### Return type
 
-[**TopicEntityListing**](TopicEntityListing.md)
+[**ChannelTopicEntityListing**](ChannelTopicEntityListing.md)
 
-<a name="NotificationsChannelsChannelidSubscriptionsPut"></a>
-## [**TopicEntityListing**](TopicEntityListing.html) NotificationsChannelsChannelidSubscriptionsPut (string channelId, List<ChannelTopic> body = null)
+<a name="PutChannelsChannelIdSubscriptions"></a>
+## [**ChannelTopicEntityListing**](ChannelTopicEntityListing.html) PutChannelsChannelIdSubscriptions (string channelId, List<ChannelTopic> body = null)
 
 Replace the current list of subscriptions with a new list.
 
 
 
 ### Example
-```csharp
+~~~csharp
 using System;
 using System.Diagnostics;
 using ININ.PureCloudApi.Api;
@@ -247,7 +352,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class NotificationsChannelsChannelidSubscriptionsPutExample
+    public class PutChannelsChannelIdSubscriptionsExample
     {
         public void main()
         {
@@ -262,17 +367,17 @@ namespace Example
             try
             {
                 // Replace the current list of subscriptions with a new list.
-                TopicEntityListing result = apiInstance.NotificationsChannelsChannelidSubscriptionsPut(channelId, body);
+                ChannelTopicEntityListing result = apiInstance.PutChannelsChannelIdSubscriptions(channelId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling NotificationsApi.NotificationsChannelsChannelidSubscriptionsPut: " + e.Message );
+                Debug.Print("Exception when calling NotificationsApi.PutChannelsChannelIdSubscriptions: " + e.Message );
             }
         }
     }
 }
-```
+~~~
 
 ### Parameters
 
@@ -285,105 +390,5 @@ namespace Example
 
 ### Return type
 
-[**TopicEntityListing**](TopicEntityListing.md)
-
-<a name="NotificationsChannelsGet"></a>
-## [**ChannelEntityListing**](ChannelEntityListing.html) NotificationsChannelsGet ()
-
-The list of existing channels
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class NotificationsChannelsGetExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new NotificationsApi();
-
-            try
-            {
-                // The list of existing channels
-                ChannelEntityListing result = apiInstance.NotificationsChannelsGet();
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling NotificationsApi.NotificationsChannelsGet: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-This endpoint does require any parameters.
-{: class="table table-striped"}
-
-### Return type
-
-[**ChannelEntityListing**](ChannelEntityListing.md)
-
-<a name="NotificationsChannelsPost"></a>
-## [**Channel**](Channel.html) NotificationsChannelsPost ()
-
-Create a new channel
-
-There is a limit of 10 channels. Creating an 11th channel will remove the channel with oldest last used date.
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class NotificationsChannelsPostExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new NotificationsApi();
-
-            try
-            {
-                // Create a new channel
-                Channel result = apiInstance.NotificationsChannelsPost();
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling NotificationsApi.NotificationsChannelsPost: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-This endpoint does require any parameters.
-{: class="table table-striped"}
-
-### Return type
-
-[**Channel**](Channel.md)
+[**ChannelTopicEntityListing**](ChannelTopicEntityListing.md)
 

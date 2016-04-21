@@ -1,7 +1,7 @@
 ---
 title: Geolocation
 ---
-## .Geolocation
+## ININ.PureCloudApi.Model.Geolocation
 
 ## Properties
 

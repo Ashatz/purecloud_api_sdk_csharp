@@ -1,7 +1,7 @@
 ---
 title: DomainOrgRoleDifference
 ---
-## .DomainOrgRoleDifference
+## ININ.PureCloudApi.Model.DomainOrgRoleDifference
 
 ## Properties
 

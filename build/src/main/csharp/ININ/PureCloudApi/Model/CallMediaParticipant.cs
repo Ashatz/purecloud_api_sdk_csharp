@@ -129,6 +129,7 @@ namespace ININ.PureCloudApi.Model
         }
 
         
+
         /// <summary>
         /// The participant's state.  Values can be: 'alerting', 'connected', 'disconnected', 'dialing', 'contacting
         /// </summary>
@@ -136,6 +137,7 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
     
+
         /// <summary>
         /// The participant's direction.  Values can be: 'inbound' or 'outbound'
         /// </summary>
@@ -143,6 +145,7 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="direction", EmitDefaultValue=false)]
         public DirectionEnum? Direction { get; set; }
     
+
         /// <summary>
         /// The reason the participant was disconnected from the conversation.
         /// </summary>
@@ -150,6 +153,7 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="disconnectType", EmitDefaultValue=false)]
         public DisconnectTypeEnum? DisconnectType { get; set; }
     
+
         /// <summary>
         /// The state of the call recording.
         /// </summary>

@@ -53,6 +53,7 @@ namespace ININ.PureCloudApi.Model
         }
 
         
+
         /// <summary>
         /// Gets or Sets NodeType
         /// </summary>

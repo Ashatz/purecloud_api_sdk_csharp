@@ -25,25 +25,14 @@ namespace ININ.PureCloudApi.Model
         /// <param name="EntityType">EntityType.</param>
         /// <param name="Action">Action.</param>
         /// <param name="Label">Label.</param>
-<<<<<<< HEAD
-        /// <param name="Licenses">Licenses.</param>
-        /// <param name="AllowsConditions">AllowsConditions (default to false).</param>
-
-        public DomainPermission(string Domain = null, string EntityType = null, string Action = null, string Label = null, List<string> Licenses = null, bool? AllowsConditions = null)
-=======
         /// <param name="AllowsConditions">AllowsConditions (default to false).</param>
 
         public DomainPermission(string Domain = null, string EntityType = null, string Action = null, string Label = null, bool? AllowsConditions = null)
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         {
             this.Domain = Domain;
             this.EntityType = EntityType;
             this.Action = Action;
             this.Label = Label;
-<<<<<<< HEAD
-            this.Licenses = Licenses;
-=======
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             // use default value if no "AllowsConditions" provided
             if (AllowsConditions == null)
             {
@@ -81,15 +70,6 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="label", EmitDefaultValue=false)]
         public string Label { get; set; }
     
-<<<<<<< HEAD
-        /// <summary>
-        /// Gets or Sets Licenses
-        /// </summary>
-        [DataMember(Name="licenses", EmitDefaultValue=false)]
-        public List<string> Licenses { get; set; }
-    
-=======
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// Gets or Sets AllowsConditions
         /// </summary>
@@ -165,14 +145,6 @@ namespace ININ.PureCloudApi.Model
                     this.Label != null &&
                     this.Label.Equals(other.Label)
                 ) &&
-<<<<<<< HEAD
-                (
-                    this.Licenses == other.Licenses ||
-                    this.Licenses != null &&
-                    this.Licenses.SequenceEqual(other.Licenses)
-                ) &&
-=======
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 (
                     this.AllowsConditions == other.AllowsConditions ||
                     this.AllowsConditions != null &&
@@ -199,11 +171,6 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.Action.GetHashCode();
                 if (this.Label != null)
                     hash = hash * 59 + this.Label.GetHashCode();
-<<<<<<< HEAD
-                if (this.Licenses != null)
-                    hash = hash * 59 + this.Licenses.GetHashCode();
-=======
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 if (this.AllowsConditions != null)
                     hash = hash * 59 + this.AllowsConditions.GetHashCode();
                 return hash;

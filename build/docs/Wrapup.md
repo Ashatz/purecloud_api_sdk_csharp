@@ -1,7 +1,7 @@
 ---
 title: Wrapup
 ---
-## .Wrapup
+## ININ.PureCloudApi.Model.Wrapup
 
 ## Properties
 

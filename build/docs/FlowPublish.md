@@ -1,7 +1,7 @@
 ---
 title: FlowPublish
 ---
-## .FlowPublish
+## ININ.PureCloudApi.Model.FlowPublish
 
 ## Properties
 

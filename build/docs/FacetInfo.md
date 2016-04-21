@@ -1,7 +1,7 @@
 ---
 title: FacetInfo
 ---
-## .FacetInfo
+## ININ.PureCloudApi.Model.FacetInfo
 
 ## Properties
 

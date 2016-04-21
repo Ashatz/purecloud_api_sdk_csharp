@@ -24,26 +24,14 @@ namespace ININ.PureCloudApi.Model
         /// <param name="ChangeNumber">ChangeNumber.</param>
         /// <param name="Name">Name.</param>
         /// <param name="Read">Read (default to false).</param>
-<<<<<<< HEAD
-        /// <param name="UpdateAttributes">UpdateAttributes.</param>
-        /// <param name="RemoveAttributes">RemoveAttributes.</param>
-=======
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <param name="AddTags">AddTags.</param>
         /// <param name="RemoveTags">RemoveTags.</param>
         /// <param name="AddTagIds">AddTagIds.</param>
         /// <param name="RemoveTagIds">RemoveTagIds.</param>
-<<<<<<< HEAD
-        /// <param name="AddAttributeGroupInstanceIds">AddAttributeGroupInstanceIds.</param>
-        /// <param name="RemoveAttributeGroupInstanceIds">RemoveAttributeGroupInstanceIds.</param>
-
-        public DocumentUpdate(int? ChangeNumber = null, string Name = null, bool? Read = null, List<AttributeValue> UpdateAttributes = null, List<string> RemoveAttributes = null, List<string> AddTags = null, List<string> RemoveTags = null, List<string> AddTagIds = null, List<string> RemoveTagIds = null, List<string> AddAttributeGroupInstanceIds = null, List<string> RemoveAttributeGroupInstanceIds = null)
-=======
         /// <param name="UpdateAttributes">UpdateAttributes.</param>
         /// <param name="RemoveAttributes">RemoveAttributes.</param>
 
         public DocumentUpdate(int? ChangeNumber = null, string Name = null, bool? Read = null, List<string> AddTags = null, List<string> RemoveTags = null, List<string> AddTagIds = null, List<string> RemoveTagIds = null, List<DocumentAttribute> UpdateAttributes = null, List<string> RemoveAttributes = null)
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         {
             this.ChangeNumber = ChangeNumber;
             this.Name = Name;
@@ -56,22 +44,12 @@ namespace ININ.PureCloudApi.Model
             {
                 this.Read = Read;
             }
-<<<<<<< HEAD
-            this.UpdateAttributes = UpdateAttributes;
-            this.RemoveAttributes = RemoveAttributes;
-=======
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             this.AddTags = AddTags;
             this.RemoveTags = RemoveTags;
             this.AddTagIds = AddTagIds;
             this.RemoveTagIds = RemoveTagIds;
-<<<<<<< HEAD
-            this.AddAttributeGroupInstanceIds = AddAttributeGroupInstanceIds;
-            this.RemoveAttributeGroupInstanceIds = RemoveAttributeGroupInstanceIds;
-=======
             this.UpdateAttributes = UpdateAttributes;
             this.RemoveAttributes = RemoveAttributes;
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
@@ -94,21 +72,6 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="read", EmitDefaultValue=false)]
         public bool? Read { get; set; }
     
-<<<<<<< HEAD
-        /// <summary>
-        /// Gets or Sets UpdateAttributes
-        /// </summary>
-        [DataMember(Name="updateAttributes", EmitDefaultValue=false)]
-        public List<AttributeValue> UpdateAttributes { get; set; }
-    
-        /// <summary>
-        /// Gets or Sets RemoveAttributes
-        /// </summary>
-        [DataMember(Name="removeAttributes", EmitDefaultValue=false)]
-        public List<string> RemoveAttributes { get; set; }
-    
-=======
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// Gets or Sets AddTags
         /// </summary>
@@ -136,24 +99,14 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Gets or Sets UpdateAttributes
         /// </summary>
-<<<<<<< HEAD
-        [DataMember(Name="addAttributeGroupInstanceIds", EmitDefaultValue=false)]
-        public List<string> AddAttributeGroupInstanceIds { get; set; }
-=======
         [DataMember(Name="updateAttributes", EmitDefaultValue=false)]
         public List<DocumentAttribute> UpdateAttributes { get; set; }
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
     
         /// <summary>
         /// Gets or Sets RemoveAttributes
         /// </summary>
-<<<<<<< HEAD
-        [DataMember(Name="removeAttributeGroupInstanceIds", EmitDefaultValue=false)]
-        public List<string> RemoveAttributeGroupInstanceIds { get; set; }
-=======
         [DataMember(Name="removeAttributes", EmitDefaultValue=false)]
         public List<string> RemoveAttributes { get; set; }
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -170,13 +123,8 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  RemoveTags: ").Append(RemoveTags).Append("\n");
             sb.Append("  AddTagIds: ").Append(AddTagIds).Append("\n");
             sb.Append("  RemoveTagIds: ").Append(RemoveTagIds).Append("\n");
-<<<<<<< HEAD
-            sb.Append("  AddAttributeGroupInstanceIds: ").Append(AddAttributeGroupInstanceIds).Append("\n");
-            sb.Append("  RemoveAttributeGroupInstanceIds: ").Append(RemoveAttributeGroupInstanceIds).Append("\n");
-=======
             sb.Append("  UpdateAttributes: ").Append(UpdateAttributes).Append("\n");
             sb.Append("  RemoveAttributes: ").Append(RemoveAttributes).Append("\n");
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -228,19 +176,6 @@ namespace ININ.PureCloudApi.Model
                     this.Read != null &&
                     this.Read.Equals(other.Read)
                 ) &&
-<<<<<<< HEAD
-                (
-                    this.UpdateAttributes == other.UpdateAttributes ||
-                    this.UpdateAttributes != null &&
-                    this.UpdateAttributes.SequenceEqual(other.UpdateAttributes)
-                ) &&
-                (
-                    this.RemoveAttributes == other.RemoveAttributes ||
-                    this.RemoveAttributes != null &&
-                    this.RemoveAttributes.SequenceEqual(other.RemoveAttributes)
-                ) &&
-=======
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 (
                     this.AddTags == other.AddTags ||
                     this.AddTags != null &&
@@ -262,15 +197,9 @@ namespace ININ.PureCloudApi.Model
                     this.RemoveTagIds.SequenceEqual(other.RemoveTagIds)
                 ) &&
                 (
-<<<<<<< HEAD
-                    this.AddAttributeGroupInstanceIds == other.AddAttributeGroupInstanceIds ||
-                    this.AddAttributeGroupInstanceIds != null &&
-                    this.AddAttributeGroupInstanceIds.SequenceEqual(other.AddAttributeGroupInstanceIds)
-=======
                     this.UpdateAttributes == other.UpdateAttributes ||
                     this.UpdateAttributes != null &&
                     this.UpdateAttributes.SequenceEqual(other.UpdateAttributes)
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 ) &&
                 (
                     this.RemoveAttributes == other.RemoveAttributes ||
@@ -296,13 +225,6 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.Name.GetHashCode();
                 if (this.Read != null)
                     hash = hash * 59 + this.Read.GetHashCode();
-<<<<<<< HEAD
-                if (this.UpdateAttributes != null)
-                    hash = hash * 59 + this.UpdateAttributes.GetHashCode();
-                if (this.RemoveAttributes != null)
-                    hash = hash * 59 + this.RemoveAttributes.GetHashCode();
-=======
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 if (this.AddTags != null)
                     hash = hash * 59 + this.AddTags.GetHashCode();
                 if (this.RemoveTags != null)
@@ -311,17 +233,10 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.AddTagIds.GetHashCode();
                 if (this.RemoveTagIds != null)
                     hash = hash * 59 + this.RemoveTagIds.GetHashCode();
-<<<<<<< HEAD
-                if (this.AddAttributeGroupInstanceIds != null)
-                    hash = hash * 59 + this.AddAttributeGroupInstanceIds.GetHashCode();
-                if (this.RemoveAttributeGroupInstanceIds != null)
-                    hash = hash * 59 + this.RemoveAttributeGroupInstanceIds.GetHashCode();
-=======
                 if (this.UpdateAttributes != null)
                     hash = hash * 59 + this.UpdateAttributes.GetHashCode();
                 if (this.RemoveAttributes != null)
                     hash = hash * 59 + this.RemoveAttributes.GetHashCode();
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 return hash;
             }
         }

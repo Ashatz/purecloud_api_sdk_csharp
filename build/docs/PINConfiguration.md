@@ -1,7 +1,7 @@
 ---
 title: PINConfiguration
 ---
-## .PINConfiguration
+## ININ.PureCloudApi.Model.PINConfiguration
 
 ## Properties
 

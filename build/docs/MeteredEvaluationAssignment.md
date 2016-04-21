@@ -1,7 +1,7 @@
 ---
 title: MeteredEvaluationAssignment
 ---
-## .MeteredEvaluationAssignment
+## ININ.PureCloudApi.Model.MeteredEvaluationAssignment
 
 ## Properties
 

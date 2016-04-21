@@ -15,31 +15,6 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/AttributeGroupInstanceCommand.cs
-    public partial class AttributeGroupInstanceCommand :  IEquatable<AttributeGroupInstanceCommand>
-    { 
-        
-        /// <summary>
-        /// Initializes a new instance of the <see cref="AttributeGroupInstanceCommand" />class.
-        /// </summary>
-        /// <param name="Instance">Instance.</param>
-        /// <param name="Status">Status.</param>
-        /// <param name="Created">Created (default to false).</param>
-
-        public AttributeGroupInstanceCommand(AttributeGroupInstance Instance = null, CommandStatus Status = null, bool? Created = null)
-        {
-            this.Instance = Instance;
-            this.Status = Status;
-            // use default value if no "Created" provided
-            if (Created == null)
-            {
-                this.Created = false;
-            }
-            else
-            {
-                this.Created = Created;
-            }
-=======
     public partial class SubscriberResponse :  IEquatable<SubscriberResponse>
     { 
         
@@ -53,7 +28,6 @@ namespace ININ.PureCloudApi.Model
         {
             this.MessageReturned = MessageReturned;
             this.Status = Status;
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/SubscriberResponse.cs
             
         }
 
@@ -61,29 +35,14 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Gets or Sets MessageReturned
         /// </summary>
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/AttributeGroupInstanceCommand.cs
-        [DataMember(Name="instance", EmitDefaultValue=false)]
-        public AttributeGroupInstance Instance { get; set; }
-=======
         [DataMember(Name="messageReturned", EmitDefaultValue=false)]
         public List<string> MessageReturned { get; set; }
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/SubscriberResponse.cs
     
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
         [DataMember(Name="status", EmitDefaultValue=false)]
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/AttributeGroupInstanceCommand.cs
-        public CommandStatus Status { get; set; }
-    
-        /// <summary>
-        /// Gets or Sets Created
-        /// </summary>
-        [DataMember(Name="created", EmitDefaultValue=false)]
-        public bool? Created { get; set; }
-=======
         public string Status { get; set; }
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/SubscriberResponse.cs
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -95,10 +54,6 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class SubscriberResponse {\n");
             sb.Append("  MessageReturned: ").Append(MessageReturned).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/AttributeGroupInstanceCommand.cs
-            sb.Append("  Created: ").Append(Created).Append("\n");
-=======
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/SubscriberResponse.cs
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -126,11 +81,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if SubscriberResponse instances are equal
         /// </summary>
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/AttributeGroupInstanceCommand.cs
-        /// <param name="other">Instance of AttributeGroupInstanceCommand to be compared</param>
-=======
         /// <param name="other">Instance of SubscriberResponse to be compared</param>
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/SubscriberResponse.cs
         /// <returns>Boolean</returns>
         public bool Equals(SubscriberResponse other)
         {
@@ -140,28 +91,14 @@ namespace ININ.PureCloudApi.Model
 
             return true &&
                 (
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/AttributeGroupInstanceCommand.cs
-                    this.Instance == other.Instance ||
-                    this.Instance != null &&
-                    this.Instance.Equals(other.Instance)
-=======
                     this.MessageReturned == other.MessageReturned ||
                     this.MessageReturned != null &&
                     this.MessageReturned.SequenceEqual(other.MessageReturned)
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/SubscriberResponse.cs
                 ) &&
                 (
                     this.Status == other.Status ||
                     this.Status != null &&
                     this.Status.Equals(other.Status)
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/AttributeGroupInstanceCommand.cs
-                ) &&
-                (
-                    this.Created == other.Created ||
-                    this.Created != null &&
-                    this.Created.Equals(other.Created)
-=======
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/SubscriberResponse.cs
                 );
         }
 
@@ -176,19 +113,10 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/AttributeGroupInstanceCommand.cs
-                if (this.Instance != null)
-                    hash = hash * 59 + this.Instance.GetHashCode();
-                if (this.Status != null)
-                    hash = hash * 59 + this.Status.GetHashCode();
-                if (this.Created != null)
-                    hash = hash * 59 + this.Created.GetHashCode();
-=======
                 if (this.MessageReturned != null)
                     hash = hash * 59 + this.MessageReturned.GetHashCode();
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/SubscriberResponse.cs
                 return hash;
             }
         }

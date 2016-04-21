@@ -1,7 +1,7 @@
 ---
 title: License
 ---
-## .License
+## ININ.PureCloudApi.Model.License
 
 ## Properties
 

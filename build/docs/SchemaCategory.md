@@ -1,7 +1,7 @@
 ---
 title: SchemaCategory
 ---
-## .SchemaCategory
+## ININ.PureCloudApi.Model.SchemaCategory
 
 ## Properties
 

@@ -1,7 +1,7 @@
 ---
 title: HardwareRateListing
 ---
-## .HardwareRateListing
+## ININ.PureCloudApi.Model.HardwareRateListing
 
 ## Properties
 
@@ -12,9 +12,9 @@ title: HardwareRateListing
 | **Total** | **long?** |  | [optional] |
 | **Entities** | [**List&lt;HardwareRate&gt;**](HardwareRate.html) |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
+| **FirstUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **NextUri** | **string** |  | [optional] |
-| **FirstUri** | **string** |  | [optional] |
 | **LastUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
 {: class="table table-striped"}

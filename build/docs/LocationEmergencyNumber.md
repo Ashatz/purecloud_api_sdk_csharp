@@ -1,7 +1,7 @@
 ---
 title: LocationEmergencyNumber
 ---
-## .LocationEmergencyNumber
+## ININ.PureCloudApi.Model.LocationEmergencyNumber
 
 ## Properties
 

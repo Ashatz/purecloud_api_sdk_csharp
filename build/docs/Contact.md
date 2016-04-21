@@ -1,20 +1,16 @@
 ---
 title: Contact
 ---
-## .Contact
+## ININ.PureCloudApi.Model.Contact
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Id** | **string** | The globally unique identifier for the object. | [optional] |
-| **Name** | **string** |  | [optional] |
-| **ContactListId** | **string** |  | [optional] |
-| **Data** | **Dictionary&lt;string, Object&gt;** |  | [optional] |
-| **CallRecords** | [**Dictionary&lt;string, CallRecord&gt;**](CallRecord.html) |  | [optional] |
-| **Callable** | **bool?** |  | [optional] [default to false]|
-| **PhoneNumberStatus** | [**Dictionary&lt;string, PhoneNumberStatus&gt;**](PhoneNumberStatus.html) |  | [optional] |
-| **SelfUri** | **string** | The URI for this object | [optional] |
+| **Address** | **string** | Email address or phone number for this contact type | [optional] |
+| **Display** | **string** | Formatted version of the address property | [optional] |
+| **MediaType** | **string** |  | [optional] |
+| **Type** | **string** |  | [optional] |
 {: class="table table-striped"}
 
 

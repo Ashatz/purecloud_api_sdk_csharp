@@ -27,32 +27,6 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "ACTIVE")]
             Active,
             
-<<<<<<< HEAD
-            [EnumMember(Value = "DELETED")]
-            Deleted,
-            
-            [EnumMember(Value = "INACTIVE")]
-            Inactive
-        }
-
-
-        /// <summary>
-        /// The type of matching technique the number plan uses.
-        /// </summary>
-        /// <value>The type of matching technique the number plan uses.</value>
-        [JsonConverter(typeof(StringEnumConverter))]
-                public enum MatchTypeEnum {
-            
-            [EnumMember(Value = "e164NumberList")]
-            E164numberlist,
-            
-            [EnumMember(Value = "numberList")]
-            Numberlist,
-            
-            [EnumMember(Value = "digitLength")]
-            Digitlength,
-            
-=======
             [EnumMember(Value = "INACTIVE")]
             Inactive,
             
@@ -77,7 +51,6 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "digitLength")]
             Digitlength,
             
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             [EnumMember(Value = "regex")]
             Regex,
             
@@ -97,71 +70,6 @@ namespace ININ.PureCloudApi.Model
         public StateEnum? State { get; set; }
     
 
-        /// <summary>
-        /// The type of matching technique the number plan uses.
-        /// </summary>
-        /// <value>The type of matching technique the number plan uses.</value>
-        [DataMember(Name="matchType", EmitDefaultValue=false)]
-        public MatchTypeEnum? MatchType { get; set; }
-    
-        /// <summary>
-        /// Initializes a new instance of the <see cref="NumberPlan" />class.
-        /// </summary>
-        /// <param name="Name">Name.</param>
-        /// <param name="Description">Description.</param>
-        /// <param name="Version">Version.</param>
-        /// <param name="DateCreated">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        /// <param name="DateModified">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        /// <param name="ModifiedBy">ModifiedBy.</param>
-        /// <param name="CreatedBy">CreatedBy.</param>
-        /// <param name="State">State.</param>
-        /// <param name="ModifiedByApp">ModifiedByApp.</param>
-        /// <param name="CreatedByApp">CreatedByApp.</param>
-        /// <param name="Match">Match.</param>
-        /// <param name="NormalizedFormat">NormalizedFormat.</param>
-        /// <param name="Priority">Priority.</param>
-        /// <param name="Numbers">Numbers.</param>
-        /// <param name="DigitLength">DigitLength.</param>
-        /// <param name="Classification">Classification.</param>
-        /// <param name="MatchType">The type of matching technique the number plan uses. (required).</param>
-
-        public NumberPlan(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, string Match = null, string NormalizedFormat = null, int? Priority = null, List<double?> Numbers = null, DigitLength DigitLength = null, string Classification = null, MatchTypeEnum? MatchType = null)
-        {
-            // to ensure "MatchType" is required (not null)
-            if (MatchType == null)
-            {
-                throw new InvalidDataException("MatchType is a required property for NumberPlan and cannot be null");
-            }
-            else
-            {
-                this.MatchType = MatchType;
-            }
-            this.Name = Name;
-            this.Description = Description;
-            this.Version = Version;
-            this.DateCreated = DateCreated;
-            this.DateModified = DateModified;
-            this.ModifiedBy = ModifiedBy;
-            this.CreatedBy = CreatedBy;
-            this.State = State;
-            this.ModifiedByApp = ModifiedByApp;
-            this.CreatedByApp = CreatedByApp;
-            this.Match = Match;
-            this.NormalizedFormat = NormalizedFormat;
-            this.Priority = Priority;
-            this.Numbers = Numbers;
-            this.DigitLength = DigitLength;
-            this.Classification = Classification;
-            
-        }
-
-    
-        /// <summary>
-        /// Gets or Sets State
-        /// </summary>
-        [DataMember(Name="state", EmitDefaultValue=false)]
-        public StateEnum? State { get; set; }
-    
         /// <summary>
         /// The type of matching technique the number plan uses.
         /// </summary>

@@ -27,29 +27,6 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "ACTIVE")]
             Active,
             
-<<<<<<< HEAD
-            [EnumMember(Value = "DELETED")]
-            Deleted,
-            
-            [EnumMember(Value = "INACTIVE")]
-            Inactive
-        }
-
-
-        /// <summary>
-        /// The type of this trunk base.
-        /// </summary>
-        /// <value>The type of this trunk base.</value>
-        [JsonConverter(typeof(StringEnumConverter))]
-                public enum TrunkTypeEnum {
-            
-            [EnumMember(Value = "EXTERNAL")]
-            External,
-            
-            [EnumMember(Value = "PHONE")]
-            Phone,
-            
-=======
             [EnumMember(Value = "INACTIVE")]
             Inactive,
             
@@ -71,7 +48,6 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "PHONE")]
             Phone,
             
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             [EnumMember(Value = "EDGE")]
             Edge
         }
@@ -85,81 +61,6 @@ namespace ININ.PureCloudApi.Model
         public StateEnum? State { get; set; }
     
 
-        /// <summary>
-        /// The type of this trunk base.
-        /// </summary>
-        /// <value>The type of this trunk base.</value>
-        [DataMember(Name="trunkType", EmitDefaultValue=false)]
-        public TrunkTypeEnum? TrunkType { get; set; }
-    
-        /// <summary>
-        /// Initializes a new instance of the <see cref="TrunkBase" />class.
-        /// </summary>
-        /// <param name="Name">Name.</param>
-        /// <param name="Description">Description.</param>
-        /// <param name="Version">Version.</param>
-        /// <param name="DateCreated">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        /// <param name="DateModified">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        /// <param name="ModifiedBy">ModifiedBy.</param>
-        /// <param name="CreatedBy">CreatedBy.</param>
-        /// <param name="State">State.</param>
-        /// <param name="ModifiedByApp">ModifiedByApp.</param>
-        /// <param name="CreatedByApp">CreatedByApp.</param>
-        /// <param name="TrunkMetabase">The meta-base this trunk is based on. (required).</param>
-        /// <param name="Properties">Properties.</param>
-        /// <param name="TrunkType">The type of this trunk base. (required).</param>
-        /// <param name="Managed">Is this trunk being managed remotely. (default to false).</param>
-
-        public TrunkBase(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, UriReference TrunkMetabase = null, Dictionary<string, Object> Properties = null, TrunkTypeEnum? TrunkType = null, bool? Managed = null)
-        {
-            // to ensure "TrunkMetabase" is required (not null)
-            if (TrunkMetabase == null)
-            {
-                throw new InvalidDataException("TrunkMetabase is a required property for TrunkBase and cannot be null");
-            }
-            else
-            {
-                this.TrunkMetabase = TrunkMetabase;
-            }
-            // to ensure "TrunkType" is required (not null)
-            if (TrunkType == null)
-            {
-                throw new InvalidDataException("TrunkType is a required property for TrunkBase and cannot be null");
-            }
-            else
-            {
-                this.TrunkType = TrunkType;
-            }
-            this.Name = Name;
-            this.Description = Description;
-            this.Version = Version;
-            this.DateCreated = DateCreated;
-            this.DateModified = DateModified;
-            this.ModifiedBy = ModifiedBy;
-            this.CreatedBy = CreatedBy;
-            this.State = State;
-            this.ModifiedByApp = ModifiedByApp;
-            this.CreatedByApp = CreatedByApp;
-            this.Properties = Properties;
-            // use default value if no "Managed" provided
-            if (Managed == null)
-            {
-                this.Managed = false;
-            }
-            else
-            {
-                this.Managed = Managed;
-            }
-            
-        }
-
-    
-        /// <summary>
-        /// Gets or Sets State
-        /// </summary>
-        [DataMember(Name="state", EmitDefaultValue=false)]
-        public StateEnum? State { get; set; }
-    
         /// <summary>
         /// The type of this trunk base.
         /// </summary>

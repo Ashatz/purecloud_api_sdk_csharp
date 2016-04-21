@@ -1,14 +1,14 @@
 ---
 title: MediaSummary
 ---
-## .MediaSummary
+## ININ.PureCloudApi.Model.MediaSummary
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **ContactCenter** | **int?** |  | [optional] |
-| **Enterprise** | **int?** |  | [optional] |
+| **ContactCenter** | [**MediaSummaryDetail**](MediaSummaryDetail.html) |  | [optional] |
+| **Enterprise** | [**MediaSummaryDetail**](MediaSummaryDetail.html) |  | [optional] |
 {: class="table table-striped"}
 
 

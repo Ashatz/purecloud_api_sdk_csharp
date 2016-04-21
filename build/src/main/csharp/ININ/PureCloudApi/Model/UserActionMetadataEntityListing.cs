@@ -25,35 +25,20 @@ namespace ININ.PureCloudApi.Model
         /// <param name="PageNumber">PageNumber.</param>
         /// <param name="Entities">Entities.</param>
         /// <param name="SelfUri">SelfUri.</param>
-<<<<<<< HEAD
-        /// <param name="PreviousUri">PreviousUri.</param>
-        /// <param name="NextUri">NextUri.</param>
-        /// <param name="FirstUri">FirstUri.</param>
-        /// <param name="PageCount">PageCount.</param>
-
-        public UserActionMetadataEntityListing(int? PageSize = null, int? PageNumber = null, List<UserActionMetadata> Entities = null, string SelfUri = null, string PreviousUri = null, string NextUri = null, string FirstUri = null, int? PageCount = null)
-=======
         /// <param name="FirstUri">FirstUri.</param>
         /// <param name="PreviousUri">PreviousUri.</param>
         /// <param name="NextUri">NextUri.</param>
         /// <param name="PageCount">PageCount.</param>
 
         public UserActionMetadataEntityListing(int? PageSize = null, int? PageNumber = null, List<UserActionMetadata> Entities = null, string SelfUri = null, string FirstUri = null, string PreviousUri = null, string NextUri = null, int? PageCount = null)
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         {
             this.PageSize = PageSize;
             this.PageNumber = PageNumber;
             this.Entities = Entities;
             this.SelfUri = SelfUri;
-<<<<<<< HEAD
-            this.PreviousUri = PreviousUri;
-            this.NextUri = NextUri;
-            this.FirstUri = FirstUri;
-=======
             this.FirstUri = FirstUri;
             this.PreviousUri = PreviousUri;
             this.NextUri = NextUri;
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             this.PageCount = PageCount;
             
         }
@@ -83,15 +68,12 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; set; }
     
-<<<<<<< HEAD
-=======
         /// <summary>
         /// Gets or Sets FirstUri
         /// </summary>
         [DataMember(Name="firstUri", EmitDefaultValue=false)]
         public string FirstUri { get; set; }
     
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// Gets or Sets PreviousUri
         /// </summary>
@@ -104,15 +86,6 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="nextUri", EmitDefaultValue=false)]
         public string NextUri { get; set; }
     
-<<<<<<< HEAD
-        /// <summary>
-        /// Gets or Sets FirstUri
-        /// </summary>
-        [DataMember(Name="firstUri", EmitDefaultValue=false)]
-        public string FirstUri { get; set; }
-    
-=======
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// Gets or Sets PageCount
         /// </summary>
@@ -191,14 +164,11 @@ namespace ININ.PureCloudApi.Model
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
                 ) &&
-<<<<<<< HEAD
-=======
                 (
                     this.FirstUri == other.FirstUri ||
                     this.FirstUri != null &&
                     this.FirstUri.Equals(other.FirstUri)
                 ) &&
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 (
                     this.PreviousUri == other.PreviousUri ||
                     this.PreviousUri != null &&
@@ -209,14 +179,6 @@ namespace ININ.PureCloudApi.Model
                     this.NextUri != null &&
                     this.NextUri.Equals(other.NextUri)
                 ) &&
-<<<<<<< HEAD
-                (
-                    this.FirstUri == other.FirstUri ||
-                    this.FirstUri != null &&
-                    this.FirstUri.Equals(other.FirstUri)
-                ) &&
-=======
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 (
                     this.PageCount == other.PageCount ||
                     this.PageCount != null &&
@@ -243,20 +205,12 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.Entities.GetHashCode();
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-<<<<<<< HEAD
-=======
                 if (this.FirstUri != null)
                     hash = hash * 59 + this.FirstUri.GetHashCode();
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 if (this.PreviousUri != null)
                     hash = hash * 59 + this.PreviousUri.GetHashCode();
                 if (this.NextUri != null)
                     hash = hash * 59 + this.NextUri.GetHashCode();
-<<<<<<< HEAD
-                if (this.FirstUri != null)
-                    hash = hash * 59 + this.FirstUri.GetHashCode();
-=======
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 if (this.PageCount != null)
                     hash = hash * 59 + this.PageCount.GetHashCode();
                 return hash;

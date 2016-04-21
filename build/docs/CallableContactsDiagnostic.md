@@ -1,7 +1,7 @@
 ---
 title: CallableContactsDiagnostic
 ---
-## .CallableContactsDiagnostic
+## ININ.PureCloudApi.Model.CallableContactsDiagnostic
 
 ## Properties
 

@@ -1,7 +1,7 @@
 ---
 title: Extension
 ---
-## .Extension
+## ININ.PureCloudApi.Model.Extension
 
 ## Properties
 

@@ -1,7 +1,7 @@
 ---
 title: BatchItem
 ---
-## .BatchItem
+## ININ.PureCloudApi.Model.BatchItem
 
 ## Properties
 

@@ -44,17 +44,10 @@ namespace ININ.PureCloudApi.Model
             
             [EnumMember(Value = "INBOUNDCALLFLOW")]
             Inboundcallflow,
-<<<<<<< HEAD
             
             [EnumMember(Value = "INQUEUECALLFLOW")]
             Inqueuecallflow,
             
-=======
-            
-            [EnumMember(Value = "INQUEUECALLFLOW")]
-            Inqueuecallflow,
-            
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             [EnumMember(Value = "IVRCONFIGURATION")]
             Ivrconfiguration,
             
@@ -82,42 +75,6 @@ namespace ININ.PureCloudApi.Model
 
         
 
-        /// <summary>
-        /// Gets or Sets Type
-        /// </summary>
-        [DataMember(Name="type", EmitDefaultValue=false)]
-        public TypeEnum? Type { get; set; }
-    
-        /// <summary>
-        /// Initializes a new instance of the <see cref="DependencyObject" />class.
-        /// </summary>
-        /// <param name="Name">Name.</param>
-        /// <param name="Version">Version.</param>
-        /// <param name="Type">Type.</param>
-        /// <param name="Deleted">Deleted (default to false).</param>
-        /// <param name="ConsumedResources">ConsumedResources.</param>
-        /// <param name="ConsumingResources">ConsumingResources.</param>
-
-        public DependencyObject(string Name = null, string Version = null, TypeEnum? Type = null, bool? Deleted = null, List<Dependency> ConsumedResources = null, List<Dependency> ConsumingResources = null)
-        {
-            this.Name = Name;
-            this.Version = Version;
-            this.Type = Type;
-            // use default value if no "Deleted" provided
-            if (Deleted == null)
-            {
-                this.Deleted = false;
-            }
-            else
-            {
-                this.Deleted = Deleted;
-            }
-            this.ConsumedResources = ConsumedResources;
-            this.ConsumingResources = ConsumingResources;
-            
-        }
-
-    
         /// <summary>
         /// Gets or Sets Type
         /// </summary>

@@ -1,7 +1,7 @@
 ---
 title: AuditEntityReference
 ---
-## .AuditEntityReference
+## ININ.PureCloudApi.Model.AuditEntityReference
 
 ## Properties
 

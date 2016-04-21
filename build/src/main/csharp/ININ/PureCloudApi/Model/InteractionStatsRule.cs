@@ -143,6 +143,7 @@ namespace ININ.PureCloudApi.Model
         public static string AlertTypes_Email = "EMAIL";
         
         
+
         /// <summary>
         /// The dimension of concern.
         /// </summary>
@@ -150,6 +151,7 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="dimension", EmitDefaultValue=false)]
         public DimensionEnum? Dimension { get; set; }
     
+
         /// <summary>
         /// The metric to be assessed.
         /// </summary>
@@ -157,6 +159,7 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="metric", EmitDefaultValue=false)]
         public MetricEnum? Metric { get; set; }
     
+
         /// <summary>
         /// The media type.
         /// </summary>
@@ -164,6 +167,7 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="mediaType", EmitDefaultValue=false)]
         public MediaTypeEnum? MediaType { get; set; }
     
+
         /// <summary>
         /// The comparison descriptor used against the metric's value.
         /// </summary>
@@ -171,6 +175,7 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="numericRange", EmitDefaultValue=false)]
         public NumericRangeEnum? NumericRange { get; set; }
     
+
         /// <summary>
         /// The statistic of concern for the metric.
         /// </summary>
@@ -193,7 +198,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="NotificationUsers">The ids of users who will be notified of alarm state change. (required).</param>
         /// <param name="AlertTypes">A collection of notification methods. &#x3D; [&#39;SMS&#39;, &#39;DEVICE&#39;, &#39;EMAIL&#39;] (required).</param>
 
-        public InteractionStatsRule(string Name = null, DimensionEnum? Dimension = null, string DimensionValue = null, MetricEnum? Metric = null, MediaTypeEnum? MediaType = null, NumericRangeEnum? NumericRange = null, StatisticEnum? Statistic = null, double? Value = null, bool? Enabled = null, List<User> NotificationUsers = null, List<string> AlertTypes = null)
+        public InteractionStatsRule(string Name = null, DimensionEnum? Dimension = null, string DimensionValue = null, MetricEnum? Metric = null, MediaTypeEnum? MediaType = null, NumericRangeEnum? NumericRange = null, StatisticEnum? Statistic = null, double? Value = null, bool? Enabled = nullList<User> NotificationUsers = null, List<string> AlertTypes = null)
         {
             // to ensure "Name" is required (not null)
             if (Name == null)

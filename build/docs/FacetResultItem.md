@@ -1,7 +1,7 @@
 ---
 title: FacetResultItem
 ---
-## .FacetResultItem
+## ININ.PureCloudApi.Model.FacetResultItem
 
 ## Properties
 

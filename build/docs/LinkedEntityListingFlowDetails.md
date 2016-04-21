@@ -1,7 +1,7 @@
 ---
 title: LinkedEntityListingFlowDetails
 ---
-## .LinkedEntityListingFlowDetails
+## ININ.PureCloudApi.Model.LinkedEntityListingFlowDetails
 
 ## Properties
 
@@ -12,9 +12,9 @@ title: LinkedEntityListingFlowDetails
 | **Total** | **long?** |  | [optional] |
 | **Entities** | [**List&lt;FlowDetails&gt;**](FlowDetails.html) |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
+| **FirstUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **NextUri** | **string** |  | [optional] |
-| **FirstUri** | **string** |  | [optional] |
 | **LastUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
 {: class="table table-striped"}

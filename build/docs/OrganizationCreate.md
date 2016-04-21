@@ -1,7 +1,7 @@
 ---
 title: OrganizationCreate
 ---
-## .OrganizationCreate
+## ININ.PureCloudApi.Model.OrganizationCreate
 
 ## Properties
 

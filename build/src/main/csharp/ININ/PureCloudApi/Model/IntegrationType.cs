@@ -15,25 +15,6 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/DomainLicense.cs
-    public partial class DomainLicense :  IEquatable<DomainLicense>
-    { 
-        
-        /// <summary>
-        /// Initializes a new instance of the <see cref="DomainLicense" />class.
-        /// </summary>
-        /// <param name="Name">Name.</param>
-        /// <param name="Description">Description.</param>
-        /// <param name="Product">Product.</param>
-        /// <param name="Permissions">Permissions.</param>
-
-        public DomainLicense(string Name = null, string Description = null, string Product = null, List<string> Permissions = null)
-        {
-            this.Name = Name;
-            this.Description = Description;
-            this.Product = Product;
-            this.Permissions = Permissions;
-=======
     public partial class IntegrationType :  IEquatable<IntegrationType>
     { 
 
@@ -48,13 +29,13 @@ namespace ININ.PureCloudApi.Model
             
             [EnumMember(Value = "WEBHOOKS")]
             Webhooks,
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/IntegrationType.cs
             
             [EnumMember(Value = "REALTIME")]
             Realtime
         }
 
-    
+        
+
         /// <summary>
         /// Gets or Sets Provider
         /// </summary>
@@ -98,25 +79,11 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
     
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/DomainLicense.cs
-        /// <summary>
-        /// Gets or Sets Product
-        /// </summary>
-        [DataMember(Name="product", EmitDefaultValue=false)]
-        public string Product { get; set; }
-    
-=======
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/IntegrationType.cs
         /// <summary>
         /// Gets or Sets Images
         /// </summary>
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/DomainLicense.cs
-        [DataMember(Name="permissions", EmitDefaultValue=false)]
-        public List<string> Permissions { get; set; }
-=======
         [DataMember(Name="images", EmitDefaultValue=false)]
         public List<UserImage> Images { get; set; }
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/IntegrationType.cs
     
         /// <summary>
         /// The URI for this object
@@ -166,11 +133,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if IntegrationType instances are equal
         /// </summary>
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/DomainLicense.cs
-        /// <param name="other">Instance of DomainLicense to be compared</param>
-=======
         /// <param name="other">Instance of IntegrationType to be compared</param>
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/IntegrationType.cs
         /// <returns>Boolean</returns>
         public bool Equals(IntegrationType other)
         {
@@ -195,16 +158,6 @@ namespace ININ.PureCloudApi.Model
                     this.Description.Equals(other.Description)
                 ) &&
                 (
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/DomainLicense.cs
-                    this.Product == other.Product ||
-                    this.Product != null &&
-                    this.Product.Equals(other.Product)
-                ) &&
-                (
-                    this.Permissions == other.Permissions ||
-                    this.Permissions != null &&
-                    this.Permissions.SequenceEqual(other.Permissions)
-=======
                     this.Provider == other.Provider ||
                     this.Provider != null &&
                     this.Provider.Equals(other.Provider)
@@ -213,7 +166,6 @@ namespace ININ.PureCloudApi.Model
                     this.Images == other.Images ||
                     this.Images != null &&
                     this.Images.SequenceEqual(other.Images)
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/IntegrationType.cs
                 ) &&
                 (
                     this.SelfUri == other.SelfUri ||
@@ -239,17 +191,10 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.Name.GetHashCode();
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/DomainLicense.cs
-                if (this.Product != null)
-                    hash = hash * 59 + this.Product.GetHashCode();
-                if (this.Permissions != null)
-                    hash = hash * 59 + this.Permissions.GetHashCode();
-=======
                 if (this.Provider != null)
                     hash = hash * 59 + this.Provider.GetHashCode();
                 if (this.Images != null)
                     hash = hash * 59 + this.Images.GetHashCode();
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/IntegrationType.cs
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;

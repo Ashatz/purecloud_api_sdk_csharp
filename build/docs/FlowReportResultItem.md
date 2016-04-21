@@ -1,7 +1,7 @@
 ---
 title: FlowReportResultItem
 ---
-## .FlowReportResultItem
+## ININ.PureCloudApi.Model.FlowReportResultItem
 
 ## Properties
 

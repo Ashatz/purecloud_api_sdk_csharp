@@ -1,7 +1,7 @@
 ---
 title: DomainOrganizationProduct
 ---
-## .DomainOrganizationProduct
+## ININ.PureCloudApi.Model.DomainOrganizationProduct
 
 ## Properties
 

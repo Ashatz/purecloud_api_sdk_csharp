@@ -1,7 +1,7 @@
 ---
 title: DomainLogicalInterface
 ---
-## .DomainLogicalInterface
+## ININ.PureCloudApi.Model.DomainLogicalInterface
 
 ## Properties
 
@@ -37,6 +37,12 @@ title: DomainLogicalInterface
 | **LastModifiedUserId** | **string** |  | [optional] |
 | **LastModifiedCorrelationId** | **string** |  | [optional] |
 | **CommandResponses** | [**List&lt;DomainNetworkCommandResponse&gt;**](DomainNetworkCommandResponse.html) |  | [optional] |
+| **InheritPhoneTrunkBases** | **bool?** | Phone trunk base assignment will be inherited from the Edge Group. | [optional] [default to false]|
+| **InheritPhoneTrunkBasesIPv4** | **bool?** | The IPv4 phone trunk base assignment will be inherited from the Edge Group. | [optional] [default to false]|
+| **InheritPhoneTrunkBasesIPv6** | **bool?** | The IPv6 phone trunk base assignment will be inherited from the Edge Group. | [optional] [default to false]|
+| **UseForInternalEdgeCommunication** | **bool?** | This interface will be used for all internal edge-to-edge communication using settings from the edgeTrunkBaseAssignment on the Edge Group. | [optional] [default to false]|
+| **ExternalTrunkBaseAssignments** | [**List&lt;TrunkBaseAssignment&gt;**](TrunkBaseAssignment.html) | External trunk base settings to use for external communication from this interface. | [optional] |
+| **PhoneTrunkBaseAssignments** | [**List&lt;TrunkBaseAssignment&gt;**](TrunkBaseAssignment.html) | Phone trunk base settings to use for phone communication from this interface.  These settings will be ignored when \&quot;inheritPhoneTrunkBases\&quot; is true. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

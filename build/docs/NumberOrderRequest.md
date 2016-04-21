@@ -1,7 +1,7 @@
 ---
 title: NumberOrderRequest
 ---
-## .NumberOrderRequest
+## ININ.PureCloudApi.Model.NumberOrderRequest
 
 ## Properties
 

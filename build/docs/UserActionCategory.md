@@ -1,7 +1,7 @@
 ---
 title: UserActionCategory
 ---
-## .UserActionCategory
+## ININ.PureCloudApi.Model.UserActionCategory
 
 ## Properties
 

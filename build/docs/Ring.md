@@ -1,7 +1,7 @@
 ---
 title: Ring
 ---
-## .Ring
+## ININ.PureCloudApi.Model.Ring
 
 ## Properties
 

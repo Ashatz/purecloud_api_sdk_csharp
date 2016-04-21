@@ -15,27 +15,6 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/FlowActivateRequest.cs
-    public partial class FlowActivateRequest :  IEquatable<FlowActivateRequest>
-    { 
-        
-        /// <summary>
-        /// Initializes a new instance of the <see cref="FlowActivateRequest" />class.
-        /// </summary>
-        /// <param name="Activated">Change the activated state of the flow definition.  True to activate the flow definition so it can be launched, false to disable the flow. (required) (default to false).</param>
-
-        public FlowActivateRequest(bool? Activated = null)
-        {
-            // to ensure "Activated" is required (not null)
-            if (Activated == null)
-            {
-                throw new InvalidDataException("Activated is a required property for FlowActivateRequest and cannot be null");
-            }
-            else
-            {
-                this.Activated = Activated;
-            }
-=======
     public partial class RecordingSettings :  IEquatable<RecordingSettings>
     { 
         
@@ -47,7 +26,6 @@ namespace ININ.PureCloudApi.Model
         public RecordingSettings(int? MaxSimultaneousStreams = null)
         {
             this.MaxSimultaneousStreams = MaxSimultaneousStreams;
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/RecordingSettings.cs
             
         }
 
@@ -55,14 +33,8 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Gets or Sets MaxSimultaneousStreams
         /// </summary>
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/FlowActivateRequest.cs
-        /// <value>Change the activated state of the flow definition.  True to activate the flow definition so it can be launched, false to disable the flow.</value>
-        [DataMember(Name="activated", EmitDefaultValue=false)]
-        public bool? Activated { get; set; }
-=======
         [DataMember(Name="maxSimultaneousStreams", EmitDefaultValue=false)]
         public int? MaxSimultaneousStreams { get; set; }
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/RecordingSettings.cs
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -71,13 +43,8 @@ namespace ININ.PureCloudApi.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/FlowActivateRequest.cs
-            sb.Append("class FlowActivateRequest {\n");
-            sb.Append("  Activated: ").Append(Activated).Append("\n");
-=======
             sb.Append("class RecordingSettings {\n");
             sb.Append("  MaxSimultaneousStreams: ").Append(MaxSimultaneousStreams).Append("\n");
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/RecordingSettings.cs
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -105,11 +72,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if RecordingSettings instances are equal
         /// </summary>
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/FlowActivateRequest.cs
-        /// <param name="other">Instance of FlowActivateRequest to be compared</param>
-=======
         /// <param name="other">Instance of RecordingSettings to be compared</param>
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/RecordingSettings.cs
         /// <returns>Boolean</returns>
         public bool Equals(RecordingSettings other)
         {
@@ -136,13 +99,8 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/FlowActivateRequest.cs
-                if (this.Activated != null)
-                    hash = hash * 59 + this.Activated.GetHashCode();
-=======
                 if (this.MaxSimultaneousStreams != null)
                     hash = hash * 59 + this.MaxSimultaneousStreams.GetHashCode();
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/RecordingSettings.cs
                 return hash;
             }
         }

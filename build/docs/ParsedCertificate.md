@@ -1,7 +1,7 @@
 ---
 title: ParsedCertificate
 ---
-## .ParsedCertificate
+## ININ.PureCloudApi.Model.ParsedCertificate
 
 ## Properties
 

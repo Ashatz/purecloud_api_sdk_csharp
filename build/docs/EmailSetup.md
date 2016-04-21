@@ -1,7 +1,7 @@
 ---
 title: EmailSetup
 ---
-## .EmailSetup
+## ININ.PureCloudApi.Model.EmailSetup
 
 ## Properties
 

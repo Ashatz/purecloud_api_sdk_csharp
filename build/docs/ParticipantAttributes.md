@@ -1,7 +1,7 @@
 ---
 title: ParticipantAttributes
 ---
-## .ParticipantAttributes
+## ININ.PureCloudApi.Model.ParticipantAttributes
 
 ## Properties
 

@@ -1,7 +1,7 @@
 ---
 title: EdgeLine
 ---
-## .EdgeLine
+## ININ.PureCloudApi.Model.EdgeLine
 
 ## Properties
 

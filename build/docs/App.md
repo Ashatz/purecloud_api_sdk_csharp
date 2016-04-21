@@ -1,7 +1,7 @@
 ---
 title: App
 ---
-## .App
+## ININ.PureCloudApi.Model.App
 
 ## Properties
 

@@ -1,7 +1,7 @@
 ---
 title: VoiceRateUpdate
 ---
-## .VoiceRateUpdate
+## ININ.PureCloudApi.Model.VoiceRateUpdate
 
 ## Properties
 

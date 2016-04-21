@@ -23,17 +23,6 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
                 public enum StateEnum {
-<<<<<<< HEAD
-            
-            [EnumMember(Value = "ACTIVE")]
-            Active,
-            
-            [EnumMember(Value = "DELETED")]
-            Deleted,
-            
-            [EnumMember(Value = "INACTIVE")]
-            Inactive
-=======
             
             [EnumMember(Value = "ACTIVE")]
             Active,
@@ -43,61 +32,10 @@ namespace ININ.PureCloudApi.Model
             
             [EnumMember(Value = "DELETED")]
             Deleted
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         }
 
         
 
-        /// <summary>
-        /// Gets or Sets State
-        /// </summary>
-        [DataMember(Name="state", EmitDefaultValue=false)]
-        public StateEnum? State { get; set; }
-    
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EdgeGroup" />class.
-        /// </summary>
-        /// <param name="Name">Name.</param>
-        /// <param name="Description">Description.</param>
-        /// <param name="Version">Version.</param>
-        /// <param name="DateCreated">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        /// <param name="DateModified">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        /// <param name="ModifiedBy">ModifiedBy.</param>
-        /// <param name="CreatedBy">CreatedBy.</param>
-        /// <param name="State">State.</param>
-        /// <param name="ModifiedByApp">ModifiedByApp.</param>
-        /// <param name="CreatedByApp">CreatedByApp.</param>
-        /// <param name="Managed">Is this edge group being managed remotely. (default to false).</param>
-        /// <param name="EdgeTrunkBaseAssignment">A trunk base settings assignment of trunkType \&quot;EDGE\&quot; to use for edge-to-edge communication..</param>
-        /// <param name="PhoneTrunkBaseAssignments">Trunk base settings assignments of trunkType \&quot;PHONE\&quot; to inherit to edge logical interfaces for phone communication..</param>
-
-        public EdgeGroup(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, bool? Managed = null, TrunkBaseAssignment EdgeTrunkBaseAssignment = null, List<TrunkBaseAssignment> PhoneTrunkBaseAssignments = null)
-        {
-            this.Name = Name;
-            this.Description = Description;
-            this.Version = Version;
-            this.DateCreated = DateCreated;
-            this.DateModified = DateModified;
-            this.ModifiedBy = ModifiedBy;
-            this.CreatedBy = CreatedBy;
-            this.State = State;
-            this.ModifiedByApp = ModifiedByApp;
-            this.CreatedByApp = CreatedByApp;
-            // use default value if no "Managed" provided
-            if (Managed == null)
-            {
-                this.Managed = false;
-            }
-            else
-            {
-                this.Managed = Managed;
-            }
-            this.EdgeTrunkBaseAssignment = EdgeTrunkBaseAssignment;
-            this.PhoneTrunkBaseAssignments = PhoneTrunkBaseAssignments;
-            
-        }
-
-    
         /// <summary>
         /// Gets or Sets State
         /// </summary>
@@ -234,8 +172,6 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="phoneTrunkBaseAssignments", EmitDefaultValue=false)]
         public List<TrunkBaseAssignment> PhoneTrunkBaseAssignments { get; set; }
     
-<<<<<<< HEAD
-=======
         /// <summary>
         /// Trunk base settings of trunkType \&quot;PHONE\&quot; to inherit to edge logical interface for phone communication.
         /// </summary>
@@ -243,7 +179,6 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="phoneTrunkBases", EmitDefaultValue=false)]
         public List<UriReference> PhoneTrunkBases { get; set; }
     
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// The URI for this object
         /// </summary>
@@ -381,14 +316,11 @@ namespace ININ.PureCloudApi.Model
                     this.PhoneTrunkBaseAssignments != null &&
                     this.PhoneTrunkBaseAssignments.SequenceEqual(other.PhoneTrunkBaseAssignments)
                 ) &&
-<<<<<<< HEAD
-=======
                 (
                     this.PhoneTrunkBases == other.PhoneTrunkBases ||
                     this.PhoneTrunkBases != null &&
                     this.PhoneTrunkBases.SequenceEqual(other.PhoneTrunkBases)
                 ) &&
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
@@ -435,11 +367,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.EdgeTrunkBaseAssignment.GetHashCode();
                 if (this.PhoneTrunkBaseAssignments != null)
                     hash = hash * 59 + this.PhoneTrunkBaseAssignments.GetHashCode();
-<<<<<<< HEAD
-=======
                 if (this.PhoneTrunkBases != null)
                     hash = hash * 59 + this.PhoneTrunkBases.GetHashCode();
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;

@@ -1,7 +1,7 @@
 ---
 title: DomainNetworkRoute
 ---
-## .DomainNetworkRoute
+## ININ.PureCloudApi.Model.DomainNetworkRoute
 
 ## Properties
 

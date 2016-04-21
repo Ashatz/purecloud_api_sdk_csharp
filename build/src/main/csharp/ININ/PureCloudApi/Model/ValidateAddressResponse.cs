@@ -24,11 +24,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Valid">Valid (default to false).</param>
         /// <param name="Response">Response.</param>
 
-<<<<<<< HEAD
-        public ValidateAddressResponse(bool? Valid = null, Response Response = null)
-=======
         public ValidateAddressResponse(bool? Valid = null, SubscriberResponse Response = null)
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         {
             // use default value if no "Valid" provided
             if (Valid == null)
@@ -54,11 +50,7 @@ namespace ININ.PureCloudApi.Model
         /// Gets or Sets Response
         /// </summary>
         [DataMember(Name="response", EmitDefaultValue=false)]
-<<<<<<< HEAD
-        public Response Response { get; set; }
-=======
         public SubscriberResponse Response { get; set; }
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
     
         /// <summary>
         /// Returns the string presentation of the object

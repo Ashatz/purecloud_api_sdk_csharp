@@ -1,7 +1,7 @@
 ---
 title: PolicyErrors
 ---
-## .PolicyErrors
+## ININ.PureCloudApi.Model.PolicyErrors
 
 ## Properties
 

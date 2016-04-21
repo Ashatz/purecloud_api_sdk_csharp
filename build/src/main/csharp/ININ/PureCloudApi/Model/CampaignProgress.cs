@@ -15,25 +15,6 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/PenetrationRate.cs
-    public partial class PenetrationRate :  IEquatable<PenetrationRate>
-    { 
-        
-        /// <summary>
-        /// Initializes a new instance of the <see cref="PenetrationRate" />class.
-        /// </summary>
-        /// <param name="NumberOfContactsCalled">NumberOfContactsCalled.</param>
-        /// <param name="TotalNumberOfContacts">TotalNumberOfContacts.</param>
-        /// <param name="Percentage">Percentage.</param>
-        /// <param name="PenetrationRateId">PenetrationRateId.</param>
-
-        public PenetrationRate(long? NumberOfContactsCalled = null, long? TotalNumberOfContacts = null, long? Percentage = null, PenetrationRateId PenetrationRateId = null)
-        {
-            this.NumberOfContactsCalled = NumberOfContactsCalled;
-            this.TotalNumberOfContacts = TotalNumberOfContacts;
-            this.Percentage = Percentage;
-            this.PenetrationRateId = PenetrationRateId;
-=======
     public partial class CampaignProgress :  IEquatable<CampaignProgress>
     { 
         
@@ -53,13 +34,10 @@ namespace ININ.PureCloudApi.Model
             this.NumberOfContactsCalled = NumberOfContactsCalled;
             this.TotalNumberOfContacts = TotalNumberOfContacts;
             this.Percentage = Percentage;
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/CampaignProgress.cs
             
         }
 
     
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/PenetrationRate.cs
-=======
         /// <summary>
         /// Gets or Sets Campaign
         /// </summary>
@@ -72,7 +50,6 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="contactList", EmitDefaultValue=false)]
         public UriReference ContactList { get; set; }
     
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/CampaignProgress.cs
         /// <summary>
         /// Gets or Sets NumberOfContactsCalled
         /// </summary>
@@ -91,15 +68,6 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="percentage", EmitDefaultValue=false)]
         public long? Percentage { get; set; }
     
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/PenetrationRate.cs
-        /// <summary>
-        /// Gets or Sets PenetrationRateId
-        /// </summary>
-        [DataMember(Name="penetrationRateId", EmitDefaultValue=false)]
-        public PenetrationRateId PenetrationRateId { get; set; }
-    
-=======
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/CampaignProgress.cs
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -113,10 +81,6 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  NumberOfContactsCalled: ").Append(NumberOfContactsCalled).Append("\n");
             sb.Append("  TotalNumberOfContacts: ").Append(TotalNumberOfContacts).Append("\n");
             sb.Append("  Percentage: ").Append(Percentage).Append("\n");
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/PenetrationRate.cs
-            sb.Append("  PenetrationRateId: ").Append(PenetrationRateId).Append("\n");
-=======
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/CampaignProgress.cs
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -144,11 +108,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if CampaignProgress instances are equal
         /// </summary>
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/PenetrationRate.cs
-        /// <param name="other">Instance of PenetrationRate to be compared</param>
-=======
         /// <param name="other">Instance of CampaignProgress to be compared</param>
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/CampaignProgress.cs
         /// <returns>Boolean</returns>
         public bool Equals(CampaignProgress other)
         {
@@ -157,8 +117,6 @@ namespace ININ.PureCloudApi.Model
                 return false;
 
             return true &&
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/PenetrationRate.cs
-=======
                 (
                     this.Campaign == other.Campaign ||
                     this.Campaign != null &&
@@ -169,7 +127,6 @@ namespace ININ.PureCloudApi.Model
                     this.ContactList != null &&
                     this.ContactList.Equals(other.ContactList)
                 ) &&
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/CampaignProgress.cs
                 (
                     this.NumberOfContactsCalled == other.NumberOfContactsCalled ||
                     this.NumberOfContactsCalled != null &&
@@ -184,14 +141,6 @@ namespace ININ.PureCloudApi.Model
                     this.Percentage == other.Percentage ||
                     this.Percentage != null &&
                     this.Percentage.Equals(other.Percentage)
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/PenetrationRate.cs
-                ) &&
-                (
-                    this.PenetrationRateId == other.PenetrationRateId ||
-                    this.PenetrationRateId != null &&
-                    this.PenetrationRateId.Equals(other.PenetrationRateId)
-=======
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/CampaignProgress.cs
                 );
         }
 
@@ -206,24 +155,16 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/PenetrationRate.cs
-=======
                 if (this.Campaign != null)
                     hash = hash * 59 + this.Campaign.GetHashCode();
                 if (this.ContactList != null)
                     hash = hash * 59 + this.ContactList.GetHashCode();
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/CampaignProgress.cs
                 if (this.NumberOfContactsCalled != null)
                     hash = hash * 59 + this.NumberOfContactsCalled.GetHashCode();
                 if (this.TotalNumberOfContacts != null)
                     hash = hash * 59 + this.TotalNumberOfContacts.GetHashCode();
                 if (this.Percentage != null)
                     hash = hash * 59 + this.Percentage.GetHashCode();
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/PenetrationRate.cs
-                if (this.PenetrationRateId != null)
-                    hash = hash * 59 + this.PenetrationRateId.GetHashCode();
-=======
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/CampaignProgress.cs
                 return hash;
             }
         }

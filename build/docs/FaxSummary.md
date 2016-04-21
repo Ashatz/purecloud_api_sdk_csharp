@@ -1,7 +1,7 @@
 ---
 title: FaxSummary
 ---
-## .FaxSummary
+## ININ.PureCloudApi.Model.FaxSummary
 
 ## Properties
 

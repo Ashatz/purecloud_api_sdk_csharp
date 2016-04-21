@@ -1,7 +1,7 @@
 ---
 title: ThirdPartySubscription
 ---
-## .ThirdPartySubscription
+## ININ.PureCloudApi.Model.ThirdPartySubscription
 
 ## Properties
 

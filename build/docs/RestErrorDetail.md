@@ -1,7 +1,7 @@
 ---
 title: RestErrorDetail
 ---
-## .RestErrorDetail
+## ININ.PureCloudApi.Model.RestErrorDetail
 
 ## Properties
 

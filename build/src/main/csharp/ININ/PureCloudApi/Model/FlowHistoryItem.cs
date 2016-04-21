@@ -48,17 +48,10 @@ namespace ININ.PureCloudApi.Model
             
             [EnumMember(Value = "WORK_ITEM_INSTANCE_ACQUIRE")]
             WorkItemInstanceAcquire,
-<<<<<<< HEAD
             
             [EnumMember(Value = "WORK_ITEM_INSTANCE_SUBMIT")]
             WorkItemInstanceSubmit,
             
-=======
-            
-            [EnumMember(Value = "WORK_ITEM_INSTANCE_SUBMIT")]
-            WorkItemInstanceSubmit,
-            
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             [EnumMember(Value = "WORK_ITEM_INSTANCE_OFFER")]
             WorkItemInstanceOffer,
             
@@ -74,63 +67,6 @@ namespace ININ.PureCloudApi.Model
 
         
 
-        /// <summary>
-        /// The type of the history event being reported.
-        /// </summary>
-        /// <value>The type of the history event being reported.</value>
-        [DataMember(Name="historyEventType", EmitDefaultValue=false)]
-        public HistoryEventTypeEnum? HistoryEventType { get; set; }
-    
-        /// <summary>
-        /// Initializes a new instance of the <see cref="FlowHistoryItem" />class.
-        /// </summary>
-        /// <param name="HistoryEventTime">The time when the history item occurred. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (required).</param>
-        /// <param name="State">The State sequence that applies to the history event, if applicable..</param>
-        /// <param name="WorkItem">Information about the work item associated with the history event, if applicable..</param>
-        /// <param name="User">The user associated with this history event, if applicable..</param>
-        /// <param name="Queue">The queue associated with this history event, if applicable..</param>
-        /// <param name="HistoryEventData">Data elements associated with this history event..</param>
-        /// <param name="HistoryEventType">The type of the history event being reported. (required).</param>
-        /// <param name="Success">Whether or not the flow item was successful (if a &#39;notification&#39; event this will default to true) (required) (default to false).</param>
-
-        public FlowHistoryItem(DateTime? HistoryEventTime = null, FlowState State = null, WorkItem WorkItem = null, User User = null, Queue Queue = null, List<DataItem> HistoryEventData = null, HistoryEventTypeEnum? HistoryEventType = null, bool? Success = null)
-        {
-            // to ensure "HistoryEventTime" is required (not null)
-            if (HistoryEventTime == null)
-            {
-                throw new InvalidDataException("HistoryEventTime is a required property for FlowHistoryItem and cannot be null");
-            }
-            else
-            {
-                this.HistoryEventTime = HistoryEventTime;
-            }
-            // to ensure "HistoryEventType" is required (not null)
-            if (HistoryEventType == null)
-            {
-                throw new InvalidDataException("HistoryEventType is a required property for FlowHistoryItem and cannot be null");
-            }
-            else
-            {
-                this.HistoryEventType = HistoryEventType;
-            }
-            // to ensure "Success" is required (not null)
-            if (Success == null)
-            {
-                throw new InvalidDataException("Success is a required property for FlowHistoryItem and cannot be null");
-            }
-            else
-            {
-                this.Success = Success;
-            }
-            this.State = State;
-            this.WorkItem = WorkItem;
-            this.User = User;
-            this.Queue = Queue;
-            this.HistoryEventData = HistoryEventData;
-            
-        }
-
-    
         /// <summary>
         /// The type of the history event being reported.
         /// </summary>

@@ -1,7 +1,7 @@
 ---
 title: AcwSettings
 ---
-## .AcwSettings
+## ININ.PureCloudApi.Model.AcwSettings
 
 ## Properties
 

@@ -14,8 +14,6 @@ namespace ININ.PureCloudApi.Api
     public interface ISearchApi
     {
         #region Synchronous Operations
-<<<<<<< HEAD
-=======
         /// <summary>
         /// Search using q64
         /// </summary>
@@ -185,7 +183,6 @@ namespace ININ.PureCloudApi.Api
         /// <returns>Task of JsonNodeSearchResponse</returns>
         System.Threading.Tasks.Task<JsonNodeSearchResponse> GetSearch_0Async (string q64 = null, List<string> expand = null);
 
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// Search using q64
         /// </summary>
@@ -193,17 +190,10 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-<<<<<<< HEAD
-        /// <param name="body">Search request options (optional)</param>
-        /// <returns>ChatSearchListing</returns>
-        ChatSearchListing SearchChatsPost (ChatSearchRequest body = null);
-
-=======
         /// <param name="q64"> (optional)</param>
         /// <param name="expand"> (optional)</param>
         /// <returns>Task of ApiResponse (JsonNodeSearchResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<JsonNodeSearchResponse>> GetSearch_0AsyncWithHttpInfo (string q64 = null, List<string> expand = null);
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// Search using q64
         /// </summary>
@@ -211,19 +201,11 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-<<<<<<< HEAD
-        /// <param name="body">Search request options (optional)</param>
-        /// <returns>ApiResponse of ChatSearchListing</returns>
-        ApiResponse<ChatSearchListing> SearchChatsPostWithHttpInfo (ChatSearchRequest body = null);
-        #endregion Synchronous Operations
-        #region Asynchronous Operations
-=======
         /// <param name="q64"> (optional)</param>
         /// <param name="expand"> (optional)</param>
         /// <returns>Task of UsersSearchResponse</returns>
         System.Threading.Tasks.Task<UsersSearchResponse> GetSearch_1Async (string q64 = null, List<string> expand = null);
 
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// Search using q64
         /// </summary>
@@ -243,13 +225,8 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options (optional)</param>
-<<<<<<< HEAD
-        /// <returns>Task of ChatSearchListing</returns>
-        System.Threading.Tasks.Task<ChatSearchListing> SearchChatsPostAsync (ChatSearchRequest body = null);
-=======
         /// <returns>Task of GroupsSearchResponse</returns>
         System.Threading.Tasks.Task<GroupsSearchResponse> PostSearchAsync (SearchRequest body = null);
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
         /// <summary>
         /// Search
@@ -269,10 +246,6 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options (optional)</param>
-<<<<<<< HEAD
-        /// <returns>Task of ApiResponse (ChatSearchListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ChatSearchListing>> SearchChatsPostAsyncWithHttpInfo (ChatSearchRequest body = null);
-=======
         /// <returns>Task of JsonNodeSearchResponse</returns>
         System.Threading.Tasks.Task<JsonNodeSearchResponse> PostSearch_0Async (SearchRequest body = null);
 
@@ -307,7 +280,6 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">Search request options (optional)</param>
         /// <returns>Task of ApiResponse (UsersSearchResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<UsersSearchResponse>> PostSearch_1AsyncWithHttpInfo (SearchRequest body = null);
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         #endregion Asynchronous Operations
     }
 
@@ -402,20 +374,12 @@ namespace ININ.PureCloudApi.Api
         /// Search using q64 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-<<<<<<< HEAD
-        /// <param name="body">Search request options (optional)</param>
-        /// <returns>ChatSearchListing</returns>
-        public ChatSearchListing SearchChatsPost (ChatSearchRequest body = null)
-        {
-             ApiResponse<ChatSearchListing> localVarResponse = SearchChatsPostWithHttpInfo(body);
-=======
         /// <param name="q64"> (optional)</param>
         /// <param name="expand"> (optional)</param>
         /// <returns>GroupsSearchResponse</returns>
         public GroupsSearchResponse GetSearch (string q64 = null, List<string> expand = null)
         {
              ApiResponse<GroupsSearchResponse> localVarResponse = GetSearchWithHttpInfo(q64, expand);
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
         }
 
@@ -423,14 +387,6 @@ namespace ININ.PureCloudApi.Api
         /// Search using q64 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-<<<<<<< HEAD
-        /// <param name="body">Search request options (optional)</param>
-        /// <returns>ApiResponse of ChatSearchListing</returns>
-        public ApiResponse< ChatSearchListing > SearchChatsPostWithHttpInfo (ChatSearchRequest body = null)
-        {
-
-            var localVarPath = "/api/v1/search/chats";
-=======
         /// <param name="q64"> (optional)</param>
         /// <param name="expand"> (optional)</param>
         /// <returns>ApiResponse of GroupsSearchResponse</returns>
@@ -438,7 +394,6 @@ namespace ININ.PureCloudApi.Api
         {
 
             var localVarPath = "/api/v2/groups/search";
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -463,18 +418,6 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-<<<<<<< HEAD
-            if (body.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = body; // byte array
-            }
-
-            // authentication (PureCloud Auth) required
-=======
             if (q64 != null) localVarQueryParams.Add("q64", Configuration.ApiClient.ParameterToString(q64)); // query parameter
             if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
 
@@ -556,18 +499,12 @@ namespace ININ.PureCloudApi.Api
             if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
 
             // authentication (PureCloud Auth) required
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
 
-<<<<<<< HEAD
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-=======
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
@@ -647,21 +584,11 @@ namespace ININ.PureCloudApi.Api
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-<<<<<<< HEAD
-                throw new ApiException (localVarStatusCode, "Error calling SearchChatsPost: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling SearchChatsPost: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<ChatSearchListing>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ChatSearchListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ChatSearchListing)));
-=======
                 throw new ApiException (localVarStatusCode, "Error calling GetSearch_0: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetSearch_0: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -669,7 +596,6 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<JsonNodeSearchResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (JsonNodeSearchResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(JsonNodeSearchResponse)));
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
@@ -677,20 +603,12 @@ namespace ININ.PureCloudApi.Api
         /// Search using q64 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-<<<<<<< HEAD
-        /// <param name="body">Search request options (optional)</param>
-        /// <returns>Task of ChatSearchListing</returns>
-        public async System.Threading.Tasks.Task<ChatSearchListing> SearchChatsPostAsync (ChatSearchRequest body = null)
-        {
-             ApiResponse<ChatSearchListing> localVarResponse = await SearchChatsPostAsyncWithHttpInfo(body);
-=======
         /// <param name="q64"> (optional)</param>
         /// <param name="expand"> (optional)</param>
         /// <returns>Task of JsonNodeSearchResponse</returns>
         public async System.Threading.Tasks.Task<JsonNodeSearchResponse> GetSearch_0Async (string q64 = null, List<string> expand = null)
         {
              ApiResponse<JsonNodeSearchResponse> localVarResponse = await GetSearch_0AsyncWithHttpInfo(q64, expand);
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
 
         }
@@ -699,14 +617,6 @@ namespace ININ.PureCloudApi.Api
         /// Search using q64 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-<<<<<<< HEAD
-        /// <param name="body">Search request options (optional)</param>
-        /// <returns>Task of ApiResponse (ChatSearchListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ChatSearchListing>> SearchChatsPostAsyncWithHttpInfo (ChatSearchRequest body = null)
-        {
-
-            var localVarPath = "/api/v1/search/chats";
-=======
         /// <param name="q64"> (optional)</param>
         /// <param name="expand"> (optional)</param>
         /// <returns>Task of ApiResponse (JsonNodeSearchResponse)</returns>
@@ -714,7 +624,6 @@ namespace ININ.PureCloudApi.Api
         {
 
             var localVarPath = "/api/v2/search";
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -739,8 +648,6 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-<<<<<<< HEAD
-=======
             if (q64 != null) localVarQueryParams.Add("q64", Configuration.ApiClient.ParameterToString(q64)); // query parameter
             if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
 
@@ -1049,7 +956,6 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -1058,10 +964,6 @@ namespace ININ.PureCloudApi.Api
             {
                 localVarPostBody = body; // byte array
             }
-<<<<<<< HEAD
-
-            // authentication (PureCloud Auth) required
-=======
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -1305,14 +1207,11 @@ namespace ININ.PureCloudApi.Api
             }
 
             // authentication (PureCloud Auth) required
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-<<<<<<< HEAD
-=======
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -1394,7 +1293,6 @@ namespace ININ.PureCloudApi.Api
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -1404,15 +1302,6 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-<<<<<<< HEAD
-                throw new ApiException (localVarStatusCode, "Error calling SearchChatsPost: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling SearchChatsPost: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<ChatSearchListing>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ChatSearchListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ChatSearchListing)));
-=======
                 throw new ApiException (localVarStatusCode, "Error calling PostSearch_1: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostSearch_1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
@@ -1420,7 +1309,6 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<UsersSearchResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (UsersSearchResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UsersSearchResponse)));
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 

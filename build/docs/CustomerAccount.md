@@ -1,7 +1,7 @@
 ---
 title: CustomerAccount
 ---
-## .CustomerAccount
+## ININ.PureCloudApi.Model.CustomerAccount
 
 ## Properties
 
@@ -13,7 +13,7 @@ title: CustomerAccount
 | **OrgLegalName** | **string** | The organization legal name. | |
 | **OrgPhone** | **string** | The organization phone number. | |
 | **IsTaxExempt** | **bool?** | Indicates whether the account is tax exempt. | [default to false]|
-| **BillingAddress** | [**Address**](Address.html) | The account billing address. | |
+| **BillingAddress** | [**BillingAddress**](BillingAddress.html) | The account billing address. | |
 | **Currency** | **string** | The account currency. | |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}

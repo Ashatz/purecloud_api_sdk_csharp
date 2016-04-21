@@ -15,21 +15,6 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/DialerPlaceCallCommand.cs
-    public partial class DialerPlaceCallCommand :  IEquatable<DialerPlaceCallCommand>
-    { 
-        
-        /// <summary>
-        /// Initializes a new instance of the <see cref="DialerPlaceCallCommand" />class.
-        /// </summary>
-        /// <param name="CallId">CallId.</param>
-        /// <param name="PhoneNumber">PhoneNumber.</param>
-
-        public DialerPlaceCallCommand(string CallId = null, string PhoneNumber = null)
-        {
-            this.CallId = CallId;
-            this.PhoneNumber = PhoneNumber;
-=======
     public partial class AggregationRange :  IEquatable<AggregationRange>
     { 
         
@@ -43,7 +28,6 @@ namespace ININ.PureCloudApi.Model
         {
             this.Gte = Gte;
             this.Lt = Lt;
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/AggregationRange.cs
             
         }
 
@@ -51,26 +35,16 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Greater than or equal to
         /// </summary>
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/DialerPlaceCallCommand.cs
-        [DataMember(Name="callId", EmitDefaultValue=false)]
-        public string CallId { get; set; }
-=======
         /// <value>Greater than or equal to</value>
         [DataMember(Name="gte", EmitDefaultValue=false)]
         public double? Gte { get; set; }
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/AggregationRange.cs
     
         /// <summary>
         /// Less than
         /// </summary>
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/DialerPlaceCallCommand.cs
-        [DataMember(Name="phoneNumber", EmitDefaultValue=false)]
-        public string PhoneNumber { get; set; }
-=======
         /// <value>Less than</value>
         [DataMember(Name="lt", EmitDefaultValue=false)]
         public double? Lt { get; set; }
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/AggregationRange.cs
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -79,15 +53,9 @@ namespace ININ.PureCloudApi.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/DialerPlaceCallCommand.cs
-            sb.Append("class DialerPlaceCallCommand {\n");
-            sb.Append("  CallId: ").Append(CallId).Append("\n");
-            sb.Append("  PhoneNumber: ").Append(PhoneNumber).Append("\n");
-=======
             sb.Append("class AggregationRange {\n");
             sb.Append("  Gte: ").Append(Gte).Append("\n");
             sb.Append("  Lt: ").Append(Lt).Append("\n");
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/AggregationRange.cs
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -115,11 +83,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if AggregationRange instances are equal
         /// </summary>
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/DialerPlaceCallCommand.cs
-        /// <param name="other">Instance of DialerPlaceCallCommand to be compared</param>
-=======
         /// <param name="other">Instance of AggregationRange to be compared</param>
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/AggregationRange.cs
         /// <returns>Boolean</returns>
         public bool Equals(AggregationRange other)
         {
@@ -129,15 +93,9 @@ namespace ININ.PureCloudApi.Model
 
             return true &&
                 (
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/DialerPlaceCallCommand.cs
-                    this.CallId == other.CallId ||
-                    this.CallId != null &&
-                    this.CallId.Equals(other.CallId)
-=======
                     this.Gte == other.Gte ||
                     this.Gte != null &&
                     this.Gte.Equals(other.Gte)
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/AggregationRange.cs
                 ) &&
                 (
                     this.Lt == other.Lt ||
@@ -157,17 +115,10 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/DialerPlaceCallCommand.cs
-                if (this.CallId != null)
-                    hash = hash * 59 + this.CallId.GetHashCode();
-                if (this.PhoneNumber != null)
-                    hash = hash * 59 + this.PhoneNumber.GetHashCode();
-=======
                 if (this.Gte != null)
                     hash = hash * 59 + this.Gte.GetHashCode();
                 if (this.Lt != null)
                     hash = hash * 59 + this.Lt.GetHashCode();
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/AggregationRange.cs
                 return hash;
             }
         }

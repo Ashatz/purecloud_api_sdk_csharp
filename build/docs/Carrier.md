@@ -1,7 +1,7 @@
 ---
 title: Carrier
 ---
-## .Carrier
+## ININ.PureCloudApi.Model.Carrier
 
 ## Properties
 

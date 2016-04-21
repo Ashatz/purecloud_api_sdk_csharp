@@ -1,7 +1,7 @@
 ---
 title: EmbeddedSignatureView
 ---
-## .EmbeddedSignatureView
+## ININ.PureCloudApi.Model.EmbeddedSignatureView
 
 ## Properties
 

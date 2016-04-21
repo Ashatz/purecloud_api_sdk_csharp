@@ -1,7 +1,7 @@
 ---
 title: Parameter
 ---
-## .Parameter
+## ININ.PureCloudApi.Model.Parameter
 
 ## Properties
 

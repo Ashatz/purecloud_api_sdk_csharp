@@ -1,7 +1,7 @@
 ---
 title: InboundDomain
 ---
-## .InboundDomain
+## ININ.PureCloudApi.Model.InboundDomain
 
 ## Properties
 

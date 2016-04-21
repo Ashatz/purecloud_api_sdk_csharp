@@ -1,7 +1,7 @@
 ---
 title: ServerDate
 ---
-## .ServerDate
+## ININ.PureCloudApi.Model.ServerDate
 
 ## Properties
 

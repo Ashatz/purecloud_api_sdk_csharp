@@ -1,7 +1,7 @@
 ---
 title: EvaluationAssignment
 ---
-## .EvaluationAssignment
+## ININ.PureCloudApi.Model.EvaluationAssignment
 
 ## Properties
 

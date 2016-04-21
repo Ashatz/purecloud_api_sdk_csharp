@@ -76,12 +76,14 @@ namespace ININ.PureCloudApi.Model
         }
 
         
+
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
     
+
         /// <summary>
         /// Gets or Sets _Operator
         /// </summary>

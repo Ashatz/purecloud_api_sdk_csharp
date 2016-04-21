@@ -1,7 +1,7 @@
 ---
 title: EdgeVersionInformation
 ---
-## .EdgeVersionInformation
+## ININ.PureCloudApi.Model.EdgeVersionInformation
 
 ## Properties
 

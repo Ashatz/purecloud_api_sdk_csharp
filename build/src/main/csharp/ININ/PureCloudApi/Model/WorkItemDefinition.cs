@@ -24,15 +24,9 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Id">The configuration ID for this workItem (required).</param>
         /// <param name="Name">Name.</param>
         /// <param name="CommandCategories">The commands that can be performed on this work item.</param>
-<<<<<<< HEAD
-        /// <param name="DataElements">The simple work item form data elements to present for this work item.</param>
-
-        public WorkItemDefinition(string Id = null, string Name = null, List<WorkItemCommandGroup> CommandCategories = null, List<BackendWorkItemDataElement> DataElements = null)
-=======
         /// <param name="Form">The simple work item form containging the control to present for this work item.</param>
 
         public WorkItemDefinition(string Id = null, string Name = null, List<WorkItemCommandGroup> CommandCategories = null, Form Form = null)
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         {
             // to ensure "Id" is required (not null)
             if (Id == null)
@@ -45,11 +39,7 @@ namespace ININ.PureCloudApi.Model
             }
             this.Name = Name;
             this.CommandCategories = CommandCategories;
-<<<<<<< HEAD
-            this.DataElements = DataElements;
-=======
             this.Form = Form;
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
@@ -77,15 +67,9 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// The simple work item form containging the control to present for this work item
         /// </summary>
-<<<<<<< HEAD
-        /// <value>The simple work item form data elements to present for this work item</value>
-        [DataMember(Name="dataElements", EmitDefaultValue=false)]
-        public List<BackendWorkItemDataElement> DataElements { get; set; }
-=======
         /// <value>The simple work item form containging the control to present for this work item</value>
         [DataMember(Name="form", EmitDefaultValue=false)]
         public Form Form { get; set; }
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -98,11 +82,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  CommandCategories: ").Append(CommandCategories).Append("\n");
-<<<<<<< HEAD
-            sb.Append("  DataElements: ").Append(DataElements).Append("\n");
-=======
             sb.Append("  Form: ").Append(Form).Append("\n");
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -178,13 +158,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.Name.GetHashCode();
                 if (this.CommandCategories != null)
                     hash = hash * 59 + this.CommandCategories.GetHashCode();
-<<<<<<< HEAD
-                if (this.DataElements != null)
-                    hash = hash * 59 + this.DataElements.GetHashCode();
-=======
                 if (this.Form != null)
                     hash = hash * 59 + this.Form.GetHashCode();
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 return hash;
             }
         }

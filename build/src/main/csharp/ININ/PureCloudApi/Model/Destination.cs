@@ -21,21 +21,12 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Destination" />class.
         /// </summary>
-<<<<<<< HEAD
-        /// <param name="AccountCodeDigits">AccountCodeDigits.</param>
-        /// <param name="PostConnectDigits">PostConnectDigits.</param>
-=======
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <param name="Address">Address or phone number. (required).</param>
         /// <param name="Name">Name.</param>
         /// <param name="UserId">UserId.</param>
         /// <param name="QueueId">QueueId.</param>
 
-<<<<<<< HEAD
-        public Destination(string AccountCodeDigits = null, string PostConnectDigits = null, string Address = null, string Name = null, string UserId = null, string QueueId = null)
-=======
         public Destination(string Address = null, string Name = null, string UserId = null, string QueueId = null)
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         {
             // to ensure "Address" is required (not null)
             if (Address == null)
@@ -46,11 +37,6 @@ namespace ININ.PureCloudApi.Model
             {
                 this.Address = Address;
             }
-<<<<<<< HEAD
-            this.AccountCodeDigits = AccountCodeDigits;
-            this.PostConnectDigits = PostConnectDigits;
-=======
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             this.Name = Name;
             this.UserId = UserId;
             this.QueueId = QueueId;
@@ -58,21 +44,6 @@ namespace ININ.PureCloudApi.Model
         }
 
     
-<<<<<<< HEAD
-        /// <summary>
-        /// Gets or Sets AccountCodeDigits
-        /// </summary>
-        [DataMember(Name="accountCodeDigits", EmitDefaultValue=false)]
-        public string AccountCodeDigits { get; set; }
-    
-        /// <summary>
-        /// Gets or Sets PostConnectDigits
-        /// </summary>
-        [DataMember(Name="postConnectDigits", EmitDefaultValue=false)]
-        public string PostConnectDigits { get; set; }
-    
-=======
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// Address or phone number.
         /// </summary>
@@ -146,19 +117,6 @@ namespace ININ.PureCloudApi.Model
                 return false;
 
             return true &&
-<<<<<<< HEAD
-                (
-                    this.AccountCodeDigits == other.AccountCodeDigits ||
-                    this.AccountCodeDigits != null &&
-                    this.AccountCodeDigits.Equals(other.AccountCodeDigits)
-                ) &&
-                (
-                    this.PostConnectDigits == other.PostConnectDigits ||
-                    this.PostConnectDigits != null &&
-                    this.PostConnectDigits.Equals(other.PostConnectDigits)
-                ) &&
-=======
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 (
                     this.Address == other.Address ||
                     this.Address != null &&
@@ -192,13 +150,6 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-<<<<<<< HEAD
-                if (this.AccountCodeDigits != null)
-                    hash = hash * 59 + this.AccountCodeDigits.GetHashCode();
-                if (this.PostConnectDigits != null)
-                    hash = hash * 59 + this.PostConnectDigits.GetHashCode();
-=======
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 if (this.Address != null)
                     hash = hash * 59 + this.Address.GetHashCode();
                 if (this.Name != null)

@@ -1,7 +1,7 @@
 ---
 title: Order
 ---
-## .Order
+## ININ.PureCloudApi.Model.Order
 
 ## Properties
 

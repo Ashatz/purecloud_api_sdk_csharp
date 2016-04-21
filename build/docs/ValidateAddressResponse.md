@@ -1,14 +1,14 @@
 ---
 title: ValidateAddressResponse
 ---
-## .ValidateAddressResponse
+## ININ.PureCloudApi.Model.ValidateAddressResponse
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Valid** | **bool?** |  | [optional] [default to false]|
-| **Response** | [**Response**](Response.html) |  | [optional] |
+| **Response** | [**SubscriberResponse**](SubscriberResponse.html) |  | [optional] |
 {: class="table table-striped"}
 
 

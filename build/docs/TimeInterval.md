@@ -1,7 +1,7 @@
 ---
 title: TimeInterval
 ---
-## .TimeInterval
+## ININ.PureCloudApi.Model.TimeInterval
 
 ## Properties
 

@@ -1,7 +1,7 @@
 ---
 title: ContactSalesResponse
 ---
-## .ContactSalesResponse
+## ININ.PureCloudApi.Model.ContactSalesResponse
 
 ## Properties
 

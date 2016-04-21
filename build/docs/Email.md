@@ -1,7 +1,7 @@
 ---
 title: Email
 ---
-## .Email
+## ININ.PureCloudApi.Model.Email
 
 ## Properties
 
@@ -18,6 +18,8 @@ title: Email
 | **ErrorInfo** | [**ErrorBody**](ErrorBody.html) |  | [optional] |
 | **DisconnectType** | **string** |  | [optional] |
 | **StartHoldTime** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
+| **ConnectedTime** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
+| **DisconnectedTime** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 {: class="table table-striped"}
 
 

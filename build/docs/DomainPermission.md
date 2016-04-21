@@ -1,7 +1,7 @@
 ---
 title: DomainPermission
 ---
-## .DomainPermission
+## ININ.PureCloudApi.Model.DomainPermission
 
 ## Properties
 
@@ -11,7 +11,6 @@ title: DomainPermission
 | **EntityType** | **string** |  | [optional] |
 | **Action** | **string** |  | [optional] |
 | **Label** | **string** |  | [optional] |
-| **Licenses** | **List&lt;string&gt;** |  | [optional] |
 | **AllowsConditions** | **bool?** |  | [optional] [default to false]|
 {: class="table table-striped"}
 

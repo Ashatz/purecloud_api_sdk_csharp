@@ -1,7 +1,7 @@
 ---
 title: ContentQueryRequest
 ---
-## .ContentQueryRequest
+## ININ.PureCloudApi.Model.ContentQueryRequest
 
 ## Properties
 
@@ -13,6 +13,7 @@ title: ContentQueryRequest
 | **FacetNameRequests** | **List&lt;string&gt;** |  | [optional] |
 | **Sort** | [**List&lt;ContentSortItem&gt;**](ContentSortItem.html) |  | [optional] |
 | **Filters** | [**List&lt;ContentFacetFilterItem&gt;**](ContentFacetFilterItem.html) |  | [optional] |
+| **AttributeFilters** | [**List&lt;ContentAttributeFilterItem&gt;**](ContentAttributeFilterItem.html) |  | [optional] |
 {: class="table table-striped"}
 
 

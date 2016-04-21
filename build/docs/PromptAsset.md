@@ -1,7 +1,7 @@
 ---
 title: PromptAsset
 ---
-## .PromptAsset
+## ININ.PureCloudApi.Model.PromptAsset
 
 ## Properties
 
@@ -15,6 +15,8 @@ title: PromptAsset
 | **TtsString** | **string** |  | [optional] |
 | **UploadStatus** | **string** |  | [optional] |
 | **UploadUri** | **string** |  | [optional] |
+| **LanguageDefault** | **bool?** |  | [optional] [default to false]|
+| **Tags** | **Dictionary&lt;string, string&gt;** |  | [optional] |
 | **DurationSeconds** | **double?** |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}

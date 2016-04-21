@@ -15,29 +15,6 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/ChatSearchItem.cs
-    public partial class ChatSearchItem :  IEquatable<ChatSearchItem>
-    { 
-        
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ChatSearchItem" />class.
-        /// </summary>
-        /// <param name="Id">Id.</param>
-        /// <param name="Name">Name.</param>
-        /// <param name="CreatedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        /// <param name="From">From.</param>
-        /// <param name="To">To.</param>
-        /// <param name="Body">Body.</param>
-
-        public ChatSearchItem(string Id = null, string Name = null, DateTime? CreatedDate = null, ChatParticipant From = null, ChatParticipant To = null, string Body = null)
-        {
-            this.Id = Id;
-            this.Name = Name;
-            this.CreatedDate = CreatedDate;
-            this.From = From;
-            this.To = To;
-            this.Body = Body;
-=======
     public partial class Note :  IEquatable<Note>
     { 
         
@@ -55,7 +32,6 @@ namespace ININ.PureCloudApi.Model
             this.NoteText = NoteText;
             this.ModifyDate = ModifyDate;
             this.CreateDate = CreateDate;
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/Note.cs
             
         }
 
@@ -65,11 +41,7 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/ChatSearchItem.cs
-        public string Id { get; set; }
-=======
         public string Id { get; private set; }
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/Note.cs
     
         /// <summary>
         /// Gets or Sets Name
@@ -77,50 +49,25 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
     
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/ChatSearchItem.cs
-        /// <summary>
-        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
-        /// </summary>
-        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
-        [DataMember(Name="createdDate", EmitDefaultValue=false)]
-        public DateTime? CreatedDate { get; set; }
-    
-=======
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/Note.cs
         /// <summary>
         /// Gets or Sets NoteText
         /// </summary>
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/ChatSearchItem.cs
-        [DataMember(Name="from", EmitDefaultValue=false)]
-        public ChatParticipant From { get; set; }
-=======
         [DataMember(Name="noteText", EmitDefaultValue=false)]
         public string NoteText { get; set; }
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/Note.cs
     
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/ChatSearchItem.cs
-        [DataMember(Name="to", EmitDefaultValue=false)]
-        public ChatParticipant To { get; set; }
-=======
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="modifyDate", EmitDefaultValue=false)]
         public DateTime? ModifyDate { get; set; }
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/Note.cs
     
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/ChatSearchItem.cs
-        [DataMember(Name="body", EmitDefaultValue=false)]
-        public string Body { get; set; }
-=======
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="createDate", EmitDefaultValue=false)]
         public DateTime? CreateDate { get; set; }
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/Note.cs
     
         /// <summary>
         /// The URI for this object
@@ -170,11 +117,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if Note instances are equal
         /// </summary>
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/ChatSearchItem.cs
-        /// <param name="other">Instance of ChatSearchItem to be compared</param>
-=======
         /// <param name="other">Instance of Note to be compared</param>
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/Note.cs
         /// <returns>Boolean</returns>
         public bool Equals(Note other)
         {
@@ -194,26 +137,6 @@ namespace ININ.PureCloudApi.Model
                     this.Name.Equals(other.Name)
                 ) &&
                 (
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/ChatSearchItem.cs
-                    this.CreatedDate == other.CreatedDate ||
-                    this.CreatedDate != null &&
-                    this.CreatedDate.Equals(other.CreatedDate)
-                ) &&
-                (
-                    this.From == other.From ||
-                    this.From != null &&
-                    this.From.Equals(other.From)
-                ) &&
-                (
-                    this.To == other.To ||
-                    this.To != null &&
-                    this.To.Equals(other.To)
-                ) &&
-                (
-                    this.Body == other.Body ||
-                    this.Body != null &&
-                    this.Body.Equals(other.Body)
-=======
                     this.NoteText == other.NoteText ||
                     this.NoteText != null &&
                     this.NoteText.Equals(other.NoteText)
@@ -227,7 +150,6 @@ namespace ININ.PureCloudApi.Model
                     this.CreateDate == other.CreateDate ||
                     this.CreateDate != null &&
                     this.CreateDate.Equals(other.CreateDate)
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/Note.cs
                 ) &&
                 (
                     this.SelfUri == other.SelfUri ||
@@ -251,23 +173,12 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.Id.GetHashCode();
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/ChatSearchItem.cs
-                if (this.CreatedDate != null)
-                    hash = hash * 59 + this.CreatedDate.GetHashCode();
-                if (this.From != null)
-                    hash = hash * 59 + this.From.GetHashCode();
-                if (this.To != null)
-                    hash = hash * 59 + this.To.GetHashCode();
-                if (this.Body != null)
-                    hash = hash * 59 + this.Body.GetHashCode();
-=======
                 if (this.NoteText != null)
                     hash = hash * 59 + this.NoteText.GetHashCode();
                 if (this.ModifyDate != null)
                     hash = hash * 59 + this.ModifyDate.GetHashCode();
                 if (this.CreateDate != null)
                     hash = hash * 59 + this.CreateDate.GetHashCode();
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/Note.cs
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;

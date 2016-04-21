@@ -1,7 +1,7 @@
 ---
 title: Line
 ---
-## .Line
+## ININ.PureCloudApi.Model.Line
 
 ## Properties
 

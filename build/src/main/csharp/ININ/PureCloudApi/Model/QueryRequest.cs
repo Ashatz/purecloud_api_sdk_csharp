@@ -27,14 +27,9 @@ namespace ININ.PureCloudApi.Model
         /// <param name="FacetNameRequests">FacetNameRequests.</param>
         /// <param name="Sort">Sort.</param>
         /// <param name="Filters">Filters.</param>
-<<<<<<< HEAD
-
-        public QueryRequest(string QueryPhrase = null, int? PageNumber = null, int? PageSize = null, List<string> FacetNameRequests = null, List<SortItem> Sort = null, List<FacetFilterItem> Filters = null)
-=======
         /// <param name="AttributeFilters">AttributeFilters.</param>
 
         public QueryRequest(string QueryPhrase = null, int? PageNumber = null, int? PageSize = null, List<string> FacetNameRequests = null, List<SortItem> Sort = null, List<ContentFilterItem> Filters = null, List<AttributeFilterItem> AttributeFilters = null)
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         {
             this.QueryPhrase = QueryPhrase;
             this.PageNumber = PageNumber;
@@ -42,10 +37,7 @@ namespace ININ.PureCloudApi.Model
             this.FacetNameRequests = FacetNameRequests;
             this.Sort = Sort;
             this.Filters = Filters;
-<<<<<<< HEAD
-=======
             this.AttributeFilters = AttributeFilters;
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
@@ -84,9 +76,6 @@ namespace ININ.PureCloudApi.Model
         /// Gets or Sets Filters
         /// </summary>
         [DataMember(Name="filters", EmitDefaultValue=false)]
-<<<<<<< HEAD
-        public List<FacetFilterItem> Filters { get; set; }
-=======
         public List<ContentFilterItem> Filters { get; set; }
     
         /// <summary>
@@ -94,7 +83,6 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         [DataMember(Name="attributeFilters", EmitDefaultValue=false)]
         public List<AttributeFilterItem> AttributeFilters { get; set; }
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -110,10 +98,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  FacetNameRequests: ").Append(FacetNameRequests).Append("\n");
             sb.Append("  Sort: ").Append(Sort).Append("\n");
             sb.Append("  Filters: ").Append(Filters).Append("\n");
-<<<<<<< HEAD
-=======
             sb.Append("  AttributeFilters: ").Append(AttributeFilters).Append("\n");
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -210,11 +195,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.Sort.GetHashCode();
                 if (this.Filters != null)
                     hash = hash * 59 + this.Filters.GetHashCode();
-<<<<<<< HEAD
-=======
                 if (this.AttributeFilters != null)
                     hash = hash * 59 + this.AttributeFilters.GetHashCode();
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 return hash;
             }
         }

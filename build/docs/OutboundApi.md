@@ -4,148 +4,80 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**OutboundAuditsPost**](OutboundApi.md#outboundauditspost) | **POST** /api/v1/outbound/audits | Retrieves audits for dialer. |
-| [**OutboundCallabletimesetsCallabletimesetidDelete**](OutboundApi.md#outboundcallabletimesetscallabletimesetiddelete) | **DELETE** /api/v1/outbound/callabletimesets/{callableTimeSetId} | Delete callable time set |
-| [**OutboundCallabletimesetsCallabletimesetidGet**](OutboundApi.md#outboundcallabletimesetscallabletimesetidget) | **GET** /api/v1/outbound/callabletimesets/{callableTimeSetId} | Get callable time set |
-| [**OutboundCallabletimesetsCallabletimesetidPut**](OutboundApi.md#outboundcallabletimesetscallabletimesetidput) | **PUT** /api/v1/outbound/callabletimesets/{callableTimeSetId} | Update callable time set |
-| [**OutboundCallabletimesetsGet**](OutboundApi.md#outboundcallabletimesetsget) | **GET** /api/v1/outbound/callabletimesets | Query callable time set list |
-| [**OutboundCallabletimesetsPost**](OutboundApi.md#outboundcallabletimesetspost) | **POST** /api/v1/outbound/callabletimesets | Create callable time set |
-| [**OutboundCallanalysisresponsesetsCallanalysissetidDelete**](OutboundApi.md#outboundcallanalysisresponsesetscallanalysissetiddelete) | **DELETE** /api/v1/outbound/callanalysisresponsesets/{callAnalysisSetId} | Delete a dialer call analysis response set. |
-| [**OutboundCallanalysisresponsesetsCallanalysissetidGet**](OutboundApi.md#outboundcallanalysisresponsesetscallanalysissetidget) | **GET** /api/v1/outbound/callanalysisresponsesets/{callAnalysisSetId} | Get a dialer call analysis response set. |
-| [**OutboundCallanalysisresponsesetsCallanalysissetidPut**](OutboundApi.md#outboundcallanalysisresponsesetscallanalysissetidput) | **PUT** /api/v1/outbound/callanalysisresponsesets/{callAnalysisSetId} | Update a dialer call analysis response set. |
-| [**OutboundCallanalysisresponsesetsGet**](OutboundApi.md#outboundcallanalysisresponsesetsget) | **GET** /api/v1/outbound/callanalysisresponsesets | Query a list of dialer call analysis response sets. |
-| [**OutboundCallanalysisresponsesetsPost**](OutboundApi.md#outboundcallanalysisresponsesetspost) | **POST** /api/v1/outbound/callanalysisresponsesets | Create a dialer call analysis response set. |
-| [**OutboundCampaignsCampaignidAgentsUseridPut**](OutboundApi.md#outboundcampaignscampaignidagentsuseridput) | **PUT** /api/v1/outbound/campaigns/{campaignId}/agents/{userId} | Send notification that an agent&#39;s state changed  |
-| [**OutboundCampaignsCampaignidCallbackSchedulePost**](OutboundApi.md#outboundcampaignscampaignidcallbackschedulepost) | **POST** /api/v1/outbound/campaigns/{campaignId}/callback/schedule | Schedule a Callback for a Dialer Campaign |
-| [**OutboundCampaignsCampaignidDelete**](OutboundApi.md#outboundcampaignscampaigniddelete) | **DELETE** /api/v1/outbound/campaigns/{campaignId} | Delete a campaign. |
-| [**OutboundCampaignsCampaignidDiagnosticsGet**](OutboundApi.md#outboundcampaignscampaigniddiagnosticsget) | **GET** /api/v1/outbound/campaigns/{campaignId}/diagnostics | Get campaign diagnostics |
-| [**OutboundCampaignsCampaignidGet**](OutboundApi.md#outboundcampaignscampaignidget) | **GET** /api/v1/outbound/campaigns/{campaignId} | Get dialer campaign. |
-| [**OutboundCampaignsCampaignidPut**](OutboundApi.md#outboundcampaignscampaignidput) | **PUT** /api/v1/outbound/campaigns/{campaignId} | Update a campaign. |
-| [**OutboundCampaignsCampaignidStatsGet**](OutboundApi.md#outboundcampaignscampaignidstatsget) | **GET** /api/v1/outbound/campaigns/{campaignId}/stats | Get statistics about a Dialer Campaign |
-| [**OutboundCampaignsGet**](OutboundApi.md#outboundcampaignsget) | **GET** /api/v1/outbound/campaigns | Query a list of dialer campaigns. |
-| [**OutboundCampaignsPost**](OutboundApi.md#outboundcampaignspost) | **POST** /api/v1/outbound/campaigns | Create a campaign. |
-| [**OutboundContactlistsContactlistidCampaignidPenetrationrateGet**](OutboundApi.md#outboundcontactlistscontactlistidcampaignidpenetrationrateget) | **GET** /api/v1/outbound/contactlists/{contactListId}/{campaignId}/penetrationrate | Get Dialer campaign&#39;s penetration rate |
-| [**OutboundContactlistsContactlistidContactsContactidDelete**](OutboundApi.md#outboundcontactlistscontactlistidcontactscontactiddelete) | **DELETE** /api/v1/outbound/contactlists/{contactListId}/contacts/{contactId} | Delete a contact. |
-| [**OutboundContactlistsContactlistidContactsContactidGet**](OutboundApi.md#outboundcontactlistscontactlistidcontactscontactidget) | **GET** /api/v1/outbound/contactlists/{contactListId}/contacts/{contactId} | Get dialer contactList. |
-| [**OutboundContactlistsContactlistidContactsContactidPut**](OutboundApi.md#outboundcontactlistscontactlistidcontactscontactidput) | **PUT** /api/v1/outbound/contactlists/{contactListId}/contacts/{contactId} | Update a contact. |
-| [**OutboundContactlistsContactlistidContactsPost**](OutboundApi.md#outboundcontactlistscontactlistidcontactspost) | **POST** /api/v1/outbound/contactlists/{contactListId}/contacts | Add contacts to a contact list. |
-| [**OutboundContactlistsContactlistidDelete**](OutboundApi.md#outboundcontactlistscontactlistiddelete) | **DELETE** /api/v1/outbound/contactlists/{contactListId} | Delete a contact list. |
-| [**OutboundContactlistsContactlistidExportPost**](OutboundApi.md#outboundcontactlistscontactlistidexportpost) | **POST** /api/v1/outbound/contactlists/{contactListId}/export | Initiate the export of a contact list. |
-| [**OutboundContactlistsContactlistidGet**](OutboundApi.md#outboundcontactlistscontactlistidget) | **GET** /api/v1/outbound/contactlists/{contactListId} | Get dialer contactList. |
-| [**OutboundContactlistsContactlistidImportstatusGet**](OutboundApi.md#outboundcontactlistscontactlistidimportstatusget) | **GET** /api/v1/outbound/contactlists/{contactListId}/importstatus | Get dialer contactList import status. |
-| [**OutboundContactlistsContactlistidPut**](OutboundApi.md#outboundcontactlistscontactlistidput) | **PUT** /api/v1/outbound/contactlists/{contactListId} | Update a contact list. |
-| [**OutboundContactlistsGet**](OutboundApi.md#outboundcontactlistsget) | **GET** /api/v1/outbound/contactlists | Query a list of contact lists. |
-| [**OutboundContactlistsPenetrationratesPost**](OutboundApi.md#outboundcontactlistspenetrationratespost) | **POST** /api/v1/outbound/contactlists/penetrationrates | Get penetration rates for a list of penetration rate identifiers (contact list id and qualifier id) |
-| [**OutboundContactlistsPost**](OutboundApi.md#outboundcontactlistspost) | **POST** /api/v1/outbound/contactlists | Create a contact List. |
-| [**OutboundConversationsConversationidDncPost**](OutboundApi.md#outboundconversationsconversationiddncpost) | **POST** /api/v1/outbound/conversations/{conversationId}/dnc | Add phone numbers to a Dialer DNC list. |
-| [**OutboundDnclistsDnclistidDelete**](OutboundApi.md#outbounddnclistsdnclistiddelete) | **DELETE** /api/v1/outbound/dnclists/{dncListId} | Delete dialer DNC list |
-| [**OutboundDnclistsDnclistidExportPost**](OutboundApi.md#outbounddnclistsdnclistidexportpost) | **POST** /api/v1/outbound/dnclists/{dncListId}/export | Initiate the export of a dnc list. |
-| [**OutboundDnclistsDnclistidGet**](OutboundApi.md#outbounddnclistsdnclistidget) | **GET** /api/v1/outbound/dnclists/{dncListId} | Get dialer DNC list |
-| [**OutboundDnclistsDnclistidImportstatusGet**](OutboundApi.md#outbounddnclistsdnclistidimportstatusget) | **GET** /api/v1/outbound/dnclists/{dncListId}/importstatus | Get dialer dncList import status. |
-| [**OutboundDnclistsDnclistidPhonenumbersPost**](OutboundApi.md#outbounddnclistsdnclistidphonenumberspost) | **POST** /api/v1/outbound/dnclists/{dncListId}/phonenumbers | Add phone numbers to a Dialer DNC list. |
-| [**OutboundDnclistsDnclistidPut**](OutboundApi.md#outbounddnclistsdnclistidput) | **PUT** /api/v1/outbound/dnclists/{dncListId} | Update dialer DNC list |
-| [**OutboundDnclistsGet**](OutboundApi.md#outbounddnclistsget) | **GET** /api/v1/outbound/dnclists | Query dialer DNC lists |
-| [**OutboundDnclistsPost**](OutboundApi.md#outbounddnclistspost) | **POST** /api/v1/outbound/dnclists | Create dialer DNC list |
-| [**OutboundPreviewsGet**](OutboundApi.md#outboundpreviewsget) | **GET** /api/v1/outbound/previews | Get dialer preview for user |
-| [**OutboundPreviewsPreviewidDispositioncallPost**](OutboundApi.md#outboundpreviewspreviewiddispositioncallpost) | **POST** /api/v1/outbound/previews/{previewId}/dispositioncall | Disposition preview call |
-| [**OutboundPreviewsPreviewidGet**](OutboundApi.md#outboundpreviewspreviewidget) | **GET** /api/v1/outbound/previews/{previewId} | Get dialer preview |
-| [**OutboundPreviewsPreviewidPlacecallPost**](OutboundApi.md#outboundpreviewspreviewidplacecallpost) | **POST** /api/v1/outbound/previews/{previewId}/placecall | place preview call |
-| [**OutboundRulesetsGet**](OutboundApi.md#outboundrulesetsget) | **GET** /api/v1/outbound/rulesets | Query a list of Rule Sets. |
-| [**OutboundRulesetsPost**](OutboundApi.md#outboundrulesetspost) | **POST** /api/v1/outbound/rulesets | Create a Dialer Call Analysis Response Set. |
-| [**OutboundRulesetsRulesetidDelete**](OutboundApi.md#outboundrulesetsrulesetiddelete) | **DELETE** /api/v1/outbound/rulesets/{ruleSetId} | Delete a Rule set. |
-| [**OutboundRulesetsRulesetidGet**](OutboundApi.md#outboundrulesetsrulesetidget) | **GET** /api/v1/outbound/rulesets/{ruleSetId} | Get a Rule Set by ID. |
-| [**OutboundRulesetsRulesetidPut**](OutboundApi.md#outboundrulesetsrulesetidput) | **PUT** /api/v1/outbound/rulesets/{ruleSetId} | Update a RuleSet. |
-| [**OutboundSchedulesCampaignsCampaignidDelete**](OutboundApi.md#outboundschedulescampaignscampaigniddelete) | **DELETE** /api/v1/outbound/schedules/campaigns/{campaignId} | Delete a dialer campaign schedule. |
-| [**OutboundSchedulesCampaignsCampaignidGet**](OutboundApi.md#outboundschedulescampaignscampaignidget) | **GET** /api/v1/outbound/schedules/campaigns/{campaignId} | Get a dialer campaign schedule. |
-| [**OutboundSchedulesCampaignsCampaignidPut**](OutboundApi.md#outboundschedulescampaignscampaignidput) | **PUT** /api/v1/outbound/schedules/campaigns/{campaignId} | Update a new campaign schedule. |
-| [**OutboundSchedulesCampaignsGet**](OutboundApi.md#outboundschedulescampaignsget) | **GET** /api/v1/outbound/schedules/campaigns | Query for a list of dialer campaign schedules. |
-| [**OutboundSchedulesSequencesGet**](OutboundApi.md#outboundschedulessequencesget) | **GET** /api/v1/outbound/schedules/sequences | Query for a list of dialer sequence schedules. |
-| [**OutboundSchedulesSequencesSequenceidDelete**](OutboundApi.md#outboundschedulessequencessequenceiddelete) | **DELETE** /api/v1/outbound/schedules/sequences/{sequenceId} | Delete a dialer sequence schedule. |
-| [**OutboundSchedulesSequencesSequenceidGet**](OutboundApi.md#outboundschedulessequencessequenceidget) | **GET** /api/v1/outbound/schedules/sequences/{sequenceId} | Get a dialer sequence schedule. |
-| [**OutboundSchedulesSequencesSequenceidPut**](OutboundApi.md#outboundschedulessequencessequenceidput) | **PUT** /api/v1/outbound/schedules/sequences/{sequenceId} | Update a new sequence schedule. |
-| [**OutboundSequencesGet**](OutboundApi.md#outboundsequencesget) | **GET** /api/v1/outbound/sequences | Query a list of dialer campaign sequences. |
-| [**OutboundSequencesPost**](OutboundApi.md#outboundsequencespost) | **POST** /api/v1/outbound/sequences | Create a new campaign sequence. |
-| [**OutboundSequencesSequenceidDelete**](OutboundApi.md#outboundsequencessequenceiddelete) | **DELETE** /api/v1/outbound/sequences/{sequenceId} | Delete a dialer campaign sequence. |
-| [**OutboundSequencesSequenceidGet**](OutboundApi.md#outboundsequencessequenceidget) | **GET** /api/v1/outbound/sequences/{sequenceId} | Get a dialer campaign sequence. |
-| [**OutboundSequencesSequenceidPut**](OutboundApi.md#outboundsequencessequenceidput) | **PUT** /api/v1/outbound/sequences/{sequenceId} | Update a new campaign sequence. |
-| [**OutboundWrapupcodemappingsGet**](OutboundApi.md#outboundwrapupcodemappingsget) | **GET** /api/v1/outbound/wrapupcodemappings | Get the Dialer wrap up code mapping. |
-| [**OutboundWrapupcodemappingsPut**](OutboundApi.md#outboundwrapupcodemappingsput) | **PUT** /api/v1/outbound/wrapupcodemappings | Update the Dialer wrap up code mapping. |
+| [**DeleteCallabletimesetsCallabletimesetId**](OutboundApi.md#deletecallabletimesetscallabletimesetid) | **DELETE** /api/v2/outbound/callabletimesets/{callableTimeSetId} | Delete callable time set |
+| [**DeleteCallanalysisresponsesetsCallanalysissetId**](OutboundApi.md#deletecallanalysisresponsesetscallanalysissetid) | **DELETE** /api/v2/outbound/callanalysisresponsesets/{callAnalysisSetId} | Delete a dialer call analysis response set. |
+| [**DeleteCampaignsCampaignId**](OutboundApi.md#deletecampaignscampaignid) | **DELETE** /api/v2/outbound/campaigns/{campaignId} | Delete a campaign. |
+| [**DeleteCampaignsCampaignIdProgress**](OutboundApi.md#deletecampaignscampaignidprogress) | **DELETE** /api/v2/outbound/campaigns/{campaignId}/progress | Reset campaign progress and recycle the campaign |
+| [**DeleteContactlistsContactlistId**](OutboundApi.md#deletecontactlistscontactlistid) | **DELETE** /api/v2/outbound/contactlists/{contactListId} | Delete a contact list. |
+| [**DeleteContactlistsContactlistIdContactsContactId**](OutboundApi.md#deletecontactlistscontactlistidcontactscontactid) | **DELETE** /api/v2/outbound/contactlists/{contactListId}/contacts/{contactId} | Delete a contact. |
+| [**DeleteDnclistsDnclistId**](OutboundApi.md#deletednclistsdnclistid) | **DELETE** /api/v2/outbound/dnclists/{dncListId} | Delete dialer DNC list |
+| [**DeleteRulesetsRulesetId**](OutboundApi.md#deleterulesetsrulesetid) | **DELETE** /api/v2/outbound/rulesets/{ruleSetId} | Delete a Rule set. |
+| [**DeleteSchedulesCampaignsCampaignId**](OutboundApi.md#deleteschedulescampaignscampaignid) | **DELETE** /api/v2/outbound/schedules/campaigns/{campaignId} | Delete a dialer campaign schedule. |
+| [**DeleteSchedulesSequencesSequenceId**](OutboundApi.md#deleteschedulessequencessequenceid) | **DELETE** /api/v2/outbound/schedules/sequences/{sequenceId} | Delete a dialer sequence schedule. |
+| [**DeleteSequencesSequenceId**](OutboundApi.md#deletesequencessequenceid) | **DELETE** /api/v2/outbound/sequences/{sequenceId} | Delete a dialer campaign sequence. |
+| [**GetCallabletimesets**](OutboundApi.md#getcallabletimesets) | **GET** /api/v2/outbound/callabletimesets | Query callable time set list |
+| [**GetCallabletimesetsCallabletimesetId**](OutboundApi.md#getcallabletimesetscallabletimesetid) | **GET** /api/v2/outbound/callabletimesets/{callableTimeSetId} | Get callable time set |
+| [**GetCallanalysisresponsesets**](OutboundApi.md#getcallanalysisresponsesets) | **GET** /api/v2/outbound/callanalysisresponsesets | Query a list of dialer call analysis response sets. |
+| [**GetCallanalysisresponsesetsCallanalysissetId**](OutboundApi.md#getcallanalysisresponsesetscallanalysissetid) | **GET** /api/v2/outbound/callanalysisresponsesets/{callAnalysisSetId} | Get a dialer call analysis response set. |
+| [**GetCampaigns**](OutboundApi.md#getcampaigns) | **GET** /api/v2/outbound/campaigns | Query a list of dialer campaigns. |
+| [**GetCampaignsCampaignId**](OutboundApi.md#getcampaignscampaignid) | **GET** /api/v2/outbound/campaigns/{campaignId} | Get dialer campaign. |
+| [**GetCampaignsCampaignIdDiagnostics**](OutboundApi.md#getcampaignscampaigniddiagnostics) | **GET** /api/v2/outbound/campaigns/{campaignId}/diagnostics | Get campaign diagnostics |
+| [**GetCampaignsCampaignIdProgress**](OutboundApi.md#getcampaignscampaignidprogress) | **GET** /api/v2/outbound/campaigns/{campaignId}/progress | Get campaign progress |
+| [**GetCampaignsCampaignIdStats**](OutboundApi.md#getcampaignscampaignidstats) | **GET** /api/v2/outbound/campaigns/{campaignId}/stats | Get statistics about a Dialer Campaign |
+| [**GetContactlists**](OutboundApi.md#getcontactlists) | **GET** /api/v2/outbound/contactlists | Query a list of contact lists. |
+| [**GetContactlistsContactlistId**](OutboundApi.md#getcontactlistscontactlistid) | **GET** /api/v2/outbound/contactlists/{contactListId} | Get dialer contactList. |
+| [**GetContactlistsContactlistIdContactsContactId**](OutboundApi.md#getcontactlistscontactlistidcontactscontactid) | **GET** /api/v2/outbound/contactlists/{contactListId}/contacts/{contactId} | Get dialer contactList. |
+| [**GetContactlistsContactlistIdImportstatus**](OutboundApi.md#getcontactlistscontactlistidimportstatus) | **GET** /api/v2/outbound/contactlists/{contactListId}/importstatus | Get dialer contactList import status. |
+| [**GetDnclists**](OutboundApi.md#getdnclists) | **GET** /api/v2/outbound/dnclists | Query dialer DNC lists |
+| [**GetDnclistsDnclistId**](OutboundApi.md#getdnclistsdnclistid) | **GET** /api/v2/outbound/dnclists/{dncListId} | Get dialer DNC list |
+| [**GetDnclistsDnclistIdImportstatus**](OutboundApi.md#getdnclistsdnclistidimportstatus) | **GET** /api/v2/outbound/dnclists/{dncListId}/importstatus | Get dialer dncList import status. |
+| [**GetRulesets**](OutboundApi.md#getrulesets) | **GET** /api/v2/outbound/rulesets | Query a list of Rule Sets. |
+| [**GetRulesetsRulesetId**](OutboundApi.md#getrulesetsrulesetid) | **GET** /api/v2/outbound/rulesets/{ruleSetId} | Get a Rule Set by ID. |
+| [**GetSchedulesCampaigns**](OutboundApi.md#getschedulescampaigns) | **GET** /api/v2/outbound/schedules/campaigns | Query for a list of dialer campaign schedules. |
+| [**GetSchedulesCampaignsCampaignId**](OutboundApi.md#getschedulescampaignscampaignid) | **GET** /api/v2/outbound/schedules/campaigns/{campaignId} | Get a dialer campaign schedule. |
+| [**GetSchedulesSequences**](OutboundApi.md#getschedulessequences) | **GET** /api/v2/outbound/schedules/sequences | Query for a list of dialer sequence schedules. |
+| [**GetSchedulesSequencesSequenceId**](OutboundApi.md#getschedulessequencessequenceid) | **GET** /api/v2/outbound/schedules/sequences/{sequenceId} | Get a dialer sequence schedule. |
+| [**GetSequences**](OutboundApi.md#getsequences) | **GET** /api/v2/outbound/sequences | Query a list of dialer campaign sequences. |
+| [**GetSequencesSequenceId**](OutboundApi.md#getsequencessequenceid) | **GET** /api/v2/outbound/sequences/{sequenceId} | Get a dialer campaign sequence. |
+| [**GetWrapupcodemappings**](OutboundApi.md#getwrapupcodemappings) | **GET** /api/v2/outbound/wrapupcodemappings | Get the Dialer wrap up code mapping. |
+| [**PostAudits**](OutboundApi.md#postaudits) | **POST** /api/v2/outbound/audits | Retrieves audits for dialer. |
+| [**PostCallabletimesets**](OutboundApi.md#postcallabletimesets) | **POST** /api/v2/outbound/callabletimesets | Create callable time set |
+| [**PostCallanalysisresponsesets**](OutboundApi.md#postcallanalysisresponsesets) | **POST** /api/v2/outbound/callanalysisresponsesets | Create a dialer call analysis response set. |
+| [**PostCampaigns**](OutboundApi.md#postcampaigns) | **POST** /api/v2/outbound/campaigns | Create a campaign. |
+| [**PostCampaignsCampaignIdCallbackSchedule**](OutboundApi.md#postcampaignscampaignidcallbackschedule) | **POST** /api/v2/outbound/campaigns/{campaignId}/callback/schedule | Schedule a Callback for a Dialer Campaign |
+| [**PostCampaignsProgress**](OutboundApi.md#postcampaignsprogress) | **POST** /api/v2/outbound/campaigns/progress | Get progress for a list of campaigns |
+| [**PostContactlists**](OutboundApi.md#postcontactlists) | **POST** /api/v2/outbound/contactlists | Create a contact List. |
+| [**PostContactlistsContactlistIdContacts**](OutboundApi.md#postcontactlistscontactlistidcontacts) | **POST** /api/v2/outbound/contactlists/{contactListId}/contacts | Add contacts to a contact list. |
+| [**PostContactlistsContactlistIdExport**](OutboundApi.md#postcontactlistscontactlistidexport) | **POST** /api/v2/outbound/contactlists/{contactListId}/export | Initiate the export of a contact list. |
+| [**PostConversationsConversationIdDnc**](OutboundApi.md#postconversationsconversationiddnc) | **POST** /api/v2/outbound/conversations/{conversationId}/dnc | Add phone numbers to a Dialer DNC list. |
+| [**PostDnclists**](OutboundApi.md#postdnclists) | **POST** /api/v2/outbound/dnclists | Create dialer DNC list |
+| [**PostDnclistsDnclistIdExport**](OutboundApi.md#postdnclistsdnclistidexport) | **POST** /api/v2/outbound/dnclists/{dncListId}/export | Initiate the export of a dnc list. |
+| [**PostDnclistsDnclistIdPhonenumbers**](OutboundApi.md#postdnclistsdnclistidphonenumbers) | **POST** /api/v2/outbound/dnclists/{dncListId}/phonenumbers | Add phone numbers to a Dialer DNC list. |
+| [**PostRulesets**](OutboundApi.md#postrulesets) | **POST** /api/v2/outbound/rulesets | Create a Dialer Call Analysis Response Set. |
+| [**PostSequences**](OutboundApi.md#postsequences) | **POST** /api/v2/outbound/sequences | Create a new campaign sequence. |
+| [**PutCallabletimesetsCallabletimesetId**](OutboundApi.md#putcallabletimesetscallabletimesetid) | **PUT** /api/v2/outbound/callabletimesets/{callableTimeSetId} | Update callable time set |
+| [**PutCallanalysisresponsesetsCallanalysissetId**](OutboundApi.md#putcallanalysisresponsesetscallanalysissetid) | **PUT** /api/v2/outbound/callanalysisresponsesets/{callAnalysisSetId} | Update a dialer call analysis response set. |
+| [**PutCampaignsCampaignId**](OutboundApi.md#putcampaignscampaignid) | **PUT** /api/v2/outbound/campaigns/{campaignId} | Update a campaign. |
+| [**PutCampaignsCampaignIdAgentsUserId**](OutboundApi.md#putcampaignscampaignidagentsuserid) | **PUT** /api/v2/outbound/campaigns/{campaignId}/agents/{userId} | Send notification that an agent&#39;s state changed  |
+| [**PutContactlistsContactlistId**](OutboundApi.md#putcontactlistscontactlistid) | **PUT** /api/v2/outbound/contactlists/{contactListId} | Update a contact list. |
+| [**PutContactlistsContactlistIdContactsContactId**](OutboundApi.md#putcontactlistscontactlistidcontactscontactid) | **PUT** /api/v2/outbound/contactlists/{contactListId}/contacts/{contactId} | Update a contact. |
+| [**PutDnclistsDnclistId**](OutboundApi.md#putdnclistsdnclistid) | **PUT** /api/v2/outbound/dnclists/{dncListId} | Update dialer DNC list |
+| [**PutRulesetsRulesetId**](OutboundApi.md#putrulesetsrulesetid) | **PUT** /api/v2/outbound/rulesets/{ruleSetId} | Update a RuleSet. |
+| [**PutSchedulesCampaignsCampaignId**](OutboundApi.md#putschedulescampaignscampaignid) | **PUT** /api/v2/outbound/schedules/campaigns/{campaignId} | Update a new campaign schedule. |
+| [**PutSchedulesSequencesSequenceId**](OutboundApi.md#putschedulessequencessequenceid) | **PUT** /api/v2/outbound/schedules/sequences/{sequenceId} | Update a new sequence schedule. |
+| [**PutSequencesSequenceId**](OutboundApi.md#putsequencessequenceid) | **PUT** /api/v2/outbound/sequences/{sequenceId} | Update a new campaign sequence. |
+| [**PutWrapupcodemappings**](OutboundApi.md#putwrapupcodemappings) | **PUT** /api/v2/outbound/wrapupcodemappings | Update the Dialer wrap up code mapping. |
 {: class="table table-striped"}
 
-<a name="OutboundAuditsPost"></a>
-## [**AuditSearchResult**](AuditSearchResult.html) OutboundAuditsPost (DialerAuditRequest body = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, bool? facetsOnly = null)
-
-Retrieves audits for dialer.
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class OutboundAuditsPostExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new OutboundApi();
-            var body = new DialerAuditRequest(); // DialerAuditRequest | AuditSearch (optional) 
-            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            var sortBy = sortBy_example;  // string | Sort by (optional)  (default to entity.name)
-            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to ascending)
-            var facetsOnly = true;  // bool? | Facets only (optional)  (default to false)
-
-            try
-            {
-                // Retrieves audits for dialer.
-                AuditSearchResult result = apiInstance.OutboundAuditsPost(body, pageSize, pageNumber, sortBy, sortOrder, facetsOnly);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling OutboundApi.OutboundAuditsPost: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **body** | [**DialerAuditRequest**](DialerAuditRequest.md)| AuditSearch | [optional]  |
-| **pageSize** | **int?**| Page size | [optional] [default to 25] |
-| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-| **sortBy** | **string**| Sort by | [optional] [default to entity.name] |
-| **sortOrder** | **string**| Sort order | [optional] [default to ascending] |
-| **facetsOnly** | **bool?**| Facets only | [optional] [default to false] |
-{: class="table table-striped"}
-
-### Return type
-
-[**AuditSearchResult**](AuditSearchResult.md)
-
-<a name="OutboundCallabletimesetsCallabletimesetidDelete"></a>
-## string** OutboundCallabletimesetsCallabletimesetidDelete (string callableTimeSetId)
+<a name="DeleteCallabletimesetsCallabletimesetId"></a>
+## string** DeleteCallabletimesetsCallabletimesetId (string callableTimeSetId)
 
 Delete callable time set
 
 
 
 ### Example
-```csharp
+~~~csharp
 using System;
 using System.Diagnostics;
 using ININ.PureCloudApi.Api;
@@ -154,7 +86,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class OutboundCallabletimesetsCallabletimesetidDeleteExample
+    public class DeleteCallabletimesetsCallabletimesetIdExample
     {
         public void main()
         {
@@ -168,17 +100,17 @@ namespace Example
             try
             {
                 // Delete callable time set
-                string result = apiInstance.OutboundCallabletimesetsCallabletimesetidDelete(callableTimeSetId);
+                string result = apiInstance.DeleteCallabletimesetsCallabletimesetId(callableTimeSetId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling OutboundApi.OutboundCallabletimesetsCallabletimesetidDelete: " + e.Message );
+                Debug.Print("Exception when calling OutboundApi.DeleteCallabletimesetsCallabletimesetId: " + e.Message );
             }
         }
     }
 }
-```
+~~~
 
 ### Parameters
 
@@ -192,15 +124,15 @@ namespace Example
 
 **string**
 
-<a name="OutboundCallabletimesetsCallabletimesetidGet"></a>
-## [**CallableTimeSet**](CallableTimeSet.html) OutboundCallabletimesetsCallabletimesetidGet (string callableTimeSetId)
+<a name="DeleteCallanalysisresponsesetsCallanalysissetId"></a>
+## string** DeleteCallanalysisresponsesetsCallanalysissetId (string callAnalysisSetId)
 
-Get callable time set
+Delete a dialer call analysis response set.
 
 
 
 ### Example
-```csharp
+~~~csharp
 using System;
 using System.Diagnostics;
 using ININ.PureCloudApi.Api;
@@ -209,7 +141,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class OutboundCallabletimesetsCallabletimesetidGetExample
+    public class DeleteCallanalysisresponsesetsCallanalysissetIdExample
     {
         public void main()
         {
@@ -218,44 +150,44 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new OutboundApi();
-            var callableTimeSetId = callableTimeSetId_example;  // string | Callable Time Set ID
+            var callAnalysisSetId = callAnalysisSetId_example;  // string | Call Analysis Response Set ID
 
             try
             {
-                // Get callable time set
-                CallableTimeSet result = apiInstance.OutboundCallabletimesetsCallabletimesetidGet(callableTimeSetId);
+                // Delete a dialer call analysis response set.
+                string result = apiInstance.DeleteCallanalysisresponsesetsCallanalysissetId(callAnalysisSetId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling OutboundApi.OutboundCallabletimesetsCallabletimesetidGet: " + e.Message );
+                Debug.Print("Exception when calling OutboundApi.DeleteCallanalysisresponsesetsCallanalysissetId: " + e.Message );
             }
         }
     }
 }
-```
+~~~
 
 ### Parameters
 
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **callableTimeSetId** | **string**| Callable Time Set ID |  |
+| **callAnalysisSetId** | **string**| Call Analysis Response Set ID |  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**CallableTimeSet**](CallableTimeSet.md)
+**string**
 
-<a name="OutboundCallabletimesetsCallabletimesetidPut"></a>
-## [**CallableTimeSet**](CallableTimeSet.html) OutboundCallabletimesetsCallabletimesetidPut (string callableTimeSetId, CallableTimeSet body = null)
+<a name="DeleteCampaignsCampaignId"></a>
+## string** DeleteCampaignsCampaignId (string campaignId)
 
-Update callable time set
+Delete a campaign.
 
 
 
 ### Example
-```csharp
+~~~csharp
 using System;
 using System.Diagnostics;
 using ININ.PureCloudApi.Api;
@@ -264,7 +196,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class OutboundCallabletimesetsCallabletimesetidPutExample
+    public class DeleteCampaignsCampaignIdExample
     {
         public void main()
         {
@@ -273,46 +205,486 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new OutboundApi();
-            var callableTimeSetId = callableTimeSetId_example;  // string | Callable Time Set ID
-            var body = new CallableTimeSet(); // CallableTimeSet | DialerCallableTimeSet (optional) 
+            var campaignId = campaignId_example;  // string | Campaign ID
 
             try
             {
-                // Update callable time set
-                CallableTimeSet result = apiInstance.OutboundCallabletimesetsCallabletimesetidPut(callableTimeSetId, body);
+                // Delete a campaign.
+                string result = apiInstance.DeleteCampaignsCampaignId(campaignId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling OutboundApi.OutboundCallabletimesetsCallabletimesetidPut: " + e.Message );
+                Debug.Print("Exception when calling OutboundApi.DeleteCampaignsCampaignId: " + e.Message );
             }
         }
     }
 }
-```
+~~~
 
 ### Parameters
 
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **callableTimeSetId** | **string**| Callable Time Set ID |  |
-| **body** | [**CallableTimeSet**](CallableTimeSet.md)| DialerCallableTimeSet | [optional]  |
+| **campaignId** | **string**| Campaign ID |  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**CallableTimeSet**](CallableTimeSet.md)
+**string**
 
-<a name="OutboundCallabletimesetsGet"></a>
-## [**CallableTimeSetEntityListing**](CallableTimeSetEntityListing.html) OutboundCallabletimesetsGet (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
+<a name="DeleteCampaignsCampaignIdProgress"></a>
+## string** DeleteCampaignsCampaignIdProgress (string campaignId)
+
+Reset campaign progress and recycle the campaign
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class DeleteCampaignsCampaignIdProgressExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new OutboundApi();
+            var campaignId = campaignId_example;  // string | Campaign ID
+
+            try
+            {
+                // Reset campaign progress and recycle the campaign
+                string result = apiInstance.DeleteCampaignsCampaignIdProgress(campaignId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.DeleteCampaignsCampaignIdProgress: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **campaignId** | **string**| Campaign ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+**string**
+
+<a name="DeleteContactlistsContactlistId"></a>
+## string** DeleteContactlistsContactlistId (string contactListId)
+
+Delete a contact list.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class DeleteContactlistsContactlistIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new OutboundApi();
+            var contactListId = contactListId_example;  // string | ContactList ID
+
+            try
+            {
+                // Delete a contact list.
+                string result = apiInstance.DeleteContactlistsContactlistId(contactListId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.DeleteContactlistsContactlistId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **contactListId** | **string**| ContactList ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+**string**
+
+<a name="DeleteContactlistsContactlistIdContactsContactId"></a>
+## string** DeleteContactlistsContactlistIdContactsContactId (string contactListId, string contactId)
+
+Delete a contact.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class DeleteContactlistsContactlistIdContactsContactIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new OutboundApi();
+            var contactListId = contactListId_example;  // string | Contact List ID
+            var contactId = contactId_example;  // string | Contact ID
+
+            try
+            {
+                // Delete a contact.
+                string result = apiInstance.DeleteContactlistsContactlistIdContactsContactId(contactListId, contactId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.DeleteContactlistsContactlistIdContactsContactId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **contactListId** | **string**| Contact List ID |  |
+| **contactId** | **string**| Contact ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+**string**
+
+<a name="DeleteDnclistsDnclistId"></a>
+## string** DeleteDnclistsDnclistId (string dncListId)
+
+Delete dialer DNC list
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class DeleteDnclistsDnclistIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new OutboundApi();
+            var dncListId = dncListId_example;  // string | DncList ID
+
+            try
+            {
+                // Delete dialer DNC list
+                string result = apiInstance.DeleteDnclistsDnclistId(dncListId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.DeleteDnclistsDnclistId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **dncListId** | **string**| DncList ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+**string**
+
+<a name="DeleteRulesetsRulesetId"></a>
+## string** DeleteRulesetsRulesetId (string ruleSetId)
+
+Delete a Rule set.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class DeleteRulesetsRulesetIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new OutboundApi();
+            var ruleSetId = ruleSetId_example;  // string | Rule Set ID
+
+            try
+            {
+                // Delete a Rule set.
+                string result = apiInstance.DeleteRulesetsRulesetId(ruleSetId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.DeleteRulesetsRulesetId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **ruleSetId** | **string**| Rule Set ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+**string**
+
+<a name="DeleteSchedulesCampaignsCampaignId"></a>
+## string** DeleteSchedulesCampaignsCampaignId (string campaignId)
+
+Delete a dialer campaign schedule.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class DeleteSchedulesCampaignsCampaignIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new OutboundApi();
+            var campaignId = campaignId_example;  // string | Campaign ID
+
+            try
+            {
+                // Delete a dialer campaign schedule.
+                string result = apiInstance.DeleteSchedulesCampaignsCampaignId(campaignId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.DeleteSchedulesCampaignsCampaignId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **campaignId** | **string**| Campaign ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+**string**
+
+<a name="DeleteSchedulesSequencesSequenceId"></a>
+## string** DeleteSchedulesSequencesSequenceId (string sequenceId)
+
+Delete a dialer sequence schedule.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class DeleteSchedulesSequencesSequenceIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new OutboundApi();
+            var sequenceId = sequenceId_example;  // string | Sequence ID
+
+            try
+            {
+                // Delete a dialer sequence schedule.
+                string result = apiInstance.DeleteSchedulesSequencesSequenceId(sequenceId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.DeleteSchedulesSequencesSequenceId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **sequenceId** | **string**| Sequence ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+**string**
+
+<a name="DeleteSequencesSequenceId"></a>
+## string** DeleteSequencesSequenceId (string sequenceId)
+
+Delete a dialer campaign sequence.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class DeleteSequencesSequenceIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new OutboundApi();
+            var sequenceId = sequenceId_example;  // string | Campaign Sequence ID
+
+            try
+            {
+                // Delete a dialer campaign sequence.
+                string result = apiInstance.DeleteSequencesSequenceId(sequenceId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.DeleteSequencesSequenceId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **sequenceId** | **string**| Campaign Sequence ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+**string**
+
+<a name="GetCallabletimesets"></a>
+## [**CallableTimeSetEntityListing**](CallableTimeSetEntityListing.html) GetCallabletimesets (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
 
 Query callable time set list
 
 
 
 ### Example
-```csharp
+~~~csharp
 using System;
 using System.Diagnostics;
 using ININ.PureCloudApi.Api;
@@ -321,7 +693,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class OutboundCallabletimesetsGetExample
+    public class GetCallabletimesetsExample
     {
         public void main()
         {
@@ -340,17 +712,17 @@ namespace Example
             try
             {
                 // Query callable time set list
-                CallableTimeSetEntityListing result = apiInstance.OutboundCallabletimesetsGet(pageSize, pageNumber, filterType, name, sortBy, sortOrder);
+                CallableTimeSetEntityListing result = apiInstance.GetCallabletimesets(pageSize, pageNumber, filterType, name, sortBy, sortOrder);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling OutboundApi.OutboundCallabletimesetsGet: " + e.Message );
+                Debug.Print("Exception when calling OutboundApi.GetCallabletimesets: " + e.Message );
             }
         }
     }
 }
-```
+~~~
 
 ### Parameters
 
@@ -369,15 +741,15 @@ namespace Example
 
 [**CallableTimeSetEntityListing**](CallableTimeSetEntityListing.md)
 
-<a name="OutboundCallabletimesetsPost"></a>
-## [**CallableTimeSet**](CallableTimeSet.html) OutboundCallabletimesetsPost (CallableTimeSet body = null)
+<a name="GetCallabletimesetsCallabletimesetId"></a>
+## [**CallableTimeSet**](CallableTimeSet.html) GetCallabletimesetsCallabletimesetId (string callableTimeSetId)
 
-Create callable time set
+Get callable time set
 
 
 
 ### Example
-```csharp
+~~~csharp
 using System;
 using System.Diagnostics;
 using ININ.PureCloudApi.Api;
@@ -386,7 +758,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class OutboundCallabletimesetsPostExample
+    public class GetCallabletimesetsCallabletimesetIdExample
     {
         public void main()
         {
@@ -395,211 +767,44 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new OutboundApi();
-            var body = new CallableTimeSet(); // CallableTimeSet | DialerCallableTimeSet (optional) 
+            var callableTimeSetId = callableTimeSetId_example;  // string | Callable Time Set ID
 
             try
             {
-                // Create callable time set
-                CallableTimeSet result = apiInstance.OutboundCallabletimesetsPost(body);
+                // Get callable time set
+                CallableTimeSet result = apiInstance.GetCallabletimesetsCallabletimesetId(callableTimeSetId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling OutboundApi.OutboundCallabletimesetsPost: " + e.Message );
+                Debug.Print("Exception when calling OutboundApi.GetCallabletimesetsCallabletimesetId: " + e.Message );
             }
         }
     }
 }
-```
+~~~
 
 ### Parameters
 
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**CallableTimeSet**](CallableTimeSet.md)| DialerCallableTimeSet | [optional]  |
+| **callableTimeSetId** | **string**| Callable Time Set ID |  |
 {: class="table table-striped"}
 
 ### Return type
 
 [**CallableTimeSet**](CallableTimeSet.md)
 
-<a name="OutboundCallanalysisresponsesetsCallanalysissetidDelete"></a>
-## string** OutboundCallanalysisresponsesetsCallanalysissetidDelete (string callAnalysisSetId)
-
-Delete a dialer call analysis response set.
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class OutboundCallanalysisresponsesetsCallanalysissetidDeleteExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new OutboundApi();
-            var callAnalysisSetId = callAnalysisSetId_example;  // string | Call Analysis Response Set ID
-
-            try
-            {
-                // Delete a dialer call analysis response set.
-                string result = apiInstance.OutboundCallanalysisresponsesetsCallanalysissetidDelete(callAnalysisSetId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling OutboundApi.OutboundCallanalysisresponsesetsCallanalysissetidDelete: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **callAnalysisSetId** | **string**| Call Analysis Response Set ID |  |
-{: class="table table-striped"}
-
-### Return type
-
-**string**
-
-<a name="OutboundCallanalysisresponsesetsCallanalysissetidGet"></a>
-## [**ResponseSet**](ResponseSet.html) OutboundCallanalysisresponsesetsCallanalysissetidGet (string callAnalysisSetId)
-
-Get a dialer call analysis response set.
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class OutboundCallanalysisresponsesetsCallanalysissetidGetExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new OutboundApi();
-            var callAnalysisSetId = callAnalysisSetId_example;  // string | Call Analysis Response Set ID
-
-            try
-            {
-                // Get a dialer call analysis response set.
-                ResponseSet result = apiInstance.OutboundCallanalysisresponsesetsCallanalysissetidGet(callAnalysisSetId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling OutboundApi.OutboundCallanalysisresponsesetsCallanalysissetidGet: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **callAnalysisSetId** | **string**| Call Analysis Response Set ID |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**ResponseSet**](ResponseSet.md)
-
-<a name="OutboundCallanalysisresponsesetsCallanalysissetidPut"></a>
-## [**ResponseSet**](ResponseSet.html) OutboundCallanalysisresponsesetsCallanalysissetidPut (string callAnalysisSetId, ResponseSet body = null)
-
-Update a dialer call analysis response set.
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class OutboundCallanalysisresponsesetsCallanalysissetidPutExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new OutboundApi();
-            var callAnalysisSetId = callAnalysisSetId_example;  // string | Call Analysis Response Set ID
-            var body = new ResponseSet(); // ResponseSet | ResponseSet (optional) 
-
-            try
-            {
-                // Update a dialer call analysis response set.
-                ResponseSet result = apiInstance.OutboundCallanalysisresponsesetsCallanalysissetidPut(callAnalysisSetId, body);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling OutboundApi.OutboundCallanalysisresponsesetsCallanalysissetidPut: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **callAnalysisSetId** | **string**| Call Analysis Response Set ID |  |
-| **body** | [**ResponseSet**](ResponseSet.md)| ResponseSet | [optional]  |
-{: class="table table-striped"}
-
-### Return type
-
-[**ResponseSet**](ResponseSet.md)
-
-<a name="OutboundCallanalysisresponsesetsGet"></a>
-## [**ResponseSetEntityListing**](ResponseSetEntityListing.html) OutboundCallanalysisresponsesetsGet (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
+<a name="GetCallanalysisresponsesets"></a>
+## [**ResponseSetEntityListing**](ResponseSetEntityListing.html) GetCallanalysisresponsesets (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
 
 Query a list of dialer call analysis response sets.
 
 
 
 ### Example
-```csharp
+~~~csharp
 using System;
 using System.Diagnostics;
 using ININ.PureCloudApi.Api;
@@ -608,7 +813,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class OutboundCallanalysisresponsesetsGetExample
+    public class GetCallanalysisresponsesetsExample
     {
         public void main()
         {
@@ -627,17 +832,17 @@ namespace Example
             try
             {
                 // Query a list of dialer call analysis response sets.
-                ResponseSetEntityListing result = apiInstance.OutboundCallanalysisresponsesetsGet(pageSize, pageNumber, filterType, name, sortBy, sortOrder);
+                ResponseSetEntityListing result = apiInstance.GetCallanalysisresponsesets(pageSize, pageNumber, filterType, name, sortBy, sortOrder);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling OutboundApi.OutboundCallanalysisresponsesetsGet: " + e.Message );
+                Debug.Print("Exception when calling OutboundApi.GetCallanalysisresponsesets: " + e.Message );
             }
         }
     }
 }
-```
+~~~
 
 ### Parameters
 
@@ -656,15 +861,15 @@ namespace Example
 
 [**ResponseSetEntityListing**](ResponseSetEntityListing.md)
 
-<a name="OutboundCallanalysisresponsesetsPost"></a>
-## [**ResponseSet**](ResponseSet.html) OutboundCallanalysisresponsesetsPost (ResponseSet body = null)
+<a name="GetCallanalysisresponsesetsCallanalysissetId"></a>
+## [**ResponseSet**](ResponseSet.html) GetCallanalysisresponsesetsCallanalysissetId (string callAnalysisSetId)
 
-Create a dialer call analysis response set.
+Get a dialer call analysis response set.
 
 
 
 ### Example
-```csharp
+~~~csharp
 using System;
 using System.Diagnostics;
 using ININ.PureCloudApi.Api;
@@ -673,7 +878,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class OutboundCallanalysisresponsesetsPostExample
+    public class GetCallanalysisresponsesetsCallanalysissetIdExample
     {
         public void main()
         {
@@ -682,437 +887,44 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new OutboundApi();
-            var body = new ResponseSet(); // ResponseSet | ResponseSet (optional) 
+            var callAnalysisSetId = callAnalysisSetId_example;  // string | Call Analysis Response Set ID
 
             try
             {
-                // Create a dialer call analysis response set.
-                ResponseSet result = apiInstance.OutboundCallanalysisresponsesetsPost(body);
+                // Get a dialer call analysis response set.
+                ResponseSet result = apiInstance.GetCallanalysisresponsesetsCallanalysissetId(callAnalysisSetId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling OutboundApi.OutboundCallanalysisresponsesetsPost: " + e.Message );
+                Debug.Print("Exception when calling OutboundApi.GetCallanalysisresponsesetsCallanalysissetId: " + e.Message );
             }
         }
     }
 }
-```
+~~~
 
 ### Parameters
 
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**ResponseSet**](ResponseSet.md)| ResponseSet | [optional]  |
+| **callAnalysisSetId** | **string**| Call Analysis Response Set ID |  |
 {: class="table table-striped"}
 
 ### Return type
 
 [**ResponseSet**](ResponseSet.md)
 
-<a name="OutboundCampaignsCampaignidAgentsUseridPut"></a>
-## string** OutboundCampaignsCampaignidAgentsUseridPut (string campaignId, string userId, Agent body = null)
-
-Send notification that an agent's state changed 
-
-New agent state.
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class OutboundCampaignsCampaignidAgentsUseridPutExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new OutboundApi();
-            var campaignId = campaignId_example;  // string | Campaign ID
-            var userId = userId_example;  // string | Agent's user ID
-            var body = new Agent(); // Agent | agent (optional) 
-
-            try
-            {
-                // Send notification that an agent's state changed 
-                string result = apiInstance.OutboundCampaignsCampaignidAgentsUseridPut(campaignId, userId, body);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling OutboundApi.OutboundCampaignsCampaignidAgentsUseridPut: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **campaignId** | **string**| Campaign ID |  |
-| **userId** | **string**| Agent&#39;s user ID |  |
-| **body** | [**Agent**](Agent.md)| agent | [optional]  |
-{: class="table table-striped"}
-
-### Return type
-
-**string**
-
-<a name="OutboundCampaignsCampaignidCallbackSchedulePost"></a>
-## [**ContactCallbackRequest**](ContactCallbackRequest.html) OutboundCampaignsCampaignidCallbackSchedulePost (string campaignId, ContactCallbackRequest body = null)
-
-Schedule a Callback for a Dialer Campaign
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class OutboundCampaignsCampaignidCallbackSchedulePostExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new OutboundApi();
-            var campaignId = campaignId_example;  // string | Campaign ID
-            var body = new ContactCallbackRequest(); // ContactCallbackRequest | ContactCallbackRequest (optional) 
-
-            try
-            {
-                // Schedule a Callback for a Dialer Campaign
-                ContactCallbackRequest result = apiInstance.OutboundCampaignsCampaignidCallbackSchedulePost(campaignId, body);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling OutboundApi.OutboundCampaignsCampaignidCallbackSchedulePost: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **campaignId** | **string**| Campaign ID |  |
-| **body** | [**ContactCallbackRequest**](ContactCallbackRequest.md)| ContactCallbackRequest | [optional]  |
-{: class="table table-striped"}
-
-### Return type
-
-[**ContactCallbackRequest**](ContactCallbackRequest.md)
-
-<a name="OutboundCampaignsCampaignidDelete"></a>
-## string** OutboundCampaignsCampaignidDelete (string campaignId)
-
-Delete a campaign.
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class OutboundCampaignsCampaignidDeleteExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new OutboundApi();
-            var campaignId = campaignId_example;  // string | Campaign ID
-
-            try
-            {
-                // Delete a campaign.
-                string result = apiInstance.OutboundCampaignsCampaignidDelete(campaignId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling OutboundApi.OutboundCampaignsCampaignidDelete: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **campaignId** | **string**| Campaign ID |  |
-{: class="table table-striped"}
-
-### Return type
-
-**string**
-
-<a name="OutboundCampaignsCampaignidDiagnosticsGet"></a>
-## [**CampaignDiagnostics**](CampaignDiagnostics.html) OutboundCampaignsCampaignidDiagnosticsGet (string campaignId)
-
-Get campaign diagnostics
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class OutboundCampaignsCampaignidDiagnosticsGetExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new OutboundApi();
-            var campaignId = campaignId_example;  // string | Campaign ID
-
-            try
-            {
-                // Get campaign diagnostics
-                CampaignDiagnostics result = apiInstance.OutboundCampaignsCampaignidDiagnosticsGet(campaignId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling OutboundApi.OutboundCampaignsCampaignidDiagnosticsGet: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **campaignId** | **string**| Campaign ID |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**CampaignDiagnostics**](CampaignDiagnostics.md)
-
-<a name="OutboundCampaignsCampaignidGet"></a>
-## [**Campaign**](Campaign.html) OutboundCampaignsCampaignidGet (string campaignId)
-
-Get dialer campaign.
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class OutboundCampaignsCampaignidGetExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new OutboundApi();
-            var campaignId = campaignId_example;  // string | Campaign ID
-
-            try
-            {
-                // Get dialer campaign.
-                Campaign result = apiInstance.OutboundCampaignsCampaignidGet(campaignId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling OutboundApi.OutboundCampaignsCampaignidGet: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **campaignId** | **string**| Campaign ID |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**Campaign**](Campaign.md)
-
-<a name="OutboundCampaignsCampaignidPut"></a>
-## [**Campaign**](Campaign.html) OutboundCampaignsCampaignidPut (string campaignId, Campaign body = null)
-
-Update a campaign.
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class OutboundCampaignsCampaignidPutExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new OutboundApi();
-            var campaignId = campaignId_example;  // string | Campaign ID
-            var body = new Campaign(); // Campaign | Campaign (optional) 
-
-            try
-            {
-                // Update a campaign.
-                Campaign result = apiInstance.OutboundCampaignsCampaignidPut(campaignId, body);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling OutboundApi.OutboundCampaignsCampaignidPut: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **campaignId** | **string**| Campaign ID |  |
-| **body** | [**Campaign**](Campaign.md)| Campaign | [optional]  |
-{: class="table table-striped"}
-
-### Return type
-
-[**Campaign**](Campaign.md)
-
-<a name="OutboundCampaignsCampaignidStatsGet"></a>
-## [**CampaignStats**](CampaignStats.html) OutboundCampaignsCampaignidStatsGet (string campaignId)
-
-Get statistics about a Dialer Campaign
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class OutboundCampaignsCampaignidStatsGetExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new OutboundApi();
-            var campaignId = campaignId_example;  // string | Campaign ID
-
-            try
-            {
-                // Get statistics about a Dialer Campaign
-                CampaignStats result = apiInstance.OutboundCampaignsCampaignidStatsGet(campaignId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling OutboundApi.OutboundCampaignsCampaignidStatsGet: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **campaignId** | **string**| Campaign ID |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**CampaignStats**](CampaignStats.md)
-
-<a name="OutboundCampaignsGet"></a>
-## [**CampaignEntityListing**](CampaignEntityListing.html) OutboundCampaignsGet (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string contactListId = null, string dncListId = null, string distributionQueueId = null, string edgeGroupId = null, string callAnalysisResponseSetId = null, string sortBy = null, string sortOrder = null)
+<a name="GetCampaigns"></a>
+## [**CampaignEntityListing**](CampaignEntityListing.html) GetCampaigns (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string contactListId = null, string dncListId = null, string distributionQueueId = null, string edgeGroupId = null, string callAnalysisResponseSetId = null, string sortBy = null, string sortOrder = null)
 
 Query a list of dialer campaigns.
 
 
 
 ### Example
-```csharp
+~~~csharp
 using System;
 using System.Diagnostics;
 using ININ.PureCloudApi.Api;
@@ -1121,7 +933,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class OutboundCampaignsGetExample
+    public class GetCampaignsExample
     {
         public void main()
         {
@@ -1145,17 +957,17 @@ namespace Example
             try
             {
                 // Query a list of dialer campaigns.
-                CampaignEntityListing result = apiInstance.OutboundCampaignsGet(pageSize, pageNumber, filterType, name, contactListId, dncListId, distributionQueueId, edgeGroupId, callAnalysisResponseSetId, sortBy, sortOrder);
+                CampaignEntityListing result = apiInstance.GetCampaigns(pageSize, pageNumber, filterType, name, contactListId, dncListId, distributionQueueId, edgeGroupId, callAnalysisResponseSetId, sortBy, sortOrder);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling OutboundApi.OutboundCampaignsGet: " + e.Message );
+                Debug.Print("Exception when calling OutboundApi.GetCampaigns: " + e.Message );
             }
         }
     }
 }
-```
+~~~
 
 ### Parameters
 
@@ -1179,15 +991,15 @@ namespace Example
 
 [**CampaignEntityListing**](CampaignEntityListing.md)
 
-<a name="OutboundCampaignsPost"></a>
-## [**Campaign**](Campaign.html) OutboundCampaignsPost (Campaign body = null)
+<a name="GetCampaignsCampaignId"></a>
+## [**Campaign**](Campaign.html) GetCampaignsCampaignId (string campaignId)
 
-Create a campaign.
+Get dialer campaign.
 
 
 
 ### Example
-```csharp
+~~~csharp
 using System;
 using System.Diagnostics;
 using ININ.PureCloudApi.Api;
@@ -1196,7 +1008,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class OutboundCampaignsPostExample
+    public class GetCampaignsCampaignIdExample
     {
         public void main()
         {
@@ -1205,44 +1017,44 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new OutboundApi();
-            var body = new Campaign(); // Campaign | Campaign (optional) 
+            var campaignId = campaignId_example;  // string | Campaign ID
 
             try
             {
-                // Create a campaign.
-                Campaign result = apiInstance.OutboundCampaignsPost(body);
+                // Get dialer campaign.
+                Campaign result = apiInstance.GetCampaignsCampaignId(campaignId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling OutboundApi.OutboundCampaignsPost: " + e.Message );
+                Debug.Print("Exception when calling OutboundApi.GetCampaignsCampaignId: " + e.Message );
             }
         }
     }
 }
-```
+~~~
 
 ### Parameters
 
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**Campaign**](Campaign.md)| Campaign | [optional]  |
+| **campaignId** | **string**| Campaign ID |  |
 {: class="table table-striped"}
 
 ### Return type
 
 [**Campaign**](Campaign.md)
 
-<a name="OutboundContactlistsContactlistidCampaignidPenetrationrateGet"></a>
-## [**PenetrationRate**](PenetrationRate.html) OutboundContactlistsContactlistidCampaignidPenetrationrateGet (string contactListId, string campaignId)
+<a name="GetCampaignsCampaignIdDiagnostics"></a>
+## [**CampaignDiagnostics**](CampaignDiagnostics.html) GetCampaignsCampaignIdDiagnostics (string campaignId)
 
-Get Dialer campaign's penetration rate
+Get campaign diagnostics
 
-Get dialer campaign's penetration rate.
+
 
 ### Example
-```csharp
+~~~csharp
 using System;
 using System.Diagnostics;
 using ININ.PureCloudApi.Api;
@@ -1251,7 +1063,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class OutboundContactlistsContactlistidCampaignidPenetrationrateGetExample
+    public class GetCampaignsCampaignIdDiagnosticsExample
     {
         public void main()
         {
@@ -1260,46 +1072,44 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new OutboundApi();
-            var contactListId = contactListId_example;  // string | ContactList ID
             var campaignId = campaignId_example;  // string | Campaign ID
 
             try
             {
-                // Get Dialer campaign's penetration rate
-                PenetrationRate result = apiInstance.OutboundContactlistsContactlistidCampaignidPenetrationrateGet(contactListId, campaignId);
+                // Get campaign diagnostics
+                CampaignDiagnostics result = apiInstance.GetCampaignsCampaignIdDiagnostics(campaignId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling OutboundApi.OutboundContactlistsContactlistidCampaignidPenetrationrateGet: " + e.Message );
+                Debug.Print("Exception when calling OutboundApi.GetCampaignsCampaignIdDiagnostics: " + e.Message );
             }
         }
     }
 }
-```
+~~~
 
 ### Parameters
 
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **contactListId** | **string**| ContactList ID |  |
 | **campaignId** | **string**| Campaign ID |  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**PenetrationRate**](PenetrationRate.md)
+[**CampaignDiagnostics**](CampaignDiagnostics.md)
 
-<a name="OutboundContactlistsContactlistidContactsContactidDelete"></a>
-## string** OutboundContactlistsContactlistidContactsContactidDelete (string contactListId, string contactId)
+<a name="GetCampaignsCampaignIdProgress"></a>
+## [**CampaignProgress**](CampaignProgress.html) GetCampaignsCampaignIdProgress (string campaignId)
 
-Delete a contact.
+Get campaign progress
 
 
 
 ### Example
-```csharp
+~~~csharp
 using System;
 using System.Diagnostics;
 using ININ.PureCloudApi.Api;
@@ -1308,7 +1118,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class OutboundContactlistsContactlistidContactsContactidDeleteExample
+    public class GetCampaignsCampaignIdProgressExample
     {
         public void main()
         {
@@ -1317,46 +1127,44 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new OutboundApi();
-            var contactListId = contactListId_example;  // string | Contact List ID
-            var contactId = contactId_example;  // string | Contact ID
+            var campaignId = campaignId_example;  // string | Campaign ID
 
             try
             {
-                // Delete a contact.
-                string result = apiInstance.OutboundContactlistsContactlistidContactsContactidDelete(contactListId, contactId);
+                // Get campaign progress
+                CampaignProgress result = apiInstance.GetCampaignsCampaignIdProgress(campaignId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling OutboundApi.OutboundContactlistsContactlistidContactsContactidDelete: " + e.Message );
+                Debug.Print("Exception when calling OutboundApi.GetCampaignsCampaignIdProgress: " + e.Message );
             }
         }
     }
 }
-```
+~~~
 
 ### Parameters
 
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **contactListId** | **string**| Contact List ID |  |
-| **contactId** | **string**| Contact ID |  |
+| **campaignId** | **string**| Campaign ID |  |
 {: class="table table-striped"}
 
 ### Return type
 
-**string**
+[**CampaignProgress**](CampaignProgress.md)
 
-<a name="OutboundContactlistsContactlistidContactsContactidGet"></a>
-## [**Contact**](Contact.html) OutboundContactlistsContactlistidContactsContactidGet (string contactListId, string contactId)
+<a name="GetCampaignsCampaignIdStats"></a>
+## [**CampaignStats**](CampaignStats.html) GetCampaignsCampaignIdStats (string campaignId)
 
-Get dialer contactList.
+Get statistics about a Dialer Campaign
 
 
 
 ### Example
-```csharp
+~~~csharp
 using System;
 using System.Diagnostics;
 using ININ.PureCloudApi.Api;
@@ -1365,7 +1173,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class OutboundContactlistsContactlistidContactsContactidGetExample
+    public class GetCampaignsCampaignIdStatsExample
     {
         public void main()
         {
@@ -1374,445 +1182,44 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new OutboundApi();
-            var contactListId = contactListId_example;  // string | Contact List ID
-            var contactId = contactId_example;  // string | Contact ID
+            var campaignId = campaignId_example;  // string | Campaign ID
 
             try
             {
-                // Get dialer contactList.
-                Contact result = apiInstance.OutboundContactlistsContactlistidContactsContactidGet(contactListId, contactId);
+                // Get statistics about a Dialer Campaign
+                CampaignStats result = apiInstance.GetCampaignsCampaignIdStats(campaignId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling OutboundApi.OutboundContactlistsContactlistidContactsContactidGet: " + e.Message );
+                Debug.Print("Exception when calling OutboundApi.GetCampaignsCampaignIdStats: " + e.Message );
             }
         }
     }
 }
-```
+~~~
 
 ### Parameters
 
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **contactListId** | **string**| Contact List ID |  |
-| **contactId** | **string**| Contact ID |  |
+| **campaignId** | **string**| Campaign ID |  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**Contact**](Contact.md)
+[**CampaignStats**](CampaignStats.md)
 
-<a name="OutboundContactlistsContactlistidContactsContactidPut"></a>
-## [**Contact**](Contact.html) OutboundContactlistsContactlistidContactsContactidPut (string contactListId, string contactId, Contact body = null)
-
-Update a contact.
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class OutboundContactlistsContactlistidContactsContactidPutExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new OutboundApi();
-            var contactListId = contactListId_example;  // string | Contact List ID
-            var contactId = contactId_example;  // string | Contact ID
-            var body = new Contact(); // Contact | Contact (optional) 
-
-            try
-            {
-                // Update a contact.
-                Contact result = apiInstance.OutboundContactlistsContactlistidContactsContactidPut(contactListId, contactId, body);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling OutboundApi.OutboundContactlistsContactlistidContactsContactidPut: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **contactListId** | **string**| Contact List ID |  |
-| **contactId** | **string**| Contact ID |  |
-| **body** | [**Contact**](Contact.md)| Contact | [optional]  |
-{: class="table table-striped"}
-
-### Return type
-
-[**Contact**](Contact.md)
-
-<a name="OutboundContactlistsContactlistidContactsPost"></a>
-## [**Contact**](Contact.html) OutboundContactlistsContactlistidContactsPost (string contactListId, List<Contact> body = null, bool? priority = null)
-
-Add contacts to a contact list.
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class OutboundContactlistsContactlistidContactsPostExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new OutboundApi();
-            var contactListId = contactListId_example;  // string | Contact List ID
-            var body = new List<Contact>(); // List<Contact> | Contact (optional) 
-            var priority = true;  // bool? |  (optional) 
-
-            try
-            {
-                // Add contacts to a contact list.
-                Contact result = apiInstance.OutboundContactlistsContactlistidContactsPost(contactListId, body, priority);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling OutboundApi.OutboundContactlistsContactlistidContactsPost: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **contactListId** | **string**| Contact List ID |  |
-| **body** | [**List<Contact>**](Contact.md)| Contact | [optional]  |
-| **priority** | **bool?**|  | [optional]  |
-{: class="table table-striped"}
-
-### Return type
-
-[**Contact**](Contact.md)
-
-<a name="OutboundContactlistsContactlistidDelete"></a>
-## string** OutboundContactlistsContactlistidDelete (string contactListId)
-
-Delete a contact list.
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class OutboundContactlistsContactlistidDeleteExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new OutboundApi();
-            var contactListId = contactListId_example;  // string | ContactList ID
-
-            try
-            {
-                // Delete a contact list.
-                string result = apiInstance.OutboundContactlistsContactlistidDelete(contactListId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling OutboundApi.OutboundContactlistsContactlistidDelete: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **contactListId** | **string**| ContactList ID |  |
-{: class="table table-striped"}
-
-### Return type
-
-**string**
-
-<a name="OutboundContactlistsContactlistidExportPost"></a>
-## string** OutboundContactlistsContactlistidExportPost (string contactListId)
-
-Initiate the export of a contact list.
-
-Returns 200 if received OK.
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class OutboundContactlistsContactlistidExportPostExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new OutboundApi();
-            var contactListId = contactListId_example;  // string | ContactList ID
-
-            try
-            {
-                // Initiate the export of a contact list.
-                string result = apiInstance.OutboundContactlistsContactlistidExportPost(contactListId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling OutboundApi.OutboundContactlistsContactlistidExportPost: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **contactListId** | **string**| ContactList ID |  |
-{: class="table table-striped"}
-
-### Return type
-
-**string**
-
-<a name="OutboundContactlistsContactlistidGet"></a>
-## [**ContactList**](ContactList.html) OutboundContactlistsContactlistidGet (string contactListId, bool? importStatus = null, bool? includeSize = null)
-
-Get dialer contactList.
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class OutboundContactlistsContactlistidGetExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new OutboundApi();
-            var contactListId = contactListId_example;  // string | ContactList ID
-            var importStatus = true;  // bool? | Import status (optional)  (default to false)
-            var includeSize = true;  // bool? | Include size (optional)  (default to false)
-
-            try
-            {
-                // Get dialer contactList.
-                ContactList result = apiInstance.OutboundContactlistsContactlistidGet(contactListId, importStatus, includeSize);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling OutboundApi.OutboundContactlistsContactlistidGet: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **contactListId** | **string**| ContactList ID |  |
-| **importStatus** | **bool?**| Import status | [optional] [default to false] |
-| **includeSize** | **bool?**| Include size | [optional] [default to false] |
-{: class="table table-striped"}
-
-### Return type
-
-[**ContactList**](ContactList.md)
-
-<a name="OutboundContactlistsContactlistidImportstatusGet"></a>
-## [**ImportStatus**](ImportStatus.html) OutboundContactlistsContactlistidImportstatusGet (string contactListId)
-
-Get dialer contactList import status.
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class OutboundContactlistsContactlistidImportstatusGetExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new OutboundApi();
-            var contactListId = contactListId_example;  // string | ContactList ID
-
-            try
-            {
-                // Get dialer contactList import status.
-                ImportStatus result = apiInstance.OutboundContactlistsContactlistidImportstatusGet(contactListId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling OutboundApi.OutboundContactlistsContactlistidImportstatusGet: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **contactListId** | **string**| ContactList ID |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**ImportStatus**](ImportStatus.md)
-
-<a name="OutboundContactlistsContactlistidPut"></a>
-## [**ContactList**](ContactList.html) OutboundContactlistsContactlistidPut (string contactListId, ContactList body = null)
-
-Update a contact list.
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class OutboundContactlistsContactlistidPutExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new OutboundApi();
-            var contactListId = contactListId_example;  // string | ContactList ID
-            var body = new ContactList(); // ContactList | ContactList (optional) 
-
-            try
-            {
-                // Update a contact list.
-                ContactList result = apiInstance.OutboundContactlistsContactlistidPut(contactListId, body);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling OutboundApi.OutboundContactlistsContactlistidPut: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **contactListId** | **string**| ContactList ID |  |
-| **body** | [**ContactList**](ContactList.md)| ContactList | [optional]  |
-{: class="table table-striped"}
-
-### Return type
-
-[**ContactList**](ContactList.md)
-
-<a name="OutboundContactlistsGet"></a>
-## [**ContactListEntityListing**](ContactListEntityListing.html) OutboundContactlistsGet (bool? importStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
+<a name="GetContactlists"></a>
+## [**ContactListEntityListing**](ContactListEntityListing.html) GetContactlists (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
 
 Query a list of contact lists.
 
 
 
 ### Example
-```csharp
+~~~csharp
 using System;
 using System.Diagnostics;
 using ININ.PureCloudApi.Api;
@@ -1821,7 +1228,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class OutboundContactlistsGetExample
+    public class GetContactlistsExample
     {
         public void main()
         {
@@ -1830,7 +1237,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new OutboundApi();
-            var importStatus = true;  // bool? | Import status (optional)  (default to false)
+            var includeImportStatus = true;  // bool? | Include import status (optional)  (default to false)
             var includeSize = true;  // bool? | Include size (optional)  (default to false)
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
@@ -1842,24 +1249,24 @@ namespace Example
             try
             {
                 // Query a list of contact lists.
-                ContactListEntityListing result = apiInstance.OutboundContactlistsGet(importStatus, includeSize, pageSize, pageNumber, filterType, name, sortBy, sortOrder);
+                ContactListEntityListing result = apiInstance.GetContactlists(includeImportStatus, includeSize, pageSize, pageNumber, filterType, name, sortBy, sortOrder);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling OutboundApi.OutboundContactlistsGet: " + e.Message );
+                Debug.Print("Exception when calling OutboundApi.GetContactlists: " + e.Message );
             }
         }
     }
 }
-```
+~~~
 
 ### Parameters
 
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **importStatus** | **bool?**| Import status | [optional] [default to false] |
+| **includeImportStatus** | **bool?**| Include import status | [optional] [default to false] |
 | **includeSize** | **bool?**| Include size | [optional] [default to false] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
@@ -1873,15 +1280,15 @@ namespace Example
 
 [**ContactListEntityListing**](ContactListEntityListing.md)
 
-<a name="OutboundContactlistsPenetrationratesPost"></a>
-## [**List&lt;PenetrationRate&gt;**](PenetrationRate.html) OutboundContactlistsPenetrationratesPost (List<PenetrationRateId> body = null)
+<a name="GetContactlistsContactlistId"></a>
+## [**ContactList**](ContactList.html) GetContactlistsContactlistId (string contactListId, bool? includeImportStatus = null, bool? includeSize = null)
 
-Get penetration rates for a list of penetration rate identifiers (contact list id and qualifier id)
+Get dialer contactList.
 
 
 
 ### Example
-```csharp
+~~~csharp
 using System;
 using System.Diagnostics;
 using ININ.PureCloudApi.Api;
@@ -1890,7 +1297,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class OutboundContactlistsPenetrationratesPostExample
+    public class GetContactlistsContactlistIdExample
     {
         public void main()
         {
@@ -1899,99 +1306,48 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new OutboundApi();
-            var body = new List<PenetrationRateId>(); // List<PenetrationRateId> | PenetrationRateIdentifierList (optional) 
+            var contactListId = contactListId_example;  // string | ContactList ID
+            var includeImportStatus = true;  // bool? | Import status (optional)  (default to false)
+            var includeSize = true;  // bool? | Include size (optional)  (default to false)
 
             try
             {
-                // Get penetration rates for a list of penetration rate identifiers (contact list id and qualifier id)
-                List&lt;PenetrationRate&gt; result = apiInstance.OutboundContactlistsPenetrationratesPost(body);
+                // Get dialer contactList.
+                ContactList result = apiInstance.GetContactlistsContactlistId(contactListId, includeImportStatus, includeSize);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling OutboundApi.OutboundContactlistsPenetrationratesPost: " + e.Message );
+                Debug.Print("Exception when calling OutboundApi.GetContactlistsContactlistId: " + e.Message );
             }
         }
     }
 }
-```
+~~~
 
 ### Parameters
 
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**List<PenetrationRateId>**](PenetrationRateId.md)| PenetrationRateIdentifierList | [optional]  |
-{: class="table table-striped"}
-
-### Return type
-
-[**List<PenetrationRate>**](PenetrationRate.md)
-
-<a name="OutboundContactlistsPost"></a>
-## [**ContactList**](ContactList.html) OutboundContactlistsPost (ContactList body = null)
-
-Create a contact List.
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class OutboundContactlistsPostExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new OutboundApi();
-            var body = new ContactList(); // ContactList | ContactList (optional) 
-
-            try
-            {
-                // Create a contact List.
-                ContactList result = apiInstance.OutboundContactlistsPost(body);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling OutboundApi.OutboundContactlistsPost: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **body** | [**ContactList**](ContactList.md)| ContactList | [optional]  |
+| **contactListId** | **string**| ContactList ID |  |
+| **includeImportStatus** | **bool?**| Import status | [optional] [default to false] |
+| **includeSize** | **bool?**| Include size | [optional] [default to false] |
 {: class="table table-striped"}
 
 ### Return type
 
 [**ContactList**](ContactList.md)
 
-<a name="OutboundConversationsConversationidDncPost"></a>
-## void OutboundConversationsConversationidDncPost (string conversationId)
+<a name="GetContactlistsContactlistIdContactsContactId"></a>
+## [**DialerContact**](DialerContact.html) GetContactlistsContactlistIdContactsContactId (string contactListId, string contactId)
 
-Add phone numbers to a Dialer DNC list.
+Get dialer contactList.
 
 
 
 ### Example
-```csharp
+~~~csharp
 using System;
 using System.Diagnostics;
 using ININ.PureCloudApi.Api;
@@ -2000,7 +1356,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class OutboundConversationsConversationidDncPostExample
+    public class GetContactlistsContactlistIdContactsContactIdExample
     {
         public void main()
         {
@@ -2009,98 +1365,46 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new OutboundApi();
-            var conversationId = conversationId_example;  // string | Conversation ID
+            var contactListId = contactListId_example;  // string | Contact List ID
+            var contactId = contactId_example;  // string | Contact ID
 
             try
             {
-                // Add phone numbers to a Dialer DNC list.
-                apiInstance.OutboundConversationsConversationidDncPost(conversationId);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling OutboundApi.OutboundConversationsConversationidDncPost: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **conversationId** | **string**| Conversation ID |  |
-{: class="table table-striped"}
-
-### Return type
-
-void (empty response body)
-
-<a name="OutboundDnclistsDnclistidDelete"></a>
-## string** OutboundDnclistsDnclistidDelete (string dncListId)
-
-Delete dialer DNC list
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class OutboundDnclistsDnclistidDeleteExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new OutboundApi();
-            var dncListId = dncListId_example;  // string | DncList ID
-
-            try
-            {
-                // Delete dialer DNC list
-                string result = apiInstance.OutboundDnclistsDnclistidDelete(dncListId);
+                // Get dialer contactList.
+                DialerContact result = apiInstance.GetContactlistsContactlistIdContactsContactId(contactListId, contactId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling OutboundApi.OutboundDnclistsDnclistidDelete: " + e.Message );
+                Debug.Print("Exception when calling OutboundApi.GetContactlistsContactlistIdContactsContactId: " + e.Message );
             }
         }
     }
 }
-```
+~~~
 
 ### Parameters
 
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **dncListId** | **string**| DncList ID |  |
+| **contactListId** | **string**| Contact List ID |  |
+| **contactId** | **string**| Contact ID |  |
 {: class="table table-striped"}
 
 ### Return type
 
-**string**
+[**DialerContact**](DialerContact.md)
 
-<a name="OutboundDnclistsDnclistidExportPost"></a>
-## string** OutboundDnclistsDnclistidExportPost (string dncListId)
+<a name="GetContactlistsContactlistIdImportstatus"></a>
+## [**ImportStatus**](ImportStatus.html) GetContactlistsContactlistIdImportstatus (string contactListId)
 
-Initiate the export of a dnc list.
+Get dialer contactList import status.
 
-Returns 200 if received OK.
+
 
 ### Example
-```csharp
+~~~csharp
 using System;
 using System.Diagnostics;
 using ININ.PureCloudApi.Api;
@@ -2109,7 +1413,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class OutboundDnclistsDnclistidExportPostExample
+    public class GetContactlistsContactlistIdImportstatusExample
     {
         public void main()
         {
@@ -2118,271 +1422,44 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new OutboundApi();
-            var dncListId = dncListId_example;  // string | DncList ID
+            var contactListId = contactListId_example;  // string | ContactList ID
 
             try
             {
-                // Initiate the export of a dnc list.
-                string result = apiInstance.OutboundDnclistsDnclistidExportPost(dncListId);
+                // Get dialer contactList import status.
+                ImportStatus result = apiInstance.GetContactlistsContactlistIdImportstatus(contactListId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling OutboundApi.OutboundDnclistsDnclistidExportPost: " + e.Message );
+                Debug.Print("Exception when calling OutboundApi.GetContactlistsContactlistIdImportstatus: " + e.Message );
             }
         }
     }
 }
-```
+~~~
 
 ### Parameters
 
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **dncListId** | **string**| DncList ID |  |
-{: class="table table-striped"}
-
-### Return type
-
-**string**
-
-<a name="OutboundDnclistsDnclistidGet"></a>
-## [**DncList**](DncList.html) OutboundDnclistsDnclistidGet (string dncListId, bool? importStatus = null, bool? includeSize = null)
-
-Get dialer DNC list
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class OutboundDnclistsDnclistidGetExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new OutboundApi();
-            var dncListId = dncListId_example;  // string | DncList ID
-            var importStatus = true;  // bool? | Import status (optional)  (default to false)
-            var includeSize = true;  // bool? | Include size (optional)  (default to false)
-
-            try
-            {
-                // Get dialer DNC list
-                DncList result = apiInstance.OutboundDnclistsDnclistidGet(dncListId, importStatus, includeSize);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling OutboundApi.OutboundDnclistsDnclistidGet: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **dncListId** | **string**| DncList ID |  |
-| **importStatus** | **bool?**| Import status | [optional] [default to false] |
-| **includeSize** | **bool?**| Include size | [optional] [default to false] |
-{: class="table table-striped"}
-
-### Return type
-
-[**DncList**](DncList.md)
-
-<a name="OutboundDnclistsDnclistidImportstatusGet"></a>
-## [**ImportStatus**](ImportStatus.html) OutboundDnclistsDnclistidImportstatusGet (string dncListId)
-
-Get dialer dncList import status.
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class OutboundDnclistsDnclistidImportstatusGetExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new OutboundApi();
-            var dncListId = dncListId_example;  // string | DncList ID
-
-            try
-            {
-                // Get dialer dncList import status.
-                ImportStatus result = apiInstance.OutboundDnclistsDnclistidImportstatusGet(dncListId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling OutboundApi.OutboundDnclistsDnclistidImportstatusGet: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **dncListId** | **string**| DncList ID |  |
+| **contactListId** | **string**| ContactList ID |  |
 {: class="table table-striped"}
 
 ### Return type
 
 [**ImportStatus**](ImportStatus.md)
 
-<a name="OutboundDnclistsDnclistidPhonenumbersPost"></a>
-## void OutboundDnclistsDnclistidPhonenumbersPost (string dncListId, List<string> body = null)
-
-Add phone numbers to a Dialer DNC list.
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class OutboundDnclistsDnclistidPhonenumbersPostExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new OutboundApi();
-            var dncListId = dncListId_example;  // string | DncList ID
-            var body = ;  // List<string> | DNC Phone Numbers (optional) 
-
-            try
-            {
-                // Add phone numbers to a Dialer DNC list.
-                apiInstance.OutboundDnclistsDnclistidPhonenumbersPost(dncListId, body);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling OutboundApi.OutboundDnclistsDnclistidPhonenumbersPost: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **dncListId** | **string**| DncList ID |  |
-| **body** | **List<string>**| DNC Phone Numbers | [optional]  |
-{: class="table table-striped"}
-
-### Return type
-
-void (empty response body)
-
-<a name="OutboundDnclistsDnclistidPut"></a>
-## [**DncList**](DncList.html) OutboundDnclistsDnclistidPut (string dncListId, DncList body = null)
-
-Update dialer DNC list
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class OutboundDnclistsDnclistidPutExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new OutboundApi();
-            var dncListId = dncListId_example;  // string | DncList ID
-            var body = new DncList(); // DncList | DncList (optional) 
-
-            try
-            {
-                // Update dialer DNC list
-                DncList result = apiInstance.OutboundDnclistsDnclistidPut(dncListId, body);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling OutboundApi.OutboundDnclistsDnclistidPut: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **dncListId** | **string**| DncList ID |  |
-| **body** | [**DncList**](DncList.md)| DncList | [optional]  |
-{: class="table table-striped"}
-
-### Return type
-
-[**DncList**](DncList.md)
-
-<a name="OutboundDnclistsGet"></a>
-## [**DncListEntityListing**](DncListEntityListing.html) OutboundDnclistsGet (bool? importStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
+<a name="GetDnclists"></a>
+## [**DncListEntityListing**](DncListEntityListing.html) GetDnclists (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
 
 Query dialer DNC lists
 
 
 
 ### Example
-```csharp
+~~~csharp
 using System;
 using System.Diagnostics;
 using ININ.PureCloudApi.Api;
@@ -2391,7 +1468,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class OutboundDnclistsGetExample
+    public class GetDnclistsExample
     {
         public void main()
         {
@@ -2400,7 +1477,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new OutboundApi();
-            var importStatus = true;  // bool? | Import status (optional)  (default to false)
+            var includeImportStatus = true;  // bool? | Import status (optional)  (default to false)
             var includeSize = true;  // bool? | Include size (optional)  (default to false)
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
@@ -2412,24 +1489,24 @@ namespace Example
             try
             {
                 // Query dialer DNC lists
-                DncListEntityListing result = apiInstance.OutboundDnclistsGet(importStatus, includeSize, pageSize, pageNumber, filterType, name, sortBy, sortOrder);
+                DncListEntityListing result = apiInstance.GetDnclists(includeImportStatus, includeSize, pageSize, pageNumber, filterType, name, sortBy, sortOrder);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling OutboundApi.OutboundDnclistsGet: " + e.Message );
+                Debug.Print("Exception when calling OutboundApi.GetDnclists: " + e.Message );
             }
         }
     }
 }
-```
+~~~
 
 ### Parameters
 
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **importStatus** | **bool?**| Import status | [optional] [default to false] |
+| **includeImportStatus** | **bool?**| Import status | [optional] [default to false] |
 | **includeSize** | **bool?**| Include size | [optional] [default to false] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
@@ -2443,15 +1520,15 @@ namespace Example
 
 [**DncListEntityListing**](DncListEntityListing.md)
 
-<a name="OutboundDnclistsPost"></a>
-## [**DncList**](DncList.html) OutboundDnclistsPost (DncList body = null)
+<a name="GetDnclistsDnclistId"></a>
+## [**DncList**](DncList.html) GetDnclistsDnclistId (string dncListId, bool? includeImportStatus = null, bool? includeSize = null)
 
-Create dialer DNC list
+Get dialer DNC list
 
 
 
 ### Example
-```csharp
+~~~csharp
 using System;
 using System.Diagnostics;
 using ININ.PureCloudApi.Api;
@@ -2460,7 +1537,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class OutboundDnclistsPostExample
+    public class GetDnclistsDnclistIdExample
     {
         public void main()
         {
@@ -2469,44 +1546,48 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new OutboundApi();
-            var body = new DncList(); // DncList | DncList (optional) 
+            var dncListId = dncListId_example;  // string | DncList ID
+            var includeImportStatus = true;  // bool? | Import status (optional)  (default to false)
+            var includeSize = true;  // bool? | Include size (optional)  (default to false)
 
             try
             {
-                // Create dialer DNC list
-                DncList result = apiInstance.OutboundDnclistsPost(body);
+                // Get dialer DNC list
+                DncList result = apiInstance.GetDnclistsDnclistId(dncListId, includeImportStatus, includeSize);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling OutboundApi.OutboundDnclistsPost: " + e.Message );
+                Debug.Print("Exception when calling OutboundApi.GetDnclistsDnclistId: " + e.Message );
             }
         }
     }
 }
-```
+~~~
 
 ### Parameters
 
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**DncList**](DncList.md)| DncList | [optional]  |
+| **dncListId** | **string**| DncList ID |  |
+| **includeImportStatus** | **bool?**| Import status | [optional] [default to false] |
+| **includeSize** | **bool?**| Include size | [optional] [default to false] |
 {: class="table table-striped"}
 
 ### Return type
 
 [**DncList**](DncList.md)
 
-<a name="OutboundPreviewsGet"></a>
-## [**List&lt;Preview&gt;**](Preview.html) OutboundPreviewsGet ()
+<a name="GetDnclistsDnclistIdImportstatus"></a>
+## [**ImportStatus**](ImportStatus.html) GetDnclistsDnclistIdImportstatus (string dncListId)
 
-Get dialer preview for user
+Get dialer dncList import status.
 
 
 
 ### Example
-```csharp
+~~~csharp
 using System;
 using System.Diagnostics;
 using ININ.PureCloudApi.Api;
@@ -2515,7 +1596,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class OutboundPreviewsGetExample
+    public class GetDnclistsDnclistIdImportstatusExample
     {
         public void main()
         {
@@ -2524,208 +1605,44 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new OutboundApi();
+            var dncListId = dncListId_example;  // string | DncList ID
 
             try
             {
-                // Get dialer preview for user
-                List&lt;Preview&gt; result = apiInstance.OutboundPreviewsGet();
+                // Get dialer dncList import status.
+                ImportStatus result = apiInstance.GetDnclistsDnclistIdImportstatus(dncListId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling OutboundApi.OutboundPreviewsGet: " + e.Message );
+                Debug.Print("Exception when calling OutboundApi.GetDnclistsDnclistIdImportstatus: " + e.Message );
             }
         }
     }
 }
-```
-
-### Parameters
-This endpoint does require any parameters.
-{: class="table table-striped"}
-
-### Return type
-
-[**List<Preview>**](Preview.md)
-
-<a name="OutboundPreviewsPreviewidDispositioncallPost"></a>
-## string** OutboundPreviewsPreviewidDispositioncallPost (string previewId, DialerDispositionCallCommand body = null)
-
-Disposition preview call
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class OutboundPreviewsPreviewidDispositioncallPostExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new OutboundApi();
-            var previewId = previewId_example;  // string | preview ID
-            var body = new DialerDispositionCallCommand(); // DialerDispositionCallCommand |  (optional) 
-
-            try
-            {
-                // Disposition preview call
-                string result = apiInstance.OutboundPreviewsPreviewidDispositioncallPost(previewId, body);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling OutboundApi.OutboundPreviewsPreviewidDispositioncallPost: " + e.Message );
-            }
-        }
-    }
-}
-```
+~~~
 
 ### Parameters
 
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **previewId** | **string**| preview ID |  |
-| **body** | [**DialerDispositionCallCommand**](DialerDispositionCallCommand.md)|  | [optional]  |
+| **dncListId** | **string**| DncList ID |  |
 {: class="table table-striped"}
 
 ### Return type
 
-**string**
+[**ImportStatus**](ImportStatus.md)
 
-<a name="OutboundPreviewsPreviewidGet"></a>
-## [**Preview**](Preview.html) OutboundPreviewsPreviewidGet (string previewId)
-
-Get dialer preview
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class OutboundPreviewsPreviewidGetExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new OutboundApi();
-            var previewId = previewId_example;  // string | preview ID
-
-            try
-            {
-                // Get dialer preview
-                Preview result = apiInstance.OutboundPreviewsPreviewidGet(previewId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling OutboundApi.OutboundPreviewsPreviewidGet: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **previewId** | **string**| preview ID |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**Preview**](Preview.md)
-
-<a name="OutboundPreviewsPreviewidPlacecallPost"></a>
-## [**DialerCall**](DialerCall.html) OutboundPreviewsPreviewidPlacecallPost (string previewId, DialerPlaceCallCommand body = null)
-
-place preview call
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class OutboundPreviewsPreviewidPlacecallPostExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new OutboundApi();
-            var previewId = previewId_example;  // string | preview ID
-            var body = new DialerPlaceCallCommand(); // DialerPlaceCallCommand |  (optional) 
-
-            try
-            {
-                // place preview call
-                DialerCall result = apiInstance.OutboundPreviewsPreviewidPlacecallPost(previewId, body);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling OutboundApi.OutboundPreviewsPreviewidPlacecallPost: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **previewId** | **string**| preview ID |  |
-| **body** | [**DialerPlaceCallCommand**](DialerPlaceCallCommand.md)|  | [optional]  |
-{: class="table table-striped"}
-
-### Return type
-
-[**DialerCall**](DialerCall.md)
-
-<a name="OutboundRulesetsGet"></a>
-## [**RuleSetEntityListing**](RuleSetEntityListing.html) OutboundRulesetsGet (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
+<a name="GetRulesets"></a>
+## [**RuleSetEntityListing**](RuleSetEntityListing.html) GetRulesets (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
 
 Query a list of Rule Sets.
 
 
 
 ### Example
-```csharp
+~~~csharp
 using System;
 using System.Diagnostics;
 using ININ.PureCloudApi.Api;
@@ -2734,7 +1651,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class OutboundRulesetsGetExample
+    public class GetRulesetsExample
     {
         public void main()
         {
@@ -2753,17 +1670,17 @@ namespace Example
             try
             {
                 // Query a list of Rule Sets.
-                RuleSetEntityListing result = apiInstance.OutboundRulesetsGet(pageSize, pageNumber, filterType, name, sortBy, sortOrder);
+                RuleSetEntityListing result = apiInstance.GetRulesets(pageSize, pageNumber, filterType, name, sortBy, sortOrder);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling OutboundApi.OutboundRulesetsGet: " + e.Message );
+                Debug.Print("Exception when calling OutboundApi.GetRulesets: " + e.Message );
             }
         }
     }
 }
-```
+~~~
 
 ### Parameters
 
@@ -2782,125 +1699,15 @@ namespace Example
 
 [**RuleSetEntityListing**](RuleSetEntityListing.md)
 
-<a name="OutboundRulesetsPost"></a>
-## [**RuleSet**](RuleSet.html) OutboundRulesetsPost (RuleSet body = null)
-
-Create a Dialer Call Analysis Response Set.
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class OutboundRulesetsPostExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new OutboundApi();
-            var body = new RuleSet(); // RuleSet | RuleSet (optional) 
-
-            try
-            {
-                // Create a Dialer Call Analysis Response Set.
-                RuleSet result = apiInstance.OutboundRulesetsPost(body);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling OutboundApi.OutboundRulesetsPost: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **body** | [**RuleSet**](RuleSet.md)| RuleSet | [optional]  |
-{: class="table table-striped"}
-
-### Return type
-
-[**RuleSet**](RuleSet.md)
-
-<a name="OutboundRulesetsRulesetidDelete"></a>
-## string** OutboundRulesetsRulesetidDelete (string ruleSetId)
-
-Delete a Rule set.
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class OutboundRulesetsRulesetidDeleteExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new OutboundApi();
-            var ruleSetId = ruleSetId_example;  // string | Rule Set ID
-
-            try
-            {
-                // Delete a Rule set.
-                string result = apiInstance.OutboundRulesetsRulesetidDelete(ruleSetId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling OutboundApi.OutboundRulesetsRulesetidDelete: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **ruleSetId** | **string**| Rule Set ID |  |
-{: class="table table-striped"}
-
-### Return type
-
-**string**
-
-<a name="OutboundRulesetsRulesetidGet"></a>
-## [**RuleSet**](RuleSet.html) OutboundRulesetsRulesetidGet (string ruleSetId)
+<a name="GetRulesetsRulesetId"></a>
+## [**RuleSet**](RuleSet.html) GetRulesetsRulesetId (string ruleSetId)
 
 Get a Rule Set by ID.
 
 
 
 ### Example
-```csharp
+~~~csharp
 using System;
 using System.Diagnostics;
 using ININ.PureCloudApi.Api;
@@ -2909,7 +1716,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class OutboundRulesetsRulesetidGetExample
+    public class GetRulesetsRulesetIdExample
     {
         public void main()
         {
@@ -2923,17 +1730,17 @@ namespace Example
             try
             {
                 // Get a Rule Set by ID.
-                RuleSet result = apiInstance.OutboundRulesetsRulesetidGet(ruleSetId);
+                RuleSet result = apiInstance.GetRulesetsRulesetId(ruleSetId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling OutboundApi.OutboundRulesetsRulesetidGet: " + e.Message );
+                Debug.Print("Exception when calling OutboundApi.GetRulesetsRulesetId: " + e.Message );
             }
         }
     }
 }
-```
+~~~
 
 ### Parameters
 
@@ -2947,15 +1754,15 @@ namespace Example
 
 [**RuleSet**](RuleSet.md)
 
-<a name="OutboundRulesetsRulesetidPut"></a>
-## [**RuleSet**](RuleSet.html) OutboundRulesetsRulesetidPut (string ruleSetId, RuleSet body = null)
+<a name="GetSchedulesCampaigns"></a>
+## [**List&lt;CampaignSchedule&gt;**](CampaignSchedule.html) GetSchedulesCampaigns ()
 
-Update a RuleSet.
+Query for a list of dialer campaign schedules.
 
 
 
 ### Example
-```csharp
+~~~csharp
 using System;
 using System.Diagnostics;
 using ININ.PureCloudApi.Api;
@@ -2964,7 +1771,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class OutboundRulesetsRulesetidPutExample
+    public class GetSchedulesCampaignsExample
     {
         public void main()
         {
@@ -2973,101 +1780,39 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new OutboundApi();
-            var ruleSetId = ruleSetId_example;  // string | Rule Set ID
-            var body = new RuleSet(); // RuleSet | RuleSet (optional) 
 
             try
             {
-                // Update a RuleSet.
-                RuleSet result = apiInstance.OutboundRulesetsRulesetidPut(ruleSetId, body);
+                // Query for a list of dialer campaign schedules.
+                List&lt;CampaignSchedule&gt; result = apiInstance.GetSchedulesCampaigns();
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling OutboundApi.OutboundRulesetsRulesetidPut: " + e.Message );
+                Debug.Print("Exception when calling OutboundApi.GetSchedulesCampaigns: " + e.Message );
             }
         }
     }
 }
-```
+~~~
 
 ### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **ruleSetId** | **string**| Rule Set ID |  |
-| **body** | [**RuleSet**](RuleSet.md)| RuleSet | [optional]  |
+This endpoint does require any parameters.
 {: class="table table-striped"}
 
 ### Return type
 
-[**RuleSet**](RuleSet.md)
+[**List<CampaignSchedule>**](CampaignSchedule.md)
 
-<a name="OutboundSchedulesCampaignsCampaignidDelete"></a>
-## string** OutboundSchedulesCampaignsCampaignidDelete (string campaignId)
-
-Delete a dialer campaign schedule.
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class OutboundSchedulesCampaignsCampaignidDeleteExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new OutboundApi();
-            var campaignId = campaignId_example;  // string | Campaign ID
-
-            try
-            {
-                // Delete a dialer campaign schedule.
-                string result = apiInstance.OutboundSchedulesCampaignsCampaignidDelete(campaignId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling OutboundApi.OutboundSchedulesCampaignsCampaignidDelete: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **campaignId** | **string**| Campaign ID |  |
-{: class="table table-striped"}
-
-### Return type
-
-**string**
-
-<a name="OutboundSchedulesCampaignsCampaignidGet"></a>
-## [**CampaignSchedule**](CampaignSchedule.html) OutboundSchedulesCampaignsCampaignidGet (string campaignId)
+<a name="GetSchedulesCampaignsCampaignId"></a>
+## [**CampaignSchedule**](CampaignSchedule.html) GetSchedulesCampaignsCampaignId (string campaignId)
 
 Get a dialer campaign schedule.
 
 
 
 ### Example
-```csharp
+~~~csharp
 using System;
 using System.Diagnostics;
 using ININ.PureCloudApi.Api;
@@ -3076,7 +1821,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class OutboundSchedulesCampaignsCampaignidGetExample
+    public class GetSchedulesCampaignsCampaignIdExample
     {
         public void main()
         {
@@ -3090,17 +1835,17 @@ namespace Example
             try
             {
                 // Get a dialer campaign schedule.
-                CampaignSchedule result = apiInstance.OutboundSchedulesCampaignsCampaignidGet(campaignId);
+                CampaignSchedule result = apiInstance.GetSchedulesCampaignsCampaignId(campaignId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling OutboundApi.OutboundSchedulesCampaignsCampaignidGet: " + e.Message );
+                Debug.Print("Exception when calling OutboundApi.GetSchedulesCampaignsCampaignId: " + e.Message );
             }
         }
     }
 }
-```
+~~~
 
 ### Parameters
 
@@ -3114,122 +1859,15 @@ namespace Example
 
 [**CampaignSchedule**](CampaignSchedule.md)
 
-<a name="OutboundSchedulesCampaignsCampaignidPut"></a>
-## [**CampaignSchedule**](CampaignSchedule.html) OutboundSchedulesCampaignsCampaignidPut (string campaignId, CampaignSchedule body = null)
-
-Update a new campaign schedule.
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class OutboundSchedulesCampaignsCampaignidPutExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new OutboundApi();
-            var campaignId = campaignId_example;  // string | Campaign ID
-            var body = new CampaignSchedule(); // CampaignSchedule | CampaignSchedule (optional) 
-
-            try
-            {
-                // Update a new campaign schedule.
-                CampaignSchedule result = apiInstance.OutboundSchedulesCampaignsCampaignidPut(campaignId, body);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling OutboundApi.OutboundSchedulesCampaignsCampaignidPut: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **campaignId** | **string**| Campaign ID |  |
-| **body** | [**CampaignSchedule**](CampaignSchedule.md)| CampaignSchedule | [optional]  |
-{: class="table table-striped"}
-
-### Return type
-
-[**CampaignSchedule**](CampaignSchedule.md)
-
-<a name="OutboundSchedulesCampaignsGet"></a>
-## [**List&lt;CampaignSchedule&gt;**](CampaignSchedule.html) OutboundSchedulesCampaignsGet ()
-
-Query for a list of dialer campaign schedules.
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class OutboundSchedulesCampaignsGetExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new OutboundApi();
-
-            try
-            {
-                // Query for a list of dialer campaign schedules.
-                List&lt;CampaignSchedule&gt; result = apiInstance.OutboundSchedulesCampaignsGet();
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling OutboundApi.OutboundSchedulesCampaignsGet: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-This endpoint does require any parameters.
-{: class="table table-striped"}
-
-### Return type
-
-[**List<CampaignSchedule>**](CampaignSchedule.md)
-
-<a name="OutboundSchedulesSequencesGet"></a>
-## [**List&lt;SequenceSchedule&gt;**](SequenceSchedule.html) OutboundSchedulesSequencesGet ()
+<a name="GetSchedulesSequences"></a>
+## [**List&lt;SequenceSchedule&gt;**](SequenceSchedule.html) GetSchedulesSequences ()
 
 Query for a list of dialer sequence schedules.
 
 
 
 ### Example
-```csharp
+~~~csharp
 using System;
 using System.Diagnostics;
 using ININ.PureCloudApi.Api;
@@ -3238,7 +1876,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class OutboundSchedulesSequencesGetExample
+    public class GetSchedulesSequencesExample
     {
         public void main()
         {
@@ -3251,17 +1889,17 @@ namespace Example
             try
             {
                 // Query for a list of dialer sequence schedules.
-                List&lt;SequenceSchedule&gt; result = apiInstance.OutboundSchedulesSequencesGet();
+                List&lt;SequenceSchedule&gt; result = apiInstance.GetSchedulesSequences();
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling OutboundApi.OutboundSchedulesSequencesGet: " + e.Message );
+                Debug.Print("Exception when calling OutboundApi.GetSchedulesSequences: " + e.Message );
             }
         }
     }
 }
-```
+~~~
 
 ### Parameters
 This endpoint does require any parameters.
@@ -3271,70 +1909,15 @@ This endpoint does require any parameters.
 
 [**List<SequenceSchedule>**](SequenceSchedule.md)
 
-<a name="OutboundSchedulesSequencesSequenceidDelete"></a>
-## string** OutboundSchedulesSequencesSequenceidDelete (string sequenceId)
-
-Delete a dialer sequence schedule.
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class OutboundSchedulesSequencesSequenceidDeleteExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new OutboundApi();
-            var sequenceId = sequenceId_example;  // string | Sequence ID
-
-            try
-            {
-                // Delete a dialer sequence schedule.
-                string result = apiInstance.OutboundSchedulesSequencesSequenceidDelete(sequenceId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling OutboundApi.OutboundSchedulesSequencesSequenceidDelete: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **sequenceId** | **string**| Sequence ID |  |
-{: class="table table-striped"}
-
-### Return type
-
-**string**
-
-<a name="OutboundSchedulesSequencesSequenceidGet"></a>
-## [**SequenceSchedule**](SequenceSchedule.html) OutboundSchedulesSequencesSequenceidGet (string sequenceId)
+<a name="GetSchedulesSequencesSequenceId"></a>
+## [**SequenceSchedule**](SequenceSchedule.html) GetSchedulesSequencesSequenceId (string sequenceId)
 
 Get a dialer sequence schedule.
 
 
 
 ### Example
-```csharp
+~~~csharp
 using System;
 using System.Diagnostics;
 using ININ.PureCloudApi.Api;
@@ -3343,7 +1926,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class OutboundSchedulesSequencesSequenceidGetExample
+    public class GetSchedulesSequencesSequenceIdExample
     {
         public void main()
         {
@@ -3357,17 +1940,17 @@ namespace Example
             try
             {
                 // Get a dialer sequence schedule.
-                SequenceSchedule result = apiInstance.OutboundSchedulesSequencesSequenceidGet(sequenceId);
+                SequenceSchedule result = apiInstance.GetSchedulesSequencesSequenceId(sequenceId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling OutboundApi.OutboundSchedulesSequencesSequenceidGet: " + e.Message );
+                Debug.Print("Exception when calling OutboundApi.GetSchedulesSequencesSequenceId: " + e.Message );
             }
         }
     }
 }
-```
+~~~
 
 ### Parameters
 
@@ -3381,72 +1964,15 @@ namespace Example
 
 [**SequenceSchedule**](SequenceSchedule.md)
 
-<a name="OutboundSchedulesSequencesSequenceidPut"></a>
-## [**SequenceSchedule**](SequenceSchedule.html) OutboundSchedulesSequencesSequenceidPut (string sequenceId, SequenceSchedule body = null)
-
-Update a new sequence schedule.
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class OutboundSchedulesSequencesSequenceidPutExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new OutboundApi();
-            var sequenceId = sequenceId_example;  // string | Sequence ID
-            var body = new SequenceSchedule(); // SequenceSchedule | SequenceSchedule (optional) 
-
-            try
-            {
-                // Update a new sequence schedule.
-                SequenceSchedule result = apiInstance.OutboundSchedulesSequencesSequenceidPut(sequenceId, body);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling OutboundApi.OutboundSchedulesSequencesSequenceidPut: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **sequenceId** | **string**| Sequence ID |  |
-| **body** | [**SequenceSchedule**](SequenceSchedule.md)| SequenceSchedule | [optional]  |
-{: class="table table-striped"}
-
-### Return type
-
-[**SequenceSchedule**](SequenceSchedule.md)
-
-<a name="OutboundSequencesGet"></a>
-## [**CampaignSequenceEntityListing**](CampaignSequenceEntityListing.html) OutboundSequencesGet (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
+<a name="GetSequences"></a>
+## [**CampaignSequenceEntityListing**](CampaignSequenceEntityListing.html) GetSequences (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
 
 Query a list of dialer campaign sequences.
 
 
 
 ### Example
-```csharp
+~~~csharp
 using System;
 using System.Diagnostics;
 using ININ.PureCloudApi.Api;
@@ -3455,7 +1981,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class OutboundSequencesGetExample
+    public class GetSequencesExample
     {
         public void main()
         {
@@ -3474,17 +2000,17 @@ namespace Example
             try
             {
                 // Query a list of dialer campaign sequences.
-                CampaignSequenceEntityListing result = apiInstance.OutboundSequencesGet(pageSize, pageNumber, filterType, name, sortBy, sortOrder);
+                CampaignSequenceEntityListing result = apiInstance.GetSequences(pageSize, pageNumber, filterType, name, sortBy, sortOrder);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling OutboundApi.OutboundSequencesGet: " + e.Message );
+                Debug.Print("Exception when calling OutboundApi.GetSequences: " + e.Message );
             }
         }
     }
 }
-```
+~~~
 
 ### Parameters
 
@@ -3503,125 +2029,15 @@ namespace Example
 
 [**CampaignSequenceEntityListing**](CampaignSequenceEntityListing.md)
 
-<a name="OutboundSequencesPost"></a>
-## [**CampaignSequence**](CampaignSequence.html) OutboundSequencesPost (CampaignSequence body = null)
-
-Create a new campaign sequence.
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class OutboundSequencesPostExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new OutboundApi();
-            var body = new CampaignSequence(); // CampaignSequence | Organization (optional) 
-
-            try
-            {
-                // Create a new campaign sequence.
-                CampaignSequence result = apiInstance.OutboundSequencesPost(body);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling OutboundApi.OutboundSequencesPost: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **body** | [**CampaignSequence**](CampaignSequence.md)| Organization | [optional]  |
-{: class="table table-striped"}
-
-### Return type
-
-[**CampaignSequence**](CampaignSequence.md)
-
-<a name="OutboundSequencesSequenceidDelete"></a>
-## string** OutboundSequencesSequenceidDelete (string sequenceId)
-
-Delete a dialer campaign sequence.
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class OutboundSequencesSequenceidDeleteExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new OutboundApi();
-            var sequenceId = sequenceId_example;  // string | Campaign Sequence ID
-
-            try
-            {
-                // Delete a dialer campaign sequence.
-                string result = apiInstance.OutboundSequencesSequenceidDelete(sequenceId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling OutboundApi.OutboundSequencesSequenceidDelete: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **sequenceId** | **string**| Campaign Sequence ID |  |
-{: class="table table-striped"}
-
-### Return type
-
-**string**
-
-<a name="OutboundSequencesSequenceidGet"></a>
-## [**CampaignSequence**](CampaignSequence.html) OutboundSequencesSequenceidGet (string sequenceId)
+<a name="GetSequencesSequenceId"></a>
+## [**CampaignSequence**](CampaignSequence.html) GetSequencesSequenceId (string sequenceId)
 
 Get a dialer campaign sequence.
 
 
 
 ### Example
-```csharp
+~~~csharp
 using System;
 using System.Diagnostics;
 using ININ.PureCloudApi.Api;
@@ -3630,7 +2046,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class OutboundSequencesSequenceidGetExample
+    public class GetSequencesSequenceIdExample
     {
         public void main()
         {
@@ -3644,17 +2060,17 @@ namespace Example
             try
             {
                 // Get a dialer campaign sequence.
-                CampaignSequence result = apiInstance.OutboundSequencesSequenceidGet(sequenceId);
+                CampaignSequence result = apiInstance.GetSequencesSequenceId(sequenceId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling OutboundApi.OutboundSequencesSequenceidGet: " + e.Message );
+                Debug.Print("Exception when calling OutboundApi.GetSequencesSequenceId: " + e.Message );
             }
         }
     }
 }
-```
+~~~
 
 ### Parameters
 
@@ -3668,15 +2084,15 @@ namespace Example
 
 [**CampaignSequence**](CampaignSequence.md)
 
-<a name="OutboundSequencesSequenceidPut"></a>
-## [**CampaignSequence**](CampaignSequence.html) OutboundSequencesSequenceidPut (string sequenceId, CampaignSequence body = null)
+<a name="GetWrapupcodemappings"></a>
+## [**WrapUpCodeMapping**](WrapUpCodeMapping.html) GetWrapupcodemappings ()
 
-Update a new campaign sequence.
+Get the Dialer wrap up code mapping.
 
 
 
 ### Example
-```csharp
+~~~csharp
 using System;
 using System.Diagnostics;
 using ININ.PureCloudApi.Api;
@@ -3685,7 +2101,1472 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class OutboundSequencesSequenceidPutExample
+    public class GetWrapupcodemappingsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new OutboundApi();
+
+            try
+            {
+                // Get the Dialer wrap up code mapping.
+                WrapUpCodeMapping result = apiInstance.GetWrapupcodemappings();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.GetWrapupcodemappings: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+This endpoint does require any parameters.
+{: class="table table-striped"}
+
+### Return type
+
+[**WrapUpCodeMapping**](WrapUpCodeMapping.md)
+
+<a name="PostAudits"></a>
+## [**AuditSearchResult**](AuditSearchResult.html) PostAudits (DialerAuditRequest body = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, bool? facetsOnly = null)
+
+Retrieves audits for dialer.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PostAuditsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new OutboundApi();
+            var body = new DialerAuditRequest(); // DialerAuditRequest | AuditSearch (optional) 
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var sortBy = sortBy_example;  // string | Sort by (optional)  (default to entity.name)
+            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to ascending)
+            var facetsOnly = true;  // bool? | Facets only (optional)  (default to false)
+
+            try
+            {
+                // Retrieves audits for dialer.
+                AuditSearchResult result = apiInstance.PostAudits(body, pageSize, pageNumber, sortBy, sortOrder, facetsOnly);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.PostAudits: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**DialerAuditRequest**](DialerAuditRequest.md)| AuditSearch | [optional]  |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **sortBy** | **string**| Sort by | [optional] [default to entity.name] |
+| **sortOrder** | **string**| Sort order | [optional] [default to ascending] |
+| **facetsOnly** | **bool?**| Facets only | [optional] [default to false] |
+{: class="table table-striped"}
+
+### Return type
+
+[**AuditSearchResult**](AuditSearchResult.md)
+
+<a name="PostCallabletimesets"></a>
+## [**CallableTimeSet**](CallableTimeSet.html) PostCallabletimesets (CallableTimeSet body = null)
+
+Create callable time set
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PostCallabletimesetsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new OutboundApi();
+            var body = new CallableTimeSet(); // CallableTimeSet | DialerCallableTimeSet (optional) 
+
+            try
+            {
+                // Create callable time set
+                CallableTimeSet result = apiInstance.PostCallabletimesets(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.PostCallabletimesets: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**CallableTimeSet**](CallableTimeSet.md)| DialerCallableTimeSet | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**CallableTimeSet**](CallableTimeSet.md)
+
+<a name="PostCallanalysisresponsesets"></a>
+## [**ResponseSet**](ResponseSet.html) PostCallanalysisresponsesets (ResponseSet body = null)
+
+Create a dialer call analysis response set.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PostCallanalysisresponsesetsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new OutboundApi();
+            var body = new ResponseSet(); // ResponseSet | ResponseSet (optional) 
+
+            try
+            {
+                // Create a dialer call analysis response set.
+                ResponseSet result = apiInstance.PostCallanalysisresponsesets(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.PostCallanalysisresponsesets: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**ResponseSet**](ResponseSet.md)| ResponseSet | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ResponseSet**](ResponseSet.md)
+
+<a name="PostCampaigns"></a>
+## [**Campaign**](Campaign.html) PostCampaigns (Campaign body = null)
+
+Create a campaign.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PostCampaignsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new OutboundApi();
+            var body = new Campaign(); // Campaign | Campaign (optional) 
+
+            try
+            {
+                // Create a campaign.
+                Campaign result = apiInstance.PostCampaigns(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.PostCampaigns: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**Campaign**](Campaign.md)| Campaign | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**Campaign**](Campaign.md)
+
+<a name="PostCampaignsCampaignIdCallbackSchedule"></a>
+## [**ContactCallbackRequest**](ContactCallbackRequest.html) PostCampaignsCampaignIdCallbackSchedule (string campaignId, ContactCallbackRequest body = null)
+
+Schedule a Callback for a Dialer Campaign
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PostCampaignsCampaignIdCallbackScheduleExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new OutboundApi();
+            var campaignId = campaignId_example;  // string | Campaign ID
+            var body = new ContactCallbackRequest(); // ContactCallbackRequest | ContactCallbackRequest (optional) 
+
+            try
+            {
+                // Schedule a Callback for a Dialer Campaign
+                ContactCallbackRequest result = apiInstance.PostCampaignsCampaignIdCallbackSchedule(campaignId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.PostCampaignsCampaignIdCallbackSchedule: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **campaignId** | **string**| Campaign ID |  |
+| **body** | [**ContactCallbackRequest**](ContactCallbackRequest.md)| ContactCallbackRequest | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ContactCallbackRequest**](ContactCallbackRequest.md)
+
+<a name="PostCampaignsProgress"></a>
+## [**List&lt;CampaignProgress&gt;**](CampaignProgress.html) PostCampaignsProgress (List<string> body = null)
+
+Get progress for a list of campaigns
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PostCampaignsProgressExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new OutboundApi();
+            var body = ;  // List<string> | Campaign IDs (optional) 
+
+            try
+            {
+                // Get progress for a list of campaigns
+                List&lt;CampaignProgress&gt; result = apiInstance.PostCampaignsProgress(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.PostCampaignsProgress: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | **List<string>**| Campaign IDs | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**List<CampaignProgress>**](CampaignProgress.md)
+
+<a name="PostContactlists"></a>
+## [**ContactList**](ContactList.html) PostContactlists (ContactList body = null)
+
+Create a contact List.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PostContactlistsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new OutboundApi();
+            var body = new ContactList(); // ContactList | ContactList (optional) 
+
+            try
+            {
+                // Create a contact List.
+                ContactList result = apiInstance.PostContactlists(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.PostContactlists: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**ContactList**](ContactList.md)| ContactList | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ContactList**](ContactList.md)
+
+<a name="PostContactlistsContactlistIdContacts"></a>
+## [**DialerContact**](DialerContact.html) PostContactlistsContactlistIdContacts (string contactListId, List<DialerContact> body = null, bool? priority = null)
+
+Add contacts to a contact list.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PostContactlistsContactlistIdContactsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new OutboundApi();
+            var contactListId = contactListId_example;  // string | Contact List ID
+            var body = new List<DialerContact>(); // List<DialerContact> | Contact (optional) 
+            var priority = true;  // bool? |  (optional) 
+
+            try
+            {
+                // Add contacts to a contact list.
+                DialerContact result = apiInstance.PostContactlistsContactlistIdContacts(contactListId, body, priority);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.PostContactlistsContactlistIdContacts: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **contactListId** | **string**| Contact List ID |  |
+| **body** | [**List<DialerContact>**](DialerContact.md)| Contact | [optional]  |
+| **priority** | **bool?**|  | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**DialerContact**](DialerContact.md)
+
+<a name="PostContactlistsContactlistIdExport"></a>
+## string** PostContactlistsContactlistIdExport (string contactListId)
+
+Initiate the export of a contact list.
+
+Returns 200 if received OK.
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PostContactlistsContactlistIdExportExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new OutboundApi();
+            var contactListId = contactListId_example;  // string | ContactList ID
+
+            try
+            {
+                // Initiate the export of a contact list.
+                string result = apiInstance.PostContactlistsContactlistIdExport(contactListId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.PostContactlistsContactlistIdExport: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **contactListId** | **string**| ContactList ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+**string**
+
+<a name="PostConversationsConversationIdDnc"></a>
+## void PostConversationsConversationIdDnc (string conversationId)
+
+Add phone numbers to a Dialer DNC list.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PostConversationsConversationIdDncExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new OutboundApi();
+            var conversationId = conversationId_example;  // string | Conversation ID
+
+            try
+            {
+                // Add phone numbers to a Dialer DNC list.
+                apiInstance.PostConversationsConversationIdDnc(conversationId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.PostConversationsConversationIdDnc: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| Conversation ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="PostDnclists"></a>
+## [**DncList**](DncList.html) PostDnclists (DncList body = null)
+
+Create dialer DNC list
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PostDnclistsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new OutboundApi();
+            var body = new DncList(); // DncList | DncList (optional) 
+
+            try
+            {
+                // Create dialer DNC list
+                DncList result = apiInstance.PostDnclists(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.PostDnclists: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**DncList**](DncList.md)| DncList | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**DncList**](DncList.md)
+
+<a name="PostDnclistsDnclistIdExport"></a>
+## string** PostDnclistsDnclistIdExport (string dncListId)
+
+Initiate the export of a dnc list.
+
+Returns 200 if received OK.
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PostDnclistsDnclistIdExportExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new OutboundApi();
+            var dncListId = dncListId_example;  // string | DncList ID
+
+            try
+            {
+                // Initiate the export of a dnc list.
+                string result = apiInstance.PostDnclistsDnclistIdExport(dncListId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.PostDnclistsDnclistIdExport: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **dncListId** | **string**| DncList ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+**string**
+
+<a name="PostDnclistsDnclistIdPhonenumbers"></a>
+## void PostDnclistsDnclistIdPhonenumbers (string dncListId, List<string> body = null)
+
+Add phone numbers to a Dialer DNC list.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PostDnclistsDnclistIdPhonenumbersExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new OutboundApi();
+            var dncListId = dncListId_example;  // string | DncList ID
+            var body = ;  // List<string> | DNC Phone Numbers (optional) 
+
+            try
+            {
+                // Add phone numbers to a Dialer DNC list.
+                apiInstance.PostDnclistsDnclistIdPhonenumbers(dncListId, body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.PostDnclistsDnclistIdPhonenumbers: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **dncListId** | **string**| DncList ID |  |
+| **body** | **List<string>**| DNC Phone Numbers | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="PostRulesets"></a>
+## [**RuleSet**](RuleSet.html) PostRulesets (RuleSet body = null)
+
+Create a Dialer Call Analysis Response Set.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PostRulesetsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new OutboundApi();
+            var body = new RuleSet(); // RuleSet | RuleSet (optional) 
+
+            try
+            {
+                // Create a Dialer Call Analysis Response Set.
+                RuleSet result = apiInstance.PostRulesets(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.PostRulesets: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**RuleSet**](RuleSet.md)| RuleSet | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**RuleSet**](RuleSet.md)
+
+<a name="PostSequences"></a>
+## [**CampaignSequence**](CampaignSequence.html) PostSequences (CampaignSequence body = null)
+
+Create a new campaign sequence.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PostSequencesExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new OutboundApi();
+            var body = new CampaignSequence(); // CampaignSequence | Organization (optional) 
+
+            try
+            {
+                // Create a new campaign sequence.
+                CampaignSequence result = apiInstance.PostSequences(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.PostSequences: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**CampaignSequence**](CampaignSequence.md)| Organization | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**CampaignSequence**](CampaignSequence.md)
+
+<a name="PutCallabletimesetsCallabletimesetId"></a>
+## [**CallableTimeSet**](CallableTimeSet.html) PutCallabletimesetsCallabletimesetId (string callableTimeSetId, CallableTimeSet body = null)
+
+Update callable time set
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PutCallabletimesetsCallabletimesetIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new OutboundApi();
+            var callableTimeSetId = callableTimeSetId_example;  // string | Callable Time Set ID
+            var body = new CallableTimeSet(); // CallableTimeSet | DialerCallableTimeSet (optional) 
+
+            try
+            {
+                // Update callable time set
+                CallableTimeSet result = apiInstance.PutCallabletimesetsCallabletimesetId(callableTimeSetId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.PutCallabletimesetsCallabletimesetId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **callableTimeSetId** | **string**| Callable Time Set ID |  |
+| **body** | [**CallableTimeSet**](CallableTimeSet.md)| DialerCallableTimeSet | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**CallableTimeSet**](CallableTimeSet.md)
+
+<a name="PutCallanalysisresponsesetsCallanalysissetId"></a>
+## [**ResponseSet**](ResponseSet.html) PutCallanalysisresponsesetsCallanalysissetId (string callAnalysisSetId, ResponseSet body = null)
+
+Update a dialer call analysis response set.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PutCallanalysisresponsesetsCallanalysissetIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new OutboundApi();
+            var callAnalysisSetId = callAnalysisSetId_example;  // string | Call Analysis Response Set ID
+            var body = new ResponseSet(); // ResponseSet | ResponseSet (optional) 
+
+            try
+            {
+                // Update a dialer call analysis response set.
+                ResponseSet result = apiInstance.PutCallanalysisresponsesetsCallanalysissetId(callAnalysisSetId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.PutCallanalysisresponsesetsCallanalysissetId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **callAnalysisSetId** | **string**| Call Analysis Response Set ID |  |
+| **body** | [**ResponseSet**](ResponseSet.md)| ResponseSet | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ResponseSet**](ResponseSet.md)
+
+<a name="PutCampaignsCampaignId"></a>
+## [**Campaign**](Campaign.html) PutCampaignsCampaignId (string campaignId, Campaign body = null)
+
+Update a campaign.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PutCampaignsCampaignIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new OutboundApi();
+            var campaignId = campaignId_example;  // string | Campaign ID
+            var body = new Campaign(); // Campaign | Campaign (optional) 
+
+            try
+            {
+                // Update a campaign.
+                Campaign result = apiInstance.PutCampaignsCampaignId(campaignId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.PutCampaignsCampaignId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **campaignId** | **string**| Campaign ID |  |
+| **body** | [**Campaign**](Campaign.md)| Campaign | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**Campaign**](Campaign.md)
+
+<a name="PutCampaignsCampaignIdAgentsUserId"></a>
+## string** PutCampaignsCampaignIdAgentsUserId (string campaignId, string userId, Agent body = null)
+
+Send notification that an agent's state changed 
+
+New agent state.
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PutCampaignsCampaignIdAgentsUserIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new OutboundApi();
+            var campaignId = campaignId_example;  // string | Campaign ID
+            var userId = userId_example;  // string | Agent's user ID
+            var body = new Agent(); // Agent | agent (optional) 
+
+            try
+            {
+                // Send notification that an agent's state changed 
+                string result = apiInstance.PutCampaignsCampaignIdAgentsUserId(campaignId, userId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.PutCampaignsCampaignIdAgentsUserId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **campaignId** | **string**| Campaign ID |  |
+| **userId** | **string**| Agent&#39;s user ID |  |
+| **body** | [**Agent**](Agent.md)| agent | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+**string**
+
+<a name="PutContactlistsContactlistId"></a>
+## [**ContactList**](ContactList.html) PutContactlistsContactlistId (string contactListId, ContactList body = null)
+
+Update a contact list.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PutContactlistsContactlistIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new OutboundApi();
+            var contactListId = contactListId_example;  // string | ContactList ID
+            var body = new ContactList(); // ContactList | ContactList (optional) 
+
+            try
+            {
+                // Update a contact list.
+                ContactList result = apiInstance.PutContactlistsContactlistId(contactListId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.PutContactlistsContactlistId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **contactListId** | **string**| ContactList ID |  |
+| **body** | [**ContactList**](ContactList.md)| ContactList | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ContactList**](ContactList.md)
+
+<a name="PutContactlistsContactlistIdContactsContactId"></a>
+## [**DialerContact**](DialerContact.html) PutContactlistsContactlistIdContactsContactId (string contactListId, string contactId, DialerContact body = null)
+
+Update a contact.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PutContactlistsContactlistIdContactsContactIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new OutboundApi();
+            var contactListId = contactListId_example;  // string | Contact List ID
+            var contactId = contactId_example;  // string | Contact ID
+            var body = new DialerContact(); // DialerContact | Contact (optional) 
+
+            try
+            {
+                // Update a contact.
+                DialerContact result = apiInstance.PutContactlistsContactlistIdContactsContactId(contactListId, contactId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.PutContactlistsContactlistIdContactsContactId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **contactListId** | **string**| Contact List ID |  |
+| **contactId** | **string**| Contact ID |  |
+| **body** | [**DialerContact**](DialerContact.md)| Contact | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**DialerContact**](DialerContact.md)
+
+<a name="PutDnclistsDnclistId"></a>
+## [**DncList**](DncList.html) PutDnclistsDnclistId (string dncListId, DncList body = null)
+
+Update dialer DNC list
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PutDnclistsDnclistIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new OutboundApi();
+            var dncListId = dncListId_example;  // string | DncList ID
+            var body = new DncList(); // DncList | DncList (optional) 
+
+            try
+            {
+                // Update dialer DNC list
+                DncList result = apiInstance.PutDnclistsDnclistId(dncListId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.PutDnclistsDnclistId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **dncListId** | **string**| DncList ID |  |
+| **body** | [**DncList**](DncList.md)| DncList | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**DncList**](DncList.md)
+
+<a name="PutRulesetsRulesetId"></a>
+## [**RuleSet**](RuleSet.html) PutRulesetsRulesetId (string ruleSetId, RuleSet body = null)
+
+Update a RuleSet.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PutRulesetsRulesetIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new OutboundApi();
+            var ruleSetId = ruleSetId_example;  // string | Rule Set ID
+            var body = new RuleSet(); // RuleSet | RuleSet (optional) 
+
+            try
+            {
+                // Update a RuleSet.
+                RuleSet result = apiInstance.PutRulesetsRulesetId(ruleSetId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.PutRulesetsRulesetId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **ruleSetId** | **string**| Rule Set ID |  |
+| **body** | [**RuleSet**](RuleSet.md)| RuleSet | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**RuleSet**](RuleSet.md)
+
+<a name="PutSchedulesCampaignsCampaignId"></a>
+## [**CampaignSchedule**](CampaignSchedule.html) PutSchedulesCampaignsCampaignId (string campaignId, CampaignSchedule body = null)
+
+Update a new campaign schedule.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PutSchedulesCampaignsCampaignIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new OutboundApi();
+            var campaignId = campaignId_example;  // string | Campaign ID
+            var body = new CampaignSchedule(); // CampaignSchedule | CampaignSchedule (optional) 
+
+            try
+            {
+                // Update a new campaign schedule.
+                CampaignSchedule result = apiInstance.PutSchedulesCampaignsCampaignId(campaignId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.PutSchedulesCampaignsCampaignId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **campaignId** | **string**| Campaign ID |  |
+| **body** | [**CampaignSchedule**](CampaignSchedule.md)| CampaignSchedule | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**CampaignSchedule**](CampaignSchedule.md)
+
+<a name="PutSchedulesSequencesSequenceId"></a>
+## [**SequenceSchedule**](SequenceSchedule.html) PutSchedulesSequencesSequenceId (string sequenceId, SequenceSchedule body = null)
+
+Update a new sequence schedule.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PutSchedulesSequencesSequenceIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new OutboundApi();
+            var sequenceId = sequenceId_example;  // string | Sequence ID
+            var body = new SequenceSchedule(); // SequenceSchedule | SequenceSchedule (optional) 
+
+            try
+            {
+                // Update a new sequence schedule.
+                SequenceSchedule result = apiInstance.PutSchedulesSequencesSequenceId(sequenceId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.PutSchedulesSequencesSequenceId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **sequenceId** | **string**| Sequence ID |  |
+| **body** | [**SequenceSchedule**](SequenceSchedule.md)| SequenceSchedule | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**SequenceSchedule**](SequenceSchedule.md)
+
+<a name="PutSequencesSequenceId"></a>
+## [**CampaignSequence**](CampaignSequence.html) PutSequencesSequenceId (string sequenceId, CampaignSequence body = null)
+
+Update a new campaign sequence.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PutSequencesSequenceIdExample
     {
         public void main()
         {
@@ -3700,17 +3581,17 @@ namespace Example
             try
             {
                 // Update a new campaign sequence.
-                CampaignSequence result = apiInstance.OutboundSequencesSequenceidPut(sequenceId, body);
+                CampaignSequence result = apiInstance.PutSequencesSequenceId(sequenceId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling OutboundApi.OutboundSequencesSequenceidPut: " + e.Message );
+                Debug.Print("Exception when calling OutboundApi.PutSequencesSequenceId: " + e.Message );
             }
         }
     }
 }
-```
+~~~
 
 ### Parameters
 
@@ -3725,65 +3606,15 @@ namespace Example
 
 [**CampaignSequence**](CampaignSequence.md)
 
-<a name="OutboundWrapupcodemappingsGet"></a>
-## [**WrapUpCodeMapping**](WrapUpCodeMapping.html) OutboundWrapupcodemappingsGet ()
-
-Get the Dialer wrap up code mapping.
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class OutboundWrapupcodemappingsGetExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new OutboundApi();
-
-            try
-            {
-                // Get the Dialer wrap up code mapping.
-                WrapUpCodeMapping result = apiInstance.OutboundWrapupcodemappingsGet();
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling OutboundApi.OutboundWrapupcodemappingsGet: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-This endpoint does require any parameters.
-{: class="table table-striped"}
-
-### Return type
-
-[**WrapUpCodeMapping**](WrapUpCodeMapping.md)
-
-<a name="OutboundWrapupcodemappingsPut"></a>
-## [**WrapUpCodeMapping**](WrapUpCodeMapping.html) OutboundWrapupcodemappingsPut (WrapUpCodeMapping body = null)
+<a name="PutWrapupcodemappings"></a>
+## [**WrapUpCodeMapping**](WrapUpCodeMapping.html) PutWrapupcodemappings (WrapUpCodeMapping body = null)
 
 Update the Dialer wrap up code mapping.
 
 
 
 ### Example
-```csharp
+~~~csharp
 using System;
 using System.Diagnostics;
 using ININ.PureCloudApi.Api;
@@ -3792,7 +3623,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class OutboundWrapupcodemappingsPutExample
+    public class PutWrapupcodemappingsExample
     {
         public void main()
         {
@@ -3806,17 +3637,17 @@ namespace Example
             try
             {
                 // Update the Dialer wrap up code mapping.
-                WrapUpCodeMapping result = apiInstance.OutboundWrapupcodemappingsPut(body);
+                WrapUpCodeMapping result = apiInstance.PutWrapupcodemappings(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling OutboundApi.OutboundWrapupcodemappingsPut: " + e.Message );
+                Debug.Print("Exception when calling OutboundApi.PutWrapupcodemappings: " + e.Message );
             }
         }
     }
 }
-```
+~~~
 
 ### Parameters
 

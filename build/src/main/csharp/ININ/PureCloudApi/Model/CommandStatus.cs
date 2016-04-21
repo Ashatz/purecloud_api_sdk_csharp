@@ -29,7 +29,6 @@ namespace ININ.PureCloudApi.Model
             
             [EnumMember(Value = "COMPLETE")]
             Complete,
-<<<<<<< HEAD
             
             [EnumMember(Value = "ERROR")]
             Error,
@@ -48,26 +47,6 @@ namespace ININ.PureCloudApi.Model
         [JsonConverter(typeof(StringEnumConverter))]
                 public enum CommandTypeEnum {
             
-=======
-            
-            [EnumMember(Value = "ERROR")]
-            Error,
-            
-            [EnumMember(Value = "CANCELING")]
-            Canceling,
-            
-            [EnumMember(Value = "CANCELED")]
-            Canceled
-        }
-
-
-        /// <summary>
-        /// Gets or Sets CommandType
-        /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
-                public enum CommandTypeEnum {
-            
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             [EnumMember(Value = "UPLOAD")]
             Upload,
             
@@ -89,21 +68,6 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "UPDATETAG")]
             Updatetag,
             
-<<<<<<< HEAD
-            [EnumMember(Value = "UPDATEATTRIBUTE")]
-            Updateattribute,
-            
-            [EnumMember(Value = "DELETEATTRIBUTE")]
-            Deleteattribute,
-            
-            [EnumMember(Value = "DELETEATTRIBUTEGROUPINSTANCE")]
-            Deleteattributegroupinstance,
-            
-            [EnumMember(Value = "UPDATEATTRIBUTEGROUPINSTANCE")]
-            Updateattributegroupinstance,
-            
-=======
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             [EnumMember(Value = "REINDEX")]
             Reindex,
             
@@ -123,40 +87,6 @@ namespace ININ.PureCloudApi.Model
         public StatusCodeEnum? StatusCode { get; set; }
     
 
-        /// <summary>
-        /// Gets or Sets CommandType
-        /// </summary>
-        [DataMember(Name="commandType", EmitDefaultValue=false)]
-        public CommandTypeEnum? CommandType { get; set; }
-    
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CommandStatus" />class.
-        /// </summary>
-        /// <param name="Name">Name.</param>
-        /// <param name="Expiration">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        /// <param name="UserId">UserId.</param>
-        /// <param name="StatusCode">StatusCode.</param>
-        /// <param name="CommandType">CommandType.</param>
-        /// <param name="Document">Document.</param>
-
-        public CommandStatus(string Name = null, DateTime? Expiration = null, string UserId = null, StatusCodeEnum? StatusCode = null, CommandTypeEnum? CommandType = null, Document Document = null)
-        {
-            this.Name = Name;
-            this.Expiration = Expiration;
-            this.UserId = UserId;
-            this.StatusCode = StatusCode;
-            this.CommandType = CommandType;
-            this.Document = Document;
-            
-        }
-
-    
-        /// <summary>
-        /// Gets or Sets StatusCode
-        /// </summary>
-        [DataMember(Name="statusCode", EmitDefaultValue=false)]
-        public StatusCodeEnum? StatusCode { get; set; }
-    
         /// <summary>
         /// Gets or Sets CommandType
         /// </summary>

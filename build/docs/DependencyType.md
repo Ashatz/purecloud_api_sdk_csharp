@@ -1,7 +1,7 @@
 ---
 title: DependencyType
 ---
-## .DependencyType
+## ININ.PureCloudApi.Model.DependencyType
 
 ## Properties
 

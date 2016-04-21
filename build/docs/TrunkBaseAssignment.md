@@ -1,7 +1,7 @@
 ---
 title: TrunkBaseAssignment
 ---
-## .TrunkBaseAssignment
+## ININ.PureCloudApi.Model.TrunkBaseAssignment
 
 ## Properties
 

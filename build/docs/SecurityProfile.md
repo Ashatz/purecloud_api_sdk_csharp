@@ -1,7 +1,7 @@
 ---
 title: SecurityProfile
 ---
-## .SecurityProfile
+## ININ.PureCloudApi.Model.SecurityProfile
 
 ## Properties
 

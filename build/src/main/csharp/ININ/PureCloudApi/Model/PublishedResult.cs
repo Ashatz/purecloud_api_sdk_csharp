@@ -61,30 +61,6 @@ namespace ININ.PureCloudApi.Model
 
     
         /// <summary>
-        /// Gets or Sets Type
-        /// </summary>
-        [DataMember(Name="type", EmitDefaultValue=false)]
-        public TypeEnum? Type { get; set; }
-    
-        /// <summary>
-        /// Initializes a new instance of the <see cref="PublishedResult" />class.
-        /// </summary>
-        /// <param name="Name">Name.</param>
-        /// <param name="Type">Type.</param>
-        /// <param name="Message">Message.</param>
-        /// <param name="DateCreated">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-
-        public PublishedResult(string Name = null, TypeEnum? Type = null, string Message = null, DateTime? DateCreated = null)
-        {
-            this.Name = Name;
-            this.Type = Type;
-            this.Message = Message;
-            this.DateCreated = DateCreated;
-            
-        }
-
-    
-        /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>

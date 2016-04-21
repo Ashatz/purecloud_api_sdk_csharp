@@ -1,7 +1,7 @@
 ---
 title: DID
 ---
-## .DID
+## ININ.PureCloudApi.Model.DID
 
 ## Properties
 

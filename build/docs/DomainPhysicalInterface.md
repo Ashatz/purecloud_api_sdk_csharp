@@ -1,7 +1,7 @@
 ---
 title: DomainPhysicalInterface
 ---
-## .DomainPhysicalInterface
+## ININ.PureCloudApi.Model.DomainPhysicalInterface
 
 ## Properties
 

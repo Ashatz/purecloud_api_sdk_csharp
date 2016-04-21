@@ -1,7 +1,7 @@
 ---
 title: FlowConfigId
 ---
-## .FlowConfigId
+## ININ.PureCloudApi.Model.FlowConfigId
 
 ## Properties
 

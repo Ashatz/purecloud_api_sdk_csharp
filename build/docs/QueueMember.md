@@ -1,7 +1,7 @@
 ---
 title: QueueMember
 ---
-## .QueueMember
+## ININ.PureCloudApi.Model.QueueMember
 
 ## Properties
 

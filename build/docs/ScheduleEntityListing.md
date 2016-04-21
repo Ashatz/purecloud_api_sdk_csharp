@@ -1,7 +1,7 @@
 ---
 title: ScheduleEntityListing
 ---
-## .ScheduleEntityListing
+## ININ.PureCloudApi.Model.ScheduleEntityListing
 
 ## Properties
 
@@ -12,9 +12,9 @@ title: ScheduleEntityListing
 | **Total** | **long?** |  | [optional] |
 | **Entities** | [**List&lt;Schedule&gt;**](Schedule.html) |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
+| **FirstUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **NextUri** | **string** |  | [optional] |
-| **FirstUri** | **string** |  | [optional] |
 | **LastUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
 {: class="table table-striped"}

@@ -1,7 +1,7 @@
 ---
 title: Actions
 ---
-## .Actions
+## ININ.PureCloudApi.Model.Actions
 
 ## Properties
 

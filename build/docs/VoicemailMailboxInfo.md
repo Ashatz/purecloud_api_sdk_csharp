@@ -1,7 +1,7 @@
 ---
 title: VoicemailMailboxInfo
 ---
-## .VoicemailMailboxInfo
+## ININ.PureCloudApi.Model.VoicemailMailboxInfo
 
 ## Properties
 

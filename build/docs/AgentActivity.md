@@ -1,7 +1,7 @@
 ---
 title: AgentActivity
 ---
-## .AgentActivity
+## ININ.PureCloudApi.Model.AgentActivity
 
 ## Properties
 

@@ -34,17 +34,10 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
                 public enum MemberTypeEnum {
-<<<<<<< HEAD
             
             [EnumMember(Value = "USER")]
             User,
             
-=======
-            
-            [EnumMember(Value = "USER")]
-            User,
-            
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             [EnumMember(Value = "PUBLIC")]
             Public
         }
@@ -58,44 +51,6 @@ namespace ININ.PureCloudApi.Model
         public SharedEntityTypeEnum? SharedEntityType { get; set; }
     
 
-        /// <summary>
-        /// Gets or Sets MemberType
-        /// </summary>
-        [DataMember(Name="memberType", EmitDefaultValue=false)]
-        public MemberTypeEnum? MemberType { get; set; }
-    
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Share" />class.
-        /// </summary>
-        /// <param name="Name">Name.</param>
-        /// <param name="SharedEntityType">SharedEntityType.</param>
-        /// <param name="SharedEntity">SharedEntity.</param>
-        /// <param name="MemberType">MemberType.</param>
-        /// <param name="Member">Member.</param>
-        /// <param name="SharedBy">SharedBy.</param>
-        /// <param name="Workspace">Workspace.</param>
-        /// <param name="User">User.</param>
-
-        public Share(string Name = null, SharedEntityTypeEnum? SharedEntityType = null, UriReference SharedEntity = null, MemberTypeEnum? MemberType = null, UriReference Member = null, UriReference SharedBy = null, UriReference Workspace = null, User User = null)
-        {
-            this.Name = Name;
-            this.SharedEntityType = SharedEntityType;
-            this.SharedEntity = SharedEntity;
-            this.MemberType = MemberType;
-            this.Member = Member;
-            this.SharedBy = SharedBy;
-            this.Workspace = Workspace;
-            this.User = User;
-            
-        }
-
-    
-        /// <summary>
-        /// Gets or Sets SharedEntityType
-        /// </summary>
-        [DataMember(Name="sharedEntityType", EmitDefaultValue=false)]
-        public SharedEntityTypeEnum? SharedEntityType { get; set; }
-    
         /// <summary>
         /// Gets or Sets MemberType
         /// </summary>

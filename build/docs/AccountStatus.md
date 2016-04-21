@@ -1,7 +1,7 @@
 ---
 title: AccountStatus
 ---
-## .AccountStatus
+## ININ.PureCloudApi.Model.AccountStatus
 
 ## Properties
 

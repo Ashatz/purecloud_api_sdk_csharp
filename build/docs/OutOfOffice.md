@@ -1,7 +1,7 @@
 ---
 title: OutOfOffice
 ---
-## .OutOfOffice
+## ININ.PureCloudApi.Model.OutOfOffice
 
 ## Properties
 

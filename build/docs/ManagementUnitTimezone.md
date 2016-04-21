@@ -1,7 +1,7 @@
 ---
 title: ManagementUnitTimezone
 ---
-## .ManagementUnitTimezone
+## ININ.PureCloudApi.Model.ManagementUnitTimezone
 
 ## Properties
 

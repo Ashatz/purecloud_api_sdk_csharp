@@ -1,7 +1,7 @@
 ---
 title: DomainNetworkAddress
 ---
-## .DomainNetworkAddress
+## ININ.PureCloudApi.Model.DomainNetworkAddress
 
 ## Properties
 

@@ -1,7 +1,7 @@
 ---
 title: WorkItemSearchDetailsSearchResult
 ---
-## .WorkItemSearchDetailsSearchResult
+## ININ.PureCloudApi.Model.WorkItemSearchDetailsSearchResult
 
 ## Properties
 

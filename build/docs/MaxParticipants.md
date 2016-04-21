@@ -1,7 +1,7 @@
 ---
 title: MaxParticipants
 ---
-## .MaxParticipants
+## ININ.PureCloudApi.Model.MaxParticipants
 
 ## Properties
 

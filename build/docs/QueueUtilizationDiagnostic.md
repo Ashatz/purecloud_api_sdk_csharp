@@ -1,7 +1,7 @@
 ---
 title: QueueUtilizationDiagnostic
 ---
-## .QueueUtilizationDiagnostic
+## ININ.PureCloudApi.Model.QueueUtilizationDiagnostic
 
 ## Properties
 

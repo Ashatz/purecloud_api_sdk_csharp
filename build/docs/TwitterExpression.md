@@ -1,7 +1,7 @@
 ---
 title: TwitterExpression
 ---
-## .TwitterExpression
+## ININ.PureCloudApi.Model.TwitterExpression
 
 ## Properties
 

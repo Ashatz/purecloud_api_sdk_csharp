@@ -1,7 +1,7 @@
 ---
 title: CarrierAddress
 ---
-## .CarrierAddress
+## ININ.PureCloudApi.Model.CarrierAddress
 
 ## Properties
 

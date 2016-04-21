@@ -1,7 +1,7 @@
 ---
 title: Tier
 ---
-## .Tier
+## ININ.PureCloudApi.Model.Tier
 
 ## Properties
 

@@ -15,11 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/Occurrence.cs
-    public partial class Occurrence :  IEquatable<Occurrence>
-=======
     public partial class AnalyticsQueryClause :  IEquatable<AnalyticsQueryClause>
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/AnalyticsQueryClause.cs
     { 
 
         /// <summary>
@@ -28,56 +24,16 @@ namespace ININ.PureCloudApi.Model
         [JsonConverter(typeof(StringEnumConverter))]
                 public enum TypeEnum {
             
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/Occurrence.cs
-            [EnumMember(Value = "EVENT")]
-            Event,
-            
-            [EnumMember(Value = "SECONDS")]
-            Seconds,
-            
-            [EnumMember(Value = "MINUTES")]
-            Minutes,
-            
-            [EnumMember(Value = "INTERVALS")]
-            Intervals
-=======
             [EnumMember(Value = "and")]
             And,
             
             [EnumMember(Value = "or")]
             Or
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/AnalyticsQueryClause.cs
         }
 
         
 
         /// <summary>
-        /// Gets or Sets Type
-        /// </summary>
-        [DataMember(Name="type", EmitDefaultValue=false)]
-        public TypeEnum? Type { get; set; }
-    
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Occurrence" />class.
-        /// </summary>
-        /// <param name="Limit">Limit.</param>
-        /// <param name="Type">Type.</param>
-
-        public Occurrence(int? Limit = null, TypeEnum? Type = null)
-        {
-            this.Limit = Limit;
-            this.Type = Type;
-            
-        }
-
-    
-        /// <summary>
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/Occurrence.cs
-        /// Gets or Sets Limit
-        /// </summary>
-        [DataMember(Name="limit", EmitDefaultValue=false)]
-        public int? Limit { get; set; }
-=======
         /// Gets or Sets Type
         /// </summary>
         [DataMember(Name="type", EmitDefaultValue=false)]
@@ -103,7 +59,6 @@ namespace ININ.PureCloudApi.Model
         /// <value>Like a three-word sentence: (attribute-name) (operator) (target-value). These can be one of three types: dimension, property, metric.</value>
         [DataMember(Name="predicates", EmitDefaultValue=false)]
         public List<AnalyticsQueryPredicate> Predicates { get; set; }
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/AnalyticsQueryClause.cs
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -114,10 +69,7 @@ namespace ININ.PureCloudApi.Model
             var sb = new StringBuilder();
             sb.Append("class AnalyticsQueryClause {\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/Occurrence.cs
-=======
             sb.Append("  Predicates: ").Append(Predicates).Append("\n");
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/AnalyticsQueryClause.cs
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -145,11 +97,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if AnalyticsQueryClause instances are equal
         /// </summary>
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/Occurrence.cs
-        /// <param name="other">Instance of Occurrence to be compared</param>
-=======
         /// <param name="other">Instance of AnalyticsQueryClause to be compared</param>
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/AnalyticsQueryClause.cs
         /// <returns>Boolean</returns>
         public bool Equals(AnalyticsQueryClause other)
         {
@@ -158,14 +106,6 @@ namespace ININ.PureCloudApi.Model
                 return false;
 
             return true &&
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/Occurrence.cs
-                (
-                    this.Limit == other.Limit ||
-                    this.Limit != null &&
-                    this.Limit.Equals(other.Limit)
-                ) &&
-=======
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/AnalyticsQueryClause.cs
                 (
                     this.Type == other.Type ||
                     this.Type != null &&
@@ -189,17 +129,10 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/Occurrence.cs
-                if (this.Limit != null)
-                    hash = hash * 59 + this.Limit.GetHashCode();
-                if (this.Type != null)
-                    hash = hash * 59 + this.Type.GetHashCode();
-=======
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
                 if (this.Predicates != null)
                     hash = hash * 59 + this.Predicates.GetHashCode();
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/AnalyticsQueryClause.cs
                 return hash;
             }
         }

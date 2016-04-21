@@ -1,7 +1,7 @@
 ---
 title: Queue
 ---
-## .Queue
+## ININ.PureCloudApi.Model.Queue
 
 ## Properties
 
@@ -18,11 +18,9 @@ title: Queue
 | **State** | **string** |  | [optional] |
 | **ModifiedByApp** | **string** |  | [optional] |
 | **CreatedByApp** | **string** |  | [optional] |
-| **WrapupCodes** | [**List&lt;UriReference&gt;**](UriReference.html) |  | [optional] |
 | **MediaSettings** | [**Dictionary&lt;string, MediaSetting&gt;**](MediaSetting.html) |  | [optional] |
 | **Bullseye** | [**Bullseye**](Bullseye.html) |  | [optional] |
 | **AcwSettings** | [**AcwSettings**](AcwSettings.html) |  | [optional] |
-| **PhoneNumber** | **string** |  | [optional] |
 | **SkillEvaluationMethod** | **string** |  | [optional] |
 | **QueueFlow** | [**UriReference**](UriReference.html) |  | [optional] |
 | **CallingPartyName** | **string** |  | [optional] |

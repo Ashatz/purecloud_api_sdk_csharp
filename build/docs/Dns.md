@@ -1,7 +1,7 @@
 ---
 title: Dns
 ---
-## .Dns
+## ININ.PureCloudApi.Model.Dns
 
 ## Properties
 

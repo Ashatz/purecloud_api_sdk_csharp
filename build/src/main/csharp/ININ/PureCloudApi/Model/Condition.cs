@@ -29,7 +29,6 @@ namespace ININ.PureCloudApi.Model
             
             [EnumMember(Value = "NUMERIC")]
             Numeric,
-<<<<<<< HEAD
             
             [EnumMember(Value = "DATETIME")]
             Datetime,
@@ -45,23 +44,6 @@ namespace ININ.PureCloudApi.Model
         [JsonConverter(typeof(StringEnumConverter))]
                 public enum _OperatorEnum {
             
-=======
-            
-            [EnumMember(Value = "DATETIME")]
-            Datetime,
-            
-            [EnumMember(Value = "PERIOD")]
-            Period
-        }
-
-
-        /// <summary>
-        /// Gets or Sets _Operator
-        /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
-                public enum _OperatorEnum {
-            
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             [EnumMember(Value = "EQUALS")]
             Equals,
             
@@ -102,50 +84,6 @@ namespace ININ.PureCloudApi.Model
         public ValueTypeEnum? ValueType { get; set; }
     
 
-        /// <summary>
-        /// Gets or Sets _Operator
-        /// </summary>
-        [DataMember(Name="operator", EmitDefaultValue=false)]
-        public _OperatorEnum? _Operator { get; set; }
-    
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Condition" />class.
-        /// </summary>
-        /// <param name="Type">Type.</param>
-        /// <param name="Inverted">Inverted (default to false).</param>
-        /// <param name="AttributeName">AttributeName.</param>
-        /// <param name="Value">Value.</param>
-        /// <param name="ValueType">ValueType.</param>
-        /// <param name="_Operator">_Operator.</param>
-        /// <param name="Codes">Codes.</param>
-
-        public Condition(string Type = null, bool? Inverted = null, string AttributeName = null, string Value = null, ValueTypeEnum? ValueType = null, _OperatorEnum? _Operator = null, List<string> Codes = null)
-        {
-            this.Type = Type;
-            // use default value if no "Inverted" provided
-            if (Inverted == null)
-            {
-                this.Inverted = false;
-            }
-            else
-            {
-                this.Inverted = Inverted;
-            }
-            this.AttributeName = AttributeName;
-            this.Value = Value;
-            this.ValueType = ValueType;
-            this._Operator = _Operator;
-            this.Codes = Codes;
-            
-        }
-
-    
-        /// <summary>
-        /// Gets or Sets ValueType
-        /// </summary>
-        [DataMember(Name="valueType", EmitDefaultValue=false)]
-        public ValueTypeEnum? ValueType { get; set; }
-    
         /// <summary>
         /// Gets or Sets _Operator
         /// </summary>

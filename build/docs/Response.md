@@ -1,7 +1,7 @@
 ---
 title: Response
 ---
-## .Response
+## ININ.PureCloudApi.Model.Response
 
 ## Properties
 

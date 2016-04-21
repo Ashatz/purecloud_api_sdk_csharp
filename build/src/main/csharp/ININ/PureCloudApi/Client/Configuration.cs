@@ -36,11 +36,7 @@ namespace ININ.PureCloudApi.Client
                              string tempFolderPath = null,
                              string dateTimeFormat = null,
                              int timeout = 100000,
-<<<<<<< HEAD
                              string userAgent = "Swagger-Codegen/0.6.0/csharp"
-=======
-                             string userAgent = "Swagger-Codegen/0.38.0.239/csharp"
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                             )
         {
             setApiClientUsingDefault(apiClient);
@@ -75,11 +71,7 @@ namespace ININ.PureCloudApi.Client
         /// Version of the package.
         /// </summary>
         /// <value>Version of the package.</value>
-<<<<<<< HEAD
         public const string Version = "0.6.0";
-=======
-        public const string Version = "0.38.0.239";
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
         /// <summary>
         /// Gets or sets the default Configuration.
@@ -284,11 +276,7 @@ namespace ININ.PureCloudApi.Client
                      .GetReferencedAssemblies()
                      .Where(x => x.Name == "System.Core").First().Version.ToString()  + "\n";
             report += "    Version of the API: v1\n";
-<<<<<<< HEAD
             report += "    SDK Package Version: 0.6.0\n";
-=======
-            report += "    SDK Package Version: 0.38.0.239\n";
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             return report;
         }

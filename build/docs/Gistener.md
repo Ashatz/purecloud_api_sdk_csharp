@@ -1,7 +1,7 @@
 ---
 title: Gistener
 ---
-## .Gistener
+## ININ.PureCloudApi.Model.Gistener
 
 ## Properties
 
@@ -18,6 +18,7 @@ title: Gistener
 | **ExactPhrase** | **string** | A tweet must contain this exact quoted phrase | [optional] |
 | **GroupTags** | [**List&lt;GroupTag&gt;**](GroupTag.html) | The group tags associated with this Gistener | [optional] |
 | **SocialAccount** | [**SocialAccount**](SocialAccount.html) | The social account associated with this Gistener | [optional] |
+| **Queue** | [**Queue**](Queue.html) | The operator queue the gistener will route to. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

@@ -49,12 +49,14 @@ namespace ININ.PureCloudApi.Model
         }
 
         
+
         /// <summary>
         /// Gets or Sets MediaType
         /// </summary>
         [DataMember(Name="mediaType", EmitDefaultValue=false)]
         public MediaTypeEnum? MediaType { get; set; }
     
+
         /// <summary>
         /// Gets or Sets Direction
         /// </summary>

@@ -32,15 +32,8 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Language">Language.</param>
         /// <param name="ProductName">ProductName.</param>
         /// <param name="QuoteId">QuoteId.</param>
-<<<<<<< HEAD
-        /// <param name="Industry">Industry.</param>
-        /// <param name="EstimatedUsers">EstimatedUsers.</param>
-
-        public ContactSales(string Name = null, string Email = null, string FirstName = null, string LastName = null, string ContactPhone = null, string Country = null, string Title = null, string Message = null, string Language = null, string ProductName = null, string QuoteId = null, string Industry = null, string EstimatedUsers = null)
-=======
 
         public ContactSales(string Name = null, string Email = null, string FirstName = null, string LastName = null, string ContactPhone = null, string Country = null, string Title = null, string Message = null, string Language = null, string ProductName = null, string QuoteId = null)
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         {
             this.Name = Name;
             this.Email = Email;
@@ -53,11 +46,6 @@ namespace ININ.PureCloudApi.Model
             this.Language = Language;
             this.ProductName = ProductName;
             this.QuoteId = QuoteId;
-<<<<<<< HEAD
-            this.Industry = Industry;
-            this.EstimatedUsers = EstimatedUsers;
-=======
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
@@ -135,21 +123,6 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="quoteId", EmitDefaultValue=false)]
         public string QuoteId { get; set; }
     
-<<<<<<< HEAD
-        /// <summary>
-        /// Gets or Sets Industry
-        /// </summary>
-        [DataMember(Name="industry", EmitDefaultValue=false)]
-        public string Industry { get; set; }
-    
-        /// <summary>
-        /// Gets or Sets EstimatedUsers
-        /// </summary>
-        [DataMember(Name="estimatedUsers", EmitDefaultValue=false)]
-        public string EstimatedUsers { get; set; }
-    
-=======
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// The URI for this object
         /// </summary>
@@ -274,19 +247,6 @@ namespace ININ.PureCloudApi.Model
                     this.QuoteId != null &&
                     this.QuoteId.Equals(other.QuoteId)
                 ) &&
-<<<<<<< HEAD
-                (
-                    this.Industry == other.Industry ||
-                    this.Industry != null &&
-                    this.Industry.Equals(other.Industry)
-                ) &&
-                (
-                    this.EstimatedUsers == other.EstimatedUsers ||
-                    this.EstimatedUsers != null &&
-                    this.EstimatedUsers.Equals(other.EstimatedUsers)
-                ) &&
-=======
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
@@ -329,13 +289,6 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.ProductName.GetHashCode();
                 if (this.QuoteId != null)
                     hash = hash * 59 + this.QuoteId.GetHashCode();
-<<<<<<< HEAD
-                if (this.Industry != null)
-                    hash = hash * 59 + this.Industry.GetHashCode();
-                if (this.EstimatedUsers != null)
-                    hash = hash * 59 + this.EstimatedUsers.GetHashCode();
-=======
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;

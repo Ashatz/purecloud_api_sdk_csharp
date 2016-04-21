@@ -1,7 +1,7 @@
 ---
 title: ResponseQueryResults
 ---
-## .ResponseQueryResults
+## ININ.PureCloudApi.Model.ResponseQueryResults
 
 ## Properties
 

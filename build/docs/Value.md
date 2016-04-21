@@ -1,7 +1,7 @@
 ---
 title: Value
 ---
-## .Value
+## ININ.PureCloudApi.Model.Value
 
 ## Properties
 

@@ -1,7 +1,7 @@
 ---
 title: ScheduleGroup
 ---
-## .ScheduleGroup
+## ININ.PureCloudApi.Model.ScheduleGroup
 
 ## Properties
 

@@ -26,7 +26,6 @@ namespace ININ.PureCloudApi.Model
             
             [EnumMember(Value = "LOW")]
             Low,
-<<<<<<< HEAD
             
             [EnumMember(Value = "MEDIUM")]
             Medium,
@@ -51,32 +50,6 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "QUESTION")]
             Question,
             
-=======
-            
-            [EnumMember(Value = "MEDIUM")]
-            Medium,
-            
-            [EnumMember(Value = "HIGH")]
-            High
-        }
-
-
-        /// <summary>
-        /// Gets or Sets Type
-        /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
-                public enum TypeEnum {
-            
-            [EnumMember(Value = "PROBLEM")]
-            Problem,
-            
-            [EnumMember(Value = "FEATURE_REQUEST")]
-            FeatureRequest,
-            
-            [EnumMember(Value = "QUESTION")]
-            Question,
-            
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             [EnumMember(Value = "TECHNICAL_ISSUE")]
             TechnicalIssue,
             
@@ -93,38 +66,6 @@ namespace ININ.PureCloudApi.Model
         public PriorityEnum? Priority { get; set; }
     
 
-        /// <summary>
-        /// Gets or Sets Type
-        /// </summary>
-        [DataMember(Name="type", EmitDefaultValue=false)]
-        public TypeEnum? Type { get; set; }
-    
-        /// <summary>
-        /// Initializes a new instance of the <see cref="DiagnosticEmail" />class.
-        /// </summary>
-        /// <param name="Topic">Topic.</param>
-        /// <param name="Description">Description.</param>
-        /// <param name="Priority">Priority.</param>
-        /// <param name="Type">Type.</param>
-        /// <param name="Data">Data.</param>
-
-        public DiagnosticEmail(string Topic = null, string Description = null, PriorityEnum? Priority = null, TypeEnum? Type = null, Object Data = null)
-        {
-            this.Topic = Topic;
-            this.Description = Description;
-            this.Priority = Priority;
-            this.Type = Type;
-            this.Data = Data;
-            
-        }
-
-    
-        /// <summary>
-        /// Gets or Sets Priority
-        /// </summary>
-        [DataMember(Name="priority", EmitDefaultValue=false)]
-        public PriorityEnum? Priority { get; set; }
-    
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
@@ -160,15 +101,12 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
     
-<<<<<<< HEAD
-=======
         /// <summary>
         /// Gets or Sets Subject
         /// </summary>
         [DataMember(Name="subject", EmitDefaultValue=false)]
         public string Subject { get; set; }
     
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// Gets or Sets Topic
         /// </summary>
@@ -243,14 +181,11 @@ namespace ININ.PureCloudApi.Model
                     this.Id != null &&
                     this.Id.Equals(other.Id)
                 ) &&
-<<<<<<< HEAD
-=======
                 (
                     this.Subject == other.Subject ||
                     this.Subject != null &&
                     this.Subject.Equals(other.Subject)
                 ) &&
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 (
                     this.Topic == other.Topic ||
                     this.Topic != null &&
@@ -291,11 +226,8 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-<<<<<<< HEAD
-=======
                 if (this.Subject != null)
                     hash = hash * 59 + this.Subject.GetHashCode();
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 if (this.Topic != null)
                     hash = hash * 59 + this.Topic.GetHashCode();
                 if (this.Description != null)

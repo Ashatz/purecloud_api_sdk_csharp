@@ -1,7 +1,7 @@
 ---
 title: PolicyActions
 ---
-## .PolicyActions
+## ININ.PureCloudApi.Model.PolicyActions
 
 ## Properties
 

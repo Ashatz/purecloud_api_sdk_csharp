@@ -1,7 +1,7 @@
 ---
 title: CampaignDiagnostics
 ---
-## .CampaignDiagnostics
+## ININ.PureCloudApi.Model.CampaignDiagnostics
 
 ## Properties
 

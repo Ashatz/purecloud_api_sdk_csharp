@@ -40,7 +40,6 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
                 public enum MediaTypeEnum {
-<<<<<<< HEAD
             
             [EnumMember(Value = "CALL")]
             Call,
@@ -74,41 +73,6 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "RESTORING")]
             Restoring,
             
-=======
-            
-            [EnumMember(Value = "CALL")]
-            Call,
-            
-            [EnumMember(Value = "CHAT")]
-            Chat,
-            
-            [EnumMember(Value = "EMAIL")]
-            Email
-        }
-
-
-        /// <summary>
-        /// Gets or Sets FileState
-        /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
-                public enum FileStateEnum {
-            
-            [EnumMember(Value = "ARCHIVED")]
-            Archived,
-            
-            [EnumMember(Value = "AVAILABLE")]
-            Available,
-            
-            [EnumMember(Value = "DELETED")]
-            Deleted,
-            
-            [EnumMember(Value = "RESTORED")]
-            Restored,
-            
-            [EnumMember(Value = "RESTORING")]
-            Restoring,
-            
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             [EnumMember(Value = "UPLOADING")]
             Uploading
         }
@@ -129,52 +93,6 @@ namespace ININ.PureCloudApi.Model
         public MediaTypeEnum? MediaType { get; set; }
     
 
-        /// <summary>
-        /// Gets or Sets FileState
-        /// </summary>
-        [DataMember(Name="fileState", EmitDefaultValue=false)]
-        public FileStateEnum? FileState { get; set; }
-    
-        /// <summary>
-        /// Initializes a new instance of the <see cref="OrphanRecording" />class.
-        /// </summary>
-        /// <param name="Name">Name.</param>
-        /// <param name="CreatedTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        /// <param name="RecoveredTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        /// <param name="ProviderType">ProviderType.</param>
-        /// <param name="MediaSizeBytes">MediaSizeBytes.</param>
-        /// <param name="MediaType">MediaType.</param>
-        /// <param name="FileState">FileState.</param>
-        /// <param name="ProviderEndpoint">ProviderEndpoint.</param>
-        /// <param name="Recording">Recording.</param>
-
-        public OrphanRecording(string Name = null, DateTime? CreatedTime = null, DateTime? RecoveredTime = null, ProviderTypeEnum? ProviderType = null, long? MediaSizeBytes = null, MediaTypeEnum? MediaType = null, FileStateEnum? FileState = null, string ProviderEndpoint = null, Recording Recording = null)
-        {
-            this.Name = Name;
-            this.CreatedTime = CreatedTime;
-            this.RecoveredTime = RecoveredTime;
-            this.ProviderType = ProviderType;
-            this.MediaSizeBytes = MediaSizeBytes;
-            this.MediaType = MediaType;
-            this.FileState = FileState;
-            this.ProviderEndpoint = ProviderEndpoint;
-            this.Recording = Recording;
-            
-        }
-
-    
-        /// <summary>
-        /// Gets or Sets ProviderType
-        /// </summary>
-        [DataMember(Name="providerType", EmitDefaultValue=false)]
-        public ProviderTypeEnum? ProviderType { get; set; }
-    
-        /// <summary>
-        /// Gets or Sets MediaType
-        /// </summary>
-        [DataMember(Name="mediaType", EmitDefaultValue=false)]
-        public MediaTypeEnum? MediaType { get; set; }
-    
         /// <summary>
         /// Gets or Sets FileState
         /// </summary>
@@ -246,11 +164,7 @@ namespace ININ.PureCloudApi.Model
         /// Gets or Sets ProviderEndpoint
         /// </summary>
         [DataMember(Name="providerEndpoint", EmitDefaultValue=false)]
-<<<<<<< HEAD
-        public string ProviderEndpoint { get; set; }
-=======
         public Endpoint ProviderEndpoint { get; set; }
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
     
         /// <summary>
         /// Gets or Sets Recording

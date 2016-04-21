@@ -1,7 +1,7 @@
 ---
 title: SystemPromptAsset
 ---
-## .SystemPromptAsset
+## ININ.PureCloudApi.Model.SystemPromptAsset
 
 ## Properties
 
@@ -17,6 +17,8 @@ title: SystemPromptAsset
 | **UploadUri** | **string** |  | [optional] |
 | **UploadStatus** | **string** |  | [optional] |
 | **HasDefault** | **bool?** |  | [optional] [default to false]|
+| **LanguageDefault** | **bool?** |  | [optional] [default to false]|
+| **Tags** | **Dictionary&lt;string, string&gt;** |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

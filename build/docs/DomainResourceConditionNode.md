@@ -1,7 +1,7 @@
 ---
 title: DomainResourceConditionNode
 ---
-## .DomainResourceConditionNode
+## ININ.PureCloudApi.Model.DomainResourceConditionNode
 
 ## Properties
 

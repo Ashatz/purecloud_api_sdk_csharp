@@ -1,7 +1,7 @@
 ---
 title: PhoneCapabilities
 ---
-## .PhoneCapabilities
+## ININ.PureCloudApi.Model.PhoneCapabilities
 
 ## Properties
 
@@ -12,6 +12,7 @@ title: PhoneCapabilities
 | **DualRegisters** | **bool?** |  | [optional] [default to false]|
 | **HardwareIdType** | **string** |  | [optional] |
 | **AllowReboot** | **bool?** |  | [optional] [default to false]|
+| **NoRebalance** | **bool?** |  | [optional] [default to false]|
 {: class="table table-striped"}
 
 

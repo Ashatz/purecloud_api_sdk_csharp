@@ -80,51 +80,6 @@ namespace ININ.PureCloudApi.Model
 
     
         /// <summary>
-        /// Current activity status of the location.
-        /// </summary>
-        /// <value>Current activity status of the location.</value>
-        [DataMember(Name="state", EmitDefaultValue=false)]
-        public StateEnum? State { get; set; }
-    
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Location" />class.
-        /// </summary>
-        /// <param name="Name">Name.</param>
-        /// <param name="Address">Address.</param>
-        /// <param name="AddressFields">AddressFields.</param>
-        /// <param name="AddressVerified">AddressVerified (default to false).</param>
-        /// <param name="EmergencyNumber">EmergencyNumber.</param>
-        /// <param name="Notes">Notes.</param>
-        /// <param name="Path">Path.</param>
-        /// <param name="State">Current activity status of the location..</param>
-        /// <param name="SublocationOrder">SublocationOrder.</param>
-        /// <param name="Version">Version.</param>
-
-        public Location(string Name = null, string Address = null, LocationAddressFields AddressFields = null, bool? AddressVerified = null, LocationEmergencyNumber EmergencyNumber = null, string Notes = null, List<string> Path = null, StateEnum? State = null, List<string> SublocationOrder = null, double? Version = null)
-        {
-            this.Name = Name;
-            this.Address = Address;
-            this.AddressFields = AddressFields;
-            // use default value if no "AddressVerified" provided
-            if (AddressVerified == null)
-            {
-                this.AddressVerified = false;
-            }
-            else
-            {
-                this.AddressVerified = AddressVerified;
-            }
-            this.EmergencyNumber = EmergencyNumber;
-            this.Notes = Notes;
-            this.Path = Path;
-            this.State = State;
-            this.SublocationOrder = SublocationOrder;
-            this.Version = Version;
-            
-        }
-
-    
-        /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>

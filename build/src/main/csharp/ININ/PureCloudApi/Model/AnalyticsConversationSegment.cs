@@ -100,12 +100,14 @@ namespace ININ.PureCloudApi.Model
         }
 
         
+
         /// <summary>
         /// Gets or Sets DisconnectType
         /// </summary>
         [DataMember(Name="disconnectType", EmitDefaultValue=false)]
         public DisconnectTypeEnum? DisconnectType { get; set; }
     
+
         /// <summary>
         /// Gets or Sets SegmentType
         /// </summary>

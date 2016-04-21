@@ -1,7 +1,7 @@
 ---
 title: Charge
 ---
-## .Charge
+## ININ.PureCloudApi.Model.Charge
 
 ## Properties
 
@@ -14,6 +14,7 @@ title: Charge
 | **UnitOfMeasure** | **string** |  | [optional] |
 | **BillingPeriod** | **string** |  | [optional] |
 | **Quantity** | **int?** |  | [optional] |
+| **IncludedUnits** | **int?** |  | [optional] |
 {: class="table table-striped"}
 
 

@@ -1,7 +1,7 @@
 ---
 title: PolicyErrorMessage
 ---
-## .PolicyErrorMessage
+## ININ.PureCloudApi.Model.PolicyErrorMessage
 
 ## Properties
 

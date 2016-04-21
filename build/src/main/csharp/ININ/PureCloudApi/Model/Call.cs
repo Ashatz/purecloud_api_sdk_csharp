@@ -29,52 +29,6 @@ namespace ININ.PureCloudApi.Model
             
             [EnumMember(Value = "DIALING")]
             Dialing,
-<<<<<<< HEAD
-            
-            [EnumMember(Value = "CONTACTING")]
-            Contacting,
-            
-            [EnumMember(Value = "OFFERING")]
-            Offering,
-            
-            [EnumMember(Value = "CONNECTED")]
-            Connected,
-            
-            [EnumMember(Value = "DISCONNECTED")]
-            Disconnected,
-            
-            [EnumMember(Value = "TERMINATED")]
-            Terminated,
-            
-            [EnumMember(Value = "NONE")]
-            None
-        }
-
-
-        /// <summary>
-        /// Gets or Sets Direction
-        /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
-                public enum DirectionEnum {
-            
-            [EnumMember(Value = "INBOUND")]
-            Inbound,
-            
-            [EnumMember(Value = "OUTBOUND")]
-            Outbound
-        }
-
-
-        /// <summary>
-        /// Gets or Sets RecordingState
-        /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
-                public enum RecordingStateEnum {
-            
-            [EnumMember(Value = "NONE")]
-            None,
-            
-=======
             
             [EnumMember(Value = "CONTACTING")]
             Contacting,
@@ -128,7 +82,6 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "NONE")]
             None,
             
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             [EnumMember(Value = "ACTIVE")]
             Active,
             
@@ -152,12 +105,9 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "SYSTEM")]
             System,
             
-<<<<<<< HEAD
-=======
             [EnumMember(Value = "TIMEOUT")]
             Timeout,
             
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             [EnumMember(Value = "TRANSFER")]
             Transfer,
             
@@ -167,12 +117,9 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "TRANSFER_CONSULT")]
             TransferConsult,
             
-<<<<<<< HEAD
-=======
             [EnumMember(Value = "TRANSFER_FORWARD")]
             TransferForward,
             
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             [EnumMember(Value = "ERROR")]
             Error,
             
@@ -191,30 +138,21 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
     
-<<<<<<< HEAD
 
-=======
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// Gets or Sets Direction
         /// </summary>
         [DataMember(Name="direction", EmitDefaultValue=false)]
         public DirectionEnum? Direction { get; set; }
     
-<<<<<<< HEAD
 
-=======
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// Gets or Sets RecordingState
         /// </summary>
         [DataMember(Name="recordingState", EmitDefaultValue=false)]
         public RecordingStateEnum? RecordingState { get; set; }
     
-<<<<<<< HEAD
 
-=======
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// Gets or Sets DisconnectType
         /// </summary>
@@ -238,16 +176,11 @@ namespace ININ.PureCloudApi.Model
         /// <param name="DisconnectType">DisconnectType.</param>
         /// <param name="StartHoldTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="DocumentId">DocumentId.</param>
-<<<<<<< HEAD
-
-        public Call(StateEnum? State = null, string Id = null, DirectionEnum? Direction = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, bool? Muted = null, bool? Confined = null, bool? Held = null, string RecordingId = null, List<Segment> Segments = null, ErrorBody ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, string DocumentId = null)
-=======
         /// <param name="ConnectedTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="DisconnectedTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="DisconnectReasons">DisconnectReasons.</param>
 
         public Call(StateEnum? State = null, string Id = null, DirectionEnum? Direction = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, bool? Muted = null, bool? Confined = null, bool? Held = null, string RecordingId = null, List<Segment> Segments = null, ErrorBody ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, string DocumentId = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, List<DisconnectReason> DisconnectReasons = null)
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         {
             this.State = State;
             this.Id = Id;
@@ -295,12 +228,9 @@ namespace ININ.PureCloudApi.Model
             this.DisconnectType = DisconnectType;
             this.StartHoldTime = StartHoldTime;
             this.DocumentId = DocumentId;
-<<<<<<< HEAD
-=======
             this.ConnectedTime = ConnectedTime;
             this.DisconnectedTime = DisconnectedTime;
             this.DisconnectReasons = DisconnectReasons;
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
@@ -366,8 +296,6 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="documentId", EmitDefaultValue=false)]
         public string DocumentId { get; set; }
     
-<<<<<<< HEAD
-=======
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
@@ -388,7 +316,6 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="disconnectReasons", EmitDefaultValue=false)]
         public List<DisconnectReason> DisconnectReasons { get; set; }
     
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -411,12 +338,9 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  DisconnectType: ").Append(DisconnectType).Append("\n");
             sb.Append("  StartHoldTime: ").Append(StartHoldTime).Append("\n");
             sb.Append("  DocumentId: ").Append(DocumentId).Append("\n");
-<<<<<<< HEAD
-=======
             sb.Append("  ConnectedTime: ").Append(ConnectedTime).Append("\n");
             sb.Append("  DisconnectedTime: ").Append(DisconnectedTime).Append("\n");
             sb.Append("  DisconnectReasons: ").Append(DisconnectReasons).Append("\n");
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -579,15 +503,12 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.StartHoldTime.GetHashCode();
                 if (this.DocumentId != null)
                     hash = hash * 59 + this.DocumentId.GetHashCode();
-<<<<<<< HEAD
-=======
                 if (this.ConnectedTime != null)
                     hash = hash * 59 + this.ConnectedTime.GetHashCode();
                 if (this.DisconnectedTime != null)
                     hash = hash * 59 + this.DisconnectedTime.GetHashCode();
                 if (this.DisconnectReasons != null)
                     hash = hash * 59 + this.DisconnectReasons.GetHashCode();
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 return hash;
             }
         }

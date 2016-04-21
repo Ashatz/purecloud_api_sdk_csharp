@@ -1,7 +1,7 @@
 ---
 title: UserImage
 ---
-## .UserImage
+## ININ.PureCloudApi.Model.UserImage
 
 ## Properties
 

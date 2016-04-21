@@ -1,7 +1,7 @@
 ---
 title: LockInfo
 ---
-## .LockInfo
+## ININ.PureCloudApi.Model.LockInfo
 
 ## Properties
 

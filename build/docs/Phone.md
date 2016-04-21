@@ -1,7 +1,7 @@
 ---
 title: Phone
 ---
-## .Phone
+## ININ.PureCloudApi.Model.Phone
 
 ## Properties
 

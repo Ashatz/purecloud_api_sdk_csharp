@@ -1,15 +1,14 @@
 ---
 title: FlowBodyFormat
 ---
-## .FlowBodyFormat
+## ININ.PureCloudApi.Model.FlowBodyFormat
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Name** | **string** |  | [optional] |
-| **Description** | **string** |  | [optional] |
 | **SchemaUri** | **string** |  | [optional] |
+| **Description** | **string** |  | [optional] |
 {: class="table table-striped"}
 
 

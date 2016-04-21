@@ -1,7 +1,7 @@
 ---
 title: HIPAAConfig
 ---
-## .HIPAAConfig
+## ININ.PureCloudApi.Model.HIPAAConfig
 
 ## Properties
 

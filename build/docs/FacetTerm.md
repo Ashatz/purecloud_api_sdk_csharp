@@ -1,7 +1,7 @@
 ---
 title: FacetTerm
 ---
-## .FacetTerm
+## ININ.PureCloudApi.Model.FacetTerm
 
 ## Properties
 

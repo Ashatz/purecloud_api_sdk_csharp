@@ -1,7 +1,7 @@
 ---
 title: FacetEntry
 ---
-## .FacetEntry
+## ININ.PureCloudApi.Model.FacetEntry
 
 ## Properties
 

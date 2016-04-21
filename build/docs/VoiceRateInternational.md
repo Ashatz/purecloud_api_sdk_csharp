@@ -1,7 +1,7 @@
 ---
 title: VoiceRateInternational
 ---
-## .VoiceRateInternational
+## ININ.PureCloudApi.Model.VoiceRateInternational
 
 ## Properties
 

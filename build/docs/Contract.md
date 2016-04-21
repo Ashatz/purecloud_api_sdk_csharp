@@ -1,7 +1,7 @@
 ---
 title: Contract
 ---
-## .Contract
+## ININ.PureCloudApi.Model.Contract
 
 ## Properties
 

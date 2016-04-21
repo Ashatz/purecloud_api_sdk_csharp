@@ -1,7 +1,7 @@
 ---
 title: ChatMessage
 ---
-## .ChatMessage
+## ININ.PureCloudApi.Model.ChatMessage
 
 ## Properties
 

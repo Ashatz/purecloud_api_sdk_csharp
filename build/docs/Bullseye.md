@@ -1,7 +1,7 @@
 ---
 title: Bullseye
 ---
-## .Bullseye
+## ININ.PureCloudApi.Model.Bullseye
 
 ## Properties
 

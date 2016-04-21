@@ -23,28 +23,18 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="Status">Status.</param>
-<<<<<<< HEAD
-=======
         /// <param name="Domains">An inbound carrier specific domain (i.e. lb.domain.com).</param>
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <param name="ServiceTypes">ServiceTypes.</param>
         /// <param name="Gateways">Gateways.</param>
         /// <param name="Dns">Dns.</param>
         /// <param name="Vpn">Vpn.</param>
         /// <param name="Carrier">Carrier.</param>
 
-<<<<<<< HEAD
-        public Service(string Name = null, string Status = null, List<ServiceType> ServiceTypes = null, List<Gateway> Gateways = null, Dns Dns = null, Vpn Vpn = null, Carrier Carrier = null)
-        {
-            this.Name = Name;
-            this.Status = Status;
-=======
         public Service(string Name = null, string Status = null, List<string> Domains = null, List<ServiceType> ServiceTypes = null, List<Gateway> Gateways = null, Dns Dns = null, Vpn Vpn = null, Carrier Carrier = null)
         {
             this.Name = Name;
             this.Status = Status;
             this.Domains = Domains;
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             this.ServiceTypes = ServiceTypes;
             this.Gateways = Gateways;
             this.Dns = Dns;
@@ -73,8 +63,6 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="status", EmitDefaultValue=false)]
         public string Status { get; set; }
     
-<<<<<<< HEAD
-=======
         /// <summary>
         /// An inbound carrier specific domain (i.e. lb.domain.com)
         /// </summary>
@@ -82,7 +70,6 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="domains", EmitDefaultValue=false)]
         public List<string> Domains { get; set; }
     
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// Gets or Sets ServiceTypes
         /// </summary>
@@ -189,14 +176,11 @@ namespace ININ.PureCloudApi.Model
                     this.Status != null &&
                     this.Status.Equals(other.Status)
                 ) &&
-<<<<<<< HEAD
-=======
                 (
                     this.Domains == other.Domains ||
                     this.Domains != null &&
                     this.Domains.SequenceEqual(other.Domains)
                 ) &&
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 (
                     this.ServiceTypes == other.ServiceTypes ||
                     this.ServiceTypes != null &&
@@ -246,11 +230,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.Name.GetHashCode();
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
-<<<<<<< HEAD
-=======
                 if (this.Domains != null)
                     hash = hash * 59 + this.Domains.GetHashCode();
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 if (this.ServiceTypes != null)
                     hash = hash * 59 + this.ServiceTypes.GetHashCode();
                 if (this.Gateways != null)

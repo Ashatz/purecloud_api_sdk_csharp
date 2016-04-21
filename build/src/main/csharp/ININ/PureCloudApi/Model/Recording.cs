@@ -19,14 +19,9 @@ namespace ININ.PureCloudApi.Model
     { 
 
         /// <summary>
-<<<<<<< HEAD
-        /// Gets or Sets FileState
-        /// </summary>
-=======
         /// Represents the current file state for a recording. Examples: Uploading, Archived, etc
         /// </summary>
         /// <value>Represents the current file state for a recording. Examples: Uploading, Archived, etc</value>
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         [JsonConverter(typeof(StringEnumConverter))]
                 public enum FileStateEnum {
             
@@ -41,23 +36,6 @@ namespace ININ.PureCloudApi.Model
             
             [EnumMember(Value = "RESTORED")]
             Restored,
-<<<<<<< HEAD
-            
-            [EnumMember(Value = "RESTORING")]
-            Restoring,
-            
-            [EnumMember(Value = "UPLOADING")]
-            Uploading
-        }
-
-
-        /// <summary>
-        /// Gets or Sets ArchiveMedium
-        /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
-                public enum ArchiveMediumEnum {
-            
-=======
             
             [EnumMember(Value = "RESTORING")]
             Restoring,
@@ -74,7 +52,6 @@ namespace ININ.PureCloudApi.Model
         [JsonConverter(typeof(StringEnumConverter))]
                 public enum ArchiveMediumEnum {
             
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             [EnumMember(Value = "CLOUDARCHIVE")]
             Cloudarchive
         }
@@ -82,79 +59,13 @@ namespace ININ.PureCloudApi.Model
         
 
         /// <summary>
-        /// Gets or Sets FileState
-        /// </summary>
-        [DataMember(Name="fileState", EmitDefaultValue=false)]
-        public FileStateEnum? FileState { get; set; }
-    
-
-        /// <summary>
-        /// Gets or Sets ArchiveMedium
-        /// </summary>
-        [DataMember(Name="archiveMedium", EmitDefaultValue=false)]
-        public ArchiveMediumEnum? ArchiveMedium { get; set; }
-    
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Recording" />class.
-        /// </summary>
-        /// <param name="Name">Name.</param>
-        /// <param name="ConversationId">ConversationId.</param>
-        /// <param name="Path">Path.</param>
-        /// <param name="StartTime">StartTime.</param>
-        /// <param name="EndTime">EndTime.</param>
-        /// <param name="Media">Media.</param>
-        /// <param name="MediaUri">MediaUri.</param>
-        /// <param name="WaveUri">WaveUri.</param>
-        /// <param name="Annotations">Annotations.</param>
-        /// <param name="Transcript">Transcript.</param>
-        /// <param name="EmailTranscript">EmailTranscript.</param>
-        /// <param name="FileState">FileState.</param>
-        /// <param name="RestoreExpirationTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        /// <param name="MediaUris">MediaUris.</param>
-        /// <param name="EstimatedTranscodeTimeMs">EstimatedTranscodeTimeMs.</param>
-        /// <param name="ActualTranscodeTimeMs">ActualTranscodeTimeMs.</param>
-        /// <param name="ArchiveDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        /// <param name="ArchiveMedium">ArchiveMedium.</param>
-        /// <param name="DeleteDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        /// <param name="MaxAllowedRestorationsForOrg">MaxAllowedRestorationsForOrg.</param>
-        /// <param name="RemainingRestorationsAllowedForOrg">RemainingRestorationsAllowedForOrg.</param>
-        /// <param name="RecordingId">RecordingId.</param>
-
-        public Recording(string Name = null, string ConversationId = null, string Path = null, string StartTime = null, string EndTime = null, string Media = null, string MediaUri = null, string WaveUri = null, List<Annotation> Annotations = null, List<ChatMessage> Transcript = null, List<EmailMessage> EmailTranscript = null, FileStateEnum? FileState = null, DateTime? RestoreExpirationTime = null, Dictionary<string, MediaResult> MediaUris = null, long? EstimatedTranscodeTimeMs = null, long? ActualTranscodeTimeMs = null, DateTime? ArchiveDate = null, ArchiveMediumEnum? ArchiveMedium = null, DateTime? DeleteDate = null, int? MaxAllowedRestorationsForOrg = null, int? RemainingRestorationsAllowedForOrg = null, string RecordingId = null)
-        {
-            this.Name = Name;
-            this.ConversationId = ConversationId;
-            this.Path = Path;
-            this.StartTime = StartTime;
-            this.EndTime = EndTime;
-            this.Media = Media;
-            this.MediaUri = MediaUri;
-            this.WaveUri = WaveUri;
-            this.Annotations = Annotations;
-            this.Transcript = Transcript;
-            this.EmailTranscript = EmailTranscript;
-            this.FileState = FileState;
-            this.RestoreExpirationTime = RestoreExpirationTime;
-            this.MediaUris = MediaUris;
-            this.EstimatedTranscodeTimeMs = EstimatedTranscodeTimeMs;
-            this.ActualTranscodeTimeMs = ActualTranscodeTimeMs;
-            this.ArchiveDate = ArchiveDate;
-            this.ArchiveMedium = ArchiveMedium;
-            this.DeleteDate = DeleteDate;
-            this.MaxAllowedRestorationsForOrg = MaxAllowedRestorationsForOrg;
-            this.RemainingRestorationsAllowedForOrg = RemainingRestorationsAllowedForOrg;
-            this.RecordingId = RecordingId;
-            
-        }
-
-    
-        /// <summary>
         /// Represents the current file state for a recording. Examples: Uploading, Archived, etc
         /// </summary>
         /// <value>Represents the current file state for a recording. Examples: Uploading, Archived, etc</value>
         [DataMember(Name="fileState", EmitDefaultValue=false)]
         public FileStateEnum? FileState { get; set; }
     
+
         /// <summary>
         /// The type of archive medium used. Example: CloudArchive
         /// </summary>
@@ -257,23 +168,7 @@ namespace ININ.PureCloudApi.Model
         public string Media { get; set; }
     
         /// <summary>
-<<<<<<< HEAD
-        /// Gets or Sets MediaUri
-        /// </summary>
-        [DataMember(Name="mediaUri", EmitDefaultValue=false)]
-        public string MediaUri { get; set; }
-    
-        /// <summary>
-        /// Gets or Sets WaveUri
-        /// </summary>
-        [DataMember(Name="waveUri", EmitDefaultValue=false)]
-        public string WaveUri { get; set; }
-    
-        /// <summary>
-        /// Gets or Sets Annotations
-=======
         /// Annotations that belong to the recording.
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// </summary>
         /// <value>Annotations that belong to the recording.</value>
         [DataMember(Name="annotations", EmitDefaultValue=false)]
@@ -291,11 +186,7 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <value>Represents an email transcript</value>
         [DataMember(Name="emailTranscript", EmitDefaultValue=false)]
-<<<<<<< HEAD
-        public List<EmailMessage> EmailTranscript { get; set; }
-=======
         public List<RecordingEmailMessage> EmailTranscript { get; set; }
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
     
         /// <summary>
         /// The amount of time a restored recording will remain restored before being archived again. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
@@ -331,15 +222,9 @@ namespace ININ.PureCloudApi.Model
         public DateTime? ArchiveDate { get; set; }
     
         /// <summary>
-<<<<<<< HEAD
-        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
-        /// </summary>
-        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
-=======
         /// The date the recording will be deleted. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>The date the recording will be deleted. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         [DataMember(Name="deleteDate", EmitDefaultValue=false)]
         public DateTime? DeleteDate { get; set; }
     
@@ -360,14 +245,9 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// The session id represents an external resource id, such as email, call, chat, etc
         /// </summary>
-<<<<<<< HEAD
-        [DataMember(Name="recordingId", EmitDefaultValue=false)]
-        public string RecordingId { get; set; }
-=======
         /// <value>The session id represents an external resource id, such as email, call, chat, etc</value>
         [DataMember(Name="sessionId", EmitDefaultValue=false)]
         public string SessionId { get; set; }
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
     
         /// <summary>
         /// The URI for this object
@@ -477,19 +357,6 @@ namespace ININ.PureCloudApi.Model
                     this.Media != null &&
                     this.Media.Equals(other.Media)
                 ) &&
-<<<<<<< HEAD
-                (
-                    this.MediaUri == other.MediaUri ||
-                    this.MediaUri != null &&
-                    this.MediaUri.Equals(other.MediaUri)
-                ) &&
-                (
-                    this.WaveUri == other.WaveUri ||
-                    this.WaveUri != null &&
-                    this.WaveUri.Equals(other.WaveUri)
-                ) &&
-=======
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 (
                     this.Annotations == other.Annotations ||
                     this.Annotations != null &&
@@ -556,15 +423,9 @@ namespace ININ.PureCloudApi.Model
                     this.RemainingRestorationsAllowedForOrg.Equals(other.RemainingRestorationsAllowedForOrg)
                 ) &&
                 (
-<<<<<<< HEAD
-                    this.RecordingId == other.RecordingId ||
-                    this.RecordingId != null &&
-                    this.RecordingId.Equals(other.RecordingId)
-=======
                     this.SessionId == other.SessionId ||
                     this.SessionId != null &&
                     this.SessionId.Equals(other.SessionId)
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 ) &&
                 (
                     this.SelfUri == other.SelfUri ||
@@ -598,13 +459,6 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.EndTime.GetHashCode();
                 if (this.Media != null)
                     hash = hash * 59 + this.Media.GetHashCode();
-<<<<<<< HEAD
-                if (this.MediaUri != null)
-                    hash = hash * 59 + this.MediaUri.GetHashCode();
-                if (this.WaveUri != null)
-                    hash = hash * 59 + this.WaveUri.GetHashCode();
-=======
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 if (this.Annotations != null)
                     hash = hash * 59 + this.Annotations.GetHashCode();
                 if (this.Transcript != null)
@@ -631,13 +485,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.MaxAllowedRestorationsForOrg.GetHashCode();
                 if (this.RemainingRestorationsAllowedForOrg != null)
                     hash = hash * 59 + this.RemainingRestorationsAllowedForOrg.GetHashCode();
-<<<<<<< HEAD
-                if (this.RecordingId != null)
-                    hash = hash * 59 + this.RecordingId.GetHashCode();
-=======
                 if (this.SessionId != null)
                     hash = hash * 59 + this.SessionId.GetHashCode();
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;

@@ -110,102 +110,6 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Tags">Tags.</param>
         /// <param name="TagValues">TagValues.</param>
         /// <param name="Attributes">Attributes.</param>
-        /// <param name="AttributeGroupInstances">AttributeGroupInstances.</param>
-        /// <param name="Thumbnails">Thumbnails.</param>
-        /// <param name="UploadStatus">UploadStatus.</param>
-        /// <param name="UploadDestinationUri">UploadDestinationUri.</param>
-        /// <param name="UploadMethod">UploadMethod.</param>
-        /// <param name="LockInfo">LockInfo.</param>
-        /// <param name="Acl">A list of permitted action rights for the user making the request.</param>
-        /// <param name="SharingStatus">SharingStatus.</param>
-        /// <param name="SharingUri">SharingUri.</param>
-        /// <param name="DownloadSharingUri">DownloadSharingUri.</param>
-
-        public Document(string Name = null, int? ChangeNumber = null, DateTime? DateCreated = null, DateTime? DateModified = null, DateTime? DateUploaded = null, string ContentUri = null, UriReference Workspace = null, UriReference CreatedBy = null, UriReference UploadedBy = null, string ContentType = null, long? ContentLength = null, SystemTypeEnum? SystemType = null, string Filename = null, long? PageCount = null, bool? Read = null, string CallerAddress = null, string ReceiverAddress = null, List<string> Tags = null, List<TagValue> TagValues = null, List<AttributeValue> Attributes = null, List<AttributeGroupInstance> AttributeGroupInstances = null, List<DocumentThumbnail> Thumbnails = null, UriReference UploadStatus = null, string UploadDestinationUri = null, UploadMethodEnum? UploadMethod = null, LockInfo LockInfo = null, List<string> Acl = null, SharingStatusEnum? SharingStatus = null, string SharingUri = null, string DownloadSharingUri = null)
-        {
-            this.Name = Name;
-            this.ChangeNumber = ChangeNumber;
-            this.DateCreated = DateCreated;
-            this.DateModified = DateModified;
-            this.DateUploaded = DateUploaded;
-            this.ContentUri = ContentUri;
-            this.Workspace = Workspace;
-            this.CreatedBy = CreatedBy;
-            this.UploadedBy = UploadedBy;
-            this.ContentType = ContentType;
-            this.ContentLength = ContentLength;
-            this.SystemType = SystemType;
-            this.Filename = Filename;
-            this.PageCount = PageCount;
-            // use default value if no "Read" provided
-            if (Read == null)
-            {
-                this.Read = false;
-            }
-            else
-            {
-                this.Read = Read;
-            }
-            this.CallerAddress = CallerAddress;
-            this.ReceiverAddress = ReceiverAddress;
-            this.Tags = Tags;
-            this.TagValues = TagValues;
-            this.Attributes = Attributes;
-            this.AttributeGroupInstances = AttributeGroupInstances;
-            this.Thumbnails = Thumbnails;
-            this.UploadStatus = UploadStatus;
-            this.UploadDestinationUri = UploadDestinationUri;
-            this.UploadMethod = UploadMethod;
-            this.LockInfo = LockInfo;
-            this.Acl = Acl;
-            this.SharingStatus = SharingStatus;
-            this.SharingUri = SharingUri;
-            this.DownloadSharingUri = DownloadSharingUri;
-            
-        }
-
-    
-        /// <summary>
-        /// Gets or Sets SystemType
-        /// </summary>
-        [DataMember(Name="systemType", EmitDefaultValue=false)]
-        public SystemTypeEnum? SystemType { get; set; }
-    
-        /// <summary>
-        /// Gets or Sets UploadMethod
-        /// </summary>
-        [DataMember(Name="uploadMethod", EmitDefaultValue=false)]
-        public UploadMethodEnum? UploadMethod { get; set; }
-    
-        /// <summary>
-        /// Gets or Sets SharingStatus
-        /// </summary>
-        [DataMember(Name="sharingStatus", EmitDefaultValue=false)]
-        public SharingStatusEnum? SharingStatus { get; set; }
-    
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Document" />class.
-        /// </summary>
-        /// <param name="Name">Name.</param>
-        /// <param name="ChangeNumber">ChangeNumber.</param>
-        /// <param name="DateCreated">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        /// <param name="DateModified">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        /// <param name="DateUploaded">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        /// <param name="ContentUri">ContentUri.</param>
-        /// <param name="Workspace">Workspace.</param>
-        /// <param name="CreatedBy">CreatedBy.</param>
-        /// <param name="UploadedBy">UploadedBy.</param>
-        /// <param name="ContentType">ContentType.</param>
-        /// <param name="ContentLength">ContentLength.</param>
-        /// <param name="SystemType">SystemType.</param>
-        /// <param name="Filename">Filename.</param>
-        /// <param name="PageCount">PageCount.</param>
-        /// <param name="Read">Read (default to false).</param>
-        /// <param name="CallerAddress">CallerAddress.</param>
-        /// <param name="ReceiverAddress">ReceiverAddress.</param>
-        /// <param name="Tags">Tags.</param>
-        /// <param name="TagValues">TagValues.</param>
-        /// <param name="Attributes">Attributes.</param>
         /// <param name="Thumbnails">Thumbnails.</param>
         /// <param name="UploadStatus">UploadStatus.</param>
         /// <param name="UploadDestinationUri">UploadDestinationUri.</param>
@@ -381,17 +285,7 @@ namespace ININ.PureCloudApi.Model
         /// Gets or Sets Attributes
         /// </summary>
         [DataMember(Name="attributes", EmitDefaultValue=false)]
-<<<<<<< HEAD
-        public List<AttributeValue> Attributes { get; set; }
-    
-        /// <summary>
-        /// Gets or Sets AttributeGroupInstances
-        /// </summary>
-        [DataMember(Name="attributeGroupInstances", EmitDefaultValue=false)]
-        public List<AttributeGroupInstance> AttributeGroupInstances { get; set; }
-=======
         public List<DocumentAttribute> Attributes { get; set; }
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
     
         /// <summary>
         /// Gets or Sets Thumbnails
@@ -623,14 +517,6 @@ namespace ININ.PureCloudApi.Model
                     this.Attributes != null &&
                     this.Attributes.SequenceEqual(other.Attributes)
                 ) &&
-<<<<<<< HEAD
-                (
-                    this.AttributeGroupInstances == other.AttributeGroupInstances ||
-                    this.AttributeGroupInstances != null &&
-                    this.AttributeGroupInstances.SequenceEqual(other.AttributeGroupInstances)
-                ) &&
-=======
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 (
                     this.Thumbnails == other.Thumbnails ||
                     this.Thumbnails != null &&
@@ -736,11 +622,6 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.TagValues.GetHashCode();
                 if (this.Attributes != null)
                     hash = hash * 59 + this.Attributes.GetHashCode();
-<<<<<<< HEAD
-                if (this.AttributeGroupInstances != null)
-                    hash = hash * 59 + this.AttributeGroupInstances.GetHashCode();
-=======
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 if (this.Thumbnails != null)
                     hash = hash * 59 + this.Thumbnails.GetHashCode();
                 if (this.UploadStatus != null)

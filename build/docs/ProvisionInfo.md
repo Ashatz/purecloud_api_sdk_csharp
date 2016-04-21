@@ -1,7 +1,7 @@
 ---
 title: ProvisionInfo
 ---
-## .ProvisionInfo
+## ININ.PureCloudApi.Model.ProvisionInfo
 
 ## Properties
 

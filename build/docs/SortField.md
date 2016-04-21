@@ -1,7 +1,7 @@
 ---
 title: SortField
 ---
-## .SortField
+## ININ.PureCloudApi.Model.SortField
 
 ## Properties
 

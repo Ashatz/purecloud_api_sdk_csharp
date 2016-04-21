@@ -1,7 +1,7 @@
 ---
 title: EvaluatorActivity
 ---
-## .EvaluatorActivity
+## ININ.PureCloudApi.Model.EvaluatorActivity
 
 ## Properties
 

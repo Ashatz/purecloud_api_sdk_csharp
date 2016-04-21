@@ -15,18 +15,6 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/Interval.cs
-    public partial class Interval :  IEquatable<Interval>
-    { 
-        
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Interval" />class.
-        /// </summary>
-        /// <param name="Start">Start.</param>
-        /// <param name="End">End.</param>
-
-        public Interval(string Start = null, string End = null)
-=======
     public partial class CampaignScheduleIntervals :  IEquatable<CampaignScheduleIntervals>
     { 
         
@@ -37,7 +25,6 @@ namespace ININ.PureCloudApi.Model
         /// <param name="End">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
 
         public CampaignScheduleIntervals(DateTime? Start = null, DateTime? End = null)
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/CampaignScheduleIntervals.cs
         {
             this.Start = Start;
             this.End = End;
@@ -50,22 +37,14 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="start", EmitDefaultValue=false)]
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/Interval.cs
-        public string Start { get; set; }
-=======
         public DateTime? Start { get; set; }
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/CampaignScheduleIntervals.cs
     
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="end", EmitDefaultValue=false)]
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/Interval.cs
-        public string End { get; set; }
-=======
         public DateTime? End { get; set; }
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/CampaignScheduleIntervals.cs
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -104,11 +83,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if CampaignScheduleIntervals instances are equal
         /// </summary>
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/Interval.cs
-        /// <param name="other">Instance of Interval to be compared</param>
-=======
         /// <param name="other">Instance of CampaignScheduleIntervals to be compared</param>
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/CampaignScheduleIntervals.cs
         /// <returns>Boolean</returns>
         public bool Equals(CampaignScheduleIntervals other)
         {

@@ -1,7 +1,7 @@
 ---
 title: MediaSetting
 ---
-## .MediaSetting
+## ININ.PureCloudApi.Model.MediaSetting
 
 ## Properties
 

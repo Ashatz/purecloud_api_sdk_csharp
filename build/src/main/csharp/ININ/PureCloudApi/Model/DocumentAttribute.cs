@@ -15,28 +15,16 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/AttributeValue.cs
-    public partial class AttributeValue :  IEquatable<AttributeValue>
-    { 
-        
-        /// <summary>
-        /// Initializes a new instance of the <see cref="AttributeValue" />class.
-=======
     public partial class DocumentAttribute :  IEquatable<DocumentAttribute>
     { 
         
         /// <summary>
         /// Initializes a new instance of the <see cref="DocumentAttribute" />class.
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/DocumentAttribute.cs
         /// </summary>
         /// <param name="Attribute">Attribute.</param>
         /// <param name="Values">Values.</param>
 
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/AttributeValue.cs
-        public AttributeValue(WorkspaceAttribute Attribute = null, List<string> Values = null)
-=======
         public DocumentAttribute(ININ.PureCloudApi.Model.Attribute Attribute = null, List<string> Values = null)
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/DocumentAttribute.cs
         {
             this.Attribute = Attribute;
             this.Values = Values;
@@ -48,11 +36,7 @@ namespace ININ.PureCloudApi.Model
         /// Gets or Sets Attribute
         /// </summary>
         [DataMember(Name="attribute", EmitDefaultValue=false)]
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/AttributeValue.cs
-        public WorkspaceAttribute Attribute { get; set; }
-=======
         public ININ.PureCloudApi.Model.Attribute Attribute { get; set; }
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/DocumentAttribute.cs
     
         /// <summary>
         /// Gets or Sets Values
@@ -97,11 +81,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if DocumentAttribute instances are equal
         /// </summary>
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/AttributeValue.cs
-        /// <param name="other">Instance of AttributeValue to be compared</param>
-=======
         /// <param name="other">Instance of DocumentAttribute to be compared</param>
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/DocumentAttribute.cs
         /// <returns>Boolean</returns>
         public bool Equals(DocumentAttribute other)
         {

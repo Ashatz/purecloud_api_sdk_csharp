@@ -339,6 +339,7 @@ namespace ININ.PureCloudApi.Model
         }
 
         
+
         /// <summary>
         /// Optional type, can usually be inferred
         /// </summary>
@@ -346,6 +347,7 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
     
+
         /// <summary>
         /// Left hand side for dimension predicates
         /// </summary>
@@ -353,6 +355,7 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="dimension", EmitDefaultValue=false)]
         public DimensionEnum? Dimension { get; set; }
     
+
         /// <summary>
         /// Left hand side for property predicates
         /// </summary>
@@ -360,6 +363,7 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="propertyType", EmitDefaultValue=false)]
         public PropertyTypeEnum? PropertyType { get; set; }
     
+
         /// <summary>
         /// Left hand side for metric predicates
         /// </summary>
@@ -367,6 +371,7 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="metric", EmitDefaultValue=false)]
         public MetricEnum? Metric { get; set; }
     
+
         /// <summary>
         /// Optional operator, default is matches
         /// </summary>

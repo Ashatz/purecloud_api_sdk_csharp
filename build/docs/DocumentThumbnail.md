@@ -1,7 +1,7 @@
 ---
 title: DocumentThumbnail
 ---
-## .DocumentThumbnail
+## ININ.PureCloudApi.Model.DocumentThumbnail
 
 ## Properties
 

@@ -1,7 +1,7 @@
 ---
 title: DefaultGreetingList
 ---
-## .DefaultGreetingList
+## ININ.PureCloudApi.Model.DefaultGreetingList
 
 ## Properties
 

@@ -15,17 +15,6 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/ConversationResponse.cs
-    public partial class ConversationResponse :  IEquatable<ConversationResponse>
-    { 
-        
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ConversationResponse" />class.
-        /// </summary>
-        /// <param name="Name">Name.</param>
-
-        public ConversationResponse(string Name = null)
-=======
     public partial class Snapshot :  IEquatable<Snapshot>
     { 
         
@@ -35,7 +24,6 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Name">Name.</param>
 
         public Snapshot(string Name = null)
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/Snapshot.cs
         {
             this.Name = Name;
             
@@ -100,11 +88,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if Snapshot instances are equal
         /// </summary>
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/ConversationResponse.cs
-        /// <param name="other">Instance of ConversationResponse to be compared</param>
-=======
         /// <param name="other">Instance of Snapshot to be compared</param>
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/Snapshot.cs
         /// <returns>Boolean</returns>
         public bool Equals(Snapshot other)
         {

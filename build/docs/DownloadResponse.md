@@ -1,7 +1,7 @@
 ---
 title: DownloadResponse
 ---
-## .DownloadResponse
+## ININ.PureCloudApi.Model.DownloadResponse
 
 ## Properties
 

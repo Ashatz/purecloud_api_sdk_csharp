@@ -1,7 +1,7 @@
 ---
 title: GreetingAudioFile
 ---
-## .GreetingAudioFile
+## ININ.PureCloudApi.Model.GreetingAudioFile
 
 ## Properties
 

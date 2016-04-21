@@ -1,7 +1,7 @@
 ---
 title: ReportMetaData
 ---
-## .ReportMetaData
+## ININ.PureCloudApi.Model.ReportMetaData
 
 ## Properties
 

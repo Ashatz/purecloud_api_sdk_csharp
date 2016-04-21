@@ -39,6 +39,7 @@ namespace ININ.PureCloudApi.Model
         }
 
         
+
         /// <summary>
         /// Indicates the estimated wait time Formula
         /// </summary>

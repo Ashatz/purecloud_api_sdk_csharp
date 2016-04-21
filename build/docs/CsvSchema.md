@@ -1,7 +1,7 @@
 ---
 title: CsvSchema
 ---
-## .CsvSchema
+## ININ.PureCloudApi.Model.CsvSchema
 
 ## Properties
 

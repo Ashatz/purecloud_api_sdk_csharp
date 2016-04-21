@@ -1,7 +1,7 @@
 ---
 title: Policy
 ---
-## .Policy
+## ININ.PureCloudApi.Model.Policy
 
 ## Properties
 
@@ -14,8 +14,9 @@ title: Policy
 | **Order** | **int?** |  | [optional] |
 | **Description** | **string** |  | [optional] |
 | **Enabled** | **bool?** |  | [optional] [default to false]|
-| **Conditions** | [**PolicyConditions**](PolicyConditions.html) |  | [optional] |
-| **Actions** | [**PolicyActions**](PolicyActions.html) |  | [optional] |
+| **MediaPolicies** | [**MediaPolicies**](MediaPolicies.html) | Conditions and actions per media type | [optional] |
+| **Conditions** | [**PolicyConditions**](PolicyConditions.html) | Conditions | [optional] |
+| **Actions** | [**PolicyActions**](PolicyActions.html) | Actions | [optional] |
 | **PolicyErrors** | [**PolicyErrors**](PolicyErrors.html) |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}

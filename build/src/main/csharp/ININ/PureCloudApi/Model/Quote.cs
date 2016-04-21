@@ -29,7 +29,6 @@ namespace ININ.PureCloudApi.Model
             
             [EnumMember(Value = "AMENDMENT")]
             Amendment
-<<<<<<< HEAD
         }
 
 
@@ -67,144 +66,6 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Quote" />class.
         /// </summary>
-        /// <param name="Name">Name.</param>
-        /// <param name="PurchaseOrder">PurchaseOrder.</param>
-        /// <param name="Type">Type.</param>
-        /// <param name="Status">Status.</param>
-        /// <param name="IsSubmitted">IsSubmitted (default to false).</param>
-        /// <param name="IsPending">IsPending (default to false).</param>
-        /// <param name="IsFrozen">IsFrozen (default to false).</param>
-        /// <param name="Currency">Currency.</param>
-        /// <param name="CreatedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        /// <param name="LastUpdatedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        /// <param name="BillingContactEmail">BillingContactEmail.</param>
-        /// <param name="BillingContactFirstName">BillingContactFirstName.</param>
-        /// <param name="BillingContactLastName">BillingContactLastName.</param>
-        /// <param name="BillingContactPhone">BillingContactPhone.</param>
-        /// <param name="IncludeVoiceCharges">IncludeVoiceCharges (default to false).</param>
-        /// <param name="Charges">Charges.</param>
-        /// <param name="EdgeControlModel">EdgeControlModel.</param>
-        /// <param name="ReferralCodes">ReferralCodes.</param>
-        /// <param name="DiscountCodes">DiscountCodes.</param>
-        /// <param name="SalesPartnerCode">SalesPartnerCode.</param>
-
-        public Quote(string Name = null, string PurchaseOrder = null, TypeEnum? Type = null, StatusEnum? Status = null, bool? IsSubmitted = null, bool? IsPending = null, bool? IsFrozen = null, string Currency = null, DateTime? CreatedDate = null, DateTime? LastUpdatedDate = null, string BillingContactEmail = null, string BillingContactFirstName = null, string BillingContactLastName = null, string BillingContactPhone = null, bool? IncludeVoiceCharges = null, List<QuoteCharge> Charges = null, string EdgeControlModel = null, List<string> ReferralCodes = null, List<string> DiscountCodes = null, string SalesPartnerCode = null)
-        {
-            this.Name = Name;
-            this.PurchaseOrder = PurchaseOrder;
-            this.Type = Type;
-            this.Status = Status;
-            // use default value if no "IsSubmitted" provided
-            if (IsSubmitted == null)
-            {
-                this.IsSubmitted = false;
-            }
-            else
-            {
-                this.IsSubmitted = IsSubmitted;
-            }
-            // use default value if no "IsPending" provided
-            if (IsPending == null)
-            {
-                this.IsPending = false;
-            }
-            else
-            {
-                this.IsPending = IsPending;
-            }
-            // use default value if no "IsFrozen" provided
-            if (IsFrozen == null)
-            {
-                this.IsFrozen = false;
-            }
-            else
-            {
-                this.IsFrozen = IsFrozen;
-            }
-            this.Currency = Currency;
-            this.CreatedDate = CreatedDate;
-            this.LastUpdatedDate = LastUpdatedDate;
-            this.BillingContactEmail = BillingContactEmail;
-            this.BillingContactFirstName = BillingContactFirstName;
-            this.BillingContactLastName = BillingContactLastName;
-            this.BillingContactPhone = BillingContactPhone;
-            // use default value if no "IncludeVoiceCharges" provided
-            if (IncludeVoiceCharges == null)
-            {
-                this.IncludeVoiceCharges = false;
-            }
-            else
-            {
-                this.IncludeVoiceCharges = IncludeVoiceCharges;
-            }
-            this.Charges = Charges;
-            this.EdgeControlModel = EdgeControlModel;
-            this.ReferralCodes = ReferralCodes;
-            this.DiscountCodes = DiscountCodes;
-            this.SalesPartnerCode = SalesPartnerCode;
-            
-        }
-
-    
-        /// <summary>
-        /// The globally unique identifier for the object.
-        /// </summary>
-        /// <value>The globally unique identifier for the object.</value>
-        [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
-    
-        /// <summary>
-        /// Gets or Sets Name
-        /// </summary>
-        [DataMember(Name="name", EmitDefaultValue=false)]
-        public string Name { get; set; }
-    
-=======
-        }
-
-
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
-        /// <summary>
-        /// Gets or Sets Status
-        /// </summary>
-<<<<<<< HEAD
-        [DataMember(Name="purchaseOrder", EmitDefaultValue=false)]
-        public string PurchaseOrder { get; set; }
-=======
-        [JsonConverter(typeof(StringEnumConverter))]
-                public enum StatusEnum {
-            
-            [EnumMember(Value = "IN_PROGRESS")]
-            InProgress,
-            
-            [EnumMember(Value = "SUBMITTED")]
-            Submitted,
-            
-            [EnumMember(Value = "FROZEN")]
-            Frozen
-        }
-
-        
-        /// <summary>
-        /// Gets or Sets Type
-        /// </summary>
-        [DataMember(Name="type", EmitDefaultValue=false)]
-        public TypeEnum? Type { get; set; }
-    
-        /// <summary>
-        /// Gets or Sets Status
-        /// </summary>
-        [DataMember(Name="status", EmitDefaultValue=false)]
-        public StatusEnum? Status { get; set; }
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
-    
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Quote" />class.
-        /// </summary>
-<<<<<<< HEAD
-        [DataMember(Name="isSubmitted", EmitDefaultValue=false)]
-        public bool? IsSubmitted { get; set; }
-=======
         /// <param name="Name">Name.</param>
         /// <param name="PurchaseOrder">PurchaseOrder.</param>
         /// <param name="Type">Type.</param>
@@ -263,27 +124,17 @@ namespace ININ.PureCloudApi.Model
             
         }
 
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
     
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
-<<<<<<< HEAD
-        [DataMember(Name="isPending", EmitDefaultValue=false)]
-        public bool? IsPending { get; set; }
-=======
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
     
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
-<<<<<<< HEAD
-        [DataMember(Name="isFrozen", EmitDefaultValue=false)]
-        public bool? IsFrozen { get; set; }
-=======
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
     
@@ -292,7 +143,6 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         [DataMember(Name="purchaseOrder", EmitDefaultValue=false)]
         public string PurchaseOrder { get; set; }
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
     
         /// <summary>
         /// Gets or Sets Currency
@@ -374,15 +224,12 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="salesPartnerCode", EmitDefaultValue=false)]
         public string SalesPartnerCode { get; set; }
     
-<<<<<<< HEAD
-=======
         /// <summary>
         /// Gets or Sets IsAnnualPrepay
         /// </summary>
         [DataMember(Name="isAnnualPrepay", EmitDefaultValue=false)]
         public bool? IsAnnualPrepay { get; set; }
     
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// The URI for this object
         /// </summary>
@@ -479,24 +326,6 @@ namespace ININ.PureCloudApi.Model
                     this.Status != null &&
                     this.Status.Equals(other.Status)
                 ) &&
-<<<<<<< HEAD
-                (
-                    this.IsSubmitted == other.IsSubmitted ||
-                    this.IsSubmitted != null &&
-                    this.IsSubmitted.Equals(other.IsSubmitted)
-                ) &&
-                (
-                    this.IsPending == other.IsPending ||
-                    this.IsPending != null &&
-                    this.IsPending.Equals(other.IsPending)
-                ) &&
-                (
-                    this.IsFrozen == other.IsFrozen ||
-                    this.IsFrozen != null &&
-                    this.IsFrozen.Equals(other.IsFrozen)
-                ) &&
-=======
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 (
                     this.Currency == other.Currency ||
                     this.Currency != null &&
@@ -562,14 +391,11 @@ namespace ININ.PureCloudApi.Model
                     this.SalesPartnerCode != null &&
                     this.SalesPartnerCode.Equals(other.SalesPartnerCode)
                 ) &&
-<<<<<<< HEAD
-=======
                 (
                     this.IsAnnualPrepay == other.IsAnnualPrepay ||
                     this.IsAnnualPrepay != null &&
                     this.IsAnnualPrepay.Equals(other.IsAnnualPrepay)
                 ) &&
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
@@ -598,15 +424,6 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.Type.GetHashCode();
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
-<<<<<<< HEAD
-                if (this.IsSubmitted != null)
-                    hash = hash * 59 + this.IsSubmitted.GetHashCode();
-                if (this.IsPending != null)
-                    hash = hash * 59 + this.IsPending.GetHashCode();
-                if (this.IsFrozen != null)
-                    hash = hash * 59 + this.IsFrozen.GetHashCode();
-=======
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 if (this.Currency != null)
                     hash = hash * 59 + this.Currency.GetHashCode();
                 if (this.CreatedDate != null)
@@ -633,11 +450,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.DiscountCodes.GetHashCode();
                 if (this.SalesPartnerCode != null)
                     hash = hash * 59 + this.SalesPartnerCode.GetHashCode();
-<<<<<<< HEAD
-=======
                 if (this.IsAnnualPrepay != null)
                     hash = hash * 59 + this.IsAnnualPrepay.GetHashCode();
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;

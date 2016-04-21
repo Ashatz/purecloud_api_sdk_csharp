@@ -1,7 +1,7 @@
 ---
 title: WorkspaceMember
 ---
-## .WorkspaceMember
+## ININ.PureCloudApi.Model.WorkspaceMember
 
 ## Properties
 

@@ -1,7 +1,7 @@
 ---
 title: AutomateQueue
 ---
-## .AutomateQueue
+## ININ.PureCloudApi.Model.AutomateQueue
 
 ## Properties
 

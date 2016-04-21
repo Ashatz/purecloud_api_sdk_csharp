@@ -4,18 +4,18 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**TokensMeDelete**](TokensApi.md#tokensmedelete) | **DELETE** /api/v1/tokens/me | Delete  auth token used to make the request. |
+| [**DeleteMe**](TokensApi.md#deleteme) | **DELETE** /api/v2/tokens/me | Delete  auth token used to make the request. |
 {: class="table table-striped"}
 
-<a name="TokensMeDelete"></a>
-## string** TokensMeDelete ()
+<a name="DeleteMe"></a>
+## string** DeleteMe ()
 
 Delete  auth token used to make the request.
 
 
 
 ### Example
-```csharp
+~~~csharp
 using System;
 using System.Diagnostics;
 using ININ.PureCloudApi.Api;
@@ -24,7 +24,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class TokensMeDeleteExample
+    public class DeleteMeExample
     {
         public void main()
         {
@@ -37,17 +37,17 @@ namespace Example
             try
             {
                 // Delete  auth token used to make the request.
-                string result = apiInstance.TokensMeDelete();
+                string result = apiInstance.DeleteMe();
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling TokensApi.TokensMeDelete: " + e.Message );
+                Debug.Print("Exception when calling TokensApi.DeleteMe: " + e.Message );
             }
         }
     }
 }
-```
+~~~
 
 ### Parameters
 This endpoint does require any parameters.

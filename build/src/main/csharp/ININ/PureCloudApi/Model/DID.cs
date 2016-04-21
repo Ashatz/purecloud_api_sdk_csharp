@@ -27,25 +27,6 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "ACTIVE")]
             Active,
             
-<<<<<<< HEAD
-            [EnumMember(Value = "DELETED")]
-            Deleted,
-            
-            [EnumMember(Value = "INACTIVE")]
-            Inactive
-        }
-
-
-        /// <summary>
-        /// Gets or Sets OwnerType
-        /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
-                public enum OwnerTypeEnum {
-            
-            [EnumMember(Value = "USER")]
-            User,
-            
-=======
             [EnumMember(Value = "INACTIVE")]
             Inactive,
             
@@ -63,7 +44,6 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "USER")]
             User,
             
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             [EnumMember(Value = "PHONE")]
             Phone,
             
@@ -83,56 +63,6 @@ namespace ININ.PureCloudApi.Model
         public StateEnum? State { get; set; }
     
 
-        /// <summary>
-        /// Gets or Sets OwnerType
-        /// </summary>
-        [DataMember(Name="ownerType", EmitDefaultValue=false)]
-        public OwnerTypeEnum? OwnerType { get; set; }
-    
-        /// <summary>
-        /// Initializes a new instance of the <see cref="DID" />class.
-        /// </summary>
-        /// <param name="Name">Name.</param>
-        /// <param name="Description">Description.</param>
-        /// <param name="Version">Version.</param>
-        /// <param name="DateCreated">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        /// <param name="DateModified">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        /// <param name="ModifiedBy">ModifiedBy.</param>
-        /// <param name="CreatedBy">CreatedBy.</param>
-        /// <param name="State">State.</param>
-        /// <param name="ModifiedByApp">ModifiedByApp.</param>
-        /// <param name="CreatedByApp">CreatedByApp.</param>
-        /// <param name="PhoneNumber">PhoneNumber.</param>
-        /// <param name="DidPool">DidPool.</param>
-        /// <param name="Owner">A Uri reference to the owner of this DID, which is either a User or an IVR.</param>
-        /// <param name="OwnerType">OwnerType.</param>
-
-        public DID(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, string PhoneNumber = null, UriReference DidPool = null, UriReference Owner = null, OwnerTypeEnum? OwnerType = null)
-        {
-            this.Name = Name;
-            this.Description = Description;
-            this.Version = Version;
-            this.DateCreated = DateCreated;
-            this.DateModified = DateModified;
-            this.ModifiedBy = ModifiedBy;
-            this.CreatedBy = CreatedBy;
-            this.State = State;
-            this.ModifiedByApp = ModifiedByApp;
-            this.CreatedByApp = CreatedByApp;
-            this.PhoneNumber = PhoneNumber;
-            this.DidPool = DidPool;
-            this.Owner = Owner;
-            this.OwnerType = OwnerType;
-            
-        }
-
-    
-        /// <summary>
-        /// Gets or Sets State
-        /// </summary>
-        [DataMember(Name="state", EmitDefaultValue=false)]
-        public StateEnum? State { get; set; }
-    
         /// <summary>
         /// Gets or Sets OwnerType
         /// </summary>

@@ -1,7 +1,7 @@
 ---
 title: NocSupport
 ---
-## .NocSupport
+## ININ.PureCloudApi.Model.NocSupport
 
 ## Properties
 

@@ -15,11 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/UserStatus.cs
-    public partial class UserStatus :  IEquatable<UserStatus>
-=======
     public partial class PaymentMethod :  IEquatable<PaymentMethod>
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/PaymentMethod.cs
     { 
 
         /// <summary>
@@ -27,54 +23,13 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
                 public enum TypeEnum {
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/UserStatus.cs
-            
-            [EnumMember(Value = "USER")]
-            User,
-            
-            [EnumMember(Value = "SYSTEM")]
-            System
-=======
             
             [EnumMember(Value = "CARD_TOKEN")]
             Token
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/PaymentMethod.cs
         }
 
         
 
-        /// <summary>
-        /// Gets or Sets Type
-        /// </summary>
-        [DataMember(Name="type", EmitDefaultValue=false)]
-        public TypeEnum? Type { get; set; }
-    
-        /// <summary>
-        /// Initializes a new instance of the <see cref="UserStatus" />class.
-        /// </summary>
-        /// <param name="Name">Name.</param>
-        /// <param name="Alertable">Alertable (default to false).</param>
-        /// <param name="DateModified">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        /// <param name="Type">Type.</param>
-
-        public UserStatus(string Name = null, bool? Alertable = null, DateTime? DateModified = null, TypeEnum? Type = null)
-        {
-            this.Name = Name;
-            // use default value if no "Alertable" provided
-            if (Alertable == null)
-            {
-                this.Alertable = false;
-            }
-            else
-            {
-                this.Alertable = Alertable;
-            }
-            this.DateModified = DateModified;
-            this.Type = Type;
-            
-        }
-
-    
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
@@ -115,25 +70,14 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Gets or Sets ProviderName
         /// </summary>
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/UserStatus.cs
-        [DataMember(Name="alertable", EmitDefaultValue=false)]
-        public bool? Alertable { get; set; }
-=======
         [DataMember(Name="providerName", EmitDefaultValue=false)]
         public string ProviderName { get; set; }
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/PaymentMethod.cs
     
         /// <summary>
         /// Gets or Sets Token
         /// </summary>
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/UserStatus.cs
-        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
-        [DataMember(Name="dateModified", EmitDefaultValue=false)]
-        public DateTime? DateModified { get; set; }
-=======
         [DataMember(Name="token", EmitDefaultValue=false)]
         public string Token { get; set; }
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/PaymentMethod.cs
     
         /// <summary>
         /// The URI for this object
@@ -183,11 +127,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if PaymentMethod instances are equal
         /// </summary>
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/UserStatus.cs
-        /// <param name="other">Instance of UserStatus to be compared</param>
-=======
         /// <param name="other">Instance of PaymentMethod to be compared</param>
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/PaymentMethod.cs
         /// <returns>Boolean</returns>
         public bool Equals(PaymentMethod other)
         {
@@ -206,26 +146,11 @@ namespace ININ.PureCloudApi.Model
                     this.Name != null &&
                     this.Name.Equals(other.Name)
                 ) &&
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/UserStatus.cs
-                (
-                    this.Alertable == other.Alertable ||
-                    this.Alertable != null &&
-                    this.Alertable.Equals(other.Alertable)
-                ) &&
-                (
-                    this.DateModified == other.DateModified ||
-                    this.DateModified != null &&
-                    this.DateModified.Equals(other.DateModified)
-                ) &&
-=======
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/PaymentMethod.cs
                 (
                     this.Type == other.Type ||
                     this.Type != null &&
                     this.Type.Equals(other.Type)
                 ) &&
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/UserStatus.cs
-=======
                 (
                     this.ProviderName == other.ProviderName ||
                     this.ProviderName != null &&
@@ -236,7 +161,6 @@ namespace ININ.PureCloudApi.Model
                     this.Token != null &&
                     this.Token.Equals(other.Token)
                 ) &&
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/PaymentMethod.cs
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
@@ -259,21 +183,12 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.Id.GetHashCode();
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/UserStatus.cs
-                if (this.Alertable != null)
-                    hash = hash * 59 + this.Alertable.GetHashCode();
-                if (this.DateModified != null)
-                    hash = hash * 59 + this.DateModified.GetHashCode();
-                if (this.Type != null)
-                    hash = hash * 59 + this.Type.GetHashCode();
-=======
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
                 if (this.ProviderName != null)
                     hash = hash * 59 + this.ProviderName.GetHashCode();
                 if (this.Token != null)
                     hash = hash * 59 + this.Token.GetHashCode();
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/PaymentMethod.cs
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;

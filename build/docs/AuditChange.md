@@ -1,7 +1,7 @@
 ---
 title: AuditChange
 ---
-## .AuditChange
+## ININ.PureCloudApi.Model.AuditChange
 
 ## Properties
 

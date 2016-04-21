@@ -1,7 +1,7 @@
 ---
 title: QuestionScore
 ---
-## .QuestionScore
+## ININ.PureCloudApi.Model.QuestionScore
 
 ## Properties
 

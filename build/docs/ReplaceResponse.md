@@ -1,7 +1,7 @@
 ---
 title: ReplaceResponse
 ---
-## .ReplaceResponse
+## ININ.PureCloudApi.Model.ReplaceResponse
 
 ## Properties
 

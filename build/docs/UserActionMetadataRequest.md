@@ -1,7 +1,7 @@
 ---
 title: UserActionMetadataRequest
 ---
-## .UserActionMetadataRequest
+## ININ.PureCloudApi.Model.UserActionMetadataRequest
 
 ## Properties
 

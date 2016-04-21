@@ -15,22 +15,6 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/InstanceMemberFilter.cs
-    public partial class InstanceMemberFilter :  IEquatable<InstanceMemberFilter>
-    { 
-
-        /// <summary>
-        /// Gets or Sets Type
-        /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
-                public enum TypeEnum {
-            
-            [EnumMember(Value = "PARTIAL")]
-            Partial,
-            
-            [EnumMember(Value = "EXACT")]
-            Exact
-=======
     public partial class AttributeFilterItem :  IEquatable<AttributeFilterItem>
     { 
 
@@ -66,33 +50,10 @@ namespace ININ.PureCloudApi.Model
             
             [EnumMember(Value = "CONTAINS")]
             Contains
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/AttributeFilterItem.cs
         }
 
         
 
-        /// <summary>
-        /// Gets or Sets Type
-        /// </summary>
-        [DataMember(Name="type", EmitDefaultValue=false)]
-        public TypeEnum? Type { get; set; }
-    
-        /// <summary>
-        /// Initializes a new instance of the <see cref="InstanceMemberFilter" />class.
-        /// </summary>
-        /// <param name="Id">Id.</param>
-        /// <param name="Values">Values.</param>
-        /// <param name="Type">Type.</param>
-
-        public InstanceMemberFilter(string Id = null, List<string> Values = null, TypeEnum? Type = null)
-        {
-            this.Id = Id;
-            this.Values = Values;
-            this.Type = Type;
-            
-        }
-
-    
         /// <summary>
         /// Gets or Sets _Operator
         /// </summary>
@@ -138,10 +99,6 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  _Operator: ").Append(_Operator).Append("\n");
             sb.Append("  Values: ").Append(Values).Append("\n");
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/InstanceMemberFilter.cs
-            sb.Append("  Type: ").Append(Type).Append("\n");
-=======
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/AttributeFilterItem.cs
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -169,11 +126,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if AttributeFilterItem instances are equal
         /// </summary>
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/InstanceMemberFilter.cs
-        /// <param name="other">Instance of InstanceMemberFilter to be compared</param>
-=======
         /// <param name="other">Instance of AttributeFilterItem to be compared</param>
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/AttributeFilterItem.cs
         /// <returns>Boolean</returns>
         public bool Equals(AttributeFilterItem other)
         {
@@ -187,26 +140,15 @@ namespace ININ.PureCloudApi.Model
                     this.Id != null &&
                     this.Id.Equals(other.Id)
                 ) &&
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/InstanceMemberFilter.cs
-=======
                 (
                     this._Operator == other._Operator ||
                     this._Operator != null &&
                     this._Operator.Equals(other._Operator)
                 ) &&
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/AttributeFilterItem.cs
                 (
                     this.Values == other.Values ||
                     this.Values != null &&
                     this.Values.SequenceEqual(other.Values)
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/InstanceMemberFilter.cs
-                ) &&
-                (
-                    this.Type == other.Type ||
-                    this.Type != null &&
-                    this.Type.Equals(other.Type)
-=======
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/AttributeFilterItem.cs
                 );
         }
 
@@ -223,17 +165,10 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/InstanceMemberFilter.cs
-                if (this.Values != null)
-                    hash = hash * 59 + this.Values.GetHashCode();
-                if (this.Type != null)
-                    hash = hash * 59 + this.Type.GetHashCode();
-=======
                 if (this._Operator != null)
                     hash = hash * 59 + this._Operator.GetHashCode();
                 if (this.Values != null)
                     hash = hash * 59 + this.Values.GetHashCode();
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/AttributeFilterItem.cs
                 return hash;
             }
         }

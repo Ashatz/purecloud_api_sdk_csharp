@@ -1,7 +1,7 @@
 ---
 title: DeltaResponse
 ---
-## .DeltaResponse
+## ININ.PureCloudApi.Model.DeltaResponse
 
 ## Properties
 

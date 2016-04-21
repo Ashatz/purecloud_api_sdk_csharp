@@ -15,23 +15,6 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/PrimaryUserPresenceSource.cs
-    public partial class PrimaryUserPresenceSource :  IEquatable<PrimaryUserPresenceSource>
-    { 
-        
-        /// <summary>
-        /// Initializes a new instance of the <see cref="PrimaryUserPresenceSource" />class.
-        /// </summary>
-        /// <param name="Name">Name.</param>
-        /// <param name="User">User.</param>
-        /// <param name="PrimarySource">PrimarySource.</param>
-
-        public PrimaryUserPresenceSource(string Name = null, User User = null, string PrimarySource = null)
-        {
-            this.Name = Name;
-            this.User = User;
-            this.PrimarySource = PrimarySource;
-=======
     public partial class Currency :  IEquatable<Currency>
     { 
         
@@ -45,7 +28,6 @@ namespace ININ.PureCloudApi.Model
         {
             this.Name = Name;
             this.DecimalPlaces = DecimalPlaces;
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/Currency.cs
             
         }
 
@@ -63,25 +45,11 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
     
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/PrimaryUserPresenceSource.cs
-        /// <summary>
-        /// Gets or Sets User
-        /// </summary>
-        [DataMember(Name="user", EmitDefaultValue=false)]
-        public User User { get; set; }
-    
-=======
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/Currency.cs
         /// <summary>
         /// Gets or Sets DecimalPlaces
         /// </summary>
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/PrimaryUserPresenceSource.cs
-        [DataMember(Name="primarySource", EmitDefaultValue=false)]
-        public string PrimarySource { get; set; }
-=======
         [DataMember(Name="decimalPlaces", EmitDefaultValue=false)]
         public int? DecimalPlaces { get; set; }
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/Currency.cs
     
         /// <summary>
         /// The URI for this object
@@ -129,11 +97,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if Currency instances are equal
         /// </summary>
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/PrimaryUserPresenceSource.cs
-        /// <param name="other">Instance of PrimaryUserPresenceSource to be compared</param>
-=======
         /// <param name="other">Instance of Currency to be compared</param>
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/Currency.cs
         /// <returns>Boolean</returns>
         public bool Equals(Currency other)
         {
@@ -152,22 +116,10 @@ namespace ININ.PureCloudApi.Model
                     this.Name != null &&
                     this.Name.Equals(other.Name)
                 ) &&
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/PrimaryUserPresenceSource.cs
-                (
-                    this.User == other.User ||
-                    this.User != null &&
-                    this.User.Equals(other.User)
-                ) &&
-                (
-                    this.PrimarySource == other.PrimarySource ||
-                    this.PrimarySource != null &&
-                    this.PrimarySource.Equals(other.PrimarySource)
-=======
                 (
                     this.DecimalPlaces == other.DecimalPlaces ||
                     this.DecimalPlaces != null &&
                     this.DecimalPlaces.Equals(other.DecimalPlaces)
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/Currency.cs
                 ) &&
                 (
                     this.SelfUri == other.SelfUri ||
@@ -191,15 +143,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.Id.GetHashCode();
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/PrimaryUserPresenceSource.cs
-                if (this.User != null)
-                    hash = hash * 59 + this.User.GetHashCode();
-                if (this.PrimarySource != null)
-                    hash = hash * 59 + this.PrimarySource.GetHashCode();
-=======
                 if (this.DecimalPlaces != null)
                     hash = hash * 59 + this.DecimalPlaces.GetHashCode();
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/Currency.cs
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;

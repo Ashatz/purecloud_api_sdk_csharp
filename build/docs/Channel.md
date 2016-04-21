@@ -1,7 +1,7 @@
 ---
 title: Channel
 ---
-## .Channel
+## ININ.PureCloudApi.Model.Channel
 
 ## Properties
 

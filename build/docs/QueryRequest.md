@@ -1,7 +1,7 @@
 ---
 title: QueryRequest
 ---
-## .QueryRequest
+## ININ.PureCloudApi.Model.QueryRequest
 
 ## Properties
 
@@ -12,7 +12,8 @@ title: QueryRequest
 | **PageSize** | **int?** |  | [optional] |
 | **FacetNameRequests** | **List&lt;string&gt;** |  | [optional] |
 | **Sort** | [**List&lt;SortItem&gt;**](SortItem.html) |  | [optional] |
-| **Filters** | [**List&lt;FacetFilterItem&gt;**](FacetFilterItem.html) |  | [optional] |
+| **Filters** | [**List&lt;ContentFilterItem&gt;**](ContentFilterItem.html) |  | [optional] |
+| **AttributeFilters** | [**List&lt;AttributeFilterItem&gt;**](AttributeFilterItem.html) |  | [optional] |
 {: class="table table-striped"}
 
 

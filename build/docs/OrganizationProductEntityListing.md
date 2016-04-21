@@ -1,7 +1,7 @@
 ---
 title: OrganizationProductEntityListing
 ---
-## .OrganizationProductEntityListing
+## ININ.PureCloudApi.Model.OrganizationProductEntityListing
 
 ## Properties
 

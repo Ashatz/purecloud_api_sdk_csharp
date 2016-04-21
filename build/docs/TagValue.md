@@ -1,7 +1,7 @@
 ---
 title: TagValue
 ---
-## .TagValue
+## ININ.PureCloudApi.Model.TagValue
 
 ## Properties
 

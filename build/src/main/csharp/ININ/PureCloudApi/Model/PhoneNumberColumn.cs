@@ -23,21 +23,11 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <param name="ColumnName">ColumnName.</param>
         /// <param name="Type">Type.</param>
-<<<<<<< HEAD
-        /// <param name="CallableTimeColumn">CallableTimeColumn.</param>
-
-        public PhoneNumberColumn(string ColumnName = null, string Type = null, string CallableTimeColumn = null)
-        {
-            this.ColumnName = ColumnName;
-            this.Type = Type;
-            this.CallableTimeColumn = CallableTimeColumn;
-=======
 
         public PhoneNumberColumn(string ColumnName = null, string Type = null)
         {
             this.ColumnName = ColumnName;
             this.Type = Type;
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
@@ -54,15 +44,6 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="type", EmitDefaultValue=false)]
         public string Type { get; set; }
     
-<<<<<<< HEAD
-        /// <summary>
-        /// Gets or Sets CallableTimeColumn
-        /// </summary>
-        [DataMember(Name="callableTimeColumn", EmitDefaultValue=false)]
-        public string CallableTimeColumn { get; set; }
-    
-=======
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -73,10 +54,6 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class PhoneNumberColumn {\n");
             sb.Append("  ColumnName: ").Append(ColumnName).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
-<<<<<<< HEAD
-            sb.Append("  CallableTimeColumn: ").Append(CallableTimeColumn).Append("\n");
-=======
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -122,14 +99,6 @@ namespace ININ.PureCloudApi.Model
                     this.Type == other.Type ||
                     this.Type != null &&
                     this.Type.Equals(other.Type)
-<<<<<<< HEAD
-                ) &&
-                (
-                    this.CallableTimeColumn == other.CallableTimeColumn ||
-                    this.CallableTimeColumn != null &&
-                    this.CallableTimeColumn.Equals(other.CallableTimeColumn)
-=======
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 );
         }
 
@@ -148,11 +117,6 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.ColumnName.GetHashCode();
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-<<<<<<< HEAD
-                if (this.CallableTimeColumn != null)
-                    hash = hash * 59 + this.CallableTimeColumn.GetHashCode();
-=======
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 return hash;
             }
         }

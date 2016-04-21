@@ -1,7 +1,7 @@
 ---
 title: Metabase
 ---
-## .Metabase
+## ININ.PureCloudApi.Model.Metabase
 
 ## Properties
 

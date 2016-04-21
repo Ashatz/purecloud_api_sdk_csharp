@@ -1,7 +1,7 @@
 ---
 title: SignatureDocumentInfo
 ---
-## .SignatureDocumentInfo
+## ININ.PureCloudApi.Model.SignatureDocumentInfo
 
 ## Properties
 

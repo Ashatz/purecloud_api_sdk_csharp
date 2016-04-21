@@ -1,7 +1,7 @@
 ---
 title: EmailMessage
 ---
-## .EmailMessage
+## ININ.PureCloudApi.Model.EmailMessage
 
 ## Properties
 

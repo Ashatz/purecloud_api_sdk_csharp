@@ -1,7 +1,7 @@
 ---
 title: GreetingMediaInfo
 ---
-## .GreetingMediaInfo
+## ININ.PureCloudApi.Model.GreetingMediaInfo
 
 ## Properties
 

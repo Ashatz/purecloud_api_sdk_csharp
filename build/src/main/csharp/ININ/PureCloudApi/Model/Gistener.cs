@@ -31,14 +31,9 @@ namespace ININ.PureCloudApi.Model
         /// <param name="ExactPhrase">A tweet must contain this exact quoted phrase.</param>
         /// <param name="GroupTags">The group tags associated with this Gistener.</param>
         /// <param name="SocialAccount">The social account associated with this Gistener.</param>
-<<<<<<< HEAD
-
-        public Gistener(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, bool? Enabled = null, string AnyWords = null, string AllWords = null, string ExcludeWords = null, string ExactPhrase = null, List<GroupTag> GroupTags = null, SocialAccount SocialAccount = null)
-=======
         /// <param name="Queue">The operator queue the gistener will route to..</param>
 
         public Gistener(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, bool? Enabled = null, string AnyWords = null, string AllWords = null, string ExcludeWords = null, string ExactPhrase = null, List<GroupTag> GroupTags = null, SocialAccount SocialAccount = null, Queue Queue = null)
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         {
             this.Name = Name;
             this.DateCreated = DateCreated;
@@ -58,10 +53,7 @@ namespace ININ.PureCloudApi.Model
             this.ExactPhrase = ExactPhrase;
             this.GroupTags = GroupTags;
             this.SocialAccount = SocialAccount;
-<<<<<<< HEAD
-=======
             this.Queue = Queue;
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
         }
 
@@ -142,8 +134,6 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="socialAccount", EmitDefaultValue=false)]
         public SocialAccount SocialAccount { get; set; }
     
-<<<<<<< HEAD
-=======
         /// <summary>
         /// The operator queue the gistener will route to.
         /// </summary>
@@ -151,7 +141,6 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="queue", EmitDefaultValue=false)]
         public Queue Queue { get; set; }
     
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// The URI for this object
         /// </summary>
@@ -271,14 +260,11 @@ namespace ININ.PureCloudApi.Model
                     this.SocialAccount != null &&
                     this.SocialAccount.Equals(other.SocialAccount)
                 ) &&
-<<<<<<< HEAD
-=======
                 (
                     this.Queue == other.Queue ||
                     this.Queue != null &&
                     this.Queue.Equals(other.Queue)
                 ) &&
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
@@ -319,11 +305,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.GroupTags.GetHashCode();
                 if (this.SocialAccount != null)
                     hash = hash * 59 + this.SocialAccount.GetHashCode();
-<<<<<<< HEAD
-=======
                 if (this.Queue != null)
                     hash = hash * 59 + this.Queue.GetHashCode();
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;

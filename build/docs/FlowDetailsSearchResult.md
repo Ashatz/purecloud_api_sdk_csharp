@@ -1,7 +1,7 @@
 ---
 title: FlowDetailsSearchResult
 ---
-## .FlowDetailsSearchResult
+## ININ.PureCloudApi.Model.FlowDetailsSearchResult
 
 ## Properties
 

@@ -1,14 +1,14 @@
 ---
 title: CreateShareRequestMember
 ---
-## .CreateShareRequestMember
+## ININ.PureCloudApi.Model.CreateShareRequestMember
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **MemberType** | **string** |  | [optional] |
-| **Member** | [**Entity**](Entity.html) |  | [optional] |
+| **Member** | [**MemberEntity**](MemberEntity.html) |  | [optional] |
 {: class="table table-striped"}
 
 

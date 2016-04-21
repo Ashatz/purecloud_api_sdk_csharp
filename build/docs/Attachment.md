@@ -1,7 +1,7 @@
 ---
 title: Attachment
 ---
-## .Attachment
+## ININ.PureCloudApi.Model.Attachment
 
 ## Properties
 

@@ -1,7 +1,7 @@
 ---
 title: EdgeInterface
 ---
-## .EdgeInterface
+## ININ.PureCloudApi.Model.EdgeInterface
 
 ## Properties
 

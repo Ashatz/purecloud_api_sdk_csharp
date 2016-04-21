@@ -1,7 +1,7 @@
 ---
 title: SheetTransform
 ---
-## .SheetTransform
+## ININ.PureCloudApi.Model.SheetTransform
 
 ## Properties
 

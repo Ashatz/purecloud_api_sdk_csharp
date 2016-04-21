@@ -1,7 +1,7 @@
 ---
 title: CallableTimeSetEntityListing
 ---
-## .CallableTimeSetEntityListing
+## ININ.PureCloudApi.Model.CallableTimeSetEntityListing
 
 ## Properties
 
@@ -12,9 +12,9 @@ title: CallableTimeSetEntityListing
 | **Total** | **long?** |  | [optional] |
 | **Entities** | [**List&lt;CallableTimeSet&gt;**](CallableTimeSet.html) |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
+| **FirstUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **NextUri** | **string** |  | [optional] |
-| **FirstUri** | **string** |  | [optional] |
 | **LastUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
 {: class="table table-striped"}

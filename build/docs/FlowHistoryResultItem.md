@@ -1,7 +1,7 @@
 ---
 title: FlowHistoryResultItem
 ---
-## .FlowHistoryResultItem
+## ININ.PureCloudApi.Model.FlowHistoryResultItem
 
 ## Properties
 

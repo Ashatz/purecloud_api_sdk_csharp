@@ -1,7 +1,7 @@
 ---
 title: OrganizationPresence
 ---
-## .OrganizationPresence
+## ININ.PureCloudApi.Model.OrganizationPresence
 
 ## Properties
 

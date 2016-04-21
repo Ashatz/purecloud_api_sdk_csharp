@@ -65,6 +65,7 @@ namespace ININ.PureCloudApi.Model
         }
 
         
+
         /// <summary>
         /// Gets or Sets Purpose
         /// </summary>

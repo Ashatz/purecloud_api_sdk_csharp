@@ -1,7 +1,7 @@
 ---
 title: VoiceRateExtended
 ---
-## .VoiceRateExtended
+## ININ.PureCloudApi.Model.VoiceRateExtended
 
 ## Properties
 

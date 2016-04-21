@@ -1,7 +1,7 @@
 ---
 title: Organization
 ---
-## .Organization
+## ININ.PureCloudApi.Model.Organization
 
 ## Properties
 
@@ -12,10 +12,8 @@ title: Organization
 | **ThirdPartyOrgId** | **string** |  | [optional] |
 | **ThirdPartyOrgName** | **string** |  | [optional] |
 | **ThirdPartyURI** | **string** |  | [optional] |
-| **AdminUsername** | **string** |  | [optional] |
-| **AdminPassword** | **string** |  | [optional] |
 | **Domain** | **string** |  | [optional] |
-| **Version** | **int?** |  | [optional] |
+| **Version** | **int?** | The current version of the organization. | |
 | **State** | **string** |  | [optional] |
 | **DefaultSiteId** | **string** |  | [optional] |
 | **Deletable** | **bool?** |  | [optional] [default to false]|

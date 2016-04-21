@@ -1,7 +1,7 @@
 ---
 title: CreateShareResponse
 ---
-## .CreateShareResponse
+## ININ.PureCloudApi.Model.CreateShareResponse
 
 ## Properties
 

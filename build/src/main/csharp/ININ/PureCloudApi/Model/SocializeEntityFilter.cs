@@ -69,6 +69,7 @@ namespace ININ.PureCloudApi.Model
         }
 
         
+
         /// <summary>
         /// The operator to apply when filtering.
         /// </summary>

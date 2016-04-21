@@ -1,7 +1,7 @@
 ---
 title: ColumnCollapse
 ---
-## .ColumnCollapse
+## ININ.PureCloudApi.Model.ColumnCollapse
 
 ## Properties
 

@@ -1,7 +1,7 @@
 ---
 title: DomainOrganizationRole
 ---
-## .DomainOrganizationRole
+## ININ.PureCloudApi.Model.DomainOrganizationRole
 
 ## Properties
 
@@ -12,9 +12,7 @@ title: DomainOrganizationRole
 | **Description** | **string** |  | [optional] |
 | **DefaultRoleId** | **string** |  | [optional] |
 | **Permissions** | **List&lt;string&gt;** |  | [optional] |
-| **Licenses** | **List&lt;string&gt;** |  | [optional] |
 | **PermissionPolicies** | [**List&lt;DomainPermissionPolicy&gt;**](DomainPermissionPolicy.html) |  | [optional] |
-| **Code** | **string** |  | [optional] |
 | **UserCount** | **int?** |  | [optional] |
 | **RoleNeedsUpdate** | **bool?** |  | [optional] [default to false]|
 | **_Default** | **bool?** |  | [optional] [default to false]|

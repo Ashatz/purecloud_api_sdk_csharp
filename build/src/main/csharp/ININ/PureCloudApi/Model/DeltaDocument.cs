@@ -70,36 +70,6 @@ namespace ININ.PureCloudApi.Model
 
     
         /// <summary>
-        /// Gets or Sets Operation
-        /// </summary>
-        [DataMember(Name="operation", EmitDefaultValue=false)]
-        public OperationEnum? Operation { get; set; }
-    
-        /// <summary>
-        /// Initializes a new instance of the <see cref="DeltaDocument" />class.
-        /// </summary>
-        /// <param name="Id">Id.</param>
-        /// <param name="Name">Name.</param>
-        /// <param name="Filename">Filename.</param>
-        /// <param name="ContentType">ContentType.</param>
-        /// <param name="ContentLengthBytes">ContentLengthBytes.</param>
-        /// <param name="Operation">Operation.</param>
-        /// <param name="DateModified">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-
-        public DeltaDocument(string Id = null, string Name = null, string Filename = null, string ContentType = null, long? ContentLengthBytes = null, OperationEnum? Operation = null, DateTime? DateModified = null)
-        {
-            this.Id = Id;
-            this.Name = Name;
-            this.Filename = Filename;
-            this.ContentType = ContentType;
-            this.ContentLengthBytes = ContentLengthBytes;
-            this.Operation = Operation;
-            this.DateModified = DateModified;
-            
-        }
-
-    
-        /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]

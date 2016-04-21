@@ -1,7 +1,7 @@
 ---
 title: VoicemailOrganizationPolicy
 ---
-## .VoicemailOrganizationPolicy
+## ININ.PureCloudApi.Model.VoicemailOrganizationPolicy
 
 ## Properties
 

@@ -1,7 +1,7 @@
 ---
 title: UrlResponse
 ---
-## .UrlResponse
+## ININ.PureCloudApi.Model.UrlResponse
 
 ## Properties
 

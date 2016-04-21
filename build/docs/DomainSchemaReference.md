@@ -1,7 +1,7 @@
 ---
 title: DomainSchemaReference
 ---
-## .DomainSchemaReference
+## ININ.PureCloudApi.Model.DomainSchemaReference
 
 ## Properties
 

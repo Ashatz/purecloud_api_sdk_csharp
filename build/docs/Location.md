@@ -1,7 +1,7 @@
 ---
 title: Location
 ---
-## .Location
+## ININ.PureCloudApi.Model.Location
 
 ## Properties
 

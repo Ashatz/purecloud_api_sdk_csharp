@@ -1,7 +1,7 @@
 ---
 title: Site
 ---
-## .Site
+## ININ.PureCloudApi.Model.Site
 
 ## Properties
 
@@ -22,7 +22,7 @@ title: Site
 | **SecondarySites** | [**List&lt;UriReference&gt;**](UriReference.html) |  | [optional] |
 | **PrimaryEdges** | [**List&lt;Edge&gt;**](Edge.html) |  | [optional] |
 | **SecondaryEdges** | [**List&lt;Edge&gt;**](Edge.html) |  | [optional] |
-| **Addresses** | [**List&lt;OrganizationAddress&gt;**](OrganizationAddress.html) |  | [optional] |
+| **Addresses** | [**List&lt;Contact&gt;**](Contact.html) |  | [optional] |
 | **Edges** | [**List&lt;Edge&gt;**](Edge.html) |  | [optional] |
 | **EdgeAutoUpdateConfig** | [**EdgeAutoUpdateConfig**](EdgeAutoUpdateConfig.html) | Recurrance rule, time zone, and start/end settings for automatic edge updates for this site | [optional] |
 | **Location** | [**UriReference**](UriReference.html) |  | [optional] |

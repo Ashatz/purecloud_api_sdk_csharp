@@ -1,7 +1,7 @@
 ---
 title: UnpivotColumns
 ---
-## .UnpivotColumns
+## ININ.PureCloudApi.Model.UnpivotColumns
 
 ## Properties
 

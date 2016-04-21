@@ -1,7 +1,7 @@
 ---
 title: Greeting
 ---
-## .Greeting
+## ININ.PureCloudApi.Model.Greeting
 
 ## Properties
 

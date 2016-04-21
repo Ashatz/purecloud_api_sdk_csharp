@@ -1,7 +1,7 @@
 ---
 title: FaxSendRequest
 ---
-## .FaxSendRequest
+## ININ.PureCloudApi.Model.FaxSendRequest
 
 ## Properties
 

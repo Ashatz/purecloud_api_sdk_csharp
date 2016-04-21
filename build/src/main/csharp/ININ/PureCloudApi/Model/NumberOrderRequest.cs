@@ -65,33 +65,6 @@ namespace ININ.PureCloudApi.Model
 
     
         /// <summary>
-        /// The type of phone number (eg us-domestic, toll-free, etc), to determine which third-party api(s) to use for the order request.
-        /// </summary>
-        /// <value>The type of phone number (eg us-domestic, toll-free, etc), to determine which third-party api(s) to use for the order request.</value>
-        [DataMember(Name="phoneNumberType", EmitDefaultValue=false)]
-        public PhoneNumberTypeEnum? PhoneNumberType { get; set; }
-    
-        /// <summary>
-        /// Initializes a new instance of the <see cref="NumberOrderRequest" />class.
-        /// </summary>
-        /// <param name="OrderTns">OrderTns.</param>
-        /// <param name="ReservationIds">ReservationIds.</param>
-        /// <param name="OrderId">OrderId.</param>
-        /// <param name="EffectiveDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        /// <param name="PhoneNumberType">The type of phone number (eg us-domestic, toll-free, etc), to determine which third-party api(s) to use for the order request..</param>
-
-        public NumberOrderRequest(List<string> OrderTns = null, List<string> ReservationIds = null, string OrderId = null, DateTime? EffectiveDate = null, PhoneNumberTypeEnum? PhoneNumberType = null)
-        {
-            this.OrderTns = OrderTns;
-            this.ReservationIds = ReservationIds;
-            this.OrderId = OrderId;
-            this.EffectiveDate = EffectiveDate;
-            this.PhoneNumberType = PhoneNumberType;
-            
-        }
-
-    
-        /// <summary>
         /// Gets or Sets OrderTns
         /// </summary>
         [DataMember(Name="orderTns", EmitDefaultValue=false)]

@@ -15,19 +15,6 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/ChatParticipant.cs
-    public partial class ChatParticipant :  IEquatable<ChatParticipant>
-    { 
-
-        /// <summary>
-        /// Gets or Sets Type
-        /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
-                public enum TypeEnum {
-            
-            [EnumMember(Value = "USER")]
-            User,
-=======
     public partial class Form :  IEquatable<Form>
     { 
         
@@ -39,40 +26,15 @@ namespace ININ.PureCloudApi.Model
         public Form(List<Control> Controls = null)
         {
             this.Controls = Controls;
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/Form.cs
             
-            [EnumMember(Value = "ROOM")]
-            Room
         }
 
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/ChatParticipant.cs
-        
-
-=======
     
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/Form.cs
         /// <summary>
         /// Gets or Sets Controls
         /// </summary>
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/ChatParticipant.cs
-        [DataMember(Name="type", EmitDefaultValue=false)]
-        public TypeEnum? Type { get; set; }
-    
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ChatParticipant" />class.
-        /// </summary>
-        /// <param name="Type">Type.</param>
-
-        public ChatParticipant(TypeEnum? Type = null)
-        {
-            this.Type = Type;
-            
-        }
-
-=======
         [DataMember(Name="controls", EmitDefaultValue=false)]
         public List<Control> Controls { get; set; }
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/Form.cs
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -81,13 +43,8 @@ namespace ININ.PureCloudApi.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/ChatParticipant.cs
-            sb.Append("class ChatParticipant {\n");
-            sb.Append("  Type: ").Append(Type).Append("\n");
-=======
             sb.Append("class Form {\n");
             sb.Append("  Controls: ").Append(Controls).Append("\n");
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/Form.cs
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -115,11 +72,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if Form instances are equal
         /// </summary>
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/ChatParticipant.cs
-        /// <param name="other">Instance of ChatParticipant to be compared</param>
-=======
         /// <param name="other">Instance of Form to be compared</param>
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/Form.cs
         /// <returns>Boolean</returns>
         public bool Equals(Form other)
         {
@@ -146,13 +99,8 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/ChatParticipant.cs
-                if (this.Type != null)
-                    hash = hash * 59 + this.Type.GetHashCode();
-=======
                 if (this.Controls != null)
                     hash = hash * 59 + this.Controls.GetHashCode();
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/Form.cs
                 return hash;
             }
         }

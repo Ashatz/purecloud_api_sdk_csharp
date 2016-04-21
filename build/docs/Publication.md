@@ -1,7 +1,7 @@
 ---
 title: Publication
 ---
-## .Publication
+## ININ.PureCloudApi.Model.Publication
 
 ## Properties
 

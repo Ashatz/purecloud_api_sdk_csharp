@@ -1,7 +1,7 @@
 ---
 title: VoicemailMediaInfo
 ---
-## .VoicemailMediaInfo
+## ININ.PureCloudApi.Model.VoicemailMediaInfo
 
 ## Properties
 

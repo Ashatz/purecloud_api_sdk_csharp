@@ -1,7 +1,7 @@
 ---
 title: SequenceSchedule
 ---
-## .SequenceSchedule
+## ININ.PureCloudApi.Model.SequenceSchedule
 
 ## Properties
 
@@ -12,7 +12,7 @@ title: SequenceSchedule
 | **DateCreated** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **DateModified** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **Version** | **int?** |  | [optional] |
-| **Intervals** | [**List&lt;Interval&gt;**](Interval.html) |  | [optional] |
+| **Intervals** | [**List&lt;CampaignScheduleIntervals&gt;**](CampaignScheduleIntervals.html) |  | [optional] |
 | **TimeZone** | **string** |  | [optional] |
 | **Sequence** | [**UriReference**](UriReference.html) |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |

@@ -1,7 +1,7 @@
 ---
 title: DncList
 ---
-## .DncList
+## ININ.PureCloudApi.Model.DncList
 
 ## Properties
 

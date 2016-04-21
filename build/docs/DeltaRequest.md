@@ -1,7 +1,7 @@
 ---
 title: DeltaRequest
 ---
-## .DeltaRequest
+## ININ.PureCloudApi.Model.DeltaRequest
 
 ## Properties
 

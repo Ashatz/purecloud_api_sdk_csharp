@@ -1,7 +1,7 @@
 ---
 title: TrunkBase
 ---
-## .TrunkBase
+## ININ.PureCloudApi.Model.TrunkBase
 
 ## Properties
 

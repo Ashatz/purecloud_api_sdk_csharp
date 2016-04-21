@@ -1,7 +1,7 @@
 ---
 title: LocationAddressFields
 ---
-## .LocationAddressFields
+## ININ.PureCloudApi.Model.LocationAddressFields
 
 ## Properties
 

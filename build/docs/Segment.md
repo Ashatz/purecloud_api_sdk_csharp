@@ -1,7 +1,7 @@
 ---
 title: Segment
 ---
-## .Segment
+## ININ.PureCloudApi.Model.Segment
 
 ## Properties
 

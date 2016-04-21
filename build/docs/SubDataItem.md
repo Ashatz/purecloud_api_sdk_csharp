@@ -1,7 +1,7 @@
 ---
 title: SubDataItem
 ---
-## .SubDataItem
+## ININ.PureCloudApi.Model.SubDataItem
 
 ## Properties
 

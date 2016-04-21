@@ -1,7 +1,7 @@
 ---
 title: FlowDetails
 ---
-## .FlowDetails
+## ININ.PureCloudApi.Model.FlowDetails
 
 ## Properties
 

@@ -1,7 +1,7 @@
 ---
 title: FlowLaunchRequest
 ---
-## .FlowLaunchRequest
+## ININ.PureCloudApi.Model.FlowLaunchRequest
 
 ## Properties
 

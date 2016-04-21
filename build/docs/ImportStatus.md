@@ -1,7 +1,7 @@
 ---
 title: ImportStatus
 ---
-## .ImportStatus
+## ININ.PureCloudApi.Model.ImportStatus
 
 ## Properties
 

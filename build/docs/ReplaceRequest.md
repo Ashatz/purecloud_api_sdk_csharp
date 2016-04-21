@@ -1,7 +1,7 @@
 ---
 title: ReplaceRequest
 ---
-## .ReplaceRequest
+## ININ.PureCloudApi.Model.ReplaceRequest
 
 ## Properties
 

@@ -1,7 +1,7 @@
 ---
 title: Account
 ---
-## .Account
+## ININ.PureCloudApi.Model.Account
 
 ## Properties
 

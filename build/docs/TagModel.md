@@ -1,7 +1,7 @@
 ---
 title: TagModel
 ---
-## .TagModel
+## ININ.PureCloudApi.Model.TagModel
 
 ## Properties
 

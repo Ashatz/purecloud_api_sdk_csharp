@@ -17,29 +17,6 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class SearchRequest :  IEquatable<SearchRequest>
     { 
-<<<<<<< HEAD
-        
-        /// <summary>
-        /// Initializes a new instance of the <see cref="SearchRequest" />class.
-        /// </summary>
-        /// <param name="SearchPhrase">The search text to look for.</param>
-        /// <param name="PageNumber">The pageNumber to get results from (EG If there are 100 results with a pageSize of 10 and pageNumber is 3 then 10 results will be returned starting with index #31.</param>
-        /// <param name="PageSize">Number of entries to return/calculate per page..</param>
-        /// <param name="SearchFields">The fields to limit the searchPhrase search to.</param>
-        /// <param name="FacetRequests">List of facet requests to generate summary views from the search result set (if any).</param>
-        /// <param name="Sort">sort the results on a field(s).</param>
-        /// <param name="Filters">You can also restrict the search to particular field values and ranges.</param>
-
-        public SearchRequest(string SearchPhrase = null, int? PageNumber = null, int? PageSize = null, List<string> SearchFields = null, List<FacetRequest> FacetRequests = null, List<SortField> Sort = null, List<FilterItem> Filters = null)
-        {
-            this.SearchPhrase = SearchPhrase;
-            this.PageNumber = PageNumber;
-            this.PageSize = PageSize;
-            this.SearchFields = SearchFields;
-            this.FacetRequests = FacetRequests;
-            this.Sort = Sort;
-            this.Filters = Filters;
-=======
 
         /// <summary>
         /// Gets or Sets SortOrder
@@ -49,7 +26,6 @@ namespace ININ.PureCloudApi.Model
             
             [EnumMember(Value = "ASC")]
             Asc,
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             
             [EnumMember(Value = "DESC")]
             Desc,
@@ -58,27 +34,17 @@ namespace ININ.PureCloudApi.Model
             Score
         }
 
-    
+        
+
         /// <summary>
         /// Gets or Sets SortOrder
         /// </summary>
-<<<<<<< HEAD
-        /// <value>The search text to look for</value>
-        [DataMember(Name="searchPhrase", EmitDefaultValue=false)]
-        public string SearchPhrase { get; set; }
-=======
         [DataMember(Name="sortOrder", EmitDefaultValue=false)]
         public SortOrderEnum? SortOrder { get; set; }
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
     
         /// <summary>
         /// Initializes a new instance of the <see cref="SearchRequest" />class.
         /// </summary>
-<<<<<<< HEAD
-        /// <value>The pageNumber to get results from (EG If there are 100 results with a pageSize of 10 and pageNumber is 3 then 10 results will be returned starting with index #31</value>
-        [DataMember(Name="pageNumber", EmitDefaultValue=false)]
-        public int? PageNumber { get; set; }
-=======
         /// <param name="Types">Types.</param>
         /// <param name="SortOrder">SortOrder.</param>
         /// <param name="Query">Query.</param>
@@ -109,7 +75,6 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         [DataMember(Name="types", EmitDefaultValue=false)]
         public List<string> Types { get; set; }
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
     
         /// <summary>
         /// Gets or Sets Query
@@ -132,50 +97,26 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Gets or Sets PageNumber
         /// </summary>
-<<<<<<< HEAD
-        /// <value>The fields to limit the searchPhrase search to</value>
-        [DataMember(Name="searchFields", EmitDefaultValue=false)]
-        public List<string> SearchFields { get; set; }
-=======
         [DataMember(Name="pageNumber", EmitDefaultValue=false)]
         public int? PageNumber { get; set; }
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
     
         /// <summary>
         /// Gets or Sets ReturnFields
         /// </summary>
-<<<<<<< HEAD
-        /// <value>List of facet requests to generate summary views from the search result set (if any)</value>
-        [DataMember(Name="facetRequests", EmitDefaultValue=false)]
-        public List<FacetRequest> FacetRequests { get; set; }
-=======
         [DataMember(Name="returnFields", EmitDefaultValue=false)]
         public List<string> ReturnFields { get; set; }
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
     
         /// <summary>
         /// Gets or Sets Aggregations
         /// </summary>
-<<<<<<< HEAD
-        /// <value>sort the results on a field(s)</value>
-        [DataMember(Name="sort", EmitDefaultValue=false)]
-        public List<SortField> Sort { get; set; }
-=======
         [DataMember(Name="aggregations", EmitDefaultValue=false)]
         public List<SearchAggregation> Aggregations { get; set; }
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
     
         /// <summary>
         /// Gets or Sets Expand
         /// </summary>
-<<<<<<< HEAD
-        /// <value>You can also restrict the search to particular field values and ranges</value>
-        [DataMember(Name="filters", EmitDefaultValue=false)]
-        public List<FilterItem> Filters { get; set; }
-=======
         [DataMember(Name="expand", EmitDefaultValue=false)]
         public List<string> Expand { get; set; }
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -190,17 +131,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Query: ").Append(Query).Append("\n");
             sb.Append("  SortBy: ").Append(SortBy).Append("\n");
             sb.Append("  PageSize: ").Append(PageSize).Append("\n");
-<<<<<<< HEAD
-            sb.Append("  SearchFields: ").Append(SearchFields).Append("\n");
-            sb.Append("  FacetRequests: ").Append(FacetRequests).Append("\n");
-            sb.Append("  Sort: ").Append(Sort).Append("\n");
-            sb.Append("  Filters: ").Append(Filters).Append("\n");
-=======
             sb.Append("  PageNumber: ").Append(PageNumber).Append("\n");
             sb.Append("  ReturnFields: ").Append(ReturnFields).Append("\n");
             sb.Append("  Aggregations: ").Append(Aggregations).Append("\n");
             sb.Append("  Expand: ").Append(Expand).Append("\n");
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -238,16 +172,6 @@ namespace ININ.PureCloudApi.Model
 
             return true &&
                 (
-<<<<<<< HEAD
-                    this.SearchPhrase == other.SearchPhrase ||
-                    this.SearchPhrase != null &&
-                    this.SearchPhrase.Equals(other.SearchPhrase)
-                ) &&
-                (
-                    this.PageNumber == other.PageNumber ||
-                    this.PageNumber != null &&
-                    this.PageNumber.Equals(other.PageNumber)
-=======
                     this.Types == other.Types ||
                     this.Types != null &&
                     this.Types.SequenceEqual(other.Types)
@@ -266,7 +190,6 @@ namespace ININ.PureCloudApi.Model
                     this.SortBy == other.SortBy ||
                     this.SortBy != null &&
                     this.SortBy.Equals(other.SortBy)
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 ) &&
                 (
                     this.PageSize == other.PageSize ||
@@ -274,21 +197,6 @@ namespace ININ.PureCloudApi.Model
                     this.PageSize.Equals(other.PageSize)
                 ) &&
                 (
-<<<<<<< HEAD
-                    this.SearchFields == other.SearchFields ||
-                    this.SearchFields != null &&
-                    this.SearchFields.SequenceEqual(other.SearchFields)
-                ) &&
-                (
-                    this.FacetRequests == other.FacetRequests ||
-                    this.FacetRequests != null &&
-                    this.FacetRequests.SequenceEqual(other.FacetRequests)
-                ) &&
-                (
-                    this.Sort == other.Sort ||
-                    this.Sort != null &&
-                    this.Sort.SequenceEqual(other.Sort)
-=======
                     this.PageNumber == other.PageNumber ||
                     this.PageNumber != null &&
                     this.PageNumber.Equals(other.PageNumber)
@@ -302,7 +210,6 @@ namespace ININ.PureCloudApi.Model
                     this.Aggregations == other.Aggregations ||
                     this.Aggregations != null &&
                     this.Aggregations.SequenceEqual(other.Aggregations)
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 ) &&
                 (
                     this.Expand == other.Expand ||
@@ -322,22 +229,6 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-<<<<<<< HEAD
-                if (this.SearchPhrase != null)
-                    hash = hash * 59 + this.SearchPhrase.GetHashCode();
-                if (this.PageNumber != null)
-                    hash = hash * 59 + this.PageNumber.GetHashCode();
-                if (this.PageSize != null)
-                    hash = hash * 59 + this.PageSize.GetHashCode();
-                if (this.SearchFields != null)
-                    hash = hash * 59 + this.SearchFields.GetHashCode();
-                if (this.FacetRequests != null)
-                    hash = hash * 59 + this.FacetRequests.GetHashCode();
-                if (this.Sort != null)
-                    hash = hash * 59 + this.Sort.GetHashCode();
-                if (this.Filters != null)
-                    hash = hash * 59 + this.Filters.GetHashCode();
-=======
                 if (this.Types != null)
                     hash = hash * 59 + this.Types.GetHashCode();
                 if (this.SortOrder != null)
@@ -356,7 +247,6 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.Aggregations.GetHashCode();
                 if (this.Expand != null)
                     hash = hash * 59 + this.Expand.GetHashCode();
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 return hash;
             }
         }

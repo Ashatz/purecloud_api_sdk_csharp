@@ -1,7 +1,7 @@
 ---
 title: DeltaDocument
 ---
-## .DeltaDocument
+## ININ.PureCloudApi.Model.DeltaDocument
 
 ## Properties
 

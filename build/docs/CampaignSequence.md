@@ -1,7 +1,7 @@
 ---
 title: CampaignSequence
 ---
-## .CampaignSequence
+## ININ.PureCloudApi.Model.CampaignSequence
 
 ## Properties
 
@@ -16,6 +16,7 @@ title: CampaignSequence
 | **CurrentCampaign** | **int?** |  | [optional] |
 | **Status** | **string** |  | [optional] |
 | **StopMessage** | **string** |  | [optional] |
+| **Repeat** | **bool?** |  | [optional] [default to false]|
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

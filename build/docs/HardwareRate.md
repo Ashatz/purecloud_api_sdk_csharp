@@ -1,7 +1,7 @@
 ---
 title: HardwareRate
 ---
-## .HardwareRate
+## ININ.PureCloudApi.Model.HardwareRate
 
 ## Properties
 

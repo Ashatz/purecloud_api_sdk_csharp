@@ -25,18 +25,12 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Description">The description of this additional service. (required).</param>
         /// <param name="PartNumber">The part number of this additional service. (required).</param>
         /// <param name="RequiredForProducts">The list of products which require this additional service. (required).</param>
-<<<<<<< HEAD
-        /// <param name="Rate">The rate of this additional service. (required).</param>
-
-        public AvailableAdditionalService(string Name = null, string Description = null, string PartNumber = null, List<string> RequiredForProducts = null, Rate Rate = null)
-=======
         /// <param name="AvailableForProducts">The list of products for which this additional service is available. (required).</param>
         /// <param name="DefaultForProducts">The list of products which have this additional service by default. (required).</param>
         /// <param name="ExclusiveFromProducts">The list of additional services which are not compatible with this additional service. (required).</param>
         /// <param name="Rate">The rate of this additional service. (required).</param>
 
         public AvailableAdditionalService(string Name = null, string Description = null, string PartNumber = null, List<string> RequiredForProducts = null, List<string> AvailableForProducts = null, List<string> DefaultForProducts = null, List<string> ExclusiveFromProducts = null, Rate Rate = null)
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         {
             // to ensure "Description" is required (not null)
             if (Description == null)
@@ -65,8 +59,6 @@ namespace ININ.PureCloudApi.Model
             {
                 this.RequiredForProducts = RequiredForProducts;
             }
-<<<<<<< HEAD
-=======
             // to ensure "AvailableForProducts" is required (not null)
             if (AvailableForProducts == null)
             {
@@ -94,7 +86,6 @@ namespace ININ.PureCloudApi.Model
             {
                 this.ExclusiveFromProducts = ExclusiveFromProducts;
             }
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             // to ensure "Rate" is required (not null)
             if (Rate == null)
             {
@@ -143,8 +134,6 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="requiredForProducts", EmitDefaultValue=false)]
         public List<string> RequiredForProducts { get; set; }
     
-<<<<<<< HEAD
-=======
         /// <summary>
         /// The list of products for which this additional service is available.
         /// </summary>
@@ -166,7 +155,6 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="exclusiveFromProducts", EmitDefaultValue=false)]
         public List<string> ExclusiveFromProducts { get; set; }
     
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// The rate of this additional service.
         /// </summary>
@@ -260,8 +248,6 @@ namespace ININ.PureCloudApi.Model
                     this.RequiredForProducts != null &&
                     this.RequiredForProducts.SequenceEqual(other.RequiredForProducts)
                 ) &&
-<<<<<<< HEAD
-=======
                 (
                     this.AvailableForProducts == other.AvailableForProducts ||
                     this.AvailableForProducts != null &&
@@ -277,7 +263,6 @@ namespace ININ.PureCloudApi.Model
                     this.ExclusiveFromProducts != null &&
                     this.ExclusiveFromProducts.SequenceEqual(other.ExclusiveFromProducts)
                 ) &&
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 (
                     this.Rate == other.Rate ||
                     this.Rate != null &&
@@ -311,15 +296,12 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.PartNumber.GetHashCode();
                 if (this.RequiredForProducts != null)
                     hash = hash * 59 + this.RequiredForProducts.GetHashCode();
-<<<<<<< HEAD
-=======
                 if (this.AvailableForProducts != null)
                     hash = hash * 59 + this.AvailableForProducts.GetHashCode();
                 if (this.DefaultForProducts != null)
                     hash = hash * 59 + this.DefaultForProducts.GetHashCode();
                 if (this.ExclusiveFromProducts != null)
                     hash = hash * 59 + this.ExclusiveFromProducts.GetHashCode();
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 if (this.Rate != null)
                     hash = hash * 59 + this.Rate.GetHashCode();
                 if (this.SelfUri != null)

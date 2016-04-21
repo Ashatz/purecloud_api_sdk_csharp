@@ -1,7 +1,7 @@
 ---
 title: TransformLens
 ---
-## .TransformLens
+## ININ.PureCloudApi.Model.TransformLens
 
 ## Properties
 

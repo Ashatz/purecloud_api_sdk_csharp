@@ -1,7 +1,7 @@
 ---
 title: Condition
 ---
-## .Condition
+## ININ.PureCloudApi.Model.Condition
 
 ## Properties
 

@@ -1,7 +1,7 @@
 ---
 title: Endpoint
 ---
-## .Endpoint
+## ININ.PureCloudApi.Model.Endpoint
 
 ## Properties
 

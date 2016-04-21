@@ -1,7 +1,7 @@
 ---
 title: FacetStatistics
 ---
-## .FacetStatistics
+## ININ.PureCloudApi.Model.FacetStatistics
 
 ## Properties
 

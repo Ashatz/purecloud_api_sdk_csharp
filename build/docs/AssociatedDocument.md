@@ -1,7 +1,7 @@
 ---
 title: AssociatedDocument
 ---
-## .AssociatedDocument
+## ININ.PureCloudApi.Model.AssociatedDocument
 
 ## Properties
 

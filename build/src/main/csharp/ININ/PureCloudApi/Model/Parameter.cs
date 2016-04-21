@@ -71,10 +71,7 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="parameterType", EmitDefaultValue=false)]
         public ParameterTypeEnum? ParameterType { get; set; }
     
-<<<<<<< HEAD
 
-=======
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// Gets or Sets Domain
         /// </summary>

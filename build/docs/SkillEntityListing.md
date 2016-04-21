@@ -1,7 +1,7 @@
 ---
 title: SkillEntityListing
 ---
-## .SkillEntityListing
+## ININ.PureCloudApi.Model.SkillEntityListing
 
 ## Properties
 
@@ -10,11 +10,11 @@ title: SkillEntityListing
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
-| **Entities** | [**List&lt;Skill&gt;**](Skill.html) |  | [optional] |
+| **Entities** | [**List&lt;RoutingSkill&gt;**](RoutingSkill.html) |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
+| **FirstUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **NextUri** | **string** |  | [optional] |
-| **FirstUri** | **string** |  | [optional] |
 | **LastUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
 {: class="table table-striped"}

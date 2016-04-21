@@ -102,18 +102,21 @@ namespace ININ.PureCloudApi.Model
         }
 
         
+
         /// <summary>
         /// Gets or Sets State
         /// </summary>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
     
+
         /// <summary>
         /// Gets or Sets Direction
         /// </summary>
         [DataMember(Name="direction", EmitDefaultValue=false)]
         public DirectionEnum? Direction { get; set; }
     
+
         /// <summary>
         /// Gets or Sets DisconnectType
         /// </summary>

@@ -1,7 +1,7 @@
 ---
 title: Script
 ---
-## .Script
+## ININ.PureCloudApi.Model.Script
 
 ## Properties
 

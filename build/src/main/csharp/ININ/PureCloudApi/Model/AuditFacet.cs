@@ -15,28 +15,16 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/Facet.cs
-    public partial class Facet :  IEquatable<Facet>
-    { 
-        
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Facet" />class.
-=======
     public partial class AuditFacet :  IEquatable<AuditFacet>
     { 
         
         /// <summary>
         /// Initializes a new instance of the <see cref="AuditFacet" />class.
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/AuditFacet.cs
         /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="Type">Type.</param>
 
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/Facet.cs
-        public Facet(string Name = null, string Type = null)
-=======
         public AuditFacet(string Name = null, string Type = null)
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/AuditFacet.cs
         {
             this.Name = Name;
             this.Type = Type;
@@ -93,11 +81,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if AuditFacet instances are equal
         /// </summary>
-<<<<<<< HEAD:build/src/main/csharp/ININ/PureCloudApi/Model/Facet.cs
-        /// <param name="other">Instance of Facet to be compared</param>
-=======
         /// <param name="other">Instance of AuditFacet to be compared</param>
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548:build/src/main/csharp/ININ/PureCloudApi/Model/AuditFacet.cs
         /// <returns>Boolean</returns>
         public bool Equals(AuditFacet other)
         {

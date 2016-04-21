@@ -1,7 +1,7 @@
 ---
 title: WorkItemTransferRequest
 ---
-## .WorkItemTransferRequest
+## ININ.PureCloudApi.Model.WorkItemTransferRequest
 
 ## Properties
 

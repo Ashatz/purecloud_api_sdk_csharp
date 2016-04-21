@@ -1,7 +1,7 @@
 ---
 title: EncryptionKey
 ---
-## .EncryptionKey
+## ININ.PureCloudApi.Model.EncryptionKey
 
 ## Properties
 

@@ -29,11 +29,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Queue">Queue.</param>
         /// <param name="Rules">Rules.</param>
 
-<<<<<<< HEAD
-        public RuleSet(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, UriReference ContactList = null, UriReference Queue = null, List<Rule> Rules = null)
-=======
         public RuleSet(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, UriReference ContactList = null, UriReference Queue = null, List<DialerRule> Rules = null)
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         {
             this.Name = Name;
             this.DateCreated = DateCreated;
@@ -95,11 +91,7 @@ namespace ININ.PureCloudApi.Model
         /// Gets or Sets Rules
         /// </summary>
         [DataMember(Name="rules", EmitDefaultValue=false)]
-<<<<<<< HEAD
-        public List<Rule> Rules { get; set; }
-=======
         public List<DialerRule> Rules { get; set; }
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
     
         /// <summary>
         /// The URI for this object

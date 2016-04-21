@@ -1,7 +1,7 @@
 ---
 title: EncryptionKeyEntityListing
 ---
-## .EncryptionKeyEntityListing
+## ININ.PureCloudApi.Model.EncryptionKeyEntityListing
 
 ## Properties
 
@@ -12,9 +12,9 @@ title: EncryptionKeyEntityListing
 | **Total** | **long?** |  | [optional] |
 | **Entities** | [**List&lt;EncryptionKey&gt;**](EncryptionKey.html) |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
+| **FirstUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **NextUri** | **string** |  | [optional] |
-| **FirstUri** | **string** |  | [optional] |
 | **LastUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
 {: class="table table-striped"}

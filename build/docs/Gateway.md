@@ -1,7 +1,7 @@
 ---
 title: Gateway
 ---
-## .Gateway
+## ININ.PureCloudApi.Model.Gateway
 
 ## Properties
 

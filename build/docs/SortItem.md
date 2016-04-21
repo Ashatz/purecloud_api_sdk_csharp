@@ -1,7 +1,7 @@
 ---
 title: SortItem
 ---
-## .SortItem
+## ININ.PureCloudApi.Model.SortItem
 
 ## Properties
 

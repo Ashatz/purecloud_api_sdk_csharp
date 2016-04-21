@@ -1,7 +1,7 @@
 ---
 title: ChannelTopic
 ---
-## .ChannelTopic
+## ININ.PureCloudApi.Model.ChannelTopic
 
 ## Properties
 

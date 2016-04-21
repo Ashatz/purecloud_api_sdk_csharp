@@ -1,7 +1,7 @@
 ---
 title: DomainEdgeSoftwareUpdateDto
 ---
-## .DomainEdgeSoftwareUpdateDto
+## ININ.PureCloudApi.Model.DomainEdgeSoftwareUpdateDto
 
 ## Properties
 

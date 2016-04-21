@@ -1,7 +1,7 @@
 ---
 title: Library
 ---
-## .Library
+## ININ.PureCloudApi.Model.Library
 
 ## Properties
 

@@ -1,7 +1,7 @@
 ---
 title: PublishScriptRequestData
 ---
-## .PublishScriptRequestData
+## ININ.PureCloudApi.Model.PublishScriptRequestData
 
 ## Properties
 

@@ -1,7 +1,7 @@
 ---
 title: Document
 ---
-## .Document
+## ININ.PureCloudApi.Model.Document
 
 ## Properties
 
@@ -27,8 +27,7 @@ title: Document
 | **ReceiverAddress** | **string** |  | [optional] |
 | **Tags** | **List&lt;string&gt;** |  | [optional] |
 | **TagValues** | [**List&lt;TagValue&gt;**](TagValue.html) |  | [optional] |
-| **Attributes** | [**List&lt;AttributeValue&gt;**](AttributeValue.html) |  | [optional] |
-| **AttributeGroupInstances** | [**List&lt;AttributeGroupInstance&gt;**](AttributeGroupInstance.html) |  | [optional] |
+| **Attributes** | [**List&lt;DocumentAttribute&gt;**](DocumentAttribute.html) |  | [optional] |
 | **Thumbnails** | [**List&lt;DocumentThumbnail&gt;**](DocumentThumbnail.html) |  | [optional] |
 | **UploadStatus** | [**UriReference**](UriReference.html) |  | [optional] |
 | **UploadDestinationUri** | **string** |  | [optional] |

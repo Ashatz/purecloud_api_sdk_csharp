@@ -21,36 +21,17 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MediaResult" />class.
         /// </summary>
-<<<<<<< HEAD
-        /// <param name="WaveUri">WaveUri.</param>
-        /// <param name="MediaUri">MediaUri.</param>
-        /// <param name="WaveformData">WaveformData.</param>
-
-        public MediaResult(string WaveUri = null, string MediaUri = null, List<float?> WaveformData = null)
-        {
-            this.WaveUri = WaveUri;
-=======
         /// <param name="MediaUri">MediaUri.</param>
         /// <param name="WaveformData">WaveformData.</param>
 
         public MediaResult(string MediaUri = null, List<float?> WaveformData = null)
         {
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             this.MediaUri = MediaUri;
             this.WaveformData = WaveformData;
             
         }
 
     
-<<<<<<< HEAD
-        /// <summary>
-        /// Gets or Sets WaveUri
-        /// </summary>
-        [DataMember(Name="waveUri", EmitDefaultValue=false)]
-        public string WaveUri { get; set; }
-    
-=======
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// Gets or Sets MediaUri
         /// </summary>
@@ -109,14 +90,6 @@ namespace ININ.PureCloudApi.Model
                 return false;
 
             return true &&
-<<<<<<< HEAD
-                (
-                    this.WaveUri == other.WaveUri ||
-                    this.WaveUri != null &&
-                    this.WaveUri.Equals(other.WaveUri)
-                ) &&
-=======
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 (
                     this.MediaUri == other.MediaUri ||
                     this.MediaUri != null &&
@@ -140,11 +113,6 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-<<<<<<< HEAD
-                if (this.WaveUri != null)
-                    hash = hash * 59 + this.WaveUri.GetHashCode();
-=======
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 if (this.MediaUri != null)
                     hash = hash * 59 + this.MediaUri.GetHashCode();
                 if (this.WaveformData != null)

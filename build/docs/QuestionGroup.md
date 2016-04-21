@@ -1,7 +1,7 @@
 ---
 title: QuestionGroup
 ---
-## .QuestionGroup
+## ININ.PureCloudApi.Model.QuestionGroup
 
 ## Properties
 

@@ -1,7 +1,7 @@
 ---
 title: UploadProgress
 ---
-## .UploadProgress
+## ININ.PureCloudApi.Model.UploadProgress
 
 ## Properties
 

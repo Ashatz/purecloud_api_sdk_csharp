@@ -1,7 +1,7 @@
 ---
 title: UserParam
 ---
-## .UserParam
+## ININ.PureCloudApi.Model.UserParam
 
 ## Properties
 

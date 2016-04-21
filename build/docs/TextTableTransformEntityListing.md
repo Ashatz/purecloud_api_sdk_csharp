@@ -1,7 +1,7 @@
 ---
 title: TextTableTransformEntityListing
 ---
-## .TextTableTransformEntityListing
+## ININ.PureCloudApi.Model.TextTableTransformEntityListing
 
 ## Properties
 
@@ -10,11 +10,11 @@ title: TextTableTransformEntityListing
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
-| **Entities** | [**List&lt;TextTableTransform&gt;**](TextTableTransform.html) |  | [optional] |
+| **Entities** | [**List&lt;ClientTextTableTransform&gt;**](ClientTextTableTransform.html) |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
+| **FirstUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **NextUri** | **string** |  | [optional] |
-| **FirstUri** | **string** |  | [optional] |
 | **LastUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
 {: class="table table-striped"}

@@ -78,38 +78,6 @@ namespace ININ.PureCloudApi.Model
 
     
         /// <summary>
-        /// Gets or Sets TermType
-        /// </summary>
-        [DataMember(Name="termType", EmitDefaultValue=false)]
-        public TermTypeEnum? TermType { get; set; }
-    
-        /// <summary>
-        /// Initializes a new instance of the <see cref="FacetEntry" />class.
-        /// </summary>
-        /// <param name="Attribute">Attribute.</param>
-        /// <param name="Statistics">Statistics.</param>
-        /// <param name="Other">Other.</param>
-        /// <param name="Total">Total.</param>
-        /// <param name="Missing">Missing.</param>
-        /// <param name="TermCount">TermCount.</param>
-        /// <param name="TermType">TermType.</param>
-        /// <param name="Terms">Terms.</param>
-
-        public FacetEntry(TermAttribute Attribute = null, FacetStatistics Statistics = null, long? Other = null, long? Total = null, long? Missing = null, int? TermCount = null, TermTypeEnum? TermType = null, List<FacetTerm> Terms = null)
-        {
-            this.Attribute = Attribute;
-            this.Statistics = Statistics;
-            this.Other = Other;
-            this.Total = Total;
-            this.Missing = Missing;
-            this.TermCount = TermCount;
-            this.TermType = TermType;
-            this.Terms = Terms;
-            
-        }
-
-    
-        /// <summary>
         /// Gets or Sets Attribute
         /// </summary>
         [DataMember(Name="attribute", EmitDefaultValue=false)]

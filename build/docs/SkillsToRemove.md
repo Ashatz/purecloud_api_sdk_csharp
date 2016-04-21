@@ -1,7 +1,7 @@
 ---
 title: SkillsToRemove
 ---
-## .SkillsToRemove
+## ININ.PureCloudApi.Model.SkillsToRemove
 
 ## Properties
 

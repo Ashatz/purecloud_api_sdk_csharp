@@ -24,19 +24,11 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Name">Name.</param>
         /// <param name="VersionSpecificComment">Checkin comment for this specific flow version..</param>
         /// <param name="FlowDefinitionUri">Uri location for the flow definition contents. (required).</param>
-<<<<<<< HEAD
-        /// <param name="FlowDefinitionUploaded">true if the version has its definition properly uploaded. (required) (default to false).</param>
-=======
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <param name="CreatedByUser">If known, the user who created this flow version..</param>
         /// <param name="CreatedDate">The date and time that the version was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="Version">Version of this flow config..</param>
 
-<<<<<<< HEAD
-        public FlowVersionConfigMetaData(string Name = null, string VersionSpecificComment = null, string FlowDefinitionUri = null, bool? FlowDefinitionUploaded = null, User CreatedByUser = null, DateTime? CreatedDate = nullstring Version = null)
-=======
-        public FlowVersionConfigMetaData(string Name = null, string VersionSpecificComment = null, string FlowDefinitionUri = null, User CreatedByUser = null, DateTime? CreatedDate = null, string Version = null)
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
+        public FlowVersionConfigMetaData(string Name = null, string VersionSpecificComment = null, string FlowDefinitionUri = null, User CreatedByUser = null, DateTime? CreatedDate = nullstring Version = null)
         {
             // to ensure "FlowDefinitionUri" is required (not null)
             if (FlowDefinitionUri == null)
@@ -47,18 +39,6 @@ namespace ININ.PureCloudApi.Model
             {
                 this.FlowDefinitionUri = FlowDefinitionUri;
             }
-<<<<<<< HEAD
-            // to ensure "FlowDefinitionUploaded" is required (not null)
-            if (FlowDefinitionUploaded == null)
-            {
-                throw new InvalidDataException("FlowDefinitionUploaded is a required property for FlowVersionConfigMetaData and cannot be null");
-            }
-            else
-            {
-                this.FlowDefinitionUploaded = FlowDefinitionUploaded;
-            }
-=======
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             this.Name = Name;
             this.VersionSpecificComment = VersionSpecificComment;
             this.CreatedByUser = CreatedByUser;
@@ -95,16 +75,6 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="flowDefinitionUri", EmitDefaultValue=false)]
         public string FlowDefinitionUri { get; set; }
     
-<<<<<<< HEAD
-        /// <summary>
-        /// true if the version has its definition properly uploaded.
-        /// </summary>
-        /// <value>true if the version has its definition properly uploaded.</value>
-        [DataMember(Name="flowDefinitionUploaded", EmitDefaultValue=false)]
-        public bool? FlowDefinitionUploaded { get; set; }
-    
-=======
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// If known, the user who created this flow version.
         /// </summary>
@@ -205,14 +175,6 @@ namespace ININ.PureCloudApi.Model
                     this.FlowDefinitionUri != null &&
                     this.FlowDefinitionUri.Equals(other.FlowDefinitionUri)
                 ) &&
-<<<<<<< HEAD
-                (
-                    this.FlowDefinitionUploaded == other.FlowDefinitionUploaded ||
-                    this.FlowDefinitionUploaded != null &&
-                    this.FlowDefinitionUploaded.Equals(other.FlowDefinitionUploaded)
-                ) &&
-=======
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 (
                     this.CreatedByUser == other.CreatedByUser ||
                     this.CreatedByUser != null &&
@@ -254,11 +216,6 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.VersionSpecificComment.GetHashCode();
                 if (this.FlowDefinitionUri != null)
                     hash = hash * 59 + this.FlowDefinitionUri.GetHashCode();
-<<<<<<< HEAD
-                if (this.FlowDefinitionUploaded != null)
-                    hash = hash * 59 + this.FlowDefinitionUploaded.GetHashCode();
-=======
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 if (this.CreatedByUser != null)
                     hash = hash * 59 + this.CreatedByUser.GetHashCode();
                 if (this.CreatedDate != null)

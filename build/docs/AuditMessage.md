@@ -1,14 +1,14 @@
 ---
 title: AuditMessage
 ---
-## .AuditMessage
+## ININ.PureCloudApi.Model.AuditMessage
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** |  | [optional] |
-| **User** | [**User**](User.html) |  | [optional] |
+| **User** | [**AuditUser**](AuditUser.html) |  | [optional] |
 | **CorrelationId** | **string** |  | [optional] |
 | **TransactionId** | **string** |  | [optional] |
 | **TransactionInitiator** | **bool?** |  | [optional] [default to false]|
@@ -21,7 +21,7 @@ title: AuditMessage
 | **ActionContext** | **string** |  | [optional] |
 | **Action** | **string** |  | [optional] |
 | **Changes** | [**List&lt;Change&gt;**](Change.html) |  | [optional] |
-| **Entity** | [**Entity**](Entity.html) |  | [optional] |
+| **Entity** | [**AuditEntity**](AuditEntity.html) |  | [optional] |
 | **ServiceContext** | [**ServiceContext**](ServiceContext.html) |  | [optional] |
 {: class="table table-striped"}
 

@@ -1,7 +1,7 @@
 ---
 title: CreateTemplateFromScriptRequestData
 ---
-## .CreateTemplateFromScriptRequestData
+## ININ.PureCloudApi.Model.CreateTemplateFromScriptRequestData
 
 ## Properties
 

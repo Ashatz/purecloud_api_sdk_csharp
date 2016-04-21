@@ -1,7 +1,7 @@
 ---
 title: WorkItemCache
 ---
-## .WorkItemCache
+## ININ.PureCloudApi.Model.WorkItemCache
 
 ## Properties
 

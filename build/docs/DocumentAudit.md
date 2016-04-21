@@ -1,7 +1,7 @@
 ---
 title: DocumentAudit
 ---
-## .DocumentAudit
+## ININ.PureCloudApi.Model.DocumentAudit
 
 ## Properties
 

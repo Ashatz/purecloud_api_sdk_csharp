@@ -1,7 +1,7 @@
 ---
 title: Support
 ---
-## .Support
+## ININ.PureCloudApi.Model.Support
 
 ## Properties
 

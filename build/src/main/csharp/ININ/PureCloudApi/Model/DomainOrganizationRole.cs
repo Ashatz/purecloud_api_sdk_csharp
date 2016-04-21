@@ -25,34 +25,18 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Description">Description.</param>
         /// <param name="DefaultRoleId">DefaultRoleId.</param>
         /// <param name="Permissions">Permissions.</param>
-<<<<<<< HEAD
-        /// <param name="Licenses">Licenses.</param>
         /// <param name="PermissionPolicies">PermissionPolicies.</param>
-        /// <param name="Code">Code.</param>
-=======
-        /// <param name="PermissionPolicies">PermissionPolicies.</param>
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <param name="UserCount">UserCount.</param>
         /// <param name="RoleNeedsUpdate">RoleNeedsUpdate (default to false).</param>
         /// <param name="_Default">_Default (default to false).</param>
 
-<<<<<<< HEAD
-        public DomainOrganizationRole(string Name = null, string Description = null, string DefaultRoleId = null, List<string> Permissions = null, List<string> Licenses = null, List<DomainPermissionPolicy> PermissionPolicies = null, string Code = null, int? UserCount = null, bool? RoleNeedsUpdate = null, bool? _Default = null)
-=======
         public DomainOrganizationRole(string Name = null, string Description = null, string DefaultRoleId = null, List<string> Permissions = null, List<DomainPermissionPolicy> PermissionPolicies = null, int? UserCount = null, bool? RoleNeedsUpdate = null, bool? _Default = null)
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         {
             this.Name = Name;
             this.Description = Description;
             this.DefaultRoleId = DefaultRoleId;
             this.Permissions = Permissions;
-<<<<<<< HEAD
-            this.Licenses = Licenses;
             this.PermissionPolicies = PermissionPolicies;
-            this.Code = Code;
-=======
-            this.PermissionPolicies = PermissionPolicies;
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             this.UserCount = UserCount;
             // use default value if no "RoleNeedsUpdate" provided
             if (RoleNeedsUpdate == null)
@@ -107,30 +91,12 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="permissions", EmitDefaultValue=false)]
         public List<string> Permissions { get; set; }
     
-<<<<<<< HEAD
-        /// <summary>
-        /// Gets or Sets Licenses
-        /// </summary>
-        [DataMember(Name="licenses", EmitDefaultValue=false)]
-        public List<string> Licenses { get; set; }
-    
-=======
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// Gets or Sets PermissionPolicies
         /// </summary>
         [DataMember(Name="permissionPolicies", EmitDefaultValue=false)]
         public List<DomainPermissionPolicy> PermissionPolicies { get; set; }
     
-<<<<<<< HEAD
-        /// <summary>
-        /// Gets or Sets Code
-        /// </summary>
-        [DataMember(Name="code", EmitDefaultValue=false)]
-        public string Code { get; set; }
-    
-=======
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         /// <summary>
         /// Gets or Sets UserCount
         /// </summary>
@@ -235,27 +201,11 @@ namespace ININ.PureCloudApi.Model
                     this.Permissions != null &&
                     this.Permissions.SequenceEqual(other.Permissions)
                 ) &&
-<<<<<<< HEAD
-                (
-                    this.Licenses == other.Licenses ||
-                    this.Licenses != null &&
-                    this.Licenses.SequenceEqual(other.Licenses)
-                ) &&
-=======
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 (
                     this.PermissionPolicies == other.PermissionPolicies ||
                     this.PermissionPolicies != null &&
                     this.PermissionPolicies.SequenceEqual(other.PermissionPolicies)
                 ) &&
-<<<<<<< HEAD
-                (
-                    this.Code == other.Code ||
-                    this.Code != null &&
-                    this.Code.Equals(other.Code)
-                ) &&
-=======
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 (
                     this.UserCount == other.UserCount ||
                     this.UserCount != null &&
@@ -299,17 +249,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.DefaultRoleId.GetHashCode();
                 if (this.Permissions != null)
                     hash = hash * 59 + this.Permissions.GetHashCode();
-<<<<<<< HEAD
-                if (this.Licenses != null)
-                    hash = hash * 59 + this.Licenses.GetHashCode();
                 if (this.PermissionPolicies != null)
                     hash = hash * 59 + this.PermissionPolicies.GetHashCode();
-                if (this.Code != null)
-                    hash = hash * 59 + this.Code.GetHashCode();
-=======
-                if (this.PermissionPolicies != null)
-                    hash = hash * 59 + this.PermissionPolicies.GetHashCode();
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
                 if (this.UserCount != null)
                     hash = hash * 59 + this.UserCount.GetHashCode();
                 if (this.RoleNeedsUpdate != null)

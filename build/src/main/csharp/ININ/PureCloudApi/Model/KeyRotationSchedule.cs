@@ -19,14 +19,9 @@ namespace ININ.PureCloudApi.Model
     { 
 
         /// <summary>
-<<<<<<< HEAD
-        /// Gets or Sets Period
-        /// </summary>
-=======
         /// Value to set schedule to
         /// </summary>
         /// <value>Value to set schedule to</value>
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         [JsonConverter(typeof(StringEnumConverter))]
                 public enum PeriodEnum {
             
@@ -38,43 +33,16 @@ namespace ININ.PureCloudApi.Model
             
             [EnumMember(Value = "WEEKLY")]
             Weekly,
-<<<<<<< HEAD
             
             [EnumMember(Value = "MONTHLY")]
             Monthly,
             
-=======
-            
-            [EnumMember(Value = "MONTHLY")]
-            Monthly,
-            
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             [EnumMember(Value = "YEARLY")]
             Yearly
         }
 
         
 
-        /// <summary>
-        /// Gets or Sets Period
-        /// </summary>
-        [DataMember(Name="period", EmitDefaultValue=false)]
-        public PeriodEnum? Period { get; set; }
-    
-        /// <summary>
-        /// Initializes a new instance of the <see cref="KeyRotationSchedule" />class.
-        /// </summary>
-        /// <param name="Name">Name.</param>
-        /// <param name="Period">Period.</param>
-
-        public KeyRotationSchedule(string Name = null, PeriodEnum? Period = null)
-        {
-            this.Name = Name;
-            this.Period = Period;
-            
-        }
-
-    
         /// <summary>
         /// Value to set schedule to
         /// </summary>

@@ -1,7 +1,7 @@
 ---
 title: ArchiveRetention
 ---
-## .ArchiveRetention
+## ININ.PureCloudApi.Model.ArchiveRetention
 
 ## Properties
 

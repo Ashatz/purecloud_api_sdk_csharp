@@ -1,7 +1,7 @@
 ---
 title: DomainPermissionCollection
 ---
-## .DomainPermissionCollection
+## ININ.PureCloudApi.Model.DomainPermissionCollection
 
 ## Properties
 

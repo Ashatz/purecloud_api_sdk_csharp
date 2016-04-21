@@ -1,7 +1,7 @@
 ---
 title: Vpn
 ---
-## .Vpn
+## ININ.PureCloudApi.Model.Vpn
 
 ## Properties
 

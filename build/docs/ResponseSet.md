@@ -1,7 +1,7 @@
 ---
 title: ResponseSet
 ---
-## .ResponseSet
+## ININ.PureCloudApi.Model.ResponseSet
 
 ## Properties
 

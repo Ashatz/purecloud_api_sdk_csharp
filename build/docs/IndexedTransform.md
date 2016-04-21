@@ -1,7 +1,7 @@
 ---
 title: IndexedTransform
 ---
-## .IndexedTransform
+## ININ.PureCloudApi.Model.IndexedTransform
 
 ## Properties
 

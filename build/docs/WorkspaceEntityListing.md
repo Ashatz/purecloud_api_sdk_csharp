@@ -1,7 +1,7 @@
 ---
 title: WorkspaceEntityListing
 ---
-## .WorkspaceEntityListing
+## ININ.PureCloudApi.Model.WorkspaceEntityListing
 
 ## Properties
 
@@ -12,9 +12,9 @@ title: WorkspaceEntityListing
 | **Total** | **long?** |  | [optional] |
 | **Entities** | [**List&lt;Workspace&gt;**](Workspace.html) |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
+| **FirstUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **NextUri** | **string** |  | [optional] |
-| **FirstUri** | **string** |  | [optional] |
 | **LastUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
 {: class="table table-striped"}

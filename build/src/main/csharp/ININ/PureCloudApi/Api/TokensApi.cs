@@ -22,11 +22,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>string</returns>
-<<<<<<< HEAD
-        string TokensMeDelete ();
-=======
         string DeleteMe ();
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
         /// <summary>
         /// Delete  auth token used to make the request.
@@ -36,11 +32,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of string</returns>
-<<<<<<< HEAD
-        ApiResponse<string> TokensMeDeleteWithHttpInfo ();
-=======
         ApiResponse<string> DeleteMeWithHttpInfo ();
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -61,11 +53,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (string)</returns>
-<<<<<<< HEAD
-        System.Threading.Tasks.Task<ApiResponse<string>> TokensMeDeleteAsyncWithHttpInfo ();
-=======
         System.Threading.Tasks.Task<ApiResponse<string>> DeleteMeAsyncWithHttpInfo ();
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
         #endregion Asynchronous Operations
     }
 
@@ -163,11 +151,7 @@ namespace ININ.PureCloudApi.Api
         /// <returns>string</returns>
         public string DeleteMe ()
         {
-<<<<<<< HEAD
-             ApiResponse<string> localVarResponse = TokensMeDeleteWithHttpInfo();
-=======
              ApiResponse<string> localVarResponse = DeleteMeWithHttpInfo();
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
         }
 
@@ -179,11 +163,7 @@ namespace ININ.PureCloudApi.Api
         public ApiResponse< string > DeleteMeWithHttpInfo ()
         {
 
-<<<<<<< HEAD
-            var localVarPath = "/api/v1/tokens/me";
-=======
             var localVarPath = "/api/v2/tokens/me";
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -224,15 +204,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-<<<<<<< HEAD
-                throw new ApiException (localVarStatusCode, "Error calling TokensMeDelete: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling TokensMeDelete: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-=======
                 throw new ApiException (localVarStatusCode, "Error calling DeleteMe: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteMe: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -247,11 +221,7 @@ namespace ININ.PureCloudApi.Api
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> DeleteMeAsync ()
         {
-<<<<<<< HEAD
-             ApiResponse<string> localVarResponse = await TokensMeDeleteAsyncWithHttpInfo();
-=======
              ApiResponse<string> localVarResponse = await DeleteMeAsyncWithHttpInfo();
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
              return localVarResponse.Data;
 
         }
@@ -264,11 +234,7 @@ namespace ININ.PureCloudApi.Api
         public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteMeAsyncWithHttpInfo ()
         {
 
-<<<<<<< HEAD
-            var localVarPath = "/api/v1/tokens/me";
-=======
             var localVarPath = "/api/v2/tokens/me";
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -309,15 +275,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-<<<<<<< HEAD
-                throw new ApiException (localVarStatusCode, "Error calling TokensMeDelete: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling TokensMeDelete: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-=======
                 throw new ApiException (localVarStatusCode, "Error calling DeleteMe: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteMe: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
->>>>>>> ffdc7a4f6e60c898e481eba1ab2f0f8fe0c1c548
 
             return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

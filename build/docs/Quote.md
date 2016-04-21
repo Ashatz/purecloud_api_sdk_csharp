@@ -1,7 +1,7 @@
 ---
 title: Quote
 ---
-## .Quote
+## ININ.PureCloudApi.Model.Quote
 
 ## Properties
 
@@ -12,9 +12,6 @@ title: Quote
 | **PurchaseOrder** | **string** |  | [optional] |
 | **Type** | **string** |  | [optional] |
 | **Status** | **string** |  | [optional] |
-| **IsSubmitted** | **bool?** |  | [optional] [default to false]|
-| **IsPending** | **bool?** |  | [optional] [default to false]|
-| **IsFrozen** | **bool?** |  | [optional] [default to false]|
 | **Currency** | **string** |  | [optional] |
 | **CreatedDate** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **LastUpdatedDate** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
@@ -28,6 +25,7 @@ title: Quote
 | **ReferralCodes** | **List&lt;string&gt;** |  | [optional] |
 | **DiscountCodes** | **List&lt;string&gt;** |  | [optional] |
 | **SalesPartnerCode** | **string** |  | [optional] |
+| **IsAnnualPrepay** | **bool?** |  | [optional] [default to false]|
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

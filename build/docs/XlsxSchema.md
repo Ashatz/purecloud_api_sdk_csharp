@@ -1,7 +1,7 @@
 ---
 title: XlsxSchema
 ---
-## .XlsxSchema
+## ININ.PureCloudApi.Model.XlsxSchema
 
 ## Properties
 
