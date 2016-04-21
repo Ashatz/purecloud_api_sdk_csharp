@@ -17,8 +17,6 @@ call java %JAVA_OPTS% -jar %executable% %ags%
 
 xcopy %WORKSPACE%\repo\Extensions %WORKSPACE%\repo\build\src\main\csharp\ININ\PureCloudApi\Extensions\ /S
 
-type src\main\csharp\ININ\PureCloudApi\Model\CallableTimeSet.cs
-
 cd %WORKSPACE%\repo\build
 call compile.bat
 cd %WORKSPACE%\repo

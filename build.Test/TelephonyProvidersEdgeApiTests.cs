@@ -875,6 +875,36 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test GetProvidersEdgesTrunks
+        /// </summary>
+        [Test]
+        public void GetProvidersEdgesTrunksTest()
+        {
+            // TODO: add unit test for the method 'GetProvidersEdgesTrunks'
+            int? pageNumber = null; // TODO: replace null with proper value
+            int? pageSize = null; // TODO: replace null with proper value
+            string sortBy = null; // TODO: replace null with proper value
+            string sortOrder = null; // TODO: replace null with proper value
+            string edgeId = null; // TODO: replace null with proper value
+            string trunkBaseId = null; // TODO: replace null with proper value
+            string trunkType = null; // TODO: replace null with proper value
+            var response = instance.GetProvidersEdgesTrunks(pageNumber, pageSize, sortBy, sortOrder, edgeId, trunkBaseId, trunkType);
+            Assert.IsInstanceOf<TrunkEntityListing> (response, "response is TrunkEntityListing");
+        }
+        
+        /// <summary>
+        /// Test GetProvidersEdgesTrunksTrunkId
+        /// </summary>
+        [Test]
+        public void GetProvidersEdgesTrunksTrunkIdTest()
+        {
+            // TODO: add unit test for the method 'GetProvidersEdgesTrunksTrunkId'
+            string trunkId = null; // TODO: replace null with proper value
+            var response = instance.GetProvidersEdgesTrunksTrunkId(trunkId);
+            Assert.IsInstanceOf<Trunk> (response, "response is Trunk");
+        }
+        
+        /// <summary>
         /// Test GetSchemasEdgesVnext
         /// </summary>
         [Test]
@@ -931,19 +961,19 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensionMetadataId
+        /// Test GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensiontypeMetadataId
         /// </summary>
         [Test]
-        public void GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensionMetadataIdTest()
+        public void GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensiontypeMetadataIdTest()
         {
-            // TODO: add unit test for the method 'GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensionMetadataId'
+            // TODO: add unit test for the method 'GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensiontypeMetadataId'
             string schemaCategory = null; // TODO: replace null with proper value
             string schemaType = null; // TODO: replace null with proper value
             string schemaId = null; // TODO: replace null with proper value
-            string extension = null; // TODO: replace null with proper value
+            string extensionType = null; // TODO: replace null with proper value
             string metadataId = null; // TODO: replace null with proper value
             string type = null; // TODO: replace null with proper value
-            var response = instance.GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensionMetadataId(schemaCategory, schemaType, schemaId, extension, metadataId, type);
+            var response = instance.GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensiontypeMetadataId(schemaCategory, schemaType, schemaId, extensionType, metadataId, type);
             Assert.IsInstanceOf<Organization> (response, "response is Organization");
         }
         

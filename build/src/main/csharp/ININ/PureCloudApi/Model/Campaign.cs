@@ -17,52 +17,143 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class Campaign :  IEquatable<Campaign>
     { 
+
+        /// <summary>
+        /// dialing mode of the campaign
+        /// </summary>
+        /// <value>dialing mode of the campaign</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+                public enum DialingModeEnum {
+            
+            [EnumMember(Value = "agentless")]
+            Agentless,
+            
+            [EnumMember(Value = "preview")]
+            Preview,
+            
+            [EnumMember(Value = "power")]
+            Power,
+            
+            [EnumMember(Value = "predictive")]
+            Predictive,
+            
+            [EnumMember(Value = "progressive")]
+            Progressive
+        }
+
         
+
+        /// <summary>
+        /// dialing mode of the campaign
+        /// </summary>
+        /// <value>dialing mode of the campaign</value>
+        [DataMember(Name="dialingMode", EmitDefaultValue=false)]
+        public DialingModeEnum? DialingMode { get; set; }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Campaign" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
-        /// <param name="DateCreated">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        /// <param name="DateModified">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        /// <param name="Version">Version.</param>
-        /// <param name="ContactList">ContactList.</param>
-        /// <param name="Queue">Queue.</param>
-        /// <param name="DialingMode">DialingMode.</param>
-        /// <param name="Script">Script.</param>
-        /// <param name="EdgeGroup">EdgeGroup.</param>
-        /// <param name="CampaignStatus">CampaignStatus.</param>
-        /// <param name="PhoneColumns">PhoneColumns.</param>
-        /// <param name="AbandonRate">AbandonRate.</param>
-        /// <param name="DncLists">DncLists.</param>
-        /// <param name="CallableTimeSet">CallableTimeSet.</param>
-        /// <param name="CallAnalysisResponseSet">CallAnalysisResponseSet.</param>
-        /// <param name="Errors">Errors.</param>
-        /// <param name="CallerName">CallerName.</param>
-        /// <param name="CallerAddress">CallerAddress.</param>
-        /// <param name="OutboundLineCount">OutboundLineCount.</param>
-        /// <param name="RuleSets">RuleSets.</param>
-        /// <param name="SkipPreviewDisabled">SkipPreviewDisabled (default to false).</param>
-        /// <param name="PreviewTimeOutSeconds">PreviewTimeOutSeconds.</param>
-        /// <param name="SingleNumberPreview">SingleNumberPreview (default to false).</param>
-        /// <param name="ContactSort">ContactSort.</param>
+        /// <param name="Version">required for updates, must match the version number of the most recent update.</param>
+        /// <param name="ContactList">identifier of the contact list for the campaign (required).</param>
+        /// <param name="Queue">identifier of the agent assignment queue, required for all dialing modes other than agentless (required).</param>
+        /// <param name="DialingMode">dialing mode of the campaign (required).</param>
+        /// <param name="Script">identifier of the campaign script, required for all dialing modes other than agentless (required).</param>
+        /// <param name="EdgeGroup">identifier of the edge group, required for all dialing modes other than preview (required).</param>
+        /// <param name="CampaignStatus">status of the campaign; can be set to &#39;on&#39; or &#39;off&#39; (required).</param>
+        /// <param name="PhoneColumns">the contact list phone columns to be called for the campaign (required).</param>
+        /// <param name="AbandonRate">the targeted abandon rate percentage.</param>
+        /// <param name="DncLists">identifiers of the do not call lists.</param>
+        /// <param name="CallableTimeSet">the identifier of the callable time set.</param>
+        /// <param name="CallAnalysisResponseSet">the identifier of the call analysis response set, required for all dialing modes other than preview (required).</param>
+        /// <param name="Errors">a list of current error conditions associated with the campaign.</param>
+        /// <param name="CallerName">caller id name to be displayed on the outbound call.</param>
+        /// <param name="CallerAddress">caller id phone number to be displayed on the outbound call.</param>
+        /// <param name="OutboundLineCount">for agentless campaigns, the number of outbound lines to be concurrently dialed.</param>
+        /// <param name="RuleSets">identifiers of the rule sets.</param>
+        /// <param name="SkipPreviewDisabled">for preview campaigns, indicator of whether the agent can skip a preview without placing a call (default to false).</param>
+        /// <param name="PreviewTimeOutSeconds">for preview campaigns, number of seconds before a call will be automatically placed. A value of 0 indicates no automatic placement of calls.</param>
+        /// <param name="ContactSort">information determining the order in which the contacts will be dialed.</param>
 
-        public Campaign(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, UriReference ContactList = null, UriReference Queue = null, string DialingMode = null, UriReference Script = null, UriReference EdgeGroup = null, string CampaignStatus = null, List<PhoneColumn> PhoneColumns = null, double? AbandonRate = null, List<UriReference> DncLists = null, UriReference CallableTimeSet = null, UriReference CallAnalysisResponseSet = null, List<RestErrorDetail> Errors = null, string CallerName = null, string CallerAddress = null, int? OutboundLineCount = null, List<UriReference> RuleSets = null, bool? SkipPreviewDisabled = null, long? PreviewTimeOutSeconds = null, bool? SingleNumberPreview = null, ContactSort ContactSort = null)
+        public Campaign(string Name = null, int? Version = null, UriReference ContactList = null, UriReference Queue = null, DialingModeEnum? DialingMode = null, UriReference Script = null, UriReference EdgeGroup = null, string CampaignStatus = null, List<PhoneColumn> PhoneColumns = null, double? AbandonRate = null, List<UriReference> DncLists = null, UriReference CallableTimeSet = null, UriReference CallAnalysisResponseSet = null, List<RestErrorDetail> Errors = null, string CallerName = null, string CallerAddress = null, int? OutboundLineCount = null, List<UriReference> RuleSets = null, bool? SkipPreviewDisabled = null, long? PreviewTimeOutSeconds = null, ContactSort ContactSort = null)
         {
+            // to ensure "ContactList" is required (not null)
+            if (ContactList == null)
+            {
+                throw new InvalidDataException("ContactList is a required property for Campaign and cannot be null");
+            }
+            else
+            {
+                this.ContactList = ContactList;
+            }
+            // to ensure "Queue" is required (not null)
+            if (Queue == null)
+            {
+                throw new InvalidDataException("Queue is a required property for Campaign and cannot be null");
+            }
+            else
+            {
+                this.Queue = Queue;
+            }
+            // to ensure "DialingMode" is required (not null)
+            if (DialingMode == null)
+            {
+                throw new InvalidDataException("DialingMode is a required property for Campaign and cannot be null");
+            }
+            else
+            {
+                this.DialingMode = DialingMode;
+            }
+            // to ensure "Script" is required (not null)
+            if (Script == null)
+            {
+                throw new InvalidDataException("Script is a required property for Campaign and cannot be null");
+            }
+            else
+            {
+                this.Script = Script;
+            }
+            // to ensure "EdgeGroup" is required (not null)
+            if (EdgeGroup == null)
+            {
+                throw new InvalidDataException("EdgeGroup is a required property for Campaign and cannot be null");
+            }
+            else
+            {
+                this.EdgeGroup = EdgeGroup;
+            }
+            // to ensure "CampaignStatus" is required (not null)
+            if (CampaignStatus == null)
+            {
+                throw new InvalidDataException("CampaignStatus is a required property for Campaign and cannot be null");
+            }
+            else
+            {
+                this.CampaignStatus = CampaignStatus;
+            }
+            // to ensure "PhoneColumns" is required (not null)
+            if (PhoneColumns == null)
+            {
+                throw new InvalidDataException("PhoneColumns is a required property for Campaign and cannot be null");
+            }
+            else
+            {
+                this.PhoneColumns = PhoneColumns;
+            }
+            // to ensure "CallAnalysisResponseSet" is required (not null)
+            if (CallAnalysisResponseSet == null)
+            {
+                throw new InvalidDataException("CallAnalysisResponseSet is a required property for Campaign and cannot be null");
+            }
+            else
+            {
+                this.CallAnalysisResponseSet = CallAnalysisResponseSet;
+            }
             this.Name = Name;
-            this.DateCreated = DateCreated;
-            this.DateModified = DateModified;
             this.Version = Version;
-            this.ContactList = ContactList;
-            this.Queue = Queue;
-            this.DialingMode = DialingMode;
-            this.Script = Script;
-            this.EdgeGroup = EdgeGroup;
-            this.CampaignStatus = CampaignStatus;
-            this.PhoneColumns = PhoneColumns;
             this.AbandonRate = AbandonRate;
             this.DncLists = DncLists;
             this.CallableTimeSet = CallableTimeSet;
-            this.CallAnalysisResponseSet = CallAnalysisResponseSet;
             this.Errors = Errors;
             this.CallerName = CallerName;
             this.CallerAddress = CallerAddress;
@@ -78,15 +169,6 @@ namespace ININ.PureCloudApi.Model
                 this.SkipPreviewDisabled = SkipPreviewDisabled;
             }
             this.PreviewTimeOutSeconds = PreviewTimeOutSeconds;
-            // use default value if no "SingleNumberPreview" provided
-            if (SingleNumberPreview == null)
-            {
-                this.SingleNumberPreview = false;
-            }
-            else
-            {
-                this.SingleNumberPreview = SingleNumberPreview;
-            }
             this.ContactSort = ContactSort;
             
         }
@@ -106,142 +188,149 @@ namespace ININ.PureCloudApi.Model
         public string Name { get; set; }
     
         /// <summary>
-        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// creation time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
-        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>creation time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
-        public DateTime? DateCreated { get; set; }
+        public DateTime? DateCreated { get; private set; }
     
         /// <summary>
-        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// last modified time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
-        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>last modified time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
-        public DateTime? DateModified { get; set; }
+        public DateTime? DateModified { get; private set; }
     
         /// <summary>
-        /// Gets or Sets Version
+        /// required for updates, must match the version number of the most recent update
         /// </summary>
+        /// <value>required for updates, must match the version number of the most recent update</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public int? Version { get; set; }
     
         /// <summary>
-        /// Gets or Sets ContactList
+        /// identifier of the contact list for the campaign
         /// </summary>
+        /// <value>identifier of the contact list for the campaign</value>
         [DataMember(Name="contactList", EmitDefaultValue=false)]
         public UriReference ContactList { get; set; }
     
         /// <summary>
-        /// Gets or Sets Queue
+        /// identifier of the agent assignment queue, required for all dialing modes other than agentless
         /// </summary>
+        /// <value>identifier of the agent assignment queue, required for all dialing modes other than agentless</value>
         [DataMember(Name="queue", EmitDefaultValue=false)]
         public UriReference Queue { get; set; }
     
         /// <summary>
-        /// Gets or Sets DialingMode
+        /// identifier of the campaign script, required for all dialing modes other than agentless
         /// </summary>
-        [DataMember(Name="dialingMode", EmitDefaultValue=false)]
-        public string DialingMode { get; set; }
-    
-        /// <summary>
-        /// Gets or Sets Script
-        /// </summary>
+        /// <value>identifier of the campaign script, required for all dialing modes other than agentless</value>
         [DataMember(Name="script", EmitDefaultValue=false)]
         public UriReference Script { get; set; }
     
         /// <summary>
-        /// Gets or Sets EdgeGroup
+        /// identifier of the edge group, required for all dialing modes other than preview
         /// </summary>
+        /// <value>identifier of the edge group, required for all dialing modes other than preview</value>
         [DataMember(Name="edgeGroup", EmitDefaultValue=false)]
         public UriReference EdgeGroup { get; set; }
     
         /// <summary>
-        /// Gets or Sets CampaignStatus
+        /// status of the campaign; can be set to &#39;on&#39; or &#39;off&#39;
         /// </summary>
+        /// <value>status of the campaign; can be set to &#39;on&#39; or &#39;off&#39;</value>
         [DataMember(Name="campaignStatus", EmitDefaultValue=false)]
         public string CampaignStatus { get; set; }
     
         /// <summary>
-        /// Gets or Sets PhoneColumns
+        /// the contact list phone columns to be called for the campaign
         /// </summary>
+        /// <value>the contact list phone columns to be called for the campaign</value>
         [DataMember(Name="phoneColumns", EmitDefaultValue=false)]
         public List<PhoneColumn> PhoneColumns { get; set; }
     
         /// <summary>
-        /// Gets or Sets AbandonRate
+        /// the targeted abandon rate percentage
         /// </summary>
+        /// <value>the targeted abandon rate percentage</value>
         [DataMember(Name="abandonRate", EmitDefaultValue=false)]
         public double? AbandonRate { get; set; }
     
         /// <summary>
-        /// Gets or Sets DncLists
+        /// identifiers of the do not call lists
         /// </summary>
+        /// <value>identifiers of the do not call lists</value>
         [DataMember(Name="dncLists", EmitDefaultValue=false)]
         public List<UriReference> DncLists { get; set; }
     
         /// <summary>
-        /// Gets or Sets CallableTimeSet
+        /// the identifier of the callable time set
         /// </summary>
+        /// <value>the identifier of the callable time set</value>
         [DataMember(Name="callableTimeSet", EmitDefaultValue=false)]
         public UriReference CallableTimeSet { get; set; }
     
         /// <summary>
-        /// Gets or Sets CallAnalysisResponseSet
+        /// the identifier of the call analysis response set, required for all dialing modes other than preview
         /// </summary>
+        /// <value>the identifier of the call analysis response set, required for all dialing modes other than preview</value>
         [DataMember(Name="callAnalysisResponseSet", EmitDefaultValue=false)]
         public UriReference CallAnalysisResponseSet { get; set; }
     
         /// <summary>
-        /// Gets or Sets Errors
+        /// a list of current error conditions associated with the campaign
         /// </summary>
+        /// <value>a list of current error conditions associated with the campaign</value>
         [DataMember(Name="errors", EmitDefaultValue=false)]
         public List<RestErrorDetail> Errors { get; set; }
     
         /// <summary>
-        /// Gets or Sets CallerName
+        /// caller id name to be displayed on the outbound call
         /// </summary>
+        /// <value>caller id name to be displayed on the outbound call</value>
         [DataMember(Name="callerName", EmitDefaultValue=false)]
         public string CallerName { get; set; }
     
         /// <summary>
-        /// Gets or Sets CallerAddress
+        /// caller id phone number to be displayed on the outbound call
         /// </summary>
+        /// <value>caller id phone number to be displayed on the outbound call</value>
         [DataMember(Name="callerAddress", EmitDefaultValue=false)]
         public string CallerAddress { get; set; }
     
         /// <summary>
-        /// Gets or Sets OutboundLineCount
+        /// for agentless campaigns, the number of outbound lines to be concurrently dialed
         /// </summary>
+        /// <value>for agentless campaigns, the number of outbound lines to be concurrently dialed</value>
         [DataMember(Name="outboundLineCount", EmitDefaultValue=false)]
         public int? OutboundLineCount { get; set; }
     
         /// <summary>
-        /// Gets or Sets RuleSets
+        /// identifiers of the rule sets
         /// </summary>
+        /// <value>identifiers of the rule sets</value>
         [DataMember(Name="ruleSets", EmitDefaultValue=false)]
         public List<UriReference> RuleSets { get; set; }
     
         /// <summary>
-        /// Gets or Sets SkipPreviewDisabled
+        /// for preview campaigns, indicator of whether the agent can skip a preview without placing a call
         /// </summary>
+        /// <value>for preview campaigns, indicator of whether the agent can skip a preview without placing a call</value>
         [DataMember(Name="skipPreviewDisabled", EmitDefaultValue=false)]
         public bool? SkipPreviewDisabled { get; set; }
     
         /// <summary>
-        /// Gets or Sets PreviewTimeOutSeconds
+        /// for preview campaigns, number of seconds before a call will be automatically placed. A value of 0 indicates no automatic placement of calls
         /// </summary>
+        /// <value>for preview campaigns, number of seconds before a call will be automatically placed. A value of 0 indicates no automatic placement of calls</value>
         [DataMember(Name="previewTimeOutSeconds", EmitDefaultValue=false)]
         public long? PreviewTimeOutSeconds { get; set; }
     
         /// <summary>
-        /// Gets or Sets SingleNumberPreview
+        /// information determining the order in which the contacts will be dialed
         /// </summary>
-        [DataMember(Name="singleNumberPreview", EmitDefaultValue=false)]
-        public bool? SingleNumberPreview { get; set; }
-    
-        /// <summary>
-        /// Gets or Sets ContactSort
-        /// </summary>
+        /// <value>information determining the order in which the contacts will be dialed</value>
         [DataMember(Name="contactSort", EmitDefaultValue=false)]
         public ContactSort ContactSort { get; set; }
     
@@ -283,7 +372,6 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  RuleSets: ").Append(RuleSets).Append("\n");
             sb.Append("  SkipPreviewDisabled: ").Append(SkipPreviewDisabled).Append("\n");
             sb.Append("  PreviewTimeOutSeconds: ").Append(PreviewTimeOutSeconds).Append("\n");
-            sb.Append("  SingleNumberPreview: ").Append(SingleNumberPreview).Append("\n");
             sb.Append("  ContactSort: ").Append(ContactSort).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
@@ -438,11 +526,6 @@ namespace ININ.PureCloudApi.Model
                     this.PreviewTimeOutSeconds.Equals(other.PreviewTimeOutSeconds)
                 ) &&
                 (
-                    this.SingleNumberPreview == other.SingleNumberPreview ||
-                    this.SingleNumberPreview != null &&
-                    this.SingleNumberPreview.Equals(other.SingleNumberPreview)
-                ) &&
-                (
                     this.ContactSort == other.ContactSort ||
                     this.ContactSort != null &&
                     this.ContactSort.Equals(other.ContactSort)
@@ -511,8 +594,6 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.SkipPreviewDisabled.GetHashCode();
                 if (this.PreviewTimeOutSeconds != null)
                     hash = hash * 59 + this.PreviewTimeOutSeconds.GetHashCode();
-                if (this.SingleNumberPreview != null)
-                    hash = hash * 59 + this.SingleNumberPreview.GetHashCode();
                 if (this.ContactSort != null)
                     hash = hash * 59 + this.ContactSort.GetHashCode();
                 if (this.SelfUri != null)

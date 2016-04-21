@@ -78,12 +78,13 @@ namespace ININ.PureCloudApi.Model
         /// <param name="AssignedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="ChangedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="Queue">Queue.</param>
+        /// <param name="NeverRelease">Signifies if the evaluation is never to be released. This cannot be set true if release date is also set. (default to false).</param>
         /// <param name="ResourceId">Only used for email evaluations. Will be null for all other evaluations..</param>
         /// <param name="ResourceType">The type of resource. Only used for email evaluations. Will be null for evaluations on all other resources..</param>
         /// <param name="Redacted">Is only true when the user making the request does not have sufficient permissions to see evaluation (default to false).</param>
         /// <param name="IsScoringIndex">IsScoringIndex (default to false).</param>
 
-        public Evaluation(string Name = null, Conversation Conversation = null, EvaluationForm EvaluationForm = null, User Evaluator = null, User Agent = null, Calibration Calibration = null, StatusEnum? Status = null, EvaluationScoringSet Answers = null, bool? AgentHasRead = null, DateTime? ReleaseDate = null, DateTime? AssignedDate = null, DateTime? ChangedDate = null, Queue Queue = null, string ResourceId = null, ResourceTypeEnum? ResourceType = null, bool? Redacted = null, bool? IsScoringIndex = null)
+        public Evaluation(string Name = null, Conversation Conversation = null, EvaluationForm EvaluationForm = null, User Evaluator = null, User Agent = null, Calibration Calibration = null, StatusEnum? Status = null, EvaluationScoringSet Answers = null, bool? AgentHasRead = null, DateTime? ReleaseDate = null, DateTime? AssignedDate = null, DateTime? ChangedDate = null, Queue Queue = null, bool? NeverRelease = null, string ResourceId = null, ResourceTypeEnum? ResourceType = null, bool? Redacted = null, bool? IsScoringIndex = null)
         {
             this.Name = Name;
             this.Conversation = Conversation;
@@ -106,6 +107,15 @@ namespace ININ.PureCloudApi.Model
             this.AssignedDate = AssignedDate;
             this.ChangedDate = ChangedDate;
             this.Queue = Queue;
+            // use default value if no "NeverRelease" provided
+            if (NeverRelease == null)
+            {
+                this.NeverRelease = false;
+            }
+            else
+            {
+                this.NeverRelease = NeverRelease;
+            }
             this.ResourceId = ResourceId;
             this.ResourceType = ResourceType;
             // use default value if no "Redacted" provided
@@ -214,6 +224,13 @@ namespace ININ.PureCloudApi.Model
         public Queue Queue { get; set; }
     
         /// <summary>
+        /// Signifies if the evaluation is never to be released. This cannot be set true if release date is also set.
+        /// </summary>
+        /// <value>Signifies if the evaluation is never to be released. This cannot be set true if release date is also set.</value>
+        [DataMember(Name="neverRelease", EmitDefaultValue=false)]
+        public bool? NeverRelease { get; set; }
+    
+        /// <summary>
         /// Only used for email evaluations. Will be null for all other evaluations.
         /// </summary>
         /// <value>Only used for email evaluations. Will be null for all other evaluations.</value>
@@ -262,6 +279,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  AssignedDate: ").Append(AssignedDate).Append("\n");
             sb.Append("  ChangedDate: ").Append(ChangedDate).Append("\n");
             sb.Append("  Queue: ").Append(Queue).Append("\n");
+            sb.Append("  NeverRelease: ").Append(NeverRelease).Append("\n");
             sb.Append("  ResourceId: ").Append(ResourceId).Append("\n");
             sb.Append("  ResourceType: ").Append(ResourceType).Append("\n");
             sb.Append("  Redacted: ").Append(Redacted).Append("\n");
@@ -374,6 +392,11 @@ namespace ININ.PureCloudApi.Model
                     this.Queue.Equals(other.Queue)
                 ) &&
                 (
+                    this.NeverRelease == other.NeverRelease ||
+                    this.NeverRelease != null &&
+                    this.NeverRelease.Equals(other.NeverRelease)
+                ) &&
+                (
                     this.ResourceId == other.ResourceId ||
                     this.ResourceId != null &&
                     this.ResourceId.Equals(other.ResourceId)
@@ -439,6 +462,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.ChangedDate.GetHashCode();
                 if (this.Queue != null)
                     hash = hash * 59 + this.Queue.GetHashCode();
+                if (this.NeverRelease != null)
+                    hash = hash * 59 + this.NeverRelease.GetHashCode();
                 if (this.ResourceId != null)
                     hash = hash * 59 + this.ResourceId.GetHashCode();
                 if (this.ResourceType != null)

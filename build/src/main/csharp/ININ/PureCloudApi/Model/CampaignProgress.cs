@@ -21,52 +21,67 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CampaignProgress" />class.
         /// </summary>
-        /// <param name="Campaign">Campaign.</param>
-        /// <param name="ContactList">ContactList.</param>
-        /// <param name="NumberOfContactsCalled">NumberOfContactsCalled.</param>
-        /// <param name="TotalNumberOfContacts">TotalNumberOfContacts.</param>
-        /// <param name="Percentage">Percentage.</param>
+        /// <param name="Campaign">Identifier of the campaign (required).</param>
+        /// <param name="ContactList">Identifier of the contact list (required).</param>
 
-        public CampaignProgress(UriReference Campaign = null, UriReference ContactList = null, long? NumberOfContactsCalled = null, long? TotalNumberOfContacts = null, long? Percentage = null)
+        public CampaignProgress(UriReference Campaign = null, UriReference ContactList = null)
         {
-            this.Campaign = Campaign;
-            this.ContactList = ContactList;
-            this.NumberOfContactsCalled = NumberOfContactsCalled;
-            this.TotalNumberOfContacts = TotalNumberOfContacts;
-            this.Percentage = Percentage;
+            // to ensure "Campaign" is required (not null)
+            if (Campaign == null)
+            {
+                throw new InvalidDataException("Campaign is a required property for CampaignProgress and cannot be null");
+            }
+            else
+            {
+                this.Campaign = Campaign;
+            }
+            // to ensure "ContactList" is required (not null)
+            if (ContactList == null)
+            {
+                throw new InvalidDataException("ContactList is a required property for CampaignProgress and cannot be null");
+            }
+            else
+            {
+                this.ContactList = ContactList;
+            }
             
         }
 
     
         /// <summary>
-        /// Gets or Sets Campaign
+        /// Identifier of the campaign
         /// </summary>
+        /// <value>Identifier of the campaign</value>
         [DataMember(Name="campaign", EmitDefaultValue=false)]
         public UriReference Campaign { get; set; }
     
         /// <summary>
-        /// Gets or Sets ContactList
+        /// Identifier of the contact list
         /// </summary>
+        /// <value>Identifier of the contact list</value>
         [DataMember(Name="contactList", EmitDefaultValue=false)]
         public UriReference ContactList { get; set; }
     
         /// <summary>
-        /// Gets or Sets NumberOfContactsCalled
+        /// Number of contacts processed during the campaign
         /// </summary>
+        /// <value>Number of contacts processed during the campaign</value>
         [DataMember(Name="numberOfContactsCalled", EmitDefaultValue=false)]
-        public long? NumberOfContactsCalled { get; set; }
+        public long? NumberOfContactsCalled { get; private set; }
     
         /// <summary>
-        /// Gets or Sets TotalNumberOfContacts
+        /// Total number of contacts in the campaign
         /// </summary>
+        /// <value>Total number of contacts in the campaign</value>
         [DataMember(Name="totalNumberOfContacts", EmitDefaultValue=false)]
-        public long? TotalNumberOfContacts { get; set; }
+        public long? TotalNumberOfContacts { get; private set; }
     
         /// <summary>
-        /// Gets or Sets Percentage
+        /// Percentage of contacts processed during the campaign
         /// </summary>
+        /// <value>Percentage of contacts processed during the campaign</value>
         [DataMember(Name="percentage", EmitDefaultValue=false)]
-        public long? Percentage { get; set; }
+        public long? Percentage { get; private set; }
     
         /// <summary>
         /// Returns the string presentation of the object

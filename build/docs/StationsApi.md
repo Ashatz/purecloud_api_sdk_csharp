@@ -4,13 +4,13 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteIdAssociateduser**](StationsApi.md#deleteidassociateduser) | **DELETE** /api/v2/stations/{id}/associateduser | Unassigns the user assigned to this station |
-| [**GetId**](StationsApi.md#getid) | **GET** /api/v2/stations/{id} | Get station. |
+| [**DeleteStationIdAssociateduser**](StationsApi.md#deletestationidassociateduser) | **DELETE** /api/v2/stations/{stationId}/associateduser | Unassigns the user assigned to this station |
+| [**GetStationId**](StationsApi.md#getstationid) | **GET** /api/v2/stations/{stationId} | Get station. |
 | [**GetStations**](StationsApi.md#getstations) | **GET** /api/v2/stations | Get the list of available stations. |
 {: class="table table-striped"}
 
-<a name="DeleteIdAssociateduser"></a>
-## string** DeleteIdAssociateduser (string id)
+<a name="DeleteStationIdAssociateduser"></a>
+## string** DeleteStationIdAssociateduser (string stationId)
 
 Unassigns the user assigned to this station
 
@@ -26,7 +26,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class DeleteIdAssociateduserExample
+    public class DeleteStationIdAssociateduserExample
     {
         public void main()
         {
@@ -35,17 +35,17 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new StationsApi();
-            var id = id_example;  // string | Station ID
+            var stationId = stationId_example;  // string | Station ID
 
             try
             {
                 // Unassigns the user assigned to this station
-                string result = apiInstance.DeleteIdAssociateduser(id);
+                string result = apiInstance.DeleteStationIdAssociateduser(stationId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling StationsApi.DeleteIdAssociateduser: " + e.Message );
+                Debug.Print("Exception when calling StationsApi.DeleteStationIdAssociateduser: " + e.Message );
             }
         }
     }
@@ -57,15 +57,15 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **id** | **string**| Station ID |  |
+| **stationId** | **string**| Station ID |  |
 {: class="table table-striped"}
 
 ### Return type
 
 **string**
 
-<a name="GetId"></a>
-## [**Station**](Station.html) GetId (string id)
+<a name="GetStationId"></a>
+## [**Station**](Station.html) GetStationId (string stationId)
 
 Get station.
 
@@ -81,7 +81,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class GetIdExample
+    public class GetStationIdExample
     {
         public void main()
         {
@@ -90,17 +90,17 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new StationsApi();
-            var id = id_example;  // string | Station ID
+            var stationId = stationId_example;  // string | Station ID
 
             try
             {
                 // Get station.
-                Station result = apiInstance.GetId(id);
+                Station result = apiInstance.GetStationId(stationId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling StationsApi.GetId: " + e.Message );
+                Debug.Print("Exception when calling StationsApi.GetStationId: " + e.Message );
             }
         }
     }
@@ -112,7 +112,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **id** | **string**| Station ID |  |
+| **stationId** | **string**| Station ID |  |
 {: class="table table-striped"}
 
 ### Return type

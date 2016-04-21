@@ -8,6 +8,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetGroupIdMembers**](GroupsApi.md#getgroupidmembers) | **GET** /api/v2/groups/{groupId}/members | Get group members |
 | [**GetGroups**](GroupsApi.md#getgroups) | **GET** /api/v2/groups | Get a group list |
 | [**GetSearch**](GroupsApi.md#getsearch) | **GET** /api/v2/groups/search | Search using q64 |
+| [**PostGroups**](GroupsApi.md#postgroups) | **POST** /api/v2/groups | Create a group |
 | [**PostSearch**](GroupsApi.md#postsearch) | **POST** /api/v2/groups/search | Search |
 {: class="table table-striped"}
 
@@ -242,6 +243,61 @@ namespace Example
 ### Return type
 
 [**GroupsSearchResponse**](GroupsSearchResponse.md)
+
+<a name="PostGroups"></a>
+## [**Group**](Group.html) PostGroups (Group body = null)
+
+Create a group
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PostGroupsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new GroupsApi();
+            var body = new Group(); // Group |  (optional) 
+
+            try
+            {
+                // Create a group
+                Group result = apiInstance.PostGroups(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GroupsApi.PostGroups: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**Group**](Group.md)|  | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**Group**](Group.md)
 
 <a name="PostSearch"></a>
 ## [**GroupsSearchResponse**](GroupsSearchResponse.html) PostSearch (SearchRequest body = null)

@@ -51,28 +51,28 @@ namespace ININ.PureCloudApi.Test
         }
 
         /// <summary>
-        /// Test the property 'ParameterName'
+        /// Test the property 'DataItemId'
         /// </summary>
         [Test]
-        public void ParameterNameTest()
+        public void DataItemIdTest()
         {
-            // TODO: unit test for the property 'ParameterName'
+            // TODO: unit test for the property 'DataItemId'
         }
         /// <summary>
-        /// Test the property 'ParameterType'
+        /// Test the property 'Value'
         /// </summary>
         [Test]
-        public void ParameterTypeTest()
+        public void ValueTest()
         {
-            // TODO: unit test for the property 'ParameterType'
+            // TODO: unit test for the property 'Value'
         }
         /// <summary>
-        /// Test the property 'ParameterValues'
+        /// Test the property 'Type'
         /// </summary>
         [Test]
-        public void ParameterValuesTest()
+        public void TypeTest()
         {
-            // TODO: unit test for the property 'ParameterValues'
+            // TODO: unit test for the property 'Type'
         }
 
     }

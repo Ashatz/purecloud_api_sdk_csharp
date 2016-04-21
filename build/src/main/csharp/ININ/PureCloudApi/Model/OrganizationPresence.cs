@@ -43,7 +43,19 @@ namespace ININ.PureCloudApi.Model
             OnQueue,
             
             [EnumMember(Value = "IDLE")]
-            Idle
+            Idle,
+            
+            [EnumMember(Value = "MEAL")]
+            Meal,
+            
+            [EnumMember(Value = "TRAINING")]
+            Training,
+            
+            [EnumMember(Value = "MEETING")]
+            Meeting,
+            
+            [EnumMember(Value = "BREAK")]
+            Break
         }
 
         

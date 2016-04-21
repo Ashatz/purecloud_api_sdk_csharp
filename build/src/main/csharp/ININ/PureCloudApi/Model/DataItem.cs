@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace ININ.PureCloudApi.Model
 {
     /// <summary>
-    /// Data elements associated with a history event
+    /// 
     /// </summary>
     [DataContract]
     public partial class DataItem :  IEquatable<DataItem>
@@ -21,55 +21,36 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DataItem" />class.
         /// </summary>
-        /// <param name="ParameterName">The name of the data element associated with a history event. (required).</param>
-        /// <param name="ParameterType">The type of the data element associated with a history event. (required).</param>
-        /// <param name="ParameterValues">The values of the data element associated with a history event..</param>
+        /// <param name="DataItemId">DataItemId.</param>
+        /// <param name="Value">Value.</param>
+        /// <param name="Type">Type.</param>
 
-        public DataItem(string ParameterName = null, string ParameterType = null, Value ParameterValues = null)
+        public DataItem(string DataItemId = null, string Value = null, string Type = null)
         {
-            // to ensure "ParameterName" is required (not null)
-            if (ParameterName == null)
-            {
-                throw new InvalidDataException("ParameterName is a required property for DataItem and cannot be null");
-            }
-            else
-            {
-                this.ParameterName = ParameterName;
-            }
-            // to ensure "ParameterType" is required (not null)
-            if (ParameterType == null)
-            {
-                throw new InvalidDataException("ParameterType is a required property for DataItem and cannot be null");
-            }
-            else
-            {
-                this.ParameterType = ParameterType;
-            }
-            this.ParameterValues = ParameterValues;
+            this.DataItemId = DataItemId;
+            this.Value = Value;
+            this.Type = Type;
             
         }
 
     
         /// <summary>
-        /// The name of the data element associated with a history event.
+        /// Gets or Sets DataItemId
         /// </summary>
-        /// <value>The name of the data element associated with a history event.</value>
-        [DataMember(Name="parameterName", EmitDefaultValue=false)]
-        public string ParameterName { get; set; }
+        [DataMember(Name="dataItemId", EmitDefaultValue=false)]
+        public string DataItemId { get; set; }
     
         /// <summary>
-        /// The type of the data element associated with a history event.
+        /// Gets or Sets Value
         /// </summary>
-        /// <value>The type of the data element associated with a history event.</value>
-        [DataMember(Name="parameterType", EmitDefaultValue=false)]
-        public string ParameterType { get; set; }
+        [DataMember(Name="value", EmitDefaultValue=false)]
+        public string Value { get; set; }
     
         /// <summary>
-        /// The values of the data element associated with a history event.
+        /// Gets or Sets Type
         /// </summary>
-        /// <value>The values of the data element associated with a history event.</value>
-        [DataMember(Name="parameterValues", EmitDefaultValue=false)]
-        public Value ParameterValues { get; set; }
+        [DataMember(Name="type", EmitDefaultValue=false)]
+        public string Type { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -79,9 +60,9 @@ namespace ININ.PureCloudApi.Model
         {
             var sb = new StringBuilder();
             sb.Append("class DataItem {\n");
-            sb.Append("  ParameterName: ").Append(ParameterName).Append("\n");
-            sb.Append("  ParameterType: ").Append(ParameterType).Append("\n");
-            sb.Append("  ParameterValues: ").Append(ParameterValues).Append("\n");
+            sb.Append("  DataItemId: ").Append(DataItemId).Append("\n");
+            sb.Append("  Value: ").Append(Value).Append("\n");
+            sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -119,19 +100,19 @@ namespace ININ.PureCloudApi.Model
 
             return true &&
                 (
-                    this.ParameterName == other.ParameterName ||
-                    this.ParameterName != null &&
-                    this.ParameterName.Equals(other.ParameterName)
+                    this.DataItemId == other.DataItemId ||
+                    this.DataItemId != null &&
+                    this.DataItemId.Equals(other.DataItemId)
                 ) &&
                 (
-                    this.ParameterType == other.ParameterType ||
-                    this.ParameterType != null &&
-                    this.ParameterType.Equals(other.ParameterType)
+                    this.Value == other.Value ||
+                    this.Value != null &&
+                    this.Value.Equals(other.Value)
                 ) &&
                 (
-                    this.ParameterValues == other.ParameterValues ||
-                    this.ParameterValues != null &&
-                    this.ParameterValues.Equals(other.ParameterValues)
+                    this.Type == other.Type ||
+                    this.Type != null &&
+                    this.Type.Equals(other.Type)
                 );
         }
 
@@ -146,12 +127,12 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.ParameterName != null)
-                    hash = hash * 59 + this.ParameterName.GetHashCode();
-                if (this.ParameterType != null)
-                    hash = hash * 59 + this.ParameterType.GetHashCode();
-                if (this.ParameterValues != null)
-                    hash = hash * 59 + this.ParameterValues.GetHashCode();
+                if (this.DataItemId != null)
+                    hash = hash * 59 + this.DataItemId.GetHashCode();
+                if (this.Value != null)
+                    hash = hash * 59 + this.Value.GetHashCode();
+                if (this.Type != null)
+                    hash = hash * 59 + this.Type.GetHashCode();
                 return hash;
             }
         }

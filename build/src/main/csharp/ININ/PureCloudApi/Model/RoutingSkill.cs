@@ -25,13 +25,13 @@ namespace ININ.PureCloudApi.Model
         [JsonConverter(typeof(StringEnumConverter))]
                 public enum StateEnum {
             
-            [EnumMember(Value = "ACTIVE")]
+            [EnumMember(Value = "active")]
             Active,
             
-            [EnumMember(Value = "INACTIVE")]
+            [EnumMember(Value = "inactive")]
             Inactive,
             
-            [EnumMember(Value = "DELETED")]
+            [EnumMember(Value = "deleted")]
             Deleted
         }
 
@@ -51,7 +51,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="DateModified">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="Proficiency">Proficiency.</param>
 
-        public RoutingSkill(string Name = null, DateTime? DateModified = nullstring Proficiency = null)
+        public RoutingSkill(string Name = null, DateTime? DateModified = null, string Proficiency = null)
         {
             this.Name = Name;
             this.DateModified = DateModified;

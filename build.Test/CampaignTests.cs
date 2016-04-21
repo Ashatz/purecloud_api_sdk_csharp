@@ -235,14 +235,6 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'PreviewTimeOutSeconds'
         }
         /// <summary>
-        /// Test the property 'SingleNumberPreview'
-        /// </summary>
-        [Test]
-        public void SingleNumberPreviewTest()
-        {
-            // TODO: unit test for the property 'SingleNumberPreview'
-        }
-        /// <summary>
         /// Test the property 'ContactSort'
         /// </summary>
         [Test]

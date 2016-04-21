@@ -54,27 +54,27 @@ namespace ININ.PureCloudApi.Test
 
         
         /// <summary>
-        /// Test DeleteEmailDomainsDomainRoutesId
+        /// Test DeleteEmailDomainsDomainId
         /// </summary>
         [Test]
-        public void DeleteEmailDomainsDomainRoutesIdTest()
+        public void DeleteEmailDomainsDomainIdTest()
         {
-            // TODO: add unit test for the method 'DeleteEmailDomainsDomainRoutesId'
-            string domain = null; // TODO: replace null with proper value
-            string id = null; // TODO: replace null with proper value
-            var response = instance.DeleteEmailDomainsDomainRoutesId(domain, id);
+            // TODO: add unit test for the method 'DeleteEmailDomainsDomainId'
+            string domainId = null; // TODO: replace null with proper value
+            var response = instance.DeleteEmailDomainsDomainId(domainId);
             Assert.IsInstanceOf<string> (response, "response is string");
         }
         
         /// <summary>
-        /// Test DeleteEmailDomainsId
+        /// Test DeleteEmailDomainsDomainnameRoutesRouteId
         /// </summary>
         [Test]
-        public void DeleteEmailDomainsIdTest()
+        public void DeleteEmailDomainsDomainnameRoutesRouteIdTest()
         {
-            // TODO: add unit test for the method 'DeleteEmailDomainsId'
-            string id = null; // TODO: replace null with proper value
-            var response = instance.DeleteEmailDomainsId(id);
+            // TODO: add unit test for the method 'DeleteEmailDomainsDomainnameRoutesRouteId'
+            string domainName = null; // TODO: replace null with proper value
+            string routeId = null; // TODO: replace null with proper value
+            var response = instance.DeleteEmailDomainsDomainnameRoutesRouteId(domainName, routeId);
             Assert.IsInstanceOf<string> (response, "response is string");
         }
         
@@ -177,27 +177,27 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test GetEmailDomainsDomainRoutes
+        /// Test GetEmailDomainsDomainnameRoutes
         /// </summary>
         [Test]
-        public void GetEmailDomainsDomainRoutesTest()
+        public void GetEmailDomainsDomainnameRoutesTest()
         {
-            // TODO: add unit test for the method 'GetEmailDomainsDomainRoutes'
-            string domain = null; // TODO: replace null with proper value
-            var response = instance.GetEmailDomainsDomainRoutes(domain);
+            // TODO: add unit test for the method 'GetEmailDomainsDomainnameRoutes'
+            string domainName = null; // TODO: replace null with proper value
+            var response = instance.GetEmailDomainsDomainnameRoutes(domainName);
             Assert.IsInstanceOf<InboundRouteEntityListing> (response, "response is InboundRouteEntityListing");
         }
         
         /// <summary>
-        /// Test GetEmailDomainsDomainRoutesId
+        /// Test GetEmailDomainsDomainnameRoutesRouteId
         /// </summary>
         [Test]
-        public void GetEmailDomainsDomainRoutesIdTest()
+        public void GetEmailDomainsDomainnameRoutesRouteIdTest()
         {
-            // TODO: add unit test for the method 'GetEmailDomainsDomainRoutesId'
-            string domain = null; // TODO: replace null with proper value
-            string id = null; // TODO: replace null with proper value
-            var response = instance.GetEmailDomainsDomainRoutesId(domain, id);
+            // TODO: add unit test for the method 'GetEmailDomainsDomainnameRoutesRouteId'
+            string domainName = null; // TODO: replace null with proper value
+            string routeId = null; // TODO: replace null with proper value
+            var response = instance.GetEmailDomainsDomainnameRoutesRouteId(domainName, routeId);
             Assert.IsInstanceOf<InboundRoute> (response, "response is InboundRoute");
         }
         
@@ -400,15 +400,15 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test PostEmailDomainsDomainRoutes
+        /// Test PostEmailDomainsDomainnameRoutes
         /// </summary>
         [Test]
-        public void PostEmailDomainsDomainRoutesTest()
+        public void PostEmailDomainsDomainnameRoutesTest()
         {
-            // TODO: add unit test for the method 'PostEmailDomainsDomainRoutes'
-            string domain = null; // TODO: replace null with proper value
+            // TODO: add unit test for the method 'PostEmailDomainsDomainnameRoutes'
+            string domainName = null; // TODO: replace null with proper value
             InboundRoute body = null; // TODO: replace null with proper value
-            var response = instance.PostEmailDomainsDomainRoutes(domain, body);
+            var response = instance.PostEmailDomainsDomainnameRoutes(domainName, body);
             Assert.IsInstanceOf<InboundRoute> (response, "response is InboundRoute");
         }
         
@@ -502,16 +502,16 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test PutEmailDomainsDomainRoutesId
+        /// Test PutEmailDomainsDomainnameRoutesRouteId
         /// </summary>
         [Test]
-        public void PutEmailDomainsDomainRoutesIdTest()
+        public void PutEmailDomainsDomainnameRoutesRouteIdTest()
         {
-            // TODO: add unit test for the method 'PutEmailDomainsDomainRoutesId'
-            string domain = null; // TODO: replace null with proper value
-            string id = null; // TODO: replace null with proper value
+            // TODO: add unit test for the method 'PutEmailDomainsDomainnameRoutesRouteId'
+            string domainName = null; // TODO: replace null with proper value
+            string routeId = null; // TODO: replace null with proper value
             InboundRoute body = null; // TODO: replace null with proper value
-            var response = instance.PutEmailDomainsDomainRoutesId(domain, id, body);
+            var response = instance.PutEmailDomainsDomainnameRoutesRouteId(domainName, routeId, body);
             Assert.IsInstanceOf<InboundRoute> (response, "response is InboundRoute");
         }
         

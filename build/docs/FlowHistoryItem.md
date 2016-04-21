@@ -12,7 +12,7 @@ title: FlowHistoryItem
 | **WorkItem** | [**WorkItem**](WorkItem.html) | Information about the work item associated with the history event, if applicable. | [optional] |
 | **User** | [**User**](User.html) | The user associated with this history event, if applicable. | [optional] |
 | **Queue** | [**Queue**](Queue.html) | The queue associated with this history event, if applicable. | [optional] |
-| **HistoryEventData** | [**List&lt;DataItem&gt;**](DataItem.html) | Data elements associated with this history event. | [optional] |
+| **HistoryEventData** | [**List&lt;FlowHistoryDataItem&gt;**](FlowHistoryDataItem.html) | Data elements associated with this history event. | [optional] |
 | **HistoryEventType** | **string** | The type of the history event being reported. | |
 | **Success** | **bool?** | Whether or not the flow item was successful (if a &#39;notification&#39; event this will default to true) | [default to false]|
 {: class="table table-striped"}

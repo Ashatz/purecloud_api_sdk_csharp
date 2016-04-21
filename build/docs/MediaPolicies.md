@@ -7,9 +7,9 @@ title: MediaPolicies
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **CallPolicy** | [**MediaPolicy**](MediaPolicy.html) | Conditions and actions for calls | [optional] |
-| **ChatPolicy** | [**MediaPolicy**](MediaPolicy.html) | Conditions and actions for chats | [optional] |
-| **EmailPolicy** | [**MediaPolicy**](MediaPolicy.html) | Conditions and actions for emails | [optional] |
+| **CallPolicy** | [**CallMediaPolicy**](CallMediaPolicy.html) | Conditions and actions for calls | [optional] |
+| **ChatPolicy** | [**ChatMediaPolicy**](ChatMediaPolicy.html) | Conditions and actions for chats | [optional] |
+| **EmailPolicy** | [**EmailMediaPolicy**](EmailMediaPolicy.html) | Conditions and actions for emails | [optional] |
 {: class="table table-striped"}
 
 

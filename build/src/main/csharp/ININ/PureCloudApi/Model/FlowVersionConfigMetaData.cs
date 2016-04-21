@@ -28,7 +28,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="CreatedDate">The date and time that the version was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="Version">Version of this flow config..</param>
 
-        public FlowVersionConfigMetaData(string Name = null, string VersionSpecificComment = null, string FlowDefinitionUri = null, User CreatedByUser = null, DateTime? CreatedDate = nullstring Version = null)
+        public FlowVersionConfigMetaData(string Name = null, string VersionSpecificComment = null, string FlowDefinitionUri = null, User CreatedByUser = null, DateTime? CreatedDate = null, string Version = null)
         {
             // to ensure "FlowDefinitionUri" is required (not null)
             if (FlowDefinitionUri == null)

@@ -163,6 +163,14 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'Queue'
         }
         /// <summary>
+        /// Test the property 'NeverRelease'
+        /// </summary>
+        [Test]
+        public void NeverReleaseTest()
+        {
+            // TODO: unit test for the property 'NeverRelease'
+        }
+        /// <summary>
         /// Test the property 'ResourceId'
         /// </summary>
         [Test]

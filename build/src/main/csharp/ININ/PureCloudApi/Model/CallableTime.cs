@@ -21,26 +21,36 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CallableTime" />class.
         /// </summary>
-        /// <param name="TimeSlots">TimeSlots.</param>
-        /// <param name="TimeZoneId">TimeZoneId.</param>
+        /// <param name="TimeSlots">intervals for which it is acceptable to place outbound calls.</param>
+        /// <param name="TimeZoneId">time zone identifier to be applied to the time slots; for example Africa/Abidjan (required).</param>
 
         public CallableTime(List<CampaignTimeSlot> TimeSlots = null, string TimeZoneId = null)
         {
+            // to ensure "TimeZoneId" is required (not null)
+            if (TimeZoneId == null)
+            {
+                throw new InvalidDataException("TimeZoneId is a required property for CallableTime and cannot be null");
+            }
+            else
+            {
+                this.TimeZoneId = TimeZoneId;
+            }
             this.TimeSlots = TimeSlots;
-            this.TimeZoneId = TimeZoneId;
             
         }
 
     
         /// <summary>
-        /// Gets or Sets TimeSlots
+        /// intervals for which it is acceptable to place outbound calls
         /// </summary>
+        /// <value>intervals for which it is acceptable to place outbound calls</value>
         [DataMember(Name="timeSlots", EmitDefaultValue=false)]
         public List<CampaignTimeSlot> TimeSlots { get; set; }
     
         /// <summary>
-        /// Gets or Sets TimeZoneId
+        /// time zone identifier to be applied to the time slots; for example Africa/Abidjan
         /// </summary>
+        /// <value>time zone identifier to be applied to the time slots; for example Africa/Abidjan</value>
         [DataMember(Name="timeZoneId", EmitDefaultValue=false)]
         public string TimeZoneId { get; set; }
     

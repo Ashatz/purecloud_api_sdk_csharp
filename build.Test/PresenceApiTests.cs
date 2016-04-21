@@ -91,29 +91,29 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test GetUserIdPresencesSource
+        /// Test GetUserIdPresencesSourceId
         /// </summary>
         [Test]
-        public void GetUserIdPresencesSourceTest()
+        public void GetUserIdPresencesSourceIdTest()
         {
-            // TODO: add unit test for the method 'GetUserIdPresencesSource'
+            // TODO: add unit test for the method 'GetUserIdPresencesSourceId'
             string userId = null; // TODO: replace null with proper value
-            string source = null; // TODO: replace null with proper value
-            var response = instance.GetUserIdPresencesSource(userId, source);
+            string sourceId = null; // TODO: replace null with proper value
+            var response = instance.GetUserIdPresencesSourceId(userId, sourceId);
             Assert.IsInstanceOf<UserPresence> (response, "response is UserPresence");
         }
         
         /// <summary>
-        /// Test PatchUserIdPresencesSource
+        /// Test PatchUserIdPresencesSourceId
         /// </summary>
         [Test]
-        public void PatchUserIdPresencesSourceTest()
+        public void PatchUserIdPresencesSourceIdTest()
         {
-            // TODO: add unit test for the method 'PatchUserIdPresencesSource'
+            // TODO: add unit test for the method 'PatchUserIdPresencesSourceId'
             string userId = null; // TODO: replace null with proper value
-            string source = null; // TODO: replace null with proper value
+            string sourceId = null; // TODO: replace null with proper value
             UserPresence body = null; // TODO: replace null with proper value
-            var response = instance.PatchUserIdPresencesSource(userId, source, body);
+            var response = instance.PatchUserIdPresencesSourceId(userId, sourceId, body);
             Assert.IsInstanceOf<UserPresence> (response, "response is UserPresence");
         }
         

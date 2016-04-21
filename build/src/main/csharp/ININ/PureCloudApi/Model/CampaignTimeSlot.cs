@@ -21,34 +21,45 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CampaignTimeSlot" />class.
         /// </summary>
-        /// <param name="StartTime">StartTime.</param>
-        /// <param name="StopTime">StopTime.</param>
-        /// <param name="Day">Day.</param>
+        /// <param name="StartTime">interval start time as an ISO-8601 string. For example: HH:mm:ss.</param>
+        /// <param name="StopTime">interval stop time as an ISO-8601 string. For example: HH:mm:ss.</param>
+        /// <param name="Day">must be within [1-7], representing Monday through Sunday (required).</param>
 
         public CampaignTimeSlot(string StartTime = null, string StopTime = null, int? Day = null)
         {
+            // to ensure "Day" is required (not null)
+            if (Day == null)
+            {
+                throw new InvalidDataException("Day is a required property for CampaignTimeSlot and cannot be null");
+            }
+            else
+            {
+                this.Day = Day;
+            }
             this.StartTime = StartTime;
             this.StopTime = StopTime;
-            this.Day = Day;
             
         }
 
     
         /// <summary>
-        /// Gets or Sets StartTime
+        /// interval start time as an ISO-8601 string. For example: HH:mm:ss
         /// </summary>
+        /// <value>interval start time as an ISO-8601 string. For example: HH:mm:ss</value>
         [DataMember(Name="startTime", EmitDefaultValue=false)]
         public string StartTime { get; set; }
     
         /// <summary>
-        /// Gets or Sets StopTime
+        /// interval stop time as an ISO-8601 string. For example: HH:mm:ss
         /// </summary>
+        /// <value>interval stop time as an ISO-8601 string. For example: HH:mm:ss</value>
         [DataMember(Name="stopTime", EmitDefaultValue=false)]
         public string StopTime { get; set; }
     
         /// <summary>
-        /// Gets or Sets Day
+        /// must be within [1-7], representing Monday through Sunday
         /// </summary>
+        /// <value>must be within [1-7], representing Monday through Sunday</value>
         [DataMember(Name="day", EmitDefaultValue=false)]
         public int? Day { get; set; }
     

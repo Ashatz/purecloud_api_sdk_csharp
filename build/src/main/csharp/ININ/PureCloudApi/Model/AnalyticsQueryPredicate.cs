@@ -112,6 +112,9 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "outboundCampaignId")]
             Outboundcampaignid,
             
+            [EnumMember(Value = "outboundContactId")]
+            Outboundcontactid,
+            
             [EnumMember(Value = "outboundContactListId")]
             Outboundcontactlistid,
             

@@ -275,7 +275,7 @@ namespace ININ.PureCloudApi.Client
                      .GetExecutingAssembly()
                      .GetReferencedAssemblies()
                      .Where(x => x.Name == "System.Core").First().Version.ToString()  + "\n";
-            report += "    Version of the API: v1\n";
+            report += "    Version of the API: v2\n";
             report += "    SDK Package Version: 0.6.0\n";
 
             return report;

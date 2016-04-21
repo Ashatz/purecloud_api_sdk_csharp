@@ -190,19 +190,6 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test GetUserIdPresencesSource
-        /// </summary>
-        [Test]
-        public void GetUserIdPresencesSourceTest()
-        {
-            // TODO: add unit test for the method 'GetUserIdPresencesSource'
-            string userId = null; // TODO: replace null with proper value
-            string source = null; // TODO: replace null with proper value
-            var response = instance.GetUserIdPresencesSource(userId, source);
-            Assert.IsInstanceOf<UserPresence> (response, "response is UserPresence");
-        }
-        
-        /// <summary>
         /// Test GetUserIdQueues
         /// </summary>
         [Test]
@@ -321,20 +308,6 @@ namespace ININ.PureCloudApi.Test
             Geolocation body = null; // TODO: replace null with proper value
             var response = instance.PatchUserIdGeolocationsClientId(userId, clientId, body);
             Assert.IsInstanceOf<Geolocation> (response, "response is Geolocation");
-        }
-        
-        /// <summary>
-        /// Test PatchUserIdPresencesSource
-        /// </summary>
-        [Test]
-        public void PatchUserIdPresencesSourceTest()
-        {
-            // TODO: add unit test for the method 'PatchUserIdPresencesSource'
-            string userId = null; // TODO: replace null with proper value
-            string source = null; // TODO: replace null with proper value
-            UserPresence body = null; // TODO: replace null with proper value
-            var response = instance.PatchUserIdPresencesSource(userId, source, body);
-            Assert.IsInstanceOf<UserPresence> (response, "response is UserPresence");
         }
         
         /// <summary>

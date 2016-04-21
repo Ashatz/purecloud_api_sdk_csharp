@@ -7,8 +7,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeletePresenceId**](PresenceApi.md#deletepresenceid) | **DELETE** /api/v2/presencedefinitions/{presenceId} | Delete an OrganizationPresence |
 | [**GetPresenceId**](PresenceApi.md#getpresenceid) | **GET** /api/v2/presencedefinitions/{presenceId} | Get an OrganizationPresence |
 | [**GetPresencedefinitions**](PresenceApi.md#getpresencedefinitions) | **GET** /api/v2/presencedefinitions | Get an Organization&#39;s list of Presences |
-| [**GetUserIdPresencesSource**](PresenceApi.md#getuseridpresencessource) | **GET** /api/v2/users/{userId}/presences/{source} | Get a user&#39;s Presence |
-| [**PatchUserIdPresencesSource**](PresenceApi.md#patchuseridpresencessource) | **PATCH** /api/v2/users/{userId}/presences/{source} | Patch a user&#39;s Presence |
+| [**GetUserIdPresencesSourceId**](PresenceApi.md#getuseridpresencessourceid) | **GET** /api/v2/users/{userId}/presences/{sourceId} | Get a user&#39;s Presence |
+| [**PatchUserIdPresencesSourceId**](PresenceApi.md#patchuseridpresencessourceid) | **PATCH** /api/v2/users/{userId}/presences/{sourceId} | Patch a user&#39;s Presence |
 | [**PostPresencedefinitions**](PresenceApi.md#postpresencedefinitions) | **POST** /api/v2/presencedefinitions | Create an OrganizationPresence |
 | [**PutPresenceId**](PresenceApi.md#putpresenceid) | **PUT** /api/v2/presencedefinitions/{presenceId} | Update an OrganizationPresence |
 {: class="table table-striped"}
@@ -180,8 +180,8 @@ namespace Example
 
 [**OrganizationPresenceEntityListing**](OrganizationPresenceEntityListing.md)
 
-<a name="GetUserIdPresencesSource"></a>
-## [**UserPresence**](UserPresence.html) GetUserIdPresencesSource (string userId, string source)
+<a name="GetUserIdPresencesSourceId"></a>
+## [**UserPresence**](UserPresence.html) GetUserIdPresencesSourceId (string userId, string sourceId)
 
 Get a user's Presence
 
@@ -197,7 +197,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class GetUserIdPresencesSourceExample
+    public class GetUserIdPresencesSourceIdExample
     {
         public void main()
         {
@@ -207,17 +207,17 @@ namespace Example
 
             var apiInstance = new PresenceApi();
             var userId = userId_example;  // string | user Id
-            var source = source_example;  // string | source
+            var sourceId = sourceId_example;  // string | Source
 
             try
             {
                 // Get a user's Presence
-                UserPresence result = apiInstance.GetUserIdPresencesSource(userId, source);
+                UserPresence result = apiInstance.GetUserIdPresencesSourceId(userId, sourceId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling PresenceApi.GetUserIdPresencesSource: " + e.Message );
+                Debug.Print("Exception when calling PresenceApi.GetUserIdPresencesSourceId: " + e.Message );
             }
         }
     }
@@ -230,15 +230,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| user Id |  |
-| **source** | **string**| source |  |
+| **sourceId** | **string**| Source |  |
 {: class="table table-striped"}
 
 ### Return type
 
 [**UserPresence**](UserPresence.md)
 
-<a name="PatchUserIdPresencesSource"></a>
-## [**UserPresence**](UserPresence.html) PatchUserIdPresencesSource (string userId, string source, UserPresence body = null)
+<a name="PatchUserIdPresencesSourceId"></a>
+## [**UserPresence**](UserPresence.html) PatchUserIdPresencesSourceId (string userId, string sourceId, UserPresence body = null)
 
 Patch a user's Presence
 
@@ -254,7 +254,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class PatchUserIdPresencesSourceExample
+    public class PatchUserIdPresencesSourceIdExample
     {
         public void main()
         {
@@ -264,18 +264,18 @@ namespace Example
 
             var apiInstance = new PresenceApi();
             var userId = userId_example;  // string | user Id
-            var source = source_example;  // string | source
+            var sourceId = sourceId_example;  // string | Source
             var body = new UserPresence(); // UserPresence |  (optional) 
 
             try
             {
                 // Patch a user's Presence
-                UserPresence result = apiInstance.PatchUserIdPresencesSource(userId, source, body);
+                UserPresence result = apiInstance.PatchUserIdPresencesSourceId(userId, sourceId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling PresenceApi.PatchUserIdPresencesSource: " + e.Message );
+                Debug.Print("Exception when calling PresenceApi.PatchUserIdPresencesSourceId: " + e.Message );
             }
         }
     }
@@ -288,7 +288,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| user Id |  |
-| **source** | **string**| source |  |
+| **sourceId** | **string**| Source |  |
 | **body** | [**UserPresence**](UserPresence.md)|  | [optional]  |
 {: class="table table-striped"}
 

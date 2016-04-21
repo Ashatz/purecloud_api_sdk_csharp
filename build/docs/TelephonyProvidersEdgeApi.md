@@ -67,11 +67,13 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetProvidersEdgesTrunkbasesettingsAvailablemetabases**](TelephonyProvidersEdgeApi.md#getprovidersedgestrunkbasesettingsavailablemetabases) | **GET** /api/v2/telephony/providers/edges/trunkbasesettings/availablemetabases | Get a list of available makes and models to create a new Trunk Base Settings |
 | [**GetProvidersEdgesTrunkbasesettingsTemplate**](TelephonyProvidersEdgeApi.md#getprovidersedgestrunkbasesettingstemplate) | **GET** /api/v2/telephony/providers/edges/trunkbasesettings/template | Get a Trunk Base Settings instance template from a given make and model. This object can then be modified and saved as a new Trunk Base Settings instance |
 | [**GetProvidersEdgesTrunkbasesettingsTrunkbasesettingsId**](TelephonyProvidersEdgeApi.md#getprovidersedgestrunkbasesettingstrunkbasesettingsid) | **GET** /api/v2/telephony/providers/edges/trunkbasesettings/{trunkBaseSettingsId} | Get a Trunk Base Settings object by ID |
+| [**GetProvidersEdgesTrunks**](TelephonyProvidersEdgeApi.md#getprovidersedgestrunks) | **GET** /api/v2/telephony/providers/edges/trunks | Get the list of available trunks. |
+| [**GetProvidersEdgesTrunksTrunkId**](TelephonyProvidersEdgeApi.md#getprovidersedgestrunkstrunkid) | **GET** /api/v2/telephony/providers/edges/trunks/{trunkId} | Get a Trunk by ID |
 | [**GetSchemasEdgesVnext**](TelephonyProvidersEdgeApi.md#getschemasedgesvnext) | **GET** /api/v2/configuration/schemas/edges/vnext | Lists available schema categories |
 | [**GetSchemasEdgesVnextSchemacategory**](TelephonyProvidersEdgeApi.md#getschemasedgesvnextschemacategory) | **GET** /api/v2/configuration/schemas/edges/vnext/{schemaCategory} | List schemas of a specific category |
 | [**GetSchemasEdgesVnextSchemacategorySchematype**](TelephonyProvidersEdgeApi.md#getschemasedgesvnextschemacategoryschematype) | **GET** /api/v2/configuration/schemas/edges/vnext/{schemaCategory}/{schemaType} | List schemas of a specific category |
 | [**GetSchemasEdgesVnextSchemacategorySchematypeSchemaId**](TelephonyProvidersEdgeApi.md#getschemasedgesvnextschemacategoryschematypeschemaid) | **GET** /api/v2/configuration/schemas/edges/vnext/{schemaCategory}/{schemaType}/{schemaId} | Get a json schema |
-| [**GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensionMetadataId**](TelephonyProvidersEdgeApi.md#getschemasedgesvnextschemacategoryschematypeschemaidextensionmetadataid) | **GET** /api/v2/configuration/schemas/edges/vnext/{schemaCategory}/{schemaType}/{schemaId}/{extension}/{metadataId} | Get metadata for a schema |
+| [**GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensiontypeMetadataId**](TelephonyProvidersEdgeApi.md#getschemasedgesvnextschemacategoryschematypeschemaidextensiontypemetadataid) | **GET** /api/v2/configuration/schemas/edges/vnext/{schemaCategory}/{schemaType}/{schemaId}/{extensionType}/{metadataId} | Get metadata for a schema |
 | [**PostProvidersEdges**](TelephonyProvidersEdgeApi.md#postprovidersedges) | **POST** /api/v2/telephony/providers/edges | Create a edge. |
 | [**PostProvidersEdgesAddressvalidation**](TelephonyProvidersEdgeApi.md#postprovidersedgesaddressvalidation) | **POST** /api/v2/telephony/providers/edges/addressvalidation | Validates a street address |
 | [**PostProvidersEdgesCertificateauthorities**](TelephonyProvidersEdgeApi.md#postprovidersedgescertificateauthorities) | **POST** /api/v2/telephony/providers/edges/certificateauthorities | Create a certificate authority. |
@@ -3699,6 +3701,128 @@ namespace Example
 
 [**TrunkBase**](TrunkBase.md)
 
+<a name="GetProvidersEdgesTrunks"></a>
+## [**TrunkEntityListing**](TrunkEntityListing.html) GetProvidersEdgesTrunks (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string edgeId = null, string trunkBaseId = null, string trunkType = null)
+
+Get the list of available trunks.
+
+Trunks are created by assigning trunk base settings to an Edge or Edge Group.
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetProvidersEdgesTrunksExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new TelephonyProvidersEdgeApi();
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var sortBy = sortBy_example;  // string | Value by which to sort (optional)  (default to name)
+            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to ASC)
+            var edgeId = edgeId_example;  // string | Filter by Edge Ids (optional) 
+            var trunkBaseId = trunkBaseId_example;  // string | Filter by Trunk Base Ids (optional) 
+            var trunkType = trunkType_example;  // string | Filter by a Trunk type (optional) 
+
+            try
+            {
+                // Get the list of available trunks.
+                TrunkEntityListing result = apiInstance.GetProvidersEdgesTrunks(pageNumber, pageSize, sortBy, sortOrder, edgeId, trunkBaseId, trunkType);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetProvidersEdgesTrunks: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **sortBy** | **string**| Value by which to sort | [optional] [default to name] |
+| **sortOrder** | **string**| Sort order | [optional] [default to ASC] |
+| **edgeId** | **string**| Filter by Edge Ids | [optional]  |
+| **trunkBaseId** | **string**| Filter by Trunk Base Ids | [optional]  |
+| **trunkType** | **string**| Filter by a Trunk type | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**TrunkEntityListing**](TrunkEntityListing.md)
+
+<a name="GetProvidersEdgesTrunksTrunkId"></a>
+## [**Trunk**](Trunk.html) GetProvidersEdgesTrunksTrunkId (string trunkId)
+
+Get a Trunk by ID
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetProvidersEdgesTrunksTrunkIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new TelephonyProvidersEdgeApi();
+            var trunkId = trunkId_example;  // string | Trunk ID
+
+            try
+            {
+                // Get a Trunk by ID
+                Trunk result = apiInstance.GetProvidersEdgesTrunksTrunkId(trunkId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetProvidersEdgesTrunksTrunkId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **trunkId** | **string**| Trunk ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**Trunk**](Trunk.md)
+
 <a name="GetSchemasEdgesVnext"></a>
 ## [**SchemaCategoryEntityListing**](SchemaCategoryEntityListing.html) GetSchemasEdgesVnext (int? pageSize = null, int? pageNumber = null)
 
@@ -3935,8 +4059,8 @@ namespace Example
 
 [**Organization**](Organization.md)
 
-<a name="GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensionMetadataId"></a>
-## [**Organization**](Organization.html) GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensionMetadataId (string schemaCategory, string schemaType, string schemaId, string extension, string metadataId, string type = null)
+<a name="GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensiontypeMetadataId"></a>
+## [**Organization**](Organization.html) GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensiontypeMetadataId (string schemaCategory, string schemaType, string schemaId, string extensionType, string metadataId, string type = null)
 
 Get metadata for a schema
 
@@ -3952,7 +4076,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensionMetadataIdExample
+    public class GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensiontypeMetadataIdExample
     {
         public void main()
         {
@@ -3964,19 +4088,19 @@ namespace Example
             var schemaCategory = schemaCategory_example;  // string | Schema category
             var schemaType = schemaType_example;  // string | Schema type
             var schemaId = schemaId_example;  // string | Schema ID
-            var extension = extension_example;  // string | extension
+            var extensionType = extensionType_example;  // string | extension
             var metadataId = metadataId_example;  // string | Metadata ID
             var type = type_example;  // string | Type (optional) 
 
             try
             {
                 // Get metadata for a schema
-                Organization result = apiInstance.GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensionMetadataId(schemaCategory, schemaType, schemaId, extension, metadataId, type);
+                Organization result = apiInstance.GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensiontypeMetadataId(schemaCategory, schemaType, schemaId, extensionType, metadataId, type);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensionMetadataId: " + e.Message );
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensiontypeMetadataId: " + e.Message );
             }
         }
     }
@@ -3991,7 +4115,7 @@ namespace Example
 | **schemaCategory** | **string**| Schema category |  |
 | **schemaType** | **string**| Schema type |  |
 | **schemaId** | **string**| Schema ID |  |
-| **extension** | **string**| extension |  |
+| **extensionType** | **string**| extension |  |
 | **metadataId** | **string**| Metadata ID |  |
 | **type** | **string**| Type | [optional]  |
 {: class="table table-striped"}

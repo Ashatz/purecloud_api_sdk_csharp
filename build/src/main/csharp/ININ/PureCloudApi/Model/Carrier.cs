@@ -28,7 +28,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Services">Services.</param>
         /// <param name="Address">Address.</param>
 
-        public Carrier(string Name = null, AccountManager AccountManager = null, Support Support = null, NocSupport NocSupport = null, List<Service> Services = nullCarrierAddress Address = null)
+        public Carrier(string Name = null, AccountManager AccountManager = null, Support Support = null, NocSupport NocSupport = null, List<Service> Services = null, CarrierAddress Address = null)
         {
             this.Name = Name;
             this.AccountManager = AccountManager;

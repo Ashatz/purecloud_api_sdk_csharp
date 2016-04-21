@@ -79,7 +79,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="MediaType">MediaType.</param>
         /// <param name="Type">Type.</param>
 
-        public Contact(string Address = nullMediaTypeEnum? MediaType = null, TypeEnum? Type = null)
+        public Contact(string Address = null, MediaTypeEnum? MediaType = null, TypeEnum? Type = null)
         {
             this.Address = Address;
             this.MediaType = MediaType;

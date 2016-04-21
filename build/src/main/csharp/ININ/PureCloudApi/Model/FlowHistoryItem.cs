@@ -86,7 +86,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="HistoryEventType">The type of the history event being reported. (required).</param>
         /// <param name="Success">Whether or not the flow item was successful (if a &#39;notification&#39; event this will default to true) (required) (default to false).</param>
 
-        public FlowHistoryItem(DateTime? HistoryEventTime = null, FlowState State = null, WorkItem WorkItem = null, User User = null, Queue Queue = null, List<DataItem> HistoryEventData = null, HistoryEventTypeEnum? HistoryEventType = null, bool? Success = null)
+        public FlowHistoryItem(DateTime? HistoryEventTime = null, FlowState State = null, WorkItem WorkItem = null, User User = null, Queue Queue = null, List<FlowHistoryDataItem> HistoryEventData = null, HistoryEventTypeEnum? HistoryEventType = null, bool? Success = null)
         {
             // to ensure "HistoryEventTime" is required (not null)
             if (HistoryEventTime == null)
@@ -164,7 +164,7 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <value>Data elements associated with this history event.</value>
         [DataMember(Name="historyEventData", EmitDefaultValue=false)]
-        public List<DataItem> HistoryEventData { get; set; }
+        public List<FlowHistoryDataItem> HistoryEventData { get; set; }
     
         /// <summary>
         /// Whether or not the flow item was successful (if a &#39;notification&#39; event this will default to true)

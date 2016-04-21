@@ -7,8 +7,8 @@ title: RestErrorDetail
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Error** | **string** |  | [optional] |
-| **Details** | **string** |  | [optional] |
+| **Error** | **string** | name of the error | |
+| **Details** | **string** | additional information regarding the error | [optional] |
 {: class="table table-striped"}
 
 

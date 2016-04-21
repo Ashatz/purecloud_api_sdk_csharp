@@ -54,17 +54,6 @@ namespace ININ.PureCloudApi.Test
 
         
         /// <summary>
-        /// Test DeleteMe
-        /// </summary>
-        [Test]
-        public void DeleteMeTest()
-        {
-            // TODO: add unit test for the method 'DeleteMe'
-            var response = instance.DeleteMe();
-            Assert.IsInstanceOf<string> (response, "response is string");
-        }
-        
-        /// <summary>
         /// Test GetMe
         /// </summary>
         [Test]
@@ -72,18 +61,6 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'GetMe'
             var response = instance.GetMe();
-            Assert.IsInstanceOf<Organization> (response, "response is Organization");
-        }
-        
-        /// <summary>
-        /// Test PutMe
-        /// </summary>
-        [Test]
-        public void PutMeTest()
-        {
-            // TODO: add unit test for the method 'PutMe'
-            Organization body = null; // TODO: replace null with proper value
-            var response = instance.PutMe(body);
             Assert.IsInstanceOf<Organization> (response, "response is Organization");
         }
         

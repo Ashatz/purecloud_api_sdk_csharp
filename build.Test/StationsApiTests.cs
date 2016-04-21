@@ -54,26 +54,26 @@ namespace ININ.PureCloudApi.Test
 
         
         /// <summary>
-        /// Test DeleteIdAssociateduser
+        /// Test DeleteStationIdAssociateduser
         /// </summary>
         [Test]
-        public void DeleteIdAssociateduserTest()
+        public void DeleteStationIdAssociateduserTest()
         {
-            // TODO: add unit test for the method 'DeleteIdAssociateduser'
-            string id = null; // TODO: replace null with proper value
-            var response = instance.DeleteIdAssociateduser(id);
+            // TODO: add unit test for the method 'DeleteStationIdAssociateduser'
+            string stationId = null; // TODO: replace null with proper value
+            var response = instance.DeleteStationIdAssociateduser(stationId);
             Assert.IsInstanceOf<string> (response, "response is string");
         }
         
         /// <summary>
-        /// Test GetId
+        /// Test GetStationId
         /// </summary>
         [Test]
-        public void GetIdTest()
+        public void GetStationIdTest()
         {
-            // TODO: add unit test for the method 'GetId'
-            string id = null; // TODO: replace null with proper value
-            var response = instance.GetId(id);
+            // TODO: add unit test for the method 'GetStationId'
+            string stationId = null; // TODO: replace null with proper value
+            var response = instance.GetStationId(stationId);
             Assert.IsInstanceOf<Station> (response, "response is Station");
         }
         

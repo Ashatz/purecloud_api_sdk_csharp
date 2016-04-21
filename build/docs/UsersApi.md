@@ -15,7 +15,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetUserIdCallforwarding**](UsersApi.md#getuseridcallforwarding) | **GET** /api/v2/users/{userId}/callforwarding | Get a user&#39;s CallForwarding |
 | [**GetUserIdGeolocationsClientId**](UsersApi.md#getuseridgeolocationsclientid) | **GET** /api/v2/users/{userId}/geolocations/{clientId} | Get a user&#39;s Geolocation |
 | [**GetUserIdOutofoffice**](UsersApi.md#getuseridoutofoffice) | **GET** /api/v2/users/{userId}/outofoffice | Get a OutOfOffice |
-| [**GetUserIdPresencesSource**](UsersApi.md#getuseridpresencessource) | **GET** /api/v2/users/{userId}/presences/{source} | Get a user&#39;s Presence |
 | [**GetUserIdQueues**](UsersApi.md#getuseridqueues) | **GET** /api/v2/users/{userId}/queues | Get queues for user |
 | [**GetUserIdRoles**](UsersApi.md#getuseridroles) | **GET** /api/v2/users/{userId}/roles | Returns a listing of roles and permissions for a user. |
 | [**GetUserIdRoutingskills**](UsersApi.md#getuseridroutingskills) | **GET** /api/v2/users/{userId}/routingskills | List routing skills for user |
@@ -25,7 +24,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchUserId**](UsersApi.md#patchuserid) | **PATCH** /api/v2/users/{userId} | Update user |
 | [**PatchUserIdCallforwarding**](UsersApi.md#patchuseridcallforwarding) | **PATCH** /api/v2/users/{userId}/callforwarding | Patch a user&#39;s CallForwarding |
 | [**PatchUserIdGeolocationsClientId**](UsersApi.md#patchuseridgeolocationsclientid) | **PATCH** /api/v2/users/{userId}/geolocations/{clientId} | Patch a user&#39;s Geolocation |
-| [**PatchUserIdPresencesSource**](UsersApi.md#patchuseridpresencessource) | **PATCH** /api/v2/users/{userId}/presences/{source} | Patch a user&#39;s Presence |
 | [**PatchUserIdQueues**](UsersApi.md#patchuseridqueues) | **PATCH** /api/v2/users/{userId}/queues | Join or unjoin a set of queues for a user |
 | [**PatchUserIdQueuesQueueId**](UsersApi.md#patchuseridqueuesqueueid) | **PATCH** /api/v2/users/{userId}/queues/{queueId} | Join or unjoin a queue for a user |
 | [**PostSearch**](UsersApi.md#postsearch) | **POST** /api/v2/users/search | Search |
@@ -651,63 +649,6 @@ namespace Example
 
 [**OutOfOffice**](OutOfOffice.md)
 
-<a name="GetUserIdPresencesSource"></a>
-## [**UserPresence**](UserPresence.html) GetUserIdPresencesSource (string userId, string source)
-
-Get a user's Presence
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class GetUserIdPresencesSourceExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new UsersApi();
-            var userId = userId_example;  // string | user Id
-            var source = source_example;  // string | source
-
-            try
-            {
-                // Get a user's Presence
-                UserPresence result = apiInstance.GetUserIdPresencesSource(userId, source);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling UsersApi.GetUserIdPresencesSource: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **userId** | **string**| user Id |  |
-| **source** | **string**| source |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**UserPresence**](UserPresence.md)
-
 <a name="GetUserIdQueues"></a>
 ## [**UserQueueEntityListing**](UserQueueEntityListing.html) GetUserIdQueues (string userId, int? pageSize = null, int? pageNumber = null)
 
@@ -1228,65 +1169,6 @@ namespace Example
 ### Return type
 
 [**Geolocation**](Geolocation.md)
-
-<a name="PatchUserIdPresencesSource"></a>
-## [**UserPresence**](UserPresence.html) PatchUserIdPresencesSource (string userId, string source, UserPresence body = null)
-
-Patch a user's Presence
-
-The presence object can be patched one of three ways. Option 1: Set the 'primary' property to true. This will set the 'source' defined in the path as the user's primary presence source. Option 2: Provide the presenceDefinition value. Option 3: Provide the message value.  Option 1 can be combined with Option2 and/or Option 3.
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class PatchUserIdPresencesSourceExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new UsersApi();
-            var userId = userId_example;  // string | user Id
-            var source = source_example;  // string | source
-            var body = new UserPresence(); // UserPresence |  (optional) 
-
-            try
-            {
-                // Patch a user's Presence
-                UserPresence result = apiInstance.PatchUserIdPresencesSource(userId, source, body);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling UsersApi.PatchUserIdPresencesSource: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **userId** | **string**| user Id |  |
-| **source** | **string**| source |  |
-| **body** | [**UserPresence**](UserPresence.md)|  | [optional]  |
-{: class="table table-striped"}
-
-### Return type
-
-[**UserPresence**](UserPresence.md)
 
 <a name="PatchUserIdQueues"></a>
 ## [**UserQueue**](UserQueue.html) PatchUserIdQueues (string userId, List<UserQueue> body = null)

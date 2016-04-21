@@ -108,6 +108,18 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test PostGroups
+        /// </summary>
+        [Test]
+        public void PostGroupsTest()
+        {
+            // TODO: add unit test for the method 'PostGroups'
+            Group body = null; // TODO: replace null with proper value
+            var response = instance.PostGroups(body);
+            Assert.IsInstanceOf<Group> (response, "response is Group");
+        }
+        
+        /// <summary>
         /// Test PostSearch
         /// </summary>
         [Test]

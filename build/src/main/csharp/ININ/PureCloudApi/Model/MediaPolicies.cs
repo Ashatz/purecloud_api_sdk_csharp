@@ -25,7 +25,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="ChatPolicy">Conditions and actions for chats.</param>
         /// <param name="EmailPolicy">Conditions and actions for emails.</param>
 
-        public MediaPolicies(MediaPolicy CallPolicy = null, MediaPolicy ChatPolicy = null, MediaPolicy EmailPolicy = null)
+        public MediaPolicies(CallMediaPolicy CallPolicy = null, ChatMediaPolicy ChatPolicy = null, EmailMediaPolicy EmailPolicy = null)
         {
             this.CallPolicy = CallPolicy;
             this.ChatPolicy = ChatPolicy;
@@ -39,21 +39,21 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <value>Conditions and actions for calls</value>
         [DataMember(Name="callPolicy", EmitDefaultValue=false)]
-        public MediaPolicy CallPolicy { get; set; }
+        public CallMediaPolicy CallPolicy { get; set; }
     
         /// <summary>
         /// Conditions and actions for chats
         /// </summary>
         /// <value>Conditions and actions for chats</value>
         [DataMember(Name="chatPolicy", EmitDefaultValue=false)]
-        public MediaPolicy ChatPolicy { get; set; }
+        public ChatMediaPolicy ChatPolicy { get; set; }
     
         /// <summary>
         /// Conditions and actions for emails
         /// </summary>
         /// <value>Conditions and actions for emails</value>
         [DataMember(Name="emailPolicy", EmitDefaultValue=false)]
-        public MediaPolicy EmailPolicy { get; set; }
+        public EmailMediaPolicy EmailPolicy { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object

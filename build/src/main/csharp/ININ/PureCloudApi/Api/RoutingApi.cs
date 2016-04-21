@@ -15,38 +15,15 @@ namespace ININ.PureCloudApi.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Delete a route
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="domain">email domain</param>
-        /// <param name="id">route ID</param>
-        /// <returns>string</returns>
-        string DeleteEmailDomainsDomainRoutesId (string domain, string id);
-
-        /// <summary>
-        /// Delete a route
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="domain">email domain</param>
-        /// <param name="id">route ID</param>
-        /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteEmailDomainsDomainRoutesIdWithHttpInfo (string domain, string id);
-        /// <summary>
         /// Delete a domain
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">domain ID</param>
+        /// <param name="domainId">domain ID</param>
         /// <returns>string</returns>
-        string DeleteEmailDomainsId (string id);
+        string DeleteEmailDomainsDomainId (string domainId);
 
         /// <summary>
         /// Delete a domain
@@ -55,9 +32,32 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">domain ID</param>
+        /// <param name="domainId">domain ID</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteEmailDomainsIdWithHttpInfo (string id);
+        ApiResponse<string> DeleteEmailDomainsDomainIdWithHttpInfo (string domainId);
+        /// <summary>
+        /// Delete a route
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainName">email domain</param>
+        /// <param name="routeId">route ID</param>
+        /// <returns>string</returns>
+        string DeleteEmailDomainsDomainnameRoutesRouteId (string domainName, string routeId);
+
+        /// <summary>
+        /// Delete a route
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainName">email domain</param>
+        /// <param name="routeId">route ID</param>
+        /// <returns>ApiResponse of string</returns>
+        ApiResponse<string> DeleteEmailDomainsDomainnameRoutesRouteIdWithHttpInfo (string domainName, string routeId);
         /// <summary>
         /// Delete a queue
         /// </summary>
@@ -237,9 +237,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="domain">email domain</param>
+        /// <param name="domainName">email domain</param>
         /// <returns>InboundRouteEntityListing</returns>
-        InboundRouteEntityListing GetEmailDomainsDomainRoutes (string domain);
+        InboundRouteEntityListing GetEmailDomainsDomainnameRoutes (string domainName);
 
         /// <summary>
         /// Get routes
@@ -248,9 +248,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="domain">email domain</param>
+        /// <param name="domainName">email domain</param>
         /// <returns>ApiResponse of InboundRouteEntityListing</returns>
-        ApiResponse<InboundRouteEntityListing> GetEmailDomainsDomainRoutesWithHttpInfo (string domain);
+        ApiResponse<InboundRouteEntityListing> GetEmailDomainsDomainnameRoutesWithHttpInfo (string domainName);
         /// <summary>
         /// Get a route
         /// </summary>
@@ -258,10 +258,10 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="domain">email domain</param>
-        /// <param name="id">route ID</param>
+        /// <param name="domainName">email domain</param>
+        /// <param name="routeId">route ID</param>
         /// <returns>InboundRoute</returns>
-        InboundRoute GetEmailDomainsDomainRoutesId (string domain, string id);
+        InboundRoute GetEmailDomainsDomainnameRoutesRouteId (string domainName, string routeId);
 
         /// <summary>
         /// Get a route
@@ -270,10 +270,10 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="domain">email domain</param>
-        /// <param name="id">route ID</param>
+        /// <param name="domainName">email domain</param>
+        /// <param name="routeId">route ID</param>
         /// <returns>ApiResponse of InboundRoute</returns>
-        ApiResponse<InboundRoute> GetEmailDomainsDomainRoutesIdWithHttpInfo (string domain, string id);
+        ApiResponse<InboundRoute> GetEmailDomainsDomainnameRoutesRouteIdWithHttpInfo (string domainName, string routeId);
         /// <summary>
         /// Get email setup
         /// </summary>
@@ -632,10 +632,10 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="domain">email domain</param>
+        /// <param name="domainName">email domain</param>
         /// <param name="body">Route (optional)</param>
         /// <returns>InboundRoute</returns>
-        InboundRoute PostEmailDomainsDomainRoutes (string domain, InboundRoute body = null);
+        InboundRoute PostEmailDomainsDomainnameRoutes (string domainName, InboundRoute body = null);
 
         /// <summary>
         /// Create a route
@@ -644,10 +644,10 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="domain">email domain</param>
+        /// <param name="domainName">email domain</param>
         /// <param name="body">Route (optional)</param>
         /// <returns>ApiResponse of InboundRoute</returns>
-        ApiResponse<InboundRoute> PostEmailDomainsDomainRoutesWithHttpInfo (string domain, InboundRoute body = null);
+        ApiResponse<InboundRoute> PostEmailDomainsDomainnameRoutesWithHttpInfo (string domainName, InboundRoute body = null);
         /// <summary>
         /// Create queue
         /// </summary>
@@ -812,11 +812,11 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="domain">email domain</param>
-        /// <param name="id">route ID</param>
+        /// <param name="domainName">email domain</param>
+        /// <param name="routeId">route ID</param>
         /// <param name="body">Route (optional)</param>
         /// <returns>InboundRoute</returns>
-        InboundRoute PutEmailDomainsDomainRoutesId (string domain, string id, InboundRoute body = null);
+        InboundRoute PutEmailDomainsDomainnameRoutesRouteId (string domainName, string routeId, InboundRoute body = null);
 
         /// <summary>
         /// Update a route
@@ -825,11 +825,11 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="domain">email domain</param>
-        /// <param name="id">route ID</param>
+        /// <param name="domainName">email domain</param>
+        /// <param name="routeId">route ID</param>
         /// <param name="body">Route (optional)</param>
         /// <returns>ApiResponse of InboundRoute</returns>
-        ApiResponse<InboundRoute> PutEmailDomainsDomainRoutesIdWithHttpInfo (string domain, string id, InboundRoute body = null);
+        ApiResponse<InboundRoute> PutEmailDomainsDomainnameRoutesRouteIdWithHttpInfo (string domainName, string routeId, InboundRoute body = null);
         /// <summary>
         /// Update a queue
         /// </summary>
@@ -923,38 +923,15 @@ namespace ININ.PureCloudApi.Api
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Delete a route
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="domain">email domain</param>
-        /// <param name="id">route ID</param>
-        /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteEmailDomainsDomainRoutesIdAsync (string domain, string id);
-
-        /// <summary>
-        /// Delete a route
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="domain">email domain</param>
-        /// <param name="id">route ID</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteEmailDomainsDomainRoutesIdAsyncWithHttpInfo (string domain, string id);
-        /// <summary>
         /// Delete a domain
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">domain ID</param>
+        /// <param name="domainId">domain ID</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteEmailDomainsIdAsync (string id);
+        System.Threading.Tasks.Task<string> DeleteEmailDomainsDomainIdAsync (string domainId);
 
         /// <summary>
         /// Delete a domain
@@ -963,9 +940,32 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">domain ID</param>
+        /// <param name="domainId">domain ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteEmailDomainsIdAsyncWithHttpInfo (string id);
+        System.Threading.Tasks.Task<ApiResponse<string>> DeleteEmailDomainsDomainIdAsyncWithHttpInfo (string domainId);
+        /// <summary>
+        /// Delete a route
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainName">email domain</param>
+        /// <param name="routeId">route ID</param>
+        /// <returns>Task of string</returns>
+        System.Threading.Tasks.Task<string> DeleteEmailDomainsDomainnameRoutesRouteIdAsync (string domainName, string routeId);
+
+        /// <summary>
+        /// Delete a route
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainName">email domain</param>
+        /// <param name="routeId">route ID</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        System.Threading.Tasks.Task<ApiResponse<string>> DeleteEmailDomainsDomainnameRoutesRouteIdAsyncWithHttpInfo (string domainName, string routeId);
         /// <summary>
         /// Delete a queue
         /// </summary>
@@ -1145,9 +1145,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="domain">email domain</param>
+        /// <param name="domainName">email domain</param>
         /// <returns>Task of InboundRouteEntityListing</returns>
-        System.Threading.Tasks.Task<InboundRouteEntityListing> GetEmailDomainsDomainRoutesAsync (string domain);
+        System.Threading.Tasks.Task<InboundRouteEntityListing> GetEmailDomainsDomainnameRoutesAsync (string domainName);
 
         /// <summary>
         /// Get routes
@@ -1156,9 +1156,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="domain">email domain</param>
+        /// <param name="domainName">email domain</param>
         /// <returns>Task of ApiResponse (InboundRouteEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InboundRouteEntityListing>> GetEmailDomainsDomainRoutesAsyncWithHttpInfo (string domain);
+        System.Threading.Tasks.Task<ApiResponse<InboundRouteEntityListing>> GetEmailDomainsDomainnameRoutesAsyncWithHttpInfo (string domainName);
         /// <summary>
         /// Get a route
         /// </summary>
@@ -1166,10 +1166,10 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="domain">email domain</param>
-        /// <param name="id">route ID</param>
+        /// <param name="domainName">email domain</param>
+        /// <param name="routeId">route ID</param>
         /// <returns>Task of InboundRoute</returns>
-        System.Threading.Tasks.Task<InboundRoute> GetEmailDomainsDomainRoutesIdAsync (string domain, string id);
+        System.Threading.Tasks.Task<InboundRoute> GetEmailDomainsDomainnameRoutesRouteIdAsync (string domainName, string routeId);
 
         /// <summary>
         /// Get a route
@@ -1178,10 +1178,10 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="domain">email domain</param>
-        /// <param name="id">route ID</param>
+        /// <param name="domainName">email domain</param>
+        /// <param name="routeId">route ID</param>
         /// <returns>Task of ApiResponse (InboundRoute)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InboundRoute>> GetEmailDomainsDomainRoutesIdAsyncWithHttpInfo (string domain, string id);
+        System.Threading.Tasks.Task<ApiResponse<InboundRoute>> GetEmailDomainsDomainnameRoutesRouteIdAsyncWithHttpInfo (string domainName, string routeId);
         /// <summary>
         /// Get email setup
         /// </summary>
@@ -1540,10 +1540,10 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="domain">email domain</param>
+        /// <param name="domainName">email domain</param>
         /// <param name="body">Route (optional)</param>
         /// <returns>Task of InboundRoute</returns>
-        System.Threading.Tasks.Task<InboundRoute> PostEmailDomainsDomainRoutesAsync (string domain, InboundRoute body = null);
+        System.Threading.Tasks.Task<InboundRoute> PostEmailDomainsDomainnameRoutesAsync (string domainName, InboundRoute body = null);
 
         /// <summary>
         /// Create a route
@@ -1552,10 +1552,10 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="domain">email domain</param>
+        /// <param name="domainName">email domain</param>
         /// <param name="body">Route (optional)</param>
         /// <returns>Task of ApiResponse (InboundRoute)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InboundRoute>> PostEmailDomainsDomainRoutesAsyncWithHttpInfo (string domain, InboundRoute body = null);
+        System.Threading.Tasks.Task<ApiResponse<InboundRoute>> PostEmailDomainsDomainnameRoutesAsyncWithHttpInfo (string domainName, InboundRoute body = null);
         /// <summary>
         /// Create queue
         /// </summary>
@@ -1720,11 +1720,11 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="domain">email domain</param>
-        /// <param name="id">route ID</param>
+        /// <param name="domainName">email domain</param>
+        /// <param name="routeId">route ID</param>
         /// <param name="body">Route (optional)</param>
         /// <returns>Task of InboundRoute</returns>
-        System.Threading.Tasks.Task<InboundRoute> PutEmailDomainsDomainRoutesIdAsync (string domain, string id, InboundRoute body = null);
+        System.Threading.Tasks.Task<InboundRoute> PutEmailDomainsDomainnameRoutesRouteIdAsync (string domainName, string routeId, InboundRoute body = null);
 
         /// <summary>
         /// Update a route
@@ -1733,11 +1733,11 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="domain">email domain</param>
-        /// <param name="id">route ID</param>
+        /// <param name="domainName">email domain</param>
+        /// <param name="routeId">route ID</param>
         /// <param name="body">Route (optional)</param>
         /// <returns>Task of ApiResponse (InboundRoute)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InboundRoute>> PutEmailDomainsDomainRoutesIdAsyncWithHttpInfo (string domain, string id, InboundRoute body = null);
+        System.Threading.Tasks.Task<ApiResponse<InboundRoute>> PutEmailDomainsDomainnameRoutesRouteIdAsyncWithHttpInfo (string domainName, string routeId, InboundRoute body = null);
         /// <summary>
         /// Update a queue
         /// </summary>
@@ -1919,35 +1919,30 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Delete a route 
+        /// Delete a domain 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="domain">email domain</param>
-        /// <param name="id">route ID</param>
+        /// <param name="domainId">domain ID</param>
         /// <returns>string</returns>
-        public string DeleteEmailDomainsDomainRoutesId (string domain, string id)
+        public string DeleteEmailDomainsDomainId (string domainId)
         {
-             ApiResponse<string> localVarResponse = DeleteEmailDomainsDomainRoutesIdWithHttpInfo(domain, id);
+             ApiResponse<string> localVarResponse = DeleteEmailDomainsDomainIdWithHttpInfo(domainId);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Delete a route 
+        /// Delete a domain 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="domain">email domain</param>
-        /// <param name="id">route ID</param>
+        /// <param name="domainId">domain ID</param>
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteEmailDomainsDomainRoutesIdWithHttpInfo (string domain, string id)
+        public ApiResponse< string > DeleteEmailDomainsDomainIdWithHttpInfo (string domainId)
         {
-            // verify the required parameter 'domain' is set
-            if (domain == null)
-                throw new ApiException(400, "Missing required parameter 'domain' when calling RoutingApi->DeleteEmailDomainsDomainRoutesId");
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling RoutingApi->DeleteEmailDomainsDomainRoutesId");
+            // verify the required parameter 'domainId' is set
+            if (domainId == null)
+                throw new ApiException(400, "Missing required parameter 'domainId' when calling RoutingApi->DeleteEmailDomainsDomainId");
 
-            var localVarPath = "/api/v2/routing/email/domains/{domain}/routes/{id}";
+            var localVarPath = "/api/v2/routing/email/domains/{domainId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1972,8 +1967,7 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (domain != null) localVarPathParams.Add("domain", Configuration.ApiClient.ParameterToString(domain)); // path parameter
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (domainId != null) localVarPathParams.Add("domainId", Configuration.ApiClient.ParameterToString(domainId)); // path parameter
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -1990,9 +1984,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteEmailDomainsDomainRoutesId: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteEmailDomainsDomainId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteEmailDomainsDomainRoutesId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteEmailDomainsDomainId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2001,36 +1995,31 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Delete a route 
+        /// Delete a domain 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="domain">email domain</param>
-        /// <param name="id">route ID</param>
+        /// <param name="domainId">domain ID</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteEmailDomainsDomainRoutesIdAsync (string domain, string id)
+        public async System.Threading.Tasks.Task<string> DeleteEmailDomainsDomainIdAsync (string domainId)
         {
-             ApiResponse<string> localVarResponse = await DeleteEmailDomainsDomainRoutesIdAsyncWithHttpInfo(domain, id);
+             ApiResponse<string> localVarResponse = await DeleteEmailDomainsDomainIdAsyncWithHttpInfo(domainId);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Delete a route 
+        /// Delete a domain 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="domain">email domain</param>
-        /// <param name="id">route ID</param>
+        /// <param name="domainId">domain ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteEmailDomainsDomainRoutesIdAsyncWithHttpInfo (string domain, string id)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteEmailDomainsDomainIdAsyncWithHttpInfo (string domainId)
         {
-            // verify the required parameter 'domain' is set
-            if (domain == null)
-                throw new ApiException(400, "Missing required parameter 'domain' when calling RoutingApi->DeleteEmailDomainsDomainRoutesId");
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling RoutingApi->DeleteEmailDomainsDomainRoutesId");
+            // verify the required parameter 'domainId' is set
+            if (domainId == null)
+                throw new ApiException(400, "Missing required parameter 'domainId' when calling RoutingApi->DeleteEmailDomainsDomainId");
 
-            var localVarPath = "/api/v2/routing/email/domains/{domain}/routes/{id}";
+            var localVarPath = "/api/v2/routing/email/domains/{domainId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2055,8 +2044,7 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (domain != null) localVarPathParams.Add("domain", Configuration.ApiClient.ParameterToString(domain)); // path parameter
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (domainId != null) localVarPathParams.Add("domainId", Configuration.ApiClient.ParameterToString(domainId)); // path parameter
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -2073,9 +2061,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteEmailDomainsDomainRoutesId: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteEmailDomainsDomainId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteEmailDomainsDomainRoutesId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteEmailDomainsDomainId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2084,30 +2072,35 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Delete a domain 
+        /// Delete a route 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">domain ID</param>
+        /// <param name="domainName">email domain</param>
+        /// <param name="routeId">route ID</param>
         /// <returns>string</returns>
-        public string DeleteEmailDomainsId (string id)
+        public string DeleteEmailDomainsDomainnameRoutesRouteId (string domainName, string routeId)
         {
-             ApiResponse<string> localVarResponse = DeleteEmailDomainsIdWithHttpInfo(id);
+             ApiResponse<string> localVarResponse = DeleteEmailDomainsDomainnameRoutesRouteIdWithHttpInfo(domainName, routeId);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Delete a domain 
+        /// Delete a route 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">domain ID</param>
+        /// <param name="domainName">email domain</param>
+        /// <param name="routeId">route ID</param>
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteEmailDomainsIdWithHttpInfo (string id)
+        public ApiResponse< string > DeleteEmailDomainsDomainnameRoutesRouteIdWithHttpInfo (string domainName, string routeId)
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling RoutingApi->DeleteEmailDomainsId");
+            // verify the required parameter 'domainName' is set
+            if (domainName == null)
+                throw new ApiException(400, "Missing required parameter 'domainName' when calling RoutingApi->DeleteEmailDomainsDomainnameRoutesRouteId");
+            // verify the required parameter 'routeId' is set
+            if (routeId == null)
+                throw new ApiException(400, "Missing required parameter 'routeId' when calling RoutingApi->DeleteEmailDomainsDomainnameRoutesRouteId");
 
-            var localVarPath = "/api/v2/routing/email/domains/{id}";
+            var localVarPath = "/api/v2/routing/email/domains/{domainName}/routes/{routeId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2132,7 +2125,8 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (domainName != null) localVarPathParams.Add("domainName", Configuration.ApiClient.ParameterToString(domainName)); // path parameter
+            if (routeId != null) localVarPathParams.Add("routeId", Configuration.ApiClient.ParameterToString(routeId)); // path parameter
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -2149,9 +2143,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteEmailDomainsId: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteEmailDomainsDomainnameRoutesRouteId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteEmailDomainsId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteEmailDomainsDomainnameRoutesRouteId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2160,31 +2154,36 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Delete a domain 
+        /// Delete a route 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">domain ID</param>
+        /// <param name="domainName">email domain</param>
+        /// <param name="routeId">route ID</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteEmailDomainsIdAsync (string id)
+        public async System.Threading.Tasks.Task<string> DeleteEmailDomainsDomainnameRoutesRouteIdAsync (string domainName, string routeId)
         {
-             ApiResponse<string> localVarResponse = await DeleteEmailDomainsIdAsyncWithHttpInfo(id);
+             ApiResponse<string> localVarResponse = await DeleteEmailDomainsDomainnameRoutesRouteIdAsyncWithHttpInfo(domainName, routeId);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Delete a domain 
+        /// Delete a route 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">domain ID</param>
+        /// <param name="domainName">email domain</param>
+        /// <param name="routeId">route ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteEmailDomainsIdAsyncWithHttpInfo (string id)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteEmailDomainsDomainnameRoutesRouteIdAsyncWithHttpInfo (string domainName, string routeId)
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling RoutingApi->DeleteEmailDomainsId");
+            // verify the required parameter 'domainName' is set
+            if (domainName == null)
+                throw new ApiException(400, "Missing required parameter 'domainName' when calling RoutingApi->DeleteEmailDomainsDomainnameRoutesRouteId");
+            // verify the required parameter 'routeId' is set
+            if (routeId == null)
+                throw new ApiException(400, "Missing required parameter 'routeId' when calling RoutingApi->DeleteEmailDomainsDomainnameRoutesRouteId");
 
-            var localVarPath = "/api/v2/routing/email/domains/{id}";
+            var localVarPath = "/api/v2/routing/email/domains/{domainName}/routes/{routeId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2209,7 +2208,8 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (domainName != null) localVarPathParams.Add("domainName", Configuration.ApiClient.ParameterToString(domainName)); // path parameter
+            if (routeId != null) localVarPathParams.Add("routeId", Configuration.ApiClient.ParameterToString(routeId)); // path parameter
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -2226,9 +2226,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteEmailDomainsId: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteEmailDomainsDomainnameRoutesRouteId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteEmailDomainsId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteEmailDomainsDomainnameRoutesRouteId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3482,11 +3482,11 @@ namespace ININ.PureCloudApi.Api
         /// Get routes 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="domain">email domain</param>
+        /// <param name="domainName">email domain</param>
         /// <returns>InboundRouteEntityListing</returns>
-        public InboundRouteEntityListing GetEmailDomainsDomainRoutes (string domain)
+        public InboundRouteEntityListing GetEmailDomainsDomainnameRoutes (string domainName)
         {
-             ApiResponse<InboundRouteEntityListing> localVarResponse = GetEmailDomainsDomainRoutesWithHttpInfo(domain);
+             ApiResponse<InboundRouteEntityListing> localVarResponse = GetEmailDomainsDomainnameRoutesWithHttpInfo(domainName);
              return localVarResponse.Data;
         }
 
@@ -3494,15 +3494,15 @@ namespace ININ.PureCloudApi.Api
         /// Get routes 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="domain">email domain</param>
+        /// <param name="domainName">email domain</param>
         /// <returns>ApiResponse of InboundRouteEntityListing</returns>
-        public ApiResponse< InboundRouteEntityListing > GetEmailDomainsDomainRoutesWithHttpInfo (string domain)
+        public ApiResponse< InboundRouteEntityListing > GetEmailDomainsDomainnameRoutesWithHttpInfo (string domainName)
         {
-            // verify the required parameter 'domain' is set
-            if (domain == null)
-                throw new ApiException(400, "Missing required parameter 'domain' when calling RoutingApi->GetEmailDomainsDomainRoutes");
+            // verify the required parameter 'domainName' is set
+            if (domainName == null)
+                throw new ApiException(400, "Missing required parameter 'domainName' when calling RoutingApi->GetEmailDomainsDomainnameRoutes");
 
-            var localVarPath = "/api/v2/routing/email/domains/{domain}/routes";
+            var localVarPath = "/api/v2/routing/email/domains/{domainName}/routes";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -3527,7 +3527,7 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (domain != null) localVarPathParams.Add("domain", Configuration.ApiClient.ParameterToString(domain)); // path parameter
+            if (domainName != null) localVarPathParams.Add("domainName", Configuration.ApiClient.ParameterToString(domainName)); // path parameter
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -3544,9 +3544,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetEmailDomainsDomainRoutes: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GetEmailDomainsDomainnameRoutes: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetEmailDomainsDomainRoutes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GetEmailDomainsDomainnameRoutes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<InboundRouteEntityListing>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3558,11 +3558,11 @@ namespace ININ.PureCloudApi.Api
         /// Get routes 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="domain">email domain</param>
+        /// <param name="domainName">email domain</param>
         /// <returns>Task of InboundRouteEntityListing</returns>
-        public async System.Threading.Tasks.Task<InboundRouteEntityListing> GetEmailDomainsDomainRoutesAsync (string domain)
+        public async System.Threading.Tasks.Task<InboundRouteEntityListing> GetEmailDomainsDomainnameRoutesAsync (string domainName)
         {
-             ApiResponse<InboundRouteEntityListing> localVarResponse = await GetEmailDomainsDomainRoutesAsyncWithHttpInfo(domain);
+             ApiResponse<InboundRouteEntityListing> localVarResponse = await GetEmailDomainsDomainnameRoutesAsyncWithHttpInfo(domainName);
              return localVarResponse.Data;
 
         }
@@ -3571,15 +3571,15 @@ namespace ININ.PureCloudApi.Api
         /// Get routes 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="domain">email domain</param>
+        /// <param name="domainName">email domain</param>
         /// <returns>Task of ApiResponse (InboundRouteEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InboundRouteEntityListing>> GetEmailDomainsDomainRoutesAsyncWithHttpInfo (string domain)
+        public async System.Threading.Tasks.Task<ApiResponse<InboundRouteEntityListing>> GetEmailDomainsDomainnameRoutesAsyncWithHttpInfo (string domainName)
         {
-            // verify the required parameter 'domain' is set
-            if (domain == null)
-                throw new ApiException(400, "Missing required parameter 'domain' when calling RoutingApi->GetEmailDomainsDomainRoutes");
+            // verify the required parameter 'domainName' is set
+            if (domainName == null)
+                throw new ApiException(400, "Missing required parameter 'domainName' when calling RoutingApi->GetEmailDomainsDomainnameRoutes");
 
-            var localVarPath = "/api/v2/routing/email/domains/{domain}/routes";
+            var localVarPath = "/api/v2/routing/email/domains/{domainName}/routes";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -3604,7 +3604,7 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (domain != null) localVarPathParams.Add("domain", Configuration.ApiClient.ParameterToString(domain)); // path parameter
+            if (domainName != null) localVarPathParams.Add("domainName", Configuration.ApiClient.ParameterToString(domainName)); // path parameter
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -3621,9 +3621,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetEmailDomainsDomainRoutes: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GetEmailDomainsDomainnameRoutes: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetEmailDomainsDomainRoutes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GetEmailDomainsDomainnameRoutes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<InboundRouteEntityListing>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3635,12 +3635,12 @@ namespace ININ.PureCloudApi.Api
         /// Get a route 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="domain">email domain</param>
-        /// <param name="id">route ID</param>
+        /// <param name="domainName">email domain</param>
+        /// <param name="routeId">route ID</param>
         /// <returns>InboundRoute</returns>
-        public InboundRoute GetEmailDomainsDomainRoutesId (string domain, string id)
+        public InboundRoute GetEmailDomainsDomainnameRoutesRouteId (string domainName, string routeId)
         {
-             ApiResponse<InboundRoute> localVarResponse = GetEmailDomainsDomainRoutesIdWithHttpInfo(domain, id);
+             ApiResponse<InboundRoute> localVarResponse = GetEmailDomainsDomainnameRoutesRouteIdWithHttpInfo(domainName, routeId);
              return localVarResponse.Data;
         }
 
@@ -3648,19 +3648,19 @@ namespace ININ.PureCloudApi.Api
         /// Get a route 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="domain">email domain</param>
-        /// <param name="id">route ID</param>
+        /// <param name="domainName">email domain</param>
+        /// <param name="routeId">route ID</param>
         /// <returns>ApiResponse of InboundRoute</returns>
-        public ApiResponse< InboundRoute > GetEmailDomainsDomainRoutesIdWithHttpInfo (string domain, string id)
+        public ApiResponse< InboundRoute > GetEmailDomainsDomainnameRoutesRouteIdWithHttpInfo (string domainName, string routeId)
         {
-            // verify the required parameter 'domain' is set
-            if (domain == null)
-                throw new ApiException(400, "Missing required parameter 'domain' when calling RoutingApi->GetEmailDomainsDomainRoutesId");
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling RoutingApi->GetEmailDomainsDomainRoutesId");
+            // verify the required parameter 'domainName' is set
+            if (domainName == null)
+                throw new ApiException(400, "Missing required parameter 'domainName' when calling RoutingApi->GetEmailDomainsDomainnameRoutesRouteId");
+            // verify the required parameter 'routeId' is set
+            if (routeId == null)
+                throw new ApiException(400, "Missing required parameter 'routeId' when calling RoutingApi->GetEmailDomainsDomainnameRoutesRouteId");
 
-            var localVarPath = "/api/v2/routing/email/domains/{domain}/routes/{id}";
+            var localVarPath = "/api/v2/routing/email/domains/{domainName}/routes/{routeId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -3685,8 +3685,8 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (domain != null) localVarPathParams.Add("domain", Configuration.ApiClient.ParameterToString(domain)); // path parameter
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (domainName != null) localVarPathParams.Add("domainName", Configuration.ApiClient.ParameterToString(domainName)); // path parameter
+            if (routeId != null) localVarPathParams.Add("routeId", Configuration.ApiClient.ParameterToString(routeId)); // path parameter
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -3703,9 +3703,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetEmailDomainsDomainRoutesId: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GetEmailDomainsDomainnameRoutesRouteId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetEmailDomainsDomainRoutesId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GetEmailDomainsDomainnameRoutesRouteId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<InboundRoute>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3717,12 +3717,12 @@ namespace ININ.PureCloudApi.Api
         /// Get a route 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="domain">email domain</param>
-        /// <param name="id">route ID</param>
+        /// <param name="domainName">email domain</param>
+        /// <param name="routeId">route ID</param>
         /// <returns>Task of InboundRoute</returns>
-        public async System.Threading.Tasks.Task<InboundRoute> GetEmailDomainsDomainRoutesIdAsync (string domain, string id)
+        public async System.Threading.Tasks.Task<InboundRoute> GetEmailDomainsDomainnameRoutesRouteIdAsync (string domainName, string routeId)
         {
-             ApiResponse<InboundRoute> localVarResponse = await GetEmailDomainsDomainRoutesIdAsyncWithHttpInfo(domain, id);
+             ApiResponse<InboundRoute> localVarResponse = await GetEmailDomainsDomainnameRoutesRouteIdAsyncWithHttpInfo(domainName, routeId);
              return localVarResponse.Data;
 
         }
@@ -3731,19 +3731,19 @@ namespace ININ.PureCloudApi.Api
         /// Get a route 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="domain">email domain</param>
-        /// <param name="id">route ID</param>
+        /// <param name="domainName">email domain</param>
+        /// <param name="routeId">route ID</param>
         /// <returns>Task of ApiResponse (InboundRoute)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InboundRoute>> GetEmailDomainsDomainRoutesIdAsyncWithHttpInfo (string domain, string id)
+        public async System.Threading.Tasks.Task<ApiResponse<InboundRoute>> GetEmailDomainsDomainnameRoutesRouteIdAsyncWithHttpInfo (string domainName, string routeId)
         {
-            // verify the required parameter 'domain' is set
-            if (domain == null)
-                throw new ApiException(400, "Missing required parameter 'domain' when calling RoutingApi->GetEmailDomainsDomainRoutesId");
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling RoutingApi->GetEmailDomainsDomainRoutesId");
+            // verify the required parameter 'domainName' is set
+            if (domainName == null)
+                throw new ApiException(400, "Missing required parameter 'domainName' when calling RoutingApi->GetEmailDomainsDomainnameRoutesRouteId");
+            // verify the required parameter 'routeId' is set
+            if (routeId == null)
+                throw new ApiException(400, "Missing required parameter 'routeId' when calling RoutingApi->GetEmailDomainsDomainnameRoutesRouteId");
 
-            var localVarPath = "/api/v2/routing/email/domains/{domain}/routes/{id}";
+            var localVarPath = "/api/v2/routing/email/domains/{domainName}/routes/{routeId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -3768,8 +3768,8 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (domain != null) localVarPathParams.Add("domain", Configuration.ApiClient.ParameterToString(domain)); // path parameter
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (domainName != null) localVarPathParams.Add("domainName", Configuration.ApiClient.ParameterToString(domainName)); // path parameter
+            if (routeId != null) localVarPathParams.Add("routeId", Configuration.ApiClient.ParameterToString(routeId)); // path parameter
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -3786,9 +3786,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetEmailDomainsDomainRoutesId: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GetEmailDomainsDomainnameRoutesRouteId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetEmailDomainsDomainRoutesId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GetEmailDomainsDomainnameRoutesRouteId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<InboundRoute>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6221,12 +6221,12 @@ namespace ININ.PureCloudApi.Api
         /// Create a route 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="domain">email domain</param>
+        /// <param name="domainName">email domain</param>
         /// <param name="body">Route (optional)</param>
         /// <returns>InboundRoute</returns>
-        public InboundRoute PostEmailDomainsDomainRoutes (string domain, InboundRoute body = null)
+        public InboundRoute PostEmailDomainsDomainnameRoutes (string domainName, InboundRoute body = null)
         {
-             ApiResponse<InboundRoute> localVarResponse = PostEmailDomainsDomainRoutesWithHttpInfo(domain, body);
+             ApiResponse<InboundRoute> localVarResponse = PostEmailDomainsDomainnameRoutesWithHttpInfo(domainName, body);
              return localVarResponse.Data;
         }
 
@@ -6234,16 +6234,16 @@ namespace ININ.PureCloudApi.Api
         /// Create a route 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="domain">email domain</param>
+        /// <param name="domainName">email domain</param>
         /// <param name="body">Route (optional)</param>
         /// <returns>ApiResponse of InboundRoute</returns>
-        public ApiResponse< InboundRoute > PostEmailDomainsDomainRoutesWithHttpInfo (string domain, InboundRoute body = null)
+        public ApiResponse< InboundRoute > PostEmailDomainsDomainnameRoutesWithHttpInfo (string domainName, InboundRoute body = null)
         {
-            // verify the required parameter 'domain' is set
-            if (domain == null)
-                throw new ApiException(400, "Missing required parameter 'domain' when calling RoutingApi->PostEmailDomainsDomainRoutes");
+            // verify the required parameter 'domainName' is set
+            if (domainName == null)
+                throw new ApiException(400, "Missing required parameter 'domainName' when calling RoutingApi->PostEmailDomainsDomainnameRoutes");
 
-            var localVarPath = "/api/v2/routing/email/domains/{domain}/routes";
+            var localVarPath = "/api/v2/routing/email/domains/{domainName}/routes";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -6268,7 +6268,7 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (domain != null) localVarPathParams.Add("domain", Configuration.ApiClient.ParameterToString(domain)); // path parameter
+            if (domainName != null) localVarPathParams.Add("domainName", Configuration.ApiClient.ParameterToString(domainName)); // path parameter
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -6293,9 +6293,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostEmailDomainsDomainRoutes: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling PostEmailDomainsDomainnameRoutes: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PostEmailDomainsDomainRoutes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PostEmailDomainsDomainnameRoutes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<InboundRoute>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6307,12 +6307,12 @@ namespace ININ.PureCloudApi.Api
         /// Create a route 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="domain">email domain</param>
+        /// <param name="domainName">email domain</param>
         /// <param name="body">Route (optional)</param>
         /// <returns>Task of InboundRoute</returns>
-        public async System.Threading.Tasks.Task<InboundRoute> PostEmailDomainsDomainRoutesAsync (string domain, InboundRoute body = null)
+        public async System.Threading.Tasks.Task<InboundRoute> PostEmailDomainsDomainnameRoutesAsync (string domainName, InboundRoute body = null)
         {
-             ApiResponse<InboundRoute> localVarResponse = await PostEmailDomainsDomainRoutesAsyncWithHttpInfo(domain, body);
+             ApiResponse<InboundRoute> localVarResponse = await PostEmailDomainsDomainnameRoutesAsyncWithHttpInfo(domainName, body);
              return localVarResponse.Data;
 
         }
@@ -6321,16 +6321,16 @@ namespace ININ.PureCloudApi.Api
         /// Create a route 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="domain">email domain</param>
+        /// <param name="domainName">email domain</param>
         /// <param name="body">Route (optional)</param>
         /// <returns>Task of ApiResponse (InboundRoute)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InboundRoute>> PostEmailDomainsDomainRoutesAsyncWithHttpInfo (string domain, InboundRoute body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<InboundRoute>> PostEmailDomainsDomainnameRoutesAsyncWithHttpInfo (string domainName, InboundRoute body = null)
         {
-            // verify the required parameter 'domain' is set
-            if (domain == null)
-                throw new ApiException(400, "Missing required parameter 'domain' when calling RoutingApi->PostEmailDomainsDomainRoutes");
+            // verify the required parameter 'domainName' is set
+            if (domainName == null)
+                throw new ApiException(400, "Missing required parameter 'domainName' when calling RoutingApi->PostEmailDomainsDomainnameRoutes");
 
-            var localVarPath = "/api/v2/routing/email/domains/{domain}/routes";
+            var localVarPath = "/api/v2/routing/email/domains/{domainName}/routes";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -6355,7 +6355,7 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (domain != null) localVarPathParams.Add("domain", Configuration.ApiClient.ParameterToString(domain)); // path parameter
+            if (domainName != null) localVarPathParams.Add("domainName", Configuration.ApiClient.ParameterToString(domainName)); // path parameter
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -6380,9 +6380,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostEmailDomainsDomainRoutes: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling PostEmailDomainsDomainnameRoutes: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PostEmailDomainsDomainRoutes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PostEmailDomainsDomainnameRoutes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<InboundRoute>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -7575,13 +7575,13 @@ namespace ININ.PureCloudApi.Api
         /// Update a route 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="domain">email domain</param>
-        /// <param name="id">route ID</param>
+        /// <param name="domainName">email domain</param>
+        /// <param name="routeId">route ID</param>
         /// <param name="body">Route (optional)</param>
         /// <returns>InboundRoute</returns>
-        public InboundRoute PutEmailDomainsDomainRoutesId (string domain, string id, InboundRoute body = null)
+        public InboundRoute PutEmailDomainsDomainnameRoutesRouteId (string domainName, string routeId, InboundRoute body = null)
         {
-             ApiResponse<InboundRoute> localVarResponse = PutEmailDomainsDomainRoutesIdWithHttpInfo(domain, id, body);
+             ApiResponse<InboundRoute> localVarResponse = PutEmailDomainsDomainnameRoutesRouteIdWithHttpInfo(domainName, routeId, body);
              return localVarResponse.Data;
         }
 
@@ -7589,20 +7589,20 @@ namespace ININ.PureCloudApi.Api
         /// Update a route 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="domain">email domain</param>
-        /// <param name="id">route ID</param>
+        /// <param name="domainName">email domain</param>
+        /// <param name="routeId">route ID</param>
         /// <param name="body">Route (optional)</param>
         /// <returns>ApiResponse of InboundRoute</returns>
-        public ApiResponse< InboundRoute > PutEmailDomainsDomainRoutesIdWithHttpInfo (string domain, string id, InboundRoute body = null)
+        public ApiResponse< InboundRoute > PutEmailDomainsDomainnameRoutesRouteIdWithHttpInfo (string domainName, string routeId, InboundRoute body = null)
         {
-            // verify the required parameter 'domain' is set
-            if (domain == null)
-                throw new ApiException(400, "Missing required parameter 'domain' when calling RoutingApi->PutEmailDomainsDomainRoutesId");
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling RoutingApi->PutEmailDomainsDomainRoutesId");
+            // verify the required parameter 'domainName' is set
+            if (domainName == null)
+                throw new ApiException(400, "Missing required parameter 'domainName' when calling RoutingApi->PutEmailDomainsDomainnameRoutesRouteId");
+            // verify the required parameter 'routeId' is set
+            if (routeId == null)
+                throw new ApiException(400, "Missing required parameter 'routeId' when calling RoutingApi->PutEmailDomainsDomainnameRoutesRouteId");
 
-            var localVarPath = "/api/v2/routing/email/domains/{domain}/routes/{id}";
+            var localVarPath = "/api/v2/routing/email/domains/{domainName}/routes/{routeId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -7627,8 +7627,8 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (domain != null) localVarPathParams.Add("domain", Configuration.ApiClient.ParameterToString(domain)); // path parameter
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (domainName != null) localVarPathParams.Add("domainName", Configuration.ApiClient.ParameterToString(domainName)); // path parameter
+            if (routeId != null) localVarPathParams.Add("routeId", Configuration.ApiClient.ParameterToString(routeId)); // path parameter
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -7653,9 +7653,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PutEmailDomainsDomainRoutesId: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling PutEmailDomainsDomainnameRoutesRouteId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PutEmailDomainsDomainRoutesId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PutEmailDomainsDomainnameRoutesRouteId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<InboundRoute>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -7667,13 +7667,13 @@ namespace ININ.PureCloudApi.Api
         /// Update a route 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="domain">email domain</param>
-        /// <param name="id">route ID</param>
+        /// <param name="domainName">email domain</param>
+        /// <param name="routeId">route ID</param>
         /// <param name="body">Route (optional)</param>
         /// <returns>Task of InboundRoute</returns>
-        public async System.Threading.Tasks.Task<InboundRoute> PutEmailDomainsDomainRoutesIdAsync (string domain, string id, InboundRoute body = null)
+        public async System.Threading.Tasks.Task<InboundRoute> PutEmailDomainsDomainnameRoutesRouteIdAsync (string domainName, string routeId, InboundRoute body = null)
         {
-             ApiResponse<InboundRoute> localVarResponse = await PutEmailDomainsDomainRoutesIdAsyncWithHttpInfo(domain, id, body);
+             ApiResponse<InboundRoute> localVarResponse = await PutEmailDomainsDomainnameRoutesRouteIdAsyncWithHttpInfo(domainName, routeId, body);
              return localVarResponse.Data;
 
         }
@@ -7682,20 +7682,20 @@ namespace ININ.PureCloudApi.Api
         /// Update a route 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="domain">email domain</param>
-        /// <param name="id">route ID</param>
+        /// <param name="domainName">email domain</param>
+        /// <param name="routeId">route ID</param>
         /// <param name="body">Route (optional)</param>
         /// <returns>Task of ApiResponse (InboundRoute)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InboundRoute>> PutEmailDomainsDomainRoutesIdAsyncWithHttpInfo (string domain, string id, InboundRoute body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<InboundRoute>> PutEmailDomainsDomainnameRoutesRouteIdAsyncWithHttpInfo (string domainName, string routeId, InboundRoute body = null)
         {
-            // verify the required parameter 'domain' is set
-            if (domain == null)
-                throw new ApiException(400, "Missing required parameter 'domain' when calling RoutingApi->PutEmailDomainsDomainRoutesId");
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling RoutingApi->PutEmailDomainsDomainRoutesId");
+            // verify the required parameter 'domainName' is set
+            if (domainName == null)
+                throw new ApiException(400, "Missing required parameter 'domainName' when calling RoutingApi->PutEmailDomainsDomainnameRoutesRouteId");
+            // verify the required parameter 'routeId' is set
+            if (routeId == null)
+                throw new ApiException(400, "Missing required parameter 'routeId' when calling RoutingApi->PutEmailDomainsDomainnameRoutesRouteId");
 
-            var localVarPath = "/api/v2/routing/email/domains/{domain}/routes/{id}";
+            var localVarPath = "/api/v2/routing/email/domains/{domainName}/routes/{routeId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -7720,8 +7720,8 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (domain != null) localVarPathParams.Add("domain", Configuration.ApiClient.ParameterToString(domain)); // path parameter
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (domainName != null) localVarPathParams.Add("domainName", Configuration.ApiClient.ParameterToString(domainName)); // path parameter
+            if (routeId != null) localVarPathParams.Add("routeId", Configuration.ApiClient.ParameterToString(routeId)); // path parameter
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -7746,9 +7746,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PutEmailDomainsDomainRoutesId: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling PutEmailDomainsDomainnameRoutesRouteId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PutEmailDomainsDomainRoutesId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PutEmailDomainsDomainnameRoutesRouteId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<InboundRoute>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

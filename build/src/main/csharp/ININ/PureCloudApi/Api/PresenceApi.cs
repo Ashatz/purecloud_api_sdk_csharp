@@ -87,9 +87,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user Id</param>
-        /// <param name="source">source</param>
+        /// <param name="sourceId">Source</param>
         /// <returns>UserPresence</returns>
-        UserPresence GetUserIdPresencesSource (string userId, string source);
+        UserPresence GetUserIdPresencesSourceId (string userId, string sourceId);
 
         /// <summary>
         /// Get a user&#39;s Presence
@@ -99,9 +99,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user Id</param>
-        /// <param name="source">source</param>
+        /// <param name="sourceId">Source</param>
         /// <returns>ApiResponse of UserPresence</returns>
-        ApiResponse<UserPresence> GetUserIdPresencesSourceWithHttpInfo (string userId, string source);
+        ApiResponse<UserPresence> GetUserIdPresencesSourceIdWithHttpInfo (string userId, string sourceId);
         /// <summary>
         /// Patch a user&#39;s Presence
         /// </summary>
@@ -110,10 +110,10 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user Id</param>
-        /// <param name="source">source</param>
+        /// <param name="sourceId">Source</param>
         /// <param name="body"> (optional)</param>
         /// <returns>UserPresence</returns>
-        UserPresence PatchUserIdPresencesSource (string userId, string source, UserPresence body = null);
+        UserPresence PatchUserIdPresencesSourceId (string userId, string sourceId, UserPresence body = null);
 
         /// <summary>
         /// Patch a user&#39;s Presence
@@ -123,10 +123,10 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user Id</param>
-        /// <param name="source">source</param>
+        /// <param name="sourceId">Source</param>
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of UserPresence</returns>
-        ApiResponse<UserPresence> PatchUserIdPresencesSourceWithHttpInfo (string userId, string source, UserPresence body = null);
+        ApiResponse<UserPresence> PatchUserIdPresencesSourceIdWithHttpInfo (string userId, string sourceId, UserPresence body = null);
         /// <summary>
         /// Create an OrganizationPresence
         /// </summary>
@@ -246,9 +246,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user Id</param>
-        /// <param name="source">source</param>
+        /// <param name="sourceId">Source</param>
         /// <returns>Task of UserPresence</returns>
-        System.Threading.Tasks.Task<UserPresence> GetUserIdPresencesSourceAsync (string userId, string source);
+        System.Threading.Tasks.Task<UserPresence> GetUserIdPresencesSourceIdAsync (string userId, string sourceId);
 
         /// <summary>
         /// Get a user&#39;s Presence
@@ -258,9 +258,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user Id</param>
-        /// <param name="source">source</param>
+        /// <param name="sourceId">Source</param>
         /// <returns>Task of ApiResponse (UserPresence)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserPresence>> GetUserIdPresencesSourceAsyncWithHttpInfo (string userId, string source);
+        System.Threading.Tasks.Task<ApiResponse<UserPresence>> GetUserIdPresencesSourceIdAsyncWithHttpInfo (string userId, string sourceId);
         /// <summary>
         /// Patch a user&#39;s Presence
         /// </summary>
@@ -269,10 +269,10 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user Id</param>
-        /// <param name="source">source</param>
+        /// <param name="sourceId">Source</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of UserPresence</returns>
-        System.Threading.Tasks.Task<UserPresence> PatchUserIdPresencesSourceAsync (string userId, string source, UserPresence body = null);
+        System.Threading.Tasks.Task<UserPresence> PatchUserIdPresencesSourceIdAsync (string userId, string sourceId, UserPresence body = null);
 
         /// <summary>
         /// Patch a user&#39;s Presence
@@ -282,10 +282,10 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user Id</param>
-        /// <param name="source">source</param>
+        /// <param name="sourceId">Source</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (UserPresence)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserPresence>> PatchUserIdPresencesSourceAsyncWithHttpInfo (string userId, string source, UserPresence body = null);
+        System.Threading.Tasks.Task<ApiResponse<UserPresence>> PatchUserIdPresencesSourceIdAsyncWithHttpInfo (string userId, string sourceId, UserPresence body = null);
         /// <summary>
         /// Create an OrganizationPresence
         /// </summary>
@@ -884,11 +884,11 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user Id</param>
-        /// <param name="source">source</param>
+        /// <param name="sourceId">Source</param>
         /// <returns>UserPresence</returns>
-        public UserPresence GetUserIdPresencesSource (string userId, string source)
+        public UserPresence GetUserIdPresencesSourceId (string userId, string sourceId)
         {
-             ApiResponse<UserPresence> localVarResponse = GetUserIdPresencesSourceWithHttpInfo(userId, source);
+             ApiResponse<UserPresence> localVarResponse = GetUserIdPresencesSourceIdWithHttpInfo(userId, sourceId);
              return localVarResponse.Data;
         }
 
@@ -897,18 +897,18 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user Id</param>
-        /// <param name="source">source</param>
+        /// <param name="sourceId">Source</param>
         /// <returns>ApiResponse of UserPresence</returns>
-        public ApiResponse< UserPresence > GetUserIdPresencesSourceWithHttpInfo (string userId, string source)
+        public ApiResponse< UserPresence > GetUserIdPresencesSourceIdWithHttpInfo (string userId, string sourceId)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new ApiException(400, "Missing required parameter 'userId' when calling PresenceApi->GetUserIdPresencesSource");
-            // verify the required parameter 'source' is set
-            if (source == null)
-                throw new ApiException(400, "Missing required parameter 'source' when calling PresenceApi->GetUserIdPresencesSource");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling PresenceApi->GetUserIdPresencesSourceId");
+            // verify the required parameter 'sourceId' is set
+            if (sourceId == null)
+                throw new ApiException(400, "Missing required parameter 'sourceId' when calling PresenceApi->GetUserIdPresencesSourceId");
 
-            var localVarPath = "/api/v2/users/{userId}/presences/{source}";
+            var localVarPath = "/api/v2/users/{userId}/presences/{sourceId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -934,7 +934,7 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (userId != null) localVarPathParams.Add("userId", Configuration.ApiClient.ParameterToString(userId)); // path parameter
-            if (source != null) localVarPathParams.Add("source", Configuration.ApiClient.ParameterToString(source)); // path parameter
+            if (sourceId != null) localVarPathParams.Add("sourceId", Configuration.ApiClient.ParameterToString(sourceId)); // path parameter
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -951,9 +951,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetUserIdPresencesSource: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GetUserIdPresencesSourceId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetUserIdPresencesSource: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GetUserIdPresencesSourceId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<UserPresence>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -966,11 +966,11 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user Id</param>
-        /// <param name="source">source</param>
+        /// <param name="sourceId">Source</param>
         /// <returns>Task of UserPresence</returns>
-        public async System.Threading.Tasks.Task<UserPresence> GetUserIdPresencesSourceAsync (string userId, string source)
+        public async System.Threading.Tasks.Task<UserPresence> GetUserIdPresencesSourceIdAsync (string userId, string sourceId)
         {
-             ApiResponse<UserPresence> localVarResponse = await GetUserIdPresencesSourceAsyncWithHttpInfo(userId, source);
+             ApiResponse<UserPresence> localVarResponse = await GetUserIdPresencesSourceIdAsyncWithHttpInfo(userId, sourceId);
              return localVarResponse.Data;
 
         }
@@ -980,18 +980,18 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user Id</param>
-        /// <param name="source">source</param>
+        /// <param name="sourceId">Source</param>
         /// <returns>Task of ApiResponse (UserPresence)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UserPresence>> GetUserIdPresencesSourceAsyncWithHttpInfo (string userId, string source)
+        public async System.Threading.Tasks.Task<ApiResponse<UserPresence>> GetUserIdPresencesSourceIdAsyncWithHttpInfo (string userId, string sourceId)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new ApiException(400, "Missing required parameter 'userId' when calling PresenceApi->GetUserIdPresencesSource");
-            // verify the required parameter 'source' is set
-            if (source == null)
-                throw new ApiException(400, "Missing required parameter 'source' when calling PresenceApi->GetUserIdPresencesSource");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling PresenceApi->GetUserIdPresencesSourceId");
+            // verify the required parameter 'sourceId' is set
+            if (sourceId == null)
+                throw new ApiException(400, "Missing required parameter 'sourceId' when calling PresenceApi->GetUserIdPresencesSourceId");
 
-            var localVarPath = "/api/v2/users/{userId}/presences/{source}";
+            var localVarPath = "/api/v2/users/{userId}/presences/{sourceId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1017,7 +1017,7 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (userId != null) localVarPathParams.Add("userId", Configuration.ApiClient.ParameterToString(userId)); // path parameter
-            if (source != null) localVarPathParams.Add("source", Configuration.ApiClient.ParameterToString(source)); // path parameter
+            if (sourceId != null) localVarPathParams.Add("sourceId", Configuration.ApiClient.ParameterToString(sourceId)); // path parameter
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -1034,9 +1034,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetUserIdPresencesSource: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GetUserIdPresencesSourceId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetUserIdPresencesSource: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GetUserIdPresencesSourceId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<UserPresence>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1049,12 +1049,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user Id</param>
-        /// <param name="source">source</param>
+        /// <param name="sourceId">Source</param>
         /// <param name="body"> (optional)</param>
         /// <returns>UserPresence</returns>
-        public UserPresence PatchUserIdPresencesSource (string userId, string source, UserPresence body = null)
+        public UserPresence PatchUserIdPresencesSourceId (string userId, string sourceId, UserPresence body = null)
         {
-             ApiResponse<UserPresence> localVarResponse = PatchUserIdPresencesSourceWithHttpInfo(userId, source, body);
+             ApiResponse<UserPresence> localVarResponse = PatchUserIdPresencesSourceIdWithHttpInfo(userId, sourceId, body);
              return localVarResponse.Data;
         }
 
@@ -1063,19 +1063,19 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user Id</param>
-        /// <param name="source">source</param>
+        /// <param name="sourceId">Source</param>
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of UserPresence</returns>
-        public ApiResponse< UserPresence > PatchUserIdPresencesSourceWithHttpInfo (string userId, string source, UserPresence body = null)
+        public ApiResponse< UserPresence > PatchUserIdPresencesSourceIdWithHttpInfo (string userId, string sourceId, UserPresence body = null)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new ApiException(400, "Missing required parameter 'userId' when calling PresenceApi->PatchUserIdPresencesSource");
-            // verify the required parameter 'source' is set
-            if (source == null)
-                throw new ApiException(400, "Missing required parameter 'source' when calling PresenceApi->PatchUserIdPresencesSource");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling PresenceApi->PatchUserIdPresencesSourceId");
+            // verify the required parameter 'sourceId' is set
+            if (sourceId == null)
+                throw new ApiException(400, "Missing required parameter 'sourceId' when calling PresenceApi->PatchUserIdPresencesSourceId");
 
-            var localVarPath = "/api/v2/users/{userId}/presences/{source}";
+            var localVarPath = "/api/v2/users/{userId}/presences/{sourceId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1101,7 +1101,7 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (userId != null) localVarPathParams.Add("userId", Configuration.ApiClient.ParameterToString(userId)); // path parameter
-            if (source != null) localVarPathParams.Add("source", Configuration.ApiClient.ParameterToString(source)); // path parameter
+            if (sourceId != null) localVarPathParams.Add("sourceId", Configuration.ApiClient.ParameterToString(sourceId)); // path parameter
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -1126,9 +1126,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PatchUserIdPresencesSource: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling PatchUserIdPresencesSourceId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PatchUserIdPresencesSource: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PatchUserIdPresencesSourceId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<UserPresence>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1141,12 +1141,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user Id</param>
-        /// <param name="source">source</param>
+        /// <param name="sourceId">Source</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of UserPresence</returns>
-        public async System.Threading.Tasks.Task<UserPresence> PatchUserIdPresencesSourceAsync (string userId, string source, UserPresence body = null)
+        public async System.Threading.Tasks.Task<UserPresence> PatchUserIdPresencesSourceIdAsync (string userId, string sourceId, UserPresence body = null)
         {
-             ApiResponse<UserPresence> localVarResponse = await PatchUserIdPresencesSourceAsyncWithHttpInfo(userId, source, body);
+             ApiResponse<UserPresence> localVarResponse = await PatchUserIdPresencesSourceIdAsyncWithHttpInfo(userId, sourceId, body);
              return localVarResponse.Data;
 
         }
@@ -1156,19 +1156,19 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user Id</param>
-        /// <param name="source">source</param>
+        /// <param name="sourceId">Source</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (UserPresence)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UserPresence>> PatchUserIdPresencesSourceAsyncWithHttpInfo (string userId, string source, UserPresence body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<UserPresence>> PatchUserIdPresencesSourceIdAsyncWithHttpInfo (string userId, string sourceId, UserPresence body = null)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new ApiException(400, "Missing required parameter 'userId' when calling PresenceApi->PatchUserIdPresencesSource");
-            // verify the required parameter 'source' is set
-            if (source == null)
-                throw new ApiException(400, "Missing required parameter 'source' when calling PresenceApi->PatchUserIdPresencesSource");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling PresenceApi->PatchUserIdPresencesSourceId");
+            // verify the required parameter 'sourceId' is set
+            if (sourceId == null)
+                throw new ApiException(400, "Missing required parameter 'sourceId' when calling PresenceApi->PatchUserIdPresencesSourceId");
 
-            var localVarPath = "/api/v2/users/{userId}/presences/{source}";
+            var localVarPath = "/api/v2/users/{userId}/presences/{sourceId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1194,7 +1194,7 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (userId != null) localVarPathParams.Add("userId", Configuration.ApiClient.ParameterToString(userId)); // path parameter
-            if (source != null) localVarPathParams.Add("source", Configuration.ApiClient.ParameterToString(source)); // path parameter
+            if (sourceId != null) localVarPathParams.Add("sourceId", Configuration.ApiClient.ParameterToString(sourceId)); // path parameter
             if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -1219,9 +1219,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PatchUserIdPresencesSource: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling PatchUserIdPresencesSourceId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PatchUserIdPresencesSource: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PatchUserIdPresencesSourceId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<UserPresence>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

@@ -191,7 +191,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="AlertTypes">A collection of notification methods. &#x3D; [&#39;SMS&#39;, &#39;DEVICE&#39;, &#39;EMAIL&#39;] (required).</param>
         /// <param name="RuleUri">RuleUri.</param>
 
-        public InteractionStatsAlert(bool? Unread = nullList<User> NotificationUsers = null, List<string> AlertTypes = null, string RuleUri = null)
+        public InteractionStatsAlert(bool? Unread = null, List<User> NotificationUsers = null, List<string> AlertTypes = null, string RuleUri = null)
         {
             // to ensure "Unread" is required (not null)
             if (Unread == null)

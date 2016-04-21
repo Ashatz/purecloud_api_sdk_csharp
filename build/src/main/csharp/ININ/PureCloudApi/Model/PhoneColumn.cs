@@ -21,26 +21,44 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PhoneColumn" />class.
         /// </summary>
-        /// <param name="ColumnName">ColumnName.</param>
-        /// <param name="Type">Type.</param>
+        /// <param name="ColumnName">name of the phone column (required).</param>
+        /// <param name="Type">type of the phone column, for example, &#39;cell&#39; or &#39;home&#39; (required).</param>
 
         public PhoneColumn(string ColumnName = null, string Type = null)
         {
-            this.ColumnName = ColumnName;
-            this.Type = Type;
+            // to ensure "ColumnName" is required (not null)
+            if (ColumnName == null)
+            {
+                throw new InvalidDataException("ColumnName is a required property for PhoneColumn and cannot be null");
+            }
+            else
+            {
+                this.ColumnName = ColumnName;
+            }
+            // to ensure "Type" is required (not null)
+            if (Type == null)
+            {
+                throw new InvalidDataException("Type is a required property for PhoneColumn and cannot be null");
+            }
+            else
+            {
+                this.Type = Type;
+            }
             
         }
 
     
         /// <summary>
-        /// Gets or Sets ColumnName
+        /// name of the phone column
         /// </summary>
+        /// <value>name of the phone column</value>
         [DataMember(Name="columnName", EmitDefaultValue=false)]
         public string ColumnName { get; set; }
     
         /// <summary>
-        /// Gets or Sets Type
+        /// type of the phone column, for example, &#39;cell&#39; or &#39;home&#39;
         /// </summary>
+        /// <value>type of the phone column, for example, &#39;cell&#39; or &#39;home&#39;</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public string Type { get; set; }
     

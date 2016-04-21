@@ -15,6 +15,7 @@ title: AnalyticsSession
 | **Direction** | **string** |  | [optional] |
 | **Dnis** | **string** |  | [optional] |
 | **OutboundCampaignId** | **string** |  | [optional] |
+| **OutboundContactId** | **string** |  | [optional] |
 | **OutboundContactListId** | **string** |  | [optional] |
 | **DispositionAnalyzer** | **string** |  | [optional] |
 | **DispositionName** | **string** |  | [optional] |

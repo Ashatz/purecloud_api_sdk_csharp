@@ -4,8 +4,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteEmailDomainsDomainRoutesId**](RoutingApi.md#deleteemaildomainsdomainroutesid) | **DELETE** /api/v2/routing/email/domains/{domain}/routes/{id} | Delete a route |
-| [**DeleteEmailDomainsId**](RoutingApi.md#deleteemaildomainsid) | **DELETE** /api/v2/routing/email/domains/{id} | Delete a domain |
+| [**DeleteEmailDomainsDomainId**](RoutingApi.md#deleteemaildomainsdomainid) | **DELETE** /api/v2/routing/email/domains/{domainId} | Delete a domain |
+| [**DeleteEmailDomainsDomainnameRoutesRouteId**](RoutingApi.md#deleteemaildomainsdomainnameroutesrouteid) | **DELETE** /api/v2/routing/email/domains/{domainName}/routes/{routeId} | Delete a route |
 | [**DeleteQueuesQueueId**](RoutingApi.md#deletequeuesqueueid) | **DELETE** /api/v2/routing/queues/{queueId} | Delete a queue |
 | [**DeleteQueuesQueueIdUsersMemberId**](RoutingApi.md#deletequeuesqueueidusersmemberid) | **DELETE** /api/v2/routing/queues/{queueId}/users/{memberId} | Delete queue member |
 | [**DeleteQueuesQueueIdWrapupcodesCodeId**](RoutingApi.md#deletequeuesqueueidwrapupcodescodeid) | **DELETE** /api/v2/routing/queues/{queueId}/wrapupcodes/{codeId} | Delete a wrap-up code from a queue |
@@ -14,8 +14,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteUtilization**](RoutingApi.md#deleteutilization) | **DELETE** /api/v2/routing/utilization | Delete utilization settings and revert to system defaults. |
 | [**DeleteWrapupcodesCodeId**](RoutingApi.md#deletewrapupcodescodeid) | **DELETE** /api/v2/routing/wrapupcodes/{codeId} | Delete wrap-up code |
 | [**GetEmailDomains**](RoutingApi.md#getemaildomains) | **GET** /api/v2/routing/email/domains | Get domains |
-| [**GetEmailDomainsDomainRoutes**](RoutingApi.md#getemaildomainsdomainroutes) | **GET** /api/v2/routing/email/domains/{domain}/routes | Get routes |
-| [**GetEmailDomainsDomainRoutesId**](RoutingApi.md#getemaildomainsdomainroutesid) | **GET** /api/v2/routing/email/domains/{domain}/routes/{id} | Get a route |
+| [**GetEmailDomainsDomainnameRoutes**](RoutingApi.md#getemaildomainsdomainnameroutes) | **GET** /api/v2/routing/email/domains/{domainName}/routes | Get routes |
+| [**GetEmailDomainsDomainnameRoutesRouteId**](RoutingApi.md#getemaildomainsdomainnameroutesrouteid) | **GET** /api/v2/routing/email/domains/{domainName}/routes/{routeId} | Get a route |
 | [**GetEmailSetup**](RoutingApi.md#getemailsetup) | **GET** /api/v2/routing/email/setup | Get email setup |
 | [**GetQueues**](RoutingApi.md#getqueues) | **GET** /api/v2/routing/queues | Get list of queues. |
 | [**GetQueuesQueueId**](RoutingApi.md#getqueuesqueueid) | **GET** /api/v2/routing/queues/{queueId} | Get details about this queue. |
@@ -31,7 +31,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchQueuesQueueIdUsers**](RoutingApi.md#patchqueuesqueueidusers) | **PATCH** /api/v2/routing/queues/{queueId}/users | Join or unjoin a set of users for a queue |
 | [**PatchQueuesQueueIdUsersMemberId**](RoutingApi.md#patchqueuesqueueidusersmemberid) | **PATCH** /api/v2/routing/queues/{queueId}/users/{memberId} | Update the ring number of joined status for a User in a Queue |
 | [**PostEmailDomains**](RoutingApi.md#postemaildomains) | **POST** /api/v2/routing/email/domains | Create a domain |
-| [**PostEmailDomainsDomainRoutes**](RoutingApi.md#postemaildomainsdomainroutes) | **POST** /api/v2/routing/email/domains/{domain}/routes | Create a route |
+| [**PostEmailDomainsDomainnameRoutes**](RoutingApi.md#postemaildomainsdomainnameroutes) | **POST** /api/v2/routing/email/domains/{domainName}/routes | Create a route |
 | [**PostQueues**](RoutingApi.md#postqueues) | **POST** /api/v2/routing/queues | Create queue |
 | [**PostQueuesObservationsQuery**](RoutingApi.md#postqueuesobservationsquery) | **POST** /api/v2/analytics/queues/observations/query | Query for queue observations |
 | [**PostQueuesQueueIdUsers**](RoutingApi.md#postqueuesqueueidusers) | **POST** /api/v2/routing/queues/{queueId}/users | Bulk add or delete up to 100 queue members |
@@ -39,72 +39,15 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostSkills**](RoutingApi.md#postskills) | **POST** /api/v2/routing/skills | Create Skill |
 | [**PostUserIdRoutingskills**](RoutingApi.md#postuseridroutingskills) | **POST** /api/v2/users/{userId}/routingskills | Add routing skill to user |
 | [**PostWrapupcodes**](RoutingApi.md#postwrapupcodes) | **POST** /api/v2/routing/wrapupcodes | Create a wrap-up code |
-| [**PutEmailDomainsDomainRoutesId**](RoutingApi.md#putemaildomainsdomainroutesid) | **PUT** /api/v2/routing/email/domains/{domain}/routes/{id} | Update a route |
+| [**PutEmailDomainsDomainnameRoutesRouteId**](RoutingApi.md#putemaildomainsdomainnameroutesrouteid) | **PUT** /api/v2/routing/email/domains/{domainName}/routes/{routeId} | Update a route |
 | [**PutQueuesQueueId**](RoutingApi.md#putqueuesqueueid) | **PUT** /api/v2/routing/queues/{queueId} | Update a queue |
 | [**PutSkillsSkillId**](RoutingApi.md#putskillsskillid) | **PUT** /api/v2/routing/skills/{skillId} | Update Routing Skill |
 | [**PutUtilization**](RoutingApi.md#pututilization) | **PUT** /api/v2/routing/utilization | Update the utilization settings. |
 | [**PutWrapupcodesCodeId**](RoutingApi.md#putwrapupcodescodeid) | **PUT** /api/v2/routing/wrapupcodes/{codeId} | Update wrap-up code |
 {: class="table table-striped"}
 
-<a name="DeleteEmailDomainsDomainRoutesId"></a>
-## string** DeleteEmailDomainsDomainRoutesId (string domain, string id)
-
-Delete a route
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class DeleteEmailDomainsDomainRoutesIdExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new RoutingApi();
-            var domain = domain_example;  // string | email domain
-            var id = id_example;  // string | route ID
-
-            try
-            {
-                // Delete a route
-                string result = apiInstance.DeleteEmailDomainsDomainRoutesId(domain, id);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling RoutingApi.DeleteEmailDomainsDomainRoutesId: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **domain** | **string**| email domain |  |
-| **id** | **string**| route ID |  |
-{: class="table table-striped"}
-
-### Return type
-
-**string**
-
-<a name="DeleteEmailDomainsId"></a>
-## string** DeleteEmailDomainsId (string id)
+<a name="DeleteEmailDomainsDomainId"></a>
+## string** DeleteEmailDomainsDomainId (string domainId)
 
 Delete a domain
 
@@ -120,7 +63,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class DeleteEmailDomainsIdExample
+    public class DeleteEmailDomainsDomainIdExample
     {
         public void main()
         {
@@ -129,17 +72,17 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new RoutingApi();
-            var id = id_example;  // string | domain ID
+            var domainId = domainId_example;  // string | domain ID
 
             try
             {
                 // Delete a domain
-                string result = apiInstance.DeleteEmailDomainsId(id);
+                string result = apiInstance.DeleteEmailDomainsDomainId(domainId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling RoutingApi.DeleteEmailDomainsId: " + e.Message );
+                Debug.Print("Exception when calling RoutingApi.DeleteEmailDomainsDomainId: " + e.Message );
             }
         }
     }
@@ -151,7 +94,64 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **id** | **string**| domain ID |  |
+| **domainId** | **string**| domain ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+**string**
+
+<a name="DeleteEmailDomainsDomainnameRoutesRouteId"></a>
+## string** DeleteEmailDomainsDomainnameRoutesRouteId (string domainName, string routeId)
+
+Delete a route
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class DeleteEmailDomainsDomainnameRoutesRouteIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new RoutingApi();
+            var domainName = domainName_example;  // string | email domain
+            var routeId = routeId_example;  // string | route ID
+
+            try
+            {
+                // Delete a route
+                string result = apiInstance.DeleteEmailDomainsDomainnameRoutesRouteId(domainName, routeId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.DeleteEmailDomainsDomainnameRoutesRouteId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **domainName** | **string**| email domain |  |
+| **routeId** | **string**| route ID |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -596,8 +596,8 @@ This endpoint does require any parameters.
 
 [**InboundDomainEntityListing**](InboundDomainEntityListing.md)
 
-<a name="GetEmailDomainsDomainRoutes"></a>
-## [**InboundRouteEntityListing**](InboundRouteEntityListing.html) GetEmailDomainsDomainRoutes (string domain)
+<a name="GetEmailDomainsDomainnameRoutes"></a>
+## [**InboundRouteEntityListing**](InboundRouteEntityListing.html) GetEmailDomainsDomainnameRoutes (string domainName)
 
 Get routes
 
@@ -613,7 +613,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class GetEmailDomainsDomainRoutesExample
+    public class GetEmailDomainsDomainnameRoutesExample
     {
         public void main()
         {
@@ -622,17 +622,17 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new RoutingApi();
-            var domain = domain_example;  // string | email domain
+            var domainName = domainName_example;  // string | email domain
 
             try
             {
                 // Get routes
-                InboundRouteEntityListing result = apiInstance.GetEmailDomainsDomainRoutes(domain);
+                InboundRouteEntityListing result = apiInstance.GetEmailDomainsDomainnameRoutes(domainName);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling RoutingApi.GetEmailDomainsDomainRoutes: " + e.Message );
+                Debug.Print("Exception when calling RoutingApi.GetEmailDomainsDomainnameRoutes: " + e.Message );
             }
         }
     }
@@ -644,15 +644,15 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **domain** | **string**| email domain |  |
+| **domainName** | **string**| email domain |  |
 {: class="table table-striped"}
 
 ### Return type
 
 [**InboundRouteEntityListing**](InboundRouteEntityListing.md)
 
-<a name="GetEmailDomainsDomainRoutesId"></a>
-## [**InboundRoute**](InboundRoute.html) GetEmailDomainsDomainRoutesId (string domain, string id)
+<a name="GetEmailDomainsDomainnameRoutesRouteId"></a>
+## [**InboundRoute**](InboundRoute.html) GetEmailDomainsDomainnameRoutesRouteId (string domainName, string routeId)
 
 Get a route
 
@@ -668,7 +668,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class GetEmailDomainsDomainRoutesIdExample
+    public class GetEmailDomainsDomainnameRoutesRouteIdExample
     {
         public void main()
         {
@@ -677,18 +677,18 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new RoutingApi();
-            var domain = domain_example;  // string | email domain
-            var id = id_example;  // string | route ID
+            var domainName = domainName_example;  // string | email domain
+            var routeId = routeId_example;  // string | route ID
 
             try
             {
                 // Get a route
-                InboundRoute result = apiInstance.GetEmailDomainsDomainRoutesId(domain, id);
+                InboundRoute result = apiInstance.GetEmailDomainsDomainnameRoutesRouteId(domainName, routeId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling RoutingApi.GetEmailDomainsDomainRoutesId: " + e.Message );
+                Debug.Print("Exception when calling RoutingApi.GetEmailDomainsDomainnameRoutesRouteId: " + e.Message );
             }
         }
     }
@@ -700,8 +700,8 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **domain** | **string**| email domain |  |
-| **id** | **string**| route ID |  |
+| **domainName** | **string**| email domain |  |
+| **routeId** | **string**| route ID |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1563,8 +1563,8 @@ namespace Example
 
 [**InboundDomain**](InboundDomain.md)
 
-<a name="PostEmailDomainsDomainRoutes"></a>
-## [**InboundRoute**](InboundRoute.html) PostEmailDomainsDomainRoutes (string domain, InboundRoute body = null)
+<a name="PostEmailDomainsDomainnameRoutes"></a>
+## [**InboundRoute**](InboundRoute.html) PostEmailDomainsDomainnameRoutes (string domainName, InboundRoute body = null)
 
 Create a route
 
@@ -1580,7 +1580,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class PostEmailDomainsDomainRoutesExample
+    public class PostEmailDomainsDomainnameRoutesExample
     {
         public void main()
         {
@@ -1589,18 +1589,18 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new RoutingApi();
-            var domain = domain_example;  // string | email domain
+            var domainName = domainName_example;  // string | email domain
             var body = new InboundRoute(); // InboundRoute | Route (optional) 
 
             try
             {
                 // Create a route
-                InboundRoute result = apiInstance.PostEmailDomainsDomainRoutes(domain, body);
+                InboundRoute result = apiInstance.PostEmailDomainsDomainnameRoutes(domainName, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling RoutingApi.PostEmailDomainsDomainRoutes: " + e.Message );
+                Debug.Print("Exception when calling RoutingApi.PostEmailDomainsDomainnameRoutes: " + e.Message );
             }
         }
     }
@@ -1612,7 +1612,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **domain** | **string**| email domain |  |
+| **domainName** | **string**| email domain |  |
 | **body** | [**InboundRoute**](InboundRoute.md)| Route | [optional]  |
 {: class="table table-striped"}
 
@@ -2015,8 +2015,8 @@ namespace Example
 
 [**CallableTimeSet**](CallableTimeSet.md)
 
-<a name="PutEmailDomainsDomainRoutesId"></a>
-## [**InboundRoute**](InboundRoute.html) PutEmailDomainsDomainRoutesId (string domain, string id, InboundRoute body = null)
+<a name="PutEmailDomainsDomainnameRoutesRouteId"></a>
+## [**InboundRoute**](InboundRoute.html) PutEmailDomainsDomainnameRoutesRouteId (string domainName, string routeId, InboundRoute body = null)
 
 Update a route
 
@@ -2032,7 +2032,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class PutEmailDomainsDomainRoutesIdExample
+    public class PutEmailDomainsDomainnameRoutesRouteIdExample
     {
         public void main()
         {
@@ -2041,19 +2041,19 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new RoutingApi();
-            var domain = domain_example;  // string | email domain
-            var id = id_example;  // string | route ID
+            var domainName = domainName_example;  // string | email domain
+            var routeId = routeId_example;  // string | route ID
             var body = new InboundRoute(); // InboundRoute | Route (optional) 
 
             try
             {
                 // Update a route
-                InboundRoute result = apiInstance.PutEmailDomainsDomainRoutesId(domain, id, body);
+                InboundRoute result = apiInstance.PutEmailDomainsDomainnameRoutesRouteId(domainName, routeId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling RoutingApi.PutEmailDomainsDomainRoutesId: " + e.Message );
+                Debug.Print("Exception when calling RoutingApi.PutEmailDomainsDomainnameRoutesRouteId: " + e.Message );
             }
         }
     }
@@ -2065,8 +2065,8 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **domain** | **string**| email domain |  |
-| **id** | **string**| route ID |  |
+| **domainName** | **string**| email domain |  |
+| **routeId** | **string**| route ID |  |
 | **body** | [**InboundRoute**](InboundRoute.md)| Route | [optional]  |
 {: class="table table-striped"}
 

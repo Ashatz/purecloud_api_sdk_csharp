@@ -198,7 +198,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="NotificationUsers">The ids of users who will be notified of alarm state change. (required).</param>
         /// <param name="AlertTypes">A collection of notification methods. &#x3D; [&#39;SMS&#39;, &#39;DEVICE&#39;, &#39;EMAIL&#39;] (required).</param>
 
-        public InteractionStatsRule(string Name = null, DimensionEnum? Dimension = null, string DimensionValue = null, MetricEnum? Metric = null, MediaTypeEnum? MediaType = null, NumericRangeEnum? NumericRange = null, StatisticEnum? Statistic = null, double? Value = null, bool? Enabled = nullList<User> NotificationUsers = null, List<string> AlertTypes = null)
+        public InteractionStatsRule(string Name = null, DimensionEnum? Dimension = null, string DimensionValue = null, MetricEnum? Metric = null, MediaTypeEnum? MediaType = null, NumericRangeEnum? NumericRange = null, StatisticEnum? Statistic = null, double? Value = null, bool? Enabled = null, List<User> NotificationUsers = null, List<string> AlertTypes = null)
         {
             // to ensure "Name" is required (not null)
             if (Name == null)

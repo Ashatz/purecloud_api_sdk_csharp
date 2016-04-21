@@ -19,49 +19,122 @@ namespace ININ.PureCloudApi.Model
     { 
 
         /// <summary>
-        /// Gets or Sets State
+        /// Active, inactive, or deleted state.
         /// </summary>
+        /// <value>Active, inactive, or deleted state.</value>
         [JsonConverter(typeof(StringEnumConverter))]
                 public enum StateEnum {
             
-            [EnumMember(Value = "ACTIVE")]
+            [EnumMember(Value = "active")]
             Active,
             
-            [EnumMember(Value = "INACTIVE")]
+            [EnumMember(Value = "inactive")]
             Inactive,
             
-            [EnumMember(Value = "DELETED")]
+            [EnumMember(Value = "deleted")]
             Deleted
+        }
+
+
+        /// <summary>
+        /// Type of group.
+        /// </summary>
+        /// <value>Type of group.</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+                public enum TypeEnum {
+            
+            [EnumMember(Value = "official")]
+            Official,
+            
+            [EnumMember(Value = "social")]
+            Social
+        }
+
+
+        /// <summary>
+        /// Who can view this group
+        /// </summary>
+        /// <value>Who can view this group</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+                public enum VisibilityEnum {
+            
+            [EnumMember(Value = "public")]
+            Public,
+            
+            [EnumMember(Value = "owners")]
+            Owners,
+            
+            [EnumMember(Value = "members")]
+            Members
         }
 
         
 
         /// <summary>
-        /// Gets or Sets State
+        /// Active, inactive, or deleted state.
         /// </summary>
+        /// <value>Active, inactive, or deleted state.</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
+    
+
+        /// <summary>
+        /// Type of group.
+        /// </summary>
+        /// <value>Type of group.</value>
+        [DataMember(Name="type", EmitDefaultValue=false)]
+        public TypeEnum? Type { get; set; }
+    
+
+        /// <summary>
+        /// Who can view this group
+        /// </summary>
+        /// <value>Who can view this group</value>
+        [DataMember(Name="visibility", EmitDefaultValue=false)]
+        public VisibilityEnum? Visibility { get; set; }
     
         /// <summary>
         /// Initializes a new instance of the <see cref="Group" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="Description">Description.</param>
-        /// <param name="DateModified">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        /// <param name="MemberCount">MemberCount.</param>
-        /// <param name="State">State.</param>
-        /// <param name="Version">Version.</param>
+        /// <param name="Type">Type of group. (required).</param>
         /// <param name="Images">Images.</param>
         /// <param name="Addresses">Addresses.</param>
+        /// <param name="RulesVisible">Are membership rules visible to the person requesting to view the group (required) (default to false).</param>
+        /// <param name="Visibility">Who can view this group (required).</param>
 
-        public Group(string Name = null, string Description = null, DateTime? DateModified = null, long? MemberCount = null, StateEnum? State = null, double? Version = null, List<UserImage> Images = null, List<Contact> Addresses = null)
+        public Group(string Name = null, string Description = null, TypeEnum? Type = null, List<UserImage> Images = null, List<Contact> Addresses = null, bool? RulesVisible = null, VisibilityEnum? Visibility = null)
         {
+            // to ensure "Type" is required (not null)
+            if (Type == null)
+            {
+                throw new InvalidDataException("Type is a required property for Group and cannot be null");
+            }
+            else
+            {
+                this.Type = Type;
+            }
+            // to ensure "RulesVisible" is required (not null)
+            if (RulesVisible == null)
+            {
+                throw new InvalidDataException("RulesVisible is a required property for Group and cannot be null");
+            }
+            else
+            {
+                this.RulesVisible = RulesVisible;
+            }
+            // to ensure "Visibility" is required (not null)
+            if (Visibility == null)
+            {
+                throw new InvalidDataException("Visibility is a required property for Group and cannot be null");
+            }
+            else
+            {
+                this.Visibility = Visibility;
+            }
             this.Name = Name;
             this.Description = Description;
-            this.DateModified = DateModified;
-            this.MemberCount = MemberCount;
-            this.State = State;
-            this.Version = Version;
             this.Images = Images;
             this.Addresses = Addresses;
             
@@ -88,23 +161,25 @@ namespace ININ.PureCloudApi.Model
         public string Description { get; set; }
     
         /// <summary>
-        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// Last modified date/time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
-        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>Last modified date/time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
-        public DateTime? DateModified { get; set; }
+        public DateTime? DateModified { get; private set; }
     
         /// <summary>
-        /// Gets or Sets MemberCount
+        /// Number of members.
         /// </summary>
+        /// <value>Number of members.</value>
         [DataMember(Name="memberCount", EmitDefaultValue=false)]
-        public long? MemberCount { get; set; }
+        public long? MemberCount { get; private set; }
     
         /// <summary>
-        /// Gets or Sets Version
+        /// Current version for this resource.
         /// </summary>
+        /// <value>Current version for this resource.</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
-        public double? Version { get; set; }
+        public int? Version { get; private set; }
     
         /// <summary>
         /// Gets or Sets Images
@@ -117,6 +192,13 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         [DataMember(Name="addresses", EmitDefaultValue=false)]
         public List<Contact> Addresses { get; set; }
+    
+        /// <summary>
+        /// Are membership rules visible to the person requesting to view the group
+        /// </summary>
+        /// <value>Are membership rules visible to the person requesting to view the group</value>
+        [DataMember(Name="rulesVisible", EmitDefaultValue=false)]
+        public bool? RulesVisible { get; set; }
     
         /// <summary>
         /// The URI for this object
@@ -140,8 +222,11 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  MemberCount: ").Append(MemberCount).Append("\n");
             sb.Append("  State: ").Append(State).Append("\n");
             sb.Append("  Version: ").Append(Version).Append("\n");
+            sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Images: ").Append(Images).Append("\n");
             sb.Append("  Addresses: ").Append(Addresses).Append("\n");
+            sb.Append("  RulesVisible: ").Append(RulesVisible).Append("\n");
+            sb.Append("  Visibility: ").Append(Visibility).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -215,6 +300,11 @@ namespace ININ.PureCloudApi.Model
                     this.Version.Equals(other.Version)
                 ) &&
                 (
+                    this.Type == other.Type ||
+                    this.Type != null &&
+                    this.Type.Equals(other.Type)
+                ) &&
+                (
                     this.Images == other.Images ||
                     this.Images != null &&
                     this.Images.SequenceEqual(other.Images)
@@ -223,6 +313,16 @@ namespace ININ.PureCloudApi.Model
                     this.Addresses == other.Addresses ||
                     this.Addresses != null &&
                     this.Addresses.SequenceEqual(other.Addresses)
+                ) &&
+                (
+                    this.RulesVisible == other.RulesVisible ||
+                    this.RulesVisible != null &&
+                    this.RulesVisible.Equals(other.RulesVisible)
+                ) &&
+                (
+                    this.Visibility == other.Visibility ||
+                    this.Visibility != null &&
+                    this.Visibility.Equals(other.Visibility)
                 ) &&
                 (
                     this.SelfUri == other.SelfUri ||
@@ -256,10 +356,16 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.State.GetHashCode();
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
+                if (this.Type != null)
+                    hash = hash * 59 + this.Type.GetHashCode();
                 if (this.Images != null)
                     hash = hash * 59 + this.Images.GetHashCode();
                 if (this.Addresses != null)
                     hash = hash * 59 + this.Addresses.GetHashCode();
+                if (this.RulesVisible != null)
+                    hash = hash * 59 + this.RulesVisible.GetHashCode();
+                if (this.Visibility != null)
+                    hash = hash * 59 + this.Visibility.GetHashCode();
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;

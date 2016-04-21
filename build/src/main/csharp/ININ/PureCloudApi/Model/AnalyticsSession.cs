@@ -74,6 +74,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Direction">Direction.</param>
         /// <param name="Dnis">Dnis.</param>
         /// <param name="OutboundCampaignId">OutboundCampaignId.</param>
+        /// <param name="OutboundContactId">OutboundContactId.</param>
         /// <param name="OutboundContactListId">OutboundContactListId.</param>
         /// <param name="DispositionAnalyzer">DispositionAnalyzer.</param>
         /// <param name="DispositionName">DispositionName.</param>
@@ -84,7 +85,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="MonitoredParticipantId">MonitoredParticipantId.</param>
         /// <param name="Segments">Segments.</param>
 
-        public AnalyticsSession(MediaTypeEnum? MediaType = null, string SessionId = null, string AddressOther = null, string AddressSelf = null, string Ani = null, DirectionEnum? Direction = null, string Dnis = null, string OutboundCampaignId = null, string OutboundContactListId = null, string DispositionAnalyzer = null, string DispositionName = null, string EdgeId = null, string RemoteNameDisplayable = null, string RoomId = null, string MonitoredSessionId = null, string MonitoredParticipantId = null, List<AnalyticsConversationSegment> Segments = null)
+        public AnalyticsSession(MediaTypeEnum? MediaType = null, string SessionId = null, string AddressOther = null, string AddressSelf = null, string Ani = null, DirectionEnum? Direction = null, string Dnis = null, string OutboundCampaignId = null, string OutboundContactId = null, string OutboundContactListId = null, string DispositionAnalyzer = null, string DispositionName = null, string EdgeId = null, string RemoteNameDisplayable = null, string RoomId = null, string MonitoredSessionId = null, string MonitoredParticipantId = null, List<AnalyticsConversationSegment> Segments = null)
         {
             this.MediaType = MediaType;
             this.SessionId = SessionId;
@@ -94,6 +95,7 @@ namespace ININ.PureCloudApi.Model
             this.Direction = Direction;
             this.Dnis = Dnis;
             this.OutboundCampaignId = OutboundCampaignId;
+            this.OutboundContactId = OutboundContactId;
             this.OutboundContactListId = OutboundContactListId;
             this.DispositionAnalyzer = DispositionAnalyzer;
             this.DispositionName = DispositionName;
@@ -142,6 +144,12 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         [DataMember(Name="outboundCampaignId", EmitDefaultValue=false)]
         public string OutboundCampaignId { get; set; }
+    
+        /// <summary>
+        /// Gets or Sets OutboundContactId
+        /// </summary>
+        [DataMember(Name="outboundContactId", EmitDefaultValue=false)]
+        public string OutboundContactId { get; set; }
     
         /// <summary>
         /// Gets or Sets OutboundContactListId
@@ -213,6 +221,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Direction: ").Append(Direction).Append("\n");
             sb.Append("  Dnis: ").Append(Dnis).Append("\n");
             sb.Append("  OutboundCampaignId: ").Append(OutboundCampaignId).Append("\n");
+            sb.Append("  OutboundContactId: ").Append(OutboundContactId).Append("\n");
             sb.Append("  OutboundContactListId: ").Append(OutboundContactListId).Append("\n");
             sb.Append("  DispositionAnalyzer: ").Append(DispositionAnalyzer).Append("\n");
             sb.Append("  DispositionName: ").Append(DispositionName).Append("\n");
@@ -299,6 +308,11 @@ namespace ININ.PureCloudApi.Model
                     this.OutboundCampaignId.Equals(other.OutboundCampaignId)
                 ) &&
                 (
+                    this.OutboundContactId == other.OutboundContactId ||
+                    this.OutboundContactId != null &&
+                    this.OutboundContactId.Equals(other.OutboundContactId)
+                ) &&
+                (
                     this.OutboundContactListId == other.OutboundContactListId ||
                     this.OutboundContactListId != null &&
                     this.OutboundContactListId.Equals(other.OutboundContactListId)
@@ -372,6 +386,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.Dnis.GetHashCode();
                 if (this.OutboundCampaignId != null)
                     hash = hash * 59 + this.OutboundCampaignId.GetHashCode();
+                if (this.OutboundContactId != null)
+                    hash = hash * 59 + this.OutboundContactId.GetHashCode();
                 if (this.OutboundContactListId != null)
                     hash = hash * 59 + this.OutboundContactListId.GetHashCode();
                 if (this.DispositionAnalyzer != null)

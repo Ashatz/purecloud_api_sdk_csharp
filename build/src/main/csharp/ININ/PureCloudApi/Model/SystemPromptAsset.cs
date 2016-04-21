@@ -57,7 +57,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="LanguageDefault">LanguageDefault (default to false).</param>
         /// <param name="Tags">Tags.</param>
 
-        public SystemPromptAsset(string Name = null, string PromptId = null, string Language = null, double? DurationSeconds = null, string MediaUri = null, string TtsString = null, string UploadUri = null, UploadStatusEnum? UploadStatus = null, bool? HasDefault = null, bool? LanguageDefault = null, Dictionary<string, string> Tags = null)
+        public SystemPromptAsset(string Name = null, string PromptId = null, string Language = null, double? DurationSeconds = null, string MediaUri = null, string TtsString = null, string UploadUri = null, UploadStatusEnum? UploadStatus = null, bool? HasDefault = null, bool? LanguageDefault = null, Dictionary<string, List<string>> Tags = null)
         {
             this.Name = Name;
             this.PromptId = PromptId;
@@ -155,7 +155,7 @@ namespace ININ.PureCloudApi.Model
         /// Gets or Sets Tags
         /// </summary>
         [DataMember(Name="tags", EmitDefaultValue=false)]
-        public Dictionary<string, string> Tags { get; set; }
+        public Dictionary<string, List<string>> Tags { get; set; }
     
         /// <summary>
         /// The URI for this object

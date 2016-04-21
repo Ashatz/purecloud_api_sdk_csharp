@@ -22,18 +22,14 @@ namespace ININ.PureCloudApi.Model
         /// Initializes a new instance of the <see cref="CampaignSchedule" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
-        /// <param name="DateCreated">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        /// <param name="DateModified">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        /// <param name="Version">Version.</param>
+        /// <param name="Version">required for updates, must match the version number of the most recent update.</param>
         /// <param name="Intervals">Intervals.</param>
         /// <param name="TimeZone">TimeZone.</param>
         /// <param name="Campaign">Campaign.</param>
 
-        public CampaignSchedule(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, List<CampaignScheduleIntervals> Intervals = null, string TimeZone = null, UriReference Campaign = null)
+        public CampaignSchedule(string Name = null, int? Version = null, List<CampaignScheduleIntervals> Intervals = null, string TimeZone = null, UriReference Campaign = null)
         {
             this.Name = Name;
-            this.DateCreated = DateCreated;
-            this.DateModified = DateModified;
             this.Version = Version;
             this.Intervals = Intervals;
             this.TimeZone = TimeZone;
@@ -56,22 +52,23 @@ namespace ININ.PureCloudApi.Model
         public string Name { get; set; }
     
         /// <summary>
-        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// creation time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
-        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>creation time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
-        public DateTime? DateCreated { get; set; }
+        public DateTime? DateCreated { get; private set; }
     
         /// <summary>
-        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// last modified time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
-        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>last modified time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
-        public DateTime? DateModified { get; set; }
+        public DateTime? DateModified { get; private set; }
     
         /// <summary>
-        /// Gets or Sets Version
+        /// required for updates, must match the version number of the most recent update
         /// </summary>
+        /// <value>required for updates, must match the version number of the most recent update</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public int? Version { get; set; }
     

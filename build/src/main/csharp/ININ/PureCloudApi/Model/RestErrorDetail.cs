@@ -21,28 +21,26 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RestErrorDetail" />class.
         /// </summary>
-        /// <param name="Error">Error.</param>
-        /// <param name="Details">Details.</param>
 
-        public RestErrorDetail(string Error = null, string Details = null)
+        public RestErrorDetail()
         {
-            this.Error = Error;
-            this.Details = Details;
             
         }
 
     
         /// <summary>
-        /// Gets or Sets Error
+        /// name of the error
         /// </summary>
+        /// <value>name of the error</value>
         [DataMember(Name="error", EmitDefaultValue=false)]
-        public string Error { get; set; }
+        public string Error { get; private set; }
     
         /// <summary>
-        /// Gets or Sets Details
+        /// additional information regarding the error
         /// </summary>
+        /// <value>additional information regarding the error</value>
         [DataMember(Name="details", EmitDefaultValue=false)]
-        public string Details { get; set; }
+        public string Details { get; private set; }
     
         /// <summary>
         /// Returns the string presentation of the object

@@ -107,6 +107,14 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'Version'
         }
         /// <summary>
+        /// Test the property 'Type'
+        /// </summary>
+        [Test]
+        public void TypeTest()
+        {
+            // TODO: unit test for the property 'Type'
+        }
+        /// <summary>
         /// Test the property 'Images'
         /// </summary>
         [Test]
@@ -121,6 +129,22 @@ namespace ININ.PureCloudApi.Test
         public void AddressesTest()
         {
             // TODO: unit test for the property 'Addresses'
+        }
+        /// <summary>
+        /// Test the property 'RulesVisible'
+        /// </summary>
+        [Test]
+        public void RulesVisibleTest()
+        {
+            // TODO: unit test for the property 'RulesVisible'
+        }
+        /// <summary>
+        /// Test the property 'Visibility'
+        /// </summary>
+        [Test]
+        public void VisibilityTest()
+        {
+            // TODO: unit test for the property 'Visibility'
         }
         /// <summary>
         /// Test the property 'SelfUri'

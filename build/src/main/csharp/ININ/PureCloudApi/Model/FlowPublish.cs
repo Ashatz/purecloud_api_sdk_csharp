@@ -25,7 +25,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="FlowConfigVersionSource">Source version that the flow was published from. (required).</param>
         /// <param name="Version">Version of this flow config..</param>
 
-        public FlowPublish(string Name = null, string FlowConfigVersionSource = nullstring Version = null)
+        public FlowPublish(string Name = null, string FlowConfigVersionSource = null, string Version = null)
         {
             // to ensure "FlowConfigVersionSource" is required (not null)
             if (FlowConfigVersionSource == null)

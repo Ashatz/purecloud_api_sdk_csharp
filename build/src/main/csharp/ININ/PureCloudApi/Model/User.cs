@@ -25,13 +25,13 @@ namespace ININ.PureCloudApi.Model
         [JsonConverter(typeof(StringEnumConverter))]
                 public enum StateEnum {
             
-            [EnumMember(Value = "ACTIVE")]
+            [EnumMember(Value = "active")]
             Active,
             
-            [EnumMember(Value = "INACTIVE")]
+            [EnumMember(Value = "inactive")]
             Inactive,
             
-            [EnumMember(Value = "DELETED")]
+            [EnumMember(Value = "deleted")]
             Deleted
         }
 
@@ -64,7 +64,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Station">Effective, default, and last station information.</param>
         /// <param name="Authorization">Roles and permissions assigned to the user.</param>
 
-        public User(string Name = null, Chat Chat = null, string Department = null, string Email = null, List<Contact> PrimaryContactInfo = null, List<Contact> Addresses = nullstring Title = null, string Username = null, List<UserImage> Images = nullRoutingStatus RoutingStatus = null, UserPresence Presence = null, UserConversationSummary ConversationSummary = null, OutOfOffice OutOfOffice = null, Geolocation Geolocation = null, UserStations Station = null, UserAuthorization Authorization = null)
+        public User(string Name = null, Chat Chat = null, string Department = null, string Email = null, List<Contact> PrimaryContactInfo = null, List<Contact> Addresses = null, string Title = null, string Username = null, List<UserImage> Images = null, RoutingStatus RoutingStatus = null, UserPresence Presence = null, UserConversationSummary ConversationSummary = null, OutOfOffice OutOfOffice = null, Geolocation Geolocation = null, UserStations Station = null, UserAuthorization Authorization = null)
         {
             this.Name = Name;
             this.Chat = Chat;

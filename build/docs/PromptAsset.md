@@ -16,7 +16,7 @@ title: PromptAsset
 | **UploadStatus** | **string** |  | [optional] |
 | **UploadUri** | **string** |  | [optional] |
 | **LanguageDefault** | **bool?** |  | [optional] [default to false]|
-| **Tags** | **Dictionary&lt;string, string&gt;** |  | [optional] |
+| **Tags** | **Dictionary&lt;string, List&lt;string&gt;&gt;** |  | [optional] |
 | **DurationSeconds** | **double?** |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}

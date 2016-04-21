@@ -115,6 +115,14 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'OutboundCampaignId'
         }
         /// <summary>
+        /// Test the property 'OutboundContactId'
+        /// </summary>
+        [Test]
+        public void OutboundContactIdTest()
+        {
+            // TODO: unit test for the property 'OutboundContactId'
+        }
+        /// <summary>
         /// Test the property 'OutboundContactListId'
         /// </summary>
         [Test]

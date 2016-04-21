@@ -19,6 +19,36 @@ namespace ININ.PureCloudApi.Model
     { 
 
         /// <summary>
+        /// Functional Area of Issue
+        /// </summary>
+        /// <value>Functional Area of Issue</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+                public enum TopicEnum {
+            
+            [EnumMember(Value = "Admin")]
+            Admin,
+            
+            [EnumMember(Value = "Documents")]
+            Documents,
+            
+            [EnumMember(Value = "Chat")]
+            Chat,
+            
+            [EnumMember(Value = "Video Chat")]
+            VideoChat,
+            
+            [EnumMember(Value = "Login")]
+            Login,
+            
+            [EnumMember(Value = "Slowness")]
+            Slowness,
+            
+            [EnumMember(Value = "Other")]
+            Other
+        }
+
+
+        /// <summary>
         /// Gets or Sets Priority
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
@@ -31,33 +61,39 @@ namespace ININ.PureCloudApi.Model
             Medium,
             
             [EnumMember(Value = "HIGH")]
-            High
+            High,
+            
+            [EnumMember(Value = "CRITICAL")]
+            Critical
         }
 
 
         /// <summary>
-        /// Gets or Sets Type
+        /// Type of Issue
         /// </summary>
+        /// <value>Type of Issue</value>
         [JsonConverter(typeof(StringEnumConverter))]
                 public enum TypeEnum {
             
-            [EnumMember(Value = "PROBLEM")]
+            [EnumMember(Value = "Problem")]
             Problem,
             
-            [EnumMember(Value = "FEATURE_REQUEST")]
-            FeatureRequest,
-            
-            [EnumMember(Value = "QUESTION")]
+            [EnumMember(Value = "Question")]
             Question,
             
-            [EnumMember(Value = "TECHNICAL_ISSUE")]
-            TechnicalIssue,
-            
-            [EnumMember(Value = "NON_TECHNICAL_ISSUE")]
-            NonTechnicalIssue
+            [EnumMember(Value = "Enhancement Request")]
+            EnhancementRequest
         }
 
         
+
+        /// <summary>
+        /// Functional Area of Issue
+        /// </summary>
+        /// <value>Functional Area of Issue</value>
+        [DataMember(Name="topic", EmitDefaultValue=false)]
+        public TopicEnum? Topic { get; set; }
+    
 
         /// <summary>
         /// Gets or Sets Priority
@@ -67,22 +103,23 @@ namespace ININ.PureCloudApi.Model
     
 
         /// <summary>
-        /// Gets or Sets Type
+        /// Type of Issue
         /// </summary>
+        /// <value>Type of Issue</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
     
         /// <summary>
         /// Initializes a new instance of the <see cref="DiagnosticEmail" />class.
         /// </summary>
-        /// <param name="Subject">Subject.</param>
-        /// <param name="Topic">Topic.</param>
-        /// <param name="Description">Description.</param>
+        /// <param name="Subject">Subject of Issue Report.</param>
+        /// <param name="Topic">Functional Area of Issue.</param>
+        /// <param name="Description">Detailed Description of Issue.</param>
         /// <param name="Priority">Priority.</param>
-        /// <param name="Type">Type.</param>
-        /// <param name="Data">Data.</param>
+        /// <param name="Type">Type of Issue.</param>
+        /// <param name="Data">Json blob of data to be included with this report..</param>
 
-        public DiagnosticEmail(string Subject = null, string Topic = null, string Description = null, PriorityEnum? Priority = null, TypeEnum? Type = null, Object Data = null)
+        public DiagnosticEmail(string Subject = null, TopicEnum? Topic = null, string Description = null, PriorityEnum? Priority = null, TypeEnum? Type = null, Object Data = null)
         {
             this.Subject = Subject;
             this.Topic = Topic;
@@ -102,26 +139,23 @@ namespace ININ.PureCloudApi.Model
         public string Id { get; private set; }
     
         /// <summary>
-        /// Gets or Sets Subject
+        /// Subject of Issue Report
         /// </summary>
+        /// <value>Subject of Issue Report</value>
         [DataMember(Name="subject", EmitDefaultValue=false)]
         public string Subject { get; set; }
     
         /// <summary>
-        /// Gets or Sets Topic
+        /// Detailed Description of Issue
         /// </summary>
-        [DataMember(Name="topic", EmitDefaultValue=false)]
-        public string Topic { get; set; }
-    
-        /// <summary>
-        /// Gets or Sets Description
-        /// </summary>
+        /// <value>Detailed Description of Issue</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
     
         /// <summary>
-        /// Gets or Sets Data
+        /// Json blob of data to be included with this report.
         /// </summary>
+        /// <value>Json blob of data to be included with this report.</value>
         [DataMember(Name="data", EmitDefaultValue=false)]
         public Object Data { get; set; }
     

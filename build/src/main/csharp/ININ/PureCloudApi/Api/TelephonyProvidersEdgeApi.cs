@@ -1468,6 +1468,60 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of TrunkBase</returns>
         ApiResponse<TrunkBase> GetProvidersEdgesTrunkbasesettingsTrunkbasesettingsIdWithHttpInfo (string trunkBaseSettingsId);
         /// <summary>
+        /// Get the list of available trunks.
+        /// </summary>
+        /// <remarks>
+        /// Trunks are created by assigning trunk base settings to an Edge or Edge Group.
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Value by which to sort (optional, default to name)</param>
+        /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="edgeId">Filter by Edge Ids (optional)</param>
+        /// <param name="trunkBaseId">Filter by Trunk Base Ids (optional)</param>
+        /// <param name="trunkType">Filter by a Trunk type (optional)</param>
+        /// <returns>TrunkEntityListing</returns>
+        TrunkEntityListing GetProvidersEdgesTrunks (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string edgeId = null, string trunkBaseId = null, string trunkType = null);
+
+        /// <summary>
+        /// Get the list of available trunks.
+        /// </summary>
+        /// <remarks>
+        /// Trunks are created by assigning trunk base settings to an Edge or Edge Group.
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Value by which to sort (optional, default to name)</param>
+        /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="edgeId">Filter by Edge Ids (optional)</param>
+        /// <param name="trunkBaseId">Filter by Trunk Base Ids (optional)</param>
+        /// <param name="trunkType">Filter by a Trunk type (optional)</param>
+        /// <returns>ApiResponse of TrunkEntityListing</returns>
+        ApiResponse<TrunkEntityListing> GetProvidersEdgesTrunksWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string edgeId = null, string trunkBaseId = null, string trunkType = null);
+        /// <summary>
+        /// Get a Trunk by ID
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trunkId">Trunk ID</param>
+        /// <returns>Trunk</returns>
+        Trunk GetProvidersEdgesTrunksTrunkId (string trunkId);
+
+        /// <summary>
+        /// Get a Trunk by ID
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trunkId">Trunk ID</param>
+        /// <returns>ApiResponse of Trunk</returns>
+        ApiResponse<Trunk> GetProvidersEdgesTrunksTrunkIdWithHttpInfo (string trunkId);
+        /// <summary>
         /// Lists available schema categories
         /// </summary>
         /// <remarks>
@@ -1577,11 +1631,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="schemaCategory">Schema category</param>
         /// <param name="schemaType">Schema type</param>
         /// <param name="schemaId">Schema ID</param>
-        /// <param name="extension">extension</param>
+        /// <param name="extensionType">extension</param>
         /// <param name="metadataId">Metadata ID</param>
         /// <param name="type">Type (optional)</param>
         /// <returns>Organization</returns>
-        Organization GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensionMetadataId (string schemaCategory, string schemaType, string schemaId, string extension, string metadataId, string type = null);
+        Organization GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensiontypeMetadataId (string schemaCategory, string schemaType, string schemaId, string extensionType, string metadataId, string type = null);
 
         /// <summary>
         /// Get metadata for a schema
@@ -1593,11 +1647,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="schemaCategory">Schema category</param>
         /// <param name="schemaType">Schema type</param>
         /// <param name="schemaId">Schema ID</param>
-        /// <param name="extension">extension</param>
+        /// <param name="extensionType">extension</param>
         /// <param name="metadataId">Metadata ID</param>
         /// <param name="type">Type (optional)</param>
         /// <returns>ApiResponse of Organization</returns>
-        ApiResponse<Organization> GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensionMetadataIdWithHttpInfo (string schemaCategory, string schemaType, string schemaId, string extension, string metadataId, string type = null);
+        ApiResponse<Organization> GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensiontypeMetadataIdWithHttpInfo (string schemaCategory, string schemaType, string schemaId, string extensionType, string metadataId, string type = null);
         /// <summary>
         /// Create a edge.
         /// </summary>
@@ -3877,6 +3931,60 @@ namespace ININ.PureCloudApi.Api
         /// <returns>Task of ApiResponse (TrunkBase)</returns>
         System.Threading.Tasks.Task<ApiResponse<TrunkBase>> GetProvidersEdgesTrunkbasesettingsTrunkbasesettingsIdAsyncWithHttpInfo (string trunkBaseSettingsId);
         /// <summary>
+        /// Get the list of available trunks.
+        /// </summary>
+        /// <remarks>
+        /// Trunks are created by assigning trunk base settings to an Edge or Edge Group.
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Value by which to sort (optional, default to name)</param>
+        /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="edgeId">Filter by Edge Ids (optional)</param>
+        /// <param name="trunkBaseId">Filter by Trunk Base Ids (optional)</param>
+        /// <param name="trunkType">Filter by a Trunk type (optional)</param>
+        /// <returns>Task of TrunkEntityListing</returns>
+        System.Threading.Tasks.Task<TrunkEntityListing> GetProvidersEdgesTrunksAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string edgeId = null, string trunkBaseId = null, string trunkType = null);
+
+        /// <summary>
+        /// Get the list of available trunks.
+        /// </summary>
+        /// <remarks>
+        /// Trunks are created by assigning trunk base settings to an Edge or Edge Group.
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Value by which to sort (optional, default to name)</param>
+        /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="edgeId">Filter by Edge Ids (optional)</param>
+        /// <param name="trunkBaseId">Filter by Trunk Base Ids (optional)</param>
+        /// <param name="trunkType">Filter by a Trunk type (optional)</param>
+        /// <returns>Task of ApiResponse (TrunkEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<TrunkEntityListing>> GetProvidersEdgesTrunksAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string edgeId = null, string trunkBaseId = null, string trunkType = null);
+        /// <summary>
+        /// Get a Trunk by ID
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trunkId">Trunk ID</param>
+        /// <returns>Task of Trunk</returns>
+        System.Threading.Tasks.Task<Trunk> GetProvidersEdgesTrunksTrunkIdAsync (string trunkId);
+
+        /// <summary>
+        /// Get a Trunk by ID
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trunkId">Trunk ID</param>
+        /// <returns>Task of ApiResponse (Trunk)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Trunk>> GetProvidersEdgesTrunksTrunkIdAsyncWithHttpInfo (string trunkId);
+        /// <summary>
         /// Lists available schema categories
         /// </summary>
         /// <remarks>
@@ -3986,11 +4094,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="schemaCategory">Schema category</param>
         /// <param name="schemaType">Schema type</param>
         /// <param name="schemaId">Schema ID</param>
-        /// <param name="extension">extension</param>
+        /// <param name="extensionType">extension</param>
         /// <param name="metadataId">Metadata ID</param>
         /// <param name="type">Type (optional)</param>
         /// <returns>Task of Organization</returns>
-        System.Threading.Tasks.Task<Organization> GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensionMetadataIdAsync (string schemaCategory, string schemaType, string schemaId, string extension, string metadataId, string type = null);
+        System.Threading.Tasks.Task<Organization> GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensiontypeMetadataIdAsync (string schemaCategory, string schemaType, string schemaId, string extensionType, string metadataId, string type = null);
 
         /// <summary>
         /// Get metadata for a schema
@@ -4002,11 +4110,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="schemaCategory">Schema category</param>
         /// <param name="schemaType">Schema type</param>
         /// <param name="schemaId">Schema ID</param>
-        /// <param name="extension">extension</param>
+        /// <param name="extensionType">extension</param>
         /// <param name="metadataId">Metadata ID</param>
         /// <param name="type">Type (optional)</param>
         /// <returns>Task of ApiResponse (Organization)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Organization>> GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensionMetadataIdAsyncWithHttpInfo (string schemaCategory, string schemaType, string schemaId, string extension, string metadataId, string type = null);
+        System.Threading.Tasks.Task<ApiResponse<Organization>> GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensiontypeMetadataIdAsyncWithHttpInfo (string schemaCategory, string schemaType, string schemaId, string extensionType, string metadataId, string type = null);
         /// <summary>
         /// Create a edge.
         /// </summary>
@@ -14870,6 +14978,342 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
+        /// Get the list of available trunks. Trunks are created by assigning trunk base settings to an Edge or Edge Group.
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Value by which to sort (optional, default to name)</param>
+        /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="edgeId">Filter by Edge Ids (optional)</param>
+        /// <param name="trunkBaseId">Filter by Trunk Base Ids (optional)</param>
+        /// <param name="trunkType">Filter by a Trunk type (optional)</param>
+        /// <returns>TrunkEntityListing</returns>
+        public TrunkEntityListing GetProvidersEdgesTrunks (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string edgeId = null, string trunkBaseId = null, string trunkType = null)
+        {
+             ApiResponse<TrunkEntityListing> localVarResponse = GetProvidersEdgesTrunksWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, edgeId, trunkBaseId, trunkType);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the list of available trunks. Trunks are created by assigning trunk base settings to an Edge or Edge Group.
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Value by which to sort (optional, default to name)</param>
+        /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="edgeId">Filter by Edge Ids (optional)</param>
+        /// <param name="trunkBaseId">Filter by Trunk Base Ids (optional)</param>
+        /// <param name="trunkType">Filter by a Trunk type (optional)</param>
+        /// <returns>ApiResponse of TrunkEntityListing</returns>
+        public ApiResponse< TrunkEntityListing > GetProvidersEdgesTrunksWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string edgeId = null, string trunkBaseId = null, string trunkType = null)
+        {
+
+            var localVarPath = "/api/v2/telephony/providers/edges/trunks";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
+            if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
+            if (edgeId != null) localVarQueryParams.Add("edge.id", Configuration.ApiClient.ParameterToString(edgeId)); // query parameter
+            if (trunkBaseId != null) localVarQueryParams.Add("trunkBase.id", Configuration.ApiClient.ParameterToString(trunkBaseId)); // query parameter
+            if (trunkType != null) localVarQueryParams.Add("trunkType", Configuration.ApiClient.ParameterToString(trunkType)); // query parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetProvidersEdgesTrunks: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetProvidersEdgesTrunks: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TrunkEntityListing>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (TrunkEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrunkEntityListing)));
+            
+        }
+
+        /// <summary>
+        /// Get the list of available trunks. Trunks are created by assigning trunk base settings to an Edge or Edge Group.
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Value by which to sort (optional, default to name)</param>
+        /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="edgeId">Filter by Edge Ids (optional)</param>
+        /// <param name="trunkBaseId">Filter by Trunk Base Ids (optional)</param>
+        /// <param name="trunkType">Filter by a Trunk type (optional)</param>
+        /// <returns>Task of TrunkEntityListing</returns>
+        public async System.Threading.Tasks.Task<TrunkEntityListing> GetProvidersEdgesTrunksAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string edgeId = null, string trunkBaseId = null, string trunkType = null)
+        {
+             ApiResponse<TrunkEntityListing> localVarResponse = await GetProvidersEdgesTrunksAsyncWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, edgeId, trunkBaseId, trunkType);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the list of available trunks. Trunks are created by assigning trunk base settings to an Edge or Edge Group.
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Value by which to sort (optional, default to name)</param>
+        /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="edgeId">Filter by Edge Ids (optional)</param>
+        /// <param name="trunkBaseId">Filter by Trunk Base Ids (optional)</param>
+        /// <param name="trunkType">Filter by a Trunk type (optional)</param>
+        /// <returns>Task of ApiResponse (TrunkEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<TrunkEntityListing>> GetProvidersEdgesTrunksAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string edgeId = null, string trunkBaseId = null, string trunkType = null)
+        {
+
+            var localVarPath = "/api/v2/telephony/providers/edges/trunks";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
+            if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
+            if (edgeId != null) localVarQueryParams.Add("edge.id", Configuration.ApiClient.ParameterToString(edgeId)); // query parameter
+            if (trunkBaseId != null) localVarQueryParams.Add("trunkBase.id", Configuration.ApiClient.ParameterToString(trunkBaseId)); // query parameter
+            if (trunkType != null) localVarQueryParams.Add("trunkType", Configuration.ApiClient.ParameterToString(trunkType)); // query parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetProvidersEdgesTrunks: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetProvidersEdgesTrunks: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TrunkEntityListing>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (TrunkEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrunkEntityListing)));
+            
+        }
+
+        /// <summary>
+        /// Get a Trunk by ID 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trunkId">Trunk ID</param>
+        /// <returns>Trunk</returns>
+        public Trunk GetProvidersEdgesTrunksTrunkId (string trunkId)
+        {
+             ApiResponse<Trunk> localVarResponse = GetProvidersEdgesTrunksTrunkIdWithHttpInfo(trunkId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a Trunk by ID 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trunkId">Trunk ID</param>
+        /// <returns>ApiResponse of Trunk</returns>
+        public ApiResponse< Trunk > GetProvidersEdgesTrunksTrunkIdWithHttpInfo (string trunkId)
+        {
+            // verify the required parameter 'trunkId' is set
+            if (trunkId == null)
+                throw new ApiException(400, "Missing required parameter 'trunkId' when calling TelephonyProvidersEdgeApi->GetProvidersEdgesTrunksTrunkId");
+
+            var localVarPath = "/api/v2/telephony/providers/edges/trunks/{trunkId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (trunkId != null) localVarPathParams.Add("trunkId", Configuration.ApiClient.ParameterToString(trunkId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetProvidersEdgesTrunksTrunkId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetProvidersEdgesTrunksTrunkId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Trunk>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Trunk) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Trunk)));
+            
+        }
+
+        /// <summary>
+        /// Get a Trunk by ID 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trunkId">Trunk ID</param>
+        /// <returns>Task of Trunk</returns>
+        public async System.Threading.Tasks.Task<Trunk> GetProvidersEdgesTrunksTrunkIdAsync (string trunkId)
+        {
+             ApiResponse<Trunk> localVarResponse = await GetProvidersEdgesTrunksTrunkIdAsyncWithHttpInfo(trunkId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a Trunk by ID 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trunkId">Trunk ID</param>
+        /// <returns>Task of ApiResponse (Trunk)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Trunk>> GetProvidersEdgesTrunksTrunkIdAsyncWithHttpInfo (string trunkId)
+        {
+            // verify the required parameter 'trunkId' is set
+            if (trunkId == null)
+                throw new ApiException(400, "Missing required parameter 'trunkId' when calling TelephonyProvidersEdgeApi->GetProvidersEdgesTrunksTrunkId");
+
+            var localVarPath = "/api/v2/telephony/providers/edges/trunks/{trunkId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (trunkId != null) localVarPathParams.Add("trunkId", Configuration.ApiClient.ParameterToString(trunkId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetProvidersEdgesTrunksTrunkId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetProvidersEdgesTrunksTrunkId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Trunk>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Trunk) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Trunk)));
+            
+        }
+
+        /// <summary>
         /// Lists available schema categories 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -15548,13 +15992,13 @@ namespace ININ.PureCloudApi.Api
         /// <param name="schemaCategory">Schema category</param>
         /// <param name="schemaType">Schema type</param>
         /// <param name="schemaId">Schema ID</param>
-        /// <param name="extension">extension</param>
+        /// <param name="extensionType">extension</param>
         /// <param name="metadataId">Metadata ID</param>
         /// <param name="type">Type (optional)</param>
         /// <returns>Organization</returns>
-        public Organization GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensionMetadataId (string schemaCategory, string schemaType, string schemaId, string extension, string metadataId, string type = null)
+        public Organization GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensiontypeMetadataId (string schemaCategory, string schemaType, string schemaId, string extensionType, string metadataId, string type = null)
         {
-             ApiResponse<Organization> localVarResponse = GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensionMetadataIdWithHttpInfo(schemaCategory, schemaType, schemaId, extension, metadataId, type);
+             ApiResponse<Organization> localVarResponse = GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensiontypeMetadataIdWithHttpInfo(schemaCategory, schemaType, schemaId, extensionType, metadataId, type);
              return localVarResponse.Data;
         }
 
@@ -15565,29 +16009,29 @@ namespace ININ.PureCloudApi.Api
         /// <param name="schemaCategory">Schema category</param>
         /// <param name="schemaType">Schema type</param>
         /// <param name="schemaId">Schema ID</param>
-        /// <param name="extension">extension</param>
+        /// <param name="extensionType">extension</param>
         /// <param name="metadataId">Metadata ID</param>
         /// <param name="type">Type (optional)</param>
         /// <returns>ApiResponse of Organization</returns>
-        public ApiResponse< Organization > GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensionMetadataIdWithHttpInfo (string schemaCategory, string schemaType, string schemaId, string extension, string metadataId, string type = null)
+        public ApiResponse< Organization > GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensiontypeMetadataIdWithHttpInfo (string schemaCategory, string schemaType, string schemaId, string extensionType, string metadataId, string type = null)
         {
             // verify the required parameter 'schemaCategory' is set
             if (schemaCategory == null)
-                throw new ApiException(400, "Missing required parameter 'schemaCategory' when calling TelephonyProvidersEdgeApi->GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensionMetadataId");
+                throw new ApiException(400, "Missing required parameter 'schemaCategory' when calling TelephonyProvidersEdgeApi->GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensiontypeMetadataId");
             // verify the required parameter 'schemaType' is set
             if (schemaType == null)
-                throw new ApiException(400, "Missing required parameter 'schemaType' when calling TelephonyProvidersEdgeApi->GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensionMetadataId");
+                throw new ApiException(400, "Missing required parameter 'schemaType' when calling TelephonyProvidersEdgeApi->GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensiontypeMetadataId");
             // verify the required parameter 'schemaId' is set
             if (schemaId == null)
-                throw new ApiException(400, "Missing required parameter 'schemaId' when calling TelephonyProvidersEdgeApi->GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensionMetadataId");
-            // verify the required parameter 'extension' is set
-            if (extension == null)
-                throw new ApiException(400, "Missing required parameter 'extension' when calling TelephonyProvidersEdgeApi->GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensionMetadataId");
+                throw new ApiException(400, "Missing required parameter 'schemaId' when calling TelephonyProvidersEdgeApi->GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensiontypeMetadataId");
+            // verify the required parameter 'extensionType' is set
+            if (extensionType == null)
+                throw new ApiException(400, "Missing required parameter 'extensionType' when calling TelephonyProvidersEdgeApi->GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensiontypeMetadataId");
             // verify the required parameter 'metadataId' is set
             if (metadataId == null)
-                throw new ApiException(400, "Missing required parameter 'metadataId' when calling TelephonyProvidersEdgeApi->GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensionMetadataId");
+                throw new ApiException(400, "Missing required parameter 'metadataId' when calling TelephonyProvidersEdgeApi->GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensiontypeMetadataId");
 
-            var localVarPath = "/api/v2/configuration/schemas/edges/vnext/{schemaCategory}/{schemaType}/{schemaId}/{extension}/{metadataId}";
+            var localVarPath = "/api/v2/configuration/schemas/edges/vnext/{schemaCategory}/{schemaType}/{schemaId}/{extensionType}/{metadataId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -15615,7 +16059,7 @@ namespace ININ.PureCloudApi.Api
             if (schemaCategory != null) localVarPathParams.Add("schemaCategory", Configuration.ApiClient.ParameterToString(schemaCategory)); // path parameter
             if (schemaType != null) localVarPathParams.Add("schemaType", Configuration.ApiClient.ParameterToString(schemaType)); // path parameter
             if (schemaId != null) localVarPathParams.Add("schemaId", Configuration.ApiClient.ParameterToString(schemaId)); // path parameter
-            if (extension != null) localVarPathParams.Add("extension", Configuration.ApiClient.ParameterToString(extension)); // path parameter
+            if (extensionType != null) localVarPathParams.Add("extensionType", Configuration.ApiClient.ParameterToString(extensionType)); // path parameter
             if (metadataId != null) localVarPathParams.Add("metadataId", Configuration.ApiClient.ParameterToString(metadataId)); // path parameter
             if (type != null) localVarQueryParams.Add("type", Configuration.ApiClient.ParameterToString(type)); // query parameter
 
@@ -15634,9 +16078,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensionMetadataId: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensiontypeMetadataId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensionMetadataId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensiontypeMetadataId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Organization>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -15651,13 +16095,13 @@ namespace ININ.PureCloudApi.Api
         /// <param name="schemaCategory">Schema category</param>
         /// <param name="schemaType">Schema type</param>
         /// <param name="schemaId">Schema ID</param>
-        /// <param name="extension">extension</param>
+        /// <param name="extensionType">extension</param>
         /// <param name="metadataId">Metadata ID</param>
         /// <param name="type">Type (optional)</param>
         /// <returns>Task of Organization</returns>
-        public async System.Threading.Tasks.Task<Organization> GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensionMetadataIdAsync (string schemaCategory, string schemaType, string schemaId, string extension, string metadataId, string type = null)
+        public async System.Threading.Tasks.Task<Organization> GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensiontypeMetadataIdAsync (string schemaCategory, string schemaType, string schemaId, string extensionType, string metadataId, string type = null)
         {
-             ApiResponse<Organization> localVarResponse = await GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensionMetadataIdAsyncWithHttpInfo(schemaCategory, schemaType, schemaId, extension, metadataId, type);
+             ApiResponse<Organization> localVarResponse = await GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensiontypeMetadataIdAsyncWithHttpInfo(schemaCategory, schemaType, schemaId, extensionType, metadataId, type);
              return localVarResponse.Data;
 
         }
@@ -15669,29 +16113,29 @@ namespace ININ.PureCloudApi.Api
         /// <param name="schemaCategory">Schema category</param>
         /// <param name="schemaType">Schema type</param>
         /// <param name="schemaId">Schema ID</param>
-        /// <param name="extension">extension</param>
+        /// <param name="extensionType">extension</param>
         /// <param name="metadataId">Metadata ID</param>
         /// <param name="type">Type (optional)</param>
         /// <returns>Task of ApiResponse (Organization)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Organization>> GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensionMetadataIdAsyncWithHttpInfo (string schemaCategory, string schemaType, string schemaId, string extension, string metadataId, string type = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Organization>> GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensiontypeMetadataIdAsyncWithHttpInfo (string schemaCategory, string schemaType, string schemaId, string extensionType, string metadataId, string type = null)
         {
             // verify the required parameter 'schemaCategory' is set
             if (schemaCategory == null)
-                throw new ApiException(400, "Missing required parameter 'schemaCategory' when calling TelephonyProvidersEdgeApi->GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensionMetadataId");
+                throw new ApiException(400, "Missing required parameter 'schemaCategory' when calling TelephonyProvidersEdgeApi->GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensiontypeMetadataId");
             // verify the required parameter 'schemaType' is set
             if (schemaType == null)
-                throw new ApiException(400, "Missing required parameter 'schemaType' when calling TelephonyProvidersEdgeApi->GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensionMetadataId");
+                throw new ApiException(400, "Missing required parameter 'schemaType' when calling TelephonyProvidersEdgeApi->GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensiontypeMetadataId");
             // verify the required parameter 'schemaId' is set
             if (schemaId == null)
-                throw new ApiException(400, "Missing required parameter 'schemaId' when calling TelephonyProvidersEdgeApi->GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensionMetadataId");
-            // verify the required parameter 'extension' is set
-            if (extension == null)
-                throw new ApiException(400, "Missing required parameter 'extension' when calling TelephonyProvidersEdgeApi->GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensionMetadataId");
+                throw new ApiException(400, "Missing required parameter 'schemaId' when calling TelephonyProvidersEdgeApi->GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensiontypeMetadataId");
+            // verify the required parameter 'extensionType' is set
+            if (extensionType == null)
+                throw new ApiException(400, "Missing required parameter 'extensionType' when calling TelephonyProvidersEdgeApi->GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensiontypeMetadataId");
             // verify the required parameter 'metadataId' is set
             if (metadataId == null)
-                throw new ApiException(400, "Missing required parameter 'metadataId' when calling TelephonyProvidersEdgeApi->GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensionMetadataId");
+                throw new ApiException(400, "Missing required parameter 'metadataId' when calling TelephonyProvidersEdgeApi->GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensiontypeMetadataId");
 
-            var localVarPath = "/api/v2/configuration/schemas/edges/vnext/{schemaCategory}/{schemaType}/{schemaId}/{extension}/{metadataId}";
+            var localVarPath = "/api/v2/configuration/schemas/edges/vnext/{schemaCategory}/{schemaType}/{schemaId}/{extensionType}/{metadataId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -15719,7 +16163,7 @@ namespace ININ.PureCloudApi.Api
             if (schemaCategory != null) localVarPathParams.Add("schemaCategory", Configuration.ApiClient.ParameterToString(schemaCategory)); // path parameter
             if (schemaType != null) localVarPathParams.Add("schemaType", Configuration.ApiClient.ParameterToString(schemaType)); // path parameter
             if (schemaId != null) localVarPathParams.Add("schemaId", Configuration.ApiClient.ParameterToString(schemaId)); // path parameter
-            if (extension != null) localVarPathParams.Add("extension", Configuration.ApiClient.ParameterToString(extension)); // path parameter
+            if (extensionType != null) localVarPathParams.Add("extensionType", Configuration.ApiClient.ParameterToString(extensionType)); // path parameter
             if (metadataId != null) localVarPathParams.Add("metadataId", Configuration.ApiClient.ParameterToString(metadataId)); // path parameter
             if (type != null) localVarQueryParams.Add("type", Configuration.ApiClient.ParameterToString(type)); // query parameter
 
@@ -15738,9 +16182,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensionMetadataId: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensiontypeMetadataId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensionMetadataId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensiontypeMetadataId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Organization>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

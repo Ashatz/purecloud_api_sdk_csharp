@@ -24,13 +24,13 @@ namespace ININ.PureCloudApi.Model
         [JsonConverter(typeof(StringEnumConverter))]
                 public enum StateEnum {
             
-            [EnumMember(Value = "ACTIVE")]
+            [EnumMember(Value = "active")]
             Active,
             
-            [EnumMember(Value = "INACTIVE")]
+            [EnumMember(Value = "inactive")]
             Inactive,
             
-            [EnumMember(Value = "DELETED")]
+            [EnumMember(Value = "deleted")]
             Deleted
         }
 

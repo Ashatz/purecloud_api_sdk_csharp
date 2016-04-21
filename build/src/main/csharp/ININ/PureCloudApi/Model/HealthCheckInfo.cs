@@ -152,7 +152,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="PingMs">PingMs.</param>
         /// <param name="Date">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
 
-        public HealthCheckInfo(string Name = nullstring BuildTime = null, string BuildVersion = null, string ImplementationVersion = null, StatusEnum? Status = null, int? PingMs = null, DateTime? Date = null)
+        public HealthCheckInfo(string Name = null, string BuildTime = null, string BuildVersion = null, string ImplementationVersion = null, StatusEnum? Status = null, int? PingMs = null, DateTime? Date = null)
         {
             this.Name = Name;
             this.BuildTime = BuildTime;

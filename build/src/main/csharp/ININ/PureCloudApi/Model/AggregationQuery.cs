@@ -41,6 +41,7 @@ namespace ININ.PureCloudApi.Model
         public static string GroupBy_Dnis = "dnis";
         public static string GroupBy_Ani = "ani";
         public static string GroupBy_Outboundcampaignid = "outboundCampaignId";
+        public static string GroupBy_Outboundcontactid = "outboundContactId";
         public static string GroupBy_Outboundcontactlistid = "outboundContactListId";
         public static string GroupBy_Monitoredparticipantid = "monitoredParticipantId";
         public static string GroupBy_Sourcesessionid = "sourceSessionId";
