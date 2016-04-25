@@ -13,7 +13,7 @@ All URIs are relative to *{{basePath}}*
 
 {{#operations}}
 {{#operation}}
-<a name="{{operationId}}"></a>
+<a name="{{operationIdLowerCase}}"></a>
 
 ## {{#returnType}}{{#returnTypeIsPrimitive}}{{returnType}}**{{/returnTypeIsPrimitive}}{{^returnTypeIsPrimitive}}[**{{returnType}}**]({{returnBaseType}}.html){{/returnTypeIsPrimitive}}{{/returnType}}{{^returnType}}void{{/returnType}} {{operationId}} ({{#allParams}}{{{dataType}}} {{paramName}}{{^required}}{{#optionalMethodArgument}} = null{{/optionalMethodArgument}}{{/required}}{{#hasMore}}, {{/hasMore}}{{/allParams}})
 
