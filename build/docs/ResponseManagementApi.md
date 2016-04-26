@@ -1,23 +1,27 @@
-# ININ.PureCloudApi.Api.ResponseManagementApi
+---
+title: ResponseManagementApi
+---
+## ININ.PureCloudApi.Api.ResponseManagementApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteLibrariesLibraryId**](ResponseManagementApi.md#deletelibrarieslibraryid) | **DELETE** /api/v2/responsemanagement/libraries/{libraryId} | Delete an existing response library. |
-| [**DeleteResponsesResponseId**](ResponseManagementApi.md#deleteresponsesresponseid) | **DELETE** /api/v2/responsemanagement/responses/{responseId} | Delete an existing response. |
-| [**GetLibraries**](ResponseManagementApi.md#getlibraries) | **GET** /api/v2/responsemanagement/libraries | Gets a list of existing response libraries. |
-| [**GetLibrariesLibraryId**](ResponseManagementApi.md#getlibrarieslibraryid) | **GET** /api/v2/responsemanagement/libraries/{libraryId} | Get details about an existing response library. |
-| [**GetResponses**](ResponseManagementApi.md#getresponses) | **GET** /api/v2/responsemanagement/responses | Gets a list of existing responses. |
-| [**GetResponsesResponseId**](ResponseManagementApi.md#getresponsesresponseid) | **GET** /api/v2/responsemanagement/responses/{responseId} | Get details about an existing response. |
-| [**PostLibraries**](ResponseManagementApi.md#postlibraries) | **POST** /api/v2/responsemanagement/libraries | Create a response library. |
-| [**PostResponses**](ResponseManagementApi.md#postresponses) | **POST** /api/v2/responsemanagement/responses | Create a response. |
-| [**PostResponsesQuery**](ResponseManagementApi.md#postresponsesquery) | **POST** /api/v2/responsemanagement/responses/query | Query responses |
-| [**PutLibrariesLibraryId**](ResponseManagementApi.md#putlibrarieslibraryid) | **PUT** /api/v2/responsemanagement/libraries/{libraryId} | Update an existing response library. |
-| [**PutResponsesResponseId**](ResponseManagementApi.md#putresponsesresponseid) | **PUT** /api/v2/responsemanagement/responses/{responseId} | Update an existing response. |
+| [**DeleteLibrariesLibraryId**](ResponseManagementApi.html#deletelibrarieslibraryid) | **DELETE** /api/v2/responsemanagement/libraries/{libraryId} | Delete an existing response library. |
+| [**DeleteResponsesResponseId**](ResponseManagementApi.html#deleteresponsesresponseid) | **DELETE** /api/v2/responsemanagement/responses/{responseId} | Delete an existing response. |
+| [**GetLibraries**](ResponseManagementApi.html#getlibraries) | **GET** /api/v2/responsemanagement/libraries | Gets a list of existing response libraries. |
+| [**GetLibrariesLibraryId**](ResponseManagementApi.html#getlibrarieslibraryid) | **GET** /api/v2/responsemanagement/libraries/{libraryId} | Get details about an existing response library. |
+| [**GetResponses**](ResponseManagementApi.html#getresponses) | **GET** /api/v2/responsemanagement/responses | Gets a list of existing responses. |
+| [**GetResponsesResponseId**](ResponseManagementApi.html#getresponsesresponseid) | **GET** /api/v2/responsemanagement/responses/{responseId} | Get details about an existing response. |
+| [**PostLibraries**](ResponseManagementApi.html#postlibraries) | **POST** /api/v2/responsemanagement/libraries | Create a response library. |
+| [**PostResponses**](ResponseManagementApi.html#postresponses) | **POST** /api/v2/responsemanagement/responses | Create a response. |
+| [**PostResponsesQuery**](ResponseManagementApi.html#postresponsesquery) | **POST** /api/v2/responsemanagement/responses/query | Query responses |
+| [**PutLibrariesLibraryId**](ResponseManagementApi.html#putlibrarieslibraryid) | **PUT** /api/v2/responsemanagement/libraries/{libraryId} | Update an existing response library. |
+| [**PutResponsesResponseId**](ResponseManagementApi.html#putresponsesresponseid) | **PUT** /api/v2/responsemanagement/responses/{responseId} | Update an existing response. |
 {: class="table table-striped"}
 
-<a name="DeleteLibrariesLibraryId"></a>
+<a name="deletelibrarieslibraryid"></a>
+
 ## void DeleteLibrariesLibraryId (string libraryId)
 
 Delete an existing response library.
@@ -71,7 +75,8 @@ namespace Example
 
 void (empty response body)
 
-<a name="DeleteResponsesResponseId"></a>
+<a name="deleteresponsesresponseid"></a>
+
 ## void DeleteResponsesResponseId (string responseId)
 
 Delete an existing response.
@@ -125,7 +130,8 @@ namespace Example
 
 void (empty response body)
 
-<a name="GetLibraries"></a>
+<a name="getlibraries"></a>
+
 ## [**LibraryEntityListing**](LibraryEntityListing.html) GetLibraries (int? pageNumber = null, int? pageSize = null)
 
 Gets a list of existing response libraries.
@@ -180,9 +186,10 @@ namespace Example
 
 ### Return type
 
-[**LibraryEntityListing**](LibraryEntityListing.md)
+[**LibraryEntityListing**](LibraryEntityListing.html)
 
-<a name="GetLibrariesLibraryId"></a>
+<a name="getlibrarieslibraryid"></a>
+
 ## [**Library**](Library.html) GetLibrariesLibraryId (string libraryId)
 
 Get details about an existing response library.
@@ -235,9 +242,10 @@ namespace Example
 
 ### Return type
 
-[**Library**](Library.md)
+[**Library**](Library.html)
 
-<a name="GetResponses"></a>
+<a name="getresponses"></a>
+
 ## [**ResponseEntityListing**](ResponseEntityListing.html) GetResponses (string libraryId, int? pageNumber = null, int? pageSize = null)
 
 Gets a list of existing responses.
@@ -294,9 +302,10 @@ namespace Example
 
 ### Return type
 
-[**ResponseEntityListing**](ResponseEntityListing.md)
+[**ResponseEntityListing**](ResponseEntityListing.html)
 
-<a name="GetResponsesResponseId"></a>
+<a name="getresponsesresponseid"></a>
+
 ## [**Response**](Response.html) GetResponsesResponseId (string responseId)
 
 Get details about an existing response.
@@ -349,9 +358,10 @@ namespace Example
 
 ### Return type
 
-[**Response**](Response.md)
+[**Response**](Response.html)
 
-<a name="PostLibraries"></a>
+<a name="postlibraries"></a>
+
 ## [**Library**](Library.html) PostLibraries (Library body = null)
 
 Create a response library.
@@ -399,14 +409,15 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**Library**](Library.md)| Library | [optional]  |
+| **body** | [**Library**](Library.html)| Library | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**Library**](Library.md)
+[**Library**](Library.html)
 
-<a name="PostResponses"></a>
+<a name="postresponses"></a>
+
 ## [**Response**](Response.html) PostResponses (Response body = null)
 
 Create a response.
@@ -454,14 +465,15 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**Response**](Response.md)| Response | [optional]  |
+| **body** | [**Response**](Response.html)| Response | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**Response**](Response.md)
+[**Response**](Response.html)
 
-<a name="PostResponsesQuery"></a>
+<a name="postresponsesquery"></a>
+
 ## [**ResponseQueryResults**](ResponseQueryResults.html) PostResponsesQuery (ResponseQueryRequest body = null)
 
 Query responses
@@ -509,14 +521,15 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**ResponseQueryRequest**](ResponseQueryRequest.md)| Response | [optional]  |
+| **body** | [**ResponseQueryRequest**](ResponseQueryRequest.html)| Response | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**ResponseQueryResults**](ResponseQueryResults.md)
+[**ResponseQueryResults**](ResponseQueryResults.html)
 
-<a name="PutLibrariesLibraryId"></a>
+<a name="putlibrarieslibraryid"></a>
+
 ## [**Library**](Library.html) PutLibrariesLibraryId (string libraryId, Library body = null)
 
 Update an existing response library.
@@ -566,14 +579,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **libraryId** | **string**| Library ID |  |
-| **body** | [**Library**](Library.md)| Library | [optional]  |
+| **body** | [**Library**](Library.html)| Library | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**Library**](Library.md)
+[**Library**](Library.html)
 
-<a name="PutResponsesResponseId"></a>
+<a name="putresponsesresponseid"></a>
+
 ## [**Response**](Response.html) PutResponsesResponseId (string responseId, Response body = null)
 
 Update an existing response.
@@ -623,10 +637,10 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **responseId** | **string**| Response ID |  |
-| **body** | [**Response**](Response.md)| Response | [optional]  |
+| **body** | [**Response**](Response.html)| Response | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**Response**](Response.md)
+[**Response**](Response.html)
 

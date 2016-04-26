@@ -1,68 +1,72 @@
-# ININ.PureCloudApi.Api.ConversationsApi
+---
+title: ConversationsApi
+---
+## ININ.PureCloudApi.Api.ConversationsApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteCallsCallIdParticipantsParticipantIdConsult**](ConversationsApi.md#deletecallscallidparticipantsparticipantidconsult) | **DELETE** /api/v2/conversations/calls/{callId}/participants/{participantId}/consult | Cancel the transfer |
-| [**DeleteEmailsEmailIdMessagesDraftAttachmentsAttachmentId**](ConversationsApi.md#deleteemailsemailidmessagesdraftattachmentsattachmentid) | **DELETE** /api/v2/conversations/emails/{emailId}/messages/draft/attachments/{attachmentId} | Delete attachment from draft |
-| [**GetCallbacks**](ConversationsApi.md#getcallbacks) | **GET** /api/v2/conversations/callbacks | Get callback conversations |
-| [**GetCallbacksCallbackId**](ConversationsApi.md#getcallbackscallbackid) | **GET** /api/v2/conversations/callbacks/{callbackId} | Get callback conversation |
-| [**GetCallbacksCallbackIdParticipantsParticipantIdWrapup**](ConversationsApi.md#getcallbackscallbackidparticipantsparticipantidwrapup) | **GET** /api/v2/conversations/callbacks/{callbackId}/participants/{participantId}/wrapup | Get the wrap-up for this conversation participant.  |
-| [**GetCallbacksCallbackIdParticipantsParticipantIdWrapupcodes**](ConversationsApi.md#getcallbackscallbackidparticipantsparticipantidwrapupcodes) | **GET** /api/v2/conversations/callbacks/{callbackId}/participants/{participantId}/wrapupcodes | Get list of wrapup codes for this conversation participant |
-| [**GetCalls**](ConversationsApi.md#getcalls) | **GET** /api/v2/conversations/calls | Get recent conversations |
-| [**GetCallsCallId**](ConversationsApi.md#getcallscallid) | **GET** /api/v2/conversations/calls/{callId} | Get call conversation |
-| [**GetCallsCallIdParticipantsParticipantIdWrapup**](ConversationsApi.md#getcallscallidparticipantsparticipantidwrapup) | **GET** /api/v2/conversations/calls/{callId}/participants/{participantId}/wrapup | Get the wrap-up for this conversation participant.  |
-| [**GetCallsCallIdParticipantsParticipantIdWrapupcodes**](ConversationsApi.md#getcallscallidparticipantsparticipantidwrapupcodes) | **GET** /api/v2/conversations/calls/{callId}/participants/{participantId}/wrapupcodes | Get list of wrapup codes for this conversation participant |
-| [**GetCallsMaximumconferenceparties**](ConversationsApi.md#getcallsmaximumconferenceparties) | **GET** /api/v2/conversations/calls/maximumconferenceparties | Get the maximum number of participants that this user can have on a conference |
-| [**GetChats**](ConversationsApi.md#getchats) | **GET** /api/v2/conversations/chats | Get recent chat conversations |
-| [**GetChatsChatId**](ConversationsApi.md#getchatschatid) | **GET** /api/v2/conversations/chats/{chatId} | Get chat conversation |
-| [**GetChatsChatIdParticipantsParticipantIdWrapup**](ConversationsApi.md#getchatschatidparticipantsparticipantidwrapup) | **GET** /api/v2/conversations/chats/{chatId}/participants/{participantId}/wrapup | Get the wrap-up for this conversation participant.  |
-| [**GetChatsChatIdParticipantsParticipantIdWrapupcodes**](ConversationsApi.md#getchatschatidparticipantsparticipantidwrapupcodes) | **GET** /api/v2/conversations/chats/{chatId}/participants/{participantId}/wrapupcodes | Get list of wrapup codes for this conversation participant |
-| [**GetConversationId**](ConversationsApi.md#getconversationid) | **GET** /api/v2/conversations/{conversationId} | Get conversation |
-| [**GetConversationIdParticipantsParticipantIdWrapup**](ConversationsApi.md#getconversationidparticipantsparticipantidwrapup) | **GET** /api/v2/conversations/{conversationId}/participants/{participantId}/wrapup | Get the wrap-up for this conversation participant.  |
-| [**GetConversationIdParticipantsParticipantIdWrapupcodes**](ConversationsApi.md#getconversationidparticipantsparticipantidwrapupcodes) | **GET** /api/v2/conversations/{conversationId}/participants/{participantId}/wrapupcodes | Get list of wrapup codes for this conversation participant |
-| [**GetConversations**](ConversationsApi.md#getconversations) | **GET** /api/v2/conversations | Get conversations |
-| [**GetConversationsConversationIdDetails**](ConversationsApi.md#getconversationsconversationiddetails) | **GET** /api/v2/analytics/conversations/{conversationId}/details | Get a conversation by id |
-| [**GetEmails**](ConversationsApi.md#getemails) | **GET** /api/v2/conversations/emails | Get recent email conversations |
-| [**GetEmailsEmailId**](ConversationsApi.md#getemailsemailid) | **GET** /api/v2/conversations/emails/{emailId} | Get email conversation |
-| [**GetEmailsEmailIdMessages**](ConversationsApi.md#getemailsemailidmessages) | **GET** /api/v2/conversations/emails/{emailId}/messages | Get conversation messages |
-| [**GetEmailsEmailIdMessagesDraft**](ConversationsApi.md#getemailsemailidmessagesdraft) | **GET** /api/v2/conversations/emails/{emailId}/messages/draft | Get conversation draft reply |
-| [**GetEmailsEmailIdMessagesMessageId**](ConversationsApi.md#getemailsemailidmessagesmessageid) | **GET** /api/v2/conversations/emails/{emailId}/messages/{messageId} | Get conversation message |
-| [**GetEmailsEmailIdParticipantsParticipantIdWrapup**](ConversationsApi.md#getemailsemailidparticipantsparticipantidwrapup) | **GET** /api/v2/conversations/emails/{emailId}/participants/{participantId}/wrapup | Get the wrap-up for this conversation participant.  |
-| [**GetEmailsEmailIdParticipantsParticipantIdWrapupcodes**](ConversationsApi.md#getemailsemailidparticipantsparticipantidwrapupcodes) | **GET** /api/v2/conversations/emails/{emailId}/participants/{participantId}/wrapupcodes | Get list of wrapup codes for this conversation participant |
-| [**PatchCallbacksCallbackIdParticipantsParticipantId**](ConversationsApi.md#patchcallbackscallbackidparticipantsparticipantid) | **PATCH** /api/v2/conversations/callbacks/{callbackId}/participants/{participantId} | Update conversation participant |
-| [**PatchCallbacksCallbackIdParticipantsParticipantIdAttributes**](ConversationsApi.md#patchcallbackscallbackidparticipantsparticipantidattributes) | **PATCH** /api/v2/conversations/callbacks/{callbackId}/participants/{participantId}/attributes | Update the attributes on a conversation participant. |
-| [**PatchCallsCallId**](ConversationsApi.md#patchcallscallid) | **PATCH** /api/v2/conversations/calls/{callId} | Update conversation |
-| [**PatchCallsCallIdParticipantsParticipantId**](ConversationsApi.md#patchcallscallidparticipantsparticipantid) | **PATCH** /api/v2/conversations/calls/{callId}/participants/{participantId} | Update conversation participant |
-| [**PatchCallsCallIdParticipantsParticipantIdAttributes**](ConversationsApi.md#patchcallscallidparticipantsparticipantidattributes) | **PATCH** /api/v2/conversations/calls/{callId}/participants/{participantId}/attributes | Update the attributes on a conversation participant. |
-| [**PatchCallsCallIdParticipantsParticipantIdConsult**](ConversationsApi.md#patchcallscallidparticipantsparticipantidconsult) | **PATCH** /api/v2/conversations/calls/{callId}/participants/{participantId}/consult | Change who can speak |
-| [**PatchChatsChatIdParticipantsParticipantId**](ConversationsApi.md#patchchatschatidparticipantsparticipantid) | **PATCH** /api/v2/conversations/chats/{chatId}/participants/{participantId} | Update conversation participant |
-| [**PatchChatsChatIdParticipantsParticipantIdAttributes**](ConversationsApi.md#patchchatschatidparticipantsparticipantidattributes) | **PATCH** /api/v2/conversations/chats/{chatId}/participants/{participantId}/attributes | Update the attributes on a conversation participant. |
-| [**PatchConversationIdParticipantsParticipantId**](ConversationsApi.md#patchconversationidparticipantsparticipantid) | **PATCH** /api/v2/conversations/{conversationId}/participants/{participantId} | Update a participant. |
-| [**PatchConversationIdParticipantsParticipantIdAttributes**](ConversationsApi.md#patchconversationidparticipantsparticipantidattributes) | **PATCH** /api/v2/conversations/{conversationId}/participants/{participantId}/attributes | Update the attributes on a conversation participant. |
-| [**PatchEmailsEmailIdParticipantsParticipantId**](ConversationsApi.md#patchemailsemailidparticipantsparticipantid) | **PATCH** /api/v2/conversations/emails/{emailId}/participants/{participantId} | Update conversation participant |
-| [**PatchEmailsEmailIdParticipantsParticipantIdAttributes**](ConversationsApi.md#patchemailsemailidparticipantsparticipantidattributes) | **PATCH** /api/v2/conversations/emails/{emailId}/participants/{participantId}/attributes | Update the attributes on a conversation participant. |
-| [**PostCallbacksCallbackIdParticipantsParticipantIdReplace**](ConversationsApi.md#postcallbackscallbackidparticipantsparticipantidreplace) | **POST** /api/v2/conversations/callbacks/{callbackId}/participants/{participantId}/replace | Replace this participant with the specified user and/or address |
-| [**PostCalls**](ConversationsApi.md#postcalls) | **POST** /api/v2/conversations/calls | Create a call conversation |
-| [**PostCallsCallId**](ConversationsApi.md#postcallscallid) | **POST** /api/v2/conversations/calls/{callId} | Add a new call to a conversation |
-| [**PostCallsCallIdParticipants**](ConversationsApi.md#postcallscallidparticipants) | **POST** /api/v2/conversations/calls/{callId}/participants | Add participants to a conversation |
-| [**PostCallsCallIdParticipantsParticipantIdConsult**](ConversationsApi.md#postcallscallidparticipantsparticipantidconsult) | **POST** /api/v2/conversations/calls/{callId}/participants/{participantId}/consult | Initiate and update consult transfer |
-| [**PostCallsCallIdParticipantsParticipantIdMonitor**](ConversationsApi.md#postcallscallidparticipantsparticipantidmonitor) | **POST** /api/v2/conversations/calls/{callId}/participants/{participantId}/monitor | Listen in on the conversation from the point of view of a given participant. |
-| [**PostCallsCallIdParticipantsParticipantIdReplace**](ConversationsApi.md#postcallscallidparticipantsparticipantidreplace) | **POST** /api/v2/conversations/calls/{callId}/participants/{participantId}/replace | Replace this participant with the specified user and/or address |
-| [**PostChatsChatIdParticipantsParticipantIdReplace**](ConversationsApi.md#postchatschatidparticipantsparticipantidreplace) | **POST** /api/v2/conversations/chats/{chatId}/participants/{participantId}/replace | Replace this participant with the specified user and/or address |
-| [**PostConversationIdParticipantsParticipantIdCallbacks**](ConversationsApi.md#postconversationidparticipantsparticipantidcallbacks) | **POST** /api/v2/conversations/{conversationId}/participants/{participantId}/callbacks | Create a new callback for the specified participant on the conversation. |
-| [**PostConversationIdParticipantsParticipantIdReplace**](ConversationsApi.md#postconversationidparticipantsparticipantidreplace) | **POST** /api/v2/conversations/{conversationId}/participants/{participantId}/replace | Replace this participant with the specified user and/or address |
-| [**PostConversationsAggregatesQuery**](ConversationsApi.md#postconversationsaggregatesquery) | **POST** /api/v2/analytics/conversations/aggregates/query | Query for conversation aggregates |
-| [**PostConversationsConversationIdDetailsProperties**](ConversationsApi.md#postconversationsconversationiddetailsproperties) | **POST** /api/v2/analytics/conversations/{conversationId}/details/properties | Index conversation properties |
-| [**PostConversationsDetailsQuery**](ConversationsApi.md#postconversationsdetailsquery) | **POST** /api/v2/analytics/conversations/details/query | Query for conversation details |
-| [**PostEmailsEmailIdMessages**](ConversationsApi.md#postemailsemailidmessages) | **POST** /api/v2/conversations/emails/{emailId}/messages | Send an email reply |
-| [**PostEmailsEmailIdParticipantsParticipantIdReplace**](ConversationsApi.md#postemailsemailidparticipantsparticipantidreplace) | **POST** /api/v2/conversations/emails/{emailId}/participants/{participantId}/replace | Replace this participant with the specified user and/or address |
-| [**PostFaxes**](ConversationsApi.md#postfaxes) | **POST** /api/v2/conversations/faxes | Create Fax Conversation |
-| [**PutEmailsEmailIdMessagesDraft**](ConversationsApi.md#putemailsemailidmessagesdraft) | **PUT** /api/v2/conversations/emails/{emailId}/messages/draft | Update conversation draft reply |
+| [**DeleteCallsCallIdParticipantsParticipantIdConsult**](ConversationsApi.html#deletecallscallidparticipantsparticipantidconsult) | **DELETE** /api/v2/conversations/calls/{callId}/participants/{participantId}/consult | Cancel the transfer |
+| [**DeleteEmailsEmailIdMessagesDraftAttachmentsAttachmentId**](ConversationsApi.html#deleteemailsemailidmessagesdraftattachmentsattachmentid) | **DELETE** /api/v2/conversations/emails/{emailId}/messages/draft/attachments/{attachmentId} | Delete attachment from draft |
+| [**GetCallbacks**](ConversationsApi.html#getcallbacks) | **GET** /api/v2/conversations/callbacks | Get callback conversations |
+| [**GetCallbacksCallbackId**](ConversationsApi.html#getcallbackscallbackid) | **GET** /api/v2/conversations/callbacks/{callbackId} | Get callback conversation |
+| [**GetCallbacksCallbackIdParticipantsParticipantIdWrapup**](ConversationsApi.html#getcallbackscallbackidparticipantsparticipantidwrapup) | **GET** /api/v2/conversations/callbacks/{callbackId}/participants/{participantId}/wrapup | Get the wrap-up for this conversation participant.  |
+| [**GetCallbacksCallbackIdParticipantsParticipantIdWrapupcodes**](ConversationsApi.html#getcallbackscallbackidparticipantsparticipantidwrapupcodes) | **GET** /api/v2/conversations/callbacks/{callbackId}/participants/{participantId}/wrapupcodes | Get list of wrapup codes for this conversation participant |
+| [**GetCalls**](ConversationsApi.html#getcalls) | **GET** /api/v2/conversations/calls | Get recent conversations |
+| [**GetCallsCallId**](ConversationsApi.html#getcallscallid) | **GET** /api/v2/conversations/calls/{callId} | Get call conversation |
+| [**GetCallsCallIdParticipantsParticipantIdWrapup**](ConversationsApi.html#getcallscallidparticipantsparticipantidwrapup) | **GET** /api/v2/conversations/calls/{callId}/participants/{participantId}/wrapup | Get the wrap-up for this conversation participant.  |
+| [**GetCallsCallIdParticipantsParticipantIdWrapupcodes**](ConversationsApi.html#getcallscallidparticipantsparticipantidwrapupcodes) | **GET** /api/v2/conversations/calls/{callId}/participants/{participantId}/wrapupcodes | Get list of wrapup codes for this conversation participant |
+| [**GetCallsMaximumconferenceparties**](ConversationsApi.html#getcallsmaximumconferenceparties) | **GET** /api/v2/conversations/calls/maximumconferenceparties | Get the maximum number of participants that this user can have on a conference |
+| [**GetChats**](ConversationsApi.html#getchats) | **GET** /api/v2/conversations/chats | Get recent chat conversations |
+| [**GetChatsChatId**](ConversationsApi.html#getchatschatid) | **GET** /api/v2/conversations/chats/{chatId} | Get chat conversation |
+| [**GetChatsChatIdParticipantsParticipantIdWrapup**](ConversationsApi.html#getchatschatidparticipantsparticipantidwrapup) | **GET** /api/v2/conversations/chats/{chatId}/participants/{participantId}/wrapup | Get the wrap-up for this conversation participant.  |
+| [**GetChatsChatIdParticipantsParticipantIdWrapupcodes**](ConversationsApi.html#getchatschatidparticipantsparticipantidwrapupcodes) | **GET** /api/v2/conversations/chats/{chatId}/participants/{participantId}/wrapupcodes | Get list of wrapup codes for this conversation participant |
+| [**GetConversationId**](ConversationsApi.html#getconversationid) | **GET** /api/v2/conversations/{conversationId} | Get conversation |
+| [**GetConversationIdParticipantsParticipantIdWrapup**](ConversationsApi.html#getconversationidparticipantsparticipantidwrapup) | **GET** /api/v2/conversations/{conversationId}/participants/{participantId}/wrapup | Get the wrap-up for this conversation participant.  |
+| [**GetConversationIdParticipantsParticipantIdWrapupcodes**](ConversationsApi.html#getconversationidparticipantsparticipantidwrapupcodes) | **GET** /api/v2/conversations/{conversationId}/participants/{participantId}/wrapupcodes | Get list of wrapup codes for this conversation participant |
+| [**GetConversations**](ConversationsApi.html#getconversations) | **GET** /api/v2/conversations | Get conversations |
+| [**GetConversationsConversationIdDetails**](ConversationsApi.html#getconversationsconversationiddetails) | **GET** /api/v2/analytics/conversations/{conversationId}/details | Get a conversation by id |
+| [**GetEmails**](ConversationsApi.html#getemails) | **GET** /api/v2/conversations/emails | Get recent email conversations |
+| [**GetEmailsEmailId**](ConversationsApi.html#getemailsemailid) | **GET** /api/v2/conversations/emails/{emailId} | Get email conversation |
+| [**GetEmailsEmailIdMessages**](ConversationsApi.html#getemailsemailidmessages) | **GET** /api/v2/conversations/emails/{emailId}/messages | Get conversation messages |
+| [**GetEmailsEmailIdMessagesDraft**](ConversationsApi.html#getemailsemailidmessagesdraft) | **GET** /api/v2/conversations/emails/{emailId}/messages/draft | Get conversation draft reply |
+| [**GetEmailsEmailIdMessagesMessageId**](ConversationsApi.html#getemailsemailidmessagesmessageid) | **GET** /api/v2/conversations/emails/{emailId}/messages/{messageId} | Get conversation message |
+| [**GetEmailsEmailIdParticipantsParticipantIdWrapup**](ConversationsApi.html#getemailsemailidparticipantsparticipantidwrapup) | **GET** /api/v2/conversations/emails/{emailId}/participants/{participantId}/wrapup | Get the wrap-up for this conversation participant.  |
+| [**GetEmailsEmailIdParticipantsParticipantIdWrapupcodes**](ConversationsApi.html#getemailsemailidparticipantsparticipantidwrapupcodes) | **GET** /api/v2/conversations/emails/{emailId}/participants/{participantId}/wrapupcodes | Get list of wrapup codes for this conversation participant |
+| [**PatchCallbacksCallbackIdParticipantsParticipantId**](ConversationsApi.html#patchcallbackscallbackidparticipantsparticipantid) | **PATCH** /api/v2/conversations/callbacks/{callbackId}/participants/{participantId} | Update conversation participant |
+| [**PatchCallbacksCallbackIdParticipantsParticipantIdAttributes**](ConversationsApi.html#patchcallbackscallbackidparticipantsparticipantidattributes) | **PATCH** /api/v2/conversations/callbacks/{callbackId}/participants/{participantId}/attributes | Update the attributes on a conversation participant. |
+| [**PatchCallsCallId**](ConversationsApi.html#patchcallscallid) | **PATCH** /api/v2/conversations/calls/{callId} | Update conversation |
+| [**PatchCallsCallIdParticipantsParticipantId**](ConversationsApi.html#patchcallscallidparticipantsparticipantid) | **PATCH** /api/v2/conversations/calls/{callId}/participants/{participantId} | Update conversation participant |
+| [**PatchCallsCallIdParticipantsParticipantIdAttributes**](ConversationsApi.html#patchcallscallidparticipantsparticipantidattributes) | **PATCH** /api/v2/conversations/calls/{callId}/participants/{participantId}/attributes | Update the attributes on a conversation participant. |
+| [**PatchCallsCallIdParticipantsParticipantIdConsult**](ConversationsApi.html#patchcallscallidparticipantsparticipantidconsult) | **PATCH** /api/v2/conversations/calls/{callId}/participants/{participantId}/consult | Change who can speak |
+| [**PatchChatsChatIdParticipantsParticipantId**](ConversationsApi.html#patchchatschatidparticipantsparticipantid) | **PATCH** /api/v2/conversations/chats/{chatId}/participants/{participantId} | Update conversation participant |
+| [**PatchChatsChatIdParticipantsParticipantIdAttributes**](ConversationsApi.html#patchchatschatidparticipantsparticipantidattributes) | **PATCH** /api/v2/conversations/chats/{chatId}/participants/{participantId}/attributes | Update the attributes on a conversation participant. |
+| [**PatchConversationIdParticipantsParticipantId**](ConversationsApi.html#patchconversationidparticipantsparticipantid) | **PATCH** /api/v2/conversations/{conversationId}/participants/{participantId} | Update a participant. |
+| [**PatchConversationIdParticipantsParticipantIdAttributes**](ConversationsApi.html#patchconversationidparticipantsparticipantidattributes) | **PATCH** /api/v2/conversations/{conversationId}/participants/{participantId}/attributes | Update the attributes on a conversation participant. |
+| [**PatchEmailsEmailIdParticipantsParticipantId**](ConversationsApi.html#patchemailsemailidparticipantsparticipantid) | **PATCH** /api/v2/conversations/emails/{emailId}/participants/{participantId} | Update conversation participant |
+| [**PatchEmailsEmailIdParticipantsParticipantIdAttributes**](ConversationsApi.html#patchemailsemailidparticipantsparticipantidattributes) | **PATCH** /api/v2/conversations/emails/{emailId}/participants/{participantId}/attributes | Update the attributes on a conversation participant. |
+| [**PostCallbacksCallbackIdParticipantsParticipantIdReplace**](ConversationsApi.html#postcallbackscallbackidparticipantsparticipantidreplace) | **POST** /api/v2/conversations/callbacks/{callbackId}/participants/{participantId}/replace | Replace this participant with the specified user and/or address |
+| [**PostCalls**](ConversationsApi.html#postcalls) | **POST** /api/v2/conversations/calls | Create a call conversation |
+| [**PostCallsCallId**](ConversationsApi.html#postcallscallid) | **POST** /api/v2/conversations/calls/{callId} | Add a new call to a conversation |
+| [**PostCallsCallIdParticipants**](ConversationsApi.html#postcallscallidparticipants) | **POST** /api/v2/conversations/calls/{callId}/participants | Add participants to a conversation |
+| [**PostCallsCallIdParticipantsParticipantIdConsult**](ConversationsApi.html#postcallscallidparticipantsparticipantidconsult) | **POST** /api/v2/conversations/calls/{callId}/participants/{participantId}/consult | Initiate and update consult transfer |
+| [**PostCallsCallIdParticipantsParticipantIdMonitor**](ConversationsApi.html#postcallscallidparticipantsparticipantidmonitor) | **POST** /api/v2/conversations/calls/{callId}/participants/{participantId}/monitor | Listen in on the conversation from the point of view of a given participant. |
+| [**PostCallsCallIdParticipantsParticipantIdReplace**](ConversationsApi.html#postcallscallidparticipantsparticipantidreplace) | **POST** /api/v2/conversations/calls/{callId}/participants/{participantId}/replace | Replace this participant with the specified user and/or address |
+| [**PostChatsChatIdParticipantsParticipantIdReplace**](ConversationsApi.html#postchatschatidparticipantsparticipantidreplace) | **POST** /api/v2/conversations/chats/{chatId}/participants/{participantId}/replace | Replace this participant with the specified user and/or address |
+| [**PostConversationIdParticipantsParticipantIdCallbacks**](ConversationsApi.html#postconversationidparticipantsparticipantidcallbacks) | **POST** /api/v2/conversations/{conversationId}/participants/{participantId}/callbacks | Create a new callback for the specified participant on the conversation. |
+| [**PostConversationIdParticipantsParticipantIdReplace**](ConversationsApi.html#postconversationidparticipantsparticipantidreplace) | **POST** /api/v2/conversations/{conversationId}/participants/{participantId}/replace | Replace this participant with the specified user and/or address |
+| [**PostConversationsAggregatesQuery**](ConversationsApi.html#postconversationsaggregatesquery) | **POST** /api/v2/analytics/conversations/aggregates/query | Query for conversation aggregates |
+| [**PostConversationsConversationIdDetailsProperties**](ConversationsApi.html#postconversationsconversationiddetailsproperties) | **POST** /api/v2/analytics/conversations/{conversationId}/details/properties | Index conversation properties |
+| [**PostConversationsDetailsQuery**](ConversationsApi.html#postconversationsdetailsquery) | **POST** /api/v2/analytics/conversations/details/query | Query for conversation details |
+| [**PostEmailsEmailIdMessages**](ConversationsApi.html#postemailsemailidmessages) | **POST** /api/v2/conversations/emails/{emailId}/messages | Send an email reply |
+| [**PostEmailsEmailIdParticipantsParticipantIdReplace**](ConversationsApi.html#postemailsemailidparticipantsparticipantidreplace) | **POST** /api/v2/conversations/emails/{emailId}/participants/{participantId}/replace | Replace this participant with the specified user and/or address |
+| [**PostFaxes**](ConversationsApi.html#postfaxes) | **POST** /api/v2/conversations/faxes | Create Fax Conversation |
+| [**PutEmailsEmailIdMessagesDraft**](ConversationsApi.html#putemailsemailidmessagesdraft) | **PUT** /api/v2/conversations/emails/{emailId}/messages/draft | Update conversation draft reply |
 {: class="table table-striped"}
 
-<a name="DeleteCallsCallIdParticipantsParticipantIdConsult"></a>
+<a name="deletecallscallidparticipantsparticipantidconsult"></a>
+
 ## string** DeleteCallsCallIdParticipantsParticipantIdConsult (string callId, string participantId)
 
 Cancel the transfer
@@ -119,7 +123,8 @@ namespace Example
 
 **string**
 
-<a name="DeleteEmailsEmailIdMessagesDraftAttachmentsAttachmentId"></a>
+<a name="deleteemailsemailidmessagesdraftattachmentsattachmentid"></a>
+
 ## string** DeleteEmailsEmailIdMessagesDraftAttachmentsAttachmentId (string emailId, string attachmentId)
 
 Delete attachment from draft
@@ -176,7 +181,8 @@ namespace Example
 
 **string**
 
-<a name="GetCallbacks"></a>
+<a name="getcallbacks"></a>
+
 ## [**CallbackConversationEntityListing**](CallbackConversationEntityListing.html) GetCallbacks ()
 
 Get callback conversations
@@ -224,9 +230,10 @@ This endpoint does require any parameters.
 
 ### Return type
 
-[**CallbackConversationEntityListing**](CallbackConversationEntityListing.md)
+[**CallbackConversationEntityListing**](CallbackConversationEntityListing.html)
 
-<a name="GetCallbacksCallbackId"></a>
+<a name="getcallbackscallbackid"></a>
+
 ## [**CallbackConversation**](CallbackConversation.html) GetCallbacksCallbackId (string callbackId)
 
 Get callback conversation
@@ -279,9 +286,10 @@ namespace Example
 
 ### Return type
 
-[**CallbackConversation**](CallbackConversation.md)
+[**CallbackConversation**](CallbackConversation.html)
 
-<a name="GetCallbacksCallbackIdParticipantsParticipantIdWrapup"></a>
+<a name="getcallbackscallbackidparticipantsparticipantidwrapup"></a>
+
 ## [**WrapupCode**](WrapupCode.html) GetCallbacksCallbackIdParticipantsParticipantIdWrapup (string callbackId, string participantId, bool? provisional = null)
 
 Get the wrap-up for this conversation participant. 
@@ -338,9 +346,10 @@ namespace Example
 
 ### Return type
 
-[**WrapupCode**](WrapupCode.md)
+[**WrapupCode**](WrapupCode.html)
 
-<a name="GetCallbacksCallbackIdParticipantsParticipantIdWrapupcodes"></a>
+<a name="getcallbackscallbackidparticipantsparticipantidwrapupcodes"></a>
+
 ## [**WrapupCode**](WrapupCode.html) GetCallbacksCallbackIdParticipantsParticipantIdWrapupcodes (string callbackId, string participantId)
 
 Get list of wrapup codes for this conversation participant
@@ -395,9 +404,10 @@ namespace Example
 
 ### Return type
 
-[**WrapupCode**](WrapupCode.md)
+[**WrapupCode**](WrapupCode.html)
 
-<a name="GetCalls"></a>
+<a name="getcalls"></a>
+
 ## [**CallConversationEntityListing**](CallConversationEntityListing.html) GetCalls ()
 
 Get recent conversations
@@ -445,9 +455,10 @@ This endpoint does require any parameters.
 
 ### Return type
 
-[**CallConversationEntityListing**](CallConversationEntityListing.md)
+[**CallConversationEntityListing**](CallConversationEntityListing.html)
 
-<a name="GetCallsCallId"></a>
+<a name="getcallscallid"></a>
+
 ## [**CallConversation**](CallConversation.html) GetCallsCallId (string callId)
 
 Get call conversation
@@ -500,9 +511,10 @@ namespace Example
 
 ### Return type
 
-[**CallConversation**](CallConversation.md)
+[**CallConversation**](CallConversation.html)
 
-<a name="GetCallsCallIdParticipantsParticipantIdWrapup"></a>
+<a name="getcallscallidparticipantsparticipantidwrapup"></a>
+
 ## [**WrapupCode**](WrapupCode.html) GetCallsCallIdParticipantsParticipantIdWrapup (string callId, string participantId, bool? provisional = null)
 
 Get the wrap-up for this conversation participant. 
@@ -559,9 +571,10 @@ namespace Example
 
 ### Return type
 
-[**WrapupCode**](WrapupCode.md)
+[**WrapupCode**](WrapupCode.html)
 
-<a name="GetCallsCallIdParticipantsParticipantIdWrapupcodes"></a>
+<a name="getcallscallidparticipantsparticipantidwrapupcodes"></a>
+
 ## [**WrapupCode**](WrapupCode.html) GetCallsCallIdParticipantsParticipantIdWrapupcodes (string callId, string participantId)
 
 Get list of wrapup codes for this conversation participant
@@ -616,9 +629,10 @@ namespace Example
 
 ### Return type
 
-[**WrapupCode**](WrapupCode.md)
+[**WrapupCode**](WrapupCode.html)
 
-<a name="GetCallsMaximumconferenceparties"></a>
+<a name="getcallsmaximumconferenceparties"></a>
+
 ## [**MaxParticipants**](MaxParticipants.html) GetCallsMaximumconferenceparties ()
 
 Get the maximum number of participants that this user can have on a conference
@@ -666,9 +680,10 @@ This endpoint does require any parameters.
 
 ### Return type
 
-[**MaxParticipants**](MaxParticipants.md)
+[**MaxParticipants**](MaxParticipants.html)
 
-<a name="GetChats"></a>
+<a name="getchats"></a>
+
 ## [**ChatConversationEntityListing**](ChatConversationEntityListing.html) GetChats ()
 
 Get recent chat conversations
@@ -716,9 +731,10 @@ This endpoint does require any parameters.
 
 ### Return type
 
-[**ChatConversationEntityListing**](ChatConversationEntityListing.md)
+[**ChatConversationEntityListing**](ChatConversationEntityListing.html)
 
-<a name="GetChatsChatId"></a>
+<a name="getchatschatid"></a>
+
 ## [**ChatConversation**](ChatConversation.html) GetChatsChatId (string chatId)
 
 Get chat conversation
@@ -771,9 +787,10 @@ namespace Example
 
 ### Return type
 
-[**ChatConversation**](ChatConversation.md)
+[**ChatConversation**](ChatConversation.html)
 
-<a name="GetChatsChatIdParticipantsParticipantIdWrapup"></a>
+<a name="getchatschatidparticipantsparticipantidwrapup"></a>
+
 ## [**WrapupCode**](WrapupCode.html) GetChatsChatIdParticipantsParticipantIdWrapup (string chatId, string participantId, bool? provisional = null)
 
 Get the wrap-up for this conversation participant. 
@@ -830,9 +847,10 @@ namespace Example
 
 ### Return type
 
-[**WrapupCode**](WrapupCode.md)
+[**WrapupCode**](WrapupCode.html)
 
-<a name="GetChatsChatIdParticipantsParticipantIdWrapupcodes"></a>
+<a name="getchatschatidparticipantsparticipantidwrapupcodes"></a>
+
 ## [**WrapupCode**](WrapupCode.html) GetChatsChatIdParticipantsParticipantIdWrapupcodes (string chatId, string participantId)
 
 Get list of wrapup codes for this conversation participant
@@ -887,9 +905,10 @@ namespace Example
 
 ### Return type
 
-[**WrapupCode**](WrapupCode.md)
+[**WrapupCode**](WrapupCode.html)
 
-<a name="GetConversationId"></a>
+<a name="getconversationid"></a>
+
 ## [**Conversation**](Conversation.html) GetConversationId (string conversationId)
 
 Get conversation
@@ -942,9 +961,10 @@ namespace Example
 
 ### Return type
 
-[**Conversation**](Conversation.md)
+[**Conversation**](Conversation.html)
 
-<a name="GetConversationIdParticipantsParticipantIdWrapup"></a>
+<a name="getconversationidparticipantsparticipantidwrapup"></a>
+
 ## [**WrapupCode**](WrapupCode.html) GetConversationIdParticipantsParticipantIdWrapup (string conversationId, string participantId, bool? provisional = null)
 
 Get the wrap-up for this conversation participant. 
@@ -1001,9 +1021,10 @@ namespace Example
 
 ### Return type
 
-[**WrapupCode**](WrapupCode.md)
+[**WrapupCode**](WrapupCode.html)
 
-<a name="GetConversationIdParticipantsParticipantIdWrapupcodes"></a>
+<a name="getconversationidparticipantsparticipantidwrapupcodes"></a>
+
 ## [**WrapupCode**](WrapupCode.html) GetConversationIdParticipantsParticipantIdWrapupcodes (string conversationId, string participantId)
 
 Get list of wrapup codes for this conversation participant
@@ -1058,9 +1079,10 @@ namespace Example
 
 ### Return type
 
-[**WrapupCode**](WrapupCode.md)
+[**WrapupCode**](WrapupCode.html)
 
-<a name="GetConversations"></a>
+<a name="getconversations"></a>
+
 ## [**ConversationEntityListing**](ConversationEntityListing.html) GetConversations (string communicationType = null)
 
 Get conversations
@@ -1113,9 +1135,10 @@ namespace Example
 
 ### Return type
 
-[**ConversationEntityListing**](ConversationEntityListing.md)
+[**ConversationEntityListing**](ConversationEntityListing.html)
 
-<a name="GetConversationsConversationIdDetails"></a>
+<a name="getconversationsconversationiddetails"></a>
+
 ## [**AnalyticsConversation**](AnalyticsConversation.html) GetConversationsConversationIdDetails (string conversationId)
 
 Get a conversation by id
@@ -1168,9 +1191,10 @@ namespace Example
 
 ### Return type
 
-[**AnalyticsConversation**](AnalyticsConversation.md)
+[**AnalyticsConversation**](AnalyticsConversation.html)
 
-<a name="GetEmails"></a>
+<a name="getemails"></a>
+
 ## [**EmailConversationEntityListing**](EmailConversationEntityListing.html) GetEmails ()
 
 Get recent email conversations
@@ -1218,9 +1242,10 @@ This endpoint does require any parameters.
 
 ### Return type
 
-[**EmailConversationEntityListing**](EmailConversationEntityListing.md)
+[**EmailConversationEntityListing**](EmailConversationEntityListing.html)
 
-<a name="GetEmailsEmailId"></a>
+<a name="getemailsemailid"></a>
+
 ## [**EmailConversation**](EmailConversation.html) GetEmailsEmailId (string emailId)
 
 Get email conversation
@@ -1273,9 +1298,10 @@ namespace Example
 
 ### Return type
 
-[**EmailConversation**](EmailConversation.md)
+[**EmailConversation**](EmailConversation.html)
 
-<a name="GetEmailsEmailIdMessages"></a>
+<a name="getemailsemailidmessages"></a>
+
 ## [**EmailMessageListing**](EmailMessageListing.html) GetEmailsEmailIdMessages (string emailId)
 
 Get conversation messages
@@ -1328,9 +1354,10 @@ namespace Example
 
 ### Return type
 
-[**EmailMessageListing**](EmailMessageListing.md)
+[**EmailMessageListing**](EmailMessageListing.html)
 
-<a name="GetEmailsEmailIdMessagesDraft"></a>
+<a name="getemailsemailidmessagesdraft"></a>
+
 ## [**EmailMessage**](EmailMessage.html) GetEmailsEmailIdMessagesDraft (string emailId)
 
 Get conversation draft reply
@@ -1383,9 +1410,10 @@ namespace Example
 
 ### Return type
 
-[**EmailMessage**](EmailMessage.md)
+[**EmailMessage**](EmailMessage.html)
 
-<a name="GetEmailsEmailIdMessagesMessageId"></a>
+<a name="getemailsemailidmessagesmessageid"></a>
+
 ## [**EmailMessage**](EmailMessage.html) GetEmailsEmailIdMessagesMessageId (string emailId, string messageId)
 
 Get conversation message
@@ -1440,9 +1468,10 @@ namespace Example
 
 ### Return type
 
-[**EmailMessage**](EmailMessage.md)
+[**EmailMessage**](EmailMessage.html)
 
-<a name="GetEmailsEmailIdParticipantsParticipantIdWrapup"></a>
+<a name="getemailsemailidparticipantsparticipantidwrapup"></a>
+
 ## [**WrapupCode**](WrapupCode.html) GetEmailsEmailIdParticipantsParticipantIdWrapup (string emailId, string participantId, bool? provisional = null)
 
 Get the wrap-up for this conversation participant. 
@@ -1499,9 +1528,10 @@ namespace Example
 
 ### Return type
 
-[**WrapupCode**](WrapupCode.md)
+[**WrapupCode**](WrapupCode.html)
 
-<a name="GetEmailsEmailIdParticipantsParticipantIdWrapupcodes"></a>
+<a name="getemailsemailidparticipantsparticipantidwrapupcodes"></a>
+
 ## [**WrapupCode**](WrapupCode.html) GetEmailsEmailIdParticipantsParticipantIdWrapupcodes (string emailId, string participantId)
 
 Get list of wrapup codes for this conversation participant
@@ -1556,9 +1586,10 @@ namespace Example
 
 ### Return type
 
-[**WrapupCode**](WrapupCode.md)
+[**WrapupCode**](WrapupCode.html)
 
-<a name="PatchCallbacksCallbackIdParticipantsParticipantId"></a>
+<a name="patchcallbackscallbackidparticipantsparticipantid"></a>
+
 ## void PatchCallbacksCallbackIdParticipantsParticipantId (string callbackId, string participantId, MediaParticipantRequest body = null)
 
 Update conversation participant
@@ -1609,14 +1640,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **callbackId** | **string**|  |  |
 | **participantId** | **string**|  |  |
-| **body** | [**MediaParticipantRequest**](MediaParticipantRequest.md)|  | [optional]  |
+| **body** | [**MediaParticipantRequest**](MediaParticipantRequest.html)|  | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
 void (empty response body)
 
-<a name="PatchCallbacksCallbackIdParticipantsParticipantIdAttributes"></a>
+<a name="patchcallbackscallbackidparticipantsparticipantidattributes"></a>
+
 ## void PatchCallbacksCallbackIdParticipantsParticipantIdAttributes (string callbackId, string participantId, ParticipantAttributes body = null)
 
 Update the attributes on a conversation participant.
@@ -1667,14 +1699,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **callbackId** | **string**|  |  |
 | **participantId** | **string**|  |  |
-| **body** | [**ParticipantAttributes**](ParticipantAttributes.md)|  | [optional]  |
+| **body** | [**ParticipantAttributes**](ParticipantAttributes.html)|  | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
 void (empty response body)
 
-<a name="PatchCallsCallId"></a>
+<a name="patchcallscallid"></a>
+
 ## [**Conversation**](Conversation.html) PatchCallsCallId (string callId, Conversation body = null)
 
 Update conversation
@@ -1724,14 +1757,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **callId** | **string**|  |  |
-| **body** | [**Conversation**](Conversation.md)| Conversation | [optional]  |
+| **body** | [**Conversation**](Conversation.html)| Conversation | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**Conversation**](Conversation.md)
+[**Conversation**](Conversation.html)
 
-<a name="PatchCallsCallIdParticipantsParticipantId"></a>
+<a name="patchcallscallidparticipantsparticipantid"></a>
+
 ## void PatchCallsCallIdParticipantsParticipantId (string callId, string participantId, MediaParticipantRequest body = null)
 
 Update conversation participant
@@ -1782,14 +1816,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **callId** | **string**|  |  |
 | **participantId** | **string**|  |  |
-| **body** | [**MediaParticipantRequest**](MediaParticipantRequest.md)|  | [optional]  |
+| **body** | [**MediaParticipantRequest**](MediaParticipantRequest.html)|  | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
 void (empty response body)
 
-<a name="PatchCallsCallIdParticipantsParticipantIdAttributes"></a>
+<a name="patchcallscallidparticipantsparticipantidattributes"></a>
+
 ## void PatchCallsCallIdParticipantsParticipantIdAttributes (string callId, string participantId, ParticipantAttributes body = null)
 
 Update the attributes on a conversation participant.
@@ -1840,14 +1875,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **callId** | **string**|  |  |
 | **participantId** | **string**|  |  |
-| **body** | [**ParticipantAttributes**](ParticipantAttributes.md)|  | [optional]  |
+| **body** | [**ParticipantAttributes**](ParticipantAttributes.html)|  | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
 void (empty response body)
 
-<a name="PatchCallsCallIdParticipantsParticipantIdConsult"></a>
+<a name="patchcallscallidparticipantsparticipantidconsult"></a>
+
 ## [**ConsultTransferResponse**](ConsultTransferResponse.html) PatchCallsCallIdParticipantsParticipantIdConsult (string callId, string participantId, ConsultTransferUpdate body = null)
 
 Change who can speak
@@ -1899,14 +1935,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **callId** | **string**|  |  |
 | **participantId** | **string**|  |  |
-| **body** | [**ConsultTransferUpdate**](ConsultTransferUpdate.md)| new speak to | [optional]  |
+| **body** | [**ConsultTransferUpdate**](ConsultTransferUpdate.html)| new speak to | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**ConsultTransferResponse**](ConsultTransferResponse.md)
+[**ConsultTransferResponse**](ConsultTransferResponse.html)
 
-<a name="PatchChatsChatIdParticipantsParticipantId"></a>
+<a name="patchchatschatidparticipantsparticipantid"></a>
+
 ## void PatchChatsChatIdParticipantsParticipantId (string chatId, string participantId, MediaParticipantRequest body = null)
 
 Update conversation participant
@@ -1957,14 +1994,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **chatId** | **string**|  |  |
 | **participantId** | **string**|  |  |
-| **body** | [**MediaParticipantRequest**](MediaParticipantRequest.md)|  | [optional]  |
+| **body** | [**MediaParticipantRequest**](MediaParticipantRequest.html)|  | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
 void (empty response body)
 
-<a name="PatchChatsChatIdParticipantsParticipantIdAttributes"></a>
+<a name="patchchatschatidparticipantsparticipantidattributes"></a>
+
 ## void PatchChatsChatIdParticipantsParticipantIdAttributes (string chatId, string participantId, ParticipantAttributes body = null)
 
 Update the attributes on a conversation participant.
@@ -2015,14 +2053,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **chatId** | **string**|  |  |
 | **participantId** | **string**|  |  |
-| **body** | [**ParticipantAttributes**](ParticipantAttributes.md)|  | [optional]  |
+| **body** | [**ParticipantAttributes**](ParticipantAttributes.html)|  | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
 void (empty response body)
 
-<a name="PatchConversationIdParticipantsParticipantId"></a>
+<a name="patchconversationidparticipantsparticipantid"></a>
+
 ## void PatchConversationIdParticipantsParticipantId (string conversationId, string participantId, MediaParticipantRequest body = null)
 
 Update a participant.
@@ -2073,14 +2112,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversation ID |  |
 | **participantId** | **string**| participant ID |  |
-| **body** | [**MediaParticipantRequest**](MediaParticipantRequest.md)|  | [optional]  |
+| **body** | [**MediaParticipantRequest**](MediaParticipantRequest.html)|  | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
 void (empty response body)
 
-<a name="PatchConversationIdParticipantsParticipantIdAttributes"></a>
+<a name="patchconversationidparticipantsparticipantidattributes"></a>
+
 ## void PatchConversationIdParticipantsParticipantIdAttributes (string conversationId, string participantId, ParticipantAttributes body = null)
 
 Update the attributes on a conversation participant.
@@ -2131,14 +2171,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversation ID |  |
 | **participantId** | **string**| participant ID |  |
-| **body** | [**ParticipantAttributes**](ParticipantAttributes.md)|  | [optional]  |
+| **body** | [**ParticipantAttributes**](ParticipantAttributes.html)|  | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
 void (empty response body)
 
-<a name="PatchEmailsEmailIdParticipantsParticipantId"></a>
+<a name="patchemailsemailidparticipantsparticipantid"></a>
+
 ## void PatchEmailsEmailIdParticipantsParticipantId (string emailId, string participantId, MediaParticipantRequest body = null)
 
 Update conversation participant
@@ -2189,14 +2230,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **emailId** | **string**|  |  |
 | **participantId** | **string**|  |  |
-| **body** | [**MediaParticipantRequest**](MediaParticipantRequest.md)|  | [optional]  |
+| **body** | [**MediaParticipantRequest**](MediaParticipantRequest.html)|  | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
 void (empty response body)
 
-<a name="PatchEmailsEmailIdParticipantsParticipantIdAttributes"></a>
+<a name="patchemailsemailidparticipantsparticipantidattributes"></a>
+
 ## void PatchEmailsEmailIdParticipantsParticipantIdAttributes (string emailId, string participantId, ParticipantAttributes body = null)
 
 Update the attributes on a conversation participant.
@@ -2247,14 +2289,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **emailId** | **string**|  |  |
 | **participantId** | **string**|  |  |
-| **body** | [**ParticipantAttributes**](ParticipantAttributes.md)|  | [optional]  |
+| **body** | [**ParticipantAttributes**](ParticipantAttributes.html)|  | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
 void (empty response body)
 
-<a name="PostCallbacksCallbackIdParticipantsParticipantIdReplace"></a>
+<a name="postcallbackscallbackidparticipantsparticipantidreplace"></a>
+
 ## void PostCallbacksCallbackIdParticipantsParticipantIdReplace (string callbackId, string participantId, TransferRequest body = null)
 
 Replace this participant with the specified user and/or address
@@ -2305,14 +2348,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **callbackId** | **string**|  |  |
 | **participantId** | **string**|  |  |
-| **body** | [**TransferRequest**](TransferRequest.md)|  | [optional]  |
+| **body** | [**TransferRequest**](TransferRequest.html)|  | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
 void (empty response body)
 
-<a name="PostCalls"></a>
+<a name="postcalls"></a>
+
 ## [**CreateCallResponse**](CreateCallResponse.html) PostCalls (CreateCallRequest body = null)
 
 Create a call conversation
@@ -2360,14 +2404,15 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**CreateCallRequest**](CreateCallRequest.md)|  | [optional]  |
+| **body** | [**CreateCallRequest**](CreateCallRequest.html)|  | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**CreateCallResponse**](CreateCallResponse.md)
+[**CreateCallResponse**](CreateCallResponse.html)
 
-<a name="PostCallsCallId"></a>
+<a name="postcallscallid"></a>
+
 ## [**Conversation**](Conversation.html) PostCallsCallId (string callId, CallCommand body = null)
 
 Add a new call to a conversation
@@ -2417,14 +2462,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **callId** | **string**|  |  |
-| **body** | [**CallCommand**](CallCommand.md)| Conversation | [optional]  |
+| **body** | [**CallCommand**](CallCommand.html)| Conversation | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**Conversation**](Conversation.md)
+[**Conversation**](Conversation.html)
 
-<a name="PostCallsCallIdParticipants"></a>
+<a name="postcallscallidparticipants"></a>
+
 ## [**Conversation**](Conversation.html) PostCallsCallIdParticipants (string callId, Conversation body = null)
 
 Add participants to a conversation
@@ -2474,14 +2520,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **callId** | **string**|  |  |
-| **body** | [**Conversation**](Conversation.md)| Conversation | [optional]  |
+| **body** | [**Conversation**](Conversation.html)| Conversation | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**Conversation**](Conversation.md)
+[**Conversation**](Conversation.html)
 
-<a name="PostCallsCallIdParticipantsParticipantIdConsult"></a>
+<a name="postcallscallidparticipantsparticipantidconsult"></a>
+
 ## [**ConsultTransferResponse**](ConsultTransferResponse.html) PostCallsCallIdParticipantsParticipantIdConsult (string callId, string participantId, ConsultTransfer body = null)
 
 Initiate and update consult transfer
@@ -2533,14 +2580,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **callId** | **string**|  |  |
 | **participantId** | **string**|  |  |
-| **body** | [**ConsultTransfer**](ConsultTransfer.md)| Destination address &amp; initial speak to | [optional]  |
+| **body** | [**ConsultTransfer**](ConsultTransfer.html)| Destination address &amp; initial speak to | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**ConsultTransferResponse**](ConsultTransferResponse.md)
+[**ConsultTransferResponse**](ConsultTransferResponse.html)
 
-<a name="PostCallsCallIdParticipantsParticipantIdMonitor"></a>
+<a name="postcallscallidparticipantsparticipantidmonitor"></a>
+
 ## void PostCallsCallIdParticipantsParticipantIdMonitor (string callId, string participantId)
 
 Listen in on the conversation from the point of view of a given participant.
@@ -2596,7 +2644,8 @@ namespace Example
 
 void (empty response body)
 
-<a name="PostCallsCallIdParticipantsParticipantIdReplace"></a>
+<a name="postcallscallidparticipantsparticipantidreplace"></a>
+
 ## void PostCallsCallIdParticipantsParticipantIdReplace (string callId, string participantId, TransferRequest body = null)
 
 Replace this participant with the specified user and/or address
@@ -2647,14 +2696,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **callId** | **string**|  |  |
 | **participantId** | **string**|  |  |
-| **body** | [**TransferRequest**](TransferRequest.md)|  | [optional]  |
+| **body** | [**TransferRequest**](TransferRequest.html)|  | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
 void (empty response body)
 
-<a name="PostChatsChatIdParticipantsParticipantIdReplace"></a>
+<a name="postchatschatidparticipantsparticipantidreplace"></a>
+
 ## void PostChatsChatIdParticipantsParticipantIdReplace (string chatId, string participantId, TransferRequest body = null)
 
 Replace this participant with the specified user and/or address
@@ -2705,14 +2755,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **chatId** | **string**|  |  |
 | **participantId** | **string**|  |  |
-| **body** | [**TransferRequest**](TransferRequest.md)|  | [optional]  |
+| **body** | [**TransferRequest**](TransferRequest.html)|  | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
 void (empty response body)
 
-<a name="PostConversationIdParticipantsParticipantIdCallbacks"></a>
+<a name="postconversationidparticipantsparticipantidcallbacks"></a>
+
 ## void PostConversationIdParticipantsParticipantIdCallbacks (string conversationId, string participantId, CreateCallbackCommand body = null)
 
 Create a new callback for the specified participant on the conversation.
@@ -2763,14 +2814,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversation ID |  |
 | **participantId** | **string**| participant ID |  |
-| **body** | [**CreateCallbackCommand**](CreateCallbackCommand.md)|  | [optional]  |
+| **body** | [**CreateCallbackCommand**](CreateCallbackCommand.html)|  | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
 void (empty response body)
 
-<a name="PostConversationIdParticipantsParticipantIdReplace"></a>
+<a name="postconversationidparticipantsparticipantidreplace"></a>
+
 ## void PostConversationIdParticipantsParticipantIdReplace (string conversationId, string participantId, TransferRequest body = null)
 
 Replace this participant with the specified user and/or address
@@ -2821,14 +2873,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversation ID |  |
 | **participantId** | **string**| participant ID |  |
-| **body** | [**TransferRequest**](TransferRequest.md)|  | [optional]  |
+| **body** | [**TransferRequest**](TransferRequest.html)|  | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
 void (empty response body)
 
-<a name="PostConversationsAggregatesQuery"></a>
+<a name="postconversationsaggregatesquery"></a>
+
 ## [**AggregateQueryResponse**](AggregateQueryResponse.html) PostConversationsAggregatesQuery (AggregationQuery body = null)
 
 Query for conversation aggregates
@@ -2876,14 +2929,15 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**AggregationQuery**](AggregationQuery.md)| query | [optional]  |
+| **body** | [**AggregationQuery**](AggregationQuery.html)| query | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**AggregateQueryResponse**](AggregateQueryResponse.md)
+[**AggregateQueryResponse**](AggregateQueryResponse.html)
 
-<a name="PostConversationsConversationIdDetailsProperties"></a>
+<a name="postconversationsconversationiddetailsproperties"></a>
+
 ## [**PropertyIndexRequest**](PropertyIndexRequest.html) PostConversationsConversationIdDetailsProperties (string conversationId, PropertyIndexRequest body = null)
 
 Index conversation properties
@@ -2933,14 +2987,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
-| **body** | [**PropertyIndexRequest**](PropertyIndexRequest.md)| request | [optional]  |
+| **body** | [**PropertyIndexRequest**](PropertyIndexRequest.html)| request | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**PropertyIndexRequest**](PropertyIndexRequest.md)
+[**PropertyIndexRequest**](PropertyIndexRequest.html)
 
-<a name="PostConversationsDetailsQuery"></a>
+<a name="postconversationsdetailsquery"></a>
+
 ## [**AnalyticsConversationQueryResponse**](AnalyticsConversationQueryResponse.html) PostConversationsDetailsQuery (ConversationQuery body = null)
 
 Query for conversation details
@@ -2988,14 +3043,15 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**ConversationQuery**](ConversationQuery.md)| query | [optional]  |
+| **body** | [**ConversationQuery**](ConversationQuery.html)| query | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**AnalyticsConversationQueryResponse**](AnalyticsConversationQueryResponse.md)
+[**AnalyticsConversationQueryResponse**](AnalyticsConversationQueryResponse.html)
 
-<a name="PostEmailsEmailIdMessages"></a>
+<a name="postemailsemailidmessages"></a>
+
 ## [**EmailMessage**](EmailMessage.html) PostEmailsEmailIdMessages (string emailId, EmailMessage body = null)
 
 Send an email reply
@@ -3045,14 +3101,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **emailId** | **string**|  |  |
-| **body** | [**EmailMessage**](EmailMessage.md)| Reply | [optional]  |
+| **body** | [**EmailMessage**](EmailMessage.html)| Reply | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**EmailMessage**](EmailMessage.md)
+[**EmailMessage**](EmailMessage.html)
 
-<a name="PostEmailsEmailIdParticipantsParticipantIdReplace"></a>
+<a name="postemailsemailidparticipantsparticipantidreplace"></a>
+
 ## void PostEmailsEmailIdParticipantsParticipantIdReplace (string emailId, string participantId, TransferRequest body = null)
 
 Replace this participant with the specified user and/or address
@@ -3103,14 +3160,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **emailId** | **string**|  |  |
 | **participantId** | **string**|  |  |
-| **body** | [**TransferRequest**](TransferRequest.md)|  | [optional]  |
+| **body** | [**TransferRequest**](TransferRequest.html)|  | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
 void (empty response body)
 
-<a name="PostFaxes"></a>
+<a name="postfaxes"></a>
+
 ## [**FaxSendResponse**](FaxSendResponse.html) PostFaxes (FaxSendRequest body = null)
 
 Create Fax Conversation
@@ -3158,14 +3216,15 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**FaxSendRequest**](FaxSendRequest.md)| Fax | [optional]  |
+| **body** | [**FaxSendRequest**](FaxSendRequest.html)| Fax | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**FaxSendResponse**](FaxSendResponse.md)
+[**FaxSendResponse**](FaxSendResponse.html)
 
-<a name="PutEmailsEmailIdMessagesDraft"></a>
+<a name="putemailsemailidmessagesdraft"></a>
+
 ## [**EmailMessage**](EmailMessage.html) PutEmailsEmailIdMessagesDraft (string emailId, EmailMessage body = null)
 
 Update conversation draft reply
@@ -3215,10 +3274,10 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **emailId** | **string**|  |  |
-| **body** | [**EmailMessage**](EmailMessage.md)| Draft | [optional]  |
+| **body** | [**EmailMessage**](EmailMessage.html)| Draft | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**EmailMessage**](EmailMessage.md)
+[**EmailMessage**](EmailMessage.html)
 

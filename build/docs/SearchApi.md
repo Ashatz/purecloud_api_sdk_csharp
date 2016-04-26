@@ -1,18 +1,22 @@
-# ININ.PureCloudApi.Api.SearchApi
+---
+title: SearchApi
+---
+## ININ.PureCloudApi.Api.SearchApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**GetSearch**](SearchApi.md#getsearch) | **GET** /api/v2/groups/search | Search using q64 |
-| [**GetSearch_0**](SearchApi.md#getsearch_0) | **GET** /api/v2/search | Search using q64 |
-| [**GetSearch_1**](SearchApi.md#getsearch_1) | **GET** /api/v2/users/search | Search using q64 |
-| [**PostSearch**](SearchApi.md#postsearch) | **POST** /api/v2/groups/search | Search |
-| [**PostSearch_0**](SearchApi.md#postsearch_0) | **POST** /api/v2/search | Search |
-| [**PostSearch_1**](SearchApi.md#postsearch_1) | **POST** /api/v2/users/search | Search |
+| [**GetSearch**](SearchApi.html#getsearch) | **GET** /api/v2/groups/search | Search using q64 |
+| [**GetSearch_0**](SearchApi.html#getsearch_0) | **GET** /api/v2/search | Search using q64 |
+| [**GetSearch_1**](SearchApi.html#getsearch_1) | **GET** /api/v2/users/search | Search using q64 |
+| [**PostSearch**](SearchApi.html#postsearch) | **POST** /api/v2/groups/search | Search |
+| [**PostSearch_0**](SearchApi.html#postsearch_0) | **POST** /api/v2/search | Search |
+| [**PostSearch_1**](SearchApi.html#postsearch_1) | **POST** /api/v2/users/search | Search |
 {: class="table table-striped"}
 
-<a name="GetSearch"></a>
+<a name="getsearch"></a>
+
 ## [**GroupsSearchResponse**](GroupsSearchResponse.html) GetSearch (string q64 = null, List<string> expand = null)
 
 Search using q64
@@ -62,14 +66,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **q64** | **string**|  | [optional]  |
-| **expand** | [**List<string>**](string.md)|  | [optional]  |
+| **expand** | [**List<string>**](string.html)|  | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**GroupsSearchResponse**](GroupsSearchResponse.md)
+[**GroupsSearchResponse**](GroupsSearchResponse.html)
 
-<a name="GetSearch_0"></a>
+<a name="getsearch_0"></a>
+
 ## [**JsonNodeSearchResponse**](JsonNodeSearchResponse.html) GetSearch_0 (string q64 = null, List<string> expand = null)
 
 Search using q64
@@ -119,14 +124,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **q64** | **string**|  | [optional]  |
-| **expand** | [**List<string>**](string.md)|  | [optional]  |
+| **expand** | [**List<string>**](string.html)|  | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**JsonNodeSearchResponse**](JsonNodeSearchResponse.md)
+[**JsonNodeSearchResponse**](JsonNodeSearchResponse.html)
 
-<a name="GetSearch_1"></a>
+<a name="getsearch_1"></a>
+
 ## [**UsersSearchResponse**](UsersSearchResponse.html) GetSearch_1 (string q64 = null, List<string> expand = null)
 
 Search using q64
@@ -176,14 +182,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **q64** | **string**|  | [optional]  |
-| **expand** | [**List<string>**](string.md)|  | [optional]  |
+| **expand** | [**List<string>**](string.html)|  | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**UsersSearchResponse**](UsersSearchResponse.md)
+[**UsersSearchResponse**](UsersSearchResponse.html)
 
-<a name="PostSearch"></a>
+<a name="postsearch"></a>
+
 ## [**GroupsSearchResponse**](GroupsSearchResponse.html) PostSearch (SearchRequest body = null)
 
 Search
@@ -231,14 +238,15 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**SearchRequest**](SearchRequest.md)| Search request options | [optional]  |
+| **body** | [**SearchRequest**](SearchRequest.html)| Search request options | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**GroupsSearchResponse**](GroupsSearchResponse.md)
+[**GroupsSearchResponse**](GroupsSearchResponse.html)
 
-<a name="PostSearch_0"></a>
+<a name="postsearch_0"></a>
+
 ## [**JsonNodeSearchResponse**](JsonNodeSearchResponse.html) PostSearch_0 (SearchRequest body = null)
 
 Search
@@ -286,14 +294,15 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**SearchRequest**](SearchRequest.md)| Search request options | [optional]  |
+| **body** | [**SearchRequest**](SearchRequest.html)| Search request options | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**JsonNodeSearchResponse**](JsonNodeSearchResponse.md)
+[**JsonNodeSearchResponse**](JsonNodeSearchResponse.html)
 
-<a name="PostSearch_1"></a>
+<a name="postsearch_1"></a>
+
 ## [**UsersSearchResponse**](UsersSearchResponse.html) PostSearch_1 (SearchRequest body = null)
 
 Search
@@ -341,10 +350,10 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**SearchRequest**](SearchRequest.md)| Search request options | [optional]  |
+| **body** | [**SearchRequest**](SearchRequest.html)| Search request options | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**UsersSearchResponse**](UsersSearchResponse.md)
+[**UsersSearchResponse**](UsersSearchResponse.html)
 

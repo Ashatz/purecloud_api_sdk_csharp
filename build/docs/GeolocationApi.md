@@ -1,16 +1,20 @@
-# ININ.PureCloudApi.Api.GeolocationApi
+---
+title: GeolocationApi
+---
+## ININ.PureCloudApi.Api.GeolocationApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**GetSettings**](GeolocationApi.md#getsettings) | **GET** /api/v2/geolocations/settings | Get a organization&#39;s GeolocationSettings |
-| [**GetUserIdGeolocationsClientId**](GeolocationApi.md#getuseridgeolocationsclientid) | **GET** /api/v2/users/{userId}/geolocations/{clientId} | Get a user&#39;s Geolocation |
-| [**PatchSettings**](GeolocationApi.md#patchsettings) | **PATCH** /api/v2/geolocations/settings | Patch a organization&#39;s GeolocationSettings |
-| [**PatchUserIdGeolocationsClientId**](GeolocationApi.md#patchuseridgeolocationsclientid) | **PATCH** /api/v2/users/{userId}/geolocations/{clientId} | Patch a user&#39;s Geolocation |
+| [**GetSettings**](GeolocationApi.html#getsettings) | **GET** /api/v2/geolocations/settings | Get a organization&#39;s GeolocationSettings |
+| [**GetUserIdGeolocationsClientId**](GeolocationApi.html#getuseridgeolocationsclientid) | **GET** /api/v2/users/{userId}/geolocations/{clientId} | Get a user&#39;s Geolocation |
+| [**PatchSettings**](GeolocationApi.html#patchsettings) | **PATCH** /api/v2/geolocations/settings | Patch a organization&#39;s GeolocationSettings |
+| [**PatchUserIdGeolocationsClientId**](GeolocationApi.html#patchuseridgeolocationsclientid) | **PATCH** /api/v2/users/{userId}/geolocations/{clientId} | Patch a user&#39;s Geolocation |
 {: class="table table-striped"}
 
-<a name="GetSettings"></a>
+<a name="getsettings"></a>
+
 ## [**GeolocationSettings**](GeolocationSettings.html) GetSettings ()
 
 Get a organization's GeolocationSettings
@@ -58,9 +62,10 @@ This endpoint does require any parameters.
 
 ### Return type
 
-[**GeolocationSettings**](GeolocationSettings.md)
+[**GeolocationSettings**](GeolocationSettings.html)
 
-<a name="GetUserIdGeolocationsClientId"></a>
+<a name="getuseridgeolocationsclientid"></a>
+
 ## [**Geolocation**](Geolocation.html) GetUserIdGeolocationsClientId (string userId, string clientId)
 
 Get a user's Geolocation
@@ -115,9 +120,10 @@ namespace Example
 
 ### Return type
 
-[**Geolocation**](Geolocation.md)
+[**Geolocation**](Geolocation.html)
 
-<a name="PatchSettings"></a>
+<a name="patchsettings"></a>
+
 ## [**GeolocationSettings**](GeolocationSettings.html) PatchSettings (GeolocationSettings body = null)
 
 Patch a organization's GeolocationSettings
@@ -165,14 +171,15 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**GeolocationSettings**](GeolocationSettings.md)|  | [optional]  |
+| **body** | [**GeolocationSettings**](GeolocationSettings.html)|  | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**GeolocationSettings**](GeolocationSettings.md)
+[**GeolocationSettings**](GeolocationSettings.html)
 
-<a name="PatchUserIdGeolocationsClientId"></a>
+<a name="patchuseridgeolocationsclientid"></a>
+
 ## [**Geolocation**](Geolocation.html) PatchUserIdGeolocationsClientId (string userId, string clientId, Geolocation body = null)
 
 Patch a user's Geolocation
@@ -224,10 +231,10 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| user Id |  |
 | **clientId** | **string**| client Id |  |
-| **body** | [**Geolocation**](Geolocation.md)|  | [optional]  |
+| **body** | [**Geolocation**](Geolocation.html)|  | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**Geolocation**](Geolocation.md)
+[**Geolocation**](Geolocation.html)
 

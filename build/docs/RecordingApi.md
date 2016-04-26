@@ -1,32 +1,36 @@
-# ININ.PureCloudApi.Api.RecordingApi
+---
+title: RecordingApi
+---
+## ININ.PureCloudApi.Api.RecordingApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteConversationIdRecordingsRecordingIdAnnotationsAnnotationId**](RecordingApi.md#deleteconversationidrecordingsrecordingidannotationsannotationid) | **DELETE** /api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations/{annotationId} | Delete annotation |
-| [**DeleteMediaretentionpolicies**](RecordingApi.md#deletemediaretentionpolicies) | **DELETE** /api/v2/recording/mediaretentionpolicies | Delete media retention policies |
-| [**DeleteMediaretentionpoliciesPolicyId**](RecordingApi.md#deletemediaretentionpoliciespolicyid) | **DELETE** /api/v2/recording/mediaretentionpolicies/{policyId} | Delete a media retention policy |
-| [**DeleteOrphanId**](RecordingApi.md#deleteorphanid) | **DELETE** /api/v2/orphanrecordings/{orphanId} |  deletes a single orphan recording |
-| [**GetConversationIdRecordings**](RecordingApi.md#getconversationidrecordings) | **GET** /api/v2/conversations/{conversationId}/recordings | Get all of a Conversation&#39;s Recordings. |
-| [**GetConversationIdRecordingsRecordingId**](RecordingApi.md#getconversationidrecordingsrecordingid) | **GET** /api/v2/conversations/{conversationId}/recordings/{recordingId} | Gets a specific recording. |
-| [**GetConversationIdRecordingsRecordingIdAnnotations**](RecordingApi.md#getconversationidrecordingsrecordingidannotations) | **GET** /api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations | Get annotations for recording |
-| [**GetConversationIdRecordingsRecordingIdAnnotationsAnnotationId**](RecordingApi.md#getconversationidrecordingsrecordingidannotationsannotationid) | **GET** /api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations/{annotationId} | Get annotation |
-| [**GetMediaretentionpolicies**](RecordingApi.md#getmediaretentionpolicies) | **GET** /api/v2/recording/mediaretentionpolicies | Gets media retention policy list with query options to filter on name and enabled. |
-| [**GetMediaretentionpoliciesPolicyId**](RecordingApi.md#getmediaretentionpoliciespolicyid) | **GET** /api/v2/recording/mediaretentionpolicies/{policyId} | Get a media retention policy |
-| [**GetOrphanId**](RecordingApi.md#getorphanid) | **GET** /api/v2/orphanrecordings/{orphanId} | Gets a single orphan recording |
-| [**GetOrphanrecordings**](RecordingApi.md#getorphanrecordings) | **GET** /api/v2/orphanrecordings | Gets all orphan recordings |
-| [**GetSettings**](RecordingApi.md#getsettings) | **GET** /api/v2/recording/settings | Get the Recording Settings for the Organization |
-| [**PatchMediaretentionpoliciesPolicyId**](RecordingApi.md#patchmediaretentionpoliciespolicyid) | **PATCH** /api/v2/recording/mediaretentionpolicies/{policyId} | Patch a media retention policy |
-| [**PostConversationIdRecordingsRecordingIdAnnotations**](RecordingApi.md#postconversationidrecordingsrecordingidannotations) | **POST** /api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations | Create annotation |
-| [**PostMediaretentionpolicies**](RecordingApi.md#postmediaretentionpolicies) | **POST** /api/v2/recording/mediaretentionpolicies | Create media retention policy |
-| [**PutConversationIdRecordingsRecordingId**](RecordingApi.md#putconversationidrecordingsrecordingid) | **PUT** /api/v2/conversations/{conversationId}/recordings/{recordingId} | Updates the retention records on a recording. |
-| [**PutConversationIdRecordingsRecordingIdAnnotationsAnnotationId**](RecordingApi.md#putconversationidrecordingsrecordingidannotationsannotationid) | **PUT** /api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations/{annotationId} | Update annotation |
-| [**PutMediaretentionpoliciesPolicyId**](RecordingApi.md#putmediaretentionpoliciespolicyid) | **PUT** /api/v2/recording/mediaretentionpolicies/{policyId} | Update a media retention policy |
-| [**PutSettings**](RecordingApi.md#putsettings) | **PUT** /api/v2/recording/settings | Update the Recording Settings for the Organization |
+| [**DeleteConversationIdRecordingsRecordingIdAnnotationsAnnotationId**](RecordingApi.html#deleteconversationidrecordingsrecordingidannotationsannotationid) | **DELETE** /api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations/{annotationId} | Delete annotation |
+| [**DeleteMediaretentionpolicies**](RecordingApi.html#deletemediaretentionpolicies) | **DELETE** /api/v2/recording/mediaretentionpolicies | Delete media retention policies |
+| [**DeleteMediaretentionpoliciesPolicyId**](RecordingApi.html#deletemediaretentionpoliciespolicyid) | **DELETE** /api/v2/recording/mediaretentionpolicies/{policyId} | Delete a media retention policy |
+| [**DeleteOrphanId**](RecordingApi.html#deleteorphanid) | **DELETE** /api/v2/orphanrecordings/{orphanId} |  deletes a single orphan recording |
+| [**GetConversationIdRecordings**](RecordingApi.html#getconversationidrecordings) | **GET** /api/v2/conversations/{conversationId}/recordings | Get all of a Conversation&#39;s Recordings. |
+| [**GetConversationIdRecordingsRecordingId**](RecordingApi.html#getconversationidrecordingsrecordingid) | **GET** /api/v2/conversations/{conversationId}/recordings/{recordingId} | Gets a specific recording. |
+| [**GetConversationIdRecordingsRecordingIdAnnotations**](RecordingApi.html#getconversationidrecordingsrecordingidannotations) | **GET** /api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations | Get annotations for recording |
+| [**GetConversationIdRecordingsRecordingIdAnnotationsAnnotationId**](RecordingApi.html#getconversationidrecordingsrecordingidannotationsannotationid) | **GET** /api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations/{annotationId} | Get annotation |
+| [**GetMediaretentionpolicies**](RecordingApi.html#getmediaretentionpolicies) | **GET** /api/v2/recording/mediaretentionpolicies | Gets media retention policy list with query options to filter on name and enabled. |
+| [**GetMediaretentionpoliciesPolicyId**](RecordingApi.html#getmediaretentionpoliciespolicyid) | **GET** /api/v2/recording/mediaretentionpolicies/{policyId} | Get a media retention policy |
+| [**GetOrphanId**](RecordingApi.html#getorphanid) | **GET** /api/v2/orphanrecordings/{orphanId} | Gets a single orphan recording |
+| [**GetOrphanrecordings**](RecordingApi.html#getorphanrecordings) | **GET** /api/v2/orphanrecordings | Gets all orphan recordings |
+| [**GetSettings**](RecordingApi.html#getsettings) | **GET** /api/v2/recording/settings | Get the Recording Settings for the Organization |
+| [**PatchMediaretentionpoliciesPolicyId**](RecordingApi.html#patchmediaretentionpoliciespolicyid) | **PATCH** /api/v2/recording/mediaretentionpolicies/{policyId} | Patch a media retention policy |
+| [**PostConversationIdRecordingsRecordingIdAnnotations**](RecordingApi.html#postconversationidrecordingsrecordingidannotations) | **POST** /api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations | Create annotation |
+| [**PostMediaretentionpolicies**](RecordingApi.html#postmediaretentionpolicies) | **POST** /api/v2/recording/mediaretentionpolicies | Create media retention policy |
+| [**PutConversationIdRecordingsRecordingId**](RecordingApi.html#putconversationidrecordingsrecordingid) | **PUT** /api/v2/conversations/{conversationId}/recordings/{recordingId} | Updates the retention records on a recording. |
+| [**PutConversationIdRecordingsRecordingIdAnnotationsAnnotationId**](RecordingApi.html#putconversationidrecordingsrecordingidannotationsannotationid) | **PUT** /api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations/{annotationId} | Update annotation |
+| [**PutMediaretentionpoliciesPolicyId**](RecordingApi.html#putmediaretentionpoliciespolicyid) | **PUT** /api/v2/recording/mediaretentionpolicies/{policyId} | Update a media retention policy |
+| [**PutSettings**](RecordingApi.html#putsettings) | **PUT** /api/v2/recording/settings | Update the Recording Settings for the Organization |
 {: class="table table-striped"}
 
-<a name="DeleteConversationIdRecordingsRecordingIdAnnotationsAnnotationId"></a>
+<a name="deleteconversationidrecordingsrecordingidannotationsannotationid"></a>
+
 ## void DeleteConversationIdRecordingsRecordingIdAnnotationsAnnotationId (string conversationId, string recordingId, string annotationId)
 
 Delete annotation
@@ -84,7 +88,8 @@ namespace Example
 
 void (empty response body)
 
-<a name="DeleteMediaretentionpolicies"></a>
+<a name="deletemediaretentionpolicies"></a>
+
 ## string** DeleteMediaretentionpolicies (string ids)
 
 Delete media retention policies
@@ -139,7 +144,8 @@ namespace Example
 
 **string**
 
-<a name="DeleteMediaretentionpoliciesPolicyId"></a>
+<a name="deletemediaretentionpoliciespolicyid"></a>
+
 ## string** DeleteMediaretentionpoliciesPolicyId (string policyId)
 
 Delete a media retention policy
@@ -194,7 +200,8 @@ namespace Example
 
 **string**
 
-<a name="DeleteOrphanId"></a>
+<a name="deleteorphanid"></a>
+
 ## [**OrphanRecording**](OrphanRecording.html) DeleteOrphanId (string orphanId)
 
  deletes a single orphan recording
@@ -247,9 +254,10 @@ namespace Example
 
 ### Return type
 
-[**OrphanRecording**](OrphanRecording.md)
+[**OrphanRecording**](OrphanRecording.html)
 
-<a name="GetConversationIdRecordings"></a>
+<a name="getconversationidrecordings"></a>
+
 ## [**List&lt;Recording&gt;**](Recording.html) GetConversationIdRecordings (string conversationId, string formatId = null)
 
 Get all of a Conversation's Recordings.
@@ -304,9 +312,10 @@ namespace Example
 
 ### Return type
 
-[**List<Recording>**](Recording.md)
+[**List<Recording>**](Recording.html)
 
-<a name="GetConversationIdRecordingsRecordingId"></a>
+<a name="getconversationidrecordingsrecordingid"></a>
+
 ## void GetConversationIdRecordingsRecordingId (string conversationId, string recordingId, string formatId = null, bool? download = null, string fileName = null)
 
 Gets a specific recording.
@@ -368,7 +377,8 @@ namespace Example
 
 void (empty response body)
 
-<a name="GetConversationIdRecordingsRecordingIdAnnotations"></a>
+<a name="getconversationidrecordingsrecordingidannotations"></a>
+
 ## [**List&lt;Annotation&gt;**](Annotation.html) GetConversationIdRecordingsRecordingIdAnnotations (string conversationId, string recordingId)
 
 Get annotations for recording
@@ -423,9 +433,10 @@ namespace Example
 
 ### Return type
 
-[**List<Annotation>**](Annotation.md)
+[**List<Annotation>**](Annotation.html)
 
-<a name="GetConversationIdRecordingsRecordingIdAnnotationsAnnotationId"></a>
+<a name="getconversationidrecordingsrecordingidannotationsannotationid"></a>
+
 ## [**Annotation**](Annotation.html) GetConversationIdRecordingsRecordingIdAnnotationsAnnotationId (string conversationId, string recordingId, string annotationId)
 
 Get annotation
@@ -482,9 +493,10 @@ namespace Example
 
 ### Return type
 
-[**Annotation**](Annotation.md)
+[**Annotation**](Annotation.html)
 
-<a name="GetMediaretentionpolicies"></a>
+<a name="getmediaretentionpolicies"></a>
+
 ## [**PolicyEntityListing**](PolicyEntityListing.html) GetMediaretentionpolicies (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null)
 
 Gets media retention policy list with query options to filter on name and enabled.
@@ -544,7 +556,7 @@ namespace Example
 | **pageSize** | **int?**| The total page size requested | [optional] [default to 25] |
 | **pageNumber** | **int?**| The page number requested | [optional] [default to 1] |
 | **sortBy** | **string**| variable name requested to sort by | [optional]  |
-| **expand** | [**List<string>**](string.md)| variable name requested by expand list | [optional]  |
+| **expand** | [**List<string>**](string.html)| variable name requested by expand list | [optional]  |
 | **nextPage** | **string**| next page token | [optional]  |
 | **previousPage** | **string**| Previous page token | [optional]  |
 | **name** | **string**| the policy name - used for filtering results in searches. | [optional]  |
@@ -555,9 +567,10 @@ namespace Example
 
 ### Return type
 
-[**PolicyEntityListing**](PolicyEntityListing.md)
+[**PolicyEntityListing**](PolicyEntityListing.html)
 
-<a name="GetMediaretentionpoliciesPolicyId"></a>
+<a name="getmediaretentionpoliciespolicyid"></a>
+
 ## [**Policy**](Policy.html) GetMediaretentionpoliciesPolicyId (string policyId)
 
 Get a media retention policy
@@ -610,9 +623,10 @@ namespace Example
 
 ### Return type
 
-[**Policy**](Policy.md)
+[**Policy**](Policy.html)
 
-<a name="GetOrphanId"></a>
+<a name="getorphanid"></a>
+
 ## [**OrphanRecording**](OrphanRecording.html) GetOrphanId (string orphanId)
 
 Gets a single orphan recording
@@ -665,9 +679,10 @@ namespace Example
 
 ### Return type
 
-[**OrphanRecording**](OrphanRecording.md)
+[**OrphanRecording**](OrphanRecording.html)
 
-<a name="GetOrphanrecordings"></a>
+<a name="getorphanrecordings"></a>
+
 ## [**OrphanRecordingListing**](OrphanRecordingListing.html) GetOrphanrecordings (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
 
 Gets all orphan recordings
@@ -723,16 +738,17 @@ namespace Example
 | **pageSize** | **int?**| The total page size requested | [optional] [default to 25] |
 | **pageNumber** | **int?**| The page number requested | [optional] [default to 1] |
 | **sortBy** | **string**| variable name requested to sort by | [optional]  |
-| **expand** | [**List<string>**](string.md)| variable name requested by expand list | [optional]  |
+| **expand** | [**List<string>**](string.html)| variable name requested by expand list | [optional]  |
 | **nextPage** | **string**| next page token | [optional]  |
 | **previousPage** | **string**| Previous page token | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**OrphanRecordingListing**](OrphanRecordingListing.md)
+[**OrphanRecordingListing**](OrphanRecordingListing.html)
 
-<a name="GetSettings"></a>
+<a name="getsettings"></a>
+
 ## [**RecordingSettings**](RecordingSettings.html) GetSettings (bool? createDefault = null)
 
 Get the Recording Settings for the Organization
@@ -785,9 +801,10 @@ namespace Example
 
 ### Return type
 
-[**RecordingSettings**](RecordingSettings.md)
+[**RecordingSettings**](RecordingSettings.html)
 
-<a name="PatchMediaretentionpoliciesPolicyId"></a>
+<a name="patchmediaretentionpoliciespolicyid"></a>
+
 ## [**Policy**](Policy.html) PatchMediaretentionpoliciesPolicyId (string policyId, Policy body = null)
 
 Patch a media retention policy
@@ -837,14 +854,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **policyId** | **string**| Policy ID |  |
-| **body** | [**Policy**](Policy.md)| Policy | [optional]  |
+| **body** | [**Policy**](Policy.html)| Policy | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**Policy**](Policy.md)
+[**Policy**](Policy.html)
 
-<a name="PostConversationIdRecordingsRecordingIdAnnotations"></a>
+<a name="postconversationidrecordingsrecordingidannotations"></a>
+
 ## [**Annotation**](Annotation.html) PostConversationIdRecordingsRecordingIdAnnotations (string conversationId, string recordingId, Annotation body = null)
 
 Create annotation
@@ -896,14 +914,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| Conversation ID |  |
 | **recordingId** | **string**| Recording ID |  |
-| **body** | [**Annotation**](Annotation.md)| annotation | [optional]  |
+| **body** | [**Annotation**](Annotation.html)| annotation | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**Annotation**](Annotation.md)
+[**Annotation**](Annotation.html)
 
-<a name="PostMediaretentionpolicies"></a>
+<a name="postmediaretentionpolicies"></a>
+
 ## [**Policy**](Policy.html) PostMediaretentionpolicies (Policy body = null)
 
 Create media retention policy
@@ -951,14 +970,15 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**Policy**](Policy.md)| Policy | [optional]  |
+| **body** | [**Policy**](Policy.html)| Policy | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**Policy**](Policy.md)
+[**Policy**](Policy.html)
 
-<a name="PutConversationIdRecordingsRecordingId"></a>
+<a name="putconversationidrecordingsrecordingid"></a>
+
 ## void PutConversationIdRecordingsRecordingId (string conversationId, string recordingId, Recording body)
 
 Updates the retention records on a recording.
@@ -1009,14 +1029,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| Conversation ID |  |
 | **recordingId** | **string**| Recording ID |  |
-| **body** | [**Recording**](Recording.md)| recording |  |
+| **body** | [**Recording**](Recording.html)| recording |  |
 {: class="table table-striped"}
 
 ### Return type
 
 void (empty response body)
 
-<a name="PutConversationIdRecordingsRecordingIdAnnotationsAnnotationId"></a>
+<a name="putconversationidrecordingsrecordingidannotationsannotationid"></a>
+
 ## [**Annotation**](Annotation.html) PutConversationIdRecordingsRecordingIdAnnotationsAnnotationId (string conversationId, string recordingId, string annotationId, Annotation body = null)
 
 Update annotation
@@ -1070,14 +1091,15 @@ namespace Example
 | **conversationId** | **string**| Conversation ID |  |
 | **recordingId** | **string**| Recording ID |  |
 | **annotationId** | **string**| Annotation ID |  |
-| **body** | [**Annotation**](Annotation.md)| annotation | [optional]  |
+| **body** | [**Annotation**](Annotation.html)| annotation | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**Annotation**](Annotation.md)
+[**Annotation**](Annotation.html)
 
-<a name="PutMediaretentionpoliciesPolicyId"></a>
+<a name="putmediaretentionpoliciespolicyid"></a>
+
 ## [**Policy**](Policy.html) PutMediaretentionpoliciesPolicyId (string policyId, Policy body = null)
 
 Update a media retention policy
@@ -1127,14 +1149,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **policyId** | **string**| Policy ID |  |
-| **body** | [**Policy**](Policy.md)| Policy | [optional]  |
+| **body** | [**Policy**](Policy.html)| Policy | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**Policy**](Policy.md)
+[**Policy**](Policy.html)
 
-<a name="PutSettings"></a>
+<a name="putsettings"></a>
+
 ## [**RecordingSettings**](RecordingSettings.html) PutSettings (RecordingSettings body = null)
 
 Update the Recording Settings for the Organization
@@ -1182,10 +1205,10 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**RecordingSettings**](RecordingSettings.md)|  | [optional]  |
+| **body** | [**RecordingSettings**](RecordingSettings.html)|  | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**RecordingSettings**](RecordingSettings.md)
+[**RecordingSettings**](RecordingSettings.html)
 

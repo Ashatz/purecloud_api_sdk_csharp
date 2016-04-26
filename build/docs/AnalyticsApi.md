@@ -1,33 +1,37 @@
-# ININ.PureCloudApi.Api.AnalyticsApi
+---
+title: AnalyticsApi
+---
+## ININ.PureCloudApi.Api.AnalyticsApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteReportingSchedulesScheduleId**](AnalyticsApi.md#deletereportingschedulesscheduleid) | **DELETE** /api/v2/analytics/reporting/schedules/{scheduleId} | Delete a scheduled report job. |
-| [**GetConversationsConversationIdDetails**](AnalyticsApi.md#getconversationsconversationiddetails) | **GET** /api/v2/analytics/conversations/{conversationId}/details | Get a conversation by id |
-| [**GetReportingMetadata**](AnalyticsApi.md#getreportingmetadata) | **GET** /api/v2/analytics/reporting/metadata | Get list of reporting metadata. |
-| [**GetReportingReportIdMetadata**](AnalyticsApi.md#getreportingreportidmetadata) | **GET** /api/v2/analytics/reporting/{reportId}/metadata | Get a reporting metadata. |
-| [**GetReportingReportformats**](AnalyticsApi.md#getreportingreportformats) | **GET** /api/v2/analytics/reporting/reportformats | Get a list of report formats |
-| [**GetReportingSchedules**](AnalyticsApi.md#getreportingschedules) | **GET** /api/v2/analytics/reporting/schedules | Get a list of scheduled report jobs |
-| [**GetReportingSchedulesScheduleId**](AnalyticsApi.md#getreportingschedulesscheduleid) | **GET** /api/v2/analytics/reporting/schedules/{scheduleId} | Get a scheduled report job. |
-| [**GetReportingSchedulesScheduleIdHistory**](AnalyticsApi.md#getreportingschedulesscheduleidhistory) | **GET** /api/v2/analytics/reporting/schedules/{scheduleId}/history | Get list of completed scheduled report jobs. |
-| [**GetReportingSchedulesScheduleIdHistoryLatest**](AnalyticsApi.md#getreportingschedulesscheduleidhistorylatest) | **GET** /api/v2/analytics/reporting/schedules/{scheduleId}/history/latest | Get most recently completed scheduled report job. |
-| [**GetReportingSchedulesScheduleIdHistoryRunId**](AnalyticsApi.md#getreportingschedulesscheduleidhistoryrunid) | **GET** /api/v2/analytics/reporting/schedules/{scheduleId}/history/{runId} | A completed scheduled report job |
-| [**GetReportingTimeperiods**](AnalyticsApi.md#getreportingtimeperiods) | **GET** /api/v2/analytics/reporting/timeperiods | Get a list of report time periods. |
-| [**PostConversationsAggregatesQuery**](AnalyticsApi.md#postconversationsaggregatesquery) | **POST** /api/v2/analytics/conversations/aggregates/query | Query for conversation aggregates |
-| [**PostConversationsConversationIdDetailsProperties**](AnalyticsApi.md#postconversationsconversationiddetailsproperties) | **POST** /api/v2/analytics/conversations/{conversationId}/details/properties | Index conversation properties |
-| [**PostConversationsDetailsQuery**](AnalyticsApi.md#postconversationsdetailsquery) | **POST** /api/v2/analytics/conversations/details/query | Query for conversation details |
-| [**PostEvaluationsAggregatesQuery**](AnalyticsApi.md#postevaluationsaggregatesquery) | **POST** /api/v2/analytics/evaluations/aggregates/query | Query for evaluation aggregates |
-| [**PostQueuesObservationsQuery**](AnalyticsApi.md#postqueuesobservationsquery) | **POST** /api/v2/analytics/queues/observations/query | Query for queue observations |
-| [**PostReportingSchedules**](AnalyticsApi.md#postreportingschedules) | **POST** /api/v2/analytics/reporting/schedules | Create a scheduled report job |
-| [**PostReportingSchedulesScheduleIdRunreport**](AnalyticsApi.md#postreportingschedulesscheduleidrunreport) | **POST** /api/v2/analytics/reporting/schedules/{scheduleId}/runreport | Place a scheduled report immediately into the reporting queue |
-| [**PostUsersAggregatesQuery**](AnalyticsApi.md#postusersaggregatesquery) | **POST** /api/v2/analytics/users/aggregates/query | Query for user aggregates |
-| [**PostUsersObservationsQuery**](AnalyticsApi.md#postusersobservationsquery) | **POST** /api/v2/analytics/users/observations/query | Query for user observations |
-| [**PutReportingSchedulesScheduleId**](AnalyticsApi.md#putreportingschedulesscheduleid) | **PUT** /api/v2/analytics/reporting/schedules/{scheduleId} | Update a scheduled report job. |
+| [**DeleteReportingSchedulesScheduleId**](AnalyticsApi.html#deletereportingschedulesscheduleid) | **DELETE** /api/v2/analytics/reporting/schedules/{scheduleId} | Delete a scheduled report job. |
+| [**GetConversationsConversationIdDetails**](AnalyticsApi.html#getconversationsconversationiddetails) | **GET** /api/v2/analytics/conversations/{conversationId}/details | Get a conversation by id |
+| [**GetReportingMetadata**](AnalyticsApi.html#getreportingmetadata) | **GET** /api/v2/analytics/reporting/metadata | Get list of reporting metadata. |
+| [**GetReportingReportIdMetadata**](AnalyticsApi.html#getreportingreportidmetadata) | **GET** /api/v2/analytics/reporting/{reportId}/metadata | Get a reporting metadata. |
+| [**GetReportingReportformats**](AnalyticsApi.html#getreportingreportformats) | **GET** /api/v2/analytics/reporting/reportformats | Get a list of report formats |
+| [**GetReportingSchedules**](AnalyticsApi.html#getreportingschedules) | **GET** /api/v2/analytics/reporting/schedules | Get a list of scheduled report jobs |
+| [**GetReportingSchedulesScheduleId**](AnalyticsApi.html#getreportingschedulesscheduleid) | **GET** /api/v2/analytics/reporting/schedules/{scheduleId} | Get a scheduled report job. |
+| [**GetReportingSchedulesScheduleIdHistory**](AnalyticsApi.html#getreportingschedulesscheduleidhistory) | **GET** /api/v2/analytics/reporting/schedules/{scheduleId}/history | Get list of completed scheduled report jobs. |
+| [**GetReportingSchedulesScheduleIdHistoryLatest**](AnalyticsApi.html#getreportingschedulesscheduleidhistorylatest) | **GET** /api/v2/analytics/reporting/schedules/{scheduleId}/history/latest | Get most recently completed scheduled report job. |
+| [**GetReportingSchedulesScheduleIdHistoryRunId**](AnalyticsApi.html#getreportingschedulesscheduleidhistoryrunid) | **GET** /api/v2/analytics/reporting/schedules/{scheduleId}/history/{runId} | A completed scheduled report job |
+| [**GetReportingTimeperiods**](AnalyticsApi.html#getreportingtimeperiods) | **GET** /api/v2/analytics/reporting/timeperiods | Get a list of report time periods. |
+| [**PostConversationsAggregatesQuery**](AnalyticsApi.html#postconversationsaggregatesquery) | **POST** /api/v2/analytics/conversations/aggregates/query | Query for conversation aggregates |
+| [**PostConversationsConversationIdDetailsProperties**](AnalyticsApi.html#postconversationsconversationiddetailsproperties) | **POST** /api/v2/analytics/conversations/{conversationId}/details/properties | Index conversation properties |
+| [**PostConversationsDetailsQuery**](AnalyticsApi.html#postconversationsdetailsquery) | **POST** /api/v2/analytics/conversations/details/query | Query for conversation details |
+| [**PostEvaluationsAggregatesQuery**](AnalyticsApi.html#postevaluationsaggregatesquery) | **POST** /api/v2/analytics/evaluations/aggregates/query | Query for evaluation aggregates |
+| [**PostQueuesObservationsQuery**](AnalyticsApi.html#postqueuesobservationsquery) | **POST** /api/v2/analytics/queues/observations/query | Query for queue observations |
+| [**PostReportingSchedules**](AnalyticsApi.html#postreportingschedules) | **POST** /api/v2/analytics/reporting/schedules | Create a scheduled report job |
+| [**PostReportingSchedulesScheduleIdRunreport**](AnalyticsApi.html#postreportingschedulesscheduleidrunreport) | **POST** /api/v2/analytics/reporting/schedules/{scheduleId}/runreport | Place a scheduled report immediately into the reporting queue |
+| [**PostUsersAggregatesQuery**](AnalyticsApi.html#postusersaggregatesquery) | **POST** /api/v2/analytics/users/aggregates/query | Query for user aggregates |
+| [**PostUsersObservationsQuery**](AnalyticsApi.html#postusersobservationsquery) | **POST** /api/v2/analytics/users/observations/query | Query for user observations |
+| [**PutReportingSchedulesScheduleId**](AnalyticsApi.html#putreportingschedulesscheduleid) | **PUT** /api/v2/analytics/reporting/schedules/{scheduleId} | Update a scheduled report job. |
 {: class="table table-striped"}
 
-<a name="DeleteReportingSchedulesScheduleId"></a>
+<a name="deletereportingschedulesscheduleid"></a>
+
 ## string** DeleteReportingSchedulesScheduleId (string scheduleId)
 
 Delete a scheduled report job.
@@ -82,7 +86,8 @@ namespace Example
 
 **string**
 
-<a name="GetConversationsConversationIdDetails"></a>
+<a name="getconversationsconversationiddetails"></a>
+
 ## [**AnalyticsConversation**](AnalyticsConversation.html) GetConversationsConversationIdDetails (string conversationId)
 
 Get a conversation by id
@@ -135,9 +140,10 @@ namespace Example
 
 ### Return type
 
-[**AnalyticsConversation**](AnalyticsConversation.md)
+[**AnalyticsConversation**](AnalyticsConversation.html)
 
-<a name="GetReportingMetadata"></a>
+<a name="getreportingmetadata"></a>
+
 ## [**ReportMetaDataEntityListing**](ReportMetaDataEntityListing.html) GetReportingMetadata (int? pageNumber = null, int? pageSize = null, string locale = null)
 
 Get list of reporting metadata.
@@ -194,9 +200,10 @@ namespace Example
 
 ### Return type
 
-[**ReportMetaDataEntityListing**](ReportMetaDataEntityListing.md)
+[**ReportMetaDataEntityListing**](ReportMetaDataEntityListing.html)
 
-<a name="GetReportingReportIdMetadata"></a>
+<a name="getreportingreportidmetadata"></a>
+
 ## [**ReportMetaData**](ReportMetaData.html) GetReportingReportIdMetadata (string reportId, string locale = null)
 
 Get a reporting metadata.
@@ -251,9 +258,10 @@ namespace Example
 
 ### Return type
 
-[**ReportMetaData**](ReportMetaData.md)
+[**ReportMetaData**](ReportMetaData.html)
 
-<a name="GetReportingReportformats"></a>
+<a name="getreportingreportformats"></a>
+
 ## List&lt;string&gt;** GetReportingReportformats ()
 
 Get a list of report formats
@@ -303,7 +311,8 @@ This endpoint does require any parameters.
 
 **List<string>**
 
-<a name="GetReportingSchedules"></a>
+<a name="getreportingschedules"></a>
+
 ## [**ReportScheduleEntityListing**](ReportScheduleEntityListing.html) GetReportingSchedules (int? pageNumber = null, int? pageSize = null)
 
 Get a list of scheduled report jobs
@@ -358,9 +367,10 @@ namespace Example
 
 ### Return type
 
-[**ReportScheduleEntityListing**](ReportScheduleEntityListing.md)
+[**ReportScheduleEntityListing**](ReportScheduleEntityListing.html)
 
-<a name="GetReportingSchedulesScheduleId"></a>
+<a name="getreportingschedulesscheduleid"></a>
+
 ## [**ReportSchedule**](ReportSchedule.html) GetReportingSchedulesScheduleId (string scheduleId)
 
 Get a scheduled report job.
@@ -413,9 +423,10 @@ namespace Example
 
 ### Return type
 
-[**ReportSchedule**](ReportSchedule.md)
+[**ReportSchedule**](ReportSchedule.html)
 
-<a name="GetReportingSchedulesScheduleIdHistory"></a>
+<a name="getreportingschedulesscheduleidhistory"></a>
+
 ## [**ReportRunEntryEntityDomainListing**](ReportRunEntryEntityDomainListing.html) GetReportingSchedulesScheduleIdHistory (string scheduleId, int? pageNumber = null, int? pageSize = null)
 
 Get list of completed scheduled report jobs.
@@ -472,9 +483,10 @@ namespace Example
 
 ### Return type
 
-[**ReportRunEntryEntityDomainListing**](ReportRunEntryEntityDomainListing.md)
+[**ReportRunEntryEntityDomainListing**](ReportRunEntryEntityDomainListing.html)
 
-<a name="GetReportingSchedulesScheduleIdHistoryLatest"></a>
+<a name="getreportingschedulesscheduleidhistorylatest"></a>
+
 ## [**ReportRunEntry**](ReportRunEntry.html) GetReportingSchedulesScheduleIdHistoryLatest (string scheduleId)
 
 Get most recently completed scheduled report job.
@@ -527,9 +539,10 @@ namespace Example
 
 ### Return type
 
-[**ReportRunEntry**](ReportRunEntry.md)
+[**ReportRunEntry**](ReportRunEntry.html)
 
-<a name="GetReportingSchedulesScheduleIdHistoryRunId"></a>
+<a name="getreportingschedulesscheduleidhistoryrunid"></a>
+
 ## [**ReportRunEntry**](ReportRunEntry.html) GetReportingSchedulesScheduleIdHistoryRunId (string runId, string scheduleId)
 
 A completed scheduled report job
@@ -584,9 +597,10 @@ namespace Example
 
 ### Return type
 
-[**ReportRunEntry**](ReportRunEntry.md)
+[**ReportRunEntry**](ReportRunEntry.html)
 
-<a name="GetReportingTimeperiods"></a>
+<a name="getreportingtimeperiods"></a>
+
 ## List&lt;string&gt;** GetReportingTimeperiods ()
 
 Get a list of report time periods.
@@ -636,7 +650,8 @@ This endpoint does require any parameters.
 
 **List<string>**
 
-<a name="PostConversationsAggregatesQuery"></a>
+<a name="postconversationsaggregatesquery"></a>
+
 ## [**AggregateQueryResponse**](AggregateQueryResponse.html) PostConversationsAggregatesQuery (AggregationQuery body = null)
 
 Query for conversation aggregates
@@ -684,14 +699,15 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**AggregationQuery**](AggregationQuery.md)| query | [optional]  |
+| **body** | [**AggregationQuery**](AggregationQuery.html)| query | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**AggregateQueryResponse**](AggregateQueryResponse.md)
+[**AggregateQueryResponse**](AggregateQueryResponse.html)
 
-<a name="PostConversationsConversationIdDetailsProperties"></a>
+<a name="postconversationsconversationiddetailsproperties"></a>
+
 ## [**PropertyIndexRequest**](PropertyIndexRequest.html) PostConversationsConversationIdDetailsProperties (string conversationId, PropertyIndexRequest body = null)
 
 Index conversation properties
@@ -741,14 +757,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
-| **body** | [**PropertyIndexRequest**](PropertyIndexRequest.md)| request | [optional]  |
+| **body** | [**PropertyIndexRequest**](PropertyIndexRequest.html)| request | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**PropertyIndexRequest**](PropertyIndexRequest.md)
+[**PropertyIndexRequest**](PropertyIndexRequest.html)
 
-<a name="PostConversationsDetailsQuery"></a>
+<a name="postconversationsdetailsquery"></a>
+
 ## [**AnalyticsConversationQueryResponse**](AnalyticsConversationQueryResponse.html) PostConversationsDetailsQuery (ConversationQuery body = null)
 
 Query for conversation details
@@ -796,14 +813,15 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**ConversationQuery**](ConversationQuery.md)| query | [optional]  |
+| **body** | [**ConversationQuery**](ConversationQuery.html)| query | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**AnalyticsConversationQueryResponse**](AnalyticsConversationQueryResponse.md)
+[**AnalyticsConversationQueryResponse**](AnalyticsConversationQueryResponse.html)
 
-<a name="PostEvaluationsAggregatesQuery"></a>
+<a name="postevaluationsaggregatesquery"></a>
+
 ## [**AggregateQueryResponse**](AggregateQueryResponse.html) PostEvaluationsAggregatesQuery (AggregationQuery body = null)
 
 Query for evaluation aggregates
@@ -851,14 +869,15 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**AggregationQuery**](AggregationQuery.md)| query | [optional]  |
+| **body** | [**AggregationQuery**](AggregationQuery.html)| query | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**AggregateQueryResponse**](AggregateQueryResponse.md)
+[**AggregateQueryResponse**](AggregateQueryResponse.html)
 
-<a name="PostQueuesObservationsQuery"></a>
+<a name="postqueuesobservationsquery"></a>
+
 ## [**ObservationQueryResponse**](ObservationQueryResponse.html) PostQueuesObservationsQuery (ObservationQuery body = null)
 
 Query for queue observations
@@ -906,14 +925,15 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**ObservationQuery**](ObservationQuery.md)| query | [optional]  |
+| **body** | [**ObservationQuery**](ObservationQuery.html)| query | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**ObservationQueryResponse**](ObservationQueryResponse.md)
+[**ObservationQueryResponse**](ObservationQueryResponse.html)
 
-<a name="PostReportingSchedules"></a>
+<a name="postreportingschedules"></a>
+
 ## [**ReportSchedule**](ReportSchedule.html) PostReportingSchedules (ReportSchedule body = null)
 
 Create a scheduled report job
@@ -961,14 +981,15 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**ReportSchedule**](ReportSchedule.md)| ReportSchedule | [optional]  |
+| **body** | [**ReportSchedule**](ReportSchedule.html)| ReportSchedule | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**ReportSchedule**](ReportSchedule.md)
+[**ReportSchedule**](ReportSchedule.html)
 
-<a name="PostReportingSchedulesScheduleIdRunreport"></a>
+<a name="postreportingschedulesscheduleidrunreport"></a>
+
 ## [**RunNowResponse**](RunNowResponse.html) PostReportingSchedulesScheduleIdRunreport (string scheduleId)
 
 Place a scheduled report immediately into the reporting queue
@@ -1021,9 +1042,10 @@ namespace Example
 
 ### Return type
 
-[**RunNowResponse**](RunNowResponse.md)
+[**RunNowResponse**](RunNowResponse.html)
 
-<a name="PostUsersAggregatesQuery"></a>
+<a name="postusersaggregatesquery"></a>
+
 ## [**PresenceQueryResponse**](PresenceQueryResponse.html) PostUsersAggregatesQuery (AggregationQuery body = null)
 
 Query for user aggregates
@@ -1071,14 +1093,15 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**AggregationQuery**](AggregationQuery.md)| query | [optional]  |
+| **body** | [**AggregationQuery**](AggregationQuery.html)| query | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**PresenceQueryResponse**](PresenceQueryResponse.md)
+[**PresenceQueryResponse**](PresenceQueryResponse.html)
 
-<a name="PostUsersObservationsQuery"></a>
+<a name="postusersobservationsquery"></a>
+
 ## [**ObservationQueryResponse**](ObservationQueryResponse.html) PostUsersObservationsQuery (ObservationQuery body = null)
 
 Query for user observations
@@ -1126,14 +1149,15 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**ObservationQuery**](ObservationQuery.md)| query | [optional]  |
+| **body** | [**ObservationQuery**](ObservationQuery.html)| query | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**ObservationQueryResponse**](ObservationQueryResponse.md)
+[**ObservationQueryResponse**](ObservationQueryResponse.html)
 
-<a name="PutReportingSchedulesScheduleId"></a>
+<a name="putreportingschedulesscheduleid"></a>
+
 ## [**ReportSchedule**](ReportSchedule.html) PutReportingSchedulesScheduleId (string scheduleId, ReportSchedule body = null)
 
 Update a scheduled report job.
@@ -1183,10 +1207,10 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **scheduleId** | **string**| Schedule ID |  |
-| **body** | [**ReportSchedule**](ReportSchedule.md)| ReportSchedule | [optional]  |
+| **body** | [**ReportSchedule**](ReportSchedule.html)| ReportSchedule | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**ReportSchedule**](ReportSchedule.md)
+[**ReportSchedule**](ReportSchedule.html)
 

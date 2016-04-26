@@ -1,22 +1,26 @@
-# ININ.PureCloudApi.Api.AlertingApi
+---
+title: AlertingApi
+---
+## ININ.PureCloudApi.Api.AlertingApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteInteractionstatsAlertsAlertId**](AlertingApi.md#deleteinteractionstatsalertsalertid) | **DELETE** /api/v2/alerting/interactionstats/alerts/{alertId} | Delete an interaction stats alert |
-| [**DeleteInteractionstatsRulesRuleId**](AlertingApi.md#deleteinteractionstatsrulesruleid) | **DELETE** /api/v2/alerting/interactionstats/rules/{ruleId} | Delete an interaction stats rule. |
-| [**GetInteractionstatsAlerts**](AlertingApi.md#getinteractionstatsalerts) | **GET** /api/v2/alerting/interactionstats/alerts | Get interaction stats alert list. |
-| [**GetInteractionstatsAlertsAlertId**](AlertingApi.md#getinteractionstatsalertsalertid) | **GET** /api/v2/alerting/interactionstats/alerts/{alertId} | Get an interaction stats alert |
-| [**GetInteractionstatsAlertsUnread**](AlertingApi.md#getinteractionstatsalertsunread) | **GET** /api/v2/alerting/interactionstats/alerts/unread | Gets user unread count of interaction stats alerts. |
-| [**GetInteractionstatsRules**](AlertingApi.md#getinteractionstatsrules) | **GET** /api/v2/alerting/interactionstats/rules | Get an interaction stats rule list. |
-| [**GetInteractionstatsRulesRuleId**](AlertingApi.md#getinteractionstatsrulesruleid) | **GET** /api/v2/alerting/interactionstats/rules/{ruleId} | Get an interaction stats rule. |
-| [**PostInteractionstatsRules**](AlertingApi.md#postinteractionstatsrules) | **POST** /api/v2/alerting/interactionstats/rules | Create an interaction stats rule. |
-| [**PutInteractionstatsAlertsAlertId**](AlertingApi.md#putinteractionstatsalertsalertid) | **PUT** /api/v2/alerting/interactionstats/alerts/{alertId} | Update an interaction stats alert read status |
-| [**PutInteractionstatsRulesRuleId**](AlertingApi.md#putinteractionstatsrulesruleid) | **PUT** /api/v2/alerting/interactionstats/rules/{ruleId} | Update an interaction stats rule |
+| [**DeleteInteractionstatsAlertsAlertId**](AlertingApi.html#deleteinteractionstatsalertsalertid) | **DELETE** /api/v2/alerting/interactionstats/alerts/{alertId} | Delete an interaction stats alert |
+| [**DeleteInteractionstatsRulesRuleId**](AlertingApi.html#deleteinteractionstatsrulesruleid) | **DELETE** /api/v2/alerting/interactionstats/rules/{ruleId} | Delete an interaction stats rule. |
+| [**GetInteractionstatsAlerts**](AlertingApi.html#getinteractionstatsalerts) | **GET** /api/v2/alerting/interactionstats/alerts | Get interaction stats alert list. |
+| [**GetInteractionstatsAlertsAlertId**](AlertingApi.html#getinteractionstatsalertsalertid) | **GET** /api/v2/alerting/interactionstats/alerts/{alertId} | Get an interaction stats alert |
+| [**GetInteractionstatsAlertsUnread**](AlertingApi.html#getinteractionstatsalertsunread) | **GET** /api/v2/alerting/interactionstats/alerts/unread | Gets user unread count of interaction stats alerts. |
+| [**GetInteractionstatsRules**](AlertingApi.html#getinteractionstatsrules) | **GET** /api/v2/alerting/interactionstats/rules | Get an interaction stats rule list. |
+| [**GetInteractionstatsRulesRuleId**](AlertingApi.html#getinteractionstatsrulesruleid) | **GET** /api/v2/alerting/interactionstats/rules/{ruleId} | Get an interaction stats rule. |
+| [**PostInteractionstatsRules**](AlertingApi.html#postinteractionstatsrules) | **POST** /api/v2/alerting/interactionstats/rules | Create an interaction stats rule. |
+| [**PutInteractionstatsAlertsAlertId**](AlertingApi.html#putinteractionstatsalertsalertid) | **PUT** /api/v2/alerting/interactionstats/alerts/{alertId} | Update an interaction stats alert read status |
+| [**PutInteractionstatsRulesRuleId**](AlertingApi.html#putinteractionstatsrulesruleid) | **PUT** /api/v2/alerting/interactionstats/rules/{ruleId} | Update an interaction stats rule |
 {: class="table table-striped"}
 
-<a name="DeleteInteractionstatsAlertsAlertId"></a>
+<a name="deleteinteractionstatsalertsalertid"></a>
+
 ## void DeleteInteractionstatsAlertsAlertId (string alertId)
 
 Delete an interaction stats alert
@@ -70,7 +74,8 @@ namespace Example
 
 void (empty response body)
 
-<a name="DeleteInteractionstatsRulesRuleId"></a>
+<a name="deleteinteractionstatsrulesruleid"></a>
+
 ## void DeleteInteractionstatsRulesRuleId (string ruleId)
 
 Delete an interaction stats rule.
@@ -124,7 +129,8 @@ namespace Example
 
 void (empty response body)
 
-<a name="GetInteractionstatsAlerts"></a>
+<a name="getinteractionstatsalerts"></a>
+
 ## [**InteractionStatsAlertContainer**](InteractionStatsAlertContainer.html) GetInteractionstatsAlerts ()
 
 Get interaction stats alert list.
@@ -172,9 +178,10 @@ This endpoint does require any parameters.
 
 ### Return type
 
-[**InteractionStatsAlertContainer**](InteractionStatsAlertContainer.md)
+[**InteractionStatsAlertContainer**](InteractionStatsAlertContainer.html)
 
-<a name="GetInteractionstatsAlertsAlertId"></a>
+<a name="getinteractionstatsalertsalertid"></a>
+
 ## [**InteractionStatsAlert**](InteractionStatsAlert.html) GetInteractionstatsAlertsAlertId (string alertId)
 
 Get an interaction stats alert
@@ -227,9 +234,10 @@ namespace Example
 
 ### Return type
 
-[**InteractionStatsAlert**](InteractionStatsAlert.md)
+[**InteractionStatsAlert**](InteractionStatsAlert.html)
 
-<a name="GetInteractionstatsAlertsUnread"></a>
+<a name="getinteractionstatsalertsunread"></a>
+
 ## [**UnreadMetric**](UnreadMetric.html) GetInteractionstatsAlertsUnread ()
 
 Gets user unread count of interaction stats alerts.
@@ -277,9 +285,10 @@ This endpoint does require any parameters.
 
 ### Return type
 
-[**UnreadMetric**](UnreadMetric.md)
+[**UnreadMetric**](UnreadMetric.html)
 
-<a name="GetInteractionstatsRules"></a>
+<a name="getinteractionstatsrules"></a>
+
 ## [**InteractionStatsRuleContainer**](InteractionStatsRuleContainer.html) GetInteractionstatsRules ()
 
 Get an interaction stats rule list.
@@ -327,9 +336,10 @@ This endpoint does require any parameters.
 
 ### Return type
 
-[**InteractionStatsRuleContainer**](InteractionStatsRuleContainer.md)
+[**InteractionStatsRuleContainer**](InteractionStatsRuleContainer.html)
 
-<a name="GetInteractionstatsRulesRuleId"></a>
+<a name="getinteractionstatsrulesruleid"></a>
+
 ## [**InteractionStatsRule**](InteractionStatsRule.html) GetInteractionstatsRulesRuleId (string ruleId)
 
 Get an interaction stats rule.
@@ -382,9 +392,10 @@ namespace Example
 
 ### Return type
 
-[**InteractionStatsRule**](InteractionStatsRule.md)
+[**InteractionStatsRule**](InteractionStatsRule.html)
 
-<a name="PostInteractionstatsRules"></a>
+<a name="postinteractionstatsrules"></a>
+
 ## [**InteractionStatsRule**](InteractionStatsRule.html) PostInteractionstatsRules (InteractionStatsRule body = null)
 
 Create an interaction stats rule.
@@ -432,14 +443,15 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**InteractionStatsRule**](InteractionStatsRule.md)| AlertingRule | [optional]  |
+| **body** | [**InteractionStatsRule**](InteractionStatsRule.html)| AlertingRule | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**InteractionStatsRule**](InteractionStatsRule.md)
+[**InteractionStatsRule**](InteractionStatsRule.html)
 
-<a name="PutInteractionstatsAlertsAlertId"></a>
+<a name="putinteractionstatsalertsalertid"></a>
+
 ## [**UnreadStatus**](UnreadStatus.html) PutInteractionstatsAlertsAlertId (string alertId, UnreadStatus body = null)
 
 Update an interaction stats alert read status
@@ -489,14 +501,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **alertId** | **string**| Alert ID |  |
-| **body** | [**UnreadStatus**](UnreadStatus.md)| InteractionStatsAlert | [optional]  |
+| **body** | [**UnreadStatus**](UnreadStatus.html)| InteractionStatsAlert | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**UnreadStatus**](UnreadStatus.md)
+[**UnreadStatus**](UnreadStatus.html)
 
-<a name="PutInteractionstatsRulesRuleId"></a>
+<a name="putinteractionstatsrulesruleid"></a>
+
 ## [**InteractionStatsRule**](InteractionStatsRule.html) PutInteractionstatsRulesRuleId (string ruleId, InteractionStatsRule body = null)
 
 Update an interaction stats rule
@@ -546,10 +559,10 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **ruleId** | **string**| Rule ID |  |
-| **body** | [**InteractionStatsRule**](InteractionStatsRule.md)| AlertingRule | [optional]  |
+| **body** | [**InteractionStatsRule**](InteractionStatsRule.html)| AlertingRule | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**InteractionStatsRule**](InteractionStatsRule.md)
+[**InteractionStatsRule**](InteractionStatsRule.html)
 

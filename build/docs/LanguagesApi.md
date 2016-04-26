@@ -1,17 +1,21 @@
-# ININ.PureCloudApi.Api.LanguagesApi
+---
+title: LanguagesApi
+---
+## ININ.PureCloudApi.Api.LanguagesApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteLanguageId**](LanguagesApi.md#deletelanguageid) | **DELETE** /api/v2/languages/{languageId} | Delete Language |
-| [**GetLanguageId**](LanguagesApi.md#getlanguageid) | **GET** /api/v2/languages/{languageId} | Get language |
-| [**GetLanguages**](LanguagesApi.md#getlanguages) | **GET** /api/v2/languages | Get the list of supported languages. |
-| [**PostLanguages**](LanguagesApi.md#postlanguages) | **POST** /api/v2/languages | Create Language |
-| [**PutLanguageId**](LanguagesApi.md#putlanguageid) | **PUT** /api/v2/languages/{languageId} | Update Language |
+| [**DeleteLanguageId**](LanguagesApi.html#deletelanguageid) | **DELETE** /api/v2/languages/{languageId} | Delete Language |
+| [**GetLanguageId**](LanguagesApi.html#getlanguageid) | **GET** /api/v2/languages/{languageId} | Get language |
+| [**GetLanguages**](LanguagesApi.html#getlanguages) | **GET** /api/v2/languages | Get the list of supported languages. |
+| [**PostLanguages**](LanguagesApi.html#postlanguages) | **POST** /api/v2/languages | Create Language |
+| [**PutLanguageId**](LanguagesApi.html#putlanguageid) | **PUT** /api/v2/languages/{languageId} | Update Language |
 {: class="table table-striped"}
 
-<a name="DeleteLanguageId"></a>
+<a name="deletelanguageid"></a>
+
 ## void DeleteLanguageId (string languageId)
 
 Delete Language
@@ -65,7 +69,8 @@ namespace Example
 
 void (empty response body)
 
-<a name="GetLanguageId"></a>
+<a name="getlanguageid"></a>
+
 ## [**Language**](Language.html) GetLanguageId (string languageId)
 
 Get language
@@ -118,9 +123,10 @@ namespace Example
 
 ### Return type
 
-[**Language**](Language.md)
+[**Language**](Language.html)
 
-<a name="GetLanguages"></a>
+<a name="getlanguages"></a>
+
 ## [**LanguageEntityListing**](LanguageEntityListing.html) GetLanguages (int? pageSize = null, int? pageNumber = null, string sortOrder = null)
 
 Get the list of supported languages.
@@ -177,9 +183,10 @@ namespace Example
 
 ### Return type
 
-[**LanguageEntityListing**](LanguageEntityListing.md)
+[**LanguageEntityListing**](LanguageEntityListing.html)
 
-<a name="PostLanguages"></a>
+<a name="postlanguages"></a>
+
 ## [**Language**](Language.html) PostLanguages (Language body = null)
 
 Create Language
@@ -227,14 +234,15 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**Language**](Language.md)| Language | [optional]  |
+| **body** | [**Language**](Language.html)| Language | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**Language**](Language.md)
+[**Language**](Language.html)
 
-<a name="PutLanguageId"></a>
+<a name="putlanguageid"></a>
+
 ## [**Language**](Language.html) PutLanguageId (string languageId, Language body = null)
 
 Update Language
@@ -284,10 +292,10 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **languageId** | **string**| Language ID |  |
-| **body** | [**Language**](Language.md)| Language | [optional]  |
+| **body** | [**Language**](Language.html)| Language | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**Language**](Language.md)
+[**Language**](Language.html)
 

@@ -1,16 +1,20 @@
-# ININ.PureCloudApi.Api.ConfigurationApi
+---
+title: ConfigurationApi
+---
+## ININ.PureCloudApi.Api.ConfigurationApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**GetRecordingkeys**](ConfigurationApi.md#getrecordingkeys) | **GET** /api/v2/recording/recordingkeys | Get encryption key list |
-| [**GetRecordingkeysRotationschedule**](ConfigurationApi.md#getrecordingkeysrotationschedule) | **GET** /api/v2/recording/recordingkeys/rotationschedule | Get key rotation schedule |
-| [**PostRecordingkeys**](ConfigurationApi.md#postrecordingkeys) | **POST** /api/v2/recording/recordingkeys | Create encryption key |
-| [**PutRecordingkeysRotationschedule**](ConfigurationApi.md#putrecordingkeysrotationschedule) | **PUT** /api/v2/recording/recordingkeys/rotationschedule | Update key rotation schedule |
+| [**GetRecordingkeys**](ConfigurationApi.html#getrecordingkeys) | **GET** /api/v2/recording/recordingkeys | Get encryption key list |
+| [**GetRecordingkeysRotationschedule**](ConfigurationApi.html#getrecordingkeysrotationschedule) | **GET** /api/v2/recording/recordingkeys/rotationschedule | Get key rotation schedule |
+| [**PostRecordingkeys**](ConfigurationApi.html#postrecordingkeys) | **POST** /api/v2/recording/recordingkeys | Create encryption key |
+| [**PutRecordingkeysRotationschedule**](ConfigurationApi.html#putrecordingkeysrotationschedule) | **PUT** /api/v2/recording/recordingkeys/rotationschedule | Update key rotation schedule |
 {: class="table table-striped"}
 
-<a name="GetRecordingkeys"></a>
+<a name="getrecordingkeys"></a>
+
 ## [**EncryptionKeyEntityListing**](EncryptionKeyEntityListing.html) GetRecordingkeys (int? pageSize = null, int? pageNumber = null)
 
 Get encryption key list
@@ -65,9 +69,10 @@ namespace Example
 
 ### Return type
 
-[**EncryptionKeyEntityListing**](EncryptionKeyEntityListing.md)
+[**EncryptionKeyEntityListing**](EncryptionKeyEntityListing.html)
 
-<a name="GetRecordingkeysRotationschedule"></a>
+<a name="getrecordingkeysrotationschedule"></a>
+
 ## [**KeyRotationSchedule**](KeyRotationSchedule.html) GetRecordingkeysRotationschedule ()
 
 Get key rotation schedule
@@ -115,9 +120,10 @@ This endpoint does require any parameters.
 
 ### Return type
 
-[**KeyRotationSchedule**](KeyRotationSchedule.md)
+[**KeyRotationSchedule**](KeyRotationSchedule.html)
 
-<a name="PostRecordingkeys"></a>
+<a name="postrecordingkeys"></a>
+
 ## [**EncryptionKey**](EncryptionKey.html) PostRecordingkeys ()
 
 Create encryption key
@@ -165,9 +171,10 @@ This endpoint does require any parameters.
 
 ### Return type
 
-[**EncryptionKey**](EncryptionKey.md)
+[**EncryptionKey**](EncryptionKey.html)
 
-<a name="PutRecordingkeysRotationschedule"></a>
+<a name="putrecordingkeysrotationschedule"></a>
+
 ## [**KeyRotationSchedule**](KeyRotationSchedule.html) PutRecordingkeysRotationschedule (KeyRotationSchedule body = null)
 
 Update key rotation schedule
@@ -215,10 +222,10 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**KeyRotationSchedule**](KeyRotationSchedule.md)| KeyRotationSchedule | [optional]  |
+| **body** | [**KeyRotationSchedule**](KeyRotationSchedule.html)| KeyRotationSchedule | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**KeyRotationSchedule**](KeyRotationSchedule.md)
+[**KeyRotationSchedule**](KeyRotationSchedule.html)
 

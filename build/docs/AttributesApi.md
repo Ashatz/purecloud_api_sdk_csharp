@@ -1,18 +1,22 @@
-# ININ.PureCloudApi.Api.AttributesApi
+---
+title: AttributesApi
+---
+## ININ.PureCloudApi.Api.AttributesApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteAttributeId**](AttributesApi.md#deleteattributeid) | **DELETE** /api/v2/attributes/{attributeId} | Delete an existing Attribute. |
-| [**GetAttributeId**](AttributesApi.md#getattributeid) | **GET** /api/v2/attributes/{attributeId} | Get details about an existing attribute. |
-| [**GetAttributes**](AttributesApi.md#getattributes) | **GET** /api/v2/attributes | Gets a list of existing attributes. |
-| [**PostAttributes**](AttributesApi.md#postattributes) | **POST** /api/v2/attributes | Create an attribute. |
-| [**PostQuery**](AttributesApi.md#postquery) | **POST** /api/v2/attributes/query | Query attributes |
-| [**PutAttributeId**](AttributesApi.md#putattributeid) | **PUT** /api/v2/attributes/{attributeId} | Update an existing attribute. |
+| [**DeleteAttributeId**](AttributesApi.html#deleteattributeid) | **DELETE** /api/v2/attributes/{attributeId} | Delete an existing Attribute. |
+| [**GetAttributeId**](AttributesApi.html#getattributeid) | **GET** /api/v2/attributes/{attributeId} | Get details about an existing attribute. |
+| [**GetAttributes**](AttributesApi.html#getattributes) | **GET** /api/v2/attributes | Gets a list of existing attributes. |
+| [**PostAttributes**](AttributesApi.html#postattributes) | **POST** /api/v2/attributes | Create an attribute. |
+| [**PostQuery**](AttributesApi.html#postquery) | **POST** /api/v2/attributes/query | Query attributes |
+| [**PutAttributeId**](AttributesApi.html#putattributeid) | **PUT** /api/v2/attributes/{attributeId} | Update an existing attribute. |
 {: class="table table-striped"}
 
-<a name="DeleteAttributeId"></a>
+<a name="deleteattributeid"></a>
+
 ## void DeleteAttributeId (string attributeId)
 
 Delete an existing Attribute.
@@ -66,7 +70,8 @@ namespace Example
 
 void (empty response body)
 
-<a name="GetAttributeId"></a>
+<a name="getattributeid"></a>
+
 ## [**ININ.PureCloudApi.Model.Attribute**](Attribute.html) GetAttributeId (string attributeId)
 
 Get details about an existing attribute.
@@ -119,9 +124,10 @@ namespace Example
 
 ### Return type
 
-[**ININ.PureCloudApi.Model.Attribute**](Attribute.md)
+[**ININ.PureCloudApi.Model.Attribute**](Attribute.html)
 
-<a name="GetAttributes"></a>
+<a name="getattributes"></a>
+
 ## [**AttributeEntityListing**](AttributeEntityListing.html) GetAttributes (int? pageNumber = null, int? pageSize = null)
 
 Gets a list of existing attributes.
@@ -176,9 +182,10 @@ namespace Example
 
 ### Return type
 
-[**AttributeEntityListing**](AttributeEntityListing.md)
+[**AttributeEntityListing**](AttributeEntityListing.html)
 
-<a name="PostAttributes"></a>
+<a name="postattributes"></a>
+
 ## [**ININ.PureCloudApi.Model.Attribute**](Attribute.html) PostAttributes (ININ.PureCloudApi.Model.Attribute body = null)
 
 Create an attribute.
@@ -226,14 +233,15 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**ININ.PureCloudApi.Model.Attribute**](ININ.PureCloudApi.Model.Attribute.md)| Attribute | [optional]  |
+| **body** | [**ININ.PureCloudApi.Model.Attribute**](ININ.PureCloudApi.Model.Attribute.html)| Attribute | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**ININ.PureCloudApi.Model.Attribute**](Attribute.md)
+[**ININ.PureCloudApi.Model.Attribute**](Attribute.html)
 
-<a name="PostQuery"></a>
+<a name="postquery"></a>
+
 ## [**AttributeEntityListing**](AttributeEntityListing.html) PostQuery (AttributeQueryRequest body = null)
 
 Query attributes
@@ -281,14 +289,15 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**AttributeQueryRequest**](AttributeQueryRequest.md)| query | [optional]  |
+| **body** | [**AttributeQueryRequest**](AttributeQueryRequest.html)| query | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**AttributeEntityListing**](AttributeEntityListing.md)
+[**AttributeEntityListing**](AttributeEntityListing.html)
 
-<a name="PutAttributeId"></a>
+<a name="putattributeid"></a>
+
 ## [**ININ.PureCloudApi.Model.Attribute**](Attribute.html) PutAttributeId (string attributeId, ININ.PureCloudApi.Model.Attribute body = null)
 
 Update an existing attribute.
@@ -338,10 +347,10 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **attributeId** | **string**| Attribute ID |  |
-| **body** | [**ININ.PureCloudApi.Model.Attribute**](ININ.PureCloudApi.Model.Attribute.md)| Attribute | [optional]  |
+| **body** | [**ININ.PureCloudApi.Model.Attribute**](ININ.PureCloudApi.Model.Attribute.html)| Attribute | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**ININ.PureCloudApi.Model.Attribute**](Attribute.md)
+[**ININ.PureCloudApi.Model.Attribute**](Attribute.html)
 

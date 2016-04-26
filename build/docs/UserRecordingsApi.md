@@ -1,18 +1,22 @@
-# ININ.PureCloudApi.Api.UserRecordingsApi
+---
+title: UserRecordingsApi
+---
+## ININ.PureCloudApi.Api.UserRecordingsApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteRecordingId**](UserRecordingsApi.md#deleterecordingid) | **DELETE** /api/v2/userrecordings/{recordingId} | Delete a user recording. |
-| [**GetRecordingId**](UserRecordingsApi.md#getrecordingid) | **GET** /api/v2/userrecordings/{recordingId} | Get a user recording. |
-| [**GetRecordingIdMedia**](UserRecordingsApi.md#getrecordingidmedia) | **GET** /api/v2/userrecordings/{recordingId}/media | Download a user recording. |
-| [**GetSummary**](UserRecordingsApi.md#getsummary) | **GET** /api/v2/userrecordings/summary | Get user recording summary |
-| [**GetUserrecordings**](UserRecordingsApi.md#getuserrecordings) | **GET** /api/v2/userrecordings | Get a list of user recordings. |
-| [**PutRecordingId**](UserRecordingsApi.md#putrecordingid) | **PUT** /api/v2/userrecordings/{recordingId} | Update a user recording. |
+| [**DeleteRecordingId**](UserRecordingsApi.html#deleterecordingid) | **DELETE** /api/v2/userrecordings/{recordingId} | Delete a user recording. |
+| [**GetRecordingId**](UserRecordingsApi.html#getrecordingid) | **GET** /api/v2/userrecordings/{recordingId} | Get a user recording. |
+| [**GetRecordingIdMedia**](UserRecordingsApi.html#getrecordingidmedia) | **GET** /api/v2/userrecordings/{recordingId}/media | Download a user recording. |
+| [**GetSummary**](UserRecordingsApi.html#getsummary) | **GET** /api/v2/userrecordings/summary | Get user recording summary |
+| [**GetUserrecordings**](UserRecordingsApi.html#getuserrecordings) | **GET** /api/v2/userrecordings | Get a list of user recordings. |
+| [**PutRecordingId**](UserRecordingsApi.html#putrecordingid) | **PUT** /api/v2/userrecordings/{recordingId} | Update a user recording. |
 {: class="table table-striped"}
 
-<a name="DeleteRecordingId"></a>
+<a name="deleterecordingid"></a>
+
 ## void DeleteRecordingId (string recordingId)
 
 Delete a user recording.
@@ -66,7 +70,8 @@ namespace Example
 
 void (empty response body)
 
-<a name="GetRecordingId"></a>
+<a name="getrecordingid"></a>
+
 ## [**UserRecording**](UserRecording.html) GetRecordingId (string recordingId, string expand = null)
 
 Get a user recording.
@@ -121,9 +126,10 @@ namespace Example
 
 ### Return type
 
-[**UserRecording**](UserRecording.md)
+[**UserRecording**](UserRecording.html)
 
-<a name="GetRecordingIdMedia"></a>
+<a name="getrecordingidmedia"></a>
+
 ## [**DownloadResponse**](DownloadResponse.html) GetRecordingIdMedia (string recordingId, string formatId = null)
 
 Download a user recording.
@@ -178,9 +184,10 @@ namespace Example
 
 ### Return type
 
-[**DownloadResponse**](DownloadResponse.md)
+[**DownloadResponse**](DownloadResponse.html)
 
-<a name="GetSummary"></a>
+<a name="getsummary"></a>
+
 ## [**FaxSummary**](FaxSummary.html) GetSummary ()
 
 Get user recording summary
@@ -228,9 +235,10 @@ This endpoint does require any parameters.
 
 ### Return type
 
-[**FaxSummary**](FaxSummary.md)
+[**FaxSummary**](FaxSummary.html)
 
-<a name="GetUserrecordings"></a>
+<a name="getuserrecordings"></a>
+
 ## [**UserRecordingEntityListing**](UserRecordingEntityListing.html) GetUserrecordings (int? pageSize = null, int? pageNumber = null, string expand = null)
 
 Get a list of user recordings.
@@ -287,9 +295,10 @@ namespace Example
 
 ### Return type
 
-[**UserRecordingEntityListing**](UserRecordingEntityListing.md)
+[**UserRecordingEntityListing**](UserRecordingEntityListing.html)
 
-<a name="PutRecordingId"></a>
+<a name="putrecordingid"></a>
+
 ## [**UserRecording**](UserRecording.html) PutRecordingId (string recordingId, UserRecording body = null, string expand = null)
 
 Update a user recording.
@@ -340,11 +349,11 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **recordingId** | **string**| User Recording ID |  |
-| **body** | [**UserRecording**](UserRecording.md)| UserRecording | [optional]  |
+| **body** | [**UserRecording**](UserRecording.html)| UserRecording | [optional]  |
 | **expand** | **string**| conversation | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**UserRecording**](UserRecording.md)
+[**UserRecording**](UserRecording.html)
 

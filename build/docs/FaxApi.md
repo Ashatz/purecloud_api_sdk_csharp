@@ -1,18 +1,22 @@
-# ININ.PureCloudApi.Api.FaxApi
+---
+title: FaxApi
+---
+## ININ.PureCloudApi.Api.FaxApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteDocumentsDocumentId**](FaxApi.md#deletedocumentsdocumentid) | **DELETE** /api/v2/fax/documents/{documentId} | Delete a fax document. |
-| [**GetDocuments**](FaxApi.md#getdocuments) | **GET** /api/v2/fax/documents | Get a list of fax documents. |
-| [**GetDocumentsDocumentId**](FaxApi.md#getdocumentsdocumentid) | **GET** /api/v2/fax/documents/{documentId} | Get a document. |
-| [**GetDocumentsDocumentIdContent**](FaxApi.md#getdocumentsdocumentidcontent) | **GET** /api/v2/fax/documents/{documentId}/content | Download a fax document. |
-| [**GetSummary**](FaxApi.md#getsummary) | **GET** /api/v2/fax/summary | Get fax summary |
-| [**PutDocumentsDocumentId**](FaxApi.md#putdocumentsdocumentid) | **PUT** /api/v2/fax/documents/{documentId} | Update a fax document. |
+| [**DeleteDocumentsDocumentId**](FaxApi.html#deletedocumentsdocumentid) | **DELETE** /api/v2/fax/documents/{documentId} | Delete a fax document. |
+| [**GetDocuments**](FaxApi.html#getdocuments) | **GET** /api/v2/fax/documents | Get a list of fax documents. |
+| [**GetDocumentsDocumentId**](FaxApi.html#getdocumentsdocumentid) | **GET** /api/v2/fax/documents/{documentId} | Get a document. |
+| [**GetDocumentsDocumentIdContent**](FaxApi.html#getdocumentsdocumentidcontent) | **GET** /api/v2/fax/documents/{documentId}/content | Download a fax document. |
+| [**GetSummary**](FaxApi.html#getsummary) | **GET** /api/v2/fax/summary | Get fax summary |
+| [**PutDocumentsDocumentId**](FaxApi.html#putdocumentsdocumentid) | **PUT** /api/v2/fax/documents/{documentId} | Update a fax document. |
 {: class="table table-striped"}
 
-<a name="DeleteDocumentsDocumentId"></a>
+<a name="deletedocumentsdocumentid"></a>
+
 ## void DeleteDocumentsDocumentId (string documentId)
 
 Delete a fax document.
@@ -66,7 +70,8 @@ namespace Example
 
 void (empty response body)
 
-<a name="GetDocuments"></a>
+<a name="getdocuments"></a>
+
 ## [**FaxDocumentEntityListing**](FaxDocumentEntityListing.html) GetDocuments (int? pageSize = null, int? pageNumber = null)
 
 Get a list of fax documents.
@@ -121,9 +126,10 @@ namespace Example
 
 ### Return type
 
-[**FaxDocumentEntityListing**](FaxDocumentEntityListing.md)
+[**FaxDocumentEntityListing**](FaxDocumentEntityListing.html)
 
-<a name="GetDocumentsDocumentId"></a>
+<a name="getdocumentsdocumentid"></a>
+
 ## [**FaxDocument**](FaxDocument.html) GetDocumentsDocumentId (string documentId)
 
 Get a document.
@@ -176,9 +182,10 @@ namespace Example
 
 ### Return type
 
-[**FaxDocument**](FaxDocument.md)
+[**FaxDocument**](FaxDocument.html)
 
-<a name="GetDocumentsDocumentIdContent"></a>
+<a name="getdocumentsdocumentidcontent"></a>
+
 ## [**DownloadResponse**](DownloadResponse.html) GetDocumentsDocumentIdContent (string documentId)
 
 Download a fax document.
@@ -231,9 +238,10 @@ namespace Example
 
 ### Return type
 
-[**DownloadResponse**](DownloadResponse.md)
+[**DownloadResponse**](DownloadResponse.html)
 
-<a name="GetSummary"></a>
+<a name="getsummary"></a>
+
 ## [**FaxSummary**](FaxSummary.html) GetSummary ()
 
 Get fax summary
@@ -281,9 +289,10 @@ This endpoint does require any parameters.
 
 ### Return type
 
-[**FaxSummary**](FaxSummary.md)
+[**FaxSummary**](FaxSummary.html)
 
-<a name="PutDocumentsDocumentId"></a>
+<a name="putdocumentsdocumentid"></a>
+
 ## [**FaxDocument**](FaxDocument.html) PutDocumentsDocumentId (string documentId, FaxDocument body = null)
 
 Update a fax document.
@@ -333,10 +342,10 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **documentId** | **string**| Document ID |  |
-| **body** | [**FaxDocument**](FaxDocument.md)| Document | [optional]  |
+| **body** | [**FaxDocument**](FaxDocument.html)| Document | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**FaxDocument**](FaxDocument.md)
+[**FaxDocument**](FaxDocument.html)
 

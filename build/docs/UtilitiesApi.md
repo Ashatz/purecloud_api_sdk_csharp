@@ -1,15 +1,19 @@
-# ININ.PureCloudApi.Api.UtilitiesApi
+---
+title: UtilitiesApi
+---
+## ININ.PureCloudApi.Api.UtilitiesApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**GetDate**](UtilitiesApi.md#getdate) | **GET** /api/v2/date | Get the current system date/time |
-| [**GetTimezones**](UtilitiesApi.md#gettimezones) | **GET** /api/v2/timezones | Get time zones list |
-| [**PostDetails**](UtilitiesApi.md#postdetails) | **POST** /api/v2/certificate/details | Returns the information about an X509 PEM encoded certificate or certificate chain. |
+| [**GetDate**](UtilitiesApi.html#getdate) | **GET** /api/v2/date | Get the current system date/time |
+| [**GetTimezones**](UtilitiesApi.html#gettimezones) | **GET** /api/v2/timezones | Get time zones list |
+| [**PostDetails**](UtilitiesApi.html#postdetails) | **POST** /api/v2/certificate/details | Returns the information about an X509 PEM encoded certificate or certificate chain. |
 {: class="table table-striped"}
 
-<a name="GetDate"></a>
+<a name="getdate"></a>
+
 ## [**ServerDate**](ServerDate.html) GetDate ()
 
 Get the current system date/time
@@ -57,9 +61,10 @@ This endpoint does require any parameters.
 
 ### Return type
 
-[**ServerDate**](ServerDate.md)
+[**ServerDate**](ServerDate.html)
 
-<a name="GetTimezones"></a>
+<a name="gettimezones"></a>
+
 ## [**TimeZoneEntityListing**](TimeZoneEntityListing.html) GetTimezones (int? pageSize = null, int? pageNumber = null)
 
 Get time zones list
@@ -114,9 +119,10 @@ namespace Example
 
 ### Return type
 
-[**TimeZoneEntityListing**](TimeZoneEntityListing.md)
+[**TimeZoneEntityListing**](TimeZoneEntityListing.html)
 
-<a name="PostDetails"></a>
+<a name="postdetails"></a>
+
 ## [**ParsedCertificate**](ParsedCertificate.html) PostDetails (Certificate body = null)
 
 Returns the information about an X509 PEM encoded certificate or certificate chain.
@@ -164,10 +170,10 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**Certificate**](Certificate.md)|  | [optional]  |
+| **body** | [**Certificate**](Certificate.html)|  | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**ParsedCertificate**](ParsedCertificate.md)
+[**ParsedCertificate**](ParsedCertificate.html)
 

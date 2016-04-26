@@ -1,15 +1,19 @@
-# ININ.PureCloudApi.Api.StationsApi
+---
+title: StationsApi
+---
+## ININ.PureCloudApi.Api.StationsApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteStationIdAssociateduser**](StationsApi.md#deletestationidassociateduser) | **DELETE** /api/v2/stations/{stationId}/associateduser | Unassigns the user assigned to this station |
-| [**GetStationId**](StationsApi.md#getstationid) | **GET** /api/v2/stations/{stationId} | Get station. |
-| [**GetStations**](StationsApi.md#getstations) | **GET** /api/v2/stations | Get the list of available stations. |
+| [**DeleteStationIdAssociateduser**](StationsApi.html#deletestationidassociateduser) | **DELETE** /api/v2/stations/{stationId}/associateduser | Unassigns the user assigned to this station |
+| [**GetStationId**](StationsApi.html#getstationid) | **GET** /api/v2/stations/{stationId} | Get station. |
+| [**GetStations**](StationsApi.html#getstations) | **GET** /api/v2/stations | Get the list of available stations. |
 {: class="table table-striped"}
 
-<a name="DeleteStationIdAssociateduser"></a>
+<a name="deletestationidassociateduser"></a>
+
 ## string** DeleteStationIdAssociateduser (string stationId)
 
 Unassigns the user assigned to this station
@@ -64,7 +68,8 @@ namespace Example
 
 **string**
 
-<a name="GetStationId"></a>
+<a name="getstationid"></a>
+
 ## [**Station**](Station.html) GetStationId (string stationId)
 
 Get station.
@@ -117,9 +122,10 @@ namespace Example
 
 ### Return type
 
-[**Station**](Station.md)
+[**Station**](Station.html)
 
-<a name="GetStations"></a>
+<a name="getstations"></a>
+
 ## [**StationEntityListing**](StationEntityListing.html) GetStations (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null)
 
 Get the list of available stations.
@@ -178,5 +184,5 @@ namespace Example
 
 ### Return type
 
-[**StationEntityListing**](StationEntityListing.md)
+[**StationEntityListing**](StationEntityListing.html)
 

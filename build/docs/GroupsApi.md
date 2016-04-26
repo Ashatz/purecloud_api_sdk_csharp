@@ -1,18 +1,22 @@
-# ININ.PureCloudApi.Api.GroupsApi
+---
+title: GroupsApi
+---
+## ININ.PureCloudApi.Api.GroupsApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**GetGroupId**](GroupsApi.md#getgroupid) | **GET** /api/v2/groups/{groupId} | Get group |
-| [**GetGroupIdMembers**](GroupsApi.md#getgroupidmembers) | **GET** /api/v2/groups/{groupId}/members | Get group members |
-| [**GetGroups**](GroupsApi.md#getgroups) | **GET** /api/v2/groups | Get a group list |
-| [**GetSearch**](GroupsApi.md#getsearch) | **GET** /api/v2/groups/search | Search using q64 |
-| [**PostGroups**](GroupsApi.md#postgroups) | **POST** /api/v2/groups | Create a group |
-| [**PostSearch**](GroupsApi.md#postsearch) | **POST** /api/v2/groups/search | Search |
+| [**GetGroupId**](GroupsApi.html#getgroupid) | **GET** /api/v2/groups/{groupId} | Get group |
+| [**GetGroupIdMembers**](GroupsApi.html#getgroupidmembers) | **GET** /api/v2/groups/{groupId}/members | Get group members |
+| [**GetGroups**](GroupsApi.html#getgroups) | **GET** /api/v2/groups | Get a group list |
+| [**GetSearch**](GroupsApi.html#getsearch) | **GET** /api/v2/groups/search | Search using q64 |
+| [**PostGroups**](GroupsApi.html#postgroups) | **POST** /api/v2/groups | Create a group |
+| [**PostSearch**](GroupsApi.html#postsearch) | **POST** /api/v2/groups/search | Search |
 {: class="table table-striped"}
 
-<a name="GetGroupId"></a>
+<a name="getgroupid"></a>
+
 ## [**Group**](Group.html) GetGroupId (string groupId)
 
 Get group
@@ -65,9 +69,10 @@ namespace Example
 
 ### Return type
 
-[**Group**](Group.md)
+[**Group**](Group.html)
 
-<a name="GetGroupIdMembers"></a>
+<a name="getgroupidmembers"></a>
+
 ## [**UserEntityListing**](UserEntityListing.html) GetGroupIdMembers (string groupId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
 
 Get group members
@@ -126,9 +131,10 @@ namespace Example
 
 ### Return type
 
-[**UserEntityListing**](UserEntityListing.md)
+[**UserEntityListing**](UserEntityListing.html)
 
-<a name="GetGroups"></a>
+<a name="getgroups"></a>
+
 ## [**GroupEntityListing**](GroupEntityListing.html) GetGroups (int? pageSize = null, int? pageNumber = null, string sortOrder = null)
 
 Get a group list
@@ -185,9 +191,10 @@ namespace Example
 
 ### Return type
 
-[**GroupEntityListing**](GroupEntityListing.md)
+[**GroupEntityListing**](GroupEntityListing.html)
 
-<a name="GetSearch"></a>
+<a name="getsearch"></a>
+
 ## [**GroupsSearchResponse**](GroupsSearchResponse.html) GetSearch (string q64 = null, List<string> expand = null)
 
 Search using q64
@@ -237,14 +244,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **q64** | **string**|  | [optional]  |
-| **expand** | [**List<string>**](string.md)|  | [optional]  |
+| **expand** | [**List<string>**](string.html)|  | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**GroupsSearchResponse**](GroupsSearchResponse.md)
+[**GroupsSearchResponse**](GroupsSearchResponse.html)
 
-<a name="PostGroups"></a>
+<a name="postgroups"></a>
+
 ## [**Group**](Group.html) PostGroups (Group body = null)
 
 Create a group
@@ -292,14 +300,15 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**Group**](Group.md)|  | [optional]  |
+| **body** | [**Group**](Group.html)|  | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**Group**](Group.md)
+[**Group**](Group.html)
 
-<a name="PostSearch"></a>
+<a name="postsearch"></a>
+
 ## [**GroupsSearchResponse**](GroupsSearchResponse.html) PostSearch (SearchRequest body = null)
 
 Search
@@ -347,10 +356,10 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**SearchRequest**](SearchRequest.md)| Search request options | [optional]  |
+| **body** | [**SearchRequest**](SearchRequest.html)| Search request options | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**GroupsSearchResponse**](GroupsSearchResponse.md)
+[**GroupsSearchResponse**](GroupsSearchResponse.html)
 

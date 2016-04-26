@@ -1,13 +1,17 @@
-# ININ.PureCloudApi.Api.TokensApi
+---
+title: TokensApi
+---
+## ININ.PureCloudApi.Api.TokensApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteMe**](TokensApi.md#deleteme) | **DELETE** /api/v2/tokens/me | Delete  auth token used to make the request. |
+| [**DeleteMe**](TokensApi.html#deleteme) | **DELETE** /api/v2/tokens/me | Delete  auth token used to make the request. |
 {: class="table table-striped"}
 
-<a name="DeleteMe"></a>
+<a name="deleteme"></a>
+
 ## string** DeleteMe ()
 
 Delete  auth token used to make the request.

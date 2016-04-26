@@ -1,75 +1,79 @@
-# ININ.PureCloudApi.Api.OutboundApi
+---
+title: OutboundApi
+---
+## ININ.PureCloudApi.Api.OutboundApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteCallabletimesetsCallabletimesetId**](OutboundApi.md#deletecallabletimesetscallabletimesetid) | **DELETE** /api/v2/outbound/callabletimesets/{callableTimeSetId} | Delete callable time set |
-| [**DeleteCallanalysisresponsesetsCallanalysissetId**](OutboundApi.md#deletecallanalysisresponsesetscallanalysissetid) | **DELETE** /api/v2/outbound/callanalysisresponsesets/{callAnalysisSetId} | Delete a dialer call analysis response set. |
-| [**DeleteCampaignsCampaignId**](OutboundApi.md#deletecampaignscampaignid) | **DELETE** /api/v2/outbound/campaigns/{campaignId} | Delete a campaign. |
-| [**DeleteCampaignsCampaignIdProgress**](OutboundApi.md#deletecampaignscampaignidprogress) | **DELETE** /api/v2/outbound/campaigns/{campaignId}/progress | Reset campaign progress and recycle the campaign |
-| [**DeleteContactlistsContactlistId**](OutboundApi.md#deletecontactlistscontactlistid) | **DELETE** /api/v2/outbound/contactlists/{contactListId} | Delete a contact list. |
-| [**DeleteContactlistsContactlistIdContactsContactId**](OutboundApi.md#deletecontactlistscontactlistidcontactscontactid) | **DELETE** /api/v2/outbound/contactlists/{contactListId}/contacts/{contactId} | Delete a contact. |
-| [**DeleteDnclistsDnclistId**](OutboundApi.md#deletednclistsdnclistid) | **DELETE** /api/v2/outbound/dnclists/{dncListId} | Delete dialer DNC list |
-| [**DeleteRulesetsRulesetId**](OutboundApi.md#deleterulesetsrulesetid) | **DELETE** /api/v2/outbound/rulesets/{ruleSetId} | Delete a Rule set. |
-| [**DeleteSchedulesCampaignsCampaignId**](OutboundApi.md#deleteschedulescampaignscampaignid) | **DELETE** /api/v2/outbound/schedules/campaigns/{campaignId} | Delete a dialer campaign schedule. |
-| [**DeleteSchedulesSequencesSequenceId**](OutboundApi.md#deleteschedulessequencessequenceid) | **DELETE** /api/v2/outbound/schedules/sequences/{sequenceId} | Delete a dialer sequence schedule. |
-| [**DeleteSequencesSequenceId**](OutboundApi.md#deletesequencessequenceid) | **DELETE** /api/v2/outbound/sequences/{sequenceId} | Delete a dialer campaign sequence. |
-| [**GetCallabletimesets**](OutboundApi.md#getcallabletimesets) | **GET** /api/v2/outbound/callabletimesets | Query callable time set list |
-| [**GetCallabletimesetsCallabletimesetId**](OutboundApi.md#getcallabletimesetscallabletimesetid) | **GET** /api/v2/outbound/callabletimesets/{callableTimeSetId} | Get callable time set |
-| [**GetCallanalysisresponsesets**](OutboundApi.md#getcallanalysisresponsesets) | **GET** /api/v2/outbound/callanalysisresponsesets | Query a list of dialer call analysis response sets. |
-| [**GetCallanalysisresponsesetsCallanalysissetId**](OutboundApi.md#getcallanalysisresponsesetscallanalysissetid) | **GET** /api/v2/outbound/callanalysisresponsesets/{callAnalysisSetId} | Get a dialer call analysis response set. |
-| [**GetCampaigns**](OutboundApi.md#getcampaigns) | **GET** /api/v2/outbound/campaigns | Query a list of dialer campaigns. |
-| [**GetCampaignsCampaignId**](OutboundApi.md#getcampaignscampaignid) | **GET** /api/v2/outbound/campaigns/{campaignId} | Get dialer campaign. |
-| [**GetCampaignsCampaignIdDiagnostics**](OutboundApi.md#getcampaignscampaigniddiagnostics) | **GET** /api/v2/outbound/campaigns/{campaignId}/diagnostics | Get campaign diagnostics |
-| [**GetCampaignsCampaignIdProgress**](OutboundApi.md#getcampaignscampaignidprogress) | **GET** /api/v2/outbound/campaigns/{campaignId}/progress | Get campaign progress |
-| [**GetCampaignsCampaignIdStats**](OutboundApi.md#getcampaignscampaignidstats) | **GET** /api/v2/outbound/campaigns/{campaignId}/stats | Get statistics about a Dialer Campaign |
-| [**GetContactlists**](OutboundApi.md#getcontactlists) | **GET** /api/v2/outbound/contactlists | Query a list of contact lists. |
-| [**GetContactlistsContactlistId**](OutboundApi.md#getcontactlistscontactlistid) | **GET** /api/v2/outbound/contactlists/{contactListId} | Get dialer contactList. |
-| [**GetContactlistsContactlistIdContactsContactId**](OutboundApi.md#getcontactlistscontactlistidcontactscontactid) | **GET** /api/v2/outbound/contactlists/{contactListId}/contacts/{contactId} | Get dialer contactList. |
-| [**GetContactlistsContactlistIdImportstatus**](OutboundApi.md#getcontactlistscontactlistidimportstatus) | **GET** /api/v2/outbound/contactlists/{contactListId}/importstatus | Get dialer contactList import status. |
-| [**GetDnclists**](OutboundApi.md#getdnclists) | **GET** /api/v2/outbound/dnclists | Query dialer DNC lists |
-| [**GetDnclistsDnclistId**](OutboundApi.md#getdnclistsdnclistid) | **GET** /api/v2/outbound/dnclists/{dncListId} | Get dialer DNC list |
-| [**GetDnclistsDnclistIdImportstatus**](OutboundApi.md#getdnclistsdnclistidimportstatus) | **GET** /api/v2/outbound/dnclists/{dncListId}/importstatus | Get dialer dncList import status. |
-| [**GetRulesets**](OutboundApi.md#getrulesets) | **GET** /api/v2/outbound/rulesets | Query a list of Rule Sets. |
-| [**GetRulesetsRulesetId**](OutboundApi.md#getrulesetsrulesetid) | **GET** /api/v2/outbound/rulesets/{ruleSetId} | Get a Rule Set by ID. |
-| [**GetSchedulesCampaigns**](OutboundApi.md#getschedulescampaigns) | **GET** /api/v2/outbound/schedules/campaigns | Query for a list of dialer campaign schedules. |
-| [**GetSchedulesCampaignsCampaignId**](OutboundApi.md#getschedulescampaignscampaignid) | **GET** /api/v2/outbound/schedules/campaigns/{campaignId} | Get a dialer campaign schedule. |
-| [**GetSchedulesSequences**](OutboundApi.md#getschedulessequences) | **GET** /api/v2/outbound/schedules/sequences | Query for a list of dialer sequence schedules. |
-| [**GetSchedulesSequencesSequenceId**](OutboundApi.md#getschedulessequencessequenceid) | **GET** /api/v2/outbound/schedules/sequences/{sequenceId} | Get a dialer sequence schedule. |
-| [**GetSequences**](OutboundApi.md#getsequences) | **GET** /api/v2/outbound/sequences | Query a list of dialer campaign sequences. |
-| [**GetSequencesSequenceId**](OutboundApi.md#getsequencessequenceid) | **GET** /api/v2/outbound/sequences/{sequenceId} | Get a dialer campaign sequence. |
-| [**GetWrapupcodemappings**](OutboundApi.md#getwrapupcodemappings) | **GET** /api/v2/outbound/wrapupcodemappings | Get the Dialer wrap up code mapping. |
-| [**PostAudits**](OutboundApi.md#postaudits) | **POST** /api/v2/outbound/audits | Retrieves audits for dialer. |
-| [**PostCallabletimesets**](OutboundApi.md#postcallabletimesets) | **POST** /api/v2/outbound/callabletimesets | Create callable time set |
-| [**PostCallanalysisresponsesets**](OutboundApi.md#postcallanalysisresponsesets) | **POST** /api/v2/outbound/callanalysisresponsesets | Create a dialer call analysis response set. |
-| [**PostCampaigns**](OutboundApi.md#postcampaigns) | **POST** /api/v2/outbound/campaigns | Create a campaign. |
-| [**PostCampaignsCampaignIdCallbackSchedule**](OutboundApi.md#postcampaignscampaignidcallbackschedule) | **POST** /api/v2/outbound/campaigns/{campaignId}/callback/schedule | Schedule a Callback for a Dialer Campaign |
-| [**PostCampaignsProgress**](OutboundApi.md#postcampaignsprogress) | **POST** /api/v2/outbound/campaigns/progress | Get progress for a list of campaigns |
-| [**PostContactlists**](OutboundApi.md#postcontactlists) | **POST** /api/v2/outbound/contactlists | Create a contact List. |
-| [**PostContactlistsContactlistIdContacts**](OutboundApi.md#postcontactlistscontactlistidcontacts) | **POST** /api/v2/outbound/contactlists/{contactListId}/contacts | Add contacts to a contact list. |
-| [**PostContactlistsContactlistIdExport**](OutboundApi.md#postcontactlistscontactlistidexport) | **POST** /api/v2/outbound/contactlists/{contactListId}/export | Initiate the export of a contact list. |
-| [**PostConversationsConversationIdDnc**](OutboundApi.md#postconversationsconversationiddnc) | **POST** /api/v2/outbound/conversations/{conversationId}/dnc | Add phone numbers to a Dialer DNC list. |
-| [**PostDnclists**](OutboundApi.md#postdnclists) | **POST** /api/v2/outbound/dnclists | Create dialer DNC list |
-| [**PostDnclistsDnclistIdExport**](OutboundApi.md#postdnclistsdnclistidexport) | **POST** /api/v2/outbound/dnclists/{dncListId}/export | Initiate the export of a dnc list. |
-| [**PostDnclistsDnclistIdPhonenumbers**](OutboundApi.md#postdnclistsdnclistidphonenumbers) | **POST** /api/v2/outbound/dnclists/{dncListId}/phonenumbers | Add phone numbers to a Dialer DNC list. |
-| [**PostRulesets**](OutboundApi.md#postrulesets) | **POST** /api/v2/outbound/rulesets | Create a Dialer Call Analysis Response Set. |
-| [**PostSequences**](OutboundApi.md#postsequences) | **POST** /api/v2/outbound/sequences | Create a new campaign sequence. |
-| [**PutCallabletimesetsCallabletimesetId**](OutboundApi.md#putcallabletimesetscallabletimesetid) | **PUT** /api/v2/outbound/callabletimesets/{callableTimeSetId} | Update callable time set |
-| [**PutCallanalysisresponsesetsCallanalysissetId**](OutboundApi.md#putcallanalysisresponsesetscallanalysissetid) | **PUT** /api/v2/outbound/callanalysisresponsesets/{callAnalysisSetId} | Update a dialer call analysis response set. |
-| [**PutCampaignsCampaignId**](OutboundApi.md#putcampaignscampaignid) | **PUT** /api/v2/outbound/campaigns/{campaignId} | Update a campaign. |
-| [**PutCampaignsCampaignIdAgentsUserId**](OutboundApi.md#putcampaignscampaignidagentsuserid) | **PUT** /api/v2/outbound/campaigns/{campaignId}/agents/{userId} | Send notification that an agent&#39;s state changed  |
-| [**PutContactlistsContactlistId**](OutboundApi.md#putcontactlistscontactlistid) | **PUT** /api/v2/outbound/contactlists/{contactListId} | Update a contact list. |
-| [**PutContactlistsContactlistIdContactsContactId**](OutboundApi.md#putcontactlistscontactlistidcontactscontactid) | **PUT** /api/v2/outbound/contactlists/{contactListId}/contacts/{contactId} | Update a contact. |
-| [**PutDnclistsDnclistId**](OutboundApi.md#putdnclistsdnclistid) | **PUT** /api/v2/outbound/dnclists/{dncListId} | Update dialer DNC list |
-| [**PutRulesetsRulesetId**](OutboundApi.md#putrulesetsrulesetid) | **PUT** /api/v2/outbound/rulesets/{ruleSetId} | Update a RuleSet. |
-| [**PutSchedulesCampaignsCampaignId**](OutboundApi.md#putschedulescampaignscampaignid) | **PUT** /api/v2/outbound/schedules/campaigns/{campaignId} | Update a new campaign schedule. |
-| [**PutSchedulesSequencesSequenceId**](OutboundApi.md#putschedulessequencessequenceid) | **PUT** /api/v2/outbound/schedules/sequences/{sequenceId} | Update a new sequence schedule. |
-| [**PutSequencesSequenceId**](OutboundApi.md#putsequencessequenceid) | **PUT** /api/v2/outbound/sequences/{sequenceId} | Update a new campaign sequence. |
-| [**PutWrapupcodemappings**](OutboundApi.md#putwrapupcodemappings) | **PUT** /api/v2/outbound/wrapupcodemappings | Update the Dialer wrap up code mapping. |
+| [**DeleteCallabletimesetsCallabletimesetId**](OutboundApi.html#deletecallabletimesetscallabletimesetid) | **DELETE** /api/v2/outbound/callabletimesets/{callableTimeSetId} | Delete callable time set |
+| [**DeleteCallanalysisresponsesetsCallanalysissetId**](OutboundApi.html#deletecallanalysisresponsesetscallanalysissetid) | **DELETE** /api/v2/outbound/callanalysisresponsesets/{callAnalysisSetId} | Delete a dialer call analysis response set. |
+| [**DeleteCampaignsCampaignId**](OutboundApi.html#deletecampaignscampaignid) | **DELETE** /api/v2/outbound/campaigns/{campaignId} | Delete a campaign. |
+| [**DeleteCampaignsCampaignIdProgress**](OutboundApi.html#deletecampaignscampaignidprogress) | **DELETE** /api/v2/outbound/campaigns/{campaignId}/progress | Reset campaign progress and recycle the campaign |
+| [**DeleteContactlistsContactlistId**](OutboundApi.html#deletecontactlistscontactlistid) | **DELETE** /api/v2/outbound/contactlists/{contactListId} | Delete a contact list. |
+| [**DeleteContactlistsContactlistIdContactsContactId**](OutboundApi.html#deletecontactlistscontactlistidcontactscontactid) | **DELETE** /api/v2/outbound/contactlists/{contactListId}/contacts/{contactId} | Delete a contact. |
+| [**DeleteDnclistsDnclistId**](OutboundApi.html#deletednclistsdnclistid) | **DELETE** /api/v2/outbound/dnclists/{dncListId} | Delete dialer DNC list |
+| [**DeleteRulesetsRulesetId**](OutboundApi.html#deleterulesetsrulesetid) | **DELETE** /api/v2/outbound/rulesets/{ruleSetId} | Delete a Rule set. |
+| [**DeleteSchedulesCampaignsCampaignId**](OutboundApi.html#deleteschedulescampaignscampaignid) | **DELETE** /api/v2/outbound/schedules/campaigns/{campaignId} | Delete a dialer campaign schedule. |
+| [**DeleteSchedulesSequencesSequenceId**](OutboundApi.html#deleteschedulessequencessequenceid) | **DELETE** /api/v2/outbound/schedules/sequences/{sequenceId} | Delete a dialer sequence schedule. |
+| [**DeleteSequencesSequenceId**](OutboundApi.html#deletesequencessequenceid) | **DELETE** /api/v2/outbound/sequences/{sequenceId} | Delete a dialer campaign sequence. |
+| [**GetCallabletimesets**](OutboundApi.html#getcallabletimesets) | **GET** /api/v2/outbound/callabletimesets | Query callable time set list |
+| [**GetCallabletimesetsCallabletimesetId**](OutboundApi.html#getcallabletimesetscallabletimesetid) | **GET** /api/v2/outbound/callabletimesets/{callableTimeSetId} | Get callable time set |
+| [**GetCallanalysisresponsesets**](OutboundApi.html#getcallanalysisresponsesets) | **GET** /api/v2/outbound/callanalysisresponsesets | Query a list of dialer call analysis response sets. |
+| [**GetCallanalysisresponsesetsCallanalysissetId**](OutboundApi.html#getcallanalysisresponsesetscallanalysissetid) | **GET** /api/v2/outbound/callanalysisresponsesets/{callAnalysisSetId} | Get a dialer call analysis response set. |
+| [**GetCampaigns**](OutboundApi.html#getcampaigns) | **GET** /api/v2/outbound/campaigns | Query a list of dialer campaigns. |
+| [**GetCampaignsCampaignId**](OutboundApi.html#getcampaignscampaignid) | **GET** /api/v2/outbound/campaigns/{campaignId} | Get dialer campaign. |
+| [**GetCampaignsCampaignIdDiagnostics**](OutboundApi.html#getcampaignscampaigniddiagnostics) | **GET** /api/v2/outbound/campaigns/{campaignId}/diagnostics | Get campaign diagnostics |
+| [**GetCampaignsCampaignIdProgress**](OutboundApi.html#getcampaignscampaignidprogress) | **GET** /api/v2/outbound/campaigns/{campaignId}/progress | Get campaign progress |
+| [**GetCampaignsCampaignIdStats**](OutboundApi.html#getcampaignscampaignidstats) | **GET** /api/v2/outbound/campaigns/{campaignId}/stats | Get statistics about a Dialer Campaign |
+| [**GetContactlists**](OutboundApi.html#getcontactlists) | **GET** /api/v2/outbound/contactlists | Query a list of contact lists. |
+| [**GetContactlistsContactlistId**](OutboundApi.html#getcontactlistscontactlistid) | **GET** /api/v2/outbound/contactlists/{contactListId} | Get dialer contactList. |
+| [**GetContactlistsContactlistIdContactsContactId**](OutboundApi.html#getcontactlistscontactlistidcontactscontactid) | **GET** /api/v2/outbound/contactlists/{contactListId}/contacts/{contactId} | Get dialer contactList. |
+| [**GetContactlistsContactlistIdImportstatus**](OutboundApi.html#getcontactlistscontactlistidimportstatus) | **GET** /api/v2/outbound/contactlists/{contactListId}/importstatus | Get dialer contactList import status. |
+| [**GetDnclists**](OutboundApi.html#getdnclists) | **GET** /api/v2/outbound/dnclists | Query dialer DNC lists |
+| [**GetDnclistsDnclistId**](OutboundApi.html#getdnclistsdnclistid) | **GET** /api/v2/outbound/dnclists/{dncListId} | Get dialer DNC list |
+| [**GetDnclistsDnclistIdImportstatus**](OutboundApi.html#getdnclistsdnclistidimportstatus) | **GET** /api/v2/outbound/dnclists/{dncListId}/importstatus | Get dialer dncList import status. |
+| [**GetRulesets**](OutboundApi.html#getrulesets) | **GET** /api/v2/outbound/rulesets | Query a list of Rule Sets. |
+| [**GetRulesetsRulesetId**](OutboundApi.html#getrulesetsrulesetid) | **GET** /api/v2/outbound/rulesets/{ruleSetId} | Get a Rule Set by ID. |
+| [**GetSchedulesCampaigns**](OutboundApi.html#getschedulescampaigns) | **GET** /api/v2/outbound/schedules/campaigns | Query for a list of dialer campaign schedules. |
+| [**GetSchedulesCampaignsCampaignId**](OutboundApi.html#getschedulescampaignscampaignid) | **GET** /api/v2/outbound/schedules/campaigns/{campaignId} | Get a dialer campaign schedule. |
+| [**GetSchedulesSequences**](OutboundApi.html#getschedulessequences) | **GET** /api/v2/outbound/schedules/sequences | Query for a list of dialer sequence schedules. |
+| [**GetSchedulesSequencesSequenceId**](OutboundApi.html#getschedulessequencessequenceid) | **GET** /api/v2/outbound/schedules/sequences/{sequenceId} | Get a dialer sequence schedule. |
+| [**GetSequences**](OutboundApi.html#getsequences) | **GET** /api/v2/outbound/sequences | Query a list of dialer campaign sequences. |
+| [**GetSequencesSequenceId**](OutboundApi.html#getsequencessequenceid) | **GET** /api/v2/outbound/sequences/{sequenceId} | Get a dialer campaign sequence. |
+| [**GetWrapupcodemappings**](OutboundApi.html#getwrapupcodemappings) | **GET** /api/v2/outbound/wrapupcodemappings | Get the Dialer wrap up code mapping. |
+| [**PostAudits**](OutboundApi.html#postaudits) | **POST** /api/v2/outbound/audits | Retrieves audits for dialer. |
+| [**PostCallabletimesets**](OutboundApi.html#postcallabletimesets) | **POST** /api/v2/outbound/callabletimesets | Create callable time set |
+| [**PostCallanalysisresponsesets**](OutboundApi.html#postcallanalysisresponsesets) | **POST** /api/v2/outbound/callanalysisresponsesets | Create a dialer call analysis response set. |
+| [**PostCampaigns**](OutboundApi.html#postcampaigns) | **POST** /api/v2/outbound/campaigns | Create a campaign. |
+| [**PostCampaignsCampaignIdCallbackSchedule**](OutboundApi.html#postcampaignscampaignidcallbackschedule) | **POST** /api/v2/outbound/campaigns/{campaignId}/callback/schedule | Schedule a Callback for a Dialer Campaign |
+| [**PostCampaignsProgress**](OutboundApi.html#postcampaignsprogress) | **POST** /api/v2/outbound/campaigns/progress | Get progress for a list of campaigns |
+| [**PostContactlists**](OutboundApi.html#postcontactlists) | **POST** /api/v2/outbound/contactlists | Create a contact List. |
+| [**PostContactlistsContactlistIdContacts**](OutboundApi.html#postcontactlistscontactlistidcontacts) | **POST** /api/v2/outbound/contactlists/{contactListId}/contacts | Add contacts to a contact list. |
+| [**PostContactlistsContactlistIdExport**](OutboundApi.html#postcontactlistscontactlistidexport) | **POST** /api/v2/outbound/contactlists/{contactListId}/export | Initiate the export of a contact list. |
+| [**PostConversationsConversationIdDnc**](OutboundApi.html#postconversationsconversationiddnc) | **POST** /api/v2/outbound/conversations/{conversationId}/dnc | Add phone numbers to a Dialer DNC list. |
+| [**PostDnclists**](OutboundApi.html#postdnclists) | **POST** /api/v2/outbound/dnclists | Create dialer DNC list |
+| [**PostDnclistsDnclistIdExport**](OutboundApi.html#postdnclistsdnclistidexport) | **POST** /api/v2/outbound/dnclists/{dncListId}/export | Initiate the export of a dnc list. |
+| [**PostDnclistsDnclistIdPhonenumbers**](OutboundApi.html#postdnclistsdnclistidphonenumbers) | **POST** /api/v2/outbound/dnclists/{dncListId}/phonenumbers | Add phone numbers to a Dialer DNC list. |
+| [**PostRulesets**](OutboundApi.html#postrulesets) | **POST** /api/v2/outbound/rulesets | Create a Dialer Call Analysis Response Set. |
+| [**PostSequences**](OutboundApi.html#postsequences) | **POST** /api/v2/outbound/sequences | Create a new campaign sequence. |
+| [**PutCallabletimesetsCallabletimesetId**](OutboundApi.html#putcallabletimesetscallabletimesetid) | **PUT** /api/v2/outbound/callabletimesets/{callableTimeSetId} | Update callable time set |
+| [**PutCallanalysisresponsesetsCallanalysissetId**](OutboundApi.html#putcallanalysisresponsesetscallanalysissetid) | **PUT** /api/v2/outbound/callanalysisresponsesets/{callAnalysisSetId} | Update a dialer call analysis response set. |
+| [**PutCampaignsCampaignId**](OutboundApi.html#putcampaignscampaignid) | **PUT** /api/v2/outbound/campaigns/{campaignId} | Update a campaign. |
+| [**PutCampaignsCampaignIdAgentsUserId**](OutboundApi.html#putcampaignscampaignidagentsuserid) | **PUT** /api/v2/outbound/campaigns/{campaignId}/agents/{userId} | Send notification that an agent&#39;s state changed  |
+| [**PutContactlistsContactlistId**](OutboundApi.html#putcontactlistscontactlistid) | **PUT** /api/v2/outbound/contactlists/{contactListId} | Update a contact list. |
+| [**PutContactlistsContactlistIdContactsContactId**](OutboundApi.html#putcontactlistscontactlistidcontactscontactid) | **PUT** /api/v2/outbound/contactlists/{contactListId}/contacts/{contactId} | Update a contact. |
+| [**PutDnclistsDnclistId**](OutboundApi.html#putdnclistsdnclistid) | **PUT** /api/v2/outbound/dnclists/{dncListId} | Update dialer DNC list |
+| [**PutRulesetsRulesetId**](OutboundApi.html#putrulesetsrulesetid) | **PUT** /api/v2/outbound/rulesets/{ruleSetId} | Update a RuleSet. |
+| [**PutSchedulesCampaignsCampaignId**](OutboundApi.html#putschedulescampaignscampaignid) | **PUT** /api/v2/outbound/schedules/campaigns/{campaignId} | Update a new campaign schedule. |
+| [**PutSchedulesSequencesSequenceId**](OutboundApi.html#putschedulessequencessequenceid) | **PUT** /api/v2/outbound/schedules/sequences/{sequenceId} | Update a new sequence schedule. |
+| [**PutSequencesSequenceId**](OutboundApi.html#putsequencessequenceid) | **PUT** /api/v2/outbound/sequences/{sequenceId} | Update a new campaign sequence. |
+| [**PutWrapupcodemappings**](OutboundApi.html#putwrapupcodemappings) | **PUT** /api/v2/outbound/wrapupcodemappings | Update the Dialer wrap up code mapping. |
 {: class="table table-striped"}
 
-<a name="DeleteCallabletimesetsCallabletimesetId"></a>
+<a name="deletecallabletimesetscallabletimesetid"></a>
+
 ## string** DeleteCallabletimesetsCallabletimesetId (string callableTimeSetId)
 
 Delete callable time set
@@ -124,7 +128,8 @@ namespace Example
 
 **string**
 
-<a name="DeleteCallanalysisresponsesetsCallanalysissetId"></a>
+<a name="deletecallanalysisresponsesetscallanalysissetid"></a>
+
 ## string** DeleteCallanalysisresponsesetsCallanalysissetId (string callAnalysisSetId)
 
 Delete a dialer call analysis response set.
@@ -179,7 +184,8 @@ namespace Example
 
 **string**
 
-<a name="DeleteCampaignsCampaignId"></a>
+<a name="deletecampaignscampaignid"></a>
+
 ## string** DeleteCampaignsCampaignId (string campaignId)
 
 Delete a campaign.
@@ -234,7 +240,8 @@ namespace Example
 
 **string**
 
-<a name="DeleteCampaignsCampaignIdProgress"></a>
+<a name="deletecampaignscampaignidprogress"></a>
+
 ## string** DeleteCampaignsCampaignIdProgress (string campaignId)
 
 Reset campaign progress and recycle the campaign
@@ -289,7 +296,8 @@ namespace Example
 
 **string**
 
-<a name="DeleteContactlistsContactlistId"></a>
+<a name="deletecontactlistscontactlistid"></a>
+
 ## string** DeleteContactlistsContactlistId (string contactListId)
 
 Delete a contact list.
@@ -344,7 +352,8 @@ namespace Example
 
 **string**
 
-<a name="DeleteContactlistsContactlistIdContactsContactId"></a>
+<a name="deletecontactlistscontactlistidcontactscontactid"></a>
+
 ## string** DeleteContactlistsContactlistIdContactsContactId (string contactListId, string contactId)
 
 Delete a contact.
@@ -401,7 +410,8 @@ namespace Example
 
 **string**
 
-<a name="DeleteDnclistsDnclistId"></a>
+<a name="deletednclistsdnclistid"></a>
+
 ## string** DeleteDnclistsDnclistId (string dncListId)
 
 Delete dialer DNC list
@@ -456,7 +466,8 @@ namespace Example
 
 **string**
 
-<a name="DeleteRulesetsRulesetId"></a>
+<a name="deleterulesetsrulesetid"></a>
+
 ## string** DeleteRulesetsRulesetId (string ruleSetId)
 
 Delete a Rule set.
@@ -511,7 +522,8 @@ namespace Example
 
 **string**
 
-<a name="DeleteSchedulesCampaignsCampaignId"></a>
+<a name="deleteschedulescampaignscampaignid"></a>
+
 ## string** DeleteSchedulesCampaignsCampaignId (string campaignId)
 
 Delete a dialer campaign schedule.
@@ -566,7 +578,8 @@ namespace Example
 
 **string**
 
-<a name="DeleteSchedulesSequencesSequenceId"></a>
+<a name="deleteschedulessequencessequenceid"></a>
+
 ## string** DeleteSchedulesSequencesSequenceId (string sequenceId)
 
 Delete a dialer sequence schedule.
@@ -621,7 +634,8 @@ namespace Example
 
 **string**
 
-<a name="DeleteSequencesSequenceId"></a>
+<a name="deletesequencessequenceid"></a>
+
 ## string** DeleteSequencesSequenceId (string sequenceId)
 
 Delete a dialer campaign sequence.
@@ -676,7 +690,8 @@ namespace Example
 
 **string**
 
-<a name="GetCallabletimesets"></a>
+<a name="getcallabletimesets"></a>
+
 ## [**CallableTimeSetEntityListing**](CallableTimeSetEntityListing.html) GetCallabletimesets (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
 
 Query callable time set list
@@ -739,9 +754,10 @@ namespace Example
 
 ### Return type
 
-[**CallableTimeSetEntityListing**](CallableTimeSetEntityListing.md)
+[**CallableTimeSetEntityListing**](CallableTimeSetEntityListing.html)
 
-<a name="GetCallabletimesetsCallabletimesetId"></a>
+<a name="getcallabletimesetscallabletimesetid"></a>
+
 ## [**CallableTimeSet**](CallableTimeSet.html) GetCallabletimesetsCallabletimesetId (string callableTimeSetId)
 
 Get callable time set
@@ -794,9 +810,10 @@ namespace Example
 
 ### Return type
 
-[**CallableTimeSet**](CallableTimeSet.md)
+[**CallableTimeSet**](CallableTimeSet.html)
 
-<a name="GetCallanalysisresponsesets"></a>
+<a name="getcallanalysisresponsesets"></a>
+
 ## [**ResponseSetEntityListing**](ResponseSetEntityListing.html) GetCallanalysisresponsesets (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
 
 Query a list of dialer call analysis response sets.
@@ -859,9 +876,10 @@ namespace Example
 
 ### Return type
 
-[**ResponseSetEntityListing**](ResponseSetEntityListing.md)
+[**ResponseSetEntityListing**](ResponseSetEntityListing.html)
 
-<a name="GetCallanalysisresponsesetsCallanalysissetId"></a>
+<a name="getcallanalysisresponsesetscallanalysissetid"></a>
+
 ## [**ResponseSet**](ResponseSet.html) GetCallanalysisresponsesetsCallanalysissetId (string callAnalysisSetId)
 
 Get a dialer call analysis response set.
@@ -914,9 +932,10 @@ namespace Example
 
 ### Return type
 
-[**ResponseSet**](ResponseSet.md)
+[**ResponseSet**](ResponseSet.html)
 
-<a name="GetCampaigns"></a>
+<a name="getcampaigns"></a>
+
 ## [**CampaignEntityListing**](CampaignEntityListing.html) GetCampaigns (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string contactListId = null, string dncListId = null, string distributionQueueId = null, string edgeGroupId = null, string callAnalysisResponseSetId = null, string sortBy = null, string sortOrder = null)
 
 Query a list of dialer campaigns.
@@ -989,9 +1008,10 @@ namespace Example
 
 ### Return type
 
-[**CampaignEntityListing**](CampaignEntityListing.md)
+[**CampaignEntityListing**](CampaignEntityListing.html)
 
-<a name="GetCampaignsCampaignId"></a>
+<a name="getcampaignscampaignid"></a>
+
 ## [**Campaign**](Campaign.html) GetCampaignsCampaignId (string campaignId)
 
 Get dialer campaign.
@@ -1044,9 +1064,10 @@ namespace Example
 
 ### Return type
 
-[**Campaign**](Campaign.md)
+[**Campaign**](Campaign.html)
 
-<a name="GetCampaignsCampaignIdDiagnostics"></a>
+<a name="getcampaignscampaigniddiagnostics"></a>
+
 ## [**CampaignDiagnostics**](CampaignDiagnostics.html) GetCampaignsCampaignIdDiagnostics (string campaignId)
 
 Get campaign diagnostics
@@ -1099,9 +1120,10 @@ namespace Example
 
 ### Return type
 
-[**CampaignDiagnostics**](CampaignDiagnostics.md)
+[**CampaignDiagnostics**](CampaignDiagnostics.html)
 
-<a name="GetCampaignsCampaignIdProgress"></a>
+<a name="getcampaignscampaignidprogress"></a>
+
 ## [**CampaignProgress**](CampaignProgress.html) GetCampaignsCampaignIdProgress (string campaignId)
 
 Get campaign progress
@@ -1154,9 +1176,10 @@ namespace Example
 
 ### Return type
 
-[**CampaignProgress**](CampaignProgress.md)
+[**CampaignProgress**](CampaignProgress.html)
 
-<a name="GetCampaignsCampaignIdStats"></a>
+<a name="getcampaignscampaignidstats"></a>
+
 ## [**CampaignStats**](CampaignStats.html) GetCampaignsCampaignIdStats (string campaignId)
 
 Get statistics about a Dialer Campaign
@@ -1209,9 +1232,10 @@ namespace Example
 
 ### Return type
 
-[**CampaignStats**](CampaignStats.md)
+[**CampaignStats**](CampaignStats.html)
 
-<a name="GetContactlists"></a>
+<a name="getcontactlists"></a>
+
 ## [**ContactListEntityListing**](ContactListEntityListing.html) GetContactlists (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
 
 Query a list of contact lists.
@@ -1278,9 +1302,10 @@ namespace Example
 
 ### Return type
 
-[**ContactListEntityListing**](ContactListEntityListing.md)
+[**ContactListEntityListing**](ContactListEntityListing.html)
 
-<a name="GetContactlistsContactlistId"></a>
+<a name="getcontactlistscontactlistid"></a>
+
 ## [**ContactList**](ContactList.html) GetContactlistsContactlistId (string contactListId, bool? includeImportStatus = null, bool? includeSize = null)
 
 Get dialer contactList.
@@ -1337,9 +1362,10 @@ namespace Example
 
 ### Return type
 
-[**ContactList**](ContactList.md)
+[**ContactList**](ContactList.html)
 
-<a name="GetContactlistsContactlistIdContactsContactId"></a>
+<a name="getcontactlistscontactlistidcontactscontactid"></a>
+
 ## [**DialerContact**](DialerContact.html) GetContactlistsContactlistIdContactsContactId (string contactListId, string contactId)
 
 Get dialer contactList.
@@ -1394,9 +1420,10 @@ namespace Example
 
 ### Return type
 
-[**DialerContact**](DialerContact.md)
+[**DialerContact**](DialerContact.html)
 
-<a name="GetContactlistsContactlistIdImportstatus"></a>
+<a name="getcontactlistscontactlistidimportstatus"></a>
+
 ## [**ImportStatus**](ImportStatus.html) GetContactlistsContactlistIdImportstatus (string contactListId)
 
 Get dialer contactList import status.
@@ -1449,9 +1476,10 @@ namespace Example
 
 ### Return type
 
-[**ImportStatus**](ImportStatus.md)
+[**ImportStatus**](ImportStatus.html)
 
-<a name="GetDnclists"></a>
+<a name="getdnclists"></a>
+
 ## [**DncListEntityListing**](DncListEntityListing.html) GetDnclists (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
 
 Query dialer DNC lists
@@ -1518,9 +1546,10 @@ namespace Example
 
 ### Return type
 
-[**DncListEntityListing**](DncListEntityListing.md)
+[**DncListEntityListing**](DncListEntityListing.html)
 
-<a name="GetDnclistsDnclistId"></a>
+<a name="getdnclistsdnclistid"></a>
+
 ## [**DncList**](DncList.html) GetDnclistsDnclistId (string dncListId, bool? includeImportStatus = null, bool? includeSize = null)
 
 Get dialer DNC list
@@ -1577,9 +1606,10 @@ namespace Example
 
 ### Return type
 
-[**DncList**](DncList.md)
+[**DncList**](DncList.html)
 
-<a name="GetDnclistsDnclistIdImportstatus"></a>
+<a name="getdnclistsdnclistidimportstatus"></a>
+
 ## [**ImportStatus**](ImportStatus.html) GetDnclistsDnclistIdImportstatus (string dncListId)
 
 Get dialer dncList import status.
@@ -1632,9 +1662,10 @@ namespace Example
 
 ### Return type
 
-[**ImportStatus**](ImportStatus.md)
+[**ImportStatus**](ImportStatus.html)
 
-<a name="GetRulesets"></a>
+<a name="getrulesets"></a>
+
 ## [**RuleSetEntityListing**](RuleSetEntityListing.html) GetRulesets (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
 
 Query a list of Rule Sets.
@@ -1697,9 +1728,10 @@ namespace Example
 
 ### Return type
 
-[**RuleSetEntityListing**](RuleSetEntityListing.md)
+[**RuleSetEntityListing**](RuleSetEntityListing.html)
 
-<a name="GetRulesetsRulesetId"></a>
+<a name="getrulesetsrulesetid"></a>
+
 ## [**RuleSet**](RuleSet.html) GetRulesetsRulesetId (string ruleSetId)
 
 Get a Rule Set by ID.
@@ -1752,9 +1784,10 @@ namespace Example
 
 ### Return type
 
-[**RuleSet**](RuleSet.md)
+[**RuleSet**](RuleSet.html)
 
-<a name="GetSchedulesCampaigns"></a>
+<a name="getschedulescampaigns"></a>
+
 ## [**List&lt;CampaignSchedule&gt;**](CampaignSchedule.html) GetSchedulesCampaigns ()
 
 Query for a list of dialer campaign schedules.
@@ -1802,9 +1835,10 @@ This endpoint does require any parameters.
 
 ### Return type
 
-[**List<CampaignSchedule>**](CampaignSchedule.md)
+[**List<CampaignSchedule>**](CampaignSchedule.html)
 
-<a name="GetSchedulesCampaignsCampaignId"></a>
+<a name="getschedulescampaignscampaignid"></a>
+
 ## [**CampaignSchedule**](CampaignSchedule.html) GetSchedulesCampaignsCampaignId (string campaignId)
 
 Get a dialer campaign schedule.
@@ -1857,9 +1891,10 @@ namespace Example
 
 ### Return type
 
-[**CampaignSchedule**](CampaignSchedule.md)
+[**CampaignSchedule**](CampaignSchedule.html)
 
-<a name="GetSchedulesSequences"></a>
+<a name="getschedulessequences"></a>
+
 ## [**List&lt;SequenceSchedule&gt;**](SequenceSchedule.html) GetSchedulesSequences ()
 
 Query for a list of dialer sequence schedules.
@@ -1907,9 +1942,10 @@ This endpoint does require any parameters.
 
 ### Return type
 
-[**List<SequenceSchedule>**](SequenceSchedule.md)
+[**List<SequenceSchedule>**](SequenceSchedule.html)
 
-<a name="GetSchedulesSequencesSequenceId"></a>
+<a name="getschedulessequencessequenceid"></a>
+
 ## [**SequenceSchedule**](SequenceSchedule.html) GetSchedulesSequencesSequenceId (string sequenceId)
 
 Get a dialer sequence schedule.
@@ -1962,9 +1998,10 @@ namespace Example
 
 ### Return type
 
-[**SequenceSchedule**](SequenceSchedule.md)
+[**SequenceSchedule**](SequenceSchedule.html)
 
-<a name="GetSequences"></a>
+<a name="getsequences"></a>
+
 ## [**CampaignSequenceEntityListing**](CampaignSequenceEntityListing.html) GetSequences (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
 
 Query a list of dialer campaign sequences.
@@ -2027,9 +2064,10 @@ namespace Example
 
 ### Return type
 
-[**CampaignSequenceEntityListing**](CampaignSequenceEntityListing.md)
+[**CampaignSequenceEntityListing**](CampaignSequenceEntityListing.html)
 
-<a name="GetSequencesSequenceId"></a>
+<a name="getsequencessequenceid"></a>
+
 ## [**CampaignSequence**](CampaignSequence.html) GetSequencesSequenceId (string sequenceId)
 
 Get a dialer campaign sequence.
@@ -2082,9 +2120,10 @@ namespace Example
 
 ### Return type
 
-[**CampaignSequence**](CampaignSequence.md)
+[**CampaignSequence**](CampaignSequence.html)
 
-<a name="GetWrapupcodemappings"></a>
+<a name="getwrapupcodemappings"></a>
+
 ## [**WrapUpCodeMapping**](WrapUpCodeMapping.html) GetWrapupcodemappings ()
 
 Get the Dialer wrap up code mapping.
@@ -2132,9 +2171,10 @@ This endpoint does require any parameters.
 
 ### Return type
 
-[**WrapUpCodeMapping**](WrapUpCodeMapping.md)
+[**WrapUpCodeMapping**](WrapUpCodeMapping.html)
 
-<a name="PostAudits"></a>
+<a name="postaudits"></a>
+
 ## [**AuditSearchResult**](AuditSearchResult.html) PostAudits (DialerAuditRequest body = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, bool? facetsOnly = null)
 
 Retrieves audits for dialer.
@@ -2187,7 +2227,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**DialerAuditRequest**](DialerAuditRequest.md)| AuditSearch | [optional]  |
+| **body** | [**DialerAuditRequest**](DialerAuditRequest.html)| AuditSearch | [optional]  |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **sortBy** | **string**| Sort by | [optional] [default to entity.name] |
@@ -2197,9 +2237,10 @@ namespace Example
 
 ### Return type
 
-[**AuditSearchResult**](AuditSearchResult.md)
+[**AuditSearchResult**](AuditSearchResult.html)
 
-<a name="PostCallabletimesets"></a>
+<a name="postcallabletimesets"></a>
+
 ## [**CallableTimeSet**](CallableTimeSet.html) PostCallabletimesets (CallableTimeSet body = null)
 
 Create callable time set
@@ -2247,14 +2288,15 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**CallableTimeSet**](CallableTimeSet.md)| DialerCallableTimeSet | [optional]  |
+| **body** | [**CallableTimeSet**](CallableTimeSet.html)| DialerCallableTimeSet | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**CallableTimeSet**](CallableTimeSet.md)
+[**CallableTimeSet**](CallableTimeSet.html)
 
-<a name="PostCallanalysisresponsesets"></a>
+<a name="postcallanalysisresponsesets"></a>
+
 ## [**ResponseSet**](ResponseSet.html) PostCallanalysisresponsesets (ResponseSet body = null)
 
 Create a dialer call analysis response set.
@@ -2302,14 +2344,15 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**ResponseSet**](ResponseSet.md)| ResponseSet | [optional]  |
+| **body** | [**ResponseSet**](ResponseSet.html)| ResponseSet | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**ResponseSet**](ResponseSet.md)
+[**ResponseSet**](ResponseSet.html)
 
-<a name="PostCampaigns"></a>
+<a name="postcampaigns"></a>
+
 ## [**Campaign**](Campaign.html) PostCampaigns (Campaign body = null)
 
 Create a campaign.
@@ -2357,14 +2400,15 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**Campaign**](Campaign.md)| Campaign | [optional]  |
+| **body** | [**Campaign**](Campaign.html)| Campaign | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**Campaign**](Campaign.md)
+[**Campaign**](Campaign.html)
 
-<a name="PostCampaignsCampaignIdCallbackSchedule"></a>
+<a name="postcampaignscampaignidcallbackschedule"></a>
+
 ## [**ContactCallbackRequest**](ContactCallbackRequest.html) PostCampaignsCampaignIdCallbackSchedule (string campaignId, ContactCallbackRequest body = null)
 
 Schedule a Callback for a Dialer Campaign
@@ -2414,14 +2458,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **campaignId** | **string**| Campaign ID |  |
-| **body** | [**ContactCallbackRequest**](ContactCallbackRequest.md)| ContactCallbackRequest | [optional]  |
+| **body** | [**ContactCallbackRequest**](ContactCallbackRequest.html)| ContactCallbackRequest | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**ContactCallbackRequest**](ContactCallbackRequest.md)
+[**ContactCallbackRequest**](ContactCallbackRequest.html)
 
-<a name="PostCampaignsProgress"></a>
+<a name="postcampaignsprogress"></a>
+
 ## [**List&lt;CampaignProgress&gt;**](CampaignProgress.html) PostCampaignsProgress (List<string> body = null)
 
 Get progress for a list of campaigns
@@ -2474,9 +2519,10 @@ namespace Example
 
 ### Return type
 
-[**List<CampaignProgress>**](CampaignProgress.md)
+[**List<CampaignProgress>**](CampaignProgress.html)
 
-<a name="PostContactlists"></a>
+<a name="postcontactlists"></a>
+
 ## [**ContactList**](ContactList.html) PostContactlists (ContactList body = null)
 
 Create a contact List.
@@ -2524,14 +2570,15 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**ContactList**](ContactList.md)| ContactList | [optional]  |
+| **body** | [**ContactList**](ContactList.html)| ContactList | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**ContactList**](ContactList.md)
+[**ContactList**](ContactList.html)
 
-<a name="PostContactlistsContactlistIdContacts"></a>
+<a name="postcontactlistscontactlistidcontacts"></a>
+
 ## [**DialerContact**](DialerContact.html) PostContactlistsContactlistIdContacts (string contactListId, List<DialerContact> body = null, bool? priority = null)
 
 Add contacts to a contact list.
@@ -2582,15 +2629,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **contactListId** | **string**| Contact List ID |  |
-| **body** | [**List<DialerContact>**](DialerContact.md)| Contact | [optional]  |
+| **body** | [**List<DialerContact>**](DialerContact.html)| Contact | [optional]  |
 | **priority** | **bool?**|  | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**DialerContact**](DialerContact.md)
+[**DialerContact**](DialerContact.html)
 
-<a name="PostContactlistsContactlistIdExport"></a>
+<a name="postcontactlistscontactlistidexport"></a>
+
 ## string** PostContactlistsContactlistIdExport (string contactListId)
 
 Initiate the export of a contact list.
@@ -2645,7 +2693,8 @@ namespace Example
 
 **string**
 
-<a name="PostConversationsConversationIdDnc"></a>
+<a name="postconversationsconversationiddnc"></a>
+
 ## void PostConversationsConversationIdDnc (string conversationId)
 
 Add phone numbers to a Dialer DNC list.
@@ -2699,7 +2748,8 @@ namespace Example
 
 void (empty response body)
 
-<a name="PostDnclists"></a>
+<a name="postdnclists"></a>
+
 ## [**DncList**](DncList.html) PostDnclists (DncList body = null)
 
 Create dialer DNC list
@@ -2747,14 +2797,15 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**DncList**](DncList.md)| DncList | [optional]  |
+| **body** | [**DncList**](DncList.html)| DncList | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**DncList**](DncList.md)
+[**DncList**](DncList.html)
 
-<a name="PostDnclistsDnclistIdExport"></a>
+<a name="postdnclistsdnclistidexport"></a>
+
 ## string** PostDnclistsDnclistIdExport (string dncListId)
 
 Initiate the export of a dnc list.
@@ -2809,7 +2860,8 @@ namespace Example
 
 **string**
 
-<a name="PostDnclistsDnclistIdPhonenumbers"></a>
+<a name="postdnclistsdnclistidphonenumbers"></a>
+
 ## void PostDnclistsDnclistIdPhonenumbers (string dncListId, List<string> body = null)
 
 Add phone numbers to a Dialer DNC list.
@@ -2865,7 +2917,8 @@ namespace Example
 
 void (empty response body)
 
-<a name="PostRulesets"></a>
+<a name="postrulesets"></a>
+
 ## [**RuleSet**](RuleSet.html) PostRulesets (RuleSet body = null)
 
 Create a Dialer Call Analysis Response Set.
@@ -2913,14 +2966,15 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**RuleSet**](RuleSet.md)| RuleSet | [optional]  |
+| **body** | [**RuleSet**](RuleSet.html)| RuleSet | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**RuleSet**](RuleSet.md)
+[**RuleSet**](RuleSet.html)
 
-<a name="PostSequences"></a>
+<a name="postsequences"></a>
+
 ## [**CampaignSequence**](CampaignSequence.html) PostSequences (CampaignSequence body = null)
 
 Create a new campaign sequence.
@@ -2968,14 +3022,15 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**CampaignSequence**](CampaignSequence.md)| Organization | [optional]  |
+| **body** | [**CampaignSequence**](CampaignSequence.html)| Organization | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**CampaignSequence**](CampaignSequence.md)
+[**CampaignSequence**](CampaignSequence.html)
 
-<a name="PutCallabletimesetsCallabletimesetId"></a>
+<a name="putcallabletimesetscallabletimesetid"></a>
+
 ## [**CallableTimeSet**](CallableTimeSet.html) PutCallabletimesetsCallabletimesetId (string callableTimeSetId, CallableTimeSet body = null)
 
 Update callable time set
@@ -3025,14 +3080,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **callableTimeSetId** | **string**| Callable Time Set ID |  |
-| **body** | [**CallableTimeSet**](CallableTimeSet.md)| DialerCallableTimeSet | [optional]  |
+| **body** | [**CallableTimeSet**](CallableTimeSet.html)| DialerCallableTimeSet | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**CallableTimeSet**](CallableTimeSet.md)
+[**CallableTimeSet**](CallableTimeSet.html)
 
-<a name="PutCallanalysisresponsesetsCallanalysissetId"></a>
+<a name="putcallanalysisresponsesetscallanalysissetid"></a>
+
 ## [**ResponseSet**](ResponseSet.html) PutCallanalysisresponsesetsCallanalysissetId (string callAnalysisSetId, ResponseSet body = null)
 
 Update a dialer call analysis response set.
@@ -3082,14 +3138,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **callAnalysisSetId** | **string**| Call Analysis Response Set ID |  |
-| **body** | [**ResponseSet**](ResponseSet.md)| ResponseSet | [optional]  |
+| **body** | [**ResponseSet**](ResponseSet.html)| ResponseSet | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**ResponseSet**](ResponseSet.md)
+[**ResponseSet**](ResponseSet.html)
 
-<a name="PutCampaignsCampaignId"></a>
+<a name="putcampaignscampaignid"></a>
+
 ## [**Campaign**](Campaign.html) PutCampaignsCampaignId (string campaignId, Campaign body = null)
 
 Update a campaign.
@@ -3139,14 +3196,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **campaignId** | **string**| Campaign ID |  |
-| **body** | [**Campaign**](Campaign.md)| Campaign | [optional]  |
+| **body** | [**Campaign**](Campaign.html)| Campaign | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**Campaign**](Campaign.md)
+[**Campaign**](Campaign.html)
 
-<a name="PutCampaignsCampaignIdAgentsUserId"></a>
+<a name="putcampaignscampaignidagentsuserid"></a>
+
 ## string** PutCampaignsCampaignIdAgentsUserId (string campaignId, string userId, Agent body = null)
 
 Send notification that an agent's state changed 
@@ -3198,14 +3256,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **campaignId** | **string**| Campaign ID |  |
 | **userId** | **string**| Agent&#39;s user ID |  |
-| **body** | [**Agent**](Agent.md)| agent | [optional]  |
+| **body** | [**Agent**](Agent.html)| agent | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
 **string**
 
-<a name="PutContactlistsContactlistId"></a>
+<a name="putcontactlistscontactlistid"></a>
+
 ## [**ContactList**](ContactList.html) PutContactlistsContactlistId (string contactListId, ContactList body = null)
 
 Update a contact list.
@@ -3255,14 +3314,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **contactListId** | **string**| ContactList ID |  |
-| **body** | [**ContactList**](ContactList.md)| ContactList | [optional]  |
+| **body** | [**ContactList**](ContactList.html)| ContactList | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**ContactList**](ContactList.md)
+[**ContactList**](ContactList.html)
 
-<a name="PutContactlistsContactlistIdContactsContactId"></a>
+<a name="putcontactlistscontactlistidcontactscontactid"></a>
+
 ## [**DialerContact**](DialerContact.html) PutContactlistsContactlistIdContactsContactId (string contactListId, string contactId, DialerContact body = null)
 
 Update a contact.
@@ -3314,14 +3374,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **contactListId** | **string**| Contact List ID |  |
 | **contactId** | **string**| Contact ID |  |
-| **body** | [**DialerContact**](DialerContact.md)| Contact | [optional]  |
+| **body** | [**DialerContact**](DialerContact.html)| Contact | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**DialerContact**](DialerContact.md)
+[**DialerContact**](DialerContact.html)
 
-<a name="PutDnclistsDnclistId"></a>
+<a name="putdnclistsdnclistid"></a>
+
 ## [**DncList**](DncList.html) PutDnclistsDnclistId (string dncListId, DncList body = null)
 
 Update dialer DNC list
@@ -3371,14 +3432,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **dncListId** | **string**| DncList ID |  |
-| **body** | [**DncList**](DncList.md)| DncList | [optional]  |
+| **body** | [**DncList**](DncList.html)| DncList | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**DncList**](DncList.md)
+[**DncList**](DncList.html)
 
-<a name="PutRulesetsRulesetId"></a>
+<a name="putrulesetsrulesetid"></a>
+
 ## [**RuleSet**](RuleSet.html) PutRulesetsRulesetId (string ruleSetId, RuleSet body = null)
 
 Update a RuleSet.
@@ -3428,14 +3490,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **ruleSetId** | **string**| Rule Set ID |  |
-| **body** | [**RuleSet**](RuleSet.md)| RuleSet | [optional]  |
+| **body** | [**RuleSet**](RuleSet.html)| RuleSet | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**RuleSet**](RuleSet.md)
+[**RuleSet**](RuleSet.html)
 
-<a name="PutSchedulesCampaignsCampaignId"></a>
+<a name="putschedulescampaignscampaignid"></a>
+
 ## [**CampaignSchedule**](CampaignSchedule.html) PutSchedulesCampaignsCampaignId (string campaignId, CampaignSchedule body = null)
 
 Update a new campaign schedule.
@@ -3485,14 +3548,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **campaignId** | **string**| Campaign ID |  |
-| **body** | [**CampaignSchedule**](CampaignSchedule.md)| CampaignSchedule | [optional]  |
+| **body** | [**CampaignSchedule**](CampaignSchedule.html)| CampaignSchedule | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**CampaignSchedule**](CampaignSchedule.md)
+[**CampaignSchedule**](CampaignSchedule.html)
 
-<a name="PutSchedulesSequencesSequenceId"></a>
+<a name="putschedulessequencessequenceid"></a>
+
 ## [**SequenceSchedule**](SequenceSchedule.html) PutSchedulesSequencesSequenceId (string sequenceId, SequenceSchedule body = null)
 
 Update a new sequence schedule.
@@ -3542,14 +3606,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **sequenceId** | **string**| Sequence ID |  |
-| **body** | [**SequenceSchedule**](SequenceSchedule.md)| SequenceSchedule | [optional]  |
+| **body** | [**SequenceSchedule**](SequenceSchedule.html)| SequenceSchedule | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**SequenceSchedule**](SequenceSchedule.md)
+[**SequenceSchedule**](SequenceSchedule.html)
 
-<a name="PutSequencesSequenceId"></a>
+<a name="putsequencessequenceid"></a>
+
 ## [**CampaignSequence**](CampaignSequence.html) PutSequencesSequenceId (string sequenceId, CampaignSequence body = null)
 
 Update a new campaign sequence.
@@ -3599,14 +3664,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **sequenceId** | **string**| Campaign Sequence ID |  |
-| **body** | [**CampaignSequence**](CampaignSequence.md)| Organization | [optional]  |
+| **body** | [**CampaignSequence**](CampaignSequence.html)| Organization | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**CampaignSequence**](CampaignSequence.md)
+[**CampaignSequence**](CampaignSequence.html)
 
-<a name="PutWrapupcodemappings"></a>
+<a name="putwrapupcodemappings"></a>
+
 ## [**WrapUpCodeMapping**](WrapUpCodeMapping.html) PutWrapupcodemappings (WrapUpCodeMapping body = null)
 
 Update the Dialer wrap up code mapping.
@@ -3654,10 +3720,10 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**WrapUpCodeMapping**](WrapUpCodeMapping.md)| wrapUpCodeMapping | [optional]  |
+| **body** | [**WrapUpCodeMapping**](WrapUpCodeMapping.html)| wrapUpCodeMapping | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**WrapUpCodeMapping**](WrapUpCodeMapping.md)
+[**WrapUpCodeMapping**](WrapUpCodeMapping.html)
 

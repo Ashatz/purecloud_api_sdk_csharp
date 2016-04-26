@@ -1,29 +1,33 @@
-# ININ.PureCloudApi.Api.AuthorizationApi
+---
+title: AuthorizationApi
+---
+## ININ.PureCloudApi.Api.AuthorizationApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteRolesRoleId**](AuthorizationApi.md#deleterolesroleid) | **DELETE** /api/v2/authorization/roles/{roleId} | Delete an organization role. |
-| [**DeleteUserIdRoles**](AuthorizationApi.md#deleteuseridroles) | **DELETE** /api/v2/users/{userId}/roles | Removes all the roles from the user. |
-| [**GetPermissions**](AuthorizationApi.md#getpermissions) | **GET** /api/v2/authorization/permissions | Get all permissions. |
-| [**GetProducts**](AuthorizationApi.md#getproducts) | **GET** /api/v2/authorization/products | Get the list of enabled products |
-| [**GetRoles**](AuthorizationApi.md#getroles) | **GET** /api/v2/authorization/roles | Retrieve a list of all roles defined for the organization |
-| [**GetRolesLeftroleIdComparedefaultRightroleId**](AuthorizationApi.md#getrolesleftroleidcomparedefaultrightroleid) | **GET** /api/v2/authorization/roles/{leftRoleId}/comparedefault/{rightRoleId} | Get an org role to default role comparison comparison |
-| [**GetRolesRoleId**](AuthorizationApi.md#getrolesroleid) | **GET** /api/v2/authorization/roles/{roleId} | Get a single organization role. |
-| [**GetUserIdRoles**](AuthorizationApi.md#getuseridroles) | **GET** /api/v2/users/{userId}/roles | Returns a listing of roles and permissions for a user. |
-| [**PatchRolesRoleId**](AuthorizationApi.md#patchrolesroleid) | **PATCH** /api/v2/authorization/roles/{roleId} | Patch Organization Role for needsUpdate Field |
-| [**PostRoles**](AuthorizationApi.md#postroles) | **POST** /api/v2/authorization/roles | Create an organization role. |
-| [**PostRolesDefault**](AuthorizationApi.md#postrolesdefault) | **POST** /api/v2/authorization/roles/default | Restores all default roles |
-| [**PostRolesLeftroleIdComparedefaultRightroleId**](AuthorizationApi.md#postrolesleftroleidcomparedefaultrightroleid) | **POST** /api/v2/authorization/roles/{leftRoleId}/comparedefault/{rightRoleId} |  Get an unsaved org role to default role comparison |
-| [**PutRolesDefault**](AuthorizationApi.md#putrolesdefault) | **PUT** /api/v2/authorization/roles/default | Restore specified default roles |
-| [**PutRolesRoleId**](AuthorizationApi.md#putrolesroleid) | **PUT** /api/v2/authorization/roles/{roleId} | Update an organization role. |
-| [**PutRolesRoleIdUsersAdd**](AuthorizationApi.md#putrolesroleidusersadd) | **PUT** /api/v2/authorization/roles/{roleId}/users/add | Sets the users for the role |
-| [**PutRolesRoleIdUsersRemove**](AuthorizationApi.md#putrolesroleidusersremove) | **PUT** /api/v2/authorization/roles/{roleId}/users/remove | Removes the users from the role |
-| [**PutUserIdRoles**](AuthorizationApi.md#putuseridroles) | **PUT** /api/v2/users/{userId}/roles | Sets the user&#39;s roles |
+| [**DeleteRolesRoleId**](AuthorizationApi.html#deleterolesroleid) | **DELETE** /api/v2/authorization/roles/{roleId} | Delete an organization role. |
+| [**DeleteUserIdRoles**](AuthorizationApi.html#deleteuseridroles) | **DELETE** /api/v2/users/{userId}/roles | Removes all the roles from the user. |
+| [**GetPermissions**](AuthorizationApi.html#getpermissions) | **GET** /api/v2/authorization/permissions | Get all permissions. |
+| [**GetProducts**](AuthorizationApi.html#getproducts) | **GET** /api/v2/authorization/products | Get the list of enabled products |
+| [**GetRoles**](AuthorizationApi.html#getroles) | **GET** /api/v2/authorization/roles | Retrieve a list of all roles defined for the organization |
+| [**GetRolesLeftroleIdComparedefaultRightroleId**](AuthorizationApi.html#getrolesleftroleidcomparedefaultrightroleid) | **GET** /api/v2/authorization/roles/{leftRoleId}/comparedefault/{rightRoleId} | Get an org role to default role comparison comparison |
+| [**GetRolesRoleId**](AuthorizationApi.html#getrolesroleid) | **GET** /api/v2/authorization/roles/{roleId} | Get a single organization role. |
+| [**GetUserIdRoles**](AuthorizationApi.html#getuseridroles) | **GET** /api/v2/users/{userId}/roles | Returns a listing of roles and permissions for a user. |
+| [**PatchRolesRoleId**](AuthorizationApi.html#patchrolesroleid) | **PATCH** /api/v2/authorization/roles/{roleId} | Patch Organization Role for needsUpdate Field |
+| [**PostRoles**](AuthorizationApi.html#postroles) | **POST** /api/v2/authorization/roles | Create an organization role. |
+| [**PostRolesDefault**](AuthorizationApi.html#postrolesdefault) | **POST** /api/v2/authorization/roles/default | Restores all default roles |
+| [**PostRolesLeftroleIdComparedefaultRightroleId**](AuthorizationApi.html#postrolesleftroleidcomparedefaultrightroleid) | **POST** /api/v2/authorization/roles/{leftRoleId}/comparedefault/{rightRoleId} |  Get an unsaved org role to default role comparison |
+| [**PutRolesDefault**](AuthorizationApi.html#putrolesdefault) | **PUT** /api/v2/authorization/roles/default | Restore specified default roles |
+| [**PutRolesRoleId**](AuthorizationApi.html#putrolesroleid) | **PUT** /api/v2/authorization/roles/{roleId} | Update an organization role. |
+| [**PutRolesRoleIdUsersAdd**](AuthorizationApi.html#putrolesroleidusersadd) | **PUT** /api/v2/authorization/roles/{roleId}/users/add | Sets the users for the role |
+| [**PutRolesRoleIdUsersRemove**](AuthorizationApi.html#putrolesroleidusersremove) | **PUT** /api/v2/authorization/roles/{roleId}/users/remove | Removes the users from the role |
+| [**PutUserIdRoles**](AuthorizationApi.html#putuseridroles) | **PUT** /api/v2/users/{userId}/roles | Sets the user&#39;s roles |
 {: class="table table-striped"}
 
-<a name="DeleteRolesRoleId"></a>
+<a name="deleterolesroleid"></a>
+
 ## void DeleteRolesRoleId (string roleId)
 
 Delete an organization role.
@@ -77,7 +81,8 @@ namespace Example
 
 void (empty response body)
 
-<a name="DeleteUserIdRoles"></a>
+<a name="deleteuseridroles"></a>
+
 ## void DeleteUserIdRoles (string userId)
 
 Removes all the roles from the user.
@@ -131,7 +136,8 @@ namespace Example
 
 void (empty response body)
 
-<a name="GetPermissions"></a>
+<a name="getpermissions"></a>
+
 ## [**PermissionCollectionEntityListing**](PermissionCollectionEntityListing.html) GetPermissions (int? pageSize = null, int? pageNumber = null)
 
 Get all permissions.
@@ -186,9 +192,10 @@ namespace Example
 
 ### Return type
 
-[**PermissionCollectionEntityListing**](PermissionCollectionEntityListing.md)
+[**PermissionCollectionEntityListing**](PermissionCollectionEntityListing.html)
 
-<a name="GetProducts"></a>
+<a name="getproducts"></a>
+
 ## [**OrganizationProductEntityListing**](OrganizationProductEntityListing.html) GetProducts ()
 
 Get the list of enabled products
@@ -236,9 +243,10 @@ This endpoint does require any parameters.
 
 ### Return type
 
-[**OrganizationProductEntityListing**](OrganizationProductEntityListing.md)
+[**OrganizationProductEntityListing**](OrganizationProductEntityListing.html)
 
-<a name="GetRoles"></a>
+<a name="getroles"></a>
+
 ## [**OrganizationRoleEntityListing**](OrganizationRoleEntityListing.html) GetRoles (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, List<string> permission = null, bool? userCount = null)
 
 Retrieve a list of all roles defined for the organization
@@ -296,18 +304,19 @@ namespace Example
 | **pageSize** | **int?**| The total page size requested | [optional] [default to 25] |
 | **pageNumber** | **int?**| The page number requested | [optional] [default to 1] |
 | **sortBy** | **string**| variable name requested to sort by | [optional]  |
-| **expand** | [**List<string>**](string.md)| variable name requested by expand list | [optional]  |
+| **expand** | [**List<string>**](string.html)| variable name requested by expand list | [optional]  |
 | **nextPage** | **string**| next page token | [optional]  |
 | **previousPage** | **string**| Previous page token | [optional]  |
-| **permission** | [**List<string>**](string.md)|  | [optional]  |
+| **permission** | [**List<string>**](string.html)|  | [optional]  |
 | **userCount** | **bool?**|  | [optional] [default to true] |
 {: class="table table-striped"}
 
 ### Return type
 
-[**OrganizationRoleEntityListing**](OrganizationRoleEntityListing.md)
+[**OrganizationRoleEntityListing**](OrganizationRoleEntityListing.html)
 
-<a name="GetRolesLeftroleIdComparedefaultRightroleId"></a>
+<a name="getrolesleftroleidcomparedefaultrightroleid"></a>
+
 ## [**DomainOrgRoleDifference**](DomainOrgRoleDifference.html) GetRolesLeftroleIdComparedefaultRightroleId (string leftRoleId, string rightRoleId)
 
 Get an org role to default role comparison comparison
@@ -362,9 +371,10 @@ namespace Example
 
 ### Return type
 
-[**DomainOrgRoleDifference**](DomainOrgRoleDifference.md)
+[**DomainOrgRoleDifference**](DomainOrgRoleDifference.html)
 
-<a name="GetRolesRoleId"></a>
+<a name="getrolesroleid"></a>
+
 ## [**DomainOrganizationRole**](DomainOrganizationRole.html) GetRolesRoleId (string roleId)
 
 Get a single organization role.
@@ -417,9 +427,10 @@ namespace Example
 
 ### Return type
 
-[**DomainOrganizationRole**](DomainOrganizationRole.md)
+[**DomainOrganizationRole**](DomainOrganizationRole.html)
 
-<a name="GetUserIdRoles"></a>
+<a name="getuseridroles"></a>
+
 ## [**UserAuthorization**](UserAuthorization.html) GetUserIdRoles (string userId)
 
 Returns a listing of roles and permissions for a user.
@@ -472,9 +483,10 @@ namespace Example
 
 ### Return type
 
-[**UserAuthorization**](UserAuthorization.md)
+[**UserAuthorization**](UserAuthorization.html)
 
-<a name="PatchRolesRoleId"></a>
+<a name="patchrolesroleid"></a>
+
 ## [**DomainOrganizationRole**](DomainOrganizationRole.html) PatchRolesRoleId (string roleId, DomainOrganizationRole body = null)
 
 Patch Organization Role for needsUpdate Field
@@ -524,14 +536,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **roleId** | **string**| Role ID |  |
-| **body** | [**DomainOrganizationRole**](DomainOrganizationRole.md)|  | [optional]  |
+| **body** | [**DomainOrganizationRole**](DomainOrganizationRole.html)|  | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**DomainOrganizationRole**](DomainOrganizationRole.md)
+[**DomainOrganizationRole**](DomainOrganizationRole.html)
 
-<a name="PostRoles"></a>
+<a name="postroles"></a>
+
 ## [**DomainOrganizationRole**](DomainOrganizationRole.html) PostRoles (DomainOrganizationRole body = null)
 
 Create an organization role.
@@ -579,14 +592,15 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**DomainOrganizationRole**](DomainOrganizationRole.md)|  | [optional]  |
+| **body** | [**DomainOrganizationRole**](DomainOrganizationRole.html)|  | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**DomainOrganizationRole**](DomainOrganizationRole.md)
+[**DomainOrganizationRole**](DomainOrganizationRole.html)
 
-<a name="PostRolesDefault"></a>
+<a name="postrolesdefault"></a>
+
 ## [**OrganizationRoleEntityListing**](OrganizationRoleEntityListing.html) PostRolesDefault (bool? force = null)
 
 Restores all default roles
@@ -639,9 +653,10 @@ namespace Example
 
 ### Return type
 
-[**OrganizationRoleEntityListing**](OrganizationRoleEntityListing.md)
+[**OrganizationRoleEntityListing**](OrganizationRoleEntityListing.html)
 
-<a name="PostRolesLeftroleIdComparedefaultRightroleId"></a>
+<a name="postrolesleftroleidcomparedefaultrightroleid"></a>
+
 ## [**DomainOrgRoleDifference**](DomainOrgRoleDifference.html) PostRolesLeftroleIdComparedefaultRightroleId (string leftRoleId, string rightRoleId, DomainOrganizationRole body = null)
 
  Get an unsaved org role to default role comparison
@@ -693,14 +708,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **leftRoleId** | **string**| Left Role ID |  |
 | **rightRoleId** | **string**| Right Role id |  |
-| **body** | [**DomainOrganizationRole**](DomainOrganizationRole.md)|  | [optional]  |
+| **body** | [**DomainOrganizationRole**](DomainOrganizationRole.html)|  | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**DomainOrgRoleDifference**](DomainOrgRoleDifference.md)
+[**DomainOrgRoleDifference**](DomainOrgRoleDifference.html)
 
-<a name="PutRolesDefault"></a>
+<a name="putrolesdefault"></a>
+
 ## [**OrganizationRoleEntityListing**](OrganizationRoleEntityListing.html) PutRolesDefault (List<DomainOrganizationRole> body = null)
 
 Restore specified default roles
@@ -748,14 +764,15 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**List<DomainOrganizationRole>**](DomainOrganizationRole.md)|  | [optional]  |
+| **body** | [**List<DomainOrganizationRole>**](DomainOrganizationRole.html)|  | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**OrganizationRoleEntityListing**](OrganizationRoleEntityListing.md)
+[**OrganizationRoleEntityListing**](OrganizationRoleEntityListing.html)
 
-<a name="PutRolesRoleId"></a>
+<a name="putrolesroleid"></a>
+
 ## [**DomainOrganizationRole**](DomainOrganizationRole.html) PutRolesRoleId (string roleId, DomainOrganizationRole body = null)
 
 Update an organization role.
@@ -805,14 +822,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **roleId** | **string**| Role ID |  |
-| **body** | [**DomainOrganizationRole**](DomainOrganizationRole.md)|  | [optional]  |
+| **body** | [**DomainOrganizationRole**](DomainOrganizationRole.html)|  | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**DomainOrganizationRole**](DomainOrganizationRole.md)
+[**DomainOrganizationRole**](DomainOrganizationRole.html)
 
-<a name="PutRolesRoleIdUsersAdd"></a>
+<a name="putrolesroleidusersadd"></a>
+
 ## List&lt;string&gt;** PutRolesRoleIdUsersAdd (string roleId, List<string> body = null)
 
 Sets the users for the role
@@ -869,7 +887,8 @@ namespace Example
 
 **List<string>**
 
-<a name="PutRolesRoleIdUsersRemove"></a>
+<a name="putrolesroleidusersremove"></a>
+
 ## List&lt;string&gt;** PutRolesRoleIdUsersRemove (string roleId, List<string> body = null)
 
 Removes the users from the role
@@ -926,7 +945,8 @@ namespace Example
 
 **List<string>**
 
-<a name="PutUserIdRoles"></a>
+<a name="putuseridroles"></a>
+
 ## [**UserAuthorization**](UserAuthorization.html) PutUserIdRoles (string userId, List<string> body = null)
 
 Sets the user's roles
@@ -981,5 +1001,5 @@ namespace Example
 
 ### Return type
 
-[**UserAuthorization**](UserAuthorization.md)
+[**UserAuthorization**](UserAuthorization.html)
 

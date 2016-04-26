@@ -1,52 +1,56 @@
-# ININ.PureCloudApi.Api.RoutingApi
+---
+title: RoutingApi
+---
+## ININ.PureCloudApi.Api.RoutingApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteEmailDomainsDomainId**](RoutingApi.md#deleteemaildomainsdomainid) | **DELETE** /api/v2/routing/email/domains/{domainId} | Delete a domain |
-| [**DeleteEmailDomainsDomainnameRoutesRouteId**](RoutingApi.md#deleteemaildomainsdomainnameroutesrouteid) | **DELETE** /api/v2/routing/email/domains/{domainName}/routes/{routeId} | Delete a route |
-| [**DeleteQueuesQueueId**](RoutingApi.md#deletequeuesqueueid) | **DELETE** /api/v2/routing/queues/{queueId} | Delete a queue |
-| [**DeleteQueuesQueueIdUsersMemberId**](RoutingApi.md#deletequeuesqueueidusersmemberid) | **DELETE** /api/v2/routing/queues/{queueId}/users/{memberId} | Delete queue member |
-| [**DeleteQueuesQueueIdWrapupcodesCodeId**](RoutingApi.md#deletequeuesqueueidwrapupcodescodeid) | **DELETE** /api/v2/routing/queues/{queueId}/wrapupcodes/{codeId} | Delete a wrap-up code from a queue |
-| [**DeleteSkillsSkillId**](RoutingApi.md#deleteskillsskillid) | **DELETE** /api/v2/routing/skills/{skillId} | Delete Routing Skill |
-| [**DeleteUserIdRoutingskillsSkillId**](RoutingApi.md#deleteuseridroutingskillsskillid) | **DELETE** /api/v2/users/{userId}/routingskills/{skillId} | Remove routing skill from user |
-| [**DeleteUtilization**](RoutingApi.md#deleteutilization) | **DELETE** /api/v2/routing/utilization | Delete utilization settings and revert to system defaults. |
-| [**DeleteWrapupcodesCodeId**](RoutingApi.md#deletewrapupcodescodeid) | **DELETE** /api/v2/routing/wrapupcodes/{codeId} | Delete wrap-up code |
-| [**GetEmailDomains**](RoutingApi.md#getemaildomains) | **GET** /api/v2/routing/email/domains | Get domains |
-| [**GetEmailDomainsDomainnameRoutes**](RoutingApi.md#getemaildomainsdomainnameroutes) | **GET** /api/v2/routing/email/domains/{domainName}/routes | Get routes |
-| [**GetEmailDomainsDomainnameRoutesRouteId**](RoutingApi.md#getemaildomainsdomainnameroutesrouteid) | **GET** /api/v2/routing/email/domains/{domainName}/routes/{routeId} | Get a route |
-| [**GetEmailSetup**](RoutingApi.md#getemailsetup) | **GET** /api/v2/routing/email/setup | Get email setup |
-| [**GetQueues**](RoutingApi.md#getqueues) | **GET** /api/v2/routing/queues | Get list of queues. |
-| [**GetQueuesQueueId**](RoutingApi.md#getqueuesqueueid) | **GET** /api/v2/routing/queues/{queueId} | Get details about this queue. |
-| [**GetQueuesQueueIdEstimatedwaittime**](RoutingApi.md#getqueuesqueueidestimatedwaittime) | **GET** /api/v2/routing/queues/{queueId}/estimatedwaittime | Get Estimated Wait Time |
-| [**GetQueuesQueueIdUsers**](RoutingApi.md#getqueuesqueueidusers) | **GET** /api/v2/routing/queues/{queueId}/users | Get the members of this queue |
-| [**GetQueuesQueueIdWrapupcodes**](RoutingApi.md#getqueuesqueueidwrapupcodes) | **GET** /api/v2/routing/queues/{queueId}/wrapupcodes | Get the wrap-up codes for a queue |
-| [**GetSkills**](RoutingApi.md#getskills) | **GET** /api/v2/routing/skills | Get the list of routing skills. |
-| [**GetSkillsSkillId**](RoutingApi.md#getskillsskillid) | **GET** /api/v2/routing/skills/{skillId} | Get Routing Skill |
-| [**GetUserIdRoutingskills**](RoutingApi.md#getuseridroutingskills) | **GET** /api/v2/users/{userId}/routingskills | List routing skills for user |
-| [**GetUtilization**](RoutingApi.md#getutilization) | **GET** /api/v2/routing/utilization | Get the utilization settings. |
-| [**GetWrapupcodes**](RoutingApi.md#getwrapupcodes) | **GET** /api/v2/routing/wrapupcodes | Get list of wrapup codes. |
-| [**GetWrapupcodesCodeId**](RoutingApi.md#getwrapupcodescodeid) | **GET** /api/v2/routing/wrapupcodes/{codeId} | Get details about this wrap-up code. |
-| [**PatchQueuesQueueIdUsers**](RoutingApi.md#patchqueuesqueueidusers) | **PATCH** /api/v2/routing/queues/{queueId}/users | Join or unjoin a set of users for a queue |
-| [**PatchQueuesQueueIdUsersMemberId**](RoutingApi.md#patchqueuesqueueidusersmemberid) | **PATCH** /api/v2/routing/queues/{queueId}/users/{memberId} | Update the ring number of joined status for a User in a Queue |
-| [**PostEmailDomains**](RoutingApi.md#postemaildomains) | **POST** /api/v2/routing/email/domains | Create a domain |
-| [**PostEmailDomainsDomainnameRoutes**](RoutingApi.md#postemaildomainsdomainnameroutes) | **POST** /api/v2/routing/email/domains/{domainName}/routes | Create a route |
-| [**PostQueues**](RoutingApi.md#postqueues) | **POST** /api/v2/routing/queues | Create queue |
-| [**PostQueuesObservationsQuery**](RoutingApi.md#postqueuesobservationsquery) | **POST** /api/v2/analytics/queues/observations/query | Query for queue observations |
-| [**PostQueuesQueueIdUsers**](RoutingApi.md#postqueuesqueueidusers) | **POST** /api/v2/routing/queues/{queueId}/users | Bulk add or delete up to 100 queue members |
-| [**PostQueuesQueueIdWrapupcodes**](RoutingApi.md#postqueuesqueueidwrapupcodes) | **POST** /api/v2/routing/queues/{queueId}/wrapupcodes | Add up to 100 wrap-up codes to a queue |
-| [**PostSkills**](RoutingApi.md#postskills) | **POST** /api/v2/routing/skills | Create Skill |
-| [**PostUserIdRoutingskills**](RoutingApi.md#postuseridroutingskills) | **POST** /api/v2/users/{userId}/routingskills | Add routing skill to user |
-| [**PostWrapupcodes**](RoutingApi.md#postwrapupcodes) | **POST** /api/v2/routing/wrapupcodes | Create a wrap-up code |
-| [**PutEmailDomainsDomainnameRoutesRouteId**](RoutingApi.md#putemaildomainsdomainnameroutesrouteid) | **PUT** /api/v2/routing/email/domains/{domainName}/routes/{routeId} | Update a route |
-| [**PutQueuesQueueId**](RoutingApi.md#putqueuesqueueid) | **PUT** /api/v2/routing/queues/{queueId} | Update a queue |
-| [**PutSkillsSkillId**](RoutingApi.md#putskillsskillid) | **PUT** /api/v2/routing/skills/{skillId} | Update Routing Skill |
-| [**PutUtilization**](RoutingApi.md#pututilization) | **PUT** /api/v2/routing/utilization | Update the utilization settings. |
-| [**PutWrapupcodesCodeId**](RoutingApi.md#putwrapupcodescodeid) | **PUT** /api/v2/routing/wrapupcodes/{codeId} | Update wrap-up code |
+| [**DeleteEmailDomainsDomainId**](RoutingApi.html#deleteemaildomainsdomainid) | **DELETE** /api/v2/routing/email/domains/{domainId} | Delete a domain |
+| [**DeleteEmailDomainsDomainnameRoutesRouteId**](RoutingApi.html#deleteemaildomainsdomainnameroutesrouteid) | **DELETE** /api/v2/routing/email/domains/{domainName}/routes/{routeId} | Delete a route |
+| [**DeleteQueuesQueueId**](RoutingApi.html#deletequeuesqueueid) | **DELETE** /api/v2/routing/queues/{queueId} | Delete a queue |
+| [**DeleteQueuesQueueIdUsersMemberId**](RoutingApi.html#deletequeuesqueueidusersmemberid) | **DELETE** /api/v2/routing/queues/{queueId}/users/{memberId} | Delete queue member |
+| [**DeleteQueuesQueueIdWrapupcodesCodeId**](RoutingApi.html#deletequeuesqueueidwrapupcodescodeid) | **DELETE** /api/v2/routing/queues/{queueId}/wrapupcodes/{codeId} | Delete a wrap-up code from a queue |
+| [**DeleteSkillsSkillId**](RoutingApi.html#deleteskillsskillid) | **DELETE** /api/v2/routing/skills/{skillId} | Delete Routing Skill |
+| [**DeleteUserIdRoutingskillsSkillId**](RoutingApi.html#deleteuseridroutingskillsskillid) | **DELETE** /api/v2/users/{userId}/routingskills/{skillId} | Remove routing skill from user |
+| [**DeleteUtilization**](RoutingApi.html#deleteutilization) | **DELETE** /api/v2/routing/utilization | Delete utilization settings and revert to system defaults. |
+| [**DeleteWrapupcodesCodeId**](RoutingApi.html#deletewrapupcodescodeid) | **DELETE** /api/v2/routing/wrapupcodes/{codeId} | Delete wrap-up code |
+| [**GetEmailDomains**](RoutingApi.html#getemaildomains) | **GET** /api/v2/routing/email/domains | Get domains |
+| [**GetEmailDomainsDomainnameRoutes**](RoutingApi.html#getemaildomainsdomainnameroutes) | **GET** /api/v2/routing/email/domains/{domainName}/routes | Get routes |
+| [**GetEmailDomainsDomainnameRoutesRouteId**](RoutingApi.html#getemaildomainsdomainnameroutesrouteid) | **GET** /api/v2/routing/email/domains/{domainName}/routes/{routeId} | Get a route |
+| [**GetEmailSetup**](RoutingApi.html#getemailsetup) | **GET** /api/v2/routing/email/setup | Get email setup |
+| [**GetQueues**](RoutingApi.html#getqueues) | **GET** /api/v2/routing/queues | Get list of queues. |
+| [**GetQueuesQueueId**](RoutingApi.html#getqueuesqueueid) | **GET** /api/v2/routing/queues/{queueId} | Get details about this queue. |
+| [**GetQueuesQueueIdEstimatedwaittime**](RoutingApi.html#getqueuesqueueidestimatedwaittime) | **GET** /api/v2/routing/queues/{queueId}/estimatedwaittime | Get Estimated Wait Time |
+| [**GetQueuesQueueIdUsers**](RoutingApi.html#getqueuesqueueidusers) | **GET** /api/v2/routing/queues/{queueId}/users | Get the members of this queue |
+| [**GetQueuesQueueIdWrapupcodes**](RoutingApi.html#getqueuesqueueidwrapupcodes) | **GET** /api/v2/routing/queues/{queueId}/wrapupcodes | Get the wrap-up codes for a queue |
+| [**GetSkills**](RoutingApi.html#getskills) | **GET** /api/v2/routing/skills | Get the list of routing skills. |
+| [**GetSkillsSkillId**](RoutingApi.html#getskillsskillid) | **GET** /api/v2/routing/skills/{skillId} | Get Routing Skill |
+| [**GetUserIdRoutingskills**](RoutingApi.html#getuseridroutingskills) | **GET** /api/v2/users/{userId}/routingskills | List routing skills for user |
+| [**GetUtilization**](RoutingApi.html#getutilization) | **GET** /api/v2/routing/utilization | Get the utilization settings. |
+| [**GetWrapupcodes**](RoutingApi.html#getwrapupcodes) | **GET** /api/v2/routing/wrapupcodes | Get list of wrapup codes. |
+| [**GetWrapupcodesCodeId**](RoutingApi.html#getwrapupcodescodeid) | **GET** /api/v2/routing/wrapupcodes/{codeId} | Get details about this wrap-up code. |
+| [**PatchQueuesQueueIdUsers**](RoutingApi.html#patchqueuesqueueidusers) | **PATCH** /api/v2/routing/queues/{queueId}/users | Join or unjoin a set of users for a queue |
+| [**PatchQueuesQueueIdUsersMemberId**](RoutingApi.html#patchqueuesqueueidusersmemberid) | **PATCH** /api/v2/routing/queues/{queueId}/users/{memberId} | Update the ring number of joined status for a User in a Queue |
+| [**PostEmailDomains**](RoutingApi.html#postemaildomains) | **POST** /api/v2/routing/email/domains | Create a domain |
+| [**PostEmailDomainsDomainnameRoutes**](RoutingApi.html#postemaildomainsdomainnameroutes) | **POST** /api/v2/routing/email/domains/{domainName}/routes | Create a route |
+| [**PostQueues**](RoutingApi.html#postqueues) | **POST** /api/v2/routing/queues | Create queue |
+| [**PostQueuesObservationsQuery**](RoutingApi.html#postqueuesobservationsquery) | **POST** /api/v2/analytics/queues/observations/query | Query for queue observations |
+| [**PostQueuesQueueIdUsers**](RoutingApi.html#postqueuesqueueidusers) | **POST** /api/v2/routing/queues/{queueId}/users | Bulk add or delete up to 100 queue members |
+| [**PostQueuesQueueIdWrapupcodes**](RoutingApi.html#postqueuesqueueidwrapupcodes) | **POST** /api/v2/routing/queues/{queueId}/wrapupcodes | Add up to 100 wrap-up codes to a queue |
+| [**PostSkills**](RoutingApi.html#postskills) | **POST** /api/v2/routing/skills | Create Skill |
+| [**PostUserIdRoutingskills**](RoutingApi.html#postuseridroutingskills) | **POST** /api/v2/users/{userId}/routingskills | Add routing skill to user |
+| [**PostWrapupcodes**](RoutingApi.html#postwrapupcodes) | **POST** /api/v2/routing/wrapupcodes | Create a wrap-up code |
+| [**PutEmailDomainsDomainnameRoutesRouteId**](RoutingApi.html#putemaildomainsdomainnameroutesrouteid) | **PUT** /api/v2/routing/email/domains/{domainName}/routes/{routeId} | Update a route |
+| [**PutQueuesQueueId**](RoutingApi.html#putqueuesqueueid) | **PUT** /api/v2/routing/queues/{queueId} | Update a queue |
+| [**PutSkillsSkillId**](RoutingApi.html#putskillsskillid) | **PUT** /api/v2/routing/skills/{skillId} | Update Routing Skill |
+| [**PutUtilization**](RoutingApi.html#pututilization) | **PUT** /api/v2/routing/utilization | Update the utilization settings. |
+| [**PutWrapupcodesCodeId**](RoutingApi.html#putwrapupcodescodeid) | **PUT** /api/v2/routing/wrapupcodes/{codeId} | Update wrap-up code |
 {: class="table table-striped"}
 
-<a name="DeleteEmailDomainsDomainId"></a>
+<a name="deleteemaildomainsdomainid"></a>
+
 ## string** DeleteEmailDomainsDomainId (string domainId)
 
 Delete a domain
@@ -101,7 +105,8 @@ namespace Example
 
 **string**
 
-<a name="DeleteEmailDomainsDomainnameRoutesRouteId"></a>
+<a name="deleteemaildomainsdomainnameroutesrouteid"></a>
+
 ## string** DeleteEmailDomainsDomainnameRoutesRouteId (string domainName, string routeId)
 
 Delete a route
@@ -158,7 +163,8 @@ namespace Example
 
 **string**
 
-<a name="DeleteQueuesQueueId"></a>
+<a name="deletequeuesqueueid"></a>
+
 ## string** DeleteQueuesQueueId (string queueId, bool? forceDelete = null)
 
 Delete a queue
@@ -215,7 +221,8 @@ namespace Example
 
 **string**
 
-<a name="DeleteQueuesQueueIdUsersMemberId"></a>
+<a name="deletequeuesqueueidusersmemberid"></a>
+
 ## string** DeleteQueuesQueueIdUsersMemberId (string queueId, string memberId)
 
 Delete queue member
@@ -272,7 +279,8 @@ namespace Example
 
 **string**
 
-<a name="DeleteQueuesQueueIdWrapupcodesCodeId"></a>
+<a name="deletequeuesqueueidwrapupcodescodeid"></a>
+
 ## string** DeleteQueuesQueueIdWrapupcodesCodeId (string queueId, string codeId)
 
 Delete a wrap-up code from a queue
@@ -329,7 +337,8 @@ namespace Example
 
 **string**
 
-<a name="DeleteSkillsSkillId"></a>
+<a name="deleteskillsskillid"></a>
+
 ## string** DeleteSkillsSkillId (string skillId)
 
 Delete Routing Skill
@@ -384,7 +393,8 @@ namespace Example
 
 **string**
 
-<a name="DeleteUserIdRoutingskillsSkillId"></a>
+<a name="deleteuseridroutingskillsskillid"></a>
+
 ## string** DeleteUserIdRoutingskillsSkillId (string userId, string skillId)
 
 Remove routing skill from user
@@ -441,7 +451,8 @@ namespace Example
 
 **string**
 
-<a name="DeleteUtilization"></a>
+<a name="deleteutilization"></a>
+
 ## string** DeleteUtilization ()
 
 Delete utilization settings and revert to system defaults.
@@ -491,7 +502,8 @@ This endpoint does require any parameters.
 
 **string**
 
-<a name="DeleteWrapupcodesCodeId"></a>
+<a name="deletewrapupcodescodeid"></a>
+
 ## string** DeleteWrapupcodesCodeId (string codeId)
 
 Delete wrap-up code
@@ -546,7 +558,8 @@ namespace Example
 
 **string**
 
-<a name="GetEmailDomains"></a>
+<a name="getemaildomains"></a>
+
 ## [**InboundDomainEntityListing**](InboundDomainEntityListing.html) GetEmailDomains ()
 
 Get domains
@@ -594,9 +607,10 @@ This endpoint does require any parameters.
 
 ### Return type
 
-[**InboundDomainEntityListing**](InboundDomainEntityListing.md)
+[**InboundDomainEntityListing**](InboundDomainEntityListing.html)
 
-<a name="GetEmailDomainsDomainnameRoutes"></a>
+<a name="getemaildomainsdomainnameroutes"></a>
+
 ## [**InboundRouteEntityListing**](InboundRouteEntityListing.html) GetEmailDomainsDomainnameRoutes (string domainName)
 
 Get routes
@@ -649,9 +663,10 @@ namespace Example
 
 ### Return type
 
-[**InboundRouteEntityListing**](InboundRouteEntityListing.md)
+[**InboundRouteEntityListing**](InboundRouteEntityListing.html)
 
-<a name="GetEmailDomainsDomainnameRoutesRouteId"></a>
+<a name="getemaildomainsdomainnameroutesrouteid"></a>
+
 ## [**InboundRoute**](InboundRoute.html) GetEmailDomainsDomainnameRoutesRouteId (string domainName, string routeId)
 
 Get a route
@@ -706,9 +721,10 @@ namespace Example
 
 ### Return type
 
-[**InboundRoute**](InboundRoute.md)
+[**InboundRoute**](InboundRoute.html)
 
-<a name="GetEmailSetup"></a>
+<a name="getemailsetup"></a>
+
 ## [**EmailSetup**](EmailSetup.html) GetEmailSetup ()
 
 Get email setup
@@ -756,9 +772,10 @@ This endpoint does require any parameters.
 
 ### Return type
 
-[**EmailSetup**](EmailSetup.md)
+[**EmailSetup**](EmailSetup.html)
 
-<a name="GetQueues"></a>
+<a name="getqueues"></a>
+
 ## [**QueueEntityListing**](QueueEntityListing.html) GetQueues (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, bool? active = null)
 
 Get list of queues.
@@ -819,9 +836,10 @@ namespace Example
 
 ### Return type
 
-[**QueueEntityListing**](QueueEntityListing.md)
+[**QueueEntityListing**](QueueEntityListing.html)
 
-<a name="GetQueuesQueueId"></a>
+<a name="getqueuesqueueid"></a>
+
 ## [**Queue**](Queue.html) GetQueuesQueueId (string queueId)
 
 Get details about this queue.
@@ -874,9 +892,10 @@ namespace Example
 
 ### Return type
 
-[**Queue**](Queue.md)
+[**Queue**](Queue.html)
 
-<a name="GetQueuesQueueIdEstimatedwaittime"></a>
+<a name="getqueuesqueueidestimatedwaittime"></a>
+
 ## [**EstimatedWaitTimePredictions**](EstimatedWaitTimePredictions.html) GetQueuesQueueIdEstimatedwaittime (string queueId, string conversationId = null)
 
 Get Estimated Wait Time
@@ -931,9 +950,10 @@ namespace Example
 
 ### Return type
 
-[**EstimatedWaitTimePredictions**](EstimatedWaitTimePredictions.md)
+[**EstimatedWaitTimePredictions**](EstimatedWaitTimePredictions.html)
 
-<a name="GetQueuesQueueIdUsers"></a>
+<a name="getqueuesqueueidusers"></a>
+
 ## [**QueueMember**](QueueMember.html) GetQueuesQueueIdUsers (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, string expand = null, bool? directMembers = null)
 
 Get the members of this queue
@@ -996,9 +1016,10 @@ namespace Example
 
 ### Return type
 
-[**QueueMember**](QueueMember.md)
+[**QueueMember**](QueueMember.html)
 
-<a name="GetQueuesQueueIdWrapupcodes"></a>
+<a name="getqueuesqueueidwrapupcodes"></a>
+
 ## [**WrapupCode**](WrapupCode.html) GetQueuesQueueIdWrapupcodes (string queueId, string codeId)
 
 Get the wrap-up codes for a queue
@@ -1053,9 +1074,10 @@ namespace Example
 
 ### Return type
 
-[**WrapupCode**](WrapupCode.md)
+[**WrapupCode**](WrapupCode.html)
 
-<a name="GetSkills"></a>
+<a name="getskills"></a>
+
 ## [**SkillEntityListing**](SkillEntityListing.html) GetSkills (int? pageSize = null, int? pageNumber = null)
 
 Get the list of routing skills.
@@ -1110,9 +1132,10 @@ namespace Example
 
 ### Return type
 
-[**SkillEntityListing**](SkillEntityListing.md)
+[**SkillEntityListing**](SkillEntityListing.html)
 
-<a name="GetSkillsSkillId"></a>
+<a name="getskillsskillid"></a>
+
 ## [**RoutingSkill**](RoutingSkill.html) GetSkillsSkillId (string skillId)
 
 Get Routing Skill
@@ -1165,9 +1188,10 @@ namespace Example
 
 ### Return type
 
-[**RoutingSkill**](RoutingSkill.md)
+[**RoutingSkill**](RoutingSkill.html)
 
-<a name="GetUserIdRoutingskills"></a>
+<a name="getuseridroutingskills"></a>
+
 ## [**UserSkillEntityListing**](UserSkillEntityListing.html) GetUserIdRoutingskills (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
 
 List routing skills for user
@@ -1226,9 +1250,10 @@ namespace Example
 
 ### Return type
 
-[**UserSkillEntityListing**](UserSkillEntityListing.md)
+[**UserSkillEntityListing**](UserSkillEntityListing.html)
 
-<a name="GetUtilization"></a>
+<a name="getutilization"></a>
+
 ## [**Utilization**](Utilization.html) GetUtilization ()
 
 Get the utilization settings.
@@ -1276,9 +1301,10 @@ This endpoint does require any parameters.
 
 ### Return type
 
-[**Utilization**](Utilization.md)
+[**Utilization**](Utilization.html)
 
-<a name="GetWrapupcodes"></a>
+<a name="getwrapupcodes"></a>
+
 ## [**WrapupCodeEntityListing**](WrapupCodeEntityListing.html) GetWrapupcodes (int? pageSize = null, int? pageNumber = null, string sortBy = null)
 
 Get list of wrapup codes.
@@ -1335,9 +1361,10 @@ namespace Example
 
 ### Return type
 
-[**WrapupCodeEntityListing**](WrapupCodeEntityListing.md)
+[**WrapupCodeEntityListing**](WrapupCodeEntityListing.html)
 
-<a name="GetWrapupcodesCodeId"></a>
+<a name="getwrapupcodescodeid"></a>
+
 ## [**WrapupCode**](WrapupCode.html) GetWrapupcodesCodeId (string codeId)
 
 Get details about this wrap-up code.
@@ -1390,9 +1417,10 @@ namespace Example
 
 ### Return type
 
-[**WrapupCode**](WrapupCode.md)
+[**WrapupCode**](WrapupCode.html)
 
-<a name="PatchQueuesQueueIdUsers"></a>
+<a name="patchqueuesqueueidusers"></a>
+
 ## [**QueueMember**](QueueMember.html) PatchQueuesQueueIdUsers (string queueId, List<QueueMember> body = null)
 
 Join or unjoin a set of users for a queue
@@ -1442,14 +1470,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **queueId** | **string**| Queue ID |  |
-| **body** | [**List<QueueMember>**](QueueMember.md)| Queue Members | [optional]  |
+| **body** | [**List<QueueMember>**](QueueMember.html)| Queue Members | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**QueueMember**](QueueMember.md)
+[**QueueMember**](QueueMember.html)
 
-<a name="PatchQueuesQueueIdUsersMemberId"></a>
+<a name="patchqueuesqueueidusersmemberid"></a>
+
 ## [**QueueMember**](QueueMember.html) PatchQueuesQueueIdUsersMemberId (string queueId, string memberId, QueueMember body = null)
 
 Update the ring number of joined status for a User in a Queue
@@ -1501,14 +1530,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **queueId** | **string**| Queue ID |  |
 | **memberId** | **string**| Member ID |  |
-| **body** | [**QueueMember**](QueueMember.md)| Queue Member | [optional]  |
+| **body** | [**QueueMember**](QueueMember.html)| Queue Member | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**QueueMember**](QueueMember.md)
+[**QueueMember**](QueueMember.html)
 
-<a name="PostEmailDomains"></a>
+<a name="postemaildomains"></a>
+
 ## [**InboundDomain**](InboundDomain.html) PostEmailDomains (InboundDomain body = null)
 
 Create a domain
@@ -1556,14 +1586,15 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**InboundDomain**](InboundDomain.md)| Domain | [optional]  |
+| **body** | [**InboundDomain**](InboundDomain.html)| Domain | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**InboundDomain**](InboundDomain.md)
+[**InboundDomain**](InboundDomain.html)
 
-<a name="PostEmailDomainsDomainnameRoutes"></a>
+<a name="postemaildomainsdomainnameroutes"></a>
+
 ## [**InboundRoute**](InboundRoute.html) PostEmailDomainsDomainnameRoutes (string domainName, InboundRoute body = null)
 
 Create a route
@@ -1613,14 +1644,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **domainName** | **string**| email domain |  |
-| **body** | [**InboundRoute**](InboundRoute.md)| Route | [optional]  |
+| **body** | [**InboundRoute**](InboundRoute.html)| Route | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**InboundRoute**](InboundRoute.md)
+[**InboundRoute**](InboundRoute.html)
 
-<a name="PostQueues"></a>
+<a name="postqueues"></a>
+
 ## [**Queue**](Queue.html) PostQueues (Queue body = null)
 
 Create queue
@@ -1668,14 +1700,15 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**Queue**](Queue.md)| Queue | [optional]  |
+| **body** | [**Queue**](Queue.html)| Queue | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**Queue**](Queue.md)
+[**Queue**](Queue.html)
 
-<a name="PostQueuesObservationsQuery"></a>
+<a name="postqueuesobservationsquery"></a>
+
 ## [**ObservationQueryResponse**](ObservationQueryResponse.html) PostQueuesObservationsQuery (ObservationQuery body = null)
 
 Query for queue observations
@@ -1723,14 +1756,15 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**ObservationQuery**](ObservationQuery.md)| query | [optional]  |
+| **body** | [**ObservationQuery**](ObservationQuery.html)| query | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**ObservationQueryResponse**](ObservationQueryResponse.md)
+[**ObservationQueryResponse**](ObservationQueryResponse.html)
 
-<a name="PostQueuesQueueIdUsers"></a>
+<a name="postqueuesqueueidusers"></a>
+
 ## [**QueueMember**](QueueMember.html) PostQueuesQueueIdUsers (string queueId, List<QueueMember> body = null, bool? delete = null)
 
 Bulk add or delete up to 100 queue members
@@ -1781,15 +1815,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **queueId** | **string**| Queue ID |  |
-| **body** | [**List<QueueMember>**](QueueMember.md)| Queue Members | [optional]  |
+| **body** | [**List<QueueMember>**](QueueMember.html)| Queue Members | [optional]  |
 | **delete** | **bool?**| True to delete queue members | [optional] [default to false] |
 {: class="table table-striped"}
 
 ### Return type
 
-[**QueueMember**](QueueMember.md)
+[**QueueMember**](QueueMember.html)
 
-<a name="PostQueuesQueueIdWrapupcodes"></a>
+<a name="postqueuesqueueidwrapupcodes"></a>
+
 ## [**WrapupCode**](WrapupCode.html) PostQueuesQueueIdWrapupcodes (string queueId, string codeId, List<WrapupCode> body = null)
 
 Add up to 100 wrap-up codes to a queue
@@ -1841,14 +1876,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **queueId** | **string**| Queue ID |  |
 | **codeId** | **string**| Code ID |  |
-| **body** | [**List<WrapupCode>**](WrapupCode.md)|  | [optional]  |
+| **body** | [**List<WrapupCode>**](WrapupCode.html)|  | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**WrapupCode**](WrapupCode.md)
+[**WrapupCode**](WrapupCode.html)
 
-<a name="PostSkills"></a>
+<a name="postskills"></a>
+
 ## [**RoutingSkill**](RoutingSkill.html) PostSkills (RoutingSkill body = null)
 
 Create Skill
@@ -1896,14 +1932,15 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**RoutingSkill**](RoutingSkill.md)| Skill | [optional]  |
+| **body** | [**RoutingSkill**](RoutingSkill.html)| Skill | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**RoutingSkill**](RoutingSkill.md)
+[**RoutingSkill**](RoutingSkill.html)
 
-<a name="PostUserIdRoutingskills"></a>
+<a name="postuseridroutingskills"></a>
+
 ## [**UserRoutingSkill**](UserRoutingSkill.html) PostUserIdRoutingskills (string userId, UserRoutingSkill body = null)
 
 Add routing skill to user
@@ -1953,14 +1990,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
-| **body** | [**UserRoutingSkill**](UserRoutingSkill.md)| Skill | [optional]  |
+| **body** | [**UserRoutingSkill**](UserRoutingSkill.html)| Skill | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**UserRoutingSkill**](UserRoutingSkill.md)
+[**UserRoutingSkill**](UserRoutingSkill.html)
 
-<a name="PostWrapupcodes"></a>
+<a name="postwrapupcodes"></a>
+
 ## [**CallableTimeSet**](CallableTimeSet.html) PostWrapupcodes (WrapupCode body = null)
 
 Create a wrap-up code
@@ -2008,14 +2046,15 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**WrapupCode**](WrapupCode.md)| WrapupCode | [optional]  |
+| **body** | [**WrapupCode**](WrapupCode.html)| WrapupCode | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**CallableTimeSet**](CallableTimeSet.md)
+[**CallableTimeSet**](CallableTimeSet.html)
 
-<a name="PutEmailDomainsDomainnameRoutesRouteId"></a>
+<a name="putemaildomainsdomainnameroutesrouteid"></a>
+
 ## [**InboundRoute**](InboundRoute.html) PutEmailDomainsDomainnameRoutesRouteId (string domainName, string routeId, InboundRoute body = null)
 
 Update a route
@@ -2067,14 +2106,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **domainName** | **string**| email domain |  |
 | **routeId** | **string**| route ID |  |
-| **body** | [**InboundRoute**](InboundRoute.md)| Route | [optional]  |
+| **body** | [**InboundRoute**](InboundRoute.html)| Route | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**InboundRoute**](InboundRoute.md)
+[**InboundRoute**](InboundRoute.html)
 
-<a name="PutQueuesQueueId"></a>
+<a name="putqueuesqueueid"></a>
+
 ## [**Queue**](Queue.html) PutQueuesQueueId (string queueId, Queue body = null)
 
 Update a queue
@@ -2124,14 +2164,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **queueId** | **string**| Queue ID |  |
-| **body** | [**Queue**](Queue.md)| Queue | [optional]  |
+| **body** | [**Queue**](Queue.html)| Queue | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**Queue**](Queue.md)
+[**Queue**](Queue.html)
 
-<a name="PutSkillsSkillId"></a>
+<a name="putskillsskillid"></a>
+
 ## [**RoutingSkill**](RoutingSkill.html) PutSkillsSkillId (string skillId, RoutingSkill body = null)
 
 Update Routing Skill
@@ -2181,14 +2222,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **skillId** | **string**| Skill ID |  |
-| **body** | [**RoutingSkill**](RoutingSkill.md)| Skill | [optional]  |
+| **body** | [**RoutingSkill**](RoutingSkill.html)| Skill | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**RoutingSkill**](RoutingSkill.md)
+[**RoutingSkill**](RoutingSkill.html)
 
-<a name="PutUtilization"></a>
+<a name="pututilization"></a>
+
 ## [**Utilization**](Utilization.html) PutUtilization (Utilization body = null)
 
 Update the utilization settings.
@@ -2236,14 +2278,15 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**Utilization**](Utilization.md)| utilization | [optional]  |
+| **body** | [**Utilization**](Utilization.html)| utilization | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**Utilization**](Utilization.md)
+[**Utilization**](Utilization.html)
 
-<a name="PutWrapupcodesCodeId"></a>
+<a name="putwrapupcodescodeid"></a>
+
 ## [**WrapupCode**](WrapupCode.html) PutWrapupcodesCodeId (string codeId, WrapupCode body = null)
 
 Update wrap-up code
@@ -2293,10 +2336,10 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **codeId** | **string**| Wrapup Code ID |  |
-| **body** | [**WrapupCode**](WrapupCode.md)| WrapupCode | [optional]  |
+| **body** | [**WrapupCode**](WrapupCode.html)| WrapupCode | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**WrapupCode**](WrapupCode.md)
+[**WrapupCode**](WrapupCode.html)
 

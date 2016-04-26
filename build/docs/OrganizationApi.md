@@ -1,13 +1,17 @@
-# ININ.PureCloudApi.Api.OrganizationApi
+---
+title: OrganizationApi
+---
+## ININ.PureCloudApi.Api.OrganizationApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**GetMe**](OrganizationApi.md#getme) | **GET** /api/v2/organizations/me | Get organization. |
+| [**GetMe**](OrganizationApi.html#getme) | **GET** /api/v2/organizations/me | Get organization. |
 {: class="table table-striped"}
 
-<a name="GetMe"></a>
+<a name="getme"></a>
+
 ## [**Organization**](Organization.html) GetMe ()
 
 Get organization.
@@ -55,5 +59,5 @@ This endpoint does require any parameters.
 
 ### Return type
 
-[**Organization**](Organization.md)
+[**Organization**](Organization.html)
 

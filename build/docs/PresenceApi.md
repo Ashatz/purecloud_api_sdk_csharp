@@ -1,19 +1,23 @@
-# ININ.PureCloudApi.Api.PresenceApi
+---
+title: PresenceApi
+---
+## ININ.PureCloudApi.Api.PresenceApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeletePresenceId**](PresenceApi.md#deletepresenceid) | **DELETE** /api/v2/presencedefinitions/{presenceId} | Delete an OrganizationPresence |
-| [**GetPresenceId**](PresenceApi.md#getpresenceid) | **GET** /api/v2/presencedefinitions/{presenceId} | Get an OrganizationPresence |
-| [**GetPresencedefinitions**](PresenceApi.md#getpresencedefinitions) | **GET** /api/v2/presencedefinitions | Get an Organization&#39;s list of Presences |
-| [**GetUserIdPresencesSourceId**](PresenceApi.md#getuseridpresencessourceid) | **GET** /api/v2/users/{userId}/presences/{sourceId} | Get a user&#39;s Presence |
-| [**PatchUserIdPresencesSourceId**](PresenceApi.md#patchuseridpresencessourceid) | **PATCH** /api/v2/users/{userId}/presences/{sourceId} | Patch a user&#39;s Presence |
-| [**PostPresencedefinitions**](PresenceApi.md#postpresencedefinitions) | **POST** /api/v2/presencedefinitions | Create an OrganizationPresence |
-| [**PutPresenceId**](PresenceApi.md#putpresenceid) | **PUT** /api/v2/presencedefinitions/{presenceId} | Update an OrganizationPresence |
+| [**DeletePresenceId**](PresenceApi.html#deletepresenceid) | **DELETE** /api/v2/presencedefinitions/{presenceId} | Delete an OrganizationPresence |
+| [**GetPresenceId**](PresenceApi.html#getpresenceid) | **GET** /api/v2/presencedefinitions/{presenceId} | Get an OrganizationPresence |
+| [**GetPresencedefinitions**](PresenceApi.html#getpresencedefinitions) | **GET** /api/v2/presencedefinitions | Get an Organization&#39;s list of Presences |
+| [**GetUserIdPresencesSourceId**](PresenceApi.html#getuseridpresencessourceid) | **GET** /api/v2/users/{userId}/presences/{sourceId} | Get a user&#39;s Presence |
+| [**PatchUserIdPresencesSourceId**](PresenceApi.html#patchuseridpresencessourceid) | **PATCH** /api/v2/users/{userId}/presences/{sourceId} | Patch a user&#39;s Presence |
+| [**PostPresencedefinitions**](PresenceApi.html#postpresencedefinitions) | **POST** /api/v2/presencedefinitions | Create an OrganizationPresence |
+| [**PutPresenceId**](PresenceApi.html#putpresenceid) | **PUT** /api/v2/presencedefinitions/{presenceId} | Update an OrganizationPresence |
 {: class="table table-striped"}
 
-<a name="DeletePresenceId"></a>
+<a name="deletepresenceid"></a>
+
 ## [**OrganizationPresence**](OrganizationPresence.html) DeletePresenceId (string presenceId)
 
 Delete an OrganizationPresence
@@ -66,9 +70,10 @@ namespace Example
 
 ### Return type
 
-[**OrganizationPresence**](OrganizationPresence.md)
+[**OrganizationPresence**](OrganizationPresence.html)
 
-<a name="GetPresenceId"></a>
+<a name="getpresenceid"></a>
+
 ## [**OrganizationPresence**](OrganizationPresence.html) GetPresenceId (string presenceId)
 
 Get an OrganizationPresence
@@ -121,9 +126,10 @@ namespace Example
 
 ### Return type
 
-[**OrganizationPresence**](OrganizationPresence.md)
+[**OrganizationPresence**](OrganizationPresence.html)
 
-<a name="GetPresencedefinitions"></a>
+<a name="getpresencedefinitions"></a>
+
 ## [**OrganizationPresenceEntityListing**](OrganizationPresenceEntityListing.html) GetPresencedefinitions (int? pageNumber = null, int? pageSize = null)
 
 Get an Organization's list of Presences
@@ -178,9 +184,10 @@ namespace Example
 
 ### Return type
 
-[**OrganizationPresenceEntityListing**](OrganizationPresenceEntityListing.md)
+[**OrganizationPresenceEntityListing**](OrganizationPresenceEntityListing.html)
 
-<a name="GetUserIdPresencesSourceId"></a>
+<a name="getuseridpresencessourceid"></a>
+
 ## [**UserPresence**](UserPresence.html) GetUserIdPresencesSourceId (string userId, string sourceId)
 
 Get a user's Presence
@@ -235,9 +242,10 @@ namespace Example
 
 ### Return type
 
-[**UserPresence**](UserPresence.md)
+[**UserPresence**](UserPresence.html)
 
-<a name="PatchUserIdPresencesSourceId"></a>
+<a name="patchuseridpresencessourceid"></a>
+
 ## [**UserPresence**](UserPresence.html) PatchUserIdPresencesSourceId (string userId, string sourceId, UserPresence body = null)
 
 Patch a user's Presence
@@ -289,14 +297,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| user Id |  |
 | **sourceId** | **string**| Source |  |
-| **body** | [**UserPresence**](UserPresence.md)|  | [optional]  |
+| **body** | [**UserPresence**](UserPresence.html)|  | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**UserPresence**](UserPresence.md)
+[**UserPresence**](UserPresence.html)
 
-<a name="PostPresencedefinitions"></a>
+<a name="postpresencedefinitions"></a>
+
 ## [**OrganizationPresence**](OrganizationPresence.html) PostPresencedefinitions (OrganizationPresence body)
 
 Create an OrganizationPresence
@@ -344,14 +353,15 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**OrganizationPresence**](OrganizationPresence.md)| The OrganizationPresence to create |  |
+| **body** | [**OrganizationPresence**](OrganizationPresence.html)| The OrganizationPresence to create |  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**OrganizationPresence**](OrganizationPresence.md)
+[**OrganizationPresence**](OrganizationPresence.html)
 
-<a name="PutPresenceId"></a>
+<a name="putpresenceid"></a>
+
 ## [**OrganizationPresence**](OrganizationPresence.html) PutPresenceId (string presenceId, OrganizationPresence body)
 
 Update an OrganizationPresence
@@ -401,10 +411,10 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **presenceId** | **string**| Organization Presence ID |  |
-| **body** | [**OrganizationPresence**](OrganizationPresence.md)| The OrganizationPresence to update |  |
+| **body** | [**OrganizationPresence**](OrganizationPresence.html)| The OrganizationPresence to update |  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**OrganizationPresence**](OrganizationPresence.md)
+[**OrganizationPresence**](OrganizationPresence.html)
 

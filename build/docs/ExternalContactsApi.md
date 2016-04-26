@@ -1,38 +1,42 @@
-# ININ.PureCloudApi.Api.ExternalContactsApi
+---
+title: ExternalContactsApi
+---
+## ININ.PureCloudApi.Api.ExternalContactsApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteContactsContactId**](ExternalContactsApi.md#deletecontactscontactid) | **DELETE** /api/v2/externalcontacts/contacts/{contactId} | Delete a contact |
-| [**DeleteContactsContactIdNotesNoteId**](ExternalContactsApi.md#deletecontactscontactidnotesnoteid) | **DELETE** /api/v2/externalcontacts/contacts/{contactId}/notes/{noteId} | Delete a note for a contact |
-| [**DeleteOrganizationsExternalorganizationId**](ExternalContactsApi.md#deleteorganizationsexternalorganizationid) | **DELETE** /api/v2/externalcontacts/organizations/{externalOrganizationId} | Delete an External Organization |
-| [**DeleteOrganizationsExternalorganizationIdNotesNoteId**](ExternalContactsApi.md#deleteorganizationsexternalorganizationidnotesnoteid) | **DELETE** /api/v2/externalcontacts/organizations/{externalOrganizationId}/notes/{noteId} | Delete a note |
-| [**DeleteRelationshipsRelationshipId**](ExternalContactsApi.md#deleterelationshipsrelationshipid) | **DELETE** /api/v2/externalcontacts/relationships/{relationshipId} | Delete a relationship |
-| [**GetContacts**](ExternalContactsApi.md#getcontacts) | **GET** /api/v2/externalcontacts/contacts | Search for External Contacts |
-| [**GetContactsContactId**](ExternalContactsApi.md#getcontactscontactid) | **GET** /api/v2/externalcontacts/contacts/{contactId} | Fetch a ExternalContact |
-| [**GetContactsContactIdNotes**](ExternalContactsApi.md#getcontactscontactidnotes) | **GET** /api/v2/externalcontacts/contacts/{contactId}/notes | List Notes for an ExternalContact |
-| [**GetContactsContactIdNotesNoteId**](ExternalContactsApi.md#getcontactscontactidnotesnoteid) | **GET** /api/v2/externalcontacts/contacts/{contactId}/notes/{noteId} | Fetch a note for a contact |
-| [**GetOrganizations**](ExternalContactsApi.md#getorganizations) | **GET** /api/v2/externalcontacts/organizations | Search for External Organizations |
-| [**GetOrganizationsExternalorganizationId**](ExternalContactsApi.md#getorganizationsexternalorganizationid) | **GET** /api/v2/externalcontacts/organizations/{externalOrganizationId} | Fetch an External Organization |
-| [**GetOrganizationsExternalorganizationIdContacts**](ExternalContactsApi.md#getorganizationsexternalorganizationidcontacts) | **GET** /api/v2/externalcontacts/organizations/{externalOrganizationId}/contacts | Search for External Contacts |
-| [**GetOrganizationsExternalorganizationIdNotes**](ExternalContactsApi.md#getorganizationsexternalorganizationidnotes) | **GET** /api/v2/externalcontacts/organizations/{externalOrganizationId}/notes | List Notes for an External Organization |
-| [**GetOrganizationsExternalorganizationIdNotesNoteId**](ExternalContactsApi.md#getorganizationsexternalorganizationidnotesnoteid) | **GET** /api/v2/externalcontacts/organizations/{externalOrganizationId}/notes/{noteId} | Fetch a note |
-| [**GetOrganizationsExternalorganizationIdRelationships**](ExternalContactsApi.md#getorganizationsexternalorganizationidrelationships) | **GET** /api/v2/externalcontacts/organizations/{externalOrganizationId}/relationships | Fetch an External Organization |
-| [**GetRelationshipsRelationshipId**](ExternalContactsApi.md#getrelationshipsrelationshipid) | **GET** /api/v2/externalcontacts/relationships/{relationshipId} | Fetch a relationship |
-| [**PostContacts**](ExternalContactsApi.md#postcontacts) | **POST** /api/v2/externalcontacts/contacts | Create an ExternalContact |
-| [**PostContactsContactIdNotes**](ExternalContactsApi.md#postcontactscontactidnotes) | **POST** /api/v2/externalcontacts/contacts/{contactId}/notes | Create a Note for an ExternalContact |
-| [**PostOrganizations**](ExternalContactsApi.md#postorganizations) | **POST** /api/v2/externalcontacts/organizations | Create an External Organization |
-| [**PostOrganizationsExternalorganizationIdNotes**](ExternalContactsApi.md#postorganizationsexternalorganizationidnotes) | **POST** /api/v2/externalcontacts/organizations/{externalOrganizationId}/notes | Create a Note for an External Organization |
-| [**PostRelationships**](ExternalContactsApi.md#postrelationships) | **POST** /api/v2/externalcontacts/relationships | Create a relationship |
-| [**PutContactsContactId**](ExternalContactsApi.md#putcontactscontactid) | **PUT** /api/v2/externalcontacts/contacts/{contactId} | Update a externalContact |
-| [**PutContactsContactIdNotesNoteId**](ExternalContactsApi.md#putcontactscontactidnotesnoteid) | **PUT** /api/v2/externalcontacts/contacts/{contactId}/notes/{noteId} | Update a note for a contact |
-| [**PutOrganizationsExternalorganizationId**](ExternalContactsApi.md#putorganizationsexternalorganizationid) | **PUT** /api/v2/externalcontacts/organizations/{externalOrganizationId} | Update an External Organization |
-| [**PutOrganizationsExternalorganizationIdNotesNoteId**](ExternalContactsApi.md#putorganizationsexternalorganizationidnotesnoteid) | **PUT** /api/v2/externalcontacts/organizations/{externalOrganizationId}/notes/{noteId} | Update a note |
-| [**PutRelationshipsRelationshipId**](ExternalContactsApi.md#putrelationshipsrelationshipid) | **PUT** /api/v2/externalcontacts/relationships/{relationshipId} | Update a relationship |
+| [**DeleteContactsContactId**](ExternalContactsApi.html#deletecontactscontactid) | **DELETE** /api/v2/externalcontacts/contacts/{contactId} | Delete a contact |
+| [**DeleteContactsContactIdNotesNoteId**](ExternalContactsApi.html#deletecontactscontactidnotesnoteid) | **DELETE** /api/v2/externalcontacts/contacts/{contactId}/notes/{noteId} | Delete a note for a contact |
+| [**DeleteOrganizationsExternalorganizationId**](ExternalContactsApi.html#deleteorganizationsexternalorganizationid) | **DELETE** /api/v2/externalcontacts/organizations/{externalOrganizationId} | Delete an External Organization |
+| [**DeleteOrganizationsExternalorganizationIdNotesNoteId**](ExternalContactsApi.html#deleteorganizationsexternalorganizationidnotesnoteid) | **DELETE** /api/v2/externalcontacts/organizations/{externalOrganizationId}/notes/{noteId} | Delete a note |
+| [**DeleteRelationshipsRelationshipId**](ExternalContactsApi.html#deleterelationshipsrelationshipid) | **DELETE** /api/v2/externalcontacts/relationships/{relationshipId} | Delete a relationship |
+| [**GetContacts**](ExternalContactsApi.html#getcontacts) | **GET** /api/v2/externalcontacts/contacts | Search for External Contacts |
+| [**GetContactsContactId**](ExternalContactsApi.html#getcontactscontactid) | **GET** /api/v2/externalcontacts/contacts/{contactId} | Fetch a ExternalContact |
+| [**GetContactsContactIdNotes**](ExternalContactsApi.html#getcontactscontactidnotes) | **GET** /api/v2/externalcontacts/contacts/{contactId}/notes | List Notes for an ExternalContact |
+| [**GetContactsContactIdNotesNoteId**](ExternalContactsApi.html#getcontactscontactidnotesnoteid) | **GET** /api/v2/externalcontacts/contacts/{contactId}/notes/{noteId} | Fetch a note for a contact |
+| [**GetOrganizations**](ExternalContactsApi.html#getorganizations) | **GET** /api/v2/externalcontacts/organizations | Search for External Organizations |
+| [**GetOrganizationsExternalorganizationId**](ExternalContactsApi.html#getorganizationsexternalorganizationid) | **GET** /api/v2/externalcontacts/organizations/{externalOrganizationId} | Fetch an External Organization |
+| [**GetOrganizationsExternalorganizationIdContacts**](ExternalContactsApi.html#getorganizationsexternalorganizationidcontacts) | **GET** /api/v2/externalcontacts/organizations/{externalOrganizationId}/contacts | Search for External Contacts |
+| [**GetOrganizationsExternalorganizationIdNotes**](ExternalContactsApi.html#getorganizationsexternalorganizationidnotes) | **GET** /api/v2/externalcontacts/organizations/{externalOrganizationId}/notes | List Notes for an External Organization |
+| [**GetOrganizationsExternalorganizationIdNotesNoteId**](ExternalContactsApi.html#getorganizationsexternalorganizationidnotesnoteid) | **GET** /api/v2/externalcontacts/organizations/{externalOrganizationId}/notes/{noteId} | Fetch a note |
+| [**GetOrganizationsExternalorganizationIdRelationships**](ExternalContactsApi.html#getorganizationsexternalorganizationidrelationships) | **GET** /api/v2/externalcontacts/organizations/{externalOrganizationId}/relationships | Fetch an External Organization |
+| [**GetRelationshipsRelationshipId**](ExternalContactsApi.html#getrelationshipsrelationshipid) | **GET** /api/v2/externalcontacts/relationships/{relationshipId} | Fetch a relationship |
+| [**PostContacts**](ExternalContactsApi.html#postcontacts) | **POST** /api/v2/externalcontacts/contacts | Create an ExternalContact |
+| [**PostContactsContactIdNotes**](ExternalContactsApi.html#postcontactscontactidnotes) | **POST** /api/v2/externalcontacts/contacts/{contactId}/notes | Create a Note for an ExternalContact |
+| [**PostOrganizations**](ExternalContactsApi.html#postorganizations) | **POST** /api/v2/externalcontacts/organizations | Create an External Organization |
+| [**PostOrganizationsExternalorganizationIdNotes**](ExternalContactsApi.html#postorganizationsexternalorganizationidnotes) | **POST** /api/v2/externalcontacts/organizations/{externalOrganizationId}/notes | Create a Note for an External Organization |
+| [**PostRelationships**](ExternalContactsApi.html#postrelationships) | **POST** /api/v2/externalcontacts/relationships | Create a relationship |
+| [**PutContactsContactId**](ExternalContactsApi.html#putcontactscontactid) | **PUT** /api/v2/externalcontacts/contacts/{contactId} | Update a externalContact |
+| [**PutContactsContactIdNotesNoteId**](ExternalContactsApi.html#putcontactscontactidnotesnoteid) | **PUT** /api/v2/externalcontacts/contacts/{contactId}/notes/{noteId} | Update a note for a contact |
+| [**PutOrganizationsExternalorganizationId**](ExternalContactsApi.html#putorganizationsexternalorganizationid) | **PUT** /api/v2/externalcontacts/organizations/{externalOrganizationId} | Update an External Organization |
+| [**PutOrganizationsExternalorganizationIdNotesNoteId**](ExternalContactsApi.html#putorganizationsexternalorganizationidnotesnoteid) | **PUT** /api/v2/externalcontacts/organizations/{externalOrganizationId}/notes/{noteId} | Update a note |
+| [**PutRelationshipsRelationshipId**](ExternalContactsApi.html#putrelationshipsrelationshipid) | **PUT** /api/v2/externalcontacts/relationships/{relationshipId} | Update a relationship |
 {: class="table table-striped"}
 
-<a name="DeleteContactsContactId"></a>
+<a name="deletecontactscontactid"></a>
+
 ## void DeleteContactsContactId (string contactId)
 
 Delete a contact
@@ -86,7 +90,8 @@ namespace Example
 
 void (empty response body)
 
-<a name="DeleteContactsContactIdNotesNoteId"></a>
+<a name="deletecontactscontactidnotesnoteid"></a>
+
 ## void DeleteContactsContactIdNotesNoteId (string contactId, string noteId)
 
 Delete a note for a contact
@@ -142,7 +147,8 @@ namespace Example
 
 void (empty response body)
 
-<a name="DeleteOrganizationsExternalorganizationId"></a>
+<a name="deleteorganizationsexternalorganizationid"></a>
+
 ## void DeleteOrganizationsExternalorganizationId (string externalOrganizationId)
 
 Delete an External Organization
@@ -196,7 +202,8 @@ namespace Example
 
 void (empty response body)
 
-<a name="DeleteOrganizationsExternalorganizationIdNotesNoteId"></a>
+<a name="deleteorganizationsexternalorganizationidnotesnoteid"></a>
+
 ## void DeleteOrganizationsExternalorganizationIdNotesNoteId (string externalOrganizationId, string noteId)
 
 Delete a note
@@ -252,7 +259,8 @@ namespace Example
 
 void (empty response body)
 
-<a name="DeleteRelationshipsRelationshipId"></a>
+<a name="deleterelationshipsrelationshipid"></a>
+
 ## void DeleteRelationshipsRelationshipId (string relationshipId)
 
 Delete a relationship
@@ -306,7 +314,8 @@ namespace Example
 
 void (empty response body)
 
-<a name="GetContacts"></a>
+<a name="getcontacts"></a>
+
 ## [**ContactListing**](ContactListing.html) GetContacts (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null)
 
 Search for External Contacts
@@ -362,14 +371,15 @@ namespace Example
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **q** | **string**| User supplied search keywords (no special syntax is currently supported) | [optional]  |
 | **sortOrder** | **string**| Sort order | [optional]  |
-| **expand** | [**List<string>**](string.md)| which fields, if any, to expand | [optional]  |
+| **expand** | [**List<string>**](string.html)| which fields, if any, to expand | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**ContactListing**](ContactListing.md)
+[**ContactListing**](ContactListing.html)
 
-<a name="GetContactsContactId"></a>
+<a name="getcontactscontactid"></a>
+
 ## [**ExternalContact**](ExternalContact.html) GetContactsContactId (string contactId, List<string> expand = null)
 
 Fetch a ExternalContact
@@ -419,14 +429,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **contactId** | **string**| ExternalContact ID |  |
-| **expand** | [**List<string>**](string.md)| which fields, if any, to expand | [optional]  |
+| **expand** | [**List<string>**](string.html)| which fields, if any, to expand | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**ExternalContact**](ExternalContact.md)
+[**ExternalContact**](ExternalContact.html)
 
-<a name="GetContactsContactIdNotes"></a>
+<a name="getcontactscontactidnotes"></a>
+
 ## [**NoteListing**](NoteListing.html) GetContactsContactIdNotes (string contactId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
 
 List Notes for an ExternalContact
@@ -485,9 +496,10 @@ namespace Example
 
 ### Return type
 
-[**NoteListing**](NoteListing.md)
+[**NoteListing**](NoteListing.html)
 
-<a name="GetContactsContactIdNotesNoteId"></a>
+<a name="getcontactscontactidnotesnoteid"></a>
+
 ## [**Note**](Note.html) GetContactsContactIdNotesNoteId (string contactId, string noteId)
 
 Fetch a note for a contact
@@ -542,9 +554,10 @@ namespace Example
 
 ### Return type
 
-[**Note**](Note.md)
+[**Note**](Note.html)
 
-<a name="GetOrganizations"></a>
+<a name="getorganizations"></a>
+
 ## [**ExternalOrganizationListing**](ExternalOrganizationListing.html) GetOrganizations (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null)
 
 Search for External Organizations
@@ -603,9 +616,10 @@ namespace Example
 
 ### Return type
 
-[**ExternalOrganizationListing**](ExternalOrganizationListing.md)
+[**ExternalOrganizationListing**](ExternalOrganizationListing.html)
 
-<a name="GetOrganizationsExternalorganizationId"></a>
+<a name="getorganizationsexternalorganizationid"></a>
+
 ## [**ExternalOrganization**](ExternalOrganization.html) GetOrganizationsExternalorganizationId (string externalOrganizationId)
 
 Fetch an External Organization
@@ -658,9 +672,10 @@ namespace Example
 
 ### Return type
 
-[**ExternalOrganization**](ExternalOrganization.md)
+[**ExternalOrganization**](ExternalOrganization.html)
 
-<a name="GetOrganizationsExternalorganizationIdContacts"></a>
+<a name="getorganizationsexternalorganizationidcontacts"></a>
+
 ## [**ContactListing**](ContactListing.html) GetOrganizationsExternalorganizationIdContacts (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null)
 
 Search for External Contacts
@@ -718,14 +733,15 @@ namespace Example
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **q** | **string**| User supplied search keywords (no special syntax is currently supported) | [optional]  |
 | **sortOrder** | **string**| Sort order | [optional]  |
-| **expand** | [**List<string>**](string.md)| which fields, if any, to expand | [optional]  |
+| **expand** | [**List<string>**](string.html)| which fields, if any, to expand | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**ContactListing**](ContactListing.md)
+[**ContactListing**](ContactListing.html)
 
-<a name="GetOrganizationsExternalorganizationIdNotes"></a>
+<a name="getorganizationsexternalorganizationidnotes"></a>
+
 ## [**NoteListing**](NoteListing.html) GetOrganizationsExternalorganizationIdNotes (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
 
 List Notes for an External Organization
@@ -784,9 +800,10 @@ namespace Example
 
 ### Return type
 
-[**NoteListing**](NoteListing.md)
+[**NoteListing**](NoteListing.html)
 
-<a name="GetOrganizationsExternalorganizationIdNotesNoteId"></a>
+<a name="getorganizationsexternalorganizationidnotesnoteid"></a>
+
 ## [**Note**](Note.html) GetOrganizationsExternalorganizationIdNotesNoteId (string externalOrganizationId, string noteId)
 
 Fetch a note
@@ -841,9 +858,10 @@ namespace Example
 
 ### Return type
 
-[**Note**](Note.md)
+[**Note**](Note.html)
 
-<a name="GetOrganizationsExternalorganizationIdRelationships"></a>
+<a name="getorganizationsexternalorganizationidrelationships"></a>
+
 ## [**RelationshipListing**](RelationshipListing.html) GetOrganizationsExternalorganizationIdRelationships (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
 
 Fetch an External Organization
@@ -902,9 +920,10 @@ namespace Example
 
 ### Return type
 
-[**RelationshipListing**](RelationshipListing.md)
+[**RelationshipListing**](RelationshipListing.html)
 
-<a name="GetRelationshipsRelationshipId"></a>
+<a name="getrelationshipsrelationshipid"></a>
+
 ## [**Relationship**](Relationship.html) GetRelationshipsRelationshipId (string relationshipId)
 
 Fetch a relationship
@@ -957,9 +976,10 @@ namespace Example
 
 ### Return type
 
-[**Relationship**](Relationship.md)
+[**Relationship**](Relationship.html)
 
-<a name="PostContacts"></a>
+<a name="postcontacts"></a>
+
 ## [**ExternalContact**](ExternalContact.html) PostContacts (ExternalContact body = null)
 
 Create an ExternalContact
@@ -1007,14 +1027,15 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**ExternalContact**](ExternalContact.md)| ExternalContact | [optional]  |
+| **body** | [**ExternalContact**](ExternalContact.html)| ExternalContact | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**ExternalContact**](ExternalContact.md)
+[**ExternalContact**](ExternalContact.html)
 
-<a name="PostContactsContactIdNotes"></a>
+<a name="postcontactscontactidnotes"></a>
+
 ## [**Note**](Note.html) PostContactsContactIdNotes (string contactId, Note body = null)
 
 Create a Note for an ExternalContact
@@ -1064,14 +1085,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **contactId** | **string**| ExternalContact Id |  |
-| **body** | [**Note**](Note.md)| ExternalContact | [optional]  |
+| **body** | [**Note**](Note.html)| ExternalContact | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**Note**](Note.md)
+[**Note**](Note.html)
 
-<a name="PostOrganizations"></a>
+<a name="postorganizations"></a>
+
 ## [**ExternalOrganization**](ExternalOrganization.html) PostOrganizations (ExternalOrganization body = null)
 
 Create an External Organization
@@ -1119,14 +1141,15 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**ExternalOrganization**](ExternalOrganization.md)| ExternalOrganization | [optional]  |
+| **body** | [**ExternalOrganization**](ExternalOrganization.html)| ExternalOrganization | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**ExternalOrganization**](ExternalOrganization.md)
+[**ExternalOrganization**](ExternalOrganization.html)
 
-<a name="PostOrganizationsExternalorganizationIdNotes"></a>
+<a name="postorganizationsexternalorganizationidnotes"></a>
+
 ## [**Note**](Note.html) PostOrganizationsExternalorganizationIdNotes (string externalOrganizationId, Note body = null)
 
 Create a Note for an External Organization
@@ -1176,14 +1199,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **externalOrganizationId** | **string**| External Organization Id |  |
-| **body** | [**Note**](Note.md)| ExternalContact | [optional]  |
+| **body** | [**Note**](Note.html)| ExternalContact | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**Note**](Note.md)
+[**Note**](Note.html)
 
-<a name="PostRelationships"></a>
+<a name="postrelationships"></a>
+
 ## [**Relationship**](Relationship.html) PostRelationships (Relationship body = null)
 
 Create a relationship
@@ -1231,14 +1255,15 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**Relationship**](Relationship.md)| Relationship | [optional]  |
+| **body** | [**Relationship**](Relationship.html)| Relationship | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**Relationship**](Relationship.md)
+[**Relationship**](Relationship.html)
 
-<a name="PutContactsContactId"></a>
+<a name="putcontactscontactid"></a>
+
 ## [**ExternalContact**](ExternalContact.html) PutContactsContactId (string contactId, ExternalContact body = null)
 
 Update a externalContact
@@ -1288,14 +1313,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **contactId** | **string**| ExternalContact ID |  |
-| **body** | [**ExternalContact**](ExternalContact.md)| ExternalContact | [optional]  |
+| **body** | [**ExternalContact**](ExternalContact.html)| ExternalContact | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**ExternalContact**](ExternalContact.md)
+[**ExternalContact**](ExternalContact.html)
 
-<a name="PutContactsContactIdNotesNoteId"></a>
+<a name="putcontactscontactidnotesnoteid"></a>
+
 ## [**Note**](Note.html) PutContactsContactIdNotesNoteId (string contactId, string noteId, Note body = null)
 
 Update a note for a contact
@@ -1347,14 +1373,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **contactId** | **string**| ExternalContact Id |  |
 | **noteId** | **string**| Note Id |  |
-| **body** | [**Note**](Note.md)| Note | [optional]  |
+| **body** | [**Note**](Note.html)| Note | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**Note**](Note.md)
+[**Note**](Note.html)
 
-<a name="PutOrganizationsExternalorganizationId"></a>
+<a name="putorganizationsexternalorganizationid"></a>
+
 ## [**ExternalOrganization**](ExternalOrganization.html) PutOrganizationsExternalorganizationId (string externalOrganizationId, ExternalOrganization body = null)
 
 Update an External Organization
@@ -1404,14 +1431,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **externalOrganizationId** | **string**| External Organization ID |  |
-| **body** | [**ExternalOrganization**](ExternalOrganization.md)| ExternalOrganization | [optional]  |
+| **body** | [**ExternalOrganization**](ExternalOrganization.html)| ExternalOrganization | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**ExternalOrganization**](ExternalOrganization.md)
+[**ExternalOrganization**](ExternalOrganization.html)
 
-<a name="PutOrganizationsExternalorganizationIdNotesNoteId"></a>
+<a name="putorganizationsexternalorganizationidnotesnoteid"></a>
+
 ## [**Note**](Note.html) PutOrganizationsExternalorganizationIdNotesNoteId (string externalOrganizationId, string noteId, Note body = null)
 
 Update a note
@@ -1463,14 +1491,15 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **externalOrganizationId** | **string**| External Organization Id |  |
 | **noteId** | **string**| Note Id |  |
-| **body** | [**Note**](Note.md)| Note | [optional]  |
+| **body** | [**Note**](Note.html)| Note | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**Note**](Note.md)
+[**Note**](Note.html)
 
-<a name="PutRelationshipsRelationshipId"></a>
+<a name="putrelationshipsrelationshipid"></a>
+
 ## [**Relationship**](Relationship.html) PutRelationshipsRelationshipId (string relationshipId, Relationship body = null)
 
 Update a relationship
@@ -1520,10 +1549,10 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **relationshipId** | **string**| Relationship Id |  |
-| **body** | [**Relationship**](Relationship.md)| Relationship | [optional]  |
+| **body** | [**Relationship**](Relationship.html)| Relationship | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**Relationship**](Relationship.md)
+[**Relationship**](Relationship.html)
 

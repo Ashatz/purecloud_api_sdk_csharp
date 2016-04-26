@@ -1,19 +1,23 @@
-# ININ.PureCloudApi.Api.NotificationsApi
+---
+title: NotificationsApi
+---
+## ININ.PureCloudApi.Api.NotificationsApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteChannelsChannelIdSubscriptions**](NotificationsApi.md#deletechannelschannelidsubscriptions) | **DELETE** /api/v2/notifications/channels/{channelId}/subscriptions | Remove all subscriptions |
-| [**GetAvailabletopics**](NotificationsApi.md#getavailabletopics) | **GET** /api/v2/notifications/availabletopics | Get available notification topics. |
-| [**GetChannels**](NotificationsApi.md#getchannels) | **GET** /api/v2/notifications/channels | The list of existing channels |
-| [**GetChannelsChannelIdSubscriptions**](NotificationsApi.md#getchannelschannelidsubscriptions) | **GET** /api/v2/notifications/channels/{channelId}/subscriptions | The list of all subscriptions for this channel |
-| [**PostChannels**](NotificationsApi.md#postchannels) | **POST** /api/v2/notifications/channels | Create a new channel |
-| [**PostChannelsChannelIdSubscriptions**](NotificationsApi.md#postchannelschannelidsubscriptions) | **POST** /api/v2/notifications/channels/{channelId}/subscriptions | Add a list of subscriptions to the existing list of subscriptions |
-| [**PutChannelsChannelIdSubscriptions**](NotificationsApi.md#putchannelschannelidsubscriptions) | **PUT** /api/v2/notifications/channels/{channelId}/subscriptions | Replace the current list of subscriptions with a new list. |
+| [**DeleteChannelsChannelIdSubscriptions**](NotificationsApi.html#deletechannelschannelidsubscriptions) | **DELETE** /api/v2/notifications/channels/{channelId}/subscriptions | Remove all subscriptions |
+| [**GetAvailabletopics**](NotificationsApi.html#getavailabletopics) | **GET** /api/v2/notifications/availabletopics | Get available notification topics. |
+| [**GetChannels**](NotificationsApi.html#getchannels) | **GET** /api/v2/notifications/channels | The list of existing channels |
+| [**GetChannelsChannelIdSubscriptions**](NotificationsApi.html#getchannelschannelidsubscriptions) | **GET** /api/v2/notifications/channels/{channelId}/subscriptions | The list of all subscriptions for this channel |
+| [**PostChannels**](NotificationsApi.html#postchannels) | **POST** /api/v2/notifications/channels | Create a new channel |
+| [**PostChannelsChannelIdSubscriptions**](NotificationsApi.html#postchannelschannelidsubscriptions) | **POST** /api/v2/notifications/channels/{channelId}/subscriptions | Add a list of subscriptions to the existing list of subscriptions |
+| [**PutChannelsChannelIdSubscriptions**](NotificationsApi.html#putchannelschannelidsubscriptions) | **PUT** /api/v2/notifications/channels/{channelId}/subscriptions | Replace the current list of subscriptions with a new list. |
 {: class="table table-striped"}
 
-<a name="DeleteChannelsChannelIdSubscriptions"></a>
+<a name="deletechannelschannelidsubscriptions"></a>
+
 ## string** DeleteChannelsChannelIdSubscriptions (string channelId)
 
 Remove all subscriptions
@@ -68,7 +72,8 @@ namespace Example
 
 **string**
 
-<a name="GetAvailabletopics"></a>
+<a name="getavailabletopics"></a>
+
 ## [**AvailableTopicEntityListing**](AvailableTopicEntityListing.html) GetAvailabletopics (List<string> expand = null)
 
 Get available notification topics.
@@ -116,14 +121,15 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **expand** | [**List<string>**](string.md)| Which fields, if any, to expand | [optional]  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**AvailableTopicEntityListing**](AvailableTopicEntityListing.md)
+[**AvailableTopicEntityListing**](AvailableTopicEntityListing.html)
 
-<a name="GetChannels"></a>
+<a name="getchannels"></a>
+
 ## [**ChannelEntityListing**](ChannelEntityListing.html) GetChannels ()
 
 The list of existing channels
@@ -171,9 +177,10 @@ This endpoint does require any parameters.
 
 ### Return type
 
-[**ChannelEntityListing**](ChannelEntityListing.md)
+[**ChannelEntityListing**](ChannelEntityListing.html)
 
-<a name="GetChannelsChannelIdSubscriptions"></a>
+<a name="getchannelschannelidsubscriptions"></a>
+
 ## [**ChannelTopicEntityListing**](ChannelTopicEntityListing.html) GetChannelsChannelIdSubscriptions (string channelId)
 
 The list of all subscriptions for this channel
@@ -226,9 +233,10 @@ namespace Example
 
 ### Return type
 
-[**ChannelTopicEntityListing**](ChannelTopicEntityListing.md)
+[**ChannelTopicEntityListing**](ChannelTopicEntityListing.html)
 
-<a name="PostChannels"></a>
+<a name="postchannels"></a>
+
 ## [**Channel**](Channel.html) PostChannels ()
 
 Create a new channel
@@ -276,9 +284,10 @@ This endpoint does require any parameters.
 
 ### Return type
 
-[**Channel**](Channel.md)
+[**Channel**](Channel.html)
 
-<a name="PostChannelsChannelIdSubscriptions"></a>
+<a name="postchannelschannelidsubscriptions"></a>
+
 ## [**ChannelTopicEntityListing**](ChannelTopicEntityListing.html) PostChannelsChannelIdSubscriptions (string channelId, List<ChannelTopic> body = null)
 
 Add a list of subscriptions to the existing list of subscriptions
@@ -328,14 +337,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **channelId** | **string**| Channel ID |  |
-| **body** | [**List<ChannelTopic>**](ChannelTopic.md)| Topic | [optional]  |
+| **body** | [**List<ChannelTopic>**](ChannelTopic.html)| Topic | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**ChannelTopicEntityListing**](ChannelTopicEntityListing.md)
+[**ChannelTopicEntityListing**](ChannelTopicEntityListing.html)
 
-<a name="PutChannelsChannelIdSubscriptions"></a>
+<a name="putchannelschannelidsubscriptions"></a>
+
 ## [**ChannelTopicEntityListing**](ChannelTopicEntityListing.html) PutChannelsChannelIdSubscriptions (string channelId, List<ChannelTopic> body = null)
 
 Replace the current list of subscriptions with a new list.
@@ -385,10 +395,10 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **channelId** | **string**| Channel ID |  |
-| **body** | [**List<ChannelTopic>**](ChannelTopic.md)| Topic | [optional]  |
+| **body** | [**List<ChannelTopic>**](ChannelTopic.html)| Topic | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**ChannelTopicEntityListing**](ChannelTopicEntityListing.md)
+[**ChannelTopicEntityListing**](ChannelTopicEntityListing.html)
 

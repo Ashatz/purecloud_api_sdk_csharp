@@ -1,36 +1,40 @@
-# ININ.PureCloudApi.Api.QualityApi
+---
+title: QualityApi
+---
+## ININ.PureCloudApi.Api.QualityApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteCalibrationsCalibrationId**](QualityApi.md#deletecalibrationscalibrationid) | **DELETE** /api/v2/quality/calibrations/{calibrationId} | Delete a calibration by id. |
-| [**DeleteConversationsConversationIdEvaluationsEvaluationId**](QualityApi.md#deleteconversationsconversationidevaluationsevaluationid) | **DELETE** /api/v2/quality/conversations/{conversationId}/evaluations/{evaluationId} | Delete an evaluation |
-| [**DeleteFormsFormId**](QualityApi.md#deleteformsformid) | **DELETE** /api/v2/quality/forms/{formId} | Delete an evaluation form. |
-| [**GetAgentsActivity**](QualityApi.md#getagentsactivity) | **GET** /api/v2/quality/agents/activity | Gets a list of Agent Activities |
-| [**GetCalibrations**](QualityApi.md#getcalibrations) | **GET** /api/v2/quality/calibrations | Get the list of calibrations |
-| [**GetCalibrationsCalibrationId**](QualityApi.md#getcalibrationscalibrationid) | **GET** /api/v2/quality/calibrations/{calibrationId} | Get a calibration by id. |
-| [**GetConversationsConversationIdAudits**](QualityApi.md#getconversationsconversationidaudits) | **GET** /api/v2/quality/conversations/{conversationId}/audits | Get audits for conversation or recording |
-| [**GetConversationsConversationIdEvaluationsEvaluationId**](QualityApi.md#getconversationsconversationidevaluationsevaluationid) | **GET** /api/v2/quality/conversations/{conversationId}/evaluations/{evaluationId} | Get an evaluation |
-| [**GetEvaluationsQuery**](QualityApi.md#getevaluationsquery) | **GET** /api/v2/quality/evaluations/query | Queries Evaluations and returns a paged list |
-| [**GetEvaluatorsActivity**](QualityApi.md#getevaluatorsactivity) | **GET** /api/v2/quality/evaluators/activity | Get an evaluator activity |
-| [**GetForms**](QualityApi.md#getforms) | **GET** /api/v2/quality/forms | Get the list of evaluation forms |
-| [**GetFormsFormId**](QualityApi.md#getformsformid) | **GET** /api/v2/quality/forms/{formId} | Get an evaluation form |
-| [**GetFormsFormIdVersions**](QualityApi.md#getformsformidversions) | **GET** /api/v2/quality/forms/{formId}/versions | Gets all the revisions for a specific evaluation. |
-| [**GetPublishedforms**](QualityApi.md#getpublishedforms) | **GET** /api/v2/quality/publishedforms | Get the published evaluation forms. |
-| [**GetPublishedformsFormId**](QualityApi.md#getpublishedformsformid) | **GET** /api/v2/quality/publishedforms/{formId} | Get the published evaluation forms. |
-| [**PostCalibrations**](QualityApi.md#postcalibrations) | **POST** /api/v2/quality/calibrations | Create a calibration |
-| [**PostConversationsConversationIdEvaluations**](QualityApi.md#postconversationsconversationidevaluations) | **POST** /api/v2/quality/conversations/{conversationId}/evaluations | Create an evaluation |
-| [**PostEvaluationsAggregatesQuery**](QualityApi.md#postevaluationsaggregatesquery) | **POST** /api/v2/analytics/evaluations/aggregates/query | Query for evaluation aggregates |
-| [**PostEvaluationsScoring**](QualityApi.md#postevaluationsscoring) | **POST** /api/v2/quality/evaluations/scoring | Score evaluation |
-| [**PostForms**](QualityApi.md#postforms) | **POST** /api/v2/quality/forms | Create an evaluation form. |
-| [**PostPublishedforms**](QualityApi.md#postpublishedforms) | **POST** /api/v2/quality/publishedforms | Publish an evaluation form. |
-| [**PutCalibrationsCalibrationId**](QualityApi.md#putcalibrationscalibrationid) | **PUT** /api/v2/quality/calibrations/{calibrationId} | Update a calibration to the specified calibration via PUT.  Editable fields include: evaluators, expertEvaluator, and scoringIndex |
-| [**PutConversationsConversationIdEvaluationsEvaluationId**](QualityApi.md#putconversationsconversationidevaluationsevaluationid) | **PUT** /api/v2/quality/conversations/{conversationId}/evaluations/{evaluationId} | Update an evaluation |
-| [**PutFormsFormId**](QualityApi.md#putformsformid) | **PUT** /api/v2/quality/forms/{formId} | Update an evaluation form. |
+| [**DeleteCalibrationsCalibrationId**](QualityApi.html#deletecalibrationscalibrationid) | **DELETE** /api/v2/quality/calibrations/{calibrationId} | Delete a calibration by id. |
+| [**DeleteConversationsConversationIdEvaluationsEvaluationId**](QualityApi.html#deleteconversationsconversationidevaluationsevaluationid) | **DELETE** /api/v2/quality/conversations/{conversationId}/evaluations/{evaluationId} | Delete an evaluation |
+| [**DeleteFormsFormId**](QualityApi.html#deleteformsformid) | **DELETE** /api/v2/quality/forms/{formId} | Delete an evaluation form. |
+| [**GetAgentsActivity**](QualityApi.html#getagentsactivity) | **GET** /api/v2/quality/agents/activity | Gets a list of Agent Activities |
+| [**GetCalibrations**](QualityApi.html#getcalibrations) | **GET** /api/v2/quality/calibrations | Get the list of calibrations |
+| [**GetCalibrationsCalibrationId**](QualityApi.html#getcalibrationscalibrationid) | **GET** /api/v2/quality/calibrations/{calibrationId} | Get a calibration by id. |
+| [**GetConversationsConversationIdAudits**](QualityApi.html#getconversationsconversationidaudits) | **GET** /api/v2/quality/conversations/{conversationId}/audits | Get audits for conversation or recording |
+| [**GetConversationsConversationIdEvaluationsEvaluationId**](QualityApi.html#getconversationsconversationidevaluationsevaluationid) | **GET** /api/v2/quality/conversations/{conversationId}/evaluations/{evaluationId} | Get an evaluation |
+| [**GetEvaluationsQuery**](QualityApi.html#getevaluationsquery) | **GET** /api/v2/quality/evaluations/query | Queries Evaluations and returns a paged list |
+| [**GetEvaluatorsActivity**](QualityApi.html#getevaluatorsactivity) | **GET** /api/v2/quality/evaluators/activity | Get an evaluator activity |
+| [**GetForms**](QualityApi.html#getforms) | **GET** /api/v2/quality/forms | Get the list of evaluation forms |
+| [**GetFormsFormId**](QualityApi.html#getformsformid) | **GET** /api/v2/quality/forms/{formId} | Get an evaluation form |
+| [**GetFormsFormIdVersions**](QualityApi.html#getformsformidversions) | **GET** /api/v2/quality/forms/{formId}/versions | Gets all the revisions for a specific evaluation. |
+| [**GetPublishedforms**](QualityApi.html#getpublishedforms) | **GET** /api/v2/quality/publishedforms | Get the published evaluation forms. |
+| [**GetPublishedformsFormId**](QualityApi.html#getpublishedformsformid) | **GET** /api/v2/quality/publishedforms/{formId} | Get the published evaluation forms. |
+| [**PostCalibrations**](QualityApi.html#postcalibrations) | **POST** /api/v2/quality/calibrations | Create a calibration |
+| [**PostConversationsConversationIdEvaluations**](QualityApi.html#postconversationsconversationidevaluations) | **POST** /api/v2/quality/conversations/{conversationId}/evaluations | Create an evaluation |
+| [**PostEvaluationsAggregatesQuery**](QualityApi.html#postevaluationsaggregatesquery) | **POST** /api/v2/analytics/evaluations/aggregates/query | Query for evaluation aggregates |
+| [**PostEvaluationsScoring**](QualityApi.html#postevaluationsscoring) | **POST** /api/v2/quality/evaluations/scoring | Score evaluation |
+| [**PostForms**](QualityApi.html#postforms) | **POST** /api/v2/quality/forms | Create an evaluation form. |
+| [**PostPublishedforms**](QualityApi.html#postpublishedforms) | **POST** /api/v2/quality/publishedforms | Publish an evaluation form. |
+| [**PutCalibrationsCalibrationId**](QualityApi.html#putcalibrationscalibrationid) | **PUT** /api/v2/quality/calibrations/{calibrationId} | Update a calibration to the specified calibration via PUT.  Editable fields include: evaluators, expertEvaluator, and scoringIndex |
+| [**PutConversationsConversationIdEvaluationsEvaluationId**](QualityApi.html#putconversationsconversationidevaluationsevaluationid) | **PUT** /api/v2/quality/conversations/{conversationId}/evaluations/{evaluationId} | Update an evaluation |
+| [**PutFormsFormId**](QualityApi.html#putformsformid) | **PUT** /api/v2/quality/forms/{formId} | Update an evaluation form. |
 {: class="table table-striped"}
 
-<a name="DeleteCalibrationsCalibrationId"></a>
+<a name="deletecalibrationscalibrationid"></a>
+
 ## [**Calibration**](Calibration.html) DeleteCalibrationsCalibrationId (string calibrationId, string calibratorId)
 
 Delete a calibration by id.
@@ -85,9 +89,10 @@ namespace Example
 
 ### Return type
 
-[**Calibration**](Calibration.md)
+[**Calibration**](Calibration.html)
 
-<a name="DeleteConversationsConversationIdEvaluationsEvaluationId"></a>
+<a name="deleteconversationsconversationidevaluationsevaluationid"></a>
+
 ## [**Evaluation**](Evaluation.html) DeleteConversationsConversationIdEvaluationsEvaluationId (string conversationId, string evaluationId, string expand = null)
 
 Delete an evaluation
@@ -144,9 +149,10 @@ namespace Example
 
 ### Return type
 
-[**Evaluation**](Evaluation.md)
+[**Evaluation**](Evaluation.html)
 
-<a name="DeleteFormsFormId"></a>
+<a name="deleteformsformid"></a>
+
 ## string** DeleteFormsFormId (string formId)
 
 Delete an evaluation form.
@@ -201,7 +207,8 @@ namespace Example
 
 **string**
 
-<a name="GetAgentsActivity"></a>
+<a name="getagentsactivity"></a>
+
 ## [**AgentActivityEntityListing**](AgentActivityEntityListing.html) GetAgentsActivity (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null)
 
 Gets a list of Agent Activities
@@ -263,12 +270,12 @@ namespace Example
 | **pageSize** | **int?**| The total page size requested | [optional] [default to 25] |
 | **pageNumber** | **int?**| The page number requested | [optional] [default to 1] |
 | **sortBy** | **string**| variable name requested to sort by | [optional]  |
-| **expand** | [**List<string>**](string.md)| variable name requested by expand list | [optional]  |
+| **expand** | [**List<string>**](string.html)| variable name requested by expand list | [optional]  |
 | **nextPage** | **string**| next page token | [optional]  |
 | **previousPage** | **string**| Previous page token | [optional]  |
 | **startTime** | **DateTime?**| Start time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional]  |
 | **endTime** | **DateTime?**| End time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional]  |
-| **agentUserId** | [**List<string>**](string.md)| user id of agent requested | [optional]  |
+| **agentUserId** | [**List<string>**](string.html)| user id of agent requested | [optional]  |
 | **evaluatorUserId** | **string**| user id of the evaluator | [optional]  |
 | **name** | **string**| name | [optional]  |
 | **group** | **string**| group id | [optional]  |
@@ -276,9 +283,10 @@ namespace Example
 
 ### Return type
 
-[**AgentActivityEntityListing**](AgentActivityEntityListing.md)
+[**AgentActivityEntityListing**](AgentActivityEntityListing.html)
 
-<a name="GetCalibrations"></a>
+<a name="getcalibrations"></a>
+
 ## [**CalibrationEntityListing**](CalibrationEntityListing.html) GetCalibrations (string calibratorId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, DateTime? startTime = null, DateTime? endTime = null)
 
 Get the list of calibrations
@@ -339,7 +347,7 @@ namespace Example
 | **pageSize** | **int?**| The total page size requested | [optional] [default to 25] |
 | **pageNumber** | **int?**| The page number requested | [optional] [default to 1] |
 | **sortBy** | **string**| variable name requested to sort by | [optional]  |
-| **expand** | [**List<string>**](string.md)| variable name requested by expand list | [optional]  |
+| **expand** | [**List<string>**](string.html)| variable name requested by expand list | [optional]  |
 | **nextPage** | **string**| next page token | [optional]  |
 | **previousPage** | **string**| Previous page token | [optional]  |
 | **conversationId** | **string**| conversation id | [optional]  |
@@ -349,9 +357,10 @@ namespace Example
 
 ### Return type
 
-[**CalibrationEntityListing**](CalibrationEntityListing.md)
+[**CalibrationEntityListing**](CalibrationEntityListing.html)
 
-<a name="GetCalibrationsCalibrationId"></a>
+<a name="getcalibrationscalibrationid"></a>
+
 ## [**Calibration**](Calibration.html) GetCalibrationsCalibrationId (string calibrationId, string calibratorId)
 
 Get a calibration by id.
@@ -406,9 +415,10 @@ namespace Example
 
 ### Return type
 
-[**Calibration**](Calibration.md)
+[**Calibration**](Calibration.html)
 
-<a name="GetConversationsConversationIdAudits"></a>
+<a name="getconversationsconversationidaudits"></a>
+
 ## [**QualityAuditPage**](QualityAuditPage.html) GetConversationsConversationIdAudits (string conversationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string recordingId = null, string entityType = null)
 
 Get audits for conversation or recording
@@ -468,7 +478,7 @@ namespace Example
 | **pageSize** | **int?**| The total page size requested | [optional] [default to 25] |
 | **pageNumber** | **int?**| The page number requested | [optional] [default to 1] |
 | **sortBy** | **string**| variable name requested to sort by | [optional]  |
-| **expand** | [**List<string>**](string.md)| variable name requested by expand list | [optional]  |
+| **expand** | [**List<string>**](string.html)| variable name requested by expand list | [optional]  |
 | **nextPage** | **string**| next page token | [optional]  |
 | **previousPage** | **string**| Previous page token | [optional]  |
 | **recordingId** | **string**| id of the recording | [optional]  |
@@ -477,9 +487,10 @@ namespace Example
 
 ### Return type
 
-[**QualityAuditPage**](QualityAuditPage.md)
+[**QualityAuditPage**](QualityAuditPage.html)
 
-<a name="GetConversationsConversationIdEvaluationsEvaluationId"></a>
+<a name="getconversationsconversationidevaluationsevaluationid"></a>
+
 ## [**Evaluation**](Evaluation.html) GetConversationsConversationIdEvaluationsEvaluationId (string conversationId, string evaluationId, string expand = null)
 
 Get an evaluation
@@ -536,9 +547,10 @@ namespace Example
 
 ### Return type
 
-[**Evaluation**](Evaluation.md)
+[**Evaluation**](Evaluation.html)
 
-<a name="GetEvaluationsQuery"></a>
+<a name="getevaluationsquery"></a>
+
 ## [**EvaluationEntityListing**](EvaluationEntityListing.html) GetEvaluationsQuery (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string queueId = null, string startTime = null, string endTime = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null)
 
 Queries Evaluations and returns a paged list
@@ -605,7 +617,7 @@ namespace Example
 | **pageSize** | **int?**| The total page size requested | [optional] [default to 25] |
 | **pageNumber** | **int?**| The page number requested | [optional] [default to 1] |
 | **sortBy** | **string**| variable name requested to sort by | [optional]  |
-| **expand** | [**List<string>**](string.md)| variable name requested by expand list | [optional]  |
+| **expand** | [**List<string>**](string.html)| variable name requested by expand list | [optional]  |
 | **nextPage** | **string**| next page token | [optional]  |
 | **previousPage** | **string**| Previous page token | [optional]  |
 | **conversationId** | **string**| conversationId specified | [optional]  |
@@ -614,7 +626,7 @@ namespace Example
 | **queueId** | **string**| queue id | [optional]  |
 | **startTime** | **string**| start time of the evaluation query | [optional]  |
 | **endTime** | **string**| end time of the evaluation query | [optional]  |
-| **evaluationState** | [**List<string>**](string.md)| evaluation state options: Pending, InProgress, Finished | [optional]  |
+| **evaluationState** | [**List<string>**](string.html)| evaluation state options: Pending, InProgress, Finished | [optional]  |
 | **isReleased** | **bool?**| the evaluation has been released | [optional]  |
 | **agentHasRead** | **bool?**| agent has the evaluation | [optional]  |
 | **expandAnswerTotalScores** | **bool?**| get the total scores for evaluations | [optional]  |
@@ -623,9 +635,10 @@ namespace Example
 
 ### Return type
 
-[**EvaluationEntityListing**](EvaluationEntityListing.md)
+[**EvaluationEntityListing**](EvaluationEntityListing.html)
 
-<a name="GetEvaluatorsActivity"></a>
+<a name="getevaluatorsactivity"></a>
+
 ## [**EvaluatorActivityEntityListing**](EvaluatorActivityEntityListing.html) GetEvaluatorsActivity (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<string> permission = null, string group = null)
 
 Get an evaluator activity
@@ -686,21 +699,22 @@ namespace Example
 | **pageSize** | **int?**| The total page size requested | [optional] [default to 25] |
 | **pageNumber** | **int?**| The page number requested | [optional] [default to 1] |
 | **sortBy** | **string**| variable name requested to sort by | [optional]  |
-| **expand** | [**List<string>**](string.md)| variable name requested by expand list | [optional]  |
+| **expand** | [**List<string>**](string.html)| variable name requested by expand list | [optional]  |
 | **nextPage** | **string**| next page token | [optional]  |
 | **previousPage** | **string**| Previous page token | [optional]  |
 | **startTime** | **DateTime?**| The start time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional]  |
 | **endTime** | **DateTime?**| The end time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional]  |
 | **name** | **string**| Evaluator name | [optional]  |
-| **permission** | [**List<string>**](string.md)| permission strings | [optional]  |
+| **permission** | [**List<string>**](string.html)| permission strings | [optional]  |
 | **group** | **string**| group id | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**EvaluatorActivityEntityListing**](EvaluatorActivityEntityListing.md)
+[**EvaluatorActivityEntityListing**](EvaluatorActivityEntityListing.html)
 
-<a name="GetForms"></a>
+<a name="getforms"></a>
+
 ## [**EvaluationFormEntityListing**](EvaluationFormEntityListing.html) GetForms (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null)
 
 Get the list of evaluation forms
@@ -765,9 +779,10 @@ namespace Example
 
 ### Return type
 
-[**EvaluationFormEntityListing**](EvaluationFormEntityListing.md)
+[**EvaluationFormEntityListing**](EvaluationFormEntityListing.html)
 
-<a name="GetFormsFormId"></a>
+<a name="getformsformid"></a>
+
 ## [**EvaluationForm**](EvaluationForm.html) GetFormsFormId (string formId)
 
 Get an evaluation form
@@ -820,9 +835,10 @@ namespace Example
 
 ### Return type
 
-[**EvaluationForm**](EvaluationForm.md)
+[**EvaluationForm**](EvaluationForm.html)
 
-<a name="GetFormsFormIdVersions"></a>
+<a name="getformsformidversions"></a>
+
 ## [**EvaluationFormEntityListing**](EvaluationFormEntityListing.html) GetFormsFormIdVersions (string formId, int? pageSize = null, int? pageNumber = null)
 
 Gets all the revisions for a specific evaluation.
@@ -879,9 +895,10 @@ namespace Example
 
 ### Return type
 
-[**EvaluationFormEntityListing**](EvaluationFormEntityListing.md)
+[**EvaluationFormEntityListing**](EvaluationFormEntityListing.html)
 
-<a name="GetPublishedforms"></a>
+<a name="getpublishedforms"></a>
+
 ## [**EvaluationFormEntityListing**](EvaluationFormEntityListing.html) GetPublishedforms (int? pageSize = null, int? pageNumber = null, string name = null)
 
 Get the published evaluation forms.
@@ -938,9 +955,10 @@ namespace Example
 
 ### Return type
 
-[**EvaluationFormEntityListing**](EvaluationFormEntityListing.md)
+[**EvaluationFormEntityListing**](EvaluationFormEntityListing.html)
 
-<a name="GetPublishedformsFormId"></a>
+<a name="getpublishedformsformid"></a>
+
 ## [**EvaluationForm**](EvaluationForm.html) GetPublishedformsFormId (string formId)
 
 Get the published evaluation forms.
@@ -993,9 +1011,10 @@ namespace Example
 
 ### Return type
 
-[**EvaluationForm**](EvaluationForm.md)
+[**EvaluationForm**](EvaluationForm.html)
 
-<a name="PostCalibrations"></a>
+<a name="postcalibrations"></a>
+
 ## [**Calibration**](Calibration.html) PostCalibrations (Calibration body = null, string expand = null)
 
 Create a calibration
@@ -1044,15 +1063,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**Calibration**](Calibration.md)| calibration | [optional]  |
+| **body** | [**Calibration**](Calibration.html)| calibration | [optional]  |
 | **expand** | **string**| calibratorId | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**Calibration**](Calibration.md)
+[**Calibration**](Calibration.html)
 
-<a name="PostConversationsConversationIdEvaluations"></a>
+<a name="postconversationsconversationidevaluations"></a>
+
 ## [**Evaluation**](Evaluation.html) PostConversationsConversationIdEvaluations (string conversationId, Evaluation body = null, string expand = null)
 
 Create an evaluation
@@ -1103,15 +1123,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**|  |  |
-| **body** | [**Evaluation**](Evaluation.md)| evaluation | [optional]  |
+| **body** | [**Evaluation**](Evaluation.html)| evaluation | [optional]  |
 | **expand** | **string**| evaluatorId | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**Evaluation**](Evaluation.md)
+[**Evaluation**](Evaluation.html)
 
-<a name="PostEvaluationsAggregatesQuery"></a>
+<a name="postevaluationsaggregatesquery"></a>
+
 ## [**AggregateQueryResponse**](AggregateQueryResponse.html) PostEvaluationsAggregatesQuery (AggregationQuery body = null)
 
 Query for evaluation aggregates
@@ -1159,14 +1180,15 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**AggregationQuery**](AggregationQuery.md)| query | [optional]  |
+| **body** | [**AggregationQuery**](AggregationQuery.html)| query | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**AggregateQueryResponse**](AggregateQueryResponse.md)
+[**AggregateQueryResponse**](AggregateQueryResponse.html)
 
-<a name="PostEvaluationsScoring"></a>
+<a name="postevaluationsscoring"></a>
+
 ## [**EvaluationScoringSet**](EvaluationScoringSet.html) PostEvaluationsScoring (EvaluationFormAndScoringSet body = null)
 
 Score evaluation
@@ -1214,14 +1236,15 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**EvaluationFormAndScoringSet**](EvaluationFormAndScoringSet.md)| evaluationAndScoringSet | [optional]  |
+| **body** | [**EvaluationFormAndScoringSet**](EvaluationFormAndScoringSet.html)| evaluationAndScoringSet | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**EvaluationScoringSet**](EvaluationScoringSet.md)
+[**EvaluationScoringSet**](EvaluationScoringSet.html)
 
-<a name="PostForms"></a>
+<a name="postforms"></a>
+
 ## [**EvaluationForm**](EvaluationForm.html) PostForms (EvaluationForm body = null)
 
 Create an evaluation form.
@@ -1269,14 +1292,15 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**EvaluationForm**](EvaluationForm.md)|  | [optional]  |
+| **body** | [**EvaluationForm**](EvaluationForm.html)|  | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**EvaluationForm**](EvaluationForm.md)
+[**EvaluationForm**](EvaluationForm.html)
 
-<a name="PostPublishedforms"></a>
+<a name="postpublishedforms"></a>
+
 ## [**EvaluationForm**](EvaluationForm.html) PostPublishedforms (EvaluationForm body = null)
 
 Publish an evaluation form.
@@ -1324,14 +1348,15 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**EvaluationForm**](EvaluationForm.md)|  | [optional]  |
+| **body** | [**EvaluationForm**](EvaluationForm.html)|  | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**EvaluationForm**](EvaluationForm.md)
+[**EvaluationForm**](EvaluationForm.html)
 
-<a name="PutCalibrationsCalibrationId"></a>
+<a name="putcalibrationscalibrationid"></a>
+
 ## [**Calibration**](Calibration.html) PutCalibrationsCalibrationId (string calibrationId, Calibration body = null)
 
 Update a calibration to the specified calibration via PUT.  Editable fields include: evaluators, expertEvaluator, and scoringIndex
@@ -1381,14 +1406,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **calibrationId** | **string**| Calibration ID |  |
-| **body** | [**Calibration**](Calibration.md)| Calibration | [optional]  |
+| **body** | [**Calibration**](Calibration.html)| Calibration | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**Calibration**](Calibration.md)
+[**Calibration**](Calibration.html)
 
-<a name="PutConversationsConversationIdEvaluationsEvaluationId"></a>
+<a name="putconversationsconversationidevaluationsevaluationid"></a>
+
 ## [**Evaluation**](Evaluation.html) PutConversationsConversationIdEvaluationsEvaluationId (string conversationId, string evaluationId, Evaluation body = null, string expand = null)
 
 Update an evaluation
@@ -1441,15 +1467,16 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**|  |  |
 | **evaluationId** | **string**|  |  |
-| **body** | [**Evaluation**](Evaluation.md)| evaluation | [optional]  |
+| **body** | [**Evaluation**](Evaluation.html)| evaluation | [optional]  |
 | **expand** | **string**| evaluatorId | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**Evaluation**](Evaluation.md)
+[**Evaluation**](Evaluation.html)
 
-<a name="PutFormsFormId"></a>
+<a name="putformsformid"></a>
+
 ## [**EvaluationForm**](EvaluationForm.html) PutFormsFormId (string formId, EvaluationForm body = null)
 
 Update an evaluation form.
@@ -1499,10 +1526,10 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **formId** | **string**| Form ID |  |
-| **body** | [**EvaluationForm**](EvaluationForm.md)|  | [optional]  |
+| **body** | [**EvaluationForm**](EvaluationForm.html)|  | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**EvaluationForm**](EvaluationForm.md)
+[**EvaluationForm**](EvaluationForm.html)
 

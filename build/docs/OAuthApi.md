@@ -1,34 +1,38 @@
-# ININ.PureCloudApi.Api.OAuthApi
+---
+title: OAuthApi
+---
+## ININ.PureCloudApi.Api.OAuthApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteClientsClientId**](OAuthApi.md#deleteclientsclientid) | **DELETE** /api/v2/oauth/clients/{clientId} | Delete OAuth Client |
-| [**DeleteOkta**](OAuthApi.md#deleteokta) | **DELETE** /api/v2/identityproviders/okta | Delete Okta Identity Provider |
-| [**DeleteOnelogin**](OAuthApi.md#deleteonelogin) | **DELETE** /api/v2/identityproviders/onelogin | Delete OneLogin Identity Provider |
-| [**DeleteProviderId**](OAuthApi.md#deleteproviderid) | **DELETE** /api/v2/identityproviders/{providerId} | Delete an identity provider |
-| [**DeletePurecloud**](OAuthApi.md#deletepurecloud) | **DELETE** /api/v2/identityproviders/purecloud | Delete PureCloud Identity Provider |
-| [**DeleteSalesforce**](OAuthApi.md#deletesalesforce) | **DELETE** /api/v2/identityproviders/salesforce | Delete Salesforce Identity Provider |
-| [**GetClients**](OAuthApi.md#getclients) | **GET** /api/v2/oauth/clients | The list of OAuth clients |
-| [**GetClientsClientId**](OAuthApi.md#getclientsclientid) | **GET** /api/v2/oauth/clients/{clientId} | Get OAuth Client |
-| [**GetIdentityproviders**](OAuthApi.md#getidentityproviders) | **GET** /api/v2/identityproviders | The list of identity providers |
-| [**GetOkta**](OAuthApi.md#getokta) | **GET** /api/v2/identityproviders/okta | Get Okta Identity Provider |
-| [**GetOnelogin**](OAuthApi.md#getonelogin) | **GET** /api/v2/identityproviders/onelogin | Get OneLogin Identity Provider |
-| [**GetProviderId**](OAuthApi.md#getproviderid) | **GET** /api/v2/identityproviders/{providerId} | Get an identity provider |
-| [**GetPurecloud**](OAuthApi.md#getpurecloud) | **GET** /api/v2/identityproviders/purecloud | Get PureCloud Identity Provider |
-| [**GetSalesforce**](OAuthApi.md#getsalesforce) | **GET** /api/v2/identityproviders/salesforce | Get Salesforce Identity Provider |
-| [**PostClients**](OAuthApi.md#postclients) | **POST** /api/v2/oauth/clients | Create OAuth client |
-| [**PostClientsClientIdSecret**](OAuthApi.md#postclientsclientidsecret) | **POST** /api/v2/oauth/clients/{clientId}/secret | Regenerate Client Secret |
-| [**PutClientsClientId**](OAuthApi.md#putclientsclientid) | **PUT** /api/v2/oauth/clients/{clientId} | Update OAuth Client |
-| [**PutOkta**](OAuthApi.md#putokta) | **PUT** /api/v2/identityproviders/okta | Update/Create Okta Identity Provider |
-| [**PutOnelogin**](OAuthApi.md#putonelogin) | **PUT** /api/v2/identityproviders/onelogin | Update/Create OneLogin Identity Provider |
-| [**PutProviderId**](OAuthApi.md#putproviderid) | **PUT** /api/v2/identityproviders/{providerId} | Update an identity provider |
-| [**PutPurecloud**](OAuthApi.md#putpurecloud) | **PUT** /api/v2/identityproviders/purecloud | Update/Create PureCloud Identity Provider |
-| [**PutSalesforce**](OAuthApi.md#putsalesforce) | **PUT** /api/v2/identityproviders/salesforce | Update/Create Salesforce Identity Provider |
+| [**DeleteClientsClientId**](OAuthApi.html#deleteclientsclientid) | **DELETE** /api/v2/oauth/clients/{clientId} | Delete OAuth Client |
+| [**DeleteOkta**](OAuthApi.html#deleteokta) | **DELETE** /api/v2/identityproviders/okta | Delete Okta Identity Provider |
+| [**DeleteOnelogin**](OAuthApi.html#deleteonelogin) | **DELETE** /api/v2/identityproviders/onelogin | Delete OneLogin Identity Provider |
+| [**DeleteProviderId**](OAuthApi.html#deleteproviderid) | **DELETE** /api/v2/identityproviders/{providerId} | Delete an identity provider |
+| [**DeletePurecloud**](OAuthApi.html#deletepurecloud) | **DELETE** /api/v2/identityproviders/purecloud | Delete PureCloud Identity Provider |
+| [**DeleteSalesforce**](OAuthApi.html#deletesalesforce) | **DELETE** /api/v2/identityproviders/salesforce | Delete Salesforce Identity Provider |
+| [**GetClients**](OAuthApi.html#getclients) | **GET** /api/v2/oauth/clients | The list of OAuth clients |
+| [**GetClientsClientId**](OAuthApi.html#getclientsclientid) | **GET** /api/v2/oauth/clients/{clientId} | Get OAuth Client |
+| [**GetIdentityproviders**](OAuthApi.html#getidentityproviders) | **GET** /api/v2/identityproviders | The list of identity providers |
+| [**GetOkta**](OAuthApi.html#getokta) | **GET** /api/v2/identityproviders/okta | Get Okta Identity Provider |
+| [**GetOnelogin**](OAuthApi.html#getonelogin) | **GET** /api/v2/identityproviders/onelogin | Get OneLogin Identity Provider |
+| [**GetProviderId**](OAuthApi.html#getproviderid) | **GET** /api/v2/identityproviders/{providerId} | Get an identity provider |
+| [**GetPurecloud**](OAuthApi.html#getpurecloud) | **GET** /api/v2/identityproviders/purecloud | Get PureCloud Identity Provider |
+| [**GetSalesforce**](OAuthApi.html#getsalesforce) | **GET** /api/v2/identityproviders/salesforce | Get Salesforce Identity Provider |
+| [**PostClients**](OAuthApi.html#postclients) | **POST** /api/v2/oauth/clients | Create OAuth client |
+| [**PostClientsClientIdSecret**](OAuthApi.html#postclientsclientidsecret) | **POST** /api/v2/oauth/clients/{clientId}/secret | Regenerate Client Secret |
+| [**PutClientsClientId**](OAuthApi.html#putclientsclientid) | **PUT** /api/v2/oauth/clients/{clientId} | Update OAuth Client |
+| [**PutOkta**](OAuthApi.html#putokta) | **PUT** /api/v2/identityproviders/okta | Update/Create Okta Identity Provider |
+| [**PutOnelogin**](OAuthApi.html#putonelogin) | **PUT** /api/v2/identityproviders/onelogin | Update/Create OneLogin Identity Provider |
+| [**PutProviderId**](OAuthApi.html#putproviderid) | **PUT** /api/v2/identityproviders/{providerId} | Update an identity provider |
+| [**PutPurecloud**](OAuthApi.html#putpurecloud) | **PUT** /api/v2/identityproviders/purecloud | Update/Create PureCloud Identity Provider |
+| [**PutSalesforce**](OAuthApi.html#putsalesforce) | **PUT** /api/v2/identityproviders/salesforce | Update/Create Salesforce Identity Provider |
 {: class="table table-striped"}
 
-<a name="DeleteClientsClientId"></a>
+<a name="deleteclientsclientid"></a>
+
 ## void DeleteClientsClientId (string clientId)
 
 Delete OAuth Client
@@ -82,7 +86,8 @@ namespace Example
 
 void (empty response body)
 
-<a name="DeleteOkta"></a>
+<a name="deleteokta"></a>
+
 ## void DeleteOkta ()
 
 Delete Okta Identity Provider
@@ -131,7 +136,8 @@ This endpoint does require any parameters.
 
 void (empty response body)
 
-<a name="DeleteOnelogin"></a>
+<a name="deleteonelogin"></a>
+
 ## void DeleteOnelogin ()
 
 Delete OneLogin Identity Provider
@@ -180,7 +186,8 @@ This endpoint does require any parameters.
 
 void (empty response body)
 
-<a name="DeleteProviderId"></a>
+<a name="deleteproviderid"></a>
+
 ## void DeleteProviderId ()
 
 Delete an identity provider
@@ -229,7 +236,8 @@ This endpoint does require any parameters.
 
 void (empty response body)
 
-<a name="DeletePurecloud"></a>
+<a name="deletepurecloud"></a>
+
 ## void DeletePurecloud ()
 
 Delete PureCloud Identity Provider
@@ -278,7 +286,8 @@ This endpoint does require any parameters.
 
 void (empty response body)
 
-<a name="DeleteSalesforce"></a>
+<a name="deletesalesforce"></a>
+
 ## void DeleteSalesforce ()
 
 Delete Salesforce Identity Provider
@@ -327,7 +336,8 @@ This endpoint does require any parameters.
 
 void (empty response body)
 
-<a name="GetClients"></a>
+<a name="getclients"></a>
+
 ## [**OAuthClientEntityListing**](OAuthClientEntityListing.html) GetClients ()
 
 The list of OAuth clients
@@ -375,9 +385,10 @@ This endpoint does require any parameters.
 
 ### Return type
 
-[**OAuthClientEntityListing**](OAuthClientEntityListing.md)
+[**OAuthClientEntityListing**](OAuthClientEntityListing.html)
 
-<a name="GetClientsClientId"></a>
+<a name="getclientsclientid"></a>
+
 ## [**OAuthClient**](OAuthClient.html) GetClientsClientId (string clientId)
 
 Get OAuth Client
@@ -430,9 +441,10 @@ namespace Example
 
 ### Return type
 
-[**OAuthClient**](OAuthClient.md)
+[**OAuthClient**](OAuthClient.html)
 
-<a name="GetIdentityproviders"></a>
+<a name="getidentityproviders"></a>
+
 ## [**OAuthProviderEntityListing**](OAuthProviderEntityListing.html) GetIdentityproviders ()
 
 The list of identity providers
@@ -480,9 +492,10 @@ This endpoint does require any parameters.
 
 ### Return type
 
-[**OAuthProviderEntityListing**](OAuthProviderEntityListing.md)
+[**OAuthProviderEntityListing**](OAuthProviderEntityListing.html)
 
-<a name="GetOkta"></a>
+<a name="getokta"></a>
+
 ## [**Okta**](Okta.html) GetOkta ()
 
 Get Okta Identity Provider
@@ -530,9 +543,10 @@ This endpoint does require any parameters.
 
 ### Return type
 
-[**Okta**](Okta.md)
+[**Okta**](Okta.html)
 
-<a name="GetOnelogin"></a>
+<a name="getonelogin"></a>
+
 ## [**OneLogin**](OneLogin.html) GetOnelogin ()
 
 Get OneLogin Identity Provider
@@ -580,9 +594,10 @@ This endpoint does require any parameters.
 
 ### Return type
 
-[**OneLogin**](OneLogin.md)
+[**OneLogin**](OneLogin.html)
 
-<a name="GetProviderId"></a>
+<a name="getproviderid"></a>
+
 ## [**OAuthProvider**](OAuthProvider.html) GetProviderId ()
 
 Get an identity provider
@@ -630,9 +645,10 @@ This endpoint does require any parameters.
 
 ### Return type
 
-[**OAuthProvider**](OAuthProvider.md)
+[**OAuthProvider**](OAuthProvider.html)
 
-<a name="GetPurecloud"></a>
+<a name="getpurecloud"></a>
+
 ## [**PureCloud**](PureCloud.html) GetPurecloud ()
 
 Get PureCloud Identity Provider
@@ -680,9 +696,10 @@ This endpoint does require any parameters.
 
 ### Return type
 
-[**PureCloud**](PureCloud.md)
+[**PureCloud**](PureCloud.html)
 
-<a name="GetSalesforce"></a>
+<a name="getsalesforce"></a>
+
 ## [**Salesforce**](Salesforce.html) GetSalesforce ()
 
 Get Salesforce Identity Provider
@@ -730,9 +747,10 @@ This endpoint does require any parameters.
 
 ### Return type
 
-[**Salesforce**](Salesforce.md)
+[**Salesforce**](Salesforce.html)
 
-<a name="PostClients"></a>
+<a name="postclients"></a>
+
 ## [**OAuthClient**](OAuthClient.html) PostClients (OAuthClient body = null)
 
 Create OAuth client
@@ -780,14 +798,15 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**OAuthClient**](OAuthClient.md)| Client | [optional]  |
+| **body** | [**OAuthClient**](OAuthClient.html)| Client | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**OAuthClient**](OAuthClient.md)
+[**OAuthClient**](OAuthClient.html)
 
-<a name="PostClientsClientIdSecret"></a>
+<a name="postclientsclientidsecret"></a>
+
 ## void PostClientsClientIdSecret (string clientId)
 
 Regenerate Client Secret
@@ -841,7 +860,8 @@ namespace Example
 
 void (empty response body)
 
-<a name="PutClientsClientId"></a>
+<a name="putclientsclientid"></a>
+
 ## [**OAuthClient**](OAuthClient.html) PutClientsClientId (string clientId, OAuthClient body = null)
 
 Update OAuth Client
@@ -891,14 +911,15 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **clientId** | **string**| Client ID |  |
-| **body** | [**OAuthClient**](OAuthClient.md)| Client | [optional]  |
+| **body** | [**OAuthClient**](OAuthClient.html)| Client | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**OAuthClient**](OAuthClient.md)
+[**OAuthClient**](OAuthClient.html)
 
-<a name="PutOkta"></a>
+<a name="putokta"></a>
+
 ## void PutOkta (Okta body = null)
 
 Update/Create Okta Identity Provider
@@ -945,14 +966,15 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**Okta**](Okta.md)| Provider | [optional]  |
+| **body** | [**Okta**](Okta.html)| Provider | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
 void (empty response body)
 
-<a name="PutOnelogin"></a>
+<a name="putonelogin"></a>
+
 ## void PutOnelogin (OneLogin body = null)
 
 Update/Create OneLogin Identity Provider
@@ -999,14 +1021,15 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**OneLogin**](OneLogin.md)| Provider | [optional]  |
+| **body** | [**OneLogin**](OneLogin.html)| Provider | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
 void (empty response body)
 
-<a name="PutProviderId"></a>
+<a name="putproviderid"></a>
+
 ## void PutProviderId (OAuthProvider body = null)
 
 Update an identity provider
@@ -1053,14 +1076,15 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**OAuthProvider**](OAuthProvider.md)| Provider | [optional]  |
+| **body** | [**OAuthProvider**](OAuthProvider.html)| Provider | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
 void (empty response body)
 
-<a name="PutPurecloud"></a>
+<a name="putpurecloud"></a>
+
 ## void PutPurecloud (PureCloud body = null)
 
 Update/Create PureCloud Identity Provider
@@ -1107,14 +1131,15 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**PureCloud**](PureCloud.md)| Provider | [optional]  |
+| **body** | [**PureCloud**](PureCloud.html)| Provider | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
 void (empty response body)
 
-<a name="PutSalesforce"></a>
+<a name="putsalesforce"></a>
+
 ## void PutSalesforce (Salesforce body = null)
 
 Update/Create Salesforce Identity Provider
@@ -1161,7 +1186,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**Salesforce**](Salesforce.md)| Provider | [optional]  |
+| **body** | [**Salesforce**](Salesforce.html)| Provider | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
