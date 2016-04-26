@@ -1,4 +1,6 @@
-## PureCloud API SDK - C&#35;
+---
+title: PureCloud API SDK - C&#35;
+---
 
 [![NuGet Badge](https://buildstats.info/nuget/PureCloudApiSdk)](https://www.nuget.org/packages/PureCloudApiSdk/)
 
