@@ -156,7 +156,7 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <value>Required when updating. Version must be the current version. Only the system can assign version.</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
-        public string Version { get; private set; }
+        public int? Version { get; private set; }
     
         /// <summary>
         /// ACD routing status

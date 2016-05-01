@@ -8,11 +8,15 @@ All URIs are relative to *https://api.mypurecloud.com*
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**GetSearch**](SearchApi.html#getsearch) | **GET** /api/v2/groups/search | Search using q64 |
-| [**GetSearch_0**](SearchApi.html#getsearch_0) | **GET** /api/v2/search | Search using q64 |
-| [**GetSearch_1**](SearchApi.html#getsearch_1) | **GET** /api/v2/users/search | Search using q64 |
+| [**GetSearch_0**](SearchApi.html#getsearch_0) | **GET** /api/v2/locations/search | Search using q64 |
+| [**GetSearch_1**](SearchApi.html#getsearch_1) | **GET** /api/v2/search | Search using q64 |
+| [**GetSearch_2**](SearchApi.html#getsearch_2) | **GET** /api/v2/users/search | Search using q64 |
+| [**GetSuggest**](SearchApi.html#getsuggest) | **GET** /api/v2/search/suggest | Suggest using q64 |
 | [**PostSearch**](SearchApi.html#postsearch) | **POST** /api/v2/groups/search | Search |
-| [**PostSearch_0**](SearchApi.html#postsearch_0) | **POST** /api/v2/search | Search |
-| [**PostSearch_1**](SearchApi.html#postsearch_1) | **POST** /api/v2/users/search | Search |
+| [**PostSearch_0**](SearchApi.html#postsearch_0) | **POST** /api/v2/locations/search | Search |
+| [**PostSearch_1**](SearchApi.html#postsearch_1) | **POST** /api/v2/search | Search |
+| [**PostSearch_2**](SearchApi.html#postsearch_2) | **POST** /api/v2/users/search | Search |
+| [**PostSuggest**](SearchApi.html#postsuggest) | **POST** /api/v2/search/suggest | Suggest |
 {: class="table table-striped"}
 
 <a name="getsearch"></a>
@@ -75,7 +79,7 @@ namespace Example
 
 <a name="getsearch_0"></a>
 
-## [**JsonNodeSearchResponse**](JsonNodeSearchResponse.html) GetSearch_0 (string q64 = null, List<string> expand = null)
+## [**GroupsSearchResponse**](GroupsSearchResponse.html) GetSearch_0 (string q64 = null, List<string> expand = null)
 
 Search using q64
 
@@ -106,7 +110,7 @@ namespace Example
             try
             {
                 // Search using q64
-                JsonNodeSearchResponse result = apiInstance.GetSearch_0(q64, expand);
+                GroupsSearchResponse result = apiInstance.GetSearch_0(q64, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -129,11 +133,11 @@ namespace Example
 
 ### Return type
 
-[**JsonNodeSearchResponse**](JsonNodeSearchResponse.html)
+[**GroupsSearchResponse**](GroupsSearchResponse.html)
 
 <a name="getsearch_1"></a>
 
-## [**UsersSearchResponse**](UsersSearchResponse.html) GetSearch_1 (string q64 = null, List<string> expand = null)
+## [**JsonNodeSearchResponse**](JsonNodeSearchResponse.html) GetSearch_1 (string q64 = null, List<string> expand = null, bool? profile = null)
 
 Search using q64
 
@@ -160,11 +164,12 @@ namespace Example
             var apiInstance = new SearchApi();
             var q64 = q64_example;  // string |  (optional) 
             var expand = new List<string>(); // List<string> |  (optional) 
+            var profile = true;  // bool? |  (optional)  (default to true)
 
             try
             {
                 // Search using q64
-                UsersSearchResponse result = apiInstance.GetSearch_1(q64, expand);
+                JsonNodeSearchResponse result = apiInstance.GetSearch_1(q64, expand, profile);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -183,11 +188,128 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **q64** | **string**|  | [optional]  |
 | **expand** | [**List<string>**](string.html)|  | [optional]  |
+| **profile** | **bool?**|  | [optional] [default to true] |
+{: class="table table-striped"}
+
+### Return type
+
+[**JsonNodeSearchResponse**](JsonNodeSearchResponse.html)
+
+<a name="getsearch_2"></a>
+
+## [**UsersSearchResponse**](UsersSearchResponse.html) GetSearch_2 (string q64 = null, List<string> expand = null)
+
+Search using q64
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetSearch_2Example
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new SearchApi();
+            var q64 = q64_example;  // string |  (optional) 
+            var expand = new List<string>(); // List<string> |  (optional) 
+
+            try
+            {
+                // Search using q64
+                UsersSearchResponse result = apiInstance.GetSearch_2(q64, expand);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SearchApi.GetSearch_2: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **q64** | **string**|  | [optional]  |
+| **expand** | [**List<string>**](string.html)|  | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
 [**UsersSearchResponse**](UsersSearchResponse.html)
+
+<a name="getsuggest"></a>
+
+## [**JsonNodeSearchResponse**](JsonNodeSearchResponse.html) GetSuggest (string q64 = null, bool? profile = null)
+
+Suggest using q64
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetSuggestExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new SearchApi();
+            var q64 = q64_example;  // string |  (optional) 
+            var profile = true;  // bool? |  (optional)  (default to true)
+
+            try
+            {
+                // Suggest using q64
+                JsonNodeSearchResponse result = apiInstance.GetSuggest(q64, profile);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SearchApi.GetSuggest: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **q64** | **string**|  | [optional]  |
+| **profile** | **bool?**|  | [optional] [default to true] |
+{: class="table table-striped"}
+
+### Return type
+
+[**JsonNodeSearchResponse**](JsonNodeSearchResponse.html)
 
 <a name="postsearch"></a>
 
@@ -247,7 +369,7 @@ namespace Example
 
 <a name="postsearch_0"></a>
 
-## [**JsonNodeSearchResponse**](JsonNodeSearchResponse.html) PostSearch_0 (SearchRequest body = null)
+## [**GroupsSearchResponse**](GroupsSearchResponse.html) PostSearch_0 (SearchRequest body = null)
 
 Search
 
@@ -277,7 +399,7 @@ namespace Example
             try
             {
                 // Search
-                JsonNodeSearchResponse result = apiInstance.PostSearch_0(body);
+                GroupsSearchResponse result = apiInstance.PostSearch_0(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -299,11 +421,11 @@ namespace Example
 
 ### Return type
 
-[**JsonNodeSearchResponse**](JsonNodeSearchResponse.html)
+[**GroupsSearchResponse**](GroupsSearchResponse.html)
 
 <a name="postsearch_1"></a>
 
-## [**UsersSearchResponse**](UsersSearchResponse.html) PostSearch_1 (SearchRequest body = null)
+## [**JsonNodeSearchResponse**](JsonNodeSearchResponse.html) PostSearch_1 (SearchRequest body = null, bool? profile = null)
 
 Search
 
@@ -329,11 +451,12 @@ namespace Example
 
             var apiInstance = new SearchApi();
             var body = new SearchRequest(); // SearchRequest | Search request options (optional) 
+            var profile = true;  // bool? |  (optional)  (default to true)
 
             try
             {
                 // Search
-                UsersSearchResponse result = apiInstance.PostSearch_1(body);
+                JsonNodeSearchResponse result = apiInstance.PostSearch_1(body, profile);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -351,9 +474,124 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**SearchRequest**](SearchRequest.html)| Search request options | [optional]  |
+| **profile** | **bool?**|  | [optional] [default to true] |
+{: class="table table-striped"}
+
+### Return type
+
+[**JsonNodeSearchResponse**](JsonNodeSearchResponse.html)
+
+<a name="postsearch_2"></a>
+
+## [**UsersSearchResponse**](UsersSearchResponse.html) PostSearch_2 (SearchRequest body = null)
+
+Search
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PostSearch_2Example
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new SearchApi();
+            var body = new SearchRequest(); // SearchRequest | Search request options (optional) 
+
+            try
+            {
+                // Search
+                UsersSearchResponse result = apiInstance.PostSearch_2(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SearchApi.PostSearch_2: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**SearchRequest**](SearchRequest.html)| Search request options | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
 [**UsersSearchResponse**](UsersSearchResponse.html)
+
+<a name="postsuggest"></a>
+
+## [**JsonNodeSearchResponse**](JsonNodeSearchResponse.html) PostSuggest (SearchRequest body = null, bool? profile = null)
+
+Suggest
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PostSuggestExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new SearchApi();
+            var body = new SearchRequest(); // SearchRequest | Search request options (optional) 
+            var profile = true;  // bool? |  (optional)  (default to true)
+
+            try
+            {
+                // Suggest
+                JsonNodeSearchResponse result = apiInstance.PostSuggest(body, profile);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SearchApi.PostSuggest: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**SearchRequest**](SearchRequest.html)| Search request options | [optional]  |
+| **profile** | **bool?**|  | [optional] [default to true] |
+{: class="table table-striped"}
+
+### Return type
+
+[**JsonNodeSearchResponse**](JsonNodeSearchResponse.html)
 

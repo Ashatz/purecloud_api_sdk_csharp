@@ -18,7 +18,7 @@ title: UserMe
 | **Title** | **string** |  | [optional] |
 | **Username** | **string** |  | [optional] |
 | **Images** | [**List&lt;UserImage&gt;**](UserImage.html) |  | [optional] |
-| **Version** | **string** | Required when updating. Version must be the current version. Only the system can assign version. | [optional] |
+| **Version** | **int?** | Required when updating. Version must be the current version. Only the system can assign version. | [optional] |
 | **RoutingStatus** | [**RoutingStatus**](RoutingStatus.html) | ACD routing status | [optional] |
 | **Presence** | [**UserPresence**](UserPresence.html) | Active presence | [optional] |
 | **ConversationSummary** | [**UserConversationSummary**](UserConversationSummary.html) | Summary of conversion statistics for conversation types. | [optional] |

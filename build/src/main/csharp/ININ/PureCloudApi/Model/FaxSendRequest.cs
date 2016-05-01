@@ -17,22 +17,62 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class FaxSendRequest :  IEquatable<FaxSendRequest>
     { 
+
+        /// <summary>
+        /// The content type that is going to be uploaded. If Content Management document is used for faxing, contentType will be ignored
+        /// </summary>
+        /// <value>The content type that is going to be uploaded. If Content Management document is used for faxing, contentType will be ignored</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+                public enum ContentTypeEnum {
+            
+            [EnumMember(Value = "application/pdf")]
+            Applicationpdf,
+            
+            [EnumMember(Value = "image/tiff")]
+            Imagetiff,
+            
+            [EnumMember(Value = "application/msword")]
+            Applicationmsword,
+            
+            [EnumMember(Value = "application/vnd.oasis.opendocument.text")]
+            Applicationvndoasisopendocumenttext,
+            
+            [EnumMember(Value = "application/vnd.openxmlformats-officedocument.wordprocessingml.document")]
+            Applicationvndopenxmlformatsofficedocumentwordprocessingmldocument
+        }
+
         
+
+        /// <summary>
+        /// The content type that is going to be uploaded. If Content Management document is used for faxing, contentType will be ignored
+        /// </summary>
+        /// <value>The content type that is going to be uploaded. If Content Management document is used for faxing, contentType will be ignored</value>
+        [DataMember(Name="contentType", EmitDefaultValue=false)]
+        public ContentTypeEnum? ContentType { get; set; }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="FaxSendRequest" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
-        /// <param name="Addresses">Addresses.</param>
-        /// <param name="OriginalFilename">OriginalFilename.</param>
-        /// <param name="ContentType">ContentType.</param>
-        /// <param name="Workspace">Workspace.</param>
-        /// <param name="CoverSheet">CoverSheet.</param>
+        /// <param name="Addresses">A list of outbound fax dialing addresses. E.g. +13175555555 or 3175555555 (required).</param>
+        /// <param name="DocumentId">DocumentId of Content Management artifact. If Content Management document is not used for faxing, documentId should be null.</param>
+        /// <param name="ContentType">The content type that is going to be uploaded. If Content Management document is used for faxing, contentType will be ignored.</param>
+        /// <param name="Workspace">Workspace in which the document should be stored. If Content Management document is used for faxing, workspace will be ignored.</param>
+        /// <param name="CoverSheet">Data for coversheet generation..</param>
 
-        public FaxSendRequest(string Name = null, List<string> Addresses = null, string OriginalFilename = null, string ContentType = null, Workspace Workspace = null, CoverSheet CoverSheet = null)
+        public FaxSendRequest(string Name = null, List<string> Addresses = null, string DocumentId = null, ContentTypeEnum? ContentType = null, Workspace Workspace = null, CoverSheet CoverSheet = null)
         {
+            // to ensure "Addresses" is required (not null)
+            if (Addresses == null)
+            {
+                throw new InvalidDataException("Addresses is a required property for FaxSendRequest and cannot be null");
+            }
+            else
+            {
+                this.Addresses = Addresses;
+            }
             this.Name = Name;
-            this.Addresses = Addresses;
-            this.OriginalFilename = OriginalFilename;
+            this.DocumentId = DocumentId;
             this.ContentType = ContentType;
             this.Workspace = Workspace;
             this.CoverSheet = CoverSheet;
@@ -54,32 +94,30 @@ namespace ININ.PureCloudApi.Model
         public string Name { get; set; }
     
         /// <summary>
-        /// Gets or Sets Addresses
+        /// A list of outbound fax dialing addresses. E.g. +13175555555 or 3175555555
         /// </summary>
+        /// <value>A list of outbound fax dialing addresses. E.g. +13175555555 or 3175555555</value>
         [DataMember(Name="addresses", EmitDefaultValue=false)]
         public List<string> Addresses { get; set; }
     
         /// <summary>
-        /// Gets or Sets OriginalFilename
+        /// DocumentId of Content Management artifact. If Content Management document is not used for faxing, documentId should be null
         /// </summary>
-        [DataMember(Name="originalFilename", EmitDefaultValue=false)]
-        public string OriginalFilename { get; set; }
+        /// <value>DocumentId of Content Management artifact. If Content Management document is not used for faxing, documentId should be null</value>
+        [DataMember(Name="documentId", EmitDefaultValue=false)]
+        public string DocumentId { get; set; }
     
         /// <summary>
-        /// Gets or Sets ContentType
+        /// Workspace in which the document should be stored. If Content Management document is used for faxing, workspace will be ignored
         /// </summary>
-        [DataMember(Name="contentType", EmitDefaultValue=false)]
-        public string ContentType { get; set; }
-    
-        /// <summary>
-        /// Gets or Sets Workspace
-        /// </summary>
+        /// <value>Workspace in which the document should be stored. If Content Management document is used for faxing, workspace will be ignored</value>
         [DataMember(Name="workspace", EmitDefaultValue=false)]
         public Workspace Workspace { get; set; }
     
         /// <summary>
-        /// Gets or Sets CoverSheet
+        /// Data for coversheet generation.
         /// </summary>
+        /// <value>Data for coversheet generation.</value>
         [DataMember(Name="coverSheet", EmitDefaultValue=false)]
         public CoverSheet CoverSheet { get; set; }
     
@@ -101,7 +139,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Addresses: ").Append(Addresses).Append("\n");
-            sb.Append("  OriginalFilename: ").Append(OriginalFilename).Append("\n");
+            sb.Append("  DocumentId: ").Append(DocumentId).Append("\n");
             sb.Append("  ContentType: ").Append(ContentType).Append("\n");
             sb.Append("  Workspace: ").Append(Workspace).Append("\n");
             sb.Append("  CoverSheet: ").Append(CoverSheet).Append("\n");
@@ -158,9 +196,9 @@ namespace ININ.PureCloudApi.Model
                     this.Addresses.SequenceEqual(other.Addresses)
                 ) &&
                 (
-                    this.OriginalFilename == other.OriginalFilename ||
-                    this.OriginalFilename != null &&
-                    this.OriginalFilename.Equals(other.OriginalFilename)
+                    this.DocumentId == other.DocumentId ||
+                    this.DocumentId != null &&
+                    this.DocumentId.Equals(other.DocumentId)
                 ) &&
                 (
                     this.ContentType == other.ContentType ||
@@ -201,8 +239,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.Name.GetHashCode();
                 if (this.Addresses != null)
                     hash = hash * 59 + this.Addresses.GetHashCode();
-                if (this.OriginalFilename != null)
-                    hash = hash * 59 + this.OriginalFilename.GetHashCode();
+                if (this.DocumentId != null)
+                    hash = hash * 59 + this.DocumentId.GetHashCode();
                 if (this.ContentType != null)
                     hash = hash * 59 + this.ContentType.GetHashCode();
                 if (this.Workspace != null)

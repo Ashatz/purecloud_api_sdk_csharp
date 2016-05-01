@@ -76,7 +76,7 @@ namespace ININ.PureCloudApi.Test
             string q64 = null; // TODO: replace null with proper value
             List<string> expand = null; // TODO: replace null with proper value
             var response = instance.GetSearch_0(q64, expand);
-            Assert.IsInstanceOf<JsonNodeSearchResponse> (response, "response is JsonNodeSearchResponse");
+            Assert.IsInstanceOf<GroupsSearchResponse> (response, "response is GroupsSearchResponse");
         }
         
         /// <summary>
@@ -88,8 +88,35 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'GetSearch_1'
             string q64 = null; // TODO: replace null with proper value
             List<string> expand = null; // TODO: replace null with proper value
-            var response = instance.GetSearch_1(q64, expand);
+            bool? profile = null; // TODO: replace null with proper value
+            var response = instance.GetSearch_1(q64, expand, profile);
+            Assert.IsInstanceOf<JsonNodeSearchResponse> (response, "response is JsonNodeSearchResponse");
+        }
+        
+        /// <summary>
+        /// Test GetSearch_2
+        /// </summary>
+        [Test]
+        public void GetSearch_2Test()
+        {
+            // TODO: add unit test for the method 'GetSearch_2'
+            string q64 = null; // TODO: replace null with proper value
+            List<string> expand = null; // TODO: replace null with proper value
+            var response = instance.GetSearch_2(q64, expand);
             Assert.IsInstanceOf<UsersSearchResponse> (response, "response is UsersSearchResponse");
+        }
+        
+        /// <summary>
+        /// Test GetSuggest
+        /// </summary>
+        [Test]
+        public void GetSuggestTest()
+        {
+            // TODO: add unit test for the method 'GetSuggest'
+            string q64 = null; // TODO: replace null with proper value
+            bool? profile = null; // TODO: replace null with proper value
+            var response = instance.GetSuggest(q64, profile);
+            Assert.IsInstanceOf<JsonNodeSearchResponse> (response, "response is JsonNodeSearchResponse");
         }
         
         /// <summary>
@@ -113,7 +140,7 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'PostSearch_0'
             SearchRequest body = null; // TODO: replace null with proper value
             var response = instance.PostSearch_0(body);
-            Assert.IsInstanceOf<JsonNodeSearchResponse> (response, "response is JsonNodeSearchResponse");
+            Assert.IsInstanceOf<GroupsSearchResponse> (response, "response is GroupsSearchResponse");
         }
         
         /// <summary>
@@ -124,8 +151,34 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'PostSearch_1'
             SearchRequest body = null; // TODO: replace null with proper value
-            var response = instance.PostSearch_1(body);
+            bool? profile = null; // TODO: replace null with proper value
+            var response = instance.PostSearch_1(body, profile);
+            Assert.IsInstanceOf<JsonNodeSearchResponse> (response, "response is JsonNodeSearchResponse");
+        }
+        
+        /// <summary>
+        /// Test PostSearch_2
+        /// </summary>
+        [Test]
+        public void PostSearch_2Test()
+        {
+            // TODO: add unit test for the method 'PostSearch_2'
+            SearchRequest body = null; // TODO: replace null with proper value
+            var response = instance.PostSearch_2(body);
             Assert.IsInstanceOf<UsersSearchResponse> (response, "response is UsersSearchResponse");
+        }
+        
+        /// <summary>
+        /// Test PostSuggest
+        /// </summary>
+        [Test]
+        public void PostSuggestTest()
+        {
+            // TODO: add unit test for the method 'PostSuggest'
+            SearchRequest body = null; // TODO: replace null with proper value
+            bool? profile = null; // TODO: replace null with proper value
+            var response = instance.PostSuggest(body, profile);
+            Assert.IsInstanceOf<JsonNodeSearchResponse> (response, "response is JsonNodeSearchResponse");
         }
         
     }

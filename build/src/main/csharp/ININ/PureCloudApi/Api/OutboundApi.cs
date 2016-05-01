@@ -560,6 +560,29 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of DialerContact</returns>
         ApiResponse<DialerContact> GetContactlistsContactlistIdContactsContactIdWithHttpInfo (string contactListId, string contactId);
         /// <summary>
+        /// Get the URI of a contact list export.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">ContactList ID</param>
+        /// <param name="download">Redirect to download uri (optional, default to false)</param>
+        /// <returns>ExportUri</returns>
+        ExportUri GetContactlistsContactlistIdExport (string contactListId, string download = null);
+
+        /// <summary>
+        /// Get the URI of a contact list export.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">ContactList ID</param>
+        /// <param name="download">Redirect to download uri (optional, default to false)</param>
+        /// <returns>ApiResponse of ExportUri</returns>
+        ApiResponse<ExportUri> GetContactlistsContactlistIdExportWithHttpInfo (string contactListId, string download = null);
+        /// <summary>
         /// Get dialer contactList import status.
         /// </summary>
         /// <remarks>
@@ -640,6 +663,29 @@ namespace ININ.PureCloudApi.Api
         /// <param name="includeSize">Include size (optional, default to false)</param>
         /// <returns>ApiResponse of DncList</returns>
         ApiResponse<DncList> GetDnclistsDnclistIdWithHttpInfo (string dncListId, bool? includeImportStatus = null, bool? includeSize = null);
+        /// <summary>
+        /// Get the URI of a DNC list export.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dncListId">DncList ID</param>
+        /// <param name="download">Redirect to download uri (optional, default to false)</param>
+        /// <returns>ExportUri</returns>
+        ExportUri GetDnclistsDnclistIdExport (string dncListId, string download = null);
+
+        /// <summary>
+        /// Get the URI of a DNC list export.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dncListId">DncList ID</param>
+        /// <param name="download">Redirect to download uri (optional, default to false)</param>
+        /// <returns>ApiResponse of ExportUri</returns>
+        ApiResponse<ExportUri> GetDnclistsDnclistIdExportWithHttpInfo (string dncListId, string download = null);
         /// <summary>
         /// Get dialer dncList import status.
         /// </summary>
@@ -2023,6 +2069,29 @@ namespace ININ.PureCloudApi.Api
         /// <returns>Task of ApiResponse (DialerContact)</returns>
         System.Threading.Tasks.Task<ApiResponse<DialerContact>> GetContactlistsContactlistIdContactsContactIdAsyncWithHttpInfo (string contactListId, string contactId);
         /// <summary>
+        /// Get the URI of a contact list export.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">ContactList ID</param>
+        /// <param name="download">Redirect to download uri (optional, default to false)</param>
+        /// <returns>Task of ExportUri</returns>
+        System.Threading.Tasks.Task<ExportUri> GetContactlistsContactlistIdExportAsync (string contactListId, string download = null);
+
+        /// <summary>
+        /// Get the URI of a contact list export.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">ContactList ID</param>
+        /// <param name="download">Redirect to download uri (optional, default to false)</param>
+        /// <returns>Task of ApiResponse (ExportUri)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ExportUri>> GetContactlistsContactlistIdExportAsyncWithHttpInfo (string contactListId, string download = null);
+        /// <summary>
         /// Get dialer contactList import status.
         /// </summary>
         /// <remarks>
@@ -2103,6 +2172,29 @@ namespace ININ.PureCloudApi.Api
         /// <param name="includeSize">Include size (optional, default to false)</param>
         /// <returns>Task of ApiResponse (DncList)</returns>
         System.Threading.Tasks.Task<ApiResponse<DncList>> GetDnclistsDnclistIdAsyncWithHttpInfo (string dncListId, bool? includeImportStatus = null, bool? includeSize = null);
+        /// <summary>
+        /// Get the URI of a DNC list export.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dncListId">DncList ID</param>
+        /// <param name="download">Redirect to download uri (optional, default to false)</param>
+        /// <returns>Task of ExportUri</returns>
+        System.Threading.Tasks.Task<ExportUri> GetDnclistsDnclistIdExportAsync (string dncListId, string download = null);
+
+        /// <summary>
+        /// Get the URI of a DNC list export.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dncListId">DncList ID</param>
+        /// <param name="download">Redirect to download uri (optional, default to false)</param>
+        /// <returns>Task of ApiResponse (ExportUri)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ExportUri>> GetDnclistsDnclistIdExportAsyncWithHttpInfo (string dncListId, string download = null);
         /// <summary>
         /// Get dialer dncList import status.
         /// </summary>
@@ -6722,6 +6814,165 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
+        /// Get the URI of a contact list export. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">ContactList ID</param>
+        /// <param name="download">Redirect to download uri (optional, default to false)</param>
+        /// <returns>ExportUri</returns>
+        public ExportUri GetContactlistsContactlistIdExport (string contactListId, string download = null)
+        {
+             ApiResponse<ExportUri> localVarResponse = GetContactlistsContactlistIdExportWithHttpInfo(contactListId, download);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the URI of a contact list export. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">ContactList ID</param>
+        /// <param name="download">Redirect to download uri (optional, default to false)</param>
+        /// <returns>ApiResponse of ExportUri</returns>
+        public ApiResponse< ExportUri > GetContactlistsContactlistIdExportWithHttpInfo (string contactListId, string download = null)
+        {
+            // verify the required parameter 'contactListId' is set
+            if (contactListId == null)
+                throw new ApiException(400, "Missing required parameter 'contactListId' when calling OutboundApi->GetContactlistsContactlistIdExport");
+
+            var localVarPath = "/api/v2/outbound/contactlists/{contactListId}/export";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (contactListId != null) localVarPathParams.Add("contactListId", Configuration.ApiClient.ParameterToString(contactListId)); // path parameter
+            if (download != null) localVarQueryParams.Add("download", Configuration.ApiClient.ParameterToString(download)); // query parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetContactlistsContactlistIdExport: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetContactlistsContactlistIdExport: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ExportUri>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ExportUri) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ExportUri)));
+            
+        }
+
+        /// <summary>
+        /// Get the URI of a contact list export. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">ContactList ID</param>
+        /// <param name="download">Redirect to download uri (optional, default to false)</param>
+        /// <returns>Task of ExportUri</returns>
+        public async System.Threading.Tasks.Task<ExportUri> GetContactlistsContactlistIdExportAsync (string contactListId, string download = null)
+        {
+             ApiResponse<ExportUri> localVarResponse = await GetContactlistsContactlistIdExportAsyncWithHttpInfo(contactListId, download);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the URI of a contact list export. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">ContactList ID</param>
+        /// <param name="download">Redirect to download uri (optional, default to false)</param>
+        /// <returns>Task of ApiResponse (ExportUri)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ExportUri>> GetContactlistsContactlistIdExportAsyncWithHttpInfo (string contactListId, string download = null)
+        {
+            // verify the required parameter 'contactListId' is set
+            if (contactListId == null)
+                throw new ApiException(400, "Missing required parameter 'contactListId' when calling OutboundApi->GetContactlistsContactlistIdExport");
+
+            var localVarPath = "/api/v2/outbound/contactlists/{contactListId}/export";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (contactListId != null) localVarPathParams.Add("contactListId", Configuration.ApiClient.ParameterToString(contactListId)); // path parameter
+            if (download != null) localVarQueryParams.Add("download", Configuration.ApiClient.ParameterToString(download)); // query parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetContactlistsContactlistIdExport: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetContactlistsContactlistIdExport: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ExportUri>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ExportUri) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ExportUri)));
+            
+        }
+
+        /// <summary>
         /// Get dialer contactList import status. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -7225,6 +7476,165 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<DncList>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (DncList) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DncList)));
+            
+        }
+
+        /// <summary>
+        /// Get the URI of a DNC list export. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dncListId">DncList ID</param>
+        /// <param name="download">Redirect to download uri (optional, default to false)</param>
+        /// <returns>ExportUri</returns>
+        public ExportUri GetDnclistsDnclistIdExport (string dncListId, string download = null)
+        {
+             ApiResponse<ExportUri> localVarResponse = GetDnclistsDnclistIdExportWithHttpInfo(dncListId, download);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the URI of a DNC list export. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dncListId">DncList ID</param>
+        /// <param name="download">Redirect to download uri (optional, default to false)</param>
+        /// <returns>ApiResponse of ExportUri</returns>
+        public ApiResponse< ExportUri > GetDnclistsDnclistIdExportWithHttpInfo (string dncListId, string download = null)
+        {
+            // verify the required parameter 'dncListId' is set
+            if (dncListId == null)
+                throw new ApiException(400, "Missing required parameter 'dncListId' when calling OutboundApi->GetDnclistsDnclistIdExport");
+
+            var localVarPath = "/api/v2/outbound/dnclists/{dncListId}/export";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (dncListId != null) localVarPathParams.Add("dncListId", Configuration.ApiClient.ParameterToString(dncListId)); // path parameter
+            if (download != null) localVarQueryParams.Add("download", Configuration.ApiClient.ParameterToString(download)); // query parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetDnclistsDnclistIdExport: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetDnclistsDnclistIdExport: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ExportUri>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ExportUri) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ExportUri)));
+            
+        }
+
+        /// <summary>
+        /// Get the URI of a DNC list export. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dncListId">DncList ID</param>
+        /// <param name="download">Redirect to download uri (optional, default to false)</param>
+        /// <returns>Task of ExportUri</returns>
+        public async System.Threading.Tasks.Task<ExportUri> GetDnclistsDnclistIdExportAsync (string dncListId, string download = null)
+        {
+             ApiResponse<ExportUri> localVarResponse = await GetDnclistsDnclistIdExportAsyncWithHttpInfo(dncListId, download);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the URI of a DNC list export. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dncListId">DncList ID</param>
+        /// <param name="download">Redirect to download uri (optional, default to false)</param>
+        /// <returns>Task of ApiResponse (ExportUri)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ExportUri>> GetDnclistsDnclistIdExportAsyncWithHttpInfo (string dncListId, string download = null)
+        {
+            // verify the required parameter 'dncListId' is set
+            if (dncListId == null)
+                throw new ApiException(400, "Missing required parameter 'dncListId' when calling OutboundApi->GetDnclistsDnclistIdExport");
+
+            var localVarPath = "/api/v2/outbound/dnclists/{dncListId}/export";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (dncListId != null) localVarPathParams.Add("dncListId", Configuration.ApiClient.ParameterToString(dncListId)); // path parameter
+            if (download != null) localVarQueryParams.Add("download", Configuration.ApiClient.ParameterToString(download)); // query parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetDnclistsDnclistIdExport: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetDnclistsDnclistIdExport: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ExportUri>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ExportUri) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ExportUri)));
             
         }
 

@@ -7,13 +7,72 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
+| [**DeleteGroupIdMembers**](GroupsApi.html#deletegroupidmembers) | **DELETE** /api/v2/groups/{groupId}/members | Remove members |
 | [**GetGroupId**](GroupsApi.html#getgroupid) | **GET** /api/v2/groups/{groupId} | Get group |
 | [**GetGroupIdMembers**](GroupsApi.html#getgroupidmembers) | **GET** /api/v2/groups/{groupId}/members | Get group members |
 | [**GetGroups**](GroupsApi.html#getgroups) | **GET** /api/v2/groups | Get a group list |
 | [**GetSearch**](GroupsApi.html#getsearch) | **GET** /api/v2/groups/search | Search using q64 |
+| [**PostGroupIdMembers**](GroupsApi.html#postgroupidmembers) | **POST** /api/v2/groups/{groupId}/members | Add members |
 | [**PostGroups**](GroupsApi.html#postgroups) | **POST** /api/v2/groups | Create a group |
 | [**PostSearch**](GroupsApi.html#postsearch) | **POST** /api/v2/groups/search | Search |
 {: class="table table-striped"}
+
+<a name="deletegroupidmembers"></a>
+
+## void DeleteGroupIdMembers (string groupId, string ids)
+
+Remove members
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class DeleteGroupIdMembersExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new GroupsApi();
+            var groupId = groupId_example;  // string | Group ID
+            var ids = ids_example;  // string | Comma separated list of userIds to remove
+
+            try
+            {
+                // Remove members
+                apiInstance.DeleteGroupIdMembers(groupId, ids);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GroupsApi.DeleteGroupIdMembers: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **groupId** | **string**| Group ID |  |
+| **ids** | **string**| Comma separated list of userIds to remove |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
 
 <a name="getgroupid"></a>
 
@@ -250,6 +309,63 @@ namespace Example
 ### Return type
 
 [**GroupsSearchResponse**](GroupsSearchResponse.html)
+
+<a name="postgroupidmembers"></a>
+
+## void PostGroupIdMembers (string groupId, GroupMembersUpdate body = null)
+
+Add members
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PostGroupIdMembersExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new GroupsApi();
+            var groupId = groupId_example;  // string | Group ID
+            var body = new GroupMembersUpdate(); // GroupMembersUpdate | Add members (optional) 
+
+            try
+            {
+                // Add members
+                apiInstance.PostGroupIdMembers(groupId, body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GroupsApi.PostGroupIdMembers: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **groupId** | **string**| Group ID |  |
+| **body** | [**GroupMembersUpdate**](GroupMembersUpdate.html)| Add members | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
 
 <a name="postgroups"></a>
 

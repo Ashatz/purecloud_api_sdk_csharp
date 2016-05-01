@@ -13,7 +13,6 @@ title: CreateUser
 | **Addresses** | [**List&lt;Contact&gt;**](Contact.html) | Email addresses and phone numbers for this user | [optional] |
 | **Title** | **string** |  | [optional] |
 | **Password** | **string** | User&#39;s password | |
-| **Version** | **string** | Use version number 1 when creating | |
 {: class="table table-striped"}
 
 

@@ -12,10 +12,10 @@ title: FlowHistoryResultItemEntityListing
 | **Total** | **long?** |  | [optional] |
 | **Entities** | [**List&lt;FlowHistoryResultItem&gt;**](FlowHistoryResultItem.html) |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
-| **FirstUri** | **string** |  | [optional] |
-| **PreviousUri** | **string** |  | [optional] |
 | **NextUri** | **string** |  | [optional] |
 | **LastUri** | **string** |  | [optional] |
+| **FirstUri** | **string** |  | [optional] |
+| **PreviousUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
 {: class="table table-striped"}
 

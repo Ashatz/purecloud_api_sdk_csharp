@@ -72,12 +72,36 @@ namespace ININ.PureCloudApi.Test
         public void GetLocationsTest()
         {
             // TODO: add unit test for the method 'GetLocations'
-            string state = null; // TODO: replace null with proper value
-            string name = null; // TODO: replace null with proper value
             int? pageSize = null; // TODO: replace null with proper value
             int? pageNumber = null; // TODO: replace null with proper value
-            var response = instance.GetLocations(state, name, pageSize, pageNumber);
-            Assert.IsInstanceOf<LocationEntityListing> (response, "response is LocationEntityListing");
+            string sortOrder = null; // TODO: replace null with proper value
+            var response = instance.GetLocations(pageSize, pageNumber, sortOrder);
+            Assert.IsInstanceOf<List<Location>> (response, "response is List<Location>");
+        }
+        
+        /// <summary>
+        /// Test GetSearch
+        /// </summary>
+        [Test]
+        public void GetSearchTest()
+        {
+            // TODO: add unit test for the method 'GetSearch'
+            string q64 = null; // TODO: replace null with proper value
+            List<string> expand = null; // TODO: replace null with proper value
+            var response = instance.GetSearch(q64, expand);
+            Assert.IsInstanceOf<GroupsSearchResponse> (response, "response is GroupsSearchResponse");
+        }
+        
+        /// <summary>
+        /// Test PostSearch
+        /// </summary>
+        [Test]
+        public void PostSearchTest()
+        {
+            // TODO: add unit test for the method 'PostSearch'
+            SearchRequest body = null; // TODO: replace null with proper value
+            var response = instance.PostSearch(body);
+            Assert.IsInstanceOf<GroupsSearchResponse> (response, "response is GroupsSearchResponse");
         }
         
     }

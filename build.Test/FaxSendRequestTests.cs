@@ -75,12 +75,12 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'Addresses'
         }
         /// <summary>
-        /// Test the property 'OriginalFilename'
+        /// Test the property 'DocumentId'
         /// </summary>
         [Test]
-        public void OriginalFilenameTest()
+        public void DocumentIdTest()
         {
-            // TODO: unit test for the property 'OriginalFilename'
+            // TODO: unit test for the property 'DocumentId'
         }
         /// <summary>
         /// Test the property 'ContentType'

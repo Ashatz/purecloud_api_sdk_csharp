@@ -43,11 +43,11 @@ namespace ININ.PureCloudApi.Model
         [JsonConverter(typeof(StringEnumConverter))]
                 public enum TypeEnum {
             
-            [EnumMember(Value = "official")]
-            Official,
-            
             [EnumMember(Value = "social")]
-            Social
+            Social,
+            
+            [EnumMember(Value = "official")]
+            Official
         }
 
 

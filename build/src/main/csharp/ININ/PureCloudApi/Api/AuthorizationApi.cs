@@ -57,6 +57,27 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteUserIdRolesWithHttpInfo (string userId);
         /// <summary>
+        /// Returns a permission-protected object, showing the permission contexts it belongs to.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="objectId">Object ID</param>
+        /// <returns>AuthzObject</returns>
+        AuthzObject GetObjectsObjectId (string objectId);
+
+        /// <summary>
+        /// Returns a permission-protected object, showing the permission contexts it belongs to.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="objectId">Object ID</param>
+        /// <returns>ApiResponse of AuthzObject</returns>
+        ApiResponse<AuthzObject> GetObjectsObjectIdWithHttpInfo (string objectId);
+        /// <summary>
         /// Get all permissions.
         /// </summary>
         /// <remarks>
@@ -445,6 +466,27 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteUserIdRolesAsyncWithHttpInfo (string userId);
+        /// <summary>
+        /// Returns a permission-protected object, showing the permission contexts it belongs to.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="objectId">Object ID</param>
+        /// <returns>Task of AuthzObject</returns>
+        System.Threading.Tasks.Task<AuthzObject> GetObjectsObjectIdAsync (string objectId);
+
+        /// <summary>
+        /// Returns a permission-protected object, showing the permission contexts it belongs to.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="objectId">Object ID</param>
+        /// <returns>Task of ApiResponse (AuthzObject)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AuthzObject>> GetObjectsObjectIdAsyncWithHttpInfo (string objectId);
         /// <summary>
         /// Get all permissions.
         /// </summary>
@@ -1180,6 +1222,159 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
+        }
+
+        /// <summary>
+        /// Returns a permission-protected object, showing the permission contexts it belongs to. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="objectId">Object ID</param>
+        /// <returns>AuthzObject</returns>
+        public AuthzObject GetObjectsObjectId (string objectId)
+        {
+             ApiResponse<AuthzObject> localVarResponse = GetObjectsObjectIdWithHttpInfo(objectId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Returns a permission-protected object, showing the permission contexts it belongs to. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="objectId">Object ID</param>
+        /// <returns>ApiResponse of AuthzObject</returns>
+        public ApiResponse< AuthzObject > GetObjectsObjectIdWithHttpInfo (string objectId)
+        {
+            // verify the required parameter 'objectId' is set
+            if (objectId == null)
+                throw new ApiException(400, "Missing required parameter 'objectId' when calling AuthorizationApi->GetObjectsObjectId");
+
+            var localVarPath = "/api/v2/authorization/objects/{objectId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (objectId != null) localVarPathParams.Add("objectId", Configuration.ApiClient.ParameterToString(objectId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetObjectsObjectId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetObjectsObjectId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AuthzObject>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (AuthzObject) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AuthzObject)));
+            
+        }
+
+        /// <summary>
+        /// Returns a permission-protected object, showing the permission contexts it belongs to. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="objectId">Object ID</param>
+        /// <returns>Task of AuthzObject</returns>
+        public async System.Threading.Tasks.Task<AuthzObject> GetObjectsObjectIdAsync (string objectId)
+        {
+             ApiResponse<AuthzObject> localVarResponse = await GetObjectsObjectIdAsyncWithHttpInfo(objectId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Returns a permission-protected object, showing the permission contexts it belongs to. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="objectId">Object ID</param>
+        /// <returns>Task of ApiResponse (AuthzObject)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AuthzObject>> GetObjectsObjectIdAsyncWithHttpInfo (string objectId)
+        {
+            // verify the required parameter 'objectId' is set
+            if (objectId == null)
+                throw new ApiException(400, "Missing required parameter 'objectId' when calling AuthorizationApi->GetObjectsObjectId");
+
+            var localVarPath = "/api/v2/authorization/objects/{objectId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (objectId != null) localVarPathParams.Add("objectId", Configuration.ApiClient.ParameterToString(objectId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetObjectsObjectId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetObjectsObjectId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AuthzObject>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (AuthzObject) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AuthzObject)));
+            
         }
 
         /// <summary>

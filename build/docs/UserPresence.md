@@ -13,6 +13,7 @@ title: UserPresence
 | **Primary** | **bool?** | A boolean used to tell whether or not to set this presence source as the primary on a PATCH | [optional] [default to false]|
 | **PresenceDefinition** | [**OrganizationPresence**](OrganizationPresence.html) |  | [optional] |
 | **Message** | **string** |  | [optional] |
+| **ModifiedDate** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

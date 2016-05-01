@@ -45,6 +45,9 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "TERMINATED")]
             Terminated,
             
+            [EnumMember(Value = "SCHEDULED")]
+            Scheduled,
+            
             [EnumMember(Value = "NONE")]
             None
         }

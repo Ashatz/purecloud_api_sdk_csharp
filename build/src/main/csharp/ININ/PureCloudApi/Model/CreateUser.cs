@@ -27,9 +27,8 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Addresses">Email addresses and phone numbers for this user.</param>
         /// <param name="Title">Title.</param>
         /// <param name="Password">User&#39;s password (required).</param>
-        /// <param name="Version">Use version number 1 when creating (required).</param>
 
-        public CreateUser(string Name = null, string Department = null, string Email = null, List<Contact> Addresses = null, string Title = null, string Password = null, string Version = null)
+        public CreateUser(string Name = null, string Department = null, string Email = null, List<Contact> Addresses = null, string Title = null, string Password = null)
         {
             // to ensure "Email" is required (not null)
             if (Email == null)
@@ -48,15 +47,6 @@ namespace ININ.PureCloudApi.Model
             else
             {
                 this.Password = Password;
-            }
-            // to ensure "Version" is required (not null)
-            if (Version == null)
-            {
-                throw new InvalidDataException("Version is a required property for CreateUser and cannot be null");
-            }
-            else
-            {
-                this.Version = Version;
             }
             this.Name = Name;
             this.Department = Department;
@@ -106,13 +96,6 @@ namespace ININ.PureCloudApi.Model
         public string Password { get; set; }
     
         /// <summary>
-        /// Use version number 1 when creating
-        /// </summary>
-        /// <value>Use version number 1 when creating</value>
-        [DataMember(Name="version", EmitDefaultValue=false)]
-        public string Version { get; set; }
-    
-        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -126,7 +109,6 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Addresses: ").Append(Addresses).Append("\n");
             sb.Append("  Title: ").Append(Title).Append("\n");
             sb.Append("  Password: ").Append(Password).Append("\n");
-            sb.Append("  Version: ").Append(Version).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -192,11 +174,6 @@ namespace ININ.PureCloudApi.Model
                     this.Password == other.Password ||
                     this.Password != null &&
                     this.Password.Equals(other.Password)
-                ) &&
-                (
-                    this.Version == other.Version ||
-                    this.Version != null &&
-                    this.Version.Equals(other.Version)
                 );
         }
 
@@ -223,8 +200,6 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.Title.GetHashCode();
                 if (this.Password != null)
                     hash = hash * 59 + this.Password.GetHashCode();
-                if (this.Version != null)
-                    hash = hash * 59 + this.Version.GetHashCode();
                 return hash;
             }
         }

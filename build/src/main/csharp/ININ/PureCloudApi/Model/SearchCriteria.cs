@@ -54,8 +54,17 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "GREATER_THAN_EQUAL_TO")]
             GreaterThanEqualTo,
             
-            [EnumMember(Value = "SIMPLE_STRING")]
-            SimpleString
+            [EnumMember(Value = "SIMPLE")]
+            Simple,
+            
+            [EnumMember(Value = "TERM")]
+            Term,
+            
+            [EnumMember(Value = "TERMS")]
+            Terms,
+            
+            [EnumMember(Value = "QUERY_STRING")]
+            QueryString
         }
 
 

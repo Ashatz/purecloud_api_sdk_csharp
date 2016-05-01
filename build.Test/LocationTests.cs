@@ -75,14 +75,6 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'Address'
         }
         /// <summary>
-        /// Test the property 'AddressFields'
-        /// </summary>
-        [Test]
-        public void AddressFieldsTest()
-        {
-            // TODO: unit test for the property 'AddressFields'
-        }
-        /// <summary>
         /// Test the property 'AddressVerified'
         /// </summary>
         [Test]
@@ -99,36 +91,12 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'EmergencyNumber'
         }
         /// <summary>
-        /// Test the property 'Notes'
-        /// </summary>
-        [Test]
-        public void NotesTest()
-        {
-            // TODO: unit test for the property 'Notes'
-        }
-        /// <summary>
-        /// Test the property 'Path'
-        /// </summary>
-        [Test]
-        public void PathTest()
-        {
-            // TODO: unit test for the property 'Path'
-        }
-        /// <summary>
         /// Test the property 'State'
         /// </summary>
         [Test]
         public void StateTest()
         {
             // TODO: unit test for the property 'State'
-        }
-        /// <summary>
-        /// Test the property 'SublocationOrder'
-        /// </summary>
-        [Test]
-        public void SublocationOrderTest()
-        {
-            // TODO: unit test for the property 'SublocationOrder'
         }
         /// <summary>
         /// Test the property 'Version'

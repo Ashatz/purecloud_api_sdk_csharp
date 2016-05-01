@@ -98,14 +98,6 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: unit test for the property 'Password'
         }
-        /// <summary>
-        /// Test the property 'Version'
-        /// </summary>
-        [Test]
-        public void VersionTest()
-        {
-            // TODO: unit test for the property 'Version'
-        }
 
     }
 

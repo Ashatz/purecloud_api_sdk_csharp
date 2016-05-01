@@ -21,12 +21,12 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="OrganizationCreate" />class.
         /// </summary>
-        /// <param name="Name">Display Name for Organization (required).</param>
-        /// <param name="AdminUsername">Administrator username for this organization (required).</param>
-        /// <param name="AdminPassword">Administrator password for this organization (required).</param>
+        /// <param name="Name">Display name for this organization. (required).</param>
+        /// <param name="AdminUsername">Administrator username for this organization in the form of an email address. (required).</param>
+        /// <param name="AdminPassword">Administrator password for this organization. (required).</param>
         /// <param name="Domain">Fully qualified domain name for this organization (Ex. example.com). (required).</param>
-        /// <param name="ThirdPartyOrgName">Organization Name which does not contain special characters like spaces. (required).</param>
-        /// <param name="Deletable">Deletable Property for Organization. (default to false).</param>
+        /// <param name="ThirdPartyOrgName">Organization name which does not contain special characters like spaces. (required).</param>
+        /// <param name="Deletable">Deletable property for this organization. (default to false).</param>
 
         public OrganizationCreate(string Name = null, string AdminUsername = null, string AdminPassword = null, string Domain = null, string ThirdPartyOrgName = null, bool? Deletable = null)
         {
@@ -89,23 +89,23 @@ namespace ININ.PureCloudApi.Model
 
     
         /// <summary>
-        /// Display Name for Organization
+        /// Display name for this organization.
         /// </summary>
-        /// <value>Display Name for Organization</value>
+        /// <value>Display name for this organization.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
     
         /// <summary>
-        /// Administrator username for this organization
+        /// Administrator username for this organization in the form of an email address.
         /// </summary>
-        /// <value>Administrator username for this organization</value>
+        /// <value>Administrator username for this organization in the form of an email address.</value>
         [DataMember(Name="adminUsername", EmitDefaultValue=false)]
         public string AdminUsername { get; set; }
     
         /// <summary>
-        /// Administrator password for this organization
+        /// Administrator password for this organization.
         /// </summary>
-        /// <value>Administrator password for this organization</value>
+        /// <value>Administrator password for this organization.</value>
         [DataMember(Name="adminPassword", EmitDefaultValue=false)]
         public string AdminPassword { get; set; }
     
@@ -117,16 +117,16 @@ namespace ININ.PureCloudApi.Model
         public string Domain { get; set; }
     
         /// <summary>
-        /// Organization Name which does not contain special characters like spaces.
+        /// Organization name which does not contain special characters like spaces.
         /// </summary>
-        /// <value>Organization Name which does not contain special characters like spaces.</value>
+        /// <value>Organization name which does not contain special characters like spaces.</value>
         [DataMember(Name="thirdPartyOrgName", EmitDefaultValue=false)]
         public string ThirdPartyOrgName { get; set; }
     
         /// <summary>
-        /// Deletable Property for Organization.
+        /// Deletable property for this organization.
         /// </summary>
-        /// <value>Deletable Property for Organization.</value>
+        /// <value>Deletable property for this organization.</value>
         [DataMember(Name="deletable", EmitDefaultValue=false)]
         public bool? Deletable { get; set; }
     

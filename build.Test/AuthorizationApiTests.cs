@@ -78,6 +78,18 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test GetObjectsObjectId
+        /// </summary>
+        [Test]
+        public void GetObjectsObjectIdTest()
+        {
+            // TODO: add unit test for the method 'GetObjectsObjectId'
+            string objectId = null; // TODO: replace null with proper value
+            var response = instance.GetObjectsObjectId(objectId);
+            Assert.IsInstanceOf<AuthzObject> (response, "response is AuthzObject");
+        }
+        
+        /// <summary>
         /// Test GetPermissions
         /// </summary>
         [Test]

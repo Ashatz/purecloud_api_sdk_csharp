@@ -30,9 +30,11 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetContactlists**](OutboundApi.html#getcontactlists) | **GET** /api/v2/outbound/contactlists | Query a list of contact lists. |
 | [**GetContactlistsContactlistId**](OutboundApi.html#getcontactlistscontactlistid) | **GET** /api/v2/outbound/contactlists/{contactListId} | Get dialer contactList. |
 | [**GetContactlistsContactlistIdContactsContactId**](OutboundApi.html#getcontactlistscontactlistidcontactscontactid) | **GET** /api/v2/outbound/contactlists/{contactListId}/contacts/{contactId} | Get dialer contactList. |
+| [**GetContactlistsContactlistIdExport**](OutboundApi.html#getcontactlistscontactlistidexport) | **GET** /api/v2/outbound/contactlists/{contactListId}/export | Get the URI of a contact list export. |
 | [**GetContactlistsContactlistIdImportstatus**](OutboundApi.html#getcontactlistscontactlistidimportstatus) | **GET** /api/v2/outbound/contactlists/{contactListId}/importstatus | Get dialer contactList import status. |
 | [**GetDnclists**](OutboundApi.html#getdnclists) | **GET** /api/v2/outbound/dnclists | Query dialer DNC lists |
 | [**GetDnclistsDnclistId**](OutboundApi.html#getdnclistsdnclistid) | **GET** /api/v2/outbound/dnclists/{dncListId} | Get dialer DNC list |
+| [**GetDnclistsDnclistIdExport**](OutboundApi.html#getdnclistsdnclistidexport) | **GET** /api/v2/outbound/dnclists/{dncListId}/export | Get the URI of a DNC list export. |
 | [**GetDnclistsDnclistIdImportstatus**](OutboundApi.html#getdnclistsdnclistidimportstatus) | **GET** /api/v2/outbound/dnclists/{dncListId}/importstatus | Get dialer dncList import status. |
 | [**GetRulesets**](OutboundApi.html#getrulesets) | **GET** /api/v2/outbound/rulesets | Query a list of Rule Sets. |
 | [**GetRulesetsRulesetId**](OutboundApi.html#getrulesetsrulesetid) | **GET** /api/v2/outbound/rulesets/{ruleSetId} | Get a Rule Set by ID. |
@@ -1422,6 +1424,64 @@ namespace Example
 
 [**DialerContact**](DialerContact.html)
 
+<a name="getcontactlistscontactlistidexport"></a>
+
+## [**ExportUri**](ExportUri.html) GetContactlistsContactlistIdExport (string contactListId, string download = null)
+
+Get the URI of a contact list export.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetContactlistsContactlistIdExportExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new OutboundApi();
+            var contactListId = contactListId_example;  // string | ContactList ID
+            var download = download_example;  // string | Redirect to download uri (optional)  (default to false)
+
+            try
+            {
+                // Get the URI of a contact list export.
+                ExportUri result = apiInstance.GetContactlistsContactlistIdExport(contactListId, download);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.GetContactlistsContactlistIdExport: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **contactListId** | **string**| ContactList ID |  |
+| **download** | **string**| Redirect to download uri | [optional] [default to false] |
+{: class="table table-striped"}
+
+### Return type
+
+[**ExportUri**](ExportUri.html)
+
 <a name="getcontactlistscontactlistidimportstatus"></a>
 
 ## [**ImportStatus**](ImportStatus.html) GetContactlistsContactlistIdImportstatus (string contactListId)
@@ -1607,6 +1667,64 @@ namespace Example
 ### Return type
 
 [**DncList**](DncList.html)
+
+<a name="getdnclistsdnclistidexport"></a>
+
+## [**ExportUri**](ExportUri.html) GetDnclistsDnclistIdExport (string dncListId, string download = null)
+
+Get the URI of a DNC list export.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetDnclistsDnclistIdExportExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new OutboundApi();
+            var dncListId = dncListId_example;  // string | DncList ID
+            var download = download_example;  // string | Redirect to download uri (optional)  (default to false)
+
+            try
+            {
+                // Get the URI of a DNC list export.
+                ExportUri result = apiInstance.GetDnclistsDnclistIdExport(dncListId, download);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.GetDnclistsDnclistIdExport: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **dncListId** | **string**| DncList ID |  |
+| **download** | **string**| Redirect to download uri | [optional] [default to false] |
+{: class="table table-striped"}
+
+### Return type
+
+[**ExportUri**](ExportUri.html)
 
 <a name="getdnclistsdnclistidimportstatus"></a>
 

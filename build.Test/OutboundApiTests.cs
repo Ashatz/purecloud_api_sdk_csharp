@@ -361,6 +361,19 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test GetContactlistsContactlistIdExport
+        /// </summary>
+        [Test]
+        public void GetContactlistsContactlistIdExportTest()
+        {
+            // TODO: add unit test for the method 'GetContactlistsContactlistIdExport'
+            string contactListId = null; // TODO: replace null with proper value
+            string download = null; // TODO: replace null with proper value
+            var response = instance.GetContactlistsContactlistIdExport(contactListId, download);
+            Assert.IsInstanceOf<ExportUri> (response, "response is ExportUri");
+        }
+        
+        /// <summary>
         /// Test GetContactlistsContactlistIdImportstatus
         /// </summary>
         [Test]
@@ -403,6 +416,19 @@ namespace ININ.PureCloudApi.Test
             bool? includeSize = null; // TODO: replace null with proper value
             var response = instance.GetDnclistsDnclistId(dncListId, includeImportStatus, includeSize);
             Assert.IsInstanceOf<DncList> (response, "response is DncList");
+        }
+        
+        /// <summary>
+        /// Test GetDnclistsDnclistIdExport
+        /// </summary>
+        [Test]
+        public void GetDnclistsDnclistIdExportTest()
+        {
+            // TODO: add unit test for the method 'GetDnclistsDnclistIdExport'
+            string dncListId = null; // TODO: replace null with proper value
+            string download = null; // TODO: replace null with proper value
+            var response = instance.GetDnclistsDnclistIdExport(dncListId, download);
+            Assert.IsInstanceOf<ExportUri> (response, "response is ExportUri");
         }
         
         /// <summary>

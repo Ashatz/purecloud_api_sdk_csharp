@@ -7,12 +7,12 @@ title: OrganizationCreate
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Name** | **string** | Display Name for Organization | |
-| **AdminUsername** | **string** | Administrator username for this organization | |
-| **AdminPassword** | **string** | Administrator password for this organization | |
+| **Name** | **string** | Display name for this organization. | |
+| **AdminUsername** | **string** | Administrator username for this organization in the form of an email address. | |
+| **AdminPassword** | **string** | Administrator password for this organization. | |
 | **Domain** | **string** | Fully qualified domain name for this organization (Ex. example.com). | |
-| **ThirdPartyOrgName** | **string** | Organization Name which does not contain special characters like spaces. | |
-| **Deletable** | **bool?** | Deletable Property for Organization. | [optional] [default to false]|
+| **ThirdPartyOrgName** | **string** | Organization name which does not contain special characters like spaces. | |
+| **Deletable** | **bool?** | Deletable property for this organization. | [optional] [default to false]|
 {: class="table table-striped"}
 
 

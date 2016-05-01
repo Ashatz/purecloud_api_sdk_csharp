@@ -26,8 +26,9 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Primary">A boolean used to tell whether or not to set this presence source as the primary on a PATCH (default to false).</param>
         /// <param name="PresenceDefinition">PresenceDefinition.</param>
         /// <param name="Message">Message.</param>
+        /// <param name="ModifiedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
 
-        public UserPresence(string Name = null, string Source = null, bool? Primary = null, OrganizationPresence PresenceDefinition = null, string Message = null)
+        public UserPresence(string Name = null, string Source = null, bool? Primary = null, OrganizationPresence PresenceDefinition = null, string Message = null, DateTime? ModifiedDate = null)
         {
             this.Name = Name;
             this.Source = Source;
@@ -42,6 +43,7 @@ namespace ININ.PureCloudApi.Model
             }
             this.PresenceDefinition = PresenceDefinition;
             this.Message = Message;
+            this.ModifiedDate = ModifiedDate;
             
         }
 
@@ -86,6 +88,13 @@ namespace ININ.PureCloudApi.Model
         public string Message { get; set; }
     
         /// <summary>
+        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// </summary>
+        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        [DataMember(Name="modifiedDate", EmitDefaultValue=false)]
+        public DateTime? ModifiedDate { get; set; }
+    
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -106,6 +115,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Primary: ").Append(Primary).Append("\n");
             sb.Append("  PresenceDefinition: ").Append(PresenceDefinition).Append("\n");
             sb.Append("  Message: ").Append(Message).Append("\n");
+            sb.Append("  ModifiedDate: ").Append(ModifiedDate).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -174,6 +184,11 @@ namespace ININ.PureCloudApi.Model
                     this.Message.Equals(other.Message)
                 ) &&
                 (
+                    this.ModifiedDate == other.ModifiedDate ||
+                    this.ModifiedDate != null &&
+                    this.ModifiedDate.Equals(other.ModifiedDate)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -203,6 +218,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.PresenceDefinition.GetHashCode();
                 if (this.Message != null)
                     hash = hash * 59 + this.Message.GetHashCode();
+                if (this.ModifiedDate != null)
+                    hash = hash * 59 + this.ModifiedDate.GetHashCode();
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;

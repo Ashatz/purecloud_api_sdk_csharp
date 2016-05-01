@@ -99,6 +99,14 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'Message'
         }
         /// <summary>
+        /// Test the property 'ModifiedDate'
+        /// </summary>
+        [Test]
+        public void ModifiedDateTest()
+        {
+            // TODO: unit test for the property 'ModifiedDate'
+        }
+        /// <summary>
         /// Test the property 'SelfUri'
         /// </summary>
         [Test]
