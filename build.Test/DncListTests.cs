@@ -107,14 +107,6 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'ImportStatus'
         }
         /// <summary>
-        /// Test the property 'FileKey'
-        /// </summary>
-        [Test]
-        public void FileKeyTest()
-        {
-            // TODO: unit test for the property 'FileKey'
-        }
-        /// <summary>
         /// Test the property 'Size'
         /// </summary>
         [Test]

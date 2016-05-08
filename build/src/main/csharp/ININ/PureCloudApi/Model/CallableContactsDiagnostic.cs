@@ -21,9 +21,9 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CallableContactsDiagnostic" />class.
         /// </summary>
-        /// <param name="DncLists">DncLists.</param>
-        /// <param name="CallableTimeSet">CallableTimeSet.</param>
-        /// <param name="RuleSets">RuleSets.</param>
+        /// <param name="DncLists">Do not call lists for the campaign.</param>
+        /// <param name="CallableTimeSet">Callable time sets for the campaign.</param>
+        /// <param name="RuleSets">Rule sets for the campaign.</param>
 
         public CallableContactsDiagnostic(List<UriReference> DncLists = null, UriReference CallableTimeSet = null, List<UriReference> RuleSets = null)
         {
@@ -35,20 +35,23 @@ namespace ININ.PureCloudApi.Model
 
     
         /// <summary>
-        /// Gets or Sets DncLists
+        /// Do not call lists for the campaign
         /// </summary>
+        /// <value>Do not call lists for the campaign</value>
         [DataMember(Name="dncLists", EmitDefaultValue=false)]
         public List<UriReference> DncLists { get; set; }
     
         /// <summary>
-        /// Gets or Sets CallableTimeSet
+        /// Callable time sets for the campaign
         /// </summary>
+        /// <value>Callable time sets for the campaign</value>
         [DataMember(Name="callableTimeSet", EmitDefaultValue=false)]
         public UriReference CallableTimeSet { get; set; }
     
         /// <summary>
-        /// Gets or Sets RuleSets
+        /// Rule sets for the campaign
         /// </summary>
+        /// <value>Rule sets for the campaign</value>
         [DataMember(Name="ruleSets", EmitDefaultValue=false)]
         public List<UriReference> RuleSets { get; set; }
     

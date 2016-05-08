@@ -187,6 +187,14 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'ExternalOrganization'
         }
         /// <summary>
+        /// Test the property 'ExternalDataSources'
+        /// </summary>
+        [Test]
+        public void ExternalDataSourcesTest()
+        {
+            // TODO: unit test for the property 'ExternalDataSources'
+        }
+        /// <summary>
         /// Test the property 'SelfUri'
         /// </summary>
         [Test]

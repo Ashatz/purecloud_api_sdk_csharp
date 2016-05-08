@@ -17,62 +17,106 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class DialerRule :  IEquatable<DialerRule>
     { 
+
+        /// <summary>
+        /// The category of the rule
+        /// </summary>
+        /// <value>The category of the rule</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+                public enum CategoryEnum {
+            
+            [EnumMember(Value = "DIALER_PRECALL")]
+            Precall,
+            
+            [EnumMember(Value = "DIALER_WRAPUP")]
+            Wrapup
+        }
+
         
+
+        /// <summary>
+        /// The category of the rule
+        /// </summary>
+        /// <value>The category of the rule</value>
+        [DataMember(Name="category", EmitDefaultValue=false)]
+        public CategoryEnum? Category { get; set; }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="DialerRule" />class.
         /// </summary>
-        /// <param name="Id">Id.</param>
-        /// <param name="Name">Name.</param>
-        /// <param name="Order">Order.</param>
-        /// <param name="Category">Category.</param>
-        /// <param name="Conditions">Conditions.</param>
-        /// <param name="Actions">Actions.</param>
+        /// <param name="Name">The name of the rule (required).</param>
+        /// <param name="Order">The ranked order of the rule; rules are processed from lowest number to highest.</param>
+        /// <param name="Category">The category of the rule (required).</param>
+        /// <param name="Conditions">The list of rule conditions; all must evaluate to true to trigger the rule actions (required).</param>
+        /// <param name="Actions">The list of rule actions to be taken if the conditions are true.</param>
 
-        public DialerRule(string Id = null, string Name = null, int? Order = null, string Category = null, List<Condition> Conditions = null, List<DialerAction> Actions = null)
+        public DialerRule(string Name = null, int? Order = null, CategoryEnum? Category = null, List<Condition> Conditions = null, List<DialerAction> Actions = null)
         {
-            this.Id = Id;
-            this.Name = Name;
+            // to ensure "Name" is required (not null)
+            if (Name == null)
+            {
+                throw new InvalidDataException("Name is a required property for DialerRule and cannot be null");
+            }
+            else
+            {
+                this.Name = Name;
+            }
+            // to ensure "Category" is required (not null)
+            if (Category == null)
+            {
+                throw new InvalidDataException("Category is a required property for DialerRule and cannot be null");
+            }
+            else
+            {
+                this.Category = Category;
+            }
+            // to ensure "Conditions" is required (not null)
+            if (Conditions == null)
+            {
+                throw new InvalidDataException("Conditions is a required property for DialerRule and cannot be null");
+            }
+            else
+            {
+                this.Conditions = Conditions;
+            }
             this.Order = Order;
-            this.Category = Category;
-            this.Conditions = Conditions;
             this.Actions = Actions;
             
         }
 
     
         /// <summary>
-        /// Gets or Sets Id
+        /// The identifier of the rule
         /// </summary>
+        /// <value>The identifier of the rule</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
+        public string Id { get; private set; }
     
         /// <summary>
-        /// Gets or Sets Name
+        /// The name of the rule
         /// </summary>
+        /// <value>The name of the rule</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
     
         /// <summary>
-        /// Gets or Sets Order
+        /// The ranked order of the rule; rules are processed from lowest number to highest
         /// </summary>
+        /// <value>The ranked order of the rule; rules are processed from lowest number to highest</value>
         [DataMember(Name="order", EmitDefaultValue=false)]
         public int? Order { get; set; }
     
         /// <summary>
-        /// Gets or Sets Category
+        /// The list of rule conditions; all must evaluate to true to trigger the rule actions
         /// </summary>
-        [DataMember(Name="category", EmitDefaultValue=false)]
-        public string Category { get; set; }
-    
-        /// <summary>
-        /// Gets or Sets Conditions
-        /// </summary>
+        /// <value>The list of rule conditions; all must evaluate to true to trigger the rule actions</value>
         [DataMember(Name="conditions", EmitDefaultValue=false)]
         public List<Condition> Conditions { get; set; }
     
         /// <summary>
-        /// Gets or Sets Actions
+        /// The list of rule actions to be taken if the conditions are true
         /// </summary>
+        /// <value>The list of rule actions to be taken if the conditions are true</value>
         [DataMember(Name="actions", EmitDefaultValue=false)]
         public List<DialerAction> Actions { get; set; }
     

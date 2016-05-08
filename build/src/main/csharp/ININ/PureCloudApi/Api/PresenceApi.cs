@@ -15,7 +15,7 @@ namespace ININ.PureCloudApi.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Delete an OrganizationPresence
+        /// Delete a Presence Definition
         /// </summary>
         /// <remarks>
         /// 
@@ -26,7 +26,7 @@ namespace ININ.PureCloudApi.Api
         OrganizationPresence DeletePresenceId (string presenceId);
 
         /// <summary>
-        /// Delete an OrganizationPresence
+        /// Delete a Presence Definition
         /// </summary>
         /// <remarks>
         /// 
@@ -36,7 +36,7 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of OrganizationPresence</returns>
         ApiResponse<OrganizationPresence> DeletePresenceIdWithHttpInfo (string presenceId);
         /// <summary>
-        /// Get an OrganizationPresence
+        /// Get a Presence Definition
         /// </summary>
         /// <remarks>
         /// 
@@ -47,7 +47,7 @@ namespace ININ.PureCloudApi.Api
         OrganizationPresence GetPresenceId (string presenceId);
 
         /// <summary>
-        /// Get an OrganizationPresence
+        /// Get a Presence Definition
         /// </summary>
         /// <remarks>
         /// 
@@ -57,7 +57,7 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of OrganizationPresence</returns>
         ApiResponse<OrganizationPresence> GetPresenceIdWithHttpInfo (string presenceId);
         /// <summary>
-        /// Get an Organization&#39;s list of Presences
+        /// Get an Organization&#39;s list of Presence Definitions
         /// </summary>
         /// <remarks>
         /// 
@@ -69,7 +69,7 @@ namespace ININ.PureCloudApi.Api
         OrganizationPresenceEntityListing GetPresencedefinitions (int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
-        /// Get an Organization&#39;s list of Presences
+        /// Get an Organization&#39;s list of Presence Definitions
         /// </summary>
         /// <remarks>
         /// 
@@ -79,6 +79,25 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>ApiResponse of OrganizationPresenceEntityListing</returns>
         ApiResponse<OrganizationPresenceEntityListing> GetPresencedefinitionsWithHttpInfo (int? pageNumber = null, int? pageSize = null);
+        /// <summary>
+        /// Get the list of SystemPresences
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>SystemPresence</returns>
+        SystemPresence GetSystempresences ();
+
+        /// <summary>
+        /// Get the list of SystemPresences
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of SystemPresence</returns>
+        ApiResponse<SystemPresence> GetSystempresencesWithHttpInfo ();
         /// <summary>
         /// Get a user&#39;s Presence
         /// </summary>
@@ -128,28 +147,28 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of UserPresence</returns>
         ApiResponse<UserPresence> PatchUserIdPresencesSourceIdWithHttpInfo (string userId, string sourceId, UserPresence body = null);
         /// <summary>
-        /// Create an OrganizationPresence
+        /// Create a Presence Definition
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">The OrganizationPresence to create</param>
+        /// <param name="body">The Presence Definition to create</param>
         /// <returns>OrganizationPresence</returns>
         OrganizationPresence PostPresencedefinitions (OrganizationPresence body);
 
         /// <summary>
-        /// Create an OrganizationPresence
+        /// Create a Presence Definition
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">The OrganizationPresence to create</param>
+        /// <param name="body">The Presence Definition to create</param>
         /// <returns>ApiResponse of OrganizationPresence</returns>
         ApiResponse<OrganizationPresence> PostPresencedefinitionsWithHttpInfo (OrganizationPresence body);
         /// <summary>
-        /// Update an OrganizationPresence
+        /// Update a Presence Definition
         /// </summary>
         /// <remarks>
         /// 
@@ -161,7 +180,7 @@ namespace ININ.PureCloudApi.Api
         OrganizationPresence PutPresenceId (string presenceId, OrganizationPresence body);
 
         /// <summary>
-        /// Update an OrganizationPresence
+        /// Update a Presence Definition
         /// </summary>
         /// <remarks>
         /// 
@@ -174,7 +193,7 @@ namespace ININ.PureCloudApi.Api
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Delete an OrganizationPresence
+        /// Delete a Presence Definition
         /// </summary>
         /// <remarks>
         /// 
@@ -185,7 +204,7 @@ namespace ININ.PureCloudApi.Api
         System.Threading.Tasks.Task<OrganizationPresence> DeletePresenceIdAsync (string presenceId);
 
         /// <summary>
-        /// Delete an OrganizationPresence
+        /// Delete a Presence Definition
         /// </summary>
         /// <remarks>
         /// 
@@ -195,7 +214,7 @@ namespace ININ.PureCloudApi.Api
         /// <returns>Task of ApiResponse (OrganizationPresence)</returns>
         System.Threading.Tasks.Task<ApiResponse<OrganizationPresence>> DeletePresenceIdAsyncWithHttpInfo (string presenceId);
         /// <summary>
-        /// Get an OrganizationPresence
+        /// Get a Presence Definition
         /// </summary>
         /// <remarks>
         /// 
@@ -206,7 +225,7 @@ namespace ININ.PureCloudApi.Api
         System.Threading.Tasks.Task<OrganizationPresence> GetPresenceIdAsync (string presenceId);
 
         /// <summary>
-        /// Get an OrganizationPresence
+        /// Get a Presence Definition
         /// </summary>
         /// <remarks>
         /// 
@@ -216,7 +235,7 @@ namespace ININ.PureCloudApi.Api
         /// <returns>Task of ApiResponse (OrganizationPresence)</returns>
         System.Threading.Tasks.Task<ApiResponse<OrganizationPresence>> GetPresenceIdAsyncWithHttpInfo (string presenceId);
         /// <summary>
-        /// Get an Organization&#39;s list of Presences
+        /// Get an Organization&#39;s list of Presence Definitions
         /// </summary>
         /// <remarks>
         /// 
@@ -228,7 +247,7 @@ namespace ININ.PureCloudApi.Api
         System.Threading.Tasks.Task<OrganizationPresenceEntityListing> GetPresencedefinitionsAsync (int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
-        /// Get an Organization&#39;s list of Presences
+        /// Get an Organization&#39;s list of Presence Definitions
         /// </summary>
         /// <remarks>
         /// 
@@ -238,6 +257,25 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of ApiResponse (OrganizationPresenceEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<OrganizationPresenceEntityListing>> GetPresencedefinitionsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null);
+        /// <summary>
+        /// Get the list of SystemPresences
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of SystemPresence</returns>
+        System.Threading.Tasks.Task<SystemPresence> GetSystempresencesAsync ();
+
+        /// <summary>
+        /// Get the list of SystemPresences
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (SystemPresence)</returns>
+        System.Threading.Tasks.Task<ApiResponse<SystemPresence>> GetSystempresencesAsyncWithHttpInfo ();
         /// <summary>
         /// Get a user&#39;s Presence
         /// </summary>
@@ -287,28 +325,28 @@ namespace ININ.PureCloudApi.Api
         /// <returns>Task of ApiResponse (UserPresence)</returns>
         System.Threading.Tasks.Task<ApiResponse<UserPresence>> PatchUserIdPresencesSourceIdAsyncWithHttpInfo (string userId, string sourceId, UserPresence body = null);
         /// <summary>
-        /// Create an OrganizationPresence
+        /// Create a Presence Definition
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">The OrganizationPresence to create</param>
+        /// <param name="body">The Presence Definition to create</param>
         /// <returns>Task of OrganizationPresence</returns>
         System.Threading.Tasks.Task<OrganizationPresence> PostPresencedefinitionsAsync (OrganizationPresence body);
 
         /// <summary>
-        /// Create an OrganizationPresence
+        /// Create a Presence Definition
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">The OrganizationPresence to create</param>
+        /// <param name="body">The Presence Definition to create</param>
         /// <returns>Task of ApiResponse (OrganizationPresence)</returns>
         System.Threading.Tasks.Task<ApiResponse<OrganizationPresence>> PostPresencedefinitionsAsyncWithHttpInfo (OrganizationPresence body);
         /// <summary>
-        /// Update an OrganizationPresence
+        /// Update a Presence Definition
         /// </summary>
         /// <remarks>
         /// 
@@ -320,7 +358,7 @@ namespace ININ.PureCloudApi.Api
         System.Threading.Tasks.Task<OrganizationPresence> PutPresenceIdAsync (string presenceId, OrganizationPresence body);
 
         /// <summary>
-        /// Update an OrganizationPresence
+        /// Update a Presence Definition
         /// </summary>
         /// <remarks>
         /// 
@@ -421,7 +459,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Delete an OrganizationPresence 
+        /// Delete a Presence Definition 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="presenceId">Organization Presence ID</param>
@@ -433,7 +471,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Delete an OrganizationPresence 
+        /// Delete a Presence Definition 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="presenceId">Organization Presence ID</param>
@@ -497,7 +535,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Delete an OrganizationPresence 
+        /// Delete a Presence Definition 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="presenceId">Organization Presence ID</param>
@@ -510,7 +548,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Delete an OrganizationPresence 
+        /// Delete a Presence Definition 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="presenceId">Organization Presence ID</param>
@@ -574,7 +612,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Get an OrganizationPresence 
+        /// Get a Presence Definition 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="presenceId">Organization Presence ID</param>
@@ -586,7 +624,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Get an OrganizationPresence 
+        /// Get a Presence Definition 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="presenceId">Organization Presence ID</param>
@@ -650,7 +688,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Get an OrganizationPresence 
+        /// Get a Presence Definition 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="presenceId">Organization Presence ID</param>
@@ -663,7 +701,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Get an OrganizationPresence 
+        /// Get a Presence Definition 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="presenceId">Organization Presence ID</param>
@@ -727,7 +765,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Get an Organization&#39;s list of Presences 
+        /// Get an Organization&#39;s list of Presence Definitions 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -740,7 +778,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Get an Organization&#39;s list of Presences 
+        /// Get an Organization&#39;s list of Presence Definitions 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -803,7 +841,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Get an Organization&#39;s list of Presences 
+        /// Get an Organization&#39;s list of Presence Definitions 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -817,7 +855,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Get an Organization&#39;s list of Presences 
+        /// Get an Organization&#39;s list of Presence Definitions 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -876,6 +914,147 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<OrganizationPresenceEntityListing>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (OrganizationPresenceEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrganizationPresenceEntityListing)));
+            
+        }
+
+        /// <summary>
+        /// Get the list of SystemPresences 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>SystemPresence</returns>
+        public SystemPresence GetSystempresences ()
+        {
+             ApiResponse<SystemPresence> localVarResponse = GetSystempresencesWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the list of SystemPresences 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of SystemPresence</returns>
+        public ApiResponse< SystemPresence > GetSystempresencesWithHttpInfo ()
+        {
+
+            var localVarPath = "/api/v2/systempresences";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetSystempresences: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetSystempresences: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SystemPresence>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (SystemPresence) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SystemPresence)));
+            
+        }
+
+        /// <summary>
+        /// Get the list of SystemPresences 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of SystemPresence</returns>
+        public async System.Threading.Tasks.Task<SystemPresence> GetSystempresencesAsync ()
+        {
+             ApiResponse<SystemPresence> localVarResponse = await GetSystempresencesAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the list of SystemPresences 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (SystemPresence)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<SystemPresence>> GetSystempresencesAsyncWithHttpInfo ()
+        {
+
+            var localVarPath = "/api/v2/systempresences";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetSystempresences: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetSystempresences: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SystemPresence>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (SystemPresence) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SystemPresence)));
             
         }
 
@@ -1230,10 +1409,10 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Create an OrganizationPresence 
+        /// Create a Presence Definition 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">The OrganizationPresence to create</param>
+        /// <param name="body">The Presence Definition to create</param>
         /// <returns>OrganizationPresence</returns>
         public OrganizationPresence PostPresencedefinitions (OrganizationPresence body)
         {
@@ -1242,10 +1421,10 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Create an OrganizationPresence 
+        /// Create a Presence Definition 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">The OrganizationPresence to create</param>
+        /// <param name="body">The Presence Definition to create</param>
         /// <returns>ApiResponse of OrganizationPresence</returns>
         public ApiResponse< OrganizationPresence > PostPresencedefinitionsWithHttpInfo (OrganizationPresence body)
         {
@@ -1313,10 +1492,10 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Create an OrganizationPresence 
+        /// Create a Presence Definition 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">The OrganizationPresence to create</param>
+        /// <param name="body">The Presence Definition to create</param>
         /// <returns>Task of OrganizationPresence</returns>
         public async System.Threading.Tasks.Task<OrganizationPresence> PostPresencedefinitionsAsync (OrganizationPresence body)
         {
@@ -1326,10 +1505,10 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Create an OrganizationPresence 
+        /// Create a Presence Definition 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">The OrganizationPresence to create</param>
+        /// <param name="body">The Presence Definition to create</param>
         /// <returns>Task of ApiResponse (OrganizationPresence)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<OrganizationPresence>> PostPresencedefinitionsAsyncWithHttpInfo (OrganizationPresence body)
         {
@@ -1397,7 +1576,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Update an OrganizationPresence 
+        /// Update a Presence Definition 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="presenceId">Organization Presence ID</param>
@@ -1410,7 +1589,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Update an OrganizationPresence 
+        /// Update a Presence Definition 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="presenceId">Organization Presence ID</param>
@@ -1486,7 +1665,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Update an OrganizationPresence 
+        /// Update a Presence Definition 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="presenceId">Organization Presence ID</param>
@@ -1500,7 +1679,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Update an OrganizationPresence 
+        /// Update a Presence Definition 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="presenceId">Organization Presence ID</param>

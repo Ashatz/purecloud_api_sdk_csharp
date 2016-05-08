@@ -115,6 +115,14 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'Type'
         }
         /// <summary>
+        /// Test the property 'LineAppearanceId'
+        /// </summary>
+        [Test]
+        public void LineAppearanceIdTest()
+        {
+            // TODO: unit test for the property 'LineAppearanceId'
+        }
+        /// <summary>
         /// Test the property 'SelfUri'
         /// </summary>
         [Test]

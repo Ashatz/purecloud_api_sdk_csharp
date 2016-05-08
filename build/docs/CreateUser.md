@@ -7,7 +7,7 @@ title: CreateUser
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Name** | **string** |  | [optional] |
+| **Name** | **string** | User&#39;s full name | |
 | **Department** | **string** |  | [optional] |
 | **Email** | **string** | User&#39;s email and username | |
 | **Addresses** | [**List&lt;Contact&gt;**](Contact.html) | Email addresses and phone numbers for this user | [optional] |

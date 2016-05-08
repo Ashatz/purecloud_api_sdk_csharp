@@ -7,9 +7,9 @@ title: ConnectRate
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Attempts** | **long?** |  | [optional] |
-| **Connects** | **long?** |  | [optional] |
-| **ConnectRatio** | **double?** |  | [optional] |
+| **Attempts** | **long?** | Number of call attempts made | [optional] |
+| **Connects** | **long?** | Number of calls with a live voice detected | [optional] |
+| **ConnectRatio** | **double?** | Ratio of connects to attempts | [optional] |
 {: class="table table-striped"}
 
 

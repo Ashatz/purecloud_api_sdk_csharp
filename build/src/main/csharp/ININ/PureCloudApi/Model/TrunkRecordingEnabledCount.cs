@@ -15,36 +15,36 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public partial class CampaignScheduleIntervals :  IEquatable<CampaignScheduleIntervals>
+    public partial class TrunkRecordingEnabledCount :  IEquatable<TrunkRecordingEnabledCount>
     { 
         
         /// <summary>
-        /// Initializes a new instance of the <see cref="CampaignScheduleIntervals" />class.
+        /// Initializes a new instance of the <see cref="TrunkRecordingEnabledCount" />class.
         /// </summary>
-        /// <param name="Start">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        /// <param name="End">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="EnabledCount">The amount of trunks that have recording enabled.</param>
+        /// <param name="DisabledCount">The amount of trunks that do not have recording enabled.</param>
 
-        public CampaignScheduleIntervals(DateTime? Start = null, DateTime? End = null)
+        public TrunkRecordingEnabledCount(int? EnabledCount = null, int? DisabledCount = null)
         {
-            this.Start = Start;
-            this.End = End;
+            this.EnabledCount = EnabledCount;
+            this.DisabledCount = DisabledCount;
             
         }
 
     
         /// <summary>
-        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// The amount of trunks that have recording enabled
         /// </summary>
-        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
-        [DataMember(Name="start", EmitDefaultValue=false)]
-        public DateTime? Start { get; set; }
+        /// <value>The amount of trunks that have recording enabled</value>
+        [DataMember(Name="enabledCount", EmitDefaultValue=false)]
+        public int? EnabledCount { get; set; }
     
         /// <summary>
-        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// The amount of trunks that do not have recording enabled
         /// </summary>
-        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
-        [DataMember(Name="end", EmitDefaultValue=false)]
-        public DateTime? End { get; set; }
+        /// <value>The amount of trunks that do not have recording enabled</value>
+        [DataMember(Name="disabledCount", EmitDefaultValue=false)]
+        public int? DisabledCount { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -53,9 +53,9 @@ namespace ININ.PureCloudApi.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class CampaignScheduleIntervals {\n");
-            sb.Append("  Start: ").Append(Start).Append("\n");
-            sb.Append("  End: ").Append(End).Append("\n");
+            sb.Append("class TrunkRecordingEnabledCount {\n");
+            sb.Append("  EnabledCount: ").Append(EnabledCount).Append("\n");
+            sb.Append("  DisabledCount: ").Append(DisabledCount).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -77,15 +77,15 @@ namespace ININ.PureCloudApi.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as CampaignScheduleIntervals);
+            return this.Equals(obj as TrunkRecordingEnabledCount);
         }
 
         /// <summary>
-        /// Returns true if CampaignScheduleIntervals instances are equal
+        /// Returns true if TrunkRecordingEnabledCount instances are equal
         /// </summary>
-        /// <param name="other">Instance of CampaignScheduleIntervals to be compared</param>
+        /// <param name="other">Instance of TrunkRecordingEnabledCount to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(CampaignScheduleIntervals other)
+        public bool Equals(TrunkRecordingEnabledCount other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -93,14 +93,14 @@ namespace ININ.PureCloudApi.Model
 
             return true &&
                 (
-                    this.Start == other.Start ||
-                    this.Start != null &&
-                    this.Start.Equals(other.Start)
+                    this.EnabledCount == other.EnabledCount ||
+                    this.EnabledCount != null &&
+                    this.EnabledCount.Equals(other.EnabledCount)
                 ) &&
                 (
-                    this.End == other.End ||
-                    this.End != null &&
-                    this.End.Equals(other.End)
+                    this.DisabledCount == other.DisabledCount ||
+                    this.DisabledCount != null &&
+                    this.DisabledCount.Equals(other.DisabledCount)
                 );
         }
 
@@ -115,10 +115,10 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.Start != null)
-                    hash = hash * 59 + this.Start.GetHashCode();
-                if (this.End != null)
-                    hash = hash * 59 + this.End.GetHashCode();
+                if (this.EnabledCount != null)
+                    hash = hash * 59 + this.EnabledCount.GetHashCode();
+                if (this.DisabledCount != null)
+                    hash = hash * 59 + this.DisabledCount.GetHashCode();
                 return hash;
             }
         }

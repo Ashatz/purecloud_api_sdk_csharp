@@ -17,55 +17,7 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class OrganizationPresence :  IEquatable<OrganizationPresence>
     { 
-
-        /// <summary>
-        /// Gets or Sets SystemPresence
-        /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
-                public enum SystemPresenceEnum {
-            
-            [EnumMember(Value = "AVAILABLE")]
-            Available,
-            
-            [EnumMember(Value = "AWAY")]
-            Away,
-            
-            [EnumMember(Value = "BUSY")]
-            Busy,
-            
-            [EnumMember(Value = "OUT_OF_OFFICE")]
-            OutOfOffice,
-            
-            [EnumMember(Value = "OFFLINE")]
-            Offline,
-            
-            [EnumMember(Value = "ON_QUEUE")]
-            OnQueue,
-            
-            [EnumMember(Value = "IDLE")]
-            Idle,
-            
-            [EnumMember(Value = "MEAL")]
-            Meal,
-            
-            [EnumMember(Value = "TRAINING")]
-            Training,
-            
-            [EnumMember(Value = "MEETING")]
-            Meeting,
-            
-            [EnumMember(Value = "BREAK")]
-            Break
-        }
-
         
-
-        /// <summary>
-        /// Gets or Sets SystemPresence
-        /// </summary>
-        [DataMember(Name="systemPresence", EmitDefaultValue=false)]
-        public SystemPresenceEnum? SystemPresence { get; set; }
-    
         /// <summary>
         /// Initializes a new instance of the <see cref="OrganizationPresence" />class.
         /// </summary>
@@ -78,7 +30,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="ModifiedBy">ModifiedBy.</param>
         /// <param name="ModifiedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
 
-        public OrganizationPresence(string Name = null, Dictionary<string, string> LanguageLabels = null, SystemPresenceEnum? SystemPresence = null, bool? Deactivated = null, User CreatedBy = null, DateTime? CreatedDate = null, User ModifiedBy = null, DateTime? ModifiedDate = null)
+        public OrganizationPresence(string Name = null, Dictionary<string, string> LanguageLabels = null, string SystemPresence = null, bool? Deactivated = null, User CreatedBy = null, DateTime? CreatedDate = null, User ModifiedBy = null, DateTime? ModifiedDate = null)
         {
             this.Name = Name;
             this.LanguageLabels = LanguageLabels;
@@ -118,6 +70,12 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         [DataMember(Name="languageLabels", EmitDefaultValue=false)]
         public Dictionary<string, string> LanguageLabels { get; set; }
+    
+        /// <summary>
+        /// Gets or Sets SystemPresence
+        /// </summary>
+        [DataMember(Name="systemPresence", EmitDefaultValue=false)]
+        public string SystemPresence { get; set; }
     
         /// <summary>
         /// Gets or Sets Deactivated

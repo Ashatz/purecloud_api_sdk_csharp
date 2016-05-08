@@ -22,20 +22,24 @@ namespace ININ.PureCloudApi.Model
         /// Initializes a new instance of the <see cref="DncList" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
-        /// <param name="Version">required for updates, must match the version number of the most recent update.</param>
-        /// <param name="PhoneNumberColumns">PhoneNumberColumns.</param>
-        /// <param name="ImportStatus">ImportStatus.</param>
-        /// <param name="FileKey">FileKey.</param>
-        /// <param name="Size">Size.</param>
+        /// <param name="Version">Required for updates, must match the version number of the most recent update.</param>
+        /// <param name="PhoneNumberColumns">the name of the columns containing the numbers not to be called (required).</param>
+        /// <param name="ImportStatus">the status of the import process.</param>
 
-        public DncList(string Name = null, int? Version = null, List<string> PhoneNumberColumns = null, ImportStatus ImportStatus = null, string FileKey = null, long? Size = null)
+        public DncList(string Name = null, int? Version = null, List<string> PhoneNumberColumns = null, ImportStatus ImportStatus = null)
         {
+            // to ensure "PhoneNumberColumns" is required (not null)
+            if (PhoneNumberColumns == null)
+            {
+                throw new InvalidDataException("PhoneNumberColumns is a required property for DncList and cannot be null");
+            }
+            else
+            {
+                this.PhoneNumberColumns = PhoneNumberColumns;
+            }
             this.Name = Name;
             this.Version = Version;
-            this.PhoneNumberColumns = PhoneNumberColumns;
             this.ImportStatus = ImportStatus;
-            this.FileKey = FileKey;
-            this.Size = Size;
             
         }
 
@@ -54,49 +58,46 @@ namespace ININ.PureCloudApi.Model
         public string Name { get; set; }
     
         /// <summary>
-        /// creation time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// Creation time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
-        /// <value>creation time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>Creation time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; private set; }
     
         /// <summary>
-        /// last modified time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// Last modified time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
-        /// <value>last modified time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>Last modified time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
         public DateTime? DateModified { get; private set; }
     
         /// <summary>
-        /// required for updates, must match the version number of the most recent update
+        /// Required for updates, must match the version number of the most recent update
         /// </summary>
-        /// <value>required for updates, must match the version number of the most recent update</value>
+        /// <value>Required for updates, must match the version number of the most recent update</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public int? Version { get; set; }
     
         /// <summary>
-        /// Gets or Sets PhoneNumberColumns
+        /// the name of the columns containing the numbers not to be called
         /// </summary>
+        /// <value>the name of the columns containing the numbers not to be called</value>
         [DataMember(Name="phoneNumberColumns", EmitDefaultValue=false)]
         public List<string> PhoneNumberColumns { get; set; }
     
         /// <summary>
-        /// Gets or Sets ImportStatus
+        /// the status of the import process
         /// </summary>
+        /// <value>the status of the import process</value>
         [DataMember(Name="importStatus", EmitDefaultValue=false)]
         public ImportStatus ImportStatus { get; set; }
     
         /// <summary>
-        /// Gets or Sets FileKey
+        /// the number of phone numbers in the do not call list
         /// </summary>
-        [DataMember(Name="fileKey", EmitDefaultValue=false)]
-        public string FileKey { get; set; }
-    
-        /// <summary>
-        /// Gets or Sets Size
-        /// </summary>
+        /// <value>the number of phone numbers in the do not call list</value>
         [DataMember(Name="size", EmitDefaultValue=false)]
-        public long? Size { get; set; }
+        public long? Size { get; private set; }
     
         /// <summary>
         /// The URI for this object
@@ -120,7 +121,6 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Version: ").Append(Version).Append("\n");
             sb.Append("  PhoneNumberColumns: ").Append(PhoneNumberColumns).Append("\n");
             sb.Append("  ImportStatus: ").Append(ImportStatus).Append("\n");
-            sb.Append("  FileKey: ").Append(FileKey).Append("\n");
             sb.Append("  Size: ").Append(Size).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
@@ -195,11 +195,6 @@ namespace ININ.PureCloudApi.Model
                     this.ImportStatus.Equals(other.ImportStatus)
                 ) &&
                 (
-                    this.FileKey == other.FileKey ||
-                    this.FileKey != null &&
-                    this.FileKey.Equals(other.FileKey)
-                ) &&
-                (
                     this.Size == other.Size ||
                     this.Size != null &&
                     this.Size.Equals(other.Size)
@@ -236,8 +231,6 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.PhoneNumberColumns.GetHashCode();
                 if (this.ImportStatus != null)
                     hash = hash * 59 + this.ImportStatus.GetHashCode();
-                if (this.FileKey != null)
-                    hash = hash * 59 + this.FileKey.GetHashCode();
                 if (this.Size != null)
                     hash = hash * 59 + this.Size.GetHashCode();
                 if (this.SelfUri != null)

@@ -9,7 +9,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | ------------- | ------------- | ------------- |
 | [**DeleteRolesRoleId**](AuthorizationApi.html#deleterolesroleid) | **DELETE** /api/v2/authorization/roles/{roleId} | Delete an organization role. |
 | [**DeleteUserIdRoles**](AuthorizationApi.html#deleteuseridroles) | **DELETE** /api/v2/users/{userId}/roles | Removes all the roles from the user. |
-| [**GetObjectsObjectId**](AuthorizationApi.html#getobjectsobjectid) | **GET** /api/v2/authorization/objects/{objectId} | Returns a permission-protected object, showing the permission contexts it belongs to. |
 | [**GetPermissions**](AuthorizationApi.html#getpermissions) | **GET** /api/v2/authorization/permissions | Get all permissions. |
 | [**GetProducts**](AuthorizationApi.html#getproducts) | **GET** /api/v2/authorization/products | Get the list of enabled products |
 | [**GetRoles**](AuthorizationApi.html#getroles) | **GET** /api/v2/authorization/roles | Retrieve a list of all roles defined for the organization |
@@ -136,62 +135,6 @@ namespace Example
 ### Return type
 
 void (empty response body)
-
-<a name="getobjectsobjectid"></a>
-
-## [**AuthzObject**](AuthzObject.html) GetObjectsObjectId (string objectId)
-
-Returns a permission-protected object, showing the permission contexts it belongs to.
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class GetObjectsObjectIdExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new AuthorizationApi();
-            var objectId = objectId_example;  // string | Object ID
-
-            try
-            {
-                // Returns a permission-protected object, showing the permission contexts it belongs to.
-                AuthzObject result = apiInstance.GetObjectsObjectId(objectId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling AuthorizationApi.GetObjectsObjectId: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **objectId** | **string**| Object ID |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**AuthzObject**](AuthzObject.html)
 
 <a name="getpermissions"></a>
 

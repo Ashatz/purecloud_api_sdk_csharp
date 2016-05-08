@@ -22,16 +22,24 @@ namespace ININ.PureCloudApi.Model
         /// Initializes a new instance of the <see cref="DialerContact" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
-        /// <param name="ContactListId">ContactListId.</param>
-        /// <param name="Data">Data.</param>
-        /// <param name="CallRecords">CallRecords.</param>
-        /// <param name="Callable">Callable (default to false).</param>
-        /// <param name="PhoneNumberStatus">PhoneNumberStatus.</param>
+        /// <param name="ContactListId">Identifier of the contact list containing this contact (required).</param>
+        /// <param name="Data">A map of the contact&#39;s data attributes and values.</param>
+        /// <param name="CallRecords">A map of call records for the contact phone columns.</param>
+        /// <param name="Callable">false if the contact is not to be called (default to false).</param>
+        /// <param name="PhoneNumberStatus">A map of statuses for the contact phone columns.</param>
 
         public DialerContact(string Name = null, string ContactListId = null, Dictionary<string, Object> Data = null, Dictionary<string, CallRecord> CallRecords = null, bool? Callable = null, Dictionary<string, PhoneNumberStatus> PhoneNumberStatus = null)
         {
+            // to ensure "ContactListId" is required (not null)
+            if (ContactListId == null)
+            {
+                throw new InvalidDataException("ContactListId is a required property for DialerContact and cannot be null");
+            }
+            else
+            {
+                this.ContactListId = ContactListId;
+            }
             this.Name = Name;
-            this.ContactListId = ContactListId;
             this.Data = Data;
             this.CallRecords = CallRecords;
             // use default value if no "Callable" provided
@@ -62,32 +70,37 @@ namespace ININ.PureCloudApi.Model
         public string Name { get; set; }
     
         /// <summary>
-        /// Gets or Sets ContactListId
+        /// Identifier of the contact list containing this contact
         /// </summary>
+        /// <value>Identifier of the contact list containing this contact</value>
         [DataMember(Name="contactListId", EmitDefaultValue=false)]
         public string ContactListId { get; set; }
     
         /// <summary>
-        /// Gets or Sets Data
+        /// A map of the contact&#39;s data attributes and values
         /// </summary>
+        /// <value>A map of the contact&#39;s data attributes and values</value>
         [DataMember(Name="data", EmitDefaultValue=false)]
         public Dictionary<string, Object> Data { get; set; }
     
         /// <summary>
-        /// Gets or Sets CallRecords
+        /// A map of call records for the contact phone columns
         /// </summary>
+        /// <value>A map of call records for the contact phone columns</value>
         [DataMember(Name="callRecords", EmitDefaultValue=false)]
         public Dictionary<string, CallRecord> CallRecords { get; set; }
     
         /// <summary>
-        /// Gets or Sets Callable
+        /// false if the contact is not to be called
         /// </summary>
+        /// <value>false if the contact is not to be called</value>
         [DataMember(Name="callable", EmitDefaultValue=false)]
         public bool? Callable { get; set; }
     
         /// <summary>
-        /// Gets or Sets PhoneNumberStatus
+        /// A map of statuses for the contact phone columns
         /// </summary>
+        /// <value>A map of statuses for the contact phone columns</value>
         [DataMember(Name="phoneNumberStatus", EmitDefaultValue=false)]
         public Dictionary<string, PhoneNumberStatus> PhoneNumberStatus { get; set; }
     

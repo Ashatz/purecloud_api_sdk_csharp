@@ -19,9 +19,9 @@ namespace ININ.PureCloudApi.Model
     { 
 
         /// <summary>
-        /// The OAuth Grant/Client type supported by this client.
+        /// The OAuth Grant/Client type supported by this client.\nCode Authorization Grant/Client type - Preferred client type where the Client ID and Secret are required to create tokens. Used where the secret can be secured.\nImplicit grant type - Client ID only is required to create tokens. Used in browser and mobile apps where the secret can not be secured.\nSAML2-Bearer extension grant type - SAML2 assertion provider for user authentication at the token endpoint.\nClient Credential grant type - Used to created access tokens that are tied only to the client.\n
         /// </summary>
-        /// <value>The OAuth Grant/Client type supported by this client.</value>
+        /// <value>The OAuth Grant/Client type supported by this client.\nCode Authorization Grant/Client type - Preferred client type where the Client ID and Secret are required to create tokens. Used where the secret can be secured.\nImplicit grant type - Client ID only is required to create tokens. Used in browser and mobile apps where the secret can not be secured.\nSAML2-Bearer extension grant type - SAML2 assertion provider for user authentication at the token endpoint.\nClient Credential grant type - Used to created access tokens that are tied only to the client.\n</value>
         [JsonConverter(typeof(StringEnumConverter))]
                 public enum AuthorizedGrantTypeEnum {
             
@@ -31,16 +31,22 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "TOKEN")]
             Token,
             
-            [EnumMember(Value = "CLIENT-CREDENTIALS")]
-            Clientcredentials
+            [EnumMember(Value = "SAML2BEARER")]
+            Saml2bearer,
+            
+            [EnumMember(Value = "PASSWORD")]
+            Password,
+            
+            [EnumMember(Value = "CLIENT_CREDENTIALS")]
+            ClientCredentials
         }
 
         
 
         /// <summary>
-        /// The OAuth Grant/Client type supported by this client.
+        /// The OAuth Grant/Client type supported by this client.\nCode Authorization Grant/Client type - Preferred client type where the Client ID and Secret are required to create tokens. Used where the secret can be secured.\nImplicit grant type - Client ID only is required to create tokens. Used in browser and mobile apps where the secret can not be secured.\nSAML2-Bearer extension grant type - SAML2 assertion provider for user authentication at the token endpoint.\nClient Credential grant type - Used to created access tokens that are tied only to the client.\n
         /// </summary>
-        /// <value>The OAuth Grant/Client type supported by this client.</value>
+        /// <value>The OAuth Grant/Client type supported by this client.\nCode Authorization Grant/Client type - Preferred client type where the Client ID and Secret are required to create tokens. Used where the secret can be secured.\nImplicit grant type - Client ID only is required to create tokens. Used in browser and mobile apps where the secret can not be secured.\nSAML2-Bearer extension grant type - SAML2 assertion provider for user authentication at the token endpoint.\nClient Credential grant type - Used to created access tokens that are tied only to the client.\n</value>
         [DataMember(Name="authorizedGrantType", EmitDefaultValue=false)]
         public AuthorizedGrantTypeEnum? AuthorizedGrantType { get; set; }
     
@@ -51,9 +57,9 @@ namespace ININ.PureCloudApi.Model
         /// <param name="AccessTokenValiditySeconds">The number of seconds, between 5mins and 48hrs, until tokens created with this client expire. If this field is omitted, a default of 24 hours will be applied..</param>
         /// <param name="Description">Description.</param>
         /// <param name="RegisteredRedirectUri">List of allowed callbacks for this client. For example: https://myap.example.com/auth/callback (required).</param>
-        /// <param name="Secret">System created secret assigned to this client. Secrets are required for code authorization grants..</param>
+        /// <param name="Secret">System created secret assigned to this client. Secrets are required for code authorization and client credential grants..</param>
         /// <param name="RoleIds">Roles assigned to this client. Roles only apply to clients using the client_credential grant.</param>
-        /// <param name="AuthorizedGrantType">The OAuth Grant/Client type supported by this client. (required).</param>
+        /// <param name="AuthorizedGrantType">The OAuth Grant/Client type supported by this client.\nCode Authorization Grant/Client type - Preferred client type where the Client ID and Secret are required to create tokens. Used where the secret can be secured.\nImplicit grant type - Client ID only is required to create tokens. Used in browser and mobile apps where the secret can not be secured.\nSAML2-Bearer extension grant type - SAML2 assertion provider for user authentication at the token endpoint.\nClient Credential grant type - Used to created access tokens that are tied only to the client.\n.</param>
 
         public OAuthClient(string Name = null, long? AccessTokenValiditySeconds = null, string Description = null, List<string> RegisteredRedirectUri = null, string Secret = null, List<string> RoleIds = null, AuthorizedGrantTypeEnum? AuthorizedGrantType = null)
         {
@@ -75,19 +81,11 @@ namespace ININ.PureCloudApi.Model
             {
                 this.RegisteredRedirectUri = RegisteredRedirectUri;
             }
-            // to ensure "AuthorizedGrantType" is required (not null)
-            if (AuthorizedGrantType == null)
-            {
-                throw new InvalidDataException("AuthorizedGrantType is a required property for OAuthClient and cannot be null");
-            }
-            else
-            {
-                this.AuthorizedGrantType = AuthorizedGrantType;
-            }
             this.AccessTokenValiditySeconds = AccessTokenValiditySeconds;
             this.Description = Description;
             this.Secret = Secret;
             this.RoleIds = RoleIds;
+            this.AuthorizedGrantType = AuthorizedGrantType;
             
         }
 
@@ -127,9 +125,9 @@ namespace ININ.PureCloudApi.Model
         public List<string> RegisteredRedirectUri { get; set; }
     
         /// <summary>
-        /// System created secret assigned to this client. Secrets are required for code authorization grants.
+        /// System created secret assigned to this client. Secrets are required for code authorization and client credential grants.
         /// </summary>
-        /// <value>System created secret assigned to this client. Secrets are required for code authorization grants.</value>
+        /// <value>System created secret assigned to this client. Secrets are required for code authorization and client credential grants.</value>
         [DataMember(Name="secret", EmitDefaultValue=false)]
         public string Secret { get; set; }
     

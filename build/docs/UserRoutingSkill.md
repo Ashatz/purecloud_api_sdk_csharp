@@ -9,8 +9,8 @@ title: UserRoutingSkill
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** |  | [optional] |
-| **Proficiency** | **double?** | proficiency of the organization skill. | [optional] |
-| **Active** | **bool?** | Is the user skill active. | [optional] [default to false]|
+| **Proficiency** | **double?** | Proficiency is a rating from 0.0 to 5.0 on how competent an agent is for a particular skill. It is used when a queue is set to \&quot;Best available skills\&quot; mode to allow acd interactions to target agents with higher proficiency ratings. | [optional] |
+| **State** | **string** | Activate or deactivate this routing skill. | [optional] |
 | **SkillUri** | **string** | URI to the organization skill used by this user skill. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}

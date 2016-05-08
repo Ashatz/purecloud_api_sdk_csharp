@@ -23,11 +23,21 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <param name="MaximumCapacity">Defines the maximum number of conversations of this type that an agent can handle at one time..</param>
         /// <param name="InterruptableMediaTypes">Defines the list of other media types that can interrupt a conversation of this media type.  Values can be: call, chat, email, or socialExpression.</param>
+        /// <param name="IncludeNonAcd">If true, then track non-ACD conversations against utilization (default to false).</param>
 
-        public OrgMediaUtilization(int? MaximumCapacity = null, List<string> InterruptableMediaTypes = null)
+        public OrgMediaUtilization(int? MaximumCapacity = null, List<string> InterruptableMediaTypes = null, bool? IncludeNonAcd = null)
         {
             this.MaximumCapacity = MaximumCapacity;
             this.InterruptableMediaTypes = InterruptableMediaTypes;
+            // use default value if no "IncludeNonAcd" provided
+            if (IncludeNonAcd == null)
+            {
+                this.IncludeNonAcd = false;
+            }
+            else
+            {
+                this.IncludeNonAcd = IncludeNonAcd;
+            }
             
         }
 
@@ -47,6 +57,13 @@ namespace ININ.PureCloudApi.Model
         public List<string> InterruptableMediaTypes { get; set; }
     
         /// <summary>
+        /// If true, then track non-ACD conversations against utilization
+        /// </summary>
+        /// <value>If true, then track non-ACD conversations against utilization</value>
+        [DataMember(Name="includeNonAcd", EmitDefaultValue=false)]
+        public bool? IncludeNonAcd { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -56,6 +73,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class OrgMediaUtilization {\n");
             sb.Append("  MaximumCapacity: ").Append(MaximumCapacity).Append("\n");
             sb.Append("  InterruptableMediaTypes: ").Append(InterruptableMediaTypes).Append("\n");
+            sb.Append("  IncludeNonAcd: ").Append(IncludeNonAcd).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -101,6 +119,11 @@ namespace ININ.PureCloudApi.Model
                     this.InterruptableMediaTypes == other.InterruptableMediaTypes ||
                     this.InterruptableMediaTypes != null &&
                     this.InterruptableMediaTypes.SequenceEqual(other.InterruptableMediaTypes)
+                ) &&
+                (
+                    this.IncludeNonAcd == other.IncludeNonAcd ||
+                    this.IncludeNonAcd != null &&
+                    this.IncludeNonAcd.Equals(other.IncludeNonAcd)
                 );
         }
 
@@ -119,6 +142,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.MaximumCapacity.GetHashCode();
                 if (this.InterruptableMediaTypes != null)
                     hash = hash * 59 + this.InterruptableMediaTypes.GetHashCode();
+                if (this.IncludeNonAcd != null)
+                    hash = hash * 59 + this.IncludeNonAcd.GetHashCode();
                 return hash;
             }
         }

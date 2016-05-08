@@ -19,8 +19,9 @@ namespace ININ.PureCloudApi.Model
     { 
 
         /// <summary>
-        /// Gets or Sets Status
+        /// status of the sequence
         /// </summary>
+        /// <value>status of the sequence</value>
         [JsonConverter(typeof(StringEnumConverter))]
                 public enum StatusEnum {
             
@@ -37,8 +38,9 @@ namespace ININ.PureCloudApi.Model
         
 
         /// <summary>
-        /// Gets or Sets Status
+        /// status of the sequence
         /// </summary>
+        /// <value>status of the sequence</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
     
@@ -46,21 +48,33 @@ namespace ININ.PureCloudApi.Model
         /// Initializes a new instance of the <see cref="CampaignSequence" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
-        /// <param name="Version">required for updates, must match the version number of the most recent update.</param>
-        /// <param name="Campaigns">Campaigns.</param>
-        /// <param name="CurrentCampaign">CurrentCampaign.</param>
-        /// <param name="Status">Status.</param>
-        /// <param name="StopMessage">StopMessage.</param>
-        /// <param name="Repeat">Repeat (default to false).</param>
+        /// <param name="Version">Required for updates, must match the version number of the most recent update.</param>
+        /// <param name="Campaigns">the ordered list of campaign identifiers (required).</param>
+        /// <param name="Status">status of the sequence (required).</param>
+        /// <param name="Repeat">indicates if a sequence is to repeat from the beginning after the last campaign completes; default is false (default to false).</param>
 
-        public CampaignSequence(string Name = null, int? Version = null, List<UriReference> Campaigns = null, int? CurrentCampaign = null, StatusEnum? Status = null, string StopMessage = null, bool? Repeat = null)
+        public CampaignSequence(string Name = null, int? Version = null, List<UriReference> Campaigns = null, StatusEnum? Status = null, bool? Repeat = null)
         {
+            // to ensure "Campaigns" is required (not null)
+            if (Campaigns == null)
+            {
+                throw new InvalidDataException("Campaigns is a required property for CampaignSequence and cannot be null");
+            }
+            else
+            {
+                this.Campaigns = Campaigns;
+            }
+            // to ensure "Status" is required (not null)
+            if (Status == null)
+            {
+                throw new InvalidDataException("Status is a required property for CampaignSequence and cannot be null");
+            }
+            else
+            {
+                this.Status = Status;
+            }
             this.Name = Name;
             this.Version = Version;
-            this.Campaigns = Campaigns;
-            this.CurrentCampaign = CurrentCampaign;
-            this.Status = Status;
-            this.StopMessage = StopMessage;
             // use default value if no "Repeat" provided
             if (Repeat == null)
             {
@@ -88,47 +102,51 @@ namespace ININ.PureCloudApi.Model
         public string Name { get; set; }
     
         /// <summary>
-        /// creation time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// Creation time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
-        /// <value>creation time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>Creation time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; private set; }
     
         /// <summary>
-        /// last modified time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// Last modified time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
-        /// <value>last modified time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>Last modified time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
         public DateTime? DateModified { get; private set; }
     
         /// <summary>
-        /// required for updates, must match the version number of the most recent update
+        /// Required for updates, must match the version number of the most recent update
         /// </summary>
-        /// <value>required for updates, must match the version number of the most recent update</value>
+        /// <value>Required for updates, must match the version number of the most recent update</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public int? Version { get; set; }
     
         /// <summary>
-        /// Gets or Sets Campaigns
+        /// the ordered list of campaign identifiers
         /// </summary>
+        /// <value>the ordered list of campaign identifiers</value>
         [DataMember(Name="campaigns", EmitDefaultValue=false)]
         public List<UriReference> Campaigns { get; set; }
     
         /// <summary>
-        /// Gets or Sets CurrentCampaign
+        /// the zero-based index of the current campaign in the campaigns list
         /// </summary>
+        /// <value>the zero-based index of the current campaign in the campaigns list</value>
         [DataMember(Name="currentCampaign", EmitDefaultValue=false)]
-        public int? CurrentCampaign { get; set; }
+        public int? CurrentCampaign { get; private set; }
     
         /// <summary>
-        /// Gets or Sets StopMessage
+        /// if a sequence has unexpectedly stopped, this message provides the reason
         /// </summary>
+        /// <value>if a sequence has unexpectedly stopped, this message provides the reason</value>
         [DataMember(Name="stopMessage", EmitDefaultValue=false)]
-        public string StopMessage { get; set; }
+        public string StopMessage { get; private set; }
     
         /// <summary>
-        /// Gets or Sets Repeat
+        /// indicates if a sequence is to repeat from the beginning after the last campaign completes; default is false
         /// </summary>
+        /// <value>indicates if a sequence is to repeat from the beginning after the last campaign completes; default is false</value>
         [DataMember(Name="repeat", EmitDefaultValue=false)]
         public bool? Repeat { get; set; }
     

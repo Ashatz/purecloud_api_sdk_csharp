@@ -21,44 +21,42 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CampaignStats" />class.
         /// </summary>
-        /// <param name="ContactRate">ContactRate.</param>
-        /// <param name="IdleAgents">IdleAgents.</param>
-        /// <param name="AdjustedCallsPerAgent">AdjustedCallsPerAgent.</param>
-        /// <param name="OutstandingCalls">OutstandingCalls.</param>
+        /// <param name="ContactRate">Information regarding the campaign&#39;s connect rate.</param>
 
-        public CampaignStats(ConnectRate ContactRate = null, int? IdleAgents = null, double? AdjustedCallsPerAgent = null, int? OutstandingCalls = null)
+        public CampaignStats(ConnectRate ContactRate = null)
         {
             this.ContactRate = ContactRate;
-            this.IdleAgents = IdleAgents;
-            this.AdjustedCallsPerAgent = AdjustedCallsPerAgent;
-            this.OutstandingCalls = OutstandingCalls;
             
         }
 
     
         /// <summary>
-        /// Gets or Sets ContactRate
+        /// Information regarding the campaign&#39;s connect rate
         /// </summary>
+        /// <value>Information regarding the campaign&#39;s connect rate</value>
         [DataMember(Name="contactRate", EmitDefaultValue=false)]
         public ConnectRate ContactRate { get; set; }
     
         /// <summary>
-        /// Gets or Sets IdleAgents
+        /// Number of available agents not currently being utilized
         /// </summary>
+        /// <value>Number of available agents not currently being utilized</value>
         [DataMember(Name="idleAgents", EmitDefaultValue=false)]
-        public int? IdleAgents { get; set; }
+        public int? IdleAgents { get; private set; }
     
         /// <summary>
-        /// Gets or Sets AdjustedCallsPerAgent
+        /// Calls per agent adjusted by pace
         /// </summary>
+        /// <value>Calls per agent adjusted by pace</value>
         [DataMember(Name="adjustedCallsPerAgent", EmitDefaultValue=false)]
-        public double? AdjustedCallsPerAgent { get; set; }
+        public double? AdjustedCallsPerAgent { get; private set; }
     
         /// <summary>
-        /// Gets or Sets OutstandingCalls
+        /// Number of campaign calls currently ongoing
         /// </summary>
+        /// <value>Number of campaign calls currently ongoing</value>
         [DataMember(Name="outstandingCalls", EmitDefaultValue=false)]
-        public int? OutstandingCalls { get; set; }
+        public int? OutstandingCalls { get; private set; }
     
         /// <summary>
         /// Returns the string presentation of the object

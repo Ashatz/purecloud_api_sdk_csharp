@@ -15,6 +15,7 @@ title: Station
 | **PrimaryEdge** | [**UriReference**](UriReference.html) |  | [optional] |
 | **SecondaryEdge** | [**UriReference**](UriReference.html) |  | [optional] |
 | **Type** | **string** |  | [optional] |
+| **LineAppearanceId** | **string** |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

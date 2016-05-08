@@ -13,6 +13,7 @@ title: PolicyActions
 | **AssignMeteredEvaluations** | [**List&lt;MeteredEvaluationAssignment&gt;**](MeteredEvaluationAssignment.html) |  | [optional] |
 | **AssignCalibrations** | [**List&lt;CalibrationAssignment&gt;**](CalibrationAssignment.html) |  | [optional] |
 | **RetentionDuration** | [**RetentionDuration**](RetentionDuration.html) |  | [optional] |
+| **InitiateScreenRecording** | [**InitiateScreenRecording**](InitiateScreenRecording.html) |  | [optional] |
 {: class="table table-striped"}
 
 

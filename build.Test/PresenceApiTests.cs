@@ -91,6 +91,17 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test GetSystempresences
+        /// </summary>
+        [Test]
+        public void GetSystempresencesTest()
+        {
+            // TODO: add unit test for the method 'GetSystempresences'
+            var response = instance.GetSystempresences();
+            Assert.IsInstanceOf<SystemPresence> (response, "response is SystemPresence");
+        }
+        
+        /// <summary>
         /// Test GetUserIdPresencesSourceId
         /// </summary>
         [Test]

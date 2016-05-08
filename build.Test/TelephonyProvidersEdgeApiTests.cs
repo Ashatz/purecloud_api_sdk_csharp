@@ -228,6 +228,17 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test GetProvidersEdgesAvailablelanguages
+        /// </summary>
+        [Test]
+        public void GetProvidersEdgesAvailablelanguagesTest()
+        {
+            // TODO: add unit test for the method 'GetProvidersEdgesAvailablelanguages'
+            var response = instance.GetProvidersEdgesAvailablelanguages();
+            Assert.IsInstanceOf<AvailableLanguageList> (response, "response is AvailableLanguageList");
+        }
+        
+        /// <summary>
         /// Test GetProvidersEdgesCertificateauthorities
         /// </summary>
         [Test]
@@ -832,7 +843,8 @@ namespace ININ.PureCloudApi.Test
             int? pageSize = null; // TODO: replace null with proper value
             string sortBy = null; // TODO: replace null with proper value
             string sortOrder = null; // TODO: replace null with proper value
-            var response = instance.GetProvidersEdgesTrunkbasesettings(pageNumber, pageSize, sortBy, sortOrder);
+            bool? recordingEnabled = null; // TODO: replace null with proper value
+            var response = instance.GetProvidersEdgesTrunkbasesettings(pageNumber, pageSize, sortBy, sortOrder, recordingEnabled);
             Assert.IsInstanceOf<TrunkBase> (response, "response is TrunkBase");
         }
         
@@ -902,6 +914,18 @@ namespace ININ.PureCloudApi.Test
             string trunkId = null; // TODO: replace null with proper value
             var response = instance.GetProvidersEdgesTrunksTrunkId(trunkId);
             Assert.IsInstanceOf<Trunk> (response, "response is Trunk");
+        }
+        
+        /// <summary>
+        /// Test GetProvidersEdgesTrunkswithrecording
+        /// </summary>
+        [Test]
+        public void GetProvidersEdgesTrunkswithrecordingTest()
+        {
+            // TODO: add unit test for the method 'GetProvidersEdgesTrunkswithrecording'
+            string trunkType = null; // TODO: replace null with proper value
+            var response = instance.GetProvidersEdgesTrunkswithrecording(trunkType);
+            Assert.IsInstanceOf<TrunkRecordingEnabledCount> (response, "response is TrunkRecordingEnabledCount");
         }
         
         /// <summary>

@@ -93,6 +93,30 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test DeleteKeywordsets
+        /// </summary>
+        [Test]
+        public void DeleteKeywordsetsTest()
+        {
+            // TODO: add unit test for the method 'DeleteKeywordsets'
+            string ids = null; // TODO: replace null with proper value
+            var response = instance.DeleteKeywordsets(ids);
+            Assert.IsInstanceOf<string> (response, "response is string");
+        }
+        
+        /// <summary>
+        /// Test DeleteKeywordsetsKeywordsetId
+        /// </summary>
+        [Test]
+        public void DeleteKeywordsetsKeywordsetIdTest()
+        {
+            // TODO: add unit test for the method 'DeleteKeywordsetsKeywordsetId'
+            string keywordSetId = null; // TODO: replace null with proper value
+            instance.DeleteKeywordsetsKeywordsetId(keywordSetId);
+            
+        }
+        
+        /// <summary>
         /// Test GetAgentsActivity
         /// </summary>
         [Test]
@@ -278,6 +302,36 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test GetKeywordsets
+        /// </summary>
+        [Test]
+        public void GetKeywordsetsTest()
+        {
+            // TODO: add unit test for the method 'GetKeywordsets'
+            int? pageSize = null; // TODO: replace null with proper value
+            int? pageNumber = null; // TODO: replace null with proper value
+            string sortBy = null; // TODO: replace null with proper value
+            List<string> expand = null; // TODO: replace null with proper value
+            string nextPage = null; // TODO: replace null with proper value
+            string previousPage = null; // TODO: replace null with proper value
+            string name = null; // TODO: replace null with proper value
+            var response = instance.GetKeywordsets(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, name);
+            Assert.IsInstanceOf<KeywordSetEntityListing> (response, "response is KeywordSetEntityListing");
+        }
+        
+        /// <summary>
+        /// Test GetKeywordsetsKeywordsetId
+        /// </summary>
+        [Test]
+        public void GetKeywordsetsKeywordsetIdTest()
+        {
+            // TODO: add unit test for the method 'GetKeywordsetsKeywordsetId'
+            string keywordSetId = null; // TODO: replace null with proper value
+            var response = instance.GetKeywordsetsKeywordsetId(keywordSetId);
+            Assert.IsInstanceOf<KeywordSet> (response, "response is KeywordSet");
+        }
+        
+        /// <summary>
         /// Test GetPublishedforms
         /// </summary>
         [Test]
@@ -367,6 +421,19 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test PostKeywordsets
+        /// </summary>
+        [Test]
+        public void PostKeywordsetsTest()
+        {
+            // TODO: add unit test for the method 'PostKeywordsets'
+            KeywordSet body = null; // TODO: replace null with proper value
+            string expand = null; // TODO: replace null with proper value
+            var response = instance.PostKeywordsets(body, expand);
+            Assert.IsInstanceOf<KeywordSet> (response, "response is KeywordSet");
+        }
+        
+        /// <summary>
         /// Test PostPublishedforms
         /// </summary>
         [Test]
@@ -417,6 +484,19 @@ namespace ININ.PureCloudApi.Test
             EvaluationForm body = null; // TODO: replace null with proper value
             var response = instance.PutFormsFormId(formId, body);
             Assert.IsInstanceOf<EvaluationForm> (response, "response is EvaluationForm");
+        }
+        
+        /// <summary>
+        /// Test PutKeywordsetsKeywordsetId
+        /// </summary>
+        [Test]
+        public void PutKeywordsetsKeywordsetIdTest()
+        {
+            // TODO: add unit test for the method 'PutKeywordsetsKeywordsetId'
+            string keywordSetId = null; // TODO: replace null with proper value
+            KeywordSet body = null; // TODO: replace null with proper value
+            var response = instance.PutKeywordsetsKeywordsetId(keywordSetId, body);
+            Assert.IsInstanceOf<KeywordSet> (response, "response is KeywordSet");
         }
         
     }

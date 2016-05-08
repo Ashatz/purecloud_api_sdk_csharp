@@ -98,6 +98,14 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: unit test for the property 'RetentionDuration'
         }
+        /// <summary>
+        /// Test the property 'InitiateScreenRecording'
+        /// </summary>
+        [Test]
+        public void InitiateScreenRecordingTest()
+        {
+            // TODO: unit test for the property 'InitiateScreenRecording'
+        }
 
     }
 

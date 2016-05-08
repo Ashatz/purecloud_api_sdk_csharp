@@ -37,8 +37,9 @@ namespace ININ.PureCloudApi.Model
         /// <param name="ModifyDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="CreateDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="ExternalOrganization">ExternalOrganization.</param>
+        /// <param name="ExternalDataSources">Links to the sources of data (e.g. one source might be a CRM) that contributed data to this record.  Read-only, and only populated when requested via expand param..</param>
 
-        public ExternalContact(string FirstName = null, string MiddleName = null, string LastName = null, string Salutation = null, string Title = null, PhoneNumber WorkPhone = null, PhoneNumber CellPhone = null, PhoneNumber HomePhone = null, PhoneNumber OtherPhone = null, string WorkEmail = null, string PersonalEmail = null, string OtherEmail = null, ContactAddress Address = null, DateTime? ModifyDate = null, DateTime? CreateDate = null, ExternalOrganization ExternalOrganization = null)
+        public ExternalContact(string FirstName = null, string MiddleName = null, string LastName = null, string Salutation = null, string Title = null, PhoneNumber WorkPhone = null, PhoneNumber CellPhone = null, PhoneNumber HomePhone = null, PhoneNumber OtherPhone = null, string WorkEmail = null, string PersonalEmail = null, string OtherEmail = null, ContactAddress Address = null, DateTime? ModifyDate = null, DateTime? CreateDate = null, ExternalOrganization ExternalOrganization = null, List<ExternalDataSource> ExternalDataSources = null)
         {
             this.FirstName = FirstName;
             this.MiddleName = MiddleName;
@@ -56,6 +57,7 @@ namespace ININ.PureCloudApi.Model
             this.ModifyDate = ModifyDate;
             this.CreateDate = CreateDate;
             this.ExternalOrganization = ExternalOrganization;
+            this.ExternalDataSources = ExternalDataSources;
             
         }
 
@@ -166,6 +168,13 @@ namespace ININ.PureCloudApi.Model
         public ExternalOrganization ExternalOrganization { get; set; }
     
         /// <summary>
+        /// Links to the sources of data (e.g. one source might be a CRM) that contributed data to this record.  Read-only, and only populated when requested via expand param.
+        /// </summary>
+        /// <value>Links to the sources of data (e.g. one source might be a CRM) that contributed data to this record.  Read-only, and only populated when requested via expand param.</value>
+        [DataMember(Name="externalDataSources", EmitDefaultValue=false)]
+        public List<ExternalDataSource> ExternalDataSources { get; set; }
+    
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -197,6 +206,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  ModifyDate: ").Append(ModifyDate).Append("\n");
             sb.Append("  CreateDate: ").Append(CreateDate).Append("\n");
             sb.Append("  ExternalOrganization: ").Append(ExternalOrganization).Append("\n");
+            sb.Append("  ExternalDataSources: ").Append(ExternalDataSources).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -320,6 +330,11 @@ namespace ININ.PureCloudApi.Model
                     this.ExternalOrganization.Equals(other.ExternalOrganization)
                 ) &&
                 (
+                    this.ExternalDataSources == other.ExternalDataSources ||
+                    this.ExternalDataSources != null &&
+                    this.ExternalDataSources.SequenceEqual(other.ExternalDataSources)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -371,6 +386,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.CreateDate.GetHashCode();
                 if (this.ExternalOrganization != null)
                     hash = hash * 59 + this.ExternalOrganization.GetHashCode();
+                if (this.ExternalDataSources != null)
+                    hash = hash * 59 + this.ExternalDataSources.GetHashCode();
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;

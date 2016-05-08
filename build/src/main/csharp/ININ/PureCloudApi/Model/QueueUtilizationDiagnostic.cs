@@ -21,76 +21,70 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="QueueUtilizationDiagnostic" />class.
         /// </summary>
-        /// <param name="Queue">Queue.</param>
-        /// <param name="UsersInQueue">UsersInQueue.</param>
-        /// <param name="ActiveUsersInQueue">ActiveUsersInQueue.</param>
-        /// <param name="UsersOnQueue">UsersOnQueue.</param>
-        /// <param name="UsersNotUtilized">UsersNotUtilized.</param>
-        /// <param name="UsersOnQueueWithStation">UsersOnQueueWithStation.</param>
-        /// <param name="UsersOnACampaignCall">UsersOnACampaignCall.</param>
-        /// <param name="UsersOnANonCampaignCall">UsersOnANonCampaignCall.</param>
+        /// <param name="Queue">Identifier of the queue.</param>
 
-        public QueueUtilizationDiagnostic(UriReference Queue = null, int? UsersInQueue = null, int? ActiveUsersInQueue = null, int? UsersOnQueue = null, int? UsersNotUtilized = null, int? UsersOnQueueWithStation = null, int? UsersOnACampaignCall = null, int? UsersOnANonCampaignCall = null)
+        public QueueUtilizationDiagnostic(UriReference Queue = null)
         {
             this.Queue = Queue;
-            this.UsersInQueue = UsersInQueue;
-            this.ActiveUsersInQueue = ActiveUsersInQueue;
-            this.UsersOnQueue = UsersOnQueue;
-            this.UsersNotUtilized = UsersNotUtilized;
-            this.UsersOnQueueWithStation = UsersOnQueueWithStation;
-            this.UsersOnACampaignCall = UsersOnACampaignCall;
-            this.UsersOnANonCampaignCall = UsersOnANonCampaignCall;
             
         }
 
     
         /// <summary>
-        /// Gets or Sets Queue
+        /// Identifier of the queue
         /// </summary>
+        /// <value>Identifier of the queue</value>
         [DataMember(Name="queue", EmitDefaultValue=false)]
         public UriReference Queue { get; set; }
     
         /// <summary>
-        /// Gets or Sets UsersInQueue
+        /// The number of users joined to the queue
         /// </summary>
+        /// <value>The number of users joined to the queue</value>
         [DataMember(Name="usersInQueue", EmitDefaultValue=false)]
-        public int? UsersInQueue { get; set; }
+        public int? UsersInQueue { get; private set; }
     
         /// <summary>
-        /// Gets or Sets ActiveUsersInQueue
+        /// The number of users active on the queue
         /// </summary>
+        /// <value>The number of users active on the queue</value>
         [DataMember(Name="activeUsersInQueue", EmitDefaultValue=false)]
-        public int? ActiveUsersInQueue { get; set; }
+        public int? ActiveUsersInQueue { get; private set; }
     
         /// <summary>
-        /// Gets or Sets UsersOnQueue
+        /// The number of users with a status of on-queue
         /// </summary>
+        /// <value>The number of users with a status of on-queue</value>
         [DataMember(Name="usersOnQueue", EmitDefaultValue=false)]
-        public int? UsersOnQueue { get; set; }
+        public int? UsersOnQueue { get; private set; }
     
         /// <summary>
-        /// Gets or Sets UsersNotUtilized
+        /// The number of users in the queue currently not engaged
         /// </summary>
+        /// <value>The number of users in the queue currently not engaged</value>
         [DataMember(Name="usersNotUtilized", EmitDefaultValue=false)]
-        public int? UsersNotUtilized { get; set; }
+        public int? UsersNotUtilized { get; private set; }
     
         /// <summary>
-        /// Gets or Sets UsersOnQueueWithStation
+        /// The number of users in the queue with a station
         /// </summary>
+        /// <value>The number of users in the queue with a station</value>
         [DataMember(Name="usersOnQueueWithStation", EmitDefaultValue=false)]
-        public int? UsersOnQueueWithStation { get; set; }
+        public int? UsersOnQueueWithStation { get; private set; }
     
         /// <summary>
-        /// Gets or Sets UsersOnACampaignCall
+        /// The number of users currently engaged in a campaign call
         /// </summary>
+        /// <value>The number of users currently engaged in a campaign call</value>
         [DataMember(Name="usersOnACampaignCall", EmitDefaultValue=false)]
-        public int? UsersOnACampaignCall { get; set; }
+        public int? UsersOnACampaignCall { get; private set; }
     
         /// <summary>
-        /// Gets or Sets UsersOnANonCampaignCall
+        /// The number of users currently engaged in a communication that is not part of the campaign
         /// </summary>
+        /// <value>The number of users currently engaged in a communication that is not part of the campaign</value>
         [DataMember(Name="usersOnANonCampaignCall", EmitDefaultValue=false)]
-        public int? UsersOnANonCampaignCall { get; set; }
+        public int? UsersOnANonCampaignCall { get; private set; }
     
         /// <summary>
         /// Returns the string presentation of the object

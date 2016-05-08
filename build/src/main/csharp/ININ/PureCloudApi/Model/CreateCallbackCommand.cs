@@ -25,15 +25,17 @@ namespace ININ.PureCloudApi.Model
         /// <param name="QueueId">QueueId.</param>
         /// <param name="CallbackUserName">CallbackUserName.</param>
         /// <param name="CallbackNumbers">CallbackNumbers.</param>
+        /// <param name="CallbackScheduledTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="CountryCode">CountryCode.</param>
         /// <param name="SkipEnabled">SkipEnabled (default to false).</param>
 
-        public CreateCallbackCommand(string ScriptId = null, string QueueId = null, string CallbackUserName = null, List<string> CallbackNumbers = null, string CountryCode = null, bool? SkipEnabled = null)
+        public CreateCallbackCommand(string ScriptId = null, string QueueId = null, string CallbackUserName = null, List<string> CallbackNumbers = null, DateTime? CallbackScheduledTime = null, string CountryCode = null, bool? SkipEnabled = null)
         {
             this.ScriptId = ScriptId;
             this.QueueId = QueueId;
             this.CallbackUserName = CallbackUserName;
             this.CallbackNumbers = CallbackNumbers;
+            this.CallbackScheduledTime = CallbackScheduledTime;
             this.CountryCode = CountryCode;
             // use default value if no "SkipEnabled" provided
             if (SkipEnabled == null)
@@ -73,6 +75,13 @@ namespace ININ.PureCloudApi.Model
         public List<string> CallbackNumbers { get; set; }
     
         /// <summary>
+        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// </summary>
+        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        [DataMember(Name="callbackScheduledTime", EmitDefaultValue=false)]
+        public DateTime? CallbackScheduledTime { get; set; }
+    
+        /// <summary>
         /// Gets or Sets CountryCode
         /// </summary>
         [DataMember(Name="countryCode", EmitDefaultValue=false)]
@@ -96,6 +105,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  QueueId: ").Append(QueueId).Append("\n");
             sb.Append("  CallbackUserName: ").Append(CallbackUserName).Append("\n");
             sb.Append("  CallbackNumbers: ").Append(CallbackNumbers).Append("\n");
+            sb.Append("  CallbackScheduledTime: ").Append(CallbackScheduledTime).Append("\n");
             sb.Append("  CountryCode: ").Append(CountryCode).Append("\n");
             sb.Append("  SkipEnabled: ").Append(SkipEnabled).Append("\n");
             sb.Append("}\n");
@@ -155,6 +165,11 @@ namespace ININ.PureCloudApi.Model
                     this.CallbackNumbers.SequenceEqual(other.CallbackNumbers)
                 ) &&
                 (
+                    this.CallbackScheduledTime == other.CallbackScheduledTime ||
+                    this.CallbackScheduledTime != null &&
+                    this.CallbackScheduledTime.Equals(other.CallbackScheduledTime)
+                ) &&
+                (
                     this.CountryCode == other.CountryCode ||
                     this.CountryCode != null &&
                     this.CountryCode.Equals(other.CountryCode)
@@ -185,6 +200,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.CallbackUserName.GetHashCode();
                 if (this.CallbackNumbers != null)
                     hash = hash * 59 + this.CallbackNumbers.GetHashCode();
+                if (this.CallbackScheduledTime != null)
+                    hash = hash * 59 + this.CallbackScheduledTime.GetHashCode();
                 if (this.CountryCode != null)
                     hash = hash * 59 + this.CountryCode.GetHashCode();
                 if (this.SkipEnabled != null)

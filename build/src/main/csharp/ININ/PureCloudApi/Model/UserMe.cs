@@ -63,9 +63,13 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Geolocation">Current geolocation position.</param>
         /// <param name="Station">Effective, default, and last station information.</param>
         /// <param name="Authorization">Roles and permissions assigned to the user.</param>
-        /// <param name="Organization"> Details about the organization the user is a member of.</param>
+        /// <param name="Date">The PureCloud system date time..</param>
+        /// <param name="GeolocationSettings">Geolocation settings for user&#39;s organization..</param>
+        /// <param name="Organization">Organization details for this user..</param>
+        /// <param name="PresenceDefinitions">The first 100 presence definitions for user&#39;s organization..</param>
+        /// <param name="Locations">The first 100 locations for user&#39;s organization.</param>
 
-        public UserMe(string Name = null, Chat Chat = null, string Department = null, string Email = null, List<Contact> PrimaryContactInfo = null, List<Contact> Addresses = null, string Title = null, string Username = null, List<UserImage> Images = null, RoutingStatus RoutingStatus = null, UserPresence Presence = null, UserConversationSummary ConversationSummary = null, OutOfOffice OutOfOffice = null, Geolocation Geolocation = null, UserStations Station = null, UserAuthorization Authorization = null, Organization Organization = null)
+        public UserMe(string Name = null, Chat Chat = null, string Department = null, string Email = null, List<Contact> PrimaryContactInfo = null, List<Contact> Addresses = null, string Title = null, string Username = null, List<UserImage> Images = null, RoutingStatus RoutingStatus = null, UserPresence Presence = null, UserConversationSummary ConversationSummary = null, OutOfOffice OutOfOffice = null, Geolocation Geolocation = null, UserStations Station = null, UserAuthorization Authorization = null, ServerDate Date = null, GeolocationSettings GeolocationSettings = null, Organization Organization = null, List<OrganizationPresence> PresenceDefinitions = null, List<Location> Locations = null)
         {
             this.Name = Name;
             this.Chat = Chat;
@@ -83,7 +87,11 @@ namespace ININ.PureCloudApi.Model
             this.Geolocation = Geolocation;
             this.Station = Station;
             this.Authorization = Authorization;
+            this.Date = Date;
+            this.GeolocationSettings = GeolocationSettings;
             this.Organization = Organization;
+            this.PresenceDefinitions = PresenceDefinitions;
+            this.Locations = Locations;
             
         }
 
@@ -208,11 +216,39 @@ namespace ININ.PureCloudApi.Model
         public UserAuthorization Authorization { get; set; }
     
         /// <summary>
-        ///  Details about the organization the user is a member of
+        /// The PureCloud system date time.
         /// </summary>
-        /// <value> Details about the organization the user is a member of</value>
+        /// <value>The PureCloud system date time.</value>
+        [DataMember(Name="date", EmitDefaultValue=false)]
+        public ServerDate Date { get; set; }
+    
+        /// <summary>
+        /// Geolocation settings for user&#39;s organization.
+        /// </summary>
+        /// <value>Geolocation settings for user&#39;s organization.</value>
+        [DataMember(Name="geolocationSettings", EmitDefaultValue=false)]
+        public GeolocationSettings GeolocationSettings { get; set; }
+    
+        /// <summary>
+        /// Organization details for this user.
+        /// </summary>
+        /// <value>Organization details for this user.</value>
         [DataMember(Name="organization", EmitDefaultValue=false)]
         public Organization Organization { get; set; }
+    
+        /// <summary>
+        /// The first 100 presence definitions for user&#39;s organization.
+        /// </summary>
+        /// <value>The first 100 presence definitions for user&#39;s organization.</value>
+        [DataMember(Name="presenceDefinitions", EmitDefaultValue=false)]
+        public List<OrganizationPresence> PresenceDefinitions { get; set; }
+    
+        /// <summary>
+        /// The first 100 locations for user&#39;s organization
+        /// </summary>
+        /// <value>The first 100 locations for user&#39;s organization</value>
+        [DataMember(Name="locations", EmitDefaultValue=false)]
+        public List<Location> Locations { get; set; }
     
         /// <summary>
         /// The URI for this object
@@ -248,7 +284,11 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Geolocation: ").Append(Geolocation).Append("\n");
             sb.Append("  Station: ").Append(Station).Append("\n");
             sb.Append("  Authorization: ").Append(Authorization).Append("\n");
+            sb.Append("  Date: ").Append(Date).Append("\n");
+            sb.Append("  GeolocationSettings: ").Append(GeolocationSettings).Append("\n");
             sb.Append("  Organization: ").Append(Organization).Append("\n");
+            sb.Append("  PresenceDefinitions: ").Append(PresenceDefinitions).Append("\n");
+            sb.Append("  Locations: ").Append(Locations).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -382,9 +422,29 @@ namespace ININ.PureCloudApi.Model
                     this.Authorization.Equals(other.Authorization)
                 ) &&
                 (
+                    this.Date == other.Date ||
+                    this.Date != null &&
+                    this.Date.Equals(other.Date)
+                ) &&
+                (
+                    this.GeolocationSettings == other.GeolocationSettings ||
+                    this.GeolocationSettings != null &&
+                    this.GeolocationSettings.Equals(other.GeolocationSettings)
+                ) &&
+                (
                     this.Organization == other.Organization ||
                     this.Organization != null &&
                     this.Organization.Equals(other.Organization)
+                ) &&
+                (
+                    this.PresenceDefinitions == other.PresenceDefinitions ||
+                    this.PresenceDefinitions != null &&
+                    this.PresenceDefinitions.SequenceEqual(other.PresenceDefinitions)
+                ) &&
+                (
+                    this.Locations == other.Locations ||
+                    this.Locations != null &&
+                    this.Locations.SequenceEqual(other.Locations)
                 ) &&
                 (
                     this.SelfUri == other.SelfUri ||
@@ -442,8 +502,16 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.Station.GetHashCode();
                 if (this.Authorization != null)
                     hash = hash * 59 + this.Authorization.GetHashCode();
+                if (this.Date != null)
+                    hash = hash * 59 + this.Date.GetHashCode();
+                if (this.GeolocationSettings != null)
+                    hash = hash * 59 + this.GeolocationSettings.GetHashCode();
                 if (this.Organization != null)
                     hash = hash * 59 + this.Organization.GetHashCode();
+                if (this.PresenceDefinitions != null)
+                    hash = hash * 59 + this.PresenceDefinitions.GetHashCode();
+                if (this.Locations != null)
+                    hash = hash * 59 + this.Locations.GetHashCode();
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;

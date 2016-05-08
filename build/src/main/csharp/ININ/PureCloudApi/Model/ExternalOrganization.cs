@@ -35,8 +35,9 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Tickers">Tickers.</param>
         /// <param name="ModifyDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="CreateDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="ExternalDataSources">Links to the sources of data (e.g. one source might be a CRM) that contributed data to this record.  Read-only, and only populated when requested via expand param..</param>
 
-        public ExternalOrganization(string Name = null, string CompanyType = null, string Industry = null, string PrimaryContactId = null, ContactAddress Address = null, PhoneNumber PhoneNumber = null, PhoneNumber FaxNumber = null, long? EmployeeCount = null, long? Revenue = null, List<string> Tags = null, List<string> Websites = null, List<Ticker> Tickers = null, DateTime? ModifyDate = null, DateTime? CreateDate = null)
+        public ExternalOrganization(string Name = null, string CompanyType = null, string Industry = null, string PrimaryContactId = null, ContactAddress Address = null, PhoneNumber PhoneNumber = null, PhoneNumber FaxNumber = null, long? EmployeeCount = null, long? Revenue = null, List<string> Tags = null, List<string> Websites = null, List<Ticker> Tickers = null, DateTime? ModifyDate = null, DateTime? CreateDate = null, List<ExternalDataSource> ExternalDataSources = null)
         {
             this.Name = Name;
             this.CompanyType = CompanyType;
@@ -52,6 +53,7 @@ namespace ININ.PureCloudApi.Model
             this.Tickers = Tickers;
             this.ModifyDate = ModifyDate;
             this.CreateDate = CreateDate;
+            this.ExternalDataSources = ExternalDataSources;
             
         }
 
@@ -150,6 +152,13 @@ namespace ININ.PureCloudApi.Model
         public DateTime? CreateDate { get; set; }
     
         /// <summary>
+        /// Links to the sources of data (e.g. one source might be a CRM) that contributed data to this record.  Read-only, and only populated when requested via expand param.
+        /// </summary>
+        /// <value>Links to the sources of data (e.g. one source might be a CRM) that contributed data to this record.  Read-only, and only populated when requested via expand param.</value>
+        [DataMember(Name="externalDataSources", EmitDefaultValue=false)]
+        public List<ExternalDataSource> ExternalDataSources { get; set; }
+    
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -179,6 +188,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Tickers: ").Append(Tickers).Append("\n");
             sb.Append("  ModifyDate: ").Append(ModifyDate).Append("\n");
             sb.Append("  CreateDate: ").Append(CreateDate).Append("\n");
+            sb.Append("  ExternalDataSources: ").Append(ExternalDataSources).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -292,6 +302,11 @@ namespace ININ.PureCloudApi.Model
                     this.CreateDate.Equals(other.CreateDate)
                 ) &&
                 (
+                    this.ExternalDataSources == other.ExternalDataSources ||
+                    this.ExternalDataSources != null &&
+                    this.ExternalDataSources.SequenceEqual(other.ExternalDataSources)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -339,6 +354,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.ModifyDate.GetHashCode();
                 if (this.CreateDate != null)
                     hash = hash * 59 + this.CreateDate.GetHashCode();
+                if (this.ExternalDataSources != null)
+                    hash = hash * 59 + this.ExternalDataSources.GetHashCode();
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;

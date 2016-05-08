@@ -66,61 +66,6 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test DeleteOkta
-        /// </summary>
-        [Test]
-        public void DeleteOktaTest()
-        {
-            // TODO: add unit test for the method 'DeleteOkta'
-            instance.DeleteOkta();
-            
-        }
-        
-        /// <summary>
-        /// Test DeleteOnelogin
-        /// </summary>
-        [Test]
-        public void DeleteOneloginTest()
-        {
-            // TODO: add unit test for the method 'DeleteOnelogin'
-            instance.DeleteOnelogin();
-            
-        }
-        
-        /// <summary>
-        /// Test DeleteProviderId
-        /// </summary>
-        [Test]
-        public void DeleteProviderIdTest()
-        {
-            // TODO: add unit test for the method 'DeleteProviderId'
-            instance.DeleteProviderId();
-            
-        }
-        
-        /// <summary>
-        /// Test DeletePurecloud
-        /// </summary>
-        [Test]
-        public void DeletePurecloudTest()
-        {
-            // TODO: add unit test for the method 'DeletePurecloud'
-            instance.DeletePurecloud();
-            
-        }
-        
-        /// <summary>
-        /// Test DeleteSalesforce
-        /// </summary>
-        [Test]
-        public void DeleteSalesforceTest()
-        {
-            // TODO: add unit test for the method 'DeleteSalesforce'
-            instance.DeleteSalesforce();
-            
-        }
-        
-        /// <summary>
         /// Test GetClients
         /// </summary>
         [Test]
@@ -141,72 +86,6 @@ namespace ININ.PureCloudApi.Test
             string clientId = null; // TODO: replace null with proper value
             var response = instance.GetClientsClientId(clientId);
             Assert.IsInstanceOf<OAuthClient> (response, "response is OAuthClient");
-        }
-        
-        /// <summary>
-        /// Test GetIdentityproviders
-        /// </summary>
-        [Test]
-        public void GetIdentityprovidersTest()
-        {
-            // TODO: add unit test for the method 'GetIdentityproviders'
-            var response = instance.GetIdentityproviders();
-            Assert.IsInstanceOf<OAuthProviderEntityListing> (response, "response is OAuthProviderEntityListing");
-        }
-        
-        /// <summary>
-        /// Test GetOkta
-        /// </summary>
-        [Test]
-        public void GetOktaTest()
-        {
-            // TODO: add unit test for the method 'GetOkta'
-            var response = instance.GetOkta();
-            Assert.IsInstanceOf<Okta> (response, "response is Okta");
-        }
-        
-        /// <summary>
-        /// Test GetOnelogin
-        /// </summary>
-        [Test]
-        public void GetOneloginTest()
-        {
-            // TODO: add unit test for the method 'GetOnelogin'
-            var response = instance.GetOnelogin();
-            Assert.IsInstanceOf<OneLogin> (response, "response is OneLogin");
-        }
-        
-        /// <summary>
-        /// Test GetProviderId
-        /// </summary>
-        [Test]
-        public void GetProviderIdTest()
-        {
-            // TODO: add unit test for the method 'GetProviderId'
-            var response = instance.GetProviderId();
-            Assert.IsInstanceOf<OAuthProvider> (response, "response is OAuthProvider");
-        }
-        
-        /// <summary>
-        /// Test GetPurecloud
-        /// </summary>
-        [Test]
-        public void GetPurecloudTest()
-        {
-            // TODO: add unit test for the method 'GetPurecloud'
-            var response = instance.GetPurecloud();
-            Assert.IsInstanceOf<PureCloud> (response, "response is PureCloud");
-        }
-        
-        /// <summary>
-        /// Test GetSalesforce
-        /// </summary>
-        [Test]
-        public void GetSalesforceTest()
-        {
-            // TODO: add unit test for the method 'GetSalesforce'
-            var response = instance.GetSalesforce();
-            Assert.IsInstanceOf<Salesforce> (response, "response is Salesforce");
         }
         
         /// <summary>
@@ -244,66 +123,6 @@ namespace ININ.PureCloudApi.Test
             OAuthClient body = null; // TODO: replace null with proper value
             var response = instance.PutClientsClientId(clientId, body);
             Assert.IsInstanceOf<OAuthClient> (response, "response is OAuthClient");
-        }
-        
-        /// <summary>
-        /// Test PutOkta
-        /// </summary>
-        [Test]
-        public void PutOktaTest()
-        {
-            // TODO: add unit test for the method 'PutOkta'
-            Okta body = null; // TODO: replace null with proper value
-            instance.PutOkta(body);
-            
-        }
-        
-        /// <summary>
-        /// Test PutOnelogin
-        /// </summary>
-        [Test]
-        public void PutOneloginTest()
-        {
-            // TODO: add unit test for the method 'PutOnelogin'
-            OneLogin body = null; // TODO: replace null with proper value
-            instance.PutOnelogin(body);
-            
-        }
-        
-        /// <summary>
-        /// Test PutProviderId
-        /// </summary>
-        [Test]
-        public void PutProviderIdTest()
-        {
-            // TODO: add unit test for the method 'PutProviderId'
-            OAuthProvider body = null; // TODO: replace null with proper value
-            instance.PutProviderId(body);
-            
-        }
-        
-        /// <summary>
-        /// Test PutPurecloud
-        /// </summary>
-        [Test]
-        public void PutPurecloudTest()
-        {
-            // TODO: add unit test for the method 'PutPurecloud'
-            PureCloud body = null; // TODO: replace null with proper value
-            instance.PutPurecloud(body);
-            
-        }
-        
-        /// <summary>
-        /// Test PutSalesforce
-        /// </summary>
-        [Test]
-        public void PutSalesforceTest()
-        {
-            // TODO: add unit test for the method 'PutSalesforce'
-            Salesforce body = null; // TODO: replace null with proper value
-            instance.PutSalesforce(body);
-            
         }
         
     }

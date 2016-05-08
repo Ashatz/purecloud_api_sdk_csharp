@@ -126,7 +126,7 @@ namespace Example
 
 <a name="getstations"></a>
 
-## [**StationEntityListing**](StationEntityListing.html) GetStations (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null)
+## [**StationEntityListing**](StationEntityListing.html) GetStations (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, string lineAppearanceId = null)
 
 Get the list of available stations.
 
@@ -155,11 +155,12 @@ namespace Example
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
             var sortBy = sortBy_example;  // string | Sort by (optional)  (default to name)
             var name = name_example;  // string | Name (optional) 
+            var lineAppearanceId = lineAppearanceId_example;  // string | lineAppearanceId (optional) 
 
             try
             {
                 // Get the list of available stations.
-                StationEntityListing result = apiInstance.GetStations(pageSize, pageNumber, sortBy, name);
+                StationEntityListing result = apiInstance.GetStations(pageSize, pageNumber, sortBy, name, lineAppearanceId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -180,6 +181,7 @@ namespace Example
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **sortBy** | **string**| Sort by | [optional] [default to name] |
 | **name** | **string**| Name | [optional]  |
+| **lineAppearanceId** | **string**| lineAppearanceId | [optional]  |
 {: class="table table-striped"}
 
 ### Return type

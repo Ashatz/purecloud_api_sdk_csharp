@@ -190,6 +190,18 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test GetUserIdProfileskills
+        /// </summary>
+        [Test]
+        public void GetUserIdProfileskillsTest()
+        {
+            // TODO: add unit test for the method 'GetUserIdProfileskills'
+            string userId = null; // TODO: replace null with proper value
+            var response = instance.GetUserIdProfileskills(userId);
+            Assert.IsInstanceOf<List<string>> (response, "response is List<string>");
+        }
+        
+        /// <summary>
         /// Test GetUserIdQueues
         /// </summary>
         [Test]
@@ -425,6 +437,19 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test PutUserIdProfileskills
+        /// </summary>
+        [Test]
+        public void PutUserIdProfileskillsTest()
+        {
+            // TODO: add unit test for the method 'PutUserIdProfileskills'
+            string userId = null; // TODO: replace null with proper value
+            List<string> body = null; // TODO: replace null with proper value
+            var response = instance.PutUserIdProfileskills(userId, body);
+            Assert.IsInstanceOf<List<string>> (response, "response is List<string>");
+        }
+        
+        /// <summary>
         /// Test PutUserIdRoles
         /// </summary>
         [Test]
@@ -435,6 +460,20 @@ namespace ININ.PureCloudApi.Test
             List<string> body = null; // TODO: replace null with proper value
             var response = instance.PutUserIdRoles(userId, body);
             Assert.IsInstanceOf<UserAuthorization> (response, "response is UserAuthorization");
+        }
+        
+        /// <summary>
+        /// Test PutUserIdRoutingskillsSkillId
+        /// </summary>
+        [Test]
+        public void PutUserIdRoutingskillsSkillIdTest()
+        {
+            // TODO: add unit test for the method 'PutUserIdRoutingskillsSkillId'
+            string userId = null; // TODO: replace null with proper value
+            string skillId = null; // TODO: replace null with proper value
+            UserRoutingSkill body = null; // TODO: replace null with proper value
+            var response = instance.PutUserIdRoutingskillsSkillId(userId, skillId, body);
+            Assert.IsInstanceOf<UserRoutingSkill> (response, "response is UserRoutingSkill");
         }
         
         /// <summary>

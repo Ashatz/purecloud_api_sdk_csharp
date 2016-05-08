@@ -31,7 +31,10 @@ namespace ININ.PureCloudApi.Model
             Chat,
             
             [EnumMember(Value = "email")]
-            Email
+            Email,
+            
+            [EnumMember(Value = "callback")]
+            Callback
         }
 
 

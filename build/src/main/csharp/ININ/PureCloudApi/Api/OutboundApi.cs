@@ -512,7 +512,7 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of ContactListEntityListing</returns>
         ApiResponse<ContactListEntityListing> GetContactlistsWithHttpInfo (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null);
         /// <summary>
-        /// Get dialer contactList.
+        /// Get a dialer contact list.
         /// </summary>
         /// <remarks>
         /// 
@@ -525,7 +525,7 @@ namespace ININ.PureCloudApi.Api
         ContactList GetContactlistsContactlistId (string contactListId, bool? includeImportStatus = null, bool? includeSize = null);
 
         /// <summary>
-        /// Get dialer contactList.
+        /// Get a dialer contact list.
         /// </summary>
         /// <remarks>
         /// 
@@ -2021,7 +2021,7 @@ namespace ININ.PureCloudApi.Api
         /// <returns>Task of ApiResponse (ContactListEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<ContactListEntityListing>> GetContactlistsAsyncWithHttpInfo (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null);
         /// <summary>
-        /// Get dialer contactList.
+        /// Get a dialer contact list.
         /// </summary>
         /// <remarks>
         /// 
@@ -2034,7 +2034,7 @@ namespace ININ.PureCloudApi.Api
         System.Threading.Tasks.Task<ContactList> GetContactlistsContactlistIdAsync (string contactListId, bool? includeImportStatus = null, bool? includeSize = null);
 
         /// <summary>
-        /// Get dialer contactList.
+        /// Get a dialer contact list.
         /// </summary>
         /// <remarks>
         /// 
@@ -6484,7 +6484,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Get dialer contactList. 
+        /// Get a dialer contact list. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">ContactList ID</param>
@@ -6498,7 +6498,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Get dialer contactList. 
+        /// Get a dialer contact list. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">ContactList ID</param>
@@ -6566,7 +6566,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Get dialer contactList. 
+        /// Get a dialer contact list. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">ContactList ID</param>
@@ -6581,7 +6581,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Get dialer contactList. 
+        /// Get a dialer contact list. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">ContactList ID</param>

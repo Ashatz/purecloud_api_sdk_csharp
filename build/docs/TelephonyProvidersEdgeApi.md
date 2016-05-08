@@ -21,6 +21,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteProvidersEdgesSitesSiteId**](TelephonyProvidersEdgeApi.html#deleteprovidersedgessitessiteid) | **DELETE** /api/v2/telephony/providers/edges/sites/{siteId} | Delete an ednpoint |
 | [**DeleteProvidersEdgesTrunkbasesettingsTrunkbasesettingsId**](TelephonyProvidersEdgeApi.html#deleteprovidersedgestrunkbasesettingstrunkbasesettingsid) | **DELETE** /api/v2/telephony/providers/edges/trunkbasesettings/{trunkBaseSettingsId} | Delete a Trunk Base Settings object by ID |
 | [**GetProvidersEdges**](TelephonyProvidersEdgeApi.html#getprovidersedges) | **GET** /api/v2/telephony/providers/edges | Get the list of edges. |
+| [**GetProvidersEdgesAvailablelanguages**](TelephonyProvidersEdgeApi.html#getprovidersedgesavailablelanguages) | **GET** /api/v2/telephony/providers/edges/availablelanguages | Get the list of available languages. |
 | [**GetProvidersEdgesCertificateauthorities**](TelephonyProvidersEdgeApi.html#getprovidersedgescertificateauthorities) | **GET** /api/v2/telephony/providers/edges/certificateauthorities | Get the list of certificate authorities. |
 | [**GetProvidersEdgesCertificateauthoritiesCertificateId**](TelephonyProvidersEdgeApi.html#getprovidersedgescertificateauthoritiescertificateid) | **GET** /api/v2/telephony/providers/edges/certificateauthorities/{certificateId} | Get a certificate authority. |
 | [**GetProvidersEdgesDidpools**](TelephonyProvidersEdgeApi.html#getprovidersedgesdidpools) | **GET** /api/v2/telephony/providers/edges/didpools | Get a listing of DID Pools |
@@ -72,6 +73,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetProvidersEdgesTrunkbasesettingsTrunkbasesettingsId**](TelephonyProvidersEdgeApi.html#getprovidersedgestrunkbasesettingstrunkbasesettingsid) | **GET** /api/v2/telephony/providers/edges/trunkbasesettings/{trunkBaseSettingsId} | Get a Trunk Base Settings object by ID |
 | [**GetProvidersEdgesTrunks**](TelephonyProvidersEdgeApi.html#getprovidersedgestrunks) | **GET** /api/v2/telephony/providers/edges/trunks | Get the list of available trunks. |
 | [**GetProvidersEdgesTrunksTrunkId**](TelephonyProvidersEdgeApi.html#getprovidersedgestrunkstrunkid) | **GET** /api/v2/telephony/providers/edges/trunks/{trunkId} | Get a Trunk by ID |
+| [**GetProvidersEdgesTrunkswithrecording**](TelephonyProvidersEdgeApi.html#getprovidersedgestrunkswithrecording) | **GET** /api/v2/telephony/providers/edges/trunkswithrecording | Get Counts of trunks that have recording disabled or enabled |
 | [**GetSchemasEdgesVnext**](TelephonyProvidersEdgeApi.html#getschemasedgesvnext) | **GET** /api/v2/configuration/schemas/edges/vnext | Lists available schema categories |
 | [**GetSchemasEdgesVnextSchemacategory**](TelephonyProvidersEdgeApi.html#getschemasedgesvnextschemacategory) | **GET** /api/v2/configuration/schemas/edges/vnext/{schemaCategory} | List schemas of a specific category |
 | [**GetSchemasEdgesVnextSchemacategorySchematype**](TelephonyProvidersEdgeApi.html#getschemasedgesvnextschemacategoryschematype) | **GET** /api/v2/configuration/schemas/edges/vnext/{schemaCategory}/{schemaType} | List schemas of a specific category |
@@ -910,6 +912,57 @@ namespace Example
 ### Return type
 
 [**EdgeEntityListing**](EdgeEntityListing.html)
+
+<a name="getprovidersedgesavailablelanguages"></a>
+
+## [**AvailableLanguageList**](AvailableLanguageList.html) GetProvidersEdgesAvailablelanguages ()
+
+Get the list of available languages.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetProvidersEdgesAvailablelanguagesExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new TelephonyProvidersEdgeApi();
+
+            try
+            {
+                // Get the list of available languages.
+                AvailableLanguageList result = apiInstance.GetProvidersEdgesAvailablelanguages();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetProvidersEdgesAvailablelanguages: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+This endpoint does require any parameters.
+{: class="table table-striped"}
+
+### Return type
+
+[**AvailableLanguageList**](AvailableLanguageList.html)
 
 <a name="getprovidersedgescertificateauthorities"></a>
 
@@ -3535,7 +3588,7 @@ namespace Example
 
 <a name="getprovidersedgestrunkbasesettings"></a>
 
-## [**TrunkBase**](TrunkBase.html) GetProvidersEdgesTrunkbasesettings (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null)
+## [**TrunkBase**](TrunkBase.html) GetProvidersEdgesTrunkbasesettings (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, bool? recordingEnabled = null)
 
 Get Trunk Base Settings listing
 
@@ -3564,11 +3617,12 @@ namespace Example
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             var sortBy = sortBy_example;  // string | Value by which to sort (optional)  (default to name)
             var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to ASC)
+            var recordingEnabled = true;  // bool? | Filter trunks by recording enabled (optional) 
 
             try
             {
                 // Get Trunk Base Settings listing
-                TrunkBase result = apiInstance.GetProvidersEdgesTrunkbasesettings(pageNumber, pageSize, sortBy, sortOrder);
+                TrunkBase result = apiInstance.GetProvidersEdgesTrunkbasesettings(pageNumber, pageSize, sortBy, sortOrder, recordingEnabled);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3589,6 +3643,7 @@ namespace Example
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **sortBy** | **string**| Value by which to sort | [optional] [default to name] |
 | **sortOrder** | **string**| Sort order | [optional] [default to ASC] |
+| **recordingEnabled** | **bool?**| Filter trunks by recording enabled | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -3890,6 +3945,62 @@ namespace Example
 ### Return type
 
 [**Trunk**](Trunk.html)
+
+<a name="getprovidersedgestrunkswithrecording"></a>
+
+## [**TrunkRecordingEnabledCount**](TrunkRecordingEnabledCount.html) GetProvidersEdgesTrunkswithrecording (string trunkType = null)
+
+Get Counts of trunks that have recording disabled or enabled
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetProvidersEdgesTrunkswithrecordingExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new TelephonyProvidersEdgeApi();
+            var trunkType = trunkType_example;  // string | The type of this trunk base. (optional) 
+
+            try
+            {
+                // Get Counts of trunks that have recording disabled or enabled
+                TrunkRecordingEnabledCount result = apiInstance.GetProvidersEdgesTrunkswithrecording(trunkType);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetProvidersEdgesTrunkswithrecording: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **trunkType** | **string**| The type of this trunk base. | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**TrunkRecordingEnabledCount**](TrunkRecordingEnabledCount.html)
 
 <a name="getschemasedgesvnext"></a>
 

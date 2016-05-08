@@ -91,6 +91,30 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'Token'
         }
         /// <summary>
+        /// Test the property 'CardExpirationDate'
+        /// </summary>
+        [Test]
+        public void CardExpirationDateTest()
+        {
+            // TODO: unit test for the property 'CardExpirationDate'
+        }
+        /// <summary>
+        /// Test the property 'CardLastFourDigits'
+        /// </summary>
+        [Test]
+        public void CardLastFourDigitsTest()
+        {
+            // TODO: unit test for the property 'CardLastFourDigits'
+        }
+        /// <summary>
+        /// Test the property 'CardType'
+        /// </summary>
+        [Test]
+        public void CardTypeTest()
+        {
+            // TODO: unit test for the property 'CardType'
+        }
+        /// <summary>
         /// Test the property 'SelfUri'
         /// </summary>
         [Test]

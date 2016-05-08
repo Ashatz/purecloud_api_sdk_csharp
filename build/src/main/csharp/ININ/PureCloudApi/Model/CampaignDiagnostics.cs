@@ -21,36 +21,37 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CampaignDiagnostics" />class.
         /// </summary>
-        /// <param name="CallableContacts">CallableContacts.</param>
-        /// <param name="QueueUtilizationDiagnostic">QueueUtilizationDiagnostic.</param>
-        /// <param name="OutstandingInteractionsCount">OutstandingInteractionsCount.</param>
+        /// <param name="CallableContacts">Campaign properties that can impact which contacts are callable.</param>
+        /// <param name="QueueUtilizationDiagnostic">Information regarding the campaign&#39;s queue.</param>
 
-        public CampaignDiagnostics(CallableContactsDiagnostic CallableContacts = null, QueueUtilizationDiagnostic QueueUtilizationDiagnostic = null, int? OutstandingInteractionsCount = null)
+        public CampaignDiagnostics(CallableContactsDiagnostic CallableContacts = null, QueueUtilizationDiagnostic QueueUtilizationDiagnostic = null)
         {
             this.CallableContacts = CallableContacts;
             this.QueueUtilizationDiagnostic = QueueUtilizationDiagnostic;
-            this.OutstandingInteractionsCount = OutstandingInteractionsCount;
             
         }
 
     
         /// <summary>
-        /// Gets or Sets CallableContacts
+        /// Campaign properties that can impact which contacts are callable
         /// </summary>
+        /// <value>Campaign properties that can impact which contacts are callable</value>
         [DataMember(Name="callableContacts", EmitDefaultValue=false)]
         public CallableContactsDiagnostic CallableContacts { get; set; }
     
         /// <summary>
-        /// Gets or Sets QueueUtilizationDiagnostic
+        /// Information regarding the campaign&#39;s queue
         /// </summary>
+        /// <value>Information regarding the campaign&#39;s queue</value>
         [DataMember(Name="queueUtilizationDiagnostic", EmitDefaultValue=false)]
         public QueueUtilizationDiagnostic QueueUtilizationDiagnostic { get; set; }
     
         /// <summary>
-        /// Gets or Sets OutstandingInteractionsCount
+        /// Current number of outstanding interactions on the campaign
         /// </summary>
+        /// <value>Current number of outstanding interactions on the campaign</value>
         [DataMember(Name="outstandingInteractionsCount", EmitDefaultValue=false)]
-        public int? OutstandingInteractionsCount { get; set; }
+        public int? OutstandingInteractionsCount { get; private set; }
     
         /// <summary>
         /// Returns the string presentation of the object

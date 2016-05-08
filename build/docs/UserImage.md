@@ -7,7 +7,7 @@ title: UserImage
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Resolution** | **string** |  | [optional] |
+| **Resolution** | **string** | Height and/or width of image. ex: 640x480 or x128 | [optional] |
 | **ImageUri** | **string** |  | [optional] |
 {: class="table table-striped"}
 

@@ -28,6 +28,27 @@ namespace ININ.PureCloudApi.Model
             Token
         }
 
+
+        /// <summary>
+        /// for payment methods of type CARD_TOKEN, the type of credit or debit card
+        /// </summary>
+        /// <value>for payment methods of type CARD_TOKEN, the type of credit or debit card</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+                public enum CardTypeEnum {
+            
+            [EnumMember(Value = "Visa")]
+            Visa,
+            
+            [EnumMember(Value = "MasterCard")]
+            Mastercard,
+            
+            [EnumMember(Value = "Discover")]
+            Discover,
+            
+            [EnumMember(Value = "American Express")]
+            AmericanExpress
+        }
+
         
 
         /// <summary>
@@ -36,6 +57,14 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
     
+
+        /// <summary>
+        /// for payment methods of type CARD_TOKEN, the type of credit or debit card
+        /// </summary>
+        /// <value>for payment methods of type CARD_TOKEN, the type of credit or debit card</value>
+        [DataMember(Name="cardType", EmitDefaultValue=false)]
+        public CardTypeEnum? CardType { get; set; }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="PaymentMethod" />class.
         /// </summary>
@@ -43,13 +72,19 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Type">Type.</param>
         /// <param name="ProviderName">ProviderName.</param>
         /// <param name="Token">Token.</param>
+        /// <param name="CardExpirationDate">for payment methods of type CARD_TOKEN, the card&#39;s expiration date in the format YYYY-MM..</param>
+        /// <param name="CardLastFourDigits">CardLastFourDigits.</param>
+        /// <param name="CardType">for payment methods of type CARD_TOKEN, the type of credit or debit card.</param>
 
-        public PaymentMethod(string Name = null, TypeEnum? Type = null, string ProviderName = null, string Token = null)
+        public PaymentMethod(string Name = null, TypeEnum? Type = null, string ProviderName = null, string Token = null, string CardExpirationDate = null, string CardLastFourDigits = null, CardTypeEnum? CardType = null)
         {
             this.Name = Name;
             this.Type = Type;
             this.ProviderName = ProviderName;
             this.Token = Token;
+            this.CardExpirationDate = CardExpirationDate;
+            this.CardLastFourDigits = CardLastFourDigits;
+            this.CardType = CardType;
             
         }
 
@@ -80,6 +115,19 @@ namespace ININ.PureCloudApi.Model
         public string Token { get; set; }
     
         /// <summary>
+        /// for payment methods of type CARD_TOKEN, the card&#39;s expiration date in the format YYYY-MM.
+        /// </summary>
+        /// <value>for payment methods of type CARD_TOKEN, the card&#39;s expiration date in the format YYYY-MM.</value>
+        [DataMember(Name="cardExpirationDate", EmitDefaultValue=false)]
+        public string CardExpirationDate { get; set; }
+    
+        /// <summary>
+        /// Gets or Sets CardLastFourDigits
+        /// </summary>
+        [DataMember(Name="cardLastFourDigits", EmitDefaultValue=false)]
+        public string CardLastFourDigits { get; set; }
+    
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -99,6 +147,9 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  ProviderName: ").Append(ProviderName).Append("\n");
             sb.Append("  Token: ").Append(Token).Append("\n");
+            sb.Append("  CardExpirationDate: ").Append(CardExpirationDate).Append("\n");
+            sb.Append("  CardLastFourDigits: ").Append(CardLastFourDigits).Append("\n");
+            sb.Append("  CardType: ").Append(CardType).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -162,6 +213,21 @@ namespace ININ.PureCloudApi.Model
                     this.Token.Equals(other.Token)
                 ) &&
                 (
+                    this.CardExpirationDate == other.CardExpirationDate ||
+                    this.CardExpirationDate != null &&
+                    this.CardExpirationDate.Equals(other.CardExpirationDate)
+                ) &&
+                (
+                    this.CardLastFourDigits == other.CardLastFourDigits ||
+                    this.CardLastFourDigits != null &&
+                    this.CardLastFourDigits.Equals(other.CardLastFourDigits)
+                ) &&
+                (
+                    this.CardType == other.CardType ||
+                    this.CardType != null &&
+                    this.CardType.Equals(other.CardType)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -189,6 +255,12 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.ProviderName.GetHashCode();
                 if (this.Token != null)
                     hash = hash * 59 + this.Token.GetHashCode();
+                if (this.CardExpirationDate != null)
+                    hash = hash * 59 + this.CardExpirationDate.GetHashCode();
+                if (this.CardLastFourDigits != null)
+                    hash = hash * 59 + this.CardLastFourDigits.GetHashCode();
+                if (this.CardType != null)
+                    hash = hash * 59 + this.CardType.GetHashCode();
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;

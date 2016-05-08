@@ -854,28 +854,30 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of Queue</returns>
         ApiResponse<Queue> PutQueuesQueueIdWithHttpInfo (string queueId, Queue body = null);
         /// <summary>
-        /// Update Routing Skill
+        /// Update routing skill proficiency or state.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="skillId">Skill ID</param>
+        /// <param name="userId">User ID</param>
+        /// <param name="skillId"></param>
         /// <param name="body">Skill (optional)</param>
-        /// <returns>RoutingSkill</returns>
-        RoutingSkill PutSkillsSkillId (string skillId, RoutingSkill body = null);
+        /// <returns>UserRoutingSkill</returns>
+        UserRoutingSkill PutUserIdRoutingskillsSkillId (string userId, string skillId, UserRoutingSkill body = null);
 
         /// <summary>
-        /// Update Routing Skill
+        /// Update routing skill proficiency or state.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="skillId">Skill ID</param>
+        /// <param name="userId">User ID</param>
+        /// <param name="skillId"></param>
         /// <param name="body">Skill (optional)</param>
-        /// <returns>ApiResponse of RoutingSkill</returns>
-        ApiResponse<RoutingSkill> PutSkillsSkillIdWithHttpInfo (string skillId, RoutingSkill body = null);
+        /// <returns>ApiResponse of UserRoutingSkill</returns>
+        ApiResponse<UserRoutingSkill> PutUserIdRoutingskillsSkillIdWithHttpInfo (string userId, string skillId, UserRoutingSkill body = null);
         /// <summary>
         /// Update the utilization settings.
         /// </summary>
@@ -1762,28 +1764,30 @@ namespace ININ.PureCloudApi.Api
         /// <returns>Task of ApiResponse (Queue)</returns>
         System.Threading.Tasks.Task<ApiResponse<Queue>> PutQueuesQueueIdAsyncWithHttpInfo (string queueId, Queue body = null);
         /// <summary>
-        /// Update Routing Skill
+        /// Update routing skill proficiency or state.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="skillId">Skill ID</param>
+        /// <param name="userId">User ID</param>
+        /// <param name="skillId"></param>
         /// <param name="body">Skill (optional)</param>
-        /// <returns>Task of RoutingSkill</returns>
-        System.Threading.Tasks.Task<RoutingSkill> PutSkillsSkillIdAsync (string skillId, RoutingSkill body = null);
+        /// <returns>Task of UserRoutingSkill</returns>
+        System.Threading.Tasks.Task<UserRoutingSkill> PutUserIdRoutingskillsSkillIdAsync (string userId, string skillId, UserRoutingSkill body = null);
 
         /// <summary>
-        /// Update Routing Skill
+        /// Update routing skill proficiency or state.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="skillId">Skill ID</param>
+        /// <param name="userId">User ID</param>
+        /// <param name="skillId"></param>
         /// <param name="body">Skill (optional)</param>
-        /// <returns>Task of ApiResponse (RoutingSkill)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RoutingSkill>> PutSkillsSkillIdAsyncWithHttpInfo (string skillId, RoutingSkill body = null);
+        /// <returns>Task of ApiResponse (UserRoutingSkill)</returns>
+        System.Threading.Tasks.Task<ApiResponse<UserRoutingSkill>> PutUserIdRoutingskillsSkillIdAsyncWithHttpInfo (string userId, string skillId, UserRoutingSkill body = null);
         /// <summary>
         /// Update the utilization settings.
         /// </summary>
@@ -7930,32 +7934,37 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Update Routing Skill 
+        /// Update routing skill proficiency or state. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="skillId">Skill ID</param>
+        /// <param name="userId">User ID</param>
+        /// <param name="skillId"></param>
         /// <param name="body">Skill (optional)</param>
-        /// <returns>RoutingSkill</returns>
-        public RoutingSkill PutSkillsSkillId (string skillId, RoutingSkill body = null)
+        /// <returns>UserRoutingSkill</returns>
+        public UserRoutingSkill PutUserIdRoutingskillsSkillId (string userId, string skillId, UserRoutingSkill body = null)
         {
-             ApiResponse<RoutingSkill> localVarResponse = PutSkillsSkillIdWithHttpInfo(skillId, body);
+             ApiResponse<UserRoutingSkill> localVarResponse = PutUserIdRoutingskillsSkillIdWithHttpInfo(userId, skillId, body);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Update Routing Skill 
+        /// Update routing skill proficiency or state. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="skillId">Skill ID</param>
+        /// <param name="userId">User ID</param>
+        /// <param name="skillId"></param>
         /// <param name="body">Skill (optional)</param>
-        /// <returns>ApiResponse of RoutingSkill</returns>
-        public ApiResponse< RoutingSkill > PutSkillsSkillIdWithHttpInfo (string skillId, RoutingSkill body = null)
+        /// <returns>ApiResponse of UserRoutingSkill</returns>
+        public ApiResponse< UserRoutingSkill > PutUserIdRoutingskillsSkillIdWithHttpInfo (string userId, string skillId, UserRoutingSkill body = null)
         {
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling RoutingApi->PutUserIdRoutingskillsSkillId");
             // verify the required parameter 'skillId' is set
             if (skillId == null)
-                throw new ApiException(400, "Missing required parameter 'skillId' when calling RoutingApi->PutSkillsSkillId");
+                throw new ApiException(400, "Missing required parameter 'skillId' when calling RoutingApi->PutUserIdRoutingskillsSkillId");
 
-            var localVarPath = "/api/v2/routing/skills/{skillId}";
+            var localVarPath = "/api/v2/users/{userId}/routingskills/{skillId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -7980,6 +7989,7 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            if (userId != null) localVarPathParams.Add("userId", Configuration.ApiClient.ParameterToString(userId)); // path parameter
             if (skillId != null) localVarPathParams.Add("skillId", Configuration.ApiClient.ParameterToString(skillId)); // path parameter
             if (body.GetType() != typeof(byte[]))
             {
@@ -8005,44 +8015,49 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PutSkillsSkillId: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling PutUserIdRoutingskillsSkillId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PutSkillsSkillId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PutUserIdRoutingskillsSkillId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<RoutingSkill>(localVarStatusCode,
+            return new ApiResponse<UserRoutingSkill>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RoutingSkill) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RoutingSkill)));
+                (UserRoutingSkill) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserRoutingSkill)));
             
         }
 
         /// <summary>
-        /// Update Routing Skill 
+        /// Update routing skill proficiency or state. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="skillId">Skill ID</param>
+        /// <param name="userId">User ID</param>
+        /// <param name="skillId"></param>
         /// <param name="body">Skill (optional)</param>
-        /// <returns>Task of RoutingSkill</returns>
-        public async System.Threading.Tasks.Task<RoutingSkill> PutSkillsSkillIdAsync (string skillId, RoutingSkill body = null)
+        /// <returns>Task of UserRoutingSkill</returns>
+        public async System.Threading.Tasks.Task<UserRoutingSkill> PutUserIdRoutingskillsSkillIdAsync (string userId, string skillId, UserRoutingSkill body = null)
         {
-             ApiResponse<RoutingSkill> localVarResponse = await PutSkillsSkillIdAsyncWithHttpInfo(skillId, body);
+             ApiResponse<UserRoutingSkill> localVarResponse = await PutUserIdRoutingskillsSkillIdAsyncWithHttpInfo(userId, skillId, body);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Update Routing Skill 
+        /// Update routing skill proficiency or state. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="skillId">Skill ID</param>
+        /// <param name="userId">User ID</param>
+        /// <param name="skillId"></param>
         /// <param name="body">Skill (optional)</param>
-        /// <returns>Task of ApiResponse (RoutingSkill)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RoutingSkill>> PutSkillsSkillIdAsyncWithHttpInfo (string skillId, RoutingSkill body = null)
+        /// <returns>Task of ApiResponse (UserRoutingSkill)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<UserRoutingSkill>> PutUserIdRoutingskillsSkillIdAsyncWithHttpInfo (string userId, string skillId, UserRoutingSkill body = null)
         {
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling RoutingApi->PutUserIdRoutingskillsSkillId");
             // verify the required parameter 'skillId' is set
             if (skillId == null)
-                throw new ApiException(400, "Missing required parameter 'skillId' when calling RoutingApi->PutSkillsSkillId");
+                throw new ApiException(400, "Missing required parameter 'skillId' when calling RoutingApi->PutUserIdRoutingskillsSkillId");
 
-            var localVarPath = "/api/v2/routing/skills/{skillId}";
+            var localVarPath = "/api/v2/users/{userId}/routingskills/{skillId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -8067,6 +8082,7 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            if (userId != null) localVarPathParams.Add("userId", Configuration.ApiClient.ParameterToString(userId)); // path parameter
             if (skillId != null) localVarPathParams.Add("skillId", Configuration.ApiClient.ParameterToString(skillId)); // path parameter
             if (body.GetType() != typeof(byte[]))
             {
@@ -8092,13 +8108,13 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PutSkillsSkillId: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling PutUserIdRoutingskillsSkillId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PutSkillsSkillId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PutUserIdRoutingskillsSkillId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<RoutingSkill>(localVarStatusCode,
+            return new ApiResponse<UserRoutingSkill>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RoutingSkill) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RoutingSkill)));
+                (UserRoutingSkill) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserRoutingSkill)));
             
         }
 

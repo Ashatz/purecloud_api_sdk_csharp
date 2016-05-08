@@ -19,8 +19,9 @@ namespace ININ.PureCloudApi.Model
     { 
 
         /// <summary>
-        /// Gets or Sets State
+        /// current status of the import
         /// </summary>
+        /// <value>current status of the import</value>
         [JsonConverter(typeof(StringEnumConverter))]
                 public enum StateEnum {
             
@@ -34,54 +35,49 @@ namespace ININ.PureCloudApi.Model
         
 
         /// <summary>
-        /// Gets or Sets State
+        /// current status of the import
         /// </summary>
+        /// <value>current status of the import</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
     
         /// <summary>
         /// Initializes a new instance of the <see cref="ImportStatus" />class.
         /// </summary>
-        /// <param name="State">State.</param>
-        /// <param name="TotalRecords">TotalRecords.</param>
-        /// <param name="CompletedRecords">CompletedRecords.</param>
-        /// <param name="PercentComplete">PercentComplete.</param>
-        /// <param name="FailureReason">FailureReason.</param>
 
-        public ImportStatus(StateEnum? State = null, long? TotalRecords = null, long? CompletedRecords = null, int? PercentComplete = null, string FailureReason = null)
+        public ImportStatus()
         {
-            this.State = State;
-            this.TotalRecords = TotalRecords;
-            this.CompletedRecords = CompletedRecords;
-            this.PercentComplete = PercentComplete;
-            this.FailureReason = FailureReason;
             
         }
 
     
         /// <summary>
-        /// Gets or Sets TotalRecords
+        /// total number of records to be imported
         /// </summary>
+        /// <value>total number of records to be imported</value>
         [DataMember(Name="totalRecords", EmitDefaultValue=false)]
-        public long? TotalRecords { get; set; }
+        public long? TotalRecords { get; private set; }
     
         /// <summary>
-        /// Gets or Sets CompletedRecords
+        /// number of records finished importing
         /// </summary>
+        /// <value>number of records finished importing</value>
         [DataMember(Name="completedRecords", EmitDefaultValue=false)]
-        public long? CompletedRecords { get; set; }
+        public long? CompletedRecords { get; private set; }
     
         /// <summary>
-        /// Gets or Sets PercentComplete
+        /// percentage of records finished importing
         /// </summary>
+        /// <value>percentage of records finished importing</value>
         [DataMember(Name="percentComplete", EmitDefaultValue=false)]
-        public int? PercentComplete { get; set; }
+        public int? PercentComplete { get; private set; }
     
         /// <summary>
-        /// Gets or Sets FailureReason
+        /// if the import has failed, the reason for the failure
         /// </summary>
+        /// <value>if the import has failed, the reason for the failure</value>
         [DataMember(Name="failureReason", EmitDefaultValue=false)]
-        public string FailureReason { get; set; }
+        public string FailureReason { get; private set; }
     
         /// <summary>
         /// Returns the string presentation of the object

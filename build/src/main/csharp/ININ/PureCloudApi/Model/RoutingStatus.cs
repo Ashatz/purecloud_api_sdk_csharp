@@ -34,7 +34,10 @@ namespace ININ.PureCloudApi.Model
             Interacting,
             
             [EnumMember(Value = "NOT_RESPONDING")]
-            NotResponding
+            NotResponding,
+            
+            [EnumMember(Value = "COMMUNICATING")]
+            Communicating
         }
 
         

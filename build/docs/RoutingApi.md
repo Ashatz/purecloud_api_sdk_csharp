@@ -44,7 +44,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostWrapupcodes**](RoutingApi.html#postwrapupcodes) | **POST** /api/v2/routing/wrapupcodes | Create a wrap-up code |
 | [**PutEmailDomainsDomainnameRoutesRouteId**](RoutingApi.html#putemaildomainsdomainnameroutesrouteid) | **PUT** /api/v2/routing/email/domains/{domainName}/routes/{routeId} | Update a route |
 | [**PutQueuesQueueId**](RoutingApi.html#putqueuesqueueid) | **PUT** /api/v2/routing/queues/{queueId} | Update a queue |
-| [**PutSkillsSkillId**](RoutingApi.html#putskillsskillid) | **PUT** /api/v2/routing/skills/{skillId} | Update Routing Skill |
+| [**PutUserIdRoutingskillsSkillId**](RoutingApi.html#putuseridroutingskillsskillid) | **PUT** /api/v2/users/{userId}/routingskills/{skillId} | Update routing skill proficiency or state. |
 | [**PutUtilization**](RoutingApi.html#pututilization) | **PUT** /api/v2/routing/utilization | Update the utilization settings. |
 | [**PutWrapupcodesCodeId**](RoutingApi.html#putwrapupcodescodeid) | **PUT** /api/v2/routing/wrapupcodes/{codeId} | Update wrap-up code |
 {: class="table table-striped"}
@@ -2171,11 +2171,11 @@ namespace Example
 
 [**Queue**](Queue.html)
 
-<a name="putskillsskillid"></a>
+<a name="putuseridroutingskillsskillid"></a>
 
-## [**RoutingSkill**](RoutingSkill.html) PutSkillsSkillId (string skillId, RoutingSkill body = null)
+## [**UserRoutingSkill**](UserRoutingSkill.html) PutUserIdRoutingskillsSkillId (string userId, string skillId, UserRoutingSkill body = null)
 
-Update Routing Skill
+Update routing skill proficiency or state.
 
 
 
@@ -2189,7 +2189,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class PutSkillsSkillIdExample
+    public class PutUserIdRoutingskillsSkillIdExample
     {
         public void main()
         {
@@ -2198,18 +2198,19 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new RoutingApi();
-            var skillId = skillId_example;  // string | Skill ID
-            var body = new RoutingSkill(); // RoutingSkill | Skill (optional) 
+            var userId = userId_example;  // string | User ID
+            var skillId = skillId_example;  // string | 
+            var body = new UserRoutingSkill(); // UserRoutingSkill | Skill (optional) 
 
             try
             {
-                // Update Routing Skill
-                RoutingSkill result = apiInstance.PutSkillsSkillId(skillId, body);
+                // Update routing skill proficiency or state.
+                UserRoutingSkill result = apiInstance.PutUserIdRoutingskillsSkillId(userId, skillId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling RoutingApi.PutSkillsSkillId: " + e.Message );
+                Debug.Print("Exception when calling RoutingApi.PutUserIdRoutingskillsSkillId: " + e.Message );
             }
         }
     }
@@ -2221,13 +2222,14 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **skillId** | **string**| Skill ID |  |
-| **body** | [**RoutingSkill**](RoutingSkill.html)| Skill | [optional]  |
+| **userId** | **string**| User ID |  |
+| **skillId** | **string**|  |  |
+| **body** | [**UserRoutingSkill**](UserRoutingSkill.html)| Skill | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**RoutingSkill**](RoutingSkill.html)
+[**UserRoutingSkill**](UserRoutingSkill.html)
 
 <a name="pututilization"></a>
 

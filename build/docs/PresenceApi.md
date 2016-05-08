@@ -7,20 +7,21 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeletePresenceId**](PresenceApi.html#deletepresenceid) | **DELETE** /api/v2/presencedefinitions/{presenceId} | Delete an OrganizationPresence |
-| [**GetPresenceId**](PresenceApi.html#getpresenceid) | **GET** /api/v2/presencedefinitions/{presenceId} | Get an OrganizationPresence |
-| [**GetPresencedefinitions**](PresenceApi.html#getpresencedefinitions) | **GET** /api/v2/presencedefinitions | Get an Organization&#39;s list of Presences |
+| [**DeletePresenceId**](PresenceApi.html#deletepresenceid) | **DELETE** /api/v2/presencedefinitions/{presenceId} | Delete a Presence Definition |
+| [**GetPresenceId**](PresenceApi.html#getpresenceid) | **GET** /api/v2/presencedefinitions/{presenceId} | Get a Presence Definition |
+| [**GetPresencedefinitions**](PresenceApi.html#getpresencedefinitions) | **GET** /api/v2/presencedefinitions | Get an Organization&#39;s list of Presence Definitions |
+| [**GetSystempresences**](PresenceApi.html#getsystempresences) | **GET** /api/v2/systempresences | Get the list of SystemPresences |
 | [**GetUserIdPresencesSourceId**](PresenceApi.html#getuseridpresencessourceid) | **GET** /api/v2/users/{userId}/presences/{sourceId} | Get a user&#39;s Presence |
 | [**PatchUserIdPresencesSourceId**](PresenceApi.html#patchuseridpresencessourceid) | **PATCH** /api/v2/users/{userId}/presences/{sourceId} | Patch a user&#39;s Presence |
-| [**PostPresencedefinitions**](PresenceApi.html#postpresencedefinitions) | **POST** /api/v2/presencedefinitions | Create an OrganizationPresence |
-| [**PutPresenceId**](PresenceApi.html#putpresenceid) | **PUT** /api/v2/presencedefinitions/{presenceId} | Update an OrganizationPresence |
+| [**PostPresencedefinitions**](PresenceApi.html#postpresencedefinitions) | **POST** /api/v2/presencedefinitions | Create a Presence Definition |
+| [**PutPresenceId**](PresenceApi.html#putpresenceid) | **PUT** /api/v2/presencedefinitions/{presenceId} | Update a Presence Definition |
 {: class="table table-striped"}
 
 <a name="deletepresenceid"></a>
 
 ## [**OrganizationPresence**](OrganizationPresence.html) DeletePresenceId (string presenceId)
 
-Delete an OrganizationPresence
+Delete a Presence Definition
 
 
 
@@ -47,7 +48,7 @@ namespace Example
 
             try
             {
-                // Delete an OrganizationPresence
+                // Delete a Presence Definition
                 OrganizationPresence result = apiInstance.DeletePresenceId(presenceId);
                 Debug.WriteLine(result);
             }
@@ -76,7 +77,7 @@ namespace Example
 
 ## [**OrganizationPresence**](OrganizationPresence.html) GetPresenceId (string presenceId)
 
-Get an OrganizationPresence
+Get a Presence Definition
 
 
 
@@ -103,7 +104,7 @@ namespace Example
 
             try
             {
-                // Get an OrganizationPresence
+                // Get a Presence Definition
                 OrganizationPresence result = apiInstance.GetPresenceId(presenceId);
                 Debug.WriteLine(result);
             }
@@ -132,7 +133,7 @@ namespace Example
 
 ## [**OrganizationPresenceEntityListing**](OrganizationPresenceEntityListing.html) GetPresencedefinitions (int? pageNumber = null, int? pageSize = null)
 
-Get an Organization's list of Presences
+Get an Organization's list of Presence Definitions
 
 
 
@@ -160,7 +161,7 @@ namespace Example
 
             try
             {
-                // Get an Organization's list of Presences
+                // Get an Organization's list of Presence Definitions
                 OrganizationPresenceEntityListing result = apiInstance.GetPresencedefinitions(pageNumber, pageSize);
                 Debug.WriteLine(result);
             }
@@ -185,6 +186,57 @@ namespace Example
 ### Return type
 
 [**OrganizationPresenceEntityListing**](OrganizationPresenceEntityListing.html)
+
+<a name="getsystempresences"></a>
+
+## [**SystemPresence**](SystemPresence.html) GetSystempresences ()
+
+Get the list of SystemPresences
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetSystempresencesExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new PresenceApi();
+
+            try
+            {
+                // Get the list of SystemPresences
+                SystemPresence result = apiInstance.GetSystempresences();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling PresenceApi.GetSystempresences: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+This endpoint does require any parameters.
+{: class="table table-striped"}
+
+### Return type
+
+[**SystemPresence**](SystemPresence.html)
 
 <a name="getuseridpresencessourceid"></a>
 
@@ -308,7 +360,7 @@ namespace Example
 
 ## [**OrganizationPresence**](OrganizationPresence.html) PostPresencedefinitions (OrganizationPresence body)
 
-Create an OrganizationPresence
+Create a Presence Definition
 
 
 
@@ -331,11 +383,11 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new PresenceApi();
-            var body = new OrganizationPresence(); // OrganizationPresence | The OrganizationPresence to create
+            var body = new OrganizationPresence(); // OrganizationPresence | The Presence Definition to create
 
             try
             {
-                // Create an OrganizationPresence
+                // Create a Presence Definition
                 OrganizationPresence result = apiInstance.PostPresencedefinitions(body);
                 Debug.WriteLine(result);
             }
@@ -353,7 +405,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**OrganizationPresence**](OrganizationPresence.html)| The OrganizationPresence to create |  |
+| **body** | [**OrganizationPresence**](OrganizationPresence.html)| The Presence Definition to create |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -364,7 +416,7 @@ namespace Example
 
 ## [**OrganizationPresence**](OrganizationPresence.html) PutPresenceId (string presenceId, OrganizationPresence body)
 
-Update an OrganizationPresence
+Update a Presence Definition
 
 
 
@@ -392,7 +444,7 @@ namespace Example
 
             try
             {
-                // Update an OrganizationPresence
+                // Update a Presence Definition
                 OrganizationPresence result = apiInstance.PutPresenceId(presenceId, body);
                 Debug.WriteLine(result);
             }

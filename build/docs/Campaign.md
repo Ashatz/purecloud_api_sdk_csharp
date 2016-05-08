@@ -9,9 +9,9 @@ title: Campaign
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** |  | [optional] |
-| **DateCreated** | **DateTime?** | creation time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
-| **DateModified** | **DateTime?** | last modified time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
-| **Version** | **int?** | required for updates, must match the version number of the most recent update | [optional] |
+| **DateCreated** | **DateTime?** | Creation time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
+| **DateModified** | **DateTime?** | Last modified time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
+| **Version** | **int?** | Required for updates, must match the version number of the most recent update | [optional] |
 | **ContactList** | [**UriReference**](UriReference.html) | identifier of the contact list for the campaign | |
 | **Queue** | [**UriReference**](UriReference.html) | identifier of the agent assignment queue, required for all dialing modes other than agentless | |
 | **DialingMode** | **string** | dialing mode of the campaign | |

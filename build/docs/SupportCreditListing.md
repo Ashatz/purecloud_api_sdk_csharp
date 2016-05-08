@@ -1,7 +1,7 @@
 ---
-title: FlowHistoryResultItemEntityListing
+title: SupportCreditListing
 ---
-## ININ.PureCloudApi.Model.FlowHistoryResultItemEntityListing
+## ININ.PureCloudApi.Model.SupportCreditListing
 
 ## Properties
 
@@ -10,12 +10,12 @@ title: FlowHistoryResultItemEntityListing
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
-| **Entities** | [**List&lt;FlowHistoryResultItem&gt;**](FlowHistoryResultItem.html) |  | [optional] |
+| **Entities** | [**List&lt;SupportCredit&gt;**](SupportCredit.html) |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
+| **PreviousUri** | **string** |  | [optional] |
+| **FirstUri** | **string** |  | [optional] |
 | **NextUri** | **string** |  | [optional] |
 | **LastUri** | **string** |  | [optional] |
-| **FirstUri** | **string** |  | [optional] |
-| **PreviousUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
 {: class="table table-striped"}
 

@@ -48,14 +48,10 @@ namespace ININ.PureCloudApi.Model
         /// Initializes a new instance of the <see cref="RoutingSkill" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
-        /// <param name="DateModified">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        /// <param name="Proficiency">Proficiency.</param>
 
-        public RoutingSkill(string Name = null, DateTime? DateModified = null, string Proficiency = null)
+        public RoutingSkill(string Name = null)
         {
             this.Name = Name;
-            this.DateModified = DateModified;
-            this.Proficiency = Proficiency;
             
         }
 
@@ -74,11 +70,11 @@ namespace ININ.PureCloudApi.Model
         public string Name { get; set; }
     
         /// <summary>
-        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// Date last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
-        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>Date last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
-        public DateTime? DateModified { get; set; }
+        public DateTime? DateModified { get; private set; }
     
         /// <summary>
         /// Required when updating. Version must be the current version. Only the system can assign version.
@@ -86,12 +82,6 @@ namespace ININ.PureCloudApi.Model
         /// <value>Required when updating. Version must be the current version. Only the system can assign version.</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public string Version { get; private set; }
-    
-        /// <summary>
-        /// Gets or Sets Proficiency
-        /// </summary>
-        [DataMember(Name="proficiency", EmitDefaultValue=false)]
-        public string Proficiency { get; set; }
     
         /// <summary>
         /// The URI for this object
@@ -113,7 +103,6 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
             sb.Append("  State: ").Append(State).Append("\n");
             sb.Append("  Version: ").Append(Version).Append("\n");
-            sb.Append("  Proficiency: ").Append(Proficiency).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -177,11 +166,6 @@ namespace ININ.PureCloudApi.Model
                     this.Version.Equals(other.Version)
                 ) &&
                 (
-                    this.Proficiency == other.Proficiency ||
-                    this.Proficiency != null &&
-                    this.Proficiency.Equals(other.Proficiency)
-                ) &&
-                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -209,8 +193,6 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.State.GetHashCode();
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
-                if (this.Proficiency != null)
-                    hash = hash * 59 + this.Proficiency.GetHashCode();
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;

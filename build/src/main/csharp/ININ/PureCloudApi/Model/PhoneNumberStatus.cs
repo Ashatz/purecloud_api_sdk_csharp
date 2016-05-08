@@ -21,7 +21,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PhoneNumberStatus" />class.
         /// </summary>
-        /// <param name="Callable">Callable (default to false).</param>
+        /// <param name="Callable">false if the phone number is not callable (default to false).</param>
 
         public PhoneNumberStatus(bool? Callable = null)
         {
@@ -39,8 +39,9 @@ namespace ININ.PureCloudApi.Model
 
     
         /// <summary>
-        /// Gets or Sets Callable
+        /// false if the phone number is not callable
         /// </summary>
+        /// <value>false if the phone number is not callable</value>
         [DataMember(Name="callable", EmitDefaultValue=false)]
         public bool? Callable { get; set; }
     

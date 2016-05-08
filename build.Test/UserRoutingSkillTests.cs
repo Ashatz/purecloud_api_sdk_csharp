@@ -75,12 +75,12 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'Proficiency'
         }
         /// <summary>
-        /// Test the property 'Active'
+        /// Test the property 'State'
         /// </summary>
         [Test]
-        public void ActiveTest()
+        public void StateTest()
         {
-            // TODO: unit test for the property 'Active'
+            // TODO: unit test for the property 'State'
         }
         /// <summary>
         /// Test the property 'SkillUri'

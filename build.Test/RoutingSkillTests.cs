@@ -91,14 +91,6 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'Version'
         }
         /// <summary>
-        /// Test the property 'Proficiency'
-        /// </summary>
-        [Test]
-        public void ProficiencyTest()
-        {
-            // TODO: unit test for the property 'Proficiency'
-        }
-        /// <summary>
         /// Test the property 'SelfUri'
         /// </summary>
         [Test]

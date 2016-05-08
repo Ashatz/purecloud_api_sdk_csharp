@@ -21,34 +21,53 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ContactPhoneNumberColumn" />class.
         /// </summary>
-        /// <param name="ColumnName">ColumnName.</param>
-        /// <param name="Type">Type.</param>
-        /// <param name="CallableTimeColumn">CallableTimeColumn.</param>
+        /// <param name="ColumnName">name of the phone column (required).</param>
+        /// <param name="Type">type of the phone column, for example, &#39;cell&#39; or &#39;home&#39; (required).</param>
+        /// <param name="CallableTimeColumn">name of the column indicating the timezone to be considered for determining callable times.</param>
 
         public ContactPhoneNumberColumn(string ColumnName = null, string Type = null, string CallableTimeColumn = null)
         {
-            this.ColumnName = ColumnName;
-            this.Type = Type;
+            // to ensure "ColumnName" is required (not null)
+            if (ColumnName == null)
+            {
+                throw new InvalidDataException("ColumnName is a required property for ContactPhoneNumberColumn and cannot be null");
+            }
+            else
+            {
+                this.ColumnName = ColumnName;
+            }
+            // to ensure "Type" is required (not null)
+            if (Type == null)
+            {
+                throw new InvalidDataException("Type is a required property for ContactPhoneNumberColumn and cannot be null");
+            }
+            else
+            {
+                this.Type = Type;
+            }
             this.CallableTimeColumn = CallableTimeColumn;
             
         }
 
     
         /// <summary>
-        /// Gets or Sets ColumnName
+        /// name of the phone column
         /// </summary>
+        /// <value>name of the phone column</value>
         [DataMember(Name="columnName", EmitDefaultValue=false)]
         public string ColumnName { get; set; }
     
         /// <summary>
-        /// Gets or Sets Type
+        /// type of the phone column, for example, &#39;cell&#39; or &#39;home&#39;
         /// </summary>
+        /// <value>type of the phone column, for example, &#39;cell&#39; or &#39;home&#39;</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public string Type { get; set; }
     
         /// <summary>
-        /// Gets or Sets CallableTimeColumn
+        /// name of the column indicating the timezone to be considered for determining callable times
         /// </summary>
+        /// <value>name of the column indicating the timezone to be considered for determining callable times</value>
         [DataMember(Name="callableTimeColumn", EmitDefaultValue=false)]
         public string CallableTimeColumn { get; set; }
     

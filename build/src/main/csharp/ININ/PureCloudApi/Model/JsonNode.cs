@@ -65,9 +65,9 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <param name="NodeType">NodeType.</param>
         /// <param name="_Float">_Float (default to false).</param>
-        /// <param name="_Object">_Object (default to false).</param>
         /// <param name="Boolean">Boolean (default to false).</param>
         /// <param name="Number">Number (default to false).</param>
+        /// <param name="_Object">_Object (default to false).</param>
         /// <param name="ValueNode">ValueNode (default to false).</param>
         /// <param name="ContainerNode">ContainerNode (default to false).</param>
         /// <param name="MissingNode">MissingNode (default to false).</param>
@@ -85,7 +85,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Array">Array (default to false).</param>
         /// <param name="_Null">_Null (default to false).</param>
 
-        public JsonNode(NodeTypeEnum? NodeType = null, bool? _Float = null, bool? _Object = null, bool? Boolean = null, bool? Number = null, bool? ValueNode = null, bool? ContainerNode = null, bool? MissingNode = null, bool? Pojo = null, bool? IntegralNumber = null, bool? FloatingPointNumber = null, bool? _Short = null, bool? _Int = null, bool? _Long = null, bool? _Double = null, bool? BigDecimal = null, bool? BigInteger = null, bool? Textual = null, bool? Binary = null, bool? Array = null, bool? _Null = null)
+        public JsonNode(NodeTypeEnum? NodeType = null, bool? _Float = null, bool? Boolean = null, bool? Number = null, bool? _Object = null, bool? ValueNode = null, bool? ContainerNode = null, bool? MissingNode = null, bool? Pojo = null, bool? IntegralNumber = null, bool? FloatingPointNumber = null, bool? _Short = null, bool? _Int = null, bool? _Long = null, bool? _Double = null, bool? BigDecimal = null, bool? BigInteger = null, bool? Textual = null, bool? Binary = null, bool? Array = null, bool? _Null = null)
         {
             this.NodeType = NodeType;
             // use default value if no "_Float" provided
@@ -96,15 +96,6 @@ namespace ININ.PureCloudApi.Model
             else
             {
                 this._Float = _Float;
-            }
-            // use default value if no "_Object" provided
-            if (_Object == null)
-            {
-                this._Object = false;
-            }
-            else
-            {
-                this._Object = _Object;
             }
             // use default value if no "Boolean" provided
             if (Boolean == null)
@@ -123,6 +114,15 @@ namespace ININ.PureCloudApi.Model
             else
             {
                 this.Number = Number;
+            }
+            // use default value if no "_Object" provided
+            if (_Object == null)
+            {
+                this._Object = false;
+            }
+            else
+            {
+                this._Object = _Object;
             }
             // use default value if no "ValueNode" provided
             if (ValueNode == null)
@@ -279,12 +279,6 @@ namespace ININ.PureCloudApi.Model
         public bool? _Float { get; set; }
     
         /// <summary>
-        /// Gets or Sets _Object
-        /// </summary>
-        [DataMember(Name="object", EmitDefaultValue=false)]
-        public bool? _Object { get; set; }
-    
-        /// <summary>
         /// Gets or Sets Boolean
         /// </summary>
         [DataMember(Name="boolean", EmitDefaultValue=false)]
@@ -295,6 +289,12 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         [DataMember(Name="number", EmitDefaultValue=false)]
         public bool? Number { get; set; }
+    
+        /// <summary>
+        /// Gets or Sets _Object
+        /// </summary>
+        [DataMember(Name="object", EmitDefaultValue=false)]
+        public bool? _Object { get; set; }
     
         /// <summary>
         /// Gets or Sets ValueNode
@@ -402,9 +402,9 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class JsonNode {\n");
             sb.Append("  NodeType: ").Append(NodeType).Append("\n");
             sb.Append("  _Float: ").Append(_Float).Append("\n");
-            sb.Append("  _Object: ").Append(_Object).Append("\n");
             sb.Append("  Boolean: ").Append(Boolean).Append("\n");
             sb.Append("  Number: ").Append(Number).Append("\n");
+            sb.Append("  _Object: ").Append(_Object).Append("\n");
             sb.Append("  ValueNode: ").Append(ValueNode).Append("\n");
             sb.Append("  ContainerNode: ").Append(ContainerNode).Append("\n");
             sb.Append("  MissingNode: ").Append(MissingNode).Append("\n");
@@ -468,11 +468,6 @@ namespace ININ.PureCloudApi.Model
                     this._Float.Equals(other._Float)
                 ) &&
                 (
-                    this._Object == other._Object ||
-                    this._Object != null &&
-                    this._Object.Equals(other._Object)
-                ) &&
-                (
                     this.Boolean == other.Boolean ||
                     this.Boolean != null &&
                     this.Boolean.Equals(other.Boolean)
@@ -481,6 +476,11 @@ namespace ININ.PureCloudApi.Model
                     this.Number == other.Number ||
                     this.Number != null &&
                     this.Number.Equals(other.Number)
+                ) &&
+                (
+                    this._Object == other._Object ||
+                    this._Object != null &&
+                    this._Object.Equals(other._Object)
                 ) &&
                 (
                     this.ValueNode == other.ValueNode ||
@@ -579,12 +579,12 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.NodeType.GetHashCode();
                 if (this._Float != null)
                     hash = hash * 59 + this._Float.GetHashCode();
-                if (this._Object != null)
-                    hash = hash * 59 + this._Object.GetHashCode();
                 if (this.Boolean != null)
                     hash = hash * 59 + this.Boolean.GetHashCode();
                 if (this.Number != null)
                     hash = hash * 59 + this.Number.GetHashCode();
+                if (this._Object != null)
+                    hash = hash * 59 + this._Object.GetHashCode();
                 if (this.ValueNode != null)
                     hash = hash * 59 + this.ValueNode.GetHashCode();
                 if (this.ContainerNode != null)

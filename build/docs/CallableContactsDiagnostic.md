@@ -7,9 +7,9 @@ title: CallableContactsDiagnostic
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **DncLists** | [**List&lt;UriReference&gt;**](UriReference.html) |  | [optional] |
-| **CallableTimeSet** | [**UriReference**](UriReference.html) |  | [optional] |
-| **RuleSets** | [**List&lt;UriReference&gt;**](UriReference.html) |  | [optional] |
+| **DncLists** | [**List&lt;UriReference&gt;**](UriReference.html) | Do not call lists for the campaign | [optional] |
+| **CallableTimeSet** | [**UriReference**](UriReference.html) | Callable time sets for the campaign | [optional] |
+| **RuleSets** | [**List&lt;UriReference&gt;**](UriReference.html) | Rule sets for the campaign | [optional] |
 {: class="table table-striped"}
 
 

@@ -21,7 +21,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserImage" />class.
         /// </summary>
-        /// <param name="Resolution">Resolution.</param>
+        /// <param name="Resolution">Height and/or width of image. ex: 640x480 or x128.</param>
         /// <param name="ImageUri">ImageUri.</param>
 
         public UserImage(string Resolution = null, string ImageUri = null)
@@ -33,8 +33,9 @@ namespace ININ.PureCloudApi.Model
 
     
         /// <summary>
-        /// Gets or Sets Resolution
+        /// Height and/or width of image. ex: 640x480 or x128
         /// </summary>
+        /// <value>Height and/or width of image. ex: 640x480 or x128</value>
         [DataMember(Name="resolution", EmitDefaultValue=false)]
         public string Resolution { get; set; }
     

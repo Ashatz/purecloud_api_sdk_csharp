@@ -66,6 +66,14 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: unit test for the property 'InterruptableMediaTypes'
         }
+        /// <summary>
+        /// Test the property 'IncludeNonAcd'
+        /// </summary>
+        [Test]
+        public void IncludeNonAcdTest()
+        {
+            // TODO: unit test for the property 'IncludeNonAcd'
+        }
 
     }
 

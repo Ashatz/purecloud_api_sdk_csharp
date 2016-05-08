@@ -67,8 +67,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="lineAppearanceId">lineAppearanceId (optional)</param>
         /// <returns>StationEntityListing</returns>
-        StationEntityListing GetStations (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null);
+        StationEntityListing GetStations (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, string lineAppearanceId = null);
 
         /// <summary>
         /// Get the list of available stations.
@@ -81,8 +82,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="lineAppearanceId">lineAppearanceId (optional)</param>
         /// <returns>ApiResponse of StationEntityListing</returns>
-        ApiResponse<StationEntityListing> GetStationsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null);
+        ApiResponse<StationEntityListing> GetStationsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, string lineAppearanceId = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -138,8 +140,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="lineAppearanceId">lineAppearanceId (optional)</param>
         /// <returns>Task of StationEntityListing</returns>
-        System.Threading.Tasks.Task<StationEntityListing> GetStationsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null);
+        System.Threading.Tasks.Task<StationEntityListing> GetStationsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, string lineAppearanceId = null);
 
         /// <summary>
         /// Get the list of available stations.
@@ -152,8 +155,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="lineAppearanceId">lineAppearanceId (optional)</param>
         /// <returns>Task of ApiResponse (StationEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<StationEntityListing>> GetStationsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null);
+        System.Threading.Tasks.Task<ApiResponse<StationEntityListing>> GetStationsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, string lineAppearanceId = null);
         #endregion Asynchronous Operations
     }
 
@@ -558,10 +562,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="lineAppearanceId">lineAppearanceId (optional)</param>
         /// <returns>StationEntityListing</returns>
-        public StationEntityListing GetStations (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null)
+        public StationEntityListing GetStations (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, string lineAppearanceId = null)
         {
-             ApiResponse<StationEntityListing> localVarResponse = GetStationsWithHttpInfo(pageSize, pageNumber, sortBy, name);
+             ApiResponse<StationEntityListing> localVarResponse = GetStationsWithHttpInfo(pageSize, pageNumber, sortBy, name, lineAppearanceId);
              return localVarResponse.Data;
         }
 
@@ -573,8 +578,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="lineAppearanceId">lineAppearanceId (optional)</param>
         /// <returns>ApiResponse of StationEntityListing</returns>
-        public ApiResponse< StationEntityListing > GetStationsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null)
+        public ApiResponse< StationEntityListing > GetStationsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, string lineAppearanceId = null)
         {
 
             var localVarPath = "/api/v2/stations";
@@ -606,6 +612,7 @@ namespace ININ.PureCloudApi.Api
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
             if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
             if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
+            if (lineAppearanceId != null) localVarQueryParams.Add("lineAppearanceId", Configuration.ApiClient.ParameterToString(lineAppearanceId)); // query parameter
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -640,10 +647,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="lineAppearanceId">lineAppearanceId (optional)</param>
         /// <returns>Task of StationEntityListing</returns>
-        public async System.Threading.Tasks.Task<StationEntityListing> GetStationsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null)
+        public async System.Threading.Tasks.Task<StationEntityListing> GetStationsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, string lineAppearanceId = null)
         {
-             ApiResponse<StationEntityListing> localVarResponse = await GetStationsAsyncWithHttpInfo(pageSize, pageNumber, sortBy, name);
+             ApiResponse<StationEntityListing> localVarResponse = await GetStationsAsyncWithHttpInfo(pageSize, pageNumber, sortBy, name, lineAppearanceId);
              return localVarResponse.Data;
 
         }
@@ -656,8 +664,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="lineAppearanceId">lineAppearanceId (optional)</param>
         /// <returns>Task of ApiResponse (StationEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<StationEntityListing>> GetStationsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null)
+        public async System.Threading.Tasks.Task<ApiResponse<StationEntityListing>> GetStationsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, string lineAppearanceId = null)
         {
 
             var localVarPath = "/api/v2/stations";
@@ -689,6 +698,7 @@ namespace ININ.PureCloudApi.Api
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
             if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
             if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
+            if (lineAppearanceId != null) localVarQueryParams.Add("lineAppearanceId", Configuration.ApiClient.ParameterToString(lineAppearanceId)); // query parameter
 
             // authentication (PureCloud Auth) required
             // oauth required

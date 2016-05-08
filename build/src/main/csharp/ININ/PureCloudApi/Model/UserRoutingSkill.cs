@@ -17,15 +17,45 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class UserRoutingSkill :  IEquatable<UserRoutingSkill>
     { 
+
+        /// <summary>
+        /// Activate or deactivate this routing skill.
+        /// </summary>
+        /// <value>Activate or deactivate this routing skill.</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+                public enum StateEnum {
+            
+            [EnumMember(Value = "active")]
+            Active,
+            
+            [EnumMember(Value = "inactive")]
+            Inactive,
+            
+            [EnumMember(Value = "deleted")]
+            Deleted
+        }
+
         
+
+        /// <summary>
+        /// Activate or deactivate this routing skill.
+        /// </summary>
+        /// <value>Activate or deactivate this routing skill.</value>
+        [DataMember(Name="state", EmitDefaultValue=false)]
+        public StateEnum? State { get; set; }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="UserRoutingSkill" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
+        /// <param name="Proficiency">Proficiency is a rating from 0.0 to 5.0 on how competent an agent is for a particular skill. It is used when a queue is set to \&quot;Best available skills\&quot; mode to allow acd interactions to target agents with higher proficiency ratings..</param>
+        /// <param name="State">Activate or deactivate this routing skill..</param>
 
-        public UserRoutingSkill(string Name = null)
+        public UserRoutingSkill(string Name = null, double? Proficiency = null, StateEnum? State = null)
         {
             this.Name = Name;
+            this.Proficiency = Proficiency;
+            this.State = State;
             
         }
 
@@ -44,18 +74,11 @@ namespace ININ.PureCloudApi.Model
         public string Name { get; set; }
     
         /// <summary>
-        /// proficiency of the organization skill.
+        /// Proficiency is a rating from 0.0 to 5.0 on how competent an agent is for a particular skill. It is used when a queue is set to \&quot;Best available skills\&quot; mode to allow acd interactions to target agents with higher proficiency ratings.
         /// </summary>
-        /// <value>proficiency of the organization skill.</value>
+        /// <value>Proficiency is a rating from 0.0 to 5.0 on how competent an agent is for a particular skill. It is used when a queue is set to \&quot;Best available skills\&quot; mode to allow acd interactions to target agents with higher proficiency ratings.</value>
         [DataMember(Name="proficiency", EmitDefaultValue=false)]
-        public double? Proficiency { get; private set; }
-    
-        /// <summary>
-        /// Is the user skill active.
-        /// </summary>
-        /// <value>Is the user skill active.</value>
-        [DataMember(Name="active", EmitDefaultValue=false)]
-        public bool? Active { get; private set; }
+        public double? Proficiency { get; set; }
     
         /// <summary>
         /// URI to the organization skill used by this user skill.
@@ -82,7 +105,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Proficiency: ").Append(Proficiency).Append("\n");
-            sb.Append("  Active: ").Append(Active).Append("\n");
+            sb.Append("  State: ").Append(State).Append("\n");
             sb.Append("  SkillUri: ").Append(SkillUri).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
@@ -137,9 +160,9 @@ namespace ININ.PureCloudApi.Model
                     this.Proficiency.Equals(other.Proficiency)
                 ) &&
                 (
-                    this.Active == other.Active ||
-                    this.Active != null &&
-                    this.Active.Equals(other.Active)
+                    this.State == other.State ||
+                    this.State != null &&
+                    this.State.Equals(other.State)
                 ) &&
                 (
                     this.SkillUri == other.SkillUri ||
@@ -170,8 +193,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.Name.GetHashCode();
                 if (this.Proficiency != null)
                     hash = hash * 59 + this.Proficiency.GetHashCode();
-                if (this.Active != null)
-                    hash = hash * 59 + this.Active.GetHashCode();
+                if (this.State != null)
+                    hash = hash * 59 + this.State.GetHashCode();
                 if (this.SkillUri != null)
                     hash = hash * 59 + this.SkillUri.GetHashCode();
                 if (this.SelfUri != null)

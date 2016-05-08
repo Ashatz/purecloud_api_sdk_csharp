@@ -27,8 +27,9 @@ namespace ININ.PureCloudApi.Model
         /// <param name="AssignMeteredEvaluations">AssignMeteredEvaluations.</param>
         /// <param name="AssignCalibrations">AssignCalibrations.</param>
         /// <param name="RetentionDuration">RetentionDuration.</param>
+        /// <param name="InitiateScreenRecording">InitiateScreenRecording.</param>
 
-        public PolicyActions(bool? RetainRecording = null, bool? DeleteRecording = null, List<EvaluationAssignment> AssignEvaluations = null, List<MeteredEvaluationAssignment> AssignMeteredEvaluations = null, List<CalibrationAssignment> AssignCalibrations = null, RetentionDuration RetentionDuration = null)
+        public PolicyActions(bool? RetainRecording = null, bool? DeleteRecording = null, List<EvaluationAssignment> AssignEvaluations = null, List<MeteredEvaluationAssignment> AssignMeteredEvaluations = null, List<CalibrationAssignment> AssignCalibrations = null, RetentionDuration RetentionDuration = null, InitiateScreenRecording InitiateScreenRecording = null)
         {
             // use default value if no "RetainRecording" provided
             if (RetainRecording == null)
@@ -52,6 +53,7 @@ namespace ININ.PureCloudApi.Model
             this.AssignMeteredEvaluations = AssignMeteredEvaluations;
             this.AssignCalibrations = AssignCalibrations;
             this.RetentionDuration = RetentionDuration;
+            this.InitiateScreenRecording = InitiateScreenRecording;
             
         }
 
@@ -93,6 +95,12 @@ namespace ININ.PureCloudApi.Model
         public RetentionDuration RetentionDuration { get; set; }
     
         /// <summary>
+        /// Gets or Sets InitiateScreenRecording
+        /// </summary>
+        [DataMember(Name="initiateScreenRecording", EmitDefaultValue=false)]
+        public InitiateScreenRecording InitiateScreenRecording { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -106,6 +114,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  AssignMeteredEvaluations: ").Append(AssignMeteredEvaluations).Append("\n");
             sb.Append("  AssignCalibrations: ").Append(AssignCalibrations).Append("\n");
             sb.Append("  RetentionDuration: ").Append(RetentionDuration).Append("\n");
+            sb.Append("  InitiateScreenRecording: ").Append(InitiateScreenRecording).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -171,6 +180,11 @@ namespace ININ.PureCloudApi.Model
                     this.RetentionDuration == other.RetentionDuration ||
                     this.RetentionDuration != null &&
                     this.RetentionDuration.Equals(other.RetentionDuration)
+                ) &&
+                (
+                    this.InitiateScreenRecording == other.InitiateScreenRecording ||
+                    this.InitiateScreenRecording != null &&
+                    this.InitiateScreenRecording.Equals(other.InitiateScreenRecording)
                 );
         }
 
@@ -197,6 +211,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.AssignCalibrations.GetHashCode();
                 if (this.RetentionDuration != null)
                     hash = hash * 59 + this.RetentionDuration.GetHashCode();
+                if (this.InitiateScreenRecording != null)
+                    hash = hash * 59 + this.InitiateScreenRecording.GetHashCode();
                 return hash;
             }
         }

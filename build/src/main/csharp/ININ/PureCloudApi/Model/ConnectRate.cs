@@ -21,36 +21,33 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ConnectRate" />class.
         /// </summary>
-        /// <param name="Attempts">Attempts.</param>
-        /// <param name="Connects">Connects.</param>
-        /// <param name="ConnectRatio">ConnectRatio.</param>
 
-        public ConnectRate(long? Attempts = null, long? Connects = null, double? ConnectRatio = null)
+        public ConnectRate()
         {
-            this.Attempts = Attempts;
-            this.Connects = Connects;
-            this.ConnectRatio = ConnectRatio;
             
         }
 
     
         /// <summary>
-        /// Gets or Sets Attempts
+        /// Number of call attempts made
         /// </summary>
+        /// <value>Number of call attempts made</value>
         [DataMember(Name="attempts", EmitDefaultValue=false)]
-        public long? Attempts { get; set; }
+        public long? Attempts { get; private set; }
     
         /// <summary>
-        /// Gets or Sets Connects
+        /// Number of calls with a live voice detected
         /// </summary>
+        /// <value>Number of calls with a live voice detected</value>
         [DataMember(Name="connects", EmitDefaultValue=false)]
-        public long? Connects { get; set; }
+        public long? Connects { get; private set; }
     
         /// <summary>
-        /// Gets or Sets ConnectRatio
+        /// Ratio of connects to attempts
         /// </summary>
+        /// <value>Ratio of connects to attempts</value>
         [DataMember(Name="connectRatio", EmitDefaultValue=false)]
-        public double? ConnectRatio { get; set; }
+        public double? ConnectRatio { get; private set; }
     
         /// <summary>
         /// Returns the string presentation of the object

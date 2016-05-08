@@ -21,7 +21,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateUser" />class.
         /// </summary>
-        /// <param name="Name">Name.</param>
+        /// <param name="Name">User&#39;s full name (required).</param>
         /// <param name="Department">Department.</param>
         /// <param name="Email">User&#39;s email and username (required).</param>
         /// <param name="Addresses">Email addresses and phone numbers for this user.</param>
@@ -30,6 +30,15 @@ namespace ININ.PureCloudApi.Model
 
         public CreateUser(string Name = null, string Department = null, string Email = null, List<Contact> Addresses = null, string Title = null, string Password = null)
         {
+            // to ensure "Name" is required (not null)
+            if (Name == null)
+            {
+                throw new InvalidDataException("Name is a required property for CreateUser and cannot be null");
+            }
+            else
+            {
+                this.Name = Name;
+            }
             // to ensure "Email" is required (not null)
             if (Email == null)
             {
@@ -48,7 +57,6 @@ namespace ININ.PureCloudApi.Model
             {
                 this.Password = Password;
             }
-            this.Name = Name;
             this.Department = Department;
             this.Addresses = Addresses;
             this.Title = Title;
@@ -57,8 +65,9 @@ namespace ININ.PureCloudApi.Model
 
     
         /// <summary>
-        /// Gets or Sets Name
+        /// User&#39;s full name
         /// </summary>
+        /// <value>User&#39;s full name</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
     

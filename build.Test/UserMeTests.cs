@@ -203,12 +203,44 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'Authorization'
         }
         /// <summary>
+        /// Test the property 'Date'
+        /// </summary>
+        [Test]
+        public void DateTest()
+        {
+            // TODO: unit test for the property 'Date'
+        }
+        /// <summary>
+        /// Test the property 'GeolocationSettings'
+        /// </summary>
+        [Test]
+        public void GeolocationSettingsTest()
+        {
+            // TODO: unit test for the property 'GeolocationSettings'
+        }
+        /// <summary>
         /// Test the property 'Organization'
         /// </summary>
         [Test]
         public void OrganizationTest()
         {
             // TODO: unit test for the property 'Organization'
+        }
+        /// <summary>
+        /// Test the property 'PresenceDefinitions'
+        /// </summary>
+        [Test]
+        public void PresenceDefinitionsTest()
+        {
+            // TODO: unit test for the property 'PresenceDefinitions'
+        }
+        /// <summary>
+        /// Test the property 'Locations'
+        /// </summary>
+        [Test]
+        public void LocationsTest()
+        {
+            // TODO: unit test for the property 'Locations'
         }
         /// <summary>
         /// Test the property 'SelfUri'

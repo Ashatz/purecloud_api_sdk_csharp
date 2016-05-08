@@ -22,24 +22,38 @@ namespace ININ.PureCloudApi.Model
         /// Initializes a new instance of the <see cref="ContactList" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
-        /// <param name="Version">required for updates, must match the version number of the most recent update.</param>
-        /// <param name="ColumnNames">ColumnNames.</param>
-        /// <param name="PhoneColumns">PhoneColumns.</param>
-        /// <param name="ImportStatus">ImportStatus.</param>
-        /// <param name="PreviewModeColumnName">PreviewModeColumnName.</param>
-        /// <param name="PreviewModeAcceptedValues">PreviewModeAcceptedValues.</param>
-        /// <param name="Size">Size.</param>
+        /// <param name="Version">Required for updates, must match the version number of the most recent update.</param>
+        /// <param name="ColumnNames">the contact column names (required).</param>
+        /// <param name="PhoneColumns">the columns containing phone numbers (required).</param>
+        /// <param name="ImportStatus">the status of the import process.</param>
+        /// <param name="PreviewModeColumnName">the name of the column that holds the indicators for contacts that are to be dialed in preview mode only.</param>
+        /// <param name="PreviewModeAcceptedValues">list of user-defined values indicating the contact is to be dialed in preview mode only.</param>
 
-        public ContactList(string Name = null, int? Version = null, List<string> ColumnNames = null, List<ContactPhoneNumberColumn> PhoneColumns = null, ImportStatus ImportStatus = null, string PreviewModeColumnName = null, List<string> PreviewModeAcceptedValues = null, long? Size = null)
+        public ContactList(string Name = null, int? Version = null, List<string> ColumnNames = null, List<ContactPhoneNumberColumn> PhoneColumns = null, ImportStatus ImportStatus = null, string PreviewModeColumnName = null, List<string> PreviewModeAcceptedValues = null)
         {
+            // to ensure "ColumnNames" is required (not null)
+            if (ColumnNames == null)
+            {
+                throw new InvalidDataException("ColumnNames is a required property for ContactList and cannot be null");
+            }
+            else
+            {
+                this.ColumnNames = ColumnNames;
+            }
+            // to ensure "PhoneColumns" is required (not null)
+            if (PhoneColumns == null)
+            {
+                throw new InvalidDataException("PhoneColumns is a required property for ContactList and cannot be null");
+            }
+            else
+            {
+                this.PhoneColumns = PhoneColumns;
+            }
             this.Name = Name;
             this.Version = Version;
-            this.ColumnNames = ColumnNames;
-            this.PhoneColumns = PhoneColumns;
             this.ImportStatus = ImportStatus;
             this.PreviewModeColumnName = PreviewModeColumnName;
             this.PreviewModeAcceptedValues = PreviewModeAcceptedValues;
-            this.Size = Size;
             
         }
 
@@ -58,61 +72,67 @@ namespace ININ.PureCloudApi.Model
         public string Name { get; set; }
     
         /// <summary>
-        /// creation time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// Creation time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
-        /// <value>creation time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>Creation time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; private set; }
     
         /// <summary>
-        /// last modified time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// Last modified time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
-        /// <value>last modified time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>Last modified time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
         public DateTime? DateModified { get; private set; }
     
         /// <summary>
-        /// required for updates, must match the version number of the most recent update
+        /// Required for updates, must match the version number of the most recent update
         /// </summary>
-        /// <value>required for updates, must match the version number of the most recent update</value>
+        /// <value>Required for updates, must match the version number of the most recent update</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public int? Version { get; set; }
     
         /// <summary>
-        /// Gets or Sets ColumnNames
+        /// the contact column names
         /// </summary>
+        /// <value>the contact column names</value>
         [DataMember(Name="columnNames", EmitDefaultValue=false)]
         public List<string> ColumnNames { get; set; }
     
         /// <summary>
-        /// Gets or Sets PhoneColumns
+        /// the columns containing phone numbers
         /// </summary>
+        /// <value>the columns containing phone numbers</value>
         [DataMember(Name="phoneColumns", EmitDefaultValue=false)]
         public List<ContactPhoneNumberColumn> PhoneColumns { get; set; }
     
         /// <summary>
-        /// Gets or Sets ImportStatus
+        /// the status of the import process
         /// </summary>
+        /// <value>the status of the import process</value>
         [DataMember(Name="importStatus", EmitDefaultValue=false)]
         public ImportStatus ImportStatus { get; set; }
     
         /// <summary>
-        /// Gets or Sets PreviewModeColumnName
+        /// the name of the column that holds the indicators for contacts that are to be dialed in preview mode only
         /// </summary>
+        /// <value>the name of the column that holds the indicators for contacts that are to be dialed in preview mode only</value>
         [DataMember(Name="previewModeColumnName", EmitDefaultValue=false)]
         public string PreviewModeColumnName { get; set; }
     
         /// <summary>
-        /// Gets or Sets PreviewModeAcceptedValues
+        /// list of user-defined values indicating the contact is to be dialed in preview mode only
         /// </summary>
+        /// <value>list of user-defined values indicating the contact is to be dialed in preview mode only</value>
         [DataMember(Name="previewModeAcceptedValues", EmitDefaultValue=false)]
         public List<string> PreviewModeAcceptedValues { get; set; }
     
         /// <summary>
-        /// Gets or Sets Size
+        /// the number of contacts in the contact list
         /// </summary>
+        /// <value>the number of contacts in the contact list</value>
         [DataMember(Name="size", EmitDefaultValue=false)]
-        public long? Size { get; set; }
+        public long? Size { get; private set; }
     
         /// <summary>
         /// The URI for this object

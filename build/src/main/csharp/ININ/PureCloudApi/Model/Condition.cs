@@ -19,8 +19,33 @@ namespace ININ.PureCloudApi.Model
     { 
 
         /// <summary>
-        /// Gets or Sets ValueType
+        /// The type of the condition
         /// </summary>
+        /// <value>The type of the condition</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+                public enum TypeEnum {
+            
+            [EnumMember(Value = "wrapupCondition")]
+            Wrapupcondition,
+            
+            [EnumMember(Value = "contactAttributeCondition")]
+            Contactattributecondition,
+            
+            [EnumMember(Value = "phoneNumberCondition")]
+            Phonenumbercondition,
+            
+            [EnumMember(Value = "phoneNumberTypeCondition")]
+            Phonenumbertypecondition,
+            
+            [EnumMember(Value = "callAnalysisCondition")]
+            Callanalysiscondition
+        }
+
+
+        /// <summary>
+        /// Determines the type of the value associated with the condition
+        /// </summary>
+        /// <value>Determines the type of the value associated with the condition</value>
         [JsonConverter(typeof(StringEnumConverter))]
                 public enum ValueTypeEnum {
             
@@ -39,8 +64,9 @@ namespace ININ.PureCloudApi.Model
 
 
         /// <summary>
-        /// Gets or Sets _Operator
+        /// An operation type for condition evaluation
         /// </summary>
+        /// <value>An operation type for condition evaluation</value>
         [JsonConverter(typeof(StringEnumConverter))]
                 public enum _OperatorEnum {
             
@@ -78,30 +104,40 @@ namespace ININ.PureCloudApi.Model
         
 
         /// <summary>
-        /// Gets or Sets ValueType
+        /// The type of the condition
         /// </summary>
+        /// <value>The type of the condition</value>
+        [DataMember(Name="type", EmitDefaultValue=false)]
+        public TypeEnum? Type { get; set; }
+    
+
+        /// <summary>
+        /// Determines the type of the value associated with the condition
+        /// </summary>
+        /// <value>Determines the type of the value associated with the condition</value>
         [DataMember(Name="valueType", EmitDefaultValue=false)]
         public ValueTypeEnum? ValueType { get; set; }
     
 
         /// <summary>
-        /// Gets or Sets _Operator
+        /// An operation type for condition evaluation
         /// </summary>
+        /// <value>An operation type for condition evaluation</value>
         [DataMember(Name="operator", EmitDefaultValue=false)]
         public _OperatorEnum? _Operator { get; set; }
     
         /// <summary>
         /// Initializes a new instance of the <see cref="Condition" />class.
         /// </summary>
-        /// <param name="Type">Type.</param>
-        /// <param name="Inverted">Inverted (default to false).</param>
-        /// <param name="AttributeName">AttributeName.</param>
-        /// <param name="Value">Value.</param>
-        /// <param name="ValueType">ValueType.</param>
-        /// <param name="_Operator">_Operator.</param>
-        /// <param name="Codes">Codes.</param>
+        /// <param name="Type">The type of the condition.</param>
+        /// <param name="Inverted">Indicates whether to evaluate for the opposite of the stated condition; default is false (default to false).</param>
+        /// <param name="AttributeName">An attribute name associated with the condition (applies only to certain rule conditions).</param>
+        /// <param name="Value">A value associated with the condition.</param>
+        /// <param name="ValueType">Determines the type of the value associated with the condition.</param>
+        /// <param name="_Operator">An operation type for condition evaluation.</param>
+        /// <param name="Codes">List of wrap-up code identifiers (used only in conditions of type &#39;wrapupCondition&#39;).</param>
 
-        public Condition(string Type = null, bool? Inverted = null, string AttributeName = null, string Value = null, ValueTypeEnum? ValueType = null, _OperatorEnum? _Operator = null, List<string> Codes = null)
+        public Condition(TypeEnum? Type = null, bool? Inverted = null, string AttributeName = null, string Value = null, ValueTypeEnum? ValueType = null, _OperatorEnum? _Operator = null, List<string> Codes = null)
         {
             this.Type = Type;
             // use default value if no "Inverted" provided
@@ -123,32 +159,30 @@ namespace ININ.PureCloudApi.Model
 
     
         /// <summary>
-        /// Gets or Sets Type
+        /// Indicates whether to evaluate for the opposite of the stated condition; default is false
         /// </summary>
-        [DataMember(Name="type", EmitDefaultValue=false)]
-        public string Type { get; set; }
-    
-        /// <summary>
-        /// Gets or Sets Inverted
-        /// </summary>
+        /// <value>Indicates whether to evaluate for the opposite of the stated condition; default is false</value>
         [DataMember(Name="inverted", EmitDefaultValue=false)]
         public bool? Inverted { get; set; }
     
         /// <summary>
-        /// Gets or Sets AttributeName
+        /// An attribute name associated with the condition (applies only to certain rule conditions)
         /// </summary>
+        /// <value>An attribute name associated with the condition (applies only to certain rule conditions)</value>
         [DataMember(Name="attributeName", EmitDefaultValue=false)]
         public string AttributeName { get; set; }
     
         /// <summary>
-        /// Gets or Sets Value
+        /// A value associated with the condition
         /// </summary>
+        /// <value>A value associated with the condition</value>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public string Value { get; set; }
     
         /// <summary>
-        /// Gets or Sets Codes
+        /// List of wrap-up code identifiers (used only in conditions of type &#39;wrapupCondition&#39;)
         /// </summary>
+        /// <value>List of wrap-up code identifiers (used only in conditions of type &#39;wrapupCondition&#39;)</value>
         [DataMember(Name="codes", EmitDefaultValue=false)]
         public List<string> Codes { get; set; }
     

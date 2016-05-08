@@ -321,6 +321,25 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of EdgeEntityListing</returns>
         ApiResponse<EdgeEntityListing> GetProvidersEdgesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string edgeGroupId = null, string sortBy = null);
         /// <summary>
+        /// Get the list of available languages.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>AvailableLanguageList</returns>
+        AvailableLanguageList GetProvidersEdgesAvailablelanguages ();
+
+        /// <summary>
+        /// Get the list of available languages.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of AvailableLanguageList</returns>
+        ApiResponse<AvailableLanguageList> GetProvidersEdgesAvailablelanguagesWithHttpInfo ();
+        /// <summary>
         /// Get the list of certificate authorities.
         /// </summary>
         /// <remarks>
@@ -1384,8 +1403,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="sortBy">Value by which to sort (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="recordingEnabled">Filter trunks by recording enabled (optional)</param>
         /// <returns>TrunkBase</returns>
-        TrunkBase GetProvidersEdgesTrunkbasesettings (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null);
+        TrunkBase GetProvidersEdgesTrunkbasesettings (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, bool? recordingEnabled = null);
 
         /// <summary>
         /// Get Trunk Base Settings listing
@@ -1398,8 +1418,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="sortBy">Value by which to sort (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="recordingEnabled">Filter trunks by recording enabled (optional)</param>
         /// <returns>ApiResponse of TrunkBase</returns>
-        ApiResponse<TrunkBase> GetProvidersEdgesTrunkbasesettingsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null);
+        ApiResponse<TrunkBase> GetProvidersEdgesTrunkbasesettingsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, bool? recordingEnabled = null);
         /// <summary>
         /// Get a list of available makes and models to create a new Trunk Base Settings
         /// </summary>
@@ -1521,6 +1542,27 @@ namespace ININ.PureCloudApi.Api
         /// <param name="trunkId">Trunk ID</param>
         /// <returns>ApiResponse of Trunk</returns>
         ApiResponse<Trunk> GetProvidersEdgesTrunksTrunkIdWithHttpInfo (string trunkId);
+        /// <summary>
+        /// Get Counts of trunks that have recording disabled or enabled
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trunkType">The type of this trunk base. (optional)</param>
+        /// <returns>TrunkRecordingEnabledCount</returns>
+        TrunkRecordingEnabledCount GetProvidersEdgesTrunkswithrecording (string trunkType = null);
+
+        /// <summary>
+        /// Get Counts of trunks that have recording disabled or enabled
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trunkType">The type of this trunk base. (optional)</param>
+        /// <returns>ApiResponse of TrunkRecordingEnabledCount</returns>
+        ApiResponse<TrunkRecordingEnabledCount> GetProvidersEdgesTrunkswithrecordingWithHttpInfo (string trunkType = null);
         /// <summary>
         /// Lists available schema categories
         /// </summary>
@@ -2784,6 +2826,25 @@ namespace ININ.PureCloudApi.Api
         /// <returns>Task of ApiResponse (EdgeEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<EdgeEntityListing>> GetProvidersEdgesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string edgeGroupId = null, string sortBy = null);
         /// <summary>
+        /// Get the list of available languages.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of AvailableLanguageList</returns>
+        System.Threading.Tasks.Task<AvailableLanguageList> GetProvidersEdgesAvailablelanguagesAsync ();
+
+        /// <summary>
+        /// Get the list of available languages.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (AvailableLanguageList)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AvailableLanguageList>> GetProvidersEdgesAvailablelanguagesAsyncWithHttpInfo ();
+        /// <summary>
         /// Get the list of certificate authorities.
         /// </summary>
         /// <remarks>
@@ -3847,8 +3908,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="sortBy">Value by which to sort (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="recordingEnabled">Filter trunks by recording enabled (optional)</param>
         /// <returns>Task of TrunkBase</returns>
-        System.Threading.Tasks.Task<TrunkBase> GetProvidersEdgesTrunkbasesettingsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null);
+        System.Threading.Tasks.Task<TrunkBase> GetProvidersEdgesTrunkbasesettingsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, bool? recordingEnabled = null);
 
         /// <summary>
         /// Get Trunk Base Settings listing
@@ -3861,8 +3923,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="sortBy">Value by which to sort (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="recordingEnabled">Filter trunks by recording enabled (optional)</param>
         /// <returns>Task of ApiResponse (TrunkBase)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TrunkBase>> GetProvidersEdgesTrunkbasesettingsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null);
+        System.Threading.Tasks.Task<ApiResponse<TrunkBase>> GetProvidersEdgesTrunkbasesettingsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, bool? recordingEnabled = null);
         /// <summary>
         /// Get a list of available makes and models to create a new Trunk Base Settings
         /// </summary>
@@ -3984,6 +4047,27 @@ namespace ININ.PureCloudApi.Api
         /// <param name="trunkId">Trunk ID</param>
         /// <returns>Task of ApiResponse (Trunk)</returns>
         System.Threading.Tasks.Task<ApiResponse<Trunk>> GetProvidersEdgesTrunksTrunkIdAsyncWithHttpInfo (string trunkId);
+        /// <summary>
+        /// Get Counts of trunks that have recording disabled or enabled
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trunkType">The type of this trunk base. (optional)</param>
+        /// <returns>Task of TrunkRecordingEnabledCount</returns>
+        System.Threading.Tasks.Task<TrunkRecordingEnabledCount> GetProvidersEdgesTrunkswithrecordingAsync (string trunkType = null);
+
+        /// <summary>
+        /// Get Counts of trunks that have recording disabled or enabled
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trunkType">The type of this trunk base. (optional)</param>
+        /// <returns>Task of ApiResponse (TrunkRecordingEnabledCount)</returns>
+        System.Threading.Tasks.Task<ApiResponse<TrunkRecordingEnabledCount>> GetProvidersEdgesTrunkswithrecordingAsyncWithHttpInfo (string trunkType = null);
         /// <summary>
         /// Lists available schema categories
         /// </summary>
@@ -7201,6 +7285,147 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<EdgeEntityListing>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (EdgeEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EdgeEntityListing)));
+            
+        }
+
+        /// <summary>
+        /// Get the list of available languages. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>AvailableLanguageList</returns>
+        public AvailableLanguageList GetProvidersEdgesAvailablelanguages ()
+        {
+             ApiResponse<AvailableLanguageList> localVarResponse = GetProvidersEdgesAvailablelanguagesWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the list of available languages. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of AvailableLanguageList</returns>
+        public ApiResponse< AvailableLanguageList > GetProvidersEdgesAvailablelanguagesWithHttpInfo ()
+        {
+
+            var localVarPath = "/api/v2/telephony/providers/edges/availablelanguages";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetProvidersEdgesAvailablelanguages: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetProvidersEdgesAvailablelanguages: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AvailableLanguageList>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (AvailableLanguageList) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AvailableLanguageList)));
+            
+        }
+
+        /// <summary>
+        /// Get the list of available languages. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of AvailableLanguageList</returns>
+        public async System.Threading.Tasks.Task<AvailableLanguageList> GetProvidersEdgesAvailablelanguagesAsync ()
+        {
+             ApiResponse<AvailableLanguageList> localVarResponse = await GetProvidersEdgesAvailablelanguagesAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the list of available languages. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (AvailableLanguageList)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AvailableLanguageList>> GetProvidersEdgesAvailablelanguagesAsyncWithHttpInfo ()
+        {
+
+            var localVarPath = "/api/v2/telephony/providers/edges/availablelanguages";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetProvidersEdgesAvailablelanguages: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetProvidersEdgesAvailablelanguages: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AvailableLanguageList>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (AvailableLanguageList) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AvailableLanguageList)));
             
         }
 
@@ -14355,10 +14580,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="sortBy">Value by which to sort (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="recordingEnabled">Filter trunks by recording enabled (optional)</param>
         /// <returns>TrunkBase</returns>
-        public TrunkBase GetProvidersEdgesTrunkbasesettings (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null)
+        public TrunkBase GetProvidersEdgesTrunkbasesettings (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, bool? recordingEnabled = null)
         {
-             ApiResponse<TrunkBase> localVarResponse = GetProvidersEdgesTrunkbasesettingsWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder);
+             ApiResponse<TrunkBase> localVarResponse = GetProvidersEdgesTrunkbasesettingsWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, recordingEnabled);
              return localVarResponse.Data;
         }
 
@@ -14370,8 +14596,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="sortBy">Value by which to sort (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="recordingEnabled">Filter trunks by recording enabled (optional)</param>
         /// <returns>ApiResponse of TrunkBase</returns>
-        public ApiResponse< TrunkBase > GetProvidersEdgesTrunkbasesettingsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null)
+        public ApiResponse< TrunkBase > GetProvidersEdgesTrunkbasesettingsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, bool? recordingEnabled = null)
         {
 
             var localVarPath = "/api/v2/telephony/providers/edges/trunkbasesettings";
@@ -14403,6 +14630,7 @@ namespace ININ.PureCloudApi.Api
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
             if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
             if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
+            if (recordingEnabled != null) localVarQueryParams.Add("recordingEnabled", Configuration.ApiClient.ParameterToString(recordingEnabled)); // query parameter
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -14437,10 +14665,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="sortBy">Value by which to sort (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="recordingEnabled">Filter trunks by recording enabled (optional)</param>
         /// <returns>Task of TrunkBase</returns>
-        public async System.Threading.Tasks.Task<TrunkBase> GetProvidersEdgesTrunkbasesettingsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<TrunkBase> GetProvidersEdgesTrunkbasesettingsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, bool? recordingEnabled = null)
         {
-             ApiResponse<TrunkBase> localVarResponse = await GetProvidersEdgesTrunkbasesettingsAsyncWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder);
+             ApiResponse<TrunkBase> localVarResponse = await GetProvidersEdgesTrunkbasesettingsAsyncWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, recordingEnabled);
              return localVarResponse.Data;
 
         }
@@ -14453,8 +14682,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="sortBy">Value by which to sort (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="recordingEnabled">Filter trunks by recording enabled (optional)</param>
         /// <returns>Task of ApiResponse (TrunkBase)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TrunkBase>> GetProvidersEdgesTrunkbasesettingsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<ApiResponse<TrunkBase>> GetProvidersEdgesTrunkbasesettingsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, bool? recordingEnabled = null)
         {
 
             var localVarPath = "/api/v2/telephony/providers/edges/trunkbasesettings";
@@ -14486,6 +14716,7 @@ namespace ININ.PureCloudApi.Api
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
             if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
             if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
+            if (recordingEnabled != null) localVarQueryParams.Add("recordingEnabled", Configuration.ApiClient.ParameterToString(recordingEnabled)); // query parameter
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -15310,6 +15541,153 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<Trunk>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Trunk) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Trunk)));
+            
+        }
+
+        /// <summary>
+        /// Get Counts of trunks that have recording disabled or enabled 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trunkType">The type of this trunk base. (optional)</param>
+        /// <returns>TrunkRecordingEnabledCount</returns>
+        public TrunkRecordingEnabledCount GetProvidersEdgesTrunkswithrecording (string trunkType = null)
+        {
+             ApiResponse<TrunkRecordingEnabledCount> localVarResponse = GetProvidersEdgesTrunkswithrecordingWithHttpInfo(trunkType);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get Counts of trunks that have recording disabled or enabled 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trunkType">The type of this trunk base. (optional)</param>
+        /// <returns>ApiResponse of TrunkRecordingEnabledCount</returns>
+        public ApiResponse< TrunkRecordingEnabledCount > GetProvidersEdgesTrunkswithrecordingWithHttpInfo (string trunkType = null)
+        {
+
+            var localVarPath = "/api/v2/telephony/providers/edges/trunkswithrecording";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (trunkType != null) localVarQueryParams.Add("trunkType", Configuration.ApiClient.ParameterToString(trunkType)); // query parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetProvidersEdgesTrunkswithrecording: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetProvidersEdgesTrunkswithrecording: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TrunkRecordingEnabledCount>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (TrunkRecordingEnabledCount) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrunkRecordingEnabledCount)));
+            
+        }
+
+        /// <summary>
+        /// Get Counts of trunks that have recording disabled or enabled 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trunkType">The type of this trunk base. (optional)</param>
+        /// <returns>Task of TrunkRecordingEnabledCount</returns>
+        public async System.Threading.Tasks.Task<TrunkRecordingEnabledCount> GetProvidersEdgesTrunkswithrecordingAsync (string trunkType = null)
+        {
+             ApiResponse<TrunkRecordingEnabledCount> localVarResponse = await GetProvidersEdgesTrunkswithrecordingAsyncWithHttpInfo(trunkType);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get Counts of trunks that have recording disabled or enabled 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trunkType">The type of this trunk base. (optional)</param>
+        /// <returns>Task of ApiResponse (TrunkRecordingEnabledCount)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<TrunkRecordingEnabledCount>> GetProvidersEdgesTrunkswithrecordingAsyncWithHttpInfo (string trunkType = null)
+        {
+
+            var localVarPath = "/api/v2/telephony/providers/edges/trunkswithrecording";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (trunkType != null) localVarQueryParams.Add("trunkType", Configuration.ApiClient.ParameterToString(trunkType)); // query parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetProvidersEdgesTrunkswithrecording: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetProvidersEdgesTrunkswithrecording: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TrunkRecordingEnabledCount>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (TrunkRecordingEnabledCount) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrunkRecordingEnabledCount)));
             
         }
 

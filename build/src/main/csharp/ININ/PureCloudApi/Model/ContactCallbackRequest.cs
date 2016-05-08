@@ -21,50 +21,95 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ContactCallbackRequest" />class.
         /// </summary>
-        /// <param name="CampaignId">CampaignId.</param>
-        /// <param name="ContactListId">ContactListId.</param>
-        /// <param name="ContactId">ContactId.</param>
-        /// <param name="PhoneColumn">PhoneColumn.</param>
-        /// <param name="Schedule">Schedule.</param>
+        /// <param name="CampaignId">Campaign identifier (required).</param>
+        /// <param name="ContactListId">Contact list identifier (required).</param>
+        /// <param name="ContactId">Contact identifier (required).</param>
+        /// <param name="PhoneColumn">Name of the phone column containing the number to be called (required).</param>
+        /// <param name="Schedule">The scheduled time for the callback as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ\&quot;, example &#x3D; \&quot;2016-01-02T16:59:59\&quot; (required).</param>
 
         public ContactCallbackRequest(string CampaignId = null, string ContactListId = null, string ContactId = null, string PhoneColumn = null, string Schedule = null)
         {
-            this.CampaignId = CampaignId;
-            this.ContactListId = ContactListId;
-            this.ContactId = ContactId;
-            this.PhoneColumn = PhoneColumn;
-            this.Schedule = Schedule;
+            // to ensure "CampaignId" is required (not null)
+            if (CampaignId == null)
+            {
+                throw new InvalidDataException("CampaignId is a required property for ContactCallbackRequest and cannot be null");
+            }
+            else
+            {
+                this.CampaignId = CampaignId;
+            }
+            // to ensure "ContactListId" is required (not null)
+            if (ContactListId == null)
+            {
+                throw new InvalidDataException("ContactListId is a required property for ContactCallbackRequest and cannot be null");
+            }
+            else
+            {
+                this.ContactListId = ContactListId;
+            }
+            // to ensure "ContactId" is required (not null)
+            if (ContactId == null)
+            {
+                throw new InvalidDataException("ContactId is a required property for ContactCallbackRequest and cannot be null");
+            }
+            else
+            {
+                this.ContactId = ContactId;
+            }
+            // to ensure "PhoneColumn" is required (not null)
+            if (PhoneColumn == null)
+            {
+                throw new InvalidDataException("PhoneColumn is a required property for ContactCallbackRequest and cannot be null");
+            }
+            else
+            {
+                this.PhoneColumn = PhoneColumn;
+            }
+            // to ensure "Schedule" is required (not null)
+            if (Schedule == null)
+            {
+                throw new InvalidDataException("Schedule is a required property for ContactCallbackRequest and cannot be null");
+            }
+            else
+            {
+                this.Schedule = Schedule;
+            }
             
         }
 
     
         /// <summary>
-        /// Gets or Sets CampaignId
+        /// Campaign identifier
         /// </summary>
+        /// <value>Campaign identifier</value>
         [DataMember(Name="campaignId", EmitDefaultValue=false)]
         public string CampaignId { get; set; }
     
         /// <summary>
-        /// Gets or Sets ContactListId
+        /// Contact list identifier
         /// </summary>
+        /// <value>Contact list identifier</value>
         [DataMember(Name="contactListId", EmitDefaultValue=false)]
         public string ContactListId { get; set; }
     
         /// <summary>
-        /// Gets or Sets ContactId
+        /// Contact identifier
         /// </summary>
+        /// <value>Contact identifier</value>
         [DataMember(Name="contactId", EmitDefaultValue=false)]
         public string ContactId { get; set; }
     
         /// <summary>
-        /// Gets or Sets PhoneColumn
+        /// Name of the phone column containing the number to be called
         /// </summary>
+        /// <value>Name of the phone column containing the number to be called</value>
         [DataMember(Name="phoneColumn", EmitDefaultValue=false)]
         public string PhoneColumn { get; set; }
     
         /// <summary>
-        /// Gets or Sets Schedule
+        /// The scheduled time for the callback as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ\&quot;, example &#x3D; \&quot;2016-01-02T16:59:59\&quot;
         /// </summary>
+        /// <value>The scheduled time for the callback as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ\&quot;, example &#x3D; \&quot;2016-01-02T16:59:59\&quot;</value>
         [DataMember(Name="schedule", EmitDefaultValue=false)]
         public string Schedule { get; set; }
     

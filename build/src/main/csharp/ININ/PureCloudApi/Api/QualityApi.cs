@@ -84,6 +84,48 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> DeleteFormsFormIdWithHttpInfo (string formId);
         /// <summary>
+        /// Delete keyword sets
+        /// </summary>
+        /// <remarks>
+        /// Bulk delete of keyword sets; this will only delete the keyword sets that match the ids specified in the query param.
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ids">A comma-delimited list of valid KeywordSet ids</param>
+        /// <returns>string</returns>
+        string DeleteKeywordsets (string ids);
+
+        /// <summary>
+        /// Delete keyword sets
+        /// </summary>
+        /// <remarks>
+        /// Bulk delete of keyword sets; this will only delete the keyword sets that match the ids specified in the query param.
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ids">A comma-delimited list of valid KeywordSet ids</param>
+        /// <returns>ApiResponse of string</returns>
+        ApiResponse<string> DeleteKeywordsetsWithHttpInfo (string ids);
+        /// <summary>
+        /// Delete a keywordSet by id.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="keywordSetId">KeywordSet ID</param>
+        /// <returns></returns>
+        void DeleteKeywordsetsKeywordsetId (string keywordSetId);
+
+        /// <summary>
+        /// Delete a keywordSet by id.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="keywordSetId">KeywordSet ID</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteKeywordsetsKeywordsetIdWithHttpInfo (string keywordSetId);
+        /// <summary>
         /// Gets a list of Agent Activities
         /// </summary>
         /// <remarks>
@@ -424,6 +466,60 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of EvaluationFormEntityListing</returns>
         ApiResponse<EvaluationFormEntityListing> GetFormsFormIdVersionsWithHttpInfo (string formId, int? pageSize = null, int? pageNumber = null);
         /// <summary>
+        /// Get the list of keyword sets
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
+        /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
+        /// <param name="sortBy">variable name requested to sort by (optional)</param>
+        /// <param name="expand">variable name requested by expand list (optional)</param>
+        /// <param name="nextPage">next page token (optional)</param>
+        /// <param name="previousPage">Previous page token (optional)</param>
+        /// <param name="name">the keyword set name - used for filtering results in searches. (optional)</param>
+        /// <returns>KeywordSetEntityListing</returns>
+        KeywordSetEntityListing GetKeywordsets (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null);
+
+        /// <summary>
+        /// Get the list of keyword sets
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
+        /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
+        /// <param name="sortBy">variable name requested to sort by (optional)</param>
+        /// <param name="expand">variable name requested by expand list (optional)</param>
+        /// <param name="nextPage">next page token (optional)</param>
+        /// <param name="previousPage">Previous page token (optional)</param>
+        /// <param name="name">the keyword set name - used for filtering results in searches. (optional)</param>
+        /// <returns>ApiResponse of KeywordSetEntityListing</returns>
+        ApiResponse<KeywordSetEntityListing> GetKeywordsetsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null);
+        /// <summary>
+        /// Get a keywordSet by id.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="keywordSetId">KeywordSet ID</param>
+        /// <returns>KeywordSet</returns>
+        KeywordSet GetKeywordsetsKeywordsetId (string keywordSetId);
+
+        /// <summary>
+        /// Get a keywordSet by id.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="keywordSetId">KeywordSet ID</param>
+        /// <returns>ApiResponse of KeywordSet</returns>
+        ApiResponse<KeywordSet> GetKeywordsetsKeywordsetIdWithHttpInfo (string keywordSetId);
+        /// <summary>
         /// Get the published evaluation forms.
         /// </summary>
         /// <remarks>
@@ -581,6 +677,29 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of EvaluationForm</returns>
         ApiResponse<EvaluationForm> PostFormsWithHttpInfo (EvaluationForm body = null);
         /// <summary>
+        /// Create a Keyword Set
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">keywordSet (optional)</param>
+        /// <param name="expand">queueId (optional)</param>
+        /// <returns>KeywordSet</returns>
+        KeywordSet PostKeywordsets (KeywordSet body = null, string expand = null);
+
+        /// <summary>
+        /// Create a Keyword Set
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">keywordSet (optional)</param>
+        /// <param name="expand">queueId (optional)</param>
+        /// <returns>ApiResponse of KeywordSet</returns>
+        ApiResponse<KeywordSet> PostKeywordsetsWithHttpInfo (KeywordSet body = null, string expand = null);
+        /// <summary>
         /// Publish an evaluation form.
         /// </summary>
         /// <remarks>
@@ -674,6 +793,29 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of EvaluationForm</returns>
         ApiResponse<EvaluationForm> PutFormsFormIdWithHttpInfo (string formId, EvaluationForm body = null);
+        /// <summary>
+        /// Update a keywordSet to the specified keywordSet via PUT.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="keywordSetId">KeywordSet ID</param>
+        /// <param name="body">keywordSet (optional)</param>
+        /// <returns>KeywordSet</returns>
+        KeywordSet PutKeywordsetsKeywordsetId (string keywordSetId, KeywordSet body = null);
+
+        /// <summary>
+        /// Update a keywordSet to the specified keywordSet via PUT.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="keywordSetId">KeywordSet ID</param>
+        /// <param name="body">keywordSet (optional)</param>
+        /// <returns>ApiResponse of KeywordSet</returns>
+        ApiResponse<KeywordSet> PutKeywordsetsKeywordsetIdWithHttpInfo (string keywordSetId, KeywordSet body = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -745,6 +887,48 @@ namespace ININ.PureCloudApi.Api
         /// <param name="formId">Form ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> DeleteFormsFormIdAsyncWithHttpInfo (string formId);
+        /// <summary>
+        /// Delete keyword sets
+        /// </summary>
+        /// <remarks>
+        /// Bulk delete of keyword sets; this will only delete the keyword sets that match the ids specified in the query param.
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ids">A comma-delimited list of valid KeywordSet ids</param>
+        /// <returns>Task of string</returns>
+        System.Threading.Tasks.Task<string> DeleteKeywordsetsAsync (string ids);
+
+        /// <summary>
+        /// Delete keyword sets
+        /// </summary>
+        /// <remarks>
+        /// Bulk delete of keyword sets; this will only delete the keyword sets that match the ids specified in the query param.
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ids">A comma-delimited list of valid KeywordSet ids</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        System.Threading.Tasks.Task<ApiResponse<string>> DeleteKeywordsetsAsyncWithHttpInfo (string ids);
+        /// <summary>
+        /// Delete a keywordSet by id.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="keywordSetId">KeywordSet ID</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteKeywordsetsKeywordsetIdAsync (string keywordSetId);
+
+        /// <summary>
+        /// Delete a keywordSet by id.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="keywordSetId">KeywordSet ID</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteKeywordsetsKeywordsetIdAsyncWithHttpInfo (string keywordSetId);
         /// <summary>
         /// Gets a list of Agent Activities
         /// </summary>
@@ -1086,6 +1270,60 @@ namespace ININ.PureCloudApi.Api
         /// <returns>Task of ApiResponse (EvaluationFormEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<EvaluationFormEntityListing>> GetFormsFormIdVersionsAsyncWithHttpInfo (string formId, int? pageSize = null, int? pageNumber = null);
         /// <summary>
+        /// Get the list of keyword sets
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
+        /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
+        /// <param name="sortBy">variable name requested to sort by (optional)</param>
+        /// <param name="expand">variable name requested by expand list (optional)</param>
+        /// <param name="nextPage">next page token (optional)</param>
+        /// <param name="previousPage">Previous page token (optional)</param>
+        /// <param name="name">the keyword set name - used for filtering results in searches. (optional)</param>
+        /// <returns>Task of KeywordSetEntityListing</returns>
+        System.Threading.Tasks.Task<KeywordSetEntityListing> GetKeywordsetsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null);
+
+        /// <summary>
+        /// Get the list of keyword sets
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
+        /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
+        /// <param name="sortBy">variable name requested to sort by (optional)</param>
+        /// <param name="expand">variable name requested by expand list (optional)</param>
+        /// <param name="nextPage">next page token (optional)</param>
+        /// <param name="previousPage">Previous page token (optional)</param>
+        /// <param name="name">the keyword set name - used for filtering results in searches. (optional)</param>
+        /// <returns>Task of ApiResponse (KeywordSetEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<KeywordSetEntityListing>> GetKeywordsetsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null);
+        /// <summary>
+        /// Get a keywordSet by id.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="keywordSetId">KeywordSet ID</param>
+        /// <returns>Task of KeywordSet</returns>
+        System.Threading.Tasks.Task<KeywordSet> GetKeywordsetsKeywordsetIdAsync (string keywordSetId);
+
+        /// <summary>
+        /// Get a keywordSet by id.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="keywordSetId">KeywordSet ID</param>
+        /// <returns>Task of ApiResponse (KeywordSet)</returns>
+        System.Threading.Tasks.Task<ApiResponse<KeywordSet>> GetKeywordsetsKeywordsetIdAsyncWithHttpInfo (string keywordSetId);
+        /// <summary>
         /// Get the published evaluation forms.
         /// </summary>
         /// <remarks>
@@ -1243,6 +1481,29 @@ namespace ININ.PureCloudApi.Api
         /// <returns>Task of ApiResponse (EvaluationForm)</returns>
         System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> PostFormsAsyncWithHttpInfo (EvaluationForm body = null);
         /// <summary>
+        /// Create a Keyword Set
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">keywordSet (optional)</param>
+        /// <param name="expand">queueId (optional)</param>
+        /// <returns>Task of KeywordSet</returns>
+        System.Threading.Tasks.Task<KeywordSet> PostKeywordsetsAsync (KeywordSet body = null, string expand = null);
+
+        /// <summary>
+        /// Create a Keyword Set
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">keywordSet (optional)</param>
+        /// <param name="expand">queueId (optional)</param>
+        /// <returns>Task of ApiResponse (KeywordSet)</returns>
+        System.Threading.Tasks.Task<ApiResponse<KeywordSet>> PostKeywordsetsAsyncWithHttpInfo (KeywordSet body = null, string expand = null);
+        /// <summary>
         /// Publish an evaluation form.
         /// </summary>
         /// <remarks>
@@ -1336,6 +1597,29 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (EvaluationForm)</returns>
         System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> PutFormsFormIdAsyncWithHttpInfo (string formId, EvaluationForm body = null);
+        /// <summary>
+        /// Update a keywordSet to the specified keywordSet via PUT.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="keywordSetId">KeywordSet ID</param>
+        /// <param name="body">keywordSet (optional)</param>
+        /// <returns>Task of KeywordSet</returns>
+        System.Threading.Tasks.Task<KeywordSet> PutKeywordsetsKeywordsetIdAsync (string keywordSetId, KeywordSet body = null);
+
+        /// <summary>
+        /// Update a keywordSet to the specified keywordSet via PUT.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="keywordSetId">KeywordSet ID</param>
+        /// <param name="body">keywordSet (optional)</param>
+        /// <returns>Task of ApiResponse (KeywordSet)</returns>
+        System.Threading.Tasks.Task<ApiResponse<KeywordSet>> PutKeywordsetsKeywordsetIdAsyncWithHttpInfo (string keywordSetId, KeywordSet body = null);
         #endregion Asynchronous Operations
     }
 
@@ -1913,6 +2197,310 @@ namespace ININ.PureCloudApi.Api
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+        }
+
+        /// <summary>
+        /// Delete keyword sets Bulk delete of keyword sets; this will only delete the keyword sets that match the ids specified in the query param.
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ids">A comma-delimited list of valid KeywordSet ids</param>
+        /// <returns>string</returns>
+        public string DeleteKeywordsets (string ids)
+        {
+             ApiResponse<string> localVarResponse = DeleteKeywordsetsWithHttpInfo(ids);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Delete keyword sets Bulk delete of keyword sets; this will only delete the keyword sets that match the ids specified in the query param.
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ids">A comma-delimited list of valid KeywordSet ids</param>
+        /// <returns>ApiResponse of string</returns>
+        public ApiResponse< string > DeleteKeywordsetsWithHttpInfo (string ids)
+        {
+            // verify the required parameter 'ids' is set
+            if (ids == null)
+                throw new ApiException(400, "Missing required parameter 'ids' when calling QualityApi->DeleteKeywordsets");
+
+            var localVarPath = "/api/v2/quality/keywordsets";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (ids != null) localVarQueryParams.Add("ids", Configuration.ApiClient.ParameterToString(ids)); // query parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteKeywordsets: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteKeywordsets: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+            
+        }
+
+        /// <summary>
+        /// Delete keyword sets Bulk delete of keyword sets; this will only delete the keyword sets that match the ids specified in the query param.
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ids">A comma-delimited list of valid KeywordSet ids</param>
+        /// <returns>Task of string</returns>
+        public async System.Threading.Tasks.Task<string> DeleteKeywordsetsAsync (string ids)
+        {
+             ApiResponse<string> localVarResponse = await DeleteKeywordsetsAsyncWithHttpInfo(ids);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Delete keyword sets Bulk delete of keyword sets; this will only delete the keyword sets that match the ids specified in the query param.
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ids">A comma-delimited list of valid KeywordSet ids</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteKeywordsetsAsyncWithHttpInfo (string ids)
+        {
+            // verify the required parameter 'ids' is set
+            if (ids == null)
+                throw new ApiException(400, "Missing required parameter 'ids' when calling QualityApi->DeleteKeywordsets");
+
+            var localVarPath = "/api/v2/quality/keywordsets";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (ids != null) localVarQueryParams.Add("ids", Configuration.ApiClient.ParameterToString(ids)); // query parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteKeywordsets: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteKeywordsets: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+            
+        }
+
+        /// <summary>
+        /// Delete a keywordSet by id. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="keywordSetId">KeywordSet ID</param>
+        /// <returns></returns>
+        public void DeleteKeywordsetsKeywordsetId (string keywordSetId)
+        {
+             DeleteKeywordsetsKeywordsetIdWithHttpInfo(keywordSetId);
+        }
+
+        /// <summary>
+        /// Delete a keywordSet by id. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="keywordSetId">KeywordSet ID</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteKeywordsetsKeywordsetIdWithHttpInfo (string keywordSetId)
+        {
+            // verify the required parameter 'keywordSetId' is set
+            if (keywordSetId == null)
+                throw new ApiException(400, "Missing required parameter 'keywordSetId' when calling QualityApi->DeleteKeywordsetsKeywordsetId");
+
+            var localVarPath = "/api/v2/quality/keywordsets/{keywordSetId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (keywordSetId != null) localVarPathParams.Add("keywordSetId", Configuration.ApiClient.ParameterToString(keywordSetId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteKeywordsetsKeywordsetId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteKeywordsetsKeywordsetId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// Delete a keywordSet by id. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="keywordSetId">KeywordSet ID</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteKeywordsetsKeywordsetIdAsync (string keywordSetId)
+        {
+             await DeleteKeywordsetsKeywordsetIdAsyncWithHttpInfo(keywordSetId);
+
+        }
+
+        /// <summary>
+        /// Delete a keywordSet by id. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="keywordSetId">KeywordSet ID</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteKeywordsetsKeywordsetIdAsyncWithHttpInfo (string keywordSetId)
+        {
+            // verify the required parameter 'keywordSetId' is set
+            if (keywordSetId == null)
+                throw new ApiException(400, "Missing required parameter 'keywordSetId' when calling QualityApi->DeleteKeywordsetsKeywordsetId");
+
+            var localVarPath = "/api/v2/quality/keywordsets/{keywordSetId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (keywordSetId != null) localVarPathParams.Add("keywordSetId", Configuration.ApiClient.ParameterToString(keywordSetId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteKeywordsetsKeywordsetId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteKeywordsetsKeywordsetId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
         }
 
         /// <summary>
@@ -3824,6 +4412,342 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
+        /// Get the list of keyword sets 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
+        /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
+        /// <param name="sortBy">variable name requested to sort by (optional)</param>
+        /// <param name="expand">variable name requested by expand list (optional)</param>
+        /// <param name="nextPage">next page token (optional)</param>
+        /// <param name="previousPage">Previous page token (optional)</param>
+        /// <param name="name">the keyword set name - used for filtering results in searches. (optional)</param>
+        /// <returns>KeywordSetEntityListing</returns>
+        public KeywordSetEntityListing GetKeywordsets (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null)
+        {
+             ApiResponse<KeywordSetEntityListing> localVarResponse = GetKeywordsetsWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, name);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the list of keyword sets 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
+        /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
+        /// <param name="sortBy">variable name requested to sort by (optional)</param>
+        /// <param name="expand">variable name requested by expand list (optional)</param>
+        /// <param name="nextPage">next page token (optional)</param>
+        /// <param name="previousPage">Previous page token (optional)</param>
+        /// <param name="name">the keyword set name - used for filtering results in searches. (optional)</param>
+        /// <returns>ApiResponse of KeywordSetEntityListing</returns>
+        public ApiResponse< KeywordSetEntityListing > GetKeywordsetsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null)
+        {
+
+            var localVarPath = "/api/v2/quality/keywordsets";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
+            if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
+            if (nextPage != null) localVarQueryParams.Add("nextPage", Configuration.ApiClient.ParameterToString(nextPage)); // query parameter
+            if (previousPage != null) localVarQueryParams.Add("previousPage", Configuration.ApiClient.ParameterToString(previousPage)); // query parameter
+            if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetKeywordsets: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetKeywordsets: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<KeywordSetEntityListing>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (KeywordSetEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(KeywordSetEntityListing)));
+            
+        }
+
+        /// <summary>
+        /// Get the list of keyword sets 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
+        /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
+        /// <param name="sortBy">variable name requested to sort by (optional)</param>
+        /// <param name="expand">variable name requested by expand list (optional)</param>
+        /// <param name="nextPage">next page token (optional)</param>
+        /// <param name="previousPage">Previous page token (optional)</param>
+        /// <param name="name">the keyword set name - used for filtering results in searches. (optional)</param>
+        /// <returns>Task of KeywordSetEntityListing</returns>
+        public async System.Threading.Tasks.Task<KeywordSetEntityListing> GetKeywordsetsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null)
+        {
+             ApiResponse<KeywordSetEntityListing> localVarResponse = await GetKeywordsetsAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, name);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the list of keyword sets 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
+        /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
+        /// <param name="sortBy">variable name requested to sort by (optional)</param>
+        /// <param name="expand">variable name requested by expand list (optional)</param>
+        /// <param name="nextPage">next page token (optional)</param>
+        /// <param name="previousPage">Previous page token (optional)</param>
+        /// <param name="name">the keyword set name - used for filtering results in searches. (optional)</param>
+        /// <returns>Task of ApiResponse (KeywordSetEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<KeywordSetEntityListing>> GetKeywordsetsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null)
+        {
+
+            var localVarPath = "/api/v2/quality/keywordsets";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
+            if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
+            if (nextPage != null) localVarQueryParams.Add("nextPage", Configuration.ApiClient.ParameterToString(nextPage)); // query parameter
+            if (previousPage != null) localVarQueryParams.Add("previousPage", Configuration.ApiClient.ParameterToString(previousPage)); // query parameter
+            if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetKeywordsets: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetKeywordsets: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<KeywordSetEntityListing>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (KeywordSetEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(KeywordSetEntityListing)));
+            
+        }
+
+        /// <summary>
+        /// Get a keywordSet by id. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="keywordSetId">KeywordSet ID</param>
+        /// <returns>KeywordSet</returns>
+        public KeywordSet GetKeywordsetsKeywordsetId (string keywordSetId)
+        {
+             ApiResponse<KeywordSet> localVarResponse = GetKeywordsetsKeywordsetIdWithHttpInfo(keywordSetId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a keywordSet by id. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="keywordSetId">KeywordSet ID</param>
+        /// <returns>ApiResponse of KeywordSet</returns>
+        public ApiResponse< KeywordSet > GetKeywordsetsKeywordsetIdWithHttpInfo (string keywordSetId)
+        {
+            // verify the required parameter 'keywordSetId' is set
+            if (keywordSetId == null)
+                throw new ApiException(400, "Missing required parameter 'keywordSetId' when calling QualityApi->GetKeywordsetsKeywordsetId");
+
+            var localVarPath = "/api/v2/quality/keywordsets/{keywordSetId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (keywordSetId != null) localVarPathParams.Add("keywordSetId", Configuration.ApiClient.ParameterToString(keywordSetId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetKeywordsetsKeywordsetId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetKeywordsetsKeywordsetId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<KeywordSet>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (KeywordSet) Configuration.ApiClient.Deserialize(localVarResponse, typeof(KeywordSet)));
+            
+        }
+
+        /// <summary>
+        /// Get a keywordSet by id. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="keywordSetId">KeywordSet ID</param>
+        /// <returns>Task of KeywordSet</returns>
+        public async System.Threading.Tasks.Task<KeywordSet> GetKeywordsetsKeywordsetIdAsync (string keywordSetId)
+        {
+             ApiResponse<KeywordSet> localVarResponse = await GetKeywordsetsKeywordsetIdAsyncWithHttpInfo(keywordSetId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a keywordSet by id. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="keywordSetId">KeywordSet ID</param>
+        /// <returns>Task of ApiResponse (KeywordSet)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<KeywordSet>> GetKeywordsetsKeywordsetIdAsyncWithHttpInfo (string keywordSetId)
+        {
+            // verify the required parameter 'keywordSetId' is set
+            if (keywordSetId == null)
+                throw new ApiException(400, "Missing required parameter 'keywordSetId' when calling QualityApi->GetKeywordsetsKeywordsetId");
+
+            var localVarPath = "/api/v2/quality/keywordsets/{keywordSetId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (keywordSetId != null) localVarPathParams.Add("keywordSetId", Configuration.ApiClient.ParameterToString(keywordSetId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetKeywordsetsKeywordsetId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetKeywordsetsKeywordsetId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<KeywordSet>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (KeywordSet) Configuration.ApiClient.Deserialize(localVarResponse, typeof(KeywordSet)));
+            
+        }
+
+        /// <summary>
         /// Get the published evaluation forms. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -4965,6 +5889,173 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
+        /// Create a Keyword Set 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">keywordSet (optional)</param>
+        /// <param name="expand">queueId (optional)</param>
+        /// <returns>KeywordSet</returns>
+        public KeywordSet PostKeywordsets (KeywordSet body = null, string expand = null)
+        {
+             ApiResponse<KeywordSet> localVarResponse = PostKeywordsetsWithHttpInfo(body, expand);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create a Keyword Set 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">keywordSet (optional)</param>
+        /// <param name="expand">queueId (optional)</param>
+        /// <returns>ApiResponse of KeywordSet</returns>
+        public ApiResponse< KeywordSet > PostKeywordsetsWithHttpInfo (KeywordSet body = null, string expand = null)
+        {
+
+            var localVarPath = "/api/v2/quality/keywordsets";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
+            if (body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostKeywordsets: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostKeywordsets: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<KeywordSet>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (KeywordSet) Configuration.ApiClient.Deserialize(localVarResponse, typeof(KeywordSet)));
+            
+        }
+
+        /// <summary>
+        /// Create a Keyword Set 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">keywordSet (optional)</param>
+        /// <param name="expand">queueId (optional)</param>
+        /// <returns>Task of KeywordSet</returns>
+        public async System.Threading.Tasks.Task<KeywordSet> PostKeywordsetsAsync (KeywordSet body = null, string expand = null)
+        {
+             ApiResponse<KeywordSet> localVarResponse = await PostKeywordsetsAsyncWithHttpInfo(body, expand);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create a Keyword Set 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">keywordSet (optional)</param>
+        /// <param name="expand">queueId (optional)</param>
+        /// <returns>Task of ApiResponse (KeywordSet)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<KeywordSet>> PostKeywordsetsAsyncWithHttpInfo (KeywordSet body = null, string expand = null)
+        {
+
+            var localVarPath = "/api/v2/quality/keywordsets";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
+            if (body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostKeywordsets: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostKeywordsets: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<KeywordSet>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (KeywordSet) Configuration.ApiClient.Deserialize(localVarResponse, typeof(KeywordSet)));
+            
+        }
+
+        /// <summary>
         /// Publish an evaluation form. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -5659,6 +6750,179 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<EvaluationForm>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (EvaluationForm) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationForm)));
+            
+        }
+
+        /// <summary>
+        /// Update a keywordSet to the specified keywordSet via PUT. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="keywordSetId">KeywordSet ID</param>
+        /// <param name="body">keywordSet (optional)</param>
+        /// <returns>KeywordSet</returns>
+        public KeywordSet PutKeywordsetsKeywordsetId (string keywordSetId, KeywordSet body = null)
+        {
+             ApiResponse<KeywordSet> localVarResponse = PutKeywordsetsKeywordsetIdWithHttpInfo(keywordSetId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update a keywordSet to the specified keywordSet via PUT. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="keywordSetId">KeywordSet ID</param>
+        /// <param name="body">keywordSet (optional)</param>
+        /// <returns>ApiResponse of KeywordSet</returns>
+        public ApiResponse< KeywordSet > PutKeywordsetsKeywordsetIdWithHttpInfo (string keywordSetId, KeywordSet body = null)
+        {
+            // verify the required parameter 'keywordSetId' is set
+            if (keywordSetId == null)
+                throw new ApiException(400, "Missing required parameter 'keywordSetId' when calling QualityApi->PutKeywordsetsKeywordsetId");
+
+            var localVarPath = "/api/v2/quality/keywordsets/{keywordSetId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (keywordSetId != null) localVarPathParams.Add("keywordSetId", Configuration.ApiClient.ParameterToString(keywordSetId)); // path parameter
+            if (body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutKeywordsetsKeywordsetId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutKeywordsetsKeywordsetId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<KeywordSet>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (KeywordSet) Configuration.ApiClient.Deserialize(localVarResponse, typeof(KeywordSet)));
+            
+        }
+
+        /// <summary>
+        /// Update a keywordSet to the specified keywordSet via PUT. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="keywordSetId">KeywordSet ID</param>
+        /// <param name="body">keywordSet (optional)</param>
+        /// <returns>Task of KeywordSet</returns>
+        public async System.Threading.Tasks.Task<KeywordSet> PutKeywordsetsKeywordsetIdAsync (string keywordSetId, KeywordSet body = null)
+        {
+             ApiResponse<KeywordSet> localVarResponse = await PutKeywordsetsKeywordsetIdAsyncWithHttpInfo(keywordSetId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update a keywordSet to the specified keywordSet via PUT. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="keywordSetId">KeywordSet ID</param>
+        /// <param name="body">keywordSet (optional)</param>
+        /// <returns>Task of ApiResponse (KeywordSet)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<KeywordSet>> PutKeywordsetsKeywordsetIdAsyncWithHttpInfo (string keywordSetId, KeywordSet body = null)
+        {
+            // verify the required parameter 'keywordSetId' is set
+            if (keywordSetId == null)
+                throw new ApiException(400, "Missing required parameter 'keywordSetId' when calling QualityApi->PutKeywordsetsKeywordsetId");
+
+            var localVarPath = "/api/v2/quality/keywordsets/{keywordSetId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (keywordSetId != null) localVarPathParams.Add("keywordSetId", Configuration.ApiClient.ParameterToString(keywordSetId)); // path parameter
+            if (body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutKeywordsetsKeywordsetId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutKeywordsetsKeywordsetId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<KeywordSet>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (KeywordSet) Configuration.ApiClient.Deserialize(localVarResponse, typeof(KeywordSet)));
             
         }
 

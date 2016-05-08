@@ -21,29 +21,26 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CallRecord" />class.
         /// </summary>
-        /// <param name="LastAttempt">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        /// <param name="LastResult">LastResult.</param>
 
-        public CallRecord(DateTime? LastAttempt = null, string LastResult = null)
+        public CallRecord()
         {
-            this.LastAttempt = LastAttempt;
-            this.LastResult = LastResult;
             
         }
 
     
         /// <summary>
-        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// Timestamp of the last attempt to reach this number. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
-        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>Timestamp of the last attempt to reach this number. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="lastAttempt", EmitDefaultValue=false)]
-        public DateTime? LastAttempt { get; set; }
+        public DateTime? LastAttempt { get; private set; }
     
         /// <summary>
-        /// Gets or Sets LastResult
+        /// Result of the last attempt to reach this number
         /// </summary>
+        /// <value>Result of the last attempt to reach this number</value>
         [DataMember(Name="lastResult", EmitDefaultValue=false)]
-        public string LastResult { get; set; }
+        public string LastResult { get; private set; }
     
         /// <summary>
         /// Returns the string presentation of the object

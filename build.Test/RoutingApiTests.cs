@@ -529,16 +529,17 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test PutSkillsSkillId
+        /// Test PutUserIdRoutingskillsSkillId
         /// </summary>
         [Test]
-        public void PutSkillsSkillIdTest()
+        public void PutUserIdRoutingskillsSkillIdTest()
         {
-            // TODO: add unit test for the method 'PutSkillsSkillId'
+            // TODO: add unit test for the method 'PutUserIdRoutingskillsSkillId'
+            string userId = null; // TODO: replace null with proper value
             string skillId = null; // TODO: replace null with proper value
-            RoutingSkill body = null; // TODO: replace null with proper value
-            var response = instance.PutSkillsSkillId(skillId, body);
-            Assert.IsInstanceOf<RoutingSkill> (response, "response is RoutingSkill");
+            UserRoutingSkill body = null; // TODO: replace null with proper value
+            var response = instance.PutUserIdRoutingskillsSkillId(userId, skillId, body);
+            Assert.IsInstanceOf<UserRoutingSkill> (response, "response is UserRoutingSkill");
         }
         
         /// <summary>

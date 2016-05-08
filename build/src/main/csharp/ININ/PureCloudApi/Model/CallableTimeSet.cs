@@ -22,7 +22,7 @@ namespace ININ.PureCloudApi.Model
         /// Initializes a new instance of the <see cref="CallableTimeSet" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
-        /// <param name="Version">required for updates, must match the version number of the most recent update.</param>
+        /// <param name="Version">Required for updates, must match the version number of the most recent update.</param>
         /// <param name="CallableTimes">list of time/timezone groupings for which it is acceptable to place outbound calls.</param>
 
         public CallableTimeSet(string Name = null, int? Version = null, List<CallableTime> CallableTimes = null)
@@ -48,23 +48,23 @@ namespace ININ.PureCloudApi.Model
         public string Name { get; set; }
     
         /// <summary>
-        /// creation time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// Creation time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
-        /// <value>creation time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>Creation time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; private set; }
     
         /// <summary>
-        /// last modified time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// Last modified time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
-        /// <value>last modified time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>Last modified time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
         public DateTime? DateModified { get; private set; }
     
         /// <summary>
-        /// required for updates, must match the version number of the most recent update
+        /// Required for updates, must match the version number of the most recent update
         /// </summary>
-        /// <value>required for updates, must match the version number of the most recent update</value>
+        /// <value>Required for updates, must match the version number of the most recent update</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public int? Version { get; set; }
     

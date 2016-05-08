@@ -49,8 +49,9 @@ namespace ININ.PureCloudApi.Model
         /// <param name="PrimaryEdge">PrimaryEdge.</param>
         /// <param name="SecondaryEdge">SecondaryEdge.</param>
         /// <param name="Type">Type.</param>
+        /// <param name="LineAppearanceId">LineAppearanceId.</param>
 
-        public Station(string Name = null, string Description = null, StatusEnum? Status = null, string UserId = null, UriReference PrimaryEdge = null, UriReference SecondaryEdge = null, string Type = null)
+        public Station(string Name = null, string Description = null, StatusEnum? Status = null, string UserId = null, UriReference PrimaryEdge = null, UriReference SecondaryEdge = null, string Type = null, string LineAppearanceId = null)
         {
             this.Name = Name;
             this.Description = Description;
@@ -59,6 +60,7 @@ namespace ININ.PureCloudApi.Model
             this.PrimaryEdge = PrimaryEdge;
             this.SecondaryEdge = SecondaryEdge;
             this.Type = Type;
+            this.LineAppearanceId = LineAppearanceId;
             
         }
 
@@ -107,6 +109,12 @@ namespace ININ.PureCloudApi.Model
         public string Type { get; set; }
     
         /// <summary>
+        /// Gets or Sets LineAppearanceId
+        /// </summary>
+        [DataMember(Name="lineAppearanceId", EmitDefaultValue=false)]
+        public string LineAppearanceId { get; set; }
+    
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -129,6 +137,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  PrimaryEdge: ").Append(PrimaryEdge).Append("\n");
             sb.Append("  SecondaryEdge: ").Append(SecondaryEdge).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
+            sb.Append("  LineAppearanceId: ").Append(LineAppearanceId).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -207,6 +216,11 @@ namespace ININ.PureCloudApi.Model
                     this.Type.Equals(other.Type)
                 ) &&
                 (
+                    this.LineAppearanceId == other.LineAppearanceId ||
+                    this.LineAppearanceId != null &&
+                    this.LineAppearanceId.Equals(other.LineAppearanceId)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -240,6 +254,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.SecondaryEdge.GetHashCode();
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
+                if (this.LineAppearanceId != null)
+                    hash = hash * 59 + this.LineAppearanceId.GetHashCode();
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;
