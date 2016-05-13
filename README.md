@@ -4,7 +4,7 @@ title: PureCloud API SDK - C&#35;
 
 [![NuGet Badge](https://buildstats.info/nuget/PureCloudApiSdk)](https://www.nuget.org/packages/PureCloudApiSdk/)
 
-Documentation can be found at http://developer.mypurecloud.com/api/rest/client-libraries/csharp/latest/
+Documentation can be found at [https://developer.mypurecloud.com/api/rest/client-libraries/csharp/latest/](https://developer.mypurecloud.com/api/rest/client-libraries/csharp/latest/)
 
 ## Install Using nuget
 
@@ -12,7 +12,7 @@ Documentation can be found at http://developer.mypurecloud.com/api/rest/client-l
 install-package PureCloudApiSdk
 ~~~
 
-Package info can be found at http://www.nuget.org/packages/PureCloudApiSdk/
+Package info can be found at [https://www.nuget.org/packages/PureCloudApiSdk/](https://www.nuget.org/packages/PureCloudApiSdk/)
 
 ## Using the Library
 
