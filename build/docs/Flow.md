@@ -18,6 +18,8 @@ title: Flow
 | **CheckedInVersion** | [**FlowVersion**](FlowVersion.html) |  | [optional] |
 | **SavedVersion** | [**FlowVersion**](FlowVersion.html) |  | [optional] |
 | **System** | **bool?** |  | [optional] [default to false]|
+| **PublishStatus** | **string** |  | [optional] |
+| **PublishedBy** | [**UriReference**](UriReference.html) |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

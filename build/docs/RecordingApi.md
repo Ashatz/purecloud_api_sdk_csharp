@@ -284,7 +284,7 @@ namespace Example
 
             var apiInstance = new RecordingApi();
             var conversationId = conversationId_example;  // string | Conversation ID
-            var formatId = formatId_example;  // string | The desired media format (WEBM, WAV) (optional)  (default to WEBM)
+            var formatId = formatId_example;  // string | The desired media format. (optional)  (default to WEBM)
 
             try
             {
@@ -307,7 +307,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| Conversation ID |  |
-| **formatId** | **string**| The desired media format (WEBM, WAV) | [optional] [default to WEBM] |
+| **formatId** | **string**| The desired media format. | [optional] [default to WEBM] |
 {: class="table table-striped"}
 
 ### Return type
@@ -343,7 +343,7 @@ namespace Example
             var apiInstance = new RecordingApi();
             var conversationId = conversationId_example;  // string | Conversation ID
             var recordingId = recordingId_example;  // string | Recording ID
-            var formatId = formatId_example;  // string | The desired media format (WEBM, WAV) (optional)  (default to WEBM)
+            var formatId = formatId_example;  // string | The desired media format. (optional)  (default to WEBM)
             var download = true;  // bool? | requesting a download format of the recording (optional)  (default to false)
             var fileName = fileName_example;  // string | the name of the downloaded fileName (optional) 
 
@@ -368,7 +368,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| Conversation ID |  |
 | **recordingId** | **string**| Recording ID |  |
-| **formatId** | **string**| The desired media format (WEBM, WAV) | [optional] [default to WEBM] |
+| **formatId** | **string**| The desired media format. | [optional] [default to WEBM] |
 | **download** | **bool?**| requesting a download format of the recording | [optional] [default to false] |
 | **fileName** | **string**| the name of the downloaded fileName | [optional]  |
 {: class="table table-striped"}

@@ -110,7 +110,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
-        /// <param name="formatId">The desired media format (WEBM, WAV) (optional, default to WEBM)</param>
+        /// <param name="formatId">The desired media format. (optional, default to WEBM)</param>
         /// <returns>List&lt;Recording&gt;</returns>
         List<Recording> GetConversationIdRecordings (string conversationId, string formatId = null);
 
@@ -122,7 +122,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
-        /// <param name="formatId">The desired media format (WEBM, WAV) (optional, default to WEBM)</param>
+        /// <param name="formatId">The desired media format. (optional, default to WEBM)</param>
         /// <returns>ApiResponse of List&lt;Recording&gt;</returns>
         ApiResponse<List<Recording>> GetConversationIdRecordingsWithHttpInfo (string conversationId, string formatId = null);
         /// <summary>
@@ -134,7 +134,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
-        /// <param name="formatId">The desired media format (WEBM, WAV) (optional, default to WEBM)</param>
+        /// <param name="formatId">The desired media format. (optional, default to WEBM)</param>
         /// <param name="download">requesting a download format of the recording (optional, default to false)</param>
         /// <param name="fileName">the name of the downloaded fileName (optional)</param>
         /// <returns></returns>
@@ -149,7 +149,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
-        /// <param name="formatId">The desired media format (WEBM, WAV) (optional, default to WEBM)</param>
+        /// <param name="formatId">The desired media format. (optional, default to WEBM)</param>
         /// <param name="download">requesting a download format of the recording (optional, default to false)</param>
         /// <param name="fileName">the name of the downloaded fileName (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -598,7 +598,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
-        /// <param name="formatId">The desired media format (WEBM, WAV) (optional, default to WEBM)</param>
+        /// <param name="formatId">The desired media format. (optional, default to WEBM)</param>
         /// <returns>Task of List&lt;Recording&gt;</returns>
         System.Threading.Tasks.Task<List<Recording>> GetConversationIdRecordingsAsync (string conversationId, string formatId = null);
 
@@ -610,7 +610,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
-        /// <param name="formatId">The desired media format (WEBM, WAV) (optional, default to WEBM)</param>
+        /// <param name="formatId">The desired media format. (optional, default to WEBM)</param>
         /// <returns>Task of ApiResponse (List&lt;Recording&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<Recording>>> GetConversationIdRecordingsAsyncWithHttpInfo (string conversationId, string formatId = null);
         /// <summary>
@@ -622,7 +622,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
-        /// <param name="formatId">The desired media format (WEBM, WAV) (optional, default to WEBM)</param>
+        /// <param name="formatId">The desired media format. (optional, default to WEBM)</param>
         /// <param name="download">requesting a download format of the recording (optional, default to false)</param>
         /// <param name="fileName">the name of the downloaded fileName (optional)</param>
         /// <returns>Task of void</returns>
@@ -637,7 +637,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
-        /// <param name="formatId">The desired media format (WEBM, WAV) (optional, default to WEBM)</param>
+        /// <param name="formatId">The desired media format. (optional, default to WEBM)</param>
         /// <param name="download">requesting a download format of the recording (optional, default to false)</param>
         /// <param name="fileName">the name of the downloaded fileName (optional)</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1717,7 +1717,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
-        /// <param name="formatId">The desired media format (WEBM, WAV) (optional, default to WEBM)</param>
+        /// <param name="formatId">The desired media format. (optional, default to WEBM)</param>
         /// <returns>List&lt;Recording&gt;</returns>
         public List<Recording> GetConversationIdRecordings (string conversationId, string formatId = null)
         {
@@ -1730,7 +1730,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
-        /// <param name="formatId">The desired media format (WEBM, WAV) (optional, default to WEBM)</param>
+        /// <param name="formatId">The desired media format. (optional, default to WEBM)</param>
         /// <returns>ApiResponse of List&lt;Recording&gt;</returns>
         public ApiResponse< List<Recording> > GetConversationIdRecordingsWithHttpInfo (string conversationId, string formatId = null)
         {
@@ -1796,7 +1796,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
-        /// <param name="formatId">The desired media format (WEBM, WAV) (optional, default to WEBM)</param>
+        /// <param name="formatId">The desired media format. (optional, default to WEBM)</param>
         /// <returns>Task of List&lt;Recording&gt;</returns>
         public async System.Threading.Tasks.Task<List<Recording>> GetConversationIdRecordingsAsync (string conversationId, string formatId = null)
         {
@@ -1810,7 +1810,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
-        /// <param name="formatId">The desired media format (WEBM, WAV) (optional, default to WEBM)</param>
+        /// <param name="formatId">The desired media format. (optional, default to WEBM)</param>
         /// <returns>Task of ApiResponse (List&lt;Recording&gt;)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<List<Recording>>> GetConversationIdRecordingsAsyncWithHttpInfo (string conversationId, string formatId = null)
         {
@@ -1877,7 +1877,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
-        /// <param name="formatId">The desired media format (WEBM, WAV) (optional, default to WEBM)</param>
+        /// <param name="formatId">The desired media format. (optional, default to WEBM)</param>
         /// <param name="download">requesting a download format of the recording (optional, default to false)</param>
         /// <param name="fileName">the name of the downloaded fileName (optional)</param>
         /// <returns></returns>
@@ -1892,7 +1892,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
-        /// <param name="formatId">The desired media format (WEBM, WAV) (optional, default to WEBM)</param>
+        /// <param name="formatId">The desired media format. (optional, default to WEBM)</param>
         /// <param name="download">requesting a download format of the recording (optional, default to false)</param>
         /// <param name="fileName">the name of the downloaded fileName (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -1967,7 +1967,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
-        /// <param name="formatId">The desired media format (WEBM, WAV) (optional, default to WEBM)</param>
+        /// <param name="formatId">The desired media format. (optional, default to WEBM)</param>
         /// <param name="download">requesting a download format of the recording (optional, default to false)</param>
         /// <param name="fileName">the name of the downloaded fileName (optional)</param>
         /// <returns>Task of void</returns>
@@ -1983,7 +1983,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
-        /// <param name="formatId">The desired media format (WEBM, WAV) (optional, default to WEBM)</param>
+        /// <param name="formatId">The desired media format. (optional, default to WEBM)</param>
         /// <param name="download">requesting a download format of the recording (optional, default to false)</param>
         /// <param name="fileName">the name of the downloaded fileName (optional)</param>
         /// <returns>Task of ApiResponse</returns>

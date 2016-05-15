@@ -21,19 +21,29 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ChannelTopic" />class.
         /// </summary>
+        /// <param name="Id">Topic id for subscription (required).</param>
 
-        public ChannelTopic()
+        public ChannelTopic(string Id = null)
         {
+            // to ensure "Id" is required (not null)
+            if (Id == null)
+            {
+                throw new InvalidDataException("Id is a required property for ChannelTopic and cannot be null");
+            }
+            else
+            {
+                this.Id = Id;
+            }
             
         }
 
     
         /// <summary>
-        /// The globally unique identifier for the object.
+        /// Topic id for subscription
         /// </summary>
-        /// <value>The globally unique identifier for the object.</value>
+        /// <value>Topic id for subscription</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
+        public string Id { get; set; }
     
         /// <summary>
         /// The URI for this object

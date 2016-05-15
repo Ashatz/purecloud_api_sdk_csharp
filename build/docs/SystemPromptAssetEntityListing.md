@@ -12,8 +12,8 @@ title: SystemPromptAssetEntityListing
 | **Total** | **long?** |  | [optional] |
 | **Entities** | [**List&lt;SystemPromptAsset&gt;**](SystemPromptAsset.html) |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
-| **PreviousUri** | **string** |  | [optional] |
 | **FirstUri** | **string** |  | [optional] |
+| **PreviousUri** | **string** |  | [optional] |
 | **NextUri** | **string** |  | [optional] |
 | **LastUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |

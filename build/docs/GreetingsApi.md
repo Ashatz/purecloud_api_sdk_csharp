@@ -212,7 +212,7 @@ namespace Example
 
             var apiInstance = new GreetingsApi();
             var greetingId = greetingId_example;  // string | Greeting ID
-            var formatId = formatId_example;  // string | The desired format (WAV, etc.) (optional)  (default to WAV)
+            var formatId = formatId_example;  // string | The desired media format. (optional)  (default to WAV)
 
             try
             {
@@ -235,7 +235,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **greetingId** | **string**| Greeting ID |  |
-| **formatId** | **string**| The desired format (WAV, etc.) | [optional] [default to WAV] |
+| **formatId** | **string**| The desired media format. | [optional] [default to WAV] |
 {: class="table table-striped"}
 
 ### Return type

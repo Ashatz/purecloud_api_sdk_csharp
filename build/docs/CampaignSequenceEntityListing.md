@@ -12,8 +12,8 @@ title: CampaignSequenceEntityListing
 | **Total** | **long?** |  | [optional] |
 | **Entities** | [**List&lt;CampaignSequence&gt;**](CampaignSequence.html) |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
-| **PreviousUri** | **string** |  | [optional] |
 | **FirstUri** | **string** |  | [optional] |
+| **PreviousUri** | **string** |  | [optional] |
 | **NextUri** | **string** |  | [optional] |
 | **LastUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |

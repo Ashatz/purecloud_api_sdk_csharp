@@ -12,8 +12,8 @@ title: LinkedEntityListingWorkItemSearchDetails
 | **Total** | **long?** |  | [optional] |
 | **Entities** | [**List&lt;WorkItemSearchDetails&gt;**](WorkItemSearchDetails.html) |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
-| **PreviousUri** | **string** |  | [optional] |
 | **FirstUri** | **string** |  | [optional] |
+| **PreviousUri** | **string** |  | [optional] |
 | **NextUri** | **string** |  | [optional] |
 | **LastUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |

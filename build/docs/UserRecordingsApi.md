@@ -156,7 +156,7 @@ namespace Example
 
             var apiInstance = new UserRecordingsApi();
             var recordingId = recordingId_example;  // string | User Recording ID
-            var formatId = formatId_example;  // string | The desired media format (WEBM, WAV) (optional)  (default to WEBM)
+            var formatId = formatId_example;  // string | The desired media format. (optional)  (default to WEBM)
 
             try
             {
@@ -179,7 +179,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **recordingId** | **string**| User Recording ID |  |
-| **formatId** | **string**| The desired media format (WEBM, WAV) | [optional] [default to WEBM] |
+| **formatId** | **string**| The desired media format. | [optional] [default to WEBM] |
 {: class="table table-striped"}
 
 ### Return type

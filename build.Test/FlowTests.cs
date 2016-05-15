@@ -139,6 +139,22 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'System'
         }
         /// <summary>
+        /// Test the property 'PublishStatus'
+        /// </summary>
+        [Test]
+        public void PublishStatusTest()
+        {
+            // TODO: unit test for the property 'PublishStatus'
+        }
+        /// <summary>
+        /// Test the property 'PublishedBy'
+        /// </summary>
+        [Test]
+        public void PublishedByTest()
+        {
+            // TODO: unit test for the property 'PublishedBy'
+        }
+        /// <summary>
         /// Test the property 'SelfUri'
         /// </summary>
         [Test]

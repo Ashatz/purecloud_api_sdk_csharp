@@ -37,6 +37,29 @@ namespace ININ.PureCloudApi.Model
             Speech
         }
 
+
+        /// <summary>
+        /// Gets or Sets PublishStatus
+        /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
+                public enum PublishStatusEnum {
+            
+            [EnumMember(Value = "STARTED")]
+            Started,
+            
+            [EnumMember(Value = "PENDING_VXMLGEN")]
+            PendingVxmlgen,
+            
+            [EnumMember(Value = "PENDING_EDGE_CONFIG")]
+            PendingEdgeConfig,
+            
+            [EnumMember(Value = "SUCCESS")]
+            Success,
+            
+            [EnumMember(Value = "FAILURE")]
+            Failure
+        }
+
         
 
         /// <summary>
@@ -44,6 +67,13 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
+    
+
+        /// <summary>
+        /// Gets or Sets PublishStatus
+        /// </summary>
+        [DataMember(Name="publishStatus", EmitDefaultValue=false)]
+        public PublishStatusEnum? PublishStatus { get; set; }
     
         /// <summary>
         /// Initializes a new instance of the <see cref="Flow" />class.
@@ -58,8 +88,10 @@ namespace ININ.PureCloudApi.Model
         /// <param name="CheckedInVersion">CheckedInVersion.</param>
         /// <param name="SavedVersion">SavedVersion.</param>
         /// <param name="System">System (default to false).</param>
+        /// <param name="PublishStatus">PublishStatus.</param>
+        /// <param name="PublishedBy">PublishedBy.</param>
 
-        public Flow(string Name = null, string Description = null, TypeEnum? Type = null, UriReference LockedUser = null, bool? Active = null, bool? Deleted = null, FlowVersion PublishedVersion = null, FlowVersion CheckedInVersion = null, FlowVersion SavedVersion = null, bool? System = null)
+        public Flow(string Name = null, string Description = null, TypeEnum? Type = null, UriReference LockedUser = null, bool? Active = null, bool? Deleted = null, FlowVersion PublishedVersion = null, FlowVersion CheckedInVersion = null, FlowVersion SavedVersion = null, bool? System = null, PublishStatusEnum? PublishStatus = null, UriReference PublishedBy = null)
         {
             this.Name = Name;
             this.Description = Description;
@@ -95,6 +127,8 @@ namespace ININ.PureCloudApi.Model
             {
                 this.System = System;
             }
+            this.PublishStatus = PublishStatus;
+            this.PublishedBy = PublishedBy;
             
         }
 
@@ -161,6 +195,12 @@ namespace ININ.PureCloudApi.Model
         public bool? System { get; set; }
     
         /// <summary>
+        /// Gets or Sets PublishedBy
+        /// </summary>
+        [DataMember(Name="publishedBy", EmitDefaultValue=false)]
+        public UriReference PublishedBy { get; set; }
+    
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -186,6 +226,8 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  CheckedInVersion: ").Append(CheckedInVersion).Append("\n");
             sb.Append("  SavedVersion: ").Append(SavedVersion).Append("\n");
             sb.Append("  System: ").Append(System).Append("\n");
+            sb.Append("  PublishStatus: ").Append(PublishStatus).Append("\n");
+            sb.Append("  PublishedBy: ").Append(PublishedBy).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -279,6 +321,16 @@ namespace ININ.PureCloudApi.Model
                     this.System.Equals(other.System)
                 ) &&
                 (
+                    this.PublishStatus == other.PublishStatus ||
+                    this.PublishStatus != null &&
+                    this.PublishStatus.Equals(other.PublishStatus)
+                ) &&
+                (
+                    this.PublishedBy == other.PublishedBy ||
+                    this.PublishedBy != null &&
+                    this.PublishedBy.Equals(other.PublishedBy)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -318,6 +370,10 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.SavedVersion.GetHashCode();
                 if (this.System != null)
                     hash = hash * 59 + this.System.GetHashCode();
+                if (this.PublishStatus != null)
+                    hash = hash * 59 + this.PublishStatus.GetHashCode();
+                if (this.PublishedBy != null)
+                    hash = hash * 59 + this.PublishedBy.GetHashCode();
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;

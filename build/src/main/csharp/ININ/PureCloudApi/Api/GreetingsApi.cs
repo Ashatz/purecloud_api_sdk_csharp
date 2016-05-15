@@ -83,7 +83,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="greetingId">Greeting ID</param>
-        /// <param name="formatId">The desired format (WAV, etc.) (optional, default to WAV)</param>
+        /// <param name="formatId">The desired media format. (optional, default to WAV)</param>
         /// <returns>GreetingMediaInfo</returns>
         GreetingMediaInfo GetGreetingIdMedia (string greetingId, string formatId = null);
 
@@ -95,7 +95,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="greetingId">Greeting ID</param>
-        /// <param name="formatId">The desired format (WAV, etc.) (optional, default to WAV)</param>
+        /// <param name="formatId">The desired media format. (optional, default to WAV)</param>
         /// <returns>ApiResponse of GreetingMediaInfo</returns>
         ApiResponse<GreetingMediaInfo> GetGreetingIdMediaWithHttpInfo (string greetingId, string formatId = null);
         /// <summary>
@@ -349,7 +349,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="greetingId">Greeting ID</param>
-        /// <param name="formatId">The desired format (WAV, etc.) (optional, default to WAV)</param>
+        /// <param name="formatId">The desired media format. (optional, default to WAV)</param>
         /// <returns>Task of GreetingMediaInfo</returns>
         System.Threading.Tasks.Task<GreetingMediaInfo> GetGreetingIdMediaAsync (string greetingId, string formatId = null);
 
@@ -361,7 +361,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="greetingId">Greeting ID</param>
-        /// <param name="formatId">The desired format (WAV, etc.) (optional, default to WAV)</param>
+        /// <param name="formatId">The desired media format. (optional, default to WAV)</param>
         /// <returns>Task of ApiResponse (GreetingMediaInfo)</returns>
         System.Threading.Tasks.Task<ApiResponse<GreetingMediaInfo>> GetGreetingIdMediaAsyncWithHttpInfo (string greetingId, string formatId = null);
         /// <summary>
@@ -1086,7 +1086,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="greetingId">Greeting ID</param>
-        /// <param name="formatId">The desired format (WAV, etc.) (optional, default to WAV)</param>
+        /// <param name="formatId">The desired media format. (optional, default to WAV)</param>
         /// <returns>GreetingMediaInfo</returns>
         public GreetingMediaInfo GetGreetingIdMedia (string greetingId, string formatId = null)
         {
@@ -1099,7 +1099,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="greetingId">Greeting ID</param>
-        /// <param name="formatId">The desired format (WAV, etc.) (optional, default to WAV)</param>
+        /// <param name="formatId">The desired media format. (optional, default to WAV)</param>
         /// <returns>ApiResponse of GreetingMediaInfo</returns>
         public ApiResponse< GreetingMediaInfo > GetGreetingIdMediaWithHttpInfo (string greetingId, string formatId = null)
         {
@@ -1165,7 +1165,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="greetingId">Greeting ID</param>
-        /// <param name="formatId">The desired format (WAV, etc.) (optional, default to WAV)</param>
+        /// <param name="formatId">The desired media format. (optional, default to WAV)</param>
         /// <returns>Task of GreetingMediaInfo</returns>
         public async System.Threading.Tasks.Task<GreetingMediaInfo> GetGreetingIdMediaAsync (string greetingId, string formatId = null)
         {
@@ -1179,7 +1179,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="greetingId">Greeting ID</param>
-        /// <param name="formatId">The desired format (WAV, etc.) (optional, default to WAV)</param>
+        /// <param name="formatId">The desired media format. (optional, default to WAV)</param>
         /// <returns>Task of ApiResponse (GreetingMediaInfo)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<GreetingMediaInfo>> GetGreetingIdMediaAsyncWithHttpInfo (string greetingId, string formatId = null)
         {
