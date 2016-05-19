@@ -7,7 +7,7 @@ title: AuthzPermissionContext
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **ContextId** | **string** |  | [optional] |
+| **Id** | **string** |  | [optional] |
 | **Type** | **string** |  | [optional] |
 {: class="table table-striped"}
 

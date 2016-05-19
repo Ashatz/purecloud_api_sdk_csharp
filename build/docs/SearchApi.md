@@ -79,7 +79,7 @@ namespace Example
 
 <a name="getsearch_0"></a>
 
-## [**GroupsSearchResponse**](GroupsSearchResponse.html) GetSearch_0 (string q64 = null, List<string> expand = null)
+## [**LocationsSearchResponse**](LocationsSearchResponse.html) GetSearch_0 (string q64 = null, List<string> expand = null)
 
 Search using q64
 
@@ -110,7 +110,7 @@ namespace Example
             try
             {
                 // Search using q64
-                GroupsSearchResponse result = apiInstance.GetSearch_0(q64, expand);
+                LocationsSearchResponse result = apiInstance.GetSearch_0(q64, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -133,7 +133,7 @@ namespace Example
 
 ### Return type
 
-[**GroupsSearchResponse**](GroupsSearchResponse.html)
+[**LocationsSearchResponse**](LocationsSearchResponse.html)
 
 <a name="getsearch_1"></a>
 
@@ -313,7 +313,7 @@ namespace Example
 
 <a name="postsearch"></a>
 
-## [**GroupsSearchResponse**](GroupsSearchResponse.html) PostSearch (SearchRequest body = null)
+## [**GroupsSearchResponse**](GroupsSearchResponse.html) PostSearch (GroupSearchRequest body = null)
 
 Search
 
@@ -338,7 +338,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new SearchApi();
-            var body = new SearchRequest(); // SearchRequest | Search request options (optional) 
+            var body = new GroupSearchRequest(); // GroupSearchRequest | Search request options (optional) 
 
             try
             {
@@ -360,7 +360,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**SearchRequest**](SearchRequest.html)| Search request options | [optional]  |
+| **body** | [**GroupSearchRequest**](GroupSearchRequest.html)| Search request options | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -369,7 +369,7 @@ namespace Example
 
 <a name="postsearch_0"></a>
 
-## [**GroupsSearchResponse**](GroupsSearchResponse.html) PostSearch_0 (SearchRequest body = null)
+## [**LocationsSearchResponse**](LocationsSearchResponse.html) PostSearch_0 (LocationSearchRequest body = null)
 
 Search
 
@@ -394,12 +394,12 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new SearchApi();
-            var body = new SearchRequest(); // SearchRequest | Search request options (optional) 
+            var body = new LocationSearchRequest(); // LocationSearchRequest | Search request options (optional) 
 
             try
             {
                 // Search
-                GroupsSearchResponse result = apiInstance.PostSearch_0(body);
+                LocationsSearchResponse result = apiInstance.PostSearch_0(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -416,12 +416,12 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**SearchRequest**](SearchRequest.html)| Search request options | [optional]  |
+| **body** | [**LocationSearchRequest**](LocationSearchRequest.html)| Search request options | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**GroupsSearchResponse**](GroupsSearchResponse.html)
+[**LocationsSearchResponse**](LocationsSearchResponse.html)
 
 <a name="postsearch_1"></a>
 
@@ -483,7 +483,7 @@ namespace Example
 
 <a name="postsearch_2"></a>
 
-## [**UsersSearchResponse**](UsersSearchResponse.html) PostSearch_2 (SearchRequest body = null)
+## [**UsersSearchResponse**](UsersSearchResponse.html) PostSearch_2 (UserSearchRequest body = null)
 
 Search
 
@@ -508,7 +508,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new SearchApi();
-            var body = new SearchRequest(); // SearchRequest | Search request options (optional) 
+            var body = new UserSearchRequest(); // UserSearchRequest | Search request options (optional) 
 
             try
             {
@@ -530,7 +530,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**SearchRequest**](SearchRequest.html)| Search request options | [optional]  |
+| **body** | [**UserSearchRequest**](UserSearchRequest.html)| Search request options | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -539,7 +539,7 @@ namespace Example
 
 <a name="postsuggest"></a>
 
-## [**JsonNodeSearchResponse**](JsonNodeSearchResponse.html) PostSuggest (SearchRequest body = null, bool? profile = null)
+## [**JsonNodeSearchResponse**](JsonNodeSearchResponse.html) PostSuggest (SuggestSearchRequest body = null, bool? profile = null)
 
 Suggest
 
@@ -564,7 +564,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new SearchApi();
-            var body = new SearchRequest(); // SearchRequest | Search request options (optional) 
+            var body = new SuggestSearchRequest(); // SuggestSearchRequest | Search request options (optional) 
             var profile = true;  // bool? |  (optional)  (default to true)
 
             try
@@ -587,7 +587,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**SearchRequest**](SearchRequest.html)| Search request options | [optional]  |
+| **body** | [**SuggestSearchRequest**](SuggestSearchRequest.html)| Search request options | [optional]  |
 | **profile** | **bool?**|  | [optional] [default to true] |
 {: class="table table-striped"}
 

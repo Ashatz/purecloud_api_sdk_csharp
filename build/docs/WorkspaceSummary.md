@@ -8,6 +8,7 @@ title: WorkspaceSummary
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **TotalDocumentCount** | **long?** |  | [optional] |
+| **TotalDocumentByteCount** | **long?** |  | [optional] |
 {: class="table table-striped"}
 
 

@@ -258,7 +258,7 @@ namespace Example
 
 <a name="getconversationidrecordings"></a>
 
-## [**List&lt;Recording&gt;**](Recording.html) GetConversationIdRecordings (string conversationId, string formatId = null)
+## [**List&lt;Recording&gt;**](Recording.html) GetConversationIdRecordings (string conversationId, int? maxWaitMs = null, string formatId = null)
 
 Get all of a Conversation's Recordings.
 
@@ -284,12 +284,13 @@ namespace Example
 
             var apiInstance = new RecordingApi();
             var conversationId = conversationId_example;  // string | Conversation ID
-            var formatId = formatId_example;  // string | The desired media format. (optional)  (default to WEBM)
+            var maxWaitMs = 56;  // int? | The maximum number of milliseconds to wait for the recording to be ready. (optional)  (default to 5000)
+            var formatId = formatId_example;  // string | The desired media format (optional)  (default to WEBM)
 
             try
             {
                 // Get all of a Conversation's Recordings.
-                List&lt;Recording&gt; result = apiInstance.GetConversationIdRecordings(conversationId, formatId);
+                List&lt;Recording&gt; result = apiInstance.GetConversationIdRecordings(conversationId, maxWaitMs, formatId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -307,7 +308,8 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| Conversation ID |  |
-| **formatId** | **string**| The desired media format. | [optional] [default to WEBM] |
+| **maxWaitMs** | **int?**| The maximum number of milliseconds to wait for the recording to be ready. | [optional] [default to 5000] |
+| **formatId** | **string**| The desired media format | [optional] [default to WEBM] |
 {: class="table table-striped"}
 
 ### Return type

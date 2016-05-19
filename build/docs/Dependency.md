@@ -12,6 +12,7 @@ title: Dependency
 | **Version** | **string** |  | [optional] |
 | **Type** | **string** |  | [optional] |
 | **Deleted** | **bool?** |  | [optional] [default to false]|
+| **Updated** | **bool?** |  | [optional] [default to false]|
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

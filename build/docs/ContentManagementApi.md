@@ -25,6 +25,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetSharesShareId**](ContentManagementApi.html#getsharesshareid) | **GET** /api/v2/contentmanagement/shares/{shareId} | Retrieve details about an existing share. |
 | [**GetStatus**](ContentManagementApi.html#getstatus) | **GET** /api/v2/contentmanagement/status | Get a list of statuses for pending operations |
 | [**GetStatusStatusId**](ContentManagementApi.html#getstatusstatusid) | **GET** /api/v2/contentmanagement/status/{statusId} | Get a status. |
+| [**GetUsage**](ContentManagementApi.html#getusage) | **GET** /api/v2/contentmanagement/usage | Get usage details. |
 | [**GetWorkspaces**](ContentManagementApi.html#getworkspaces) | **GET** /api/v2/contentmanagement/workspaces | Get a list of workspaces. |
 | [**GetWorkspacesWorkspaceId**](ContentManagementApi.html#getworkspacesworkspaceid) | **GET** /api/v2/contentmanagement/workspaces/{workspaceId} | Get a workspace. |
 | [**GetWorkspacesWorkspaceIdMembers**](ContentManagementApi.html#getworkspacesworkspaceidmembers) | **GET** /api/v2/contentmanagement/workspaces/{workspaceId}/members | Get a list workspace members |
@@ -1105,6 +1106,57 @@ namespace Example
 ### Return type
 
 [**CommandStatus**](CommandStatus.html)
+
+<a name="getusage"></a>
+
+## [**Usage**](Usage.html) GetUsage ()
+
+Get usage details.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetUsageExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new ContentManagementApi();
+
+            try
+            {
+                // Get usage details.
+                Usage result = apiInstance.GetUsage();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ContentManagementApi.GetUsage: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+This endpoint does require any parameters.
+{: class="table table-striped"}
+
+### Return type
+
+[**Usage**](Usage.html)
 
 <a name="getworkspaces"></a>
 

@@ -425,7 +425,7 @@ namespace Example
 
 <a name="postsearch"></a>
 
-## [**GroupsSearchResponse**](GroupsSearchResponse.html) PostSearch (SearchRequest body = null)
+## [**GroupsSearchResponse**](GroupsSearchResponse.html) PostSearch (GroupSearchRequest body = null)
 
 Search
 
@@ -450,7 +450,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new GroupsApi();
-            var body = new SearchRequest(); // SearchRequest | Search request options (optional) 
+            var body = new GroupSearchRequest(); // GroupSearchRequest | Search request options (optional) 
 
             try
             {
@@ -472,7 +472,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**SearchRequest**](SearchRequest.html)| Search request options | [optional]  |
+| **body** | [**GroupSearchRequest**](GroupSearchRequest.html)| Search request options | [optional]  |
 {: class="table table-striped"}
 
 ### Return type

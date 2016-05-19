@@ -12,6 +12,7 @@ title: DependencyObject
 | **Version** | **string** |  | [optional] |
 | **Type** | **string** |  | [optional] |
 | **Deleted** | **bool?** |  | [optional] [default to false]|
+| **Updated** | **bool?** |  | [optional] [default to false]|
 | **ConsumedResources** | [**List&lt;Dependency&gt;**](Dependency.html) |  | [optional] |
 | **ConsumingResources** | [**List&lt;Dependency&gt;**](Dependency.html) |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |

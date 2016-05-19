@@ -131,7 +131,7 @@ namespace Example
 
 <a name="getsearch"></a>
 
-## [**GroupsSearchResponse**](GroupsSearchResponse.html) GetSearch (string q64 = null, List<string> expand = null)
+## [**LocationsSearchResponse**](LocationsSearchResponse.html) GetSearch (string q64 = null, List<string> expand = null)
 
 Search using q64
 
@@ -162,7 +162,7 @@ namespace Example
             try
             {
                 // Search using q64
-                GroupsSearchResponse result = apiInstance.GetSearch(q64, expand);
+                LocationsSearchResponse result = apiInstance.GetSearch(q64, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -185,11 +185,11 @@ namespace Example
 
 ### Return type
 
-[**GroupsSearchResponse**](GroupsSearchResponse.html)
+[**LocationsSearchResponse**](LocationsSearchResponse.html)
 
 <a name="postsearch"></a>
 
-## [**GroupsSearchResponse**](GroupsSearchResponse.html) PostSearch (SearchRequest body = null)
+## [**LocationsSearchResponse**](LocationsSearchResponse.html) PostSearch (LocationSearchRequest body = null)
 
 Search
 
@@ -214,12 +214,12 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new LocationsApi();
-            var body = new SearchRequest(); // SearchRequest | Search request options (optional) 
+            var body = new LocationSearchRequest(); // LocationSearchRequest | Search request options (optional) 
 
             try
             {
                 // Search
-                GroupsSearchResponse result = apiInstance.PostSearch(body);
+                LocationsSearchResponse result = apiInstance.PostSearch(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -236,10 +236,10 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**SearchRequest**](SearchRequest.html)| Search request options | [optional]  |
+| **body** | [**LocationSearchRequest**](LocationSearchRequest.html)| Search request options | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**GroupsSearchResponse**](GroupsSearchResponse.html)
+[**LocationsSearchResponse**](LocationsSearchResponse.html)
 

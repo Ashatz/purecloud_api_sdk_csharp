@@ -17,6 +17,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetCallsCallId**](ConversationsApi.html#getcallscallid) | **GET** /api/v2/conversations/calls/{callId} | Get call conversation |
 | [**GetCallsCallIdParticipantsParticipantIdWrapup**](ConversationsApi.html#getcallscallidparticipantsparticipantidwrapup) | **GET** /api/v2/conversations/calls/{callId}/participants/{participantId}/wrapup | Get the wrap-up for this conversation participant.  |
 | [**GetCallsCallIdParticipantsParticipantIdWrapupcodes**](ConversationsApi.html#getcallscallidparticipantsparticipantidwrapupcodes) | **GET** /api/v2/conversations/calls/{callId}/participants/{participantId}/wrapupcodes | Get list of wrapup codes for this conversation participant |
+| [**GetCallsHistory**](ConversationsApi.html#getcallshistory) | **GET** /api/v2/conversations/calls/history | Get call history |
 | [**GetCallsMaximumconferenceparties**](ConversationsApi.html#getcallsmaximumconferenceparties) | **GET** /api/v2/conversations/calls/maximumconferenceparties | Get the maximum number of participants that this user can have on a conference |
 | [**GetChats**](ConversationsApi.html#getchats) | **GET** /api/v2/conversations/chats | Get recent chat conversations |
 | [**GetChatsChatId**](ConversationsApi.html#getchatschatid) | **GET** /api/v2/conversations/chats/{chatId} | Get chat conversation |
@@ -630,6 +631,66 @@ namespace Example
 ### Return type
 
 [**WrapupCode**](WrapupCode.html)
+
+<a name="getcallshistory"></a>
+
+## [**CallConversationEntityListing**](CallConversationEntityListing.html) GetCallsHistory (int? pageSize = null, int? pageNumber = null, string interval = null)
+
+Get call history
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetCallsHistoryExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new ConversationsApi();
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var interval = interval_example;  // string | Interval string; format is ISO-8601. Separate start and end times with forward slash '/' (optional) 
+
+            try
+            {
+                // Get call history
+                CallConversationEntityListing result = apiInstance.GetCallsHistory(pageSize, pageNumber, interval);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.GetCallsHistory: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **interval** | **string**| Interval string; format is ISO-8601. Separate start and end times with forward slash &#39;/&#39; | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**CallConversationEntityListing**](CallConversationEntityListing.html)
 
 <a name="getcallsmaximumconferenceparties"></a>
 

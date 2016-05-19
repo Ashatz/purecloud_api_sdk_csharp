@@ -33,6 +33,7 @@ title: CallbackMediaParticipant
 | **CallbackUserName** | **string** |  | [optional] |
 | **SkipEnabled** | **bool?** |  | [optional] [default to false]|
 | **TimeoutSeconds** | **int?** |  | [optional] |
+| **CallbackScheduledTime** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 {: class="table table-striped"}
 
 

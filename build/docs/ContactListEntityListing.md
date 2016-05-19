@@ -12,10 +12,10 @@ title: ContactListEntityListing
 | **Total** | **long?** |  | [optional] |
 | **Entities** | [**List&lt;ContactList&gt;**](ContactList.html) |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
-| **FirstUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **NextUri** | **string** |  | [optional] |
 | **LastUri** | **string** |  | [optional] |
+| **FirstUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
 {: class="table table-striped"}
 

@@ -9,6 +9,7 @@ title: WorkspaceCreate
 |------------ | ------------- | ------------- | -------------|
 | **Name** | **string** |  | [optional] |
 | **Bucket** | **string** |  | [optional] |
+| **Description** | **string** |  | [optional] |
 {: class="table table-striped"}
 
 

@@ -17,6 +17,7 @@ title: Workspace
 | **DateModified** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **Summary** | [**WorkspaceSummary**](WorkspaceSummary.html) |  | [optional] |
 | **Acl** | **List&lt;string&gt;** |  | [optional] |
+| **Description** | **string** |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

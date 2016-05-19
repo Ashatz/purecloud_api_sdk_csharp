@@ -14,7 +14,7 @@ title: RuleSet
 | **Version** | **int?** | Required for updates, must match the version number of the most recent update | [optional] |
 | **ContactList** | [**UriReference**](UriReference.html) | The identifier of an example contact list that provides user-interface suggestions for contact-based conditions and actions | [optional] |
 | **Queue** | [**UriReference**](UriReference.html) | The identifier of an example queue that provides user-interface suggestions for wrap-up associated conditions | [optional] |
-| **Rules** | [**List&lt;DialerRule&gt;**](DialerRule.html) | The list of rules | [optional] |
+| **Rules** | [**List&lt;DialerRule&gt;**](DialerRule.html) | The list of rules | |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

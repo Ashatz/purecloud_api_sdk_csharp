@@ -18,7 +18,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetUserIdCallforwarding**](UsersApi.html#getuseridcallforwarding) | **GET** /api/v2/users/{userId}/callforwarding | Get a user&#39;s CallForwarding |
 | [**GetUserIdGeolocationsClientId**](UsersApi.html#getuseridgeolocationsclientid) | **GET** /api/v2/users/{userId}/geolocations/{clientId} | Get a user&#39;s Geolocation |
 | [**GetUserIdOutofoffice**](UsersApi.html#getuseridoutofoffice) | **GET** /api/v2/users/{userId}/outofoffice | Get a OutOfOffice |
-| [**GetUserIdProfileskills**](UsersApi.html#getuseridprofileskills) | **GET** /api/v2/users/{userId}/profileskills | List profile skills for a user |
 | [**GetUserIdQueues**](UsersApi.html#getuseridqueues) | **GET** /api/v2/users/{userId}/queues | Get queues for user |
 | [**GetUserIdRoles**](UsersApi.html#getuseridroles) | **GET** /api/v2/users/{userId}/roles | Returns a listing of roles and permissions for a user. |
 | [**GetUserIdRoutingskills**](UsersApi.html#getuseridroutingskills) | **GET** /api/v2/users/{userId}/routingskills | List routing skills for user |
@@ -37,7 +36,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostUsersObservationsQuery**](UsersApi.html#postusersobservationsquery) | **POST** /api/v2/analytics/users/observations/query | Query for user observations |
 | [**PutUserIdCallforwarding**](UsersApi.html#putuseridcallforwarding) | **PUT** /api/v2/users/{userId}/callforwarding | Update a user&#39;s CallForwarding |
 | [**PutUserIdOutofoffice**](UsersApi.html#putuseridoutofoffice) | **PUT** /api/v2/users/{userId}/outofoffice | Update an OutOfOffice |
-| [**PutUserIdProfileskills**](UsersApi.html#putuseridprofileskills) | **PUT** /api/v2/users/{userId}/profileskills | Update profile skills for a user |
 | [**PutUserIdRoles**](UsersApi.html#putuseridroles) | **PUT** /api/v2/users/{userId}/roles | Sets the user&#39;s roles |
 | [**PutUserIdRoutingskillsSkillId**](UsersApi.html#putuseridroutingskillsskillid) | **PUT** /api/v2/users/{userId}/routingskills/{skillId} | Update routing skill proficiency or state. |
 | [**PutUserIdRoutingstatus**](UsersApi.html#putuseridroutingstatus) | **PUT** /api/v2/users/{userId}/routingstatus | Update the routing status of a user |
@@ -665,62 +663,6 @@ namespace Example
 ### Return type
 
 [**OutOfOffice**](OutOfOffice.html)
-
-<a name="getuseridprofileskills"></a>
-
-## List&lt;string&gt;** GetUserIdProfileskills (string userId)
-
-List profile skills for a user
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class GetUserIdProfileskillsExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new UsersApi();
-            var userId = userId_example;  // string | User ID
-
-            try
-            {
-                // List profile skills for a user
-                List&lt;string&gt; result = apiInstance.GetUserIdProfileskills(userId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling UsersApi.GetUserIdProfileskills: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **userId** | **string**| User ID |  |
-{: class="table table-striped"}
-
-### Return type
-
-**List<string>**
 
 <a name="getuseridqueues"></a>
 
@@ -1372,7 +1314,7 @@ namespace Example
 
 <a name="postsearch"></a>
 
-## [**UsersSearchResponse**](UsersSearchResponse.html) PostSearch (SearchRequest body = null)
+## [**UsersSearchResponse**](UsersSearchResponse.html) PostSearch (UserSearchRequest body = null)
 
 Search
 
@@ -1397,7 +1339,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new UsersApi();
-            var body = new SearchRequest(); // SearchRequest | Search request options (optional) 
+            var body = new UserSearchRequest(); // UserSearchRequest | Search request options (optional) 
 
             try
             {
@@ -1419,7 +1361,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**SearchRequest**](SearchRequest.html)| Search request options | [optional]  |
+| **body** | [**UserSearchRequest**](UserSearchRequest.html)| Search request options | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1767,64 +1709,6 @@ namespace Example
 ### Return type
 
 [**OutOfOffice**](OutOfOffice.html)
-
-<a name="putuseridprofileskills"></a>
-
-## List&lt;string&gt;** PutUserIdProfileskills (string userId, List<string> body = null)
-
-Update profile skills for a user
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class PutUserIdProfileskillsExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new UsersApi();
-            var userId = userId_example;  // string | User ID
-            var body = ;  // List<string> | Skills (optional) 
-
-            try
-            {
-                // Update profile skills for a user
-                List&lt;string&gt; result = apiInstance.PutUserIdProfileskills(userId, body);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling UsersApi.PutUserIdProfileskills: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **userId** | **string**| User ID |  |
-| **body** | **List<string>**| Skills | [optional]  |
-{: class="table table-striped"}
-
-### Return type
-
-**List<string>**
 
 <a name="putuseridroles"></a>
 

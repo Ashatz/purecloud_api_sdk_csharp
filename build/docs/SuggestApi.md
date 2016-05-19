@@ -191,7 +191,7 @@ namespace Example
 
 <a name="postsuggest"></a>
 
-## [**JsonNodeSearchResponse**](JsonNodeSearchResponse.html) PostSuggest (SearchRequest body = null, bool? profile = null)
+## [**JsonNodeSearchResponse**](JsonNodeSearchResponse.html) PostSuggest (SuggestSearchRequest body = null, bool? profile = null)
 
 Suggest
 
@@ -216,7 +216,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new SuggestApi();
-            var body = new SearchRequest(); // SearchRequest | Search request options (optional) 
+            var body = new SuggestSearchRequest(); // SuggestSearchRequest | Search request options (optional) 
             var profile = true;  // bool? |  (optional)  (default to true)
 
             try
@@ -239,7 +239,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**SearchRequest**](SearchRequest.html)| Search request options | [optional]  |
+| **body** | [**SuggestSearchRequest**](SuggestSearchRequest.html)| Search request options | [optional]  |
 | **profile** | **bool?**|  | [optional] [default to true] |
 {: class="table table-striped"}
 
