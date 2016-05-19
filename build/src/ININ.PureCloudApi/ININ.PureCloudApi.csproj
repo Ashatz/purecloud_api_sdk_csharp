@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{78B32564-1908-4687-8CC8-5F6A31A2C092}</ProjectGuid>
+    <ProjectGuid>{150EC767-FC2E-43BE-B1F1-606F36B2C108}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>PureCloud Public API Library</RootNamespace>
@@ -41,13 +41,13 @@
       <HintPath Condition="Exists('$(SolutionDir)\packages')">$(SolutionDir)\packages\Newtonsoft.Json.8.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
       <HintPath Condition="Exists('..\packages')">..\packages\Newtonsoft.Json.8.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
       <HintPath Condition="Exists('..\..\packages')">..\..\packages\Newtonsoft.Json.8.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
-      <HintPath Condition="Exists('..\..\..\..\vendor')">..\..\..\..\vendor\Newtonsoft.Json.8.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <HintPath Condition="Exists('..\..\vendor')">..\..\vendor\Newtonsoft.Json.8.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="RestSharp">
         <HintPath Condition="Exists('$(SolutionDir)\packages')">$(SolutionDir)\packages\RestSharp.105.1.0\lib\net45\RestSharp.dll</HintPath>
         <HintPath Condition="Exists('..\packages')">..\packages\RestSharp.105.1.0\lib\net45\RestSharp.dll</HintPath>
         <HintPath Condition="Exists('..\..\packages')">..\..\packages\RestSharp.105.1.0\lib\net45\RestSharp.dll</HintPath>
-      <HintPath Condition="Exists('..\..\..\..\vendor')">..\..\..\..\vendor\RestSharp.105.1.0\lib\net45\RestSharp.dll</HintPath>
+      <HintPath Condition="Exists('..\..\vendor')">..\..\vendor\RestSharp.105.1.0\lib\net45\RestSharp.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
