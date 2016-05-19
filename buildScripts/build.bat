@@ -18,7 +18,7 @@ call java %JAVA_OPTS% -jar %executable% %ags%
 xcopy %WORKSPACE%\repo\Extensions %WORKSPACE%\repo\build\src\main\csharp\ININ\PureCloudApi\Extensions\ /S
 
 cd %WORKSPACE%\repo\build
-call compile.bat
+call build.bat
 cd %WORKSPACE%\repo
 
 cp README.md build/docs/index.md
