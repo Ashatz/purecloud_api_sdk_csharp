@@ -26,7 +26,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="UsageCharges">UsageCharges.</param>
         /// <param name="DomesticChargesTotal">DomesticChargesTotal.</param>
         /// <param name="InternationalChargesTotal">InternationalChargesTotal.</param>
-        public AccountOverview(, string Name = null, bool? IsSuperUser = null, bool? HasAccountNumber = null, List<Charge> UsageCharges = null, int? DomesticChargesTotal = null, int? InternationalChargesTotal = null)
+        public AccountOverview(string Name = null, bool? IsSuperUser = null, bool? HasAccountNumber = null, List<Charge> UsageCharges = null, int? DomesticChargesTotal = null, int? InternationalChargesTotal = null)
         {
             this.Name = Name;
             // use default value if no "IsSuperUser" provided
@@ -145,42 +145,42 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.IsSuperUser == other.IsSuperUser ||
                     this.IsSuperUser != null &&
                     this.IsSuperUser.Equals(other.IsSuperUser)
-                ) && 
+                ) &&
                 (
                     this.HasAccountNumber == other.HasAccountNumber ||
                     this.HasAccountNumber != null &&
                     this.HasAccountNumber.Equals(other.HasAccountNumber)
-                ) && 
+                ) &&
                 (
                     this.UsageCharges == other.UsageCharges ||
                     this.UsageCharges != null &&
                     this.UsageCharges.SequenceEqual(other.UsageCharges)
-                ) && 
+                ) &&
                 (
                     this.DomesticChargesTotal == other.DomesticChargesTotal ||
                     this.DomesticChargesTotal != null &&
                     this.DomesticChargesTotal.Equals(other.DomesticChargesTotal)
-                ) && 
+                ) &&
                 (
                     this.InternationalChargesTotal == other.InternationalChargesTotal ||
                     this.InternationalChargesTotal != null &&
                     this.InternationalChargesTotal.Equals(other.InternationalChargesTotal)
-                )
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

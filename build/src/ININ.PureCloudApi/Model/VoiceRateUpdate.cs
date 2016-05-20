@@ -36,7 +36,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="OutboundInternational">The outbound international rates..</param>
         /// <param name="AmendmentDate">The date of the rate amendment. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (required).</param>
         /// <param name="EffectiveDate">The effective date of the rate amendment. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (required).</param>
-        public VoiceRateUpdate(, string Name = null, string Currency = null, VoiceRate InboundTollFree = null, List<VoiceRateExtended> Extended = null, VoiceRate InboundTolled = null, VoiceRate OutboundLocal = null, VoiceRate OutboundIntraState = null, VoiceRate OutboundInterState = null, List<VoiceRateInternational> OutboundInternational = null, DateTime? AmendmentDate = null, DateTime? EffectiveDate = null)
+        public VoiceRateUpdate(string Name = null, string Currency = null, VoiceRate InboundTollFree = null, List<VoiceRateExtended> Extended = null, VoiceRate InboundTolled = null, VoiceRate OutboundLocal = null, VoiceRate OutboundIntraState = null, VoiceRate OutboundInterState = null, List<VoiceRateInternational> OutboundInternational = null, DateTime? AmendmentDate = null, DateTime? EffectiveDate = null)
         {
             // to ensure "Currency" is required (not null)
             if (Currency == null)
@@ -208,67 +208,67 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Currency == other.Currency ||
                     this.Currency != null &&
                     this.Currency.Equals(other.Currency)
-                ) && 
+                ) &&
                 (
                     this.InboundTollFree == other.InboundTollFree ||
                     this.InboundTollFree != null &&
                     this.InboundTollFree.Equals(other.InboundTollFree)
-                ) && 
+                ) &&
                 (
                     this.Extended == other.Extended ||
                     this.Extended != null &&
                     this.Extended.SequenceEqual(other.Extended)
-                ) && 
+                ) &&
                 (
                     this.InboundTolled == other.InboundTolled ||
                     this.InboundTolled != null &&
                     this.InboundTolled.Equals(other.InboundTolled)
-                ) && 
+                ) &&
                 (
                     this.OutboundLocal == other.OutboundLocal ||
                     this.OutboundLocal != null &&
                     this.OutboundLocal.Equals(other.OutboundLocal)
-                ) && 
+                ) &&
                 (
                     this.OutboundIntraState == other.OutboundIntraState ||
                     this.OutboundIntraState != null &&
                     this.OutboundIntraState.Equals(other.OutboundIntraState)
-                ) && 
+                ) &&
                 (
                     this.OutboundInterState == other.OutboundInterState ||
                     this.OutboundInterState != null &&
                     this.OutboundInterState.Equals(other.OutboundInterState)
-                ) && 
+                ) &&
                 (
                     this.OutboundInternational == other.OutboundInternational ||
                     this.OutboundInternational != null &&
                     this.OutboundInternational.SequenceEqual(other.OutboundInternational)
-                ) && 
+                ) &&
                 (
                     this.AmendmentDate == other.AmendmentDate ||
                     this.AmendmentDate != null &&
                     this.AmendmentDate.Equals(other.AmendmentDate)
-                ) && 
+                ) &&
                 (
                     this.EffectiveDate == other.EffectiveDate ||
                     this.EffectiveDate != null &&
                     this.EffectiveDate.Equals(other.EffectiveDate)
-                )
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

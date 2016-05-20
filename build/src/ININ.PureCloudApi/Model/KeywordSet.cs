@@ -47,7 +47,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Agents">Agents.</param>
         /// <param name="Keywords">Keywords.</param>
         /// <param name="ParticipantPurposes">ParticipantPurposes.</param>
-        public KeywordSet(, string Name = null, string Description = null, Queue Queue = null, string Language = null, List<User> Agents = null, List<Keyword> Keywords = null, List<ParticipantPurposesEnum> ParticipantPurposes = null)
+        public KeywordSet(string Name = null, string Description = null, Queue Queue = null, string Language = null, List<User> Agents = null, List<Keyword> Keywords = null, List<ParticipantPurposesEnum> ParticipantPurposes = null)
         {
             this.Name = Name;
             this.Description = Description;
@@ -98,7 +98,7 @@ namespace ININ.PureCloudApi.Model
         /// Gets or Sets ParticipantPurposes
         /// </summary>
         [DataMember(Name="participantPurposes", EmitDefaultValue=false)]
-        public List<string> ParticipantPurposes { get; set; }
+        public List<ParticipantPurposesEnum> ParticipantPurposes { get; set; }
         /// <summary>
         /// The URI for this object
         /// </summary>
@@ -157,47 +157,47 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Description == other.Description ||
                     this.Description != null &&
                     this.Description.Equals(other.Description)
-                ) && 
+                ) &&
                 (
                     this.Queue == other.Queue ||
                     this.Queue != null &&
                     this.Queue.Equals(other.Queue)
-                ) && 
+                ) &&
                 (
                     this.Language == other.Language ||
                     this.Language != null &&
                     this.Language.Equals(other.Language)
-                ) && 
+                ) &&
                 (
                     this.Agents == other.Agents ||
                     this.Agents != null &&
                     this.Agents.SequenceEqual(other.Agents)
-                ) && 
+                ) &&
                 (
                     this.Keywords == other.Keywords ||
                     this.Keywords != null &&
                     this.Keywords.SequenceEqual(other.Keywords)
-                ) && 
+                ) &&
                 (
                     this.ParticipantPurposes == other.ParticipantPurposes ||
                     this.ParticipantPurposes != null &&
                     this.ParticipantPurposes.SequenceEqual(other.ParticipantPurposes)
-                )
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

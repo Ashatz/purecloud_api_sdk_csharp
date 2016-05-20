@@ -75,7 +75,7 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.MaxSimultaneousStreams == other.MaxSimultaneousStreams ||
                     this.MaxSimultaneousStreams != null &&

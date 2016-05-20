@@ -321,17 +321,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Metric == other.Metric ||
                     this.Metric != null &&
                     this.Metric.Equals(other.Metric)
-                ) && 
+                ) &&
                 (
                     this.Qualifier == other.Qualifier ||
                     this.Qualifier != null &&
                     this.Qualifier.Equals(other.Qualifier)
-                ) && 
+                ) &&
                 (
                     this.Stats == other.Stats ||
                     this.Stats != null &&

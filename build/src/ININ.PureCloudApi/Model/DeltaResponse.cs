@@ -99,17 +99,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.ContextToken == other.ContextToken ||
                     this.ContextToken != null &&
                     this.ContextToken.Equals(other.ContextToken)
-                ) && 
+                ) &&
                 (
                     this.Documents == other.Documents ||
                     this.Documents != null &&
                     this.Documents.SequenceEqual(other.Documents)
-                ) && 
+                ) &&
                 (
                     this.HasMore == other.HasMore ||
                     this.HasMore != null &&

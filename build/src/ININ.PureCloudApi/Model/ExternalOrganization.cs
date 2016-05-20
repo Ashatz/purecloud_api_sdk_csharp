@@ -35,7 +35,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="ModifyDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="CreateDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="ExternalDataSources">Links to the sources of data (e.g. one source might be a CRM) that contributed data to this record.  Read-only, and only populated when requested via expand param..</param>
-        public ExternalOrganization(, string Name = null, string CompanyType = null, string Industry = null, string PrimaryContactId = null, ContactAddress Address = null, PhoneNumber PhoneNumber = null, PhoneNumber FaxNumber = null, long? EmployeeCount = null, long? Revenue = null, List<string> Tags = null, List<string> Websites = null, List<Ticker> Tickers = null, DateTime? ModifyDate = null, DateTime? CreateDate = null, List<ExternalDataSource> ExternalDataSources = null)
+        public ExternalOrganization(string Name = null, string CompanyType = null, string Industry = null, string PrimaryContactId = null, ContactAddress Address = null, PhoneNumber PhoneNumber = null, PhoneNumber FaxNumber = null, long? EmployeeCount = null, long? Revenue = null, List<string> Tags = null, List<string> Websites = null, List<Ticker> Tickers = null, DateTime? ModifyDate = null, DateTime? CreateDate = null, List<ExternalDataSource> ExternalDataSources = null)
         {
             this.Name = Name;
             this.CompanyType = CompanyType;
@@ -204,87 +204,87 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.CompanyType == other.CompanyType ||
                     this.CompanyType != null &&
                     this.CompanyType.Equals(other.CompanyType)
-                ) && 
+                ) &&
                 (
                     this.Industry == other.Industry ||
                     this.Industry != null &&
                     this.Industry.Equals(other.Industry)
-                ) && 
+                ) &&
                 (
                     this.PrimaryContactId == other.PrimaryContactId ||
                     this.PrimaryContactId != null &&
                     this.PrimaryContactId.Equals(other.PrimaryContactId)
-                ) && 
+                ) &&
                 (
                     this.Address == other.Address ||
                     this.Address != null &&
                     this.Address.Equals(other.Address)
-                ) && 
+                ) &&
                 (
                     this.PhoneNumber == other.PhoneNumber ||
                     this.PhoneNumber != null &&
                     this.PhoneNumber.Equals(other.PhoneNumber)
-                ) && 
+                ) &&
                 (
                     this.FaxNumber == other.FaxNumber ||
                     this.FaxNumber != null &&
                     this.FaxNumber.Equals(other.FaxNumber)
-                ) && 
+                ) &&
                 (
                     this.EmployeeCount == other.EmployeeCount ||
                     this.EmployeeCount != null &&
                     this.EmployeeCount.Equals(other.EmployeeCount)
-                ) && 
+                ) &&
                 (
                     this.Revenue == other.Revenue ||
                     this.Revenue != null &&
                     this.Revenue.Equals(other.Revenue)
-                ) && 
+                ) &&
                 (
                     this.Tags == other.Tags ||
                     this.Tags != null &&
                     this.Tags.SequenceEqual(other.Tags)
-                ) && 
+                ) &&
                 (
                     this.Websites == other.Websites ||
                     this.Websites != null &&
                     this.Websites.SequenceEqual(other.Websites)
-                ) && 
+                ) &&
                 (
                     this.Tickers == other.Tickers ||
                     this.Tickers != null &&
                     this.Tickers.SequenceEqual(other.Tickers)
-                ) && 
+                ) &&
                 (
                     this.ModifyDate == other.ModifyDate ||
                     this.ModifyDate != null &&
                     this.ModifyDate.Equals(other.ModifyDate)
-                ) && 
+                ) &&
                 (
                     this.CreateDate == other.CreateDate ||
                     this.CreateDate != null &&
                     this.CreateDate.Equals(other.CreateDate)
-                ) && 
+                ) &&
                 (
                     this.ExternalDataSources == other.ExternalDataSources ||
                     this.ExternalDataSources != null &&
                     this.ExternalDataSources.SequenceEqual(other.ExternalDataSources)
-                )
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

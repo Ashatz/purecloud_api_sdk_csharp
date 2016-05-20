@@ -33,7 +33,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="DefaultForProducts">The list of products which have this additional service by default. (required).</param>
         /// <param name="ExclusiveFromProducts">The list of additional services which are not compatible with this additional service. (required).</param>
         /// <param name="Rate">The rate of this additional service. (required).</param>
-        public AvailableAdditionalService(, string Name = null, string Description = null, string PartNumber = null, List<string> RequiredForProducts = null, List<string> AvailableForProducts = null, List<string> DefaultForProducts = null, List<string> ExclusiveFromProducts = null, Rate Rate = null)
+        public AvailableAdditionalService(string Name = null, string Description = null, string PartNumber = null, List<string> RequiredForProducts = null, List<string> AvailableForProducts = null, List<string> DefaultForProducts = null, List<string> ExclusiveFromProducts = null, Rate Rate = null)
         {
             // to ensure "Description" is required (not null)
             if (Description == null)
@@ -213,52 +213,52 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Description == other.Description ||
                     this.Description != null &&
                     this.Description.Equals(other.Description)
-                ) && 
+                ) &&
                 (
                     this.PartNumber == other.PartNumber ||
                     this.PartNumber != null &&
                     this.PartNumber.Equals(other.PartNumber)
-                ) && 
+                ) &&
                 (
                     this.RequiredForProducts == other.RequiredForProducts ||
                     this.RequiredForProducts != null &&
                     this.RequiredForProducts.SequenceEqual(other.RequiredForProducts)
-                ) && 
+                ) &&
                 (
                     this.AvailableForProducts == other.AvailableForProducts ||
                     this.AvailableForProducts != null &&
                     this.AvailableForProducts.SequenceEqual(other.AvailableForProducts)
-                ) && 
+                ) &&
                 (
                     this.DefaultForProducts == other.DefaultForProducts ||
                     this.DefaultForProducts != null &&
                     this.DefaultForProducts.SequenceEqual(other.DefaultForProducts)
-                ) && 
+                ) &&
                 (
                     this.ExclusiveFromProducts == other.ExclusiveFromProducts ||
                     this.ExclusiveFromProducts != null &&
                     this.ExclusiveFromProducts.SequenceEqual(other.ExclusiveFromProducts)
-                ) && 
+                ) &&
                 (
                     this.Rate == other.Rate ||
                     this.Rate != null &&
                     this.Rate.Equals(other.Rate)
-                )
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

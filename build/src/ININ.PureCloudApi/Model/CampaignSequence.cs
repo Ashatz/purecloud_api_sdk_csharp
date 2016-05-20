@@ -63,7 +63,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Campaigns">the ordered list of campaign identifiers (required).</param>
         /// <param name="Status">status of the sequence (required).</param>
         /// <param name="Repeat">indicates if a sequence is to repeat from the beginning after the last campaign completes; default is false (default to false).</param>
-        public CampaignSequence(, string Name = null, int? Version = null, List<UriReference> Campaigns = null, StatusEnum? Status = null, bool? Repeat = null)
+        public CampaignSequence(string Name = null, int? Version = null, List<UriReference> Campaigns = null, StatusEnum? Status = null, bool? Repeat = null)
         {
             // to ensure "Campaigns" is required (not null)
             if (Campaigns == null)
@@ -209,57 +209,57 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.DateCreated == other.DateCreated ||
                     this.DateCreated != null &&
                     this.DateCreated.Equals(other.DateCreated)
-                ) && 
+                ) &&
                 (
                     this.DateModified == other.DateModified ||
                     this.DateModified != null &&
                     this.DateModified.Equals(other.DateModified)
-                ) && 
+                ) &&
                 (
                     this.Version == other.Version ||
                     this.Version != null &&
                     this.Version.Equals(other.Version)
-                ) && 
+                ) &&
                 (
                     this.Campaigns == other.Campaigns ||
                     this.Campaigns != null &&
                     this.Campaigns.SequenceEqual(other.Campaigns)
-                ) && 
+                ) &&
                 (
                     this.CurrentCampaign == other.CurrentCampaign ||
                     this.CurrentCampaign != null &&
                     this.CurrentCampaign.Equals(other.CurrentCampaign)
-                ) && 
+                ) &&
                 (
                     this.Status == other.Status ||
                     this.Status != null &&
                     this.Status.Equals(other.Status)
-                ) && 
+                ) &&
                 (
                     this.StopMessage == other.StopMessage ||
                     this.StopMessage != null &&
                     this.StopMessage.Equals(other.StopMessage)
-                ) && 
+                ) &&
                 (
                     this.Repeat == other.Repeat ||
                     this.Repeat != null &&
                     this.Repeat.Equals(other.Repeat)
-                )
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

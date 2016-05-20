@@ -83,12 +83,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.ArchiveRetention == other.ArchiveRetention ||
                     this.ArchiveRetention != null &&
                     this.ArchiveRetention.Equals(other.ArchiveRetention)
-                ) && 
+                ) &&
                 (
                     this.DeleteRetention == other.DeleteRetention ||
                     this.DeleteRetention != null &&

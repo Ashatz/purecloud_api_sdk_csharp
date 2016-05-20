@@ -123,32 +123,32 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.TotalScore == other.TotalScore ||
                     this.TotalScore != null &&
                     this.TotalScore.Equals(other.TotalScore)
-                ) && 
+                ) &&
                 (
                     this.TotalCriticalScore == other.TotalCriticalScore ||
                     this.TotalCriticalScore != null &&
                     this.TotalCriticalScore.Equals(other.TotalCriticalScore)
-                ) && 
+                ) &&
                 (
                     this.QuestionGroupScores == other.QuestionGroupScores ||
                     this.QuestionGroupScores != null &&
                     this.QuestionGroupScores.SequenceEqual(other.QuestionGroupScores)
-                ) && 
+                ) &&
                 (
                     this.AnyFailedKillQuestions == other.AnyFailedKillQuestions ||
                     this.AnyFailedKillQuestions != null &&
                     this.AnyFailedKillQuestions.Equals(other.AnyFailedKillQuestions)
-                ) && 
+                ) &&
                 (
                     this.Comments == other.Comments ||
                     this.Comments != null &&
                     this.Comments.Equals(other.Comments)
-                ) && 
+                ) &&
                 (
                     this.AgentComments == other.AgentComments ||
                     this.AgentComments != null &&

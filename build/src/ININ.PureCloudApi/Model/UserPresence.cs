@@ -26,7 +26,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="PresenceDefinition">PresenceDefinition.</param>
         /// <param name="Message">Message.</param>
         /// <param name="ModifiedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        public UserPresence(, string Name = null, string Source = null, bool? Primary = null, OrganizationPresence PresenceDefinition = null, string Message = null, DateTime? ModifiedDate = null)
+        public UserPresence(string Name = null, string Source = null, bool? Primary = null, OrganizationPresence PresenceDefinition = null, string Message = null, DateTime? ModifiedDate = null)
         {
             this.Name = Name;
             this.Source = Source;
@@ -140,42 +140,42 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Source == other.Source ||
                     this.Source != null &&
                     this.Source.Equals(other.Source)
-                ) && 
+                ) &&
                 (
                     this.Primary == other.Primary ||
                     this.Primary != null &&
                     this.Primary.Equals(other.Primary)
-                ) && 
+                ) &&
                 (
                     this.PresenceDefinition == other.PresenceDefinition ||
                     this.PresenceDefinition != null &&
                     this.PresenceDefinition.Equals(other.PresenceDefinition)
-                ) && 
+                ) &&
                 (
                     this.Message == other.Message ||
                     this.Message != null &&
                     this.Message.Equals(other.Message)
-                ) && 
+                ) &&
                 (
                     this.ModifiedDate == other.ModifiedDate ||
                     this.ModifiedDate != null &&
                     this.ModifiedDate.Equals(other.ModifiedDate)
-                )
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

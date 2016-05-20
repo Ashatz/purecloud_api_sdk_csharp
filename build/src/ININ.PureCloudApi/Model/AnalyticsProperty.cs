@@ -168,17 +168,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.PropertyType == other.PropertyType ||
                     this.PropertyType != null &&
                     this.PropertyType.Equals(other.PropertyType)
-                ) && 
+                ) &&
                 (
                     this.Property == other.Property ||
                     this.Property != null &&
                     this.Property.Equals(other.Property)
-                ) && 
+                ) &&
                 (
                     this.Value == other.Value ||
                     this.Value != null &&

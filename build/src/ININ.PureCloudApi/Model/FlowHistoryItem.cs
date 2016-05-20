@@ -255,42 +255,42 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.HistoryEventTime == other.HistoryEventTime ||
                     this.HistoryEventTime != null &&
                     this.HistoryEventTime.Equals(other.HistoryEventTime)
-                ) && 
+                ) &&
                 (
                     this.State == other.State ||
                     this.State != null &&
                     this.State.Equals(other.State)
-                ) && 
+                ) &&
                 (
                     this.WorkItem == other.WorkItem ||
                     this.WorkItem != null &&
                     this.WorkItem.Equals(other.WorkItem)
-                ) && 
+                ) &&
                 (
                     this.User == other.User ||
                     this.User != null &&
                     this.User.Equals(other.User)
-                ) && 
+                ) &&
                 (
                     this.Queue == other.Queue ||
                     this.Queue != null &&
                     this.Queue.Equals(other.Queue)
-                ) && 
+                ) &&
                 (
                     this.HistoryEventData == other.HistoryEventData ||
                     this.HistoryEventData != null &&
                     this.HistoryEventData.SequenceEqual(other.HistoryEventData)
-                ) && 
+                ) &&
                 (
                     this.HistoryEventType == other.HistoryEventType ||
                     this.HistoryEventType != null &&
                     this.HistoryEventType.Equals(other.HistoryEventType)
-                ) && 
+                ) &&
                 (
                     this.Success == other.Success ||
                     this.Success != null &&

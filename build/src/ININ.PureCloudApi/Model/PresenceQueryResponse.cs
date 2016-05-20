@@ -84,12 +84,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.SystemToOrganizationMappings == other.SystemToOrganizationMappings ||
                     this.SystemToOrganizationMappings != null &&
                     this.SystemToOrganizationMappings.SequenceEqual(other.SystemToOrganizationMappings)
-                ) && 
+                ) &&
                 (
                     this.Results == other.Results ||
                     this.Results != null &&

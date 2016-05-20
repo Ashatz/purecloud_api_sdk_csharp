@@ -24,7 +24,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="NoteText">NoteText.</param>
         /// <param name="ModifyDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="CreateDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        public Note(, string Name = null, string NoteText = null, DateTime? ModifyDate = null, DateTime? CreateDate = null)
+        public Note(string Name = null, string NoteText = null, DateTime? ModifyDate = null, DateTime? CreateDate = null)
         {
             this.Name = Name;
             this.NoteText = NoteText;
@@ -115,32 +115,32 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.NoteText == other.NoteText ||
                     this.NoteText != null &&
                     this.NoteText.Equals(other.NoteText)
-                ) && 
+                ) &&
                 (
                     this.ModifyDate == other.ModifyDate ||
                     this.ModifyDate != null &&
                     this.ModifyDate.Equals(other.ModifyDate)
-                ) && 
+                ) &&
                 (
                     this.CreateDate == other.CreateDate ||
                     this.CreateDate != null &&
                     this.CreateDate.Equals(other.CreateDate)
-                )
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

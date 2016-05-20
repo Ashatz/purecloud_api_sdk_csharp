@@ -99,12 +99,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Vlan == other.Vlan ||
                     this.Vlan != null &&
                     this.Vlan.Equals(other.Vlan)
-                ) && 
+                ) &&
                 (
                     this.Team == other.Team ||
                     this.Team != null &&

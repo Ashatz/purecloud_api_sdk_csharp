@@ -401,112 +401,112 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.SegmentStart == other.SegmentStart ||
                     this.SegmentStart != null &&
                     this.SegmentStart.Equals(other.SegmentStart)
-                ) && 
+                ) &&
                 (
                     this.SegmentEnd == other.SegmentEnd ||
                     this.SegmentEnd != null &&
                     this.SegmentEnd.Equals(other.SegmentEnd)
-                ) && 
+                ) &&
                 (
                     this.QueueId == other.QueueId ||
                     this.QueueId != null &&
                     this.QueueId.Equals(other.QueueId)
-                ) && 
+                ) &&
                 (
                     this.WrapUpCode == other.WrapUpCode ||
                     this.WrapUpCode != null &&
                     this.WrapUpCode.Equals(other.WrapUpCode)
-                ) && 
+                ) &&
                 (
                     this.WrapUpNote == other.WrapUpNote ||
                     this.WrapUpNote != null &&
                     this.WrapUpNote.Equals(other.WrapUpNote)
-                ) && 
+                ) &&
                 (
                     this.WrapUpTags == other.WrapUpTags ||
                     this.WrapUpTags != null &&
                     this.WrapUpTags.SequenceEqual(other.WrapUpTags)
-                ) && 
+                ) &&
                 (
                     this.ErrorCode == other.ErrorCode ||
                     this.ErrorCode != null &&
                     this.ErrorCode.Equals(other.ErrorCode)
-                ) && 
+                ) &&
                 (
                     this.DisconnectType == other.DisconnectType ||
                     this.DisconnectType != null &&
                     this.DisconnectType.Equals(other.DisconnectType)
-                ) && 
+                ) &&
                 (
                     this.SegmentType == other.SegmentType ||
                     this.SegmentType != null &&
                     this.SegmentType.Equals(other.SegmentType)
-                ) && 
+                ) &&
                 (
                     this.RequestedRoutingUserIds == other.RequestedRoutingUserIds ||
                     this.RequestedRoutingUserIds != null &&
                     this.RequestedRoutingUserIds.SequenceEqual(other.RequestedRoutingUserIds)
-                ) && 
+                ) &&
                 (
                     this.RequestedRoutingSkillIds == other.RequestedRoutingSkillIds ||
                     this.RequestedRoutingSkillIds != null &&
                     this.RequestedRoutingSkillIds.SequenceEqual(other.RequestedRoutingSkillIds)
-                ) && 
+                ) &&
                 (
                     this.RequestedLanguageId == other.RequestedLanguageId ||
                     this.RequestedLanguageId != null &&
                     this.RequestedLanguageId.Equals(other.RequestedLanguageId)
-                ) && 
+                ) &&
                 (
                     this.Properties == other.Properties ||
                     this.Properties != null &&
                     this.Properties.SequenceEqual(other.Properties)
-                ) && 
+                ) &&
                 (
                     this.SourceConversationId == other.SourceConversationId ||
                     this.SourceConversationId != null &&
                     this.SourceConversationId.Equals(other.SourceConversationId)
-                ) && 
+                ) &&
                 (
                     this.DestinationConversationId == other.DestinationConversationId ||
                     this.DestinationConversationId != null &&
                     this.DestinationConversationId.Equals(other.DestinationConversationId)
-                ) && 
+                ) &&
                 (
                     this.SourceSessionId == other.SourceSessionId ||
                     this.SourceSessionId != null &&
                     this.SourceSessionId.Equals(other.SourceSessionId)
-                ) && 
+                ) &&
                 (
                     this.DestinationSessionId == other.DestinationSessionId ||
                     this.DestinationSessionId != null &&
                     this.DestinationSessionId.Equals(other.DestinationSessionId)
-                ) && 
+                ) &&
                 (
                     this.SipResponseCodes == other.SipResponseCodes ||
                     this.SipResponseCodes != null &&
                     this.SipResponseCodes.SequenceEqual(other.SipResponseCodes)
-                ) && 
+                ) &&
                 (
                     this.Q850ResponseCodes == other.Q850ResponseCodes ||
                     this.Q850ResponseCodes != null &&
                     this.Q850ResponseCodes.SequenceEqual(other.Q850ResponseCodes)
-                ) && 
+                ) &&
                 (
                     this.Conference == other.Conference ||
                     this.Conference != null &&
                     this.Conference.Equals(other.Conference)
-                ) && 
+                ) &&
                 (
                     this.GroupId == other.GroupId ||
                     this.GroupId != null &&
                     this.GroupId.Equals(other.GroupId)
-                ) && 
+                ) &&
                 (
                     this.Subject == other.Subject ||
                     this.Subject != null &&

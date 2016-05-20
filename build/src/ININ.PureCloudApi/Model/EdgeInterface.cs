@@ -106,7 +106,7 @@ namespace ININ.PureCloudApi.Model
         /// Gets or Sets LineTypes
         /// </summary>
         [DataMember(Name="lineTypes", EmitDefaultValue=false)]
-        public List<string> LineTypes { get; set; }
+        public List<LineTypesEnum> LineTypes { get; set; }
         /// <summary>
         /// Gets or Sets AddressFamilyId
         /// </summary>
@@ -163,42 +163,42 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Type == other.Type ||
                     this.Type != null &&
                     this.Type.Equals(other.Type)
-                ) && 
+                ) &&
                 (
                     this.IpAddress == other.IpAddress ||
                     this.IpAddress != null &&
                     this.IpAddress.Equals(other.IpAddress)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.MacAddress == other.MacAddress ||
                     this.MacAddress != null &&
                     this.MacAddress.Equals(other.MacAddress)
-                ) && 
+                ) &&
                 (
                     this.IfName == other.IfName ||
                     this.IfName != null &&
                     this.IfName.Equals(other.IfName)
-                ) && 
+                ) &&
                 (
                     this.Endpoints == other.Endpoints ||
                     this.Endpoints != null &&
                     this.Endpoints.SequenceEqual(other.Endpoints)
-                ) && 
+                ) &&
                 (
                     this.LineTypes == other.LineTypes ||
                     this.LineTypes != null &&
                     this.LineTypes.SequenceEqual(other.LineTypes)
-                ) && 
+                ) &&
                 (
                     this.AddressFamilyId == other.AddressFamilyId ||
                     this.AddressFamilyId != null &&

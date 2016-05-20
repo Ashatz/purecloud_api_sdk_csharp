@@ -1570,27 +1570,27 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.OrderTns == other.OrderTns ||
                     this.OrderTns != null &&
                     this.OrderTns.SequenceEqual(other.OrderTns)
-                ) && 
+                ) &&
                 (
                     this.ReservationIds == other.ReservationIds ||
                     this.ReservationIds != null &&
                     this.ReservationIds.SequenceEqual(other.ReservationIds)
-                ) && 
+                ) &&
                 (
                     this.OrderId == other.OrderId ||
                     this.OrderId != null &&
                     this.OrderId.Equals(other.OrderId)
-                ) && 
+                ) &&
                 (
                     this.EffectiveDate == other.EffectiveDate ||
                     this.EffectiveDate != null &&
                     this.EffectiveDate.Equals(other.EffectiveDate)
-                ) && 
+                ) &&
                 (
                     this.PhoneNumberType == other.PhoneNumberType ||
                     this.PhoneNumberType != null &&

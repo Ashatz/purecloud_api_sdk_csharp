@@ -193,27 +193,27 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.ParticipantId == other.ParticipantId ||
                     this.ParticipantId != null &&
                     this.ParticipantId.Equals(other.ParticipantId)
-                ) && 
+                ) &&
                 (
                     this.ParticipantName == other.ParticipantName ||
                     this.ParticipantName != null &&
                     this.ParticipantName.Equals(other.ParticipantName)
-                ) && 
+                ) &&
                 (
                     this.UserId == other.UserId ||
                     this.UserId != null &&
                     this.UserId.Equals(other.UserId)
-                ) && 
+                ) &&
                 (
                     this.Purpose == other.Purpose ||
                     this.Purpose != null &&
                     this.Purpose.Equals(other.Purpose)
-                ) && 
+                ) &&
                 (
                     this.Sessions == other.Sessions ||
                     this.Sessions != null &&

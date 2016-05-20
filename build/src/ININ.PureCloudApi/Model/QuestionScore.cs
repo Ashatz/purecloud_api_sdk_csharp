@@ -131,32 +131,32 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.QuestionId == other.QuestionId ||
                     this.QuestionId != null &&
                     this.QuestionId.Equals(other.QuestionId)
-                ) && 
+                ) &&
                 (
                     this.AnswerId == other.AnswerId ||
                     this.AnswerId != null &&
                     this.AnswerId.Equals(other.AnswerId)
-                ) && 
+                ) &&
                 (
                     this.Score == other.Score ||
                     this.Score != null &&
                     this.Score.Equals(other.Score)
-                ) && 
+                ) &&
                 (
                     this.MarkedNA == other.MarkedNA ||
                     this.MarkedNA != null &&
                     this.MarkedNA.Equals(other.MarkedNA)
-                ) && 
+                ) &&
                 (
                     this.FailedKillQuestion == other.FailedKillQuestion ||
                     this.FailedKillQuestion != null &&
                     this.FailedKillQuestion.Equals(other.FailedKillQuestion)
-                ) && 
+                ) &&
                 (
                     this.Comments == other.Comments ||
                     this.Comments != null &&

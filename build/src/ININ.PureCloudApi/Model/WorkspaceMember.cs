@@ -52,7 +52,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="User">User.</param>
         /// <param name="Group">Group.</param>
         /// <param name="SecurityProfile">SecurityProfile.</param>
-        public WorkspaceMember(, string Name = null, UriReference Workspace = null, MemberTypeEnum? MemberType = null, UriReference Member = null, User User = null, Group Group = null, SecurityProfile SecurityProfile = null)
+        public WorkspaceMember(string Name = null, UriReference Workspace = null, MemberTypeEnum? MemberType = null, UriReference Member = null, User User = null, Group Group = null, SecurityProfile SecurityProfile = null)
         {
             this.Name = Name;
             this.Workspace = Workspace;
@@ -157,47 +157,47 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Workspace == other.Workspace ||
                     this.Workspace != null &&
                     this.Workspace.Equals(other.Workspace)
-                ) && 
+                ) &&
                 (
                     this.MemberType == other.MemberType ||
                     this.MemberType != null &&
                     this.MemberType.Equals(other.MemberType)
-                ) && 
+                ) &&
                 (
                     this.Member == other.Member ||
                     this.Member != null &&
                     this.Member.Equals(other.Member)
-                ) && 
+                ) &&
                 (
                     this.User == other.User ||
                     this.User != null &&
                     this.User.Equals(other.User)
-                ) && 
+                ) &&
                 (
                     this.Group == other.Group ||
                     this.Group != null &&
                     this.Group.Equals(other.Group)
-                ) && 
+                ) &&
                 (
                     this.SecurityProfile == other.SecurityProfile ||
                     this.SecurityProfile != null &&
                     this.SecurityProfile.Equals(other.SecurityProfile)
-                )
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

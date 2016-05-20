@@ -115,17 +115,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.StateExecId == other.StateExecId ||
                     this.StateExecId != null &&
                     this.StateExecId.Equals(other.StateExecId)
-                ) && 
+                ) &&
                 (
                     this.StateConfigId == other.StateConfigId ||
                     this.StateConfigId != null &&
                     this.StateConfigId.Equals(other.StateConfigId)
-                ) && 
+                ) &&
                 (
                     this.StateName == other.StateName ||
                     this.StateName != null &&

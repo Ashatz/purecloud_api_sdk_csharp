@@ -365,82 +365,82 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.State == other.State ||
                     this.State != null &&
                     this.State.Equals(other.State)
-                ) && 
+                ) &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Segments == other.Segments ||
                     this.Segments != null &&
                     this.Segments.SequenceEqual(other.Segments)
-                ) && 
+                ) &&
                 (
                     this.Direction == other.Direction ||
                     this.Direction != null &&
                     this.Direction.Equals(other.Direction)
-                ) && 
+                ) &&
                 (
                     this.Held == other.Held ||
                     this.Held != null &&
                     this.Held.Equals(other.Held)
-                ) && 
+                ) &&
                 (
                     this.DisconnectType == other.DisconnectType ||
                     this.DisconnectType != null &&
                     this.DisconnectType.Equals(other.DisconnectType)
-                ) && 
+                ) &&
                 (
                     this.StartHoldTime == other.StartHoldTime ||
                     this.StartHoldTime != null &&
                     this.StartHoldTime.Equals(other.StartHoldTime)
-                ) && 
+                ) &&
                 (
                     this.DialerPreview == other.DialerPreview ||
                     this.DialerPreview != null &&
                     this.DialerPreview.Equals(other.DialerPreview)
-                ) && 
+                ) &&
                 (
                     this.CallbackNumbers == other.CallbackNumbers ||
                     this.CallbackNumbers != null &&
                     this.CallbackNumbers.SequenceEqual(other.CallbackNumbers)
-                ) && 
+                ) &&
                 (
                     this.CallbackUserName == other.CallbackUserName ||
                     this.CallbackUserName != null &&
                     this.CallbackUserName.Equals(other.CallbackUserName)
-                ) && 
+                ) &&
                 (
                     this.ScriptId == other.ScriptId ||
                     this.ScriptId != null &&
                     this.ScriptId.Equals(other.ScriptId)
-                ) && 
+                ) &&
                 (
                     this.SkipEnabled == other.SkipEnabled ||
                     this.SkipEnabled != null &&
                     this.SkipEnabled.Equals(other.SkipEnabled)
-                ) && 
+                ) &&
                 (
                     this.TimeoutSeconds == other.TimeoutSeconds ||
                     this.TimeoutSeconds != null &&
                     this.TimeoutSeconds.Equals(other.TimeoutSeconds)
-                ) && 
+                ) &&
                 (
                     this.ConnectedTime == other.ConnectedTime ||
                     this.ConnectedTime != null &&
                     this.ConnectedTime.Equals(other.ConnectedTime)
-                ) && 
+                ) &&
                 (
                     this.DisconnectedTime == other.DisconnectedTime ||
                     this.DisconnectedTime != null &&
                     this.DisconnectedTime.Equals(other.DisconnectedTime)
-                ) && 
+                ) &&
                 (
                     this.CallbackScheduledTime == other.CallbackScheduledTime ||
                     this.CallbackScheduledTime != null &&

@@ -155,32 +155,32 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Provisions == other.Provisions ||
                     this.Provisions != null &&
                     this.Provisions.Equals(other.Provisions)
-                ) && 
+                ) &&
                 (
                     this.Registers == other.Registers ||
                     this.Registers != null &&
                     this.Registers.Equals(other.Registers)
-                ) && 
+                ) &&
                 (
                     this.DualRegisters == other.DualRegisters ||
                     this.DualRegisters != null &&
                     this.DualRegisters.Equals(other.DualRegisters)
-                ) && 
+                ) &&
                 (
                     this.HardwareIdType == other.HardwareIdType ||
                     this.HardwareIdType != null &&
                     this.HardwareIdType.Equals(other.HardwareIdType)
-                ) && 
+                ) &&
                 (
                     this.AllowReboot == other.AllowReboot ||
                     this.AllowReboot != null &&
                     this.AllowReboot.Equals(other.AllowReboot)
-                ) && 
+                ) &&
                 (
                     this.NoRebalance == other.NoRebalance ||
                     this.NoRebalance != null &&

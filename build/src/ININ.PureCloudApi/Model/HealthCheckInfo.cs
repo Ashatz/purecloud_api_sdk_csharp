@@ -256,7 +256,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Status">Status.</param>
         /// <param name="PingMs">PingMs.</param>
         /// <param name="Date">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        public HealthCheckInfo(, string Name = null, string BuildTime = null, string BuildVersion = null, string ImplementationVersion = null, StatusEnum? Status = null, int? PingMs = null, DateTime? Date = null)
+        public HealthCheckInfo(string Name = null, string BuildTime = null, string BuildVersion = null, string ImplementationVersion = null, StatusEnum? Status = null, int? PingMs = null, DateTime? Date = null)
         {
             this.Name = Name;
             this.BuildTime = BuildTime;
@@ -362,47 +362,47 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
-                ) && 
+                ) &&
                 (
                     this.BuildTime == other.BuildTime ||
                     this.BuildTime != null &&
                     this.BuildTime.Equals(other.BuildTime)
-                ) && 
+                ) &&
                 (
                     this.BuildVersion == other.BuildVersion ||
                     this.BuildVersion != null &&
                     this.BuildVersion.Equals(other.BuildVersion)
-                ) && 
+                ) &&
                 (
                     this.ImplementationVersion == other.ImplementationVersion ||
                     this.ImplementationVersion != null &&
                     this.ImplementationVersion.Equals(other.ImplementationVersion)
-                ) && 
+                ) &&
                 (
                     this.Status == other.Status ||
                     this.Status != null &&
                     this.Status.Equals(other.Status)
-                ) && 
+                ) &&
                 (
                     this.PingMs == other.PingMs ||
                     this.PingMs != null &&
                     this.PingMs.Equals(other.PingMs)
-                ) && 
+                ) &&
                 (
                     this.Date == other.Date ||
                     this.Date != null &&

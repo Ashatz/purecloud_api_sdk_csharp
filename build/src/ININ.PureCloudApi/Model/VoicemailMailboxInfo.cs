@@ -117,32 +117,32 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.UsageSizeBytes == other.UsageSizeBytes ||
                     this.UsageSizeBytes != null &&
                     this.UsageSizeBytes.Equals(other.UsageSizeBytes)
-                ) && 
+                ) &&
                 (
                     this.TotalCount == other.TotalCount ||
                     this.TotalCount != null &&
                     this.TotalCount.Equals(other.TotalCount)
-                ) && 
+                ) &&
                 (
                     this.UnreadCount == other.UnreadCount ||
                     this.UnreadCount != null &&
                     this.UnreadCount.Equals(other.UnreadCount)
-                ) && 
+                ) &&
                 (
                     this.VoicemailPolicy == other.VoicemailPolicy ||
                     this.VoicemailPolicy != null &&
                     this.VoicemailPolicy.Equals(other.VoicemailPolicy)
-                ) && 
+                ) &&
                 (
                     this.CreatedDate == other.CreatedDate ||
                     this.CreatedDate != null &&
                     this.CreatedDate.Equals(other.CreatedDate)
-                ) && 
+                ) &&
                 (
                     this.ModifiedDate == other.ModifiedDate ||
                     this.ModifiedDate != null &&

@@ -23,7 +23,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Name">Name.</param>
         /// <param name="User">User.</param>
         /// <param name="LicenseId">LicenseId.</param>
-        public UserLicenseAssignment(, string Name = null, User User = null, string LicenseId = null)
+        public UserLicenseAssignment(string Name = null, User User = null, string LicenseId = null)
         {
             this.Name = Name;
             this.User = User;
@@ -105,27 +105,27 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.User == other.User ||
                     this.User != null &&
                     this.User.Equals(other.User)
-                ) && 
+                ) &&
                 (
                     this.LicenseId == other.LicenseId ||
                     this.LicenseId != null &&
                     this.LicenseId.Equals(other.LicenseId)
-                )
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

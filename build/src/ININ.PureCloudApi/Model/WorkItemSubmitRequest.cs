@@ -98,12 +98,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.CommandId == other.CommandId ||
                     this.CommandId != null &&
                     this.CommandId.Equals(other.CommandId)
-                ) && 
+                ) &&
                 (
                     this.DataItems == other.DataItems ||
                     this.DataItems != null &&

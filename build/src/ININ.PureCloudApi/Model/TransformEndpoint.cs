@@ -35,7 +35,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="BatchSize">The number of entities to send in an array for batch POSTs, or 0 for unbatched POSTs.</param>
         /// <param name="Parallelism">The number of parallel POSTs to allow at once.</param>
         /// <param name="UpdateProgressEvery">The swagger route to use.</param>
-        public TransformEndpoint(, string Name = null, string SwaggerUrl = null, string Route = null, string Entity = null, string ApiFunction = null, bool? Ready = null, bool? Active = null, int? BatchSize = null, int? Parallelism = null, int? UpdateProgressEvery = null)
+        public TransformEndpoint(string Name = null, string SwaggerUrl = null, string Route = null, string Entity = null, string ApiFunction = null, bool? Ready = null, bool? Active = null, int? BatchSize = null, int? Parallelism = null, int? UpdateProgressEvery = null)
         {
             // to ensure "Ready" is required (not null)
             if (Ready == null)
@@ -191,62 +191,62 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.SwaggerUrl == other.SwaggerUrl ||
                     this.SwaggerUrl != null &&
                     this.SwaggerUrl.Equals(other.SwaggerUrl)
-                ) && 
+                ) &&
                 (
                     this.Route == other.Route ||
                     this.Route != null &&
                     this.Route.Equals(other.Route)
-                ) && 
+                ) &&
                 (
                     this.Entity == other.Entity ||
                     this.Entity != null &&
                     this.Entity.Equals(other.Entity)
-                ) && 
+                ) &&
                 (
                     this.ApiFunction == other.ApiFunction ||
                     this.ApiFunction != null &&
                     this.ApiFunction.Equals(other.ApiFunction)
-                ) && 
+                ) &&
                 (
                     this.Ready == other.Ready ||
                     this.Ready != null &&
                     this.Ready.Equals(other.Ready)
-                ) && 
+                ) &&
                 (
                     this.Active == other.Active ||
                     this.Active != null &&
                     this.Active.Equals(other.Active)
-                ) && 
+                ) &&
                 (
                     this.BatchSize == other.BatchSize ||
                     this.BatchSize != null &&
                     this.BatchSize.Equals(other.BatchSize)
-                ) && 
+                ) &&
                 (
                     this.Parallelism == other.Parallelism ||
                     this.Parallelism != null &&
                     this.Parallelism.Equals(other.Parallelism)
-                ) && 
+                ) &&
                 (
                     this.UpdateProgressEvery == other.UpdateProgressEvery ||
                     this.UpdateProgressEvery != null &&
                     this.UpdateProgressEvery.Equals(other.UpdateProgressEvery)
-                )
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

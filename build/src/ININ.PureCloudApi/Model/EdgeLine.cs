@@ -66,7 +66,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Endpoint">Endpoint.</param>
         /// <param name="IpAddress">IpAddress.</param>
         /// <param name="LogicalInterfaceId">LogicalInterfaceId.</param>
-        public EdgeLine(, string Name = null, UriReference Schema = null, Dictionary<string, Object> Properties = null, Edge Edge = null, EdgeGroup EdgeGroup = null, LineTypeEnum? LineType = null, Endpoint Endpoint = null, string IpAddress = null, string LogicalInterfaceId = null)
+        public EdgeLine(string Name = null, UriReference Schema = null, Dictionary<string, Object> Properties = null, Edge Edge = null, EdgeGroup EdgeGroup = null, LineTypeEnum? LineType = null, Endpoint Endpoint = null, string IpAddress = null, string LogicalInterfaceId = null)
         {
             this.Name = Name;
             this.Schema = Schema;
@@ -185,57 +185,57 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Schema == other.Schema ||
                     this.Schema != null &&
                     this.Schema.Equals(other.Schema)
-                ) && 
+                ) &&
                 (
                     this.Properties == other.Properties ||
                     this.Properties != null &&
                     this.Properties.SequenceEqual(other.Properties)
-                ) && 
+                ) &&
                 (
                     this.Edge == other.Edge ||
                     this.Edge != null &&
                     this.Edge.Equals(other.Edge)
-                ) && 
+                ) &&
                 (
                     this.EdgeGroup == other.EdgeGroup ||
                     this.EdgeGroup != null &&
                     this.EdgeGroup.Equals(other.EdgeGroup)
-                ) && 
+                ) &&
                 (
                     this.LineType == other.LineType ||
                     this.LineType != null &&
                     this.LineType.Equals(other.LineType)
-                ) && 
+                ) &&
                 (
                     this.Endpoint == other.Endpoint ||
                     this.Endpoint != null &&
                     this.Endpoint.Equals(other.Endpoint)
-                ) && 
+                ) &&
                 (
                     this.IpAddress == other.IpAddress ||
                     this.IpAddress != null &&
                     this.IpAddress.Equals(other.IpAddress)
-                ) && 
+                ) &&
                 (
                     this.LogicalInterfaceId == other.LogicalInterfaceId ||
                     this.LogicalInterfaceId != null &&
                     this.LogicalInterfaceId.Equals(other.LogicalInterfaceId)
-                )
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

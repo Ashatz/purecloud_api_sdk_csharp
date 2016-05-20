@@ -302,67 +302,67 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.State == other.State ||
                     this.State != null &&
                     this.State.Equals(other.State)
-                ) && 
+                ) &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Held == other.Held ||
                     this.Held != null &&
                     this.Held.Equals(other.Held)
-                ) && 
+                ) &&
                 (
                     this.Subject == other.Subject ||
                     this.Subject != null &&
                     this.Subject.Equals(other.Subject)
-                ) && 
+                ) &&
                 (
                     this.MessagesSent == other.MessagesSent ||
                     this.MessagesSent != null &&
                     this.MessagesSent.Equals(other.MessagesSent)
-                ) && 
+                ) &&
                 (
                     this.Segments == other.Segments ||
                     this.Segments != null &&
                     this.Segments.SequenceEqual(other.Segments)
-                ) && 
+                ) &&
                 (
                     this.Direction == other.Direction ||
                     this.Direction != null &&
                     this.Direction.Equals(other.Direction)
-                ) && 
+                ) &&
                 (
                     this.RecordingId == other.RecordingId ||
                     this.RecordingId != null &&
                     this.RecordingId.Equals(other.RecordingId)
-                ) && 
+                ) &&
                 (
                     this.ErrorInfo == other.ErrorInfo ||
                     this.ErrorInfo != null &&
                     this.ErrorInfo.Equals(other.ErrorInfo)
-                ) && 
+                ) &&
                 (
                     this.DisconnectType == other.DisconnectType ||
                     this.DisconnectType != null &&
                     this.DisconnectType.Equals(other.DisconnectType)
-                ) && 
+                ) &&
                 (
                     this.StartHoldTime == other.StartHoldTime ||
                     this.StartHoldTime != null &&
                     this.StartHoldTime.Equals(other.StartHoldTime)
-                ) && 
+                ) &&
                 (
                     this.ConnectedTime == other.ConnectedTime ||
                     this.ConnectedTime != null &&
                     this.ConnectedTime.Equals(other.ConnectedTime)
-                ) && 
+                ) &&
                 (
                     this.DisconnectedTime == other.DisconnectedTime ||
                     this.DisconnectedTime != null &&

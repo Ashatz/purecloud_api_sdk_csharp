@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Features">Features.</param>
         /// <param name="Variables">Variables.</param>
         /// <param name="CustomActions">CustomActions.</param>
-        public Script(, string Name = null, string VersionId = null, DateTime? CreatedDate = null, DateTime? ModifiedDate = null, DateTime? PublishedDate = null, DateTime? VersionDate = null, string StartPageId = null, string StartPageName = null, Object Features = null, Object Variables = null, Object CustomActions = null)
+        public Script(string Name = null, string VersionId = null, DateTime? CreatedDate = null, DateTime? ModifiedDate = null, DateTime? PublishedDate = null, DateTime? VersionDate = null, string StartPageId = null, string StartPageName = null, Object Features = null, Object Variables = null, Object CustomActions = null)
         {
             this.Name = Name;
             this.VersionId = VersionId;
@@ -173,67 +173,67 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.VersionId == other.VersionId ||
                     this.VersionId != null &&
                     this.VersionId.Equals(other.VersionId)
-                ) && 
+                ) &&
                 (
                     this.CreatedDate == other.CreatedDate ||
                     this.CreatedDate != null &&
                     this.CreatedDate.Equals(other.CreatedDate)
-                ) && 
+                ) &&
                 (
                     this.ModifiedDate == other.ModifiedDate ||
                     this.ModifiedDate != null &&
                     this.ModifiedDate.Equals(other.ModifiedDate)
-                ) && 
+                ) &&
                 (
                     this.PublishedDate == other.PublishedDate ||
                     this.PublishedDate != null &&
                     this.PublishedDate.Equals(other.PublishedDate)
-                ) && 
+                ) &&
                 (
                     this.VersionDate == other.VersionDate ||
                     this.VersionDate != null &&
                     this.VersionDate.Equals(other.VersionDate)
-                ) && 
+                ) &&
                 (
                     this.StartPageId == other.StartPageId ||
                     this.StartPageId != null &&
                     this.StartPageId.Equals(other.StartPageId)
-                ) && 
+                ) &&
                 (
                     this.StartPageName == other.StartPageName ||
                     this.StartPageName != null &&
                     this.StartPageName.Equals(other.StartPageName)
-                ) && 
+                ) &&
                 (
                     this.Features == other.Features ||
                     this.Features != null &&
                     this.Features.Equals(other.Features)
-                ) && 
+                ) &&
                 (
                     this.Variables == other.Variables ||
                     this.Variables != null &&
                     this.Variables.Equals(other.Variables)
-                ) && 
+                ) &&
                 (
                     this.CustomActions == other.CustomActions ||
                     this.CustomActions != null &&
                     this.CustomActions.Equals(other.CustomActions)
-                )
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

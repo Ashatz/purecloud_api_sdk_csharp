@@ -22,7 +22,7 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="Body">Body.</param>
-        public QueryResult(, string Name = null, DomainEntity Body = null)
+        public QueryResult(string Name = null, DomainEntity Body = null)
         {
             this.Name = Name;
             this.Body = Body;
@@ -97,22 +97,22 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Body == other.Body ||
                     this.Body != null &&
                     this.Body.Equals(other.Body)
-                )
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

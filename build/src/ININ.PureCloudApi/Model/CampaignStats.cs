@@ -97,22 +97,22 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.ContactRate == other.ContactRate ||
                     this.ContactRate != null &&
                     this.ContactRate.Equals(other.ContactRate)
-                )
+                ) &&
                 (
                     this.IdleAgents == other.IdleAgents ||
                     this.IdleAgents != null &&
                     this.IdleAgents.Equals(other.IdleAgents)
-                ) && 
+                ) &&
                 (
                     this.AdjustedCallsPerAgent == other.AdjustedCallsPerAgent ||
                     this.AdjustedCallsPerAgent != null &&
                     this.AdjustedCallsPerAgent.Equals(other.AdjustedCallsPerAgent)
-                ) && 
+                ) &&
                 (
                     this.OutstandingCalls == other.OutstandingCalls ||
                     this.OutstandingCalls != null &&

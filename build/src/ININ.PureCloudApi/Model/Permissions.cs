@@ -22,7 +22,7 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="Ids">Ids.</param>
-        public Permissions(, string Name = null, List<string> Ids = null)
+        public Permissions(string Name = null, List<string> Ids = null)
         {
             this.Name = Name;
             this.Ids = Ids;
@@ -90,17 +90,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Ids == other.Ids ||
                     this.Ids != null &&

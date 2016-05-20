@@ -25,7 +25,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Evaluator">Evaluator.</param>
         /// <param name="NumEvaluations">NumEvaluations.</param>
         /// <param name="AverageEvaluationScore">AverageEvaluationScore.</param>
-        public AgentEvaluatorActivity(, string Name = null, User Agent = null, User Evaluator = null, int? NumEvaluations = null, int? AverageEvaluationScore = null)
+        public AgentEvaluatorActivity(string Name = null, User Agent = null, User Evaluator = null, int? NumEvaluations = null, int? AverageEvaluationScore = null)
         {
             this.Name = Name;
             this.Agent = Agent;
@@ -121,37 +121,37 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Agent == other.Agent ||
                     this.Agent != null &&
                     this.Agent.Equals(other.Agent)
-                ) && 
+                ) &&
                 (
                     this.Evaluator == other.Evaluator ||
                     this.Evaluator != null &&
                     this.Evaluator.Equals(other.Evaluator)
-                ) && 
+                ) &&
                 (
                     this.NumEvaluations == other.NumEvaluations ||
                     this.NumEvaluations != null &&
                     this.NumEvaluations.Equals(other.NumEvaluations)
-                ) && 
+                ) &&
                 (
                     this.AverageEvaluationScore == other.AverageEvaluationScore ||
                     this.AverageEvaluationScore != null &&
                     this.AverageEvaluationScore.Equals(other.AverageEvaluationScore)
-                )
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

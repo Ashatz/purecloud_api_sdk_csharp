@@ -139,37 +139,37 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.RetainRecording == other.RetainRecording ||
                     this.RetainRecording != null &&
                     this.RetainRecording.Equals(other.RetainRecording)
-                ) && 
+                ) &&
                 (
                     this.DeleteRecording == other.DeleteRecording ||
                     this.DeleteRecording != null &&
                     this.DeleteRecording.Equals(other.DeleteRecording)
-                ) && 
+                ) &&
                 (
                     this.AssignEvaluations == other.AssignEvaluations ||
                     this.AssignEvaluations != null &&
                     this.AssignEvaluations.SequenceEqual(other.AssignEvaluations)
-                ) && 
+                ) &&
                 (
                     this.AssignMeteredEvaluations == other.AssignMeteredEvaluations ||
                     this.AssignMeteredEvaluations != null &&
                     this.AssignMeteredEvaluations.SequenceEqual(other.AssignMeteredEvaluations)
-                ) && 
+                ) &&
                 (
                     this.AssignCalibrations == other.AssignCalibrations ||
                     this.AssignCalibrations != null &&
                     this.AssignCalibrations.SequenceEqual(other.AssignCalibrations)
-                ) && 
+                ) &&
                 (
                     this.RetentionDuration == other.RetentionDuration ||
                     this.RetentionDuration != null &&
                     this.RetentionDuration.Equals(other.RetentionDuration)
-                ) && 
+                ) &&
                 (
                     this.InitiateScreenRecording == other.InitiateScreenRecording ||
                     this.InitiateScreenRecording != null &&

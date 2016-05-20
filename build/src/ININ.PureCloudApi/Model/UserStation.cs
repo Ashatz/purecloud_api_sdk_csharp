@@ -23,7 +23,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="AssociatedUser">AssociatedUser.</param>
         /// <param name="AssociatedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="DefaultUser">DefaultUser.</param>
-        public UserStation(, User AssociatedUser = null, DateTime? AssociatedDate = null, User DefaultUser = null)
+        public UserStation(User AssociatedUser = null, DateTime? AssociatedDate = null, User DefaultUser = null)
         {
             this.AssociatedUser = AssociatedUser;
             this.AssociatedDate = AssociatedDate;
@@ -99,22 +99,22 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.AssociatedUser == other.AssociatedUser ||
                     this.AssociatedUser != null &&
                     this.AssociatedUser.Equals(other.AssociatedUser)
-                ) && 
+                ) &&
                 (
                     this.AssociatedDate == other.AssociatedDate ||
                     this.AssociatedDate != null &&
                     this.AssociatedDate.Equals(other.AssociatedDate)
-                ) && 
+                ) &&
                 (
                     this.DefaultUser == other.DefaultUser ||
                     this.DefaultUser != null &&

@@ -85,12 +85,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.EnabledCount == other.EnabledCount ||
                     this.EnabledCount != null &&
                     this.EnabledCount.Equals(other.EnabledCount)
-                ) && 
+                ) &&
                 (
                     this.DisabledCount == other.DisabledCount ||
                     this.DisabledCount != null &&

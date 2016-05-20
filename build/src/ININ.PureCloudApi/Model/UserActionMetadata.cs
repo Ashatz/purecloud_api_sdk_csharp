@@ -28,7 +28,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Tags">Tags.</param>
         /// <param name="HelpLink">HelpLink.</param>
         /// <param name="Requests">Requests.</param>
-        public UserActionMetadata(, string Name = null, string Category = null, bool? Deprecated = null, string Description = null, bool? Published = null, List<string> Tags = null, string HelpLink = null, List<UserActionMetadataRequest> Requests = null)
+        public UserActionMetadata(string Name = null, string Category = null, bool? Deprecated = null, string Description = null, bool? Published = null, List<string> Tags = null, string HelpLink = null, List<UserActionMetadataRequest> Requests = null)
         {
             this.Name = Name;
             this.Category = Category;
@@ -161,52 +161,52 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Category == other.Category ||
                     this.Category != null &&
                     this.Category.Equals(other.Category)
-                ) && 
+                ) &&
                 (
                     this.Deprecated == other.Deprecated ||
                     this.Deprecated != null &&
                     this.Deprecated.Equals(other.Deprecated)
-                ) && 
+                ) &&
                 (
                     this.Description == other.Description ||
                     this.Description != null &&
                     this.Description.Equals(other.Description)
-                ) && 
+                ) &&
                 (
                     this.Published == other.Published ||
                     this.Published != null &&
                     this.Published.Equals(other.Published)
-                ) && 
+                ) &&
                 (
                     this.Tags == other.Tags ||
                     this.Tags != null &&
                     this.Tags.SequenceEqual(other.Tags)
-                ) && 
+                ) &&
                 (
                     this.HelpLink == other.HelpLink ||
                     this.HelpLink != null &&
                     this.HelpLink.Equals(other.HelpLink)
-                ) && 
+                ) &&
                 (
                     this.Requests == other.Requests ||
                     this.Requests != null &&
                     this.Requests.SequenceEqual(other.Requests)
-                )
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

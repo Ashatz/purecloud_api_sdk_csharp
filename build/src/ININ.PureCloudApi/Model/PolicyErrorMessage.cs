@@ -124,37 +124,37 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.StatusCode == other.StatusCode ||
                     this.StatusCode != null &&
                     this.StatusCode.Equals(other.StatusCode)
-                ) && 
+                ) &&
                 (
                     this.UserMessage == other.UserMessage ||
                     this.UserMessage != null &&
                     this.UserMessage.Equals(other.UserMessage)
-                ) && 
+                ) &&
                 (
                     this.UserParamsMessage == other.UserParamsMessage ||
                     this.UserParamsMessage != null &&
                     this.UserParamsMessage.Equals(other.UserParamsMessage)
-                ) && 
+                ) &&
                 (
                     this.ErrorCode == other.ErrorCode ||
                     this.ErrorCode != null &&
                     this.ErrorCode.Equals(other.ErrorCode)
-                ) && 
+                ) &&
                 (
                     this.CorrelationId == other.CorrelationId ||
                     this.CorrelationId != null &&
                     this.CorrelationId.Equals(other.CorrelationId)
-                ) && 
+                ) &&
                 (
                     this.UserParams == other.UserParams ||
                     this.UserParams != null &&
                     this.UserParams.SequenceEqual(other.UserParams)
-                ) && 
+                ) &&
                 (
                     this.InsertDate == other.InsertDate ||
                     this.InsertDate != null &&

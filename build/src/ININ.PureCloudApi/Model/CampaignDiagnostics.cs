@@ -92,17 +92,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.CallableContacts == other.CallableContacts ||
                     this.CallableContacts != null &&
                     this.CallableContacts.Equals(other.CallableContacts)
-                ) && 
+                ) &&
                 (
                     this.QueueUtilizationDiagnostic == other.QueueUtilizationDiagnostic ||
                     this.QueueUtilizationDiagnostic != null &&
                     this.QueueUtilizationDiagnostic.Equals(other.QueueUtilizationDiagnostic)
-                )
+                ) &&
                 (
                     this.OutstandingInteractionsCount == other.OutstandingInteractionsCount ||
                     this.OutstandingInteractionsCount != null &&

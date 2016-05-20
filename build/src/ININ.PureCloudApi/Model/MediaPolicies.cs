@@ -94,17 +94,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.CallPolicy == other.CallPolicy ||
                     this.CallPolicy != null &&
                     this.CallPolicy.Equals(other.CallPolicy)
-                ) && 
+                ) &&
                 (
                     this.ChatPolicy == other.ChatPolicy ||
                     this.ChatPolicy != null &&
                     this.ChatPolicy.Equals(other.ChatPolicy)
-                ) && 
+                ) &&
                 (
                     this.EmailPolicy == other.EmailPolicy ||
                     this.EmailPolicy != null &&

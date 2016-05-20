@@ -135,32 +135,32 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.ChangeNumber == other.ChangeNumber ||
                     this.ChangeNumber != null &&
                     this.ChangeNumber.Equals(other.ChangeNumber)
-                ) && 
+                ) &&
                 (
                     this.UploadStatus == other.UploadStatus ||
                     this.UploadStatus != null &&
                     this.UploadStatus.Equals(other.UploadStatus)
-                ) && 
+                ) &&
                 (
                     this.UploadDestinationUri == other.UploadDestinationUri ||
                     this.UploadDestinationUri != null &&
                     this.UploadDestinationUri.Equals(other.UploadDestinationUri)
-                ) && 
+                ) &&
                 (
                     this.UploadMethod == other.UploadMethod ||
                     this.UploadMethod != null &&

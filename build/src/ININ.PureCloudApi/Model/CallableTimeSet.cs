@@ -28,7 +28,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Name">Name.</param>
         /// <param name="Version">Required for updates, must match the version number of the most recent update.</param>
         /// <param name="CallableTimes">list of time/timezone groupings for which it is acceptable to place outbound calls (required).</param>
-        public CallableTimeSet(, string Name = null, int? Version = null, List<CallableTime> CallableTimes = null)
+        public CallableTimeSet(string Name = null, int? Version = null, List<CallableTime> CallableTimes = null)
         {
             // to ensure "CallableTimes" is required (not null)
             if (CallableTimes == null)
@@ -134,37 +134,37 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.DateCreated == other.DateCreated ||
                     this.DateCreated != null &&
                     this.DateCreated.Equals(other.DateCreated)
-                ) && 
+                ) &&
                 (
                     this.DateModified == other.DateModified ||
                     this.DateModified != null &&
                     this.DateModified.Equals(other.DateModified)
-                ) && 
+                ) &&
                 (
                     this.Version == other.Version ||
                     this.Version != null &&
                     this.Version.Equals(other.Version)
-                ) && 
+                ) &&
                 (
                     this.CallableTimes == other.CallableTimes ||
                     this.CallableTimes != null &&
                     this.CallableTimes.SequenceEqual(other.CallableTimes)
-                )
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

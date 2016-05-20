@@ -125,12 +125,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Document == other.Document ||
                     this.Document != null &&
                     this.Document.Equals(other.Document)
-                ) && 
+                ) &&
                 (
                     this.DocumentAssociationType == other.DocumentAssociationType ||
                     this.DocumentAssociationType != null &&

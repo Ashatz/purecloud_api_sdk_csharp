@@ -103,22 +103,22 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.AssociatedStation == other.AssociatedStation ||
                     this.AssociatedStation != null &&
                     this.AssociatedStation.Equals(other.AssociatedStation)
-                ) && 
+                ) &&
                 (
                     this.EffectiveStation == other.EffectiveStation ||
                     this.EffectiveStation != null &&
                     this.EffectiveStation.Equals(other.EffectiveStation)
-                ) && 
+                ) &&
                 (
                     this.DefaultStation == other.DefaultStation ||
                     this.DefaultStation != null &&
                     this.DefaultStation.Equals(other.DefaultStation)
-                ) && 
+                ) &&
                 (
                     this.LastAssociatedStation == other.LastAssociatedStation ||
                     this.LastAssociatedStation != null &&

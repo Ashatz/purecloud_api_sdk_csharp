@@ -99,22 +99,22 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Actions == other.Actions ||
                     this.Actions != null &&
                     this.Actions.SequenceEqual(other.Actions)
-                ) && 
+                ) &&
                 (
                     this.Condition == other.Condition ||
                     this.Condition != null &&
                     this.Condition.Equals(other.Condition)
-                ) && 
+                ) &&
                 (
                     this.Domain == other.Domain ||
                     this.Domain != null &&
                     this.Domain.Equals(other.Domain)
-                ) && 
+                ) &&
                 (
                     this.EntityName == other.EntityName ||
                     this.EntityName != null &&

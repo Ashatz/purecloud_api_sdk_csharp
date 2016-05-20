@@ -94,17 +94,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.QueryPhrase == other.QueryPhrase ||
                     this.QueryPhrase != null &&
                     this.QueryPhrase.Equals(other.QueryPhrase)
-                ) && 
+                ) &&
                 (
                     this.PageSize == other.PageSize ||
                     this.PageSize != null &&
                     this.PageSize.Equals(other.PageSize)
-                ) && 
+                ) &&
                 (
                     this.Filters == other.Filters ||
                     this.Filters != null &&

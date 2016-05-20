@@ -131,42 +131,42 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.LicenseCount == other.LicenseCount ||
                     this.LicenseCount != null &&
                     this.LicenseCount.Equals(other.LicenseCount)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Description == other.Description ||
                     this.Description != null &&
                     this.Description.Equals(other.Description)
-                ) && 
+                ) &&
                 (
                     this.Price == other.Price ||
                     this.Price != null &&
                     this.Price.Equals(other.Price)
-                ) && 
+                ) &&
                 (
                     this.UnitOfMeasure == other.UnitOfMeasure ||
                     this.UnitOfMeasure != null &&
                     this.UnitOfMeasure.Equals(other.UnitOfMeasure)
-                ) && 
+                ) &&
                 (
                     this.BillingPeriod == other.BillingPeriod ||
                     this.BillingPeriod != null &&
                     this.BillingPeriod.Equals(other.BillingPeriod)
-                ) && 
+                ) &&
                 (
                     this.Quantity == other.Quantity ||
                     this.Quantity != null &&
                     this.Quantity.Equals(other.Quantity)
-                ) && 
+                ) &&
                 (
                     this.IncludedUnits == other.IncludedUnits ||
                     this.IncludedUnits != null &&

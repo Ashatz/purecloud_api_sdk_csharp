@@ -106,12 +106,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Symbol == other.Symbol ||
                     this.Symbol != null &&
                     this.Symbol.Equals(other.Symbol)
-                ) && 
+                ) &&
                 (
                     this.Exchange == other.Exchange ||
                     this.Exchange != null &&

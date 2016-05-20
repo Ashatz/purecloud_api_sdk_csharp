@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="CallRecords">A map of call records for the contact phone columns.</param>
         /// <param name="Callable">false if the contact is not to be called (default to false).</param>
         /// <param name="PhoneNumberStatus">A map of statuses for the contact phone columns.</param>
-        public DialerContact(, string Name = null, string ContactListId = null, Dictionary<string, Object> Data = null, Dictionary<string, CallRecord> CallRecords = null, bool? Callable = null, Dictionary<string, PhoneNumberStatus> PhoneNumberStatus = null)
+        public DialerContact(string Name = null, string ContactListId = null, Dictionary<string, Object> Data = null, Dictionary<string, CallRecord> CallRecords = null, bool? Callable = null, Dictionary<string, PhoneNumberStatus> PhoneNumberStatus = null)
         {
             // to ensure "ContactListId" is required (not null)
             if (ContactListId == null)
@@ -155,42 +155,42 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.ContactListId == other.ContactListId ||
                     this.ContactListId != null &&
                     this.ContactListId.Equals(other.ContactListId)
-                ) && 
+                ) &&
                 (
                     this.Data == other.Data ||
                     this.Data != null &&
                     this.Data.SequenceEqual(other.Data)
-                ) && 
+                ) &&
                 (
                     this.CallRecords == other.CallRecords ||
                     this.CallRecords != null &&
                     this.CallRecords.SequenceEqual(other.CallRecords)
-                ) && 
+                ) &&
                 (
                     this.Callable == other.Callable ||
                     this.Callable != null &&
                     this.Callable.Equals(other.Callable)
-                ) && 
+                ) &&
                 (
                     this.PhoneNumberStatus == other.PhoneNumberStatus ||
                     this.PhoneNumberStatus != null &&
                     this.PhoneNumberStatus.SequenceEqual(other.PhoneNumberStatus)
-                )
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

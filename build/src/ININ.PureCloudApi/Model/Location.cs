@@ -53,7 +53,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="EmergencyNumber">EmergencyNumber.</param>
         /// <param name="State">Current activity status of the location..</param>
         /// <param name="Version">Version.</param>
-        public Location(, string Name = null, LocationAddress Address = null, bool? AddressVerified = null, LocationEmergencyNumber EmergencyNumber = null, StateEnum? State = null, int? Version = null)
+        public Location(string Name = null, LocationAddress Address = null, bool? AddressVerified = null, LocationEmergencyNumber EmergencyNumber = null, StateEnum? State = null, int? Version = null)
         {
             this.Name = Name;
             this.Address = Address;
@@ -159,42 +159,42 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Address == other.Address ||
                     this.Address != null &&
                     this.Address.Equals(other.Address)
-                ) && 
+                ) &&
                 (
                     this.AddressVerified == other.AddressVerified ||
                     this.AddressVerified != null &&
                     this.AddressVerified.Equals(other.AddressVerified)
-                ) && 
+                ) &&
                 (
                     this.EmergencyNumber == other.EmergencyNumber ||
                     this.EmergencyNumber != null &&
                     this.EmergencyNumber.Equals(other.EmergencyNumber)
-                ) && 
+                ) &&
                 (
                     this.State == other.State ||
                     this.State != null &&
                     this.State.Equals(other.State)
-                ) && 
+                ) &&
                 (
                     this.Version == other.Version ||
                     this.Version != null &&
                     this.Version.Equals(other.Version)
-                )
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

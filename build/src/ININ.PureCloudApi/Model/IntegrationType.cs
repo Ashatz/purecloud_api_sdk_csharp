@@ -60,7 +60,7 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="Images">Collection of logos. (required).</param>
-        public IntegrationType(, string Name = null, List<UserImage> Images = null)
+        public IntegrationType(string Name = null, List<UserImage> Images = null)
         {
             // to ensure "Images" is required (not null)
             if (Images == null)
@@ -166,42 +166,42 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Description == other.Description ||
                     this.Description != null &&
                     this.Description.Equals(other.Description)
-                ) && 
+                ) &&
                 (
                     this.Provider == other.Provider ||
                     this.Provider != null &&
                     this.Provider.Equals(other.Provider)
-                ) && 
+                ) &&
                 (
                     this.Images == other.Images ||
                     this.Images != null &&
                     this.Images.SequenceEqual(other.Images)
-                )
+                ) &&
                 (
                     this.ConfigPropertiesSchemaUri == other.ConfigPropertiesSchemaUri ||
                     this.ConfigPropertiesSchemaUri != null &&
                     this.ConfigPropertiesSchemaUri.Equals(other.ConfigPropertiesSchemaUri)
-                ) && 
+                ) &&
                 (
                     this.ConfigAdvancedSchemaUri == other.ConfigAdvancedSchemaUri ||
                     this.ConfigAdvancedSchemaUri != null &&
                     this.ConfigAdvancedSchemaUri.Equals(other.ConfigAdvancedSchemaUri)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

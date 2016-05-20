@@ -131,42 +131,42 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.EndpointId == other.EndpointId ||
                     this.EndpointId != null &&
                     this.EndpointId.Equals(other.EndpointId)
-                ) && 
+                ) &&
                 (
                     this.FilenameReplaces == other.FilenameReplaces ||
                     this.FilenameReplaces != null &&
                     this.FilenameReplaces.SequenceEqual(other.FilenameReplaces)
-                ) && 
+                ) &&
                 (
                     this.Tags == other.Tags ||
                     this.Tags != null &&
                     this.Tags.SequenceEqual(other.Tags)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Comments == other.Comments ||
                     this.Comments != null &&
                     this.Comments.Equals(other.Comments)
-                ) && 
+                ) &&
                 (
                     this.Delimiter == other.Delimiter ||
                     this.Delimiter != null &&
                     this.Delimiter.Equals(other.Delimiter)
-                ) && 
+                ) &&
                 (
                     this.Table == other.Table ||
                     this.Table != null &&

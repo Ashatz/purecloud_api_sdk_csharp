@@ -59,7 +59,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Level">Level.</param>
         /// <param name="Tags">Tags.</param>
         /// <param name="Data">Data.</param>
-        public ComposerTemplate(, string Name = null, string Description = null, DateTime? CreatedDate = null, DateTime? ModifiedDate = null, int? Version = null, LevelEnum? Level = null, List<string> Tags = null, Dictionary<string, Object> Data = null)
+        public ComposerTemplate(string Name = null, string Description = null, DateTime? CreatedDate = null, DateTime? ModifiedDate = null, int? Version = null, LevelEnum? Level = null, List<string> Tags = null, Dictionary<string, Object> Data = null)
         {
             this.Name = Name;
             this.Description = Description;
@@ -173,52 +173,52 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Description == other.Description ||
                     this.Description != null &&
                     this.Description.Equals(other.Description)
-                ) && 
+                ) &&
                 (
                     this.CreatedDate == other.CreatedDate ||
                     this.CreatedDate != null &&
                     this.CreatedDate.Equals(other.CreatedDate)
-                ) && 
+                ) &&
                 (
                     this.ModifiedDate == other.ModifiedDate ||
                     this.ModifiedDate != null &&
                     this.ModifiedDate.Equals(other.ModifiedDate)
-                ) && 
+                ) &&
                 (
                     this.Version == other.Version ||
                     this.Version != null &&
                     this.Version.Equals(other.Version)
-                ) && 
+                ) &&
                 (
                     this.Level == other.Level ||
                     this.Level != null &&
                     this.Level.Equals(other.Level)
-                ) && 
+                ) &&
                 (
                     this.Tags == other.Tags ||
                     this.Tags != null &&
                     this.Tags.SequenceEqual(other.Tags)
-                ) && 
+                ) &&
                 (
                     this.Data == other.Data ||
                     this.Data != null &&
                     this.Data.SequenceEqual(other.Data)
-                )
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

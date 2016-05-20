@@ -22,7 +22,7 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="DecimalPlaces">DecimalPlaces.</param>
-        public Currency(, string Name = null, int? DecimalPlaces = null)
+        public Currency(string Name = null, int? DecimalPlaces = null)
         {
             this.Name = Name;
             this.DecimalPlaces = DecimalPlaces;
@@ -97,22 +97,22 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.DecimalPlaces == other.DecimalPlaces ||
                     this.DecimalPlaces != null &&
                     this.DecimalPlaces.Equals(other.DecimalPlaces)
-                )
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

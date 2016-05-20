@@ -91,7 +91,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="SkipPreviewDisabled">for preview campaigns, indicator of whether the agent can skip a preview without placing a call (default to false).</param>
         /// <param name="PreviewTimeOutSeconds">for preview campaigns, number of seconds before a call will be automatically placed. A value of 0 indicates no automatic placement of calls.</param>
         /// <param name="ContactSort">information determining the order in which the contacts will be dialed.</param>
-        public Campaign(, string Name = null, int? Version = null, UriReference ContactList = null, UriReference Queue = null, DialingModeEnum? DialingMode = null, UriReference Script = null, UriReference EdgeGroup = null, string CampaignStatus = null, List<PhoneColumn> PhoneColumns = null, double? AbandonRate = null, List<UriReference> DncLists = null, UriReference CallableTimeSet = null, UriReference CallAnalysisResponseSet = null, List<RestErrorDetail> Errors = null, string CallerName = null, string CallerAddress = null, int? OutboundLineCount = null, List<UriReference> RuleSets = null, bool? SkipPreviewDisabled = null, long? PreviewTimeOutSeconds = null, ContactSort ContactSort = null)
+        public Campaign(string Name = null, int? Version = null, UriReference ContactList = null, UriReference Queue = null, DialingModeEnum? DialingMode = null, UriReference Script = null, UriReference EdgeGroup = null, string CampaignStatus = null, List<PhoneColumn> PhoneColumns = null, double? AbandonRate = null, List<UriReference> DncLists = null, UriReference CallableTimeSet = null, UriReference CallAnalysisResponseSet = null, List<RestErrorDetail> Errors = null, string CallerName = null, string CallerAddress = null, int? OutboundLineCount = null, List<UriReference> RuleSets = null, bool? SkipPreviewDisabled = null, long? PreviewTimeOutSeconds = null, ContactSort ContactSort = null)
         {
             // to ensure "ContactList" is required (not null)
             if (ContactList == null)
@@ -399,127 +399,127 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.DateCreated == other.DateCreated ||
                     this.DateCreated != null &&
                     this.DateCreated.Equals(other.DateCreated)
-                ) && 
+                ) &&
                 (
                     this.DateModified == other.DateModified ||
                     this.DateModified != null &&
                     this.DateModified.Equals(other.DateModified)
-                ) && 
+                ) &&
                 (
                     this.Version == other.Version ||
                     this.Version != null &&
                     this.Version.Equals(other.Version)
-                ) && 
+                ) &&
                 (
                     this.ContactList == other.ContactList ||
                     this.ContactList != null &&
                     this.ContactList.Equals(other.ContactList)
-                ) && 
+                ) &&
                 (
                     this.Queue == other.Queue ||
                     this.Queue != null &&
                     this.Queue.Equals(other.Queue)
-                ) && 
+                ) &&
                 (
                     this.DialingMode == other.DialingMode ||
                     this.DialingMode != null &&
                     this.DialingMode.Equals(other.DialingMode)
-                ) && 
+                ) &&
                 (
                     this.Script == other.Script ||
                     this.Script != null &&
                     this.Script.Equals(other.Script)
-                ) && 
+                ) &&
                 (
                     this.EdgeGroup == other.EdgeGroup ||
                     this.EdgeGroup != null &&
                     this.EdgeGroup.Equals(other.EdgeGroup)
-                ) && 
+                ) &&
                 (
                     this.CampaignStatus == other.CampaignStatus ||
                     this.CampaignStatus != null &&
                     this.CampaignStatus.Equals(other.CampaignStatus)
-                ) && 
+                ) &&
                 (
                     this.PhoneColumns == other.PhoneColumns ||
                     this.PhoneColumns != null &&
                     this.PhoneColumns.SequenceEqual(other.PhoneColumns)
-                ) && 
+                ) &&
                 (
                     this.AbandonRate == other.AbandonRate ||
                     this.AbandonRate != null &&
                     this.AbandonRate.Equals(other.AbandonRate)
-                ) && 
+                ) &&
                 (
                     this.DncLists == other.DncLists ||
                     this.DncLists != null &&
                     this.DncLists.SequenceEqual(other.DncLists)
-                ) && 
+                ) &&
                 (
                     this.CallableTimeSet == other.CallableTimeSet ||
                     this.CallableTimeSet != null &&
                     this.CallableTimeSet.Equals(other.CallableTimeSet)
-                ) && 
+                ) &&
                 (
                     this.CallAnalysisResponseSet == other.CallAnalysisResponseSet ||
                     this.CallAnalysisResponseSet != null &&
                     this.CallAnalysisResponseSet.Equals(other.CallAnalysisResponseSet)
-                ) && 
+                ) &&
                 (
                     this.Errors == other.Errors ||
                     this.Errors != null &&
                     this.Errors.SequenceEqual(other.Errors)
-                ) && 
+                ) &&
                 (
                     this.CallerName == other.CallerName ||
                     this.CallerName != null &&
                     this.CallerName.Equals(other.CallerName)
-                ) && 
+                ) &&
                 (
                     this.CallerAddress == other.CallerAddress ||
                     this.CallerAddress != null &&
                     this.CallerAddress.Equals(other.CallerAddress)
-                ) && 
+                ) &&
                 (
                     this.OutboundLineCount == other.OutboundLineCount ||
                     this.OutboundLineCount != null &&
                     this.OutboundLineCount.Equals(other.OutboundLineCount)
-                ) && 
+                ) &&
                 (
                     this.RuleSets == other.RuleSets ||
                     this.RuleSets != null &&
                     this.RuleSets.SequenceEqual(other.RuleSets)
-                ) && 
+                ) &&
                 (
                     this.SkipPreviewDisabled == other.SkipPreviewDisabled ||
                     this.SkipPreviewDisabled != null &&
                     this.SkipPreviewDisabled.Equals(other.SkipPreviewDisabled)
-                ) && 
+                ) &&
                 (
                     this.PreviewTimeOutSeconds == other.PreviewTimeOutSeconds ||
                     this.PreviewTimeOutSeconds != null &&
                     this.PreviewTimeOutSeconds.Equals(other.PreviewTimeOutSeconds)
-                ) && 
+                ) &&
                 (
                     this.ContactSort == other.ContactSort ||
                     this.ContactSort != null &&
                     this.ContactSort.Equals(other.ContactSort)
-                )
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

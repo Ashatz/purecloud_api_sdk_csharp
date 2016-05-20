@@ -81,12 +81,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.LastAttempt == other.LastAttempt ||
                     this.LastAttempt != null &&
                     this.LastAttempt.Equals(other.LastAttempt)
-                ) && 
+                ) &&
                 (
                     this.LastResult == other.LastResult ||
                     this.LastResult != null &&

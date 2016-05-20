@@ -76,7 +76,7 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.CertificateDetails == other.CertificateDetails ||
                     this.CertificateDetails != null &&

@@ -83,12 +83,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.ColumnName == other.ColumnName ||
                     this.ColumnName != null &&
                     this.ColumnName.Equals(other.ColumnName)
-                ) && 
+                ) &&
                 (
                     this.Type == other.Type ||
                     this.Type != null &&

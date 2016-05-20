@@ -91,17 +91,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Category == other.Category ||
                     this.Category != null &&
                     this.Category.Equals(other.Category)
-                ) && 
+                ) &&
                 (
                     this.DefaultCommandId == other.DefaultCommandId ||
                     this.DefaultCommandId != null &&
                     this.DefaultCommandId.Equals(other.DefaultCommandId)
-                ) && 
+                ) &&
                 (
                     this.Commands == other.Commands ||
                     this.Commands != null &&

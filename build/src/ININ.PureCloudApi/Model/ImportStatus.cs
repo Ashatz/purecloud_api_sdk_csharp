@@ -47,11 +47,6 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ImportStatus" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected ImportStatus() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ImportStatus" /> class.
-        /// </summary>
         public ImportStatus()
         {
         }
@@ -128,27 +123,27 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.State == other.State ||
                     this.State != null &&
                     this.State.Equals(other.State)
-                ) && 
+                ) &&
                 (
                     this.TotalRecords == other.TotalRecords ||
                     this.TotalRecords != null &&
                     this.TotalRecords.Equals(other.TotalRecords)
-                ) && 
+                ) &&
                 (
                     this.CompletedRecords == other.CompletedRecords ||
                     this.CompletedRecords != null &&
                     this.CompletedRecords.Equals(other.CompletedRecords)
-                ) && 
+                ) &&
                 (
                     this.PercentComplete == other.PercentComplete ||
                     this.PercentComplete != null &&
                     this.PercentComplete.Equals(other.PercentComplete)
-                ) && 
+                ) &&
                 (
                     this.FailureReason == other.FailureReason ||
                     this.FailureReason != null &&

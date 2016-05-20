@@ -125,37 +125,37 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Count == other.Count ||
                     this.Count != null &&
                     this.Count.Equals(other.Count)
-                ) && 
+                ) &&
                 (
                     this.Min == other.Min ||
                     this.Min != null &&
                     this.Min.Equals(other.Min)
-                ) && 
+                ) &&
                 (
                     this.Max == other.Max ||
                     this.Max != null &&
                     this.Max.Equals(other.Max)
-                ) && 
+                ) &&
                 (
                     this.Mean == other.Mean ||
                     this.Mean != null &&
                     this.Mean.Equals(other.Mean)
-                ) && 
+                ) &&
                 (
                     this.StdDeviation == other.StdDeviation ||
                     this.StdDeviation != null &&
                     this.StdDeviation.Equals(other.StdDeviation)
-                ) && 
+                ) &&
                 (
                     this.DateMin == other.DateMin ||
                     this.DateMin != null &&
                     this.DateMin.Equals(other.DateMin)
-                ) && 
+                ) &&
                 (
                     this.DateMax == other.DateMax ||
                     this.DateMax != null &&

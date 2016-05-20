@@ -85,7 +85,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="CardExpirationDate">for payment methods of type CARD_TOKEN, the card&#39;s expiration date in the format YYYY-MM..</param>
         /// <param name="CardLastFourDigits">CardLastFourDigits.</param>
         /// <param name="CardType">for payment methods of type CARD_TOKEN, the type of credit or debit card.</param>
-        public PaymentMethod(, string Name = null, TypeEnum? Type = null, string ProviderName = null, string Token = null, string CardExpirationDate = null, string CardLastFourDigits = null, CardTypeEnum? CardType = null)
+        public PaymentMethod(string Name = null, TypeEnum? Type = null, string ProviderName = null, string Token = null, string CardExpirationDate = null, string CardLastFourDigits = null, CardTypeEnum? CardType = null)
         {
             this.Name = Name;
             this.Type = Type;
@@ -186,47 +186,47 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Type == other.Type ||
                     this.Type != null &&
                     this.Type.Equals(other.Type)
-                ) && 
+                ) &&
                 (
                     this.ProviderName == other.ProviderName ||
                     this.ProviderName != null &&
                     this.ProviderName.Equals(other.ProviderName)
-                ) && 
+                ) &&
                 (
                     this.Token == other.Token ||
                     this.Token != null &&
                     this.Token.Equals(other.Token)
-                ) && 
+                ) &&
                 (
                     this.CardExpirationDate == other.CardExpirationDate ||
                     this.CardExpirationDate != null &&
                     this.CardExpirationDate.Equals(other.CardExpirationDate)
-                ) && 
+                ) &&
                 (
                     this.CardLastFourDigits == other.CardLastFourDigits ||
                     this.CardLastFourDigits != null &&
                     this.CardLastFourDigits.Equals(other.CardLastFourDigits)
-                ) && 
+                ) &&
                 (
                     this.CardType == other.CardType ||
                     this.CardType != null &&
                     this.CardType.Equals(other.CardType)
-                )
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

@@ -83,12 +83,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Resolution == other.Resolution ||
                     this.Resolution != null &&
                     this.Resolution.Equals(other.Resolution)
-                ) && 
+                ) &&
                 (
                     this.ImageUri == other.ImageUri ||
                     this.ImageUri != null &&

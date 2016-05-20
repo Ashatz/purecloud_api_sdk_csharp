@@ -457,107 +457,107 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.NodeType == other.NodeType ||
                     this.NodeType != null &&
                     this.NodeType.Equals(other.NodeType)
-                ) && 
+                ) &&
                 (
                     this._Float == other._Float ||
                     this._Float != null &&
                     this._Float.Equals(other._Float)
-                ) && 
+                ) &&
                 (
                     this._Object == other._Object ||
                     this._Object != null &&
                     this._Object.Equals(other._Object)
-                ) && 
+                ) &&
                 (
                     this.Boolean == other.Boolean ||
                     this.Boolean != null &&
                     this.Boolean.Equals(other.Boolean)
-                ) && 
+                ) &&
                 (
                     this.Number == other.Number ||
                     this.Number != null &&
                     this.Number.Equals(other.Number)
-                ) && 
+                ) &&
                 (
                     this.ValueNode == other.ValueNode ||
                     this.ValueNode != null &&
                     this.ValueNode.Equals(other.ValueNode)
-                ) && 
+                ) &&
                 (
                     this.FloatingPointNumber == other.FloatingPointNumber ||
                     this.FloatingPointNumber != null &&
                     this.FloatingPointNumber.Equals(other.FloatingPointNumber)
-                ) && 
+                ) &&
                 (
                     this.ContainerNode == other.ContainerNode ||
                     this.ContainerNode != null &&
                     this.ContainerNode.Equals(other.ContainerNode)
-                ) && 
+                ) &&
                 (
                     this.MissingNode == other.MissingNode ||
                     this.MissingNode != null &&
                     this.MissingNode.Equals(other.MissingNode)
-                ) && 
+                ) &&
                 (
                     this.Pojo == other.Pojo ||
                     this.Pojo != null &&
                     this.Pojo.Equals(other.Pojo)
-                ) && 
+                ) &&
                 (
                     this.IntegralNumber == other.IntegralNumber ||
                     this.IntegralNumber != null &&
                     this.IntegralNumber.Equals(other.IntegralNumber)
-                ) && 
+                ) &&
                 (
                     this._Short == other._Short ||
                     this._Short != null &&
                     this._Short.Equals(other._Short)
-                ) && 
+                ) &&
                 (
                     this._Int == other._Int ||
                     this._Int != null &&
                     this._Int.Equals(other._Int)
-                ) && 
+                ) &&
                 (
                     this._Long == other._Long ||
                     this._Long != null &&
                     this._Long.Equals(other._Long)
-                ) && 
+                ) &&
                 (
                     this._Double == other._Double ||
                     this._Double != null &&
                     this._Double.Equals(other._Double)
-                ) && 
+                ) &&
                 (
                     this.BigDecimal == other.BigDecimal ||
                     this.BigDecimal != null &&
                     this.BigDecimal.Equals(other.BigDecimal)
-                ) && 
+                ) &&
                 (
                     this.BigInteger == other.BigInteger ||
                     this.BigInteger != null &&
                     this.BigInteger.Equals(other.BigInteger)
-                ) && 
+                ) &&
                 (
                     this.Textual == other.Textual ||
                     this.Textual != null &&
                     this.Textual.Equals(other.Textual)
-                ) && 
+                ) &&
                 (
                     this.Binary == other.Binary ||
                     this.Binary != null &&
                     this.Binary.Equals(other.Binary)
-                ) && 
+                ) &&
                 (
                     this.Array == other.Array ||
                     this.Array != null &&
                     this.Array.Equals(other.Array)
-                ) && 
+                ) &&
                 (
                     this._Null == other._Null ||
                     this._Null != null &&

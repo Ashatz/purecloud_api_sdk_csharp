@@ -99,17 +99,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.TimeSlots == other.TimeSlots ||
                     this.TimeSlots != null &&
                     this.TimeSlots.SequenceEqual(other.TimeSlots)
-                ) && 
+                ) &&
                 (
                     this.TimeZoneId == other.TimeZoneId ||
                     this.TimeZoneId != null &&
                     this.TimeZoneId.Equals(other.TimeZoneId)
-                ) && 
+                ) &&
                 (
                     this.Empty == other.Empty ||
                     this.Empty != null &&

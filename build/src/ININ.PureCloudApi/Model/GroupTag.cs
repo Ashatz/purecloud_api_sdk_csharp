@@ -58,7 +58,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="DateModified">Date the entity was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="Type">Defines which entity this Group Tag may be used for.  &#39;ANY&#39; for all entities..</param>
         /// <param name="Enabled">Indicates if this Group Tag is available for selection by other entities (default to false).</param>
-        public GroupTag(, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, TypeEnum? Type = null, bool? Enabled = null)
+        public GroupTag(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, TypeEnum? Type = null, bool? Enabled = null)
         {
             this.Name = Name;
             this.DateCreated = DateCreated;
@@ -160,37 +160,37 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.DateCreated == other.DateCreated ||
                     this.DateCreated != null &&
                     this.DateCreated.Equals(other.DateCreated)
-                ) && 
+                ) &&
                 (
                     this.DateModified == other.DateModified ||
                     this.DateModified != null &&
                     this.DateModified.Equals(other.DateModified)
-                ) && 
+                ) &&
                 (
                     this.Type == other.Type ||
                     this.Type != null &&
                     this.Type.Equals(other.Type)
-                ) && 
+                ) &&
                 (
                     this.Enabled == other.Enabled ||
                     this.Enabled != null &&
                     this.Enabled.Equals(other.Enabled)
-                )
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

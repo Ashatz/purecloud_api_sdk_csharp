@@ -139,47 +139,47 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Body == other.Body ||
                     this.Body != null &&
                     this.Body.Equals(other.Body)
-                ) && 
+                ) &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.To == other.To ||
                     this.To != null &&
                     this.To.Equals(other.To)
-                ) && 
+                ) &&
                 (
                     this.From == other.From ||
                     this.From != null &&
                     this.From.Equals(other.From)
-                ) && 
+                ) &&
                 (
                     this.Utc == other.Utc ||
                     this.Utc != null &&
                     this.Utc.Equals(other.Utc)
-                ) && 
+                ) &&
                 (
                     this.Chat == other.Chat ||
                     this.Chat != null &&
                     this.Chat.Equals(other.Chat)
-                ) && 
+                ) &&
                 (
                     this.Message == other.Message ||
                     this.Message != null &&
                     this.Message.Equals(other.Message)
-                ) && 
+                ) &&
                 (
                     this.Type == other.Type ||
                     this.Type != null &&
                     this.Type.Equals(other.Type)
-                ) && 
+                ) &&
                 (
                     this.User == other.User ||
                     this.User != null &&

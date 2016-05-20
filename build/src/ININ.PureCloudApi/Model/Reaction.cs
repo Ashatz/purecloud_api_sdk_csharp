@@ -123,17 +123,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Data == other.Data ||
                     this.Data != null &&
                     this.Data.Equals(other.Data)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.ReactionType == other.ReactionType ||
                     this.ReactionType != null &&

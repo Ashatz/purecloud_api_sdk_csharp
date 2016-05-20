@@ -153,7 +153,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Priority">Priority.</param>
         /// <param name="Type">Type of Issue.</param>
         /// <param name="Data">Json blob of data to be included with this report..</param>
-        public DiagnosticEmail(, string Subject = null, TopicEnum? Topic = null, string Description = null, PriorityEnum? Priority = null, TypeEnum? Type = null, Object Data = null)
+        public DiagnosticEmail(string Subject = null, TopicEnum? Topic = null, string Description = null, PriorityEnum? Priority = null, TypeEnum? Type = null, Object Data = null)
         {
             this.Subject = Subject;
             this.Topic = Topic;
@@ -237,37 +237,37 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Subject == other.Subject ||
                     this.Subject != null &&
                     this.Subject.Equals(other.Subject)
-                ) && 
+                ) &&
                 (
                     this.Topic == other.Topic ||
                     this.Topic != null &&
                     this.Topic.Equals(other.Topic)
-                ) && 
+                ) &&
                 (
                     this.Description == other.Description ||
                     this.Description != null &&
                     this.Description.Equals(other.Description)
-                ) && 
+                ) &&
                 (
                     this.Priority == other.Priority ||
                     this.Priority != null &&
                     this.Priority.Equals(other.Priority)
-                ) && 
+                ) &&
                 (
                     this.Type == other.Type ||
                     this.Type != null &&
                     this.Type.Equals(other.Type)
-                ) && 
+                ) &&
                 (
                     this.Data == other.Data ||
                     this.Data != null &&

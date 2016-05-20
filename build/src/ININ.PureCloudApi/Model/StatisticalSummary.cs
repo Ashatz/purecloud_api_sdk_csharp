@@ -139,47 +139,47 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Max == other.Max ||
                     this.Max != null &&
                     this.Max.Equals(other.Max)
-                ) && 
+                ) &&
                 (
                     this.Min == other.Min ||
                     this.Min != null &&
                     this.Min.Equals(other.Min)
-                ) && 
+                ) &&
                 (
                     this.Count == other.Count ||
                     this.Count != null &&
                     this.Count.Equals(other.Count)
-                ) && 
+                ) &&
                 (
                     this.Sum == other.Sum ||
                     this.Sum != null &&
                     this.Sum.Equals(other.Sum)
-                ) && 
+                ) &&
                 (
                     this.Current == other.Current ||
                     this.Current != null &&
                     this.Current.Equals(other.Current)
-                ) && 
+                ) &&
                 (
                     this.Ratio == other.Ratio ||
                     this.Ratio != null &&
                     this.Ratio.Equals(other.Ratio)
-                ) && 
+                ) &&
                 (
                     this.Numerator == other.Numerator ||
                     this.Numerator != null &&
                     this.Numerator.Equals(other.Numerator)
-                ) && 
+                ) &&
                 (
                     this.Denominator == other.Denominator ||
                     this.Denominator != null &&
                     this.Denominator.Equals(other.Denominator)
-                ) && 
+                ) &&
                 (
                     this.Target == other.Target ||
                     this.Target != null &&

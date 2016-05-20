@@ -83,12 +83,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.AppId == other.AppId ||
                     this.AppId != null &&
                     this.AppId.Equals(other.AppId)
-                ) && 
+                ) &&
                 (
                     this.AppVersion == other.AppVersion ||
                     this.AppVersion != null &&

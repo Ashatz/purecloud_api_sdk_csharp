@@ -245,37 +245,37 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Wrapup == other.Wrapup ||
                     this.Wrapup != null &&
                     this.Wrapup.Equals(other.Wrapup)
-                ) && 
+                ) &&
                 (
                     this.State == other.State ||
                     this.State != null &&
                     this.State.Equals(other.State)
-                ) && 
+                ) &&
                 (
                     this.Recording == other.Recording ||
                     this.Recording != null &&
                     this.Recording.Equals(other.Recording)
-                ) && 
+                ) &&
                 (
                     this.Muted == other.Muted ||
                     this.Muted != null &&
                     this.Muted.Equals(other.Muted)
-                ) && 
+                ) &&
                 (
                     this.Confined == other.Confined ||
                     this.Confined != null &&
                     this.Confined.Equals(other.Confined)
-                ) && 
+                ) &&
                 (
                     this.Held == other.Held ||
                     this.Held != null &&
                     this.Held.Equals(other.Held)
-                ) && 
+                ) &&
                 (
                     this.WrapupSkipped == other.WrapupSkipped ||
                     this.WrapupSkipped != null &&

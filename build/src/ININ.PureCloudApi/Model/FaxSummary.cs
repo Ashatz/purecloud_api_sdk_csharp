@@ -91,17 +91,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.ReadCount == other.ReadCount ||
                     this.ReadCount != null &&
                     this.ReadCount.Equals(other.ReadCount)
-                ) && 
+                ) &&
                 (
                     this.UnreadCount == other.UnreadCount ||
                     this.UnreadCount != null &&
                     this.UnreadCount.Equals(other.UnreadCount)
-                ) && 
+                ) &&
                 (
                     this.TotalCount == other.TotalCount ||
                     this.TotalCount != null &&

@@ -103,12 +103,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.MemberType == other.MemberType ||
                     this.MemberType != null &&
                     this.MemberType.Equals(other.MemberType)
-                ) && 
+                ) &&
                 (
                     this.Member == other.Member ||
                     this.Member != null &&

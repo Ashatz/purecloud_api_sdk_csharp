@@ -32,7 +32,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="ImportStatus">the status of the import process.</param>
         /// <param name="PreviewModeColumnName">the name of the column that holds the indicators for contacts that are to be dialed in preview mode only.</param>
         /// <param name="PreviewModeAcceptedValues">list of user-defined values indicating the contact is to be dialed in preview mode only.</param>
-        public ContactList(, string Name = null, int? Version = null, List<string> ColumnNames = null, List<ContactPhoneNumberColumn> PhoneColumns = null, ImportStatus ImportStatus = null, string PreviewModeColumnName = null, List<string> PreviewModeAcceptedValues = null)
+        public ContactList(string Name = null, int? Version = null, List<string> ColumnNames = null, List<ContactPhoneNumberColumn> PhoneColumns = null, ImportStatus ImportStatus = null, string PreviewModeColumnName = null, List<string> PreviewModeAcceptedValues = null)
         {
             // to ensure "ColumnNames" is required (not null)
             if (ColumnNames == null)
@@ -185,62 +185,62 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.DateCreated == other.DateCreated ||
                     this.DateCreated != null &&
                     this.DateCreated.Equals(other.DateCreated)
-                ) && 
+                ) &&
                 (
                     this.DateModified == other.DateModified ||
                     this.DateModified != null &&
                     this.DateModified.Equals(other.DateModified)
-                ) && 
+                ) &&
                 (
                     this.Version == other.Version ||
                     this.Version != null &&
                     this.Version.Equals(other.Version)
-                ) && 
+                ) &&
                 (
                     this.ColumnNames == other.ColumnNames ||
                     this.ColumnNames != null &&
                     this.ColumnNames.SequenceEqual(other.ColumnNames)
-                ) && 
+                ) &&
                 (
                     this.PhoneColumns == other.PhoneColumns ||
                     this.PhoneColumns != null &&
                     this.PhoneColumns.SequenceEqual(other.PhoneColumns)
-                ) && 
+                ) &&
                 (
                     this.ImportStatus == other.ImportStatus ||
                     this.ImportStatus != null &&
                     this.ImportStatus.Equals(other.ImportStatus)
-                ) && 
+                ) &&
                 (
                     this.PreviewModeColumnName == other.PreviewModeColumnName ||
                     this.PreviewModeColumnName != null &&
                     this.PreviewModeColumnName.Equals(other.PreviewModeColumnName)
-                ) && 
+                ) &&
                 (
                     this.PreviewModeAcceptedValues == other.PreviewModeAcceptedValues ||
                     this.PreviewModeAcceptedValues != null &&
                     this.PreviewModeAcceptedValues.SequenceEqual(other.PreviewModeAcceptedValues)
-                )
+                ) &&
                 (
                     this.Size == other.Size ||
                     this.Size != null &&
                     this.Size.Equals(other.Size)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

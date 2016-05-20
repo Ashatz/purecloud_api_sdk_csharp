@@ -100,22 +100,22 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.ConversationId == other.ConversationId ||
                     this.ConversationId != null &&
                     this.ConversationId.Equals(other.ConversationId)
-                ) && 
+                ) &&
                 (
                     this.ConversationStart == other.ConversationStart ||
                     this.ConversationStart != null &&
                     this.ConversationStart.Equals(other.ConversationStart)
-                ) && 
+                ) &&
                 (
                     this.Participants == other.Participants ||
                     this.Participants != null &&
                     this.Participants.SequenceEqual(other.Participants)
-                ) && 
+                ) &&
                 (
                     this.Evaluations == other.Evaluations ||
                     this.Evaluations != null &&

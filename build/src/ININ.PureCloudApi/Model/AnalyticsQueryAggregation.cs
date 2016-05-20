@@ -133,27 +133,27 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Type == other.Type ||
                     this.Type != null &&
                     this.Type.Equals(other.Type)
-                ) && 
+                ) &&
                 (
                     this.Dimension == other.Dimension ||
                     this.Dimension != null &&
                     this.Dimension.Equals(other.Dimension)
-                ) && 
+                ) &&
                 (
                     this.Metric == other.Metric ||
                     this.Metric != null &&
                     this.Metric.Equals(other.Metric)
-                ) && 
+                ) &&
                 (
                     this.Size == other.Size ||
                     this.Size != null &&
                     this.Size.Equals(other.Size)
-                ) && 
+                ) &&
                 (
                     this.Ranges == other.Ranges ||
                     this.Ranges != null &&

@@ -112,27 +112,27 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.WorkItemExecId == other.WorkItemExecId ||
                     this.WorkItemExecId != null &&
                     this.WorkItemExecId.Equals(other.WorkItemExecId)
-                ) && 
+                ) &&
                 (
                     this.SaveTime == other.SaveTime ||
                     this.SaveTime != null &&
                     this.SaveTime.Equals(other.SaveTime)
-                ) && 
+                ) &&
                 (
                     this.SaveUser == other.SaveUser ||
                     this.SaveUser != null &&
                     this.SaveUser.Equals(other.SaveUser)
-                ) && 
+                ) &&
                 (
                     this.SaveComment == other.SaveComment ||
                     this.SaveComment != null &&
                     this.SaveComment.Equals(other.SaveComment)
-                ) && 
+                ) &&
                 (
                     this.DataItems == other.DataItems ||
                     this.DataItems != null &&

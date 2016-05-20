@@ -64,7 +64,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="RateType">Rate type for the sheet. (required).</param>
         /// <param name="Name">Human readable name for schema. (required).</param>
         /// <param name="DateFormat">A date format that represents the date time stamp you want to parse. This is based on the reference time of Mon Jan 2 15:04:05 MST 2006. For example, if you had the date 13-OCT-2015, this parameter should be 02-Jan-2006. As another example, if you have the date 2014-09-20, this parameter should be 2006-01-02..</param>
-        public CsvSchema(, int? HeaderRow = null, int? DataRow = null, Dictionary<string, string> HeaderMappings = null, RateTypeEnum? RateType = null, string Name = null, string DateFormat = null)
+        public CsvSchema(int? HeaderRow = null, int? DataRow = null, Dictionary<string, string> HeaderMappings = null, RateTypeEnum? RateType = null, string Name = null, string DateFormat = null)
         {
             // to ensure "HeaderRow" is required (not null)
             if (HeaderRow == null)
@@ -200,37 +200,37 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.CarrierId == other.CarrierId ||
                     this.CarrierId != null &&
                     this.CarrierId.Equals(other.CarrierId)
-                ) && 
+                ) &&
                 (
                     this.HeaderRow == other.HeaderRow ||
                     this.HeaderRow != null &&
                     this.HeaderRow.Equals(other.HeaderRow)
-                ) && 
+                ) &&
                 (
                     this.DataRow == other.DataRow ||
                     this.DataRow != null &&
                     this.DataRow.Equals(other.DataRow)
-                ) && 
+                ) &&
                 (
                     this.HeaderMappings == other.HeaderMappings ||
                     this.HeaderMappings != null &&
                     this.HeaderMappings.SequenceEqual(other.HeaderMappings)
-                ) && 
+                ) &&
                 (
                     this.RateType == other.RateType ||
                     this.RateType != null &&
                     this.RateType.Equals(other.RateType)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.DateFormat == other.DateFormat ||
                     this.DateFormat != null &&

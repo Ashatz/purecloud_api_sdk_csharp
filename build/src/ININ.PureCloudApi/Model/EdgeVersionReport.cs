@@ -83,12 +83,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.OldestVersion == other.OldestVersion ||
                     this.OldestVersion != null &&
                     this.OldestVersion.Equals(other.OldestVersion)
-                ) && 
+                ) &&
                 (
                     this.NewestVersion == other.NewestVersion ||
                     this.NewestVersion != null &&

@@ -142,7 +142,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="StatusCode">StatusCode.</param>
         /// <param name="CommandType">CommandType.</param>
         /// <param name="Document">Document.</param>
-        public CommandStatus(, string Name = null, DateTime? Expiration = null, string UserId = null, StatusCodeEnum? StatusCode = null, CommandTypeEnum? CommandType = null, Document Document = null)
+        public CommandStatus(string Name = null, DateTime? Expiration = null, string UserId = null, StatusCodeEnum? StatusCode = null, CommandTypeEnum? CommandType = null, Document Document = null)
         {
             this.Name = Name;
             this.Expiration = Expiration;
@@ -236,42 +236,42 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Expiration == other.Expiration ||
                     this.Expiration != null &&
                     this.Expiration.Equals(other.Expiration)
-                ) && 
+                ) &&
                 (
                     this.UserId == other.UserId ||
                     this.UserId != null &&
                     this.UserId.Equals(other.UserId)
-                ) && 
+                ) &&
                 (
                     this.StatusCode == other.StatusCode ||
                     this.StatusCode != null &&
                     this.StatusCode.Equals(other.StatusCode)
-                ) && 
+                ) &&
                 (
                     this.CommandType == other.CommandType ||
                     this.CommandType != null &&
                     this.CommandType.Equals(other.CommandType)
-                ) && 
+                ) &&
                 (
                     this.Document == other.Document ||
                     this.Document != null &&
                     this.Document.Equals(other.Document)
-                )
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

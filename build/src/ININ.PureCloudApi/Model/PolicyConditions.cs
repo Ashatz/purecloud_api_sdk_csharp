@@ -89,7 +89,7 @@ namespace ININ.PureCloudApi.Model
         /// Gets or Sets Directions
         /// </summary>
         [DataMember(Name="directions", EmitDefaultValue=false)]
-        public List<string> Directions { get; set; }
+        public List<DirectionsEnum> Directions { get; set; }
         /// <summary>
         /// Gets or Sets DateRanges
         /// </summary>
@@ -99,7 +99,7 @@ namespace ININ.PureCloudApi.Model
         /// Gets or Sets MediaTypes
         /// </summary>
         [DataMember(Name="mediaTypes", EmitDefaultValue=false)]
-        public List<string> MediaTypes { get; set; }
+        public List<MediaTypesEnum> MediaTypes { get; set; }
         /// <summary>
         /// Gets or Sets ForQueues
         /// </summary>
@@ -171,42 +171,42 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.ForUsers == other.ForUsers ||
                     this.ForUsers != null &&
                     this.ForUsers.SequenceEqual(other.ForUsers)
-                ) && 
+                ) &&
                 (
                     this.Directions == other.Directions ||
                     this.Directions != null &&
                     this.Directions.SequenceEqual(other.Directions)
-                ) && 
+                ) &&
                 (
                     this.DateRanges == other.DateRanges ||
                     this.DateRanges != null &&
                     this.DateRanges.SequenceEqual(other.DateRanges)
-                ) && 
+                ) &&
                 (
                     this.MediaTypes == other.MediaTypes ||
                     this.MediaTypes != null &&
                     this.MediaTypes.SequenceEqual(other.MediaTypes)
-                ) && 
+                ) &&
                 (
                     this.ForQueues == other.ForQueues ||
                     this.ForQueues != null &&
                     this.ForQueues.SequenceEqual(other.ForQueues)
-                ) && 
+                ) &&
                 (
                     this.Duration == other.Duration ||
                     this.Duration != null &&
                     this.Duration.Equals(other.Duration)
-                ) && 
+                ) &&
                 (
                     this.WrapupCodes == other.WrapupCodes ||
                     this.WrapupCodes != null &&
                     this.WrapupCodes.SequenceEqual(other.WrapupCodes)
-                ) && 
+                ) &&
                 (
                     this.TimeAllowed == other.TimeAllowed ||
                     this.TimeAllowed != null &&

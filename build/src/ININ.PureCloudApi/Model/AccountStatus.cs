@@ -27,7 +27,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="ThirdPartyAccountId">ThirdPartyAccountId.</param>
         /// <param name="ThirdPartySubscriptionId">ThirdPartySubscriptionId.</param>
         /// <param name="ThirdPartySubscriptionNonAcbId">ThirdPartySubscriptionNonAcbId.</param>
-        public AccountStatus(, string Name = null, string OrgName = null, bool? Configured = null, string AdminUIURL = null, string ThirdPartyAccountId = null, string ThirdPartySubscriptionId = null, string ThirdPartySubscriptionNonAcbId = null)
+        public AccountStatus(string Name = null, string OrgName = null, bool? Configured = null, string AdminUIURL = null, string ThirdPartyAccountId = null, string ThirdPartySubscriptionId = null, string ThirdPartySubscriptionNonAcbId = null)
         {
             this.Name = Name;
             this.OrgName = OrgName;
@@ -145,47 +145,47 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.OrgName == other.OrgName ||
                     this.OrgName != null &&
                     this.OrgName.Equals(other.OrgName)
-                ) && 
+                ) &&
                 (
                     this.Configured == other.Configured ||
                     this.Configured != null &&
                     this.Configured.Equals(other.Configured)
-                ) && 
+                ) &&
                 (
                     this.AdminUIURL == other.AdminUIURL ||
                     this.AdminUIURL != null &&
                     this.AdminUIURL.Equals(other.AdminUIURL)
-                ) && 
+                ) &&
                 (
                     this.ThirdPartyAccountId == other.ThirdPartyAccountId ||
                     this.ThirdPartyAccountId != null &&
                     this.ThirdPartyAccountId.Equals(other.ThirdPartyAccountId)
-                ) && 
+                ) &&
                 (
                     this.ThirdPartySubscriptionId == other.ThirdPartySubscriptionId ||
                     this.ThirdPartySubscriptionId != null &&
                     this.ThirdPartySubscriptionId.Equals(other.ThirdPartySubscriptionId)
-                ) && 
+                ) &&
                 (
                     this.ThirdPartySubscriptionNonAcbId == other.ThirdPartySubscriptionNonAcbId ||
                     this.ThirdPartySubscriptionNonAcbId != null &&
                     this.ThirdPartySubscriptionNonAcbId.Equals(other.ThirdPartySubscriptionNonAcbId)
-                )
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

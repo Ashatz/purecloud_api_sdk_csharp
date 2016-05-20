@@ -187,42 +187,42 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Interval == other.Interval ||
                     this.Interval != null &&
                     this.Interval.Equals(other.Interval)
-                ) && 
+                ) &&
                 (
                     this.ConversationFilters == other.ConversationFilters ||
                     this.ConversationFilters != null &&
                     this.ConversationFilters.SequenceEqual(other.ConversationFilters)
-                ) && 
+                ) &&
                 (
                     this.EvaluationFilters == other.EvaluationFilters ||
                     this.EvaluationFilters != null &&
                     this.EvaluationFilters.SequenceEqual(other.EvaluationFilters)
-                ) && 
+                ) &&
                 (
                     this.SegmentFilters == other.SegmentFilters ||
                     this.SegmentFilters != null &&
                     this.SegmentFilters.SequenceEqual(other.SegmentFilters)
-                ) && 
+                ) &&
                 (
                     this.Aggregations == other.Aggregations ||
                     this.Aggregations != null &&
                     this.Aggregations.SequenceEqual(other.Aggregations)
-                ) && 
+                ) &&
                 (
                     this.Paging == other.Paging ||
                     this.Paging != null &&
                     this.Paging.Equals(other.Paging)
-                ) && 
+                ) &&
                 (
                     this.Order == other.Order ||
                     this.Order != null &&
                     this.Order.Equals(other.Order)
-                ) && 
+                ) &&
                 (
                     this.OrderBy == other.OrderBy ||
                     this.OrderBy != null &&

@@ -29,7 +29,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="User">The user associated with the external organization (required).</param>
         /// <param name="ExternalOrganization">The external organization this relationship is attached to (required).</param>
         /// <param name="_Relationship">The relationship or role of the user to this external organization.Examples: Account Manager, Sales Engineer, Implementation Consultant (required).</param>
-        public Relationship(, string Name = null, User User = null, ExternalOrganization ExternalOrganization = null, string _Relationship = null)
+        public Relationship(string Name = null, User User = null, ExternalOrganization ExternalOrganization = null, string _Relationship = null)
         {
             // to ensure "User" is required (not null)
             if (User == null)
@@ -145,32 +145,32 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.User == other.User ||
                     this.User != null &&
                     this.User.Equals(other.User)
-                ) && 
+                ) &&
                 (
                     this.ExternalOrganization == other.ExternalOrganization ||
                     this.ExternalOrganization != null &&
                     this.ExternalOrganization.Equals(other.ExternalOrganization)
-                ) && 
+                ) &&
                 (
                     this._Relationship == other._Relationship ||
                     this._Relationship != null &&
                     this._Relationship.Equals(other._Relationship)
-                )
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

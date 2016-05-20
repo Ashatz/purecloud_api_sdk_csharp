@@ -42,7 +42,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="UserFollowersCount">Twitter: the number of followers this user has at the time of this expression.</param>
         /// <param name="GroupTags">The Group Tags applied by the generating Gistener.</param>
         /// <param name="Routed">Routed (default to false).</param>
-        public TwitterExpression(, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, bool? IsDispositioned = null, bool? IsNoise = null, Gistener Gistener = null, string TweetId = null, string Text = null, DateTime? TweetCreated = null, bool? IsReply = null, bool? IsRetweet = null, string RetweetParentId = null, int? RetweetCount = null, bool? IsQuotedTweet = null, string QuotedParentId = null, string UserId = null, string UserName = null, string UserScreenName = null, int? UserTweetCount = null, int? UserFollowersCount = null, List<GroupTag> GroupTags = null, bool? Routed = null)
+        public TwitterExpression(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, bool? IsDispositioned = null, bool? IsNoise = null, Gistener Gistener = null, string TweetId = null, string Text = null, DateTime? TweetCreated = null, bool? IsReply = null, bool? IsRetweet = null, string RetweetParentId = null, int? RetweetCount = null, bool? IsQuotedTweet = null, string QuotedParentId = null, string UserId = null, string UserName = null, string UserScreenName = null, int? UserTweetCount = null, int? UserFollowersCount = null, List<GroupTag> GroupTags = null, bool? Routed = null)
         {
             this.Name = Name;
             this.DateCreated = DateCreated;
@@ -325,122 +325,122 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.DateCreated == other.DateCreated ||
                     this.DateCreated != null &&
                     this.DateCreated.Equals(other.DateCreated)
-                ) && 
+                ) &&
                 (
                     this.DateModified == other.DateModified ||
                     this.DateModified != null &&
                     this.DateModified.Equals(other.DateModified)
-                ) && 
+                ) &&
                 (
                     this.IsDispositioned == other.IsDispositioned ||
                     this.IsDispositioned != null &&
                     this.IsDispositioned.Equals(other.IsDispositioned)
-                ) && 
+                ) &&
                 (
                     this.IsNoise == other.IsNoise ||
                     this.IsNoise != null &&
                     this.IsNoise.Equals(other.IsNoise)
-                ) && 
+                ) &&
                 (
                     this.Gistener == other.Gistener ||
                     this.Gistener != null &&
                     this.Gistener.Equals(other.Gistener)
-                ) && 
+                ) &&
                 (
                     this.TweetId == other.TweetId ||
                     this.TweetId != null &&
                     this.TweetId.Equals(other.TweetId)
-                ) && 
+                ) &&
                 (
                     this.Text == other.Text ||
                     this.Text != null &&
                     this.Text.Equals(other.Text)
-                ) && 
+                ) &&
                 (
                     this.TweetCreated == other.TweetCreated ||
                     this.TweetCreated != null &&
                     this.TweetCreated.Equals(other.TweetCreated)
-                ) && 
+                ) &&
                 (
                     this.IsReply == other.IsReply ||
                     this.IsReply != null &&
                     this.IsReply.Equals(other.IsReply)
-                ) && 
+                ) &&
                 (
                     this.IsRetweet == other.IsRetweet ||
                     this.IsRetweet != null &&
                     this.IsRetweet.Equals(other.IsRetweet)
-                ) && 
+                ) &&
                 (
                     this.RetweetParentId == other.RetweetParentId ||
                     this.RetweetParentId != null &&
                     this.RetweetParentId.Equals(other.RetweetParentId)
-                ) && 
+                ) &&
                 (
                     this.RetweetCount == other.RetweetCount ||
                     this.RetweetCount != null &&
                     this.RetweetCount.Equals(other.RetweetCount)
-                ) && 
+                ) &&
                 (
                     this.IsQuotedTweet == other.IsQuotedTweet ||
                     this.IsQuotedTweet != null &&
                     this.IsQuotedTweet.Equals(other.IsQuotedTweet)
-                ) && 
+                ) &&
                 (
                     this.QuotedParentId == other.QuotedParentId ||
                     this.QuotedParentId != null &&
                     this.QuotedParentId.Equals(other.QuotedParentId)
-                ) && 
+                ) &&
                 (
                     this.UserId == other.UserId ||
                     this.UserId != null &&
                     this.UserId.Equals(other.UserId)
-                ) && 
+                ) &&
                 (
                     this.UserName == other.UserName ||
                     this.UserName != null &&
                     this.UserName.Equals(other.UserName)
-                ) && 
+                ) &&
                 (
                     this.UserScreenName == other.UserScreenName ||
                     this.UserScreenName != null &&
                     this.UserScreenName.Equals(other.UserScreenName)
-                ) && 
+                ) &&
                 (
                     this.UserTweetCount == other.UserTweetCount ||
                     this.UserTweetCount != null &&
                     this.UserTweetCount.Equals(other.UserTweetCount)
-                ) && 
+                ) &&
                 (
                     this.UserFollowersCount == other.UserFollowersCount ||
                     this.UserFollowersCount != null &&
                     this.UserFollowersCount.Equals(other.UserFollowersCount)
-                ) && 
+                ) &&
                 (
                     this.GroupTags == other.GroupTags ||
                     this.GroupTags != null &&
                     this.GroupTags.SequenceEqual(other.GroupTags)
-                ) && 
+                ) &&
                 (
                     this.Routed == other.Routed ||
                     this.Routed != null &&
                     this.Routed.Equals(other.Routed)
-                )
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

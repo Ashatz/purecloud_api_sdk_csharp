@@ -139,12 +139,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Formula == other.Formula ||
                     this.Formula != null &&
                     this.Formula.Equals(other.Formula)
-                ) && 
+                ) &&
                 (
                     this.EstimatedWaitTimeSeconds == other.EstimatedWaitTimeSeconds ||
                     this.EstimatedWaitTimeSeconds != null &&

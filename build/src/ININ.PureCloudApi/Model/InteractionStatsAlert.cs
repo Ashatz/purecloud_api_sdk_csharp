@@ -280,7 +280,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="NotificationUsers">The ids of users who were notified of alarm state change. (required).</param>
         /// <param name="AlertTypes">A collection of notification methods. &#x3D; [&#39;SMS&#39;, &#39;DEVICE&#39;, &#39;EMAIL&#39;] (required).</param>
         /// <param name="RuleUri">RuleUri.</param>
-        public InteractionStatsAlert(, bool? Unread = null, List<User> NotificationUsers = null, List<AlertTypesEnum> AlertTypes = null, string RuleUri = null)
+        public InteractionStatsAlert(bool? Unread = null, List<User> NotificationUsers = null, List<AlertTypesEnum> AlertTypes = null, string RuleUri = null)
         {
             // to ensure "Unread" is required (not null)
             if (Unread == null)
@@ -371,7 +371,7 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <value>A collection of notification methods. &#x3D; [&#39;SMS&#39;, &#39;DEVICE&#39;, &#39;EMAIL&#39;]</value>
         [DataMember(Name="alertTypes", EmitDefaultValue=false)]
-        public List<string> AlertTypes { get; set; }
+        public List<AlertTypesEnum> AlertTypes { get; set; }
         /// <summary>
         /// Gets or Sets RuleUri
         /// </summary>
@@ -443,87 +443,87 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Dimension == other.Dimension ||
                     this.Dimension != null &&
                     this.Dimension.Equals(other.Dimension)
-                ) && 
+                ) &&
                 (
                     this.DimensionValue == other.DimensionValue ||
                     this.DimensionValue != null &&
                     this.DimensionValue.Equals(other.DimensionValue)
-                ) && 
+                ) &&
                 (
                     this.Metric == other.Metric ||
                     this.Metric != null &&
                     this.Metric.Equals(other.Metric)
-                ) && 
+                ) &&
                 (
                     this.MediaType == other.MediaType ||
                     this.MediaType != null &&
                     this.MediaType.Equals(other.MediaType)
-                ) && 
+                ) &&
                 (
                     this.NumericRange == other.NumericRange ||
                     this.NumericRange != null &&
                     this.NumericRange.Equals(other.NumericRange)
-                ) && 
+                ) &&
                 (
                     this.Statistic == other.Statistic ||
                     this.Statistic != null &&
                     this.Statistic.Equals(other.Statistic)
-                ) && 
+                ) &&
                 (
                     this.Value == other.Value ||
                     this.Value != null &&
                     this.Value.Equals(other.Value)
-                ) && 
+                ) &&
                 (
                     this.RuleId == other.RuleId ||
                     this.RuleId != null &&
                     this.RuleId.Equals(other.RuleId)
-                ) && 
+                ) &&
                 (
                     this.Unread == other.Unread ||
                     this.Unread != null &&
                     this.Unread.Equals(other.Unread)
-                ) && 
+                ) &&
                 (
                     this.StartDate == other.StartDate ||
                     this.StartDate != null &&
                     this.StartDate.Equals(other.StartDate)
-                ) && 
+                ) &&
                 (
                     this.EndDate == other.EndDate ||
                     this.EndDate != null &&
                     this.EndDate.Equals(other.EndDate)
-                ) && 
+                ) &&
                 (
                     this.NotificationUsers == other.NotificationUsers ||
                     this.NotificationUsers != null &&
                     this.NotificationUsers.SequenceEqual(other.NotificationUsers)
-                ) && 
+                ) &&
                 (
                     this.AlertTypes == other.AlertTypes ||
                     this.AlertTypes != null &&
                     this.AlertTypes.SequenceEqual(other.AlertTypes)
-                ) && 
+                ) &&
                 (
                     this.RuleUri == other.RuleUri ||
                     this.RuleUri != null &&
                     this.RuleUri.Equals(other.RuleUri)
-                )
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

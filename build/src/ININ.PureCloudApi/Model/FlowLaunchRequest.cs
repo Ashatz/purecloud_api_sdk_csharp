@@ -157,22 +157,22 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.FlowConfigId == other.FlowConfigId ||
                     this.FlowConfigId != null &&
                     this.FlowConfigId.Equals(other.FlowConfigId)
-                ) && 
+                ) &&
                 (
                     this.FlowInstanceName == other.FlowInstanceName ||
                     this.FlowInstanceName != null &&
                     this.FlowInstanceName.Equals(other.FlowInstanceName)
-                ) && 
+                ) &&
                 (
                     this.InputData == other.InputData ||
                     this.InputData != null &&
                     this.InputData.Equals(other.InputData)
-                ) && 
+                ) &&
                 (
                     this.LaunchType == other.LaunchType ||
                     this.LaunchType != null &&

@@ -120,27 +120,27 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Reachable == other.Reachable ||
                     this.Reachable != null &&
                     this.Reachable.Equals(other.Reachable)
-                ) && 
+                ) &&
                 (
                     this.AddressOfRecord == other.AddressOfRecord ||
                     this.AddressOfRecord != null &&
                     this.AddressOfRecord.Equals(other.AddressOfRecord)
-                ) && 
+                ) &&
                 (
                     this.ContactAddresses == other.ContactAddresses ||
                     this.ContactAddresses != null &&
                     this.ContactAddresses.SequenceEqual(other.ContactAddresses)
-                ) && 
+                ) &&
                 (
                     this.ReachableStateTime == other.ReachableStateTime ||
                     this.ReachableStateTime != null &&

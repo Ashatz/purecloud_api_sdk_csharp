@@ -92,17 +92,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.PermissionContext == other.PermissionContext ||
                     this.PermissionContext != null &&
                     this.PermissionContext.Equals(other.PermissionContext)
-                ) && 
+                ) &&
                 (
                     this.Role == other.Role ||
                     this.Role != null &&
                     this.Role.Equals(other.Role)
-                ) && 
+                ) &&
                 (
                     this.GrantMadeAt == other.GrantMadeAt ||
                     this.GrantMadeAt != null &&

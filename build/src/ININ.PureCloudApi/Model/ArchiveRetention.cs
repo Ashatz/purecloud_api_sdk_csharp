@@ -97,12 +97,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Days == other.Days ||
                     this.Days != null &&
                     this.Days.Equals(other.Days)
-                ) && 
+                ) &&
                 (
                     this.StorageMedium == other.StorageMedium ||
                     this.StorageMedium != null &&

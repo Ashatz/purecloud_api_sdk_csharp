@@ -26,7 +26,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="DurationMs">DurationMs.</param>
         /// <param name="User">User.</param>
         /// <param name="Description">Description.</param>
-        public Annotation(, string Name = null, string Type = null, long? Location = null, long? DurationMs = null, User User = null, string Description = null)
+        public Annotation(string Name = null, string Type = null, long? Location = null, long? DurationMs = null, User User = null, string Description = null)
         {
             this.Name = Name;
             this.Type = Type;
@@ -129,42 +129,42 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Type == other.Type ||
                     this.Type != null &&
                     this.Type.Equals(other.Type)
-                ) && 
+                ) &&
                 (
                     this.Location == other.Location ||
                     this.Location != null &&
                     this.Location.Equals(other.Location)
-                ) && 
+                ) &&
                 (
                     this.DurationMs == other.DurationMs ||
                     this.DurationMs != null &&
                     this.DurationMs.Equals(other.DurationMs)
-                ) && 
+                ) &&
                 (
                     this.User == other.User ||
                     this.User != null &&
                     this.User.Equals(other.User)
-                ) && 
+                ) &&
                 (
                     this.Description == other.Description ||
                     this.Description != null &&
                     this.Description.Equals(other.Description)
-                )
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

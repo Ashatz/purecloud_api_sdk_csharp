@@ -91,17 +91,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.DurationMilliseconds == other.DurationMilliseconds ||
                     this.DurationMilliseconds != null &&
                     this.DurationMilliseconds.Equals(other.DurationMilliseconds)
-                ) && 
+                ) &&
                 (
                     this.SizeBytes == other.SizeBytes ||
                     this.SizeBytes != null &&
                     this.SizeBytes.Equals(other.SizeBytes)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

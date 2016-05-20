@@ -26,7 +26,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="TweetText">The text of the tweet..</param>
         /// <param name="RawTweetText">The raw text of the tweet.</param>
         /// <param name="Approved">Approved (default to false).</param>
-        public Publication(, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, string TweetText = null, string RawTweetText = null, bool? Approved = null)
+        public Publication(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, string TweetText = null, string RawTweetText = null, bool? Approved = null)
         {
             this.Name = Name;
             this.DateCreated = DateCreated;
@@ -141,42 +141,42 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.DateCreated == other.DateCreated ||
                     this.DateCreated != null &&
                     this.DateCreated.Equals(other.DateCreated)
-                ) && 
+                ) &&
                 (
                     this.DateModified == other.DateModified ||
                     this.DateModified != null &&
                     this.DateModified.Equals(other.DateModified)
-                ) && 
+                ) &&
                 (
                     this.TweetText == other.TweetText ||
                     this.TweetText != null &&
                     this.TweetText.Equals(other.TweetText)
-                ) && 
+                ) &&
                 (
                     this.RawTweetText == other.RawTweetText ||
                     this.RawTweetText != null &&
                     this.RawTweetText.Equals(other.RawTweetText)
-                ) && 
+                ) &&
                 (
                     this.Approved == other.Approved ||
                     this.Approved != null &&
                     this.Approved.Equals(other.Approved)
-                )
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

@@ -126,7 +126,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="LineStatuses">A list of LineStatus information for each of the lines of this phone.</param>
         /// <param name="PhoneAssignmentToEdgeType">The phone status&#39;s edge assignment type..</param>
         /// <param name="Edge">The URI of the edge that provided this status information..</param>
-        public PhoneStatus(, string Name = null, OperationalStatusEnum? OperationalStatus = null, EdgesStatusEnum? EdgesStatus = null, ProvisionInfo Provision = null, List<LineStatus> LineStatuses = null, PhoneAssignmentToEdgeTypeEnum? PhoneAssignmentToEdgeType = null, UriReference Edge = null)
+        public PhoneStatus(string Name = null, OperationalStatusEnum? OperationalStatus = null, EdgesStatusEnum? EdgesStatus = null, ProvisionInfo Provision = null, List<LineStatus> LineStatuses = null, PhoneAssignmentToEdgeTypeEnum? PhoneAssignmentToEdgeType = null, UriReference Edge = null)
         {
             this.Name = Name;
             this.OperationalStatus = OperationalStatus;
@@ -224,47 +224,47 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.OperationalStatus == other.OperationalStatus ||
                     this.OperationalStatus != null &&
                     this.OperationalStatus.Equals(other.OperationalStatus)
-                ) && 
+                ) &&
                 (
                     this.EdgesStatus == other.EdgesStatus ||
                     this.EdgesStatus != null &&
                     this.EdgesStatus.Equals(other.EdgesStatus)
-                ) && 
+                ) &&
                 (
                     this.Provision == other.Provision ||
                     this.Provision != null &&
                     this.Provision.Equals(other.Provision)
-                ) && 
+                ) &&
                 (
                     this.LineStatuses == other.LineStatuses ||
                     this.LineStatuses != null &&
                     this.LineStatuses.SequenceEqual(other.LineStatuses)
-                ) && 
+                ) &&
                 (
                     this.PhoneAssignmentToEdgeType == other.PhoneAssignmentToEdgeType ||
                     this.PhoneAssignmentToEdgeType != null &&
                     this.PhoneAssignmentToEdgeType.Equals(other.PhoneAssignmentToEdgeType)
-                ) && 
+                ) &&
                 (
                     this.Edge == other.Edge ||
                     this.Edge != null &&
                     this.Edge.Equals(other.Edge)
-                )
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

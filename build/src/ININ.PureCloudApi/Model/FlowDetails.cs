@@ -119,7 +119,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="FlowCompletionTime">The time the flow completed, if applicable. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="FlowCompletionReason">The completion reason set at the flow completion time, if applicable..</param>
         /// <param name="FlowErrorInfo">Additional information if the flow is in error.</param>
-        public FlowDetails(, string Name = null, FlowConfigId FlowConfigId = null, DateTime? LaunchTime = null, LaunchTypeEnum? LaunchType = null, User LaunchedBy = null, StatusEnum? Status = null, List<AssociatedDocument> AssociatedDocuments = null, DateTime? FlowCompletionTime = null, string FlowCompletionReason = null, ErrorBody FlowErrorInfo = null)
+        public FlowDetails(string Name = null, FlowConfigId FlowConfigId = null, DateTime? LaunchTime = null, LaunchTypeEnum? LaunchType = null, User LaunchedBy = null, StatusEnum? Status = null, List<AssociatedDocument> AssociatedDocuments = null, DateTime? FlowCompletionTime = null, string FlowCompletionReason = null, ErrorBody FlowErrorInfo = null)
         {
             // to ensure "FlowConfigId" is required (not null)
             if (FlowConfigId == null)
@@ -271,62 +271,62 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.FlowConfigId == other.FlowConfigId ||
                     this.FlowConfigId != null &&
                     this.FlowConfigId.Equals(other.FlowConfigId)
-                ) && 
+                ) &&
                 (
                     this.LaunchTime == other.LaunchTime ||
                     this.LaunchTime != null &&
                     this.LaunchTime.Equals(other.LaunchTime)
-                ) && 
+                ) &&
                 (
                     this.LaunchType == other.LaunchType ||
                     this.LaunchType != null &&
                     this.LaunchType.Equals(other.LaunchType)
-                ) && 
+                ) &&
                 (
                     this.LaunchedBy == other.LaunchedBy ||
                     this.LaunchedBy != null &&
                     this.LaunchedBy.Equals(other.LaunchedBy)
-                ) && 
+                ) &&
                 (
                     this.Status == other.Status ||
                     this.Status != null &&
                     this.Status.Equals(other.Status)
-                ) && 
+                ) &&
                 (
                     this.AssociatedDocuments == other.AssociatedDocuments ||
                     this.AssociatedDocuments != null &&
                     this.AssociatedDocuments.SequenceEqual(other.AssociatedDocuments)
-                ) && 
+                ) &&
                 (
                     this.FlowCompletionTime == other.FlowCompletionTime ||
                     this.FlowCompletionTime != null &&
                     this.FlowCompletionTime.Equals(other.FlowCompletionTime)
-                ) && 
+                ) &&
                 (
                     this.FlowCompletionReason == other.FlowCompletionReason ||
                     this.FlowCompletionReason != null &&
                     this.FlowCompletionReason.Equals(other.FlowCompletionReason)
-                ) && 
+                ) &&
                 (
                     this.FlowErrorInfo == other.FlowErrorInfo ||
                     this.FlowErrorInfo != null &&
                     this.FlowErrorInfo.Equals(other.FlowErrorInfo)
-                )
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

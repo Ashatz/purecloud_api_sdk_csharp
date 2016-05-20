@@ -174,32 +174,32 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.AdminUsername == other.AdminUsername ||
                     this.AdminUsername != null &&
                     this.AdminUsername.Equals(other.AdminUsername)
-                ) && 
+                ) &&
                 (
                     this.AdminPassword == other.AdminPassword ||
                     this.AdminPassword != null &&
                     this.AdminPassword.Equals(other.AdminPassword)
-                ) && 
+                ) &&
                 (
                     this.Domain == other.Domain ||
                     this.Domain != null &&
                     this.Domain.Equals(other.Domain)
-                ) && 
+                ) &&
                 (
                     this.ThirdPartyOrgName == other.ThirdPartyOrgName ||
                     this.ThirdPartyOrgName != null &&
                     this.ThirdPartyOrgName.Equals(other.ThirdPartyOrgName)
-                ) && 
+                ) &&
                 (
                     this.Deletable == other.Deletable ||
                     this.Deletable != null &&

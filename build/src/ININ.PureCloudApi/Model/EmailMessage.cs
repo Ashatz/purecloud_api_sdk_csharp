@@ -30,7 +30,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="TextBody">The text body of the email message..</param>
         /// <param name="HtmlBody">The html body of the email message..</param>
         /// <param name="Time">The time when the message was received or sent. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        public EmailMessage(, string Name = null, List<EmailAddress> To = null, List<EmailAddress> Cc = null, List<EmailAddress> Bcc = null, EmailAddress From = null, string Subject = null, List<Attachment> Attachments = null, string TextBody = null, string HtmlBody = null, DateTime? Time = null)
+        public EmailMessage(string Name = null, List<EmailAddress> To = null, List<EmailAddress> Cc = null, List<EmailAddress> Bcc = null, EmailAddress From = null, string Subject = null, List<Attachment> Attachments = null, string TextBody = null, string HtmlBody = null, DateTime? Time = null)
         {
             this.Name = Name;
             this.To = To;
@@ -170,62 +170,62 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.To == other.To ||
                     this.To != null &&
                     this.To.SequenceEqual(other.To)
-                ) && 
+                ) &&
                 (
                     this.Cc == other.Cc ||
                     this.Cc != null &&
                     this.Cc.SequenceEqual(other.Cc)
-                ) && 
+                ) &&
                 (
                     this.Bcc == other.Bcc ||
                     this.Bcc != null &&
                     this.Bcc.SequenceEqual(other.Bcc)
-                ) && 
+                ) &&
                 (
                     this.From == other.From ||
                     this.From != null &&
                     this.From.Equals(other.From)
-                ) && 
+                ) &&
                 (
                     this.Subject == other.Subject ||
                     this.Subject != null &&
                     this.Subject.Equals(other.Subject)
-                ) && 
+                ) &&
                 (
                     this.Attachments == other.Attachments ||
                     this.Attachments != null &&
                     this.Attachments.SequenceEqual(other.Attachments)
-                ) && 
+                ) &&
                 (
                     this.TextBody == other.TextBody ||
                     this.TextBody != null &&
                     this.TextBody.Equals(other.TextBody)
-                ) && 
+                ) &&
                 (
                     this.HtmlBody == other.HtmlBody ||
                     this.HtmlBody != null &&
                     this.HtmlBody.Equals(other.HtmlBody)
-                ) && 
+                ) &&
                 (
                     this.Time == other.Time ||
                     this.Time != null &&
                     this.Time.Equals(other.Time)
-                )
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

@@ -203,82 +203,82 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.User == other.User ||
                     this.User != null &&
                     this.User.Equals(other.User)
-                ) && 
+                ) &&
                 (
                     this.CorrelationId == other.CorrelationId ||
                     this.CorrelationId != null &&
                     this.CorrelationId.Equals(other.CorrelationId)
-                ) && 
+                ) &&
                 (
                     this.TransactionId == other.TransactionId ||
                     this.TransactionId != null &&
                     this.TransactionId.Equals(other.TransactionId)
-                ) && 
+                ) &&
                 (
                     this.TransactionInitiator == other.TransactionInitiator ||
                     this.TransactionInitiator != null &&
                     this.TransactionInitiator.Equals(other.TransactionInitiator)
-                ) && 
+                ) &&
                 (
                     this.Application == other.Application ||
                     this.Application != null &&
                     this.Application.Equals(other.Application)
-                ) && 
+                ) &&
                 (
                     this.ServiceName == other.ServiceName ||
                     this.ServiceName != null &&
                     this.ServiceName.Equals(other.ServiceName)
-                ) && 
+                ) &&
                 (
                     this.Level == other.Level ||
                     this.Level != null &&
                     this.Level.Equals(other.Level)
-                ) && 
+                ) &&
                 (
                     this.Timestamp == other.Timestamp ||
                     this.Timestamp != null &&
                     this.Timestamp.Equals(other.Timestamp)
-                ) && 
+                ) &&
                 (
                     this.ReceivedTimestamp == other.ReceivedTimestamp ||
                     this.ReceivedTimestamp != null &&
                     this.ReceivedTimestamp.Equals(other.ReceivedTimestamp)
-                ) && 
+                ) &&
                 (
                     this.Status == other.Status ||
                     this.Status != null &&
                     this.Status.Equals(other.Status)
-                ) && 
+                ) &&
                 (
                     this.ActionContext == other.ActionContext ||
                     this.ActionContext != null &&
                     this.ActionContext.Equals(other.ActionContext)
-                ) && 
+                ) &&
                 (
                     this.Action == other.Action ||
                     this.Action != null &&
                     this.Action.Equals(other.Action)
-                ) && 
+                ) &&
                 (
                     this.Changes == other.Changes ||
                     this.Changes != null &&
                     this.Changes.SequenceEqual(other.Changes)
-                ) && 
+                ) &&
                 (
                     this.Entity == other.Entity ||
                     this.Entity != null &&
                     this.Entity.Equals(other.Entity)
-                ) && 
+                ) &&
                 (
                     this.ServiceContext == other.ServiceContext ||
                     this.ServiceContext != null &&

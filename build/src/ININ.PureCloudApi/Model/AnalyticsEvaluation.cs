@@ -147,52 +147,52 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.EvaluationId == other.EvaluationId ||
                     this.EvaluationId != null &&
                     this.EvaluationId.Equals(other.EvaluationId)
-                ) && 
+                ) &&
                 (
                     this.EvaluatorId == other.EvaluatorId ||
                     this.EvaluatorId != null &&
                     this.EvaluatorId.Equals(other.EvaluatorId)
-                ) && 
+                ) &&
                 (
                     this.UserId == other.UserId ||
                     this.UserId != null &&
                     this.UserId.Equals(other.UserId)
-                ) && 
+                ) &&
                 (
                     this.EventTime == other.EventTime ||
                     this.EventTime != null &&
                     this.EventTime.Equals(other.EventTime)
-                ) && 
+                ) &&
                 (
                     this.QueueId == other.QueueId ||
                     this.QueueId != null &&
                     this.QueueId.Equals(other.QueueId)
-                ) && 
+                ) &&
                 (
                     this.FormId == other.FormId ||
                     this.FormId != null &&
                     this.FormId.Equals(other.FormId)
-                ) && 
+                ) &&
                 (
                     this.ContextId == other.ContextId ||
                     this.ContextId != null &&
                     this.ContextId.Equals(other.ContextId)
-                ) && 
+                ) &&
                 (
                     this.FormName == other.FormName ||
                     this.FormName != null &&
                     this.FormName.Equals(other.FormName)
-                ) && 
+                ) &&
                 (
                     this.GetoTotalScore == other.GetoTotalScore ||
                     this.GetoTotalScore != null &&
                     this.GetoTotalScore.Equals(other.GetoTotalScore)
-                ) && 
+                ) &&
                 (
                     this.GetoTotalCriticalScore == other.GetoTotalCriticalScore ||
                     this.GetoTotalCriticalScore != null &&

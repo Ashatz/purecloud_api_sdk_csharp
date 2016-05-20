@@ -23,7 +23,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Name">Name.</param>
         /// <param name="InUse">InUse (default to false).</param>
         /// <param name="Acl">Acl.</param>
-        public TagValue(, string Name = null, bool? InUse = null, List<string> Acl = null)
+        public TagValue(string Name = null, bool? InUse = null, List<string> Acl = null)
         {
             this.Name = Name;
             // use default value if no "InUse" provided
@@ -113,27 +113,27 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.InUse == other.InUse ||
                     this.InUse != null &&
                     this.InUse.Equals(other.InUse)
-                ) && 
+                ) &&
                 (
                     this.Acl == other.Acl ||
                     this.Acl != null &&
                     this.Acl.SequenceEqual(other.Acl)
-                )
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

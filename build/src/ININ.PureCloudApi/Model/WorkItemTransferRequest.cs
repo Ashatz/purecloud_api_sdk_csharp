@@ -127,12 +127,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.TransferTargetType == other.TransferTargetType ||
                     this.TransferTargetType != null &&
                     this.TransferTargetType.Equals(other.TransferTargetType)
-                ) && 
+                ) &&
                 (
                     this.TransferTarget == other.TransferTarget ||
                     this.TransferTarget != null &&

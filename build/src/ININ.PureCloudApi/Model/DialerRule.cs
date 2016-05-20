@@ -57,7 +57,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Category">The category of the rule (required).</param>
         /// <param name="Conditions">The list of rule conditions; all must evaluate to true to trigger the rule actions (required).</param>
         /// <param name="Actions">The list of rule actions to be taken if the conditions are true.</param>
-        public DialerRule(, string Name = null, int? Order = null, CategoryEnum? Category = null, List<Condition> Conditions = null, List<DialerAction> Actions = null)
+        public DialerRule(string Name = null, int? Order = null, CategoryEnum? Category = null, List<Condition> Conditions = null, List<DialerAction> Actions = null)
         {
             // to ensure "Name" is required (not null)
             if (Name == null)
@@ -169,32 +169,32 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Order == other.Order ||
                     this.Order != null &&
                     this.Order.Equals(other.Order)
-                ) && 
+                ) &&
                 (
                     this.Category == other.Category ||
                     this.Category != null &&
                     this.Category.Equals(other.Category)
-                ) && 
+                ) &&
                 (
                     this.Conditions == other.Conditions ||
                     this.Conditions != null &&
                     this.Conditions.SequenceEqual(other.Conditions)
-                ) && 
+                ) &&
                 (
                     this.Actions == other.Actions ||
                     this.Actions != null &&

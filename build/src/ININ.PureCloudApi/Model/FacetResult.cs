@@ -177,27 +177,27 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.RequestName == other.RequestName ||
                     this.RequestName != null &&
                     this.RequestName.Equals(other.RequestName)
-                ) && 
+                ) &&
                 (
                     this.RequestFieldName == other.RequestFieldName ||
                     this.RequestFieldName != null &&
                     this.RequestFieldName.Equals(other.RequestFieldName)
-                ) && 
+                ) &&
                 (
                     this.FieldType == other.FieldType ||
                     this.FieldType != null &&
                     this.FieldType.Equals(other.FieldType)
-                ) && 
+                ) &&
                 (
                     this.RequestType == other.RequestType ||
                     this.RequestType != null &&
                     this.RequestType.Equals(other.RequestType)
-                ) && 
+                ) &&
                 (
                     this.Results == other.Results ||
                     this.Results != null &&

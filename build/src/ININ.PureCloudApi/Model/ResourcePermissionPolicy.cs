@@ -147,52 +147,52 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Domain == other.Domain ||
                     this.Domain != null &&
                     this.Domain.Equals(other.Domain)
-                ) && 
+                ) &&
                 (
                     this.EntityName == other.EntityName ||
                     this.EntityName != null &&
                     this.EntityName.Equals(other.EntityName)
-                ) && 
+                ) &&
                 (
                     this.PolicyName == other.PolicyName ||
                     this.PolicyName != null &&
                     this.PolicyName.Equals(other.PolicyName)
-                ) && 
+                ) &&
                 (
                     this.PolicyDescription == other.PolicyDescription ||
                     this.PolicyDescription != null &&
                     this.PolicyDescription.Equals(other.PolicyDescription)
-                ) && 
+                ) &&
                 (
                     this.ActionSetKey == other.ActionSetKey ||
                     this.ActionSetKey != null &&
                     this.ActionSetKey.Equals(other.ActionSetKey)
-                ) && 
+                ) &&
                 (
                     this.ResourceConditionNode == other.ResourceConditionNode ||
                     this.ResourceConditionNode != null &&
                     this.ResourceConditionNode.Equals(other.ResourceConditionNode)
-                ) && 
+                ) &&
                 (
                     this.NamedResources == other.NamedResources ||
                     this.NamedResources != null &&
                     this.NamedResources.SequenceEqual(other.NamedResources)
-                ) && 
+                ) &&
                 (
                     this.ResourceCondition == other.ResourceCondition ||
                     this.ResourceCondition != null &&
                     this.ResourceCondition.Equals(other.ResourceCondition)
-                ) && 
+                ) &&
                 (
                     this.ActionSet == other.ActionSet ||
                     this.ActionSet != null &&

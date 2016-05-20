@@ -23,7 +23,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Name">Name.</param>
         /// <param name="Properties">Key-value configuration settings described by the schema in the propertiesSchemaUri field..</param>
         /// <param name="Advanced">Advanced configuration described by the schema in the advancedSchemaUri field..</param>
-        public IntegrationConfiguration(, string Name = null, Object Properties = null, Object Advanced = null)
+        public IntegrationConfiguration(string Name = null, Object Properties = null, Object Advanced = null)
         {
             this.Name = Name;
             this.Properties = Properties;
@@ -128,42 +128,42 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Version == other.Version ||
                     this.Version != null &&
                     this.Version.Equals(other.Version)
-                ) && 
+                ) &&
                 (
                     this.PropertiesSchemaUri == other.PropertiesSchemaUri ||
                     this.PropertiesSchemaUri != null &&
                     this.PropertiesSchemaUri.Equals(other.PropertiesSchemaUri)
-                ) && 
+                ) &&
                 (
                     this.AdvancedSchemaUri == other.AdvancedSchemaUri ||
                     this.AdvancedSchemaUri != null &&
                     this.AdvancedSchemaUri.Equals(other.AdvancedSchemaUri)
-                ) && 
+                ) &&
                 (
                     this.Properties == other.Properties ||
                     this.Properties != null &&
                     this.Properties.Equals(other.Properties)
-                ) && 
+                ) &&
                 (
                     this.Advanced == other.Advanced ||
                     this.Advanced != null &&
                     this.Advanced.Equals(other.Advanced)
-                )
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

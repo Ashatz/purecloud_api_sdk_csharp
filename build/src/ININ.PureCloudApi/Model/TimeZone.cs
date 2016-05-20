@@ -22,7 +22,7 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="Offset">Offset.</param>
-        public TimeZone(, string Name = null, long? Offset = null)
+        public TimeZone(string Name = null, long? Offset = null)
         {
             this.Name = Name;
             this.Offset = Offset;
@@ -97,22 +97,22 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Offset == other.Offset ||
                     this.Offset != null &&
                     this.Offset.Equals(other.Offset)
-                )
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

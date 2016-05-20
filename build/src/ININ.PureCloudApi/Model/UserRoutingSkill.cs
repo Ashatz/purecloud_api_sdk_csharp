@@ -56,7 +56,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Name">Name.</param>
         /// <param name="Proficiency">Proficiency is a rating from 0.0 to 5.0 on how competent an agent is for a particular skill. It is used when a queue is set to \&quot;Best available skills\&quot; mode to allow acd interactions to target agents with higher proficiency ratings..</param>
         /// <param name="State">Activate or deactivate this routing skill..</param>
-        public UserRoutingSkill(, string Name = null, double? Proficiency = null, StateEnum? State = null)
+        public UserRoutingSkill(string Name = null, double? Proficiency = null, StateEnum? State = null)
         {
             this.Name = Name;
             this.Proficiency = Proficiency;
@@ -141,32 +141,32 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Proficiency == other.Proficiency ||
                     this.Proficiency != null &&
                     this.Proficiency.Equals(other.Proficiency)
-                ) && 
+                ) &&
                 (
                     this.State == other.State ||
                     this.State != null &&
                     this.State.Equals(other.State)
-                )
+                ) &&
                 (
                     this.SkillUri == other.SkillUri ||
                     this.SkillUri != null &&
                     this.SkillUri.Equals(other.SkillUri)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

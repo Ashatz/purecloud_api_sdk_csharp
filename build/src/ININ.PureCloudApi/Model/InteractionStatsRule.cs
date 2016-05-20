@@ -287,7 +287,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Enabled">Indicates if the rule is enabled. (required) (default to false).</param>
         /// <param name="NotificationUsers">The ids of users who will be notified of alarm state change. (required).</param>
         /// <param name="AlertTypes">A collection of notification methods. &#x3D; [&#39;SMS&#39;, &#39;DEVICE&#39;, &#39;EMAIL&#39;] (required).</param>
-        public InteractionStatsRule(, string Name = null, DimensionEnum? Dimension = null, string DimensionValue = null, MetricEnum? Metric = null, MediaTypeEnum? MediaType = null, NumericRangeEnum? NumericRange = null, StatisticEnum? Statistic = null, double? Value = null, bool? Enabled = null, List<User> NotificationUsers = null, List<AlertTypesEnum> AlertTypes = null)
+        public InteractionStatsRule(string Name = null, DimensionEnum? Dimension = null, string DimensionValue = null, MetricEnum? Metric = null, MediaTypeEnum? MediaType = null, NumericRangeEnum? NumericRange = null, StatisticEnum? Statistic = null, double? Value = null, bool? Enabled = null, List<User> NotificationUsers = null, List<AlertTypesEnum> AlertTypes = null)
         {
             // to ensure "Name" is required (not null)
             if (Name == null)
@@ -437,7 +437,7 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <value>A collection of notification methods. &#x3D; [&#39;SMS&#39;, &#39;DEVICE&#39;, &#39;EMAIL&#39;]</value>
         [DataMember(Name="alertTypes", EmitDefaultValue=false)]
-        public List<string> AlertTypes { get; set; }
+        public List<AlertTypesEnum> AlertTypes { get; set; }
         /// <summary>
         /// The URI for this object
         /// </summary>
@@ -501,72 +501,72 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Dimension == other.Dimension ||
                     this.Dimension != null &&
                     this.Dimension.Equals(other.Dimension)
-                ) && 
+                ) &&
                 (
                     this.DimensionValue == other.DimensionValue ||
                     this.DimensionValue != null &&
                     this.DimensionValue.Equals(other.DimensionValue)
-                ) && 
+                ) &&
                 (
                     this.Metric == other.Metric ||
                     this.Metric != null &&
                     this.Metric.Equals(other.Metric)
-                ) && 
+                ) &&
                 (
                     this.MediaType == other.MediaType ||
                     this.MediaType != null &&
                     this.MediaType.Equals(other.MediaType)
-                ) && 
+                ) &&
                 (
                     this.NumericRange == other.NumericRange ||
                     this.NumericRange != null &&
                     this.NumericRange.Equals(other.NumericRange)
-                ) && 
+                ) &&
                 (
                     this.Statistic == other.Statistic ||
                     this.Statistic != null &&
                     this.Statistic.Equals(other.Statistic)
-                ) && 
+                ) &&
                 (
                     this.Value == other.Value ||
                     this.Value != null &&
                     this.Value.Equals(other.Value)
-                ) && 
+                ) &&
                 (
                     this.Enabled == other.Enabled ||
                     this.Enabled != null &&
                     this.Enabled.Equals(other.Enabled)
-                ) && 
+                ) &&
                 (
                     this.InAlarm == other.InAlarm ||
                     this.InAlarm != null &&
                     this.InAlarm.Equals(other.InAlarm)
-                ) && 
+                ) &&
                 (
                     this.NotificationUsers == other.NotificationUsers ||
                     this.NotificationUsers != null &&
                     this.NotificationUsers.SequenceEqual(other.NotificationUsers)
-                ) && 
+                ) &&
                 (
                     this.AlertTypes == other.AlertTypes ||
                     this.AlertTypes != null &&
                     this.AlertTypes.SequenceEqual(other.AlertTypes)
-                )
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

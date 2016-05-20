@@ -26,7 +26,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="NocSupport">NocSupport.</param>
         /// <param name="Services">Services.</param>
         /// <param name="Address">Address.</param>
-        public Carrier(, string Name = null, AccountManager AccountManager = null, Support Support = null, NocSupport NocSupport = null, List<Service> Services = null, CarrierAddress Address = null)
+        public Carrier(string Name = null, AccountManager AccountManager = null, Support Support = null, NocSupport NocSupport = null, List<Service> Services = null, CarrierAddress Address = null)
         {
             this.Name = Name;
             this.AccountManager = AccountManager;
@@ -129,42 +129,42 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.AccountManager == other.AccountManager ||
                     this.AccountManager != null &&
                     this.AccountManager.Equals(other.AccountManager)
-                ) && 
+                ) &&
                 (
                     this.Support == other.Support ||
                     this.Support != null &&
                     this.Support.Equals(other.Support)
-                ) && 
+                ) &&
                 (
                     this.NocSupport == other.NocSupport ||
                     this.NocSupport != null &&
                     this.NocSupport.Equals(other.NocSupport)
-                ) && 
+                ) &&
                 (
                     this.Services == other.Services ||
                     this.Services != null &&
                     this.Services.SequenceEqual(other.Services)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
-                ) && 
+                ) &&
                 (
                     this.Address == other.Address ||
                     this.Address != null &&

@@ -115,32 +115,32 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Address1 == other.Address1 ||
                     this.Address1 != null &&
                     this.Address1.Equals(other.Address1)
-                ) && 
+                ) &&
                 (
                     this.Address2 == other.Address2 ||
                     this.Address2 != null &&
                     this.Address2.Equals(other.Address2)
-                ) && 
+                ) &&
                 (
                     this.City == other.City ||
                     this.City != null &&
                     this.City.Equals(other.City)
-                ) && 
+                ) &&
                 (
                     this.State == other.State ||
                     this.State != null &&
                     this.State.Equals(other.State)
-                ) && 
+                ) &&
                 (
                     this.PostalCode == other.PostalCode ||
                     this.PostalCode != null &&
                     this.PostalCode.Equals(other.PostalCode)
-                ) && 
+                ) &&
                 (
                     this.CountryCode == other.CountryCode ||
                     this.CountryCode != null &&

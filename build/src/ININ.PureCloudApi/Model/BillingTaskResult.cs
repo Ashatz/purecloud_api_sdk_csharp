@@ -119,7 +119,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="ResultUri">ResultUri.</param>
         /// <param name="ResultDownloadUrl">ResultDownloadUrl.</param>
         /// <param name="ErrorCode">ErrorCode.</param>
-        public BillingTaskResult(, string Name = null, TaskTypeEnum? TaskType = null, StatusEnum? Status = null, string ResultId = null, string ResultUri = null, string ResultDownloadUrl = null, string ErrorCode = null)
+        public BillingTaskResult(string Name = null, TaskTypeEnum? TaskType = null, StatusEnum? Status = null, string ResultId = null, string ResultUri = null, string ResultDownloadUrl = null, string ErrorCode = null)
         {
             this.Name = Name;
             this.TaskType = TaskType;
@@ -219,47 +219,47 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.TaskType == other.TaskType ||
                     this.TaskType != null &&
                     this.TaskType.Equals(other.TaskType)
-                ) && 
+                ) &&
                 (
                     this.Status == other.Status ||
                     this.Status != null &&
                     this.Status.Equals(other.Status)
-                ) && 
+                ) &&
                 (
                     this.ResultId == other.ResultId ||
                     this.ResultId != null &&
                     this.ResultId.Equals(other.ResultId)
-                ) && 
+                ) &&
                 (
                     this.ResultUri == other.ResultUri ||
                     this.ResultUri != null &&
                     this.ResultUri.Equals(other.ResultUri)
-                ) && 
+                ) &&
                 (
                     this.ResultDownloadUrl == other.ResultDownloadUrl ||
                     this.ResultDownloadUrl != null &&
                     this.ResultDownloadUrl.Equals(other.ResultDownloadUrl)
-                ) && 
+                ) &&
                 (
                     this.ErrorCode == other.ErrorCode ||
                     this.ErrorCode != null &&
                     this.ErrorCode.Equals(other.ErrorCode)
-                )
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

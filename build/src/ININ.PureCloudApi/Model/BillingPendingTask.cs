@@ -22,7 +22,7 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="Task">Task.</param>
-        public BillingPendingTask(, string Name = null, BillingTaskResult Task = null)
+        public BillingPendingTask(string Name = null, BillingTaskResult Task = null)
         {
             this.Name = Name;
             this.Task = Task;
@@ -97,22 +97,22 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Task == other.Task ||
                     this.Task != null &&
                     this.Task.Equals(other.Task)
-                )
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

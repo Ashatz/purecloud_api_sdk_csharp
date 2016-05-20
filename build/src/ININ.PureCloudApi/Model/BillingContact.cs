@@ -26,7 +26,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Email">Email.</param>
         /// <param name="Phone">Phone.</param>
         /// <param name="IvrCode">IvrCode.</param>
-        public BillingContact(, string Name = null, string FirstName = null, string LastName = null, string Email = null, string Phone = null, string IvrCode = null)
+        public BillingContact(string Name = null, string FirstName = null, string LastName = null, string Email = null, string Phone = null, string IvrCode = null)
         {
             this.Name = Name;
             this.FirstName = FirstName;
@@ -129,42 +129,42 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.FirstName == other.FirstName ||
                     this.FirstName != null &&
                     this.FirstName.Equals(other.FirstName)
-                ) && 
+                ) &&
                 (
                     this.LastName == other.LastName ||
                     this.LastName != null &&
                     this.LastName.Equals(other.LastName)
-                ) && 
+                ) &&
                 (
                     this.Email == other.Email ||
                     this.Email != null &&
                     this.Email.Equals(other.Email)
-                ) && 
+                ) &&
                 (
                     this.Phone == other.Phone ||
                     this.Phone != null &&
                     this.Phone.Equals(other.Phone)
-                ) && 
+                ) &&
                 (
                     this.IvrCode == other.IvrCode ||
                     this.IvrCode != null &&
                     this.IvrCode.Equals(other.IvrCode)
-                )
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

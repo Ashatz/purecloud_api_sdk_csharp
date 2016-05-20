@@ -130,37 +130,37 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.SearchPhrase == other.SearchPhrase ||
                     this.SearchPhrase != null &&
                     this.SearchPhrase.Equals(other.SearchPhrase)
-                ) && 
+                ) &&
                 (
                     this.PageNumber == other.PageNumber ||
                     this.PageNumber != null &&
                     this.PageNumber.Equals(other.PageNumber)
-                ) && 
+                ) &&
                 (
                     this.PageSize == other.PageSize ||
                     this.PageSize != null &&
                     this.PageSize.Equals(other.PageSize)
-                ) && 
+                ) &&
                 (
                     this.SearchFields == other.SearchFields ||
                     this.SearchFields != null &&
                     this.SearchFields.SequenceEqual(other.SearchFields)
-                ) && 
+                ) &&
                 (
                     this.FacetRequests == other.FacetRequests ||
                     this.FacetRequests != null &&
                     this.FacetRequests.SequenceEqual(other.FacetRequests)
-                ) && 
+                ) &&
                 (
                     this.Sort == other.Sort ||
                     this.Sort != null &&
                     this.Sort.SequenceEqual(other.Sort)
-                ) && 
+                ) &&
                 (
                     this.Filters == other.Filters ||
                     this.Filters != null &&

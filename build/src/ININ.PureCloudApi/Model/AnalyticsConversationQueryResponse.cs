@@ -83,12 +83,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Conversations == other.Conversations ||
                     this.Conversations != null &&
                     this.Conversations.SequenceEqual(other.Conversations)
-                ) && 
+                ) &&
                 (
                     this.Aggregations == other.Aggregations ||
                     this.Aggregations != null &&

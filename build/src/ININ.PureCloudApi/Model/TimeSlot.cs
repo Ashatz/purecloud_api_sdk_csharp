@@ -94,17 +94,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.StartTime == other.StartTime ||
                     this.StartTime != null &&
                     this.StartTime.Equals(other.StartTime)
-                ) && 
+                ) &&
                 (
                     this.StopTime == other.StopTime ||
                     this.StopTime != null &&
                     this.StopTime.Equals(other.StopTime)
-                ) && 
+                ) &&
                 (
                     this.Day == other.Day ||
                     this.Day != null &&

@@ -24,7 +24,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Certificate">Certificate.</param>
         /// <param name="IssuerURI">IssuerURI.</param>
         /// <param name="SsoTargetURI">SsoTargetURI.</param>
-        public Salesforce(, string Name = null, string Certificate = null, string IssuerURI = null, string SsoTargetURI = null)
+        public Salesforce(string Name = null, string Certificate = null, string IssuerURI = null, string SsoTargetURI = null)
         {
             this.Name = Name;
             this.Certificate = Certificate;
@@ -113,32 +113,32 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Certificate == other.Certificate ||
                     this.Certificate != null &&
                     this.Certificate.Equals(other.Certificate)
-                ) && 
+                ) &&
                 (
                     this.IssuerURI == other.IssuerURI ||
                     this.IssuerURI != null &&
                     this.IssuerURI.Equals(other.IssuerURI)
-                ) && 
+                ) &&
                 (
                     this.SsoTargetURI == other.SsoTargetURI ||
                     this.SsoTargetURI != null &&
                     this.SsoTargetURI.Equals(other.SsoTargetURI)
-                )
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

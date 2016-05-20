@@ -88,17 +88,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Attempts == other.Attempts ||
                     this.Attempts != null &&
                     this.Attempts.Equals(other.Attempts)
-                ) && 
+                ) &&
                 (
                     this.Connects == other.Connects ||
                     this.Connects != null &&
                     this.Connects.Equals(other.Connects)
-                ) && 
+                ) &&
                 (
                     this.ConnectRatio == other.ConnectRatio ||
                     this.ConnectRatio != null &&

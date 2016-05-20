@@ -102,17 +102,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.MaximumCapacity == other.MaximumCapacity ||
                     this.MaximumCapacity != null &&
                     this.MaximumCapacity.Equals(other.MaximumCapacity)
-                ) && 
+                ) &&
                 (
                     this.InterruptableMediaTypes == other.InterruptableMediaTypes ||
                     this.InterruptableMediaTypes != null &&
                     this.InterruptableMediaTypes.SequenceEqual(other.InterruptableMediaTypes)
-                ) && 
+                ) &&
                 (
                     this.IncludeNonAcd == other.IncludeNonAcd ||
                     this.IncludeNonAcd != null &&

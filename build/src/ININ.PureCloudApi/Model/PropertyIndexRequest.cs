@@ -107,17 +107,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.SessionId == other.SessionId ||
                     this.SessionId != null &&
                     this.SessionId.Equals(other.SessionId)
-                ) && 
+                ) &&
                 (
                     this.Timestamp == other.Timestamp ||
                     this.Timestamp != null &&
                     this.Timestamp.Equals(other.Timestamp)
-                ) && 
+                ) &&
                 (
                     this.Properties == other.Properties ||
                     this.Properties != null &&

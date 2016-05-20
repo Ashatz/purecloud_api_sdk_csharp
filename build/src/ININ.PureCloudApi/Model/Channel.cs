@@ -21,7 +21,7 @@ namespace ININ.PureCloudApi.Model
         /// Initializes a new instance of the <see cref="Channel" /> class.
         /// </summary>
         /// <param name="ConnectUri">ConnectUri.</param>
-        public Channel(, string ConnectUri = null)
+        public Channel(string ConnectUri = null)
         {
             this.ConnectUri = ConnectUri;
         }
@@ -82,12 +82,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.ConnectUri == other.ConnectUri ||
                     this.ConnectUri != null &&

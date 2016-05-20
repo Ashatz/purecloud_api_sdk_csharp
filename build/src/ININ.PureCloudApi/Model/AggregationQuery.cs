@@ -563,7 +563,7 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <value>Behaves like a SQL GROUPBY. Allows for multiple levels of grouping as a list of dimensions. Partitions resulting aggregate computations into distinct named subgroups rather than across the entire result set as if it were one group.</value>
         [DataMember(Name="groupBy", EmitDefaultValue=false)]
-        public List<string> GroupBy { get; set; }
+        public List<GroupByEnum> GroupBy { get; set; }
         /// <summary>
         /// Behaves like a SQL WHERE clause. This is ANDed with the interval parameter. Expresses boolean logical predicates as well as dimensional filters
         /// </summary>
@@ -575,7 +575,7 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <value>Behaves like a SQL SELECT clause. Enables retrieving only named metrics. If omitted, all metrics that are available will be returned (like SELECT *).</value>
         [DataMember(Name="metrics", EmitDefaultValue=false)]
-        public List<string> Metrics { get; set; }
+        public List<MetricsEnum> Metrics { get; set; }
         /// <summary>
         /// Flattens any multivalued dimensions used in response groups (e.g. [&#39;a&#39;,&#39;b&#39;,&#39;c&#39;]-&gt;&#39;a,b,c&#39;)
         /// </summary>
@@ -631,32 +631,32 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Interval == other.Interval ||
                     this.Interval != null &&
                     this.Interval.Equals(other.Interval)
-                ) && 
+                ) &&
                 (
                     this.Granularity == other.Granularity ||
                     this.Granularity != null &&
                     this.Granularity.Equals(other.Granularity)
-                ) && 
+                ) &&
                 (
                     this.GroupBy == other.GroupBy ||
                     this.GroupBy != null &&
                     this.GroupBy.SequenceEqual(other.GroupBy)
-                ) && 
+                ) &&
                 (
                     this.Filter == other.Filter ||
                     this.Filter != null &&
                     this.Filter.Equals(other.Filter)
-                ) && 
+                ) &&
                 (
                     this.Metrics == other.Metrics ||
                     this.Metrics != null &&
                     this.Metrics.SequenceEqual(other.Metrics)
-                ) && 
+                ) &&
                 (
                     this.FlattenMultivaluedDimensions == other.FlattenMultivaluedDimensions ||
                     this.FlattenMultivaluedDimensions != null &&

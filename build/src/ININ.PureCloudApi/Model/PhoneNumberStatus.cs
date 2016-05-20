@@ -84,7 +84,7 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Callable == other.Callable ||
                     this.Callable != null &&

@@ -83,12 +83,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.AlertingTimeoutSeconds == other.AlertingTimeoutSeconds ||
                     this.AlertingTimeoutSeconds != null &&
                     this.AlertingTimeoutSeconds.Equals(other.AlertingTimeoutSeconds)
-                ) && 
+                ) &&
                 (
                     this.ServiceLevel == other.ServiceLevel ||
                     this.ServiceLevel != null &&

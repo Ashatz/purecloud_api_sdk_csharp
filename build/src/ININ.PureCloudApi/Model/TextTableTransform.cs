@@ -27,7 +27,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="CommentSymbol">CommentSymbol.</param>
         /// <param name="Delimiter">Delimiter.</param>
         /// <param name="Table">Table.</param>
-        public TextTableTransform(, string Name = null, TransformEndpoint RestEndpoint = null, List<BasicTransform> FilenameTransforms = null, List<TagModel> Tags = null, string CommentSymbol = null, string Delimiter = null, TableTransform Table = null)
+        public TextTableTransform(string Name = null, TransformEndpoint RestEndpoint = null, List<BasicTransform> FilenameTransforms = null, List<TagModel> Tags = null, string CommentSymbol = null, string Delimiter = null, TableTransform Table = null)
         {
             this.Name = Name;
             this.RestEndpoint = RestEndpoint;
@@ -137,47 +137,47 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.RestEndpoint == other.RestEndpoint ||
                     this.RestEndpoint != null &&
                     this.RestEndpoint.Equals(other.RestEndpoint)
-                ) && 
+                ) &&
                 (
                     this.FilenameTransforms == other.FilenameTransforms ||
                     this.FilenameTransforms != null &&
                     this.FilenameTransforms.SequenceEqual(other.FilenameTransforms)
-                ) && 
+                ) &&
                 (
                     this.Tags == other.Tags ||
                     this.Tags != null &&
                     this.Tags.SequenceEqual(other.Tags)
-                ) && 
+                ) &&
                 (
                     this.CommentSymbol == other.CommentSymbol ||
                     this.CommentSymbol != null &&
                     this.CommentSymbol.Equals(other.CommentSymbol)
-                ) && 
+                ) &&
                 (
                     this.Delimiter == other.Delimiter ||
                     this.Delimiter != null &&
                     this.Delimiter.Equals(other.Delimiter)
-                ) && 
+                ) &&
                 (
                     this.Table == other.Table ||
                     this.Table != null &&
                     this.Table.Equals(other.Table)
-                )
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

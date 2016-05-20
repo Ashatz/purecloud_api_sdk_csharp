@@ -123,37 +123,37 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.StringItems == other.StringItems ||
                     this.StringItems != null &&
                     this.StringItems.SequenceEqual(other.StringItems)
-                ) && 
+                ) &&
                 (
                     this.IntegerItems == other.IntegerItems ||
                     this.IntegerItems != null &&
                     this.IntegerItems.SequenceEqual(other.IntegerItems)
-                ) && 
+                ) &&
                 (
                     this.RealItems == other.RealItems ||
                     this.RealItems != null &&
                     this.RealItems.SequenceEqual(other.RealItems)
-                ) && 
+                ) &&
                 (
                     this.DateItems == other.DateItems ||
                     this.DateItems != null &&
                     this.DateItems.SequenceEqual(other.DateItems)
-                ) && 
+                ) &&
                 (
                     this.UserItems == other.UserItems ||
                     this.UserItems != null &&
                     this.UserItems.SequenceEqual(other.UserItems)
-                ) && 
+                ) &&
                 (
                     this.QueueItems == other.QueueItems ||
                     this.QueueItems != null &&
                     this.QueueItems.SequenceEqual(other.QueueItems)
-                ) && 
+                ) &&
                 (
                     this.DataItems == other.DataItems ||
                     this.DataItems != null &&

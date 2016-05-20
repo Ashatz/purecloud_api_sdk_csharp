@@ -148,47 +148,47 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.PhoneNumber == other.PhoneNumber ||
                     this.PhoneNumber != null &&
                     this.PhoneNumber.Equals(other.PhoneNumber)
-                ) && 
+                ) &&
                 (
                     this.CallFromQueueId == other.CallFromQueueId ||
                     this.CallFromQueueId != null &&
                     this.CallFromQueueId.Equals(other.CallFromQueueId)
-                ) && 
+                ) &&
                 (
                     this.CallQueueId == other.CallQueueId ||
                     this.CallQueueId != null &&
                     this.CallQueueId.Equals(other.CallQueueId)
-                ) && 
+                ) &&
                 (
                     this.CallUserId == other.CallUserId ||
                     this.CallUserId != null &&
                     this.CallUserId.Equals(other.CallUserId)
-                ) && 
+                ) &&
                 (
                     this.Priority == other.Priority ||
                     this.Priority != null &&
                     this.Priority.Equals(other.Priority)
-                ) && 
+                ) &&
                 (
                     this.LanguageId == other.LanguageId ||
                     this.LanguageId != null &&
                     this.LanguageId.Equals(other.LanguageId)
-                ) && 
+                ) &&
                 (
                     this.RoutingSkillsIds == other.RoutingSkillsIds ||
                     this.RoutingSkillsIds != null &&
                     this.RoutingSkillsIds.SequenceEqual(other.RoutingSkillsIds)
-                ) && 
+                ) &&
                 (
                     this.ConversationIds == other.ConversationIds ||
                     this.ConversationIds != null &&
                     this.ConversationIds.SequenceEqual(other.ConversationIds)
-                ) && 
+                ) &&
                 (
                     this.Participants == other.Participants ||
                     this.Participants != null &&

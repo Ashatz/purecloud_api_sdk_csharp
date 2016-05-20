@@ -83,12 +83,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.ExpansionCriteria == other.ExpansionCriteria ||
                     this.ExpansionCriteria != null &&
                     this.ExpansionCriteria.SequenceEqual(other.ExpansionCriteria)
-                ) && 
+                ) &&
                 (
                     this.Actions == other.Actions ||
                     this.Actions != null &&

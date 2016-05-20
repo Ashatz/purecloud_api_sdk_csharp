@@ -139,47 +139,47 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Total == other.Total ||
                     this.Total != null &&
                     this.Total.Equals(other.Total)
-                ) && 
+                ) &&
                 (
                     this.PageCount == other.PageCount ||
                     this.PageCount != null &&
                     this.PageCount.Equals(other.PageCount)
-                ) && 
+                ) &&
                 (
                     this.PageSize == other.PageSize ||
                     this.PageSize != null &&
                     this.PageSize.Equals(other.PageSize)
-                ) && 
+                ) &&
                 (
                     this.PageNumber == other.PageNumber ||
                     this.PageNumber != null &&
                     this.PageNumber.Equals(other.PageNumber)
-                ) && 
+                ) &&
                 (
                     this.PreviousPage == other.PreviousPage ||
                     this.PreviousPage != null &&
                     this.PreviousPage.Equals(other.PreviousPage)
-                ) && 
+                ) &&
                 (
                     this.CurrentPage == other.CurrentPage ||
                     this.CurrentPage != null &&
                     this.CurrentPage.Equals(other.CurrentPage)
-                ) && 
+                ) &&
                 (
                     this.NextPage == other.NextPage ||
                     this.NextPage != null &&
                     this.NextPage.Equals(other.NextPage)
-                ) && 
+                ) &&
                 (
                     this.Types == other.Types ||
                     this.Types != null &&
                     this.Types.SequenceEqual(other.Types)
-                ) && 
+                ) &&
                 (
                     this.Results == other.Results ||
                     this.Results != null &&

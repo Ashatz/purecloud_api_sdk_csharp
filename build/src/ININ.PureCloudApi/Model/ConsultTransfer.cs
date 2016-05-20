@@ -125,12 +125,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.SpeakTo == other.SpeakTo ||
                     this.SpeakTo != null &&
                     this.SpeakTo.Equals(other.SpeakTo)
-                ) && 
+                ) &&
                 (
                     this.Destination == other.Destination ||
                     this.Destination != null &&

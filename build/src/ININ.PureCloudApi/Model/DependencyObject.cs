@@ -136,7 +136,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Updated">Updated (default to false).</param>
         /// <param name="ConsumedResources">ConsumedResources.</param>
         /// <param name="ConsumingResources">ConsumingResources.</param>
-        public DependencyObject(, string Name = null, string Version = null, TypeEnum? Type = null, bool? Deleted = null, bool? Updated = null, List<Dependency> ConsumedResources = null, List<Dependency> ConsumingResources = null)
+        public DependencyObject(string Name = null, string Version = null, TypeEnum? Type = null, bool? Deleted = null, bool? Updated = null, List<Dependency> ConsumedResources = null, List<Dependency> ConsumingResources = null)
         {
             this.Name = Name;
             this.Version = Version;
@@ -257,47 +257,47 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Version == other.Version ||
                     this.Version != null &&
                     this.Version.Equals(other.Version)
-                ) && 
+                ) &&
                 (
                     this.Type == other.Type ||
                     this.Type != null &&
                     this.Type.Equals(other.Type)
-                ) && 
+                ) &&
                 (
                     this.Deleted == other.Deleted ||
                     this.Deleted != null &&
                     this.Deleted.Equals(other.Deleted)
-                ) && 
+                ) &&
                 (
                     this.Updated == other.Updated ||
                     this.Updated != null &&
                     this.Updated.Equals(other.Updated)
-                ) && 
+                ) &&
                 (
                     this.ConsumedResources == other.ConsumedResources ||
                     this.ConsumedResources != null &&
                     this.ConsumedResources.SequenceEqual(other.ConsumedResources)
-                ) && 
+                ) &&
                 (
                     this.ConsumingResources == other.ConsumingResources ||
                     this.ConsumingResources != null &&
                     this.ConsumingResources.SequenceEqual(other.ConsumingResources)
-                )
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

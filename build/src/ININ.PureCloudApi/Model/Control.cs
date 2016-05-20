@@ -165,37 +165,37 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Label == other.Label ||
                     this.Label != null &&
                     this.Label.Equals(other.Label)
-                ) && 
+                ) &&
                 (
                     this.Options == other.Options ||
                     this.Options != null &&
                     this.Options.SequenceEqual(other.Options)
-                ) && 
+                ) &&
                 (
                     this.Required == other.Required ||
                     this.Required != null &&
                     this.Required.Equals(other.Required)
-                ) && 
+                ) &&
                 (
                     this._ReadOnly == other._ReadOnly ||
                     this._ReadOnly != null &&
                     this._ReadOnly.Equals(other._ReadOnly)
-                ) && 
+                ) &&
                 (
                     this.VariableBindingId == other.VariableBindingId ||
                     this.VariableBindingId != null &&
                     this.VariableBindingId.Equals(other.VariableBindingId)
-                ) && 
+                ) &&
                 (
                     this.Type == other.Type ||
                     this.Type != null &&

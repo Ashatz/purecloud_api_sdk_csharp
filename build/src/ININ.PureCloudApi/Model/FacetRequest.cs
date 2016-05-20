@@ -225,37 +225,37 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.FacetRequestQueryType == other.FacetRequestQueryType ||
                     this.FacetRequestQueryType != null &&
                     this.FacetRequestQueryType.Equals(other.FacetRequestQueryType)
-                ) && 
+                ) &&
                 (
                     this.FieldName == other.FieldName ||
                     this.FieldName != null &&
                     this.FieldName.Equals(other.FieldName)
-                ) && 
+                ) &&
                 (
                     this.Type == other.Type ||
                     this.Type != null &&
                     this.Type.Equals(other.Type)
-                ) && 
+                ) &&
                 (
                     this.RangeFrom == other.RangeFrom ||
                     this.RangeFrom != null &&
                     this.RangeFrom.Equals(other.RangeFrom)
-                ) && 
+                ) &&
                 (
                     this.RangeTo == other.RangeTo ||
                     this.RangeTo != null &&
                     this.RangeTo.Equals(other.RangeTo)
-                ) && 
+                ) &&
                 (
                     this.MaxFacetCount == other.MaxFacetCount ||
                     this.MaxFacetCount != null &&

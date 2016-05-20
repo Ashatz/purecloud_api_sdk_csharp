@@ -742,42 +742,42 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Type == other.Type ||
                     this.Type != null &&
                     this.Type.Equals(other.Type)
-                ) && 
+                ) &&
                 (
                     this.Dimension == other.Dimension ||
                     this.Dimension != null &&
                     this.Dimension.Equals(other.Dimension)
-                ) && 
+                ) &&
                 (
                     this.PropertyType == other.PropertyType ||
                     this.PropertyType != null &&
                     this.PropertyType.Equals(other.PropertyType)
-                ) && 
+                ) &&
                 (
                     this.Property == other.Property ||
                     this.Property != null &&
                     this.Property.Equals(other.Property)
-                ) && 
+                ) &&
                 (
                     this.Metric == other.Metric ||
                     this.Metric != null &&
                     this.Metric.Equals(other.Metric)
-                ) && 
+                ) &&
                 (
                     this._Operator == other._Operator ||
                     this._Operator != null &&
                     this._Operator.Equals(other._Operator)
-                ) && 
+                ) &&
                 (
                     this.Value == other.Value ||
                     this.Value != null &&
                     this.Value.Equals(other.Value)
-                ) && 
+                ) &&
                 (
                     this.Range == other.Range ||
                     this.Range != null &&

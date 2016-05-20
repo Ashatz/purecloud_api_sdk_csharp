@@ -111,17 +111,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.DurationTarget == other.DurationTarget ||
                     this.DurationTarget != null &&
                     this.DurationTarget.Equals(other.DurationTarget)
-                ) && 
+                ) &&
                 (
                     this.DurationOperator == other.DurationOperator ||
                     this.DurationOperator != null &&
                     this.DurationOperator.Equals(other.DurationOperator)
-                ) && 
+                ) &&
                 (
                     this.DurationRange == other.DurationRange ||
                     this.DurationRange != null &&

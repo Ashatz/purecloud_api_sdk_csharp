@@ -35,7 +35,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="ReportId">ReportId.</param>
         /// <param name="Parameters">Parameters.</param>
         /// <param name="LastRun">LastRun.</param>
-        public ReportSchedule(, string Name = null, string QuartzCronExpression = null, DateTime? NextFireTime = null, DateTime? DateCreated = null, DateTime? DateModified = null, string Description = null, string TimeZone = null, string TimePeriod = null, string Interval = null, string ReportFormat = null, string Locale = null, bool? Enabled = null, string ReportId = null, Dictionary<string, Object> Parameters = null, ReportRunEntry LastRun = null)
+        public ReportSchedule(string Name = null, string QuartzCronExpression = null, DateTime? NextFireTime = null, DateTime? DateCreated = null, DateTime? DateModified = null, string Description = null, string TimeZone = null, string TimePeriod = null, string Interval = null, string ReportFormat = null, string Locale = null, bool? Enabled = null, string ReportId = null, Dictionary<string, Object> Parameters = null, ReportRunEntry LastRun = null)
         {
             this.Name = Name;
             this.QuartzCronExpression = QuartzCronExpression;
@@ -213,87 +213,87 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.QuartzCronExpression == other.QuartzCronExpression ||
                     this.QuartzCronExpression != null &&
                     this.QuartzCronExpression.Equals(other.QuartzCronExpression)
-                ) && 
+                ) &&
                 (
                     this.NextFireTime == other.NextFireTime ||
                     this.NextFireTime != null &&
                     this.NextFireTime.Equals(other.NextFireTime)
-                ) && 
+                ) &&
                 (
                     this.DateCreated == other.DateCreated ||
                     this.DateCreated != null &&
                     this.DateCreated.Equals(other.DateCreated)
-                ) && 
+                ) &&
                 (
                     this.DateModified == other.DateModified ||
                     this.DateModified != null &&
                     this.DateModified.Equals(other.DateModified)
-                ) && 
+                ) &&
                 (
                     this.Description == other.Description ||
                     this.Description != null &&
                     this.Description.Equals(other.Description)
-                ) && 
+                ) &&
                 (
                     this.TimeZone == other.TimeZone ||
                     this.TimeZone != null &&
                     this.TimeZone.Equals(other.TimeZone)
-                ) && 
+                ) &&
                 (
                     this.TimePeriod == other.TimePeriod ||
                     this.TimePeriod != null &&
                     this.TimePeriod.Equals(other.TimePeriod)
-                ) && 
+                ) &&
                 (
                     this.Interval == other.Interval ||
                     this.Interval != null &&
                     this.Interval.Equals(other.Interval)
-                ) && 
+                ) &&
                 (
                     this.ReportFormat == other.ReportFormat ||
                     this.ReportFormat != null &&
                     this.ReportFormat.Equals(other.ReportFormat)
-                ) && 
+                ) &&
                 (
                     this.Locale == other.Locale ||
                     this.Locale != null &&
                     this.Locale.Equals(other.Locale)
-                ) && 
+                ) &&
                 (
                     this.Enabled == other.Enabled ||
                     this.Enabled != null &&
                     this.Enabled.Equals(other.Enabled)
-                ) && 
+                ) &&
                 (
                     this.ReportId == other.ReportId ||
                     this.ReportId != null &&
                     this.ReportId.Equals(other.ReportId)
-                ) && 
+                ) &&
                 (
                     this.Parameters == other.Parameters ||
                     this.Parameters != null &&
                     this.Parameters.SequenceEqual(other.Parameters)
-                ) && 
+                ) &&
                 (
                     this.LastRun == other.LastRun ||
                     this.LastRun != null &&
                     this.LastRun.Equals(other.LastRun)
-                )
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

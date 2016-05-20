@@ -48,7 +48,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Name">Name.</param>
         /// <param name="UploadDestinationUri">UploadDestinationUri.</param>
         /// <param name="UploadMethodType">UploadMethodType.</param>
-        public FaxSendResponse(, string Name = null, string UploadDestinationUri = null, UploadMethodTypeEnum? UploadMethodType = null)
+        public FaxSendResponse(string Name = null, string UploadDestinationUri = null, UploadMethodTypeEnum? UploadMethodType = null)
         {
             this.Name = Name;
             this.UploadDestinationUri = UploadDestinationUri;
@@ -125,27 +125,27 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.UploadDestinationUri == other.UploadDestinationUri ||
                     this.UploadDestinationUri != null &&
                     this.UploadDestinationUri.Equals(other.UploadDestinationUri)
-                ) && 
+                ) &&
                 (
                     this.UploadMethodType == other.UploadMethodType ||
                     this.UploadMethodType != null &&
                     this.UploadMethodType.Equals(other.UploadMethodType)
-                )
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

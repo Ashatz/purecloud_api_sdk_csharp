@@ -65,11 +65,6 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="IntegrationStatusInfo" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected IntegrationStatusInfo() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="IntegrationStatusInfo" /> class.
-        /// </summary>
         public IntegrationStatusInfo()
         {
         }
@@ -139,22 +134,22 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this._Internal == other._Internal ||
                     this._Internal != null &&
                     this._Internal.Equals(other._Internal)
-                ) && 
+                ) &&
                 (
                     this.Effective == other.Effective ||
                     this.Effective != null &&
                     this.Effective.Equals(other.Effective)
-                ) && 
+                ) &&
                 (
                     this.Detail == other.Detail ||
                     this.Detail != null &&
                     this.Detail.Equals(other.Detail)
-                ) && 
+                ) &&
                 (
                     this.LastUpdated == other.LastUpdated ||
                     this.LastUpdated != null &&

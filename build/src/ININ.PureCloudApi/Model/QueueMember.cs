@@ -26,7 +26,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Joined">Joined (default to false).</param>
         /// <param name="MemberBy">MemberBy.</param>
         /// <param name="RoutingStatus">RoutingStatus.</param>
-        public QueueMember(, string Name = null, User User = null, int? RingNumber = null, bool? Joined = null, string MemberBy = null, RoutingStatus RoutingStatus = null)
+        public QueueMember(string Name = null, User User = null, int? RingNumber = null, bool? Joined = null, string MemberBy = null, RoutingStatus RoutingStatus = null)
         {
             this.Name = Name;
             this.User = User;
@@ -137,42 +137,42 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.User == other.User ||
                     this.User != null &&
                     this.User.Equals(other.User)
-                ) && 
+                ) &&
                 (
                     this.RingNumber == other.RingNumber ||
                     this.RingNumber != null &&
                     this.RingNumber.Equals(other.RingNumber)
-                ) && 
+                ) &&
                 (
                     this.Joined == other.Joined ||
                     this.Joined != null &&
                     this.Joined.Equals(other.Joined)
-                ) && 
+                ) &&
                 (
                     this.MemberBy == other.MemberBy ||
                     this.MemberBy != null &&
                     this.MemberBy.Equals(other.MemberBy)
-                ) && 
+                ) &&
                 (
                     this.RoutingStatus == other.RoutingStatus ||
                     this.RoutingStatus != null &&
                     this.RoutingStatus.Equals(other.RoutingStatus)
-                )
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

@@ -29,7 +29,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Version">Required for updates, must match the version number of the most recent update.</param>
         /// <param name="PhoneNumberColumns">the name of the columns containing the numbers not to be called (required).</param>
         /// <param name="ImportStatus">the status of the import process.</param>
-        public DncList(, string Name = null, int? Version = null, List<string> PhoneNumberColumns = null, ImportStatus ImportStatus = null)
+        public DncList(string Name = null, int? Version = null, List<string> PhoneNumberColumns = null, ImportStatus ImportStatus = null)
         {
             // to ensure "PhoneNumberColumns" is required (not null)
             if (PhoneNumberColumns == null)
@@ -150,47 +150,47 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.DateCreated == other.DateCreated ||
                     this.DateCreated != null &&
                     this.DateCreated.Equals(other.DateCreated)
-                ) && 
+                ) &&
                 (
                     this.DateModified == other.DateModified ||
                     this.DateModified != null &&
                     this.DateModified.Equals(other.DateModified)
-                ) && 
+                ) &&
                 (
                     this.Version == other.Version ||
                     this.Version != null &&
                     this.Version.Equals(other.Version)
-                ) && 
+                ) &&
                 (
                     this.PhoneNumberColumns == other.PhoneNumberColumns ||
                     this.PhoneNumberColumns != null &&
                     this.PhoneNumberColumns.SequenceEqual(other.PhoneNumberColumns)
-                ) && 
+                ) &&
                 (
                     this.ImportStatus == other.ImportStatus ||
                     this.ImportStatus != null &&
                     this.ImportStatus.Equals(other.ImportStatus)
-                )
+                ) &&
                 (
                     this.Size == other.Size ||
                     this.Size != null &&
                     this.Size.Equals(other.Size)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

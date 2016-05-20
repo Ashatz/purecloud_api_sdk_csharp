@@ -55,7 +55,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Summary">Summary.</param>
         /// <param name="Acl">Acl.</param>
         /// <param name="Description">Description.</param>
-        public Workspace(, string Name = null, TypeEnum? Type = null, bool? IsCurrentUserWorkspace = null, UriReference User = null, string Bucket = null, DateTime? DateCreated = null, DateTime? DateModified = null, WorkspaceSummary Summary = null, List<string> Acl = null, string Description = null)
+        public Workspace(string Name = null, TypeEnum? Type = null, bool? IsCurrentUserWorkspace = null, UriReference User = null, string Bucket = null, DateTime? DateCreated = null, DateTime? DateModified = null, WorkspaceSummary Summary = null, List<string> Acl = null, string Description = null)
         {
             this.Name = Name;
             this.Type = Type;
@@ -191,62 +191,62 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Type == other.Type ||
                     this.Type != null &&
                     this.Type.Equals(other.Type)
-                ) && 
+                ) &&
                 (
                     this.IsCurrentUserWorkspace == other.IsCurrentUserWorkspace ||
                     this.IsCurrentUserWorkspace != null &&
                     this.IsCurrentUserWorkspace.Equals(other.IsCurrentUserWorkspace)
-                ) && 
+                ) &&
                 (
                     this.User == other.User ||
                     this.User != null &&
                     this.User.Equals(other.User)
-                ) && 
+                ) &&
                 (
                     this.Bucket == other.Bucket ||
                     this.Bucket != null &&
                     this.Bucket.Equals(other.Bucket)
-                ) && 
+                ) &&
                 (
                     this.DateCreated == other.DateCreated ||
                     this.DateCreated != null &&
                     this.DateCreated.Equals(other.DateCreated)
-                ) && 
+                ) &&
                 (
                     this.DateModified == other.DateModified ||
                     this.DateModified != null &&
                     this.DateModified.Equals(other.DateModified)
-                ) && 
+                ) &&
                 (
                     this.Summary == other.Summary ||
                     this.Summary != null &&
                     this.Summary.Equals(other.Summary)
-                ) && 
+                ) &&
                 (
                     this.Acl == other.Acl ||
                     this.Acl != null &&
                     this.Acl.SequenceEqual(other.Acl)
-                ) && 
+                ) &&
                 (
                     this.Description == other.Description ||
                     this.Description != null &&
                     this.Description.Equals(other.Description)
-                )
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

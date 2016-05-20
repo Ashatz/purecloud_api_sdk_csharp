@@ -50,7 +50,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Version">Required for updates, must match the version number of the most recent update.</param>
         /// <param name="DefaultSet">The default set of wrapup values.</param>
         /// <param name="Mapping">A map from wrapup code identifiers to a set of wrapup values.</param>
-        public WrapUpCodeMapping(, string Name = null, int? Version = null, List<DefaultSetEnum> DefaultSet = null, Dictionary<string, List<string>> Mapping = null)
+        public WrapUpCodeMapping(string Name = null, int? Version = null, List<DefaultSetEnum> DefaultSet = null, Dictionary<string, List<string>> Mapping = null)
         {
             this.Name = Name;
             this.Version = Version;
@@ -92,7 +92,7 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <value>The default set of wrapup values</value>
         [DataMember(Name="defaultSet", EmitDefaultValue=false)]
-        public List<string> DefaultSet { get; set; }
+        public List<DefaultSetEnum> DefaultSet { get; set; }
         /// <summary>
         /// A map from wrapup code identifiers to a set of wrapup values
         /// </summary>
@@ -156,42 +156,42 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.DateCreated == other.DateCreated ||
                     this.DateCreated != null &&
                     this.DateCreated.Equals(other.DateCreated)
-                ) && 
+                ) &&
                 (
                     this.DateModified == other.DateModified ||
                     this.DateModified != null &&
                     this.DateModified.Equals(other.DateModified)
-                ) && 
+                ) &&
                 (
                     this.Version == other.Version ||
                     this.Version != null &&
                     this.Version.Equals(other.Version)
-                ) && 
+                ) &&
                 (
                     this.DefaultSet == other.DefaultSet ||
                     this.DefaultSet != null &&
                     this.DefaultSet.SequenceEqual(other.DefaultSet)
-                ) && 
+                ) &&
                 (
                     this.Mapping == other.Mapping ||
                     this.Mapping != null &&
                     this.Mapping.SequenceEqual(other.Mapping)
-                )
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

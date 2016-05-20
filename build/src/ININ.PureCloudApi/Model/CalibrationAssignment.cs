@@ -99,22 +99,22 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Calibrator == other.Calibrator ||
                     this.Calibrator != null &&
                     this.Calibrator.Equals(other.Calibrator)
-                ) && 
+                ) &&
                 (
                     this.Evaluators == other.Evaluators ||
                     this.Evaluators != null &&
                     this.Evaluators.SequenceEqual(other.Evaluators)
-                ) && 
+                ) &&
                 (
                     this.EvaluationForm == other.EvaluationForm ||
                     this.EvaluationForm != null &&
                     this.EvaluationForm.Equals(other.EvaluationForm)
-                ) && 
+                ) &&
                 (
                     this.ExpertEvaluator == other.ExpertEvaluator ||
                     this.ExpertEvaluator != null &&

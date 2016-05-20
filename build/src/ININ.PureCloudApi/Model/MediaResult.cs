@@ -83,12 +83,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.MediaUri == other.MediaUri ||
                     this.MediaUri != null &&
                     this.MediaUri.Equals(other.MediaUri)
-                ) && 
+                ) &&
                 (
                     this.WaveformData == other.WaveformData ||
                     this.WaveformData != null &&

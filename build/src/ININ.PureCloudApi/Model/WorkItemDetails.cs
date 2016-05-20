@@ -43,7 +43,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="LastOfferedTime">The time this work item was last offered to a user or queue. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="LastOwnershipUpdateTime">The most recent time a user assumed ownership of a work item. This may be blank if the work item has no owner. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="CurrentTaskStartTime">This is the time when the current task that started the work item was started. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        public WorkItemDetails(, string Name = null, WorkItemDefinition WorkItemDefinition = null, FlowExecId FlowExecId = null, FlowConfigId FlowConfigId = null, DateTime? FlowCreateTime = null, DateTime? CreateTime = null, User Owner = null, List<User> OfferedToUsers = null, List<Queue> OfferedToQueues = null, string Title = null, string Subtitle = null, List<AssociatedDocument> AssociatedDocuments = null, WorkItemActions AvailableActions = null, DataValueInfo DataValueInfo = null, WorkItemCache WorkItemCache = null, DateTime? LastOfferedTime = null, DateTime? LastOwnershipUpdateTime = null, DateTime? CurrentTaskStartTime = null)
+        public WorkItemDetails(string Name = null, WorkItemDefinition WorkItemDefinition = null, FlowExecId FlowExecId = null, FlowConfigId FlowConfigId = null, DateTime? FlowCreateTime = null, DateTime? CreateTime = null, User Owner = null, List<User> OfferedToUsers = null, List<Queue> OfferedToQueues = null, string Title = null, string Subtitle = null, List<AssociatedDocument> AssociatedDocuments = null, WorkItemActions AvailableActions = null, DataValueInfo DataValueInfo = null, WorkItemCache WorkItemCache = null, DateTime? LastOfferedTime = null, DateTime? LastOwnershipUpdateTime = null, DateTime? CurrentTaskStartTime = null)
         {
             // to ensure "FlowExecId" is required (not null)
             if (FlowExecId == null)
@@ -278,102 +278,102 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.WorkItemDefinition == other.WorkItemDefinition ||
                     this.WorkItemDefinition != null &&
                     this.WorkItemDefinition.Equals(other.WorkItemDefinition)
-                ) && 
+                ) &&
                 (
                     this.FlowExecId == other.FlowExecId ||
                     this.FlowExecId != null &&
                     this.FlowExecId.Equals(other.FlowExecId)
-                ) && 
+                ) &&
                 (
                     this.FlowConfigId == other.FlowConfigId ||
                     this.FlowConfigId != null &&
                     this.FlowConfigId.Equals(other.FlowConfigId)
-                ) && 
+                ) &&
                 (
                     this.FlowCreateTime == other.FlowCreateTime ||
                     this.FlowCreateTime != null &&
                     this.FlowCreateTime.Equals(other.FlowCreateTime)
-                ) && 
+                ) &&
                 (
                     this.CreateTime == other.CreateTime ||
                     this.CreateTime != null &&
                     this.CreateTime.Equals(other.CreateTime)
-                ) && 
+                ) &&
                 (
                     this.Owner == other.Owner ||
                     this.Owner != null &&
                     this.Owner.Equals(other.Owner)
-                ) && 
+                ) &&
                 (
                     this.OfferedToUsers == other.OfferedToUsers ||
                     this.OfferedToUsers != null &&
                     this.OfferedToUsers.SequenceEqual(other.OfferedToUsers)
-                ) && 
+                ) &&
                 (
                     this.OfferedToQueues == other.OfferedToQueues ||
                     this.OfferedToQueues != null &&
                     this.OfferedToQueues.SequenceEqual(other.OfferedToQueues)
-                ) && 
+                ) &&
                 (
                     this.Title == other.Title ||
                     this.Title != null &&
                     this.Title.Equals(other.Title)
-                ) && 
+                ) &&
                 (
                     this.Subtitle == other.Subtitle ||
                     this.Subtitle != null &&
                     this.Subtitle.Equals(other.Subtitle)
-                ) && 
+                ) &&
                 (
                     this.AssociatedDocuments == other.AssociatedDocuments ||
                     this.AssociatedDocuments != null &&
                     this.AssociatedDocuments.SequenceEqual(other.AssociatedDocuments)
-                ) && 
+                ) &&
                 (
                     this.AvailableActions == other.AvailableActions ||
                     this.AvailableActions != null &&
                     this.AvailableActions.Equals(other.AvailableActions)
-                ) && 
+                ) &&
                 (
                     this.DataValueInfo == other.DataValueInfo ||
                     this.DataValueInfo != null &&
                     this.DataValueInfo.Equals(other.DataValueInfo)
-                ) && 
+                ) &&
                 (
                     this.WorkItemCache == other.WorkItemCache ||
                     this.WorkItemCache != null &&
                     this.WorkItemCache.Equals(other.WorkItemCache)
-                ) && 
+                ) &&
                 (
                     this.LastOfferedTime == other.LastOfferedTime ||
                     this.LastOfferedTime != null &&
                     this.LastOfferedTime.Equals(other.LastOfferedTime)
-                ) && 
+                ) &&
                 (
                     this.LastOwnershipUpdateTime == other.LastOwnershipUpdateTime ||
                     this.LastOwnershipUpdateTime != null &&
                     this.LastOwnershipUpdateTime.Equals(other.LastOwnershipUpdateTime)
-                ) && 
+                ) &&
                 (
                     this.CurrentTaskStartTime == other.CurrentTaskStartTime ||
                     this.CurrentTaskStartTime != null &&
                     this.CurrentTaskStartTime.Equals(other.CurrentTaskStartTime)
-                )
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

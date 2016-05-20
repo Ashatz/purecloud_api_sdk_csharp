@@ -124,37 +124,37 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Type == other.Type ||
                     this.Type != null &&
                     this.Type.Equals(other.Type)
-                ) && 
+                ) &&
                 (
                     this.Parameters == other.Parameters ||
                     this.Parameters != null &&
                     this.Parameters.SequenceEqual(other.Parameters)
-                ) && 
+                ) &&
                 (
                     this.Codecs == other.Codecs ||
                     this.Codecs != null &&
                     this.Codecs.SequenceEqual(other.Codecs)
-                ) && 
+                ) &&
                 (
                     this.Strip == other.Strip ||
                     this.Strip != null &&
                     this.Strip.Equals(other.Strip)
-                ) && 
+                ) &&
                 (
                     this.CallingPartyId == other.CallingPartyId ||
                     this.CallingPartyId != null &&
                     this.CallingPartyId.Equals(other.CallingPartyId)
-                ) && 
+                ) &&
                 (
                     this.CallHistory == other.CallHistory ||
                     this.CallHistory != null &&
                     this.CallHistory.Equals(other.CallHistory)
-                ) && 
+                ) &&
                 (
                     this.Prefix == other.Prefix ||
                     this.Prefix != null &&

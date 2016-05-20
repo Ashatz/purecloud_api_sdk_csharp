@@ -125,7 +125,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Addresses">Addresses.</param>
         /// <param name="RulesVisible">Are membership rules visible to the person requesting to view the group (required) (default to false).</param>
         /// <param name="Visibility">Who can view this group (required).</param>
-        public Group(, string Name = null, string Description = null, TypeEnum? Type = null, List<UserImage> Images = null, List<Contact> Addresses = null, bool? RulesVisible = null, VisibilityEnum? Visibility = null)
+        public Group(string Name = null, string Description = null, TypeEnum? Type = null, List<UserImage> Images = null, List<Contact> Addresses = null, bool? RulesVisible = null, VisibilityEnum? Visibility = null)
         {
             // to ensure "Type" is required (not null)
             if (Type == null)
@@ -272,67 +272,67 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Description == other.Description ||
                     this.Description != null &&
                     this.Description.Equals(other.Description)
-                ) && 
+                ) &&
                 (
                     this.DateModified == other.DateModified ||
                     this.DateModified != null &&
                     this.DateModified.Equals(other.DateModified)
-                ) && 
+                ) &&
                 (
                     this.MemberCount == other.MemberCount ||
                     this.MemberCount != null &&
                     this.MemberCount.Equals(other.MemberCount)
-                ) && 
+                ) &&
                 (
                     this.State == other.State ||
                     this.State != null &&
                     this.State.Equals(other.State)
-                ) && 
+                ) &&
                 (
                     this.Version == other.Version ||
                     this.Version != null &&
                     this.Version.Equals(other.Version)
-                ) && 
+                ) &&
                 (
                     this.Type == other.Type ||
                     this.Type != null &&
                     this.Type.Equals(other.Type)
-                ) && 
+                ) &&
                 (
                     this.Images == other.Images ||
                     this.Images != null &&
                     this.Images.SequenceEqual(other.Images)
-                ) && 
+                ) &&
                 (
                     this.Addresses == other.Addresses ||
                     this.Addresses != null &&
                     this.Addresses.SequenceEqual(other.Addresses)
-                ) && 
+                ) &&
                 (
                     this.RulesVisible == other.RulesVisible ||
                     this.RulesVisible != null &&
                     this.RulesVisible.Equals(other.RulesVisible)
-                ) && 
+                ) &&
                 (
                     this.Visibility == other.Visibility ||
                     this.Visibility != null &&
                     this.Visibility.Equals(other.Visibility)
-                )
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

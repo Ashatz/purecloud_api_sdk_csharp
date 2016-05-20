@@ -148,52 +148,52 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.HtmlBody == other.HtmlBody ||
                     this.HtmlBody != null &&
                     this.HtmlBody.Equals(other.HtmlBody)
-                ) && 
+                ) &&
                 (
                     this.TextBody == other.TextBody ||
                     this.TextBody != null &&
                     this.TextBody.Equals(other.TextBody)
-                ) && 
+                ) &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.To == other.To ||
                     this.To != null &&
                     this.To.SequenceEqual(other.To)
-                ) && 
+                ) &&
                 (
                     this.Cc == other.Cc ||
                     this.Cc != null &&
                     this.Cc.SequenceEqual(other.Cc)
-                ) && 
+                ) &&
                 (
                     this.Bcc == other.Bcc ||
                     this.Bcc != null &&
                     this.Bcc.SequenceEqual(other.Bcc)
-                ) && 
+                ) &&
                 (
                     this.From == other.From ||
                     this.From != null &&
                     this.From.Equals(other.From)
-                ) && 
+                ) &&
                 (
                     this.Subject == other.Subject ||
                     this.Subject != null &&
                     this.Subject.Equals(other.Subject)
-                ) && 
+                ) &&
                 (
                     this.Attachments == other.Attachments ||
                     this.Attachments != null &&
                     this.Attachments.SequenceEqual(other.Attachments)
-                ) && 
+                ) &&
                 (
                     this.Time == other.Time ||
                     this.Time != null &&

@@ -132,37 +132,37 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.ScriptId == other.ScriptId ||
                     this.ScriptId != null &&
                     this.ScriptId.Equals(other.ScriptId)
-                ) && 
+                ) &&
                 (
                     this.QueueId == other.QueueId ||
                     this.QueueId != null &&
                     this.QueueId.Equals(other.QueueId)
-                ) && 
+                ) &&
                 (
                     this.CallbackUserName == other.CallbackUserName ||
                     this.CallbackUserName != null &&
                     this.CallbackUserName.Equals(other.CallbackUserName)
-                ) && 
+                ) &&
                 (
                     this.CallbackNumbers == other.CallbackNumbers ||
                     this.CallbackNumbers != null &&
                     this.CallbackNumbers.SequenceEqual(other.CallbackNumbers)
-                ) && 
+                ) &&
                 (
                     this.CallbackScheduledTime == other.CallbackScheduledTime ||
                     this.CallbackScheduledTime != null &&
                     this.CallbackScheduledTime.Equals(other.CallbackScheduledTime)
-                ) && 
+                ) &&
                 (
                     this.CountryCode == other.CountryCode ||
                     this.CountryCode != null &&
                     this.CountryCode.Equals(other.CountryCode)
-                ) && 
+                ) &&
                 (
                     this.SkipEnabled == other.SkipEnabled ||
                     this.SkipEnabled != null &&

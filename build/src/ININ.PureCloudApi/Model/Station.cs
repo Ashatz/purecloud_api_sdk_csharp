@@ -53,7 +53,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="SecondaryEdge">SecondaryEdge.</param>
         /// <param name="Type">Type.</param>
         /// <param name="LineAppearanceId">LineAppearanceId.</param>
-        public Station(, string Name = null, string Description = null, StatusEnum? Status = null, string UserId = null, UriReference PrimaryEdge = null, UriReference SecondaryEdge = null, string Type = null, string LineAppearanceId = null)
+        public Station(string Name = null, string Description = null, StatusEnum? Status = null, string UserId = null, UriReference PrimaryEdge = null, UriReference SecondaryEdge = null, string Type = null, string LineAppearanceId = null)
         {
             this.Name = Name;
             this.Description = Description;
@@ -165,52 +165,52 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Description == other.Description ||
                     this.Description != null &&
                     this.Description.Equals(other.Description)
-                ) && 
+                ) &&
                 (
                     this.Status == other.Status ||
                     this.Status != null &&
                     this.Status.Equals(other.Status)
-                ) && 
+                ) &&
                 (
                     this.UserId == other.UserId ||
                     this.UserId != null &&
                     this.UserId.Equals(other.UserId)
-                ) && 
+                ) &&
                 (
                     this.PrimaryEdge == other.PrimaryEdge ||
                     this.PrimaryEdge != null &&
                     this.PrimaryEdge.Equals(other.PrimaryEdge)
-                ) && 
+                ) &&
                 (
                     this.SecondaryEdge == other.SecondaryEdge ||
                     this.SecondaryEdge != null &&
                     this.SecondaryEdge.Equals(other.SecondaryEdge)
-                ) && 
+                ) &&
                 (
                     this.Type == other.Type ||
                     this.Type != null &&
                     this.Type.Equals(other.Type)
-                ) && 
+                ) &&
                 (
                     this.LineAppearanceId == other.LineAppearanceId ||
                     this.LineAppearanceId != null &&
                     this.LineAppearanceId.Equals(other.LineAppearanceId)
-                )
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

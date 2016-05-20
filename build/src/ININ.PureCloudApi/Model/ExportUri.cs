@@ -84,12 +84,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Uri == other.Uri ||
                     this.Uri != null &&
                     this.Uri.Equals(other.Uri)
-                ) && 
+                ) &&
                 (
                     this.ExportTimestamp == other.ExportTimestamp ||
                     this.ExportTimestamp != null &&

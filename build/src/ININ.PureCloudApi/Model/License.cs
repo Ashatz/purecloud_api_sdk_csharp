@@ -21,7 +21,7 @@ namespace ININ.PureCloudApi.Model
         /// Initializes a new instance of the <see cref="License" /> class.
         /// </summary>
         /// <param name="Name">Name.</param>
-        public License(, string Name = null)
+        public License(string Name = null)
         {
             this.Name = Name;
         }
@@ -82,12 +82,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&

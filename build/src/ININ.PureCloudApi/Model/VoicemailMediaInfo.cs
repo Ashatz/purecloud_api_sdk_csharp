@@ -22,7 +22,7 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <param name="MediaFileUri">MediaFileUri.</param>
         /// <param name="MediaImageUri">MediaImageUri.</param>
-        public VoicemailMediaInfo(, string MediaFileUri = null, string MediaImageUri = null)
+        public VoicemailMediaInfo(string MediaFileUri = null, string MediaImageUri = null)
         {
             this.MediaFileUri = MediaFileUri;
             this.MediaImageUri = MediaImageUri;
@@ -90,17 +90,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.MediaFileUri == other.MediaFileUri ||
                     this.MediaFileUri != null &&
                     this.MediaFileUri.Equals(other.MediaFileUri)
-                ) && 
+                ) &&
                 (
                     this.MediaImageUri == other.MediaImageUri ||
                     this.MediaImageUri != null &&

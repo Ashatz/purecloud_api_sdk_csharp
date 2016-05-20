@@ -187,17 +187,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.FieldName == other.FieldName ||
                     this.FieldName != null &&
                     this.FieldName.Equals(other.FieldName)
-                ) && 
+                ) &&
                 (
                     this._Operator == other._Operator ||
                     this._Operator != null &&
                     this._Operator.Equals(other._Operator)
-                ) && 
+                ) &&
                 (
                     this.FieldValue == other.FieldValue ||
                     this.FieldValue != null &&

@@ -83,12 +83,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Percentage == other.Percentage ||
                     this.Percentage != null &&
                     this.Percentage.Equals(other.Percentage)
-                ) && 
+                ) &&
                 (
                     this.DurationMs == other.DurationMs ||
                     this.DurationMs != null &&

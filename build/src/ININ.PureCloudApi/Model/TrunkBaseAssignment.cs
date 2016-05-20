@@ -85,12 +85,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Family == other.Family ||
                     this.Family != null &&
                     this.Family.Equals(other.Family)
-                ) && 
+                ) &&
                 (
                     this.TrunkBase == other.TrunkBase ||
                     this.TrunkBase != null &&

@@ -26,7 +26,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="CountryName">CountryName.</param>
         /// <param name="StateName">StateName.</param>
         /// <param name="PostalCode">PostalCode.</param>
-        public BillingAddress(, string Name = null, string Street = null, string City = null, string CountryName = null, string StateName = null, string PostalCode = null)
+        public BillingAddress(string Name = null, string Street = null, string City = null, string CountryName = null, string StateName = null, string PostalCode = null)
         {
             this.Name = Name;
             this.Street = Street;
@@ -129,42 +129,42 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Street == other.Street ||
                     this.Street != null &&
                     this.Street.Equals(other.Street)
-                ) && 
+                ) &&
                 (
                     this.City == other.City ||
                     this.City != null &&
                     this.City.Equals(other.City)
-                ) && 
+                ) &&
                 (
                     this.CountryName == other.CountryName ||
                     this.CountryName != null &&
                     this.CountryName.Equals(other.CountryName)
-                ) && 
+                ) &&
                 (
                     this.StateName == other.StateName ||
                     this.StateName != null &&
                     this.StateName.Equals(other.StateName)
-                ) && 
+                ) &&
                 (
                     this.PostalCode == other.PostalCode ||
                     this.PostalCode != null &&
                     this.PostalCode.Equals(other.PostalCode)
-                )
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

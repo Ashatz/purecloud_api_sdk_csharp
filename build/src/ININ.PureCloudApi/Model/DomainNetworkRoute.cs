@@ -115,27 +115,27 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Prefix == other.Prefix ||
                     this.Prefix != null &&
                     this.Prefix.Equals(other.Prefix)
-                ) && 
+                ) &&
                 (
                     this.Nexthop == other.Nexthop ||
                     this.Nexthop != null &&
                     this.Nexthop.Equals(other.Nexthop)
-                ) && 
+                ) &&
                 (
                     this.Persistent == other.Persistent ||
                     this.Persistent != null &&
                     this.Persistent.Equals(other.Persistent)
-                ) && 
+                ) &&
                 (
                     this.Metric == other.Metric ||
                     this.Metric != null &&
                     this.Metric.Equals(other.Metric)
-                ) && 
+                ) &&
                 (
                     this.Family == other.Family ||
                     this.Family != null &&

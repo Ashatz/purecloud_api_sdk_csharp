@@ -99,22 +99,22 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.QueryPhrase == other.QueryPhrase ||
                     this.QueryPhrase != null &&
                     this.QueryPhrase.Equals(other.QueryPhrase)
-                ) && 
+                ) &&
                 (
                     this.QueryFields == other.QueryFields ||
                     this.QueryFields != null &&
                     this.QueryFields.SequenceEqual(other.QueryFields)
-                ) && 
+                ) &&
                 (
                     this.Facets == other.Facets ||
                     this.Facets != null &&
                     this.Facets.SequenceEqual(other.Facets)
-                ) && 
+                ) &&
                 (
                     this.Filters == other.Filters ||
                     this.Filters != null &&

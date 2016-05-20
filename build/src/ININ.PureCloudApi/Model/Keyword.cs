@@ -123,37 +123,37 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Phrase == other.Phrase ||
                     this.Phrase != null &&
                     this.Phrase.Equals(other.Phrase)
-                ) && 
+                ) &&
                 (
                     this.Confidence == other.Confidence ||
                     this.Confidence != null &&
                     this.Confidence.Equals(other.Confidence)
-                ) && 
+                ) &&
                 (
                     this.AgentScoreModifier == other.AgentScoreModifier ||
                     this.AgentScoreModifier != null &&
                     this.AgentScoreModifier.Equals(other.AgentScoreModifier)
-                ) && 
+                ) &&
                 (
                     this.CustomerScoreModifier == other.CustomerScoreModifier ||
                     this.CustomerScoreModifier != null &&
                     this.CustomerScoreModifier.Equals(other.CustomerScoreModifier)
-                ) && 
+                ) &&
                 (
                     this.AlternateSpellings == other.AlternateSpellings ||
                     this.AlternateSpellings != null &&

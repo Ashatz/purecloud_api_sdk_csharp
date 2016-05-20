@@ -68,7 +68,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="OpenHoursFlow">OpenHoursFlow.</param>
         /// <param name="ClosedHoursFlow">ClosedHoursFlow.</param>
         /// <param name="ScheduleGroup">ScheduleGroup.</param>
-        public IVR(, string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, string IvrUri = null, List<string> Dnis = null, string FlowId = null, string ScheduleId = null, UriReference OpenHoursFlow = null, UriReference ClosedHoursFlow = null, UriReference ScheduleGroup = null)
+        public IVR(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, string IvrUri = null, List<string> Dnis = null, string FlowId = null, string ScheduleId = null, UriReference OpenHoursFlow = null, UriReference ClosedHoursFlow = null, UriReference ScheduleGroup = null)
         {
             this.Name = Name;
             this.Description = Description;
@@ -245,97 +245,97 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Description == other.Description ||
                     this.Description != null &&
                     this.Description.Equals(other.Description)
-                ) && 
+                ) &&
                 (
                     this.Version == other.Version ||
                     this.Version != null &&
                     this.Version.Equals(other.Version)
-                ) && 
+                ) &&
                 (
                     this.DateCreated == other.DateCreated ||
                     this.DateCreated != null &&
                     this.DateCreated.Equals(other.DateCreated)
-                ) && 
+                ) &&
                 (
                     this.DateModified == other.DateModified ||
                     this.DateModified != null &&
                     this.DateModified.Equals(other.DateModified)
-                ) && 
+                ) &&
                 (
                     this.ModifiedBy == other.ModifiedBy ||
                     this.ModifiedBy != null &&
                     this.ModifiedBy.Equals(other.ModifiedBy)
-                ) && 
+                ) &&
                 (
                     this.CreatedBy == other.CreatedBy ||
                     this.CreatedBy != null &&
                     this.CreatedBy.Equals(other.CreatedBy)
-                ) && 
+                ) &&
                 (
                     this.State == other.State ||
                     this.State != null &&
                     this.State.Equals(other.State)
-                ) && 
+                ) &&
                 (
                     this.ModifiedByApp == other.ModifiedByApp ||
                     this.ModifiedByApp != null &&
                     this.ModifiedByApp.Equals(other.ModifiedByApp)
-                ) && 
+                ) &&
                 (
                     this.CreatedByApp == other.CreatedByApp ||
                     this.CreatedByApp != null &&
                     this.CreatedByApp.Equals(other.CreatedByApp)
-                ) && 
+                ) &&
                 (
                     this.IvrUri == other.IvrUri ||
                     this.IvrUri != null &&
                     this.IvrUri.Equals(other.IvrUri)
-                ) && 
+                ) &&
                 (
                     this.Dnis == other.Dnis ||
                     this.Dnis != null &&
                     this.Dnis.SequenceEqual(other.Dnis)
-                ) && 
+                ) &&
                 (
                     this.FlowId == other.FlowId ||
                     this.FlowId != null &&
                     this.FlowId.Equals(other.FlowId)
-                ) && 
+                ) &&
                 (
                     this.ScheduleId == other.ScheduleId ||
                     this.ScheduleId != null &&
                     this.ScheduleId.Equals(other.ScheduleId)
-                ) && 
+                ) &&
                 (
                     this.OpenHoursFlow == other.OpenHoursFlow ||
                     this.OpenHoursFlow != null &&
                     this.OpenHoursFlow.Equals(other.OpenHoursFlow)
-                ) && 
+                ) &&
                 (
                     this.ClosedHoursFlow == other.ClosedHoursFlow ||
                     this.ClosedHoursFlow != null &&
                     this.ClosedHoursFlow.Equals(other.ClosedHoursFlow)
-                ) && 
+                ) &&
                 (
                     this.ScheduleGroup == other.ScheduleGroup ||
                     this.ScheduleGroup != null &&
                     this.ScheduleGroup.Equals(other.ScheduleGroup)
-                )
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

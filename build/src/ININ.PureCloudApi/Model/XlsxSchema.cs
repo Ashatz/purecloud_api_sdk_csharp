@@ -113,17 +113,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.SheetSchemas == other.SheetSchemas ||
                     this.SheetSchemas != null &&
                     this.SheetSchemas.SequenceEqual(other.SheetSchemas)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                )
+                ) &&
                 (
                     this.CarrierId == other.CarrierId ||
                     this.CarrierId != null &&

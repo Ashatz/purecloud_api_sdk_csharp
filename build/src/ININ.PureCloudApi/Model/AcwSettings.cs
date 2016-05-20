@@ -115,12 +115,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.WrapupPrompt == other.WrapupPrompt ||
                     this.WrapupPrompt != null &&
                     this.WrapupPrompt.Equals(other.WrapupPrompt)
-                ) && 
+                ) &&
                 (
                     this.TimeoutMs == other.TimeoutMs ||
                     this.TimeoutMs != null &&

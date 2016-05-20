@@ -23,7 +23,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Name">Name.</param>
         /// <param name="Quote">Quote.</param>
         /// <param name="EnvelopeId">EnvelopeId.</param>
-        public Order(, string Name = null, Quote Quote = null, string EnvelopeId = null)
+        public Order(string Name = null, Quote Quote = null, string EnvelopeId = null)
         {
             this.Name = Name;
             this.Quote = Quote;
@@ -105,27 +105,27 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Quote == other.Quote ||
                     this.Quote != null &&
                     this.Quote.Equals(other.Quote)
-                ) && 
+                ) &&
                 (
                     this.EnvelopeId == other.EnvelopeId ||
                     this.EnvelopeId != null &&
                     this.EnvelopeId.Equals(other.EnvelopeId)
-                )
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

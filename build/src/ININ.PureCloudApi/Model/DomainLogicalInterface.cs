@@ -135,7 +135,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="UseForInternalEdgeCommunication">This interface will be used for all internal edge-to-edge communication using settings from the edgeTrunkBaseAssignment on the Edge Group. (default to false).</param>
         /// <param name="ExternalTrunkBaseAssignments">External trunk base settings to use for external communication from this interface..</param>
         /// <param name="PhoneTrunkBaseAssignments">Phone trunk base settings to use for phone communication from this interface.  These settings will be ignored when \&quot;inheritPhoneTrunkBases\&quot; is true..</param>
-        public DomainLogicalInterface(, string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, string EdgeUri = null, string EdgeAssignedId = null, string FriendlyName = null, int? VlanTagId = null, string HardwareAddress = null, string PhysicalAdapterId = null, string IpAddress = null, string Gateway = null, string PrimaryDns = null, string SecondaryDns = null, string IfStatus = null, List<DomainNetworkRoute> Routes = null, List<DomainNetworkAddress> Addresses = null, DomainCapabilities Ipv4Capabilities = null, DomainCapabilities Ipv6Capabilities = null, CurrentStateEnum? CurrentState = null, string LastModifiedUserId = null, string LastModifiedCorrelationId = null, List<DomainNetworkCommandResponse> CommandResponses = null, bool? InheritPhoneTrunkBases = null, bool? InheritPhoneTrunkBasesIPv4 = null, bool? InheritPhoneTrunkBasesIPv6 = null, bool? UseForInternalEdgeCommunication = null, List<TrunkBaseAssignment> ExternalTrunkBaseAssignments = null, List<TrunkBaseAssignment> PhoneTrunkBaseAssignments = null)
+        public DomainLogicalInterface(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, string EdgeUri = null, string EdgeAssignedId = null, string FriendlyName = null, int? VlanTagId = null, string HardwareAddress = null, string PhysicalAdapterId = null, string IpAddress = null, string Gateway = null, string PrimaryDns = null, string SecondaryDns = null, string IfStatus = null, List<DomainNetworkRoute> Routes = null, List<DomainNetworkAddress> Addresses = null, DomainCapabilities Ipv4Capabilities = null, DomainCapabilities Ipv6Capabilities = null, CurrentStateEnum? CurrentState = null, string LastModifiedUserId = null, string LastModifiedCorrelationId = null, List<DomainNetworkCommandResponse> CommandResponses = null, bool? InheritPhoneTrunkBases = null, bool? InheritPhoneTrunkBasesIPv4 = null, bool? InheritPhoneTrunkBasesIPv6 = null, bool? UseForInternalEdgeCommunication = null, List<TrunkBaseAssignment> ExternalTrunkBaseAssignments = null, List<TrunkBaseAssignment> PhoneTrunkBaseAssignments = null)
         {
             this.Name = Name;
             this.Description = Description;
@@ -471,187 +471,187 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Description == other.Description ||
                     this.Description != null &&
                     this.Description.Equals(other.Description)
-                ) && 
+                ) &&
                 (
                     this.Version == other.Version ||
                     this.Version != null &&
                     this.Version.Equals(other.Version)
-                ) && 
+                ) &&
                 (
                     this.DateCreated == other.DateCreated ||
                     this.DateCreated != null &&
                     this.DateCreated.Equals(other.DateCreated)
-                ) && 
+                ) &&
                 (
                     this.DateModified == other.DateModified ||
                     this.DateModified != null &&
                     this.DateModified.Equals(other.DateModified)
-                ) && 
+                ) &&
                 (
                     this.ModifiedBy == other.ModifiedBy ||
                     this.ModifiedBy != null &&
                     this.ModifiedBy.Equals(other.ModifiedBy)
-                ) && 
+                ) &&
                 (
                     this.CreatedBy == other.CreatedBy ||
                     this.CreatedBy != null &&
                     this.CreatedBy.Equals(other.CreatedBy)
-                ) && 
+                ) &&
                 (
                     this.State == other.State ||
                     this.State != null &&
                     this.State.Equals(other.State)
-                ) && 
+                ) &&
                 (
                     this.ModifiedByApp == other.ModifiedByApp ||
                     this.ModifiedByApp != null &&
                     this.ModifiedByApp.Equals(other.ModifiedByApp)
-                ) && 
+                ) &&
                 (
                     this.CreatedByApp == other.CreatedByApp ||
                     this.CreatedByApp != null &&
                     this.CreatedByApp.Equals(other.CreatedByApp)
-                ) && 
+                ) &&
                 (
                     this.EdgeUri == other.EdgeUri ||
                     this.EdgeUri != null &&
                     this.EdgeUri.Equals(other.EdgeUri)
-                ) && 
+                ) &&
                 (
                     this.EdgeAssignedId == other.EdgeAssignedId ||
                     this.EdgeAssignedId != null &&
                     this.EdgeAssignedId.Equals(other.EdgeAssignedId)
-                ) && 
+                ) &&
                 (
                     this.FriendlyName == other.FriendlyName ||
                     this.FriendlyName != null &&
                     this.FriendlyName.Equals(other.FriendlyName)
-                ) && 
+                ) &&
                 (
                     this.VlanTagId == other.VlanTagId ||
                     this.VlanTagId != null &&
                     this.VlanTagId.Equals(other.VlanTagId)
-                ) && 
+                ) &&
                 (
                     this.HardwareAddress == other.HardwareAddress ||
                     this.HardwareAddress != null &&
                     this.HardwareAddress.Equals(other.HardwareAddress)
-                ) && 
+                ) &&
                 (
                     this.PhysicalAdapterId == other.PhysicalAdapterId ||
                     this.PhysicalAdapterId != null &&
                     this.PhysicalAdapterId.Equals(other.PhysicalAdapterId)
-                ) && 
+                ) &&
                 (
                     this.IpAddress == other.IpAddress ||
                     this.IpAddress != null &&
                     this.IpAddress.Equals(other.IpAddress)
-                ) && 
+                ) &&
                 (
                     this.Gateway == other.Gateway ||
                     this.Gateway != null &&
                     this.Gateway.Equals(other.Gateway)
-                ) && 
+                ) &&
                 (
                     this.PrimaryDns == other.PrimaryDns ||
                     this.PrimaryDns != null &&
                     this.PrimaryDns.Equals(other.PrimaryDns)
-                ) && 
+                ) &&
                 (
                     this.SecondaryDns == other.SecondaryDns ||
                     this.SecondaryDns != null &&
                     this.SecondaryDns.Equals(other.SecondaryDns)
-                ) && 
+                ) &&
                 (
                     this.IfStatus == other.IfStatus ||
                     this.IfStatus != null &&
                     this.IfStatus.Equals(other.IfStatus)
-                ) && 
+                ) &&
                 (
                     this.Routes == other.Routes ||
                     this.Routes != null &&
                     this.Routes.SequenceEqual(other.Routes)
-                ) && 
+                ) &&
                 (
                     this.Addresses == other.Addresses ||
                     this.Addresses != null &&
                     this.Addresses.SequenceEqual(other.Addresses)
-                ) && 
+                ) &&
                 (
                     this.Ipv4Capabilities == other.Ipv4Capabilities ||
                     this.Ipv4Capabilities != null &&
                     this.Ipv4Capabilities.Equals(other.Ipv4Capabilities)
-                ) && 
+                ) &&
                 (
                     this.Ipv6Capabilities == other.Ipv6Capabilities ||
                     this.Ipv6Capabilities != null &&
                     this.Ipv6Capabilities.Equals(other.Ipv6Capabilities)
-                ) && 
+                ) &&
                 (
                     this.CurrentState == other.CurrentState ||
                     this.CurrentState != null &&
                     this.CurrentState.Equals(other.CurrentState)
-                ) && 
+                ) &&
                 (
                     this.LastModifiedUserId == other.LastModifiedUserId ||
                     this.LastModifiedUserId != null &&
                     this.LastModifiedUserId.Equals(other.LastModifiedUserId)
-                ) && 
+                ) &&
                 (
                     this.LastModifiedCorrelationId == other.LastModifiedCorrelationId ||
                     this.LastModifiedCorrelationId != null &&
                     this.LastModifiedCorrelationId.Equals(other.LastModifiedCorrelationId)
-                ) && 
+                ) &&
                 (
                     this.CommandResponses == other.CommandResponses ||
                     this.CommandResponses != null &&
                     this.CommandResponses.SequenceEqual(other.CommandResponses)
-                ) && 
+                ) &&
                 (
                     this.InheritPhoneTrunkBases == other.InheritPhoneTrunkBases ||
                     this.InheritPhoneTrunkBases != null &&
                     this.InheritPhoneTrunkBases.Equals(other.InheritPhoneTrunkBases)
-                ) && 
+                ) &&
                 (
                     this.InheritPhoneTrunkBasesIPv4 == other.InheritPhoneTrunkBasesIPv4 ||
                     this.InheritPhoneTrunkBasesIPv4 != null &&
                     this.InheritPhoneTrunkBasesIPv4.Equals(other.InheritPhoneTrunkBasesIPv4)
-                ) && 
+                ) &&
                 (
                     this.InheritPhoneTrunkBasesIPv6 == other.InheritPhoneTrunkBasesIPv6 ||
                     this.InheritPhoneTrunkBasesIPv6 != null &&
                     this.InheritPhoneTrunkBasesIPv6.Equals(other.InheritPhoneTrunkBasesIPv6)
-                ) && 
+                ) &&
                 (
                     this.UseForInternalEdgeCommunication == other.UseForInternalEdgeCommunication ||
                     this.UseForInternalEdgeCommunication != null &&
                     this.UseForInternalEdgeCommunication.Equals(other.UseForInternalEdgeCommunication)
-                ) && 
+                ) &&
                 (
                     this.ExternalTrunkBaseAssignments == other.ExternalTrunkBaseAssignments ||
                     this.ExternalTrunkBaseAssignments != null &&
                     this.ExternalTrunkBaseAssignments.SequenceEqual(other.ExternalTrunkBaseAssignments)
-                ) && 
+                ) &&
                 (
                     this.PhoneTrunkBaseAssignments == other.PhoneTrunkBaseAssignments ||
                     this.PhoneTrunkBaseAssignments != null &&
                     this.PhoneTrunkBaseAssignments.SequenceEqual(other.PhoneTrunkBaseAssignments)
-                )
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

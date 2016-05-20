@@ -27,7 +27,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="AvailableLocales">AvailableLocales.</param>
         /// <param name="Parameters">Parameters.</param>
         /// <param name="ExampleUrl">ExampleUrl.</param>
-        public ReportMetaData(, string Name = null, string Title = null, string Description = null, List<string> Keywords = null, List<string> AvailableLocales = null, List<Parameter> Parameters = null, string ExampleUrl = null)
+        public ReportMetaData(string Name = null, string Title = null, string Description = null, List<string> Keywords = null, List<string> AvailableLocales = null, List<Parameter> Parameters = null, string ExampleUrl = null)
         {
             this.Name = Name;
             this.Title = Title;
@@ -137,47 +137,47 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Title == other.Title ||
                     this.Title != null &&
                     this.Title.Equals(other.Title)
-                ) && 
+                ) &&
                 (
                     this.Description == other.Description ||
                     this.Description != null &&
                     this.Description.Equals(other.Description)
-                ) && 
+                ) &&
                 (
                     this.Keywords == other.Keywords ||
                     this.Keywords != null &&
                     this.Keywords.SequenceEqual(other.Keywords)
-                ) && 
+                ) &&
                 (
                     this.AvailableLocales == other.AvailableLocales ||
                     this.AvailableLocales != null &&
                     this.AvailableLocales.SequenceEqual(other.AvailableLocales)
-                ) && 
+                ) &&
                 (
                     this.Parameters == other.Parameters ||
                     this.Parameters != null &&
                     this.Parameters.SequenceEqual(other.Parameters)
-                ) && 
+                ) &&
                 (
                     this.ExampleUrl == other.ExampleUrl ||
                     this.ExampleUrl != null &&
                     this.ExampleUrl.Equals(other.ExampleUrl)
-                )
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

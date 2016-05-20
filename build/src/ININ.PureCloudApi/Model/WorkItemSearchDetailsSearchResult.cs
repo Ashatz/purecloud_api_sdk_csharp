@@ -85,12 +85,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.SearchResults == other.SearchResults ||
                     this.SearchResults != null &&
                     this.SearchResults.Equals(other.SearchResults)
-                ) && 
+                ) &&
                 (
                     this.FacetResults == other.FacetResults ||
                     this.FacetResults != null &&

@@ -69,7 +69,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Geolocation">Current geolocation position.</param>
         /// <param name="Station">Effective, default, and last station information.</param>
         /// <param name="Authorization">Roles and permissions assigned to the user.</param>
-        public User(, string Name = null, Chat Chat = null, string Department = null, string Email = null, List<Contact> PrimaryContactInfo = null, List<Contact> Addresses = null, string Title = null, string Username = null, List<UserImage> Images = null, RoutingStatus RoutingStatus = null, UserPresence Presence = null, UserConversationSummary ConversationSummary = null, OutOfOffice OutOfOffice = null, Geolocation Geolocation = null, UserStations Station = null, UserAuthorization Authorization = null)
+        public User(string Name = null, Chat Chat = null, string Department = null, string Email = null, List<Contact> PrimaryContactInfo = null, List<Contact> Addresses = null, string Title = null, string Username = null, List<UserImage> Images = null, RoutingStatus RoutingStatus = null, UserPresence Presence = null, UserConversationSummary ConversationSummary = null, OutOfOffice OutOfOffice = null, Geolocation Geolocation = null, UserStations Station = null, UserAuthorization Authorization = null)
         {
             this.Name = Name;
             this.Chat = Chat;
@@ -259,102 +259,102 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Chat == other.Chat ||
                     this.Chat != null &&
                     this.Chat.Equals(other.Chat)
-                ) && 
+                ) &&
                 (
                     this.Department == other.Department ||
                     this.Department != null &&
                     this.Department.Equals(other.Department)
-                ) && 
+                ) &&
                 (
                     this.Email == other.Email ||
                     this.Email != null &&
                     this.Email.Equals(other.Email)
-                ) && 
+                ) &&
                 (
                     this.PrimaryContactInfo == other.PrimaryContactInfo ||
                     this.PrimaryContactInfo != null &&
                     this.PrimaryContactInfo.SequenceEqual(other.PrimaryContactInfo)
-                ) && 
+                ) &&
                 (
                     this.Addresses == other.Addresses ||
                     this.Addresses != null &&
                     this.Addresses.SequenceEqual(other.Addresses)
-                ) && 
+                ) &&
                 (
                     this.State == other.State ||
                     this.State != null &&
                     this.State.Equals(other.State)
-                ) && 
+                ) &&
                 (
                     this.Title == other.Title ||
                     this.Title != null &&
                     this.Title.Equals(other.Title)
-                ) && 
+                ) &&
                 (
                     this.Username == other.Username ||
                     this.Username != null &&
                     this.Username.Equals(other.Username)
-                ) && 
+                ) &&
                 (
                     this.Images == other.Images ||
                     this.Images != null &&
                     this.Images.SequenceEqual(other.Images)
-                ) && 
+                ) &&
                 (
                     this.Version == other.Version ||
                     this.Version != null &&
                     this.Version.Equals(other.Version)
-                ) && 
+                ) &&
                 (
                     this.RoutingStatus == other.RoutingStatus ||
                     this.RoutingStatus != null &&
                     this.RoutingStatus.Equals(other.RoutingStatus)
-                ) && 
+                ) &&
                 (
                     this.Presence == other.Presence ||
                     this.Presence != null &&
                     this.Presence.Equals(other.Presence)
-                ) && 
+                ) &&
                 (
                     this.ConversationSummary == other.ConversationSummary ||
                     this.ConversationSummary != null &&
                     this.ConversationSummary.Equals(other.ConversationSummary)
-                ) && 
+                ) &&
                 (
                     this.OutOfOffice == other.OutOfOffice ||
                     this.OutOfOffice != null &&
                     this.OutOfOffice.Equals(other.OutOfOffice)
-                ) && 
+                ) &&
                 (
                     this.Geolocation == other.Geolocation ||
                     this.Geolocation != null &&
                     this.Geolocation.Equals(other.Geolocation)
-                ) && 
+                ) &&
                 (
                     this.Station == other.Station ||
                     this.Station != null &&
                     this.Station.Equals(other.Station)
-                ) && 
+                ) &&
                 (
                     this.Authorization == other.Authorization ||
                     this.Authorization != null &&
                     this.Authorization.Equals(other.Authorization)
-                )
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

@@ -20,11 +20,6 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RestErrorDetail" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected RestErrorDetail() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="RestErrorDetail" /> class.
-        /// </summary>
         public RestErrorDetail()
         {
         }
@@ -86,12 +81,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Error == other.Error ||
                     this.Error != null &&
                     this.Error.Equals(other.Error)
-                ) && 
+                ) &&
                 (
                     this.Details == other.Details ||
                     this.Details != null &&

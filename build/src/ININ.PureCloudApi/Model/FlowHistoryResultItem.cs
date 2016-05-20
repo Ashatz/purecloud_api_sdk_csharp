@@ -107,17 +107,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.FlowInstance == other.FlowInstance ||
                     this.FlowInstance != null &&
                     this.FlowInstance.Equals(other.FlowInstance)
-                ) && 
+                ) &&
                 (
                     this.AvailableActions == other.AvailableActions ||
                     this.AvailableActions != null &&
                     this.AvailableActions.Equals(other.AvailableActions)
-                ) && 
+                ) &&
                 (
                     this.HistoryItems == other.HistoryItems ||
                     this.HistoryItems != null &&

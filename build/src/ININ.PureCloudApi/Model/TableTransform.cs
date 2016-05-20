@@ -115,32 +115,32 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.HeaderRow == other.HeaderRow ||
                     this.HeaderRow != null &&
                     this.HeaderRow.Equals(other.HeaderRow)
-                ) && 
+                ) &&
                 (
                     this.FirstData == other.FirstData ||
                     this.FirstData != null &&
                     this.FirstData.Equals(other.FirstData)
-                ) && 
+                ) &&
                 (
                     this.HeaderReplaces == other.HeaderReplaces ||
                     this.HeaderReplaces != null &&
                     this.HeaderReplaces.SequenceEqual(other.HeaderReplaces)
-                ) && 
+                ) &&
                 (
                     this.Columns == other.Columns ||
                     this.Columns != null &&
                     this.Columns.SequenceEqual(other.Columns)
-                ) && 
+                ) &&
                 (
                     this.Unpivots == other.Unpivots ||
                     this.Unpivots != null &&
                     this.Unpivots.SequenceEqual(other.Unpivots)
-                ) && 
+                ) &&
                 (
                     this.Collapses == other.Collapses ||
                     this.Collapses != null &&

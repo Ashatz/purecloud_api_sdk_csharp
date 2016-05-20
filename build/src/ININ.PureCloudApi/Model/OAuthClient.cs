@@ -77,7 +77,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Secret">System created secret assigned to this client. Secrets are required for code authorization and client credential grants..</param>
         /// <param name="RoleIds">Roles assigned to this client. Roles only apply to clients using the client_credential grant.</param>
         /// <param name="AuthorizedGrantType">The OAuth Grant/Client type supported by this client. Code Authorization Grant/Client type - Preferred client type where the Client ID and Secret are required to create tokens. Used where the secret can be secured. Implicit grant type - Client ID only is required to create tokens. Used in browser and mobile apps where the secret can not be secured. SAML2-Bearer extension grant type - SAML2 assertion provider for user authentication at the token endpoint. Client Credential grant type - Used to created access tokens that are tied only to the client. .</param>
-        public OAuthClient(, string Name = null, long? AccessTokenValiditySeconds = null, string Description = null, List<string> RegisteredRedirectUri = null, string Secret = null, List<string> RoleIds = null, AuthorizedGrantTypeEnum? AuthorizedGrantType = null)
+        public OAuthClient(string Name = null, long? AccessTokenValiditySeconds = null, string Description = null, List<string> RegisteredRedirectUri = null, string Secret = null, List<string> RoleIds = null, AuthorizedGrantTypeEnum? AuthorizedGrantType = null)
         {
             // to ensure "Name" is required (not null)
             if (Name == null)
@@ -203,47 +203,47 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.AccessTokenValiditySeconds == other.AccessTokenValiditySeconds ||
                     this.AccessTokenValiditySeconds != null &&
                     this.AccessTokenValiditySeconds.Equals(other.AccessTokenValiditySeconds)
-                ) && 
+                ) &&
                 (
                     this.Description == other.Description ||
                     this.Description != null &&
                     this.Description.Equals(other.Description)
-                ) && 
+                ) &&
                 (
                     this.RegisteredRedirectUri == other.RegisteredRedirectUri ||
                     this.RegisteredRedirectUri != null &&
                     this.RegisteredRedirectUri.SequenceEqual(other.RegisteredRedirectUri)
-                ) && 
+                ) &&
                 (
                     this.Secret == other.Secret ||
                     this.Secret != null &&
                     this.Secret.Equals(other.Secret)
-                ) && 
+                ) &&
                 (
                     this.RoleIds == other.RoleIds ||
                     this.RoleIds != null &&
                     this.RoleIds.SequenceEqual(other.RoleIds)
-                ) && 
+                ) &&
                 (
                     this.AuthorizedGrantType == other.AuthorizedGrantType ||
                     this.AuthorizedGrantType != null &&
                     this.AuthorizedGrantType.Equals(other.AuthorizedGrantType)
-                )
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

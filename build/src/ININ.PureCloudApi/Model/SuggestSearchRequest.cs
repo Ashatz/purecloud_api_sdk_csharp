@@ -97,12 +97,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Types == other.Types ||
                     this.Types != null &&
                     this.Types.SequenceEqual(other.Types)
-                ) && 
+                ) &&
                 (
                     this.Query == other.Query ||
                     this.Query != null &&

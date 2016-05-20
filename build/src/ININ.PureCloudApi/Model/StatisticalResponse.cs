@@ -83,12 +83,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Interval == other.Interval ||
                     this.Interval != null &&
                     this.Interval.Equals(other.Interval)
-                ) && 
+                ) &&
                 (
                     this.Metrics == other.Metrics ||
                     this.Metrics != null &&

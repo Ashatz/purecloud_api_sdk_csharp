@@ -91,17 +91,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Method == other.Method ||
                     this.Method != null &&
                     this.Method.Equals(other.Method)
-                ) && 
+                ) &&
                 (
                     this.Url == other.Url ||
                     this.Url != null &&
                     this.Url.Equals(other.Url)
-                ) && 
+                ) &&
                 (
                     this.Body == other.Body ||
                     this.Body != null &&

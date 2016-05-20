@@ -107,22 +107,22 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.CorrelationId == other.CorrelationId ||
                     this.CorrelationId != null &&
                     this.CorrelationId.Equals(other.CorrelationId)
-                ) && 
+                ) &&
                 (
                     this.CommandName == other.CommandName ||
                     this.CommandName != null &&
                     this.CommandName.Equals(other.CommandName)
-                ) && 
+                ) &&
                 (
                     this.Acknowledged == other.Acknowledged ||
                     this.Acknowledged != null &&
                     this.Acknowledged.Equals(other.Acknowledged)
-                ) && 
+                ) &&
                 (
                     this.ErrorInfo == other.ErrorInfo ||
                     this.ErrorInfo != null &&

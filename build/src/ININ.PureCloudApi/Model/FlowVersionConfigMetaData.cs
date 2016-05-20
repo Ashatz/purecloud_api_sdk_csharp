@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="CreatedByUser">If known, the user who created this flow version..</param>
         /// <param name="CreatedDate">The date and time that the version was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="Version">Version of this flow config..</param>
-        public FlowVersionConfigMetaData(, string Name = null, string VersionSpecificComment = null, string FlowDefinitionUri = null, User CreatedByUser = null, DateTime? CreatedDate = null, string Version = null)
+        public FlowVersionConfigMetaData(string Name = null, string VersionSpecificComment = null, string FlowDefinitionUri = null, User CreatedByUser = null, DateTime? CreatedDate = null, string Version = null)
         {
             // to ensure "FlowDefinitionUri" is required (not null)
             if (FlowDefinitionUri == null)
@@ -147,42 +147,42 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.VersionSpecificComment == other.VersionSpecificComment ||
                     this.VersionSpecificComment != null &&
                     this.VersionSpecificComment.Equals(other.VersionSpecificComment)
-                ) && 
+                ) &&
                 (
                     this.FlowDefinitionUri == other.FlowDefinitionUri ||
                     this.FlowDefinitionUri != null &&
                     this.FlowDefinitionUri.Equals(other.FlowDefinitionUri)
-                ) && 
+                ) &&
                 (
                     this.CreatedByUser == other.CreatedByUser ||
                     this.CreatedByUser != null &&
                     this.CreatedByUser.Equals(other.CreatedByUser)
-                ) && 
+                ) &&
                 (
                     this.CreatedDate == other.CreatedDate ||
                     this.CreatedDate != null &&
                     this.CreatedDate.Equals(other.CreatedDate)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
-                ) && 
+                ) &&
                 (
                     this.Version == other.Version ||
                     this.Version != null &&

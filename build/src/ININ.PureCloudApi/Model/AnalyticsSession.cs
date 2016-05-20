@@ -263,92 +263,92 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.MediaType == other.MediaType ||
                     this.MediaType != null &&
                     this.MediaType.Equals(other.MediaType)
-                ) && 
+                ) &&
                 (
                     this.SessionId == other.SessionId ||
                     this.SessionId != null &&
                     this.SessionId.Equals(other.SessionId)
-                ) && 
+                ) &&
                 (
                     this.AddressOther == other.AddressOther ||
                     this.AddressOther != null &&
                     this.AddressOther.Equals(other.AddressOther)
-                ) && 
+                ) &&
                 (
                     this.AddressSelf == other.AddressSelf ||
                     this.AddressSelf != null &&
                     this.AddressSelf.Equals(other.AddressSelf)
-                ) && 
+                ) &&
                 (
                     this.Ani == other.Ani ||
                     this.Ani != null &&
                     this.Ani.Equals(other.Ani)
-                ) && 
+                ) &&
                 (
                     this.Direction == other.Direction ||
                     this.Direction != null &&
                     this.Direction.Equals(other.Direction)
-                ) && 
+                ) &&
                 (
                     this.Dnis == other.Dnis ||
                     this.Dnis != null &&
                     this.Dnis.Equals(other.Dnis)
-                ) && 
+                ) &&
                 (
                     this.OutboundCampaignId == other.OutboundCampaignId ||
                     this.OutboundCampaignId != null &&
                     this.OutboundCampaignId.Equals(other.OutboundCampaignId)
-                ) && 
+                ) &&
                 (
                     this.OutboundContactId == other.OutboundContactId ||
                     this.OutboundContactId != null &&
                     this.OutboundContactId.Equals(other.OutboundContactId)
-                ) && 
+                ) &&
                 (
                     this.OutboundContactListId == other.OutboundContactListId ||
                     this.OutboundContactListId != null &&
                     this.OutboundContactListId.Equals(other.OutboundContactListId)
-                ) && 
+                ) &&
                 (
                     this.DispositionAnalyzer == other.DispositionAnalyzer ||
                     this.DispositionAnalyzer != null &&
                     this.DispositionAnalyzer.Equals(other.DispositionAnalyzer)
-                ) && 
+                ) &&
                 (
                     this.DispositionName == other.DispositionName ||
                     this.DispositionName != null &&
                     this.DispositionName.Equals(other.DispositionName)
-                ) && 
+                ) &&
                 (
                     this.EdgeId == other.EdgeId ||
                     this.EdgeId != null &&
                     this.EdgeId.Equals(other.EdgeId)
-                ) && 
+                ) &&
                 (
                     this.RemoteNameDisplayable == other.RemoteNameDisplayable ||
                     this.RemoteNameDisplayable != null &&
                     this.RemoteNameDisplayable.Equals(other.RemoteNameDisplayable)
-                ) && 
+                ) &&
                 (
                     this.RoomId == other.RoomId ||
                     this.RoomId != null &&
                     this.RoomId.Equals(other.RoomId)
-                ) && 
+                ) &&
                 (
                     this.MonitoredSessionId == other.MonitoredSessionId ||
                     this.MonitoredSessionId != null &&
                     this.MonitoredSessionId.Equals(other.MonitoredSessionId)
-                ) && 
+                ) &&
                 (
                     this.MonitoredParticipantId == other.MonitoredParticipantId ||
                     this.MonitoredParticipantId != null &&
                     this.MonitoredParticipantId.Equals(other.MonitoredParticipantId)
-                ) && 
+                ) &&
                 (
                     this.Segments == other.Segments ||
                     this.Segments != null &&

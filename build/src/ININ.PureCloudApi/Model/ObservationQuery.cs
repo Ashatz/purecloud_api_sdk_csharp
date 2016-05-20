@@ -269,7 +269,7 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <value>Behaves like a SQL SELECT clause. Enables retrieving only named metrics. If omitted, all metrics that are available will be returned (like SELECT *).</value>
         [DataMember(Name="metrics", EmitDefaultValue=false)]
-        public List<string> Metrics { get; set; }
+        public List<MetricsEnum> Metrics { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -315,12 +315,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Filter == other.Filter ||
                     this.Filter != null &&
                     this.Filter.Equals(other.Filter)
-                ) && 
+                ) &&
                 (
                     this.Metrics == other.Metrics ||
                     this.Metrics != null &&

@@ -23,7 +23,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Name">Name.</param>
         /// <param name="Description">Description.</param>
         /// <param name="Policies">Policies.</param>
-        public AuthzGrantRole(, string Name = null, string Description = null, List<AuthzGrantPolicy> Policies = null)
+        public AuthzGrantRole(string Name = null, string Description = null, List<AuthzGrantPolicy> Policies = null)
         {
             this.Name = Name;
             this.Description = Description;
@@ -105,27 +105,27 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Description == other.Description ||
                     this.Description != null &&
                     this.Description.Equals(other.Description)
-                ) && 
+                ) &&
                 (
                     this.Policies == other.Policies ||
                     this.Policies != null &&
                     this.Policies.SequenceEqual(other.Policies)
-                )
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

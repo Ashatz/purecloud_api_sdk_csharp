@@ -112,7 +112,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="System">System (default to false).</param>
         /// <param name="PublishStatus">PublishStatus.</param>
         /// <param name="PublishedBy">PublishedBy.</param>
-        public Flow(, string Name = null, string Description = null, TypeEnum? Type = null, UriReference LockedUser = null, bool? Active = null, bool? Deleted = null, FlowVersion PublishedVersion = null, FlowVersion CheckedInVersion = null, FlowVersion SavedVersion = null, bool? System = null, PublishStatusEnum? PublishStatus = null, UriReference PublishedBy = null)
+        public Flow(string Name = null, string Description = null, TypeEnum? Type = null, UriReference LockedUser = null, bool? Active = null, bool? Deleted = null, FlowVersion PublishedVersion = null, FlowVersion CheckedInVersion = null, FlowVersion SavedVersion = null, bool? System = null, PublishStatusEnum? PublishStatus = null, UriReference PublishedBy = null)
         {
             this.Name = Name;
             this.Description = Description;
@@ -271,72 +271,72 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Description == other.Description ||
                     this.Description != null &&
                     this.Description.Equals(other.Description)
-                ) && 
+                ) &&
                 (
                     this.Type == other.Type ||
                     this.Type != null &&
                     this.Type.Equals(other.Type)
-                ) && 
+                ) &&
                 (
                     this.LockedUser == other.LockedUser ||
                     this.LockedUser != null &&
                     this.LockedUser.Equals(other.LockedUser)
-                ) && 
+                ) &&
                 (
                     this.Active == other.Active ||
                     this.Active != null &&
                     this.Active.Equals(other.Active)
-                ) && 
+                ) &&
                 (
                     this.Deleted == other.Deleted ||
                     this.Deleted != null &&
                     this.Deleted.Equals(other.Deleted)
-                ) && 
+                ) &&
                 (
                     this.PublishedVersion == other.PublishedVersion ||
                     this.PublishedVersion != null &&
                     this.PublishedVersion.Equals(other.PublishedVersion)
-                ) && 
+                ) &&
                 (
                     this.CheckedInVersion == other.CheckedInVersion ||
                     this.CheckedInVersion != null &&
                     this.CheckedInVersion.Equals(other.CheckedInVersion)
-                ) && 
+                ) &&
                 (
                     this.SavedVersion == other.SavedVersion ||
                     this.SavedVersion != null &&
                     this.SavedVersion.Equals(other.SavedVersion)
-                ) && 
+                ) &&
                 (
                     this.System == other.System ||
                     this.System != null &&
                     this.System.Equals(other.System)
-                ) && 
+                ) &&
                 (
                     this.PublishStatus == other.PublishStatus ||
                     this.PublishStatus != null &&
                     this.PublishStatus.Equals(other.PublishStatus)
-                ) && 
+                ) &&
                 (
                     this.PublishedBy == other.PublishedBy ||
                     this.PublishedBy != null &&
                     this.PublishedBy.Equals(other.PublishedBy)
-                )
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

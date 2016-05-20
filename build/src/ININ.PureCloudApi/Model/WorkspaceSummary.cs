@@ -83,12 +83,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.TotalDocumentCount == other.TotalDocumentCount ||
                     this.TotalDocumentCount != null &&
                     this.TotalDocumentCount.Equals(other.TotalDocumentCount)
-                ) && 
+                ) &&
                 (
                     this.TotalDocumentByteCount == other.TotalDocumentByteCount ||
                     this.TotalDocumentByteCount != null &&

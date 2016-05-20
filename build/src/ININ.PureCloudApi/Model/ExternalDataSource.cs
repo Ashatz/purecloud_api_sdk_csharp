@@ -83,12 +83,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Platform == other.Platform ||
                     this.Platform != null &&
                     this.Platform.Equals(other.Platform)
-                ) && 
+                ) &&
                 (
                     this.Url == other.Url ||
                     this.Url != null &&

@@ -87,7 +87,7 @@ namespace ININ.PureCloudApi.Model
         /// Gets or Sets Directions
         /// </summary>
         [DataMember(Name="directions", EmitDefaultValue=false)]
-        public List<string> Directions { get; set; }
+        public List<DirectionsEnum> Directions { get; set; }
         /// <summary>
         /// Gets or Sets Duration
         /// </summary>
@@ -143,37 +143,37 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.ForUsers == other.ForUsers ||
                     this.ForUsers != null &&
                     this.ForUsers.SequenceEqual(other.ForUsers)
-                ) && 
+                ) &&
                 (
                     this.DateRanges == other.DateRanges ||
                     this.DateRanges != null &&
                     this.DateRanges.SequenceEqual(other.DateRanges)
-                ) && 
+                ) &&
                 (
                     this.ForQueues == other.ForQueues ||
                     this.ForQueues != null &&
                     this.ForQueues.SequenceEqual(other.ForQueues)
-                ) && 
+                ) &&
                 (
                     this.WrapupCodes == other.WrapupCodes ||
                     this.WrapupCodes != null &&
                     this.WrapupCodes.SequenceEqual(other.WrapupCodes)
-                ) && 
+                ) &&
                 (
                     this.TimeAllowed == other.TimeAllowed ||
                     this.TimeAllowed != null &&
                     this.TimeAllowed.Equals(other.TimeAllowed)
-                ) && 
+                ) &&
                 (
                     this.Directions == other.Directions ||
                     this.Directions != null &&
                     this.Directions.SequenceEqual(other.Directions)
-                ) && 
+                ) &&
                 (
                     this.Duration == other.Duration ||
                     this.Duration != null &&

@@ -156,37 +156,37 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Topic == other.Topic ||
                     this.Topic != null &&
                     this.Topic.Equals(other.Topic)
-                ) && 
+                ) &&
                 (
                     this.Timestamp == other.Timestamp ||
                     this.Timestamp != null &&
                     this.Timestamp.Equals(other.Timestamp)
-                ) && 
+                ) &&
                 (
                     this.Level == other.Level ||
                     this.Level != null &&
                     this.Level.Equals(other.Level)
-                ) && 
+                ) &&
                 (
                     this.Message == other.Message ||
                     this.Message != null &&
                     this.Message.Equals(other.Message)
-                ) && 
+                ) &&
                 (
                     this.Details == other.Details ||
                     this.Details != null &&
                     this.Details.Equals(other.Details)
-                ) && 
+                ) &&
                 (
                     this.TimestampString == other.TimestampString ||
                     this.TimestampString != null &&
                     this.TimestampString.Equals(other.TimestampString)
-                ) && 
+                ) &&
                 (
                     this.DetailsString == other.DetailsString ||
                     this.DetailsString != null &&

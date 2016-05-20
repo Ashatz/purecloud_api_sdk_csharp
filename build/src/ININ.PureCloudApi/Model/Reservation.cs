@@ -1562,22 +1562,22 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.ReservedTn == other.ReservedTn ||
                     this.ReservedTn != null &&
                     this.ReservedTn.Equals(other.ReservedTn)
-                ) && 
+                ) &&
                 (
                     this.ReservationExpires == other.ReservationExpires ||
                     this.ReservationExpires != null &&
                     this.ReservationExpires.Equals(other.ReservationExpires)
-                ) && 
+                ) &&
                 (
                     this.PhoneNumberType == other.PhoneNumberType ||
                     this.PhoneNumberType != null &&

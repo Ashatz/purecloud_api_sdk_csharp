@@ -251,62 +251,62 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.FlowExecId == other.FlowExecId ||
                     this.FlowExecId != null &&
                     this.FlowExecId.Equals(other.FlowExecId)
-                ) && 
+                ) &&
                 (
                     this.FlowConfigId == other.FlowConfigId ||
                     this.FlowConfigId != null &&
                     this.FlowConfigId.Equals(other.FlowConfigId)
-                ) && 
+                ) &&
                 (
                     this.FlowInstanceName == other.FlowInstanceName ||
                     this.FlowInstanceName != null &&
                     this.FlowInstanceName.Equals(other.FlowInstanceName)
-                ) && 
+                ) &&
                 (
                     this.AssociatedDocument == other.AssociatedDocument ||
                     this.AssociatedDocument != null &&
                     this.AssociatedDocument.Equals(other.AssociatedDocument)
-                ) && 
+                ) &&
                 (
                     this.FlowStatus == other.FlowStatus ||
                     this.FlowStatus != null &&
                     this.FlowStatus.Equals(other.FlowStatus)
-                ) && 
+                ) &&
                 (
                     this.CurrentState == other.CurrentState ||
                     this.CurrentState != null &&
                     this.CurrentState.Equals(other.CurrentState)
-                ) && 
+                ) &&
                 (
                     this.StartDateTime == other.StartDateTime ||
                     this.StartDateTime != null &&
                     this.StartDateTime.Equals(other.StartDateTime)
-                ) && 
+                ) &&
                 (
                     this.EndDateTime == other.EndDateTime ||
                     this.EndDateTime != null &&
                     this.EndDateTime.Equals(other.EndDateTime)
-                ) && 
+                ) &&
                 (
                     this.WorkItemUserAssignees == other.WorkItemUserAssignees ||
                     this.WorkItemUserAssignees != null &&
                     this.WorkItemUserAssignees.SequenceEqual(other.WorkItemUserAssignees)
-                ) && 
+                ) &&
                 (
                     this.CompletedUser == other.CompletedUser ||
                     this.CompletedUser != null &&
                     this.CompletedUser.Equals(other.CompletedUser)
-                ) && 
+                ) &&
                 (
                     this.CompletionReason == other.CompletionReason ||
                     this.CompletionReason != null &&
                     this.CompletionReason.Equals(other.CompletionReason)
-                ) && 
+                ) &&
                 (
                     this.FlowErrorInfo == other.FlowErrorInfo ||
                     this.FlowErrorInfo != null &&

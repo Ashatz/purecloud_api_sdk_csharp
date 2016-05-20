@@ -30,7 +30,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="LanguageDefault">LanguageDefault (default to false).</param>
         /// <param name="Tags">Tags.</param>
         /// <param name="DurationSeconds">DurationSeconds.</param>
-        public PromptAsset(, string Name = null, string PromptId = null, string Language = null, string MediaUri = null, string TtsString = null, string UploadStatus = null, string UploadUri = null, bool? LanguageDefault = null, Dictionary<string, List<string>> Tags = null, double? DurationSeconds = null)
+        public PromptAsset(string Name = null, string PromptId = null, string Language = null, string MediaUri = null, string TtsString = null, string UploadStatus = null, string UploadUri = null, bool? LanguageDefault = null, Dictionary<string, List<string>> Tags = null, double? DurationSeconds = null)
         {
             this.Name = Name;
             this.PromptId = PromptId;
@@ -169,62 +169,62 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.PromptId == other.PromptId ||
                     this.PromptId != null &&
                     this.PromptId.Equals(other.PromptId)
-                ) && 
+                ) &&
                 (
                     this.Language == other.Language ||
                     this.Language != null &&
                     this.Language.Equals(other.Language)
-                ) && 
+                ) &&
                 (
                     this.MediaUri == other.MediaUri ||
                     this.MediaUri != null &&
                     this.MediaUri.Equals(other.MediaUri)
-                ) && 
+                ) &&
                 (
                     this.TtsString == other.TtsString ||
                     this.TtsString != null &&
                     this.TtsString.Equals(other.TtsString)
-                ) && 
+                ) &&
                 (
                     this.UploadStatus == other.UploadStatus ||
                     this.UploadStatus != null &&
                     this.UploadStatus.Equals(other.UploadStatus)
-                ) && 
+                ) &&
                 (
                     this.UploadUri == other.UploadUri ||
                     this.UploadUri != null &&
                     this.UploadUri.Equals(other.UploadUri)
-                ) && 
+                ) &&
                 (
                     this.LanguageDefault == other.LanguageDefault ||
                     this.LanguageDefault != null &&
                     this.LanguageDefault.Equals(other.LanguageDefault)
-                ) && 
+                ) &&
                 (
                     this.Tags == other.Tags ||
                     this.Tags != null &&
                     this.Tags.SequenceEqual(other.Tags)
-                ) && 
+                ) &&
                 (
                     this.DurationSeconds == other.DurationSeconds ||
                     this.DurationSeconds != null &&
                     this.DurationSeconds.Equals(other.DurationSeconds)
-                )
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

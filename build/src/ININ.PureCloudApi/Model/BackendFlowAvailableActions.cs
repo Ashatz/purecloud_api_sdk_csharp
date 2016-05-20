@@ -83,7 +83,7 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.CanTerminate == other.CanTerminate ||
                     this.CanTerminate != null &&

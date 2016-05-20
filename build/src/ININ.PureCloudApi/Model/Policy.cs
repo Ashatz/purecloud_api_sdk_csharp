@@ -30,7 +30,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Conditions">Conditions.</param>
         /// <param name="Actions">Actions.</param>
         /// <param name="PolicyErrors">PolicyErrors.</param>
-        public Policy(, string Name = null, DateTime? ModifiedDate = null, DateTime? CreatedDate = null, int? Order = null, string Description = null, bool? Enabled = null, MediaPolicies MediaPolicies = null, PolicyConditions Conditions = null, PolicyActions Actions = null, PolicyErrors PolicyErrors = null)
+        public Policy(string Name = null, DateTime? ModifiedDate = null, DateTime? CreatedDate = null, int? Order = null, string Description = null, bool? Enabled = null, MediaPolicies MediaPolicies = null, PolicyConditions Conditions = null, PolicyActions Actions = null, PolicyErrors PolicyErrors = null)
         {
             this.Name = Name;
             this.ModifiedDate = ModifiedDate;
@@ -174,62 +174,62 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.ModifiedDate == other.ModifiedDate ||
                     this.ModifiedDate != null &&
                     this.ModifiedDate.Equals(other.ModifiedDate)
-                ) && 
+                ) &&
                 (
                     this.CreatedDate == other.CreatedDate ||
                     this.CreatedDate != null &&
                     this.CreatedDate.Equals(other.CreatedDate)
-                ) && 
+                ) &&
                 (
                     this.Order == other.Order ||
                     this.Order != null &&
                     this.Order.Equals(other.Order)
-                ) && 
+                ) &&
                 (
                     this.Description == other.Description ||
                     this.Description != null &&
                     this.Description.Equals(other.Description)
-                ) && 
+                ) &&
                 (
                     this.Enabled == other.Enabled ||
                     this.Enabled != null &&
                     this.Enabled.Equals(other.Enabled)
-                ) && 
+                ) &&
                 (
                     this.MediaPolicies == other.MediaPolicies ||
                     this.MediaPolicies != null &&
                     this.MediaPolicies.Equals(other.MediaPolicies)
-                ) && 
+                ) &&
                 (
                     this.Conditions == other.Conditions ||
                     this.Conditions != null &&
                     this.Conditions.Equals(other.Conditions)
-                ) && 
+                ) &&
                 (
                     this.Actions == other.Actions ||
                     this.Actions != null &&
                     this.Actions.Equals(other.Actions)
-                ) && 
+                ) &&
                 (
                     this.PolicyErrors == other.PolicyErrors ||
                     this.PolicyErrors != null &&
                     this.PolicyErrors.Equals(other.PolicyErrors)
-                )
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

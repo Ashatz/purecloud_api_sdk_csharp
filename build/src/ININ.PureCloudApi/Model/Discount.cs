@@ -26,7 +26,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Maximum">Maximum.</param>
         /// <param name="Minimum">Minimum.</param>
         /// <param name="ProductCategory">ProductCategory.</param>
-        public Discount(, string Name = null, bool? AnnualPrePay = null, string _Discount = null, string Maximum = null, string Minimum = null, string ProductCategory = null)
+        public Discount(string Name = null, bool? AnnualPrePay = null, string _Discount = null, string Maximum = null, string Minimum = null, string ProductCategory = null)
         {
             this.Name = Name;
             // use default value if no "AnnualPrePay" provided
@@ -137,42 +137,42 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.AnnualPrePay == other.AnnualPrePay ||
                     this.AnnualPrePay != null &&
                     this.AnnualPrePay.Equals(other.AnnualPrePay)
-                ) && 
+                ) &&
                 (
                     this._Discount == other._Discount ||
                     this._Discount != null &&
                     this._Discount.Equals(other._Discount)
-                ) && 
+                ) &&
                 (
                     this.Maximum == other.Maximum ||
                     this.Maximum != null &&
                     this.Maximum.Equals(other.Maximum)
-                ) && 
+                ) &&
                 (
                     this.Minimum == other.Minimum ||
                     this.Minimum != null &&
                     this.Minimum.Equals(other.Minimum)
-                ) && 
+                ) &&
                 (
                     this.ProductCategory == other.ProductCategory ||
                     this.ProductCategory != null &&
                     this.ProductCategory.Equals(other.ProductCategory)
-                )
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

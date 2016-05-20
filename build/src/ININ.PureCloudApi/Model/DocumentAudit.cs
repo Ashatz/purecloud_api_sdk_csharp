@@ -602,7 +602,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Action">Action.</param>
         /// <param name="Entity">Entity.</param>
         /// <param name="Changes">Changes.</param>
-        public DocumentAudit(, string Name = null, UriReference User = null, UriReference Workspace = null, string TransactionId = null, bool? TransactionInitiator = null, string Application = null, string ServiceName = null, LevelEnum? Level = null, DateTime? Timestamp = null, StatusEnum? Status = null, ActionContextEnum? ActionContext = null, ActionEnum? Action = null, AuditEntityReference Entity = null, List<AuditChange> Changes = null)
+        public DocumentAudit(string Name = null, UriReference User = null, UriReference Workspace = null, string TransactionId = null, bool? TransactionInitiator = null, string Application = null, string ServiceName = null, LevelEnum? Level = null, DateTime? Timestamp = null, StatusEnum? Status = null, ActionContextEnum? ActionContext = null, ActionEnum? Action = null, AuditEntityReference Entity = null, List<AuditChange> Changes = null)
         {
             this.Name = Name;
             this.User = User;
@@ -750,82 +750,82 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.User == other.User ||
                     this.User != null &&
                     this.User.Equals(other.User)
-                ) && 
+                ) &&
                 (
                     this.Workspace == other.Workspace ||
                     this.Workspace != null &&
                     this.Workspace.Equals(other.Workspace)
-                ) && 
+                ) &&
                 (
                     this.TransactionId == other.TransactionId ||
                     this.TransactionId != null &&
                     this.TransactionId.Equals(other.TransactionId)
-                ) && 
+                ) &&
                 (
                     this.TransactionInitiator == other.TransactionInitiator ||
                     this.TransactionInitiator != null &&
                     this.TransactionInitiator.Equals(other.TransactionInitiator)
-                ) && 
+                ) &&
                 (
                     this.Application == other.Application ||
                     this.Application != null &&
                     this.Application.Equals(other.Application)
-                ) && 
+                ) &&
                 (
                     this.ServiceName == other.ServiceName ||
                     this.ServiceName != null &&
                     this.ServiceName.Equals(other.ServiceName)
-                ) && 
+                ) &&
                 (
                     this.Level == other.Level ||
                     this.Level != null &&
                     this.Level.Equals(other.Level)
-                ) && 
+                ) &&
                 (
                     this.Timestamp == other.Timestamp ||
                     this.Timestamp != null &&
                     this.Timestamp.Equals(other.Timestamp)
-                ) && 
+                ) &&
                 (
                     this.Status == other.Status ||
                     this.Status != null &&
                     this.Status.Equals(other.Status)
-                ) && 
+                ) &&
                 (
                     this.ActionContext == other.ActionContext ||
                     this.ActionContext != null &&
                     this.ActionContext.Equals(other.ActionContext)
-                ) && 
+                ) &&
                 (
                     this.Action == other.Action ||
                     this.Action != null &&
                     this.Action.Equals(other.Action)
-                ) && 
+                ) &&
                 (
                     this.Entity == other.Entity ||
                     this.Entity != null &&
                     this.Entity.Equals(other.Entity)
-                ) && 
+                ) &&
                 (
                     this.Changes == other.Changes ||
                     this.Changes != null &&
                     this.Changes.SequenceEqual(other.Changes)
-                )
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

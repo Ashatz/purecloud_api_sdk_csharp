@@ -22,7 +22,7 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="Grants">Grants.</param>
-        public AuthzSubject(, string Name = null, List<AuthzGrant> Grants = null)
+        public AuthzSubject(string Name = null, List<AuthzGrant> Grants = null)
         {
             this.Name = Name;
             this.Grants = Grants;
@@ -97,22 +97,22 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Grants == other.Grants ||
                     this.Grants != null &&
                     this.Grants.SequenceEqual(other.Grants)
-                )
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

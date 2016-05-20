@@ -30,7 +30,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Intervals">a list of start and end times (required).</param>
         /// <param name="TimeZone">time zone identifier to be applied to the intervals; for example Africa/Abidjan (required).</param>
         /// <param name="Sequence">identifier of the sequence to be scheduled (required).</param>
-        public SequenceSchedule(, string Name = null, int? Version = null, List<ScheduleInterval> Intervals = null, string TimeZone = null, UriReference Sequence = null)
+        public SequenceSchedule(string Name = null, int? Version = null, List<ScheduleInterval> Intervals = null, string TimeZone = null, UriReference Sequence = null)
         {
             // to ensure "Intervals" is required (not null)
             if (Intervals == null)
@@ -168,47 +168,47 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.DateCreated == other.DateCreated ||
                     this.DateCreated != null &&
                     this.DateCreated.Equals(other.DateCreated)
-                ) && 
+                ) &&
                 (
                     this.DateModified == other.DateModified ||
                     this.DateModified != null &&
                     this.DateModified.Equals(other.DateModified)
-                ) && 
+                ) &&
                 (
                     this.Version == other.Version ||
                     this.Version != null &&
                     this.Version.Equals(other.Version)
-                ) && 
+                ) &&
                 (
                     this.Intervals == other.Intervals ||
                     this.Intervals != null &&
                     this.Intervals.SequenceEqual(other.Intervals)
-                ) && 
+                ) &&
                 (
                     this.TimeZone == other.TimeZone ||
                     this.TimeZone != null &&
                     this.TimeZone.Equals(other.TimeZone)
-                ) && 
+                ) &&
                 (
                     this.Sequence == other.Sequence ||
                     this.Sequence != null &&
                     this.Sequence.Equals(other.Sequence)
-                )
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

@@ -23,7 +23,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Name">Name.</param>
         /// <param name="LastModified">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="PermissionContexts">PermissionContexts.</param>
-        public AuthzObject(, string Name = null, DateTime? LastModified = null, List<AuthzPermissionContext> PermissionContexts = null)
+        public AuthzObject(string Name = null, DateTime? LastModified = null, List<AuthzPermissionContext> PermissionContexts = null)
         {
             this.Name = Name;
             this.LastModified = LastModified;
@@ -106,27 +106,27 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.LastModified == other.LastModified ||
                     this.LastModified != null &&
                     this.LastModified.Equals(other.LastModified)
-                ) && 
+                ) &&
                 (
                     this.PermissionContexts == other.PermissionContexts ||
                     this.PermissionContexts != null &&
                     this.PermissionContexts.SequenceEqual(other.PermissionContexts)
-                )
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

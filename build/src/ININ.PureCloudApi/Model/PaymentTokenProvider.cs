@@ -22,7 +22,7 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="TokenCreationRequestEnvelope">TokenCreationRequestEnvelope.</param>
-        public PaymentTokenProvider(, string Name = null, Dictionary<string, string> TokenCreationRequestEnvelope = null)
+        public PaymentTokenProvider(string Name = null, Dictionary<string, string> TokenCreationRequestEnvelope = null)
         {
             this.Name = Name;
             this.TokenCreationRequestEnvelope = TokenCreationRequestEnvelope;
@@ -97,22 +97,22 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.TokenCreationRequestEnvelope == other.TokenCreationRequestEnvelope ||
                     this.TokenCreationRequestEnvelope != null &&
                     this.TokenCreationRequestEnvelope.SequenceEqual(other.TokenCreationRequestEnvelope)
-                )
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

@@ -60,7 +60,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="ReportUrl">ReportUrl.</param>
         /// <param name="ReportFormat">ReportFormat.</param>
         /// <param name="ScheduleUri">ScheduleUri.</param>
-        public ReportRunEntry(, string Name = null, string ReportId = null, DateTime? RunTime = null, RunStatusEnum? RunStatus = null, string ErrorMessage = null, long? RunDurationMsec = null, string ReportUrl = null, string ReportFormat = null, string ScheduleUri = null)
+        public ReportRunEntry(string Name = null, string ReportId = null, DateTime? RunTime = null, RunStatusEnum? RunStatus = null, string ErrorMessage = null, long? RunDurationMsec = null, string ReportUrl = null, string ReportFormat = null, string ScheduleUri = null)
         {
             this.Name = Name;
             this.ReportId = ReportId;
@@ -180,57 +180,57 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.ReportId == other.ReportId ||
                     this.ReportId != null &&
                     this.ReportId.Equals(other.ReportId)
-                ) && 
+                ) &&
                 (
                     this.RunTime == other.RunTime ||
                     this.RunTime != null &&
                     this.RunTime.Equals(other.RunTime)
-                ) && 
+                ) &&
                 (
                     this.RunStatus == other.RunStatus ||
                     this.RunStatus != null &&
                     this.RunStatus.Equals(other.RunStatus)
-                ) && 
+                ) &&
                 (
                     this.ErrorMessage == other.ErrorMessage ||
                     this.ErrorMessage != null &&
                     this.ErrorMessage.Equals(other.ErrorMessage)
-                ) && 
+                ) &&
                 (
                     this.RunDurationMsec == other.RunDurationMsec ||
                     this.RunDurationMsec != null &&
                     this.RunDurationMsec.Equals(other.RunDurationMsec)
-                ) && 
+                ) &&
                 (
                     this.ReportUrl == other.ReportUrl ||
                     this.ReportUrl != null &&
                     this.ReportUrl.Equals(other.ReportUrl)
-                ) && 
+                ) &&
                 (
                     this.ReportFormat == other.ReportFormat ||
                     this.ReportFormat != null &&
                     this.ReportFormat.Equals(other.ReportFormat)
-                ) && 
+                ) &&
                 (
                     this.ScheduleUri == other.ScheduleUri ||
                     this.ScheduleUri != null &&
                     this.ScheduleUri.Equals(other.ScheduleUri)
-                )
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

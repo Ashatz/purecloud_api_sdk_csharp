@@ -580,157 +580,157 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Address == other.Address ||
                     this.Address != null &&
                     this.Address.Equals(other.Address)
-                ) && 
+                ) &&
                 (
                     this.StartTime == other.StartTime ||
                     this.StartTime != null &&
                     this.StartTime.Equals(other.StartTime)
-                ) && 
+                ) &&
                 (
                     this.ConnectedTime == other.ConnectedTime ||
                     this.ConnectedTime != null &&
                     this.ConnectedTime.Equals(other.ConnectedTime)
-                ) && 
+                ) &&
                 (
                     this.EndTime == other.EndTime ||
                     this.EndTime != null &&
                     this.EndTime.Equals(other.EndTime)
-                ) && 
+                ) &&
                 (
                     this.StartHoldTime == other.StartHoldTime ||
                     this.StartHoldTime != null &&
                     this.StartHoldTime.Equals(other.StartHoldTime)
-                ) && 
+                ) &&
                 (
                     this.Purpose == other.Purpose ||
                     this.Purpose != null &&
                     this.Purpose.Equals(other.Purpose)
-                ) && 
+                ) &&
                 (
                     this.State == other.State ||
                     this.State != null &&
                     this.State.Equals(other.State)
-                ) && 
+                ) &&
                 (
                     this.Direction == other.Direction ||
                     this.Direction != null &&
                     this.Direction.Equals(other.Direction)
-                ) && 
+                ) &&
                 (
                     this.DisconnectType == other.DisconnectType ||
                     this.DisconnectType != null &&
                     this.DisconnectType.Equals(other.DisconnectType)
-                ) && 
+                ) &&
                 (
                     this.Held == other.Held ||
                     this.Held != null &&
                     this.Held.Equals(other.Held)
-                ) && 
+                ) &&
                 (
                     this.WrapupRequired == other.WrapupRequired ||
                     this.WrapupRequired != null &&
                     this.WrapupRequired.Equals(other.WrapupRequired)
-                ) && 
+                ) &&
                 (
                     this.WrapupPrompt == other.WrapupPrompt ||
                     this.WrapupPrompt != null &&
                     this.WrapupPrompt.Equals(other.WrapupPrompt)
-                ) && 
+                ) &&
                 (
                     this.User == other.User ||
                     this.User != null &&
                     this.User.Equals(other.User)
-                ) && 
+                ) &&
                 (
                     this.Queue == other.Queue ||
                     this.Queue != null &&
                     this.Queue.Equals(other.Queue)
-                ) && 
+                ) &&
                 (
                     this.Attributes == other.Attributes ||
                     this.Attributes != null &&
                     this.Attributes.SequenceEqual(other.Attributes)
-                ) && 
+                ) &&
                 (
                     this.ErrorInfo == other.ErrorInfo ||
                     this.ErrorInfo != null &&
                     this.ErrorInfo.Equals(other.ErrorInfo)
-                ) && 
+                ) &&
                 (
                     this.Script == other.Script ||
                     this.Script != null &&
                     this.Script.Equals(other.Script)
-                ) && 
+                ) &&
                 (
                     this.WrapupTimeoutMs == other.WrapupTimeoutMs ||
                     this.WrapupTimeoutMs != null &&
                     this.WrapupTimeoutMs.Equals(other.WrapupTimeoutMs)
-                ) && 
+                ) &&
                 (
                     this.WrapupSkipped == other.WrapupSkipped ||
                     this.WrapupSkipped != null &&
                     this.WrapupSkipped.Equals(other.WrapupSkipped)
-                ) && 
+                ) &&
                 (
                     this.Muted == other.Muted ||
                     this.Muted != null &&
                     this.Muted.Equals(other.Muted)
-                ) && 
+                ) &&
                 (
                     this.Confined == other.Confined ||
                     this.Confined != null &&
                     this.Confined.Equals(other.Confined)
-                ) && 
+                ) &&
                 (
                     this.Recording == other.Recording ||
                     this.Recording != null &&
                     this.Recording.Equals(other.Recording)
-                ) && 
+                ) &&
                 (
                     this.RecordingState == other.RecordingState ||
                     this.RecordingState != null &&
                     this.RecordingState.Equals(other.RecordingState)
-                ) && 
+                ) &&
                 (
                     this.Group == other.Group ||
                     this.Group != null &&
                     this.Group.Equals(other.Group)
-                ) && 
+                ) &&
                 (
                     this.Ani == other.Ani ||
                     this.Ani != null &&
                     this.Ani.Equals(other.Ani)
-                ) && 
+                ) &&
                 (
                     this.Dnis == other.Dnis ||
                     this.Dnis != null &&
                     this.Dnis.Equals(other.Dnis)
-                ) && 
+                ) &&
                 (
                     this.DocumentId == other.DocumentId ||
                     this.DocumentId != null &&
                     this.DocumentId.Equals(other.DocumentId)
-                ) && 
+                ) &&
                 (
                     this.MonitoredParticipantId == other.MonitoredParticipantId ||
                     this.MonitoredParticipantId != null &&
                     this.MonitoredParticipantId.Equals(other.MonitoredParticipantId)
-                ) && 
+                ) &&
                 (
                     this.ConsultParticipantId == other.ConsultParticipantId ||
                     this.ConsultParticipantId != null &&

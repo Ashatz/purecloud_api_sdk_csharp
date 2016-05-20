@@ -83,12 +83,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.MinimumLength == other.MinimumLength ||
                     this.MinimumLength != null &&
                     this.MinimumLength.Equals(other.MinimumLength)
-                ) && 
+                ) &&
                 (
                     this.MaximumLength == other.MaximumLength ||
                     this.MaximumLength != null &&

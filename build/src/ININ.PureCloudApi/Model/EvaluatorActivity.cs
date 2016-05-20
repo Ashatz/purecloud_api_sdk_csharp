@@ -28,7 +28,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="NumCalibrationsAssigned">NumCalibrationsAssigned.</param>
         /// <param name="NumCalibrationsStarted">NumCalibrationsStarted.</param>
         /// <param name="NumCalibrationsCompleted">NumCalibrationsCompleted.</param>
-        public EvaluatorActivity(, string Name = null, User Evaluator = null, int? NumEvaluationsAssigned = null, int? NumEvaluationsStarted = null, int? NumEvaluationsCompleted = null, int? NumCalibrationsAssigned = null, int? NumCalibrationsStarted = null, int? NumCalibrationsCompleted = null)
+        public EvaluatorActivity(string Name = null, User Evaluator = null, int? NumEvaluationsAssigned = null, int? NumEvaluationsStarted = null, int? NumEvaluationsCompleted = null, int? NumCalibrationsAssigned = null, int? NumCalibrationsStarted = null, int? NumCalibrationsCompleted = null)
         {
             this.Name = Name;
             this.Evaluator = Evaluator;
@@ -145,52 +145,52 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Evaluator == other.Evaluator ||
                     this.Evaluator != null &&
                     this.Evaluator.Equals(other.Evaluator)
-                ) && 
+                ) &&
                 (
                     this.NumEvaluationsAssigned == other.NumEvaluationsAssigned ||
                     this.NumEvaluationsAssigned != null &&
                     this.NumEvaluationsAssigned.Equals(other.NumEvaluationsAssigned)
-                ) && 
+                ) &&
                 (
                     this.NumEvaluationsStarted == other.NumEvaluationsStarted ||
                     this.NumEvaluationsStarted != null &&
                     this.NumEvaluationsStarted.Equals(other.NumEvaluationsStarted)
-                ) && 
+                ) &&
                 (
                     this.NumEvaluationsCompleted == other.NumEvaluationsCompleted ||
                     this.NumEvaluationsCompleted != null &&
                     this.NumEvaluationsCompleted.Equals(other.NumEvaluationsCompleted)
-                ) && 
+                ) &&
                 (
                     this.NumCalibrationsAssigned == other.NumCalibrationsAssigned ||
                     this.NumCalibrationsAssigned != null &&
                     this.NumCalibrationsAssigned.Equals(other.NumCalibrationsAssigned)
-                ) && 
+                ) &&
                 (
                     this.NumCalibrationsStarted == other.NumCalibrationsStarted ||
                     this.NumCalibrationsStarted != null &&
                     this.NumCalibrationsStarted.Equals(other.NumCalibrationsStarted)
-                ) && 
+                ) &&
                 (
                     this.NumCalibrationsCompleted == other.NumCalibrationsCompleted ||
                     this.NumCalibrationsCompleted != null &&
                     this.NumCalibrationsCompleted.Equals(other.NumCalibrationsCompleted)
-                )
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

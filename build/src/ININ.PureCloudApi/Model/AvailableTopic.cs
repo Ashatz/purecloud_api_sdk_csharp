@@ -22,7 +22,7 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <param name="Description">Description.</param>
         /// <param name="Schema">Schema.</param>
-        public AvailableTopic(, string Description = null, Dictionary<string, Object> Schema = null)
+        public AvailableTopic(string Description = null, Dictionary<string, Object> Schema = null)
         {
             this.Description = Description;
             this.Schema = Schema;
@@ -90,17 +90,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Description == other.Description ||
                     this.Description != null &&
                     this.Description.Equals(other.Description)
-                ) && 
+                ) &&
                 (
                     this.Schema == other.Schema ||
                     this.Schema != null &&

@@ -157,27 +157,27 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.CampaignId == other.CampaignId ||
                     this.CampaignId != null &&
                     this.CampaignId.Equals(other.CampaignId)
-                ) && 
+                ) &&
                 (
                     this.ContactListId == other.ContactListId ||
                     this.ContactListId != null &&
                     this.ContactListId.Equals(other.ContactListId)
-                ) && 
+                ) &&
                 (
                     this.ContactId == other.ContactId ||
                     this.ContactId != null &&
                     this.ContactId.Equals(other.ContactId)
-                ) && 
+                ) &&
                 (
                     this.PhoneColumn == other.PhoneColumn ||
                     this.PhoneColumn != null &&
                     this.PhoneColumn.Equals(other.PhoneColumn)
-                ) && 
+                ) &&
                 (
                     this.Schedule == other.Schedule ||
                     this.Schedule != null &&

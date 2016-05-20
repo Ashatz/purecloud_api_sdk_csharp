@@ -63,7 +63,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="State">Configured state of the integration..</param>
         /// <param name="Config">Configuration for the integration..</param>
         /// <param name="LastStatus">Last reported status of the integration..</param>
-        public Integration(, string Name = null, IntegrationType IntegrationType = null, StateEnum? State = null, IntegrationConfiguration Config = null, IntegrationStatusInfo LastStatus = null)
+        public Integration(string Name = null, IntegrationType IntegrationType = null, StateEnum? State = null, IntegrationConfiguration Config = null, IntegrationStatusInfo LastStatus = null)
         {
             // to ensure "IntegrationType" is required (not null)
             if (IntegrationType == null)
@@ -172,42 +172,42 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.IntegrationType == other.IntegrationType ||
                     this.IntegrationType != null &&
                     this.IntegrationType.Equals(other.IntegrationType)
-                ) && 
+                ) &&
                 (
                     this.State == other.State ||
                     this.State != null &&
                     this.State.Equals(other.State)
-                ) && 
+                ) &&
                 (
                     this.Config == other.Config ||
                     this.Config != null &&
                     this.Config.Equals(other.Config)
-                ) && 
+                ) &&
                 (
                     this.LastStatus == other.LastStatus ||
                     this.LastStatus != null &&
                     this.LastStatus.Equals(other.LastStatus)
-                )
+                ) &&
                 (
                     this.Version == other.Version ||
                     this.Version != null &&
                     this.Version.Equals(other.Version)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

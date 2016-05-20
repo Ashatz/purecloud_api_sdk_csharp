@@ -75,7 +75,7 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Rings == other.Rings ||
                     this.Rings != null &&

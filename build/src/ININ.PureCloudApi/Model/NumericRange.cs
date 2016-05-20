@@ -103,22 +103,22 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Gt == other.Gt ||
                     this.Gt != null &&
                     this.Gt.Equals(other.Gt)
-                ) && 
+                ) &&
                 (
                     this.Gte == other.Gte ||
                     this.Gte != null &&
                     this.Gte.Equals(other.Gte)
-                ) && 
+                ) &&
                 (
                     this.Lt == other.Lt ||
                     this.Lt != null &&
                     this.Lt.Equals(other.Lt)
-                ) && 
+                ) &&
                 (
                     this.Lte == other.Lte ||
                     this.Lte != null &&

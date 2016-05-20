@@ -24,7 +24,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="StartDayOfWeek">StartDayOfWeek.</param>
         /// <param name="Timezone">Timezone.</param>
         /// <param name="Version">Version.</param>
-        public ManagementUnit(, string Name = null, string StartDayOfWeek = null, string Timezone = null, int? Version = null)
+        public ManagementUnit(string Name = null, string StartDayOfWeek = null, string Timezone = null, int? Version = null)
         {
             this.Name = Name;
             this.StartDayOfWeek = StartDayOfWeek;
@@ -113,32 +113,32 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.StartDayOfWeek == other.StartDayOfWeek ||
                     this.StartDayOfWeek != null &&
                     this.StartDayOfWeek.Equals(other.StartDayOfWeek)
-                ) && 
+                ) &&
                 (
                     this.Timezone == other.Timezone ||
                     this.Timezone != null &&
                     this.Timezone.Equals(other.Timezone)
-                ) && 
+                ) &&
                 (
                     this.Version == other.Version ||
                     this.Version != null &&
                     this.Version.Equals(other.Version)
-                )
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

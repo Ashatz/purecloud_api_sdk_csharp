@@ -94,17 +94,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.DncLists == other.DncLists ||
                     this.DncLists != null &&
                     this.DncLists.SequenceEqual(other.DncLists)
-                ) && 
+                ) &&
                 (
                     this.CallableTimeSet == other.CallableTimeSet ||
                     this.CallableTimeSet != null &&
                     this.CallableTimeSet.Equals(other.CallableTimeSet)
-                ) && 
+                ) &&
                 (
                     this.RuleSets == other.RuleSets ||
                     this.RuleSets != null &&

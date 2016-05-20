@@ -163,57 +163,57 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.QuestionGroupId == other.QuestionGroupId ||
                     this.QuestionGroupId != null &&
                     this.QuestionGroupId.Equals(other.QuestionGroupId)
-                ) && 
+                ) &&
                 (
                     this.TotalScore == other.TotalScore ||
                     this.TotalScore != null &&
                     this.TotalScore.Equals(other.TotalScore)
-                ) && 
+                ) &&
                 (
                     this.MaxTotalScore == other.MaxTotalScore ||
                     this.MaxTotalScore != null &&
                     this.MaxTotalScore.Equals(other.MaxTotalScore)
-                ) && 
+                ) &&
                 (
                     this.TotalCriticalScore == other.TotalCriticalScore ||
                     this.TotalCriticalScore != null &&
                     this.TotalCriticalScore.Equals(other.TotalCriticalScore)
-                ) && 
+                ) &&
                 (
                     this.MaxTotalCriticalScore == other.MaxTotalCriticalScore ||
                     this.MaxTotalCriticalScore != null &&
                     this.MaxTotalCriticalScore.Equals(other.MaxTotalCriticalScore)
-                ) && 
+                ) &&
                 (
                     this.TotalScoreUnweighted == other.TotalScoreUnweighted ||
                     this.TotalScoreUnweighted != null &&
                     this.TotalScoreUnweighted.Equals(other.TotalScoreUnweighted)
-                ) && 
+                ) &&
                 (
                     this.MaxTotalScoreUnweighted == other.MaxTotalScoreUnweighted ||
                     this.MaxTotalScoreUnweighted != null &&
                     this.MaxTotalScoreUnweighted.Equals(other.MaxTotalScoreUnweighted)
-                ) && 
+                ) &&
                 (
                     this.TotalCriticalScoreUnweighted == other.TotalCriticalScoreUnweighted ||
                     this.TotalCriticalScoreUnweighted != null &&
                     this.TotalCriticalScoreUnweighted.Equals(other.TotalCriticalScoreUnweighted)
-                ) && 
+                ) &&
                 (
                     this.MaxTotalCriticalScoreUnweighted == other.MaxTotalCriticalScoreUnweighted ||
                     this.MaxTotalCriticalScoreUnweighted != null &&
                     this.MaxTotalCriticalScoreUnweighted.Equals(other.MaxTotalCriticalScoreUnweighted)
-                ) && 
+                ) &&
                 (
                     this.MarkedNA == other.MarkedNA ||
                     this.MarkedNA != null &&
                     this.MarkedNA.Equals(other.MarkedNA)
-                ) && 
+                ) &&
                 (
                     this.QuestionScores == other.QuestionScores ||
                     this.QuestionScores != null &&

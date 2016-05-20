@@ -83,12 +83,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.App == other.App ||
                     this.App != null &&
                     this.App.Equals(other.App)
-                ) && 
+                ) &&
                 (
                     this.Traces == other.Traces ||
                     this.Traces != null &&
