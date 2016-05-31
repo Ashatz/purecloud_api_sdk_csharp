@@ -10,6 +10,7 @@
 		"dateformat":"*",
 		"q":"*",
 		"archiver":"*",
-		"purecloud-api-sdk-common":"git://github.com/MyPureCloud/purecloud_api_sdk_common.git"
+		"purecloud-api-sdk-common":"git://github.com/MyPureCloud/purecloud_api_sdk_common.git",
+		"superagent": "1.x"
 	}
 }
