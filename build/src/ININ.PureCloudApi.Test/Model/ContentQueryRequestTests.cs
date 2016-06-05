@@ -106,6 +106,14 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: unit test for the property 'AttributeFilters'
         }
+        /// <summary>
+        /// Test the property 'IncludeShares'
+        /// </summary>
+        [Test]
+        public void IncludeSharesTest()
+        {
+            // TODO: unit test for the property 'IncludeShares'
+        }
 
     }
 

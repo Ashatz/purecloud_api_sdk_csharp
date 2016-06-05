@@ -18,6 +18,39 @@ namespace ININ.PureCloudApi.Model
     public partial class Response :  IEquatable<Response>
     {
         /// <summary>
+        /// The interaction type for this response.
+        /// </summary>
+        /// <value>The interaction type for this response.</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum InteractionTypeEnum
+        {
+            
+            /// <summary>
+            /// Enum Chat for "chat"
+            /// </summary>
+            [EnumMember(Value = "chat")]
+            Chat,
+            
+            /// <summary>
+            /// Enum Email for "email"
+            /// </summary>
+            [EnumMember(Value = "email")]
+            Email,
+            
+            /// <summary>
+            /// Enum Twitter for "twitter"
+            /// </summary>
+            [EnumMember(Value = "twitter")]
+            Twitter
+        }
+
+        /// <summary>
+        /// The interaction type for this response.
+        /// </summary>
+        /// <value>The interaction type for this response.</value>
+        [DataMember(Name="interactionType", EmitDefaultValue=false)]
+        public InteractionTypeEnum? InteractionType { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="Response" /> class.
         /// </summary>
         [JsonConstructorAttribute]
@@ -31,7 +64,8 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Texts">One or more texts associated with the response. (required).</param>
         /// <param name="CreatedBy">User that created the response.</param>
         /// <param name="DateCreated">The date and time the response was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        public Response(string Name = null, int? Version = null, List<UriReference> Libraries = null, List<ResponseText> Texts = null, User CreatedBy = null, DateTime? DateCreated = null)
+        /// <param name="InteractionType">The interaction type for this response..</param>
+        public Response(string Name = null, int? Version = null, List<UriReference> Libraries = null, List<ResponseText> Texts = null, User CreatedBy = null, DateTime? DateCreated = null, InteractionTypeEnum? InteractionType = null)
         {
             // to ensure "Libraries" is required (not null)
             if (Libraries == null)
@@ -55,6 +89,7 @@ namespace ININ.PureCloudApi.Model
             this.Version = Version;
             this.CreatedBy = CreatedBy;
             this.DateCreated = DateCreated;
+            this.InteractionType = InteractionType;
         }
         
         /// <summary>
@@ -119,6 +154,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Texts: ").Append(Texts).Append("\n");
             sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
+            sb.Append("  InteractionType: ").Append(InteractionType).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -192,6 +228,11 @@ namespace ININ.PureCloudApi.Model
                     this.DateCreated.Equals(other.DateCreated)
                 ) &&
                 (
+                    this.InteractionType == other.InteractionType ||
+                    this.InteractionType != null &&
+                    this.InteractionType.Equals(other.InteractionType)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -223,6 +264,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.CreatedBy.GetHashCode();
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
+                if (this.InteractionType != null)
+                    hash = hash * 59 + this.InteractionType.GetHashCode();
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;

@@ -107,6 +107,14 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'DateCreated'
         }
         /// <summary>
+        /// Test the property 'InteractionType'
+        /// </summary>
+        [Test]
+        public void InteractionTypeTest()
+        {
+            // TODO: unit test for the property 'InteractionType'
+        }
+        /// <summary>
         /// Test the property 'SelfUri'
         /// </summary>
         [Test]

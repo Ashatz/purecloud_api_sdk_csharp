@@ -21,9 +21,19 @@ namespace ININ.PureCloudApi.Model
         /// Initializes a new instance of the <see cref="PureCloud" /> class.
         /// </summary>
         /// <param name="Name">Name.</param>
-        public PureCloud(string Name = null)
+        /// <param name="Disabled">Disabled (default to false).</param>
+        public PureCloud(string Name = null, bool? Disabled = null)
         {
             this.Name = Name;
+            // use default value if no "Disabled" provided
+            if (Disabled == null)
+            {
+                this.Disabled = false;
+            }
+            else
+            {
+                this.Disabled = Disabled;
+            }
         }
         
         /// <summary>
@@ -37,6 +47,11 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        /// <summary>
+        /// Gets or Sets Disabled
+        /// </summary>
+        [DataMember(Name="disabled", EmitDefaultValue=false)]
+        public bool? Disabled { get; set; }
         /// <summary>
         /// The URI for this object
         /// </summary>
@@ -53,6 +68,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class PureCloud {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  Disabled: ").Append(Disabled).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -101,6 +117,11 @@ namespace ININ.PureCloudApi.Model
                     this.Name.Equals(other.Name)
                 ) &&
                 (
+                    this.Disabled == other.Disabled ||
+                    this.Disabled != null &&
+                    this.Disabled.Equals(other.Disabled)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -122,6 +143,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.Id.GetHashCode();
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                if (this.Disabled != null)
+                    hash = hash * 59 + this.Disabled.GetHashCode();
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;

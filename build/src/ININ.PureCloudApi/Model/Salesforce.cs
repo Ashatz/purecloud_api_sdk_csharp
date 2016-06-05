@@ -24,12 +24,22 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Certificate">Certificate.</param>
         /// <param name="IssuerURI">IssuerURI.</param>
         /// <param name="SsoTargetURI">SsoTargetURI.</param>
-        public Salesforce(string Name = null, string Certificate = null, string IssuerURI = null, string SsoTargetURI = null)
+        /// <param name="Disabled">Disabled (default to false).</param>
+        public Salesforce(string Name = null, string Certificate = null, string IssuerURI = null, string SsoTargetURI = null, bool? Disabled = null)
         {
             this.Name = Name;
             this.Certificate = Certificate;
             this.IssuerURI = IssuerURI;
             this.SsoTargetURI = SsoTargetURI;
+            // use default value if no "Disabled" provided
+            if (Disabled == null)
+            {
+                this.Disabled = false;
+            }
+            else
+            {
+                this.Disabled = Disabled;
+            }
         }
         
         /// <summary>
@@ -59,6 +69,11 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="ssoTargetURI", EmitDefaultValue=false)]
         public string SsoTargetURI { get; set; }
         /// <summary>
+        /// Gets or Sets Disabled
+        /// </summary>
+        [DataMember(Name="disabled", EmitDefaultValue=false)]
+        public bool? Disabled { get; set; }
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -77,6 +92,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Certificate: ").Append(Certificate).Append("\n");
             sb.Append("  IssuerURI: ").Append(IssuerURI).Append("\n");
             sb.Append("  SsoTargetURI: ").Append(SsoTargetURI).Append("\n");
+            sb.Append("  Disabled: ").Append(Disabled).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -140,6 +156,11 @@ namespace ININ.PureCloudApi.Model
                     this.SsoTargetURI.Equals(other.SsoTargetURI)
                 ) &&
                 (
+                    this.Disabled == other.Disabled ||
+                    this.Disabled != null &&
+                    this.Disabled.Equals(other.Disabled)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -167,6 +188,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.IssuerURI.GetHashCode();
                 if (this.SsoTargetURI != null)
                     hash = hash * 59 + this.SsoTargetURI.GetHashCode();
+                if (this.Disabled != null)
+                    hash = hash * 59 + this.Disabled.GetHashCode();
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;

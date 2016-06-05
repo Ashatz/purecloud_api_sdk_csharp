@@ -163,6 +163,22 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'CompanyName'
         }
         /// <summary>
+        /// Test the property 'CountryCode'
+        /// </summary>
+        [Test]
+        public void CountryCodeTest()
+        {
+            // TODO: unit test for the property 'CountryCode'
+        }
+        /// <summary>
+        /// Test the property 'EnvelopeId'
+        /// </summary>
+        [Test]
+        public void EnvelopeIdTest()
+        {
+            // TODO: unit test for the property 'EnvelopeId'
+        }
+        /// <summary>
         /// Test the property 'SelfUri'
         /// </summary>
         [Test]

@@ -115,12 +115,12 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'SkipEnabled'
         }
         /// <summary>
-        /// Test the property 'AdditionalInfo'
+        /// Test the property 'Data'
         /// </summary>
         [Test]
-        public void AdditionalInfoTest()
+        public void DataTest()
         {
-            // TODO: unit test for the property 'AdditionalInfo'
+            // TODO: unit test for the property 'Data'
         }
 
     }

@@ -20,14 +20,45 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="IntegrationConfiguration" /> class.
         /// </summary>
+        [JsonConstructorAttribute]
+        protected IntegrationConfiguration() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="IntegrationConfiguration" /> class.
+        /// </summary>
         /// <param name="Name">Name.</param>
-        /// <param name="Properties">Key-value configuration settings described by the schema in the propertiesSchemaUri field..</param>
-        /// <param name="Advanced">Advanced configuration described by the schema in the advancedSchemaUri field..</param>
-        public IntegrationConfiguration(string Name = null, Object Properties = null, Object Advanced = null)
+        /// <param name="Version">Version number required for updates. (required).</param>
+        /// <param name="Properties">Key-value configuration settings described by the schema in the propertiesSchemaUri field. (required).</param>
+        /// <param name="Advanced">Advanced configuration described by the schema in the advancedSchemaUri field. (required).</param>
+        public IntegrationConfiguration(string Name = null, int? Version = null, Object Properties = null, Object Advanced = null)
         {
+            // to ensure "Version" is required (not null)
+            if (Version == null)
+            {
+                throw new InvalidDataException("Version is a required property for IntegrationConfiguration and cannot be null");
+            }
+            else
+            {
+                this.Version = Version;
+            }
+            // to ensure "Properties" is required (not null)
+            if (Properties == null)
+            {
+                throw new InvalidDataException("Properties is a required property for IntegrationConfiguration and cannot be null");
+            }
+            else
+            {
+                this.Properties = Properties;
+            }
+            // to ensure "Advanced" is required (not null)
+            if (Advanced == null)
+            {
+                throw new InvalidDataException("Advanced is a required property for IntegrationConfiguration and cannot be null");
+            }
+            else
+            {
+                this.Advanced = Advanced;
+            }
             this.Name = Name;
-            this.Properties = Properties;
-            this.Advanced = Advanced;
         }
         
         /// <summary>
@@ -46,7 +77,7 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <value>Version number required for updates.</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
-        public int? Version { get; private set; }
+        public int? Version { get; set; }
         /// <summary>
         /// URI for the JSON Schema describing the configuration properties in the properties field.
         /// </summary>

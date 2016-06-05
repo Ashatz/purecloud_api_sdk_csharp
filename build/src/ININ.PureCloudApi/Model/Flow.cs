@@ -46,7 +46,13 @@ namespace ININ.PureCloudApi.Model
             /// Enum Speech for "SPEECH"
             /// </summary>
             [EnumMember(Value = "SPEECH")]
-            Speech
+            Speech,
+            
+            /// <summary>
+            /// Enum Subflowcall for "SUBFLOWCALL"
+            /// </summary>
+            [EnumMember(Value = "SUBFLOWCALL")]
+            Subflowcall
         }
 
         /// <summary>

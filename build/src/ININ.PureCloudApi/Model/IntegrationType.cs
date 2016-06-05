@@ -18,39 +18,6 @@ namespace ININ.PureCloudApi.Model
     public partial class IntegrationType :  IEquatable<IntegrationType>
     {
         /// <summary>
-        /// PureCloud provider of the integration type.
-        /// </summary>
-        /// <value>PureCloud provider of the integration type.</value>
-        [JsonConverter(typeof(StringEnumConverter))]
-        public enum ProviderEnum
-        {
-            
-            /// <summary>
-            /// Enum Bridge for "BRIDGE"
-            /// </summary>
-            [EnumMember(Value = "BRIDGE")]
-            Bridge,
-            
-            /// <summary>
-            /// Enum Webhooks for "WEBHOOKS"
-            /// </summary>
-            [EnumMember(Value = "WEBHOOKS")]
-            Webhooks,
-            
-            /// <summary>
-            /// Enum Realtime for "REALTIME"
-            /// </summary>
-            [EnumMember(Value = "REALTIME")]
-            Realtime
-        }
-
-        /// <summary>
-        /// PureCloud provider of the integration type.
-        /// </summary>
-        /// <value>PureCloud provider of the integration type.</value>
-        [DataMember(Name="provider", EmitDefaultValue=false)]
-        public ProviderEnum? Provider { get; set; }
-        /// <summary>
         /// Initializes a new instance of the <see cref="IntegrationType" /> class.
         /// </summary>
         [JsonConstructorAttribute]
@@ -58,28 +25,30 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="IntegrationType" /> class.
         /// </summary>
+        /// <param name="Id">The ID of the integration type. (required).</param>
         /// <param name="Name">Name.</param>
-        /// <param name="Images">Collection of logos. (required).</param>
-        public IntegrationType(string Name = null, List<UserImage> Images = null)
+        /// <param name="Images">Collection of logos..</param>
+        public IntegrationType(string Id = null, string Name = null, List<UserImage> Images = null)
         {
-            // to ensure "Images" is required (not null)
-            if (Images == null)
+            // to ensure "Id" is required (not null)
+            if (Id == null)
             {
-                throw new InvalidDataException("Images is a required property for IntegrationType and cannot be null");
+                throw new InvalidDataException("Id is a required property for IntegrationType and cannot be null");
             }
             else
             {
-                this.Images = Images;
+                this.Id = Id;
             }
             this.Name = Name;
+            this.Images = Images;
         }
         
         /// <summary>
-        /// The globally unique identifier for the object.
+        /// The ID of the integration type.
         /// </summary>
-        /// <value>The globally unique identifier for the object.</value>
+        /// <value>The ID of the integration type.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
+        public string Id { get; set; }
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
@@ -91,6 +60,12 @@ namespace ININ.PureCloudApi.Model
         /// <value>Localized description of the integration type.</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; private set; }
+        /// <summary>
+        /// PureCloud provider of the integration type.
+        /// </summary>
+        /// <value>PureCloud provider of the integration type.</value>
+        [DataMember(Name="provider", EmitDefaultValue=false)]
+        public string Provider { get; private set; }
         /// <summary>
         /// Collection of logos.
         /// </summary>

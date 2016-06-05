@@ -67,6 +67,14 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'DeleteRecording'
         }
         /// <summary>
+        /// Test the property 'AlwaysDelete'
+        /// </summary>
+        [Test]
+        public void AlwaysDeleteTest()
+        {
+            // TODO: unit test for the property 'AlwaysDelete'
+        }
+        /// <summary>
         /// Test the property 'AssignEvaluations'
         /// </summary>
         [Test]

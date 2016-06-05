@@ -7,12 +7,14 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
+| [**DeleteAdfs**](IdentityProviderApi.html#deleteadfs) | **DELETE** /api/v2/identityproviders/adfs | Delete ADFS Identity Provider |
 | [**DeleteCic**](IdentityProviderApi.html#deletecic) | **DELETE** /api/v2/identityproviders/cic | Delete Customer Interaction Center (CIC) Identity Provider |
 | [**DeleteOkta**](IdentityProviderApi.html#deleteokta) | **DELETE** /api/v2/identityproviders/okta | Delete Okta Identity Provider |
 | [**DeleteOnelogin**](IdentityProviderApi.html#deleteonelogin) | **DELETE** /api/v2/identityproviders/onelogin | Delete OneLogin Identity Provider |
 | [**DeleteProviderId**](IdentityProviderApi.html#deleteproviderid) | **DELETE** /api/v2/identityproviders/{providerId} | Delete an identity provider |
 | [**DeletePurecloud**](IdentityProviderApi.html#deletepurecloud) | **DELETE** /api/v2/identityproviders/purecloud | Delete PureCloud Identity Provider |
 | [**DeleteSalesforce**](IdentityProviderApi.html#deletesalesforce) | **DELETE** /api/v2/identityproviders/salesforce | Delete Salesforce Identity Provider |
+| [**GetAdfs**](IdentityProviderApi.html#getadfs) | **GET** /api/v2/identityproviders/adfs | Get ADFS Identity Provider |
 | [**GetCic**](IdentityProviderApi.html#getcic) | **GET** /api/v2/identityproviders/cic | Get Customer Interaction Center (CIC) Identity Provider |
 | [**GetIdentityproviders**](IdentityProviderApi.html#getidentityproviders) | **GET** /api/v2/identityproviders | The list of identity providers |
 | [**GetOkta**](IdentityProviderApi.html#getokta) | **GET** /api/v2/identityproviders/okta | Get Okta Identity Provider |
@@ -20,6 +22,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetProviderId**](IdentityProviderApi.html#getproviderid) | **GET** /api/v2/identityproviders/{providerId} | Get an identity provider |
 | [**GetPurecloud**](IdentityProviderApi.html#getpurecloud) | **GET** /api/v2/identityproviders/purecloud | Get PureCloud Identity Provider |
 | [**GetSalesforce**](IdentityProviderApi.html#getsalesforce) | **GET** /api/v2/identityproviders/salesforce | Get Salesforce Identity Provider |
+| [**PutAdfs**](IdentityProviderApi.html#putadfs) | **PUT** /api/v2/identityproviders/adfs | Update/Create ADFS Identity Provider |
 | [**PutCic**](IdentityProviderApi.html#putcic) | **PUT** /api/v2/identityproviders/cic | Update/Create Customer Interaction Center (CIC) Identity Provider |
 | [**PutOkta**](IdentityProviderApi.html#putokta) | **PUT** /api/v2/identityproviders/okta | Update/Create Okta Identity Provider |
 | [**PutOnelogin**](IdentityProviderApi.html#putonelogin) | **PUT** /api/v2/identityproviders/onelogin | Update/Create OneLogin Identity Provider |
@@ -27,6 +30,56 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PutPurecloud**](IdentityProviderApi.html#putpurecloud) | **PUT** /api/v2/identityproviders/purecloud | Update/Create PureCloud Identity Provider |
 | [**PutSalesforce**](IdentityProviderApi.html#putsalesforce) | **PUT** /api/v2/identityproviders/salesforce | Update/Create Salesforce Identity Provider |
 {: class="table table-striped"}
+
+<a name="deleteadfs"></a>
+
+## void DeleteAdfs ()
+
+Delete ADFS Identity Provider
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class DeleteAdfsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new IdentityProviderApi();
+
+            try
+            {
+                // Delete ADFS Identity Provider
+                apiInstance.DeleteAdfs();
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IdentityProviderApi.DeleteAdfs: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+This endpoint does require any parameters.
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
 
 <a name="deletecic"></a>
 
@@ -327,6 +380,57 @@ This endpoint does require any parameters.
 ### Return type
 
 void (empty response body)
+
+<a name="getadfs"></a>
+
+## [**ADFS**](ADFS.html) GetAdfs ()
+
+Get ADFS Identity Provider
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetAdfsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new IdentityProviderApi();
+
+            try
+            {
+                // Get ADFS Identity Provider
+                ADFS result = apiInstance.GetAdfs();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IdentityProviderApi.GetAdfs: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+This endpoint does require any parameters.
+{: class="table table-striped"}
+
+### Return type
+
+[**ADFS**](ADFS.html)
 
 <a name="getcic"></a>
 
@@ -684,6 +788,61 @@ This endpoint does require any parameters.
 ### Return type
 
 [**Salesforce**](Salesforce.html)
+
+<a name="putadfs"></a>
+
+## void PutAdfs (ADFS body = null)
+
+Update/Create ADFS Identity Provider
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PutAdfsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new IdentityProviderApi();
+            var body = new ADFS(); // ADFS | Provider (optional) 
+
+            try
+            {
+                // Update/Create ADFS Identity Provider
+                apiInstance.PutAdfs(body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IdentityProviderApi.PutAdfs: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**ADFS**](ADFS.html)| Provider | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
 
 <a name="putcic"></a>
 

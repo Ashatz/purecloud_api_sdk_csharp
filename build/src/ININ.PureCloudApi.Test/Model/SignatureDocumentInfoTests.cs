@@ -74,6 +74,14 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: unit test for the property 'ReturnUrl'
         }
+        /// <summary>
+        /// Test the property 'Template'
+        /// </summary>
+        [Test]
+        public void TemplateTest()
+        {
+            // TODO: unit test for the property 'Template'
+        }
 
     }
 

@@ -47,10 +47,20 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <param name="FieldName">FieldName.</param>
         /// <param name="Direction">Direction.</param>
-        public ContactSort(string FieldName = null, DirectionEnum? Direction = null)
+        /// <param name="Numeric">Numeric (default to false).</param>
+        public ContactSort(string FieldName = null, DirectionEnum? Direction = null, bool? Numeric = null)
         {
             this.FieldName = FieldName;
             this.Direction = Direction;
+            // use default value if no "Numeric" provided
+            if (Numeric == null)
+            {
+                this.Numeric = false;
+            }
+            else
+            {
+                this.Numeric = Numeric;
+            }
         }
         
         /// <summary>
@@ -58,6 +68,11 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         [DataMember(Name="fieldName", EmitDefaultValue=false)]
         public string FieldName { get; set; }
+        /// <summary>
+        /// Gets or Sets Numeric
+        /// </summary>
+        [DataMember(Name="numeric", EmitDefaultValue=false)]
+        public bool? Numeric { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -68,6 +83,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class ContactSort {\n");
             sb.Append("  FieldName: ").Append(FieldName).Append("\n");
             sb.Append("  Direction: ").Append(Direction).Append("\n");
+            sb.Append("  Numeric: ").Append(Numeric).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -113,6 +129,11 @@ namespace ININ.PureCloudApi.Model
                     this.Direction == other.Direction ||
                     this.Direction != null &&
                     this.Direction.Equals(other.Direction)
+                ) &&
+                (
+                    this.Numeric == other.Numeric ||
+                    this.Numeric != null &&
+                    this.Numeric.Equals(other.Numeric)
                 );
         }
 
@@ -131,6 +152,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.FieldName.GetHashCode();
                 if (this.Direction != null)
                     hash = hash * 59 + this.Direction.GetHashCode();
+                if (this.Numeric != null)
+                    hash = hash * 59 + this.Numeric.GetHashCode();
                 return hash;
             }
         }

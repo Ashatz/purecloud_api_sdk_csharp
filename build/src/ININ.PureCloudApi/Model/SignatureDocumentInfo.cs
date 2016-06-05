@@ -23,11 +23,13 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Org">Org.</param>
         /// <param name="User">User.</param>
         /// <param name="ReturnUrl">ReturnUrl.</param>
-        public SignatureDocumentInfo(Organization Org = null, User User = null, string ReturnUrl = null)
+        /// <param name="Template">Template ID alias for the ESignature template you would like to retrieve..</param>
+        public SignatureDocumentInfo(Organization Org = null, User User = null, string ReturnUrl = null, DocusignTemplateMapping Template = null)
         {
             this.Org = Org;
             this.User = User;
             this.ReturnUrl = ReturnUrl;
+            this.Template = Template;
         }
         
         /// <summary>
@@ -46,6 +48,12 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="returnUrl", EmitDefaultValue=false)]
         public string ReturnUrl { get; set; }
         /// <summary>
+        /// Template ID alias for the ESignature template you would like to retrieve.
+        /// </summary>
+        /// <value>Template ID alias for the ESignature template you would like to retrieve.</value>
+        [DataMember(Name="template", EmitDefaultValue=false)]
+        public DocusignTemplateMapping Template { get; set; }
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -56,6 +64,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Org: ").Append(Org).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  ReturnUrl: ").Append(ReturnUrl).Append("\n");
+            sb.Append("  Template: ").Append(Template).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -106,6 +115,11 @@ namespace ININ.PureCloudApi.Model
                     this.ReturnUrl == other.ReturnUrl ||
                     this.ReturnUrl != null &&
                     this.ReturnUrl.Equals(other.ReturnUrl)
+                ) &&
+                (
+                    this.Template == other.Template ||
+                    this.Template != null &&
+                    this.Template.Equals(other.Template)
                 );
         }
 
@@ -126,6 +140,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.User.GetHashCode();
                 if (this.ReturnUrl != null)
                     hash = hash * 59 + this.ReturnUrl.GetHashCode();
+                if (this.Template != null)
+                    hash = hash * 59 + this.Template.GetHashCode();
                 return hash;
             }
         }

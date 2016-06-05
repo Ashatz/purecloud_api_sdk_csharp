@@ -20,22 +20,35 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateCallbackCommand" /> class.
         /// </summary>
-        /// <param name="ScriptId">ScriptId.</param>
-        /// <param name="QueueId">QueueId.</param>
-        /// <param name="RoutingData">RoutingData.</param>
-        /// <param name="CallbackUserName">CallbackUserName.</param>
-        /// <param name="CallbackNumbers">CallbackNumbers.</param>
-        /// <param name="CallbackScheduledTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        /// <param name="CountryCode">CountryCode.</param>
-        /// <param name="SkipEnabled">SkipEnabled (default to false).</param>
-        /// <param name="AdditionalInfo">AdditionalInfo.</param>
-        public CreateCallbackCommand(string ScriptId = null, string QueueId = null, RoutingData RoutingData = null, string CallbackUserName = null, List<string> CallbackNumbers = null, DateTime? CallbackScheduledTime = null, string CountryCode = null, bool? SkipEnabled = null, AdditionalInfo AdditionalInfo = null)
+        [JsonConstructorAttribute]
+        protected CreateCallbackCommand() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CreateCallbackCommand" /> class.
+        /// </summary>
+        /// <param name="ScriptId">The identifier of the script to be used for the callback.</param>
+        /// <param name="QueueId">The identifier of the queue to be used for the callback. Either queueId or routingData is required..</param>
+        /// <param name="RoutingData">The routing data to be used for the callback. Either queueId or routingData is required..</param>
+        /// <param name="CallbackUserName">The name of the party to be called back..</param>
+        /// <param name="CallbackNumbers">A list of phone numbers for the callback. (required).</param>
+        /// <param name="CallbackScheduledTime">The scheduled date-time for the callback as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="CountryCode">The country code to be associated with the callback numbers..</param>
+        /// <param name="SkipEnabled">Indicates if the agent is allowed to skip the callback. (default to false).</param>
+        /// <param name="Data">A map of key-value pairs containing additional data that can be associated to the callback. These could be set up for instance to be used in a customized script shown during the call. Example: { \&quot;notes\&quot;: \&quot;ready to close the deal!\&quot;, \&quot;customerPreferredName\&quot;: \&quot;Doc\&quot; }.</param>
+        public CreateCallbackCommand(string ScriptId = null, string QueueId = null, RoutingData RoutingData = null, string CallbackUserName = null, List<string> CallbackNumbers = null, DateTime? CallbackScheduledTime = null, string CountryCode = null, bool? SkipEnabled = null, Dictionary<string, string> Data = null)
         {
+            // to ensure "CallbackNumbers" is required (not null)
+            if (CallbackNumbers == null)
+            {
+                throw new InvalidDataException("CallbackNumbers is a required property for CreateCallbackCommand and cannot be null");
+            }
+            else
+            {
+                this.CallbackNumbers = CallbackNumbers;
+            }
             this.ScriptId = ScriptId;
             this.QueueId = QueueId;
             this.RoutingData = RoutingData;
             this.CallbackUserName = CallbackUserName;
-            this.CallbackNumbers = CallbackNumbers;
             this.CallbackScheduledTime = CallbackScheduledTime;
             this.CountryCode = CountryCode;
             // use default value if no "SkipEnabled" provided
@@ -47,55 +60,63 @@ namespace ININ.PureCloudApi.Model
             {
                 this.SkipEnabled = SkipEnabled;
             }
-            this.AdditionalInfo = AdditionalInfo;
+            this.Data = Data;
         }
         
         /// <summary>
-        /// Gets or Sets ScriptId
+        /// The identifier of the script to be used for the callback
         /// </summary>
+        /// <value>The identifier of the script to be used for the callback</value>
         [DataMember(Name="scriptId", EmitDefaultValue=false)]
         public string ScriptId { get; set; }
         /// <summary>
-        /// Gets or Sets QueueId
+        /// The identifier of the queue to be used for the callback. Either queueId or routingData is required.
         /// </summary>
+        /// <value>The identifier of the queue to be used for the callback. Either queueId or routingData is required.</value>
         [DataMember(Name="queueId", EmitDefaultValue=false)]
         public string QueueId { get; set; }
         /// <summary>
-        /// Gets or Sets RoutingData
+        /// The routing data to be used for the callback. Either queueId or routingData is required.
         /// </summary>
+        /// <value>The routing data to be used for the callback. Either queueId or routingData is required.</value>
         [DataMember(Name="routingData", EmitDefaultValue=false)]
         public RoutingData RoutingData { get; set; }
         /// <summary>
-        /// Gets or Sets CallbackUserName
+        /// The name of the party to be called back.
         /// </summary>
+        /// <value>The name of the party to be called back.</value>
         [DataMember(Name="callbackUserName", EmitDefaultValue=false)]
         public string CallbackUserName { get; set; }
         /// <summary>
-        /// Gets or Sets CallbackNumbers
+        /// A list of phone numbers for the callback.
         /// </summary>
+        /// <value>A list of phone numbers for the callback.</value>
         [DataMember(Name="callbackNumbers", EmitDefaultValue=false)]
         public List<string> CallbackNumbers { get; set; }
         /// <summary>
-        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// The scheduled date-time for the callback as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
-        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>The scheduled date-time for the callback as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="callbackScheduledTime", EmitDefaultValue=false)]
         public DateTime? CallbackScheduledTime { get; set; }
         /// <summary>
-        /// Gets or Sets CountryCode
+        /// The country code to be associated with the callback numbers.
         /// </summary>
+        /// <value>The country code to be associated with the callback numbers.</value>
         [DataMember(Name="countryCode", EmitDefaultValue=false)]
         public string CountryCode { get; set; }
         /// <summary>
-        /// Gets or Sets SkipEnabled
+        /// Indicates if the agent is allowed to skip the callback.
         /// </summary>
+        /// <value>Indicates if the agent is allowed to skip the callback.</value>
         [DataMember(Name="skipEnabled", EmitDefaultValue=false)]
         public bool? SkipEnabled { get; set; }
         /// <summary>
-        /// Gets or Sets AdditionalInfo
+        /// A map of key-value pairs containing additional data that can be associated to the callback. These could be set up for instance to be used in a customized script shown during the call. Example: { \&quot;notes\&quot;: \&quot;ready to close the deal!\&quot;, \&quot;customerPreferredName\&quot;: \&quot;Doc\&quot; }
         /// </summary>
-        [DataMember(Name="additionalInfo", EmitDefaultValue=false)]
-        public AdditionalInfo AdditionalInfo { get; set; }
+        /// <value>A map of key-value pairs containing additional data that can be associated to the callback. These could be set up for instance to be used in a customized script shown during the call. Example: { \&quot;notes\&quot;: \&quot;ready to close the deal!\&quot;, \&quot;customerPreferredName\&quot;: \&quot;Doc\&quot; }</value>
+        [DataMember(Name="data", EmitDefaultValue=false)]
+        public Dictionary<string, string> Data { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -112,7 +133,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  CallbackScheduledTime: ").Append(CallbackScheduledTime).Append("\n");
             sb.Append("  CountryCode: ").Append(CountryCode).Append("\n");
             sb.Append("  SkipEnabled: ").Append(SkipEnabled).Append("\n");
-            sb.Append("  AdditionalInfo: ").Append(AdditionalInfo).Append("\n");
+            sb.Append("  Data: ").Append(Data).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -190,9 +211,9 @@ namespace ININ.PureCloudApi.Model
                     this.SkipEnabled.Equals(other.SkipEnabled)
                 ) &&
                 (
-                    this.AdditionalInfo == other.AdditionalInfo ||
-                    this.AdditionalInfo != null &&
-                    this.AdditionalInfo.Equals(other.AdditionalInfo)
+                    this.Data == other.Data ||
+                    this.Data != null &&
+                    this.Data.SequenceEqual(other.Data)
                 );
         }
 
@@ -223,8 +244,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.CountryCode.GetHashCode();
                 if (this.SkipEnabled != null)
                     hash = hash * 59 + this.SkipEnabled.GetHashCode();
-                if (this.AdditionalInfo != null)
-                    hash = hash * 59 + this.AdditionalInfo.GetHashCode();
+                if (this.Data != null)
+                    hash = hash * 59 + this.Data.GetHashCode();
                 return hash;
             }
         }

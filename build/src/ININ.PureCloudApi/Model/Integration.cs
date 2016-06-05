@@ -58,24 +58,42 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Integration" /> class.
         /// </summary>
-        /// <param name="Name">Name.</param>
-        /// <param name="IntegrationType">Type of the integration. (required).</param>
-        /// <param name="State">Configured state of the integration..</param>
+        /// <param name="Name">The name of the integration, used to distinguish this integration from others of the same type. (required).</param>
+        /// <param name="IntegrationType">Type of the integration.</param>
+        /// <param name="State">Configured state of the integration. (required).</param>
         /// <param name="Config">Configuration for the integration..</param>
         /// <param name="LastStatus">Last reported status of the integration..</param>
-        public Integration(string Name = null, IntegrationType IntegrationType = null, StateEnum? State = null, IntegrationConfiguration Config = null, IntegrationStatusInfo LastStatus = null)
+        /// <param name="Version">Version number required for updates. (required).</param>
+        public Integration(string Name = null, IntegrationType IntegrationType = null, StateEnum? State = null, IntegrationConfiguration Config = null, IntegrationStatusInfo LastStatus = null, int? Version = null)
         {
-            // to ensure "IntegrationType" is required (not null)
-            if (IntegrationType == null)
+            // to ensure "Name" is required (not null)
+            if (Name == null)
             {
-                throw new InvalidDataException("IntegrationType is a required property for Integration and cannot be null");
+                throw new InvalidDataException("Name is a required property for Integration and cannot be null");
             }
             else
             {
-                this.IntegrationType = IntegrationType;
+                this.Name = Name;
             }
-            this.Name = Name;
-            this.State = State;
+            // to ensure "State" is required (not null)
+            if (State == null)
+            {
+                throw new InvalidDataException("State is a required property for Integration and cannot be null");
+            }
+            else
+            {
+                this.State = State;
+            }
+            // to ensure "Version" is required (not null)
+            if (Version == null)
+            {
+                throw new InvalidDataException("Version is a required property for Integration and cannot be null");
+            }
+            else
+            {
+                this.Version = Version;
+            }
+            this.IntegrationType = IntegrationType;
             this.Config = Config;
             this.LastStatus = LastStatus;
         }
@@ -87,14 +105,15 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
         /// <summary>
-        /// Gets or Sets Name
+        /// The name of the integration, used to distinguish this integration from others of the same type.
         /// </summary>
+        /// <value>The name of the integration, used to distinguish this integration from others of the same type.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
         /// <summary>
-        /// Type of the integration.
+        /// Type of the integration
         /// </summary>
-        /// <value>Type of the integration.</value>
+        /// <value>Type of the integration</value>
         [DataMember(Name="integrationType", EmitDefaultValue=false)]
         public IntegrationType IntegrationType { get; set; }
         /// <summary>
@@ -114,7 +133,7 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <value>Version number required for updates.</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
-        public int? Version { get; private set; }
+        public int? Version { get; set; }
         /// <summary>
         /// The URI for this object
         /// </summary>

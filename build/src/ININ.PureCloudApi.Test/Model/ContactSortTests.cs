@@ -66,6 +66,14 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: unit test for the property 'Direction'
         }
+        /// <summary>
+        /// Test the property 'Numeric'
+        /// </summary>
+        [Test]
+        public void NumericTest()
+        {
+            // TODO: unit test for the property 'Numeric'
+        }
 
     }
 

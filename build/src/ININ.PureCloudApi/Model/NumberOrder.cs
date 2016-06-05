@@ -1623,7 +1623,9 @@ namespace ININ.PureCloudApi.Model
         /// <param name="BillingAddress">Billing address used for a number port.</param>
         /// <param name="ResponsibleContact">Company contact for a number port.</param>
         /// <param name="CompanyName">Company name for a number port.</param>
-        public NumberOrder(string Name = null, string Did = null, DateTime? EffectiveStartDate = null, DateTime? EffectiveEndDate = null, DateTime? LastUpdated = null, string StartAuthUserId = null, string EndAuthUserId = null, StatusEnum? Status = null, PhoneNumberTypeEnum? PhoneNumberType = null, bool? Porting = null, PortBillingAddress BillingAddress = null, PortContact ResponsibleContact = null, string CompanyName = null)
+        /// <param name="CountryCode">Country dial in codes (telephone dialing prefixes).</param>
+        /// <param name="EnvelopeId">Id of the terms and conditions envelope for the order..</param>
+        public NumberOrder(string Name = null, string Did = null, DateTime? EffectiveStartDate = null, DateTime? EffectiveEndDate = null, DateTime? LastUpdated = null, string StartAuthUserId = null, string EndAuthUserId = null, StatusEnum? Status = null, PhoneNumberTypeEnum? PhoneNumberType = null, bool? Porting = null, PortBillingAddress BillingAddress = null, PortContact ResponsibleContact = null, string CompanyName = null, string CountryCode = null, string EnvelopeId = null)
         {
             this.Name = Name;
             this.Did = Did;
@@ -1646,6 +1648,8 @@ namespace ININ.PureCloudApi.Model
             this.BillingAddress = BillingAddress;
             this.ResponsibleContact = ResponsibleContact;
             this.CompanyName = CompanyName;
+            this.CountryCode = CountryCode;
+            this.EnvelopeId = EnvelopeId;
         }
         
         /// <summary>
@@ -1720,6 +1724,18 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="companyName", EmitDefaultValue=false)]
         public string CompanyName { get; set; }
         /// <summary>
+        /// Country dial in codes (telephone dialing prefixes)
+        /// </summary>
+        /// <value>Country dial in codes (telephone dialing prefixes)</value>
+        [DataMember(Name="countryCode", EmitDefaultValue=false)]
+        public string CountryCode { get; set; }
+        /// <summary>
+        /// Id of the terms and conditions envelope for the order.
+        /// </summary>
+        /// <value>Id of the terms and conditions envelope for the order.</value>
+        [DataMember(Name="envelopeId", EmitDefaultValue=false)]
+        public string EnvelopeId { get; set; }
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -1747,6 +1763,8 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  BillingAddress: ").Append(BillingAddress).Append("\n");
             sb.Append("  ResponsibleContact: ").Append(ResponsibleContact).Append("\n");
             sb.Append("  CompanyName: ").Append(CompanyName).Append("\n");
+            sb.Append("  CountryCode: ").Append(CountryCode).Append("\n");
+            sb.Append("  EnvelopeId: ").Append(EnvelopeId).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -1855,6 +1873,16 @@ namespace ININ.PureCloudApi.Model
                     this.CompanyName.Equals(other.CompanyName)
                 ) &&
                 (
+                    this.CountryCode == other.CountryCode ||
+                    this.CountryCode != null &&
+                    this.CountryCode.Equals(other.CountryCode)
+                ) &&
+                (
+                    this.EnvelopeId == other.EnvelopeId ||
+                    this.EnvelopeId != null &&
+                    this.EnvelopeId.Equals(other.EnvelopeId)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -1900,6 +1928,10 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.ResponsibleContact.GetHashCode();
                 if (this.CompanyName != null)
                     hash = hash * 59 + this.CompanyName.GetHashCode();
+                if (this.CountryCode != null)
+                    hash = hash * 59 + this.CountryCode.GetHashCode();
+                if (this.EnvelopeId != null)
+                    hash = hash * 59 + this.EnvelopeId.GetHashCode();
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;

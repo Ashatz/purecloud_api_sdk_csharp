@@ -248,7 +248,7 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> DeleteProvidersEdgesPhonesPhoneIdWithHttpInfo (string phoneId);
         /// <summary>
-        /// Delete an ednpoint
+        /// Delete a Site by ID
         /// </summary>
         /// <remarks>
         /// 
@@ -259,7 +259,7 @@ namespace ININ.PureCloudApi.Api
         string DeleteProvidersEdgesSitesSiteId (string siteId);
 
         /// <summary>
-        /// Delete an ednpoint
+        /// Delete a Site by ID
         /// </summary>
         /// <remarks>
         /// 
@@ -1251,7 +1251,7 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of Phone</returns>
         ApiResponse<Phone> GetProvidersEdgesPhonesTemplateWithHttpInfo (string phoneBaseSettingsId);
         /// <summary>
-        /// Get the list of sites.
+        /// Get the list of Sites.
         /// </summary>
         /// <remarks>
         /// 
@@ -1267,7 +1267,7 @@ namespace ININ.PureCloudApi.Api
         SiteEntityListing GetProvidersEdgesSites (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string locationId = null);
 
         /// <summary>
-        /// Get the list of sites.
+        /// Get the list of Sites.
         /// </summary>
         /// <remarks>
         /// 
@@ -1282,7 +1282,7 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of SiteEntityListing</returns>
         ApiResponse<SiteEntityListing> GetProvidersEdgesSitesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string locationId = null);
         /// <summary>
-        /// Get endpoint.
+        /// Get a Site by ID.
         /// </summary>
         /// <remarks>
         /// 
@@ -1293,7 +1293,7 @@ namespace ININ.PureCloudApi.Api
         Site GetProvidersEdgesSitesSiteId (string siteId);
 
         /// <summary>
-        /// Get endpoint.
+        /// Get a Site by ID.
         /// </summary>
         /// <remarks>
         /// 
@@ -2083,7 +2083,7 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostProvidersEdgesPhonesRebootWithHttpInfo (PhonesReboot body = null);
         /// <summary>
-        /// Create a endpoint.
+        /// Create a Site.
         /// </summary>
         /// <remarks>
         /// 
@@ -2094,7 +2094,7 @@ namespace ININ.PureCloudApi.Api
         Site PostProvidersEdgesSites (Site body = null);
 
         /// <summary>
-        /// Create a endpoint.
+        /// Create a Site.
         /// </summary>
         /// <remarks>
         /// 
@@ -2449,7 +2449,7 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of Phone</returns>
         ApiResponse<Phone> PutProvidersEdgesPhonesPhoneIdWithHttpInfo (string phoneId, Phone body = null);
         /// <summary>
-        /// Update a endpoint.
+        /// Update a Site by ID.
         /// </summary>
         /// <remarks>
         /// 
@@ -2461,7 +2461,7 @@ namespace ININ.PureCloudApi.Api
         Site PutProvidersEdgesSitesSiteId (string siteId, Site body = null);
 
         /// <summary>
-        /// Update a endpoint.
+        /// Update a Site by ID.
         /// </summary>
         /// <remarks>
         /// 
@@ -2753,7 +2753,7 @@ namespace ININ.PureCloudApi.Api
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> DeleteProvidersEdgesPhonesPhoneIdAsyncWithHttpInfo (string phoneId);
         /// <summary>
-        /// Delete an ednpoint
+        /// Delete a Site by ID
         /// </summary>
         /// <remarks>
         /// 
@@ -2764,7 +2764,7 @@ namespace ININ.PureCloudApi.Api
         System.Threading.Tasks.Task<string> DeleteProvidersEdgesSitesSiteIdAsync (string siteId);
 
         /// <summary>
-        /// Delete an ednpoint
+        /// Delete a Site by ID
         /// </summary>
         /// <remarks>
         /// 
@@ -3756,7 +3756,7 @@ namespace ININ.PureCloudApi.Api
         /// <returns>Task of ApiResponse (Phone)</returns>
         System.Threading.Tasks.Task<ApiResponse<Phone>> GetProvidersEdgesPhonesTemplateAsyncWithHttpInfo (string phoneBaseSettingsId);
         /// <summary>
-        /// Get the list of sites.
+        /// Get the list of Sites.
         /// </summary>
         /// <remarks>
         /// 
@@ -3772,7 +3772,7 @@ namespace ININ.PureCloudApi.Api
         System.Threading.Tasks.Task<SiteEntityListing> GetProvidersEdgesSitesAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string locationId = null);
 
         /// <summary>
-        /// Get the list of sites.
+        /// Get the list of Sites.
         /// </summary>
         /// <remarks>
         /// 
@@ -3787,7 +3787,7 @@ namespace ININ.PureCloudApi.Api
         /// <returns>Task of ApiResponse (SiteEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<SiteEntityListing>> GetProvidersEdgesSitesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string locationId = null);
         /// <summary>
-        /// Get endpoint.
+        /// Get a Site by ID.
         /// </summary>
         /// <remarks>
         /// 
@@ -3798,7 +3798,7 @@ namespace ININ.PureCloudApi.Api
         System.Threading.Tasks.Task<Site> GetProvidersEdgesSitesSiteIdAsync (string siteId);
 
         /// <summary>
-        /// Get endpoint.
+        /// Get a Site by ID.
         /// </summary>
         /// <remarks>
         /// 
@@ -4588,7 +4588,7 @@ namespace ININ.PureCloudApi.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> PostProvidersEdgesPhonesRebootAsyncWithHttpInfo (PhonesReboot body = null);
         /// <summary>
-        /// Create a endpoint.
+        /// Create a Site.
         /// </summary>
         /// <remarks>
         /// 
@@ -4599,7 +4599,7 @@ namespace ININ.PureCloudApi.Api
         System.Threading.Tasks.Task<Site> PostProvidersEdgesSitesAsync (Site body = null);
 
         /// <summary>
-        /// Create a endpoint.
+        /// Create a Site.
         /// </summary>
         /// <remarks>
         /// 
@@ -4954,7 +4954,7 @@ namespace ININ.PureCloudApi.Api
         /// <returns>Task of ApiResponse (Phone)</returns>
         System.Threading.Tasks.Task<ApiResponse<Phone>> PutProvidersEdgesPhonesPhoneIdAsyncWithHttpInfo (string phoneId, Phone body = null);
         /// <summary>
-        /// Update a endpoint.
+        /// Update a Site by ID.
         /// </summary>
         /// <remarks>
         /// 
@@ -4966,7 +4966,7 @@ namespace ININ.PureCloudApi.Api
         System.Threading.Tasks.Task<Site> PutProvidersEdgesSitesSiteIdAsync (string siteId, Site body = null);
 
         /// <summary>
-        /// Update a endpoint.
+        /// Update a Site by ID.
         /// </summary>
         /// <remarks>
         /// 
@@ -6806,7 +6806,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Delete an ednpoint 
+        /// Delete a Site by ID 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="siteId">Site ID</param>
@@ -6818,7 +6818,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Delete an ednpoint 
+        /// Delete a Site by ID 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="siteId">Site ID</param>
@@ -6882,7 +6882,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Delete an ednpoint 
+        /// Delete a Site by ID 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="siteId">Site ID</param>
@@ -6895,7 +6895,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Delete an ednpoint 
+        /// Delete a Site by ID 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="siteId">Site ID</param>
@@ -13613,7 +13613,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Get the list of sites. 
+        /// Get the list of Sites. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -13630,7 +13630,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Get the list of sites. 
+        /// Get the list of Sites. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -13701,7 +13701,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Get the list of sites. 
+        /// Get the list of Sites. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -13719,7 +13719,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Get the list of sites. 
+        /// Get the list of Sites. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -13790,7 +13790,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Get endpoint. 
+        /// Get a Site by ID. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="siteId">Site ID</param>
@@ -13802,7 +13802,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Get endpoint. 
+        /// Get a Site by ID. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="siteId">Site ID</param>
@@ -13866,7 +13866,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Get endpoint. 
+        /// Get a Site by ID. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="siteId">Site ID</param>
@@ -13879,7 +13879,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Get endpoint. 
+        /// Get a Site by ID. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="siteId">Site ID</param>
@@ -19499,7 +19499,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Create a endpoint. 
+        /// Create a Site. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Site (optional)</param>
@@ -19511,7 +19511,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Create a endpoint. 
+        /// Create a Site. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Site (optional)</param>
@@ -19579,7 +19579,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Create a endpoint. 
+        /// Create a Site. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Site (optional)</param>
@@ -19592,7 +19592,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Create a endpoint. 
+        /// Create a Site. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Site (optional)</param>
@@ -22245,7 +22245,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Update a endpoint. 
+        /// Update a Site by ID. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="siteId">Site ID</param>
@@ -22258,7 +22258,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Update a endpoint. 
+        /// Update a Site by ID. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="siteId">Site ID</param>
@@ -22331,7 +22331,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Update a endpoint. 
+        /// Update a Site by ID. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="siteId">Site ID</param>
@@ -22345,7 +22345,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Update a endpoint. 
+        /// Update a Site by ID. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="siteId">Site ID</param>

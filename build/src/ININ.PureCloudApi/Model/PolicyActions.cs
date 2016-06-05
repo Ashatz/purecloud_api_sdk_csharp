@@ -20,14 +20,15 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PolicyActions" /> class.
         /// </summary>
-        /// <param name="RetainRecording">RetainRecording (default to false).</param>
-        /// <param name="DeleteRecording">DeleteRecording (default to false).</param>
+        /// <param name="RetainRecording">true to retain the recording associated with the conversation. Default &#x3D; true (default to false).</param>
+        /// <param name="DeleteRecording">true to delete the recording associated with the conversation. If retainRecording &#x3D; true, this will be ignored. Default &#x3D; false (default to false).</param>
+        /// <param name="AlwaysDelete">true to delete the recording associated with the conversation regardless of the values of retainRecording or deleteRecording. Default &#x3D; false (default to false).</param>
         /// <param name="AssignEvaluations">AssignEvaluations.</param>
         /// <param name="AssignMeteredEvaluations">AssignMeteredEvaluations.</param>
         /// <param name="AssignCalibrations">AssignCalibrations.</param>
         /// <param name="RetentionDuration">RetentionDuration.</param>
         /// <param name="InitiateScreenRecording">InitiateScreenRecording.</param>
-        public PolicyActions(bool? RetainRecording = null, bool? DeleteRecording = null, List<EvaluationAssignment> AssignEvaluations = null, List<MeteredEvaluationAssignment> AssignMeteredEvaluations = null, List<CalibrationAssignment> AssignCalibrations = null, RetentionDuration RetentionDuration = null, InitiateScreenRecording InitiateScreenRecording = null)
+        public PolicyActions(bool? RetainRecording = null, bool? DeleteRecording = null, bool? AlwaysDelete = null, List<EvaluationAssignment> AssignEvaluations = null, List<MeteredEvaluationAssignment> AssignMeteredEvaluations = null, List<CalibrationAssignment> AssignCalibrations = null, RetentionDuration RetentionDuration = null, InitiateScreenRecording InitiateScreenRecording = null)
         {
             // use default value if no "RetainRecording" provided
             if (RetainRecording == null)
@@ -47,6 +48,15 @@ namespace ININ.PureCloudApi.Model
             {
                 this.DeleteRecording = DeleteRecording;
             }
+            // use default value if no "AlwaysDelete" provided
+            if (AlwaysDelete == null)
+            {
+                this.AlwaysDelete = false;
+            }
+            else
+            {
+                this.AlwaysDelete = AlwaysDelete;
+            }
             this.AssignEvaluations = AssignEvaluations;
             this.AssignMeteredEvaluations = AssignMeteredEvaluations;
             this.AssignCalibrations = AssignCalibrations;
@@ -55,15 +65,23 @@ namespace ININ.PureCloudApi.Model
         }
         
         /// <summary>
-        /// Gets or Sets RetainRecording
+        /// true to retain the recording associated with the conversation. Default &#x3D; true
         /// </summary>
+        /// <value>true to retain the recording associated with the conversation. Default &#x3D; true</value>
         [DataMember(Name="retainRecording", EmitDefaultValue=false)]
         public bool? RetainRecording { get; set; }
         /// <summary>
-        /// Gets or Sets DeleteRecording
+        /// true to delete the recording associated with the conversation. If retainRecording &#x3D; true, this will be ignored. Default &#x3D; false
         /// </summary>
+        /// <value>true to delete the recording associated with the conversation. If retainRecording &#x3D; true, this will be ignored. Default &#x3D; false</value>
         [DataMember(Name="deleteRecording", EmitDefaultValue=false)]
         public bool? DeleteRecording { get; set; }
+        /// <summary>
+        /// true to delete the recording associated with the conversation regardless of the values of retainRecording or deleteRecording. Default &#x3D; false
+        /// </summary>
+        /// <value>true to delete the recording associated with the conversation regardless of the values of retainRecording or deleteRecording. Default &#x3D; false</value>
+        [DataMember(Name="alwaysDelete", EmitDefaultValue=false)]
+        public bool? AlwaysDelete { get; set; }
         /// <summary>
         /// Gets or Sets AssignEvaluations
         /// </summary>
@@ -99,6 +117,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class PolicyActions {\n");
             sb.Append("  RetainRecording: ").Append(RetainRecording).Append("\n");
             sb.Append("  DeleteRecording: ").Append(DeleteRecording).Append("\n");
+            sb.Append("  AlwaysDelete: ").Append(AlwaysDelete).Append("\n");
             sb.Append("  AssignEvaluations: ").Append(AssignEvaluations).Append("\n");
             sb.Append("  AssignMeteredEvaluations: ").Append(AssignMeteredEvaluations).Append("\n");
             sb.Append("  AssignCalibrations: ").Append(AssignCalibrations).Append("\n");
@@ -151,6 +170,11 @@ namespace ININ.PureCloudApi.Model
                     this.DeleteRecording.Equals(other.DeleteRecording)
                 ) &&
                 (
+                    this.AlwaysDelete == other.AlwaysDelete ||
+                    this.AlwaysDelete != null &&
+                    this.AlwaysDelete.Equals(other.AlwaysDelete)
+                ) &&
+                (
                     this.AssignEvaluations == other.AssignEvaluations ||
                     this.AssignEvaluations != null &&
                     this.AssignEvaluations.SequenceEqual(other.AssignEvaluations)
@@ -192,6 +216,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.RetainRecording.GetHashCode();
                 if (this.DeleteRecording != null)
                     hash = hash * 59 + this.DeleteRecording.GetHashCode();
+                if (this.AlwaysDelete != null)
+                    hash = hash * 59 + this.AlwaysDelete.GetHashCode();
                 if (this.AssignEvaluations != null)
                     hash = hash * 59 + this.AssignEvaluations.GetHashCode();
                 if (this.AssignMeteredEvaluations != null)

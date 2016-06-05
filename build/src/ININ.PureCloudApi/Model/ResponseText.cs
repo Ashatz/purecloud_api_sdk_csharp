@@ -18,6 +18,33 @@ namespace ININ.PureCloudApi.Model
     public partial class ResponseText :  IEquatable<ResponseText>
     {
         /// <summary>
+        /// Response text content type.
+        /// </summary>
+        /// <value>Response text content type.</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum ContentTypeEnum
+        {
+            
+            /// <summary>
+            /// Enum Plain for "text/plain"
+            /// </summary>
+            [EnumMember(Value = "text/plain")]
+            Plain,
+            
+            /// <summary>
+            /// Enum Html for "text/html"
+            /// </summary>
+            [EnumMember(Value = "text/html")]
+            Html
+        }
+
+        /// <summary>
+        /// Response text content type.
+        /// </summary>
+        /// <value>Response text content type.</value>
+        [DataMember(Name="contentType", EmitDefaultValue=false)]
+        public ContentTypeEnum? ContentType { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="ResponseText" /> class.
         /// </summary>
         [JsonConstructorAttribute]
@@ -27,7 +54,7 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <param name="Content">Response text content. (required).</param>
         /// <param name="ContentType">Response text content type..</param>
-        public ResponseText(string Content = null, string ContentType = null)
+        public ResponseText(string Content = null, ContentTypeEnum? ContentType = null)
         {
             // to ensure "Content" is required (not null)
             if (Content == null)
@@ -47,12 +74,6 @@ namespace ININ.PureCloudApi.Model
         /// <value>Response text content.</value>
         [DataMember(Name="content", EmitDefaultValue=false)]
         public string Content { get; set; }
-        /// <summary>
-        /// Response text content type.
-        /// </summary>
-        /// <value>Response text content type.</value>
-        [DataMember(Name="contentType", EmitDefaultValue=false)]
-        public string ContentType { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

@@ -97,6 +97,12 @@ namespace ININ.PureCloudApi.Model
             Queue,
             
             /// <summary>
+            /// Enum Subflowcallflow for "SUBFLOWCALLFLOW"
+            /// </summary>
+            [EnumMember(Value = "SUBFLOWCALLFLOW")]
+            Subflowcallflow,
+            
+            /// <summary>
             /// Enum Systemprompt for "SYSTEMPROMPT"
             /// </summary>
             [EnumMember(Value = "SYSTEMPROMPT")]

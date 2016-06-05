@@ -31,7 +31,8 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Features">Features.</param>
         /// <param name="Variables">Variables.</param>
         /// <param name="CustomActions">CustomActions.</param>
-        public Script(string Name = null, string VersionId = null, DateTime? CreatedDate = null, DateTime? ModifiedDate = null, DateTime? PublishedDate = null, DateTime? VersionDate = null, string StartPageId = null, string StartPageName = null, Object Features = null, Object Variables = null, Object CustomActions = null)
+        /// <param name="Pages">Pages.</param>
+        public Script(string Name = null, string VersionId = null, DateTime? CreatedDate = null, DateTime? ModifiedDate = null, DateTime? PublishedDate = null, DateTime? VersionDate = null, string StartPageId = null, string StartPageName = null, Object Features = null, Object Variables = null, Object CustomActions = null, List<Page> Pages = null)
         {
             this.Name = Name;
             this.VersionId = VersionId;
@@ -44,6 +45,7 @@ namespace ININ.PureCloudApi.Model
             this.Features = Features;
             this.Variables = Variables;
             this.CustomActions = CustomActions;
+            this.Pages = Pages;
         }
         
         /// <summary>
@@ -112,6 +114,11 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="customActions", EmitDefaultValue=false)]
         public Object CustomActions { get; set; }
         /// <summary>
+        /// Gets or Sets Pages
+        /// </summary>
+        [DataMember(Name="pages", EmitDefaultValue=false)]
+        public List<Page> Pages { get; set; }
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -137,6 +144,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Features: ").Append(Features).Append("\n");
             sb.Append("  Variables: ").Append(Variables).Append("\n");
             sb.Append("  CustomActions: ").Append(CustomActions).Append("\n");
+            sb.Append("  Pages: ").Append(Pages).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -235,6 +243,11 @@ namespace ININ.PureCloudApi.Model
                     this.CustomActions.Equals(other.CustomActions)
                 ) &&
                 (
+                    this.Pages == other.Pages ||
+                    this.Pages != null &&
+                    this.Pages.SequenceEqual(other.Pages)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -276,6 +289,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.Variables.GetHashCode();
                 if (this.CustomActions != null)
                     hash = hash * 59 + this.CustomActions.GetHashCode();
+                if (this.Pages != null)
+                    hash = hash * 59 + this.Pages.GetHashCode();
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;

@@ -54,6 +54,17 @@ namespace ININ.PureCloudApi.Test
 
         
         /// <summary>
+        /// Test DeleteAdfs
+        /// </summary>
+        [Test]
+        public void DeleteAdfsTest()
+        {
+            // TODO: add unit test for the method 'DeleteAdfs'
+            instance.DeleteAdfs();
+            
+        }
+        
+        /// <summary>
         /// Test DeleteCic
         /// </summary>
         [Test]
@@ -117,6 +128,17 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'DeleteSalesforce'
             instance.DeleteSalesforce();
             
+        }
+        
+        /// <summary>
+        /// Test GetAdfs
+        /// </summary>
+        [Test]
+        public void GetAdfsTest()
+        {
+            // TODO: add unit test for the method 'GetAdfs'
+            var response = instance.GetAdfs();
+            Assert.IsInstanceOf<ADFS> (response, "response is ADFS");
         }
         
         /// <summary>
@@ -194,6 +216,18 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'GetSalesforce'
             var response = instance.GetSalesforce();
             Assert.IsInstanceOf<Salesforce> (response, "response is Salesforce");
+        }
+        
+        /// <summary>
+        /// Test PutAdfs
+        /// </summary>
+        [Test]
+        public void PutAdfsTest()
+        {
+            // TODO: add unit test for the method 'PutAdfs'
+            ADFS body = null; // TODO: replace null with proper value
+            instance.PutAdfs(body);
+            
         }
         
         /// <summary>

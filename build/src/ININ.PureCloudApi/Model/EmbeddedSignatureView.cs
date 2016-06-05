@@ -21,9 +21,11 @@ namespace ININ.PureCloudApi.Model
         /// Initializes a new instance of the <see cref="EmbeddedSignatureView" /> class.
         /// </summary>
         /// <param name="View">View.</param>
-        public EmbeddedSignatureView(View View = null)
+        /// <param name="EnvelopeId">Envelope id for the terms and conditions associated with this request..</param>
+        public EmbeddedSignatureView(View View = null, string EnvelopeId = null)
         {
             this.View = View;
+            this.EnvelopeId = EnvelopeId;
         }
         
         /// <summary>
@@ -31,6 +33,12 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         [DataMember(Name="view", EmitDefaultValue=false)]
         public View View { get; set; }
+        /// <summary>
+        /// Envelope id for the terms and conditions associated with this request.
+        /// </summary>
+        /// <value>Envelope id for the terms and conditions associated with this request.</value>
+        [DataMember(Name="envelopeId", EmitDefaultValue=false)]
+        public string EnvelopeId { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -40,6 +48,7 @@ namespace ININ.PureCloudApi.Model
             var sb = new StringBuilder();
             sb.Append("class EmbeddedSignatureView {\n");
             sb.Append("  View: ").Append(View).Append("\n");
+            sb.Append("  EnvelopeId: ").Append(EnvelopeId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -80,6 +89,11 @@ namespace ININ.PureCloudApi.Model
                     this.View == other.View ||
                     this.View != null &&
                     this.View.Equals(other.View)
+                ) &&
+                (
+                    this.EnvelopeId == other.EnvelopeId ||
+                    this.EnvelopeId != null &&
+                    this.EnvelopeId.Equals(other.EnvelopeId)
                 );
         }
 
@@ -96,6 +110,8 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.View != null)
                     hash = hash * 59 + this.View.GetHashCode();
+                if (this.EnvelopeId != null)
+                    hash = hash * 59 + this.EnvelopeId.GetHashCode();
                 return hash;
             }
         }

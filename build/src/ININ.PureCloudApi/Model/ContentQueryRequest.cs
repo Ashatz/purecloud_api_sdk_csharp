@@ -27,7 +27,8 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Sort">Sort.</param>
         /// <param name="Filters">Filters.</param>
         /// <param name="AttributeFilters">AttributeFilters.</param>
-        public ContentQueryRequest(string QueryPhrase = null, int? PageNumber = null, int? PageSize = null, List<string> FacetNameRequests = null, List<ContentSortItem> Sort = null, List<ContentFacetFilterItem> Filters = null, List<ContentAttributeFilterItem> AttributeFilters = null)
+        /// <param name="IncludeShares">IncludeShares (default to false).</param>
+        public ContentQueryRequest(string QueryPhrase = null, int? PageNumber = null, int? PageSize = null, List<string> FacetNameRequests = null, List<ContentSortItem> Sort = null, List<ContentFacetFilterItem> Filters = null, List<ContentAttributeFilterItem> AttributeFilters = null, bool? IncludeShares = null)
         {
             this.QueryPhrase = QueryPhrase;
             this.PageNumber = PageNumber;
@@ -36,6 +37,15 @@ namespace ININ.PureCloudApi.Model
             this.Sort = Sort;
             this.Filters = Filters;
             this.AttributeFilters = AttributeFilters;
+            // use default value if no "IncludeShares" provided
+            if (IncludeShares == null)
+            {
+                this.IncludeShares = false;
+            }
+            else
+            {
+                this.IncludeShares = IncludeShares;
+            }
         }
         
         /// <summary>
@@ -74,6 +84,11 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="attributeFilters", EmitDefaultValue=false)]
         public List<ContentAttributeFilterItem> AttributeFilters { get; set; }
         /// <summary>
+        /// Gets or Sets IncludeShares
+        /// </summary>
+        [DataMember(Name="includeShares", EmitDefaultValue=false)]
+        public bool? IncludeShares { get; set; }
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -88,6 +103,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Sort: ").Append(Sort).Append("\n");
             sb.Append("  Filters: ").Append(Filters).Append("\n");
             sb.Append("  AttributeFilters: ").Append(AttributeFilters).Append("\n");
+            sb.Append("  IncludeShares: ").Append(IncludeShares).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -158,6 +174,11 @@ namespace ININ.PureCloudApi.Model
                     this.AttributeFilters == other.AttributeFilters ||
                     this.AttributeFilters != null &&
                     this.AttributeFilters.SequenceEqual(other.AttributeFilters)
+                ) &&
+                (
+                    this.IncludeShares == other.IncludeShares ||
+                    this.IncludeShares != null &&
+                    this.IncludeShares.Equals(other.IncludeShares)
                 );
         }
 
@@ -186,6 +207,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.Filters.GetHashCode();
                 if (this.AttributeFilters != null)
                     hash = hash * 59 + this.AttributeFilters.GetHashCode();
+                if (this.IncludeShares != null)
+                    hash = hash * 59 + this.IncludeShares.GetHashCode();
                 return hash;
             }
         }

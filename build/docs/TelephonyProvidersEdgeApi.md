@@ -18,7 +18,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteProvidersEdgesOutboundroutesOutboundrouteId**](TelephonyProvidersEdgeApi.html#deleteprovidersedgesoutboundroutesoutboundrouteid) | **DELETE** /api/v2/telephony/providers/edges/outboundroutes/{outboundRouteId} | Delete Outbound Route |
 | [**DeleteProvidersEdgesPhonebasesettingsPhonebaseId**](TelephonyProvidersEdgeApi.html#deleteprovidersedgesphonebasesettingsphonebaseid) | **DELETE** /api/v2/telephony/providers/edges/phonebasesettings/{phoneBaseId} | Delete a Phone Base Settings by ID |
 | [**DeleteProvidersEdgesPhonesPhoneId**](TelephonyProvidersEdgeApi.html#deleteprovidersedgesphonesphoneid) | **DELETE** /api/v2/telephony/providers/edges/phones/{phoneId} | Delete a Phone by ID |
-| [**DeleteProvidersEdgesSitesSiteId**](TelephonyProvidersEdgeApi.html#deleteprovidersedgessitessiteid) | **DELETE** /api/v2/telephony/providers/edges/sites/{siteId} | Delete an ednpoint |
+| [**DeleteProvidersEdgesSitesSiteId**](TelephonyProvidersEdgeApi.html#deleteprovidersedgessitessiteid) | **DELETE** /api/v2/telephony/providers/edges/sites/{siteId} | Delete a Site by ID |
 | [**DeleteProvidersEdgesTrunkbasesettingsTrunkbasesettingsId**](TelephonyProvidersEdgeApi.html#deleteprovidersedgestrunkbasesettingstrunkbasesettingsid) | **DELETE** /api/v2/telephony/providers/edges/trunkbasesettings/{trunkBaseSettingsId} | Delete a Trunk Base Settings object by ID |
 | [**GetProvidersEdges**](TelephonyProvidersEdgeApi.html#getprovidersedges) | **GET** /api/v2/telephony/providers/edges | Get the list of edges. |
 | [**GetProvidersEdgesAvailablelanguages**](TelephonyProvidersEdgeApi.html#getprovidersedgesavailablelanguages) | **GET** /api/v2/telephony/providers/edges/availablelanguages | Get the list of available languages. |
@@ -61,8 +61,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetProvidersEdgesPhones**](TelephonyProvidersEdgeApi.html#getprovidersedgesphones) | **GET** /api/v2/telephony/providers/edges/phones | Get a list of Phone Instances |
 | [**GetProvidersEdgesPhonesPhoneId**](TelephonyProvidersEdgeApi.html#getprovidersedgesphonesphoneid) | **GET** /api/v2/telephony/providers/edges/phones/{phoneId} | Get a Phone by ID |
 | [**GetProvidersEdgesPhonesTemplate**](TelephonyProvidersEdgeApi.html#getprovidersedgesphonestemplate) | **GET** /api/v2/telephony/providers/edges/phones/template | Get a Phone instance template based on a Phone Base Settings object. This object can then be modified and saved as a new Phone instance |
-| [**GetProvidersEdgesSites**](TelephonyProvidersEdgeApi.html#getprovidersedgessites) | **GET** /api/v2/telephony/providers/edges/sites | Get the list of sites. |
-| [**GetProvidersEdgesSitesSiteId**](TelephonyProvidersEdgeApi.html#getprovidersedgessitessiteid) | **GET** /api/v2/telephony/providers/edges/sites/{siteId} | Get endpoint. |
+| [**GetProvidersEdgesSites**](TelephonyProvidersEdgeApi.html#getprovidersedgessites) | **GET** /api/v2/telephony/providers/edges/sites | Get the list of Sites. |
+| [**GetProvidersEdgesSitesSiteId**](TelephonyProvidersEdgeApi.html#getprovidersedgessitessiteid) | **GET** /api/v2/telephony/providers/edges/sites/{siteId} | Get a Site by ID. |
 | [**GetProvidersEdgesSitesSiteIdNumberplans**](TelephonyProvidersEdgeApi.html#getprovidersedgessitessiteidnumberplans) | **GET** /api/v2/telephony/providers/edges/sites/{siteId}/numberplans | Get the list of Number Plans for this Site. |
 | [**GetProvidersEdgesSitesSiteIdNumberplansClassifications**](TelephonyProvidersEdgeApi.html#getprovidersedgessitessiteidnumberplansclassifications) | **GET** /api/v2/telephony/providers/edges/sites/{siteId}/numberplans/classifications | Get a list of Classifications for this Site |
 | [**GetProvidersEdgesSitesSiteIdNumberplansNumberplanId**](TelephonyProvidersEdgeApi.html#getprovidersedgessitessiteidnumberplansnumberplanid) | **GET** /api/v2/telephony/providers/edges/sites/{siteId}/numberplans/{numberPlanId} | Get a Number Plan by ID. |
@@ -97,7 +97,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostProvidersEdgesPhones**](TelephonyProvidersEdgeApi.html#postprovidersedgesphones) | **POST** /api/v2/telephony/providers/edges/phones | Create a new Phone |
 | [**PostProvidersEdgesPhonesPhoneIdReboot**](TelephonyProvidersEdgeApi.html#postprovidersedgesphonesphoneidreboot) | **POST** /api/v2/telephony/providers/edges/phones/{phoneId}/reboot | Reboot a Phone |
 | [**PostProvidersEdgesPhonesReboot**](TelephonyProvidersEdgeApi.html#postprovidersedgesphonesreboot) | **POST** /api/v2/telephony/providers/edges/phones/reboot | Reboot Multiple Phones |
-| [**PostProvidersEdgesSites**](TelephonyProvidersEdgeApi.html#postprovidersedgessites) | **POST** /api/v2/telephony/providers/edges/sites | Create a endpoint. |
+| [**PostProvidersEdgesSites**](TelephonyProvidersEdgeApi.html#postprovidersedgessites) | **POST** /api/v2/telephony/providers/edges/sites | Create a Site. |
 | [**PostProvidersEdgesSitesSiteIdRebalance**](TelephonyProvidersEdgeApi.html#postprovidersedgessitessiteidrebalance) | **POST** /api/v2/telephony/providers/edges/sites/{siteId}/rebalance | Triggers the rebalance operation. |
 | [**PostProvidersEdgesTrunkbasesettings**](TelephonyProvidersEdgeApi.html#postprovidersedgestrunkbasesettings) | **POST** /api/v2/telephony/providers/edges/trunkbasesettings | Create a Trunk Base Settings object |
 | [**PutProvidersEdgesCertificateauthoritiesCertificateId**](TelephonyProvidersEdgeApi.html#putprovidersedgescertificateauthoritiescertificateid) | **PUT** /api/v2/telephony/providers/edges/certificateauthorities/{certificateId} | Update a certificate authority. |
@@ -113,7 +113,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PutProvidersEdgesOutboundroutesOutboundrouteId**](TelephonyProvidersEdgeApi.html#putprovidersedgesoutboundroutesoutboundrouteid) | **PUT** /api/v2/telephony/providers/edges/outboundroutes/{outboundRouteId} | Update outbound route |
 | [**PutProvidersEdgesPhonebasesettingsPhonebaseId**](TelephonyProvidersEdgeApi.html#putprovidersedgesphonebasesettingsphonebaseid) | **PUT** /api/v2/telephony/providers/edges/phonebasesettings/{phoneBaseId} | Update a Phone Base Settings by ID |
 | [**PutProvidersEdgesPhonesPhoneId**](TelephonyProvidersEdgeApi.html#putprovidersedgesphonesphoneid) | **PUT** /api/v2/telephony/providers/edges/phones/{phoneId} | Update a Phone by ID |
-| [**PutProvidersEdgesSitesSiteId**](TelephonyProvidersEdgeApi.html#putprovidersedgessitessiteid) | **PUT** /api/v2/telephony/providers/edges/sites/{siteId} | Update a endpoint. |
+| [**PutProvidersEdgesSitesSiteId**](TelephonyProvidersEdgeApi.html#putprovidersedgessitessiteid) | **PUT** /api/v2/telephony/providers/edges/sites/{siteId} | Update a Site by ID. |
 | [**PutProvidersEdgesSitesSiteIdNumberplans**](TelephonyProvidersEdgeApi.html#putprovidersedgessitessiteidnumberplans) | **PUT** /api/v2/telephony/providers/edges/sites/{siteId}/numberplans | Update the list of Number Plans. |
 | [**PutProvidersEdgesTrunkbasesettingsTrunkbasesettingsId**](TelephonyProvidersEdgeApi.html#putprovidersedgestrunkbasesettingstrunkbasesettingsid) | **PUT** /api/v2/telephony/providers/edges/trunkbasesettings/{trunkBaseSettingsId} | Update a Trunk Base Settings object by ID |
 {: class="table table-striped"}
@@ -739,7 +739,7 @@ namespace Example
 
 ## string** DeleteProvidersEdgesSitesSiteId (string siteId)
 
-Delete an ednpoint
+Delete a Site by ID
 
 
 
@@ -766,7 +766,7 @@ namespace Example
 
             try
             {
-                // Delete an ednpoint
+                // Delete a Site by ID
                 string result = apiInstance.DeleteProvidersEdgesSitesSiteId(siteId);
                 Debug.WriteLine(result);
             }
@@ -3238,7 +3238,7 @@ namespace Example
 
 ## [**SiteEntityListing**](SiteEntityListing.html) GetProvidersEdgesSites (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string locationId = null)
 
-Get the list of sites.
+Get the list of Sites.
 
 
 
@@ -3270,7 +3270,7 @@ namespace Example
 
             try
             {
-                // Get the list of sites.
+                // Get the list of Sites.
                 SiteEntityListing result = apiInstance.GetProvidersEdgesSites(pageSize, pageNumber, sortBy, sortOrder, name, locationId);
                 Debug.WriteLine(result);
             }
@@ -3304,7 +3304,7 @@ namespace Example
 
 ## [**Site**](Site.html) GetProvidersEdgesSitesSiteId (string siteId)
 
-Get endpoint.
+Get a Site by ID.
 
 
 
@@ -3331,7 +3331,7 @@ namespace Example
 
             try
             {
-                // Get endpoint.
+                // Get a Site by ID.
                 Site result = apiInstance.GetProvidersEdgesSitesSiteId(siteId);
                 Debug.WriteLine(result);
             }
@@ -5327,7 +5327,7 @@ void (empty response body)
 
 ## [**Site**](Site.html) PostProvidersEdgesSites (Site body = null)
 
-Create a endpoint.
+Create a Site.
 
 
 
@@ -5354,7 +5354,7 @@ namespace Example
 
             try
             {
-                // Create a endpoint.
+                // Create a Site.
                 Site result = apiInstance.PostProvidersEdgesSites(body);
                 Debug.WriteLine(result);
             }
@@ -6252,7 +6252,7 @@ namespace Example
 
 ## [**Site**](Site.html) PutProvidersEdgesSitesSiteId (string siteId, Site body = null)
 
-Update a endpoint.
+Update a Site by ID.
 
 
 
@@ -6280,7 +6280,7 @@ namespace Example
 
             try
             {
-                // Update a endpoint.
+                // Update a Site by ID.
                 Site result = apiInstance.PutProvidersEdgesSitesSiteId(siteId, body);
                 Debug.WriteLine(result);
             }

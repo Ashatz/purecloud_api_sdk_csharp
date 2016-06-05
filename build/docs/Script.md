@@ -19,6 +19,7 @@ title: Script
 | **Features** | **Object** |  | [optional] |
 | **Variables** | **Object** |  | [optional] |
 | **CustomActions** | **Object** |  | [optional] |
+| **Pages** | [**List&lt;Page&gt;**](Page.html) |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

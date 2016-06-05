@@ -21,6 +21,8 @@ title: NumberOrder
 | **BillingAddress** | [**PortBillingAddress**](PortBillingAddress.html) | Billing address used for a number port | [optional] |
 | **ResponsibleContact** | [**PortContact**](PortContact.html) | Company contact for a number port | [optional] |
 | **CompanyName** | **string** | Company name for a number port | [optional] |
+| **CountryCode** | **string** | Country dial in codes (telephone dialing prefixes) | [optional] |
+| **EnvelopeId** | **string** | Id of the terms and conditions envelope for the order. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

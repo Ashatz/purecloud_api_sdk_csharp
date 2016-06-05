@@ -147,6 +147,14 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'CustomActions'
         }
         /// <summary>
+        /// Test the property 'Pages'
+        /// </summary>
+        [Test]
+        public void PagesTest()
+        {
+            // TODO: unit test for the property 'Pages'
+        }
+        /// <summary>
         /// Test the property 'SelfUri'
         /// </summary>
         [Test]
