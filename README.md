@@ -100,15 +100,25 @@ var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4
 Console.WriteLine("Access token=" + accessTokenInfo.AccessToken);
 ~~~
 
+### Making Requests
+
+#### Setting the Environment
+
+If the SDK should interact with an environment other than mypurecloud.com (mypurecloud.ie, for example), specify the environment before doing anything else with the SDK:
+
+~~~
+Configuration.Default.ApiClient.RestClient.BaseUrl = new Uri("https://api.mypurecloud.ie");
+~~~
+
 #### Setting the Access Token
 
-Once an access token has been obtained from one of the above methods, it must be set in the SDK's configuration.
+Once an access token has been obtained from one of the OAuth methods, it must be set in the SDK's configuration.
 
 ~~~
 ININ.PureCloudApi.Client.Configuration.Default.AccessToken = "BL4Cb3EQIQFlqIItaj-zf5eIhAiP96zk3333QImd24P99ojbFHtpgUTJdRIkuUYfXMy0afEnZcWnEQ";
 ~~~
 
-### Making Requests
+#### Invoking the API
 
 There are two steps to making requests:
 
