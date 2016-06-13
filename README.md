@@ -26,13 +26,39 @@ If you're building from source or otherwise not using nuget, reference your vers
 
 #### Implicit Grant
 
-If the application will be authenticating as a person, the [Implicit Grant](http://developer.mypurecloud.com/api/rest/authorization/use-implicit-grant.html) OAuth 2 flow may be used from an embeddable browser. The access token can be retrieved from the querystring of the redirected URL in the browser control. This process is implemented in the [PureCloud API dotNET OAuth Control](https://github.com/MyPureCloud/purecloud_api_dotnet_oauth_control) project.
+**Use when...** 
+
+* The app is authenticating as a human
+* The app is running locally on the user's computer
+* The app has an embedded browser to use for OAuth
+
+If the application will be authenticating as a human, the [Implicit Grant](http://developer.mypurecloud.com/api/rest/authorization/use-implicit-grant.html) OAuth 2 flow may be used from an embeddable browser. The access token can be retrieved from the querystring of the redirected URL in the browser control. This process is implemented in the [PureCloud API dotNET OAuth Control](https://github.com/MyPureCloud/purecloud_api_dotnet_oauth_control) project.
+
+See the browser control implemented in a winforms project in the [C# OAuth With Implicit Grant](https://developer.mypurecloud.com/api/tutorials/oauth-implicit/#csharp) tutorial.
 
 #### Authorization Code Grant
 
-The auth code grant should only be used in ASP.NET applications. The auth code grant will return the auth code in the querystring to allow the server-side to make the request to get an access token with the auth code, and prevent the access token from being known by the client-side.
+**Use when...**
 
-First, use the following namespaces:
+* The app is authenticating as a human
+* The app is served via a web server, such as IIS
+* There is server-side code that will be making API requests
+
+The [Authorization Code Grant](https://developer.mypurecloud.com/api/rest/authorization/use-authorization-code.html) will return the auth code in the querystring to allow the server-side code to make the request to get an access token with the auth code, and prevent the access token from being known by the client-side. The process for this is:
+
+* Redirect user to OAuth login page
+* When the user is redirected to your URL, retrieve the auth code from the querystring on the server side
+* On the server side, exchange the auth code for an access token
+
+##### ASP.NET tutorial
+
+This is a tutorial of how to use an Authorization Code Grant without using the SDK: [https://developer.mypurecloud.com/api/tutorials/oauth-auth-code/#csharp](https://developer.mypurecloud.com/api/tutorials/oauth-auth-code/#csharp)
+
+##### Example with the SDK
+
+In addition to the process in the tutorial above, swap out the POST to "https://login." + host + "/oauth/token" with the following:
+
+Use the following namespaces:
 
 ~~~
 using ININ.PureCloudApi.Api;
@@ -51,6 +77,10 @@ Console.WriteLine("Access token=" + accessTokenInfo.AccessToken);
 ~~~
 
 #### Client Credentials Grant
+
+**Use when...**
+
+* The app is authenticating as a non-human (e.g. a service, scheduled task, or other non-UI application)
 
 For headless and non-user applications, the [Client Credentials Grant](http://developer.mypurecloud.com/api/rest/authorization/use-client-credentials.html) can be used via the AuthExtensions extension methods.
 
