@@ -104,7 +104,7 @@ Console.WriteLine("Access token=" + accessTokenInfo.AccessToken);
 
 #### Setting the Environment
 
-If the SDK should interact with an environment other than mypurecloud.com (mypurecloud.ie, for example), specify the environment before doing anything else with the SDK:
+If connecting to a PureCloud environment other than mypurecloud.com (e.g. mypurecloud.ie), set the new base path before constructing any API classes. The new base path should be the base path to the Platform API for your environment.
 
 ~~~
 Configuration.Default.ApiClient.RestClient.BaseUrl = new Uri("https://api.mypurecloud.ie");
