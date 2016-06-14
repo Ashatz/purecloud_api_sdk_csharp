@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Interactive Intelligence, Inc.")]
 [assembly: AssemblyProduct("PureCloudPublicAPILibrary")]
-[assembly: AssemblyCopyright("Copyright © Interactive Intelligence, Inc. 2015")]
+[assembly: AssemblyCopyright("Copyright © Interactive Intelligence, Inc. 2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -28,5 +28,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("0.51.0.284")]
-[assembly: AssemblyFileVersion("0.51.0.284")]
+[assembly: AssemblyVersion("0.52.0.286")]
+[assembly: AssemblyFileVersion("0.52.0.286")]

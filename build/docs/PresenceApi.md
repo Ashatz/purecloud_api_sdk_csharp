@@ -131,7 +131,7 @@ namespace Example
 
 <a name="getpresencedefinitions"></a>
 
-## [**OrganizationPresenceEntityListing**](OrganizationPresenceEntityListing.html) GetPresencedefinitions (int? pageNumber = null, int? pageSize = null)
+## [**OrganizationPresenceEntityListing**](OrganizationPresenceEntityListing.html) GetPresencedefinitions (int? pageNumber = null, int? pageSize = null, string deleted = null)
 
 Get an Organization's list of Presence Definitions
 
@@ -158,11 +158,12 @@ namespace Example
             var apiInstance = new PresenceApi();
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var deleted = deleted_example;  // string | Deleted query can be true, false or all (optional)  (default to false)
 
             try
             {
                 // Get an Organization's list of Presence Definitions
-                OrganizationPresenceEntityListing result = apiInstance.GetPresencedefinitions(pageNumber, pageSize);
+                OrganizationPresenceEntityListing result = apiInstance.GetPresencedefinitions(pageNumber, pageSize, deleted);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -181,6 +182,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **deleted** | **string**| Deleted query can be true, false or all | [optional] [default to false] |
 {: class="table table-striped"}
 
 ### Return type

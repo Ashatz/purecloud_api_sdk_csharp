@@ -8,6 +8,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**DeleteCallsCallIdParticipantsParticipantIdConsult**](ConversationsApi.html#deletecallscallidparticipantsparticipantidconsult) | **DELETE** /api/v2/conversations/calls/{callId}/participants/{participantId}/consult | Cancel the transfer |
+| [**DeleteConversationIdParticipantsParticipantIdCodesAddcommunicationcode**](ConversationsApi.html#deleteconversationidparticipantsparticipantidcodesaddcommunicationcode) | **DELETE** /api/v2/conversations/{conversationId}/participants/{participantId}/codes/{addCommunicationCode} | Delete a code used to add a communication to this participant |
 | [**DeleteEmailsEmailIdMessagesDraftAttachmentsAttachmentId**](ConversationsApi.html#deleteemailsemailidmessagesdraftattachmentsattachmentid) | **DELETE** /api/v2/conversations/emails/{emailId}/messages/draft/attachments/{attachmentId} | Delete attachment from draft |
 | [**GetCallbacks**](ConversationsApi.html#getcallbacks) | **GET** /api/v2/conversations/callbacks | Get callback conversations |
 | [**GetCallbacksCallbackId**](ConversationsApi.html#getcallbackscallbackid) | **GET** /api/v2/conversations/callbacks/{callbackId} | Get callback conversation |
@@ -124,6 +125,65 @@ namespace Example
 ### Return type
 
 **string**
+
+<a name="deleteconversationidparticipantsparticipantidcodesaddcommunicationcode"></a>
+
+## void DeleteConversationIdParticipantsParticipantIdCodesAddcommunicationcode (string conversationId, string participantId, string addCommunicationCode)
+
+Delete a code used to add a communication to this participant
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class DeleteConversationIdParticipantsParticipantIdCodesAddcommunicationcodeExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new ConversationsApi();
+            var conversationId = conversationId_example;  // string | conversation ID
+            var participantId = participantId_example;  // string | participant ID
+            var addCommunicationCode = addCommunicationCode_example;  // string | addCommunicationCode
+
+            try
+            {
+                // Delete a code used to add a communication to this participant
+                apiInstance.DeleteConversationIdParticipantsParticipantIdCodesAddcommunicationcode(conversationId, participantId, addCommunicationCode);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.DeleteConversationIdParticipantsParticipantIdCodesAddcommunicationcode: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| conversation ID |  |
+| **participantId** | **string**| participant ID |  |
+| **addCommunicationCode** | **string**| addCommunicationCode |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
 
 <a name="deleteemailsemailidmessagesdraftattachmentsattachmentid"></a>
 

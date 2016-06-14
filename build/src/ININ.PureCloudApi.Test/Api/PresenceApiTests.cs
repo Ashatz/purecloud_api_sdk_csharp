@@ -86,7 +86,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'GetPresencedefinitions'
             int? pageNumber = null; // TODO: replace null with proper value
             int? pageSize = null; // TODO: replace null with proper value
-            var response = instance.GetPresencedefinitions(pageNumber, pageSize);
+            string deleted = null; // TODO: replace null with proper value
+            var response = instance.GetPresencedefinitions(pageNumber, pageSize, deleted);
             Assert.IsInstanceOf<OrganizationPresenceEntityListing> (response, "response is OrganizationPresenceEntityListing");
         }
         

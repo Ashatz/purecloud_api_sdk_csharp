@@ -14,6 +14,7 @@ title: QueueUtilizationDiagnostic
 | **UsersNotUtilized** | **int?** | The number of users in the queue currently not engaged | [optional] |
 | **UsersOnQueueWithStation** | **int?** | The number of users in the queue with a station | [optional] |
 | **UsersOnACampaignCall** | **int?** | The number of users currently engaged in a campaign call | [optional] |
+| **UsersOnDifferentEdgeGroup** | **int?** | The number of users whose station is homed to an edge different from the campaign | [optional] |
 | **UsersOnANonCampaignCall** | **int?** | The number of users currently engaged in a communication that is not part of the campaign | [optional] |
 {: class="table table-striped"}
 

@@ -12,10 +12,10 @@ title: SystemPromptEntityListing
 | **Total** | **long?** |  | [optional] |
 | **Entities** | [**List&lt;SystemPrompt&gt;**](SystemPrompt.html) |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
-| **LastUri** | **string** |  | [optional] |
-| **PreviousUri** | **string** |  | [optional] |
 | **FirstUri** | **string** |  | [optional] |
+| **PreviousUri** | **string** |  | [optional] |
 | **NextUri** | **string** |  | [optional] |
+| **LastUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
 {: class="table table-striped"}
 

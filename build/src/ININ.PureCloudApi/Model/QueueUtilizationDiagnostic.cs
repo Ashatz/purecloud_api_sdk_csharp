@@ -69,6 +69,12 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="usersOnACampaignCall", EmitDefaultValue=false)]
         public int? UsersOnACampaignCall { get; private set; }
         /// <summary>
+        /// The number of users whose station is homed to an edge different from the campaign
+        /// </summary>
+        /// <value>The number of users whose station is homed to an edge different from the campaign</value>
+        [DataMember(Name="usersOnDifferentEdgeGroup", EmitDefaultValue=false)]
+        public int? UsersOnDifferentEdgeGroup { get; private set; }
+        /// <summary>
         /// The number of users currently engaged in a communication that is not part of the campaign
         /// </summary>
         /// <value>The number of users currently engaged in a communication that is not part of the campaign</value>
@@ -89,6 +95,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  UsersNotUtilized: ").Append(UsersNotUtilized).Append("\n");
             sb.Append("  UsersOnQueueWithStation: ").Append(UsersOnQueueWithStation).Append("\n");
             sb.Append("  UsersOnACampaignCall: ").Append(UsersOnACampaignCall).Append("\n");
+            sb.Append("  UsersOnDifferentEdgeGroup: ").Append(UsersOnDifferentEdgeGroup).Append("\n");
             sb.Append("  UsersOnANonCampaignCall: ").Append(UsersOnANonCampaignCall).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -162,6 +169,11 @@ namespace ININ.PureCloudApi.Model
                     this.UsersOnACampaignCall.Equals(other.UsersOnACampaignCall)
                 ) &&
                 (
+                    this.UsersOnDifferentEdgeGroup == other.UsersOnDifferentEdgeGroup ||
+                    this.UsersOnDifferentEdgeGroup != null &&
+                    this.UsersOnDifferentEdgeGroup.Equals(other.UsersOnDifferentEdgeGroup)
+                ) &&
+                (
                     this.UsersOnANonCampaignCall == other.UsersOnANonCampaignCall ||
                     this.UsersOnANonCampaignCall != null &&
                     this.UsersOnANonCampaignCall.Equals(other.UsersOnANonCampaignCall)
@@ -193,6 +205,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.UsersOnQueueWithStation.GetHashCode();
                 if (this.UsersOnACampaignCall != null)
                     hash = hash * 59 + this.UsersOnACampaignCall.GetHashCode();
+                if (this.UsersOnDifferentEdgeGroup != null)
+                    hash = hash * 59 + this.UsersOnDifferentEdgeGroup.GetHashCode();
                 if (this.UsersOnANonCampaignCall != null)
                     hash = hash * 59 + this.UsersOnANonCampaignCall.GetHashCode();
                 return hash;

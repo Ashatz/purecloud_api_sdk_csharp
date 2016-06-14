@@ -23,11 +23,13 @@ namespace ININ.PureCloudApi.Model
         /// <param name="AssociatedUser">AssociatedUser.</param>
         /// <param name="AssociatedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="DefaultUser">DefaultUser.</param>
-        public UserStation(User AssociatedUser = null, DateTime? AssociatedDate = null, User DefaultUser = null)
+        /// <param name="ProviderInfo">Provider-specific info for this station, e.g. { \&quot;edgeGroupId\&quot;: \&quot;ffe7b15c-a9cc-4f4c-88f5-781327819a49\&quot; }.</param>
+        public UserStation(User AssociatedUser = null, DateTime? AssociatedDate = null, User DefaultUser = null, Dictionary<string, string> ProviderInfo = null)
         {
             this.AssociatedUser = AssociatedUser;
             this.AssociatedDate = AssociatedDate;
             this.DefaultUser = DefaultUser;
+            this.ProviderInfo = ProviderInfo;
         }
         
         /// <summary>
@@ -53,6 +55,12 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="defaultUser", EmitDefaultValue=false)]
         public User DefaultUser { get; set; }
         /// <summary>
+        /// Provider-specific info for this station, e.g. { \&quot;edgeGroupId\&quot;: \&quot;ffe7b15c-a9cc-4f4c-88f5-781327819a49\&quot; }
+        /// </summary>
+        /// <value>Provider-specific info for this station, e.g. { \&quot;edgeGroupId\&quot;: \&quot;ffe7b15c-a9cc-4f4c-88f5-781327819a49\&quot; }</value>
+        [DataMember(Name="providerInfo", EmitDefaultValue=false)]
+        public Dictionary<string, string> ProviderInfo { get; set; }
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -64,6 +72,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  AssociatedUser: ").Append(AssociatedUser).Append("\n");
             sb.Append("  AssociatedDate: ").Append(AssociatedDate).Append("\n");
             sb.Append("  DefaultUser: ").Append(DefaultUser).Append("\n");
+            sb.Append("  ProviderInfo: ").Append(ProviderInfo).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -119,6 +128,11 @@ namespace ININ.PureCloudApi.Model
                     this.DefaultUser == other.DefaultUser ||
                     this.DefaultUser != null &&
                     this.DefaultUser.Equals(other.DefaultUser)
+                ) &&
+                (
+                    this.ProviderInfo == other.ProviderInfo ||
+                    this.ProviderInfo != null &&
+                    this.ProviderInfo.SequenceEqual(other.ProviderInfo)
                 );
         }
 
@@ -141,6 +155,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.AssociatedDate.GetHashCode();
                 if (this.DefaultUser != null)
                     hash = hash * 59 + this.DefaultUser.GetHashCode();
+                if (this.ProviderInfo != null)
+                    hash = hash * 59 + this.ProviderInfo.GetHashCode();
                 return hash;
             }
         }

@@ -3052,7 +3052,7 @@ namespace Example
 
 <a name="getprovidersedgesphones"></a>
 
-## [**PhoneEntityListing**](PhoneEntityListing.html) GetProvidersEdgesPhones (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string siteId = null, string phoneBaseSettingsId = null, string phoneHardwareId = null, List<string> expand = null, List<string> fields = null)
+## [**PhoneEntityListing**](PhoneEntityListing.html) GetProvidersEdgesPhones (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string siteId = null, string webRtcUserId = null, string phoneBaseSettingsId = null, string linesLoggedInUserId = null, string phoneHardwareId = null, List<string> expand = null, List<string> fields = null)
 
 Get a list of Phone Instances
 
@@ -3082,15 +3082,17 @@ namespace Example
             var sortBy = sortBy_example;  // string | Value by which to sort (optional)  (default to name)
             var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to ASC)
             var siteId = siteId_example;  // string | Filter by site.id (optional) 
+            var webRtcUserId = webRtcUserId_example;  // string | Filter by webRtcUser.id (optional) 
             var phoneBaseSettingsId = phoneBaseSettingsId_example;  // string | Filter by phoneBaseSettings.id (optional) 
+            var linesLoggedInUserId = linesLoggedInUserId_example;  // string | Filter by lines.loggedInUser.id (optional) 
             var phoneHardwareId = phoneHardwareId_example;  // string | Filter by phone_hardwareId (optional) 
             var expand = new List<string>(); // List<string> | Fields to expand in the response, comma-separated (optional) 
-            var fields = new List<string>(); // List<string> | Fields under properties to get, comma-separated (optional) 
+            var fields = new List<string>(); // List<string> | Fields and properties to get, comma-separated (optional) 
 
             try
             {
                 // Get a list of Phone Instances
-                PhoneEntityListing result = apiInstance.GetProvidersEdgesPhones(pageNumber, pageSize, sortBy, sortOrder, siteId, phoneBaseSettingsId, phoneHardwareId, expand, fields);
+                PhoneEntityListing result = apiInstance.GetProvidersEdgesPhones(pageNumber, pageSize, sortBy, sortOrder, siteId, webRtcUserId, phoneBaseSettingsId, linesLoggedInUserId, phoneHardwareId, expand, fields);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3112,10 +3114,12 @@ namespace Example
 | **sortBy** | **string**| Value by which to sort | [optional] [default to name] |
 | **sortOrder** | **string**| Sort order | [optional] [default to ASC] |
 | **siteId** | **string**| Filter by site.id | [optional]  |
+| **webRtcUserId** | **string**| Filter by webRtcUser.id | [optional]  |
 | **phoneBaseSettingsId** | **string**| Filter by phoneBaseSettings.id | [optional]  |
+| **linesLoggedInUserId** | **string**| Filter by lines.loggedInUser.id | [optional]  |
 | **phoneHardwareId** | **string**| Filter by phone_hardwareId | [optional]  |
 | **expand** | [**List<string>**](string.html)| Fields to expand in the response, comma-separated | [optional]  |
-| **fields** | [**List<string>**](string.html)| Fields under properties to get, comma-separated | [optional]  |
+| **fields** | [**List<string>**](string.html)| Fields and properties to get, comma-separated | [optional]  |
 {: class="table table-striped"}
 
 ### Return type

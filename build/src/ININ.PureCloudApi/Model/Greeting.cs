@@ -60,7 +60,13 @@ namespace ININ.PureCloudApi.Model
             /// Enum Organization for "ORGANIZATION"
             /// </summary>
             [EnumMember(Value = "ORGANIZATION")]
-            Organization
+            Organization,
+            
+            /// <summary>
+            /// Enum Group for "GROUP"
+            /// </summary>
+            [EnumMember(Value = "GROUP")]
+            Group
         }
 
         /// <summary>

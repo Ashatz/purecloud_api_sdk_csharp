@@ -71,7 +71,8 @@ namespace ININ.PureCloudApi.Model
         /// <param name="SecondaryStatus">The status of the phone and lines from the secondary Edge..</param>
         /// <param name="Properties">Properties.</param>
         /// <param name="Capabilities">Capabilities.</param>
-        public Phone(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, UriReference EdgeGroup = null, UriReference Site = null, UriReference PhoneBaseSettings = null, UriReference LineBaseSettings = null, UriReference PhoneMetaBase = null, List<Line> Lines = null, PhoneStatus Status = null, PhoneStatus SecondaryStatus = null, Dictionary<string, Object> Properties = null, PhoneCapabilities Capabilities = null)
+        /// <param name="WebRtcUser">This is the user associated with a WebRTC type phone.  It is required for all WebRTC phones..</param>
+        public Phone(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, UriReference EdgeGroup = null, UriReference Site = null, UriReference PhoneBaseSettings = null, UriReference LineBaseSettings = null, UriReference PhoneMetaBase = null, List<Line> Lines = null, PhoneStatus Status = null, PhoneStatus SecondaryStatus = null, Dictionary<string, Object> Properties = null, PhoneCapabilities Capabilities = null, UriReference WebRtcUser = null)
         {
             this.Name = Name;
             this.Description = Description;
@@ -93,6 +94,7 @@ namespace ININ.PureCloudApi.Model
             this.SecondaryStatus = SecondaryStatus;
             this.Properties = Properties;
             this.Capabilities = Capabilities;
+            this.WebRtcUser = WebRtcUser;
         }
         
         /// <summary>
@@ -201,6 +203,12 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="capabilities", EmitDefaultValue=false)]
         public PhoneCapabilities Capabilities { get; set; }
         /// <summary>
+        /// This is the user associated with a WebRTC type phone.  It is required for all WebRTC phones.
+        /// </summary>
+        /// <value>This is the user associated with a WebRTC type phone.  It is required for all WebRTC phones.</value>
+        [DataMember(Name="webRtcUser", EmitDefaultValue=false)]
+        public UriReference WebRtcUser { get; set; }
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -235,6 +243,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  SecondaryStatus: ").Append(SecondaryStatus).Append("\n");
             sb.Append("  Properties: ").Append(Properties).Append("\n");
             sb.Append("  Capabilities: ").Append(Capabilities).Append("\n");
+            sb.Append("  WebRtcUser: ").Append(WebRtcUser).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -378,6 +387,11 @@ namespace ININ.PureCloudApi.Model
                     this.Capabilities.Equals(other.Capabilities)
                 ) &&
                 (
+                    this.WebRtcUser == other.WebRtcUser ||
+                    this.WebRtcUser != null &&
+                    this.WebRtcUser.Equals(other.WebRtcUser)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -437,6 +451,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.Properties.GetHashCode();
                 if (this.Capabilities != null)
                     hash = hash * 59 + this.Capabilities.GetHashCode();
+                if (this.WebRtcUser != null)
+                    hash = hash * 59 + this.WebRtcUser.GetHashCode();
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;

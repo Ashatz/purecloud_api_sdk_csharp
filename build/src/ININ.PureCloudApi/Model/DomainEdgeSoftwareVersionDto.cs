@@ -24,23 +24,14 @@ namespace ININ.PureCloudApi.Model
         /// <param name="EdgeVersion">EdgeVersion.</param>
         /// <param name="PublishDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="EdgeUri">EdgeUri.</param>
-        /// <param name="LatestRelease">LatestRelease (default to false).</param>
         /// <param name="Current">Current (default to false).</param>
-        public DomainEdgeSoftwareVersionDto(string Name = null, string EdgeVersion = null, DateTime? PublishDate = null, string EdgeUri = null, bool? LatestRelease = null, bool? Current = null)
+        /// <param name="LatestRelease">LatestRelease (default to false).</param>
+        public DomainEdgeSoftwareVersionDto(string Name = null, string EdgeVersion = null, DateTime? PublishDate = null, string EdgeUri = null, bool? Current = null, bool? LatestRelease = null)
         {
             this.Name = Name;
             this.EdgeVersion = EdgeVersion;
             this.PublishDate = PublishDate;
             this.EdgeUri = EdgeUri;
-            // use default value if no "LatestRelease" provided
-            if (LatestRelease == null)
-            {
-                this.LatestRelease = false;
-            }
-            else
-            {
-                this.LatestRelease = LatestRelease;
-            }
             // use default value if no "Current" provided
             if (Current == null)
             {
@@ -49,6 +40,15 @@ namespace ININ.PureCloudApi.Model
             else
             {
                 this.Current = Current;
+            }
+            // use default value if no "LatestRelease" provided
+            if (LatestRelease == null)
+            {
+                this.LatestRelease = false;
+            }
+            else
+            {
+                this.LatestRelease = LatestRelease;
             }
         }
         
@@ -80,15 +80,15 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="edgeUri", EmitDefaultValue=false)]
         public string EdgeUri { get; set; }
         /// <summary>
-        /// Gets or Sets LatestRelease
-        /// </summary>
-        [DataMember(Name="latestRelease", EmitDefaultValue=false)]
-        public bool? LatestRelease { get; set; }
-        /// <summary>
         /// Gets or Sets Current
         /// </summary>
         [DataMember(Name="current", EmitDefaultValue=false)]
         public bool? Current { get; set; }
+        /// <summary>
+        /// Gets or Sets LatestRelease
+        /// </summary>
+        [DataMember(Name="latestRelease", EmitDefaultValue=false)]
+        public bool? LatestRelease { get; set; }
         /// <summary>
         /// The URI for this object
         /// </summary>
@@ -108,8 +108,8 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  EdgeVersion: ").Append(EdgeVersion).Append("\n");
             sb.Append("  PublishDate: ").Append(PublishDate).Append("\n");
             sb.Append("  EdgeUri: ").Append(EdgeUri).Append("\n");
-            sb.Append("  LatestRelease: ").Append(LatestRelease).Append("\n");
             sb.Append("  Current: ").Append(Current).Append("\n");
+            sb.Append("  LatestRelease: ").Append(LatestRelease).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -173,14 +173,14 @@ namespace ININ.PureCloudApi.Model
                     this.EdgeUri.Equals(other.EdgeUri)
                 ) &&
                 (
-                    this.LatestRelease == other.LatestRelease ||
-                    this.LatestRelease != null &&
-                    this.LatestRelease.Equals(other.LatestRelease)
-                ) &&
-                (
                     this.Current == other.Current ||
                     this.Current != null &&
                     this.Current.Equals(other.Current)
+                ) &&
+                (
+                    this.LatestRelease == other.LatestRelease ||
+                    this.LatestRelease != null &&
+                    this.LatestRelease.Equals(other.LatestRelease)
                 ) &&
                 (
                     this.SelfUri == other.SelfUri ||
@@ -210,10 +210,10 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.PublishDate.GetHashCode();
                 if (this.EdgeUri != null)
                     hash = hash * 59 + this.EdgeUri.GetHashCode();
-                if (this.LatestRelease != null)
-                    hash = hash * 59 + this.LatestRelease.GetHashCode();
                 if (this.Current != null)
                     hash = hash * 59 + this.Current.GetHashCode();
+                if (this.LatestRelease != null)
+                    hash = hash * 59 + this.LatestRelease.GetHashCode();
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;

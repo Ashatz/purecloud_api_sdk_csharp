@@ -51,6 +51,70 @@ namespace ININ.PureCloudApi.Test
         }
 
         /// <summary>
+        /// Test the property 'NodeType'
+        /// </summary>
+        [Test]
+        public void NodeTypeTest()
+        {
+            // TODO: unit test for the property 'NodeType'
+        }
+        /// <summary>
+        /// Test the property '_Float'
+        /// </summary>
+        [Test]
+        public void _FloatTest()
+        {
+            // TODO: unit test for the property '_Float'
+        }
+        /// <summary>
+        /// Test the property 'Boolean'
+        /// </summary>
+        [Test]
+        public void BooleanTest()
+        {
+            // TODO: unit test for the property 'Boolean'
+        }
+        /// <summary>
+        /// Test the property 'Number'
+        /// </summary>
+        [Test]
+        public void NumberTest()
+        {
+            // TODO: unit test for the property 'Number'
+        }
+        /// <summary>
+        /// Test the property '_Object'
+        /// </summary>
+        [Test]
+        public void _ObjectTest()
+        {
+            // TODO: unit test for the property '_Object'
+        }
+        /// <summary>
+        /// Test the property 'ValueNode'
+        /// </summary>
+        [Test]
+        public void ValueNodeTest()
+        {
+            // TODO: unit test for the property 'ValueNode'
+        }
+        /// <summary>
+        /// Test the property 'ContainerNode'
+        /// </summary>
+        [Test]
+        public void ContainerNodeTest()
+        {
+            // TODO: unit test for the property 'ContainerNode'
+        }
+        /// <summary>
+        /// Test the property 'MissingNode'
+        /// </summary>
+        [Test]
+        public void MissingNodeTest()
+        {
+            // TODO: unit test for the property 'MissingNode'
+        }
+        /// <summary>
         /// Test the property 'Pojo'
         /// </summary>
         [Test]
@@ -137,70 +201,6 @@ namespace ININ.PureCloudApi.Test
         public void BinaryTest()
         {
             // TODO: unit test for the property 'Binary'
-        }
-        /// <summary>
-        /// Test the property 'NodeType'
-        /// </summary>
-        [Test]
-        public void NodeTypeTest()
-        {
-            // TODO: unit test for the property 'NodeType'
-        }
-        /// <summary>
-        /// Test the property 'MissingNode'
-        /// </summary>
-        [Test]
-        public void MissingNodeTest()
-        {
-            // TODO: unit test for the property 'MissingNode'
-        }
-        /// <summary>
-        /// Test the property '_Float'
-        /// </summary>
-        [Test]
-        public void _FloatTest()
-        {
-            // TODO: unit test for the property '_Float'
-        }
-        /// <summary>
-        /// Test the property '_Object'
-        /// </summary>
-        [Test]
-        public void _ObjectTest()
-        {
-            // TODO: unit test for the property '_Object'
-        }
-        /// <summary>
-        /// Test the property 'Boolean'
-        /// </summary>
-        [Test]
-        public void BooleanTest()
-        {
-            // TODO: unit test for the property 'Boolean'
-        }
-        /// <summary>
-        /// Test the property 'Number'
-        /// </summary>
-        [Test]
-        public void NumberTest()
-        {
-            // TODO: unit test for the property 'Number'
-        }
-        /// <summary>
-        /// Test the property 'ValueNode'
-        /// </summary>
-        [Test]
-        public void ValueNodeTest()
-        {
-            // TODO: unit test for the property 'ValueNode'
-        }
-        /// <summary>
-        /// Test the property 'ContainerNode'
-        /// </summary>
-        [Test]
-        public void ContainerNodeTest()
-        {
-            // TODO: unit test for the property 'ContainerNode'
         }
         /// <summary>
         /// Test the property 'Array'

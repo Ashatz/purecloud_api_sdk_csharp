@@ -107,6 +107,14 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'UsersOnACampaignCall'
         }
         /// <summary>
+        /// Test the property 'UsersOnDifferentEdgeGroup'
+        /// </summary>
+        [Test]
+        public void UsersOnDifferentEdgeGroupTest()
+        {
+            // TODO: unit test for the property 'UsersOnDifferentEdgeGroup'
+        }
+        /// <summary>
         /// Test the property 'UsersOnANonCampaignCall'
         /// </summary>
         [Test]

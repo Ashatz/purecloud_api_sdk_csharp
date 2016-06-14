@@ -67,6 +67,20 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test DeleteConversationIdParticipantsParticipantIdCodesAddcommunicationcode
+        /// </summary>
+        [Test]
+        public void DeleteConversationIdParticipantsParticipantIdCodesAddcommunicationcodeTest()
+        {
+            // TODO: add unit test for the method 'DeleteConversationIdParticipantsParticipantIdCodesAddcommunicationcode'
+            string conversationId = null; // TODO: replace null with proper value
+            string participantId = null; // TODO: replace null with proper value
+            string addCommunicationCode = null; // TODO: replace null with proper value
+            instance.DeleteConversationIdParticipantsParticipantIdCodesAddcommunicationcode(conversationId, participantId, addCommunicationCode);
+            
+        }
+        
+        /// <summary>
         /// Test DeleteEmailsEmailIdMessagesDraftAttachmentsAttachmentId
         /// </summary>
         [Test]

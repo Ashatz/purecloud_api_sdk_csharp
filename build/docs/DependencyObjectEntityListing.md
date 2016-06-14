@@ -12,10 +12,10 @@ title: DependencyObjectEntityListing
 | **Total** | **long?** |  | [optional] |
 | **Entities** | [**List&lt;DependencyObject&gt;**](DependencyObject.html) |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
-| **LastUri** | **string** |  | [optional] |
-| **PreviousUri** | **string** |  | [optional] |
 | **FirstUri** | **string** |  | [optional] |
+| **PreviousUri** | **string** |  | [optional] |
 | **NextUri** | **string** |  | [optional] |
+| **LastUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
 {: class="table table-striped"}
 

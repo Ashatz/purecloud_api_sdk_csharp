@@ -1183,12 +1183,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Value by which to sort (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
         /// <param name="siteId">Filter by site.id (optional)</param>
+        /// <param name="webRtcUserId">Filter by webRtcUser.id (optional)</param>
         /// <param name="phoneBaseSettingsId">Filter by phoneBaseSettings.id (optional)</param>
+        /// <param name="linesLoggedInUserId">Filter by lines.loggedInUser.id (optional)</param>
         /// <param name="phoneHardwareId">Filter by phone_hardwareId (optional)</param>
         /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
-        /// <param name="fields">Fields under properties to get, comma-separated (optional)</param>
+        /// <param name="fields">Fields and properties to get, comma-separated (optional)</param>
         /// <returns>PhoneEntityListing</returns>
-        PhoneEntityListing GetProvidersEdgesPhones (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string siteId = null, string phoneBaseSettingsId = null, string phoneHardwareId = null, List<string> expand = null, List<string> fields = null);
+        PhoneEntityListing GetProvidersEdgesPhones (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string siteId = null, string webRtcUserId = null, string phoneBaseSettingsId = null, string linesLoggedInUserId = null, string phoneHardwareId = null, List<string> expand = null, List<string> fields = null);
 
         /// <summary>
         /// Get a list of Phone Instances
@@ -1202,12 +1204,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Value by which to sort (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
         /// <param name="siteId">Filter by site.id (optional)</param>
+        /// <param name="webRtcUserId">Filter by webRtcUser.id (optional)</param>
         /// <param name="phoneBaseSettingsId">Filter by phoneBaseSettings.id (optional)</param>
+        /// <param name="linesLoggedInUserId">Filter by lines.loggedInUser.id (optional)</param>
         /// <param name="phoneHardwareId">Filter by phone_hardwareId (optional)</param>
         /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
-        /// <param name="fields">Fields under properties to get, comma-separated (optional)</param>
+        /// <param name="fields">Fields and properties to get, comma-separated (optional)</param>
         /// <returns>ApiResponse of PhoneEntityListing</returns>
-        ApiResponse<PhoneEntityListing> GetProvidersEdgesPhonesWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string siteId = null, string phoneBaseSettingsId = null, string phoneHardwareId = null, List<string> expand = null, List<string> fields = null);
+        ApiResponse<PhoneEntityListing> GetProvidersEdgesPhonesWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string siteId = null, string webRtcUserId = null, string phoneBaseSettingsId = null, string linesLoggedInUserId = null, string phoneHardwareId = null, List<string> expand = null, List<string> fields = null);
         /// <summary>
         /// Get a Phone by ID
         /// </summary>
@@ -3688,12 +3692,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Value by which to sort (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
         /// <param name="siteId">Filter by site.id (optional)</param>
+        /// <param name="webRtcUserId">Filter by webRtcUser.id (optional)</param>
         /// <param name="phoneBaseSettingsId">Filter by phoneBaseSettings.id (optional)</param>
+        /// <param name="linesLoggedInUserId">Filter by lines.loggedInUser.id (optional)</param>
         /// <param name="phoneHardwareId">Filter by phone_hardwareId (optional)</param>
         /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
-        /// <param name="fields">Fields under properties to get, comma-separated (optional)</param>
+        /// <param name="fields">Fields and properties to get, comma-separated (optional)</param>
         /// <returns>Task of PhoneEntityListing</returns>
-        System.Threading.Tasks.Task<PhoneEntityListing> GetProvidersEdgesPhonesAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string siteId = null, string phoneBaseSettingsId = null, string phoneHardwareId = null, List<string> expand = null, List<string> fields = null);
+        System.Threading.Tasks.Task<PhoneEntityListing> GetProvidersEdgesPhonesAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string siteId = null, string webRtcUserId = null, string phoneBaseSettingsId = null, string linesLoggedInUserId = null, string phoneHardwareId = null, List<string> expand = null, List<string> fields = null);
 
         /// <summary>
         /// Get a list of Phone Instances
@@ -3707,12 +3713,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Value by which to sort (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
         /// <param name="siteId">Filter by site.id (optional)</param>
+        /// <param name="webRtcUserId">Filter by webRtcUser.id (optional)</param>
         /// <param name="phoneBaseSettingsId">Filter by phoneBaseSettings.id (optional)</param>
+        /// <param name="linesLoggedInUserId">Filter by lines.loggedInUser.id (optional)</param>
         /// <param name="phoneHardwareId">Filter by phone_hardwareId (optional)</param>
         /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
-        /// <param name="fields">Fields under properties to get, comma-separated (optional)</param>
+        /// <param name="fields">Fields and properties to get, comma-separated (optional)</param>
         /// <returns>Task of ApiResponse (PhoneEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PhoneEntityListing>> GetProvidersEdgesPhonesAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string siteId = null, string phoneBaseSettingsId = null, string phoneHardwareId = null, List<string> expand = null, List<string> fields = null);
+        System.Threading.Tasks.Task<ApiResponse<PhoneEntityListing>> GetProvidersEdgesPhonesAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string siteId = null, string webRtcUserId = null, string phoneBaseSettingsId = null, string linesLoggedInUserId = null, string phoneHardwareId = null, List<string> expand = null, List<string> fields = null);
         /// <summary>
         /// Get a Phone by ID
         /// </summary>
@@ -13120,14 +13128,16 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Value by which to sort (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
         /// <param name="siteId">Filter by site.id (optional)</param>
+        /// <param name="webRtcUserId">Filter by webRtcUser.id (optional)</param>
         /// <param name="phoneBaseSettingsId">Filter by phoneBaseSettings.id (optional)</param>
+        /// <param name="linesLoggedInUserId">Filter by lines.loggedInUser.id (optional)</param>
         /// <param name="phoneHardwareId">Filter by phone_hardwareId (optional)</param>
         /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
-        /// <param name="fields">Fields under properties to get, comma-separated (optional)</param>
+        /// <param name="fields">Fields and properties to get, comma-separated (optional)</param>
         /// <returns>PhoneEntityListing</returns>
-        public PhoneEntityListing GetProvidersEdgesPhones (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string siteId = null, string phoneBaseSettingsId = null, string phoneHardwareId = null, List<string> expand = null, List<string> fields = null)
+        public PhoneEntityListing GetProvidersEdgesPhones (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string siteId = null, string webRtcUserId = null, string phoneBaseSettingsId = null, string linesLoggedInUserId = null, string phoneHardwareId = null, List<string> expand = null, List<string> fields = null)
         {
-             ApiResponse<PhoneEntityListing> localVarResponse = GetProvidersEdgesPhonesWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, siteId, phoneBaseSettingsId, phoneHardwareId, expand, fields);
+             ApiResponse<PhoneEntityListing> localVarResponse = GetProvidersEdgesPhonesWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, siteId, webRtcUserId, phoneBaseSettingsId, linesLoggedInUserId, phoneHardwareId, expand, fields);
              return localVarResponse.Data;
         }
 
@@ -13140,12 +13150,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Value by which to sort (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
         /// <param name="siteId">Filter by site.id (optional)</param>
+        /// <param name="webRtcUserId">Filter by webRtcUser.id (optional)</param>
         /// <param name="phoneBaseSettingsId">Filter by phoneBaseSettings.id (optional)</param>
+        /// <param name="linesLoggedInUserId">Filter by lines.loggedInUser.id (optional)</param>
         /// <param name="phoneHardwareId">Filter by phone_hardwareId (optional)</param>
         /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
-        /// <param name="fields">Fields under properties to get, comma-separated (optional)</param>
+        /// <param name="fields">Fields and properties to get, comma-separated (optional)</param>
         /// <returns>ApiResponse of PhoneEntityListing</returns>
-        public ApiResponse< PhoneEntityListing > GetProvidersEdgesPhonesWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string siteId = null, string phoneBaseSettingsId = null, string phoneHardwareId = null, List<string> expand = null, List<string> fields = null)
+        public ApiResponse< PhoneEntityListing > GetProvidersEdgesPhonesWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string siteId = null, string webRtcUserId = null, string phoneBaseSettingsId = null, string linesLoggedInUserId = null, string phoneHardwareId = null, List<string> expand = null, List<string> fields = null)
         {
 
             var localVarPath = "/api/v2/telephony/providers/edges/phones";
@@ -13178,7 +13190,9 @@ namespace ININ.PureCloudApi.Api
             if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
             if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
             if (siteId != null) localVarQueryParams.Add("site.id", Configuration.ApiClient.ParameterToString(siteId)); // query parameter
+            if (webRtcUserId != null) localVarQueryParams.Add("webRtcUser.id", Configuration.ApiClient.ParameterToString(webRtcUserId)); // query parameter
             if (phoneBaseSettingsId != null) localVarQueryParams.Add("phoneBaseSettings.id", Configuration.ApiClient.ParameterToString(phoneBaseSettingsId)); // query parameter
+            if (linesLoggedInUserId != null) localVarQueryParams.Add("lines.loggedInUser.id", Configuration.ApiClient.ParameterToString(linesLoggedInUserId)); // query parameter
             if (phoneHardwareId != null) localVarQueryParams.Add("phone_hardwareId", Configuration.ApiClient.ParameterToString(phoneHardwareId)); // query parameter
             if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
             if (fields != null) localVarQueryParams.Add("fields", Configuration.ApiClient.ParameterToString(fields)); // query parameter
@@ -13217,14 +13231,16 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Value by which to sort (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
         /// <param name="siteId">Filter by site.id (optional)</param>
+        /// <param name="webRtcUserId">Filter by webRtcUser.id (optional)</param>
         /// <param name="phoneBaseSettingsId">Filter by phoneBaseSettings.id (optional)</param>
+        /// <param name="linesLoggedInUserId">Filter by lines.loggedInUser.id (optional)</param>
         /// <param name="phoneHardwareId">Filter by phone_hardwareId (optional)</param>
         /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
-        /// <param name="fields">Fields under properties to get, comma-separated (optional)</param>
+        /// <param name="fields">Fields and properties to get, comma-separated (optional)</param>
         /// <returns>Task of PhoneEntityListing</returns>
-        public async System.Threading.Tasks.Task<PhoneEntityListing> GetProvidersEdgesPhonesAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string siteId = null, string phoneBaseSettingsId = null, string phoneHardwareId = null, List<string> expand = null, List<string> fields = null)
+        public async System.Threading.Tasks.Task<PhoneEntityListing> GetProvidersEdgesPhonesAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string siteId = null, string webRtcUserId = null, string phoneBaseSettingsId = null, string linesLoggedInUserId = null, string phoneHardwareId = null, List<string> expand = null, List<string> fields = null)
         {
-             ApiResponse<PhoneEntityListing> localVarResponse = await GetProvidersEdgesPhonesAsyncWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, siteId, phoneBaseSettingsId, phoneHardwareId, expand, fields);
+             ApiResponse<PhoneEntityListing> localVarResponse = await GetProvidersEdgesPhonesAsyncWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, siteId, webRtcUserId, phoneBaseSettingsId, linesLoggedInUserId, phoneHardwareId, expand, fields);
              return localVarResponse.Data;
 
         }
@@ -13238,12 +13254,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Value by which to sort (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
         /// <param name="siteId">Filter by site.id (optional)</param>
+        /// <param name="webRtcUserId">Filter by webRtcUser.id (optional)</param>
         /// <param name="phoneBaseSettingsId">Filter by phoneBaseSettings.id (optional)</param>
+        /// <param name="linesLoggedInUserId">Filter by lines.loggedInUser.id (optional)</param>
         /// <param name="phoneHardwareId">Filter by phone_hardwareId (optional)</param>
         /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
-        /// <param name="fields">Fields under properties to get, comma-separated (optional)</param>
+        /// <param name="fields">Fields and properties to get, comma-separated (optional)</param>
         /// <returns>Task of ApiResponse (PhoneEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PhoneEntityListing>> GetProvidersEdgesPhonesAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string siteId = null, string phoneBaseSettingsId = null, string phoneHardwareId = null, List<string> expand = null, List<string> fields = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PhoneEntityListing>> GetProvidersEdgesPhonesAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string siteId = null, string webRtcUserId = null, string phoneBaseSettingsId = null, string linesLoggedInUserId = null, string phoneHardwareId = null, List<string> expand = null, List<string> fields = null)
         {
 
             var localVarPath = "/api/v2/telephony/providers/edges/phones";
@@ -13276,7 +13294,9 @@ namespace ININ.PureCloudApi.Api
             if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
             if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
             if (siteId != null) localVarQueryParams.Add("site.id", Configuration.ApiClient.ParameterToString(siteId)); // query parameter
+            if (webRtcUserId != null) localVarQueryParams.Add("webRtcUser.id", Configuration.ApiClient.ParameterToString(webRtcUserId)); // query parameter
             if (phoneBaseSettingsId != null) localVarQueryParams.Add("phoneBaseSettings.id", Configuration.ApiClient.ParameterToString(phoneBaseSettingsId)); // query parameter
+            if (linesLoggedInUserId != null) localVarQueryParams.Add("lines.loggedInUser.id", Configuration.ApiClient.ParameterToString(linesLoggedInUserId)); // query parameter
             if (phoneHardwareId != null) localVarQueryParams.Add("phone_hardwareId", Configuration.ApiClient.ParameterToString(phoneHardwareId)); // query parameter
             if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
             if (fields != null) localVarQueryParams.Add("fields", Configuration.ApiClient.ParameterToString(fields)); // query parameter

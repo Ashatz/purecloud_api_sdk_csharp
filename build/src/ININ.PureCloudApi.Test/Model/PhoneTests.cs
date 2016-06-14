@@ -219,6 +219,14 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'Capabilities'
         }
         /// <summary>
+        /// Test the property 'WebRtcUser'
+        /// </summary>
+        [Test]
+        public void WebRtcUserTest()
+        {
+            // TODO: unit test for the property 'WebRtcUser'
+        }
+        /// <summary>
         /// Test the property 'SelfUri'
         /// </summary>
         [Test]

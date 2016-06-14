@@ -720,11 +720,13 @@ namespace ININ.PureCloudApi.Test
             string sortBy = null; // TODO: replace null with proper value
             string sortOrder = null; // TODO: replace null with proper value
             string siteId = null; // TODO: replace null with proper value
+            string webRtcUserId = null; // TODO: replace null with proper value
             string phoneBaseSettingsId = null; // TODO: replace null with proper value
+            string linesLoggedInUserId = null; // TODO: replace null with proper value
             string phoneHardwareId = null; // TODO: replace null with proper value
             List<string> expand = null; // TODO: replace null with proper value
             List<string> fields = null; // TODO: replace null with proper value
-            var response = instance.GetProvidersEdgesPhones(pageNumber, pageSize, sortBy, sortOrder, siteId, phoneBaseSettingsId, phoneHardwareId, expand, fields);
+            var response = instance.GetProvidersEdgesPhones(pageNumber, pageSize, sortBy, sortOrder, siteId, webRtcUserId, phoneBaseSettingsId, linesLoggedInUserId, phoneHardwareId, expand, fields);
             Assert.IsInstanceOf<PhoneEntityListing> (response, "response is PhoneEntityListing");
         }
         
