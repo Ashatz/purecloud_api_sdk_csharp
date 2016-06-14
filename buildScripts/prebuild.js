@@ -59,7 +59,8 @@ function writeConfig() {
 	    "packageProductName":"PureCloudPublicAPILibrary",
 	    "packageDescription":"A .NET library to interface with the PureCloud Public API",
 	    "packageCompany":"Interactive Intelligence, Inc.",
-	    "packageCopyright":"Copyright © Interactive Intelligence, Inc. 2015"
+	    "packageCopyright":"Copyright © Interactive Intelligence, Inc. 2016",
+	    "httpUserAgent":"PureCloud SDK"
 	};
 
 	fs.writeFile('bin/config-csharp.json', JSON.stringify(config), function(err) {
