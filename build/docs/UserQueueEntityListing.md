@@ -13,9 +13,9 @@ title: UserQueueEntityListing
 | **Entities** | [**List&lt;UserQueue&gt;**](UserQueue.html) |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
 | **FirstUri** | **string** |  | [optional] |
-| **PreviousUri** | **string** |  | [optional] |
-| **NextUri** | **string** |  | [optional] |
 | **LastUri** | **string** |  | [optional] |
+| **NextUri** | **string** |  | [optional] |
+| **PreviousUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
 {: class="table table-striped"}
 

@@ -13,9 +13,9 @@ title: TextTableTransformEntityListing
 | **Entities** | [**List&lt;ClientTextTableTransform&gt;**](ClientTextTableTransform.html) |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
 | **FirstUri** | **string** |  | [optional] |
-| **PreviousUri** | **string** |  | [optional] |
-| **NextUri** | **string** |  | [optional] |
 | **LastUri** | **string** |  | [optional] |
+| **NextUri** | **string** |  | [optional] |
+| **PreviousUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
 {: class="table table-striped"}
 
