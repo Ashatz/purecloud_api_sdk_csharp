@@ -12,8 +12,8 @@ title: UserActionMetadataEntityListing
 | **Entities** | [**List&lt;UserActionMetadata&gt;**](UserActionMetadata.html) |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
 | **FirstUri** | **string** |  | [optional] |
-| **NextUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
+| **NextUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
 {: class="table table-striped"}
 

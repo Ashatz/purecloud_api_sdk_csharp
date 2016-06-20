@@ -91,6 +91,30 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property '_Object'
         }
         /// <summary>
+        /// Test the property 'ValueNode'
+        /// </summary>
+        [Test]
+        public void ValueNodeTest()
+        {
+            // TODO: unit test for the property 'ValueNode'
+        }
+        /// <summary>
+        /// Test the property 'ContainerNode'
+        /// </summary>
+        [Test]
+        public void ContainerNodeTest()
+        {
+            // TODO: unit test for the property 'ContainerNode'
+        }
+        /// <summary>
+        /// Test the property 'MissingNode'
+        /// </summary>
+        [Test]
+        public void MissingNodeTest()
+        {
+            // TODO: unit test for the property 'MissingNode'
+        }
+        /// <summary>
         /// Test the property 'Pojo'
         /// </summary>
         [Test]
@@ -177,30 +201,6 @@ namespace ININ.PureCloudApi.Test
         public void BinaryTest()
         {
             // TODO: unit test for the property 'Binary'
-        }
-        /// <summary>
-        /// Test the property 'ValueNode'
-        /// </summary>
-        [Test]
-        public void ValueNodeTest()
-        {
-            // TODO: unit test for the property 'ValueNode'
-        }
-        /// <summary>
-        /// Test the property 'ContainerNode'
-        /// </summary>
-        [Test]
-        public void ContainerNodeTest()
-        {
-            // TODO: unit test for the property 'ContainerNode'
-        }
-        /// <summary>
-        /// Test the property 'MissingNode'
-        /// </summary>
-        [Test]
-        public void MissingNodeTest()
-        {
-            // TODO: unit test for the property 'MissingNode'
         }
         /// <summary>
         /// Test the property 'Array'

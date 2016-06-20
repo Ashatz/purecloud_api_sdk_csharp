@@ -13,9 +13,9 @@ title: VideoConversationEntityListing
 | **Entities** | [**List&lt;VideoConversation&gt;**](VideoConversation.html) |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
 | **FirstUri** | **string** |  | [optional] |
-| **LastUri** | **string** |  | [optional] |
-| **NextUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
+| **NextUri** | **string** |  | [optional] |
+| **LastUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
 {: class="table table-striped"}
 
