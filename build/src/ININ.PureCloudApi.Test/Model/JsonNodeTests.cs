@@ -67,6 +67,14 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property '_Float'
         }
         /// <summary>
+        /// Test the property '_Object'
+        /// </summary>
+        [Test]
+        public void _ObjectTest()
+        {
+            // TODO: unit test for the property '_Object'
+        }
+        /// <summary>
         /// Test the property 'Boolean'
         /// </summary>
         [Test]
@@ -83,20 +91,20 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'Number'
         }
         /// <summary>
-        /// Test the property '_Object'
-        /// </summary>
-        [Test]
-        public void _ObjectTest()
-        {
-            // TODO: unit test for the property '_Object'
-        }
-        /// <summary>
         /// Test the property 'ValueNode'
         /// </summary>
         [Test]
         public void ValueNodeTest()
         {
             // TODO: unit test for the property 'ValueNode'
+        }
+        /// <summary>
+        /// Test the property 'FloatingPointNumber'
+        /// </summary>
+        [Test]
+        public void FloatingPointNumberTest()
+        {
+            // TODO: unit test for the property 'FloatingPointNumber'
         }
         /// <summary>
         /// Test the property 'ContainerNode'
@@ -129,14 +137,6 @@ namespace ININ.PureCloudApi.Test
         public void IntegralNumberTest()
         {
             // TODO: unit test for the property 'IntegralNumber'
-        }
-        /// <summary>
-        /// Test the property 'FloatingPointNumber'
-        /// </summary>
-        [Test]
-        public void FloatingPointNumberTest()
-        {
-            // TODO: unit test for the property 'FloatingPointNumber'
         }
         /// <summary>
         /// Test the property '_Short'
