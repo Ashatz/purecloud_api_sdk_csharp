@@ -20,25 +20,47 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ReportSchedule" /> class.
         /// </summary>
+        [JsonConstructorAttribute]
+        protected ReportSchedule() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ReportSchedule" /> class.
+        /// </summary>
         /// <param name="Name">Name.</param>
-        /// <param name="QuartzCronExpression">QuartzCronExpression.</param>
+        /// <param name="QuartzCronExpression">Quartz Cron Expression (required).</param>
         /// <param name="NextFireTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="DateCreated">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="DateModified">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="Description">Description.</param>
         /// <param name="TimeZone">TimeZone.</param>
         /// <param name="TimePeriod">TimePeriod.</param>
-        /// <param name="Interval">Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss.</param>
+        /// <param name="Interval">Interval. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss.</param>
         /// <param name="ReportFormat">ReportFormat.</param>
         /// <param name="Locale">Locale.</param>
         /// <param name="Enabled">Enabled (default to false).</param>
-        /// <param name="ReportId">ReportId.</param>
+        /// <param name="ReportId">Report ID (required).</param>
         /// <param name="Parameters">Parameters.</param>
         /// <param name="LastRun">LastRun.</param>
         public ReportSchedule(string Name = null, string QuartzCronExpression = null, DateTime? NextFireTime = null, DateTime? DateCreated = null, DateTime? DateModified = null, string Description = null, string TimeZone = null, string TimePeriod = null, string Interval = null, string ReportFormat = null, string Locale = null, bool? Enabled = null, string ReportId = null, Dictionary<string, Object> Parameters = null, ReportRunEntry LastRun = null)
         {
+            // to ensure "QuartzCronExpression" is required (not null)
+            if (QuartzCronExpression == null)
+            {
+                throw new InvalidDataException("QuartzCronExpression is a required property for ReportSchedule and cannot be null");
+            }
+            else
+            {
+                this.QuartzCronExpression = QuartzCronExpression;
+            }
+            // to ensure "ReportId" is required (not null)
+            if (ReportId == null)
+            {
+                throw new InvalidDataException("ReportId is a required property for ReportSchedule and cannot be null");
+            }
+            else
+            {
+                this.ReportId = ReportId;
+            }
             this.Name = Name;
-            this.QuartzCronExpression = QuartzCronExpression;
             this.NextFireTime = NextFireTime;
             this.DateCreated = DateCreated;
             this.DateModified = DateModified;
@@ -57,7 +79,6 @@ namespace ININ.PureCloudApi.Model
             {
                 this.Enabled = Enabled;
             }
-            this.ReportId = ReportId;
             this.Parameters = Parameters;
             this.LastRun = LastRun;
         }
@@ -74,8 +95,9 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
         /// <summary>
-        /// Gets or Sets QuartzCronExpression
+        /// Quartz Cron Expression
         /// </summary>
+        /// <value>Quartz Cron Expression</value>
         [DataMember(Name="quartzCronExpression", EmitDefaultValue=false)]
         public string QuartzCronExpression { get; set; }
         /// <summary>
@@ -112,9 +134,9 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="timePeriod", EmitDefaultValue=false)]
         public string TimePeriod { get; set; }
         /// <summary>
-        /// Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss
+        /// Interval. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss
         /// </summary>
-        /// <value>Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss</value>
+        /// <value>Interval. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss</value>
         [DataMember(Name="interval", EmitDefaultValue=false)]
         public string Interval { get; set; }
         /// <summary>
@@ -133,8 +155,9 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="enabled", EmitDefaultValue=false)]
         public bool? Enabled { get; set; }
         /// <summary>
-        /// Gets or Sets ReportId
+        /// Report ID
         /// </summary>
+        /// <value>Report ID</value>
         [DataMember(Name="reportId", EmitDefaultValue=false)]
         public string ReportId { get; set; }
         /// <summary>

@@ -99,8 +99,14 @@ namespace ININ.PureCloudApi.Model
         /// <param name="RoomId">RoomId.</param>
         /// <param name="MonitoredSessionId">MonitoredSessionId.</param>
         /// <param name="MonitoredParticipantId">MonitoredParticipantId.</param>
+        /// <param name="CallbackUserName">CallbackUserName.</param>
+        /// <param name="CallbackNumbers">CallbackNumbers.</param>
+        /// <param name="CallbackScheduledTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="ScriptId">ScriptId.</param>
+        /// <param name="SkipEnabled">SkipEnabled (default to false).</param>
+        /// <param name="TimeoutSeconds">TimeoutSeconds.</param>
         /// <param name="Segments">Segments.</param>
-        public AnalyticsSession(MediaTypeEnum? MediaType = null, string SessionId = null, string AddressOther = null, string AddressSelf = null, string Ani = null, DirectionEnum? Direction = null, string Dnis = null, string OutboundCampaignId = null, string OutboundContactId = null, string OutboundContactListId = null, string DispositionAnalyzer = null, string DispositionName = null, string EdgeId = null, string RemoteNameDisplayable = null, string RoomId = null, string MonitoredSessionId = null, string MonitoredParticipantId = null, List<AnalyticsConversationSegment> Segments = null)
+        public AnalyticsSession(MediaTypeEnum? MediaType = null, string SessionId = null, string AddressOther = null, string AddressSelf = null, string Ani = null, DirectionEnum? Direction = null, string Dnis = null, string OutboundCampaignId = null, string OutboundContactId = null, string OutboundContactListId = null, string DispositionAnalyzer = null, string DispositionName = null, string EdgeId = null, string RemoteNameDisplayable = null, string RoomId = null, string MonitoredSessionId = null, string MonitoredParticipantId = null, string CallbackUserName = null, List<string> CallbackNumbers = null, DateTime? CallbackScheduledTime = null, string ScriptId = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, List<AnalyticsConversationSegment> Segments = null)
         {
             this.MediaType = MediaType;
             this.SessionId = SessionId;
@@ -119,6 +125,20 @@ namespace ININ.PureCloudApi.Model
             this.RoomId = RoomId;
             this.MonitoredSessionId = MonitoredSessionId;
             this.MonitoredParticipantId = MonitoredParticipantId;
+            this.CallbackUserName = CallbackUserName;
+            this.CallbackNumbers = CallbackNumbers;
+            this.CallbackScheduledTime = CallbackScheduledTime;
+            this.ScriptId = ScriptId;
+            // use default value if no "SkipEnabled" provided
+            if (SkipEnabled == null)
+            {
+                this.SkipEnabled = false;
+            }
+            else
+            {
+                this.SkipEnabled = SkipEnabled;
+            }
+            this.TimeoutSeconds = TimeoutSeconds;
             this.Segments = Segments;
         }
         
@@ -198,6 +218,37 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="monitoredParticipantId", EmitDefaultValue=false)]
         public string MonitoredParticipantId { get; set; }
         /// <summary>
+        /// Gets or Sets CallbackUserName
+        /// </summary>
+        [DataMember(Name="callbackUserName", EmitDefaultValue=false)]
+        public string CallbackUserName { get; set; }
+        /// <summary>
+        /// Gets or Sets CallbackNumbers
+        /// </summary>
+        [DataMember(Name="callbackNumbers", EmitDefaultValue=false)]
+        public List<string> CallbackNumbers { get; set; }
+        /// <summary>
+        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// </summary>
+        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        [DataMember(Name="callbackScheduledTime", EmitDefaultValue=false)]
+        public DateTime? CallbackScheduledTime { get; set; }
+        /// <summary>
+        /// Gets or Sets ScriptId
+        /// </summary>
+        [DataMember(Name="scriptId", EmitDefaultValue=false)]
+        public string ScriptId { get; set; }
+        /// <summary>
+        /// Gets or Sets SkipEnabled
+        /// </summary>
+        [DataMember(Name="skipEnabled", EmitDefaultValue=false)]
+        public bool? SkipEnabled { get; set; }
+        /// <summary>
+        /// Gets or Sets TimeoutSeconds
+        /// </summary>
+        [DataMember(Name="timeoutSeconds", EmitDefaultValue=false)]
+        public int? TimeoutSeconds { get; set; }
+        /// <summary>
         /// Gets or Sets Segments
         /// </summary>
         [DataMember(Name="segments", EmitDefaultValue=false)]
@@ -227,6 +278,12 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  RoomId: ").Append(RoomId).Append("\n");
             sb.Append("  MonitoredSessionId: ").Append(MonitoredSessionId).Append("\n");
             sb.Append("  MonitoredParticipantId: ").Append(MonitoredParticipantId).Append("\n");
+            sb.Append("  CallbackUserName: ").Append(CallbackUserName).Append("\n");
+            sb.Append("  CallbackNumbers: ").Append(CallbackNumbers).Append("\n");
+            sb.Append("  CallbackScheduledTime: ").Append(CallbackScheduledTime).Append("\n");
+            sb.Append("  ScriptId: ").Append(ScriptId).Append("\n");
+            sb.Append("  SkipEnabled: ").Append(SkipEnabled).Append("\n");
+            sb.Append("  TimeoutSeconds: ").Append(TimeoutSeconds).Append("\n");
             sb.Append("  Segments: ").Append(Segments).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -350,6 +407,36 @@ namespace ININ.PureCloudApi.Model
                     this.MonitoredParticipantId.Equals(other.MonitoredParticipantId)
                 ) &&
                 (
+                    this.CallbackUserName == other.CallbackUserName ||
+                    this.CallbackUserName != null &&
+                    this.CallbackUserName.Equals(other.CallbackUserName)
+                ) &&
+                (
+                    this.CallbackNumbers == other.CallbackNumbers ||
+                    this.CallbackNumbers != null &&
+                    this.CallbackNumbers.SequenceEqual(other.CallbackNumbers)
+                ) &&
+                (
+                    this.CallbackScheduledTime == other.CallbackScheduledTime ||
+                    this.CallbackScheduledTime != null &&
+                    this.CallbackScheduledTime.Equals(other.CallbackScheduledTime)
+                ) &&
+                (
+                    this.ScriptId == other.ScriptId ||
+                    this.ScriptId != null &&
+                    this.ScriptId.Equals(other.ScriptId)
+                ) &&
+                (
+                    this.SkipEnabled == other.SkipEnabled ||
+                    this.SkipEnabled != null &&
+                    this.SkipEnabled.Equals(other.SkipEnabled)
+                ) &&
+                (
+                    this.TimeoutSeconds == other.TimeoutSeconds ||
+                    this.TimeoutSeconds != null &&
+                    this.TimeoutSeconds.Equals(other.TimeoutSeconds)
+                ) &&
+                (
                     this.Segments == other.Segments ||
                     this.Segments != null &&
                     this.Segments.SequenceEqual(other.Segments)
@@ -401,6 +488,18 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.MonitoredSessionId.GetHashCode();
                 if (this.MonitoredParticipantId != null)
                     hash = hash * 59 + this.MonitoredParticipantId.GetHashCode();
+                if (this.CallbackUserName != null)
+                    hash = hash * 59 + this.CallbackUserName.GetHashCode();
+                if (this.CallbackNumbers != null)
+                    hash = hash * 59 + this.CallbackNumbers.GetHashCode();
+                if (this.CallbackScheduledTime != null)
+                    hash = hash * 59 + this.CallbackScheduledTime.GetHashCode();
+                if (this.ScriptId != null)
+                    hash = hash * 59 + this.ScriptId.GetHashCode();
+                if (this.SkipEnabled != null)
+                    hash = hash * 59 + this.SkipEnabled.GetHashCode();
+                if (this.TimeoutSeconds != null)
+                    hash = hash * 59 + this.TimeoutSeconds.GetHashCode();
                 if (this.Segments != null)
                     hash = hash * 59 + this.Segments.GetHashCode();
                 return hash;

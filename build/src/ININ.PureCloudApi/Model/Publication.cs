@@ -20,18 +20,31 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Publication" /> class.
         /// </summary>
+        [JsonConstructorAttribute]
+        protected Publication() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Publication" /> class.
+        /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="DateCreated">Creation date for the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="DateModified">Date the entity was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        /// <param name="TweetText">The text of the tweet..</param>
+        /// <param name="TweetText">The text of the tweet. (required).</param>
         /// <param name="RawTweetText">The raw text of the tweet.</param>
         /// <param name="Approved">Approved (default to false).</param>
         public Publication(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, string TweetText = null, string RawTweetText = null, bool? Approved = null)
         {
+            // to ensure "TweetText" is required (not null)
+            if (TweetText == null)
+            {
+                throw new InvalidDataException("TweetText is a required property for Publication and cannot be null");
+            }
+            else
+            {
+                this.TweetText = TweetText;
+            }
             this.Name = Name;
             this.DateCreated = DateCreated;
             this.DateModified = DateModified;
-            this.TweetText = TweetText;
             this.RawTweetText = RawTweetText;
             // use default value if no "Approved" provided
             if (Approved == null)

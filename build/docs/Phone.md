@@ -19,11 +19,11 @@ title: Phone
 | **ModifiedByApp** | **string** |  | [optional] |
 | **CreatedByApp** | **string** |  | [optional] |
 | **EdgeGroup** | [**UriReference**](UriReference.html) |  | [optional] |
-| **Site** | [**UriReference**](UriReference.html) |  | [optional] |
-| **PhoneBaseSettings** | [**UriReference**](UriReference.html) |  | [optional] |
+| **Site** | [**UriReference**](UriReference.html) | Site | |
+| **PhoneBaseSettings** | [**UriReference**](UriReference.html) | Phone Base Settings | |
 | **LineBaseSettings** | [**UriReference**](UriReference.html) |  | [optional] |
 | **PhoneMetaBase** | [**UriReference**](UriReference.html) |  | [optional] |
-| **Lines** | [**List&lt;Line&gt;**](Line.html) |  | [optional] |
+| **Lines** | [**List&lt;Line&gt;**](Line.html) | Lines | |
 | **Status** | [**PhoneStatus**](PhoneStatus.html) | The status of the phone and lines from the primary Edge. | [optional] |
 | **SecondaryStatus** | [**PhoneStatus**](PhoneStatus.html) | The status of the phone and lines from the secondary Edge. | [optional] |
 | **Properties** | **Dictionary&lt;string, Object&gt;** |  | [optional] |

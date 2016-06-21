@@ -162,7 +162,13 @@ namespace ININ.PureCloudApi.Model
             /// Enum Voicemail for "voicemail"
             /// </summary>
             [EnumMember(Value = "voicemail")]
-            Voicemail
+            Voicemail,
+            
+            /// <summary>
+            /// Enum Scheduled for "scheduled"
+            /// </summary>
+            [EnumMember(Value = "scheduled")]
+            Scheduled
         }
 
         /// <summary>

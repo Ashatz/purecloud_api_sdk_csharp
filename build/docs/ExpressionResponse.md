@@ -15,7 +15,7 @@ title: ExpressionResponse
 | **Conversation** | [**Conversation**](Conversation.html) | The conversation that this response is a part of. | [optional] |
 | **TwitterExpression** | [**TwitterExpression**](TwitterExpression.html) | The twitter expression that this is in response to. | [optional] |
 | **RawResponseText** | **string** | The raw text of the response. | [optional] |
-| **SocialAccount** | [**SocialAccount**](SocialAccount.html) | The Social Account used to publish this expression | [optional] |
+| **SocialAccount** | [**SocialAccount**](SocialAccount.html) | The Social Account used to publish this expression | |
 | **SocialHubResponseId** | **string** | The id given to this response from the social hub | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}

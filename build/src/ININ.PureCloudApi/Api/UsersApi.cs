@@ -149,10 +149,10 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"> (optional)</param>
+        /// <param name="q64"></param>
         /// <param name="expand"> (optional)</param>
         /// <returns>UsersSearchResponse</returns>
-        UsersSearchResponse GetSearch (string q64 = null, List<string> expand = null);
+        UsersSearchResponse GetSearch (string q64, List<string> expand = null);
 
         /// <summary>
         /// Search using q64
@@ -161,12 +161,12 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"> (optional)</param>
+        /// <param name="q64"></param>
         /// <param name="expand"> (optional)</param>
         /// <returns>ApiResponse of UsersSearchResponse</returns>
-        ApiResponse<UsersSearchResponse> GetSearchWithHttpInfo (string q64 = null, List<string> expand = null);
+        ApiResponse<UsersSearchResponse> GetSearchWithHttpInfo (string q64, List<string> expand = null);
         /// <summary>
-        /// Get user
+        /// Get user.
         /// </summary>
         /// <remarks>
         /// 
@@ -178,7 +178,7 @@ namespace ININ.PureCloudApi.Api
         User GetUserId (string userId, List<string> expand = null);
 
         /// <summary>
-        /// Get user
+        /// Get user.
         /// </summary>
         /// <remarks>
         /// 
@@ -377,11 +377,15 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="id">The list of user ids to get. Paging is ignored if ids are specified (optional)</param>
-        /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
+        /// <param name="id">id (optional)</param>
+        /// <param name="sortBy">Sort by (optional, default to name)</param>
+        /// <param name="role">Role (optional)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="username">Username (optional)</param>
+        /// <param name="skill">Skill (optional)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>UsersEntityListing</returns>
-        UsersEntityListing GetUsers (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortOrder = null, List<string> expand = null);
+        UsersEntityListing GetUsers (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortBy = null, string role = null, string name = null, string username = null, List<string> skill = null, List<string> expand = null);
 
         /// <summary>
         /// Get the list of available users.
@@ -392,11 +396,15 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="id">The list of user ids to get. Paging is ignored if ids are specified (optional)</param>
-        /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
+        /// <param name="id">id (optional)</param>
+        /// <param name="sortBy">Sort by (optional, default to name)</param>
+        /// <param name="role">Role (optional)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="username">Username (optional)</param>
+        /// <param name="skill">Skill (optional)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of UsersEntityListing</returns>
-        ApiResponse<UsersEntityListing> GetUsersWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortOrder = null, List<string> expand = null);
+        ApiResponse<UsersEntityListing> GetUsersWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortBy = null, string role = null, string name = null, string username = null, List<string> skill = null, List<string> expand = null);
         /// <summary>
         /// Update user
         /// </summary>
@@ -923,10 +931,10 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"> (optional)</param>
+        /// <param name="q64"></param>
         /// <param name="expand"> (optional)</param>
         /// <returns>Task of UsersSearchResponse</returns>
-        System.Threading.Tasks.Task<UsersSearchResponse> GetSearchAsync (string q64 = null, List<string> expand = null);
+        System.Threading.Tasks.Task<UsersSearchResponse> GetSearchAsync (string q64, List<string> expand = null);
 
         /// <summary>
         /// Search using q64
@@ -935,12 +943,12 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"> (optional)</param>
+        /// <param name="q64"></param>
         /// <param name="expand"> (optional)</param>
         /// <returns>Task of ApiResponse (UsersSearchResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UsersSearchResponse>> GetSearchAsyncWithHttpInfo (string q64 = null, List<string> expand = null);
+        System.Threading.Tasks.Task<ApiResponse<UsersSearchResponse>> GetSearchAsyncWithHttpInfo (string q64, List<string> expand = null);
         /// <summary>
-        /// Get user
+        /// Get user.
         /// </summary>
         /// <remarks>
         /// 
@@ -952,7 +960,7 @@ namespace ININ.PureCloudApi.Api
         System.Threading.Tasks.Task<User> GetUserIdAsync (string userId, List<string> expand = null);
 
         /// <summary>
-        /// Get user
+        /// Get user.
         /// </summary>
         /// <remarks>
         /// 
@@ -1151,11 +1159,15 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="id">The list of user ids to get. Paging is ignored if ids are specified (optional)</param>
-        /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
+        /// <param name="id">id (optional)</param>
+        /// <param name="sortBy">Sort by (optional, default to name)</param>
+        /// <param name="role">Role (optional)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="username">Username (optional)</param>
+        /// <param name="skill">Skill (optional)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of UsersEntityListing</returns>
-        System.Threading.Tasks.Task<UsersEntityListing> GetUsersAsync (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortOrder = null, List<string> expand = null);
+        System.Threading.Tasks.Task<UsersEntityListing> GetUsersAsync (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortBy = null, string role = null, string name = null, string username = null, List<string> skill = null, List<string> expand = null);
 
         /// <summary>
         /// Get the list of available users.
@@ -1166,11 +1178,15 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="id">The list of user ids to get. Paging is ignored if ids are specified (optional)</param>
-        /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
+        /// <param name="id">id (optional)</param>
+        /// <param name="sortBy">Sort by (optional, default to name)</param>
+        /// <param name="role">Role (optional)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="username">Username (optional)</param>
+        /// <param name="skill">Skill (optional)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (UsersEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UsersEntityListing>> GetUsersAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortOrder = null, List<string> expand = null);
+        System.Threading.Tasks.Task<ApiResponse<UsersEntityListing>> GetUsersAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortBy = null, string role = null, string name = null, string username = null, List<string> skill = null, List<string> expand = null);
         /// <summary>
         /// Update user
         /// </summary>
@@ -2572,10 +2588,10 @@ namespace ININ.PureCloudApi.Api
         /// Search using q64 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"> (optional)</param>
+        /// <param name="q64"></param>
         /// <param name="expand"> (optional)</param>
         /// <returns>UsersSearchResponse</returns>
-        public UsersSearchResponse GetSearch (string q64 = null, List<string> expand = null)
+        public UsersSearchResponse GetSearch (string q64, List<string> expand = null)
         {
              ApiResponse<UsersSearchResponse> localVarResponse = GetSearchWithHttpInfo(q64, expand);
              return localVarResponse.Data;
@@ -2585,11 +2601,14 @@ namespace ININ.PureCloudApi.Api
         /// Search using q64 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"> (optional)</param>
+        /// <param name="q64"></param>
         /// <param name="expand"> (optional)</param>
         /// <returns>ApiResponse of UsersSearchResponse</returns>
-        public ApiResponse< UsersSearchResponse > GetSearchWithHttpInfo (string q64 = null, List<string> expand = null)
+        public ApiResponse< UsersSearchResponse > GetSearchWithHttpInfo (string q64, List<string> expand = null)
         {
+            // verify the required parameter 'q64' is set
+            if (q64 == null)
+                throw new ApiException(400, "Missing required parameter 'q64' when calling UsersApi->GetSearch");
 
             var localVarPath = "/api/v2/users/search";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2648,10 +2667,10 @@ namespace ININ.PureCloudApi.Api
         /// Search using q64 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"> (optional)</param>
+        /// <param name="q64"></param>
         /// <param name="expand"> (optional)</param>
         /// <returns>Task of UsersSearchResponse</returns>
-        public async System.Threading.Tasks.Task<UsersSearchResponse> GetSearchAsync (string q64 = null, List<string> expand = null)
+        public async System.Threading.Tasks.Task<UsersSearchResponse> GetSearchAsync (string q64, List<string> expand = null)
         {
              ApiResponse<UsersSearchResponse> localVarResponse = await GetSearchAsyncWithHttpInfo(q64, expand);
              return localVarResponse.Data;
@@ -2662,11 +2681,14 @@ namespace ININ.PureCloudApi.Api
         /// Search using q64 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"> (optional)</param>
+        /// <param name="q64"></param>
         /// <param name="expand"> (optional)</param>
         /// <returns>Task of ApiResponse (UsersSearchResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UsersSearchResponse>> GetSearchAsyncWithHttpInfo (string q64 = null, List<string> expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<UsersSearchResponse>> GetSearchAsyncWithHttpInfo (string q64, List<string> expand = null)
         {
+            // verify the required parameter 'q64' is set
+            if (q64 == null)
+                throw new ApiException(400, "Missing required parameter 'q64' when calling UsersApi->GetSearch");
 
             var localVarPath = "/api/v2/users/search";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2722,7 +2744,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Get user 
+        /// Get user. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
@@ -2735,7 +2757,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Get user 
+        /// Get user. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
@@ -2801,7 +2823,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Get user 
+        /// Get user. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
@@ -2815,7 +2837,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Get user 
+        /// Get user. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
@@ -4152,13 +4174,17 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="id">The list of user ids to get. Paging is ignored if ids are specified (optional)</param>
-        /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
+        /// <param name="id">id (optional)</param>
+        /// <param name="sortBy">Sort by (optional, default to name)</param>
+        /// <param name="role">Role (optional)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="username">Username (optional)</param>
+        /// <param name="skill">Skill (optional)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>UsersEntityListing</returns>
-        public UsersEntityListing GetUsers (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortOrder = null, List<string> expand = null)
+        public UsersEntityListing GetUsers (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortBy = null, string role = null, string name = null, string username = null, List<string> skill = null, List<string> expand = null)
         {
-             ApiResponse<UsersEntityListing> localVarResponse = GetUsersWithHttpInfo(pageSize, pageNumber, id, sortOrder, expand);
+             ApiResponse<UsersEntityListing> localVarResponse = GetUsersWithHttpInfo(pageSize, pageNumber, id, sortBy, role, name, username, skill, expand);
              return localVarResponse.Data;
         }
 
@@ -4168,11 +4194,15 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="id">The list of user ids to get. Paging is ignored if ids are specified (optional)</param>
-        /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
+        /// <param name="id">id (optional)</param>
+        /// <param name="sortBy">Sort by (optional, default to name)</param>
+        /// <param name="role">Role (optional)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="username">Username (optional)</param>
+        /// <param name="skill">Skill (optional)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of UsersEntityListing</returns>
-        public ApiResponse< UsersEntityListing > GetUsersWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortOrder = null, List<string> expand = null)
+        public ApiResponse< UsersEntityListing > GetUsersWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortBy = null, string role = null, string name = null, string username = null, List<string> skill = null, List<string> expand = null)
         {
 
             var localVarPath = "/api/v2/users";
@@ -4203,7 +4233,11 @@ namespace ININ.PureCloudApi.Api
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
             if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
-            if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
+            if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
+            if (role != null) localVarQueryParams.Add("role", Configuration.ApiClient.ParameterToString(role)); // query parameter
+            if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
+            if (username != null) localVarQueryParams.Add("username", Configuration.ApiClient.ParameterToString(username)); // query parameter
+            if (skill != null) localVarQueryParams.Add("skill", Configuration.ApiClient.ParameterToString(skill)); // query parameter
             if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
 
             // authentication (PureCloud Auth) required
@@ -4237,13 +4271,17 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="id">The list of user ids to get. Paging is ignored if ids are specified (optional)</param>
-        /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
+        /// <param name="id">id (optional)</param>
+        /// <param name="sortBy">Sort by (optional, default to name)</param>
+        /// <param name="role">Role (optional)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="username">Username (optional)</param>
+        /// <param name="skill">Skill (optional)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of UsersEntityListing</returns>
-        public async System.Threading.Tasks.Task<UsersEntityListing> GetUsersAsync (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortOrder = null, List<string> expand = null)
+        public async System.Threading.Tasks.Task<UsersEntityListing> GetUsersAsync (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortBy = null, string role = null, string name = null, string username = null, List<string> skill = null, List<string> expand = null)
         {
-             ApiResponse<UsersEntityListing> localVarResponse = await GetUsersAsyncWithHttpInfo(pageSize, pageNumber, id, sortOrder, expand);
+             ApiResponse<UsersEntityListing> localVarResponse = await GetUsersAsyncWithHttpInfo(pageSize, pageNumber, id, sortBy, role, name, username, skill, expand);
              return localVarResponse.Data;
 
         }
@@ -4254,11 +4292,15 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="id">The list of user ids to get. Paging is ignored if ids are specified (optional)</param>
-        /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
+        /// <param name="id">id (optional)</param>
+        /// <param name="sortBy">Sort by (optional, default to name)</param>
+        /// <param name="role">Role (optional)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="username">Username (optional)</param>
+        /// <param name="skill">Skill (optional)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (UsersEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UsersEntityListing>> GetUsersAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortOrder = null, List<string> expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<UsersEntityListing>> GetUsersAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortBy = null, string role = null, string name = null, string username = null, List<string> skill = null, List<string> expand = null)
         {
 
             var localVarPath = "/api/v2/users";
@@ -4289,7 +4331,11 @@ namespace ININ.PureCloudApi.Api
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
             if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
-            if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
+            if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
+            if (role != null) localVarQueryParams.Add("role", Configuration.ApiClient.ParameterToString(role)); // query parameter
+            if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
+            if (username != null) localVarQueryParams.Add("username", Configuration.ApiClient.ParameterToString(username)); // query parameter
+            if (skill != null) localVarQueryParams.Add("skill", Configuration.ApiClient.ParameterToString(skill)); // query parameter
             if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
 
             // authentication (PureCloud Auth) required

@@ -7,7 +7,7 @@ title: DomainEdgeSoftwareUpdateDto
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Version** | [**DomainEdgeSoftwareVersionDto**](DomainEdgeSoftwareVersionDto.html) |  | [optional] |
+| **Version** | [**DomainEdgeSoftwareVersionDto**](DomainEdgeSoftwareVersionDto.html) | Version | |
 | **MaxDownloadRate** | **int?** |  | [optional] |
 | **DownloadStartTime** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **ExecuteStartTime** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |

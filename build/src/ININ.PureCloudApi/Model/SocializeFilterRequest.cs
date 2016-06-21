@@ -45,14 +45,27 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SocializeFilterRequest" /> class.
         /// </summary>
-        /// <param name="Filters">The list of filters used to narrow the return..</param>
+        [JsonConstructorAttribute]
+        protected SocializeFilterRequest() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="SocializeFilterRequest" /> class.
+        /// </summary>
+        /// <param name="Filters">The list of filters used to narrow the return. (required).</param>
         /// <param name="PageSize">PageSize.</param>
         /// <param name="PageNumber">PageNumber.</param>
         /// <param name="SortBy">SortBy.</param>
         /// <param name="SortOrder">SortOrder.</param>
         public SocializeFilterRequest(List<SocializeEntityFilter> Filters = null, int? PageSize = null, int? PageNumber = null, string SortBy = null, SortOrderEnum? SortOrder = null)
         {
-            this.Filters = Filters;
+            // to ensure "Filters" is required (not null)
+            if (Filters == null)
+            {
+                throw new InvalidDataException("Filters is a required property for SocializeFilterRequest and cannot be null");
+            }
+            else
+            {
+                this.Filters = Filters;
+            }
             this.PageSize = PageSize;
             this.PageNumber = PageNumber;
             this.SortBy = SortBy;

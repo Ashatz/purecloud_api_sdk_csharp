@@ -76,6 +76,11 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="OutboundRoute" /> class.
         /// </summary>
+        [JsonConstructorAttribute]
+        protected OutboundRoute() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="OutboundRoute" /> class.
+        /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="Description">Description.</param>
         /// <param name="Version">Version.</param>
@@ -86,7 +91,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="State">State.</param>
         /// <param name="ModifiedByApp">ModifiedByApp.</param>
         /// <param name="CreatedByApp">CreatedByApp.</param>
-        /// <param name="Site">Site.</param>
+        /// <param name="Site">Site (required).</param>
         /// <param name="ClassificationTypes">ClassificationTypes.</param>
         /// <param name="Enabled">Enabled (default to false).</param>
         /// <param name="Distribution">Distribution.</param>
@@ -94,6 +99,15 @@ namespace ININ.PureCloudApi.Model
         /// <param name="ExternalTrunkBases">Trunk base settings of trunkType \&quot;EXTERNAL\&quot;.  This base must also be set on an edge logical interface for correct routing..</param>
         public OutboundRoute(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, Site Site = null, List<string> ClassificationTypes = null, bool? Enabled = null, DistributionEnum? Distribution = null, bool? Managed = null, List<UriReference> ExternalTrunkBases = null)
         {
+            // to ensure "Site" is required (not null)
+            if (Site == null)
+            {
+                throw new InvalidDataException("Site is a required property for OutboundRoute and cannot be null");
+            }
+            else
+            {
+                this.Site = Site;
+            }
             this.Name = Name;
             this.Description = Description;
             this.Version = Version;
@@ -104,7 +118,6 @@ namespace ININ.PureCloudApi.Model
             this.State = State;
             this.ModifiedByApp = ModifiedByApp;
             this.CreatedByApp = CreatedByApp;
-            this.Site = Site;
             this.ClassificationTypes = ClassificationTypes;
             // use default value if no "Enabled" provided
             if (Enabled == null)
@@ -182,8 +195,9 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="createdByApp", EmitDefaultValue=false)]
         public string CreatedByApp { get; set; }
         /// <summary>
-        /// Gets or Sets Site
+        /// Site
         /// </summary>
+        /// <value>Site</value>
         [DataMember(Name="site", EmitDefaultValue=false)]
         public Site Site { get; set; }
         /// <summary>

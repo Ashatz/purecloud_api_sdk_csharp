@@ -45,6 +45,12 @@ namespace ININ.PureCloudApi.Model
             User,
             
             /// <summary>
+            /// Enum Group for "GROUP"
+            /// </summary>
+            [EnumMember(Value = "GROUP")]
+            Group,
+            
+            /// <summary>
             /// Enum Public for "PUBLIC"
             /// </summary>
             [EnumMember(Value = "PUBLIC")]
@@ -72,7 +78,8 @@ namespace ININ.PureCloudApi.Model
         /// <param name="SharedBy">SharedBy.</param>
         /// <param name="Workspace">Workspace.</param>
         /// <param name="User">User.</param>
-        public Share(string Name = null, SharedEntityTypeEnum? SharedEntityType = null, UriReference SharedEntity = null, MemberTypeEnum? MemberType = null, UriReference Member = null, UriReference SharedBy = null, UriReference Workspace = null, User User = null)
+        /// <param name="Group">Group.</param>
+        public Share(string Name = null, SharedEntityTypeEnum? SharedEntityType = null, UriReference SharedEntity = null, MemberTypeEnum? MemberType = null, UriReference Member = null, UriReference SharedBy = null, UriReference Workspace = null, User User = null, Group Group = null)
         {
             this.Name = Name;
             this.SharedEntityType = SharedEntityType;
@@ -82,6 +89,7 @@ namespace ININ.PureCloudApi.Model
             this.SharedBy = SharedBy;
             this.Workspace = Workspace;
             this.User = User;
+            this.Group = Group;
         }
         
         /// <summary>
@@ -121,6 +129,11 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="user", EmitDefaultValue=false)]
         public User User { get; set; }
         /// <summary>
+        /// Gets or Sets Group
+        /// </summary>
+        [DataMember(Name="group", EmitDefaultValue=false)]
+        public Group Group { get; set; }
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -143,6 +156,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  SharedBy: ").Append(SharedBy).Append("\n");
             sb.Append("  Workspace: ").Append(Workspace).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
+            sb.Append("  Group: ").Append(Group).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -226,6 +240,11 @@ namespace ININ.PureCloudApi.Model
                     this.User.Equals(other.User)
                 ) &&
                 (
+                    this.Group == other.Group ||
+                    this.Group != null &&
+                    this.Group.Equals(other.Group)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -261,6 +280,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.Workspace.GetHashCode();
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();
+                if (this.Group != null)
+                    hash = hash * 59 + this.Group.GetHashCode();
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;

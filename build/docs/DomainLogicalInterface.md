@@ -20,10 +20,10 @@ title: DomainLogicalInterface
 | **CreatedByApp** | **string** |  | [optional] |
 | **EdgeUri** | **string** |  | [optional] |
 | **EdgeAssignedId** | **string** |  | [optional] |
-| **FriendlyName** | **string** |  | [optional] |
+| **FriendlyName** | **string** | Friendly Name | |
 | **VlanTagId** | **int?** |  | [optional] |
-| **HardwareAddress** | **string** |  | [optional] |
-| **PhysicalAdapterId** | **string** |  | [optional] |
+| **HardwareAddress** | **string** | Hardware Address | |
+| **PhysicalAdapterId** | **string** | Physical Adapter Id | |
 | **IpAddress** | **string** |  | [optional] |
 | **Gateway** | **string** |  | [optional] |
 | **PrimaryDns** | **string** |  | [optional] |

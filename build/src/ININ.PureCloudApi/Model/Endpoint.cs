@@ -51,7 +51,12 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Endpoint" /> class.
         /// </summary>
-        /// <param name="Name">Name.</param>
+        [JsonConstructorAttribute]
+        protected Endpoint() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Endpoint" /> class.
+        /// </summary>
+        /// <param name="Name">Name (required).</param>
         /// <param name="Description">Description.</param>
         /// <param name="Version">Version.</param>
         /// <param name="DateCreated">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
@@ -63,13 +68,30 @@ namespace ININ.PureCloudApi.Model
         /// <param name="CreatedByApp">CreatedByApp.</param>
         /// <param name="Count">Count.</param>
         /// <param name="Properties">Properties.</param>
-        /// <param name="Schema">Schema.</param>
+        /// <param name="Schema">Schema (required).</param>
         /// <param name="Enabled">Enabled (default to false).</param>
         /// <param name="Site">Site.</param>
         /// <param name="Dids">Dids.</param>
         public Endpoint(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, int? Count = null, Dictionary<string, Object> Properties = null, UriReference Schema = null, bool? Enabled = null, UriReference Site = null, List<string> Dids = null)
         {
-            this.Name = Name;
+            // to ensure "Name" is required (not null)
+            if (Name == null)
+            {
+                throw new InvalidDataException("Name is a required property for Endpoint and cannot be null");
+            }
+            else
+            {
+                this.Name = Name;
+            }
+            // to ensure "Schema" is required (not null)
+            if (Schema == null)
+            {
+                throw new InvalidDataException("Schema is a required property for Endpoint and cannot be null");
+            }
+            else
+            {
+                this.Schema = Schema;
+            }
             this.Description = Description;
             this.Version = Version;
             this.DateCreated = DateCreated;
@@ -81,7 +103,6 @@ namespace ININ.PureCloudApi.Model
             this.CreatedByApp = CreatedByApp;
             this.Count = Count;
             this.Properties = Properties;
-            this.Schema = Schema;
             // use default value if no "Enabled" provided
             if (Enabled == null)
             {
@@ -102,8 +123,9 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
         /// <summary>
-        /// Gets or Sets Name
+        /// Name
         /// </summary>
+        /// <value>Name</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
         /// <summary>
@@ -159,8 +181,9 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="properties", EmitDefaultValue=false)]
         public Dictionary<string, Object> Properties { get; set; }
         /// <summary>
-        /// Gets or Sets Schema
+        /// Schema
         /// </summary>
+        /// <value>Schema</value>
         [DataMember(Name="schema", EmitDefaultValue=false)]
         public UriReference Schema { get; set; }
         /// <summary>

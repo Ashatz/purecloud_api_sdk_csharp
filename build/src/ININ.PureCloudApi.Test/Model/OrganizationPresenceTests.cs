@@ -91,6 +91,14 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'Deactivated'
         }
         /// <summary>
+        /// Test the property 'Primary'
+        /// </summary>
+        [Test]
+        public void PrimaryTest()
+        {
+            // TODO: unit test for the property 'Primary'
+        }
+        /// <summary>
         /// Test the property 'CreatedBy'
         /// </summary>
         [Test]

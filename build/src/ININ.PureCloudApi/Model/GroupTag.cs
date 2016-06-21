@@ -53,17 +53,30 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="GroupTag" /> class.
         /// </summary>
+        [JsonConstructorAttribute]
+        protected GroupTag() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="GroupTag" /> class.
+        /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="DateCreated">Creation date for the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="DateModified">Date the entity was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        /// <param name="Type">Defines which entity this Group Tag may be used for.  &#39;ANY&#39; for all entities..</param>
+        /// <param name="Type">Defines which entity this Group Tag may be used for.  &#39;ANY&#39; for all entities. (required).</param>
         /// <param name="Enabled">Indicates if this Group Tag is available for selection by other entities (default to false).</param>
         public GroupTag(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, TypeEnum? Type = null, bool? Enabled = null)
         {
+            // to ensure "Type" is required (not null)
+            if (Type == null)
+            {
+                throw new InvalidDataException("Type is a required property for GroupTag and cannot be null");
+            }
+            else
+            {
+                this.Type = Type;
+            }
             this.Name = Name;
             this.DateCreated = DateCreated;
             this.DateModified = DateModified;
-            this.Type = Type;
             // use default value if no "Enabled" provided
             if (Enabled == null)
             {

@@ -67,10 +67,10 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"> (optional)</param>
+        /// <param name="q64"></param>
         /// <param name="expand"> (optional)</param>
         /// <returns>LocationsSearchResponse</returns>
-        LocationsSearchResponse GetSearch (string q64 = null, List<string> expand = null);
+        LocationsSearchResponse GetSearch (string q64, List<string> expand = null);
 
         /// <summary>
         /// Search using q64
@@ -79,10 +79,10 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"> (optional)</param>
+        /// <param name="q64"></param>
         /// <param name="expand"> (optional)</param>
         /// <returns>ApiResponse of LocationsSearchResponse</returns>
-        ApiResponse<LocationsSearchResponse> GetSearchWithHttpInfo (string q64 = null, List<string> expand = null);
+        ApiResponse<LocationsSearchResponse> GetSearchWithHttpInfo (string q64, List<string> expand = null);
         /// <summary>
         /// Search
         /// </summary>
@@ -159,10 +159,10 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"> (optional)</param>
+        /// <param name="q64"></param>
         /// <param name="expand"> (optional)</param>
         /// <returns>Task of LocationsSearchResponse</returns>
-        System.Threading.Tasks.Task<LocationsSearchResponse> GetSearchAsync (string q64 = null, List<string> expand = null);
+        System.Threading.Tasks.Task<LocationsSearchResponse> GetSearchAsync (string q64, List<string> expand = null);
 
         /// <summary>
         /// Search using q64
@@ -171,10 +171,10 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"> (optional)</param>
+        /// <param name="q64"></param>
         /// <param name="expand"> (optional)</param>
         /// <returns>Task of ApiResponse (LocationsSearchResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<LocationsSearchResponse>> GetSearchAsyncWithHttpInfo (string q64 = null, List<string> expand = null);
+        System.Threading.Tasks.Task<ApiResponse<LocationsSearchResponse>> GetSearchAsyncWithHttpInfo (string q64, List<string> expand = null);
         /// <summary>
         /// Search
         /// </summary>
@@ -602,10 +602,10 @@ namespace ININ.PureCloudApi.Api
         /// Search using q64 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"> (optional)</param>
+        /// <param name="q64"></param>
         /// <param name="expand"> (optional)</param>
         /// <returns>LocationsSearchResponse</returns>
-        public LocationsSearchResponse GetSearch (string q64 = null, List<string> expand = null)
+        public LocationsSearchResponse GetSearch (string q64, List<string> expand = null)
         {
              ApiResponse<LocationsSearchResponse> localVarResponse = GetSearchWithHttpInfo(q64, expand);
              return localVarResponse.Data;
@@ -615,11 +615,14 @@ namespace ININ.PureCloudApi.Api
         /// Search using q64 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"> (optional)</param>
+        /// <param name="q64"></param>
         /// <param name="expand"> (optional)</param>
         /// <returns>ApiResponse of LocationsSearchResponse</returns>
-        public ApiResponse< LocationsSearchResponse > GetSearchWithHttpInfo (string q64 = null, List<string> expand = null)
+        public ApiResponse< LocationsSearchResponse > GetSearchWithHttpInfo (string q64, List<string> expand = null)
         {
+            // verify the required parameter 'q64' is set
+            if (q64 == null)
+                throw new ApiException(400, "Missing required parameter 'q64' when calling LocationsApi->GetSearch");
 
             var localVarPath = "/api/v2/locations/search";
             var localVarPathParams = new Dictionary<String, String>();
@@ -678,10 +681,10 @@ namespace ININ.PureCloudApi.Api
         /// Search using q64 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"> (optional)</param>
+        /// <param name="q64"></param>
         /// <param name="expand"> (optional)</param>
         /// <returns>Task of LocationsSearchResponse</returns>
-        public async System.Threading.Tasks.Task<LocationsSearchResponse> GetSearchAsync (string q64 = null, List<string> expand = null)
+        public async System.Threading.Tasks.Task<LocationsSearchResponse> GetSearchAsync (string q64, List<string> expand = null)
         {
              ApiResponse<LocationsSearchResponse> localVarResponse = await GetSearchAsyncWithHttpInfo(q64, expand);
              return localVarResponse.Data;
@@ -692,11 +695,14 @@ namespace ININ.PureCloudApi.Api
         /// Search using q64 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"> (optional)</param>
+        /// <param name="q64"></param>
         /// <param name="expand"> (optional)</param>
         /// <returns>Task of ApiResponse (LocationsSearchResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<LocationsSearchResponse>> GetSearchAsyncWithHttpInfo (string q64 = null, List<string> expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<LocationsSearchResponse>> GetSearchAsyncWithHttpInfo (string q64, List<string> expand = null)
         {
+            // verify the required parameter 'q64' is set
+            if (q64 == null)
+                throw new ApiException(400, "Missing required parameter 'q64' when calling LocationsApi->GetSearch");
 
             var localVarPath = "/api/v2/locations/search";
             var localVarPathParams = new Dictionary<String, String>();

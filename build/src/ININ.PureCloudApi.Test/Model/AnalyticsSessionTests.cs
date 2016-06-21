@@ -187,6 +187,54 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'MonitoredParticipantId'
         }
         /// <summary>
+        /// Test the property 'CallbackUserName'
+        /// </summary>
+        [Test]
+        public void CallbackUserNameTest()
+        {
+            // TODO: unit test for the property 'CallbackUserName'
+        }
+        /// <summary>
+        /// Test the property 'CallbackNumbers'
+        /// </summary>
+        [Test]
+        public void CallbackNumbersTest()
+        {
+            // TODO: unit test for the property 'CallbackNumbers'
+        }
+        /// <summary>
+        /// Test the property 'CallbackScheduledTime'
+        /// </summary>
+        [Test]
+        public void CallbackScheduledTimeTest()
+        {
+            // TODO: unit test for the property 'CallbackScheduledTime'
+        }
+        /// <summary>
+        /// Test the property 'ScriptId'
+        /// </summary>
+        [Test]
+        public void ScriptIdTest()
+        {
+            // TODO: unit test for the property 'ScriptId'
+        }
+        /// <summary>
+        /// Test the property 'SkipEnabled'
+        /// </summary>
+        [Test]
+        public void SkipEnabledTest()
+        {
+            // TODO: unit test for the property 'SkipEnabled'
+        }
+        /// <summary>
+        /// Test the property 'TimeoutSeconds'
+        /// </summary>
+        [Test]
+        public void TimeoutSecondsTest()
+        {
+            // TODO: unit test for the property 'TimeoutSeconds'
+        }
+        /// <summary>
         /// Test the property 'Segments'
         /// </summary>
         [Test]

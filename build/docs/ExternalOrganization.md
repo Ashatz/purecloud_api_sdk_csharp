@@ -20,6 +20,7 @@ title: ExternalOrganization
 | **Tags** | **List&lt;string&gt;** |  | [optional] |
 | **Websites** | **List&lt;string&gt;** |  | [optional] |
 | **Tickers** | [**List&lt;Ticker&gt;**](Ticker.html) |  | [optional] |
+| **TwitterId** | [**TwitterId**](TwitterId.html) |  | [optional] |
 | **ModifyDate** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **CreateDate** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **ExternalDataSources** | [**List&lt;ExternalDataSource&gt;**](ExternalDataSource.html) | Links to the sources of data (e.g. one source might be a CRM) that contributed data to this record.  Read-only, and only populated when requested via expand param. | [optional] |

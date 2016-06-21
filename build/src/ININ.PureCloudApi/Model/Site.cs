@@ -51,6 +51,11 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Site" /> class.
         /// </summary>
+        [JsonConstructorAttribute]
+        protected Site() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Site" /> class.
+        /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="Description">Description.</param>
         /// <param name="Version">Version.</param>
@@ -68,10 +73,19 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Addresses">Addresses.</param>
         /// <param name="Edges">Edges.</param>
         /// <param name="EdgeAutoUpdateConfig">Recurrance rule, time zone, and start/end settings for automatic edge updates for this site.</param>
-        /// <param name="Location">Location.</param>
+        /// <param name="Location">Location (required).</param>
         /// <param name="Managed">Managed (default to false).</param>
         public Site(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, List<UriReference> PrimarySites = null, List<UriReference> SecondarySites = null, List<Edge> PrimaryEdges = null, List<Edge> SecondaryEdges = null, List<Contact> Addresses = null, List<Edge> Edges = null, EdgeAutoUpdateConfig EdgeAutoUpdateConfig = null, UriReference Location = null, bool? Managed = null)
         {
+            // to ensure "Location" is required (not null)
+            if (Location == null)
+            {
+                throw new InvalidDataException("Location is a required property for Site and cannot be null");
+            }
+            else
+            {
+                this.Location = Location;
+            }
             this.Name = Name;
             this.Description = Description;
             this.Version = Version;
@@ -89,7 +103,6 @@ namespace ININ.PureCloudApi.Model
             this.Addresses = Addresses;
             this.Edges = Edges;
             this.EdgeAutoUpdateConfig = EdgeAutoUpdateConfig;
-            this.Location = Location;
             // use default value if no "Managed" provided
             if (Managed == null)
             {
@@ -191,8 +204,9 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="edgeAutoUpdateConfig", EmitDefaultValue=false)]
         public EdgeAutoUpdateConfig EdgeAutoUpdateConfig { get; set; }
         /// <summary>
-        /// Gets or Sets Location
+        /// Location
         /// </summary>
+        /// <value>Location</value>
         [DataMember(Name="location", EmitDefaultValue=false)]
         public UriReference Location { get; set; }
         /// <summary>

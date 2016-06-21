@@ -18,7 +18,7 @@ title: OutboundRoute
 | **State** | **string** |  | [optional] |
 | **ModifiedByApp** | **string** |  | [optional] |
 | **CreatedByApp** | **string** |  | [optional] |
-| **Site** | [**Site**](Site.html) |  | [optional] |
+| **Site** | [**Site**](Site.html) | Site | |
 | **ClassificationTypes** | **List&lt;string&gt;** |  | [optional] |
 | **Enabled** | **bool?** |  | [optional] [default to false]|
 | **Distribution** | **string** |  | [optional] |

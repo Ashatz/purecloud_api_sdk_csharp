@@ -33,11 +33,12 @@ namespace ININ.PureCloudApi.Model
         /// <param name="PersonalEmail">PersonalEmail.</param>
         /// <param name="OtherEmail">OtherEmail.</param>
         /// <param name="Address">Address.</param>
+        /// <param name="TwitterId">TwitterId.</param>
         /// <param name="ModifyDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="CreateDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="ExternalOrganization">ExternalOrganization.</param>
         /// <param name="ExternalDataSources">Links to the sources of data (e.g. one source might be a CRM) that contributed data to this record.  Read-only, and only populated when requested via expand param..</param>
-        public ExternalContact(string FirstName = null, string MiddleName = null, string LastName = null, string Salutation = null, string Title = null, PhoneNumber WorkPhone = null, PhoneNumber CellPhone = null, PhoneNumber HomePhone = null, PhoneNumber OtherPhone = null, string WorkEmail = null, string PersonalEmail = null, string OtherEmail = null, ContactAddress Address = null, DateTime? ModifyDate = null, DateTime? CreateDate = null, ExternalOrganization ExternalOrganization = null, List<ExternalDataSource> ExternalDataSources = null)
+        public ExternalContact(string FirstName = null, string MiddleName = null, string LastName = null, string Salutation = null, string Title = null, PhoneNumber WorkPhone = null, PhoneNumber CellPhone = null, PhoneNumber HomePhone = null, PhoneNumber OtherPhone = null, string WorkEmail = null, string PersonalEmail = null, string OtherEmail = null, ContactAddress Address = null, TwitterId TwitterId = null, DateTime? ModifyDate = null, DateTime? CreateDate = null, ExternalOrganization ExternalOrganization = null, List<ExternalDataSource> ExternalDataSources = null)
         {
             this.FirstName = FirstName;
             this.MiddleName = MiddleName;
@@ -52,6 +53,7 @@ namespace ININ.PureCloudApi.Model
             this.PersonalEmail = PersonalEmail;
             this.OtherEmail = OtherEmail;
             this.Address = Address;
+            this.TwitterId = TwitterId;
             this.ModifyDate = ModifyDate;
             this.CreateDate = CreateDate;
             this.ExternalOrganization = ExternalOrganization;
@@ -130,6 +132,11 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="address", EmitDefaultValue=false)]
         public ContactAddress Address { get; set; }
         /// <summary>
+        /// Gets or Sets TwitterId
+        /// </summary>
+        [DataMember(Name="twitterId", EmitDefaultValue=false)]
+        public TwitterId TwitterId { get; set; }
+        /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
@@ -180,6 +187,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  PersonalEmail: ").Append(PersonalEmail).Append("\n");
             sb.Append("  OtherEmail: ").Append(OtherEmail).Append("\n");
             sb.Append("  Address: ").Append(Address).Append("\n");
+            sb.Append("  TwitterId: ").Append(TwitterId).Append("\n");
             sb.Append("  ModifyDate: ").Append(ModifyDate).Append("\n");
             sb.Append("  CreateDate: ").Append(CreateDate).Append("\n");
             sb.Append("  ExternalOrganization: ").Append(ExternalOrganization).Append("\n");
@@ -292,6 +300,11 @@ namespace ININ.PureCloudApi.Model
                     this.Address.Equals(other.Address)
                 ) &&
                 (
+                    this.TwitterId == other.TwitterId ||
+                    this.TwitterId != null &&
+                    this.TwitterId.Equals(other.TwitterId)
+                ) &&
+                (
                     this.ModifyDate == other.ModifyDate ||
                     this.ModifyDate != null &&
                     this.ModifyDate.Equals(other.ModifyDate)
@@ -357,6 +370,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.OtherEmail.GetHashCode();
                 if (this.Address != null)
                     hash = hash * 59 + this.Address.GetHashCode();
+                if (this.TwitterId != null)
+                    hash = hash * 59 + this.TwitterId.GetHashCode();
                 if (this.ModifyDate != null)
                     hash = hash * 59 + this.ModifyDate.GetHashCode();
                 if (this.CreateDate != null)

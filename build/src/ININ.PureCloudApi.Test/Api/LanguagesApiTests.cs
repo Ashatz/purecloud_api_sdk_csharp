@@ -87,7 +87,8 @@ namespace ININ.PureCloudApi.Test
             int? pageSize = null; // TODO: replace null with proper value
             int? pageNumber = null; // TODO: replace null with proper value
             string sortOrder = null; // TODO: replace null with proper value
-            var response = instance.GetLanguages(pageSize, pageNumber, sortOrder);
+            string name = null; // TODO: replace null with proper value
+            var response = instance.GetLanguages(pageSize, pageNumber, sortOrder, name);
             Assert.IsInstanceOf<LanguageEntityListing> (response, "response is LanguageEntityListing");
         }
         

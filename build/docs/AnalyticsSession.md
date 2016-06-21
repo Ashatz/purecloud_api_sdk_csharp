@@ -24,6 +24,12 @@ title: AnalyticsSession
 | **RoomId** | **string** |  | [optional] |
 | **MonitoredSessionId** | **string** |  | [optional] |
 | **MonitoredParticipantId** | **string** |  | [optional] |
+| **CallbackUserName** | **string** |  | [optional] |
+| **CallbackNumbers** | **List&lt;string&gt;** |  | [optional] |
+| **CallbackScheduledTime** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
+| **ScriptId** | **string** |  | [optional] |
+| **SkipEnabled** | **bool?** |  | [optional] [default to false]|
+| **TimeoutSeconds** | **int?** |  | [optional] |
 | **Segments** | [**List&lt;AnalyticsConversationSegment&gt;**](AnalyticsConversationSegment.html) |  | [optional] |
 {: class="table table-striped"}
 

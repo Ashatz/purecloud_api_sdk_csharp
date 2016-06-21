@@ -66,8 +66,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
+        /// <param name="name">Name (optional)</param>
         /// <returns>LanguageEntityListing</returns>
-        LanguageEntityListing GetLanguages (int? pageSize = null, int? pageNumber = null, string sortOrder = null);
+        LanguageEntityListing GetLanguages (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null);
 
         /// <summary>
         /// Get the list of supported languages.
@@ -79,8 +80,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
+        /// <param name="name">Name (optional)</param>
         /// <returns>ApiResponse of LanguageEntityListing</returns>
-        ApiResponse<LanguageEntityListing> GetLanguagesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null);
+        ApiResponse<LanguageEntityListing> GetLanguagesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null);
         /// <summary>
         /// Create Language
         /// </summary>
@@ -179,8 +181,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
+        /// <param name="name">Name (optional)</param>
         /// <returns>Task of LanguageEntityListing</returns>
-        System.Threading.Tasks.Task<LanguageEntityListing> GetLanguagesAsync (int? pageSize = null, int? pageNumber = null, string sortOrder = null);
+        System.Threading.Tasks.Task<LanguageEntityListing> GetLanguagesAsync (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null);
 
         /// <summary>
         /// Get the list of supported languages.
@@ -192,8 +195,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
+        /// <param name="name">Name (optional)</param>
         /// <returns>Task of ApiResponse (LanguageEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<LanguageEntityListing>> GetLanguagesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null);
+        System.Threading.Tasks.Task<ApiResponse<LanguageEntityListing>> GetLanguagesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null);
         /// <summary>
         /// Create Language
         /// </summary>
@@ -639,10 +643,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
+        /// <param name="name">Name (optional)</param>
         /// <returns>LanguageEntityListing</returns>
-        public LanguageEntityListing GetLanguages (int? pageSize = null, int? pageNumber = null, string sortOrder = null)
+        public LanguageEntityListing GetLanguages (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null)
         {
-             ApiResponse<LanguageEntityListing> localVarResponse = GetLanguagesWithHttpInfo(pageSize, pageNumber, sortOrder);
+             ApiResponse<LanguageEntityListing> localVarResponse = GetLanguagesWithHttpInfo(pageSize, pageNumber, sortOrder, name);
              return localVarResponse.Data;
         }
 
@@ -653,8 +658,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
+        /// <param name="name">Name (optional)</param>
         /// <returns>ApiResponse of LanguageEntityListing</returns>
-        public ApiResponse< LanguageEntityListing > GetLanguagesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null)
+        public ApiResponse< LanguageEntityListing > GetLanguagesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null)
         {
 
             var localVarPath = "/api/v2/languages";
@@ -685,6 +691,7 @@ namespace ININ.PureCloudApi.Api
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
             if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
+            if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -718,10 +725,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
+        /// <param name="name">Name (optional)</param>
         /// <returns>Task of LanguageEntityListing</returns>
-        public async System.Threading.Tasks.Task<LanguageEntityListing> GetLanguagesAsync (int? pageSize = null, int? pageNumber = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<LanguageEntityListing> GetLanguagesAsync (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null)
         {
-             ApiResponse<LanguageEntityListing> localVarResponse = await GetLanguagesAsyncWithHttpInfo(pageSize, pageNumber, sortOrder);
+             ApiResponse<LanguageEntityListing> localVarResponse = await GetLanguagesAsyncWithHttpInfo(pageSize, pageNumber, sortOrder, name);
              return localVarResponse.Data;
 
         }
@@ -733,8 +741,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
+        /// <param name="name">Name (optional)</param>
         /// <returns>Task of ApiResponse (LanguageEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<LanguageEntityListing>> GetLanguagesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<ApiResponse<LanguageEntityListing>> GetLanguagesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null)
         {
 
             var localVarPath = "/api/v2/languages";
@@ -765,6 +774,7 @@ namespace ININ.PureCloudApi.Api
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
             if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
+            if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
 
             // authentication (PureCloud Auth) required
             // oauth required

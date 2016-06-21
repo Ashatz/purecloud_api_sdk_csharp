@@ -32,10 +32,11 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Tags">Tags.</param>
         /// <param name="Websites">Websites.</param>
         /// <param name="Tickers">Tickers.</param>
+        /// <param name="TwitterId">TwitterId.</param>
         /// <param name="ModifyDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="CreateDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="ExternalDataSources">Links to the sources of data (e.g. one source might be a CRM) that contributed data to this record.  Read-only, and only populated when requested via expand param..</param>
-        public ExternalOrganization(string Name = null, string CompanyType = null, string Industry = null, string PrimaryContactId = null, ContactAddress Address = null, PhoneNumber PhoneNumber = null, PhoneNumber FaxNumber = null, long? EmployeeCount = null, long? Revenue = null, List<string> Tags = null, List<string> Websites = null, List<Ticker> Tickers = null, DateTime? ModifyDate = null, DateTime? CreateDate = null, List<ExternalDataSource> ExternalDataSources = null)
+        public ExternalOrganization(string Name = null, string CompanyType = null, string Industry = null, string PrimaryContactId = null, ContactAddress Address = null, PhoneNumber PhoneNumber = null, PhoneNumber FaxNumber = null, long? EmployeeCount = null, long? Revenue = null, List<string> Tags = null, List<string> Websites = null, List<Ticker> Tickers = null, TwitterId TwitterId = null, DateTime? ModifyDate = null, DateTime? CreateDate = null, List<ExternalDataSource> ExternalDataSources = null)
         {
             this.Name = Name;
             this.CompanyType = CompanyType;
@@ -49,6 +50,7 @@ namespace ININ.PureCloudApi.Model
             this.Tags = Tags;
             this.Websites = Websites;
             this.Tickers = Tickers;
+            this.TwitterId = TwitterId;
             this.ModifyDate = ModifyDate;
             this.CreateDate = CreateDate;
             this.ExternalDataSources = ExternalDataSources;
@@ -121,6 +123,11 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="tickers", EmitDefaultValue=false)]
         public List<Ticker> Tickers { get; set; }
         /// <summary>
+        /// Gets or Sets TwitterId
+        /// </summary>
+        [DataMember(Name="twitterId", EmitDefaultValue=false)]
+        public TwitterId TwitterId { get; set; }
+        /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
@@ -165,6 +172,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Tags: ").Append(Tags).Append("\n");
             sb.Append("  Websites: ").Append(Websites).Append("\n");
             sb.Append("  Tickers: ").Append(Tickers).Append("\n");
+            sb.Append("  TwitterId: ").Append(TwitterId).Append("\n");
             sb.Append("  ModifyDate: ").Append(ModifyDate).Append("\n");
             sb.Append("  CreateDate: ").Append(CreateDate).Append("\n");
             sb.Append("  ExternalDataSources: ").Append(ExternalDataSources).Append("\n");
@@ -271,6 +279,11 @@ namespace ININ.PureCloudApi.Model
                     this.Tickers.SequenceEqual(other.Tickers)
                 ) &&
                 (
+                    this.TwitterId == other.TwitterId ||
+                    this.TwitterId != null &&
+                    this.TwitterId.Equals(other.TwitterId)
+                ) &&
+                (
                     this.ModifyDate == other.ModifyDate ||
                     this.ModifyDate != null &&
                     this.ModifyDate.Equals(other.ModifyDate)
@@ -329,6 +342,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.Websites.GetHashCode();
                 if (this.Tickers != null)
                     hash = hash * 59 + this.Tickers.GetHashCode();
+                if (this.TwitterId != null)
+                    hash = hash * 59 + this.TwitterId.GetHashCode();
                 if (this.ModifyDate != null)
                     hash = hash * 59 + this.ModifyDate.GetHashCode();
                 if (this.CreateDate != null)

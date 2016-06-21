@@ -163,6 +163,14 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'Address'
         }
         /// <summary>
+        /// Test the property 'TwitterId'
+        /// </summary>
+        [Test]
+        public void TwitterIdTest()
+        {
+            // TODO: unit test for the property 'TwitterId'
+        }
+        /// <summary>
         /// Test the property 'ModifyDate'
         /// </summary>
         [Test]

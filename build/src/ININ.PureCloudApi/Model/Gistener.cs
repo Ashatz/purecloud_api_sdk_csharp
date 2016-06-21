@@ -20,6 +20,11 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Gistener" /> class.
         /// </summary>
+        [JsonConstructorAttribute]
+        protected Gistener() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Gistener" /> class.
+        /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="DateCreated">Creation date for the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="DateModified">Date the entity was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
@@ -29,10 +34,28 @@ namespace ININ.PureCloudApi.Model
         /// <param name="ExcludeWords">If a tweet contains any one of these words, it is thrown out.</param>
         /// <param name="ExactPhrase">A tweet must contain this exact quoted phrase.</param>
         /// <param name="GroupTags">The group tags associated with this Gistener.</param>
-        /// <param name="SocialAccount">The social account associated with this Gistener.</param>
-        /// <param name="Queue">The operator queue the gistener will route to..</param>
+        /// <param name="SocialAccount">The social account associated with this Gistener (required).</param>
+        /// <param name="Queue">The operator queue the gistener will route to. (required).</param>
         public Gistener(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, bool? Enabled = null, string AnyWords = null, string AllWords = null, string ExcludeWords = null, string ExactPhrase = null, List<GroupTag> GroupTags = null, SocialAccount SocialAccount = null, Queue Queue = null)
         {
+            // to ensure "SocialAccount" is required (not null)
+            if (SocialAccount == null)
+            {
+                throw new InvalidDataException("SocialAccount is a required property for Gistener and cannot be null");
+            }
+            else
+            {
+                this.SocialAccount = SocialAccount;
+            }
+            // to ensure "Queue" is required (not null)
+            if (Queue == null)
+            {
+                throw new InvalidDataException("Queue is a required property for Gistener and cannot be null");
+            }
+            else
+            {
+                this.Queue = Queue;
+            }
             this.Name = Name;
             this.DateCreated = DateCreated;
             this.DateModified = DateModified;
@@ -50,8 +73,6 @@ namespace ININ.PureCloudApi.Model
             this.ExcludeWords = ExcludeWords;
             this.ExactPhrase = ExactPhrase;
             this.GroupTags = GroupTags;
-            this.SocialAccount = SocialAccount;
-            this.Queue = Queue;
         }
         
         /// <summary>

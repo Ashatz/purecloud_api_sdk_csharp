@@ -20,6 +20,11 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ExpressionResponse" /> class.
         /// </summary>
+        [JsonConstructorAttribute]
+        protected ExpressionResponse() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ExpressionResponse" /> class.
+        /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="DateCreated">Creation date for the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="DateModified">Date the entity was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
@@ -27,10 +32,19 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Conversation">The conversation that this response is a part of..</param>
         /// <param name="TwitterExpression">The twitter expression that this is in response to..</param>
         /// <param name="RawResponseText">The raw text of the response..</param>
-        /// <param name="SocialAccount">The Social Account used to publish this expression.</param>
+        /// <param name="SocialAccount">The Social Account used to publish this expression (required).</param>
         /// <param name="SocialHubResponseId">The id given to this response from the social hub.</param>
         public ExpressionResponse(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, string SocialHub = null, Conversation Conversation = null, TwitterExpression TwitterExpression = null, string RawResponseText = null, SocialAccount SocialAccount = null, string SocialHubResponseId = null)
         {
+            // to ensure "SocialAccount" is required (not null)
+            if (SocialAccount == null)
+            {
+                throw new InvalidDataException("SocialAccount is a required property for ExpressionResponse and cannot be null");
+            }
+            else
+            {
+                this.SocialAccount = SocialAccount;
+            }
             this.Name = Name;
             this.DateCreated = DateCreated;
             this.DateModified = DateModified;
@@ -38,7 +52,6 @@ namespace ININ.PureCloudApi.Model
             this.Conversation = Conversation;
             this.TwitterExpression = TwitterExpression;
             this.RawResponseText = RawResponseText;
-            this.SocialAccount = SocialAccount;
             this.SocialHubResponseId = SocialHubResponseId;
         }
         

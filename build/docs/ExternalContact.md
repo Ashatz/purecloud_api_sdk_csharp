@@ -21,6 +21,7 @@ title: ExternalContact
 | **PersonalEmail** | **string** |  | [optional] |
 | **OtherEmail** | **string** |  | [optional] |
 | **Address** | [**ContactAddress**](ContactAddress.html) |  | [optional] |
+| **TwitterId** | [**TwitterId**](TwitterId.html) |  | [optional] |
 | **ModifyDate** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **CreateDate** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **ExternalOrganization** | [**ExternalOrganization**](ExternalOrganization.html) |  | [optional] |

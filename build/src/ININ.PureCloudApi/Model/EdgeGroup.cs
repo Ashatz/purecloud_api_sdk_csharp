@@ -51,6 +51,11 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EdgeGroup" /> class.
         /// </summary>
+        [JsonConstructorAttribute]
+        protected EdgeGroup() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EdgeGroup" /> class.
+        /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="Description">Description.</param>
         /// <param name="Version">Version.</param>
@@ -62,11 +67,20 @@ namespace ININ.PureCloudApi.Model
         /// <param name="ModifiedByApp">ModifiedByApp.</param>
         /// <param name="CreatedByApp">CreatedByApp.</param>
         /// <param name="Managed">Is this edge group being managed remotely. (default to false).</param>
-        /// <param name="EdgeTrunkBaseAssignment">A trunk base settings assignment of trunkType \&quot;EDGE\&quot; to use for edge-to-edge communication..</param>
+        /// <param name="EdgeTrunkBaseAssignment">A trunk base settings assignment of trunkType \&quot;EDGE\&quot; to use for edge-to-edge communication. (required).</param>
         /// <param name="PhoneTrunkBaseAssignments">Trunk base settings assignments of trunkType \&quot;PHONE\&quot; to inherit to edge logical interfaces for phone communication..</param>
         /// <param name="PhoneTrunkBases">Trunk base settings of trunkType \&quot;PHONE\&quot; to inherit to edge logical interface for phone communication..</param>
         public EdgeGroup(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, bool? Managed = null, TrunkBaseAssignment EdgeTrunkBaseAssignment = null, List<TrunkBaseAssignment> PhoneTrunkBaseAssignments = null, List<UriReference> PhoneTrunkBases = null)
         {
+            // to ensure "EdgeTrunkBaseAssignment" is required (not null)
+            if (EdgeTrunkBaseAssignment == null)
+            {
+                throw new InvalidDataException("EdgeTrunkBaseAssignment is a required property for EdgeGroup and cannot be null");
+            }
+            else
+            {
+                this.EdgeTrunkBaseAssignment = EdgeTrunkBaseAssignment;
+            }
             this.Name = Name;
             this.Description = Description;
             this.Version = Version;
@@ -86,7 +100,6 @@ namespace ININ.PureCloudApi.Model
             {
                 this.Managed = Managed;
             }
-            this.EdgeTrunkBaseAssignment = EdgeTrunkBaseAssignment;
             this.PhoneTrunkBaseAssignments = PhoneTrunkBaseAssignments;
             this.PhoneTrunkBases = PhoneTrunkBases;
         }

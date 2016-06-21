@@ -16,6 +16,7 @@ title: Share
 | **SharedBy** | [**UriReference**](UriReference.html) |  | [optional] |
 | **Workspace** | [**UriReference**](UriReference.html) |  | [optional] |
 | **User** | [**User**](User.html) |  | [optional] |
+| **Group** | [**Group**](Group.html) |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

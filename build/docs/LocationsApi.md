@@ -131,7 +131,7 @@ namespace Example
 
 <a name="getsearch"></a>
 
-## [**LocationsSearchResponse**](LocationsSearchResponse.html) GetSearch (string q64 = null, List<string> expand = null)
+## [**LocationsSearchResponse**](LocationsSearchResponse.html) GetSearch (string q64, List<string> expand = null)
 
 Search using q64
 
@@ -156,7 +156,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new LocationsApi();
-            var q64 = q64_example;  // string |  (optional) 
+            var q64 = q64_example;  // string | 
             var expand = new List<string>(); // List<string> |  (optional) 
 
             try
@@ -179,7 +179,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **q64** | **string**|  | [optional]  |
+| **q64** | **string**|  |  |
 | **expand** | [**List<string>**](string.html)|  | [optional]  |
 {: class="table table-striped"}
 

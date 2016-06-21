@@ -20,14 +20,19 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TwitterExpression" /> class.
         /// </summary>
+        [JsonConstructorAttribute]
+        protected TwitterExpression() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="TwitterExpression" /> class.
+        /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="DateCreated">Creation date for the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="DateModified">Date the entity was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="IsDispositioned">True once the expression has been dispositioned by an agent through the ACD process (default to false).</param>
         /// <param name="IsNoise">Indicates if a user/agent found this expression to be undesirable (default to false).</param>
-        /// <param name="Gistener">The Gistener that generated this expression.</param>
-        /// <param name="TweetId">Twitter: the tweet&#39;s unique id.</param>
-        /// <param name="Text">Twitter: the tweets full text.</param>
+        /// <param name="Gistener">The Gistener that generated this expression (required).</param>
+        /// <param name="TweetId">Twitter: the tweet&#39;s unique id (required).</param>
+        /// <param name="Text">Twitter: the tweets full text (required).</param>
         /// <param name="TweetCreated">Twitter: the date the tweet was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="IsReply">Twitter: indicates this tweet as a reply to another tweet (default to false).</param>
         /// <param name="IsRetweet">Twitter: indicates this tweet as a &#39;retweet&#39; of another tweet (default to false).</param>
@@ -36,7 +41,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="IsQuotedTweet">Twitter: indicates this expression as a quoted tweet (a tweet with an addendum as the primary text) (default to false).</param>
         /// <param name="QuotedParentId">Twitter: when the expression is a quoted tweet, this is Twitter&#39;s id of the original tweet (may not be immediately functional).</param>
         /// <param name="UserId">Twitter: the expressing user&#39;s Twitter id.</param>
-        /// <param name="UserName">Twitter: the user&#39;s account name for the core service.</param>
+        /// <param name="UserName">Twitter: the user&#39;s account name for the core service (required).</param>
         /// <param name="UserScreenName">Twitter: the user&#39;s custom &#39;branding&#39; name (allowed to change over time).</param>
         /// <param name="UserTweetCount">Twitter: the number of times this user has tweeted (includes all forms of expression replies/quotes/retweets).</param>
         /// <param name="UserFollowersCount">Twitter: the number of followers this user has at the time of this expression.</param>
@@ -44,6 +49,42 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Routed">Routed (default to false).</param>
         public TwitterExpression(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, bool? IsDispositioned = null, bool? IsNoise = null, Gistener Gistener = null, string TweetId = null, string Text = null, DateTime? TweetCreated = null, bool? IsReply = null, bool? IsRetweet = null, string RetweetParentId = null, int? RetweetCount = null, bool? IsQuotedTweet = null, string QuotedParentId = null, string UserId = null, string UserName = null, string UserScreenName = null, int? UserTweetCount = null, int? UserFollowersCount = null, List<GroupTag> GroupTags = null, bool? Routed = null)
         {
+            // to ensure "Gistener" is required (not null)
+            if (Gistener == null)
+            {
+                throw new InvalidDataException("Gistener is a required property for TwitterExpression and cannot be null");
+            }
+            else
+            {
+                this.Gistener = Gistener;
+            }
+            // to ensure "TweetId" is required (not null)
+            if (TweetId == null)
+            {
+                throw new InvalidDataException("TweetId is a required property for TwitterExpression and cannot be null");
+            }
+            else
+            {
+                this.TweetId = TweetId;
+            }
+            // to ensure "Text" is required (not null)
+            if (Text == null)
+            {
+                throw new InvalidDataException("Text is a required property for TwitterExpression and cannot be null");
+            }
+            else
+            {
+                this.Text = Text;
+            }
+            // to ensure "UserName" is required (not null)
+            if (UserName == null)
+            {
+                throw new InvalidDataException("UserName is a required property for TwitterExpression and cannot be null");
+            }
+            else
+            {
+                this.UserName = UserName;
+            }
             this.Name = Name;
             this.DateCreated = DateCreated;
             this.DateModified = DateModified;
@@ -65,9 +106,6 @@ namespace ININ.PureCloudApi.Model
             {
                 this.IsNoise = IsNoise;
             }
-            this.Gistener = Gistener;
-            this.TweetId = TweetId;
-            this.Text = Text;
             this.TweetCreated = TweetCreated;
             // use default value if no "IsReply" provided
             if (IsReply == null)
@@ -100,7 +138,6 @@ namespace ININ.PureCloudApi.Model
             }
             this.QuotedParentId = QuotedParentId;
             this.UserId = UserId;
-            this.UserName = UserName;
             this.UserScreenName = UserScreenName;
             this.UserTweetCount = UserTweetCount;
             this.UserFollowersCount = UserFollowersCount;

@@ -87,7 +87,12 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DomainEdgeSoftwareUpdateDto" /> class.
         /// </summary>
-        /// <param name="Version">Version.</param>
+        [JsonConstructorAttribute]
+        protected DomainEdgeSoftwareUpdateDto() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="DomainEdgeSoftwareUpdateDto" /> class.
+        /// </summary>
+        /// <param name="Version">Version (required).</param>
         /// <param name="MaxDownloadRate">MaxDownloadRate.</param>
         /// <param name="DownloadStartTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="ExecuteStartTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
@@ -98,7 +103,15 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Current">Current (default to false).</param>
         public DomainEdgeSoftwareUpdateDto(DomainEdgeSoftwareVersionDto Version = null, int? MaxDownloadRate = null, DateTime? DownloadStartTime = null, DateTime? ExecuteStartTime = null, DateTime? ExecuteStopTime = null, bool? ExecuteOnIdle = null, StatusEnum? Status = null, string EdgeUri = null, bool? Current = null)
         {
-            this.Version = Version;
+            // to ensure "Version" is required (not null)
+            if (Version == null)
+            {
+                throw new InvalidDataException("Version is a required property for DomainEdgeSoftwareUpdateDto and cannot be null");
+            }
+            else
+            {
+                this.Version = Version;
+            }
             this.MaxDownloadRate = MaxDownloadRate;
             this.DownloadStartTime = DownloadStartTime;
             this.ExecuteStartTime = ExecuteStartTime;
@@ -126,8 +139,9 @@ namespace ININ.PureCloudApi.Model
         }
         
         /// <summary>
-        /// Gets or Sets Version
+        /// Version
         /// </summary>
+        /// <value>Version</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public DomainEdgeSoftwareVersionDto Version { get; set; }
         /// <summary>

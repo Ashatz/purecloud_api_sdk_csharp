@@ -123,6 +123,14 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'User'
         }
         /// <summary>
+        /// Test the property 'Group'
+        /// </summary>
+        [Test]
+        public void GroupTest()
+        {
+            // TODO: unit test for the property 'Group'
+        }
+        /// <summary>
         /// Test the property 'SelfUri'
         /// </summary>
         [Test]

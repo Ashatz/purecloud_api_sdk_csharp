@@ -8,7 +8,7 @@ title: Endpoint
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
-| **Name** | **string** |  | [optional] |
+| **Name** | **string** | Name | |
 | **Description** | **string** |  | [optional] |
 | **Version** | **int?** |  | [optional] |
 | **DateCreated** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
@@ -20,7 +20,7 @@ title: Endpoint
 | **CreatedByApp** | **string** |  | [optional] |
 | **Count** | **int?** |  | [optional] |
 | **Properties** | **Dictionary&lt;string, Object&gt;** |  | [optional] |
-| **Schema** | [**UriReference**](UriReference.html) |  | [optional] |
+| **Schema** | [**UriReference**](UriReference.html) | Schema | |
 | **Enabled** | **bool?** |  | [optional] [default to false]|
 | **Site** | [**UriReference**](UriReference.html) |  | [optional] |
 | **Dids** | **List&lt;string&gt;** |  | [optional] |

@@ -51,6 +51,11 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Phone" /> class.
         /// </summary>
+        [JsonConstructorAttribute]
+        protected Phone() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Phone" /> class.
+        /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="Description">Description.</param>
         /// <param name="Version">Version.</param>
@@ -62,11 +67,11 @@ namespace ININ.PureCloudApi.Model
         /// <param name="ModifiedByApp">ModifiedByApp.</param>
         /// <param name="CreatedByApp">CreatedByApp.</param>
         /// <param name="EdgeGroup">EdgeGroup.</param>
-        /// <param name="Site">Site.</param>
-        /// <param name="PhoneBaseSettings">PhoneBaseSettings.</param>
+        /// <param name="Site">Site (required).</param>
+        /// <param name="PhoneBaseSettings">Phone Base Settings (required).</param>
         /// <param name="LineBaseSettings">LineBaseSettings.</param>
         /// <param name="PhoneMetaBase">PhoneMetaBase.</param>
-        /// <param name="Lines">Lines.</param>
+        /// <param name="Lines">Lines (required).</param>
         /// <param name="Status">The status of the phone and lines from the primary Edge..</param>
         /// <param name="SecondaryStatus">The status of the phone and lines from the secondary Edge..</param>
         /// <param name="Properties">Properties.</param>
@@ -74,6 +79,33 @@ namespace ININ.PureCloudApi.Model
         /// <param name="WebRtcUser">This is the user associated with a WebRTC type phone.  It is required for all WebRTC phones..</param>
         public Phone(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, UriReference EdgeGroup = null, UriReference Site = null, UriReference PhoneBaseSettings = null, UriReference LineBaseSettings = null, UriReference PhoneMetaBase = null, List<Line> Lines = null, PhoneStatus Status = null, PhoneStatus SecondaryStatus = null, Dictionary<string, Object> Properties = null, PhoneCapabilities Capabilities = null, UriReference WebRtcUser = null)
         {
+            // to ensure "Site" is required (not null)
+            if (Site == null)
+            {
+                throw new InvalidDataException("Site is a required property for Phone and cannot be null");
+            }
+            else
+            {
+                this.Site = Site;
+            }
+            // to ensure "PhoneBaseSettings" is required (not null)
+            if (PhoneBaseSettings == null)
+            {
+                throw new InvalidDataException("PhoneBaseSettings is a required property for Phone and cannot be null");
+            }
+            else
+            {
+                this.PhoneBaseSettings = PhoneBaseSettings;
+            }
+            // to ensure "Lines" is required (not null)
+            if (Lines == null)
+            {
+                throw new InvalidDataException("Lines is a required property for Phone and cannot be null");
+            }
+            else
+            {
+                this.Lines = Lines;
+            }
             this.Name = Name;
             this.Description = Description;
             this.Version = Version;
@@ -85,11 +117,8 @@ namespace ININ.PureCloudApi.Model
             this.ModifiedByApp = ModifiedByApp;
             this.CreatedByApp = CreatedByApp;
             this.EdgeGroup = EdgeGroup;
-            this.Site = Site;
-            this.PhoneBaseSettings = PhoneBaseSettings;
             this.LineBaseSettings = LineBaseSettings;
             this.PhoneMetaBase = PhoneMetaBase;
-            this.Lines = Lines;
             this.Status = Status;
             this.SecondaryStatus = SecondaryStatus;
             this.Properties = Properties;
@@ -156,13 +185,15 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="edgeGroup", EmitDefaultValue=false)]
         public UriReference EdgeGroup { get; set; }
         /// <summary>
-        /// Gets or Sets Site
+        /// Site
         /// </summary>
+        /// <value>Site</value>
         [DataMember(Name="site", EmitDefaultValue=false)]
         public UriReference Site { get; set; }
         /// <summary>
-        /// Gets or Sets PhoneBaseSettings
+        /// Phone Base Settings
         /// </summary>
+        /// <value>Phone Base Settings</value>
         [DataMember(Name="phoneBaseSettings", EmitDefaultValue=false)]
         public UriReference PhoneBaseSettings { get; set; }
         /// <summary>
@@ -176,8 +207,9 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="phoneMetaBase", EmitDefaultValue=false)]
         public UriReference PhoneMetaBase { get; set; }
         /// <summary>
-        /// Gets or Sets Lines
+        /// Lines
         /// </summary>
+        /// <value>Lines</value>
         [DataMember(Name="lines", EmitDefaultValue=false)]
         public List<Line> Lines { get; set; }
         /// <summary>

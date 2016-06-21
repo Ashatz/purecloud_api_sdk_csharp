@@ -14,7 +14,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteUserIdStationDefaultstation**](UsersApi.html#deleteuseridstationdefaultstation) | **DELETE** /api/v2/users/{userId}/station/defaultstation | Clear default station |
 | [**GetMe**](UsersApi.html#getme) | **GET** /api/v2/users/me | Get user. |
 | [**GetSearch**](UsersApi.html#getsearch) | **GET** /api/v2/users/search | Search using q64 |
-| [**GetUserId**](UsersApi.html#getuserid) | **GET** /api/v2/users/{userId} | Get user |
+| [**GetUserId**](UsersApi.html#getuserid) | **GET** /api/v2/users/{userId} | Get user. |
 | [**GetUserIdCallforwarding**](UsersApi.html#getuseridcallforwarding) | **GET** /api/v2/users/{userId}/callforwarding | Get a user&#39;s CallForwarding |
 | [**GetUserIdGeolocationsClientId**](UsersApi.html#getuseridgeolocationsclientid) | **GET** /api/v2/users/{userId}/geolocations/{clientId} | Get a user&#39;s Geolocation |
 | [**GetUserIdOutofoffice**](UsersApi.html#getuseridoutofoffice) | **GET** /api/v2/users/{userId}/outofoffice | Get a OutOfOffice |
@@ -380,7 +380,7 @@ namespace Example
 
 <a name="getsearch"></a>
 
-## [**UsersSearchResponse**](UsersSearchResponse.html) GetSearch (string q64 = null, List<string> expand = null)
+## [**UsersSearchResponse**](UsersSearchResponse.html) GetSearch (string q64, List<string> expand = null)
 
 Search using q64
 
@@ -405,7 +405,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new UsersApi();
-            var q64 = q64_example;  // string |  (optional) 
+            var q64 = q64_example;  // string | 
             var expand = new List<string>(); // List<string> |  (optional) 
 
             try
@@ -428,7 +428,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **q64** | **string**|  | [optional]  |
+| **q64** | **string**|  |  |
 | **expand** | [**List<string>**](string.html)|  | [optional]  |
 {: class="table table-striped"}
 
@@ -440,7 +440,7 @@ namespace Example
 
 ## [**User**](User.html) GetUserId (string userId, List<string> expand = null)
 
-Get user
+Get user.
 
 
 
@@ -468,7 +468,7 @@ namespace Example
 
             try
             {
-                // Get user
+                // Get user.
                 User result = apiInstance.GetUserId(userId, expand);
                 Debug.WriteLine(result);
             }
@@ -956,7 +956,7 @@ namespace Example
 
 <a name="getusers"></a>
 
-## [**UsersEntityListing**](UsersEntityListing.html) GetUsers (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortOrder = null, List<string> expand = null)
+## [**UsersEntityListing**](UsersEntityListing.html) GetUsers (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortBy = null, string role = null, string name = null, string username = null, List<string> skill = null, List<string> expand = null)
 
 Get the list of available users.
 
@@ -983,14 +983,18 @@ namespace Example
             var apiInstance = new UsersApi();
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            var id = new List<string>(); // List<string> | The list of user ids to get. Paging is ignored if ids are specified (optional) 
-            var sortOrder = sortOrder_example;  // string | Ascending or descending sort order (optional)  (default to ASC)
+            var id = new List<string>(); // List<string> | id (optional) 
+            var sortBy = sortBy_example;  // string | Sort by (optional)  (default to name)
+            var role = role_example;  // string | Role (optional) 
+            var name = name_example;  // string | Name (optional) 
+            var username = username_example;  // string | Username (optional) 
+            var skill = new List<string>(); // List<string> | Skill (optional) 
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
 
             try
             {
                 // Get the list of available users.
-                UsersEntityListing result = apiInstance.GetUsers(pageSize, pageNumber, id, sortOrder, expand);
+                UsersEntityListing result = apiInstance.GetUsers(pageSize, pageNumber, id, sortBy, role, name, username, skill, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1009,8 +1013,12 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-| **id** | [**List<string>**](string.html)| The list of user ids to get. Paging is ignored if ids are specified | [optional]  |
-| **sortOrder** | **string**| Ascending or descending sort order | [optional] [default to ASC] |
+| **id** | [**List<string>**](string.html)| id | [optional]  |
+| **sortBy** | **string**| Sort by | [optional] [default to name] |
+| **role** | **string**| Role | [optional]  |
+| **name** | **string**| Name | [optional]  |
+| **username** | **string**| Username | [optional]  |
+| **skill** | [**List<string>**](string.html)| Skill | [optional]  |
 | **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional]  |
 {: class="table table-striped"}
 

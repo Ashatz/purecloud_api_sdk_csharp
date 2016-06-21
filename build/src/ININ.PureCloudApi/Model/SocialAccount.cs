@@ -20,18 +20,41 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SocialAccount" /> class.
         /// </summary>
+        [JsonConstructorAttribute]
+        protected SocialAccount() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="SocialAccount" /> class.
+        /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="DateCreated">Creation date for the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="DateModified">Date the entity was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="Enabled">Indicates if this Social Account is available for selection by other entities (default to false).</param>
         /// <param name="Authorized">True when successfully completing the third-party authorization process (default to false).</param>
         /// <param name="SocialHub">Which third party Social Media Hub this account will be communicating through.</param>
-        /// <param name="AccessToken">Credential provided through the Social Hub&#39;s authorization process.</param>
-        /// <param name="AccessTokenSecret">Credential provided through the Social Hub&#39;s authorization process.</param>
+        /// <param name="AccessToken">Credential provided through the Social Hub&#39;s authorization process (required).</param>
+        /// <param name="AccessTokenSecret">Credential provided through the Social Hub&#39;s authorization process (required).</param>
         /// <param name="TwitterId">The account ID as provided by Twitter during the authorization process.</param>
         /// <param name="StreamingEnabled">Indicates if a stream should be opened on behalf of the indicated Social Hub account (default to false).</param>
         public SocialAccount(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, bool? Enabled = null, bool? Authorized = null, string SocialHub = null, string AccessToken = null, string AccessTokenSecret = null, string TwitterId = null, bool? StreamingEnabled = null)
         {
+            // to ensure "AccessToken" is required (not null)
+            if (AccessToken == null)
+            {
+                throw new InvalidDataException("AccessToken is a required property for SocialAccount and cannot be null");
+            }
+            else
+            {
+                this.AccessToken = AccessToken;
+            }
+            // to ensure "AccessTokenSecret" is required (not null)
+            if (AccessTokenSecret == null)
+            {
+                throw new InvalidDataException("AccessTokenSecret is a required property for SocialAccount and cannot be null");
+            }
+            else
+            {
+                this.AccessTokenSecret = AccessTokenSecret;
+            }
             this.Name = Name;
             this.DateCreated = DateCreated;
             this.DateModified = DateModified;
@@ -54,8 +77,6 @@ namespace ININ.PureCloudApi.Model
                 this.Authorized = Authorized;
             }
             this.SocialHub = SocialHub;
-            this.AccessToken = AccessToken;
-            this.AccessTokenSecret = AccessTokenSecret;
             this.TwitterId = TwitterId;
             // use default value if no "StreamingEnabled" provided
             if (StreamingEnabled == null)

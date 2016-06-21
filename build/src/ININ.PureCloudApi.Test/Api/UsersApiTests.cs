@@ -264,9 +264,13 @@ namespace ININ.PureCloudApi.Test
             int? pageSize = null; // TODO: replace null with proper value
             int? pageNumber = null; // TODO: replace null with proper value
             List<string> id = null; // TODO: replace null with proper value
-            string sortOrder = null; // TODO: replace null with proper value
+            string sortBy = null; // TODO: replace null with proper value
+            string role = null; // TODO: replace null with proper value
+            string name = null; // TODO: replace null with proper value
+            string username = null; // TODO: replace null with proper value
+            List<string> skill = null; // TODO: replace null with proper value
             List<string> expand = null; // TODO: replace null with proper value
-            var response = instance.GetUsers(pageSize, pageNumber, id, sortOrder, expand);
+            var response = instance.GetUsers(pageSize, pageNumber, id, sortBy, role, name, username, skill, expand);
             Assert.IsInstanceOf<UsersEntityListing> (response, "response is UsersEntityListing");
         }
         

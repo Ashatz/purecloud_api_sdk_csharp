@@ -18,8 +18,9 @@ namespace ININ.PureCloudApi.Model
     public partial class Greeting :  IEquatable<Greeting>
     {
         /// <summary>
-        /// Gets or Sets Type
+        /// Greeting type
         /// </summary>
+        /// <value>Greeting type</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum TypeEnum
         {
@@ -44,8 +45,9 @@ namespace ININ.PureCloudApi.Model
         }
 
         /// <summary>
-        /// Gets or Sets OwnerType
+        /// Greeting owner type
         /// </summary>
+        /// <value>Greeting owner type</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum OwnerTypeEnum
         {
@@ -70,22 +72,29 @@ namespace ININ.PureCloudApi.Model
         }
 
         /// <summary>
-        /// Gets or Sets Type
+        /// Greeting type
         /// </summary>
+        /// <value>Greeting type</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
         /// <summary>
-        /// Gets or Sets OwnerType
+        /// Greeting owner type
         /// </summary>
+        /// <value>Greeting owner type</value>
         [DataMember(Name="ownerType", EmitDefaultValue=false)]
         public OwnerTypeEnum? OwnerType { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="Greeting" /> class.
         /// </summary>
+        [JsonConstructorAttribute]
+        protected Greeting() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Greeting" /> class.
+        /// </summary>
         /// <param name="Name">Name.</param>
-        /// <param name="Type">Type.</param>
-        /// <param name="OwnerType">OwnerType.</param>
-        /// <param name="Owner">Owner.</param>
+        /// <param name="Type">Greeting type (required).</param>
+        /// <param name="OwnerType">Greeting owner type (required).</param>
+        /// <param name="Owner">Greeting owner (required).</param>
         /// <param name="AudioFile">AudioFile.</param>
         /// <param name="AudioTTS">AudioTTS.</param>
         /// <param name="CreatedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
@@ -94,10 +103,34 @@ namespace ININ.PureCloudApi.Model
         /// <param name="ModifiedBy">ModifiedBy.</param>
         public Greeting(string Name = null, TypeEnum? Type = null, OwnerTypeEnum? OwnerType = null, DomainEntity Owner = null, GreetingAudioFile AudioFile = null, string AudioTTS = null, DateTime? CreatedDate = null, string CreatedBy = null, DateTime? ModifiedDate = null, string ModifiedBy = null)
         {
+            // to ensure "Type" is required (not null)
+            if (Type == null)
+            {
+                throw new InvalidDataException("Type is a required property for Greeting and cannot be null");
+            }
+            else
+            {
+                this.Type = Type;
+            }
+            // to ensure "OwnerType" is required (not null)
+            if (OwnerType == null)
+            {
+                throw new InvalidDataException("OwnerType is a required property for Greeting and cannot be null");
+            }
+            else
+            {
+                this.OwnerType = OwnerType;
+            }
+            // to ensure "Owner" is required (not null)
+            if (Owner == null)
+            {
+                throw new InvalidDataException("Owner is a required property for Greeting and cannot be null");
+            }
+            else
+            {
+                this.Owner = Owner;
+            }
             this.Name = Name;
-            this.Type = Type;
-            this.OwnerType = OwnerType;
-            this.Owner = Owner;
             this.AudioFile = AudioFile;
             this.AudioTTS = AudioTTS;
             this.CreatedDate = CreatedDate;
@@ -118,8 +151,9 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
         /// <summary>
-        /// Gets or Sets Owner
+        /// Greeting owner
         /// </summary>
+        /// <value>Greeting owner</value>
         [DataMember(Name="owner", EmitDefaultValue=false)]
         public DomainEntity Owner { get; set; }
         /// <summary>

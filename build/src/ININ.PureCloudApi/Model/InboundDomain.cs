@@ -18,8 +18,9 @@ namespace ININ.PureCloudApi.Model
     public partial class InboundDomain :  IEquatable<InboundDomain>
     {
         /// <summary>
-        /// Gets or Sets MxRecordStatus
+        /// Mx Record Status
         /// </summary>
+        /// <value>Mx Record Status</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum MxRecordStatusEnum
         {
@@ -44,20 +45,34 @@ namespace ININ.PureCloudApi.Model
         }
 
         /// <summary>
-        /// Gets or Sets MxRecordStatus
+        /// Mx Record Status
         /// </summary>
+        /// <value>Mx Record Status</value>
         [DataMember(Name="mxRecordStatus", EmitDefaultValue=false)]
         public MxRecordStatusEnum? MxRecordStatus { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="InboundDomain" /> class.
         /// </summary>
+        [JsonConstructorAttribute]
+        protected InboundDomain() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="InboundDomain" /> class.
+        /// </summary>
         /// <param name="Name">Name.</param>
-        /// <param name="MxRecordStatus">MxRecordStatus.</param>
+        /// <param name="MxRecordStatus">Mx Record Status (required).</param>
         /// <param name="SubDomain">Indicates if this a PureCloud sub-domain.  If true, then the appropriate DNS records are created for sending/receiving email. (default to false).</param>
         public InboundDomain(string Name = null, MxRecordStatusEnum? MxRecordStatus = null, bool? SubDomain = null)
         {
+            // to ensure "MxRecordStatus" is required (not null)
+            if (MxRecordStatus == null)
+            {
+                throw new InvalidDataException("MxRecordStatus is a required property for InboundDomain and cannot be null");
+            }
+            else
+            {
+                this.MxRecordStatus = MxRecordStatus;
+            }
             this.Name = Name;
-            this.MxRecordStatus = MxRecordStatus;
             // use default value if no "SubDomain" provided
             if (SubDomain == null)
             {

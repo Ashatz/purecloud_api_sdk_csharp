@@ -537,7 +537,7 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of ContactList</returns>
         ApiResponse<ContactList> GetContactlistsContactlistIdWithHttpInfo (string contactListId, bool? includeImportStatus = null, bool? includeSize = null);
         /// <summary>
-        /// Get dialer contactList.
+        /// Get a contact.
         /// </summary>
         /// <remarks>
         /// 
@@ -549,7 +549,7 @@ namespace ININ.PureCloudApi.Api
         DialerContact GetContactlistsContactlistIdContactsContactId (string contactListId, string contactId);
 
         /// <summary>
-        /// Get dialer contactList.
+        /// Get a contact.
         /// </summary>
         /// <remarks>
         /// 
@@ -1078,7 +1078,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="body">Contact (optional)</param>
-        /// <param name="priority"> (optional)</param>
+        /// <param name="priority">Contact priority.  True means the contact(s) will go to the beginning of the list, false means at the end. (optional)</param>
         /// <returns>DialerContact</returns>
         DialerContact PostContactlistsContactlistIdContacts (string contactListId, List<DialerContact> body = null, bool? priority = null);
 
@@ -1091,7 +1091,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="body">Contact (optional)</param>
-        /// <param name="priority"> (optional)</param>
+        /// <param name="priority">Contact priority.  True means the contact(s) will go to the beginning of the list, false means at the end. (optional)</param>
         /// <returns>ApiResponse of DialerContact</returns>
         ApiResponse<DialerContact> PostContactlistsContactlistIdContactsWithHttpInfo (string contactListId, List<DialerContact> body = null, bool? priority = null);
         /// <summary>
@@ -2046,7 +2046,7 @@ namespace ININ.PureCloudApi.Api
         /// <returns>Task of ApiResponse (ContactList)</returns>
         System.Threading.Tasks.Task<ApiResponse<ContactList>> GetContactlistsContactlistIdAsyncWithHttpInfo (string contactListId, bool? includeImportStatus = null, bool? includeSize = null);
         /// <summary>
-        /// Get dialer contactList.
+        /// Get a contact.
         /// </summary>
         /// <remarks>
         /// 
@@ -2058,7 +2058,7 @@ namespace ININ.PureCloudApi.Api
         System.Threading.Tasks.Task<DialerContact> GetContactlistsContactlistIdContactsContactIdAsync (string contactListId, string contactId);
 
         /// <summary>
-        /// Get dialer contactList.
+        /// Get a contact.
         /// </summary>
         /// <remarks>
         /// 
@@ -2587,7 +2587,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="body">Contact (optional)</param>
-        /// <param name="priority"> (optional)</param>
+        /// <param name="priority">Contact priority.  True means the contact(s) will go to the beginning of the list, false means at the end. (optional)</param>
         /// <returns>Task of DialerContact</returns>
         System.Threading.Tasks.Task<DialerContact> PostContactlistsContactlistIdContactsAsync (string contactListId, List<DialerContact> body = null, bool? priority = null);
 
@@ -2600,7 +2600,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="body">Contact (optional)</param>
-        /// <param name="priority"> (optional)</param>
+        /// <param name="priority">Contact priority.  True means the contact(s) will go to the beginning of the list, false means at the end. (optional)</param>
         /// <returns>Task of ApiResponse (DialerContact)</returns>
         System.Threading.Tasks.Task<ApiResponse<DialerContact>> PostContactlistsContactlistIdContactsAsyncWithHttpInfo (string contactListId, List<DialerContact> body = null, bool? priority = null);
         /// <summary>
@@ -6649,7 +6649,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Get dialer contactList. 
+        /// Get a contact. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">Contact List ID</param>
@@ -6662,7 +6662,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Get dialer contactList. 
+        /// Get a contact. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">Contact List ID</param>
@@ -6731,7 +6731,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Get dialer contactList. 
+        /// Get a contact. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">Contact List ID</param>
@@ -6745,7 +6745,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Get dialer contactList. 
+        /// Get a contact. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">Contact List ID</param>
@@ -10355,7 +10355,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="body">Contact (optional)</param>
-        /// <param name="priority"> (optional)</param>
+        /// <param name="priority">Contact priority.  True means the contact(s) will go to the beginning of the list, false means at the end. (optional)</param>
         /// <returns>DialerContact</returns>
         public DialerContact PostContactlistsContactlistIdContacts (string contactListId, List<DialerContact> body = null, bool? priority = null)
         {
@@ -10369,7 +10369,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="body">Contact (optional)</param>
-        /// <param name="priority"> (optional)</param>
+        /// <param name="priority">Contact priority.  True means the contact(s) will go to the beginning of the list, false means at the end. (optional)</param>
         /// <returns>ApiResponse of DialerContact</returns>
         public ApiResponse< DialerContact > PostContactlistsContactlistIdContactsWithHttpInfo (string contactListId, List<DialerContact> body = null, bool? priority = null)
         {
@@ -10444,7 +10444,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="body">Contact (optional)</param>
-        /// <param name="priority"> (optional)</param>
+        /// <param name="priority">Contact priority.  True means the contact(s) will go to the beginning of the list, false means at the end. (optional)</param>
         /// <returns>Task of DialerContact</returns>
         public async System.Threading.Tasks.Task<DialerContact> PostContactlistsContactlistIdContactsAsync (string contactListId, List<DialerContact> body = null, bool? priority = null)
         {
@@ -10459,7 +10459,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="body">Contact (optional)</param>
-        /// <param name="priority"> (optional)</param>
+        /// <param name="priority">Contact priority.  True means the contact(s) will go to the beginning of the list, false means at the end. (optional)</param>
         /// <returns>Task of ApiResponse (DialerContact)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<DialerContact>> PostContactlistsContactlistIdContactsAsyncWithHttpInfo (string contactListId, List<DialerContact> body = null, bool? priority = null)
         {

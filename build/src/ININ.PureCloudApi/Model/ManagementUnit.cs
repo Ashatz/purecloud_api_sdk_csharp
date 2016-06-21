@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace ININ.PureCloudApi.Model
 {
     /// <summary>
-    /// ManagementUnit
+    /// Management Unit object for Workforce Management.  Not currently functional in public-api v2
     /// </summary>
     [DataContract]
     public partial class ManagementUnit :  IEquatable<ManagementUnit>

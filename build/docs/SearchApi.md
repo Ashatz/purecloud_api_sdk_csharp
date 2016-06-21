@@ -21,7 +21,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 <a name="getsearch"></a>
 
-## [**GroupsSearchResponse**](GroupsSearchResponse.html) GetSearch (string q64 = null, List<string> expand = null)
+## [**GroupsSearchResponse**](GroupsSearchResponse.html) GetSearch (string q64, List<string> expand = null)
 
 Search using q64
 
@@ -46,7 +46,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new SearchApi();
-            var q64 = q64_example;  // string |  (optional) 
+            var q64 = q64_example;  // string | 
             var expand = new List<string>(); // List<string> |  (optional) 
 
             try
@@ -69,7 +69,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **q64** | **string**|  | [optional]  |
+| **q64** | **string**|  |  |
 | **expand** | [**List<string>**](string.html)|  | [optional]  |
 {: class="table table-striped"}
 
@@ -79,7 +79,7 @@ namespace Example
 
 <a name="getsearch_0"></a>
 
-## [**LocationsSearchResponse**](LocationsSearchResponse.html) GetSearch_0 (string q64 = null, List<string> expand = null)
+## [**LocationsSearchResponse**](LocationsSearchResponse.html) GetSearch_0 (string q64, List<string> expand = null)
 
 Search using q64
 
@@ -104,7 +104,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new SearchApi();
-            var q64 = q64_example;  // string |  (optional) 
+            var q64 = q64_example;  // string | 
             var expand = new List<string>(); // List<string> |  (optional) 
 
             try
@@ -127,7 +127,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **q64** | **string**|  | [optional]  |
+| **q64** | **string**|  |  |
 | **expand** | [**List<string>**](string.html)|  | [optional]  |
 {: class="table table-striped"}
 
@@ -137,7 +137,7 @@ namespace Example
 
 <a name="getsearch_1"></a>
 
-## [**JsonNodeSearchResponse**](JsonNodeSearchResponse.html) GetSearch_1 (string q64 = null, List<string> expand = null, bool? profile = null)
+## [**JsonNodeSearchResponse**](JsonNodeSearchResponse.html) GetSearch_1 (string q64, List<string> expand = null, bool? profile = null)
 
 Search using q64
 
@@ -162,7 +162,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new SearchApi();
-            var q64 = q64_example;  // string |  (optional) 
+            var q64 = q64_example;  // string | 
             var expand = new List<string>(); // List<string> |  (optional) 
             var profile = true;  // bool? |  (optional)  (default to true)
 
@@ -186,7 +186,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **q64** | **string**|  | [optional]  |
+| **q64** | **string**|  |  |
 | **expand** | [**List<string>**](string.html)|  | [optional]  |
 | **profile** | **bool?**|  | [optional] [default to true] |
 {: class="table table-striped"}
@@ -197,7 +197,7 @@ namespace Example
 
 <a name="getsearch_2"></a>
 
-## [**UsersSearchResponse**](UsersSearchResponse.html) GetSearch_2 (string q64 = null, List<string> expand = null)
+## [**UsersSearchResponse**](UsersSearchResponse.html) GetSearch_2 (string q64, List<string> expand = null)
 
 Search using q64
 
@@ -222,7 +222,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new SearchApi();
-            var q64 = q64_example;  // string |  (optional) 
+            var q64 = q64_example;  // string | 
             var expand = new List<string>(); // List<string> |  (optional) 
 
             try
@@ -245,7 +245,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **q64** | **string**|  | [optional]  |
+| **q64** | **string**|  |  |
 | **expand** | [**List<string>**](string.html)|  | [optional]  |
 {: class="table table-striped"}
 
@@ -255,7 +255,7 @@ namespace Example
 
 <a name="getsuggest"></a>
 
-## [**JsonNodeSearchResponse**](JsonNodeSearchResponse.html) GetSuggest (string q64 = null, bool? profile = null)
+## [**JsonNodeSearchResponse**](JsonNodeSearchResponse.html) GetSuggest (string q64, bool? profile = null)
 
 Suggest using q64
 
@@ -280,7 +280,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new SearchApi();
-            var q64 = q64_example;  // string |  (optional) 
+            var q64 = q64_example;  // string | 
             var profile = true;  // bool? |  (optional)  (default to true)
 
             try
@@ -303,7 +303,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **q64** | **string**|  | [optional]  |
+| **q64** | **string**|  |  |
 | **profile** | **bool?**|  | [optional] [default to true] |
 {: class="table table-striped"}
 

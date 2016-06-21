@@ -15,7 +15,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 <a name="getsearch"></a>
 
-## [**JsonNodeSearchResponse**](JsonNodeSearchResponse.html) GetSearch (string q64 = null, List<string> expand = null, bool? profile = null)
+## [**JsonNodeSearchResponse**](JsonNodeSearchResponse.html) GetSearch (string q64, List<string> expand = null, bool? profile = null)
 
 Search using q64
 
@@ -40,7 +40,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new SuggestApi();
-            var q64 = q64_example;  // string |  (optional) 
+            var q64 = q64_example;  // string | 
             var expand = new List<string>(); // List<string> |  (optional) 
             var profile = true;  // bool? |  (optional)  (default to true)
 
@@ -64,7 +64,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **q64** | **string**|  | [optional]  |
+| **q64** | **string**|  |  |
 | **expand** | [**List<string>**](string.html)|  | [optional]  |
 | **profile** | **bool?**|  | [optional] [default to true] |
 {: class="table table-striped"}
@@ -75,7 +75,7 @@ namespace Example
 
 <a name="getsuggest"></a>
 
-## [**JsonNodeSearchResponse**](JsonNodeSearchResponse.html) GetSuggest (string q64 = null, bool? profile = null)
+## [**JsonNodeSearchResponse**](JsonNodeSearchResponse.html) GetSuggest (string q64, bool? profile = null)
 
 Suggest using q64
 
@@ -100,7 +100,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new SuggestApi();
-            var q64 = q64_example;  // string |  (optional) 
+            var q64 = q64_example;  // string | 
             var profile = true;  // bool? |  (optional)  (default to true)
 
             try
@@ -123,7 +123,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **q64** | **string**|  | [optional]  |
+| **q64** | **string**|  |  |
 | **profile** | **bool?**|  | [optional] [default to true] |
 {: class="table table-striped"}
 

@@ -14,7 +14,8 @@ title: CreateCallbackCommand
 | **CallbackNumbers** | **List&lt;string&gt;** |  | [optional] |
 | **CallbackScheduledTime** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **CountryCode** | **string** |  | [optional] |
-| **SkipEnabled** | **bool?** |  | [optional] [default to false]|
+| **IsAutomated** | **bool?** |  | [optional] [default to false]|
+| **AutomatedCallbackConfigId** | **string** |  | [optional] |
 | **AdditionalInfo** | [**AdditionalInfo**](AdditionalInfo.html) |  | [optional] |
 {: class="table table-striped"}
 

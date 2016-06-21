@@ -27,9 +27,10 @@ namespace ININ.PureCloudApi.Model
         /// <param name="CallbackNumbers">CallbackNumbers.</param>
         /// <param name="CallbackScheduledTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="CountryCode">CountryCode.</param>
-        /// <param name="SkipEnabled">SkipEnabled (default to false).</param>
+        /// <param name="IsAutomated">IsAutomated (default to false).</param>
+        /// <param name="AutomatedCallbackConfigId">AutomatedCallbackConfigId.</param>
         /// <param name="AdditionalInfo">AdditionalInfo.</param>
-        public CreateCallbackCommand(string ScriptId = null, string QueueId = null, RoutingData RoutingData = null, string CallbackUserName = null, List<string> CallbackNumbers = null, DateTime? CallbackScheduledTime = null, string CountryCode = null, bool? SkipEnabled = null, AdditionalInfo AdditionalInfo = null)
+        public CreateCallbackCommand(string ScriptId = null, string QueueId = null, RoutingData RoutingData = null, string CallbackUserName = null, List<string> CallbackNumbers = null, DateTime? CallbackScheduledTime = null, string CountryCode = null, bool? IsAutomated = null, string AutomatedCallbackConfigId = null, AdditionalInfo AdditionalInfo = null)
         {
             this.ScriptId = ScriptId;
             this.QueueId = QueueId;
@@ -38,15 +39,16 @@ namespace ININ.PureCloudApi.Model
             this.CallbackNumbers = CallbackNumbers;
             this.CallbackScheduledTime = CallbackScheduledTime;
             this.CountryCode = CountryCode;
-            // use default value if no "SkipEnabled" provided
-            if (SkipEnabled == null)
+            // use default value if no "IsAutomated" provided
+            if (IsAutomated == null)
             {
-                this.SkipEnabled = false;
+                this.IsAutomated = false;
             }
             else
             {
-                this.SkipEnabled = SkipEnabled;
+                this.IsAutomated = IsAutomated;
             }
+            this.AutomatedCallbackConfigId = AutomatedCallbackConfigId;
             this.AdditionalInfo = AdditionalInfo;
         }
         
@@ -87,10 +89,15 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="countryCode", EmitDefaultValue=false)]
         public string CountryCode { get; set; }
         /// <summary>
-        /// Gets or Sets SkipEnabled
+        /// Gets or Sets IsAutomated
         /// </summary>
-        [DataMember(Name="skipEnabled", EmitDefaultValue=false)]
-        public bool? SkipEnabled { get; set; }
+        [DataMember(Name="isAutomated", EmitDefaultValue=false)]
+        public bool? IsAutomated { get; set; }
+        /// <summary>
+        /// Gets or Sets AutomatedCallbackConfigId
+        /// </summary>
+        [DataMember(Name="automatedCallbackConfigId", EmitDefaultValue=false)]
+        public string AutomatedCallbackConfigId { get; set; }
         /// <summary>
         /// Gets or Sets AdditionalInfo
         /// </summary>
@@ -111,7 +118,8 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  CallbackNumbers: ").Append(CallbackNumbers).Append("\n");
             sb.Append("  CallbackScheduledTime: ").Append(CallbackScheduledTime).Append("\n");
             sb.Append("  CountryCode: ").Append(CountryCode).Append("\n");
-            sb.Append("  SkipEnabled: ").Append(SkipEnabled).Append("\n");
+            sb.Append("  IsAutomated: ").Append(IsAutomated).Append("\n");
+            sb.Append("  AutomatedCallbackConfigId: ").Append(AutomatedCallbackConfigId).Append("\n");
             sb.Append("  AdditionalInfo: ").Append(AdditionalInfo).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -185,9 +193,14 @@ namespace ININ.PureCloudApi.Model
                     this.CountryCode.Equals(other.CountryCode)
                 ) &&
                 (
-                    this.SkipEnabled == other.SkipEnabled ||
-                    this.SkipEnabled != null &&
-                    this.SkipEnabled.Equals(other.SkipEnabled)
+                    this.IsAutomated == other.IsAutomated ||
+                    this.IsAutomated != null &&
+                    this.IsAutomated.Equals(other.IsAutomated)
+                ) &&
+                (
+                    this.AutomatedCallbackConfigId == other.AutomatedCallbackConfigId ||
+                    this.AutomatedCallbackConfigId != null &&
+                    this.AutomatedCallbackConfigId.Equals(other.AutomatedCallbackConfigId)
                 ) &&
                 (
                     this.AdditionalInfo == other.AdditionalInfo ||
@@ -221,8 +234,10 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.CallbackScheduledTime.GetHashCode();
                 if (this.CountryCode != null)
                     hash = hash * 59 + this.CountryCode.GetHashCode();
-                if (this.SkipEnabled != null)
-                    hash = hash * 59 + this.SkipEnabled.GetHashCode();
+                if (this.IsAutomated != null)
+                    hash = hash * 59 + this.IsAutomated.GetHashCode();
+                if (this.AutomatedCallbackConfigId != null)
+                    hash = hash * 59 + this.AutomatedCallbackConfigId.GetHashCode();
                 if (this.AdditionalInfo != null)
                     hash = hash * 59 + this.AdditionalInfo.GetHashCode();
                 return hash;

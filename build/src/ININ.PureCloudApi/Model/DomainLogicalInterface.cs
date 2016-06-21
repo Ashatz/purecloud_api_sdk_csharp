@@ -100,6 +100,11 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DomainLogicalInterface" /> class.
         /// </summary>
+        [JsonConstructorAttribute]
+        protected DomainLogicalInterface() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="DomainLogicalInterface" /> class.
+        /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="Description">Description.</param>
         /// <param name="Version">Version.</param>
@@ -112,10 +117,10 @@ namespace ININ.PureCloudApi.Model
         /// <param name="CreatedByApp">CreatedByApp.</param>
         /// <param name="EdgeUri">EdgeUri.</param>
         /// <param name="EdgeAssignedId">EdgeAssignedId.</param>
-        /// <param name="FriendlyName">FriendlyName.</param>
+        /// <param name="FriendlyName">Friendly Name (required).</param>
         /// <param name="VlanTagId">VlanTagId.</param>
-        /// <param name="HardwareAddress">HardwareAddress.</param>
-        /// <param name="PhysicalAdapterId">PhysicalAdapterId.</param>
+        /// <param name="HardwareAddress">Hardware Address (required).</param>
+        /// <param name="PhysicalAdapterId">Physical Adapter Id (required).</param>
         /// <param name="IpAddress">IpAddress.</param>
         /// <param name="Gateway">Gateway.</param>
         /// <param name="PrimaryDns">PrimaryDns.</param>
@@ -137,6 +142,33 @@ namespace ININ.PureCloudApi.Model
         /// <param name="PhoneTrunkBaseAssignments">Phone trunk base settings to use for phone communication from this interface.  These settings will be ignored when \&quot;inheritPhoneTrunkBases\&quot; is true..</param>
         public DomainLogicalInterface(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, string EdgeUri = null, string EdgeAssignedId = null, string FriendlyName = null, int? VlanTagId = null, string HardwareAddress = null, string PhysicalAdapterId = null, string IpAddress = null, string Gateway = null, string PrimaryDns = null, string SecondaryDns = null, string IfStatus = null, List<DomainNetworkRoute> Routes = null, List<DomainNetworkAddress> Addresses = null, DomainCapabilities Ipv4Capabilities = null, DomainCapabilities Ipv6Capabilities = null, CurrentStateEnum? CurrentState = null, string LastModifiedUserId = null, string LastModifiedCorrelationId = null, List<DomainNetworkCommandResponse> CommandResponses = null, bool? InheritPhoneTrunkBases = null, bool? InheritPhoneTrunkBasesIPv4 = null, bool? InheritPhoneTrunkBasesIPv6 = null, bool? UseForInternalEdgeCommunication = null, List<TrunkBaseAssignment> ExternalTrunkBaseAssignments = null, List<TrunkBaseAssignment> PhoneTrunkBaseAssignments = null)
         {
+            // to ensure "FriendlyName" is required (not null)
+            if (FriendlyName == null)
+            {
+                throw new InvalidDataException("FriendlyName is a required property for DomainLogicalInterface and cannot be null");
+            }
+            else
+            {
+                this.FriendlyName = FriendlyName;
+            }
+            // to ensure "HardwareAddress" is required (not null)
+            if (HardwareAddress == null)
+            {
+                throw new InvalidDataException("HardwareAddress is a required property for DomainLogicalInterface and cannot be null");
+            }
+            else
+            {
+                this.HardwareAddress = HardwareAddress;
+            }
+            // to ensure "PhysicalAdapterId" is required (not null)
+            if (PhysicalAdapterId == null)
+            {
+                throw new InvalidDataException("PhysicalAdapterId is a required property for DomainLogicalInterface and cannot be null");
+            }
+            else
+            {
+                this.PhysicalAdapterId = PhysicalAdapterId;
+            }
             this.Name = Name;
             this.Description = Description;
             this.Version = Version;
@@ -149,10 +181,7 @@ namespace ININ.PureCloudApi.Model
             this.CreatedByApp = CreatedByApp;
             this.EdgeUri = EdgeUri;
             this.EdgeAssignedId = EdgeAssignedId;
-            this.FriendlyName = FriendlyName;
             this.VlanTagId = VlanTagId;
-            this.HardwareAddress = HardwareAddress;
-            this.PhysicalAdapterId = PhysicalAdapterId;
             this.IpAddress = IpAddress;
             this.Gateway = Gateway;
             this.PrimaryDns = PrimaryDns;
@@ -270,8 +299,9 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="edgeAssignedId", EmitDefaultValue=false)]
         public string EdgeAssignedId { get; set; }
         /// <summary>
-        /// Gets or Sets FriendlyName
+        /// Friendly Name
         /// </summary>
+        /// <value>Friendly Name</value>
         [DataMember(Name="friendlyName", EmitDefaultValue=false)]
         public string FriendlyName { get; set; }
         /// <summary>
@@ -280,13 +310,15 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="vlanTagId", EmitDefaultValue=false)]
         public int? VlanTagId { get; set; }
         /// <summary>
-        /// Gets or Sets HardwareAddress
+        /// Hardware Address
         /// </summary>
+        /// <value>Hardware Address</value>
         [DataMember(Name="hardwareAddress", EmitDefaultValue=false)]
         public string HardwareAddress { get; set; }
         /// <summary>
-        /// Gets or Sets PhysicalAdapterId
+        /// Physical Adapter Id
         /// </summary>
+        /// <value>Physical Adapter Id</value>
         [DataMember(Name="physicalAdapterId", EmitDefaultValue=false)]
         public string PhysicalAdapterId { get; set; }
         /// <summary>

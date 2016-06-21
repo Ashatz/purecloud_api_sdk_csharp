@@ -21,11 +21,11 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"> (optional)</param>
+        /// <param name="q64"></param>
         /// <param name="expand"> (optional)</param>
         /// <param name="profile"> (optional, default to true)</param>
         /// <returns>JsonNodeSearchResponse</returns>
-        JsonNodeSearchResponse GetSearch (string q64 = null, List<string> expand = null, bool? profile = null);
+        JsonNodeSearchResponse GetSearch (string q64, List<string> expand = null, bool? profile = null);
 
         /// <summary>
         /// Search using q64
@@ -34,11 +34,11 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"> (optional)</param>
+        /// <param name="q64"></param>
         /// <param name="expand"> (optional)</param>
         /// <param name="profile"> (optional, default to true)</param>
         /// <returns>ApiResponse of JsonNodeSearchResponse</returns>
-        ApiResponse<JsonNodeSearchResponse> GetSearchWithHttpInfo (string q64 = null, List<string> expand = null, bool? profile = null);
+        ApiResponse<JsonNodeSearchResponse> GetSearchWithHttpInfo (string q64, List<string> expand = null, bool? profile = null);
         /// <summary>
         /// Suggest using q64
         /// </summary>
@@ -46,10 +46,10 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"> (optional)</param>
+        /// <param name="q64"></param>
         /// <param name="profile"> (optional, default to true)</param>
         /// <returns>JsonNodeSearchResponse</returns>
-        JsonNodeSearchResponse GetSuggest (string q64 = null, bool? profile = null);
+        JsonNodeSearchResponse GetSuggest (string q64, bool? profile = null);
 
         /// <summary>
         /// Suggest using q64
@@ -58,10 +58,10 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"> (optional)</param>
+        /// <param name="q64"></param>
         /// <param name="profile"> (optional, default to true)</param>
         /// <returns>ApiResponse of JsonNodeSearchResponse</returns>
-        ApiResponse<JsonNodeSearchResponse> GetSuggestWithHttpInfo (string q64 = null, bool? profile = null);
+        ApiResponse<JsonNodeSearchResponse> GetSuggestWithHttpInfo (string q64, bool? profile = null);
         /// <summary>
         /// Search
         /// </summary>
@@ -117,11 +117,11 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"> (optional)</param>
+        /// <param name="q64"></param>
         /// <param name="expand"> (optional)</param>
         /// <param name="profile"> (optional, default to true)</param>
         /// <returns>Task of JsonNodeSearchResponse</returns>
-        System.Threading.Tasks.Task<JsonNodeSearchResponse> GetSearchAsync (string q64 = null, List<string> expand = null, bool? profile = null);
+        System.Threading.Tasks.Task<JsonNodeSearchResponse> GetSearchAsync (string q64, List<string> expand = null, bool? profile = null);
 
         /// <summary>
         /// Search using q64
@@ -130,11 +130,11 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"> (optional)</param>
+        /// <param name="q64"></param>
         /// <param name="expand"> (optional)</param>
         /// <param name="profile"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse (JsonNodeSearchResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<JsonNodeSearchResponse>> GetSearchAsyncWithHttpInfo (string q64 = null, List<string> expand = null, bool? profile = null);
+        System.Threading.Tasks.Task<ApiResponse<JsonNodeSearchResponse>> GetSearchAsyncWithHttpInfo (string q64, List<string> expand = null, bool? profile = null);
         /// <summary>
         /// Suggest using q64
         /// </summary>
@@ -142,10 +142,10 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"> (optional)</param>
+        /// <param name="q64"></param>
         /// <param name="profile"> (optional, default to true)</param>
         /// <returns>Task of JsonNodeSearchResponse</returns>
-        System.Threading.Tasks.Task<JsonNodeSearchResponse> GetSuggestAsync (string q64 = null, bool? profile = null);
+        System.Threading.Tasks.Task<JsonNodeSearchResponse> GetSuggestAsync (string q64, bool? profile = null);
 
         /// <summary>
         /// Suggest using q64
@@ -154,10 +154,10 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"> (optional)</param>
+        /// <param name="q64"></param>
         /// <param name="profile"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse (JsonNodeSearchResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<JsonNodeSearchResponse>> GetSuggestAsyncWithHttpInfo (string q64 = null, bool? profile = null);
+        System.Threading.Tasks.Task<ApiResponse<JsonNodeSearchResponse>> GetSuggestAsyncWithHttpInfo (string q64, bool? profile = null);
         /// <summary>
         /// Search
         /// </summary>
@@ -298,11 +298,11 @@ namespace ININ.PureCloudApi.Api
         /// Search using q64 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"> (optional)</param>
+        /// <param name="q64"></param>
         /// <param name="expand"> (optional)</param>
         /// <param name="profile"> (optional, default to true)</param>
         /// <returns>JsonNodeSearchResponse</returns>
-        public JsonNodeSearchResponse GetSearch (string q64 = null, List<string> expand = null, bool? profile = null)
+        public JsonNodeSearchResponse GetSearch (string q64, List<string> expand = null, bool? profile = null)
         {
              ApiResponse<JsonNodeSearchResponse> localVarResponse = GetSearchWithHttpInfo(q64, expand, profile);
              return localVarResponse.Data;
@@ -312,12 +312,15 @@ namespace ININ.PureCloudApi.Api
         /// Search using q64 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"> (optional)</param>
+        /// <param name="q64"></param>
         /// <param name="expand"> (optional)</param>
         /// <param name="profile"> (optional, default to true)</param>
         /// <returns>ApiResponse of JsonNodeSearchResponse</returns>
-        public ApiResponse< JsonNodeSearchResponse > GetSearchWithHttpInfo (string q64 = null, List<string> expand = null, bool? profile = null)
+        public ApiResponse< JsonNodeSearchResponse > GetSearchWithHttpInfo (string q64, List<string> expand = null, bool? profile = null)
         {
+            // verify the required parameter 'q64' is set
+            if (q64 == null)
+                throw new ApiException(400, "Missing required parameter 'q64' when calling SuggestApi->GetSearch");
 
             var localVarPath = "/api/v2/search";
             var localVarPathParams = new Dictionary<String, String>();
@@ -377,11 +380,11 @@ namespace ININ.PureCloudApi.Api
         /// Search using q64 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"> (optional)</param>
+        /// <param name="q64"></param>
         /// <param name="expand"> (optional)</param>
         /// <param name="profile"> (optional, default to true)</param>
         /// <returns>Task of JsonNodeSearchResponse</returns>
-        public async System.Threading.Tasks.Task<JsonNodeSearchResponse> GetSearchAsync (string q64 = null, List<string> expand = null, bool? profile = null)
+        public async System.Threading.Tasks.Task<JsonNodeSearchResponse> GetSearchAsync (string q64, List<string> expand = null, bool? profile = null)
         {
              ApiResponse<JsonNodeSearchResponse> localVarResponse = await GetSearchAsyncWithHttpInfo(q64, expand, profile);
              return localVarResponse.Data;
@@ -392,12 +395,15 @@ namespace ININ.PureCloudApi.Api
         /// Search using q64 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"> (optional)</param>
+        /// <param name="q64"></param>
         /// <param name="expand"> (optional)</param>
         /// <param name="profile"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse (JsonNodeSearchResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<JsonNodeSearchResponse>> GetSearchAsyncWithHttpInfo (string q64 = null, List<string> expand = null, bool? profile = null)
+        public async System.Threading.Tasks.Task<ApiResponse<JsonNodeSearchResponse>> GetSearchAsyncWithHttpInfo (string q64, List<string> expand = null, bool? profile = null)
         {
+            // verify the required parameter 'q64' is set
+            if (q64 == null)
+                throw new ApiException(400, "Missing required parameter 'q64' when calling SuggestApi->GetSearch");
 
             var localVarPath = "/api/v2/search";
             var localVarPathParams = new Dictionary<String, String>();
@@ -457,10 +463,10 @@ namespace ININ.PureCloudApi.Api
         /// Suggest using q64 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"> (optional)</param>
+        /// <param name="q64"></param>
         /// <param name="profile"> (optional, default to true)</param>
         /// <returns>JsonNodeSearchResponse</returns>
-        public JsonNodeSearchResponse GetSuggest (string q64 = null, bool? profile = null)
+        public JsonNodeSearchResponse GetSuggest (string q64, bool? profile = null)
         {
              ApiResponse<JsonNodeSearchResponse> localVarResponse = GetSuggestWithHttpInfo(q64, profile);
              return localVarResponse.Data;
@@ -470,11 +476,14 @@ namespace ININ.PureCloudApi.Api
         /// Suggest using q64 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"> (optional)</param>
+        /// <param name="q64"></param>
         /// <param name="profile"> (optional, default to true)</param>
         /// <returns>ApiResponse of JsonNodeSearchResponse</returns>
-        public ApiResponse< JsonNodeSearchResponse > GetSuggestWithHttpInfo (string q64 = null, bool? profile = null)
+        public ApiResponse< JsonNodeSearchResponse > GetSuggestWithHttpInfo (string q64, bool? profile = null)
         {
+            // verify the required parameter 'q64' is set
+            if (q64 == null)
+                throw new ApiException(400, "Missing required parameter 'q64' when calling SuggestApi->GetSuggest");
 
             var localVarPath = "/api/v2/search/suggest";
             var localVarPathParams = new Dictionary<String, String>();
@@ -533,10 +542,10 @@ namespace ININ.PureCloudApi.Api
         /// Suggest using q64 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"> (optional)</param>
+        /// <param name="q64"></param>
         /// <param name="profile"> (optional, default to true)</param>
         /// <returns>Task of JsonNodeSearchResponse</returns>
-        public async System.Threading.Tasks.Task<JsonNodeSearchResponse> GetSuggestAsync (string q64 = null, bool? profile = null)
+        public async System.Threading.Tasks.Task<JsonNodeSearchResponse> GetSuggestAsync (string q64, bool? profile = null)
         {
              ApiResponse<JsonNodeSearchResponse> localVarResponse = await GetSuggestAsyncWithHttpInfo(q64, profile);
              return localVarResponse.Data;
@@ -547,11 +556,14 @@ namespace ININ.PureCloudApi.Api
         /// Suggest using q64 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"> (optional)</param>
+        /// <param name="q64"></param>
         /// <param name="profile"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse (JsonNodeSearchResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<JsonNodeSearchResponse>> GetSuggestAsyncWithHttpInfo (string q64 = null, bool? profile = null)
+        public async System.Threading.Tasks.Task<ApiResponse<JsonNodeSearchResponse>> GetSuggestAsyncWithHttpInfo (string q64, bool? profile = null)
         {
+            // verify the required parameter 'q64' is set
+            if (q64 == null)
+                throw new ApiException(400, "Missing required parameter 'q64' when calling SuggestApi->GetSuggest");
 
             var localVarPath = "/api/v2/search/suggest";
             var localVarPathParams = new Dictionary<String, String>();

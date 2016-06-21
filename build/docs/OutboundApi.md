@@ -29,7 +29,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetCampaignsCampaignIdStats**](OutboundApi.html#getcampaignscampaignidstats) | **GET** /api/v2/outbound/campaigns/{campaignId}/stats | Get statistics about a Dialer Campaign |
 | [**GetContactlists**](OutboundApi.html#getcontactlists) | **GET** /api/v2/outbound/contactlists | Query a list of contact lists. |
 | [**GetContactlistsContactlistId**](OutboundApi.html#getcontactlistscontactlistid) | **GET** /api/v2/outbound/contactlists/{contactListId} | Get a dialer contact list. |
-| [**GetContactlistsContactlistIdContactsContactId**](OutboundApi.html#getcontactlistscontactlistidcontactscontactid) | **GET** /api/v2/outbound/contactlists/{contactListId}/contacts/{contactId} | Get dialer contactList. |
+| [**GetContactlistsContactlistIdContactsContactId**](OutboundApi.html#getcontactlistscontactlistidcontactscontactid) | **GET** /api/v2/outbound/contactlists/{contactListId}/contacts/{contactId} | Get a contact. |
 | [**GetContactlistsContactlistIdExport**](OutboundApi.html#getcontactlistscontactlistidexport) | **GET** /api/v2/outbound/contactlists/{contactListId}/export | Get the URI of a contact list export. |
 | [**GetContactlistsContactlistIdImportstatus**](OutboundApi.html#getcontactlistscontactlistidimportstatus) | **GET** /api/v2/outbound/contactlists/{contactListId}/importstatus | Get dialer contactList import status. |
 | [**GetDnclists**](OutboundApi.html#getdnclists) | **GET** /api/v2/outbound/dnclists | Query dialer DNC lists |
@@ -1370,7 +1370,7 @@ namespace Example
 
 ## [**DialerContact**](DialerContact.html) GetContactlistsContactlistIdContactsContactId (string contactListId, string contactId)
 
-Get dialer contactList.
+Get a contact.
 
 
 
@@ -1398,7 +1398,7 @@ namespace Example
 
             try
             {
-                // Get dialer contactList.
+                // Get a contact.
                 DialerContact result = apiInstance.GetContactlistsContactlistIdContactsContactId(contactListId, contactId);
                 Debug.WriteLine(result);
             }
@@ -2724,7 +2724,7 @@ namespace Example
             var apiInstance = new OutboundApi();
             var contactListId = contactListId_example;  // string | Contact List ID
             var body = new List<DialerContact>(); // List<DialerContact> | Contact (optional) 
-            var priority = true;  // bool? |  (optional) 
+            var priority = true;  // bool? | Contact priority.  True means the contact(s) will go to the beginning of the list, false means at the end. (optional) 
 
             try
             {
@@ -2748,7 +2748,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **contactListId** | **string**| Contact List ID |  |
 | **body** | [**List<DialerContact>**](DialerContact.html)| Contact | [optional]  |
-| **priority** | **bool?**|  | [optional]  |
+| **priority** | **bool?**| Contact priority.  True means the contact(s) will go to the beginning of the list, false means at the end. | [optional]  |
 {: class="table table-striped"}
 
 ### Return type

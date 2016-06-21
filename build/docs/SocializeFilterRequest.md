@@ -7,7 +7,7 @@ title: SocializeFilterRequest
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Filters** | [**List&lt;SocializeEntityFilter&gt;**](SocializeEntityFilter.html) | The list of filters used to narrow the return. | [optional] |
+| **Filters** | [**List&lt;SocializeEntityFilter&gt;**](SocializeEntityFilter.html) | The list of filters used to narrow the return. | |
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **SortBy** | **string** |  | [optional] |

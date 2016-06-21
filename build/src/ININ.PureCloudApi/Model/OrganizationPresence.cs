@@ -24,11 +24,12 @@ namespace ININ.PureCloudApi.Model
         /// <param name="LanguageLabels">LanguageLabels.</param>
         /// <param name="SystemPresence">SystemPresence.</param>
         /// <param name="Deactivated">Deactivated (default to false).</param>
+        /// <param name="Primary">Primary (default to false).</param>
         /// <param name="CreatedBy">CreatedBy.</param>
         /// <param name="CreatedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="ModifiedBy">ModifiedBy.</param>
         /// <param name="ModifiedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        public OrganizationPresence(string Name = null, Dictionary<string, string> LanguageLabels = null, string SystemPresence = null, bool? Deactivated = null, User CreatedBy = null, DateTime? CreatedDate = null, User ModifiedBy = null, DateTime? ModifiedDate = null)
+        public OrganizationPresence(string Name = null, Dictionary<string, string> LanguageLabels = null, string SystemPresence = null, bool? Deactivated = null, bool? Primary = null, User CreatedBy = null, DateTime? CreatedDate = null, User ModifiedBy = null, DateTime? ModifiedDate = null)
         {
             this.Name = Name;
             this.LanguageLabels = LanguageLabels;
@@ -41,6 +42,15 @@ namespace ININ.PureCloudApi.Model
             else
             {
                 this.Deactivated = Deactivated;
+            }
+            // use default value if no "Primary" provided
+            if (Primary == null)
+            {
+                this.Primary = false;
+            }
+            else
+            {
+                this.Primary = Primary;
             }
             this.CreatedBy = CreatedBy;
             this.CreatedDate = CreatedDate;
@@ -74,6 +84,11 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         [DataMember(Name="deactivated", EmitDefaultValue=false)]
         public bool? Deactivated { get; set; }
+        /// <summary>
+        /// Gets or Sets Primary
+        /// </summary>
+        [DataMember(Name="primary", EmitDefaultValue=false)]
+        public bool? Primary { get; set; }
         /// <summary>
         /// Gets or Sets CreatedBy
         /// </summary>
@@ -115,6 +130,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  LanguageLabels: ").Append(LanguageLabels).Append("\n");
             sb.Append("  SystemPresence: ").Append(SystemPresence).Append("\n");
             sb.Append("  Deactivated: ").Append(Deactivated).Append("\n");
+            sb.Append("  Primary: ").Append(Primary).Append("\n");
             sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
             sb.Append("  CreatedDate: ").Append(CreatedDate).Append("\n");
             sb.Append("  ModifiedBy: ").Append(ModifiedBy).Append("\n");
@@ -182,6 +198,11 @@ namespace ININ.PureCloudApi.Model
                     this.Deactivated.Equals(other.Deactivated)
                 ) &&
                 (
+                    this.Primary == other.Primary ||
+                    this.Primary != null &&
+                    this.Primary.Equals(other.Primary)
+                ) &&
+                (
                     this.CreatedBy == other.CreatedBy ||
                     this.CreatedBy != null &&
                     this.CreatedBy.Equals(other.CreatedBy)
@@ -229,6 +250,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.SystemPresence.GetHashCode();
                 if (this.Deactivated != null)
                     hash = hash * 59 + this.Deactivated.GetHashCode();
+                if (this.Primary != null)
+                    hash = hash * 59 + this.Primary.GetHashCode();
                 if (this.CreatedBy != null)
                     hash = hash * 59 + this.CreatedBy.GetHashCode();
                 if (this.CreatedDate != null)

@@ -253,6 +253,18 @@ namespace ININ.PureCloudApi.Model
             Addressto,
             
             /// <summary>
+            /// Enum Peerid for "peerId"
+            /// </summary>
+            [EnumMember(Value = "peerId")]
+            Peerid,
+            
+            /// <summary>
+            /// Enum Scriptid for "scriptId"
+            /// </summary>
+            [EnumMember(Value = "scriptId")]
+            Scriptid,
+            
+            /// <summary>
             /// Enum Evaluationid for "evaluationId"
             /// </summary>
             [EnumMember(Value = "evaluationId")]

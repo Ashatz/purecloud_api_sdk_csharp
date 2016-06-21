@@ -31,6 +31,12 @@ namespace ININ.PureCloudApi.Model
             User,
             
             /// <summary>
+            /// Enum Group for "GROUP"
+            /// </summary>
+            [EnumMember(Value = "GROUP")]
+            Group,
+            
+            /// <summary>
             /// Enum Public for "PUBLIC"
             /// </summary>
             [EnumMember(Value = "PUBLIC")]

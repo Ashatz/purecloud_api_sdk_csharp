@@ -14,8 +14,8 @@ title: SocialAccount
 | **Enabled** | **bool?** | Indicates if this Social Account is available for selection by other entities | [optional] [default to false]|
 | **Authorized** | **bool?** | True when successfully completing the third-party authorization process | [optional] [default to false]|
 | **SocialHub** | **string** | Which third party Social Media Hub this account will be communicating through | [optional] |
-| **AccessToken** | **string** | Credential provided through the Social Hub&#39;s authorization process | [optional] |
-| **AccessTokenSecret** | **string** | Credential provided through the Social Hub&#39;s authorization process | [optional] |
+| **AccessToken** | **string** | Credential provided through the Social Hub&#39;s authorization process | |
+| **AccessTokenSecret** | **string** | Credential provided through the Social Hub&#39;s authorization process | |
 | **TwitterId** | **string** | The account ID as provided by Twitter during the authorization process | [optional] |
 | **StreamingEnabled** | **bool?** | Indicates if a stream should be opened on behalf of the indicated Social Hub account | [optional] [default to false]|
 | **SelfUri** | **string** | The URI for this object | [optional] |

@@ -20,16 +20,37 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PhoneBase" /> class.
         /// </summary>
+        [JsonConstructorAttribute]
+        protected PhoneBase() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PhoneBase" /> class.
+        /// </summary>
         /// <param name="Name">Name.</param>
-        /// <param name="PhoneMetaBase">PhoneMetaBase.</param>
-        /// <param name="Lines">Lines.</param>
+        /// <param name="PhoneMetaBase">Phone Meta Base (required).</param>
+        /// <param name="Lines">Lines (required).</param>
         /// <param name="Properties">Properties.</param>
         /// <param name="Capabilities">Capabilities.</param>
         public PhoneBase(string Name = null, UriReference PhoneMetaBase = null, List<LineBase> Lines = null, Dictionary<string, Object> Properties = null, PhoneCapabilities Capabilities = null)
         {
+            // to ensure "PhoneMetaBase" is required (not null)
+            if (PhoneMetaBase == null)
+            {
+                throw new InvalidDataException("PhoneMetaBase is a required property for PhoneBase and cannot be null");
+            }
+            else
+            {
+                this.PhoneMetaBase = PhoneMetaBase;
+            }
+            // to ensure "Lines" is required (not null)
+            if (Lines == null)
+            {
+                throw new InvalidDataException("Lines is a required property for PhoneBase and cannot be null");
+            }
+            else
+            {
+                this.Lines = Lines;
+            }
             this.Name = Name;
-            this.PhoneMetaBase = PhoneMetaBase;
-            this.Lines = Lines;
             this.Properties = Properties;
             this.Capabilities = Capabilities;
         }
@@ -46,13 +67,15 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
         /// <summary>
-        /// Gets or Sets PhoneMetaBase
+        /// Phone Meta Base
         /// </summary>
+        /// <value>Phone Meta Base</value>
         [DataMember(Name="phoneMetaBase", EmitDefaultValue=false)]
         public UriReference PhoneMetaBase { get; set; }
         /// <summary>
-        /// Gets or Sets Lines
+        /// Lines
         /// </summary>
+        /// <value>Lines</value>
         [DataMember(Name="lines", EmitDefaultValue=false)]
         public List<LineBase> Lines { get; set; }
         /// <summary>

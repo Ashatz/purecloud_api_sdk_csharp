@@ -127,7 +127,7 @@ namespace Example
 
 <a name="getlanguages"></a>
 
-## [**LanguageEntityListing**](LanguageEntityListing.html) GetLanguages (int? pageSize = null, int? pageNumber = null, string sortOrder = null)
+## [**LanguageEntityListing**](LanguageEntityListing.html) GetLanguages (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null)
 
 Get the list of supported languages.
 
@@ -155,11 +155,12 @@ namespace Example
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
             var sortOrder = sortOrder_example;  // string | Ascending or descending sort order (optional)  (default to ASC)
+            var name = name_example;  // string | Name (optional) 
 
             try
             {
                 // Get the list of supported languages.
-                LanguageEntityListing result = apiInstance.GetLanguages(pageSize, pageNumber, sortOrder);
+                LanguageEntityListing result = apiInstance.GetLanguages(pageSize, pageNumber, sortOrder, name);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -179,6 +180,7 @@ namespace Example
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **sortOrder** | **string**| Ascending or descending sort order | [optional] [default to ASC] |
+| **name** | **string**| Name | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
