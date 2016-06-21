@@ -25,8 +25,8 @@ try {
 	        '</dependencies>' + 
 	    '</metadata>' + 
 	    '<files>' + 
-	        '<file src="..\\build\\bin\\ININ.PureCloudApi.dll" target="lib\\ININ.PureCloudApi.dll" />' + 
-	        '<file src="..\\build\\bin\\ININ.PureCloudApi.xml" target="lib\\ININ.PureCloudApi.xml" />' + 
+	        '<file src="../build/bin/ININ.PureCloudApi.dll" target="lib/ININ.PureCloudApi.dll" />' + 
+	        '<file src="../build/bin/ININ.PureCloudApi.xml" target="lib/ININ.PureCloudApi.xml" />' + 
 	    '</files>' + 
 	'</package>';
 
