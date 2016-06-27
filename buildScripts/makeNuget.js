@@ -2,7 +2,7 @@ var fs = require('fs');
 
 try {
 	var version = fs.readFileSync('bin/VERSION', 'UTF-8');
-	var nuspecFilePath = 'bin/PureCloudApiSdk.nuspec';
+	var nuspecFilePath = 'build/bin/PureCloudApiSdk.nuspec';
 	var content = '<?xml version="1.0" encoding="utf-8"?>' + 
 	'<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">' + 
 	    '<metadata>' + 
@@ -25,8 +25,8 @@ try {
 	        '</dependencies>' + 
 	    '</metadata>' + 
 	    '<files>' + 
-	        '<file src="../build/bin/ININ.PureCloudApi.dll" target="lib/ININ.PureCloudApi.dll" />' + 
-	        '<file src="../build/bin/ININ.PureCloudApi.xml" target="lib/ININ.PureCloudApi.xml" />' + 
+	        '<file src="ININ.PureCloudApi.dll" target="lib/ININ.PureCloudApi.dll" />' + 
+	        '<file src="ININ.PureCloudApi.xml" target="lib/ININ.PureCloudApi.xml" />' + 
 	    '</files>' + 
 	'</package>';
 
