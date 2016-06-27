@@ -20,8 +20,8 @@ try {
 	        '<requireLicenseAcceptance>false</requireLicenseAcceptance>' + 
 	        '<description>PureCloud API SDK for .NET</description>' + 
 	        '<dependencies>' + 
-	            '<dependency id="Newtonsoft.Json" />' + 
-	            '<dependency id="RestSharp" />' + 
+	            '<dependency id="Newtonsoft.Json" version="9.0.1" />' + 
+	            '<dependency id="RestSharp" version="105.2.3" />' + 
 	        '</dependencies>' + 
 	    '</metadata>' + 
 	    '<files>' + 
