@@ -20,36 +20,23 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateCallbackCommand" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected CreateCallbackCommand() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CreateCallbackCommand" /> class.
-        /// </summary>
-        /// <param name="ScriptId">The identifier of the script to be used for the callback.</param>
-        /// <param name="QueueId">The identifier of the queue to be used for the callback. Either queueId or routingData is required..</param>
-        /// <param name="RoutingData">The routing data to be used for the callback. Either queueId or routingData is required..</param>
-        /// <param name="CallbackUserName">The name of the party to be called back..</param>
-        /// <param name="CallbackNumbers">A list of phone numbers for the callback. (required).</param>
-        /// <param name="CallbackScheduledTime">The scheduled date-time for the callback as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        /// <param name="CountryCode">The country code to be associated with the callback numbers..</param>
-        /// <param name="IsAutomated">Whether or not to automatically place a call for this callback. (default to false).</param>
-        /// <param name="AutomatedCallbackConfigId">The id of the configuration to handle the response (e.g. live voice, machine) from automatically placing a call for a callback..</param>
-        /// <param name="Data">A map of key-value pairs containing additional data that can be associated to the callback. These could be set up for instance to be used in a customized script shown during the call. Example: { \&quot;notes\&quot;: \&quot;ready to close the deal!\&quot;, \&quot;customerPreferredName\&quot;: \&quot;Doc\&quot; }.</param>
-        public CreateCallbackCommand(string ScriptId = null, string QueueId = null, RoutingData RoutingData = null, string CallbackUserName = null, List<string> CallbackNumbers = null, DateTime? CallbackScheduledTime = null, string CountryCode = null, bool? IsAutomated = null, string AutomatedCallbackConfigId = null, Dictionary<string, string> Data = null)
+        /// <param name="ScriptId">ScriptId.</param>
+        /// <param name="QueueId">QueueId.</param>
+        /// <param name="RoutingData">RoutingData.</param>
+        /// <param name="CallbackUserName">CallbackUserName.</param>
+        /// <param name="CallbackNumbers">CallbackNumbers.</param>
+        /// <param name="CallbackScheduledTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="CountryCode">CountryCode.</param>
+        /// <param name="IsAutomated">IsAutomated (default to false).</param>
+        /// <param name="AutomatedCallbackConfigId">AutomatedCallbackConfigId.</param>
+        /// <param name="AdditionalInfo">AdditionalInfo.</param>
+        public CreateCallbackCommand(string ScriptId = null, string QueueId = null, RoutingData RoutingData = null, string CallbackUserName = null, List<string> CallbackNumbers = null, DateTime? CallbackScheduledTime = null, string CountryCode = null, bool? IsAutomated = null, string AutomatedCallbackConfigId = null, AdditionalInfo AdditionalInfo = null)
         {
-            // to ensure "CallbackNumbers" is required (not null)
-            if (CallbackNumbers == null)
-            {
-                throw new InvalidDataException("CallbackNumbers is a required property for CreateCallbackCommand and cannot be null");
-            }
-            else
-            {
-                this.CallbackNumbers = CallbackNumbers;
-            }
             this.ScriptId = ScriptId;
             this.QueueId = QueueId;
             this.RoutingData = RoutingData;
             this.CallbackUserName = CallbackUserName;
+            this.CallbackNumbers = CallbackNumbers;
             this.CallbackScheduledTime = CallbackScheduledTime;
             this.CountryCode = CountryCode;
             // use default value if no "IsAutomated" provided
@@ -62,69 +49,60 @@ namespace ININ.PureCloudApi.Model
                 this.IsAutomated = IsAutomated;
             }
             this.AutomatedCallbackConfigId = AutomatedCallbackConfigId;
-            this.Data = Data;
+            this.AdditionalInfo = AdditionalInfo;
         }
         
         /// <summary>
-        /// The identifier of the script to be used for the callback
+        /// Gets or Sets ScriptId
         /// </summary>
-        /// <value>The identifier of the script to be used for the callback</value>
         [DataMember(Name="scriptId", EmitDefaultValue=false)]
         public string ScriptId { get; set; }
         /// <summary>
-        /// The identifier of the queue to be used for the callback. Either queueId or routingData is required.
+        /// Gets or Sets QueueId
         /// </summary>
-        /// <value>The identifier of the queue to be used for the callback. Either queueId or routingData is required.</value>
         [DataMember(Name="queueId", EmitDefaultValue=false)]
         public string QueueId { get; set; }
         /// <summary>
-        /// The routing data to be used for the callback. Either queueId or routingData is required.
+        /// Gets or Sets RoutingData
         /// </summary>
-        /// <value>The routing data to be used for the callback. Either queueId or routingData is required.</value>
         [DataMember(Name="routingData", EmitDefaultValue=false)]
         public RoutingData RoutingData { get; set; }
         /// <summary>
-        /// The name of the party to be called back.
+        /// Gets or Sets CallbackUserName
         /// </summary>
-        /// <value>The name of the party to be called back.</value>
         [DataMember(Name="callbackUserName", EmitDefaultValue=false)]
         public string CallbackUserName { get; set; }
         /// <summary>
-        /// A list of phone numbers for the callback.
+        /// Gets or Sets CallbackNumbers
         /// </summary>
-        /// <value>A list of phone numbers for the callback.</value>
         [DataMember(Name="callbackNumbers", EmitDefaultValue=false)]
         public List<string> CallbackNumbers { get; set; }
         /// <summary>
-        /// The scheduled date-time for the callback as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
-        /// <value>The scheduled date-time for the callback as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="callbackScheduledTime", EmitDefaultValue=false)]
         public DateTime? CallbackScheduledTime { get; set; }
         /// <summary>
-        /// The country code to be associated with the callback numbers.
+        /// Gets or Sets CountryCode
         /// </summary>
-        /// <value>The country code to be associated with the callback numbers.</value>
         [DataMember(Name="countryCode", EmitDefaultValue=false)]
         public string CountryCode { get; set; }
         /// <summary>
-        /// Whether or not to automatically place a call for this callback.
+        /// Gets or Sets IsAutomated
         /// </summary>
-        /// <value>Whether or not to automatically place a call for this callback.</value>
         [DataMember(Name="isAutomated", EmitDefaultValue=false)]
         public bool? IsAutomated { get; set; }
         /// <summary>
-        /// The id of the configuration to handle the response (e.g. live voice, machine) from automatically placing a call for a callback.
+        /// Gets or Sets AutomatedCallbackConfigId
         /// </summary>
-        /// <value>The id of the configuration to handle the response (e.g. live voice, machine) from automatically placing a call for a callback.</value>
         [DataMember(Name="automatedCallbackConfigId", EmitDefaultValue=false)]
         public string AutomatedCallbackConfigId { get; set; }
         /// <summary>
-        /// A map of key-value pairs containing additional data that can be associated to the callback. These could be set up for instance to be used in a customized script shown during the call. Example: { \&quot;notes\&quot;: \&quot;ready to close the deal!\&quot;, \&quot;customerPreferredName\&quot;: \&quot;Doc\&quot; }
+        /// Gets or Sets AdditionalInfo
         /// </summary>
-        /// <value>A map of key-value pairs containing additional data that can be associated to the callback. These could be set up for instance to be used in a customized script shown during the call. Example: { \&quot;notes\&quot;: \&quot;ready to close the deal!\&quot;, \&quot;customerPreferredName\&quot;: \&quot;Doc\&quot; }</value>
-        [DataMember(Name="data", EmitDefaultValue=false)]
-        public Dictionary<string, string> Data { get; set; }
+        [DataMember(Name="additionalInfo", EmitDefaultValue=false)]
+        public AdditionalInfo AdditionalInfo { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -142,7 +120,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  CountryCode: ").Append(CountryCode).Append("\n");
             sb.Append("  IsAutomated: ").Append(IsAutomated).Append("\n");
             sb.Append("  AutomatedCallbackConfigId: ").Append(AutomatedCallbackConfigId).Append("\n");
-            sb.Append("  Data: ").Append(Data).Append("\n");
+            sb.Append("  AdditionalInfo: ").Append(AdditionalInfo).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -225,9 +203,9 @@ namespace ININ.PureCloudApi.Model
                     this.AutomatedCallbackConfigId.Equals(other.AutomatedCallbackConfigId)
                 ) &&
                 (
-                    this.Data == other.Data ||
-                    this.Data != null &&
-                    this.Data.SequenceEqual(other.Data)
+                    this.AdditionalInfo == other.AdditionalInfo ||
+                    this.AdditionalInfo != null &&
+                    this.AdditionalInfo.Equals(other.AdditionalInfo)
                 );
         }
 
@@ -260,8 +238,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.IsAutomated.GetHashCode();
                 if (this.AutomatedCallbackConfigId != null)
                     hash = hash * 59 + this.AutomatedCallbackConfigId.GetHashCode();
-                if (this.Data != null)
-                    hash = hash * 59 + this.Data.GetHashCode();
+                if (this.AdditionalInfo != null)
+                    hash = hash * 59 + this.AdditionalInfo.GetHashCode();
                 return hash;
             }
         }

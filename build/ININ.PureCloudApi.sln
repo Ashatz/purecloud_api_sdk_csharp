@@ -2,7 +2,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 VisualStudioVersion = 12.0.0.0
 MinimumVisualStudioVersion = 10.0.0.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ININ.PureCloudApi", "src\ININ.PureCloudApi\ININ.PureCloudApi.csproj", "{179C89F9-0E18-4CD0-8FD5-78433B58DF54}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ININ.PureCloudApi", "src\ININ.PureCloudApi\ININ.PureCloudApi.csproj", "{05A6DDF1-3F14-4CF2-9D3B-678540B36EB1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ININ.PureCloudApi.Test", "src\ININ.PureCloudApi.Test\ININ.PureCloudApi.Test.csproj", "{19F1DEBC-DE5E-4517-8062-F000CD499087}"
 EndProject
@@ -12,10 +12,10 @@ Debug|Any CPU = Debug|Any CPU
 Release|Any CPU = Release|Any CPU
 EndGlobalSection
 GlobalSection(ProjectConfigurationPlatforms) = postSolution
-{179C89F9-0E18-4CD0-8FD5-78433B58DF54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-{179C89F9-0E18-4CD0-8FD5-78433B58DF54}.Debug|Any CPU.Build.0 = Debug|Any CPU
-{179C89F9-0E18-4CD0-8FD5-78433B58DF54}.Release|Any CPU.ActiveCfg = Release|Any CPU
-{179C89F9-0E18-4CD0-8FD5-78433B58DF54}.Release|Any CPU.Build.0 = Release|Any CPU
+{05A6DDF1-3F14-4CF2-9D3B-678540B36EB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+{05A6DDF1-3F14-4CF2-9D3B-678540B36EB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+{05A6DDF1-3F14-4CF2-9D3B-678540B36EB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+{05A6DDF1-3F14-4CF2-9D3B-678540B36EB1}.Release|Any CPU.Build.0 = Release|Any CPU
 {19F1DEBC-DE5E-4517-8062-F000CD499087}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 {19F1DEBC-DE5E-4517-8062-F000CD499087}.Debug|Any CPU.Build.0 = Debug|Any CPU
 {19F1DEBC-DE5E-4517-8062-F000CD499087}.Release|Any CPU.ActiveCfg = Release|Any CPU

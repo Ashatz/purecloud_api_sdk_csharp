@@ -12,8 +12,8 @@ title: EndpointEntityListing
 | **Total** | **long?** |  | [optional] |
 | **Entities** | [**List&lt;Endpoint&gt;**](Endpoint.html) |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
-| **FirstUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
+| **FirstUri** | **string** |  | [optional] |
 | **NextUri** | **string** |  | [optional] |
 | **LastUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
